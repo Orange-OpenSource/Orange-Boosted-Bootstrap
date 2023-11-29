@@ -69,7 +69,7 @@ body {
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  color: var(--#{$prefix}body-color);
+  // Boosted mod: no color
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
@@ -501,7 +501,6 @@ th {
 label {
   display: inline-block; // 1
   font-weight: $form-label-font-weight; // Boosted mod
-  color: var(--#{$prefix}body-color); // Boosted mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

@@ -34,6 +34,8 @@
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
   // scss-docs-end accordion-css-vars
+
+  background-color: transparent; // Boosted mod
 }
 
 .accordion-button {
