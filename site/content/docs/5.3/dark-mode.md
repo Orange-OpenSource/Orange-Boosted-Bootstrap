@@ -531,20 +531,9 @@ sitemap_exclude: true
 <h4 class="mt-3">No theme</h4>
 
 <div class="d-flex gap-2 flex-wrap border p-3">
-  <h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
   <button type="button" class="btn btn-primary">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
-  <a href="#" class="position-relative">
-    <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    <span class="visually-hidden">Shopping basket</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
-      99+
-      <span class="visually-hidden">shopping basket items</span>
-    </span>
-  </a>
   <div>
     <span class="badge text-bg-primary">Primary</span>
     <span class="badge text-bg-secondary">Secondary</span>
@@ -560,20 +549,9 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
-  <h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
   <button type="button" class="btn btn-primary">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
-  <a href="#" class="position-relative">
-    <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    <span class="visually-hidden">Shopping basket</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
-      99+
-      <span class="visually-hidden">shopping basket items</span>
-    </span>
-  </a>
   <div>
     <span class="badge text-bg-primary">Primary</span>
     <span class="badge text-bg-secondary">Secondary</span>
@@ -589,20 +567,9 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on container</h4>
 
 <div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
-  <h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
   <button type="button" class="btn btn-primary">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
-  <a href="#" class="position-relative">
-    <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    <span class="visually-hidden">Shopping basket</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
-      99+
-      <span class="visually-hidden">shopping basket items</span>
-    </span>
-  </a>
   <div>
     <span class="badge text-bg-primary">Primary</span>
     <span class="badge text-bg-secondary">Secondary</span>
@@ -618,20 +585,9 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
-  <h6 data-bs-theme="dark">Example heading <span class="badge text-bg-secondary">New</span></h6>
   <button type="button" class="btn btn-primary" data-bs-theme="dark">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
-  <a href="#" class="position-relative" data-bs-theme="dark">
-    <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    <span class="visually-hidden">Shopping basket</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
-      99+
-      <span class="visually-hidden">shopping basket items</span>
-    </span>
-  </a>
   <div>
     <span class="badge text-bg-primary" data-bs-theme="dark">Primary</span>
     <span class="badge text-bg-secondary" data-bs-theme="dark">Secondary</span>
@@ -647,20 +603,9 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
-  <h6 data-bs-theme="light">Example heading <span class="badge text-bg-secondary">New</span></h6>
   <button type="button" class="btn btn-primary" data-bs-theme="light">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
-  <a href="#" class="position-relative" data-bs-theme="light">
-    <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    <span class="visually-hidden">Shopping basket</span>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
-      99+
-      <span class="visually-hidden">shopping basket items</span>
-    </span>
-  </a>
   <div>
     <span class="badge text-bg-primary" data-bs-theme="light">Primary</span>
     <span class="badge text-bg-secondary" data-bs-theme="light">Secondary</span>
