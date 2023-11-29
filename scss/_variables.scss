@@ -1146,7 +1146,7 @@ $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // Boosted mod
 
 $input-placeholder-color:               var(--#{$prefix}placeholder-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$input-plaintext-color:                 null !default;
+$input-plaintext-color:                 null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 
 // Boosted mod: no $input-height-border
 
