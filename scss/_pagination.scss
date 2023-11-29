@@ -36,6 +36,7 @@
   display: flex;
   flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // Boosted mod
   margin: var(--#{$prefix}pagination-margin-y) 0; // Boosted mod
+  background-color: transparent; // Boosted mod
   @include list-unstyled();
 }
 
