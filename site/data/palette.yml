@@ -43,13 +43,6 @@
       class: orange
       hex: "#ff7900"
       variable: $supporting-orange
-- category: OBS Gray
-  name: "OBS Gray"
-  colors:
-    - name: 800
-      class: 800
-      hex: "#595959"
-      variable: $gray-800
 - category: Functional colors
   name: "Functional colors"
   colors:
@@ -100,11 +93,6 @@
       hex: "#666"
       darkHex: "#999"
       variable: --bs-secondary-color, --bs-placeholder-color
-    - name: 800
-      class: 800
-      hex: "#595959"
-      darkHex: "#595959"
-      variable: $gray-800
     - name: 900
       class: 900
       hex: "#333"
