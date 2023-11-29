@@ -8,7 +8,33 @@ aliases:
 toc: true
 ---
 
-This first part is about the colors that are dynamic depending on the used theme. The variables They are the variables you should be using inside your project.
+## Theming
+
+{{< callout warning >}}
+This part explains how we built our large set of [dynamic usable variables](#usable-variables). They aren't the variables you should be using inside your project.
+{{< /callout >}}
+
+{{< callout warning >}}
+Following parts might expose some **hexadecimal codes**. They aren't meant to be used. They are only informational. **Prefer using the associated variables.**
+{{< /callout >}}
+
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
+
+<div class="row">
+  {{< theme-colors.inline >}}
+  {{- range (index $.Site.Data "theme-colors") }}
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold text-bg-{{ .name }}">{{ .name | title }}</div>
+    </div>
+  {{ end -}}
+  {{< /theme-colors.inline >}}
+</div>
+
+All these colors are available as a Sass map, `$theme-colors`.
+
+{{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
+
+Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
 ### Theme colors
 
@@ -16,14 +42,22 @@ The core colors of orange design. These colors should always dominate other colo
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
-      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-    </svg>
-    <div class="d-flex flex-column justify-content-around w-50 ps-2">
+    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+          <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+          <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+        </svg>
+        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
+      </button>
+      <figcaption>
+        <var class="text-nowrap user-select-all">--bs-{{- $color.class -}}</var>
+      </figcaption>
+    </figure>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2 mb-4">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
     </div>
@@ -40,14 +74,22 @@ The functional colors of orange design. These colors are not meant to be used as
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-      <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-    </svg>
-    <div class="d-flex flex-column justify-content-around w-50 ps-2">
+    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-{{ $color.level }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{ $color.level }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+          <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+          <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+        </svg>
+        <span class="visually-hidden">Copy variable name --bs-{{ $color.level }}</span>
+      </button>
+      <figcaption>
+        <var class="text-nowrap user-select-all">--bs-{{- $color.level -}}</var>
+      </figcaption>
+    </figure>
+    <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
     </div>
@@ -65,19 +107,28 @@ The functional grays of orange design. These colors are used as backgrounds, col
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-      <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-    </svg>
-    <div class="d-flex flex-column justify-content-around w-50 ps-2">
+    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+          <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+          <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+        </svg>
+        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
+      </button>
+      <figcaption>
+        <var class="text-nowrap user-select-all">{{- $color.variable -}}</var>
+      </figcaption>
+    </figure>
+    <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4 pe-none">
       <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="pe-auto user-select-all">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
+  <div class="double-figure d-none d-md-flex"></div>
 </div>
 {{ end -}}
 {{< /palette.inline >}}
@@ -88,13 +139,21 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-      <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
-    </svg>
-    <div class="d-flex flex-column justify-content-around w-50 ps-2">
+    <figure class="mb-0 w-50" aria-label="Supporting {{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+          <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
+        </svg>
+        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
+      </button>
+      <figcaption>
+        <var class="text-nowrap user-select-all">{{ $color.variable }}</var>
+      </figcaption>
+    </figure>
+    <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.hex }}</code></p>
     </div>
@@ -104,47 +163,67 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 {{ end -}}
 {{< /palette.inline >}}
 
-## Text
+## Usable variables
 
 #### Light vs Dark
 
 Ne devrait pas être utilisé directement (normalement)
 
 <div>
---bs-primary: #f16e00; + rgb
---bs-secondary: #000; + rgb
---bs-success: #228722; + rgb
---bs-info: #4170d8; + rgb
---bs-warning: #fc0; + rgb
---bs-danger: #cd3c14; + rgb
+// Functional colors
+--bs-primary: #f16e00; + rgb                          accent.primary
+--bs-secondary: #000; + rgb                           surface.medium // accent.focus
+--bs-success: #228722; + rgb                          accent.positive
+--bs-info: #4170d8; + rgb                             accent.information
+--bs-warning: #fc0; + rgb                             accent.warning
+--bs-danger: #cd3c14; + rgb                           accent.negative
+Manque #fff > #141414 --bs-body-bg                    background
 
+// Concepts fonctionnels manquants
 --bs-light: #ccc; + rgb
 --bs-dark: #000; + rgb
 
-Manque #fff > #141414
-
-// Functional grays (utilisés dans tous les composants)
+// Functional grays (utilisés dans tous les composants) (fontion: gris ? neutre ?)
 #eee      #333        --bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
 #ddd      #666        --bs-active-bg                  surface.highlight
 #ccc      #666        --bs-disabled-color             accent.neutral // accent.disabled
 #666      #999        --bs-placeholder-color          accent.secondary
+#333      #333        Variable a introduire           surface.low ??? Utilisé dans Boosted ? Pourrait être --bs-light dans un premier temps?
+#000      #000        Variable a introduire           inverted.background ??? Utilisé dans Boosted ? Pourrait être --bs-dark dans un premier temps?
+
+// Supporting colors
+#4bb4e6   #4bb4e6     Variable a introduire           surface.extra1 (bleu)
+#50be87   #50be87     Variable a introduire           surface.extra2 (vert)
+#ffb4e6   #ffb4e6     Variable a introduire           surface.extra3 (rose)
+#a885d8   #a885d8     Variable a introduire           surface.extra4 (violet)
+#ffd200   #ffd200     Variable a introduire           surface.extra5 (jaune)
+#ff7900   #ff7900     Variable a introduire           surface.high (orange)
+#f9f5f0   #f9f5f0     Variable a introduire           surface.extra6 (organic) ??? Encore des gros doutes sur celle-ci
+
+// Cas bizarre
+#000      #ff7900     --bs-hover-color                N'existe pas mais devrait être dans Figma
+
+// Ne devrait pas apparaitre ?
 #333      #eee        --bs-body-color-subtle          -------
+#333      #666        --bs-gray-tweak                 N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
+#000      #141414     --bs-black-tweak                N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
 
+Idées:
+- On ajoute des variables avec des noms différents pour ce niveau genre: `--bs-theme-{fonction}-{nombre}`, `--bs-global-*`
+- Les variables qui ont des noms qu'on aime pas, on rename en fonction des tokens coté design ?
+- Donner des noms très longs et très peu compréhensibles (comprendre abstraits) pour pas donner l'envie de les utiliser ?
 
---bs-hover-color                #000    #f7900        N'existe pas mais devrait être dans Figma
---bs-gray-tweak                 #333    #666          N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
---bs-black-tweak                #000    #141414       N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
-
-
-surface.low   #333 #333 ??? Utilisé dans Boosted ?
-inverted.background  #000 #000 ??? Utilisé dans Boosted ?
+/************************************************************/
+/* ! Penser à update palette.yml avec les noms de variables */
+/************************************************************/
 </div>
 
 #### Concepts de base
 
-Tableau de Boostrap (probablement - à vérifier)
+Tableau de Bootstrap (probablement - à vérifier)
 
 <div>
+// Briques de base réutilisables dans les composants
 --bs-link-color: #000;
 --bs-link-color-rgb: 0, 0, 0;
 --bs-link-hover-color: #f16e00;
@@ -152,10 +231,43 @@ Tableau de Boostrap (probablement - à vérifier)
 --bs-code-color: #666;
 --bs-highlight-color: #fff;
 --bs-highlight-bg: #000;
---bs-border-color: #000;
---bs-border-translucent: #ccc
+
+/***** Réutilisables pour créer des composants custom <!-- TODO: Besoin d'expliquer comment ça fonctionne ? -->
+// Briques de base des bordures
+--bs-border-color: #000;                    Devrait etre --bs-border-primary/secondary ? ou --bs-border-high ? Coté Bs anyway
+--bs-border-translucent: #ccc               Devrait etre --bs-border-secondary/tertiary ? ou --bs-border-medium/low ? Coté Bs anyway
+
+// Briques de base du concept body
 --bs-body-color + rgb
 --bs-body-bg + rgb
+
+?? Devrait etre dans la section précedente avec les secondary-x/tertiary-x ? Ou alors rename avec des --bs-body-* ?
+--bs-secondary-color: #666; + rgb
+--bs-tertiary-color + rgb
+--bs-secondary-bg: #eee; + rgb
+--bs-tertiary-bg + rgb
+??
+
+// Brique de base du focus
+--bs-focus-visible-inner-color: #fff;
+--bs-focus-visible-outer-color: #000;
+
+// Briques de base des composants (+ forms ?)
+composant.hover.bg
+composant.active.bg
+composant.pressed.bg
+composant.disabled.bg
+composant.hover.color
+composant.active.color
+composant.pressed.color
+composant.disabled.color
+composant.hover.border
+composant.active.border
+composant.pressed.border
+composant.disabled.border
+/**************************************************/
+
+?? Coté Bootstrap ca devrait être dans la section liht vs dark ?, comme c'est des briques de base ?
 --bs-primary-text-emphasis: #f16e00;
 --bs-secondary-text-emphasis: #000;
 --bs-success-text-emphasis: #228722;
@@ -181,12 +293,7 @@ Tableau de Boostrap (probablement - à vérifier)
 --bs-light-border-subtle: #ccc;
 --bs-dark-border-subtle: #000;
 --bs-emphasis-color: #000; + rgb
---bs-secondary-color: #666; + rgb
---bs-tertiary-color + rgb
---bs-secondary-bg: #eee; + rgb
---bs-tertiary-bg + rgb
---bs-focus-visible-inner-color: #fff;
---bs-focus-visible-outer-color: #000;
+??
 </div>
 
 #### Composants
@@ -207,10 +314,10 @@ Ne devrait pas être dans _root.scss. Devrait être dans _components.scss.
 
 ### Sass variables
 
-#### Orange variables      
+#### Orange variables
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 {{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
-    
+
 #### Bootstrap variables
 
 TODO: explain this is the most important part. The rest will be implicit
@@ -590,126 +697,6 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
 </table>
 
 <!--Boosted mod: no "Using the new colors" section because `.bg-primary-subtle` stays orange without opacity in Boosted so the text can't be visible-->
-
-### Theme colors
-
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
-
-<div class="row">
-  {{< theme-colors.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-    <div class="col-md-4">
-      <div class="p-3 mb-3 fw-bold text-bg-{{ .name }}">{{ .name | title }}</div>
-    </div>
-  {{ end -}}
-  {{< /theme-colors.inline >}}
-</div>
-
-All these colors are available as a Sass map, `$theme-colors`.
-
-{{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
-
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
-
-### All colors
-
-{{< design-callout-alert >}}
-Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong to the Orange Design System specifications.
-
-Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
-{{< /design-callout-alert >}}
-
-{{< callout warning >}}
-All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
-
-Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
-{{< /callout >}}
-
-Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
-
-<div class="row font-monospace">
-  {{< theme-colors.inline >}}
-  {{- range $color := $.Site.Data.colors }}
-    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
-    <div class="col-md-4 mb-3">
-      <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
-        <strong class="d-block">${{ $color.name }}</strong>
-        {{ $color.hex }}
-      </div>
-      {{ range (seq 100 100 900) }}
-      <div class="p-3 bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
-      {{ end }}
-    </div>
-    {{ end -}}
-  {{ end -}}
-
-  <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 position-relative swatch-gray-500">
-      <strong class="d-block">$gray-500</strong>
-      #ccc
-    </div>
-  {{- range $.Site.Data.grays }}
-    <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
-  {{ end -}}
-  </div>
-  {{< /theme-colors.inline >}}
-
-  <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 bd-accessible-orange">
-      <strong class="d-block">$accessible-orange</strong>
-      #f16e00
-    </div>
-    <div class="p-3 mb-2 bd-supporting-yellow">
-      <strong class="d-block">$supporting-yellow</strong>
-      #ffd200
-    </div>
-    <div class="p-3 mb-2 bd-black text-white">
-      <strong class="d-block">$black</strong>
-      #000
-    </div>
-    <div class="p-3 mb-2 bd-white border">
-      <strong class="d-block">$white</strong>
-      #fff
-    </div>
-  </div>
-</div>
-
-### Notes on Sass
-
-Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
-
-Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
-
-Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
-
-## Color Sass maps
-
-Boosted's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
-
-- `$colors` lists all our available base (`500`) colors
-- `$theme-colors` lists all semantically named theme colors (shown below)
-- `$background-colors` overrides `$theme-colors` specifically for usage in `.bg-*` utilities
-- `$grays` lists all tints and shades of gray
-
-Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
-
-{{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
-
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
-
-### Example
-
-Here's how you can use these in your Sass:
-
-```scss
-.alpha { color: $purple; }
-.beta {
-  color: $yellow-300;
-  background-color: $indigo-900;
-}
-```
-
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
 
 ## Generating utilities
 
