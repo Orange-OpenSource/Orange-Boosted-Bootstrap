@@ -19,6 +19,7 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: transparent; // Boosted mod
 }
 
 .nav-link {
@@ -240,6 +241,7 @@
   // scss-docs-end tab-content-css-vars
 
   padding: var(--#{$prefix}tab-content-padding-y) var(--#{$prefix}tab-content-padding-x);
+  background-color: transparent;
   border: var(--#{$prefix}tab-content-border-width) solid var(--#{$prefix}tab-content-border-color);
   border-top: 0;
   // End mod
