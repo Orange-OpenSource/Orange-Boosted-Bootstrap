@@ -8,13 +8,6 @@ aliases:
 toc: true
 ---
 
-<!-- Boosted mod -->
-## Orange's colors
-
-{{< callout info >}}
-This page is an adaptation of the Bootstrap documentation.
-{{< /callout >}}
-
 This first part is about the colors that are dynamic depending on the used theme. The variables They are the variables you should be using inside your project.
 
 ### Theme colors
@@ -26,21 +19,13 @@ The core colors of orange design. These colors should always dominate other colo
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
-          <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">--bs-{{- $color.class -}}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
+    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{- end -}}
@@ -58,21 +43,13 @@ The functional colors of orange design. These colors are not meant to be used as
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-{{ $color.level }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{ $color.level }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name --bs-{{ $color.level }}</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">--bs-{{- $color.level -}}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
+    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+      <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
@@ -91,21 +68,13 @@ The functional grays of orange design. These colors are used as backgrounds, col
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4 pe-none">
+    <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+      <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="pe-auto user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="pe-auto user-select-all">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
@@ -122,20 +91,12 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="Supporting {{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">{{ $color.variable }}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
+    <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+      <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.hex }}</code></p>
     </div>
   </div>
   {{ end -}}
@@ -143,57 +104,144 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 {{ end -}}
 {{< /palette.inline >}}
 
-## Orange's full palette
+## Text
 
-The variables above should fulfil all your needs, but in case you still need some other colors, here are the design color tokens we use to build the usable colors above.
-None of the following variables are dynamic.
+#### Light vs Dark
 
-{{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "ODS colors" }}
-  {{- range $subcategory := .subcategories }}
-  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 gy-3 pb-3">
-    {{- range $color := .colors }}
-      <figure class="mb-0" aria-label="{{ $color.name }}">
-        <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-          <svg viewBox="0 0 100 100" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (eq $color.name "White 100") (eq $color.name "Black 900")) (eq $color.name "Gray 900") }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
-            <rect fill="{{ $color.hex }}" width="100" height="100"/>
-          </svg>
-          <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-        </button>
-        <figcaption class="py-1">
-          <code class="user-select-all">{{ $color.hex }}</code>
-          <hr class="my-1 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
-          <var class="user-select-all">{{- $color.variable -}}</var>
-        </figcaption>
-      </figure>
-    {{ end -}}
-  </div>
-  {{ end -}}
-{{ end -}}
-{{< /palette.inline >}}
+Ne devrait pas être utilisé directement (normalement)
 
-## Usage
+<div>
+--bs-primary: #f16e00; + rgb
+--bs-secondary: #000; + rgb
+--bs-success: #228722; + rgb
+--bs-info: #4170d8; + rgb
+--bs-warning: #fc0; + rgb
+--bs-danger: #cd3c14; + rgb
 
-Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
-Boosted core uses Bootstrap's naming for maintenance ease, but **you're encouraged to use Orange color tokens when it comes to custom code**.
+--bs-light: #ccc; + rgb
+--bs-dark: #000; + rgb
 
-<div class="row row-cols-1 row-cols-lg-2 mt-4">
-    <div class="col">
-        <h4>Orange color tokens</h4>
+Manque #fff > #141414
+
+// Functional grays (utilisés dans tous les composants)
+#eee      #333        --bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
+#ddd      #666        --bs-active-bg                  surface.highlight
+#ccc      #666        --bs-disabled-color             accent.neutral // accent.disabled
+#666      #999        --bs-placeholder-color          accent.secondary
+#333      #eee        --bs-body-color-subtle          -------
+
+
+--bs-hover-color                #000    #f7900        N'existe pas mais devrait être dans Figma
+--bs-gray-tweak                 #333    #666          N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
+--bs-black-tweak                #000    #141414       N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
+
+
+surface.low   #333 #333 ??? Utilisé dans Boosted ?
+inverted.background  #000 #000 ??? Utilisé dans Boosted ?
+</div>
+
+#### Concepts de base
+
+Tableau de Boostrap (probablement - à vérifier)
+
+<div>
+--bs-link-color: #000;
+--bs-link-color-rgb: 0, 0, 0;
+--bs-link-hover-color: #f16e00;
+--bs-link-hover-color-rgb: 241, 110, 0;
+--bs-code-color: #666;
+--bs-highlight-color: #fff;
+--bs-highlight-bg: #000;
+--bs-border-color: #000;
+--bs-border-translucent: #ccc
+--bs-body-color + rgb
+--bs-body-bg + rgb
+--bs-primary-text-emphasis: #f16e00;
+--bs-secondary-text-emphasis: #000;
+--bs-success-text-emphasis: #228722;
+--bs-info-text-emphasis: #4170d8;
+--bs-warning-text-emphasis: #fc0;
+--bs-danger-text-emphasis: #cd3c14;
+--bs-light-text-emphasis: #ccc;
+--bs-dark-text-emphasis: #000;
+--bs-primary-bg-subtle: #f16e00;
+--bs-secondary-bg-subtle: #000;
+--bs-success-bg-subtle: #228722;
+--bs-info-bg-subtle: #4170d8;
+--bs-warning-bg-subtle: #fc0;
+--bs-danger-bg-subtle: #cd3c14;
+--bs-light-bg-subtle: #ccc;
+--bs-dark-bg-subtle: #000;
+--bs-primary-border-subtle: #f16e00;
+--bs-secondary-border-subtle: #000;
+--bs-success-border-subtle: #228722;
+--bs-info-border-subtle: #4170d8;
+--bs-warning-border-subtle: #fc0;
+--bs-danger-border-subtle: #cd3c14;
+--bs-light-border-subtle: #ccc;
+--bs-dark-border-subtle: #000;
+--bs-emphasis-color: #000; + rgb
+--bs-secondary-color: #666; + rgb
+--bs-tertiary-color + rgb
+--bs-secondary-bg: #eee; + rgb
+--bs-tertiary-bg + rgb
+--bs-focus-visible-inner-color: #fff;
+--bs-focus-visible-outer-color: #000;
+</div>
+
+#### Composants
+
+Ne devrait pas être dans _root.scss. Devrait être dans _components.scss.
+
+<div>
+--bs-focus-ring-color
+--bs-form-valid-color: var(--bs-success-text-emphasis);
+--bs-form-valid-border-color: var(--bs-success);
+--bs-form-invalid-color: var(--bs-danger-text-emphasis);
+--bs-form-invalid-border-color: var(--bs-danger);
+</div>
+
+
+
+### Variables
+
+### Sass variables
+
+#### Orange variables      
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 {{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
-    </div>
-    <div class="col">
-        <h4>Bootstrap core variables</h4>
+    
+#### Bootstrap variables
+
+TODO: explain this is the most important part. The rest will be implicit
+
+TODO: add grays?
+
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
-    </div>
-</div>
-<!-- End mod -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <details>
-<summary>All colors from Bootstrap</summary>
-<br>
-<h2>Colors</h2>
+<summary>Table of contents</summary>
+
+## Colors
 
 {{< added-in "5.3.0" >}}
 
@@ -543,7 +591,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
 
 <!--Boosted mod: no "Using the new colors" section because `.bg-primary-subtle` stays orange without opacity in Boosted so the text can't be visible-->
 
-<h3>Theme colors</h3>
+### Theme colors
 
 We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
 
@@ -557,15 +605,13 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-All these colors are available as a Sass map, `$theme-colors` or `$theme-colors-dark`.
+All these colors are available as a Sass map, `$theme-colors`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
-
 Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
-<h3>All colors</h3>
+### All colors
 
 {{< design-callout-alert >}}
 Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong to the Orange Design System specifications.
@@ -609,6 +655,14 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 bd-accessible-orange">
+      <strong class="d-block">$accessible-orange</strong>
+      #f16e00
+    </div>
+    <div class="p-3 mb-2 bd-supporting-yellow">
+      <strong class="d-block">$supporting-yellow</strong>
+      #ffd200
+    </div>
     <div class="p-3 mb-2 bd-black text-white">
       <strong class="d-block">$black</strong>
       #000
@@ -620,7 +674,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   </div>
 </div>
 
-<h3>Notes on Sass</h3>
+### Notes on Sass
 
 Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
 
@@ -628,7 +682,7 @@ Using `mix()` is not the same as `lighten()` and `darken()`—the former blends 
 
 Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
 
-<h2>Color Sass maps</h2>
+## Color Sass maps
 
 Boosted's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
 
@@ -643,7 +697,7 @@ Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass ma
 
 Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
-<h3>Example</h3>
+### Example
 
 Here's how you can use these in your Sass:
 
@@ -657,7 +711,7 @@ Here's how you can use these in your Sass:
 
 [Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
 
-<h2>Generating utilities</h2>
+## Generating utilities
 
 {{< added-in "5.1.0" >}}
 
