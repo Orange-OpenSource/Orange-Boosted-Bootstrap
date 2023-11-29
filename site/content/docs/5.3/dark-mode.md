@@ -4739,186 +4739,186 @@ sitemap_exclude: true
 <h4 class="mt-3">No theme</h4>
 
 <div class="d-flex flex-column gap-2 border p-3">
-  <span class="placeholder col-12 text-bg-primary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-primary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-glow">Text</span>
+  <span class="placeholder col-12 bg-primary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-primary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-dark placeholder-wave"></span>
+  <span class="placeholder col-12 bg-dark placeholder-glow"></span>
+  <span class="placeholder col-12 bg-success placeholder-wave"></span>
+  <span class="placeholder col-12 bg-success placeholder-glow"></span>
+  <span class="placeholder col-12 bg-info placeholder-wave"></span>
+  <span class="placeholder col-12 bg-info placeholder-glow"></span>
+  <span class="placeholder col-12 bg-warning placeholder-wave"></span>
+  <span class="placeholder col-12 bg-warning placeholder-glow"></span>
+  <span class="placeholder col-12 bg-danger placeholder-wave"></span>
+  <span class="placeholder col-12 bg-danger placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-glow"></span>
+  <span class="placeholder col-12 bg-light placeholder-wave"></span>
+  <span class="placeholder col-12 bg-light placeholder-glow"></span>
+  <span class="placeholder col-12 bg-white placeholder-wave"></span>
+  <span class="placeholder col-12 bg-white placeholder-glow"></span>
+  <span class="placeholder col-12 bg-body placeholder-wave"></span>
+  <span class="placeholder col-12 bg-body placeholder-glow"></span>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="dark">
-  <span class="placeholder col-12 text-bg-primary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-primary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-glow">Text</span>
+  <span class="placeholder col-12 bg-primary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-primary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-dark placeholder-wave"></span>
+  <span class="placeholder col-12 bg-dark placeholder-glow"></span>
+  <span class="placeholder col-12 bg-success placeholder-wave"></span>
+  <span class="placeholder col-12 bg-success placeholder-glow"></span>
+  <span class="placeholder col-12 bg-info placeholder-wave"></span>
+  <span class="placeholder col-12 bg-info placeholder-glow"></span>
+  <span class="placeholder col-12 bg-warning placeholder-wave"></span>
+  <span class="placeholder col-12 bg-warning placeholder-glow"></span>
+  <span class="placeholder col-12 bg-danger placeholder-wave"></span>
+  <span class="placeholder col-12 bg-danger placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-glow"></span>
+  <span class="placeholder col-12 bg-light placeholder-wave"></span>
+  <span class="placeholder col-12 bg-light placeholder-glow"></span>
+  <span class="placeholder col-12 bg-white placeholder-wave"></span>
+  <span class="placeholder col-12 bg-white placeholder-glow"></span>
+  <span class="placeholder col-12 bg-body placeholder-wave"></span>
+  <span class="placeholder col-12 bg-body placeholder-glow"></span>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
 <div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="light">
-  <span class="placeholder col-12 text-bg-primary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-primary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-secondary placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-dark placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-success placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-info placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-warning placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-bg-danger placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-green placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-purple placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-yellow placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-blue placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-pink placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-supporting-orange placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-light placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-black bg-white placeholder-glow">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-wave">Text</span>
-  <span class="placeholder col-12 text-body bg-body placeholder-glow">Text</span>
+  <span class="placeholder col-12 bg-primary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-primary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-wave"></span>
+  <span class="placeholder col-12 bg-secondary placeholder-glow"></span>
+  <span class="placeholder col-12 bg-dark placeholder-wave"></span>
+  <span class="placeholder col-12 bg-dark placeholder-glow"></span>
+  <span class="placeholder col-12 bg-success placeholder-wave"></span>
+  <span class="placeholder col-12 bg-success placeholder-glow"></span>
+  <span class="placeholder col-12 bg-info placeholder-wave"></span>
+  <span class="placeholder col-12 bg-info placeholder-glow"></span>
+  <span class="placeholder col-12 bg-warning placeholder-wave"></span>
+  <span class="placeholder col-12 bg-warning placeholder-glow"></span>
+  <span class="placeholder col-12 bg-danger placeholder-wave"></span>
+  <span class="placeholder col-12 bg-danger placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-green placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-purple placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-yellow placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-blue placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-pink placeholder-glow"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-wave"></span>
+  <span class="placeholder col-12 bg-supporting-orange placeholder-glow"></span>
+  <span class="placeholder col-12 bg-light placeholder-wave"></span>
+  <span class="placeholder col-12 bg-light placeholder-glow"></span>
+  <span class="placeholder col-12 bg-white placeholder-wave"></span>
+  <span class="placeholder col-12 bg-white placeholder-glow"></span>
+  <span class="placeholder col-12 bg-body placeholder-wave"></span>
+  <span class="placeholder col-12 bg-body placeholder-glow"></span>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="d-flex flex-column gap-2 border p-3" style="background-color: #282d55;">
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-primary placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-primary placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-secondary placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-secondary placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-dark placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-dark placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-success placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-success placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-info placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-info placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-warning placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-warning placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-danger placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-bg-danger placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-green placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-green placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-purple placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-purple placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-yellow placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-yellow placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-blue placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-blue placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-pink placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-pink placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-orange placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-supporting-orange placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-light placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-light placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-white placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-black bg-white placeholder-glow">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-body bg-body placeholder-wave">Text</span>
-  <span data-bs-theme="dark" class="placeholder col-12 text-body bg-body placeholder-glow">Text</span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-primary placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-primary placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-secondary placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-secondary placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-dark placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-dark placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-success placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-success placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-info placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-info placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-warning placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-warning placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-danger placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-danger placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-green placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-green placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-purple placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-purple placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-yellow placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-yellow placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-blue placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-blue placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-pink placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-pink placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-orange placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-supporting-orange placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-light placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-light placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-white placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-white placeholder-glow"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-body placeholder-wave"></span>
+  <span data-bs-theme="dark" class="placeholder col-12 bg-body placeholder-glow"></span>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="d-flex flex-column gap-2 border p-3" style="background-color: #b5e8f7">
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-primary placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-primary placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-secondary placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-secondary placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-dark placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-dark placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-success placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-success placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-info placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-info placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-warning placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-warning placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-danger placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-bg-danger placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-green placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-green placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-purple placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-purple placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-yellow placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-yellow placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-blue placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-blue placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-pink placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-pink placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-orange placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-supporting-orange placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-light placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-light placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-white placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-black bg-white placeholder-glow">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-body bg-body placeholder-wave">Text</span>
-  <span data-bs-theme="light" class="placeholder col-12 text-body bg-body placeholder-glow">Text</span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-primary placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-primary placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-secondary placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-secondary placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-dark placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-dark placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-success placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-success placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-info placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-info placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-warning placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-warning placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-danger placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-danger placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-green placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-green placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-purple placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-purple placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-yellow placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-yellow placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-blue placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-blue placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-pink placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-pink placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-orange placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-supporting-orange placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-light placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-light placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-white placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-white placeholder-glow"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-body placeholder-wave"></span>
+  <span data-bs-theme="light" class="placeholder col-12 bg-body placeholder-glow"></span>
 </div>
 
 ### Popovers
