@@ -548,7 +548,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3" data-bs-theme="dark">
   <button type="button" class="btn btn-primary">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
@@ -566,7 +566,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3" data-bs-theme="light">
   <button type="button" class="btn btn-primary">
     Notifications <span class="badge text-bg-dark">4</span>
   </button>
@@ -4775,7 +4775,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 border p-3" data-bs-theme="dark">
   <span class="placeholder col-12 bg-primary placeholder-wave"></span>
   <span class="placeholder col-12 bg-primary placeholder-glow"></span>
   <span class="placeholder col-12 bg-secondary placeholder-wave"></span>
@@ -4812,7 +4812,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 border p-3" data-bs-theme="light">
   <span class="placeholder col-12 bg-primary placeholder-wave"></span>
   <span class="placeholder col-12 bg-primary placeholder-glow"></span>
   <span class="placeholder col-12 bg-secondary placeholder-wave"></span>
