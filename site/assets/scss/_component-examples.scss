@@ -452,7 +452,7 @@
 }
 
 .double-figure {
-  background: linear-gradient(to bottom, #fff, #fff calc((100% - 1.375rem) * .5), #141414 calc((100% - 1.375rem) * .5), #141414 calc(100% - 1.375rem), transparent calc(100% - 1.375rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, #fff, #fff calc((100% - 1.375rem) * .5), $gray-950 calc((100% - 1.375rem) * .5), $gray-950 calc(100% - 1.375rem), transparent calc(100% - 1.375rem)); // stylelint-disable-line function-disallowed-list
 
   .color-copy {
     margin: 10px 0;

@@ -8,18 +8,18 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
+$white:    $ods-white-100 !default;
 $gray-100: #fafafa !default;
 $gray-200: #f6f6f6 !default;
-$gray-300: #eee !default;
-$gray-400: #ddd !default;
-$gray-500: #ccc !default;
-$gray-600: #999 !default;
-$gray-700: #666 !default;
-$gray-800: #595959 !default;
-$gray-900: #333 !default;
-$gray-950: #141414 !default;
-$black:    #000 !default;
+$gray-300: $ods-gray-200 !default;
+$gray-400: $ods-gray-300 !default;
+$gray-500: $ods-gray-400 !default;
+$gray-600: $ods-gray-500 !default;
+$gray-700: $ods-gray-600 !default;
+$gray-800: $ods-gray-700 !default;
+$gray-900: $ods-gray-800 !default;
+$gray-950: $ods-gray-900 !default;
+$black:    $ods-black-900 !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -45,16 +45,16 @@ $grays: (
 $accessible-orange: #f16e00 !default;
 $brand-orange:      #ff7900 !default;
 //// Functional colors
-$functional-green:  #228722 !default;
-$functional-blue:   #4170d8 !default;
-$functional-yellow: #fc0 !default;
-$functional-red:    #cd3c14 !default;
+$functional-green:  $ods-forest-200 !default;
+$functional-blue:   $ods-water-200 !default;
+$functional-yellow: $ods-sun-100 !default;
+$functional-red:    $ods-fire-200 !default;
 //// Supporting colors
-$supporting-blue:   #4bb4e6 !default;
-$supporting-yellow: #ffd200 !default;
-$supporting-green:  #50be87 !default;
-$supporting-purple: #a885d8 !default;
-$supporting-pink:   #ffb4e6 !default;
+$supporting-blue:   $ods-blue-300 !default;
+$supporting-yellow: $ods-yellow-300 !default;
+$supporting-green:  $ods-green-300 !default;
+$supporting-purple: $ods-purple-300 !default;
+$supporting-pink:   $ods-pink-300 !default;
 // scss-docs-end brand-colors
 // End mod
 
@@ -110,35 +110,35 @@ $blue-700: shade-color($blue, 40%) !default;
 $blue-800: shade-color($blue, 60%) !default;
 $blue-900: shade-color($blue, 80%) !default;
 
-$indigo-100: tint-color($indigo, 80%) !default;
-$indigo-200: tint-color($indigo, 60%) !default;
-$indigo-300: tint-color($indigo, 40%) !default;
-$indigo-400: tint-color($indigo, 20%) !default;
-$indigo-500: $indigo !default;
-$indigo-600: shade-color($indigo, 20%) !default;
-$indigo-700: shade-color($indigo, 40%) !default;
-$indigo-800: shade-color($indigo, 60%) !default;
-$indigo-900: shade-color($indigo, 80%) !default;
+$indigo-100: $ods-purple-100 !default;
+$indigo-200: $ods-purple-200 !default;
+$indigo-300: $ods-purple-300 !default;
+$indigo-400: $ods-purple-400 !default;
+$indigo-500: $ods-purple-500 !default;
+$indigo-600: $ods-purple-600 !default;
+$indigo-700: shade-color($ods-purple-600, 20%) !default;
+$indigo-800: shade-color($ods-purple-600, 40%) !default;
+$indigo-900: shade-color($ods-purple-600, 60%) !default;
 
-$purple-100: tint-color($purple, 80%) !default;
-$purple-200: tint-color($purple, 60%) !default;
-$purple-300: tint-color($purple, 40%) !default;
-$purple-400: tint-color($purple, 20%) !default;
-$purple-500: $purple !default;
-$purple-600: shade-color($purple, 20%) !default;
-$purple-700: shade-color($purple, 40%) !default;
-$purple-800: shade-color($purple, 60%) !default;
-$purple-900: shade-color($purple, 80%) !default;
+$purple-100: $ods-purple-100 !default;
+$purple-200: $ods-purple-200 !default;
+$purple-300: $ods-purple-300 !default;
+$purple-400: $ods-purple-400 !default;
+$purple-500: $ods-purple-500 !default;
+$purple-600: $ods-purple-600 !default;
+$purple-700: shade-color($ods-purple-600, 20%) !default;
+$purple-800: shade-color($ods-purple-600, 40%) !default;
+$purple-900: shade-color($ods-purple-600, 60%) !default;
 
-$pink-100: tint-color($pink, 80%) !default;
-$pink-200: tint-color($pink, 60%) !default;
-$pink-300: tint-color($pink, 40%) !default;
-$pink-400: tint-color($pink, 20%) !default;
-$pink-500: $pink !default;
-$pink-600: shade-color($pink, 20%) !default;
-$pink-700: shade-color($pink, 40%) !default;
-$pink-800: shade-color($pink, 60%) !default;
-$pink-900: shade-color($pink, 80%) !default;
+$pink-100: $ods-pink-100 !default;
+$pink-200: $ods-pink-200 !default;
+$pink-300: $ods-pink-300 !default;
+$pink-400: $ods-pink-400 !default;
+$pink-500: $ods-pink-500 !default;
+$pink-600: $ods-pink-600 !default;
+$pink-700: shade-color($ods-pink-600, 20%) !default;
+$pink-800: shade-color($ods-pink-600, 40%) !default;
+$pink-900: shade-color($ods-pink-600, 60%) !default;
 
 $red-100: tint-color($red, 80%) !default;
 $red-200: tint-color($red, 60%) !default;
@@ -160,15 +160,15 @@ $orange-700: shade-color($orange, 40%) !default;
 $orange-800: shade-color($orange, 60%) !default;
 $orange-900: shade-color($orange, 80%) !default;
 
-$yellow-100: tint-color($yellow, 80%) !default;
-$yellow-200: tint-color($yellow, 60%) !default;
-$yellow-300: tint-color($yellow, 40%) !default;
-$yellow-400: tint-color($yellow, 20%) !default;
-$yellow-500: $yellow !default;
-$yellow-600: shade-color($yellow, 20%) !default;
-$yellow-700: shade-color($yellow, 40%) !default;
-$yellow-800: shade-color($yellow, 60%) !default;
-$yellow-900: shade-color($yellow, 80%) !default;
+$yellow-100: $ods-yellow-100 !default;
+$yellow-200: $ods-yellow-200 !default;
+$yellow-300: $ods-yellow-300 !default;
+$yellow-400: $ods-yellow-400 !default;
+$yellow-500: $ods-yellow-500 !default;
+$yellow-600: $ods-yellow-600 !default;
+$yellow-700: shade-color($ods-yellow-600, 20%) !default;
+$yellow-800: shade-color($ods-yellow-600, 40%) !default;
+$yellow-900: shade-color($ods-yellow-600, 60%) !default;
 
 $green-100: tint-color($green, 80%) !default;
 $green-200: tint-color($green, 60%) !default;
@@ -180,25 +180,25 @@ $green-700: shade-color($green, 40%) !default;
 $green-800: shade-color($green, 60%) !default;
 $green-900: shade-color($green, 80%) !default;
 
-$teal-100: tint-color($teal, 80%) !default;
-$teal-200: tint-color($teal, 60%) !default;
-$teal-300: tint-color($teal, 40%) !default;
-$teal-400: tint-color($teal, 20%) !default;
-$teal-500: $teal !default;
-$teal-600: shade-color($teal, 20%) !default;
-$teal-700: shade-color($teal, 40%) !default;
-$teal-800: shade-color($teal, 60%) !default;
-$teal-900: shade-color($teal, 80%) !default;
+$teal-100: $ods-green-100 !default;
+$teal-200: $ods-green-200 !default;
+$teal-300: $ods-green-300 !default;
+$teal-400: $ods-green-400 !default;
+$teal-500: $ods-green-500 !default;
+$teal-600: $ods-green-600 !default;
+$teal-700: shade-color($ods-green-600, 20%) !default;
+$teal-800: shade-color($ods-green-600, 40%) !default;
+$teal-900: shade-color($ods-green-600, 60%) !default;
 
-$cyan-100: tint-color($cyan, 80%) !default;
-$cyan-200: tint-color($cyan, 60%) !default;
-$cyan-300: tint-color($cyan, 40%) !default;
-$cyan-400: tint-color($cyan, 20%) !default;
-$cyan-500: $cyan !default;
-$cyan-600: shade-color($cyan, 20%) !default;
-$cyan-700: shade-color($cyan, 40%) !default;
-$cyan-800: shade-color($cyan, 60%) !default;
-$cyan-900: shade-color($cyan, 80%) !default;
+$cyan-100: $ods-blue-100 !default;
+$cyan-200: $ods-blue-200 !default;
+$cyan-300: $ods-blue-300 !default;
+$cyan-400: $ods-blue-400 !default;
+$cyan-500: $ods-blue-500 !default;
+$cyan-600: $ods-blue-600 !default;
+$cyan-700: shade-color($ods-blue-600, 20%) !default;
+$cyan-800: shade-color($ods-blue-600, 40%) !default;
+$cyan-900: shade-color($ods-blue-600, 60%) !default;
 
 $blues: (
   "blue-100": $blue-100,
@@ -398,7 +398,7 @@ $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill='#{$warning}' fill-rule='evenodd' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875ZM500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
-$warning-icon-filled:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill='#{$warning}' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875Z'/><path fill='#000' d='M500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
+$warning-icon-filled:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill='#{$warning}' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875Z'/><path fill='#{$black}' d='M500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
 $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default;
 $add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
 $remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
@@ -1220,10 +1220,10 @@ $form-star-rating-unchecked-color:      var(--#{$prefix}secondary-color) !defaul
 $form-star-rating-hover-color:          var(--#{$prefix}highlight-bg) !default;
 $form-star-rating-disabled-color:       var(--#{$prefix}disabled-color) !default;
 
-$form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
-$form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
-$form-star-rating-sm-checked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' stroke='#000' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
-$form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='transparent' stroke='#000' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
+$form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#{$black}' stroke='#{$black}' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
+$form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#{$black}' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
+$form-star-rating-sm-checked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#{$black}' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
+$form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='transparent' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
 //fusv-disable
 $form-star-focus-color:                 $black !default; // Deprecated in v5.2.3
 $form-star-focus-outline:               var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3
@@ -1295,7 +1295,7 @@ $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x top add(50%, 1px) !default;
 $form-select-bg-size:               .875rem 1rem !default; // In pixels because image dimensions
 $form-select-indicator:             escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
-$form-select-disabled-indicator:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#666' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
+$form-select-disabled-indicator:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-700}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
 $form-select-feedback-icon-position:    center right $form-select-indicator-padding !default;
