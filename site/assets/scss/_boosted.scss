@@ -50,6 +50,14 @@ body {
   text-rendering: optimizelegibility;
 }
 
+#orange-logo ~ .row .ratio .figure-caption {
+  bottom: -#{$spacer * 1.5};
+
+  @include media-breakpoint-up(lg) {
+    bottom: -#{$spacer};
+  }
+}
+
 // Back to top offset
 [id="#{$back-to-top-target-id}"]:target {
   @include media-breakpoint-up(md) {
