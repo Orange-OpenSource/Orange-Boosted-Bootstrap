@@ -9,6 +9,7 @@
   height: var(--#{$prefix}spinner-height);
   color: #{$spinner-color}; // Boosted mod
   vertical-align: var(--#{$prefix}spinner-vertical-align);
+  background-color: transparent; // Boosted mod
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
   animation: var(--#{$prefix}spinner-animation-speed) linear infinite var(--#{$prefix}spinner-animation-name);
