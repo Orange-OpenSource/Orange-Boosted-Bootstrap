@@ -13,18 +13,9 @@
       }
     }
   } @else {
-    // Boosted mod
-    @if $mode == "light" {
-      :root,
-      [data-bs-theme="#{$mode}"] {
-        @content;
-      }
-    } @else {
-      [data-bs-theme="#{$mode}"] {
-        @content;
-      }
+    [data-bs-theme="#{$mode}"] {
+      @content;
     }
-    // End mod
   }
 }
 // scss-docs-end color-mode-mixin
