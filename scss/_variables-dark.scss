@@ -8,10 +8,10 @@
 
 // Boosted mod
 // scss-docs-start brand-colors-dark
-$functional-green-dark:  #6c6 !default;
-$functional-blue-dark:   #69f !default;
+$functional-green-dark:  $ods-forest-100 !default;
+$functional-blue-dark:   $ods-water-100 !default;
 $functional-yellow-dark: $functional-yellow !default;
-$functional-red-dark:    #f66 !default;
+$functional-red-dark:    $ods-fire-100 !default;
 // scss-docs-end brand-colors-dark
 
 // scss-docs-start sass-dark-mode-vars
@@ -111,8 +111,8 @@ $svg-as-custom-props-dark: (
 //
 
 // Boosted mod: no $form-select-indicator-color-dark
-$form-select-indicator-dark:          escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#fff' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
-$form-select-disabled-indicator-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#999' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
+$form-select-indicator-dark:          escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
+$form-select-disabled-indicator-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-600}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
 
 // Boosted mod: no $form-switch-color-dark
 // Boosted mod: no $form-switch-bg-image-dark

@@ -2,10 +2,11 @@
 
 // Colors palette
 
-// fusv-disable
 // Orange
+// fusv-disable
 $ods-orange-100: #ff7900 !default;
 $ods-orange-200: #f16e00 !default;
+// fusv-enable
 
 // White, grays and black
 $ods-white-100: #fff !default;
@@ -33,7 +34,9 @@ $ods-water-200: #4170d8 !default;
 
 // Sun
 $ods-sun-100: #fc0 !default;
+// fusv-disable
 $ods-sun-200: #8f7200 !default;
+// fusv-enable
 
 // Blue
 $ods-blue-100: #b5e8f7 !default;
@@ -74,4 +77,3 @@ $ods-yellow-300: #ffd200 !default;
 $ods-yellow-400: #ffb400 !default;
 $ods-yellow-500: #b98f11 !default;
 $ods-yellow-600: #9d6e06 !default;
-// fusv-enable
