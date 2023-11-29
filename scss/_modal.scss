@@ -50,6 +50,7 @@
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
   // See also https://github.com/twbs/bootstrap/issues/17695
+  background-color: transparent; // Boosted mod
 }
 
 // Shell div to position the modal with bottom padding
