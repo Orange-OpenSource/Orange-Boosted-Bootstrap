@@ -2,6 +2,7 @@
 .link-chevron {
   font-weight: $font-weight-bold;
   text-decoration: if($link-decoration == none, null, none);
+  background-color: transparent;
 
   &::after {
     display: inline-block;

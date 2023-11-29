@@ -105,7 +105,7 @@
 a.tag,
 button.tag,
 label.tag {
-  color: var(--#{$prefix}body-color);
+  color: var(--#{$prefix}tag-color);
   text-decoration: none;
   cursor: pointer;
 
