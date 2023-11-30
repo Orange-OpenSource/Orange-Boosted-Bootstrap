@@ -45,18 +45,6 @@ $theme-colors-border-subtle: (
 ) !default;
 // scss-docs-end theme-border-subtle-map
 
-// Boosted mod
-$background-colors: map-merge(
-  $theme-colors,
-  (
-    "success": $supporting-green,
-    "info":    $supporting-blue,
-    "warning": $supporting-yellow,
-    "danger":  $danger
-  )
-) !default;
-// End mod
-
 $theme-colors-text-dark: null !default;
 $theme-colors-bg-subtle-dark: null !default;
 $theme-colors-border-subtle-dark: null !default;

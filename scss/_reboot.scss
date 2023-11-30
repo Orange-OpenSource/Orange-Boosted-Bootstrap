@@ -88,21 +88,23 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 //    See https://github.com/WICG/focus-visible
-//    Note: this rule is not applied for our focus ring helper which
+//    Note 1: this rule is not applied for our focus ring helper which
 //    handles itself outline and box shadow
+//    Note 2: this rule is also not applied for invalid select and invalid input files to ensure
+//    sufficient contrast between select elements on error focused vs. non focused
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
   @include focus-visible(); // 1
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring),
-.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring) { // 2
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible):not(.focus-ring) { // 3
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
   outline: 0 !important;
   box-shadow: none;
 }
@@ -313,7 +315,7 @@ small {
 
 mark {
   padding: $mark-padding;
-  color: var(--#{$prefix}highlight-color); // Boosted mod
+  color: var(--#{$prefix}highlight-color);
   background-color: var(--#{$prefix}highlight-bg);
 }
 
