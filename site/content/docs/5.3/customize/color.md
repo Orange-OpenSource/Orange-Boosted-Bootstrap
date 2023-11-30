@@ -296,19 +296,21 @@ composant.disabled.border
 ??
 </div>
 
-#### Composants
+<!--
+TODO: IMO this section shouldn't appear here because it's rather related to components. These CSS variables shouldn't be in __root.scss_ but in specific files like it's suggested in https://github.com/twbs/bootstrap/pull/39295.
 
-Ne devrait pas être dans _root.scss. Devrait être dans _components.scss.
+#### Components
 
-<div>
+Then we have the following list of CSS variables that are related to components, forms and helpers defined at the root level:
+
+```
 --bs-focus-ring-color
 --bs-form-valid-color: var(--bs-success-text-emphasis);
 --bs-form-valid-border-color: var(--bs-success);
 --bs-form-invalid-color: var(--bs-danger-text-emphasis);
 --bs-form-invalid-border-color: var(--bs-danger);
-</div>
-
-
+```
+-->
 
 ### Variables
 
@@ -320,9 +322,10 @@ Ne devrait pas être dans _root.scss. Devrait être dans _components.scss.
 
 #### Bootstrap variables
 
-TODO: explain this is the most important part. The rest will be implicit
-
+<!--
+TODO: explain that this is only the most important part, and that the rest exists somewhere else but is not documented here
 TODO: add grays?
+-->
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
