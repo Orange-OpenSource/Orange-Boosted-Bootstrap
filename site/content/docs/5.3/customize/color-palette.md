@@ -37,15 +37,19 @@ None of the following variables are dynamic.
 {{ end -}}
 {{< /palette.inline >}}
 
+## Bootstrap's palette
+
+Bootstrap defines a color palette on its own. We worked on a mapping between Orange Design System's colors and Bootstrap's ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with Boosted CSS, provides an acceptable automatic rendering.
+
 <details>
 <summary>See Bootstrap's palette</summary>
 <br>
 <h2>All colors</h2>
 
 {{< design-callout-alert >}}
-Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong to the Orange Design System specifications.
+Some of the colors below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color-theme#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our Boosted [color palette]({{< docsref "/customize/color-palette#palette" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout warning >}}
