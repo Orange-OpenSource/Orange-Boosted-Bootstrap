@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: Color
+title: Color theme
 description: Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
 aliases:
   - "/docs/customize/color/"
+  - "/docs/5.3/about/customize/color/"
+  - "/docs/customize/color-theme/"
 toc: true
 ---
 
@@ -40,7 +42,7 @@ However, other colors are needed to create an interface. The following sections 
 The corresponding CSS variables displayed in these sections are used within the framework to create our components and utilities. But they are rarely used and to be used directly in a project. We recommend using the [usable variables](#usable-variables) instead that are more specific.
 {{< /callout >}}
 
-### Theme colors
+### Core
 
 The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
@@ -64,8 +66,8 @@ The core colors of orange design. These colors should always dominate other colo
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 ps-2 mb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="light"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all text-body">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{- end -}}
@@ -74,7 +76,7 @@ The core colors of orange design. These colors should always dominate other colo
 {{ end -}}
 {{< /palette.inline >}}
 
-### Functional colors
+### Functional
 
 The functional colors of orange design. These colors are not meant to be used as backgrounds or colors. They are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error). They should be associated with a meaningful icon.
 
@@ -96,8 +98,8 @@ The functional colors of orange design. These colors are not meant to be used as
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="light"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all text-body">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
@@ -107,7 +109,7 @@ The functional colors of orange design. These colors are not meant to be used as
 {{ end -}}
 {{< /palette.inline >}}
 
-### Functional grays
+### Grays
 
 The functional grays of orange design. These colors are used as backgrounds, colors or borders to outline some elements (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
@@ -131,8 +133,8 @@ The functional grays of orange design. These colors are used as backgrounds, col
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4 pe-none">
-      <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-0" data-bs-theme="dark"><code class="pe-auto user-select-all">{{ $color.darkHex }}</code></p>
+      <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all text-body">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="pe-auto user-select-all text-body">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
@@ -141,7 +143,7 @@ The functional grays of orange design. These colors are used as backgrounds, col
 {{ end -}}
 {{< /palette.inline >}}
 
-### Supporting colors
+### Supporting
 
 The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. They should not be used alone or dominate the page.
 
@@ -164,8 +166,8 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
-      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="light"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
+      <p class="mb-0" data-bs-theme="dark"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
     </div>
   </div>
   {{ end -}}

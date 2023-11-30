@@ -62,7 +62,7 @@ Here is a list of these extra classes:
 {{< callout >}}
 ### Color naming
 
-Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color#oranges-colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
+Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color-theme#oranges-colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
 Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
 {{< /callout >}}
 
