@@ -8,17 +8,15 @@ aliases:
 toc: true
 ---
 
+<!--
+TODO: add an introduction paragraph talking about the color palette + a link to the color palette page.
+-->
+
 ## Theming
 
-{{< callout warning >}}
-This part explains how we built our large set of [dynamic usable variables](#usable-variables). They aren't the variables you should be using inside your project.
-{{< /callout >}}
+We use a subset of [the full color palette]({{< docsref "/customize/color-palette" >}}) to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
 
-{{< callout warning >}}
-Following parts might expose some **hexadecimal codes**. They aren't meant to be used. They are only informational. **Prefer using the associated variables.**
-{{< /callout >}}
-
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
+This smaller color palette is used to generate our components variants and our color-related utilities and helpers.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -36,9 +34,17 @@ All these colors are available as a Sass map, `$theme-colors`.
 
 Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
+However, other colors are needed to create an interface. The following sections explain which colors are used for which purpose in a light and dark mode context.
+
+{{< callout info >}}
+The corresponding CSS variables displayed in these sections are used within the framework to create our components and utilities. But they are rarely used and to be used directly in a project. We recommend using the [usable variables](#usable-variables) instead that are more specific.
+{{< /callout >}}
+
 ### Theme colors
 
 The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
+
+<!-- TODO: find a new variable instead of --bs-body-bg -->
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
@@ -105,6 +111,8 @@ The functional colors of orange design. These colors are not meant to be used as
 
 The functional grays of orange design. These colors are used as backgrounds, colors or borders to outline some elements (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
+<!-- TODO: find new variables for all these use cases -->
+
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
@@ -137,6 +145,8 @@ The functional grays of orange design. These colors are used as backgrounds, col
 
 The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. They should not be used alone or dominate the page.
 
+<!-- TODO: create new CSS variables for all these use cases -->
+
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
@@ -164,6 +174,16 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 {{< /palette.inline >}}
 
 ## Usable variables
+
+#### Save
+
+{{< callout warning >}}
+This part explains how we built our large set of [dynamic usable variables](#usable-variables). They aren't the variables you should be using inside your project.
+{{< /callout >}}
+
+{{< callout warning >}}
+Following parts might expose some **hexadecimal codes**. They aren't meant to be used. They are only informational. **Prefer using the associated variables.**
+{{< /callout >}}
 
 #### Light vs Dark
 
