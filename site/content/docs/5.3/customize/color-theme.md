@@ -189,9 +189,8 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 
 #### Light vs Dark
 
-Ne devrait pas être utilisé directement (normalement)
+<!--TODO: the following shouldn't be used directly (or rarely):
 
-<div>
 // Functional colors
 --bs-primary: #f16e00; + rgb                          accent.primary
 --bs-secondary: #000; + rgb                           surface.medium // accent.focus
@@ -199,53 +198,55 @@ Ne devrait pas être utilisé directement (normalement)
 --bs-info: #4170d8; + rgb                             accent.information
 --bs-warning: #fc0; + rgb                             accent.warning
 --bs-danger: #cd3c14; + rgb                           accent.negative
-Manque #fff > #141414 --bs-body-bg                    background
+Missing: #fff > #141414 --bs-body-bg                    background
 
-// Concepts fonctionnels manquants
+// Missing functional concepts
 --bs-light: #ccc; + rgb
 --bs-dark: #000; + rgb
 
-// Functional grays (utilisés dans tous les composants) (fontion: gris ? neutre ?)
+// Functional grays (used in all components) (function: gray, neutral)
 #eee      #333        --bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
 #ddd      #666        --bs-active-bg                  surface.highlight
 #ccc      #666        --bs-disabled-color             accent.neutral // accent.disabled
 #666      #999        --bs-placeholder-color          accent.secondary
-#333      #333        Variable a introduire           surface.low ??? Utilisé dans Boosted ? Pourrait être --bs-light dans un premier temps?
-#000      #000        Variable a introduire           inverted.background ??? Utilisé dans Boosted ? Pourrait être --bs-dark dans un premier temps?
+#333      #333        Variable to introduce?          surface.low ??? Used in Boosted? Could be --bs-light for now?
+#000      #000        Variable to introduce?          inverted.background ??? Used in Boosted? Could be --bs-dark for now?
 
 // Supporting colors
-#4bb4e6   #4bb4e6     Variable a introduire           surface.extra1 (bleu)
-#50be87   #50be87     Variable a introduire           surface.extra2 (vert)
-#ffb4e6   #ffb4e6     Variable a introduire           surface.extra3 (rose)
-#a885d8   #a885d8     Variable a introduire           surface.extra4 (violet)
-#ffd200   #ffd200     Variable a introduire           surface.extra5 (jaune)
-#ff7900   #ff7900     Variable a introduire           surface.high (orange)
-#f9f5f0   #f9f5f0     Variable a introduire           surface.extra6 (organic) ??? Encore des gros doutes sur celle-ci
+#4bb4e6   #4bb4e6     Variable to introduce?          surface.extra1 (blue)
+#50be87   #50be87     Variable to introduce?          surface.extra2 (green)
+#ffb4e6   #ffb4e6     Variable to introduce?          surface.extra3 (pink)
+#a885d8   #a885d8     Variable to introduce?          surface.extra4 (violet)
+#ffd200   #ffd200     Variable to introduce?          surface.extra5 (yellow)
+#ff7900   #ff7900     Variable to introduce?          surface.high (orange)
+#f9f5f0   #f9f5f0     Variable to introduce?          surface.extra6 (organic) ??? Still big doubts on this one
 
-// Cas bizarre
-#000      #ff7900     --bs-hover-color                N'existe pas mais devrait être dans Figma
+// Weird use case
+#000      #ff7900     --bs-hover-color                Doesn't exist but should be in Figma
 
-// Ne devrait pas apparaitre ?
+// Shouldn't appear?
 #333      #eee        --bs-body-color-subtle          -------
-#333      #666        --bs-gray-tweak                 N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
-#000      #141414     --bs-black-tweak                N'existe pas dans Figma, lié à un filter, ne devrait pas apparaître dans la doc
+#333      #666        --bs-gray-tweak                 Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
+#000      #141414     --bs-black-tweak                Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
+-->
 
-Idées:
-- On ajoute des variables avec des noms différents pour ce niveau genre: `--bs-theme-{fonction}-{nombre}`, `--bs-global-*`
-- Les variables qui ont des noms qu'on aime pas, on rename en fonction des tokens coté design ?
-- Donner des noms très longs et très peu compréhensibles (comprendre abstraits) pour pas donner l'envie de les utiliser ?
+<!--
+Ideas:
+- We add variables with different names for this level like: `--bs-theme-{function}-{number}`, `--bs-global-*`
+- The variables with names we don't like, renaming based on the design tokens on design side?
+- Giving very long and not understandable names (abstract) to not give the desire to use them?
+-->
 
-/************************************************************/
-/* ! Penser à update palette.yml avec les noms de variables */
-/************************************************************/
-</div>
+<!--
+TODO: think to update palette.yml with variable names!!
+-->
 
 #### Concepts de base
 
-Tableau de Bootstrap (probablement - à vérifier)
+<!-- TODO: Bootstrap array (probably - to check) -->
 
-<div>
-// Briques de base réutilisables dans les composants
+<!--
+// Reusable base bricks in components
 --bs-link-color: #000;
 --bs-link-color-rgb: 0, 0, 0;
 --bs-link-hover-color: #f16e00;
@@ -254,27 +255,27 @@ Tableau de Bootstrap (probablement - à vérifier)
 --bs-highlight-color: #fff;
 --bs-highlight-bg: #000;
 
-/***** Réutilisables pour créer des composants custom <!-- TODO: Besoin d'expliquer comment ça fonctionne ? -->
-// Briques de base des bordures
---bs-border-color: #000;                    Devrait etre --bs-border-primary/secondary ? ou --bs-border-high ? Coté Bs anyway
---bs-border-translucent: #ccc               Devrait etre --bs-border-secondary/tertiary ? ou --bs-border-medium/low ? Coté Bs anyway
+// Reusable to create custom components. Need to explain how it works?
+// Border base bricks
+--bs-border-color: #000;                    Should be --bs-border-primary/secondary ? or --bs-border-high ? Bootstrap side anyway
+--bs-border-translucent: #ccc               Should be --bs-border-secondary/tertiary ? or --bs-border-medium/low ? Bootstrap side anyway
 
-// Briques de base du concept body
+// Concept body base bricks
 --bs-body-color + rgb
 --bs-body-bg + rgb
 
-?? Devrait etre dans la section précedente avec les secondary-x/tertiary-x ? Ou alors rename avec des --bs-body-* ?
+// Should be in the previous section with secondary-x/tertiary-x? Or renaming with --bs-body-*?
 --bs-secondary-color: #666; + rgb
 --bs-tertiary-color + rgb
 --bs-secondary-bg: #eee; + rgb
 --bs-tertiary-bg + rgb
 ??
 
-// Brique de base du focus
+// Focus base bricks
 --bs-focus-visible-inner-color: #fff;
 --bs-focus-visible-outer-color: #000;
 
-// Briques de base des composants (+ forms ?)
+// Components base bricks (+ forms?)
 composant.hover.bg
 composant.active.bg
 composant.pressed.bg
@@ -287,9 +288,8 @@ composant.hover.border
 composant.active.border
 composant.pressed.border
 composant.disabled.border
-/**************************************************/
 
-?? Coté Bootstrap ca devrait être dans la section liht vs dark ?, comme c'est des briques de base ?
+// On Bootstrap side, it should be in the light vs dark section? As they are bricks base?
 --bs-primary-text-emphasis: #f16e00;
 --bs-secondary-text-emphasis: #000;
 --bs-success-text-emphasis: #228722;
@@ -316,7 +316,7 @@ composant.disabled.border
 --bs-dark-border-subtle: #000;
 --bs-emphasis-color: #000; + rgb
 ??
-</div>
+-->
 
 <!--
 TODO: IMO this section shouldn't appear here because it's rather related to components. These CSS variables shouldn't be in __root.scss_ but in specific files like it's suggested in https://github.com/twbs/bootstrap/pull/39295.

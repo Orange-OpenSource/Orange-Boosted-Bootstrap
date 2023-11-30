@@ -146,46 +146,51 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 
 #### Orange
 
-Yapas
+<!-- TODO: probably nothing to display in this section -->
 
 #### Bootstrap
 
+<!-- TODO: the following could appear, but it is possible to do it automatically? -->
+
 ```
---bs-blue: #4170d8;
---bs-indigo: #a885d8;
---bs-purple: #a885d8;
---bs-pink: #ffb4e6;
---bs-red: #cd3c14;
---bs-orange: #f16e00;
---bs-yellow: #fc0;
---bs-green: #228722;
---bs-teal: #50be87;
---bs-cyan: #4bb4e6;
---bs-black: #000; + rgb
---bs-white: #fff; + rgb
---bs-gray: #999;
---bs-gray-dark: #595959;
---bs-gray-100: #fafafa;
---bs-gray-200: #f6f6f6;
---bs-gray-300: #eee;
---bs-gray-400: #ddd;
---bs-gray-500: #ccc;
---bs-gray-600: #999;
---bs-gray-700: #666;
---bs-gray-800: #595959;
---bs-gray-900: #333;
---bs-gray-950: #141414;
+--bs-blue
+--bs-indigo
+--bs-purple
+--bs-pink
+--bs-red
+--bs-orange
+--bs-yellow
+--bs-green
+--bs-teal
+--bs-cyan
+--bs-black
+--bs-black-rgb
+--bs-white
+--bs-white-rgb
+--bs-gray
+--bs-gray-dark
+--bs-gray-100
+--bs-gray-200
+--bs-gray-300
+--bs-gray-400
+--bs-gray-500
+--bs-gray-600
+--bs-gray-700
+--bs-gray-800
+--bs-gray-900
+--bs-gray-950
 ```
+
 
 ### Sass variables
 
 #### Orange variables
+
 {{< scss-docs name="palette" file="scss/_color-palette.scss" >}}
 
 #### Bootstrap variables
 
-TODO: explain this is the most important part. The rest will be implicit
-
-TODO: add grays?
+<!-- TODO: explain this is the most important part and that the rest is not displayed here but still exists -->
+<!-- TODO: add grays? -->
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
