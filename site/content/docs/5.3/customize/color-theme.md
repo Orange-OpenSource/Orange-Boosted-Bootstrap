@@ -46,7 +46,7 @@ The corresponding CSS variables displayed in these sections are used within the 
 
 The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
-<!-- TODO: find a new variable instead of --bs-body-bg -->
+<!-- TODO: find a new variable instead of -bs-body-bg -->
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
@@ -192,25 +192,25 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 <!--TODO: the following shouldn't be used directly (or rarely):
 
 // Functional colors
---bs-primary: #f16e00; + rgb                          accent.primary
---bs-secondary: #000; + rgb                           surface.medium // accent.focus
---bs-success: #228722; + rgb                          accent.positive
---bs-info: #4170d8; + rgb                             accent.information
---bs-warning: #fc0; + rgb                             accent.warning
---bs-danger: #cd3c14; + rgb                           accent.negative
-Missing: #fff > #141414 --bs-body-bg                    background
+-bs-primary: #f16e00; + rgb                          accent.primary
+-bs-secondary: #000; + rgb                           surface.medium // accent.focus
+-bs-success: #228722; + rgb                          accent.positive
+-bs-info: #4170d8; + rgb                             accent.information
+-bs-warning: #fc0; + rgb                             accent.warning
+-bs-danger: #cd3c14; + rgb                           accent.negative
+Missing: #fff > #141414 -bs-body-bg                  background
 
 // Missing functional concepts
---bs-light: #ccc; + rgb
---bs-dark: #000; + rgb
+-bs-light: #ccc; + rgb
+-bs-dark: #000; + rgb
 
 // Functional grays (used in all components) (function: gray, neutral)
-#eee      #333        --bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
-#ddd      #666        --bs-active-bg                  surface.highlight
-#ccc      #666        --bs-disabled-color             accent.neutral // accent.disabled
-#666      #999        --bs-placeholder-color          accent.secondary
-#333      #333        Variable to introduce?          surface.low ??? Used in Boosted? Could be --bs-light for now?
-#000      #000        Variable to introduce?          inverted.background ??? Used in Boosted? Could be --bs-dark for now?
+#eee      #333        -bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
+#ddd      #666        -bs-active-bg                  surface.highlight
+#ccc      #666        -bs-disabled-color             accent.neutral // accent.disabled
+#666      #999        -bs-placeholder-color          accent.secondary
+#333      #333        Variable to introduce?          surface.low ??? Used in Boosted? Could be -bs-light for now?
+#000      #000        Variable to introduce?          inverted.background ??? Used in Boosted? Could be -bs-dark for now?
 
 // Supporting colors
 #4bb4e6   #4bb4e6     Variable to introduce?          surface.extra1 (blue)
@@ -222,17 +222,17 @@ Missing: #fff > #141414 --bs-body-bg                    background
 #f9f5f0   #f9f5f0     Variable to introduce?          surface.extra6 (organic) ??? Still big doubts on this one
 
 // Weird use case
-#000      #ff7900     --bs-hover-color                Doesn't exist but should be in Figma
+#000      #ff7900     -bs-hover-color                 Doesn't exist but should be in Figma
 
 // Shouldn't appear?
-#333      #eee        --bs-body-color-subtle          -------
-#333      #666        --bs-gray-tweak                 Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
-#000      #141414     --bs-black-tweak                Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
+#333      #eee        -bs-body-color-subtle           <>
+#333      #666        -bs-gray-tweak                  Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
+#000      #141414     -bs-black-tweak                 Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
 -->
 
 <!--
 Ideas:
-- We add variables with different names for this level like: `--bs-theme-{function}-{number}`, `--bs-global-*`
+- We add variables with different names for this level like: `-bs-theme-{function}-{number}`, `-bs-global-*`
 - The variables with names we don't like, renaming based on the design tokens on design side?
 - Giving very long and not understandable names (abstract) to not give the desire to use them?
 -->
@@ -247,33 +247,33 @@ TODO: think to update palette.yml with variable names!!
 
 <!--
 // Reusable base bricks in components
---bs-link-color: #000;
---bs-link-color-rgb: 0, 0, 0;
---bs-link-hover-color: #f16e00;
---bs-link-hover-color-rgb: 241, 110, 0;
---bs-code-color: #666;
---bs-highlight-color: #fff;
---bs-highlight-bg: #000;
+-bs-link-color: #000;
+-bs-link-color-rgb: 0, 0, 0;
+-bs-link-hover-color: #f16e00;
+-bs-link-hover-color-rgb: 241, 110, 0;
+-bs-code-color: #666;
+-bs-highlight-color: #fff;
+-bs-highlight-bg: #000;
 
 // Reusable to create custom components. Need to explain how it works?
 // Border base bricks
---bs-border-color: #000;                    Should be --bs-border-primary/secondary ? or --bs-border-high ? Bootstrap side anyway
---bs-border-translucent: #ccc               Should be --bs-border-secondary/tertiary ? or --bs-border-medium/low ? Bootstrap side anyway
+-bs-border-color: #000;                    Should be -bs-border-primary/secondary ? or -bs-border-high ? Bootstrap side anyway
+-bs-border-translucent: #ccc               Should be -bs-border-secondary/tertiary ? or -bs-border-medium/low ? Bootstrap side anyway
 
 // Concept body base bricks
---bs-body-color + rgb
---bs-body-bg + rgb
+-bs-body-color + rgb
+-bs-body-bg + rgb
 
-// Should be in the previous section with secondary-x/tertiary-x? Or renaming with --bs-body-*?
---bs-secondary-color: #666; + rgb
---bs-tertiary-color + rgb
---bs-secondary-bg: #eee; + rgb
---bs-tertiary-bg + rgb
+// Should be in the previous section with secondary-x/tertiary-x? Or renaming with -bs-body-*?
+-bs-secondary-color: #666; + rgb
+-bs-tertiary-color + rgb
+-bs-secondary-bg: #eee; + rgb
+-bs-tertiary-bg + rgb
 ??
 
 // Focus base bricks
---bs-focus-visible-inner-color: #fff;
---bs-focus-visible-outer-color: #000;
+-bs-focus-visible-inner-color: #fff;
+-bs-focus-visible-outer-color: #000;
 
 // Components base bricks (+ forms?)
 component.hover.bg
@@ -290,31 +290,31 @@ component.pressed.border
 component.disabled.border
 
 // On Bootstrap side, it should be in the light vs dark section? As they are bricks base?
---bs-primary-text-emphasis: #f16e00;
---bs-secondary-text-emphasis: #000;
---bs-success-text-emphasis: #228722;
---bs-info-text-emphasis: #4170d8;
---bs-warning-text-emphasis: #fc0;
---bs-danger-text-emphasis: #cd3c14;
---bs-light-text-emphasis: #ccc;
---bs-dark-text-emphasis: #000;
---bs-primary-bg-subtle: #f16e00;
---bs-secondary-bg-subtle: #000;
---bs-success-bg-subtle: #228722;
---bs-info-bg-subtle: #4170d8;
---bs-warning-bg-subtle: #fc0;
---bs-danger-bg-subtle: #cd3c14;
---bs-light-bg-subtle: #ccc;
---bs-dark-bg-subtle: #000;
---bs-primary-border-subtle: #f16e00;
---bs-secondary-border-subtle: #000;
---bs-success-border-subtle: #228722;
---bs-info-border-subtle: #4170d8;
---bs-warning-border-subtle: #fc0;
---bs-danger-border-subtle: #cd3c14;
---bs-light-border-subtle: #ccc;
---bs-dark-border-subtle: #000;
---bs-emphasis-color: #000; + rgb
+-bs-primary-text-emphasis: #f16e00;
+-bs-secondary-text-emphasis: #000;
+-bs-success-text-emphasis: #228722;
+-bs-info-text-emphasis: #4170d8;
+-bs-warning-text-emphasis: #fc0;
+-bs-danger-text-emphasis: #cd3c14;
+-bs-light-text-emphasis: #ccc;
+-bs-dark-text-emphasis: #000;
+-bs-primary-bg-subtle: #f16e00;
+-bs-secondary-bg-subtle: #000;
+-bs-success-bg-subtle: #228722;
+-bs-info-bg-subtle: #4170d8;
+-bs-warning-bg-subtle: #fc0;
+-bs-danger-bg-subtle: #cd3c14;
+-bs-light-bg-subtle: #ccc;
+-bs-dark-bg-subtle: #000;
+-bs-primary-border-subtle: #f16e00;
+-bs-secondary-border-subtle: #000;
+-bs-success-border-subtle: #228722;
+-bs-info-border-subtle: #4170d8;
+-bs-warning-border-subtle: #fc0;
+-bs-danger-border-subtle: #cd3c14;
+-bs-light-border-subtle: #ccc;
+-bs-dark-border-subtle: #000;
+-bs-emphasis-color: #000; + rgb
 ??
 -->
 
@@ -326,11 +326,11 @@ TODO: IMO this section shouldn't appear here because it's rather related to comp
 Then we have the following list of CSS variables that are related to components, forms and helpers defined at the root level:
 
 ```
---bs-focus-ring-color
---bs-form-valid-color: var(--bs-success-text-emphasis);
---bs-form-valid-border-color: var(--bs-success);
---bs-form-invalid-color: var(--bs-danger-text-emphasis);
---bs-form-invalid-border-color: var(--bs-danger);
+-bs-focus-ring-color
+-bs-form-valid-color: var(-bs-success-text-emphasis);
+-bs-form-valid-border-color: var(-bs-success);
+-bs-form-invalid-color: var(-bs-danger-text-emphasis);
+-bs-form-invalid-border-color: var(-bs-danger);
 ```
 -->
 
@@ -339,7 +339,9 @@ Then we have the following list of CSS variables that are related to components,
 ### Sass variables
 
 #### Orange variables
+
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+
 {{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
 
 #### Bootstrap variables
