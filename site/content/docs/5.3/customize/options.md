@@ -31,5 +31,5 @@ You can find and customize these variables for key global options in Boosted's `
 | `$enable-deprecation-messages` | `true` (default) or `false`           | Set to `false` to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in `v6`. |
 | `$enable-important-utilities`  | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
 | `$enable-smooth-scroll`        | `true` (default) or `false`           | Applies `scroll-behavior: smooth` globally, except for users asking for reduced motion through [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}) |
-| `$enable-fixed-header`         | `true` or `false` (default)           | Set `scroll-padding-top` rule to root element, preventing focus from being hidden under a fixed header. |
+| `$enable-fixed-header`         | `true` (default) or `false`           | Set `scroll-padding-top` rule to root element, preventing focus from being hidden under a fixed header. |
 {{< /bs-table >}}

@@ -35,20 +35,37 @@
       scroll-behavior: smooth;
     }
   }
+}
 
-  // Boosted mod: Improve focus visibility when fixed/sticky header is used
-  // See https://caniuse.com/?search=scroll-padding
-  // scss-docs-start scroll-offset
-  @if $enable-fixed-header {
-    scroll-padding-top: $scroll-offset-top * .5;
+// Boosted mod: Improve focus visibility when fixed/sticky header is used
+// See https://caniuse.com/?search=scroll-padding
+// scss-docs-start scroll-offset
+@if $enable-fixed-header {
+  main {
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    h2,
+    h3,
+    h4,
+    [tabindex="0"] {
+      scroll-margin-top: calc($scroll-offset-top * .5 + .5rem); // stylelint-disable-line function-disallowed-list
+      scroll-margin-bottom: 100px;
 
-    @include media-breakpoint-up(lg) {
-      scroll-padding-top: $scroll-offset-top;
+      @include media-breakpoint-up(md) {
+        scroll-margin-top: calc($scroll-offset-top + 2.5rem); // stylelint-disable-line function-disallowed-list
+
+        .header-minimized ~ & {
+          scroll-margin-top: $scroll-offset-top;
+        }
+      }
     }
   }
-  // scss-docs-end scroll-offset
-  // End mod
 }
+// scss-docs-end scroll-offset
+// End mod
 
 
 // Body
