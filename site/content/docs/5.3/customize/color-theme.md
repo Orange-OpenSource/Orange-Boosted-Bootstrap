@@ -276,18 +276,18 @@ TODO: think to update palette.yml with variable names!!
 --bs-focus-visible-outer-color: #000;
 
 // Components base bricks (+ forms?)
-composant.hover.bg
-composant.active.bg
-composant.pressed.bg
-composant.disabled.bg
-composant.hover.color
-composant.active.color
-composant.pressed.color
-composant.disabled.color
-composant.hover.border
-composant.active.border
-composant.pressed.border
-composant.disabled.border
+component.hover.bg
+component.active.bg
+component.pressed.bg
+component.disabled.bg
+component.hover.color
+component.active.color
+component.pressed.color
+component.disabled.color
+component.hover.border
+component.active.border
+component.pressed.border
+component.disabled.border
 
 // On Bootstrap side, it should be in the light vs dark section? As they are bricks base?
 --bs-primary-text-emphasis: #f16e00;
