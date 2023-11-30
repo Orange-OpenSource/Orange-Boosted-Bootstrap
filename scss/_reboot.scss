@@ -51,11 +51,11 @@
     h3,
     h4,
     [tabindex="0"] {
-      scroll-margin-top: calc($scroll-offset-top * .5 + .5rem); // stylelint-disable-line function-disallowed-list
+      scroll-margin-top: calc($scroll-offset-top * .5 + 1rem); // stylelint-disable-line function-disallowed-list
       scroll-margin-bottom: 100px;
 
       @include media-breakpoint-up(md) {
-        scroll-margin-top: calc($scroll-offset-top + 2.5rem); // stylelint-disable-line function-disallowed-list
+        scroll-margin-top: calc($scroll-offset-top + 2rem); // stylelint-disable-line function-disallowed-list
 
         .header-minimized ~ & {
           scroll-margin-top: $scroll-offset-top;
