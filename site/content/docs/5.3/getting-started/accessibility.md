@@ -29,7 +29,7 @@ Because Boosted's components are purposely designed to be fairly generic, author
 <!-- Boosted mod -->
 Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
+Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-theme" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
 <!-- end mod -->
 
 ### Visually hidden content
