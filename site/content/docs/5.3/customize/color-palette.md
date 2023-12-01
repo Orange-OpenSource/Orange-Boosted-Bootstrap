@@ -29,6 +29,7 @@ None of the following variables are dynamic.
           <code class="user-select-all">{{ $color.hex }}</code>
           <hr class="my-1 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
           <var class="user-select-all">{{- $color.variable -}}</var>
+          <!-- TODO: Add the equivalent design token ? -->
         </figcaption>
       </figure>
     {{ end -}}
