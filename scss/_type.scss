@@ -71,7 +71,7 @@ h2,
 .lead {
   @include font-size($h6-font-size);
   font-weight: $lead-font-weight;
-  line-height: $h6-line-height;
+  line-height: $lead-line-height;
 
   /* rtl:remove */
   letter-spacing: $h6-spacing;
@@ -119,10 +119,16 @@ h2,
 
   h4,
   h5,
-  h6,
-  .lead {
+  h6 {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
+
+    /* rtl:remove */
+    letter-spacing: $h5-spacing;
+  }
+
+  .lead {
+    @include font-size($h5-font-size);
 
     /* rtl:remove */
     letter-spacing: $h5-spacing;
@@ -194,7 +200,6 @@ h2,
 
   .lead {
     @include font-size($lead-font-size);
-    line-height: $lead-line-height;
 
     /* rtl:remove */
     letter-spacing: $lead-letter-spacing;

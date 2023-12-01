@@ -159,7 +159,6 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: var(--#{$prefix}modal-header-padding);
   border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // Boosted mod
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
