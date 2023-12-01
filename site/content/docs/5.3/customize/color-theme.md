@@ -189,8 +189,10 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 
 #### Light vs Dark
 
+<!-- TODO: Should we place them inside :root, [data-bs-theme="light"] and [data-bs-theme="dark"] ? -->
 <!--TODO: the following shouldn't be used directly (or rarely):
 
+<div>
 // Functional colors
 -bs-primary: #f16e00; + rgb                          accent.primary
 -bs-secondary: #000; + rgb                           surface.medium // accent.focus
@@ -243,6 +245,8 @@ TODO: think to update palette.yml with variable names!!
 
 #### Concepts de base
 
+<!-- TODO: Set up inside :root, [data-bs-theme] ? -->
+<!-- TODO: Do we need to explain to people how to build components from all this ? -->
 <!-- TODO: Bootstrap array (probably - to check) -->
 
 <!--
