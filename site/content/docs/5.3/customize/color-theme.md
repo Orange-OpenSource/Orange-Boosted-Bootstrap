@@ -172,7 +172,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
     </thead>
     <tbody>
-      {{< toto.inline >}}
+      {{< themeColors.inline >}}
       {{- range index $.Site.Data "theme-colors" }}
       <tr>
         <td>
@@ -199,30 +199,12 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
         </td>
       </tr>
       {{ end -}}
-      {{< /toto.inline >}}
+      {{< /themeColors.inline >}}
     </tbody>
   </table>
 </div>
 
 <!--
-TODO: don't forget to add that into the second table (from Bootstrap)
-
--bs-secondary-color
--bs-secondary-color-rgb
--bs-secondary-bg
--bs-secondary-bg-rgb
-
--bs-tertiary-color
--bs-tertiary-color-rgb
--bs-tertiary-bg
--bs-tertiary-bg-rgb
-
--bs-emphasis-color
--bs-emphasis-color-rgb
-
--bs-border-color
--bs-border-color-rgb
-
 #### Save
 
 {{< callout warning >}}
@@ -239,36 +221,14 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 <!-- TODO: Should we place them inside :root, [data-bs-theme="light"] and [data-bs-theme="dark"] ? -->
 <!--TODO: the following shouldn't be used directly (or rarely):
 
-<div>
-// Functional colors
--bs-primary: #f16e00; + rgb                          accent.primary
--bs-secondary: #000; + rgb                           surface.medium // accent.focus
--bs-success: #228722; + rgb                          accent.positive
--bs-info: #4170d8; + rgb                             accent.information
--bs-warning: #fc0; + rgb                             accent.warning
--bs-danger: #cd3c14; + rgb                           accent.negative
-Missing: #fff > #141414 -bs-body-bg                  background
-
-// Missing functional concepts
--bs-light: #ccc; + rgb
--bs-dark: #000; + rgb
-
 // Functional grays (used in all components) (function: gray, neutral)
 #eee      #333        -bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
+
 #ddd      #666        -bs-active-bg                  surface.highlight
 #ccc      #666        -bs-disabled-color             accent.neutral // accent.disabled
 #666      #999        -bs-placeholder-color          accent.secondary
 #333      #333        Variable to introduce?          surface.low ??? Used in Boosted? Could be -bs-light for now?
 #000      #000        Variable to introduce?          inverted.background ??? Used in Boosted? Could be -bs-dark for now?
-
-// Supporting colors
-#4bb4e6   #4bb4e6     Variable to introduce?          surface.extra1 (blue)
-#50be87   #50be87     Variable to introduce?          surface.extra2 (green)
-#ffb4e6   #ffb4e6     Variable to introduce?          surface.extra3 (pink)
-#a885d8   #a885d8     Variable to introduce?          surface.extra4 (violet)
-#ffd200   #ffd200     Variable to introduce?          surface.extra5 (yellow)
-#ff7900   #ff7900     Variable to introduce?          surface.high (orange)
-#f9f5f0   #f9f5f0     Variable to introduce?          surface.extra6 (organic) ??? Still big doubts on this one
 
 // Weird use case
 #000      #ff7900     -bs-hover-color                 Doesn't exist but should be in Figma
@@ -297,76 +257,10 @@ TODO: think to update palette.yml with variable names!!
 <!-- TODO: Bootstrap array (probably - to check) -->
 
 <!--
-// Reusable base bricks in components
--bs-link-color: #000;
--bs-link-color-rgb: 0, 0, 0;
--bs-link-hover-color: #f16e00;
--bs-link-hover-color-rgb: 241, 110, 0;
--bs-code-color: #666;
--bs-highlight-color: #fff;
--bs-highlight-bg: #000;
-
 // Reusable to create custom components. Need to explain how it works?
 // Border base bricks
 -bs-border-color: #000;                    Should be -bs-border-primary/secondary ? or -bs-border-high ? Bootstrap side anyway
 -bs-border-translucent: #ccc               Should be -bs-border-secondary/tertiary ? or -bs-border-medium/low ? Bootstrap side anyway
-
-// Concept body base bricks
--bs-body-color + rgb
--bs-body-bg + rgb
-
-// Should be in the previous section with secondary-x/tertiary-x? Or renaming with -bs-body-*?
--bs-secondary-color: #666; + rgb
--bs-tertiary-color + rgb
--bs-secondary-bg: #eee; + rgb
--bs-tertiary-bg + rgb
-??
-
-// Focus base bricks
--bs-focus-visible-inner-color: #fff;
--bs-focus-visible-outer-color: #000;
-
-// Components base bricks (+ forms?)
-component.hover.bg
-component.active.bg
-component.pressed.bg
-component.disabled.bg
-component.hover.color
-component.active.color
-component.pressed.color
-component.disabled.color
-component.hover.border
-component.active.border
-component.pressed.border
-component.disabled.border
-
-// On Bootstrap side, it should be in the light vs dark section? As they are bricks base?
--bs-primary-text-emphasis: #f16e00;
--bs-secondary-text-emphasis: #000;
--bs-success-text-emphasis: #228722;
--bs-info-text-emphasis: #4170d8;
--bs-warning-text-emphasis: #fc0;
--bs-danger-text-emphasis: #cd3c14;
--bs-light-text-emphasis: #ccc;
--bs-dark-text-emphasis: #000;
--bs-primary-bg-subtle: #f16e00;
--bs-secondary-bg-subtle: #000;
--bs-success-bg-subtle: #228722;
--bs-info-bg-subtle: #4170d8;
--bs-warning-bg-subtle: #fc0;
--bs-danger-bg-subtle: #cd3c14;
--bs-light-bg-subtle: #ccc;
--bs-dark-bg-subtle: #000;
--bs-primary-border-subtle: #f16e00;
--bs-secondary-border-subtle: #000;
--bs-success-border-subtle: #228722;
--bs-info-border-subtle: #4170d8;
--bs-warning-border-subtle: #fc0;
--bs-danger-border-subtle: #cd3c14;
--bs-light-border-subtle: #ccc;
--bs-dark-border-subtle: #000;
--bs-emphasis-color: #000; + rgb
-??
 -->
 
 #### Test
@@ -384,8 +278,8 @@ component.disabled.border
     </thead>
     <tbody>
       <tr class="border-bottom-0">
-        <td>
-          {{< markdown >}}**Body**{{< /markdown >}}
+        <td rowspan="2">
+          {{< markdown >}}**Body** - Default background and foreground (color), including components. {{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -408,8 +302,6 @@ component.disabled.border
         </td>
       </tr>
       <tr>
-        <td class="border-top-0">
-        </td>
         <td>
           {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
@@ -431,8 +323,277 @@ component.disabled.border
         </td>
       </tr>
       <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Secondary** - <span class="text-bg-warning">Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.</span>{{< /markdown >}}
+        </td>
         <td>
-          {{< markdown >}}**Link**{{< /markdown >}}
+          {{< markdown >}}Background.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-secondary-bg);" data-bs-theme="light" title="#eee"><p class="visually-hidden">#eee</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-secondary-bg);" data-bs-theme="dark" title="#333"><p class="visually-hidden">#333</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-bg</code>" data-bs-html="true"><code>--bs-secondary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-bg-rgb</code>" data-bs-html="true"><code>--bs-secondary-bg-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}Foreground.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-secondary-color);" data-bs-theme="light" title="#666"><p class="visually-hidden">#666</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-secondary-color);" data-bs-theme="dark" title="#999"><p class="visually-hidden">#999</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-color</code>" data-bs-html="true"><code>--bs-secondary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-color-rgb</code>" data-bs-html="true"><code>--bs-secondary-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Tertiary** - <span class="text-bg-warning">Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.</span>{{< /markdown >}}
+          <div class="alert alert-warning mt-2" role="alert">
+            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+            <p>Change foreground light color!</p>
+          </div>
+        </td>
+        <td>
+          {{< markdown >}}Background.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-bg);" data-bs-theme="light" title="#fafafa"><p class="visually-hidden">#fafafa</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-bg);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-bg</code>" data-bs-html="true"><code>--bs-tertiary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-bg-rgb</code>" data-bs-html="true"><code>--bs-tertiary-bg-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}Foreground.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="light" title="#7f7f7f"><p class="visually-hidden">#7f7f7f</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="dark" title="#999"><p class="visually-hidden">#999</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-color</code>" data-bs-html="true"><code>--bs-tertiary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-color-rgb</code>" data-bs-html="true"><code>--bs-tertiary-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{< markdown >}}**Emphasis** - For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-emphasis-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-emphasis-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-emphasis-color</code>" data-bs-html="true"><code>--bs-emphasis-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-emphasis-color-rgb</code>" data-bs-html="true"><code>--bs-emphasis-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Border** - <span class="text-bg-warning">For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an rgba() value.</span>{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Default.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color</code>" data-bs-html="true"><code>--bs-border-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color-rgb</code>" data-bs-html="true"><code>--bs-border-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}Translucent.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color-translucent);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color-translucent);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color-translucent</code>" data-bs-html="true"><code>--bs-border-color-translucent</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="alert alert-warning" role="alert">
+            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+            <p>Can't we get rid of --bs-hover-color?<br>Only used for local navigation links and nav tabs.</p>
+          </div>
+          {{< markdown >}}**Hover** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-hover-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-hover-color</code>" data-bs-html="true"><code>--bs-hover-color</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Highlight** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Background.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-highlight-bg);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-highlight-bg);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-highlight-bg</code>" data-bs-html="true"><code>--bs-highlight-bg</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}Foreground.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-highlight-color);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-highlight-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-highlight-color</code>" data-bs-html="true"><code>--bs-highlight-color</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Focus** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Outer.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-outer-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-outer-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-outer-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-focus-visible-outer-color</code>" data-bs-html="true"><code>--bs-focus-visible-outer-color</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}Inner.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-inner-color);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-inner-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-focus-visible-inner-color</code>" data-bs-html="true"><code>--bs-focus-visible-inner-color</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td rowspan="2">
+          {{< markdown >}}**Link** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Default.{{< /markdown >}}
@@ -455,8 +616,6 @@ component.disabled.border
         </td>
       </tr>
       <tr>
-        <td class="border-top-0">
-        </td>
         <td>
           {{< markdown >}}Hover.{{< /markdown >}}
         </td>
@@ -477,87 +636,32 @@ component.disabled.border
           </div>
         </td>
       </tr>
-      <tr>
-        <td>
-          {{< markdown >}}**FAKE**{{< /markdown >}}
-        </td>
-        <td>
-          {{< markdown >}}Default.{{< /markdown >}}
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
-          </div>
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
-          </div>
-        </td>
-        <td>
-          <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color</code>" data-bs-html="true"><code>--bs-link-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color-rgb</code>" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
-          </div>
-        </td>
-      </tr>
       <tr class="border-bottom-0">
         <td colspan="2">
-          {{< markdown >}}**FAKE** - I'm a fake description{{< /markdown >}}
+          {{< markdown >}}**Code** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-code-color);" data-bs-theme="light" title="#666"><p class="visually-hidden">#666</p></div>
           </div>
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-code-color);" data-bs-theme="dark" title="#a3a3a3"><p class="visually-hidden">#a3a3a3</p></div>
           </div>
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color</code>" data-bs-html="true"><code>--bs-link-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color-rgb</code>" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-code-color</code>" data-bs-html="true"><code>--bs-code-color</code></button>
           </div>
         </td>
       </tr>
-      <!--
-      <tr>
-        <td>
-          {{< markdown >}}**Link —** Link hovered foreground.{{< /markdown >}}
-        </td>
-        <td>
-          <div class="border-color" style="background-color: var(--bs-link-hover-color);" data-bs-theme="light" title="#f16e00"><p class="visually-hidden">#f16e00</p></div>
-        </td>
-        <td>
-          <div class="border-color" style="background-color: var(--bs-link-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
-        </td>
-        <td>
-          <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color</code>" data-bs-html="true"><code>--bs-link-hover-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color-rgb</code>" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
-          </div>
-        </td>
-      </tr>-->
     </tbody>
   </table>
 </div>
 
 <!--
 TODO: IMO this section shouldn't appear here because it's rather related to components. These CSS variables shouldn't be in __root.scss_ but in specific files like it's suggested in https://github.com/twbs/bootstrap/pull/39295.
-
-#### Components
-
-Then we have the following list of CSS variables that are related to components, forms and helpers defined at the root level:
-
-```
--bs-focus-ring-color
--bs-form-valid-color: var(-bs-success-text-emphasis);
--bs-form-valid-border-color: var(-bs-success);
--bs-form-invalid-color: var(-bs-danger-text-emphasis);
--bs-form-invalid-border-color: var(-bs-danger);
-```
 -->
 
 ### Sass variables
