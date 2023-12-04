@@ -42,7 +42,6 @@ $grays: (
 // Boosted mod
 // scss-docs-start brand-colors
 //// Core colors
-$accessible-orange: #f16e00 !default;
 $brand-orange:      #ff7900 !default;
 //// Functional colors
 $functional-green:  $ods-forest-200 !default;
@@ -65,7 +64,7 @@ $indigo:  $supporting-purple !default;
 $purple:  $supporting-purple !default;
 $pink:    $supporting-pink !default;
 $red:     $functional-red !default;
-$orange:  $accessible-orange !default;
+$orange:  $ods-orange-200 !default;
 $yellow:  $functional-yellow !default;
 $green:   $functional-green !default;
 $teal:    $supporting-green !default;
@@ -525,7 +524,7 @@ $body-emphasis-color:       $black !default;
 $link-color:                              $black !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        $accessible-orange !default; // Boosted mod
+$link-hover-color:                        $primary !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
