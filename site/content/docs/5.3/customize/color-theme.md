@@ -46,32 +46,22 @@ The corresponding CSS variables displayed in these sections are used within the 
 
 The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
-<!-- TODO: find a new variable instead of -bs-body-bg -->
-
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
-  <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
-          <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
-      <figcaption>
-        <var class="text-nowrap user-select-all">--bs-{{- $color.class -}}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-around w-50 ps-2 mb-4">
+  <div class="double-figure-svg d-flex">
+    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="user-select-all text-body">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{- end -}}
-  <div class="double-figure d-none d-md-flex d-lg-none"></div>
+  <div class="double-figure-svg d-none d-md-flex d-lg-none"></div>
 </div>
 {{ end -}}
 {{< /palette.inline >}}
@@ -86,15 +76,12 @@ The functional colors of orange design. These colors are not meant to be used as
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
     <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-{{ $color.level }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{ $color.level }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name --bs-{{ $color.level }}</span>
-      </button>
+      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+        <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+        <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+      </svg>
       <figcaption>
-        <var class="text-nowrap user-select-all">--bs-{{- $color.level -}}</var>
+        <b>{{- $color.level | title -}}</b>
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
@@ -113,32 +100,22 @@ The functional colors of orange design. These colors are not meant to be used as
 
 The functional grays of orange design. These colors are used as backgrounds, colors or borders to outline some elements (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
-<!-- TODO: find new variables for all these use cases -->
-
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
-  <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
-      <figcaption>
-        <var class="text-nowrap user-select-all">{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4 pe-none">
+  <div class="double-figure-svg d-flex">
+    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+      <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    </svg>
+    <div class="d-flex flex-column justify-content-around w-50 p-2 pe-none">
       <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all text-body">{{ $color.hex }}</code></p>
       <p class="mb-0" data-bs-theme="dark"><code class="pe-auto user-select-all text-body">{{ $color.darkHex }}</code></p>
     </div>
   </div>
   {{ end -}}
-  <div class="double-figure d-none d-md-flex"></div>
+  <div class="double-figure-svg d-none d-md-flex"></div>
 </div>
 {{ end -}}
 {{< /palette.inline >}}
@@ -155,14 +132,11 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
     <figure class="mb-0 w-50" aria-label="Supporting {{ $color.name }}">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-          <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
-      </button>
+      <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+        <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
+      </svg>
       <figcaption>
-        <var class="text-nowrap user-select-all">{{ $color.variable }}</var>
+        <b>Supporting {{ $color.name | title -}}</b>
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
@@ -175,7 +149,79 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 {{ end -}}
 {{< /palette.inline >}}
 
-## Usable variables
+## CSS
+
+### Variables
+
+#### Theming
+
+{{< added-in "5.3.0" >}}
+
+The following CSS variables are used to create our [usable variables](#usable-variables). They are not meant to be used directly in a project.
+
+Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
+
+<div class="table-responsive">
+  <table class="table table-swatches">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th style="width: 60px;">Light value</th>
+        <th style="width: 60px;">Dark value</th>
+        <th>Variables</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{< toto.inline >}}
+      {{- range index $.Site.Data "theme-colors" }}
+      <tr>
+        <td>
+          {{.description}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-{{.name}});" data-bs-theme="light" title="{{.hex}}"><p class="visually-hidden">{{.hex}}</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-{{.name}});" data-bs-theme="dark" title="{{.dark_hex}}"><p class="visually-hidden">{{.dark_hex}}</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}</code>" data-bs-html="true"><code>--bs-{{.name}}</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-rgb</code>" data-bs-html="true"><code>--bs-{{.name}}-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-bg-subtle" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-bg-subtle</code>" data-bs-html="true"><code>--bs-{{.name}}-bg-subtle</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-border-subtle" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-border-subtle</code>" data-bs-html="true"><code>--bs-{{.name}}-border-subtle</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-text-emphasis" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-text-emphasis</code>" data-bs-html="true"><code>--bs-{{.name}}-text-emphasis</code></button>
+          </div>
+        </td>
+      </tr>
+      {{ end -}}
+      {{< /toto.inline >}}
+    </tbody>
+  </table>
+</div>
+
+<!--
+TODO: don't forget to add that into the second table (from Bootstrap)
+
+-bs-secondary-color
+-bs-secondary-color-rgb
+-bs-secondary-bg
+-bs-secondary-bg-rgb
+
+-bs-tertiary-color
+-bs-tertiary-color-rgb
+-bs-tertiary-bg
+-bs-tertiary-bg-rgb
+
+-bs-emphasis-color
+-bs-emphasis-color-rgb
+
+-bs-border-color
+-bs-border-color-rgb
 
 #### Save
 
@@ -188,6 +234,7 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 {{< /callout >}}
 
 #### Light vs Dark
+-->
 
 <!-- TODO: Should we place them inside :root, [data-bs-theme="light"] and [data-bs-theme="dark"] ? -->
 <!--TODO: the following shouldn't be used directly (or rarely):
@@ -243,7 +290,7 @@ Ideas:
 TODO: think to update palette.yml with variable names!!
 -->
 
-#### Concepts de base
+<!--#### Concepts de base-->
 
 <!-- TODO: Set up inside :root, [data-bs-theme] ? -->
 <!-- TODO: Do we need to explain to people how to build components from all this ? -->
@@ -322,17 +369,7 @@ component.disabled.border
 ??
 -->
 
-## Colors
-
-{{< added-in "5.3.0" >}}
-
-We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
-
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
-
-{{< callout warning>}}
-**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
-{{< /callout >}}
+#### Test
 
 <div class="table-responsive">
   <table class="table table-swatches">
@@ -523,8 +560,6 @@ Then we have the following list of CSS variables that are related to components,
 ```
 -->
 
-### Variables
-
 ### Sass variables
 
 #### Orange variables
@@ -541,378 +576,6 @@ TODO: add grays?
 -->
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-<summary>Table of contents</summary>
-
-## Colors
-
-{{< added-in "5.3.0" >}}
-
-We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
-
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
-
-{{< callout warning>}}
-**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
-{{< /callout >}}
-
-<table class="table table-swatches">
-  <thead>
-    <tr>
-      <th style="width: 340px;">Description</th>
-      <th style="width: 200px;" class="ps-0">Swatch</th>
-      <th>Variables</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Body —** Default foreground (color) and background, including components.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-body-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-body-color`<br>`--bs-body-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3 border" style="background-color: var(--bs-body-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-body-bg`<br>`--bs-body-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Secondary —** Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-secondary-color`<br>`--bs-secondary-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3 border" style="background-color: var(--bs-secondary-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-secondary-bg`<br>`--bs-secondary-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Tertiary —** Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-tertiary-color`<br>`--bs-tertiary-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3 border" style="background-color: var(--bs-tertiary-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-tertiary-bg`<br>`--bs-tertiary-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}**Emphasis —** For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-emphasis-color`<br>`--bs-emphasis-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}**Border —** For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-border-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-border-color`<br>`--bs-border-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-primary">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary`<br>`--bs-primary-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-primary-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-primary-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-success">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success`<br>`--bs-success-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-success-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-success-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Danger —** Theme color used for errors and dangerous actions.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-danger">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger`<br>`--bs-danger-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-danger-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-danger-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Warning —** Theme color used for non-destructive warning messages.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-warning">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning`<br>`--bs-warning-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-warning-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-warning-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Info —** Theme color used for neutral and informative content.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-info">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info`<br>`--bs-info-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-info-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-info-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-info-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Light —** Additional theme option for less contrasting colors.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-light">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light`<br>`--bs-light-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-light-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-light-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-light-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Dark —** Additional theme option for higher contrasting colors.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 bg-dark">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark`<br>`--bs-dark-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="background-color: var(--bs-dark-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="p-3" style="border: 5px var(--bs-dark-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<!--Boosted mod: no "Using the new colors" section because `.bg-primary-subtle` stays orange without opacity in Boosted so the text can't be visible-->
 
 ## Generating utilities
 
@@ -957,4 +620,3 @@ $utilities: map-merge(
 ```
 
 This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.
-</details>

@@ -442,25 +442,21 @@
   --bs-border-color: var(--bs-border-color-translucent);
 }
 
-.color-copy:hover svg {
-  transform: scale(1.07);
-}
-
-.color-copy svg {
-  // stylelint-disable-next-line property-disallowed-list
-  transition: transform .15s ease-in-out;
+.double-figure-svg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(to bottom, $white, $white 50%, $gray-950 50%, $gray-950 100%);
 }
 
 .double-figure {
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: linear-gradient(to bottom, $white, $white calc((100% - 1.875rem) * .5), $gray-950 calc((100% - 1.875rem) * .5), $gray-950 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
 
   figcaption {
     height: 1.875rem;
-    padding-top: 5px;
-  }
-
-  .color-copy {
-    margin: 10px 0;
+    padding-top: 15px;
+    white-space: nowrap;
   }
 }
 // End mod
