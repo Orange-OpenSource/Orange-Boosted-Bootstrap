@@ -73,13 +73,14 @@
     white-space: nowrap;
   }
 
-  td:nth-child(2),
-  td:nth-child(3) {
-    div {
-      width: 60px;
-      height: 60px;
-      border: 1px solid var(--bs-border-color-translucent);
-    }
+  .border-top-1 {
+    border-top: 1px solid var(--bs-border-color-translucent);
+  }
+
+  .border-color {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--bs-border-color-translucent);
   }
 
   td:last-child {
@@ -95,7 +96,6 @@
       padding: 0 5px;
       background-color: transparent;
       border: 0;
-      border-radius: 5px; // stylelint-disable-line property-disallowed-list
 
       &:hover {
         text-decoration: underline;
