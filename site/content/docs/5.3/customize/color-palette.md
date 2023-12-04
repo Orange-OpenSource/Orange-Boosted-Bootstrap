@@ -1,17 +1,19 @@
 ---
 layout: docs
 title: Color palette
-description: TODO
+description: Orange's color palette is the summary of all the existing and useable colors.
 group: customize
 aliases:
   - "/docs/customize/color-palette/"
 toc: true
+added: "5.3"
 ---
 
 ## Palette
 
-The variables above should fulfil all your needs, but in case you still need some other colors, here are the design color tokens we use to build the usable colors above.
-None of the following variables are dynamic.
+This section exposes all the existing colors inside the Orange palette. These variables aren't meant to be used, it's an exposure of the available variables. Be aware that none of the variables presented depend on the theme.
+
+Please make sure that none of the [color theme variables]({{< docsref "/customize/color-theme" >}}) fit your needs before getting one here.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "ODS colors" }}
@@ -29,7 +31,6 @@ None of the following variables are dynamic.
           <code class="user-select-all">{{ $color.hex }}</code>
           <hr class="my-1 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
           <var class="user-select-all">{{- $color.variable -}}</var>
-          <!-- TODO: Add the equivalent design token ? -->
         </figcaption>
       </figure>
     {{ end -}}
@@ -50,7 +51,7 @@ Bootstrap defines a color palette on its own. We worked on a mapping between Ora
 {{< design-callout-alert >}}
 Some of the colors below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [color palette]({{< docsref "/customize/color-palette#palette" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our Boosted [color palette](#palette) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout warning >}}
@@ -102,30 +103,13 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 
 <h3>Notes on Sass</h3>
 
-<!-- TODO: Refactor this paragraph to explain how we generate these maps (from ods tokens + generated values) (only light mode colors) -->
+Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. For `$indigo`, `$purple`, `$pink`, `$teal`, and `$cyan`, we specify first 6 colors (`*-100` to `*-600`) from the Orange palette (design tokens) and build the last ones programmatically to darken our `*-600`. For the grays, the first 2 (`$gray-100` and `$gray-200`) are the values from Bootstrap and only the last 8 (`*-300` to `*-950`) are extracted from the Orange palette. For the remaining, only the `*-500` are correct since we specify the midpoint value and use custom color functions to tint (lighten) or shade (darken) our colors vis Sass's `mix()` color function.
 
-Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
+The built colors depend only on the light color mode colors.
 
 Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
 
 Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
-
-<h2>Color Sass maps</h2>
-
-<!-- TODO: Refactor this paragraph (3 maps and we expose 4 ?) -->
-
-Boosted's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
-
-- `$colors` lists all our available base (`500`) colors
-- `$theme-colors` lists all semantically named theme colors (shown below)
-- `$background-colors` overrides `$theme-colors` specifically for usage in `.bg-*` utilities
-- `$grays` lists all tints and shades of gray
-
-Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
-
-{{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
-
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
 <h3>Example</h3>
 
@@ -139,7 +123,7 @@ Here's how you can use these in your Sass:
 }
 ```
 
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
+[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` or `300` for some color values.
 </details>
 
 ## CSS
@@ -149,41 +133,44 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 
 ### Variables
 
+These variables aren't meant to be changed
+
 #### Orange
 
-<!-- TODO: probably nothing to display in this section -->
+```css
+--bs-black-rgb:     0, 0, 0;
+--bs-white-rgb:     255, 255, 255;
+--bs-gray-950:      #141414;
+```
 
 #### Bootstrap
 
-<!-- TODO: the following could appear, but it is possible to do it automatically? -->
+<!-- TODO: the following could appear, but it is possible to do it automatically? -> I don't think so, we could probably make a short code to get it inside `boosted.css` but heavier not minimized css bundle and not insured results. -->
 
-```
---bs-blue
---bs-indigo
---bs-purple
---bs-pink
---bs-red
---bs-orange
---bs-yellow
---bs-green
---bs-teal
---bs-cyan
---bs-black
---bs-black-rgb
---bs-white
---bs-white-rgb
---bs-gray
---bs-gray-dark
---bs-gray-100
---bs-gray-200
---bs-gray-300
---bs-gray-400
---bs-gray-500
---bs-gray-600
---bs-gray-700
---bs-gray-800
---bs-gray-900
---bs-gray-950
+```css
+--bs-blue:          #4170d8;
+--bs-indigo:        #a885d8;
+--bs-purple:        #a885d8;
+--bs-pink:          #ffb4e6;
+--bs-red:           #cd3c14;
+--bs-orange:        #f16e00;
+--bs-yellow:        #fc0;
+--bs-green:         #228722;
+--bs-teal:          #50be87;
+--bs-cyan:          #4bb4e6;
+--bs-black:         #000;
+--bs-white:         #fff;
+--bs-gray:          #999;
+--bs-gray-dark:     #595959;
+--bs-gray-100:      #fafafa;
+--bs-gray-200:      #f6f6f6;
+--bs-gray-300:      #eee;
+--bs-gray-400:      #ddd;
+--bs-gray-500:      #ccc;
+--bs-gray-600:      #999;
+--bs-gray-700:      #666;
+--bs-gray-800:      #595959;
+--bs-gray-900:      #333;
 ```
 
 
@@ -195,7 +182,26 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 
 #### Bootstrap variables
 
-<!-- TODO: explain this is the most important part and that the rest is not displayed here but still exists -->
-<!-- TODO: add grays? -->
+This code shows the mapping of the Orange design tokens and the Bootstrap's native variables.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
+
+### Sass maps
+
+Boosted's source Sass files include 17 maps to help you quickly and easily loop over a list of colors and their hex values.
+
+- `$colors` lists all our available Orange base (`500` or `300`) colors
+- `$theme-colors` lists all semantically named theme colors for light theme (shown in our [color theme]({{< docsref "/customize/color-theme" >}}))
+- `$theme-colors-dark` lists all semantically named theme colors for dark theme (shown in our [color theme]({{< docsref "/customize/color-theme" >}}))
+- `$utilities-text` overrides `$theme-colors` specifically for usage in `.text-*` utilities
+- `$utilities-bg` overrides `$theme-colors` specifically for usage in `.bg-*` utilities
+- `$utilities-border` overrides `$theme-colors` specifically for usage in `.border-*` utilities
+- `$grays`, `$blues`, `$indigos`, `$purples`, `$pinks`, `$reds`, `$oranges`, `$yellows`, `$greens`, `$teals`, and `$cyans` list all tints and shades of our colors
+
+Within `scss/_variables.scss` or `scss/_maps.scss`, you'll find Boosted's color variables and Sass maps. Here's an example of the `$colors` Sass map:
+
+{{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
+
+Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.

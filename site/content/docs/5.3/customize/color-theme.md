@@ -5,14 +5,10 @@ description: Boosted is supported by an extensive color system that themes our s
 group: customize
 aliases:
   - "/docs/customize/color/"
-  - "/docs/5.3/about/customize/color/"
+  - "/docs/5.3/customize/color/"
   - "/docs/customize/color-theme/"
 toc: true
 ---
-
-<!--
-TODO: add an introduction paragraph talking about the color palette + a link to the color palette page.
--->
 
 ## Theming
 
@@ -39,7 +35,9 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 However, other colors are needed to create an interface. The following sections explain which colors are used for which purpose in a light and dark mode context.
 
 {{< callout info >}}
-The corresponding CSS variables displayed in these sections are used within the framework to create our components and utilities. But they are rarely used and to be used directly in a project. We recommend using the [usable variables](#usable-variables) instead that are more specific.
+The following color patches represent the only colors you should have inside an Orange interface either in contextual light or dark theme. The color patches show how a color should behave on light or dark theme.
+
+The corresponding values displayed in these sections are used within the framework to create our components and utilities. But they are rarely used and to be used directly in a project. We recommend using the [usable variables](#usable-variables) instead that are more specific.
 {{< /callout >}}
 
 ### Core
@@ -98,7 +96,7 @@ The functional colors of orange design. These colors are not meant to be used as
 
 ### Grays
 
-The functional grays of orange design. These colors are used as backgrounds, colors or borders to outline some elements (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
+The functional grays of orange design. These colors are used as backgrounds, colors or borders to highlight some elements or actions (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
@@ -122,9 +120,7 @@ The functional grays of orange design. These colors are used as backgrounds, col
 
 ### Supporting
 
-The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. They should not be used alone or dominate the page.
-
-<!-- TODO: create new CSS variables for all these use cases -->
+The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. As you can see, they don't change their color depending on the theme. They should not be used alone or dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
@@ -159,9 +155,9 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 
 The following CSS variables are used to create our [usable variables](#usable-variables). They are not meant to be used directly in a project.
 
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
+Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-rgb), .5)`.
 
-<div class="table-responsive">
+<div class="table-responsive mb-4">
   <table class="table table-swatches">
     <thead>
       <tr>
@@ -190,11 +186,11 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-{{.name}}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}</code>" data-bs-html="true"><code>--bs-{{.name}}</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-rgb</code>" data-bs-html="true"><code>--bs-{{.name}}-rgb</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-bg-subtle" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-bg-subtle</code>" data-bs-html="true"><code>--bs-{{.name}}-bg-subtle</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-border-subtle" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-border-subtle</code>" data-bs-html="true"><code>--bs-{{.name}}-border-subtle</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-text-emphasis" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{.name}}-text-emphasis</code>" data-bs-html="true"><code>--bs-{{.name}}-text-emphasis</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy to clipboard"><code>--bs-{{.name}}</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-rgb" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy to clipboard"><code>--bs-{{.name}}-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-bg-subtle" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy to clipboard"><code>--bs-{{.name}}-bg-subtle</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-border-subtle" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy to clipboard"><code>--bs-{{.name}}-border-subtle</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-{{.name}}-text-emphasis" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Copy to clipboard"><code>--bs-{{.name}}-text-emphasis</code></button>
           </div>
         </td>
       </tr>
@@ -204,21 +200,6 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </table>
 </div>
 
-<!--
-#### Save
-
-{{< callout warning >}}
-This part explains how we built our large set of [dynamic usable variables](#usable-variables). They aren't the variables you should be using inside your project.
-{{< /callout >}}
-
-{{< callout warning >}}
-Following parts might expose some **hexadecimal codes**. They aren't meant to be used. They are only informational. **Prefer using the associated variables.**
-{{< /callout >}}
-
-#### Light vs Dark
--->
-
-<!-- TODO: Should we place them inside :root, [data-bs-theme="light"] and [data-bs-theme="dark"] ? -->
 <!--TODO: the following shouldn't be used directly (or rarely):
 
 // Functional grays (used in all components) (function: gray, neutral)
@@ -239,33 +220,11 @@ Following parts might expose some **hexadecimal codes**. They aren't meant to be
 #000      #141414     -bs-black-tweak                 Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
 -->
 
-<!--
-Ideas:
-- We add variables with different names for this level like: `-bs-theme-{function}-{number}`, `-bs-global-*`
-- The variables with names we don't like, renaming based on the design tokens on design side?
-- Giving very long and not understandable names (abstract) to not give the desire to use them?
--->
+#### Usable variables
 
-<!--
-TODO: think to update palette.yml with variable names!!
--->
+We provide some more contextual variables that are meant to ease the maintenance and the choice of variable you make.
 
-<!--#### Concepts de base-->
-
-<!-- TODO: Set up inside :root, [data-bs-theme] ? -->
-<!-- TODO: Do we need to explain to people how to build components from all this ? -->
-<!-- TODO: Bootstrap array (probably - to check) -->
-
-<!--
-// Reusable to create custom components. Need to explain how it works?
-// Border base bricks
--bs-border-color: #000;                    Should be -bs-border-primary/secondary ? or -bs-border-high ? Bootstrap side anyway
--bs-border-translucent: #ccc               Should be -bs-border-secondary/tertiary ? or -bs-border-medium/low ? Bootstrap side anyway
--->
-
-#### Test
-
-<div class="table-responsive">
+<div class="table-responsive mb-4">
   <table class="table table-swatches">
     <thead>
       <tr>
@@ -296,8 +255,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg</code>" data-bs-html="true"><code>--bs-body-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg-rgb</code>" data-bs-html="true"><code>--bs-body-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -317,8 +276,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-body-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-color</code>" data-bs-html="true"><code>--bs-body-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-body-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-color-rgb</code>" data-bs-html="true"><code>--bs-body-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -341,8 +300,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-bg</code>" data-bs-html="true"><code>--bs-secondary-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-bg-rgb</code>" data-bs-html="true"><code>--bs-secondary-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -362,8 +321,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-color</code>" data-bs-html="true"><code>--bs-secondary-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary-color-rgb</code>" data-bs-html="true"><code>--bs-secondary-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -390,8 +349,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-bg</code>" data-bs-html="true"><code>--bs-tertiary-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-bg-rgb</code>" data-bs-html="true"><code>--bs-tertiary-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -411,8 +370,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-color</code>" data-bs-html="true"><code>--bs-tertiary-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-tertiary-color-rgb</code>" data-bs-html="true"><code>--bs-tertiary-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -432,8 +391,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-emphasis-color</code>" data-bs-html="true"><code>--bs-emphasis-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-emphasis-color-rgb</code>" data-bs-html="true"><code>--bs-emphasis-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-emphasis-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-emphasis-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -456,8 +415,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color</code>" data-bs-html="true"><code>--bs-border-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color-rgb</code>" data-bs-html="true"><code>--bs-border-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -477,7 +436,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-border-color-translucent</code>" data-bs-html="true"><code>--bs-border-color-translucent</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color-translucent</code></button>
           </div>
         </td>
       </tr>
@@ -501,7 +460,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-hover-color</code>" data-bs-html="true"><code>--bs-hover-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-hover-color</code></button>
           </div>
         </td>
       </tr>
@@ -524,7 +483,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-highlight-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-highlight-bg</code>" data-bs-html="true"><code>--bs-highlight-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-highlight-bg</code></button>
           </div>
         </td>
       </tr>
@@ -544,7 +503,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-highlight-color</code>" data-bs-html="true"><code>--bs-highlight-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-highlight-color</code></button>
           </div>
         </td>
       </tr>
@@ -567,7 +526,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-focus-visible-outer-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-focus-visible-outer-color</code>" data-bs-html="true"><code>--bs-focus-visible-outer-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-outer-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-focus-visible-outer-color</code></button>
           </div>
         </td>
       </tr>
@@ -587,7 +546,7 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-focus-visible-inner-color</code>" data-bs-html="true"><code>--bs-focus-visible-inner-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-focus-visible-inner-color</code></button>
           </div>
         </td>
       </tr>
@@ -610,8 +569,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color</code>" data-bs-html="true"><code>--bs-link-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color-rgb</code>" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -631,8 +590,8 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color</code>" data-bs-html="true"><code>--bs-link-hover-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color-rgb</code>" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-hover-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -652,17 +611,14 @@ TODO: think to update palette.yml with variable names!!
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-code-color</code>" data-bs-html="true"><code>--bs-code-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-code-color</code></button>
           </div>
         </td>
       </tr>
+      <!-- TODO: active-bg, disabled-bg, all the remaining variables we just introduced inside dark mode -->
     </tbody>
   </table>
 </div>
-
-<!--
-TODO: IMO this section shouldn't appear here because it's rather related to components. These CSS variables shouldn't be in __root.scss_ but in specific files like it's suggested in https://github.com/twbs/bootstrap/pull/39295.
--->
 
 ### Sass variables
 

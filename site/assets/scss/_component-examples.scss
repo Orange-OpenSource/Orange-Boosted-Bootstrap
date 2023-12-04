@@ -442,6 +442,14 @@
   --bs-border-color: var(--bs-border-color-translucent);
 }
 
+.color-copy:hover svg {
+  transform: scale(1.07);
+}
+
+.color-copy svg {
+  transition: transform .15s ease-in-out; // stylelint-disable-line property-disallowed-list
+}
+
 .double-figure-svg {
   padding-top: 10px;
   padding-bottom: 10px;
