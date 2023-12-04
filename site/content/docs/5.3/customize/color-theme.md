@@ -339,21 +339,52 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     <thead>
       <tr>
         <th>Description</th>
+        <th></th>
         <th style="width: 60px;">Light value</th>
         <th style="width: 60px;">Dark value</th>
         <th>Variables</th>
       </tr>
     </thead>
     <tbody>
+      <tr class="border-bottom-0">
+        <td>
+          {{< markdown >}}**Body**{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Background.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-body-bg);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-body-bg);" data-bs-theme="dark" title="#141414"><p class="visually-hidden">#141414</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg</code>" data-bs-html="true"><code>--bs-body-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg-rgb</code>" data-bs-html="true"><code>--bs-body-bg-rgb</code></button>
+          </div>
+        </td>
+      </tr>
       <tr>
-        <td>
-          {{< markdown >}}**Body —** Default foreground.{{< /markdown >}}
+        <td class="border-top-0">
         </td>
         <td>
-          <div style="background-color: var(--bs-body-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
         <td>
-          <div style="background-color: var(--bs-body-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-body-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-body-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
         </td>
         <td>
           <div>
@@ -362,32 +393,22 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
           </div>
         </td>
       </tr>
-      <tr>
+      <tr class="border-bottom-0">
         <td>
-          {{< markdown >}}**Body —** Default background.{{< /markdown >}}
+          {{< markdown >}}**Link**{{< /markdown >}}
         </td>
         <td>
-          <div style="background-color: var(--bs-body-bg);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
+          {{< markdown >}}Default.{{< /markdown >}}
         </td>
         <td>
-          <div style="background-color: var(--bs-body-bg);" data-bs-theme="dark" title="#141414"><p class="visually-hidden">#141414</p></div>
-        </td>
-        <td>
-          <div>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg</code>" data-bs-html="true"><code>--bs-body-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg-rgb</code>" data-bs-html="true"><code>--bs-body-bg-rgb</code></button>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
           </div>
         </td>
-      </tr>
-      <tr>
         <td>
-          {{< markdown >}}**Link —** Link default foreground.{{< /markdown >}}
-        </td>
-        <td>
-          <div style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
-        </td>
-        <td>
-          <div style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
         </td>
         <td>
           <div>
@@ -397,14 +418,83 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
         </td>
       </tr>
       <tr>
+        <td class="border-top-0">
+        </td>
+        <td>
+          {{< markdown >}}Hover.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-hover-color);" data-bs-theme="light" title="#f16e00"><p class="visually-hidden">#f16e00</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color</code>" data-bs-html="true"><code>--bs-link-hover-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color-rgb</code>" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}**FAKE**{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Default.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color</code>" data-bs-html="true"><code>--bs-link-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color-rgb</code>" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom-0">
+        <td colspan="2">
+          {{< markdown >}}**FAKE** - I'm a fake description{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-link-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color</code>" data-bs-html="true"><code>--bs-link-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-color-rgb</code>" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <!--
+      <tr>
         <td>
           {{< markdown >}}**Link —** Link hovered foreground.{{< /markdown >}}
         </td>
         <td>
-          <div style="background-color: var(--bs-link-hover-color);" data-bs-theme="light" title="#f16e00"><p class="visually-hidden">#f16e00</p></div>
+          <div class="border-color" style="background-color: var(--bs-link-hover-color);" data-bs-theme="light" title="#f16e00"><p class="visually-hidden">#f16e00</p></div>
         </td>
         <td>
-          <div style="background-color: var(--bs-link-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
+          <div class="border-color" style="background-color: var(--bs-link-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
         </td>
         <td>
           <div>
@@ -412,7 +502,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
             <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-link-hover-color-rgb</code>" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
           </div>
         </td>
-      </tr>
+      </tr>-->
     </tbody>
   </table>
 </div>
