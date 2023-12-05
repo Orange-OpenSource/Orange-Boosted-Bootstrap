@@ -83,7 +83,7 @@
     border: 1px solid var(--bs-border-color-translucent);
   }
 
-  td:last-child {
+  td:last-child:not(:first-child) {
     div {
       display: flex;
       flex-direction: column;

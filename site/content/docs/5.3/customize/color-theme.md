@@ -120,7 +120,7 @@ The functional grays of orange design. These colors are used as backgrounds, col
 
 ### Supporting
 
-The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. As you can see, they don't change their color depending on the theme. They should not be used alone or dominate the page.
+The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. As you may have noticed, they don't change their color depending on the theme. They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
@@ -153,7 +153,7 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 
 {{< added-in "5.3.0" >}}
 
-The following CSS variables are used to create our [usable variables](#usable-variables). They are not meant to be used directly in a project.
+The following CSS variables are used to create our [usable variables](#usable-variables). Only the functional colors are meant to be used directly in a project.
 
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-rgb), .5)`.
 
@@ -255,8 +255,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -276,14 +276,14 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-body-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-body-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-body-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-body-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-color-rgb</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Secondary** - <span class="text-bg-warning">Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.</span>{{< /markdown >}}
+          {{< markdown >}}**Body secondary** - <span class="text-bg-warning">Use the `color` option for less accentuated text (placeholder, helper text, code). Use the `bg` option to low emphasis a content or display a specific component state (hover, form disabled). **TODO**: replace --bs-placeholder</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -300,8 +300,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -321,14 +321,14 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-secondary-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-color-rgb</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Tertiary** - <span class="text-bg-warning">Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.</span>{{< /markdown >}}
+          {{< markdown >}}**Body tertiary** - <span class="text-bg-warning">Use the `color` option for even lighter text (Should we change to #ccc -> #666 correspond to disabled for us). Use the `bg` option to style backgrounds for hover states, accents, and wells. We don't have anything that would fit the Bootstrap definition for the bg option</span>{{< /markdown >}}
           <div class="alert alert-warning mt-2" role="alert">
             <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
             <p>Change foreground light color!</p>
@@ -349,8 +349,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-bg</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-bg-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-bg-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-bg-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -370,8 +370,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-tertiary-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -391,14 +391,14 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-emphasis-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-emphasis-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-emphasis-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-emphasis-color-rgb</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Border** - <span class="text-bg-warning">For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an rgba() value.</span>{{< /markdown >}}
+          {{< markdown >}}**Border** - <span class="text-bg-warning">For clickable component borders. Use `--bs-border-color-translucent` to use a lighter value for inputs, defined areas, dividers, and rules.</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Default.{{< /markdown >}}
@@ -415,8 +415,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -436,7 +436,7 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-border-color-translucent</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-translucent</code></button>
           </div>
         </td>
       </tr>
@@ -460,13 +460,13 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-hover-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-hover-color</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Highlight** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+          {{< markdown >}}**Highlight** - <span class="text-bg-warning">For `<mark>` text. Also used to highlight some components to get both foreground and background.</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -483,7 +483,7 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-highlight-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-highlight-bg</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-highlight-bg</code></button>
           </div>
         </td>
       </tr>
@@ -503,13 +503,13 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-highlight-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-highlight-color</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Focus** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+          {{< markdown >}}**Focus** - <span class="text-bg-warning">Use the `outer` version for the focus outline. Use the `inner` option for the focus box-shadow.</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Outer.{{< /markdown >}}
@@ -526,7 +526,7 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-focus-visible-outer-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-focus-visible-outer-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-outer-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-focus-visible-outer-color</code></button>
           </div>
         </td>
       </tr>
@@ -546,13 +546,13 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-focus-visible-inner-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-focus-visible-inner-color</code></button>
           </div>
         </td>
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Link** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+          {{< markdown >}}**Link** - <span class="text-bg-warning">Use these variables to set the color to a link or something that should look like a link.</span>{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Default.{{< /markdown >}}
@@ -569,8 +569,8 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-link-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-link-color-rgb</code></button>
           </div>
         </td>
       </tr>
@@ -590,14 +590,14 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td class="border-top-1">
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-hover-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-link-hover-color-rgb</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-link-hover-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-link-hover-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-link-hover-color-rgb</code></button>
           </div>
         </td>
       </tr>
-      <tr class="border-bottom-0">
+      <tr>
         <td colspan="2">
-          {{< markdown >}}**Code** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
+          {{< markdown >}}**Code** - <span class="text-bg-warning">Use this variable to set the color to a code text.</span>{{< /markdown >}}
         </td>
         <td>
           <div class="border-color">
@@ -606,16 +606,23 @@ We provide some more contextual variables that are meant to ease the maintenance
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-code-color);" data-bs-theme="dark" title="#a3a3a3"><p class="visually-hidden">#a3a3a3</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-code-color);" data-bs-theme="dark" title="#999"><p class="visually-hidden">#999</p></div>
           </div>
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left" data-bs-html="true"><code>--bs-code-color</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-code-color</code></button>
           </div>
         </td>
       </tr>
-      <!-- TODO: active-bg, disabled-bg, all the remaining variables we just introduced inside dark mode -->
+      <tr>
+        <td colspan="5">
+          <div class="alert alert-warning mb-0" role="alert">
+            <span class="alert-icon"><span class="visually-hidden"></span></span>
+            <p>TODO: active-bg, disabled-color, decide what to do with the remaining variables remove ?</p>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -624,18 +631,38 @@ We provide some more contextual variables that are meant to ease the maintenance
 
 #### Orange variables
 
-{{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+We define our meaningful variables for light and dark themes first.
 
+<div class="row">
+  <div class="col-md-6 col-lg-12 col-xl-6">
+{{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+  </div>
+  <div class="col-md-6 col-lg-12 col-xl-6">
 {{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+  </div>
+</div>
 
 #### Bootstrap variables
 
-<!--
-TODO: explain that this is only the most important part, and that the rest exists somewhere else but is not documented here
-TODO: add grays?
--->
+<div class="alert alert-warning" role="alert">
+  <span class="alert-icon"><span class="visually-hidden"></span></span>
+  <p>TODO: explain that this is only the most important part, and that the rest exists somewhere else but is not documented here. TODO: add grays?</p>
+</div>
+
+We assign our meaningful variables to Bootstrap's tokens.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
+
+We then define theme colors for light (resp. dark). These are the variables used for our CSS variables.
+
+<div class="row">
+  <div class="col-md-6 col-lg-12 col-xl-6">
+{{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
+  </div>
+  <div class="col-md-6 col-lg-12 col-xl-6">
+{{< scss-docs name="theme-color-dark-variables" file="scss/_variables-dark.scss" >}}
+  </div>
+</div>
 
 ## Generating utilities
 
