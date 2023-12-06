@@ -45,18 +45,6 @@ $theme-colors-border-subtle: (
 ) !default;
 // scss-docs-end theme-border-subtle-map
 
-// Boosted mod
-$background-colors: map-merge(
-  $theme-colors,
-  (
-    "success": $supporting-green,
-    "info":    $supporting-blue,
-    "warning": $supporting-yellow,
-    "danger":  $danger
-  )
-) !default;
-// End mod
-
 $theme-colors-text-dark: null !default;
 $theme-colors-bg-subtle-dark: null !default;
 $theme-colors-border-subtle-dark: null !default;
@@ -112,13 +100,14 @@ $utilities-colors: $theme-colors-rgb !default;
 // scss-docs-end utilities-colors
 
 // scss-docs-start utilities-text-colors
-// Boosted mod: content of $utilities-text
-$utilities-text: (
-  "primary": to-rgb($accessible-orange),
-  "light": to-rgb($gray-500),
-  "black": to-rgb($black),
-  "white": to-rgb($white),
-  "body": to-rgb($body-color),
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    "primary": to-rgb($accessible-orange), // Boosted mod
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color)
+  )
 ) !default;
 $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
 

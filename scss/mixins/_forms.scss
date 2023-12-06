@@ -30,7 +30,7 @@
           padding-right: $input-height-inner;
           background-image: escape-svg($icon);
           background-repeat: no-repeat;
-          background-position: right $input-height-inner-quarter top subtract($input-height-inner-quarter, 2px);
+          background-position: right subtract($input-height-inner-quarter, $input-border-width) top subtract($input-height-inner-quarter, $input-border-width);
           background-size: $input-height-inner-half $input-height-inner-half;
         }
       }
@@ -49,7 +49,7 @@
 
       .form-control-color {
         @include form-validation-state-selector($state) {
-          width: add($form-color-width, $input-height-inner);
+          width: calc(#{$form-color-width} + #{$input-height-inner-half} + #{$input-height-inner-quarter} - #{$input-border-width}); // stylelint-disable-line function-disallowed-list
         }
       }
     }
@@ -95,15 +95,19 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          @include focus-visible();
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+        }
+        // End mod
       }
     }
 
-    // Boosted mod: Remove border on input for form element QuantitySelector
+    // Boosted mod: Change border-color when on error for form element QuantitySelector
     .quantity-selector .form-control {
       @include form-validation-state-selector($state) {
-        border-right: none;
-        border-left: none;
-
         // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
           border-color: $border-color;
@@ -123,6 +127,13 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          @include focus-visible();
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+        }
+        // End mod
       }
     }
 

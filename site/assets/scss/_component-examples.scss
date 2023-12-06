@@ -2,12 +2,16 @@
 // Docs examples
 //
 
-.bd-example-snippet {
+.bd-code-snippet {
+  margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
+    margin-right: 0;
+    margin-left: 0;
     border-width: 1px;
+    @include border-radius(var(--bs-border-radius));
   }
 }
 
@@ -16,7 +20,7 @@
 
   position: relative;
   padding: var(--bd-example-padding);
-  margin: 0 ($bd-gutter-x * -.5);
+  margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
@@ -27,13 +31,7 @@
     margin-right: 0;
     margin-left: 0;
     border-width: 1px;
-    @include border-top-radius(var(--bs-border-radius));
-  }
-
-  + .bd-code-snippet {
-    @include border-top-radius(0);
-    border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
-    border-width: 0 1px 1px;
+    @include border-radius(var(--bs-border-radius));
   }
 
   + p {
@@ -119,8 +117,8 @@
 .bd-example-cssgrid [class*="grid"] > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: rgba(var(--bd-violet-rgb), .15);
-  border: 1px solid rgba(var(--bd-violet-rgb), .3);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
+  border: 1px solid rgba(var(--bd-primary-light-rgb), .3);
 }
 
 .bd-example-row .row + .row,
@@ -130,12 +128,12 @@
 
 .bd-example-row-flex-cols .row {
   min-height: 10rem;
-  background-color: rgba(var(--bd-violet-rgb), .15);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
 }
 
 .bd-example-flex div:not(.vr) {
-  background-color: rgba(var(--bd-violet-rgb), .15);
-  border: 1px solid rgba(var(--bd-violet-rgb), .3);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
+  border: 1px solid rgba(var(--bd-primary-light-rgb), .3);
 }
 
 // Grid mixins
@@ -222,16 +220,18 @@
 
 // scss-docs-start custom-tooltip
 .custom-tooltip {
-  --bs-tooltip-bg: var(--bs-primary);
+  --bs-tooltip-bg: var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
 }
 // scss-docs-end custom-tooltip
 
 // scss-docs-start custom-popovers
 .custom-popover {
   --bs-popover-max-width: 12.5rem;
-  --bs-popover-border-color: var(--bs-primary);
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-black); // Boosted mod: text-dark on primary
+  --bs-popover-border-color: var(--bd-violet-bg);
+  --bs-popover-header-bg: var(--bd-violet-bg);
+  --bs-popover-header-padding-y: .5rem; // Boosted mod
+  --bs-popover-header-color: var(--bs-white);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
@@ -315,8 +315,8 @@
 
   > div {
     color: var(--bs-body-bg);
-    background-color: var(--bd-violet);
-    border: 1px solid var(--bd-purple);
+    background-color: var(--bd-primary-light);
+    border: 1px solid var(--bd-primary);
 
     > span {
       position: absolute;
@@ -350,12 +350,17 @@
 .highlight {
   position: relative;
   padding: .75rem ($bd-gutter-x * .5);
-  margin-bottom: 1rem;
   background-color: var(--bd-pre-bg);
 
   @include media-breakpoint-up(md) {
     padding: .75rem 1.25rem;
-    @include border-radius(var(--bs-border-radius));
+    @include border-radius(calc(var(--bs-border-radius) - 1px));
+  }
+
+  @include media-breakpoint-up(lg) {
+    pre {
+      margin-right: 1.875rem;
+    }
   }
 
   pre {
@@ -376,34 +381,64 @@
   }
 }
 
-.bd-code-snippet {
-  margin: 0 ($bd-gutter-x * -.5) $spacer;
-
-  .highlight {
-    margin-bottom: 0;
-    @include border-top-radius(0);
-  }
-
-  .bd-example {
-    margin: 0;
-    border: 0;
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-right: 0;
-    margin-left: 0;
-    @include border-radius($border-radius);
-  }
+.bd-example-snippet .highlight pre {
+  margin-right: 0;
 }
 
 .highlight-toolbar {
   background-color: var(--bd-pre-bg);
-  border: solid $gray-400; // Boosted mod
-  border-width: 1px 0; // Boosted mod
-}
 
-.bd-scss-docs {
-  .highlight-toolbar {
-    @include border-top-radius(calc(var(--bs-border-radius) + 1px));
+  + .highlight {
+    @include border-top-radius(0);
   }
 }
+
+.bd-file-ref {
+  .highlight-toolbar {
+    @include media-breakpoint-up(md) {
+      @include border-top-radius(calc(var(--bs-border-radius) - 1px));
+    }
+  }
+}
+
+.bd-content .bd-code-snippet {
+  margin-bottom: 1rem;
+}
+
+// Boosted mod
+// scss-docs-start sticker-fs-4xl
+.sticker-fs-4xl {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.125rem;
+}
+// scss-docs-end sticker-fs-4xl
+
+// scss-docs-start sticker-fs-l-3xl
+// scss-docs-start sticker-fs-3xl
+.sticker-fs-3xl {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+// scss-docs-end sticker-fs-3xl
+
+.sticker-fs-l {
+  font-size: 1.5rem;
+  line-height: calc(26 / 24); // stylelint-disable-line function-disallowed-list
+  letter-spacing: -.03125rem;
+}
+// scss-docs-end sticker-fs-l-3xl
+
+// scss-docs-start sticker-fs-xl
+.sticker-fs-xl {
+  font-size: 1.875rem;
+  line-height: calc(32 / 30); // stylelint-disable-line function-disallowed-list
+  letter-spacing: -.05rem;
+}
+// scss-docs-end sticker-fs-xl
+
+.border-gray-400 {
+  --bs-border-color: #{$gray-400};
+}
+// End mod

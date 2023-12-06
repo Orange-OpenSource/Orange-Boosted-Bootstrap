@@ -24,7 +24,7 @@ Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an asp
 
 {{< example >}}
 <div class="ratio ratio-16x9">
-  <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
 </div>
 {{< /example >}}
 
@@ -79,7 +79,7 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 {{< /example >}}
 
 
-## Sass map
+## Sass maps
 
 Within `_variables.scss`, you can change the aspect ratios you want to use. Here's our default `$ratio-aspect-ratios` map. Modify the map as you like and recompile your Sass to put them to use.
 

@@ -123,7 +123,10 @@
 
   // No focus
   &:hover {
-    color: var(--#{$prefix}navbar-brand-hover-color);
+    .title,
+    .two-lined {
+      color: var(--#{$prefix}navbar-brand-hover-color);
+    }
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
@@ -459,7 +462,8 @@
           display: flex;
         }
 
-        &.header-minimized {
+        .header-minimized &:first-child:not(.supra),
+        .header-minimized .supra + &.navbar {
           --#{$prefix}navbar-nav-link-margin-y: .75rem;
         }
 
@@ -529,7 +533,8 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
-.navbar-dark {
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
   // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};

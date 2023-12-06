@@ -29,17 +29,18 @@
 .form-check-input {
   --#{$prefix}form-check-bg: #{$form-check-input-bg};
 
+  flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
+  appearance: none;
   background-color: var(--#{$prefix}form-check-bg);
   background-image: var(--#{$prefix}form-check-bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border: $form-check-input-border;
-  appearance: none;
   print-color-adjust: exact; // Keep themed appearance for print
   @include transition($form-check-transition);
 
@@ -153,7 +154,7 @@
 
 .form-switch {
   // Boosted mod
-  --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+  --#{$prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
@@ -166,12 +167,12 @@
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
     background-color: $white; // Boosted mod
-    background-image: var(--#{$prefix}form-switch-bg), var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
+    background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // Boosted mod: extra param `var(--#{$prefix}switch-gradient)`
     filter: $invert-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
     border-color: $white; // Boosted mod
-    @include border-radius($form-switch-border-radius);
+    @include border-radius($form-switch-border-radius, 0);
     @include transition($form-switch-transition);
 
     &:focus {
@@ -202,7 +203,7 @@
       }
 
       &:not(:disabled) {
-        --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
+        --#{$prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
       }
     }
 
@@ -263,11 +264,11 @@
       content: "";
     }
 
-    &:not(:first-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:first-of-type) {
       border-left: 0;
     }
 
-    &:not(:last-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:last-of-type) {
       border-right: 0;
     }
   }

@@ -40,7 +40,7 @@
 
   // Boosted mod
   @each $icon, $svg in $svg-as-custom-props {
-    --#{$boosted-prefix}#{$icon}-icon: #{escape-svg($svg)};
+    --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
   }
   // End mod
 
@@ -84,9 +84,7 @@
   --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
   // scss-docs-end root-body-variables
 
-  @if $headings-color != null {
-    --#{$prefix}heading-color: #{$headings-color};
-  }
+  --#{$prefix}heading-color: #{$headings-color};
 
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
@@ -100,7 +98,7 @@
   }
 
   --#{$prefix}code-color: #{$code-color};
-  --#{$prefix}highlight-color: #{$mark-color}; // Boosted mod
+  --#{$prefix}highlight-color: #{$mark-color};
   --#{$prefix}highlight-bg: #{$mark-bg};
 
   // scss-docs-start root-border-var
@@ -153,13 +151,15 @@
   --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
   --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
   --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
-  --#{$boosted-prefix}caption-color: #{$table-caption-color-inverted};
+  --#{$prefix}caption-color: #{$table-caption-color-inverted};
   --#{$prefix}code-color: #{$code-color-inverted};
   --#{$prefix}highlight-color: #{$mark-color-inverted};
   --#{$prefix}highlight-bg: #{$mark-bg-inverted};
-  --#{$boosted-prefix}kbd-color: #{$kbd-color-inverted};
-  --#{$boosted-prefix}kbd-bg: #{$kbd-bg-inverted};
-  --#{$boosted-prefix}pre-color: #{$pre-color-inverted};
+  --#{$prefix}kbd-color: #{$kbd-color-inverted};
+  --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
+  --#{$prefix}pre-color: #{$pre-color-inverted};
+  --#{$prefix}body-color: #{$body-color-dark};
+  --#{$prefix}heading-color: #{$headings-color-dark};
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {
@@ -170,13 +170,15 @@
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
     --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
     --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
-    --#{$boosted-prefix}caption-color: #{$table-caption-color};
+    --#{$prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};
     --#{$prefix}highlight-bg: #{$mark-bg};
-    --#{$boosted-prefix}kbd-color: #{$kbd-color};
-    --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
-    --#{$boosted-prefix}pre-color: #{$pre-color};
+    --#{$prefix}kbd-color: #{$kbd-color};
+    --#{$prefix}kbd-bg: #{$kbd-bg};
+    --#{$prefix}pre-color: #{$pre-color};
+    --#{$prefix}body-color: #{$body-color};
+    --#{$prefix}heading-color: #{$headings-color};
   }
 }
 // End mod
@@ -217,9 +219,7 @@
       --#{$prefix}#{$color}-border-subtle: #{$value};
     }
 
-    @if $headings-color-dark != null {
-      --#{$prefix}heading-color: #{$headings-color-dark};
-    }
+    --#{$prefix}heading-color: #{$headings-color-dark};
 
     --#{$prefix}link-color: #{$link-color-dark};
     --#{$prefix}link-hover-color: #{$link-hover-color-dark};
@@ -227,6 +227,8 @@
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
 
     --#{$prefix}code-color: #{$code-color-dark};
+    --#{$prefix}highlight-color: #{$mark-color-dark};
+    --#{$prefix}highlight-bg: #{$mark-bg-dark};
 
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};

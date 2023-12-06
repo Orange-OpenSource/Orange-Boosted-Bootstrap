@@ -1,5 +1,3 @@
-// stylelint-disable function-disallowed-list
-
 %offcanvas-css-vars {
   // scss-docs-start offcanvas-css-vars
   --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas};
@@ -128,14 +126,11 @@
 .offcanvas-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
     // Boosted mod: no extra padding rule
-    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
-    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
-    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    margin: 0 0 0 auto; // Boosted mod: instead of `calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) calc(-.5 * var(--#{$prefix}offcanvas-padding-x)) calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) auto;`
   }
 }
 

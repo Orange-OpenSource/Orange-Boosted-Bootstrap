@@ -88,16 +88,15 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <!-- eslint-skip -->
    ```js
-   const path = require('path')
+   import { resolve } from 'path'
 
    export default {
-     root: path.resolve(__dirname, 'src'),
+     root: resolve(__dirname, 'src'),
      build: {
        outDir: '../dist'
      },
      server: {
-       port: 8080,
-       hot: true
+       port: 8080
      }
    }
    ```

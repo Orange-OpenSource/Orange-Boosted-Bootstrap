@@ -7,7 +7,7 @@ on:
       - 'js/**'
       - 'scss/**'
   pull_request:
-    types: [labeled, unlabeled, opened, reopened, synchronize]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -20,16 +20,16 @@ permissions:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
+    if: github.actor != 'dependabot[bot]'
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "${{ env.NODE }}"
           cache: npm

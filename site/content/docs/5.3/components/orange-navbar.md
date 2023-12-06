@@ -192,7 +192,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
               </svg>
               <span class="visually-hidden">Basket</span>
               <span class="position-relative align-self-start">
-                <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
@@ -356,8 +356,7 @@ You can add a search input into your Global header.
       ...
 
       <!-- Navbar with action icons -->
-      <form class="d-flex d-none d-lg-flex nav-item" role="search">
-        <!-- todo : reforge when .dark-input -->
+      <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
         <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
       </form>
       <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex global-header-5">
