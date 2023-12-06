@@ -2464,7 +2464,7 @@ $tag-active-decoration-color-dark:  $white !default;
 // Local navigation
 
 // scss-docs-start local-nav-variables
-$local-nav-padding-y:           $navbar-nav-link-padding-y !default;
+$local-nav-padding-y:           $navbar-nav-link-margin-y !default;
 $local-nav-color:               var(--#{$prefix}body-color) !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
 $local-nav-hover-color:         $local-nav-color !default;
