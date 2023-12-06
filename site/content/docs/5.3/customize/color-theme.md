@@ -618,7 +618,7 @@ We provide some more contextual variables that are meant to ease the maintenance
       <tr>
         <td colspan="5">
           <div class="alert alert-warning mb-0" role="alert">
-            <span class="alert-icon"><span class="visually-hidden"></span></span>
+            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
             <p>TODO: active-bg, disabled-color, decide what to do with the remaining variables remove ?</p>
           </div>
         </td>
@@ -645,7 +645,7 @@ We define our meaningful variables for light and dark themes first.
 #### Bootstrap variables
 
 <div class="alert alert-warning" role="alert">
-  <span class="alert-icon"><span class="visually-hidden"></span></span>
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>TODO: explain that this is only the most important part, and that the rest exists somewhere else but is not documented here. TODO: add grays?</p>
 </div>
 

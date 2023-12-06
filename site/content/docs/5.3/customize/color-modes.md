@@ -15,7 +15,7 @@ added: "5.3"
 
 ## Dark mode
 
-**Boosted now supports color modes, starting with dark mode!** With v5.3.0 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**Boosted now supports color modes, starting with dark mode!** With v5.3.0 you can implement <span class="text-bg-warning">your own color mode toggler (see below for an example from Boosted's docs) Should we create a component Bootstrap side ?</span>. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
 
 Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.
 
@@ -36,6 +36,11 @@ For example, to change the color mode of a dropdown menu, add `data-bs-theme="li
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
+</div>
+
+<div class="alert alert-warning mb-0" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+  <p>TODO: `data-bs-theme="dark"` on `.dropdown` or `.dropdown-menu`? if yes, change paragraph above.</p>
 </div>
 
 <div class="dropdown" data-bs-theme="dark">
@@ -93,6 +98,11 @@ Enable the built in dark color mode across your entire project by adding the `da
 Boosted does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. [Learn more in the JavaScript section.](#javascript)
 
 ### Building with Sass
+
+<div class="alert alert-warning mb-0" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+  <p>TODO: Should we hide this section? Maybe explain more precisely that Orange need dark theme.</p>
+</div>
 
 Our new dark mode option is available to use for all users of Boosted, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
 
