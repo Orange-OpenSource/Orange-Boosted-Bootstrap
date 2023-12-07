@@ -466,19 +466,19 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
   <fieldset class="star-rating" disabled aria-hidden="true">
     <legend class="visually-hidden">Disabled star rating</legend>
 
-    <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
+    <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden" disabled>
     <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
 
-    <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
+    <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden" disabled>
     <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
 
-    <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
+    <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" disabled checked>
     <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
 
-    <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
+    <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" disabled>
     <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
 
-    <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
+    <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden" disabled>
     <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
   <p class="visually-hidden">Disabled star rating: rated 3 out of 5</p>
