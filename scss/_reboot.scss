@@ -246,7 +246,7 @@ li::marker {
   }
 }
 
-li li::marker { color: var(--#{$prefix}placeholder-color); }
+li li::marker { color: var(--#{$prefix}secondary-color); }
 
 li li li::marker { color: var(--#{$prefix}border-color-translucent); }
 
@@ -262,7 +262,7 @@ li::before {
   }
 }
 
-li li::before { color: var(--#{$prefix}placeholder-color); }
+li li::before { color: var(--#{$prefix}secondary-color); }
 
 li li li::before { color: var(--#{$prefix}border-color-translucent); }
 // stylelint-enable selector-max-type

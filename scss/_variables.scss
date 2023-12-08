@@ -832,7 +832,7 @@ $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-xlg !default;
-$blockquote-footer-color:     var(--#{$prefix}placeholder-color) !default; // Boosted mod: instead of `$gray-600`
+$blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // Boosted mod: instead of `$gray-600`
 $blockquote-footer-font-size: $small-font-size !default;
 $blockquote-line-height:      1.5 !default; // Boosted mod
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mod
@@ -1087,7 +1087,7 @@ $form-text-font-size:                   $small-font-size !default;
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // Boosted mod: instead of `null`
 $form-text-line-height:                 $line-height-sm !default; // Boosted mod
-$form-text-color:                       var(--#{$prefix}placeholder-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$form-text-color:                       var(--#{$prefix}secondary-color) !default;
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
@@ -1126,7 +1126,7 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              var(--#{$prefix}body-bg) !default;
-$input-disabled-color:                  var(--#{$prefix}placeholder-color) !default; // Boosted mod
+$input-disabled-color:                  var(--#{$prefix}secondary-color) !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
@@ -1145,7 +1145,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // Boosted mod
 
-$input-placeholder-color:               var(--#{$prefix}placeholder-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
 $input-plaintext-color:                 null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 
 // Boosted mod: no $input-height-border
@@ -1722,7 +1722,7 @@ $card-color:                        null !default;
 $card-bg:                           var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
-$card-footer-color:                 var(--#{$prefix}placeholder-color) !default; // Boosted mod
+$card-footer-color:                 var(--#{$prefix}secondary-color) !default; // Boosted mod
 // scss-docs-end card-variables
 
 // Accordion

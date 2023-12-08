@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color palette
-description: Orange's color palette is the summary of all the existing and useable colors.
+description: Boosted's color palette is the summary of all the existing and useable colors.
 group: customize
 aliases:
   - "/docs/customize/color-palette/"
@@ -11,7 +11,7 @@ added: "5.3"
 
 ## Palette
 
-This section exposes all the existing colors inside the Orange palette. These variables aren't meant to be used, it's an exposure of the available variables. Be aware that none of the variables presented depend on the theme.
+This section exposes all the existing colors inside the Boosted palette. These variables aren't meant to be used, it's an exposure of the available variables. Be aware that none of the variables presented depend on the theme.
 
 Please make sure that none of the [color theme variables]({{< docsref "/customize/color-theme" >}}) fit your needs before getting one here.
 

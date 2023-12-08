@@ -35,14 +35,14 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 However, other colors are needed to create an interface. The following sections explain which colors are used for which purpose in a light and dark mode context.
 
 {{< callout info >}}
-The following color patches represent the only colors you should have inside an Orange interface either in contextual light or dark theme. The color patches show how a color should behave on light or dark theme.
+The following color sections represent the only colors you should have inside an Orange interface either in contextual light or dark theme. The following bicolor representation shows the rendering of the same usage on light or dark theme.
 
 The corresponding values displayed in these sections are used within the framework to create our components and utilities. But they are rarely used and to be used directly in a project. We recommend using the [usable variables](#usable-variables) instead that are more specific.
 {{< /callout >}}
 
 ### Core
 
-The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
+The Boosted core colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
@@ -66,7 +66,9 @@ The core colors of orange design. These colors should always dominate other colo
 
 ### Functional
 
-The functional colors of orange design. These colors are not meant to be used as backgrounds or colors. They are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error). They should be associated with a meaningful icon.
+The Boosted functional colors are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error) and should be used in combination with a meaningful icon.
+
+Please note that the functional colors are not meant to be used as backgrounds or colors.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
@@ -96,7 +98,7 @@ The functional colors of orange design. These colors are not meant to be used as
 
 ### Grays
 
-The functional grays of orange design. These colors are used as backgrounds, colors or borders to highlight some elements or actions (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
+The Boosted grays are used as backgrounds, colors or borders to highlight some elements or actions (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
@@ -120,7 +122,7 @@ The functional grays of orange design. These colors are used as backgrounds, col
 
 ### Supporting
 
-The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. As you may have noticed, they don't change their color depending on the theme. They should not dominate the page.
+The Boosted supporting colors are meant for backgrounds, data display or illustrations. As you may have noticed, they don't change their color depending on the theme. They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
@@ -149,13 +151,15 @@ The supporting colors of orange design. These colors are meant for backgrounds, 
 
 ### Variables
 
-#### Theming
-
 {{< added-in "5.3.0" >}}
 
-The following CSS variables are used to create our [usable variables](#usable-variables). Only the functional colors are meant to be used directly in a project.
-
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-rgb), .5)`.
+
+#### Theming
+
+The following CSS variables are the custom properties built from [our theming Sass map](#theming) and are used to create our [usable variables](#usable-variables).
+
+Please note that only the functional colors are meant to be used directly in a project.
 
 <div class="table-responsive mb-4">
   <table class="table table-swatches">
@@ -200,29 +204,11 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </table>
 </div>
 
-<!--TODO: the following shouldn't be used directly (or rarely):
-
-// Functional grays (used in all components) (function: gray, neutral)
-#eee      #333        -bs-secondary-bg               surface.lowest // surface.hover // surface.disabled
-
-#ddd      #666        -bs-active-bg                  surface.highlight
-#ccc      #666        -bs-disabled-color             accent.neutral // accent.disabled
-#666      #999        -bs-placeholder-color          accent.secondary
-#333      #333        Variable to introduce?          surface.low ??? Used in Boosted? Could be -bs-light for now?
-#000      #000        Variable to introduce?          inverted.background ??? Used in Boosted? Could be -bs-dark for now?
-
-// Weird use case
-#000      #ff7900     -bs-hover-color                 Doesn't exist but should be in Figma
-
-// Shouldn't appear?
-#333      #eee        -bs-body-color-subtle           <>
-#333      #666        -bs-gray-tweak                  Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
-#000      #141414     -bs-black-tweak                 Does not exist in Figma, linked to a filter, shouldn't be displayed in the documentation
--->
-
 #### Usable variables
 
-We provide some more contextual variables that are meant to ease the maintenance and the choice of variable you make.
+Some more contextual CSS variables are provided to create high-level semantic variables for your project that are linked to reusable basic concepts such as disabled, hover, focus, active, etc.
+
+**They are meant to be used directly in a project** and will ease its maintenance, especially after a Boosted update.
 
 <div class="table-responsive mb-4">
   <table class="table table-swatches">
@@ -238,7 +224,7 @@ We provide some more contextual variables that are meant to ease the maintenance
     <tbody>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Body** - Default background and foreground (color), including components. {{< /markdown >}}
+          {{< markdown >}}**Body** - Default background and foreground colors, including components. {{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -283,7 +269,7 @@ We provide some more contextual variables that are meant to ease the maintenance
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Body secondary** - <span class="text-bg-warning">Use the `color` option for less accentuated text (placeholder, helper text, code). Use the `bg` option to low emphasis a content or display a specific component state (hover, form disabled). **TODO**: replace --bs-placeholder</span>{{< /markdown >}}
+          {{< markdown >}}**Body secondary** - Use the `color` option for less accentuated text (placeholder, helper text, code). Use the `bg` option to low emphasis a content or display a specific component state (hover, form disabled).{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -620,6 +606,7 @@ We provide some more contextual variables that are meant to ease the maintenance
           <div class="alert alert-warning mb-0" role="alert">
             <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
             <p>TODO: active-bg, disabled-color, decide what to do with the remaining variables remove ?</p>
+            <p>-bs-body-color-subtle</p>
           </div>
         </td>
       </tr>
