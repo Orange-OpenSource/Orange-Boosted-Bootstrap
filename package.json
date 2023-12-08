@@ -154,7 +154,7 @@
     "ods-storybook-theme": "^1.1.0",
     "pa11y-ci": "^3.1.0",
     "pa11y-ci-reporter-html": "^6.0.2",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "postcss-cli": "^10.1.0",
     "rollup": "^3.29.3",
     "rollup-plugin-istanbul": "^5.0.0",
