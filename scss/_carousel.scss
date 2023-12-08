@@ -241,10 +241,10 @@
       // Animation based on Lea Verou's simple pie chart
       // See https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
       background-image: linear-gradient(to right, transparent 50%, color-contrast($carousel-indicator-active-bg) 0);
-      transform: scale($carousel-indicator-hover-scale);
       // No need to feature test mask-*
       // See https://caniuse.com/mdn-css_properties_mask-image
       mask-image: radial-gradient(circle at 50%, transparent 33%, $white add(33%, 1px));
+      transform: scale($carousel-indicator-hover-scale);
 
       &:hover,
       &:focus {
