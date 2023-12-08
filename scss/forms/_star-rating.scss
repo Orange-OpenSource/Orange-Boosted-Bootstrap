@@ -30,9 +30,9 @@
       display: block;
       width: 100%;
       height: 100%;
-      mask-image: var(--#{$prefix}star-rating-checked-icon);
       content: "";
       background-color: var(--#{$prefix}star-rating-checked-color);
+      mask-image: var(--#{$prefix}star-rating-checked-icon);
     }
 
     &:not(:first-of-type){
@@ -42,13 +42,13 @@
 
   > input:checked ~ label::before,
   .checked ~ span::before {
-    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
     background-color: var(--#{$prefix}star-rating-unchecked-color);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
   }
 
   > input:checked + label::before {
-    mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 
   > [data-focus-visible-added]:focus + label {
@@ -58,18 +58,18 @@
   }
 
   &:hover input + label::before {
-    mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-hover-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 
   > input:hover ~ label::before {
-    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
     background-color: var(--#{$prefix}star-rating-unchecked-color);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
   }
 
   > input:hover + label::before {
-    mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-hover-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 }
 
