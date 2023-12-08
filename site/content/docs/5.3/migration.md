@@ -35,6 +35,8 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 
 - <span class="badge text-bg-warning">Warning</span> Quantity selector has been updated to ensure a proper visible focus state and the `.input-group` class has been removed. Make sure to incorporate these changes into your websites.
 
+- <span class="badge text-bg-warning">Warning</span> The disabled star rating markup has been slightly changed for accessibility purpose; the `<input>`s wrapped into the `<fieldset>` also have a `disabled` attribute now. Please reflect this modification into your websites.
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
