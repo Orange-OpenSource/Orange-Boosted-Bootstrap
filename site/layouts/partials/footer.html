@@ -20,6 +20,7 @@
               <li><a class="nav-link{{ if (and (eq .Page.Layout "docs") (ne $category_slug "getting-started")) }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
               <li><a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
               <li><a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.icons }}" aria-describedby="headingLinks" target="_blank" rel="noopener">Solaris icons</a></li>
               <!-- Boosted mod: removed .Site.Params.themes|.blog|.swag -->
             </ul>
           </div>
@@ -53,7 +54,6 @@
               <li><a class="nav-link" href="{{ .Site.Params.repo }}/tree/v4-dev" aria-describedby="headingProjects" target="_blank" rel="noopener">Boosted 4</a></li>
               <li><a class="nav-link" href="{{ .Site.Params.bootstrap }}" aria-describedby="headingProjects" target="_blank" rel="noopener">Bootstrap</a></li>
               <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects" target="_blank" rel="noopener">Pre-release on Netlify</a></li>
-              <li><a class="nav-link" href="{{ .Site.Params.icons }}" aria-describedby="headingLinks" target="_blank" rel="noopener">Solaris icons</a></li>
             </ul>
           </div>
         </div>
