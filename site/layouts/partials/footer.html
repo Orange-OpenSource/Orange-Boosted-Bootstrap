@@ -20,7 +20,6 @@
               <li><a class="nav-link{{ if (and (eq .Page.Layout "docs") (ne $category_slug "getting-started")) }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
               <li><a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
               <li><a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
-              <li><a class="nav-link" href="{{ .Site.Params.icons }}" aria-describedby="headingLinks" target="_blank" rel="noopener">Solaris icons</a></li>
               <!-- Boosted mod: removed .Site.Params.themes|.blog|.swag -->
             </ul>
           </div>
