@@ -150,7 +150,6 @@
   // scss-docs-end root-form-validation-variables
 
   // ******* Additions for dark-mode
-  --#{$prefix}hover-color: #{$body-color};
   --#{$prefix}active-bg: #{$gray-400};
   --#{$prefix}disabled-color: #{$gray-500};
   --#{$prefix}disabled-filter: #{$disabled-filter};
@@ -167,6 +166,9 @@
   // Might not be needed
   --#{$prefix}body-color-subtle: #{$gray-900};
   // ******* End additions for dark-mode
+
+  // Navigation-specific styles
+  --#{$prefix}nav-link-active-color: #{$body-color};
 }
 
 @if $enable-dark-mode {
@@ -245,7 +247,6 @@
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
 
     // ******* Additions for dark-mode
-    --#{$prefix}hover-color: #{$supporting-orange};
     --#{$prefix}active-bg: #{$gray-700};
     --#{$prefix}disabled-color: #{$gray-700};
     --#{$prefix}disabled-filter: #{$disabled-filter-dark};
@@ -262,5 +263,8 @@
     --#{$prefix}body-color-subtle: #{$gray-300};
     // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
+
+    // Navigation-specific styles
+    --#{$prefix}nav-link-active-color: #{$supporting-orange};
   }
 }

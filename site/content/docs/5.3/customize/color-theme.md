@@ -426,30 +426,6 @@ Some more contextual CSS variables are provided to create high-level semantic va
           </div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
-          <div class="alert alert-warning" role="alert">
-            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-            <p>Can't we get rid of --bs-hover-color?<br>Only used for local navigation links and nav tabs.</p>
-          </div>
-          {{< markdown >}}**Hover** - <span class="text-bg-warning">TODO</span>{{< /markdown >}}
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-hover-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
-          </div>
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-hover-color);" data-bs-theme="dark" title="#ff7900"><p class="visually-hidden">#ff7900</p></div>
-          </div>
-        </td>
-        <td>
-          <div>
-            <button class="color-copy" data-clipboard-text="--bs-hover-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-hover-color</code></button>
-          </div>
-        </td>
-      </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
           {{< markdown >}}**Highlight** - <span class="text-bg-warning">For `<mark>` text. Also used to highlight some components to get both foreground and background.</span>{{< /markdown >}}
