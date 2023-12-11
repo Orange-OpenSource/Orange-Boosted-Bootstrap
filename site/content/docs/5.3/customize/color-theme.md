@@ -106,8 +106,8 @@ The Boosted grays are used as backgrounds, colors or borders to highlight some e
   {{- range $color := .colors }}
   <div class="double-figure-svg d-flex">
     <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-      <rect fill="{{ if eq $color.name 800 }}{{ $color.hex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="{{ if eq $color.name 800 }}{{ $color.darkHex }}{{ else }}var({{ $color.variable }}){{ end }}" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
     </svg>
     <div class="d-flex flex-column justify-content-around w-50 p-2 pe-none">
       <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all text-body">{{ $color.hex }}</code></p>

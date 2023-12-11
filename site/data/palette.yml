@@ -87,12 +87,12 @@
       class: 500
       hex: "#ccc"
       darkHex: "#666"
-      variable: --bs-disabled-color, --bs-border-color-translucent
+      variable: --bs-tertiary-color
     - name: 700
       class: 700
       hex: "#666"
       darkHex: "#999"
-      variable: --bs-secondary-color, --bs-placeholder-color
+      variable: --bs-secondary-color
 - category: ODS colors
   name: "ODS colors"
   subcategories:
