@@ -314,11 +314,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Body tertiary** - <span class="text-bg-warning">Use the `color` option for even lighter text (Should we change to #ccc -> #666 correspond to disabled for us). Use the `bg` option to style backgrounds for hover states, accents, and wells. We don't have anything that would fit the Bootstrap definition for the bg option</span>{{< /markdown >}}
-          <div class="alert alert-warning mt-2" role="alert">
-            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-            <p>Change foreground light color!</p>
-          </div>
+          {{< markdown >}}**Body tertiary** - Use the tertiary `color` and `bg` options to have a body secondary less-emphasized rendering.{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}
@@ -379,6 +375,26 @@ Some more contextual CSS variables are provided to create high-level semantic va
           <div>
             <button class="color-copy" data-clipboard-text="--bs-emphasis-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-emphasis-color</code></button>
             <button class="color-copy" data-clipboard-text="--bs-emphasis-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-emphasis-color-rgb</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{< markdown >}}**Disabled** - For disabled state.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-disabled-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-disabled-color</code></button>
           </div>
         </td>
       </tr>
