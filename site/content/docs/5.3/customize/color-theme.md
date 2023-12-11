@@ -597,8 +597,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td colspan="5">
           <div class="alert alert-warning mb-0" role="alert">
             <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-            <p>TODO: active-bg, disabled-color, decide what to do with the remaining variables remove ?</p>
-            <p>-bs-body-color-subtle</p>
+            <p>TODO: active-bg, decide what to do with the remaining variables remove ?</p>
           </div>
         </td>
       </tr>

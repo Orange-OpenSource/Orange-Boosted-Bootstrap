@@ -93,11 +93,6 @@
       hex: "#666"
       darkHex: "#999"
       variable: --bs-secondary-color, --bs-placeholder-color
-    - name: 900
-      class: 900
-      hex: "#333"
-      darkHex: "#eee"
-      variable: --bs-body-color-subtle
 - category: ODS colors
   name: "ODS colors"
   subcategories:

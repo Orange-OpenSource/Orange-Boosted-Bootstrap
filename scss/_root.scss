@@ -163,8 +163,6 @@
   --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
   --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
   --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
-  // Might not be needed
-  --#{$prefix}body-color-subtle: #{$gray-900};
   // ******* End additions for dark-mode
 
   // Boosted mod
@@ -263,7 +261,6 @@
     --#{$prefix}table-striped-hover-bg-factor: .855; // .865 if solid bg
     --#{$prefix}table-hover-bg-factor: .135; // .2 if solid bg
     --#{$prefix}table-active-bg-factor: .565; // .6 if solid bg
-    --#{$prefix}body-color-subtle: #{$gray-300};
     // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
 

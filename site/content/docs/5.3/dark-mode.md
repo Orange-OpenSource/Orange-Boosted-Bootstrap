@@ -126,11 +126,6 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="dark"></div>
   </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-body-color-subtle</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="dark"></div>
-  </div>
 </div>
 
 ## Components

@@ -2256,7 +2256,7 @@ $kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
 $kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
-$pre-color:                         var(--#{$prefix}body-color-subtle) !default;
+$pre-color:                         var(--#{$prefix}code-color) !default;
 $pre-line-height:                   1.25 !default;
 // End mod
 
