@@ -117,6 +117,7 @@
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
+  --#{$prefix}border-color-subtle: #{$border-color-subtle}; // Boosted mod
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
 
   --#{$prefix}border-radius: #{$border-radius};
@@ -235,6 +236,7 @@
     --#{$prefix}disabled-color: var(--#{$prefix}tertiary-color); // Boosted mod
 
     --#{$prefix}border-color: #{$border-color-dark};
+    --#{$prefix}border-color-subtle: #{$border-color-subtle-dark}; // Boosted mod
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
 
     --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod

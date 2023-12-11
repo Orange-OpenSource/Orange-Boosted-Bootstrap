@@ -49,7 +49,7 @@ The Boosted core colors should always dominate other colors inside a page. They 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure-svg d-flex">
-    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
       <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
       <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
     </svg>
@@ -400,7 +400,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Border** - <span class="text-bg-warning">For clickable component borders. Use `--bs-border-color-translucent` to use a lighter value for inputs, defined areas, dividers, and rules.</span>{{< /markdown >}}
+          {{< markdown >}}**Border** - Use the default border for clickable component borders and the subtle variant for everything else.{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Default.{{< /markdown >}}
@@ -418,27 +418,26 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-border-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color</code></button>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-rgb</code></button>
           </div>
         </td>
       </tr>
       <tr>
         <td>
-          {{< markdown >}}Translucent.{{< /markdown >}}
+          {{< markdown >}}Subtle.{{< /markdown >}}
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-border-color-translucent);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color-subtle);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
           </div>
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-border-color-translucent);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color-subtle);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
           </div>
         </td>
         <td>
           <div>
-            <button class="color-copy" data-clipboard-text="--bs-border-color-translucent" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-translucent</code></button>
+            <button class="color-copy" data-clipboard-text="--bs-border-color-subtle" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-subtle</code></button>
           </div>
         </td>
       </tr>
