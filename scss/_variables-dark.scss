@@ -92,8 +92,6 @@ $mark-bg-dark:                      $white !default; // Boosted mod: instead of 
 
 $focus-ring-color-dark:             rgba($supporting-orange, $focus-ring-opacity) !default; // Boosted mod
 
-$disabled-filter-dark:  brightness(0) invert(1) brightness(.4) !default; // Boosted mod
-
 $focus-visible-inner-color-dark:    $black !default; // Boosted mod
 $focus-visible-outer-color-dark:    $white !default; // Boosted mod
 
@@ -111,6 +109,8 @@ $svg-as-custom-props-dark: (
 // Forms
 //
 
+$form-color-disabled-filter-dark:  brightness(0) invert(1) brightness(.4) !default; // Boosted mod
+
 // Boosted mod: no $form-select-indicator-color-dark
 $form-select-indicator-dark:          escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
 $form-select-disabled-indicator-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-600}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
@@ -124,7 +124,6 @@ $form-valid-border-color-dark:      var(--#{$prefix}success) !default; // Booste
 $form-invalid-color-dark:           var(--#{$prefix}danger-text-emphasis) !default; // Boosted mod: instead of `$red-300`
 $form-invalid-border-color-dark:    var(--#{$prefix}danger) !default; // Boosted mod: instead of `$red-300`
 // scss-docs-end form-validation-colors-dark
-
 
 //
 // Accordion

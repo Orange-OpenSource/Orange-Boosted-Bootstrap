@@ -152,21 +152,23 @@
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
 
-  // ******* Additions for dark-mode
-  --#{$prefix}disabled-filter: #{$disabled-filter};
-  --#{$prefix}gray-tweak: #{$gray-900};
-  --#{$prefix}black-tweak: #{$black};
-  --#{$prefix}input-filter: #{$invert-filter};
-  --#{$prefix}icon-filter: none;
-  --#{$prefix}select-indicator: #{$form-select-indicator};
-  --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator};
-  --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
-  --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
-  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
-  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
-  // ******* End additions for dark-mode
+  --#{$prefix}form-check-filter: #{$invert-filter}; // Boosted mod
+  --#{$prefix}form-check-input-disabled-color: #{$gray-900}; // Boosted mod
+  --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter}; // Boosted mod
+  --#{$prefix}form-select-indicator: #{$form-select-indicator}; // Boosted mod
+  --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // Boosted mod
+  --#{$prefix}form-switch-square-bg: #{$black}; // Boosted mod
 
   // Boosted mod
+  // Table-specific styles
+  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
+  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+  --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+  --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
+
+  // Breadcrumb-specific styles
+  --#{$prefix}breadcrumb-divider-filter: none;
+
   // Navigation-specific styles
   --#{$prefix}nav-link-active-color: #{$body-color};
   // End mod
@@ -249,25 +251,26 @@
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
-
-    // ******* Additions for dark-mode
-    --#{$prefix}disabled-filter: #{$disabled-filter-dark};
-    --#{$prefix}gray-tweak: #{$gray-700};
-    --#{$prefix}black-tweak: #{$gray-950};
-    --#{$prefix}input-filter: none;
-    --#{$prefix}icon-filter: #{$invert-filter};
-    --#{$prefix}select-indicator: #{$form-select-indicator-dark};
-    --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator-dark};
-    --#{$prefix}table-striped-bg-factor: .135; // .2 if solid bg
-    --#{$prefix}table-striped-hover-bg-factor: .855; // .865 if solid bg
-    --#{$prefix}table-hover-bg-factor: .135; // .2 if solid bg
-    --#{$prefix}table-active-bg-factor: .565; // .6 if solid bg
-    // ******* End additions for dark-mode
-    // scss-docs-end root-dark-mode-vars
+    --#{$prefix}form-check-filter: none; // Boosted mod
+    --#{$prefix}form-check-input-disabled-color: #{$gray-700}; // Boosted mod
+    --#{$prefix}form-select-indicator: #{$form-select-indicator-dark}; // Boosted mod
+    --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // Boosted mod
+    --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
+    --#{$prefix}form-switch-square-bg: #{$gray-950}; // Boosted mod
 
     // Boosted mod
+    // Table-specific styles
+    --#{$prefix}table-striped-bg-factor: .135;
+    --#{$prefix}table-striped-hover-bg-factor: .855;
+    --#{$prefix}table-hover-bg-factor: .135;
+    --#{$prefix}table-active-bg-factor: .565;
+
+    // Breadcrumb-specific styles
+    --#{$prefix}breadcrumb-divider-filter: #{$invert-filter};
+
     // Navigation-specific styles
     --#{$prefix}nav-link-active-color: #{$supporting-orange};
     // End mod
+    // scss-docs-end root-dark-mode-vars
   }
 }
