@@ -574,7 +574,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr>
         <td colspan="2">
-          {{< markdown >}}**Code** - <span class="text-bg-warning">Use this variable to set the color to a code text.</span>{{< /markdown >}}
+          {{< markdown >}}**Code** - For code color text.{{< /markdown >}}
         </td>
         <td>
           <div class="border-color">
