@@ -103,7 +103,7 @@
 
 // scss-docs-start btn-variant-loops
 .btn-primary {
-  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
+  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
 }
 
 .btn-success {
@@ -127,11 +127,11 @@
 }
 
 .btn-dark {
-  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: $black);
+  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}border-color), $hover-color: $black);
 }
 
 .btn-secondary {
-  @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
+  @include button-variant(var(--#{$prefix}secondary), var(--#{$prefix}secondary), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}border-color), $hover-color: var(--#{$prefix}body-color));
 }
 
 @each $color, $value in $theme-colors {
@@ -169,7 +169,7 @@
   .btn-check:checked + & {
     color: var(--#{$prefix}highlight-color);
     background-color: var(--#{$prefix}highlight-bg);
-    border-color: var(--#{$prefix}highlight-bg);
+    border-color: var(--#{$prefix}border-color);
   }
 
   .btn-group .btn-check + &.btn:not(:first-of-type) {
@@ -267,7 +267,7 @@
   --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
   --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
   --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
-  --#{$prefix}btn-active-border-color: var(--#{$prefix}highlight-bg);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color);
   --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);

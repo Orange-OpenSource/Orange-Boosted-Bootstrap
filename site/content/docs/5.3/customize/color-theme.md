@@ -443,7 +443,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Highlight** - <span class="text-bg-warning">For `<mark>` text. Also used to highlight some components to get both foreground and background.</span>{{< /markdown >}}
+          {{< markdown >}}**Highlight** - Use to highlight some components.{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Background.{{< /markdown >}}

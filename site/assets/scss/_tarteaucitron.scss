@@ -122,7 +122,7 @@
 @include tac("Name", true) {
   float: left;
   font-size: $font-size-sm;
-  color: var(--bs-placeholder-color);
+  color: var(--bs-secondary-color);
 }
 
 @include tac("Ask", true) {

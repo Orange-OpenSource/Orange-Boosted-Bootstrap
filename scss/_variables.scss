@@ -988,7 +988,7 @@ $btn-letter-spacing-lg:       $letter-spacing-base * 2 !default; // Boosted mod
 $btn-border-width:            $input-btn-border-width !default;
 
 $btn-default-hover-bg:        var(--#{$prefix}highlight-bg) !default; // Boosted mod
-$btn-default-hover-border:    var(--#{$prefix}highlight-bg) !default; // Boosted mod
+$btn-default-hover-border:    var(--#{$prefix}border-color) !default; // Boosted mod
 $btn-default-hover-color:     var(--#{$prefix}highlight-color) !default; // Boosted mod
 $btn-default-active-bg:       $supporting-orange !default; // Boosted mod
 $btn-default-active-border:   $supporting-orange !default; // Boosted mod
@@ -1334,7 +1334,7 @@ $form-range-track-box-shadow:     var(--#{$prefix}box-shadow-inset) !default;
 $form-range-thumb-width:                   1rem !default;
 $form-range-thumb-height:                  $form-range-thumb-width !default;
 $form-range-thumb-bg:                      var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `$component-active-bg`
-$form-range-thumb-border:                  var(--#{$prefix}border-width) solid var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `0`
+$form-range-thumb-border:                  var(--#{$prefix}border-width) solid var(--#{$prefix}border-color) !default; // Boosted mod: instead of `0`
 $form-range-thumb-border-radius:           50% !default;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
 $form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
@@ -1449,7 +1449,7 @@ $nav-tabs-border-radius:            var(--#{$prefix}border-radius) !default;
 $nav-tabs-link-padding-x:           1.8125rem !default; // Boosted mod
 $nav-tabs-link-hover-color:         var(--#{$prefix}highlight-color) !default; // Boosted mod
 $nav-tabs-link-hover-bg:            var(--#{$prefix}highlight-bg) !default; // Boosted mod
-$nav-tabs-link-hover-border-color:  var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color`
+$nav-tabs-link-hover-border-color:  var(--#{$prefix}border-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color`
 $nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg`
@@ -2301,7 +2301,7 @@ $step-item-padding:           7px !default;
 $step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
 // fusv-enable
 $step-item-margin-end:        var(--#{$prefix}border-width) !default;
-$step-item-bg:                var(--#{$prefix}highlight-bg) !default;
+$step-item-bg:                var(--#{$prefix}secondary) !default;
 $step-item-active-bg:         $supporting-orange !default;
 $step-item-next-bg:           var(--#{$prefix}border-color-subtle) !default;
 $step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
