@@ -486,7 +486,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Focus** - <span class="text-bg-warning">Use the `outer` version for the focus outline. Use the `inner` option for the focus box-shadow.</span>{{< /markdown >}}
+          {{< markdown >}}**Focus visible** - Use `outer` for the focus outline. Use `inner` for the focus box-shadow.{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Outer.{{< /markdown >}}
