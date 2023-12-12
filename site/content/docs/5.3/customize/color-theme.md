@@ -378,26 +378,6 @@ Some more contextual CSS variables are provided to create high-level semantic va
           </div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
-          {{< markdown >}}**Disabled** - For disabled state.{{< /markdown >}}
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
-          </div>
-        </td>
-        <td>
-          <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
-          </div>
-        </td>
-        <td>
-          <div>
-            <button class="color-copy" data-clipboard-text="--bs-disabled-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-disabled-color</code></button>
-          </div>
-        </td>
-      </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
           {{< markdown >}}**Border** - Use the default border for clickable component borders and the subtle variant for everything else.{{< /markdown >}}
@@ -441,6 +421,26 @@ Some more contextual CSS variables are provided to create high-level semantic va
           </div>
         </td>
       </tr>
+      <tr>
+        <td colspan="2">
+          {{< markdown >}}**Disabled** - For disabled state.{{< /markdown >}}
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
+          </div>
+        </td>
+        <td>
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-disabled-color);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-disabled-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-disabled-color</code></button>
+          </div>
+        </td>
+      </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
           {{< markdown >}}**Highlight** - Use to highlight some components.{{< /markdown >}}
@@ -481,6 +481,29 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           <div>
             <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-highlight-color</code></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}**Tertiary active** - Use for active components often accompanied to an orange active bar.{{< /markdown >}}
+        </td>
+        <td>
+          {{< markdown >}}Background.{{< /markdown >}}
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-active-bg);" data-bs-theme="light" title="#ddd"><p class="visually-hidden">#ddd</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div class="border-color">
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-active-bg);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
+          </div>
+        </td>
+        <td class="border-top-1">
+          <div>
+            <button class="color-copy" data-clipboard-text="--bs-tertiary-active-bg" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-active-bg</code></button>
           </div>
         </td>
       </tr>
@@ -589,14 +612,6 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           <div>
             <button class="color-copy" data-clipboard-text="--bs-code-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-code-color</code></button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="5">
-          <div class="alert alert-warning mb-0" role="alert">
-            <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-            <p>TODO: active-bg, decide what to do with the remaining variables remove ?</p>
           </div>
         </td>
       </tr>

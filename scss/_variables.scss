@@ -1659,7 +1659,7 @@ $pagination-focus-outline:          null !default; // Boosted mod
 // fusv-enable
 
 $pagination-hover-color:            var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}link-hover-color)`
-$pagination-hover-bg:               var(--#{$prefix}active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$pagination-hover-bg:               var(--#{$prefix}tertiary-active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $pagination-hover-border-color:     $pagination-hover-bg !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
 $pagination-active-color:           var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$component-active-color`
@@ -1986,7 +1986,7 @@ $alert-dismissible-padding-r:       $alert-padding-y * 3 !default; // 3x covers 
 // scss-docs-start progress-variables
 $progress-height:                   $spacer !default;
 $progress-font-size:                $font-size-base !default;
-$progress-bg:                       var(--#{$prefix}active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
+$progress-bg:                       var(--#{$prefix}tertiary-active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $progress-border-radius:            var(--#{$prefix}border-radius) !default;
 $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
 $progress-bar-color:                var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$white`
@@ -2023,7 +2023,7 @@ $list-group-numbered-item-margin-end: 14px !default; // Boosted mod
 
 $list-group-hover-bg:                 var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $list-group-active-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
-$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}primary) 4px, var(--#{$prefix}active-bg) 4px) !default; // Boosted mod: instead of `$component-active-bg`
+$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}primary) 4px, var(--#{$prefix}tertiary-active-bg) 4px) !default; // Boosted mod: instead of `$component-active-bg`
 $list-group-active-border-color:      $list-group-border-color !default; // Boosted mod: instead of `$list-group-active-bg`
 
 $list-group-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
@@ -2461,7 +2461,7 @@ $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
 $local-nav-hover-color:         var(--#{$prefix}nav-link-active-color) !default;
 $local-nav-hover-bg:            var(--#{$prefix}secondary-bg) !default;
 $local-nav-active-color:        var(--#{$prefix}primary) !default;
-$local-nav-active-bg:           var(--#{$prefix}active-bg) !default;
+$local-nav-active-bg:           var(--#{$prefix}tertiary-active-bg) !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        var(--#{$prefix}border-color-subtle) !default;
 $local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list

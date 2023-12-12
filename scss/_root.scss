@@ -112,6 +112,7 @@
   --#{$prefix}highlight-color: #{$mark-color};
   --#{$prefix}highlight-bg: #{$mark-bg};
   --#{$prefix}disabled-color: var(--#{$prefix}tertiary-color); // Boosted mod
+  --#{$prefix}tertiary-active-bg: #{$gray-400}; // Boosted mod
 
   // scss-docs-start root-border-var
   --#{$prefix}border-width: #{$border-width};
@@ -152,7 +153,6 @@
   // scss-docs-end root-form-validation-variables
 
   // ******* Additions for dark-mode
-  --#{$prefix}active-bg: #{$gray-400};
   --#{$prefix}disabled-filter: #{$disabled-filter};
   --#{$prefix}gray-tweak: #{$gray-900};
   --#{$prefix}black-tweak: #{$black};
@@ -234,6 +234,7 @@
     --#{$prefix}highlight-color: #{$mark-color-dark};
     --#{$prefix}highlight-bg: #{$mark-bg-dark};
     --#{$prefix}disabled-color: var(--#{$prefix}tertiary-color); // Boosted mod
+    --#{$prefix}tertiary-active-bg: #{$gray-700}; // Boosted mod
 
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-subtle: #{$border-color-subtle-dark}; // Boosted mod
@@ -250,8 +251,6 @@
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
 
     // ******* Additions for dark-mode
-    --#{$prefix}active-bg: #{$gray-700};
-
     --#{$prefix}disabled-filter: #{$disabled-filter-dark};
     --#{$prefix}gray-tweak: #{$gray-700};
     --#{$prefix}black-tweak: #{$gray-950};

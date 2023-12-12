@@ -82,7 +82,7 @@
       class: 400
       hex: "#ddd"
       darkHex: "#666"
-      variable: --bs-active-bg
+      variable: --bs-tertiary-active-bg
     - name: 500
       class: 500
       hex: "#ccc"
