@@ -97,11 +97,6 @@ sitemap_exclude: true
 
 <div class="d-flex flex-column gap-2">
   <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-nav-active-color</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-nav-active-color)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-nav-active-color)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-active-bg</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="dark"></div>
