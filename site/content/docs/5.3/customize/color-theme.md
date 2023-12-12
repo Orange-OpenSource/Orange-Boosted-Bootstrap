@@ -621,9 +621,9 @@ Some more contextual CSS variables are provided to create high-level semantic va
 
 ### Sass variables
 
-#### Orange variables
+#### Boosted variables
 
-We define our meaningful variables for light and dark themes first.
+Our functional and supporting colors are defined for light and dark modes.
 
 <div class="row">
   <div class="col-md-6 col-lg-12 col-xl-6">
@@ -636,16 +636,11 @@ We define our meaningful variables for light and dark themes first.
 
 #### Bootstrap variables
 
-<div class="alert alert-warning" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-  <p>TODO: explain that this is only the most important part, and that the rest exists somewhere else but is not documented here. TODO: add grays?</p>
-</div>
-
-We assign our meaningful variables to Bootstrap's tokens.
+Our Boosted variables are mapped to Bootstrap's basic color variables.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
-We then define theme colors for light (resp. dark). These are the variables used for our CSS variables.
+Then, these basic color variables are used to define the theme colors. They are used to create our [CSS theming variables](#theming-1).
 
 <div class="row">
   <div class="col-md-6 col-lg-12 col-xl-6">
