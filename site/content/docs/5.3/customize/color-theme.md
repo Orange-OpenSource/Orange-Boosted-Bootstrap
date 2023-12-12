@@ -529,7 +529,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
       </tr>
       <tr class="border-bottom-0">
         <td rowspan="2">
-          {{< markdown >}}**Link** - <span class="text-bg-warning">Use these variables to set the color to a link or something that should look like a link.</span>{{< /markdown >}}
+          {{< markdown >}}**Link** - Use the default `color` for a link and the hover variant for a link hover state.{{< /markdown >}}
         </td>
         <td>
           {{< markdown >}}Default.{{< /markdown >}}

@@ -149,7 +149,7 @@
 
 // Boosted mod: Boosted-specific no outline button
 .btn-no-outline {
-  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}link-hover-color), transparent, transparent, var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
 
   .btn-check:checked + &.btn {
     border-color: transparent;
@@ -164,7 +164,7 @@
 
 // Boosted mod: Boosted-specific toggle button
 .btn-toggle {
-  @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}link-hover-color), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
 
   .btn-check:checked + & {
     color: var(--#{$prefix}highlight-color);

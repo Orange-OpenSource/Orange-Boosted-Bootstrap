@@ -1099,7 +1099,7 @@ $form-label-font-weight:                $font-weight-bold !default;
 $form-label-color:                      null !default;
 $form-label-disabled-color:             var(--#{$prefix}disabled-color) !default; // Boosted mod
 $form-label-required-margin-left:       .1875rem !default; // Boosted mod
-$form-label-required-color:             var(--#{$prefix}link-hover-color) !default; // Boosted mod
+$form-label-required-color:             var(--#{$prefix}primary) !default; // Boosted mod
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-helper-variables
@@ -1214,7 +1214,7 @@ $form-star-size:                        1.5625rem !default;
 $form-star-size-sm:                     1.25rem !default;
 $form-star-margin-between:              -.125rem !default;
 
-$form-star-rating-checked-color:        var(--#{$prefix}link-hover-color) !default;
+$form-star-rating-checked-color:        var(--#{$prefix}primary) !default;
 $form-star-rating-unchecked-color:      var(--#{$prefix}secondary-color) !default;
 $form-star-rating-hover-color:          var(--#{$prefix}highlight-bg) !default;
 $form-star-rating-disabled-color:       var(--#{$prefix}disabled-color) !default;
@@ -1327,7 +1327,7 @@ $form-range-track-width:          100% !default;
 $form-range-track-height:         .375rem !default; // Boosted mod: instead of `.5rem`
 $form-range-track-cursor:         pointer !default;
 $form-range-track-bg:             var(--#{$prefix}secondary-bg) !default;
-$form-range-track-filled-bg:      var(--#{$prefix}link-hover-color) !default; // Boosted mod
+$form-range-track-filled-bg:      var(--#{$prefix}primary) !default; // Boosted mod
 $form-range-track-border-radius:  null !default; // Boosted mod: instead of `1rem`
 $form-range-track-box-shadow:     var(--#{$prefix}box-shadow-inset) !default;
 
@@ -1340,8 +1340,8 @@ $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !defa
 $form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-hover-bg:                var(--#{$prefix}highlight-bg) !default; // Boosted mod
-$form-range-thumb-active-bg:               var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `tint-color($component-active-bg, 70%)`
-$form-range-thumb-active-border:           var(--#{$prefix}link-hover-color) !default; // Boosted mod
+$form-range-thumb-active-bg:               var(--#{$prefix}primary) !default; // Boosted mod: instead of `tint-color($component-active-bg, 70%)`
+$form-range-thumb-active-border:           var(--#{$prefix}primary) !default; // Boosted mod
 $form-range-thumb-disabled-bg:             var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
 // scss-docs-end form-range-variables
@@ -1471,7 +1471,7 @@ $nav-underline-link-hover-color:          var(--#{$prefix}link-hover-color) !def
 // stylelint-disable-next-line function-disallowed-list
 $nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default; // Boosted mod
 $nav-underline-link-active-bg:            transparent !default; // Boosted mod
-$nav-underline-link-active-border-color:  var(--#{$prefix}link-hover-color) !default; // Boosted mod
+$nav-underline-link-active-border-color:  var(--#{$prefix}primary) !default; // Boosted mod
 // scss-docs-end nav-variables
 
 
@@ -1503,7 +1503,7 @@ $navbar-toggler-transition:           $transition-focus !default; // Boosted mod
 $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .65)`
 $navbar-light-bg:                     var(--#{$prefix}highlight-color) !default; // Boosted mod
 $navbar-light-hover-color:            var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
-$navbar-light-active-color:           var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
+$navbar-light-active-color:           var(--#{$prefix}primary) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
 $navbar-light-disabled-color:         var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
 $navbar-light-icon-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `rgba($body-color, .75)`
 $navbar-light-icon-hover-color:       var(--#{$prefix}link-hover-color) !default; // Boosted mod
@@ -1658,7 +1658,7 @@ $pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$pr
 $pagination-focus-outline:          null !default; // Boosted mod
 // fusv-enable
 
-$pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod: instead of `var(--#{$prefix}link-hover-color)`
+$pagination-hover-color:            var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}link-hover-color)`
 $pagination-hover-bg:               var(--#{$prefix}active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $pagination-hover-border-color:     $pagination-hover-bg !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
@@ -1992,7 +1992,7 @@ $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
 $progress-bar-color:                var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$white`
 $progress-bar-font-weight:          $font-weight-bold !default; // Boosted mod
 $progress-bar-text-indent:          map-get($spacers, 2) !default; // Boosted mod
-$progress-bar-bg:                   var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `$primary`
+$progress-bar-bg:                   var(--#{$prefix}primary) !default; // Boosted mod: instead of `$primary`
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
@@ -2023,7 +2023,7 @@ $list-group-numbered-item-margin-end: 14px !default; // Boosted mod
 
 $list-group-hover-bg:                 var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $list-group-active-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
-$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, var(--#{$prefix}active-bg) 4px) !default; // Boosted mod: instead of `$component-active-bg`
+$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}primary) 4px, var(--#{$prefix}active-bg) 4px) !default; // Boosted mod: instead of `$component-active-bg`
 $list-group-active-border-color:      $list-group-border-color !default; // Boosted mod: instead of `$list-group-active-bg`
 
 $list-group-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
@@ -2210,7 +2210,7 @@ $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in
 
 // Boosted mod
 $btn-close-hover-color:         $btn-close-color !default;
-$btn-close-active-color:        var(--#{$prefix}link-hover-color) !default;
+$btn-close-active-color:        var(--#{$prefix}primary) !default;
 $btn-close-active-border-color: var(--#{$prefix}border-color-subtle) !default;
 $btn-close-disabled-color:      var(--#{$prefix}disabled-color) !default;
 
@@ -2378,7 +2378,7 @@ $footer-line-height-md:                   $line-height-base !default;
 $footer-title-font-weight:                $font-weight-bold !default;
 $footer-letter-spacing:                   $letter-spacing-base !default;
 $footer-accordion-line-height:            $spacer * 1.45 !default;
-$footer-accordion-active-color:           var(--#{$prefix}link-hover-color) !default;
+$footer-accordion-active-color:           var(--#{$prefix}primary) !default;
 $footer-accordion-btn-hover-bg:           null !default;
 // fusv-disable
 $footer-nav-link-font-weight:             $font-weight-bold !default; // Deprecated in v5.3.3
@@ -2460,7 +2460,7 @@ $local-nav-color:               null !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
 $local-nav-hover-color:         var(--#{$prefix}nav-link-active-color) !default;
 $local-nav-hover-bg:            var(--#{$prefix}secondary-bg) !default;
-$local-nav-active-color:        var(--#{$prefix}link-hover-color) !default;
+$local-nav-active-color:        var(--#{$prefix}primary) !default;
 $local-nav-active-bg:           var(--#{$prefix}active-bg) !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        var(--#{$prefix}border-color-subtle) !default;
