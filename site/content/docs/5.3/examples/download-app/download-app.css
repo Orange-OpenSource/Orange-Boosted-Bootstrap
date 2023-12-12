@@ -1,10 +1,10 @@
-.border-translucent {
-  --bs-border-color: var(--bs-border-color-translucent);
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
 }
 
 .custom-vr {
   height: 75px;
-  background-color: var(--bs-border-color-translucent);
+  background-color: var(--bs-border-color-subtle);
 }
 
 @media (max-width: 479.98px) {

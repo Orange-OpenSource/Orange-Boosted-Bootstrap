@@ -248,7 +248,7 @@ li::marker {
 
 li li::marker { color: var(--#{$prefix}secondary-color); }
 
-li li li::marker { color: var(--#{$prefix}border-color-translucent); }
+li li li::marker { color: var(--#{$prefix}tertiary-color); }
 
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
@@ -264,7 +264,7 @@ li::before {
 
 li li::before { color: var(--#{$prefix}secondary-color); }
 
-li li li::before { color: var(--#{$prefix}border-color-translucent); }
+li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
 // End mod
 

@@ -8320,7 +8320,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3">
+<div class="d-flex flex-column gap-2 align-items-start border p-3">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check1">Single toggle</label>
@@ -8427,7 +8427,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" data-bs-theme="dark">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check11" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check11">Single toggle</label>
@@ -8534,7 +8534,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" data-bs-theme="light">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check12" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check12">Single toggle</label>
@@ -8641,7 +8641,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #282d55;">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check13" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check13" data-bs-theme="dark">Single toggle</label>
@@ -8748,7 +8748,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #b5e8f7">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check14" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check14" data-bs-theme="light">Single toggle</label>

@@ -49,7 +49,7 @@
 }
 
 .DocSearch-Modal {
-  border: var(--bs-border-width) solid var(--bs-border-color-translucent);
+  border: var(--bs-border-width) solid var(--bs-border-color-subtle);
   @include border-radius(0, 0);
 }
 
@@ -97,7 +97,7 @@
 }
 
 .DocSearch-Form {
-  box-shadow: var(--bs-border-color-translucent) 0 0 0 .125rem inset;
+  box-shadow: var(--bs-border-color-subtle) 0 0 0 .125rem inset;
   @include border-radius(0, 0);
 
   &:focus-within {
