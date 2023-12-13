@@ -160,22 +160,22 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" aria-hidden="true" data-bs-theme="dark"></span>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
   <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true" data-bs-theme="dark"></span>
+  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" aria-hidden="true" data-bs-theme="dark"></span>
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
   <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true" data-bs-theme="dark"></span>
+  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
