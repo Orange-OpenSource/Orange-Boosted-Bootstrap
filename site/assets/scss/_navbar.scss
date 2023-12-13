@@ -50,7 +50,7 @@
   // Boosted mod: Specificity
   .navbar-nav.flex-row {
     @include media-breakpoint-down(lg) {
-      border-top: 1px solid #666;
+      border-top: 1px solid $gray-700;
     }
   }
   // End mod

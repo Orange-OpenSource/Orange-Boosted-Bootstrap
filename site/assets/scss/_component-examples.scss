@@ -4,7 +4,7 @@
 
 .bd-code-snippet {
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
@@ -21,7 +21,7 @@
   position: relative;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
 
@@ -178,7 +178,7 @@
     font-weight: $font-weight-bold; // Boosted mod
     color: var(--bs-secondary-color);
     background-color: var(--bs-secondary-bg); // Boosted mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--bs-border-width) solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
+    border: var(--bs-border-width) solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
       display: flex;
@@ -251,7 +251,7 @@
 
 // Boosted mod
 .simple-list-example-scrollspy .active {
-  color: var(--bs-link-hover-color);
+  color: var(--bs-primary);
 }
 // End mod
 
@@ -438,7 +438,33 @@
 }
 // scss-docs-end sticker-fs-xl
 
-.border-tertiary {
-  --bs-border-color: var(--bs-border-color-translucent);
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
+}
+
+.color-copy:hover svg {
+  transform: scale(1.07);
+}
+
+.color-copy svg {
+  transition: transform .15s ease-in-out; // stylelint-disable-line property-disallowed-list
+}
+
+.double-figure-svg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(to bottom, $white, $white 50%, $gray-950 50%, $gray-950 100%);
+}
+
+.double-figure {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(to bottom, $white, $white calc((100% - 1.875rem) * .5), $gray-950 calc((100% - 1.875rem) * .5), $gray-950 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+
+  figcaption {
+    height: 1.875rem;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
 }
 // End mod
