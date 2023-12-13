@@ -9,14 +9,6 @@ toc: true
 added: "5.3"
 ---
 
-{{< design-callout-alert >}}
-Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
-
-However, the dark mode is not yet available in the Orange Design System specifications.
-
-Please use Boosted v5.3.3 to have the dark mode available.
-{{< /design-callout-alert >}}
-
 {{< callout >}}
 **Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
 {{< /callout >}}
@@ -29,7 +21,7 @@ Alternatively, you can also switch to a media query implementation thanks to our
 
 ## Example
 
-For example, to change the color mode of a dropdown menu, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
+For example, to change the color mode of a dropdown, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
 
 {{< example class="d-flex justify-content-between" >}}
 <div class="dropdown" data-bs-theme="light">
@@ -103,6 +95,12 @@ Boosted does not yet ship with a built-in color mode picker, but you can use the
 ### Building with Sass
 
 Our new dark mode option is available to use for all users of Boosted, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
+
+{{< callout warning >}}
+Please be aware that some of Boosted's components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Footer]({{< docsref "/components/footer" >}}).
+
+If you need to use them, you won't be able to disable the dark mode globally.
+{{< /callout >}}
 
 We use a custom Sass mixin, `color-mode()`, to help you control _how_ color modes are applied. By default, we use a `data` attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.
 

@@ -47,9 +47,9 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-border-color)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-border-color-translucent</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="dark"></div>
+    <div style="width: 200px">--bs-border-color-subtle</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-subtle)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-subtle)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-secondary-color</div>
@@ -97,39 +97,14 @@ sitemap_exclude: true
 
 <div class="d-flex flex-column gap-2">
   <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-hover-color</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-hover-color)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-hover-color)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-active-bg</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="dark"></div>
+    <div style="width: 200px">--bs-tertiary-active-bg</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-tertiary-active-bg)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-tertiary-active-bg)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-disabled-color</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-placeholder-color</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-gray-tweak</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-black-tweak</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="dark"></div>
-  </div>
-  <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-body-color-subtle</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="dark"></div>
   </div>
 </div>
 
@@ -965,7 +940,7 @@ sitemap_exclude: true
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -981,7 +956,7 @@ sitemap_exclude: true
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1028,7 +1003,7 @@ sitemap_exclude: true
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1044,7 +1019,7 @@ sitemap_exclude: true
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1091,7 +1066,7 @@ sitemap_exclude: true
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1107,7 +1082,7 @@ sitemap_exclude: true
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1154,7 +1129,7 @@ sitemap_exclude: true
   <div class="col">
     <div class="card" data-bs-theme="dark">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1170,7 +1145,7 @@ sitemap_exclude: true
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1217,7 +1192,7 @@ sitemap_exclude: true
   <div class="col">
     <div class="card" data-bs-theme="light">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1233,7 +1208,7 @@ sitemap_exclude: true
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -3231,7 +3206,7 @@ sitemap_exclude: true
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3262,7 +3237,7 @@ sitemap_exclude: true
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3293,7 +3268,7 @@ sitemap_exclude: true
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3324,7 +3299,7 @@ sitemap_exclude: true
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3355,7 +3330,7 @@ sitemap_exclude: true
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-translucent)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -8325,7 +8300,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3">
+<div class="d-flex flex-column gap-2 align-items-start border p-3">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check1">Single toggle</label>
@@ -8432,7 +8407,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" data-bs-theme="dark">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check11" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check11">Single toggle</label>
@@ -8539,7 +8514,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" data-bs-theme="light">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check12" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check12">Single toggle</label>
@@ -8646,7 +8621,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #282d55;">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check13" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check13" data-bs-theme="dark">Single toggle</label>
@@ -8753,7 +8728,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #b5e8f7">
   <div class="d-flex gap-2 flex-wrap">
     <input type="checkbox" class="btn-check" id="btn-check14" autocomplete="off">
     <label class="btn btn-toggle" for="btn-check14" data-bs-theme="light">Single toggle</label>

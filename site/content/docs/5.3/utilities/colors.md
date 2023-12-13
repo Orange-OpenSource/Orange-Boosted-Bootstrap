@@ -127,9 +127,9 @@ Consider our default `.text-primary` utility.
 }
 ```
 
-We use an RGB version of our `$accessible-orange` (with the value of `241, 110, 0`) Sass variable as a CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(241, 110, 0, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `$primary` (with the value of `241, 110, 0`) Sass variable as a CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(241, 110, 0, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
-When used in a dark variant context, `--bs-primary-text-rgb` will use the value of `$brand-orange` (with the value of `255, 121, 0`).
+When used in dark mode, `--bs-primary-text-rgb` will use the value of `$supporting-orange` (with the value of `255, 121, 0`).
 
 ### Example
 
