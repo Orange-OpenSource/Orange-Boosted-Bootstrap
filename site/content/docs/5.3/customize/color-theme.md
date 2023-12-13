@@ -343,7 +343,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
         </td>
         <td>
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="light" title="#7f7f7f"><p class="visually-hidden">#7f7f7f</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
           </div>
         </td>
         <td>
@@ -393,7 +393,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
         </td>
         <td class="border-top-1">
           <div class="border-color">
-            <div class="w-100 h-100" style="background-color: var(--bs-border-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
+            <div class="w-100 h-100" style="background-color: var(--bs-border-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
           </div>
         </td>
         <td class="border-top-1">
