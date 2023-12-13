@@ -1,98 +1,60 @@
 - category: Core colors
   name: "Core colors"
   colors:
-    - name: Orange
-      class: primary
+    - name: Primary
       hex: "#f16e00"
       darkHex: "#ff7900"
-      variable: --bs-primary
-    - name: Black
-      class: secondary
+    - name: Secondary
       hex: "#000"
       darkHex: "#fff"
-      variable: --bs-secondary
-    - name: White
-      class: body-bg
+    - name: Body Bg
       hex: "#fff"
       darkHex: "#141414"
-      variable: --bs-body-bg
 - category: Supporting colors
   name: "Supporting colors"
   colors:
     - name: Blue
-      class: cyan
       hex: "#4bb4e6"
-      variable: $supporting-blue
     - name: Yellow
-      class: yellow-2
       hex: "#ffd200"
-      variable: $supporting-yellow
     - name: Green
-      class: teal
       hex: "#50be87"
-      variable: $supporting-green
     - name: Purple
-      class: purple
       hex: "#a885d8"
-      variable: $supporting-purple
     - name: Pink
-      class: pink
       hex: "#ffb4e6"
-      variable: $supporting-pink
     - name: Orange
-      class: orange
       hex: "#ff7900"
-      variable: $supporting-orange
 - category: Functional colors
   name: "Functional colors"
   colors:
-    - name: Green
-      class: green
-      level: success
+    - name: Success
       hex: "#228722"
       darkHex: "#6c6"
-      variable: $functional-green
-    - name: Blue
-      class: blue
-      level: info
+    - name: Info
       hex: "#4170d8"
       darkHex: "#69f"
-      variable: $functional-blue
-    - name: Yellow
-      class: yellow
-      level: warning
+    - name: Warning
       hex: "#fc0"
       darkHex: "#fc0"
-      variable: $functional-yellow
-    - name: Red
-      class: red
-      level: danger
+    - name: Danger
       hex: "#cd3c14"
       darkHex: "#f66"
-      variable: $functional-red
 - category: Grays
   name: "Grays"
   colors:
-    - name: 300
-      class: 300
+    - name: Secondary Bg
       hex: "#eee"
       darkHex: "#333"
-      variable: --bs-secondary-bg
-    - name: 400
-      class: 400
+    - name: Tertiary Active Bg
       hex: "#ddd"
       darkHex: "#666"
-      variable: --bs-tertiary-active-bg
-    - name: 500
-      class: 500
+    - name: Tertiary Color
       hex: "#ccc"
       darkHex: "#666"
-      variable: --bs-tertiary-color
-    - name: 700
-      class: 700
+    - name: Secondary Color
       hex: "#666"
       darkHex: "#999"
-      variable: --bs-secondary-color
 - category: ODS colors
   name: "ODS colors"
   subcategories:

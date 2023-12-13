@@ -49,9 +49,9 @@ The Boosted core colors should always dominate other colors inside a page. They 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure-svg d-flex">
-    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
-      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "Body Bg" }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
+      <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
     </svg>
     <div class="d-flex flex-column justify-content-around w-50 ps-2">
       <p class="mb-0" data-bs-theme="light"><code class="user-select-all text-body">{{ $color.hex }}</code></p>
@@ -75,13 +75,13 @@ Please note that the functional colors are not meant to be used as backgrounds o
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-        <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    <figure class="mb-0 w-50" aria-label="{{ $color.name | title }}">
+      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name | title }}" preserveAspectRatio="xMidYMid meet">
+        <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+        <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
       </svg>
       <figcaption>
-        <b>{{- $color.level | title -}}</b>
+        <b>{{- $color.name | title -}}</b>
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
@@ -106,8 +106,8 @@ The Boosted grays are used as backgrounds, colors or borders to highlight some e
   {{- range $color := .colors }}
   <div class="double-figure-svg d-flex">
     <svg class="ratio ratio-1x1 w-50" viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-      <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-      <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+      <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+      <rect fill="var(--bs-{{ $color.name | urlize }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
     </svg>
     <div class="d-flex flex-column justify-content-around w-50 p-2 pe-none">
       <p class="mb-0" data-bs-theme="light"><code class="pe-auto user-select-all text-body">{{ $color.hex }}</code></p>
@@ -115,7 +115,8 @@ The Boosted grays are used as backgrounds, colors or borders to highlight some e
     </div>
   </div>
   {{ end -}}
-  <div class="double-figure-svg d-none d-md-flex"></div>
+  <div class="double-figure-svg d-none d-lg-flex"></div>
+  <div class="double-figure-svg d-none d-lg-flex"></div>
 </div>
 {{ end -}}
 {{< /palette.inline >}}
@@ -129,12 +130,12 @@ The Boosted supporting colors are meant for backgrounds, data display or illustr
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2">
   {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="Supporting {{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+    <figure class="mb-0 w-50" aria-label="Supporting {{ $color.name | lower }}">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Supporting {{ $color.name | urlize }}" preserveAspectRatio="xMidYMid meet">
         <rect fill="{{ $color.hex }}" x="0" y="0" width="100" height="100"/>
       </svg>
       <figcaption>
-        <b>Supporting {{ $color.name | title -}}</b>
+        <b>Supporting {{ $color.name | lower -}}</b>
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-around w-50 p-2 mb-4">
