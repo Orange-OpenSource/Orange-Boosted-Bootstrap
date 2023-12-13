@@ -168,9 +168,6 @@
 
   // Breadcrumb-specific styles
   --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter};
-
-  // Navigation-specific styles
-  --#{$prefix}nav-link-active-color: #{$nav-link-active-color};
   // End mod
 }
 
@@ -267,9 +264,6 @@
 
     // Breadcrumb-specific styles
     --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter-dark};
-
-    // Navigation-specific styles
-    --#{$prefix}nav-link-active-color: #{$nav-link-active-color-dark};
     // End mod
     // scss-docs-end root-dark-mode-vars
   }
