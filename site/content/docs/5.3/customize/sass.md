@@ -235,7 +235,7 @@ For example, we use the `primary`, `success`, and `danger` keys from `$theme-col
 
 ### Colors
 
-Next to the [Sass maps]({{< docsref "/customize/color-theme#color-sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
+Next to the [Sass maps]({{< docsref "/customize/color-palette#sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
 
 ```scss
 .custom-element {
