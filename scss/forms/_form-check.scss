@@ -137,7 +137,7 @@
   &:required {
     ~ .form-check-label::after {
       margin-left: $form-label-required-margin-left;
-      color: $accessible-orange;
+      color: $primary;
       content: "*";
     }
   }
