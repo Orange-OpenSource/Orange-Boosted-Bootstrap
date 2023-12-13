@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Background
-description: Convey meaning through `background-color` and add decoration with gradients.
+description: Convey meaning through `background-color`.
 group: utilities
 aliases:
   - "/docs/utilities/background/"
@@ -14,14 +14,14 @@ toc: true
 
 ## Background color
 
-Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts.
+Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**. Prefer using our [color & background helper]({{< docsref "/helpers/color-background" >}}) for our [theme colors]({{< docsref "/customize/color-theme#theming" >}}).
 
 {{< callout info >}}
-Background utilities like `.bg-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.bg-*-subtle` utility will. This will be resolved in v6.
-{{< /callout >}}
+Note that our **`.bg-supporting-*`** (and some other) utilities don't change their own `background-color` between light and dark mode. Make sure to add either `.text-black` or even `[data-bs-theme="light"]` (or `[data-bs-theme="dark"]`) when it wraps components.
 
-{{< callout info >}}
-In case you need to write over one of these background, prefer using our [color & background helper]({{< docsref "/helpers/color-background" >}}) when it exists.
+On the other side **`.bg-secondary`**, **`.bg-success`**, **`.bg-danger`** or **`.bg-info`** might force their direct children to use `[data-bs-theme="inverted"].bg-transparent` (`.text-bg-*` until then) to display correctly.
+
+You should not be using **`.bg-body-tertiary`** since its light mode value depends on [Bootstrap's palette]({{< docsref "/customize/color-palette#bootstraps-palette" >}}).
 {{< /callout >}}
 
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
@@ -32,38 +32,34 @@ In case you need to write over one of these background, prefer using our [color 
 <div class="p-3 mb-2 fw-bold bg-danger"><span class="text-bg-danger">.bg-danger</span></div>
 <div class="p-3 mb-2 fw-bold bg-warning"><span class="text-bg-warning">.bg-warning</span></div>
 <div class="p-3 mb-2 fw-bold bg-info"><span class="text-bg-info">.bg-info</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-black">.bg-supporting-yellow</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-blue text-black">.bg-supporting-blue</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-pink text-black">.bg-supporting-pink</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-orange text-black">.bg-supporting-orange</div>
-<div class="p-3 mb-2 fw-bold bg-light"><span class="text-bg-light">.bg-light</span></div>
-<div class="p-3 mb-2 fw-bold bg-dark"><span class="text-bg-dark">.bg-dark</span></div>
+<div class="p-3 mb-2 fw-bold bg-supporting-green" data-bs-theme="light">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple" data-bs-theme="light">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow" data-bs-theme="light">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue" data-bs-theme="light">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink" data-bs-theme="light">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-orange" data-bs-theme="light">.bg-supporting-orange</div>
+<div class="p-3 mb-2 fw-bold bg-light" data-bs-theme="light">.bg-light</div>
+<div class="p-3 mb-2 fw-bold bg-dark" data-bs-theme="dark">.bg-dark</div>
 <div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
-<div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
-<div class="p-3 mb-2 fw-bold bg-white text-black">.bg-white</div>
+<div class="p-3 mb-2 fw-bold bg-black" data-bs-theme="dark">.bg-black</div>
+<div class="p-3 mb-2 fw-bold bg-white" data-bs-theme="light">.bg-white</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
 {{< callout info >}}
 For each `.background-*` there is a matching `.background-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
 
-Here is a list of these extra classes:
+<details>
+  <summary>Show list of hidden extra classes</summary>
+  <br>
 {{< background-subtle.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 - `.bg-{{ .name }}-subtle`
 {{- end -}}
 {{< /background-subtle.inline >}}
-{{< /callout >}}
-
-{{< callout >}}
-### Color naming
-
-Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color-theme#theming" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
-Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
+</details>
 {{< /callout >}}
 
 <!-- Boosted mod: no background gradient -->
