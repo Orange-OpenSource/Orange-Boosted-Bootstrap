@@ -178,7 +178,7 @@ Use contextual classes to style list items with a stateful icon.
 {{- range (index $.Site.Data "palette") }}
   {{- if (eq .category "Functional colors") }}
     {{- range (index .colors) }}
-  <li class="list-group-item list-group-item-{{ .level }}">A simple {{ .level }} list group item</li>
+  <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
     {{- end -}}
   {{- end -}}
 {{- end -}}
@@ -198,7 +198,7 @@ Contextual classes also work with `.list-group-item-action` for `<a>` and `<butt
 {{- range (index $.Site.Data "palette") -}}
   {{- if (eq .category "Functional colors") -}}
     {{- range (index .colors) }}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .level }}">A simple {{ .level }} list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
     {{- end -}}
   {{- end -}}
 {{- end -}}

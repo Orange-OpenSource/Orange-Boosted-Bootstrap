@@ -103,7 +103,7 @@
 
 // scss-docs-start btn-variant-loops
 .btn-primary {
-  @include button-variant($brand-orange, $brand-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
+  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
 }
 
 .btn-success {
@@ -127,11 +127,11 @@
 }
 
 .btn-dark {
-  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: $black);
+  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}border-color), $hover-color: $black);
 }
 
 .btn-secondary {
-  @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
+  @include button-variant(var(--#{$prefix}secondary), var(--#{$prefix}secondary), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}border-color), $hover-color: var(--#{$prefix}body-color));
 }
 
 @each $color, $value in $theme-colors {
@@ -149,7 +149,7 @@
 
 // Boosted mod: Boosted-specific no outline button
 .btn-no-outline {
-  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), transparent, transparent, var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
 
   .btn-check:checked + &.btn {
     border-color: transparent;
@@ -164,12 +164,12 @@
 
 // Boosted mod: Boosted-specific toggle button
 .btn-toggle {
-  @include button-variant(transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), $brand-orange, $brand-orange, $black, transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
 
   .btn-check:checked + & {
     color: var(--#{$prefix}highlight-color);
     background-color: var(--#{$prefix}highlight-bg);
-    border-color: var(--#{$prefix}highlight-bg);
+    border-color: var(--#{$prefix}border-color);
   }
 
   .btn-group .btn-check + &.btn:not(:first-of-type) {
@@ -199,7 +199,7 @@
 
 // Boosted mod: Boosted-specific dropdown button
 .btn-dropdown {
-  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
+  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }
 // End mod
 
@@ -220,7 +220,7 @@
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
+  --#{$prefix}btn-box-shadow: 0 0 0 #{$black}; // Can't use `none` as keyword negates all values when used with multiple shadows
   // Boosted mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
 
   text-decoration: $link-decoration;
@@ -267,7 +267,7 @@
   --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
   --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
   --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
-  --#{$prefix}btn-active-border-color: var(--#{$prefix}highlight-bg);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color);
   --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);

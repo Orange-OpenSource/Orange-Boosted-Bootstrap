@@ -2,7 +2,7 @@
 // stylelint-disable-next-line function-disallowed-list
 $bd-primary-light: lighten(saturate($primary, 5%), 15%); // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
-$bd-primary-dark:  darken(saturate($brand-orange, 5%), 15%); // Boosted mod
+$bd-primary-dark:  darken(saturate($supporting-orange, 5%), 15%); // Boosted mod
 $bd-purple:        #4c0bce;
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 // Boosted mod: np $bd-purple-light

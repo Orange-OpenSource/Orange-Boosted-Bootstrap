@@ -4,12 +4,12 @@
 
 :root {
   // All available CSS vars and specific modifications for Boosted
-  --docsearch-primary-color: var(--bs-link-hover-color);
+  --docsearch-primary-color: var(--bs-primary);
   --docsearch-text-color: var(--bs-body-color);
   // --docsearch-spacing
   // --docsearch-icon-stroke-width
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-muted-color: var(--bs-placeholder-color);
+  --docsearch-muted-color: var(--bs-secondary-color);
   --docsearch-container-background: #{rgba($modal-backdrop-bg, $modal-backdrop-opacity)};
   --docsearch-logo-color: var(--bs-body-color);
   // --docsearch-modal-width
@@ -21,7 +21,7 @@
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
   // --docsearch-hit-height;
-  --docsearch-hit-color: var(--bs-placeholder-color);
+  --docsearch-hit-color: var(--bs-secondary-color);
   --docsearch-hit-active-color: var(--bs-highlight-color);
   --docsearch-hit-background: transparent;
   // --docsearch-hit-shadow;
@@ -49,14 +49,12 @@
 }
 
 .DocSearch-Modal {
-  border: var(--bs-border-width) solid var(--bs-border-color-translucent);
+  border: var(--bs-border-width) solid var(--bs-border-color-subtle);
   @include border-radius(0, 0);
 }
 
 .DocSearch-Button {
-  --docsearch-searchbox-background: var(--bs-highlight-color);
-  --docsearch-searchbox-focus-background: var(--bs-highlight-color);
-  --docsearch-text-color: var(--bs-highlight-bg);
+  --docsearch-searchbox-background: transparent;
 
   height: auto;
   padding: 0;
@@ -99,7 +97,7 @@
 }
 
 .DocSearch-Form {
-  box-shadow: var(--bs-border-color-translucent) 0 0 0 .125rem inset;
+  box-shadow: var(--bs-border-color-subtle) 0 0 0 .125rem inset;
   @include border-radius(0, 0);
 
   &:focus-within {
