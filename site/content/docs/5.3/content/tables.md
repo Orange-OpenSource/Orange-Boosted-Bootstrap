@@ -914,7 +914,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <img style="filter: var(--bs-breadcrumb-divider-filter)" src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
             Cell text
           </td>
           <td>Cell text</td>
@@ -951,7 +951,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <img style="filter: var(--bs-breadcrumb-divider-filter)" src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
             Cell text
           </td>
           <td>Cell text</td>
@@ -1068,7 +1068,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
   <table class="table table-sm table-hover align-middle has-checkbox">
     ...
     <td>
-      <img style="filter: var(--bs-breadcrumb-divider-filter)" src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+      <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
       Cell text
     </td>
     ...
