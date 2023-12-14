@@ -670,6 +670,8 @@ $box-shadow-inset:  null !default; // Boosted mod: instead of `inset 0 1px 2px r
 
 $component-active-color:      $black !default;
 $component-active-bg:         $supporting-orange !default;
+$disabled-color:              var(--#{$prefix}tertiary-color) !default; // Boosted mod
+$tertiary-active-bg:          $gray-400 !default; // Boosted mod
 
 // scss-docs-start focus-ring-variables
 $focus-ring-width:      .25rem !default;
@@ -1178,6 +1180,7 @@ $form-check-label-padding-top:            .4375rem !default; // Boosted mod
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
 $form-check-transition:                   null !default;
+$form-check-filter:                       $invert-filter !default; // Boosted mod
 
 $form-check-input-active-filter:          null !default;
 $form-check-input-active-bg-color:        $component-active-bg !default; // Boosted mod
@@ -1193,7 +1196,7 @@ $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       var(--#{$prefix}check-icon) !default;
-$form-check-input-disabled-color:         var(--#{$prefix}form-check-input-disabled-color) !default; // Boosted mod
+$form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
 $form-check-input-disabled-filter:        var(--#{$prefix}form-check-filter) !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
@@ -1244,7 +1247,7 @@ $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted 
 $form-switch-border-radius:       null !default; // Boosted mod
 $form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // Boosted mod
 
-$form-switch-square-bg:             var(--#{$prefix}form-switch-square-bg) !default; // Boosted mod
+$form-switch-square-bg:             $black !default; // Boosted mod
 $form-switch-bg:                    $white !default; // Boosted mod
 $form-switch-border-color:          $white !default; // Boosted mod
 $form-switch-filter:                var(--#{$prefix}form-check-filter) !default; // Boosted mod
@@ -1438,6 +1441,7 @@ $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    inherit !default; // Boosted mod: instead of `var(--#{$prefix}link-color)`
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
+$nav-link-active-color:             $body-color !default; // Boosted mod
 $nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 // Boosted mod: no `$nav-link-focus-box-shadow`
@@ -2105,6 +2109,7 @@ $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $black !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-active-color:           null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
+$breadcrumb-divider-filter:         none !default; // Boosted mod
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
