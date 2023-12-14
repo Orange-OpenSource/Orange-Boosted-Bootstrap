@@ -140,7 +140,6 @@
 
   .dropdown-menu {
     --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
-    --bs-dropdown-link-color: var(--bs-white);
     --bs-dropdown-link-active-color: var(--bs-white);
     --bs-dropdown-link-active-bg: #{$blue-700};
     --bs-dropdown-link-hover-color: var(--bs-white);
@@ -148,7 +147,6 @@
   }
 
   .btn-dropdown {
-    --bs-btn-color: var(--bs-white);
     --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
     --bs-btn-border-color: #{rgba($white, .25)};
     --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
