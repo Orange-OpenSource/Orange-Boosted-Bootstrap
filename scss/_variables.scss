@@ -1658,7 +1658,7 @@ $pagination-focus-outline:          null !default; // Boosted mod
 // fusv-enable
 
 $pagination-hover-color:            var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}link-hover-color)`
-$pagination-hover-bg:               var(--#{$prefix}tertiary-active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$pagination-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $pagination-hover-border-color:     $pagination-hover-bg !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
 $pagination-active-color:           var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$component-active-color`
