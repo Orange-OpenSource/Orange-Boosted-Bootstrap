@@ -111,8 +111,8 @@
   --#{$prefix}code-color: #{$code-color};
   --#{$prefix}highlight-color: #{$mark-color};
   --#{$prefix}highlight-bg: #{$mark-bg};
-  --#{$prefix}disabled-color: var(--#{$prefix}tertiary-color); // Boosted mod
-  --#{$prefix}tertiary-active-bg: #{$gray-400}; // Boosted mod
+  --#{$prefix}disabled-color: #{$disabled-color}; // Boosted mod
+  --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg}; // Boosted mod
 
   // scss-docs-start root-border-var
   --#{$prefix}border-width: #{$border-width};
@@ -152,12 +152,12 @@
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
 
-  --#{$prefix}form-check-filter: #{$invert-filter}; // Boosted mod
-  --#{$prefix}form-check-input-disabled-color: #{$gray-900}; // Boosted mod
+  --#{$prefix}form-check-filter: #{$form-check-filter}; // Boosted mod
+  --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color}; // Boosted mod
   --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter}; // Boosted mod
   --#{$prefix}form-select-indicator: #{$form-select-indicator}; // Boosted mod
   --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // Boosted mod
-  --#{$prefix}form-switch-square-bg: #{$black}; // Boosted mod
+  --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg}; // Boosted mod
 
   // Boosted mod
   // Table-specific styles
@@ -167,10 +167,10 @@
   --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
 
   // Breadcrumb-specific styles
-  --#{$prefix}breadcrumb-divider-filter: none;
+  --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter};
 
   // Navigation-specific styles
-  --#{$prefix}nav-link-active-color: #{$body-color};
+  --#{$prefix}nav-link-active-color: #{$nav-link-active-color};
   // End mod
 }
 
@@ -235,8 +235,8 @@
     --#{$prefix}code-color: #{$code-color-dark};
     --#{$prefix}highlight-color: #{$mark-color-dark};
     --#{$prefix}highlight-bg: #{$mark-bg-dark};
-    --#{$prefix}disabled-color: var(--#{$prefix}tertiary-color); // Boosted mod
-    --#{$prefix}tertiary-active-bg: #{$gray-700}; // Boosted mod
+    --#{$prefix}disabled-color: #{$disabled-color-dark}; // Boosted mod
+    --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark}; // Boosted mod
 
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-subtle: #{$border-color-subtle-dark}; // Boosted mod
@@ -251,25 +251,25 @@
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
-    --#{$prefix}form-check-filter: none; // Boosted mod
-    --#{$prefix}form-check-input-disabled-color: #{$gray-700}; // Boosted mod
+    --#{$prefix}form-check-filter: #{$form-check-filter-dark}; // Boosted mod
+    --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color-dark}; // Boosted mod
     --#{$prefix}form-select-indicator: #{$form-select-indicator-dark}; // Boosted mod
     --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // Boosted mod
     --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
-    --#{$prefix}form-switch-square-bg: #{$gray-950}; // Boosted mod
+    --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg-dark}; // Boosted mod
 
     // Boosted mod
     // Table-specific styles
-    --#{$prefix}table-striped-bg-factor: .135;
-    --#{$prefix}table-striped-hover-bg-factor: .855;
-    --#{$prefix}table-hover-bg-factor: .135;
-    --#{$prefix}table-active-bg-factor: .565;
+    --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
+    --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor-dark};
+    --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
+    --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
 
     // Breadcrumb-specific styles
-    --#{$prefix}breadcrumb-divider-filter: #{$invert-filter};
+    --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter-dark};
 
     // Navigation-specific styles
-    --#{$prefix}nav-link-active-color: #{$supporting-orange};
+    --#{$prefix}nav-link-active-color: #{$nav-link-active-color-dark};
     // End mod
     // scss-docs-end root-dark-mode-vars
   }
