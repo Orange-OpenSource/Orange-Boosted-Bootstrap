@@ -161,10 +161,9 @@
 
   // Boosted mod
   // Table-specific styles
-  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
-  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
   --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
-  --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
+  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
 
   // Breadcrumb-specific styles
   --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter};
@@ -258,7 +257,6 @@
     // Boosted mod
     // Table-specific styles
     --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
-    --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor-dark};
     --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
     --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
 
