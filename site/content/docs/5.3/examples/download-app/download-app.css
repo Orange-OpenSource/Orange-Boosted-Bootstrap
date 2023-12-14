@@ -78,10 +78,6 @@ iframe {
   min-height: 10.625rem;
 }
 
-footer .nav-link:hover {
-  text-decoration: underline;
-}
-
 .carousel-inner.showcase-images {
   min-height: calc(216vw - 208px);
 }
