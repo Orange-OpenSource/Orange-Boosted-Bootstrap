@@ -114,9 +114,9 @@
     // Boosted mod
     &:checked,
     &[type="checkbox"]:indeterminate {
-      background-color: $form-check-input-disabled-color;
+      background-color: var(--#{$prefix}form-check-input-disabled-color);
       filter: $form-check-input-disabled-filter;
-      border-color: $form-check-input-disabled-color;
+      border-color: var(--#{$prefix}form-check-input-disabled-color);
     }
     // End mod
   }
@@ -154,7 +154,7 @@
 
 .form-switch {
   // Boosted mod
-  --#{$prefix}switch-gradient: #{linear-gradient(to right, $form-switch-square-bg $form-switch-bg-square-size, transparent)};
+  --#{$prefix}switch-gradient: #{linear-gradient(to right, var(--#{$prefix}form-switch-square-bg) $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
@@ -215,9 +215,9 @@
     }
 
     &:disabled {
-      background-color: $form-check-input-disabled-color;
+      background-color: var(--#{$prefix}form-check-input-disabled-color);
       filter: $form-check-input-disabled-filter;
-      border-color: $form-check-input-disabled-color;
+      border-color: var(--#{$prefix}form-check-input-disabled-color);
     }
   }
 
