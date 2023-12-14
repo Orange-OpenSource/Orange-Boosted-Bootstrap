@@ -1601,10 +1601,10 @@ $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $dropdown-link-hover-color:         $dropdown-link-color !default;
-$dropdown-link-hover-bg:            var(--#{$prefix}tertiary-color) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$dropdown-link-hover-bg:            var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 
-$dropdown-link-active-color:        var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$component-active-color`
-$dropdown-link-active-bg:           var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `$component-active-bg`
+$dropdown-link-active-color:        $dropdown-link-color !default; // Boosted mod: instead of `$component-active-color`
+$dropdown-link-active-bg:           var(--#{$prefix}tertiary-active-bg) !default; // Boosted mod: instead of `$component-active-bg`
 
 $dropdown-link-disabled-color:      var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
 
