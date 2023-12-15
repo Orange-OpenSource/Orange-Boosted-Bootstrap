@@ -1131,7 +1131,7 @@ $input-disabled-color:                  var(--#{$prefix}secondary-color) !defaul
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$input-color:                           var(--#{$prefix}body-color) !default;
 $input-border-color:                    var(--#{$prefix}border-color-subtle) !default; // Boosted mod: instead of var(--#{$prefix}border-color)
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
@@ -1307,7 +1307,7 @@ $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $input-border-radius !default;
 $form-select-box-shadow:          none !default; // Boosted mod
 
-$form-select-focus-border-color:  $input-focus-border-color !default;
+$form-select-focus-border-color:  $input-color !default; // Boosted mod: handle a Firefox-specific visible focus rendering where we remove the border from the select box (see `.form-select` rule)
 // Boosted mod: no $form-select-focus-width
 $form-select-focus-box-shadow:    none !default; // Boosted mod
 
