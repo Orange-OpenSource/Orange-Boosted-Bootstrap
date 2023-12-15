@@ -56,4 +56,4 @@
   // End mod
 }
 
-// Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode
+// Boosted mod: no `@include color-mode(dark)` since we pack our CSS variables in `_root.scss`

@@ -514,6 +514,7 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
+// Deprecated in v5.3.3
 // Boosted mod: no `navbar[data-bs-theme="dark"]` selector
 .navbar-dark {
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
@@ -527,4 +528,4 @@
   // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
 }
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+// Boosted mod: no `@if enable-dark-mode` since we pack our CSS variables in `_root.scss`
