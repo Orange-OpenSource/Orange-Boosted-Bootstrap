@@ -528,4 +528,4 @@
   // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
 }
 
-// Boosted mod: no `@if enable-dark-mode` since we pack our CSS variables in `_root.scss`
+// Boosted mod: no `@if enable-dark-mode`

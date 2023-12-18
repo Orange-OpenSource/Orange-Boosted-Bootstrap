@@ -1566,7 +1566,7 @@ $navbar-badge-margin-top:                   .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-// ** Deprecated in v5.3.3
+// Deprecated in v5.3.3: all `$navbar-dark-*`
 $navbar-dark-border-color:          $gray-700 !default; // Boosted mod
 $navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
 $navbar-dark-hover-color:           $supporting-orange !default; // Boosted mod: instead of `rgba($white, .75)`
@@ -1577,7 +1577,6 @@ $navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead 
 $navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
 $navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
-// ** End **
 
 
 // Dropdowns
@@ -1621,7 +1620,7 @@ $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-
 // fusv-enable
 // scss-docs-end dropdown-variables
 
-// ** Deprecated in v5.3.3 **
+// Deprecated in v5.3.3: all `$dropdown-dark-*`
 $dropdown-dark-color:               $white !default; // Boosted mod
 $dropdown-dark-bg:                  $black !default; // Boosted mod
 $dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
@@ -1634,7 +1633,6 @@ $dropdown-dark-link-active-color:   $black !default; // Boosted mod
 $dropdown-dark-link-active-bg:      $white !default; // Boosted mod
 $dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
 $dropdown-dark-header-color:        $white !default; // Boosted mod
-// ** End **
 
 // Pagination
 
@@ -2226,7 +2224,7 @@ $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !de
 // End mod
 // scss-docs-end close-variables
 
-// ** Deprecated in v5.3.3 **
+// Deprecated in v5.3.3: all `$btn-close-white-*`
 $btn-close-white-color:               $white !default; // Boosted mod
 $btn-close-white-bg:                  transparent !default; // Boosted mod
 $btn-close-white-border-color:        transparent !default; // Boosted mod
@@ -2234,7 +2232,6 @@ $btn-close-white-hover-color:         $btn-close-white-color !default; // Booste
 $btn-close-white-active-color:        $supporting-orange !default; // Boosted mod
 $btn-close-white-active-border-color: $gray-700 !default; // Boosted mod
 $btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
-// ** End **
 
 // Offcanvas
 
