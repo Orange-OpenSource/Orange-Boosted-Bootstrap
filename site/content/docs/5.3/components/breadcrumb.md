@@ -100,11 +100,7 @@ $breadcrumb-divider: none;
 
 {{< deprecated-in "5.3.3" >}}
 
-{{< callout warning >}}
-**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
-
-Add `data-bs-theme="dark"` to the `.breadcrumb` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
-{{< /callout >}}
+{{< callout-deprecated-dark-variants "breadcrumb" >}}
 <!-- End mod -->
 
 ## Accessibility
