@@ -243,6 +243,7 @@
   color: var(--#{$prefix}dropdown-link-color);
 }
 
+// Deprecated in v5.3.3
 // Dark dropdowns
 .dropdown-menu-dark {
   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
