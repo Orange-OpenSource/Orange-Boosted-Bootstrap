@@ -92,7 +92,8 @@
       <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     </form>
 {{- end }}
-    <div id="{{ $id }}.2" class="navbar-collapse collapse d-sm-flex{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
+    <!-- TODO: Be careful of `d-` -->
+    <div id="{{ $id }}.2" class="navbar-collapse collapse{{ cond (not (eq $mode "theme")) " d-sm-flex" " d-" }}{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
       <ul class="navbar-nav flex-row">
 {{- if eq $mode "actions" }}
         <li class="nav-item">
@@ -131,6 +132,38 @@
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
+        </li>
+{{- else if eq $mode "theme" }}
+        <li class="nav-item">
+          <div class="d-inline-block dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme2" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text2">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text2">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2 theme-icon"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2 theme-icon"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                  <svg class="me-2 theme-icon"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </div>
         </li>
 {{- end }}
       </ul>

@@ -1,6 +1,4 @@
 .bd-navbar {
-  --bd-navbar-dropdown-item-icon-size: 1.25rem; // Boosted mod
-
   // Boosted mod: no padding
   // Boosted mod: no background-color
   // Boosted mod: no box-shadow
@@ -12,13 +10,6 @@
   // Boosted mod: no .navbar-toggler
 
   // Boosted mod: no .navbar-brand
-
-  // Boosted mod: Needed since our icons are larger in the navbar
-  .bi {
-    width: var(--bd-navbar-dropdown-item-icon-size);
-    height: var(--bd-navbar-dropdown-item-icon-size);
-  }
-  // End mod
 
   // Boosted mod: no .navbar-nav-svg
 
@@ -32,10 +23,6 @@
     @include rfs($font-size-sm, --bs-dropdown-font-size);
     --bs-dropdown-line-height: #{$line-height-sm};
     --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
-
-    .dropdown-item {
-      height: 2.5rem;
-    }
 
     .active .bi {
       display: block !important; // stylelint-disable-line declaration-no-important
@@ -51,6 +38,14 @@
   .navbar-nav.flex-row {
     @include media-breakpoint-down(lg) {
       border-top: 1px solid $gray-700;
+    }
+
+    .dropdown-toggle {
+      line-height: 1.3125rem;
+
+      @include media-breakpoint-up(md) {
+        line-height: 1.875rem;
+      }
     }
   }
   // End mod

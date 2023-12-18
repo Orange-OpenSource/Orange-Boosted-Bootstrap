@@ -99,6 +99,18 @@
       @extend %container-flex-properties;
     }
   }
+
+  // Boosted mod
+  .dropdown-toggle::after {
+    margin-left: $spacer * .25;
+  }
+
+  .dropdown-menu svg {
+    width: $dropdown-icon-size;
+    height: $dropdown-icon-size;
+    margin: calc(-.5 * (#{$dropdown-icon-size} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0; // stylelint-disable-line function-disallowed-list
+  }
+  // End mod
 }
 
 

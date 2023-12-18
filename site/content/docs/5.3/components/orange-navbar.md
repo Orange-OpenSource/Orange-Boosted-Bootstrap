@@ -376,6 +376,87 @@ You can add a search input into your Global header.
 </header>
 ```
 
+### With theme selector
+
+You can add a theme selector control into your Global header.
+
+{{< callout info >}}
+Make sure to import the icons inside your project.
+
+Make sure our [theme javascript]({{< docsref "/customize/color-modes#javascript" >}}) is imported or mocked as well.
+
+Some small css needs to be added:
+```css
+#global-header-6.2 .dropdown-menu .active .bi {
+  display: block !important;
+}
+```
+{{< /callout >}}
+
+<div class="bd-example-snippet">
+  <div class="bd-example p-0">
+    <header data-bs-theme="dark">
+      {{< orange-global-headers id="global-header-6" mode="theme" demo=true aria_label="Global navigation - With theme selector example">}}
+      {{< /orange-global-headers >}}
+    </header>
+  </div>
+</div>
+
+```html
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With theme selector example">
+    <div class="container-xxl">
+
+      <!-- Orange brand logo -->
+      ...
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      ...
+
+      <!-- Navbar with theme selector -->
+      <div id="global-header-6.2" class="navbar-collapse d- global-header-6 collapse show">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <div class="d-inline-block dropdown">
+              <button class="nav-link nav-icon dropdown-toggle" id="bd-theme2" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+                <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text2">Toggle mode</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text2">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="me-2 theme-icon"><use href="#ui-light-mode"></use></svg>
+                    Light
+                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="me-2 theme-icon"><use href="#ui-dark-mode"></use></svg>
+                    Dark
+                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                    <svg class="me-2 theme-icon"><use href="#ui-auto-mode"></use></svg>
+                    Auto
+                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+```
+
 ### Minimizing behavior
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
@@ -401,7 +482,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 <div class="bd-example p-0">
   <header data-bs-theme="dark">
-    {{< orange-global-headers id="global-header-6" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - Standard example with nav-under">}}
+    {{< orange-global-headers id="global-header-7" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - Standard example with nav-under">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
@@ -427,7 +508,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
   <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Nav-under example">
     <div class="container-xxl">
-      <div id="global-header-6.1" class="navbar-collapse collapse m-0 global-header-6">
+      <div id="global-header-7.1" class="navbar-collapse collapse m-0 global-header-7">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
