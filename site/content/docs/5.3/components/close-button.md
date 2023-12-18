@@ -28,16 +28,7 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 
 {{< deprecated-in "5.3.3" >}}
 
-{{< callout warning >}}
-**Heads up!** As of v5.3.3, the `.btn-close-white` class is deprecated. Instead, use `data-bs-theme="dark"` to change the color mode of the close button.
-{{< /callout >}}
-
-Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to invert the close button. This uses the `filter` property to invert the `background-image` without overriding its value.
-
-{{< example class="bg-dark" stackblitz_add_js="true" >}}
-<button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
-<button type="button" class="btn-close" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "btn-close" >}}
 
 ## Eco-design variant
 

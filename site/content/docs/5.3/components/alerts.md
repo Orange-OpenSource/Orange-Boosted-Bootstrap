@@ -131,28 +131,9 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
-
-{{< example class="bg-dark" stackblitz_add_js="true" >}}
-<div class="alert alert-success bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-  <p>Success notification text goes here.</p>
-</div>
-<div class="alert alert-success bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-  <div>
-    <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
-    <p>Description text with <a href="#">a link</a> goes here.</p>
-  </div>
-</div>
-<div class="alert alert-warning alert-dismissible fade show bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-  <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
-</div>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "alert" >}}
 
 ## CSS
 
