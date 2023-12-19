@@ -1441,7 +1441,6 @@ $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    inherit !default; // Boosted mod: instead of `var(--#{$prefix}link-color)`
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
-$nav-link-active-color:             $body-color !default; // Boosted mod
 $nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 // Boosted mod: no `$nav-link-focus-box-shadow`
@@ -1468,7 +1467,7 @@ $nav-underline-gap-lg:                    $spacer * .5 !default; // Boosted mod
 $nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod: instead of `.125rem`
 $nav-underline-border-color:              var(--#{$prefix}border-color-subtle) !default; // Boosted mod
 $nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
-$nav-underline-link-active-color:         var(--#{$prefix}nav-link-active-color) !default; // Boosted mod instead of `var(--#{$prefix}emphasis-color)`
+$nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
 $nav-underline-link-padding-x:            1.8125rem !default; // Boosted mod
 $nav-underline-link-hover-color:          var(--#{$prefix}link-hover-color) !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
@@ -2464,7 +2463,7 @@ $tag-font-size-sm:                  $font-size-sm !default;
 $local-nav-padding-y:           $navbar-nav-link-padding-y !default;
 $local-nav-color:               null !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
-$local-nav-hover-color:         var(--#{$prefix}nav-link-active-color) !default;
+$local-nav-hover-color:         var(--#{$prefix}link-hover-color) !default;
 $local-nav-hover-bg:            var(--#{$prefix}secondary-bg) !default;
 $local-nav-active-color:        var(--#{$prefix}primary) !default;
 $local-nav-active-bg:           var(--#{$prefix}tertiary-active-bg) !default;

@@ -3001,14 +3001,14 @@ sitemap_exclude: true
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNav1" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
@@ -3021,14 +3021,14 @@ sitemap_exclude: true
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNav2" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
@@ -3041,14 +3041,14 @@ sitemap_exclude: true
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNav3" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
@@ -3061,14 +3061,14 @@ sitemap_exclude: true
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNav4" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
@@ -3081,14 +3081,14 @@ sitemap_exclude: true
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNav5" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
