@@ -95,6 +95,7 @@
     {{- end }}
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
+    {{ if ne .Page.Params.theme_selector false }}
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 1000 1000">
         <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
@@ -144,6 +145,7 @@
         </li>
       </ul>
     </div>
+    {{- end -}}
 
     {{ .Content }}
 
