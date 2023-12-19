@@ -190,7 +190,7 @@
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    color: var(--#{$prefix}nav-underline-link-active-color);
+    --#{$prefix}nav-link-color: var(--#{$prefix}nav-underline-link-active-color);
     background-color: var(--#{$prefix}nav-underline-link-active-bg);
     border-color: var(--#{$prefix}nav-underline-link-active-border-color);
   }
