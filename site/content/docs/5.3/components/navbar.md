@@ -391,11 +391,11 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
           <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse align-items-end" id="navbarColor02">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-items-end" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -414,7 +414,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
             </ul>
           </li>
         </ul>
-        <form class="d-flex navbar-item ms-3 mt-md-4" role="search">
+        <form class="d-flex navbar-item ms-lg-3 mt-md-4" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
@@ -429,11 +429,11 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
           <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse align-items-end" id="navbarColor03">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-items-end" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -452,7 +452,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
             </ul>
           </li>
         </ul>
-        <form class="d-flex navbar-item ms-3 mt-md-4" role="search">
+        <form class="d-flex navbar-item ms-lg-3 mt-md-4" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
