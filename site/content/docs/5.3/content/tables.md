@@ -33,18 +33,22 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 
 ## Variants
 
-<!-- Boosted mod: only .table-dark is allowed -->
-Use contextual class to color tables, table rows or individual cells.
-
 {{< callout warning >}}
-Boosted doesn't provide any branded variant.
+Boosted doesn't provide any colored variant.
 
-Darker tables are allowed so you may add `data-bs-theme="dark"` to the `.table` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.table` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
 {{< /callout >}}
 
 <details>
-<summary>See Bootstrap's variants</summary>
+<summary>See Bootstrap's colored variants</summary>
 <br>
+
+Use contextual classes to color tables, table rows or individual cells.
+
+{{< callout info >}}
+**Heads up!** Because of the more complicated CSS used to generate our table variants, they most likely won't see color mode adaptive styling until v6.
+{{< /callout >}}
+
 <div class="bd-example">
   <table class="table">
     <caption class="visually-hidden">Boosted table variants</caption>
@@ -119,18 +123,16 @@ Use .table-striped-columns to add zebra-striping to any table column.
 
 {{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
-These classes can also be added to table variants.
-
 <details>
-<summary>See Bootstrap's examples</summary>
+<summary>These classes can also be added to Bootstrap's table colored variants.</summary>
 <br>
-{{< table class="table table-dark table-striped" >}}
+{{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
 
-{{< table class="table table-dark table-striped-columns" >}}
+{{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
 
-{{< table class="table table-success table-striped" >}}
+{{< table class="table table-success table-striped" caption="Boosted success striped rows table" >}}
 
-{{< table class="table table-success table-striped-columns" >}}
+{{< table class="table table-success table-striped-columns" caption="Boosted success striped columns table" >}}
 </details>
 
 ### Hoverable rows
@@ -140,7 +142,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 {{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
 <details>
-<summary class="mb-3">See on Bootstrap variant</summary>
+<summary class="mb-3">See it applied on another Bootstrap's variant</summary>
 {{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
 </details>
 
@@ -149,7 +151,7 @@ These hoverable rows can also be combined with the striped rows variant:
 {{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
 <details>
-<summary>See on Bootstrap variant</summary>
+<summary>See it applied on another Bootstrap's variant</summary>
 <br>
 {{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
 </details>
@@ -214,7 +216,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 ```
 
 <details>
-<summary>See on Bootstrap variant</summary>
+<summary>See it applied on another Bootstrap's variant</summary>
 <br>
 <div class="bd-example">
   <table class="table table-dark">
@@ -299,7 +301,7 @@ To display basic tables, Orange Design System recommends using these compact tab
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
 <details>
-<summary>See on Bootstrap variant</summary>
+<summary>See it applied on another Bootstrap's variant</summary>
 <br>
 {{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
 </details>
