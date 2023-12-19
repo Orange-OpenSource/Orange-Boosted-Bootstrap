@@ -839,7 +839,7 @@ $blockquote-line-height:      1.5 !default; // Boosted mod
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mod
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    var(--#{$prefix}heading-color) !default; // Boosted mod: instead of `inherit`
+$hr-color:                    inherit !default;
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in v5.2.0
