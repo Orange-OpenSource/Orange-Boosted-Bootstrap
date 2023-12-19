@@ -55,7 +55,7 @@ jobs:
         run: npm run docs-accessibility
 
       - name: Upload accessibility results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: pa11y-ci-results
