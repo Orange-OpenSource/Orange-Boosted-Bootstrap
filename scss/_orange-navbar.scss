@@ -23,6 +23,10 @@
       padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
     }
   }
+
+  &.navbar-nav .nav-link:not(.nav-icon) {
+    margin-right: 0;
+  }
 }
 
 .header-minimized :first-child:not(.supra),
