@@ -105,7 +105,7 @@ aliases:
 </section>
 
 <header class="sticky-top">
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - E-shop example">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - E-shop example" data-bs-theme="dark">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -149,7 +149,7 @@ aliases:
               </svg>
               <span class="visually-hidden">Basket</span>
               <span class="position-relative align-self-start">
-                <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
@@ -177,7 +177,7 @@ aliases:
   </ol>
 </nav>
 
-<div class="bg-body title-bar mb-2 mb-md-3" id="title">
+<div class="title-bar mb-2 mb-md-3" id="title">
   <div class="container-xxl">
     <h1 class="display-1">Smartphones</h1>
   </div>
@@ -254,18 +254,18 @@ aliases:
         </li>
       </ul>
     </div>
-    <hr class="mt-0 mt-md-3 border-1 border-light">
+    <hr class="mt-0 mt-md-3 border-1 border-subtle">
     <div class="row pt-md-4 mb-3">
 
       <div class="offcanvas-lg offcanvas-end col-lg-3 px-0 pe-lg-5 ps-lg-2" style="--bs-offcanvas-width: 280px;" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
-        <div class="offcanvas-header border-bottom border-1 border-light">
+        <div class="offcanvas-header border-bottom border-1 border-subtle">
           <h5 class="offcanvas-title fs-5" id="filterOffcanvasLabel">Filter 'Smartphones'</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filterOffcanvas"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="offcanvas-body">
 
           <form class="d-flex flex-column">
-            <button type="button" class="btn btn-dark mb-3">
+            <button type="button" class="btn btn-secondary mb-3">
               <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
                 <use xlink:href="#delete"/>
               </svg>
@@ -274,7 +274,7 @@ aliases:
 
             <fieldset class="d-flex flex-column mb-2 pt-lg-4">
               <legend class="mb-0"><h3 class="h4 mb-0">Purchase type</h3></legend>
-              <hr class="border-1 border-light my-2">
+              <hr class="border-1 border-subtle my-2">
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" id="offerTypeFilter">
                 <label class="form-check-label" for="offerTypeFilter">
@@ -291,7 +291,7 @@ aliases:
 
             <fieldset class="d-flex flex-column mb-2 pt-lg-4">
               <legend class="mb-0"><h3 class="h4 mb-0">Brands</h3></legend>
-              <hr class="border-1 border-light my-2">
+              <hr class="border-1 border-subtle my-2">
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" id="allBrandsFilter">
                 <label class="form-check-label" for="allBrandsFilter">
@@ -367,7 +367,7 @@ aliases:
 
             <fieldset class="d-flex flex-column mb-2 pt-lg-4">
               <legend class="mb-0"><h3 class="h4 mb-0">Colors</h3></legend>
-              <hr class="border-1 border-light my-2">
+              <hr class="border-1 border-subtle my-2">
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" id="allColorsFilter">
                 <label class="form-check-label" for="allColorsFilter">
@@ -443,7 +443,7 @@ aliases:
 
             <fieldset class="d-flex flex-column mb-2 pt-lg-4">
               <legend class="mb-0"><h3 class="h4 mb-0">Storage</h3></legend>
-              <hr class="border-1 border-light my-2">
+              <hr class="border-1 border-subtle my-2">
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" id="allStorageFilter" checked>
                 <label class="form-check-label" for="allStorageFilter">
@@ -484,7 +484,7 @@ aliases:
 
             <fieldset class="d-flex flex-column mb-2 pt-lg-4">
               <legend class="mb-0"><h3 class="h4 mb-0">SIM</h3></legend>
-              <hr class="border-1 border-light my-2">
+              <hr class="border-1 border-subtle my-2">
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" id="monoSimFilter">
                 <label class="form-check-label" for="monoSimFilter">
@@ -507,13 +507,13 @@ aliases:
 
             <!-- No price yet since we don't have the dual range slider -->
 
-            <hr class="d-lg-none border-1 border-light">
+            <hr class="d-lg-none border-1 border-subtle">
 
             <button type="button" class="btn btn-primary d-lg-none mb-3">
               See 23 results
             </button>
 
-            <button type="button" class="btn btn-dark mt-3">
+            <button type="button" class="btn btn-secondary mt-3">
               <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
                 <use xlink:href="#delete"/>
               </svg>
@@ -527,7 +527,7 @@ aliases:
       <div class="col-12 col-lg-9">
         <div class="d-flex justify-content-between gap-2 mb-4">
           <div class="dropdown flex-shrink-1" style="width: 9rem;">
-            <button class="btn btn-secondary dropdown-toggle justify-content-between w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="results-order">
+            <button class="btn btn-dropdown dropdown-toggle justify-content-between w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="results-order">
               <span class="visually-hidden">Sorted by</span>Newest
             </button>
             <ul class="dropdown-menu">
@@ -539,7 +539,7 @@ aliases:
           </div>
 
           <div class="d-flex flex-shrink-1 justify-content-end" style="width: 9rem;">
-            <button class="btn btn-secondary d-lg-none w-100" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+            <button class="btn btn-outline-secondary d-lg-none w-100" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
               <svg class="me-1 flex-shrink-0" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#filter"/>
               </svg>
@@ -623,14 +623,14 @@ aliases:
 
         <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-3 list-unstyled">
           <li class="card border-0 pt-2 pt-md-0">
-            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
               <div class="d-flex">
-                <p class="mb-0 p-2 bg-primary text-nowrap">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#tick"/>
                   </svg>Flash sale
                 </p>
-                <div class="custom-triangle border-primary"></div>
+                <div class="custom-triangle border-supporting-orange"></div>
               </div>
             </div>
             <div class="d-flex justify-content-between mb-2 mx-2">
@@ -640,16 +640,16 @@ aliases:
                 </svg>
                 <p class="mb-0">
                   <span class="visually-hidden">Only</span>
-                  <span class="border border-1 border-light custom-counter">03</span>
+                  <span class="border border-1 border-subtle custom-counter">03</span>
                   <span class="visually-hidden">days</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">01</span>
+                  <span class="border border-1 border-subtle custom-counter">01</span>
                   <span class="visually-hidden">hour</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">11</span>
+                  <span class="border border-1 border-subtle custom-counter">11</span>
                   <span class="visually-hidden">minutes</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">27</span>
+                  <span class="border border-1 border-subtle custom-counter">27</span>
                   <span class="visually-hidden">seconds left</span>
                 </p>
               </div>
@@ -671,7 +671,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <defs>
                         <linearGradient id="Gradient1">
                           <stop offset="0%" stop-color="#0400ff"/>
@@ -702,7 +702,7 @@ aliases:
                       <label for="phoneCompare1" class="form-check-label">Compare <span class="visually-hidden">xxxxx xxxxxx xx xxx xxx to other selected smartphones</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxx xxxxxx xx xxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxx xxxxxx xx xxx xxx</span></a>
                 </div>
               </div>
             </div>
@@ -735,7 +735,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000"/>
                     </svg>
                     Black
@@ -758,7 +758,7 @@ aliases:
                       <label for="phoneCompare2" class="form-check-label">Compare <span class="visually-hidden">xxxx xxx to other selected smartphones</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxx xxx</span></a>
                 </div>
               </div>
             </div>
@@ -791,7 +791,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#085edb"/>
                     </svg>
                     Blue
@@ -814,7 +814,7 @@ aliases:
                       <label for="phoneCompare3" class="form-check-label">Compare <span class="visually-hidden">xxxxxx xxxx xxx to other selected smartphones</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxxx xxxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxx xxxx xxx</span></a>
                 </div>
               </div>
             </div>
@@ -823,7 +823,7 @@ aliases:
           <li class="card border-0 pt-4 pt-md-5">
             <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
               <div class="d-flex mt-xl-3">
-                <p class="mb-0 p-2 bg-success text-nowrap">
+                <p class="mb-0 p-2 text-bg-success text-nowrap">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#new"/>
                   </svg>New
@@ -847,7 +847,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
@@ -870,21 +870,21 @@ aliases:
                       <label for="phoneCompare4" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxx to other selected smartphones</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
                 </div>
               </div>
             </div>
           </li>
 
           <li class="card border-0 pt-4 pt-md-5">
-            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+            <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
               <div class="d-flex">
-                <p class="mb-0 p-2 bg-primary text-nowrap">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#tick"/>
                   </svg>Flash sale
                 </p>
-                <div class="custom-triangle border-primary"></div>
+                <div class="custom-triangle border-supporting-orange"></div>
               </div>
             </div>
             <div class="d-flex justify-content-between mb-2 mx-2">
@@ -894,16 +894,16 @@ aliases:
                 </svg>
                 <p class="mb-0">
                   <span class="visually-hidden">Only</span>
-                  <span class="border border-1 border-light custom-counter">03</span>
+                  <span class="border border-1 border-subtle custom-counter">03</span>
                   <span class="visually-hidden">days</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">01</span>
+                  <span class="border border-1 border-subtle custom-counter">01</span>
                   <span class="visually-hidden">hour</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">11</span>
+                  <span class="border border-1 border-subtle custom-counter">11</span>
                   <span class="visually-hidden">minutes</span>
                   <span aria-hidden="true">:</span>
-                  <span class="border border-1 border-light custom-counter">27</span>
+                  <span class="border border-1 border-subtle custom-counter">27</span>
                   <span class="visually-hidden">seconds left</span>
                 </p>
               </div>
@@ -925,7 +925,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
@@ -950,21 +950,21 @@ aliases:
                       <label for="phoneCompare5" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxxxxx xxx to other selected smartphones</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxxxx xxxxxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxxxxx xxx</span></a>
                 </div>
               </div>
             </div>
           </li>
 
           <li class="card border-0 pt-4 pt-md-5">
-            <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+            <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
               <div class="d-flex mt-md-3">
-                <p class="mb-0 p-2 bg-primary text-nowrap">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#promotion"/>
                   </svg>Best deal
                 </p>
-                <div class="custom-triangle border-primary"></div>
+                <div class="custom-triangle border-supporting-orange"></div>
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
@@ -983,7 +983,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000000"/>
                     </svg>
                     Black
@@ -1000,7 +1000,7 @@ aliases:
                   <p class="mb-0">DAS: 0,87 W/Kg</p>
                 </div>
               </div>
-              <div class="d-flex mb-3 p-2 bg-supporting-yellow">
+              <div class="d-flex mb-3 p-2 bg-supporting-yellow" data-bs-theme="light">
                 <svg class="flex-shrink-0 me-2" width="1.875rem" height="1.875rem" fill="currentColor" aria-hidden="true" focusable="false">
                   <use xlink:href="#exchange"/>
                 </svg>
@@ -1014,7 +1014,7 @@ aliases:
                       <label for="phoneCompare6" class="form-check-label">Compare <span class="visually-hidden">xxx xx xxx to other selected smartphones.</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxx xx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxx xx xxx</span></a>
                 </div>
               </div>
             </div>
@@ -1023,7 +1023,7 @@ aliases:
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
             <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
               <div class="d-flex">
-                <p class="mb-0 p-2 bg-success text-nowrap">
+                <p class="mb-0 p-2 text-bg-success text-nowrap">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#new"/>
                   </svg>New
@@ -1047,7 +1047,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
@@ -1070,21 +1070,21 @@ aliases:
                       <label for="phoneCompare7" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxx to other selected smartphones.</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxx</span></a>
                 </div>
               </div>
             </div>
           </li>
 
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
-            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
               <div class="d-flex">
-                <p class="mb-0 p-2 bg-primary text-nowrap">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#promotion"/>
                   </svg>Best deal
                 </p>
-                <div class="custom-triangle border-primary"></div>
+                <div class="custom-triangle border-supporting-orange"></div>
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
@@ -1103,7 +1103,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
@@ -1128,21 +1128,21 @@ aliases:
                       <label for="phoneCompare8" class="form-check-label">Compare <span class="visually-hidden">xxxxxxx xxxxxx xx to other selected smartphones.</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxxxxxx xxxxxx xx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxxxxxx xxxxxx xx</span></a>
                 </div>
               </div>
             </div>
           </li>
 
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
-            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-supporting-orange fw-bold">
               <div class="d-flex">
-                <p class="mb-0 p-2 bg-primary text-nowrap">
+                <p class="mb-0 p-2 bg-supporting-orange text-nowrap" data-bs-theme="light">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#promotion"/>
                   </svg>Best deal
                 </p>
-                <div class="custom-triangle border-primary"></div>
+                <div class="custom-triangle border-supporting-orange"></div>
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
@@ -1161,7 +1161,7 @@ aliases:
                     </div>
                   </div>
                   <p class="mb-3 fw-bold d-inline-flex align-middle">
-                    <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg class="border border-1 rounded-circle me-2 bg-secondary" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000000"/>
                     </svg>
                     Black
@@ -1186,7 +1186,7 @@ aliases:
                       <label for="phoneCompare9" class="form-check-label">Compare <span class="visually-hidden">xxx xx xxx to other selected smartphones.</span></label>
                     </div>
                   </form>
-                  <a href="#" class="btn btn-info">More details <span class="visually-hidden">about xxx xx xxx</span></a>
+                  <a href="#" class="btn btn-secondary">More details <span class="visually-hidden">about xxx xx xxx</span></a>
                 </div>
               </div>
             </div>
@@ -1195,7 +1195,7 @@ aliases:
 
         <div class="row pt-2 pt-md-5">
           <div class="col-12 col-md-6 col-xl-4 offset-md-3 offset-xl-4">
-            <a class="btn btn-info w-100 mb-2 disabled">Compare selection (0)</a>
+            <a class="btn btn-secondary w-100 mb-2 disabled">Compare selection (0)</a>
             <button class="btn btn-secondary w-100">Load all results</button>
           </div>
         </div>
@@ -1339,7 +1339,7 @@ aliases:
             <div class="ratio ratio-16x9 h-100">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
-            <div class="h-100 p-2 p-lg-4 bg-dark">
+            <div class="h-100 p-2 p-lg-4 bg-dark" data-bs-theme="dark">
               <div class="pt-1 pt-lg-0 pe-3 pe-lg-4 pb-1 ps-2">
                 <h3 class="h1 mb-2 text-primary" id="best-budget-title">The best for my budget</h3>
                 <p class="h2 pt-1 pt-lg-2 mb-2">iPhone at a reduced price refurbished, with 1 year guarantly</p>
@@ -1360,7 +1360,7 @@ aliases:
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 pe-lg-5">
                 <h3 class="mb-2">Why buy your phone from Orange?</h3>
-                <p class="lead mb-0 mt-lg-1 line-height-custom">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you and demonstrate it to you.</p>
+                <p class="lead mb-0 mt-lg-1 ">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you and demonstrate it to you.</p>
               </div>
             </div>
           </div>
@@ -1376,7 +1376,7 @@ aliases:
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 ps-lg-5">
                 <h3 class="mb-2">How to choose your smartphone?</h3>
-                <p class="lead mb-0 mt-lg-1 line-height-custom">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
+                <p class="lead mb-0 mt-lg-1 ">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
               </div>
             </div>
           </div>
@@ -1392,7 +1392,7 @@ aliases:
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 pe-lg-5">
                 <h3 class="mb-2">Do you prefer a simple phone?</h3>
-                <p class="lead mb-0 mt-lg-1 line-height-custom">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
+                <p class="lead mb-0 mt-lg-1 ">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
               </div>
             </div>
           </div>
@@ -1408,7 +1408,7 @@ aliases:
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 ps-lg-5">
                 <h3 class="mb-2">Which offer to choose with your mobile?</h3>
-                <p class="lead mb-0 mt-lg-1 line-height-custom">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
+                <p class="lead mb-0 mt-lg-1 ">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
               </div>
             </div>
           </div>
@@ -1453,7 +1453,7 @@ aliases:
   </div>
 </main>
 
-<footer class="footer bg-dark navbar-dark" id="footer">
+<footer class="footer navbar" data-bs-theme="dark" id="footer">
   <h2 class="visually-hidden">Sitemap &amp; information</h2>
   <div class="container-xxl footer-social">
     <h3 class="footer-heading me-md-3">Follow us</h3>
@@ -1561,7 +1561,7 @@ aliases:
 </footer>
 
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-bs-label="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>

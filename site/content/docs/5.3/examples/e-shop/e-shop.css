@@ -19,11 +19,12 @@
   --bs-aspect-ratio: 133%;
 }
 
-.line-height-custom {
-  line-height: 1.5;
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
+  border-color: var(--bs-border-color-subtle);
 }
 
-/* For a11y purpose, 200% text was displayed under white bg */
-.card {
-  --bs-card-bg: transparent;
+.border-supporting-orange {
+  --bs-border-color: #ff7900;
+  border-color: #ff7900;
 }
