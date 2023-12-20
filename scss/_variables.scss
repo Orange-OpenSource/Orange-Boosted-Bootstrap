@@ -1602,8 +1602,6 @@ $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default; // Boosted mod: instead of `$spacer * .5`
 $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
-$dropdown-icon-size:                $spacer !default; // Boosted mod
-
 $dropdown-link-color:               null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
