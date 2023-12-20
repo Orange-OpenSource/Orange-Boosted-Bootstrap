@@ -456,7 +456,8 @@
         }
         // End mod
 
-        .navbar-nav-scroll {
+        .navbar-nav-scroll,
+        &.navbar-nav-scroll {
           overflow: visible;
         }
 

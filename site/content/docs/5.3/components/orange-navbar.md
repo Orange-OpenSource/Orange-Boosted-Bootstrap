@@ -140,6 +140,10 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
 ## Global header
 
+We strongly recommend to add `.navbar-nav-scroll` and `style="--bs-navbar-scroll-height: 100vh;"` to the main `.navbar` relating to [this part of the docs]({{< docsref "/components/navbar#scrolling" >}}).
+
+If you have a navigation under, you may need to tweak a bit the previous solution or we refactor navbar a bit, meaning change html for folks.
+
 ### Standard
 
 <div class="bd-example p-0">
