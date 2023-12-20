@@ -376,27 +376,20 @@ You can add a search input into your Global header.
 </header>
 ```
 
-### With theme selector
+### With mode selector
 
-You can add a theme selector control into your Global header.
+You can add a mode selector control into your Global header. (this one isn't working atm).
 
 {{< callout info >}}
 Make sure to import the icons inside your project.
 
 Make sure our [theme javascript]({{< docsref "/customize/color-modes#javascript" >}}) is imported or mocked as well.
-
-Some small css needs to be added:
-```css
-#global-header-6.2 .dropdown-menu .active .bi {
-  display: block !important;
-}
-```
 {{< /callout >}}
 
 <div class="bd-example-snippet">
   <div class="bd-example p-0">
     <header data-bs-theme="dark">
-      {{< orange-global-headers id="global-header-6" mode="theme" demo=true aria_label="Global navigation - With theme selector example">}}
+      {{< orange-global-headers id="global-header-6" mode="theme" demo=true aria_label="Global navigation - With mode selector example">}}
       {{< /orange-global-headers >}}
     </header>
   </div>
@@ -404,7 +397,7 @@ Some small css needs to be added:
 
 ```html
 <header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With theme selector example">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With mode selector example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -416,16 +409,16 @@ Some small css needs to be added:
       <!-- Navbar with links -->
       ...
 
-      <!-- Navbar with theme selector -->
+      <!-- Navbar with mode selector -->
       <div id="global-header-6.2" class="navbar-collapse d- global-header-6 collapse show">
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <div class="d-inline-block dropdown">
-              <button class="nav-link nav-icon dropdown-toggle" id="bd-theme2" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
                 <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-                <span class="d-lg-none ms-2" id="bd-theme-text2">Toggle mode</span>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text2">
+              <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
                 <li>
                   <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                     <svg class="me-2 theme-icon"><use href="#ui-light-mode"></use></svg>
