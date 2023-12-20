@@ -137,7 +137,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 
 As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
-{{< scss-docs name="footer-part-css-vars" file="scss/_footer.scss" >}}
+{{< scss-docs name="footer-css-vars" file="scss/_footer.scss" >}}
 
 Each bar redefines its own CSS variables.
 
