@@ -17,9 +17,9 @@ toc: true
 Background utilities like `.bg-*` are generated from our original `$theme-colors` Sass map and respond to color modes.
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you'll want to use:
-* `.text-*` [color utilities]({{< docsref "/utilities/colors" >}})
+* `.text-*` [color utilities]({{< docsref "/utilities/colors" >}}) when the background color remains the same in light and dark mode
 * `.text-bg-*` [color & background helper]({{< docsref "/helpers/color-background" >}}) from our [theme colors]({{< docsref "/customize/color-theme#theming" >}})
-* `[data-bs-theme]` [color mode attribute]({{< docsref "/customize/color-modes#example" >}})
+* `[data-bs-theme]` [color mode attribute]({{< docsref "/customize/color-modes#example" >}}) when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
 
 {{< example >}}
 {{< colors.inline >}}
@@ -30,19 +30,19 @@ Similar to the contextual text color classes, set the background of an element t
 <div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
 <div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
-<div class="p-3 mb-2 fw-bold bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 fw-bold bg-white text-black">.bg-white</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
 Supporting background utilities are generated from our [supporting colors]({{< docsref "/customize/color-theme#supporting" >}}). Please note that their color value stays the same between light and dark mode.
 
 {{< example >}}
-<div class="p-3 mb-2 fw-bold bg-supporting-green text-dark">.bg-supporting-green</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-purple text-dark">.bg-supporting-purple</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-dark">.bg-supporting-yellow</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-blue text-dark">.bg-supporting-blue</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-pink text-dark">.bg-supporting-pink</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-orange text-dark">.bg-supporting-orange</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-black">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue text-black">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink text-black">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-orange text-black">.bg-supporting-orange</div>
 {{< /example >}}
 
 <details>
