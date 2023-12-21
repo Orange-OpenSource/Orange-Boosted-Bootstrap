@@ -410,7 +410,7 @@ Make sure our [theme javascript]({{< docsref "/customize/color-modes#javascript"
       ...
 
       <!-- Navbar with mode selector -->
-      <div id="global-header-6.2" class="navbar-collapse d- global-header-6 collapse show">
+      <div id="global-header-6.2" class="navbar-collapse d-lg-flex global-header-6 collapse show">
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <div class="d-inline-block dropdown">
