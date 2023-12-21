@@ -18,11 +18,16 @@
   // Boosted mod: no .dropdown-toggle
 
   // Boosted mod
+  .dropdown-toggle::after {
+    border-width: .3125rem;
+  }
+
   .dropdown-menu {
-    --bs-dropdown-min-width: 12rem;
-    @include rfs($font-size-sm, --bs-dropdown-font-size);
-    --bs-dropdown-line-height: #{$line-height-sm};
-    --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+    @include media-breakpoint-down(lg) {
+      @include rfs($font-size-sm, --bs-dropdown-font-size);
+      --bs-dropdown-line-height: #{$line-height-sm};
+      --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+    }
 
     .active .bi {
       display: block !important; // stylelint-disable-line declaration-no-important
@@ -31,7 +36,7 @@
   // End mod
 
   .dropdown-menu-end {
-    --bs-dropdown-min-width: 8rem;
+    --bs-dropdown-min-width: 8.75rem; // Boosted mod: instead of `8rem`
   }
 
   // Boosted mod: Specificity
