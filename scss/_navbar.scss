@@ -101,19 +101,32 @@
   }
 
   // Boosted mod
-  .dropdown-toggle::after {
-    margin-left: $spacer * .25;
-  }
+  .dropdown {
+    svg {
+      width: $spacer;
+      height: $spacer;
+      margin: calc(-.5 * (#{$spacer} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0; // stylelint-disable-line function-disallowed-list
+      fill: currentcolor;
+    }
 
-  .dropdown svg {
-    width: $spacer;
-    height: $spacer;
-    margin: calc(-.5 * (#{$spacer} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0; // stylelint-disable-line function-disallowed-list
-    fill: currentcolor;
-  }
+    .active svg {
+      display: block if($enable-important-utilities, !important, null);
+    }
 
-  .dropdown-menu .active svg {
-    display: block if($enable-important-utilities, !important, null);
+    .dropdown-toggle::after {
+      margin-left: $spacer * .25;
+      border-width: .3125rem;
+    }
+
+    .dropdown-menu {
+      --bs-dropdown-min-width: 8.75rem; // Boosted mod: instead of `8rem`
+
+      @include media-breakpoint-down(lg) {
+        @include rfs($font-size-sm, --bs-dropdown-font-size);
+        --bs-dropdown-line-height: #{$line-height-sm};
+        --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+      }
+    }
   }
   // End mod
 }
