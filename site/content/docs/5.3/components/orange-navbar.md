@@ -412,36 +412,34 @@ Make sure our [theme javascript]({{< docsref "/customize/color-modes#javascript"
       <!-- Navbar with mode selector -->
       <div id="global-header-6.2" class="navbar-collapse d-lg-flex global-header-6 collapse show">
         <ul class="navbar-nav flex-row">
-          <li class="nav-item">
-            <div class="d-inline-block dropdown">
-              <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-                <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="me-2"><use href="#ui-light-mode"></use></svg>
-                    Light
-                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
-                    Dark
-                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
-                    <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
-                    Auto
-                    <svg class="ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
