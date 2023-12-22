@@ -1,0 +1,24 @@
+---
+layout: examples
+title: Navbar with mode selector
+aliases:
+  - "/examples/navbar-mode-selector"
+  - "/docs/examples/navbar-mode-selector"
+---
+
+<main>
+  <h1 class="visually-hidden">Navbar containing a mode selector</h1>
+  <header class="sticky-top" data-bs-theme="dark">
+    {{< orange-supra mode="languages" aria_label="Supra navigation - Mode selector example" >}}
+    {{< /orange-supra >}}
+
+    {{< orange-global-headers id="global-header-1" mode="theme" demo=true aria_label="Global navigation - Mode selector example">}}
+    {{< /orange-global-headers >}}
+  </header>
+  <div class="container-xxl pt-4">
+    <h1>Title</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+</main>
