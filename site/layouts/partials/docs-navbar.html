@@ -8,8 +8,8 @@
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-nav-scroll" style="--bs-scroll-height: 100vh;" aria-label="Main navigation">
-    <div class="container-xxl">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Main navigation">
+    <div class="container-xxl navbar-nav-scroll" style="--bs-scroll-height: 100vh;">
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="/">
           <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
@@ -55,37 +55,35 @@
 
           {{ partial "docs-versions" . }}
         </ul>
-        <ul class="navbar-nav ms-lg-3">
-          <li class="nav-item">
-            <div class="d-inline-block dropdown">
-              <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
-                <svg class="bi theme-icon-active"><use href="#circle-half"></use></svg>
-                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark mb-2" aria-labelledby="bd-theme-text">
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="bi me-2"><use href="#sun-fill"></use></svg>
-                    Light
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="bi me-2"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                    <svg class="bi me-2"><use href="#circle-half"></use></svg>
-                    Auto
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
+        <ul class="navbar-nav flex-row ms-lg-3">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+              <svg class="bi theme-icon-active"><use href="#circle-half"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2"><use href="#sun-fill"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2"><use href="#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="bi me-2"><use href="#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
