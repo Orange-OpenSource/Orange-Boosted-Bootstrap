@@ -53,7 +53,7 @@
     }
 
     .dropdown-toggle {
-      line-height: 1.3125rem;
+      line-height: 1.5625rem;
 
       @include media-breakpoint-up(md) {
         line-height: 1.875rem;
@@ -62,5 +62,12 @@
   }
   // End mod
 }
+
+// Boosted mod
+.main-header {
+  max-height: 100vh;
+  overflow: hidden auto;
+}
+// End mod
 
 // Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode
