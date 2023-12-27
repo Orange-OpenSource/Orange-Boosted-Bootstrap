@@ -63,7 +63,7 @@ Thus, the `.text-primary` color on white background (`#f16e00`) can only be used
 The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
 
 {{< callout warning >}}
-When the texts can be shown on both light and dark backgrounds (when there is a mode selector for instance), the light mode stricter restrictions must be applied!
+When the interface allows to switch between light and dark backgrounds, the light mode stricter restrictions must be applied!
 {{< /callout >}}
 
 Here are some compliant combinations examples for texts:
