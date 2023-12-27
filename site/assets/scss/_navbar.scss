@@ -51,8 +51,27 @@
     @include media-breakpoint-down(lg) {
       border-top: 1px solid #666;
     }
+
+    .dropdown-toggle {
+      line-height: 1.5625rem;
+
+      @include media-breakpoint-up(md) {
+        line-height: 1.875rem;
+      }
+    }
   }
   // End mod
 }
+
+// Boosted mod
+.bd-header {
+  max-height: 100vh;
+  overflow: hidden auto;
+
+  @include media-breakpoint-up(lg) {
+    overflow: visible;
+  }
+}
+// End mod
 
 // Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode

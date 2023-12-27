@@ -1,4 +1,4 @@
-<header class="sticky-top">
+<header class="sticky-top bd-header">
   <nav class="navbar navbar-dark navbar-expand bg-dark supra d-none" aria-label="Supra-navigation - New release banner">
     <div class="container-xxl d-flex justify-content-center">
       <ul class="navbar-nav">
@@ -42,27 +42,26 @@
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-0">
-        <ul class="navbar-nav flex-row">
+        <ul class="navbar-nav flex-row me-lg-3">
           <li class="nav-item">
             <a class="nav-link nav-icon" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" }}
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          <li class="nav-item d-flex align-items-md-center mb-0 me-1 me-md-0 me-lg-2">
-            <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
+          <li class="nav-item">
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
           </li>
 
           {{ partial "docs-versions" . }}
         </ul>
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item dropdown d-flex">
-            <a href="#" class="nav-link dropdown-toggle gap-1 mx-lg-2 bg-transparent" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+        <ul class="navbar-nav flex-row ms-lg-3">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
               <svg class="bi theme-icon-active"><use href="#circle-half"></use></svg>
-              <span class="d-lg-none ms-2" aria-hidden="true" id="bd-theme-text">Toggle theme</span>
-              <span class="visually-hidden">Toggle theme</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute" aria-labelledby="bd-theme-text">
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark mb-2" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2"><use href="#sun-fill"></use></svg>
