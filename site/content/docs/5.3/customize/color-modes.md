@@ -15,9 +15,40 @@ added: "5.3"
 
 ## Dark mode
 
-**Boosted now supports color modes, starting with dark mode!** With v5.3.0 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**Boosted now supports color modes, starting with dark mode!** With v5.3.3 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+
+This `data-bs-theme` attribute will automatically apply the corresponding `color` and `background-color` properties of the targeted element.
+
+{{< example class="d-flex flex-column gap-4" >}}
+<div class="p-1">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="p-1" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="p-2" data-bs-theme="dark">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="bg-supporting-blue p-2" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+{{< /example >}}
+
+{{< callout warning >}}
+Applying a color mode directly on a component or element (especially with some basic HTML elements, form controls, etc.), some unexpected rendering may occur. It is mostly related to the automatic change of `color` and `background-color` properties linked to the color mode.
+
+Most of the time, the workaround will be to add a `data-bs-theme` attribute on the parent element of the component or element you want to apply a color mode to.
+{{< /callout >}}
 
 Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.
+
+### Contextual dark mode vs. dark variants
+
+Before v5.3.3, Boosted had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
 
 ## Example
 
