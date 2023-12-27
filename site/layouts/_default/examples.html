@@ -110,6 +110,7 @@
       </symbol>
     </svg>
 
+    {{ if ne .Page.Params.theme_selector false }}
     <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
               id="bd-theme"
@@ -144,6 +145,7 @@
         </li>
       </ul>
     </div>
+    {{- end -}}
 
     {{ .Content }}
 
