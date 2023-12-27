@@ -95,7 +95,6 @@
     {{- end }}
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
-    {{ if ne .Page.Params.theme_selector false }}
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 1000 1000">
         <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
@@ -111,6 +110,7 @@
       </symbol>
     </svg>
 
+    {{ if ne .Page.Params.theme_selector false }}
     <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
               id="bd-theme"
