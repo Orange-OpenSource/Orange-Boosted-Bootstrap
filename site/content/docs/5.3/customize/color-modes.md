@@ -19,6 +19,25 @@ added: "5.3"
 
 This `data-bs-theme` attribute will automatically apply the corresponding `color` and `background-color` properties of the targeted element.
 
+{{< example class="d-flex flex-column gap-4" >}}
+<div class="p-1">
+  <h1>Title</h1>
+  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+</div>
+<div class="p-1" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+</div>
+<div class="p-2" data-bs-theme="dark">
+  <h1>Title</h1>
+  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+</div>
+<div class="bg-supporting-blue p-2" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+</div>
+{{< /example >}}
+
 {{< callout warning >}}
 Applying a color mode directly on a component or element (especially with some basic HTML elements, form controls, etc.), some unexpected rendering may occur. It is mostly related to the automatic change of `color` and `background-color` properties linked to the color mode.
 
