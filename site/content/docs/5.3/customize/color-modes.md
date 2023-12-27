@@ -22,19 +22,19 @@ This `data-bs-theme` attribute will automatically apply the corresponding `color
 {{< example class="d-flex flex-column gap-4" >}}
 <div class="p-1">
   <h1>Title</h1>
-  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+  <p class="lead mb-0">This is a lead paragraph.</p>
 </div>
 <div class="p-1" data-bs-theme="light">
   <h1>Title</h1>
-  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+  <p class="lead mb-0">This is a lead paragraph.</p>
 </div>
 <div class="p-2" data-bs-theme="dark">
   <h1>Title</h1>
-  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+  <p class="lead mb-0">This is a lead paragraph.</p>
 </div>
 <div class="bg-supporting-blue p-2" data-bs-theme="light">
   <h1>Title</h1>
-  <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+  <p class="lead mb-0">This is a lead paragraph.</p>
 </div>
 {{< /example >}}
 
