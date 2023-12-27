@@ -376,6 +376,93 @@ You can add a search input into your Global header.
 </header>
 ```
 
+### With mode selector
+
+You can add a mode selector control into your Global header.
+
+{{< callout info >}}
+In this section, the dropdown menu items are not functional because the JavaScript is linked to the documentation mode selector; the active state and the tick icon are not rendered correctly. But don't worry, it'll work perfectly in your project.
+
+Don't forget to import the [corresponding color modes JavaScript]({{< docsref "/customize/color-modes#javascript" >}}) in your project.
+{{< /callout >}}
+
+<div class="bd-example-snippet">
+  <div class="bd-example p-0">
+    <header data-bs-theme="dark">
+      {{< orange-global-headers id="global-header-6" mode="theme" demo=true aria_label="Global navigation - With mode selector example">}}
+      {{< /orange-global-headers >}}
+    </header>
+  </div>
+</div>
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With mode selector example">
+    <div class="container-xxl">
+
+      <!-- Orange brand logo -->
+      ...
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      ...
+
+      <!-- Navbar with mode selector -->
+      <div id="global-header-6.2" class="navbar-collapse d-lg-flex global-header-6 collapse show">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+```
+
 ### Minimizing behavior
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
@@ -401,7 +488,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 <div class="bd-example p-0">
   <header data-bs-theme="dark">
-    {{< orange-global-headers id="global-header-6" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - Standard example with nav-under">}}
+    {{< orange-global-headers id="global-header-7" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - Standard example with nav-under">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
@@ -427,7 +514,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
   <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Nav-under example">
     <div class="container-xxl">
-      <div id="global-header-6.1" class="navbar-collapse collapse m-0 global-header-6">
+      <div id="global-header-7.1" class="navbar-collapse collapse m-0 global-header-7">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
