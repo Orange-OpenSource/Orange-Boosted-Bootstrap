@@ -384,6 +384,8 @@ You can add a mode selector control into your Global header.
 In this section, the dropdown menu items are not functional because the JavaScript is linked to the documentation mode selector; the active state and the tick icon are not rendered correctly. But don't worry, it'll work perfectly in your project.
 
 Don't forget to import the [corresponding color modes JavaScript]({{< docsref "/customize/color-modes#javascript" >}}) in your project.
+
+To easily integrate it in your project, you can start from our [Navbar mode selector example]({{< docsref "/examples/navbar-mode-selector" >}}).
 {{< /callout >}}
 
 <div class="bd-example-snippet">
