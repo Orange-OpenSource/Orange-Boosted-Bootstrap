@@ -119,7 +119,7 @@
     }
 
     .dropdown-menu {
-      --bs-dropdown-min-width: 8.75rem; // Boosted mod: instead of `8rem`
+      --bs-dropdown-min-width: 8.75rem;
 
       @include media-breakpoint-down(lg) {
         @include rfs($font-size-sm, --bs-dropdown-font-size);
