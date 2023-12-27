@@ -1,6 +1,7 @@
 ---
 layout: examples
 title: Form example
+theme_selector: false
 extra_js:
   - src: "form.js"
 aliases:
@@ -31,7 +32,7 @@ aliases:
         </a>
         <h1 class="title">Travel</h1>
       </div>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2 global-header-1.3" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
@@ -46,7 +47,7 @@ aliases:
           <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
         </ul>
       </div>
-      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1 me-lg-3">
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -63,6 +64,39 @@ aliases:
               </svg>
               <span class="visually-hidden">My account</span>
             </a>
+          </li>
+        </ul>
+      </div>
+      <div id="global-header-1.3" class="navbar-collapse d-lg-flex global-header-1 collapse ms-lg-3">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
