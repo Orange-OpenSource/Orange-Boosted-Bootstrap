@@ -62,9 +62,13 @@ To be sure to respect the specifications, it is necessary to define `color`, `ba
 Thus, the `.text-primary` color on white background (`#f16e00`) can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
 The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
 
+{{< callout warning >}}
+When the texts can be shown on both light and dark backgrounds (when there is a mode selector for instance), the light mode stricter restrictions must be applied!
+{{< /callout >}}
+
 Here are some compliant combinations examples for texts:
 
-  {{< example >}}
+{{< example >}}
 <div class="p-1" data-bs-theme="light">
   <p>regular text</p>
   <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3 (restrictive because of the light mode)</p>
