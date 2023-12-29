@@ -67,7 +67,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.btn-close-white`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Dropdown**
-  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications.
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover and actives states of dropdown menu items.
   - <span class="badge text-bg-danger">Breaking</span> Dropdown markup has changed by replacing `.btn-secondary` by `.btn-dropdown` class. Please reflect this modification into your websites.
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the dropdown (`.dropdown-menu-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
   - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
@@ -88,6 +88,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-warning">Warning</span> List group font weight is now bold by default. Please check that it doesn't break your design.
 
 - **Local navigation**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover state of navigation items.
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the local navigation (`.local-nav-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Modal**
