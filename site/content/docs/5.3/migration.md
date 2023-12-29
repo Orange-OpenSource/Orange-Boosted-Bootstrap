@@ -76,7 +76,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 
 - **Footer**
   - <span class="badge text-bg-danger">Breaking</span> Footer has changed its markup:
-    - `.navbar-dark.bg-dark` classes have been replaced by using the contextual dark mode with `data-bs-theme="dark"` on the `<footer>`.
+    - `.navbar-dark.bg-dark` classes have been replaced by using the `.navbar` class and the contextual dark mode with `data-bs-theme="dark"` on the `<footer>`.
     - `.accordion-dark` class has been removed.
     - if an input was present in your footer, there is no need anymore to add background, color and border utilities to it.
     - if a button was present in your footer, remove its `.btn-inverse` class. If it was a secondary button, transform it into an outline secondary.
