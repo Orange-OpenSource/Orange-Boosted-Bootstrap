@@ -114,6 +114,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
 
 - **Pagination**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover state of page items.
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the pagination (`.pagination-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Progress**
