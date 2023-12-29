@@ -76,7 +76,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 
 - **Footer**
   - <span class="badge text-bg-danger">Breaking</span> Footer has changed its markup:
-    - `.navbar-dark.bg-dark` classes have been changed by `data-bs-theme="dark"`.
+    - `.navbar-dark.bg-dark` classes have been replaced by using the contextual dark mode with `data-bs-theme="dark"` on the `<footer>`.
     - `.accordion-dark` class has been removed.
     - if an input was present in your footer, there is no need anymore to add background, color and border utilities to it.
     - if a button was present in your footer, remove its `.btn-inverse` class. If it was a secondary button, transform it into an outline secondary.
@@ -99,19 +99,19 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 - **Offcanvas**
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the offcanvas has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
+- **Navbar**
+  - <span class="badge text-bg-success">New</span> A new automatic rendering has been added to the navbar's dropdowns containing texts or SVG icons.
+  - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
+
 - **Orange navbar**
   - <span class="badge text-bg-success">New</span> A new Orange navbar with mode selector variant is now available.
 
   - <span class="badge text-bg-danger">Breaking</span> Orange navbars have changed their markup (including supra bars):
-    - `.navbar-dark.bg-dark` classes have been changed by `data-bs-theme="dark"`.
+    - `.navbar-dark.bg-dark` classes have been replaced by using the contextual dark mode with `data-bs-theme="dark"` on the `<header>`.
     - if an input was present in your navbar, there is no need anymore to add background, color and border utilities to it.
-    - if a shopping basket was present in your navbar, the notification text doesn't need `.text-white` anymore. It'll be automatically set to white in dark mode and black in light mode.
+    - if a notification badge was present in your navbar, the notification text doesn't need `.text-white` anymore. It'll be automatically set to white in dark mode and black in light mode.
 
     All examples using an Orange navbar have of course been updated to use this new markup. Make sure to incorporate these changes into your websites.
-
-- **Navbar**
-  - <span class="badge text-bg-success">New</span> A new automatic rendering has been added to the navbar's dropdowns containing texts or SVG icons.
-  - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
 
 - **Pagination**
   - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover state of page items.
@@ -208,6 +208,7 @@ All the examples have a mode selector on the bottom right corner to switch betwe
       <li><code>--bs-list-group-item-icon-margin-x</code></li>
       <li><code>--bs-list-group-item-icon-size</code></li>
       <li><code>--bs-navbar-bg</code></li>
+      <li><code>--bs-navbar-toggler-icon-color</code></li>
       <li><code>--bs-navbar-toggler-icon-hover-color</code></li>
       <li><code>--bs-stepped-process-bg</code></li>
       <li><code>--bs-sticker-color</code></li>
