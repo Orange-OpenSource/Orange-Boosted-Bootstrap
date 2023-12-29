@@ -67,6 +67,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.btn-close-white`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Dropdown**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications.
   - <span class="badge text-bg-danger">Breaking</span> Dropdown markup has changed by replacing `.btn-secondary` by `.btn-dropdown` class. Please reflect this modification into your websites.
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the dropdown (`.dropdown-menu-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
   - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
@@ -180,7 +181,9 @@ All the examples have a mode selector on the bottom right corner to switch betwe
 
 - <span class="badge text-bg-success">New</span> A new `button-outline-variant()` mixin has been added.
 
-- <span class="badge text-bg-breaking">Breaking</span> The `button-variant()` mixin has removed its last argument.
+- <span class="badge text-bg-danger">Breaking</span> The `button-variant()` mixin has removed its last argument.
+
+- <span class="badge text-bg-danger">Breaking</span> `$accessible-orange` and `$brand-orange` Sass variables have been removed. Please refer to the [new color theme documentation]({{< docsref "/customize/color-theme" >}}) and the [new color palette documentation]({{< docsref "/customize/color-palette" >}}) for more details about the new color modes mechanism.
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
