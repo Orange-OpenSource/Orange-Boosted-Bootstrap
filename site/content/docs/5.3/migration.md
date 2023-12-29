@@ -210,6 +210,7 @@ All the examples have a mode selector on the bottom right corner to switch betwe
       <li><code>--bs-navbar-toggler-icon-hover-color</code></li>
       <li><code>--bs-stepped-process-bg</code></li>
       <li><code>--bs-sticker-color</code></li>
+      <li><code>--bs-tab-content-border-color</code></li>
       <li><code>--bs-table-active-bg-factor</code></li>
       <li><code>--bs-table-hover-bg-factor</code></li>
       <li><code>--bs-table-striped-bg-factor</code></li>
