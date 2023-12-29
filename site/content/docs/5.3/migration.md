@@ -111,7 +111,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 
 - **Navbar**
   - <span class="badge text-bg-success">New</span> A new automatic rendering has been added to the navbar's dropdowns containing texts or SVG icons.
-  - <span class="badge text-bg-danger">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white. 
+  - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
 
 - **Pagination**
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the pagination (`.pagination-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
@@ -135,7 +135,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 
 - <span class="badge text-bg-warning">Warning</span> The `.lead` class has been updated to reflect the new letter-spacing value for desktop breakpoint, and the line-height values for tablet and mobile breakpoints. Please check that it doesn't break your design.
 
-- <span class="badge text-bg-warning">Breaking</span> Table dark variant has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+- <span class="badge text-bg-danger">Breaking</span> Table dark variant has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - <span class="badge text-bg-warning">Warning</span> Striped table background color has changed to adapt to the new color modes mechanism.
 
