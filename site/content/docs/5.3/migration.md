@@ -56,7 +56,9 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.breadcrumb-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Buttons**
-  - <span class="badge text-bg-danger">Breaking</span> The rendering of the secondary button has changed. If you were using the secondary button and want to keep the same rendering, please use the new `.btn-outline-secondary` class instead of `.btn-secondary` if you want to keep the previous rendering. All the secondary buttons in the documentation, components and examples have been updated to use this new class. Please reflect this modification into your websites.
+  - <span class="badge text-bg-danger">Breaking</span> The rendering of the secondary button has changed:
+    - if you were using the secondary button as an outline button and want to keep the same rendering, please use the new `.btn-outline-secondary` class instead of `.btn-secondary`. All the secondary buttons in the documentation, components and examples have been updated to use this new class. Please reflect this modification into your websites.
+    - if you were using a black button with `.btn-info` or `.btn-dark`, please now use `.btn-secondary` instead.
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the buttons (`.btn-inverse`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Button group**
