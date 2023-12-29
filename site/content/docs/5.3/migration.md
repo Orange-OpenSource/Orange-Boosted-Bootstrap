@@ -118,7 +118,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the pagination (`.pagination-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Progress**
-  - <span class="badge text-bg-warning">Warning</span> Thanks to the automatic contrast mechanism, some progress bars variants with texts have been modified to avoid using text utilities that are set automatically. Please reflect these modifications into your websites.
+  - <span class="badge text-bg-warning">Warning</span> Thanks to the automatic contrast mechanism, some progress bars variants with texts have been modified to avoid using text utilities that are set automatically. However the default progress bar and the warning ones still need a `.text-dark`. Please reflect these modifications into your websites.
 
 - **Stepped Process**
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the stepped process (`.stepped-process-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.

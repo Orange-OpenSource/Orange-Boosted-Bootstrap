@@ -79,7 +79,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%">25%</div>
+  <div class="progress-bar text-dark" style="width: 25%">25%</div>
 </div>
 {{< /example >}}
 
