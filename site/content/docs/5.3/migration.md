@@ -96,12 +96,12 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
 - **Modal**
   - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
 
-- **Offcanvas**
-  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the offcanvas has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
-
 - **Navbar**
   - <span class="badge text-bg-success">New</span> A new automatic rendering has been added to the navbar's dropdowns containing texts or SVG icons.
   - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
+
+- **Offcanvas**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the offcanvas has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Orange navbar**
   - <span class="badge text-bg-success">New</span> A new Orange navbar with mode selector variant is now available.
@@ -127,7 +127,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the tags (`.tag-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Title bar**
-  - <span class="badge text-bg-danger">Breaking</span> The variants with background colors have been modified to apply the right `data-bs-theme` attribute. Please reflect this modification into your websites.
+  - <span class="badge text-bg-danger">Breaking</span> The variants with background colors have been modified to apply the right `data-bs-theme` attribute. And the `.bg-dark`, `.bg-black`, and `.bg-white` classes have been removed since they don't make sense anymore. Please reflect these modifications into your websites.
 
 - **Toasts**
   - <span class="badge text-bg-danger">Breaking</span> The dark variant of the toast has been modified by using the contextual dark mode with `data-bs-theme="dark"`. Please reflect this modification into your websites.
