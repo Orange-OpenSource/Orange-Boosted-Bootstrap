@@ -15,7 +15,7 @@
     <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="main" />
     <icon>boosted.png</icon>
     <license type="expression">MIT</license>
-    <copyright>Copyright 2015-2023</copyright>
+    <copyright>Copyright 2015-2024</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>css mobile-first responsive front-end framework web bootstrap</tags>
     <contentFiles>
