@@ -79,7 +79,7 @@ Here are some compliant combinations examples for texts:
   <p class="text-body-secondary fw-bold">bold secondary text</p>
 </div>
 
-<div class="bg-dark p-1" data-bs-theme="dark">
+<div class="p-1" data-bs-theme="dark">
   <p class="text-white">regular white text</p>
   <p class="text-primary">regular primary text</p>
   <p class="text-body-secondary">regular secondary text</p>
