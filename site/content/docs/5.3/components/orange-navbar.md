@@ -450,7 +450,7 @@ To easily integrate it in your project, you can start from our [Navbar mode sele
                 </button>
               </li>
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="body" aria-pressed="true">
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
                   Auto
                   <svg class="ms-auto d-none"><use href="#check2"></use></svg>
