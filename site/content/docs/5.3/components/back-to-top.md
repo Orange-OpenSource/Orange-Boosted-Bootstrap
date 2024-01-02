@@ -29,7 +29,7 @@ Smooth scrolling does not depend on this component. It's turned on only when the
 
 ## Example
 
-<div class="bd-example">
+<div class="bd-example d-flex">
   <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
     <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>

@@ -251,17 +251,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-body-color);" data-bs-theme="light" title="#000"><p class="visually-hidden">#000</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-body-color);" data-bs-theme="dark" title="#fff"><p class="visually-hidden">#fff</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-body-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-color</code></button>
             <button class="color-copy" data-clipboard-text="--bs-body-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-body-color-rgb</code></button>
@@ -296,17 +296,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-secondary-color);" data-bs-theme="light" title="#666"><p class="visually-hidden">#666</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-secondary-color);" data-bs-theme="dark" title="#999"><p class="visually-hidden">#999</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-secondary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-color</code></button>
             <button class="color-copy" data-clipboard-text="--bs-secondary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-secondary-color-rgb</code></button>
@@ -341,17 +341,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-tertiary-color);" data-bs-theme="dark" title="#999"><p class="visually-hidden">#999</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-tertiary-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-color</code></button>
             <button class="color-copy" data-clipboard-text="--bs-tertiary-color-rgb" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-tertiary-color-rgb</code></button>
@@ -406,17 +406,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Subtle.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-border-color-subtle);" data-bs-theme="light" title="#ccc"><p class="visually-hidden">#ccc</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-border-color-subtle);" data-bs-theme="dark" title="#666"><p class="visually-hidden">#666</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-border-color-subtle" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-border-color-subtle</code></button>
           </div>
@@ -469,17 +469,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Foreground.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-highlight-color);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-highlight-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-highlight-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-highlight-color</code></button>
           </div>
@@ -535,17 +535,17 @@ Some more contextual CSS variables are provided to create high-level semantic va
         <td>
           {{< markdown >}}Inner.{{< /markdown >}}
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-inner-color);" data-bs-theme="light" title="#fff"><p class="visually-hidden">#fff</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div class="border-color">
             <div class="w-100 h-100" style="background-color: var(--bs-focus-visible-inner-color);" data-bs-theme="dark" title="#000"><p class="visually-hidden">#000</p></div>
           </div>
         </td>
-        <td>
+        <td class="border-top-1">
           <div>
             <button class="color-copy" data-clipboard-text="--bs-focus-visible-inner-color" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-bs-placement="left"><code>--bs-focus-visible-inner-color</code></button>
           </div>

@@ -19,7 +19,7 @@ Have a need for Boosted's brand resources? Great! We have only a few guidelines 
 <div class="row row-cols-md-2 mt-4 mb-5">
   <div class="col">
     <div class="ratio ratio-1x1">
-    <figure class="d-flex bg-dark">
+    <figure class="d-flex bg-black">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img img-fluid m-auto" width="220" height="220" role="img" alt="Orange" loading="lazy">
       <figcaption class="figure-caption fw-bold position-absolute">Master logo</figcaption>
     </figure>
@@ -27,7 +27,7 @@ Have a need for Boosted's brand resources? Great! We have only a few guidelines 
   </div>
   <div class="col">
     <div class="ratio ratio-1x1">
-    <figure class="d-flex bg-dark">
+    <figure class="d-flex bg-black">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img m-auto" width="30" height="30" role="img" alt="Orange" loading="lazy">
       <figcaption class="figure-caption fw-bold position-absolute">Small logo</figcaption>
     </figure>
@@ -48,7 +48,7 @@ Orange Business Services has its own logo that contains the Orange logo and the 
 <div class="row row-cols-md-2 mt-4 mb-5">
   <div class="col">
     <div class="ratio ratio-1x1">
-    <figure class="d-flex bg-dark">
+    <figure class="d-flex bg-black">
       <img src="/docs/{{< param docs_version >}}/assets/brand/OBS-logo.svg" class="figure-img img-fluid m-auto" width="220" height="220" role="img" alt="Orange" loading="lazy">
       <figcaption class="figure-caption fw-bold position-absolute">Orange Business Services logo</figcaption>
     </figure>

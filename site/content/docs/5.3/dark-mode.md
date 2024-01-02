@@ -2083,7 +2083,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark dropdown variant for retro-compatibility</h4>
 
-<div class="d-flex gap-2 flex-wrap border p-3 bg-dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-black">
   <div class="dropdown">
     <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button

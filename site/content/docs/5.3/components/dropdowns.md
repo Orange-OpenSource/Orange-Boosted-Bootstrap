@@ -395,8 +395,6 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 {{< deprecated-in "5.3.3" >}}
 
-Opt into darker dropdowns to match a dark navbar or custom style by adding `.dropdown-menu-dark` onto an existing `.dropdown-menu`. No changes are required to the dropdown items.
-
 {{< callout-deprecated-dark-variants "dropdown-menu" >}}
 
 ## Directions

@@ -60,6 +60,7 @@
   }
 }
 
+// Deprecated in v5.3.3
 // Boosted mod: changing color instead of using filter
 .btn-close-white {
   --#{$prefix}btn-close-color: #{$btn-close-white-color}; // Boosted mod

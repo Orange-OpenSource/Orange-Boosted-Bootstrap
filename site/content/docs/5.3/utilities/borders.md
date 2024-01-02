@@ -190,10 +190,6 @@ These border variants with **a size CSS class different than `.rounded-0`** shou
 ## Dividers
 
 {{< example >}}
-<div class="bg-dark p-1">
-  <div class="border-top border-white my-3"></div>
-  <hr>
-</div>
 <div class="border-top border-light my-3"></div>
 <div class="border-top border-light border-1 my-3"></div>
 <div class="border-top border-dark my-3"></div>

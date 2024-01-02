@@ -1,5 +1,5 @@
 .footer {
-  // scss-docs-start footer-part-css-vars
+  // scss-docs-start footer-css-vars
   --#{$prefix}footer-gap: 0;
   --#{$prefix}footer-padding-top: 0;
   --#{$prefix}footer-padding-bottom: 0;
@@ -9,7 +9,7 @@
   --#{$prefix}footer-title-font-weight: #{$footer-title-font-weight};
   --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
   --#{$prefix}footer-title-letter-spacing: #{$footer-letter-spacing};
-  // scss-docs-end footer-part-css-vars
+  // scss-docs-end footer-css-vars
   --#{$prefix}navbar-padding-y: 0;
   --#{$prefix}navbar-nav-link-padding-y: 0;
   --#{$prefix}navbar-nav-link-padding-x: 0;
