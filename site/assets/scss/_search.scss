@@ -4,52 +4,32 @@
 
 :root {
   // All available CSS vars and specific modifications for Boosted
-  --docsearch-primary-color: #{$primary};
-  --docsearch-text-color: #{$black};
+  --docsearch-primary-color: var(--bs-primary);
+  --docsearch-text-color: var(--bs-body-color);
   // --docsearch-spacing
   // --docsearch-icon-stroke-width
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-muted-color: var(--bs-secondary-color);
-  // --docsearch-container-background
-  --docsearch-logo-color: #{$black};
+  --docsearch-container-background: #{rgba($modal-backdrop-bg, $modal-backdrop-opacity)};
+  --docsearch-logo-color: var(--bs-body-color);
   // --docsearch-modal-width
   // --docsearch-modal-height
   --docsearch-modal-background: #{$modal-content-bg};
-  // --docsearch-modal-shadow;
+  --docsearch-modal-shadow: none;
   // --docsearch-searchbox-height;
   // --docsearch-searchbox-background;
-  // --docsearch-searchbox-focus-background;
+  --docsearch-searchbox-focus-background: transparent;
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
   // --docsearch-hit-height;
-  --docsearch-hit-color: #{$gray-700};
-  // --docsearch-hit-active-color;
-  // --docsearch-hit-background;
+  --docsearch-hit-color: var(--bs-secondary-color);
+  --docsearch-hit-active-color: var(--bs-highlight-color);
+  --docsearch-hit-background: transparent;
   // --docsearch-hit-shadow;
   --docsearch-key-gradient: null;
   --docsearch-key-shadow: null;
   // --docsearch-footer-height;
-  --docsearch-footer-background: #{$modal-footer-bg};
-  --docsearch-footer-shadow: 0 -1px #{$black};
-}
-
-@include color-mode(dark, true) {
-  // From here, the values are copied from https://cdn.jsdelivr.net/npm/@docsearch/css@3
-  // in html[data-theme="dark"] selector
-  // and are slightly modified for formatting purpose
-  --docsearch-text-color: #f5f6f7;
-  --docsearch-container-background: rgba(9, 10, 17, .8);
-  --docsearch-modal-background: #15172a;
-  --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
-  --docsearch-searchbox-background: #090a11;
-  --docsearch-searchbox-focus-background: #000;
-  --docsearch-hit-color: #bec3c9;
-  --docsearch-hit-shadow: none;
-  --docsearch-hit-background: #090a11;
-  --docsearch-key-gradient: linear-gradient(-26.5deg, #565872, #31355b);
-  --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, .3);
-  --docsearch-footer-background: #1e2136;
-  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, .5), 0 -4px 8px 0 rgba(0, 0, 0, .2);
-  --docsearch-muted-color: #7f8497;
+  --docsearch-footer-background: transparent;
+  --docsearch-footer-shadow: 0 -1px var(--bs-border-color);
 }
 
 .bd-search {
@@ -69,14 +49,15 @@
 }
 
 .DocSearch-Modal {
+  border: var(--bs-border-width) solid var(--bs-border-color-subtle);
   @include border-radius(0, 0);
 }
 
 .DocSearch-Button {
-  --docsearch-searchbox-background: #{$black};
-  --docsearch-searchbox-focus-background: #{$black};
-  --docsearch-text-color: #{$white};
+  --docsearch-searchbox-background: transparent;
 
+  height: auto;
+  padding: 0;
   margin: 0;
   border: 0;
 
@@ -97,7 +78,7 @@
   }
 
   .DocSearch-Search-Icon {
-    color: $white;
+    color: var(--bs-body-color);
   }
 }
 
@@ -116,11 +97,11 @@
 }
 
 .DocSearch-Form {
-  box-shadow: $gray-500 0 0 0 .125rem inset;
+  box-shadow: var(--bs-border-color-subtle) 0 0 0 .125rem inset;
   @include border-radius(0, 0);
 
   &:focus-within {
-    box-shadow: $black 0 0 0 .125rem inset;
+    box-shadow: var(--bs-body-color) 0 0 0 .125rem inset;
   }
 }
 
@@ -148,7 +129,7 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: var(--bs-white);
+  background-color: var(--bs-highlight-color);
 }
 
 .DocSearch-Hits {
@@ -169,19 +150,19 @@
   }
 
   mark {
-    color: var(--bs-white);
-    background: var(--bs-black);
+    color: var(--bs-highlight-color);
+    background: var(--bs-highlight-bg);
   }
 
   &[aria-selected="true"] {
     a {
-      background-color: var(--bs-black);
+      background-color: var(--bs-highlight-bg);
     }
 
     mark {
-      --docsearch-hit-active-color: var(--bs-black);
+      --docsearch-hit-active-color: var(--bs-body-color);
       text-decoration: none;
-      background: var(--bs-white);
+      background: var(--bs-highlight-color);
     }
   }
 }
@@ -192,11 +173,15 @@
   &:hover,
   &:focus {
     background: transparent;
+
+    path {
+      fill: var(--bs-highlight-color);
+    }
   }
 }
 
 .DocSearch-Prefill {
-  color: $black;
+  color: var(--bs-body-color);
   text-decoration: underline;
   @include border-radius(0, 0);
 

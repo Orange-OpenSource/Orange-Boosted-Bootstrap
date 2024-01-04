@@ -593,7 +593,6 @@ $utilities: map-merge(
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
           "reset": inherit,
-          "primary": rgba(var(--#{$prefix}primary-text-rgb), var(--#{$prefix}text-opacity)), // Boosted mod: redefine primary value
         )
       )
     ),
@@ -680,7 +679,8 @@ $utilities: map-merge(
           "supporting-blue": $supporting-blue, // Boosted mod
           "supporting-yellow": $supporting-yellow, // Boosted mod
           "supporting-pink": $supporting-pink, // Boosted mod
-          "supporting-purple": $supporting-purple // Boosted mod
+          "supporting-purple": $supporting-purple, // Boosted mod
+          "supporting-orange": $supporting-orange, // Boosted mod
         )
       )
     ),

@@ -62,6 +62,8 @@
       font-style: $form-feedback-font-style;
       font-weight: $font-weight-bold; // Boosted mod
       line-height: $form-feedback-line-height; // Boosted mod
+      color: $form-feedback-color; // Boosted mod
+      background-color: transparent; // Boosted mod
 
       // Boosted mod: status should not rely on color only
       @if $enable-validation-icons {
