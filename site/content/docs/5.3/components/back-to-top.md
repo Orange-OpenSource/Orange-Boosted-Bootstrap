@@ -29,16 +29,16 @@ Smooth scrolling does not depend on this component. It's turned on only when the
 
 ## Example
 
-<div class="bd-example">
+<div class="bd-example d-flex">
   <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
-    <a href="#top" class="back-to-top-link btn btn-icon btn-secondary position-relative top-0" data-bs-label="Back to top">
+    <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
     </a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-bs-label="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -57,7 +57,7 @@ Add `.position-fixed` utility to your `.back-to-top-link` to make your back-to-t
 
 {{< example show_preview="false" >}}
 <nav aria-label="Fixed back to top example" class="back-to-top">
-  <a href="#top" class="back-to-top-link position-fixed btn btn-icon btn-secondary" data-bs-label="Back to top">
+  <a href="#top" class="back-to-top-link position-fixed btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -69,14 +69,14 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 
 <div class="bd-example">
   <nav aria-label="Icon only back to top example" class="back-to-top position-static">
-    <a href="#top" class="back-to-top-link position-static btn btn-icon btn-secondary" title="Back to top">
+    <a href="#top" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
       <span class="visually-hidden">Back to top</span>
     </a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>

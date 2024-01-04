@@ -4,7 +4,7 @@
 // Brand exclusive thin navbar that can be used with orange navbar
 .supra {
   // scss-docs-start supra-navbar-css-vars
-  --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
+  --#{$prefix}navbar-padding-y: 0px;
   --#{$prefix}navbar-nav-font-size: #{$font-size-sm};
   --#{$prefix}navbar-nav-line-height: #{$line-height-sm};
   --#{$prefix}navbar-nav-link-padding-y: #{$navbar-supra-link-padding-y};
@@ -23,12 +23,17 @@
       padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
     }
   }
+
+  &.navbar-nav .nav-link {
+    margin-right: 0;
+  }
 }
 
-.header-minimized {
+.header-minimized :first-child:not(.supra),
+.header-minimized .supra + .navbar {
   // scss-docs-start minimized-navbar-css-vars
   @include media-breakpoint-up(md){
-    --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
+    --#{$prefix}navbar-padding-y: 0px;
     --#{$prefix}navbar-brand-margin-y: #{$navbar-minimized-brand-margin-y};
     --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs};
     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs};

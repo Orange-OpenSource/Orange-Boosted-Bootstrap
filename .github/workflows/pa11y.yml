@@ -8,31 +8,31 @@ on:
       - 'scss/**'
       - 'site/**'
   pull_request:
-    types: [labeled, unlabeled, opened, reopened, synchronize]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
-  NODE: 18
+  NODE: 20
 
 jobs:
   pa11y:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
+    if: github.actor != 'dependabot[bot]'
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "${{ env.NODE }}"
 
       - name: Set up npm cache
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v3.3.2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
@@ -55,7 +55,7 @@ jobs:
         run: npm run docs-accessibility
 
       - name: Upload accessibility results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: pa11y-ci-results

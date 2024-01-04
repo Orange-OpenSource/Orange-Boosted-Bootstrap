@@ -65,7 +65,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 
 ### Images
 
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+`.card-img-top` and `.card-img-bottom` respectively set the top and bottom corners rounded to match the card's borders. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -302,7 +302,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {{< example >}}
 <div class="card text-center">
-  <div class="card-header bg-white">
+  <div class="card-header text-body bg-body">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
         <a class="nav-link active" aria-current="true" href="#">Active</a>
@@ -311,7 +311,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>
@@ -325,7 +325,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {{< example >}}
 <div class="card text-center">
-  <div class="card-header bg-white">
+  <div class="card-header text-body bg-body">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -334,7 +334,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>
@@ -475,7 +475,7 @@ You can also change the borders on the card header and footer as needed, and eve
 {{< example >}}
 <div class="card border-success mb-3" style="max-width: 18rem;">
   <div class="card-header bg-transparent border-success text-body">Header</div>
-  <div class="card-body text-success">
+  <div class="card-body">
     <h5 class="card-title">Success card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>

@@ -1,5 +1,5 @@
-import OrangeNavbar from '../../src/orange-navbar'
-import { clearFixture, getFixture, createEvent, jQueryMock } from '../helpers/fixture'
+import OrangeNavbar from '../../src/orange-navbar.js'
+import { clearFixture, getFixture, createEvent, jQueryMock } from '../helpers/fixture.js'
 
 describe('OrangeNavbar', () => {
   let fixtureEl
@@ -122,64 +122,27 @@ describe('OrangeNavbar', () => {
 
   it('should add .header-minimized to the global header non-supra first <nav> when enableMinimizing is called not at the top of the page', () => {
     fixtureEl.innerHTML = [
-      '<header class="sticky-top" style="height: 20000px;">',
-      '  <nav id="notTargeted" class="supra"></nav>',
-      '  <nav id="target"></nav>',
-      '  <nav id="notTargeted2"></nav>',
-      '</header>'
+      '<header class="sticky-top" style="height: 20000px;"></header>'
     ].join('')
 
-    const targetEl = fixtureEl.querySelector('#target')
-    const notTargetedEl = fixtureEl.querySelector('#notTargeted')
-    const notTargeted2El = fixtureEl.querySelector('#notTargeted2')
+    const targetEl = fixtureEl.querySelector('header')
     window.scrollY = 1
 
     OrangeNavbar.enableMinimizing(fixtureEl.querySelector('header.sticky-top'))
 
     expect(targetEl).toHaveClass('header-minimized')
-    expect(notTargetedEl).not.toHaveClass('header-minimized')
-    expect(notTargeted2El).not.toHaveClass('header-minimized')
   })
 
   it('should remove .header-minimized to the global header non-supra first <nav> when enableMinimizing is called at the top of the page', () => {
     fixtureEl.innerHTML = [
-      '<header class="sticky-top" style="height: 20000px;">',
-      '  <nav id="notTargeted" class="supra"></nav>',
-      '  <nav id="target" class="header-minimized"></nav>',
-      '  <nav id="notTargeted2"></nav>',
-      '</header>'
+      '<header class="sticky-top" style="height: 20000px;"></header>'
     ].join('')
 
-    const targetEl = fixtureEl.querySelector('#target')
-    const notTargetedEl = fixtureEl.querySelector('#notTargeted')
-    const notTargeted2El = fixtureEl.querySelector('#notTargeted2')
+    const targetEl = fixtureEl.querySelector('header')
     window.scrollY = 0
 
     OrangeNavbar.enableMinimizing(fixtureEl.querySelector('header.sticky-top'))
 
     expect(targetEl).not.toHaveClass('header-minimized')
-    expect(notTargetedEl).not.toHaveClass('header-minimized')
-    expect(notTargeted2El).not.toHaveClass('header-minimized')
-  })
-
-  it('should not add .header-minimized to the global header non-supra first <nav> when the header only has .supra <nav>', () => {
-    fixtureEl.innerHTML = [
-      '<header class="sticky-top" style="height: 20000px;">',
-      '  <nav id="target0" class="supra"></nav>',
-      '  <nav id="target1" class="supra"></nav>',
-      '  <nav id="target2" class="supra"></nav>',
-      '</header>'
-    ].join('')
-
-    const target0El = fixtureEl.querySelector('#target0')
-    const target1El = fixtureEl.querySelector('#target1')
-    const target2El = fixtureEl.querySelector('#target2')
-    window.scrollY = 1
-
-    OrangeNavbar.enableMinimizing(fixtureEl.querySelector('header.sticky-top'))
-
-    expect(target0El).not.toHaveClass('header-minimized')
-    expect(target1El).not.toHaveClass('header-minimized')
-    expect(target2El).not.toHaveClass('header-minimized')
   })
 })

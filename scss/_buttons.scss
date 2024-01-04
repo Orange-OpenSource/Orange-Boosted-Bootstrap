@@ -16,11 +16,12 @@
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-color: #{$btn-hover-color}; // Boosted mod
   --#{$prefix}btn-hover-border-color: initial; // Boosted mod
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // Boosted mod
-  --#{$boosted-prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
+  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
   // scss-docs-end btn-css-vars
 
   display: inline-flex; // Boosted mod
@@ -57,8 +58,9 @@
 
   // Boosted mod: no .btn-check:focus-visible + &
 
-  // Boosted mod: custom styles for .btn-check
-  // Boosted mod: simpler rule
+  // Boosted mod: selectors are slightly different to handle `.btn-check:checked`
+  .btn-check:checked + &:active,
+  .btn-check:checked + &,
   &:active,
   &.active,
   &.show {
@@ -70,7 +72,10 @@
     // Boosted mod: no box shadow modification for the active state
     // Boosted mod: no &:focus-visible
   }
+  // End mod
 
+  // Boosted mod: selectors are slightly different to handle `.btn-check`
+  .btn-check:disabled + &,
   &:disabled,
   &.disabled,
   fieldset:disabled & {
@@ -82,6 +87,7 @@
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }
+  // End mod
 
   // Boosted mod: with icon
   &:not(.btn-icon):not(.btn-sm) > svg {
@@ -95,65 +101,105 @@
 // Alternate buttons
 //
 
-// Boosted mod: inconsistent theming ¯\_(ツ)_/¯
 // scss-docs-start btn-variant-loops
-.btn-primary,
-.btn-warning {
-  @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
-  &.btn-inverse {
-    @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black, $black);
-  }
-}
-
-.btn-light,
-.btn-secondary {
-  @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
+.btn-primary {
+  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
 }
 
 .btn-success {
-  @include button-variant($success, $success);
-  &.btn-inverse {
-    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
-}
-
-.btn-info,
-.btn-dark {
-  @include button-variant($black, $black, $white, $white, $black, $black);
-  &.btn-inverse {
-    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
+  @include button-variant(var(--#{$prefix}success), var(--#{$prefix}success), var(--#{$prefix}highlight-color));
 }
 
 .btn-danger {
-  @include button-variant($danger, $danger);
-  &.btn-inverse {
-    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+  @include button-variant(var(--#{$prefix}danger), var(--#{$prefix}danger), var(--#{$prefix}highlight-color));
+}
+
+.btn-warning {
+  @include button-variant($warning, $warning, $black);
+}
+
+.btn-info {
+  @include button-variant(var(--#{$prefix}info), var(--#{$prefix}info), var(--#{$prefix}highlight-color));
+}
+
+.btn-light {
+  @include button-variant($light, $light, $black);
+}
+
+.btn-dark {
+  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}border-color), $hover-color: $black);
+}
+
+.btn-secondary {
+  @include button-variant(var(--#{$prefix}secondary), var(--#{$prefix}secondary), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}border-color), $hover-color: var(--#{$prefix}body-color));
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    $btn-outline-hover-color: var(--#{$prefix}highlight-color);
+    @if index(("primary", "warning", "light"), #{$color}) {
+      $btn-outline-hover-color: $black;
+    } @else if (#{$color} == "dark") {
+      $btn-outline-hover-color: $white;
+    }
+    @include button-outline-variant(var(--#{$prefix}#{$color}), $btn-outline-hover-color);
   }
 }
 // scss-docs-end btn-variant-loops
+
+// Boosted mod: Boosted-specific no outline button
+.btn-no-outline {
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
+
+  .btn-check:checked + &.btn {
+    border-color: transparent;
+
+    &:hover {
+      border-color: var(--#{$prefix}btn-hover-border-color);
+    }
+  }
+}
 // End mod
 
-// Boosted mod: no .btn-outline
 
-// Boosted mod: border-only on :hover and :active
-.btn-no-outline {
-  --#{$prefix}btn-hover-border-color: #{$gray-500};
-  --#{$prefix}btn-active-color: #{$accessible-orange};
-  --#{$prefix}btn-active-border-color: #{$gray-500};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
-  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
+// Boosted mod: Boosted-specific toggle button
+.btn-toggle {
+  @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
 
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-hover-border-color: #{$gray-700};
-    --#{$prefix}btn-active-color: #{$brand-orange};
-    --#{$prefix}btn-active-border-color: #{$gray-700};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
+  .btn-check:checked + & {
+    color: var(--#{$prefix}highlight-color);
+    background-color: var(--#{$prefix}highlight-bg);
+    border-color: var(--#{$prefix}border-color);
   }
+
+  .btn-group .btn-check + &.btn:not(:first-of-type) {
+    border-left: 0;
+
+    &::before {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
+  }
+
+  .btn-group .btn-check + &.btn:not(:last-of-type) {
+    border-right: 0;
+
+    &::after {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
+  }
+}
+// End mod
+
+
+// Boosted mod: Boosted-specific dropdown button
+.btn-dropdown {
+  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }
 // End mod
 
@@ -174,7 +220,7 @@
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
+  --#{$prefix}btn-box-shadow: 0 0 0 #{$black}; // Can't use `none` as keyword negates all values when used with multiple shadows
   // Boosted mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
 
   text-decoration: $link-decoration;
@@ -188,12 +234,6 @@
   }
 
   // Boosted mod: no focus-visible color change
-
-  // Boosted mod: btn inverse
-  &.btn-inverse {
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
-  // End mod
 
   // No need for an active state here
 }
@@ -215,7 +255,7 @@
 
 // Boosted mod: icon button
 .btn-icon {
-  padding: var(--#{$boosted-prefix}icon-spacing);
+  padding: var(--#{$prefix}icon-spacing);
 
   &.btn-sm {
     padding-right: $btn-icon-padding-x-sm + .0625rem;
@@ -228,31 +268,23 @@
 .btn-social {
   --#{$prefix}btn-border-color: currentcolor;
   --#{$prefix}btn-hover-color: #{$white};
-  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, $black);
-  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, $black);
-  --#{$prefix}btn-active-color: #{$white};
-  --#{$prefix}btn-active-bg: #{$black};
-  --#{$prefix}btn-active-border-color: #{$black};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-hover-bg: var(--#{$prefix}network-color, #{$black});
+  --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
+  --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
+  --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
-  @include button-icon(var(--#{$boosted-prefix}network-logo));
-
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-active-color: #{$black};
-    --#{$prefix}btn-active-bg: #{$white};
-    --#{$prefix}btn-active-border-color: #{$white};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
+  @include button-icon(var(--#{$prefix}network-logo));
 }
 
 @each $name in map-keys($btn-social-networks) {
   $network: map-get($btn-social-networks, $name);
 
   .btn-#{$name} {
-    --#{$boosted-prefix}network-color: #{map-get($network, "color")};
-    --#{$boosted-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
+    --#{$prefix}network-color: #{map-get($network, "color")};
+    --#{$prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
 
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);

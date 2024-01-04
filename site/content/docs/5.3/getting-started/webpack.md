@@ -86,6 +86,7 @@ With dependencies installed and our project folder ready for us to start coding,
 
 1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack where to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
 
+   <!-- eslint-skip -->
    ```js
    'use strict'
 
@@ -125,7 +126,6 @@ With dependencies installed and our project folder ready for us to start coding,
          <h1>Hello, Boosted and Webpack!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
-       <script src="./main.js"></script>
      </body>
    </html>
    ```
@@ -139,7 +139,7 @@ With dependencies installed and our project folder ready for us to start coding,
      // ...
      "scripts": {
        "start": "webpack serve",
-       "build": "webpack build",
+       "build": "webpack build --mode=production",
        "test": "echo \"Error: no test specified\" && exit 1"
      },
      // ...
@@ -162,6 +162,7 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
 1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
 
+   <!-- eslint-skip -->
    ```js
    'use strict'
 
@@ -202,7 +203,7 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
                loader: 'postcss-loader',
                options: {
                  postcssOptions: {
-                   plugins: () => [
+                   plugins: [
                      autoprefixer
                    ]
                  }
@@ -322,8 +323,8 @@ Then instantiate and use the plugin in the Webpack configuration:
 After running `npm run build` again, there will be a new file `dist/main.css`, which will contain all of the CSS imported by `src/js/main.js`. If you view `dist/index.html` in your browser now, the style will be missing, as it is now in `dist/main.css`. You can include the generated CSS in `dist/index.html` like this:
 
 ```diff
---- a/webpack/dist/index.html
-+++ b/webpack/dist/index.html
+--- a/dist/index.html
++++ b/dist/index.html
 @@ -3,6 +3,7 @@
    <head>
      <meta charset="utf-8">
@@ -341,8 +342,8 @@ Boosted's CSS includes multiple references to SVG files via inline `data:` URIs.
 Configure Webpack to extract inline SVG files like this:
 
 ```diff
---- a/webpack/webpack.config.js
-+++ b/webpack/webpack.config.js
+--- a/webpack.config.js
++++ b/webpack.config.js
 @@ -23,6 +23,14 @@ module.exports = {
    },
    module: {

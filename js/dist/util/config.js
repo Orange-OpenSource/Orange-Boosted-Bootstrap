@@ -1,18 +1,18 @@
 /*!
-  * Boosted v5.3.0-alpha2 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap config.js v5.3.0-alpha2 (https://boosted.orange.com/)
+  * Bootstrap config.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./index.js'), require('../dom/manipulator.js')) :
-  typeof define === 'function' && define.amd ? define(['./index', '../dom/manipulator'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Config = factory(global.Index, global.Manipulator));
-})(this, (function (index_js, Manipulator) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/manipulator.js'), require('./index.js')) :
+  typeof define === 'function' && define.amd ? define(['../dom/manipulator', './index'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Config = factory(global.Manipulator, global.Index));
+})(this, (function (Manipulator, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
@@ -20,6 +20,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Class definition

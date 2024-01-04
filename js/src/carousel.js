@@ -5,6 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
+import Manipulator from './dom/manipulator.js'
+import SelectorEngine from './dom/selector-engine.js'
 import {
   defineJQueryPlugin,
   getNextActiveElement,
@@ -13,11 +17,7 @@ import {
   reflow,
   triggerTransitionEnd
 } from './util/index.js'
-import EventHandler from './dom/event-handler.js'
-import Manipulator from './dom/manipulator.js'
-import SelectorEngine from './dom/selector-engine.js'
 import Swipe from './util/swipe.js'
-import BaseComponent from './base-component.js'
 
 /**
  * Constants
@@ -72,7 +72,7 @@ const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // Boosted mod
 const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel' // Boosted mod
 const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel' // Boosted mod
 
-const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-prefix` in scss/_variables.scss
+const PREFIX_CUSTOM_PROPS = 'bs-' // Boosted mod: should match `$prefix` in scss/_variables.scss
 
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
@@ -119,7 +119,10 @@ class Carousel extends BaseComponent {
 
     if (this._config.ride === CLASS_NAME_CAROUSEL) {
       this.cycle()
+    } else if (this._indicatorsElement) { // Boosted mod: set the animation properly on progress indicator
+      this._element.classList.add(CLASS_NAME_PAUSED)
     }
+    // End mod
   }
 
   // Getters
@@ -448,7 +451,7 @@ class Carousel extends BaseComponent {
 
     if (!activeElement || !nextElement) {
       // Some weirdness is happening, so we bail
-      // todo: change tests that use empty divs to avoid this check
+      // TODO: change tests that use empty divs to avoid this check
       return
     }
 

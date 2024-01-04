@@ -22,6 +22,7 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
   <div class="opacity-75 p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-50 p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-25 p-3 m-2 bg-primary fw-bold"></div>
+  <div class="opacity-0 p-3 m-2 bg-primary fw-bold"></div>
 </div>
 
 ```html
@@ -29,9 +30,12 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 <div class="opacity-75">...</div>
 <div class="opacity-50">...</div>
 <div class="opacity-25">...</div>
+<div class="opacity-0">...</div>
 ```
 
-### Utilities API
+## CSS
+
+### Sass utilities API
 
 Opacity utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

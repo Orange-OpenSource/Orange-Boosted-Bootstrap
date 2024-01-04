@@ -8,6 +8,7 @@
   flex-wrap: wrap; // For form validation feedback
   align-items: stretch;
   width: 100%;
+  background-color: transparent; // Boosted mod
 
   > .form-control,
   > .form-select,
@@ -122,7 +123,7 @@
   }
 
   > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
-    margin-left: calc($input-border-width * -1); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
     @include border-start-radius(0);
   }
 

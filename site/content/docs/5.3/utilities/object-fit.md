@@ -25,11 +25,11 @@ Classes for the value of `object-fit` are named using the format `.object-fit-{v
 Add the `object-fit-{value}` class to the [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="120" class="object-fit-contain border" text="Object fit contain" markup="img" color="#666" background="#ddd" >}}
-{{< placeholder width="140" height="120" class="object-fit-cover border" text="Object fit cover" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="120" class="object-fit-fill border" text="Object fit fill" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="120" class="object-fit-scale border" text="Object fit scale down" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="120" class="object-fit-none border" text="Object fit none" markup="img" color="666" background="#ddd" >}}
+{{< placeholder width="140" height="120" class="object-fit-contain border" text="Object fit contain" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-cover border" text="Object fit cover" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-fill border" text="Object fit fill" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-scale border" text="Object fit scale down" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-none border" text="Object fit none" markup="img" color="#333" background="#bbb" >}}
 {{< /example >}}
 
 ## Responsive
@@ -37,11 +37,11 @@ Add the `object-fit-{value}` class to the [replaced element](https://developer.m
 Responsive variations also exist for each `object-fit` value using the format `.object-fit-{breakpoint}-{value}`, for the following breakpoint abbreviations: `sm`, `md`, `lg`, `xl`, and `xxl`. Classes can be combined for various effects as you need.
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="80" class="object-fit-sm-contain border" text="Contain on sm" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="80" class="object-fit-md-contain border" text="Contain on md" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="80" class="object-fit-lg-contain border" text="Contain on lg" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="80" class="object-fit-xl-contain border" text="Contain on xl" markup="img" color="666" background="#ddd" >}}
-{{< placeholder width="140" height="80" class="object-fit-xxl-contain border" text="Contain on xxl" markup="img" color="666" background="#ddd" >}}
+{{< placeholder width="140" height="80" class="object-fit-sm-contain border" text="Contain on sm" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-md-contain border" text="Contain on md" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-lg-contain border" text="Contain on lg" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-xl-contain border" text="Contain on xl" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-xxl-contain border" text="Contain on xxl" markup="img" color="#333" background="#bbb" >}}
 {{< /example >}}
 
 ## Video
@@ -56,7 +56,9 @@ The `.object-fit-{value}` and responsive `.object-fit-{breakpoint}-{value}` util
 <video src="..." class="object-fit-none" autoplay></video>
 ```
 
-## Utilities API
+## CSS
+
+### Sass utilities API
 
 Object fit utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

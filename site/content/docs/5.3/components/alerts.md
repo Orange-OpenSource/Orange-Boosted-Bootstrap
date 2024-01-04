@@ -12,14 +12,14 @@ toc: true
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
-Boosted also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color#functional-colors">}}):
+Boosted also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color-theme#functional">}}):
 - success,
 - info,
 - warning,
 - danger.
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 {{< example >}}
@@ -56,37 +56,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 
 We use the following JavaScript to trigger our live alert demo:
 
-<!-- Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() -->
-
-```js
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type, typeVisuallyHidden) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    '   <span class="alert-icon">',
-    `      <span class="visually-hidden">${typeVisuallyHidden}</span>`,
-    '   </span>',
-    '   <p>',
-    `     ${message}`,
-    '   </p>',
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert">',
-    '      <span class="visually-hidden">Close</span>',
-    '   </button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('Nice, you triggered this alert message!', 'success', 'Success')
-  })
-}
-```
+{{< js-docs name="live-alert" file="site/assets/js/snippets.js" >}}
 
 <!-- Boosted mod: no Link color -->
 
@@ -140,15 +110,16 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 - Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
 - Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
 - On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
+- On the close button, add the `data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"` attributes, which add a tooltip for better accessibility. You also need to [enable tooltips]({{< docsref "/components/tooltips#enable-tooltips" >}}) (if not already done).
 - To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
 
 You can see this in action with a live demo:
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 
@@ -156,30 +127,13 @@ You can see this in action with a live demo:
 When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you're planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
 {{< /callout >}}
 
+{{% enable-btn-close-tooltip 4 alerts %}}
+
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
-
-{{< example class="bg-dark" >}}
-<div class="alert alert-success bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-  <p>Success notification text goes here.</p>
-</div>
-<div class="alert alert-success bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-  <div>
-    <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
-    <p>Description text with <a href="#">a link</a> goes here.</p>
-  </div>
-</div>
-<div class="alert alert-warning alert-dismissible fade show bg-dark" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-  <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
-</div>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "alert" >}}
 
 ## CSS
 
@@ -199,17 +153,15 @@ Customization through CSS variables can be seen on the `.alert-sm` class where w
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
-### Sass mixin
+### Sass mixins
 
 {{< deprecated-in "5.3.0" >}}
 
-Used in combination with `$theme-colors` to create contextual modifier classes for our alerts.
-
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
-### Sass loop
+### Sass loops
 
-Loop that generates the modifier classes with the `alert-variant()` mixin.
+Loop that generates the modifier classes with an overriding of CSS variables.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 

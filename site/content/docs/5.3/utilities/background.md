@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Background
-description: Convey meaning through `background-color` and add decoration with gradients.
+description: Convey meaning through `background-color`.
 group: utilities
 aliases:
   - "/docs/utilities/background/"
@@ -14,48 +14,57 @@ toc: true
 
 ## Background color
 
-Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts.
+Background utilities like `.bg-*` are generated from our original `$theme-colors` Sass map and respond to color modes.
 
-{{< callout info >}}
-Background utilities like `.bg-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.bg-*-subtle` utility will. This will be resolved in v6.
-{{< /callout >}}
+Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you'll want to use:
+* `.text-*` [color utilities]({{< docsref "/utilities/colors" >}}) when the background color remains the same in light and dark mode
+* `.text-bg-*` [color & background helper]({{< docsref "/helpers/color-background" >}}) from our [theme colors]({{< docsref "/customize/color-theme#theming" >}})
+* `[data-bs-theme]` [color mode attribute]({{< docsref "/customize/color-modes#example" >}}) when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
 
-<!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
-<div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
-<div class="p-3 mb-2 fw-bold bg-secondary">.bg-secondary</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-green">.bg-supporting-green</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-purple">.bg-supporting-purple</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-yellow">.bg-supporting-yellow</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-blue">.bg-supporting-blue</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-pink">.bg-supporting-pink</div>
-<div class="p-3 mb-2 fw-bold bg-light">.bg-light</div>
-<div class="p-3 mb-2 fw-bold bg-dark">.bg-dark</div>
+{{< colors.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<div class="p-3 mb-2 fw-bold bg-{{ .name }}"><span class="text-bg-{{ .name }}">.bg-{{ .name }}</span></div>
+{{- end -}}
+{{< /colors.inline >}}
 <div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
-<div class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
-<div class="p-3 mb-2 fw-bold bg-black">.bg-black</div>
-<div class="p-3 mb-2 fw-bold bg-white">.bg-white</div>
+<div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 fw-bold bg-white text-black">.bg-white</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
-{{< callout info >}}
-For each `.background-*` there is a matching `.background-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+Supporting background utilities are generated from our [supporting colors]({{< docsref "/customize/color-theme#supporting" >}}). Please note that their color value stays the same between light and dark mode.
 
-Here is a list of these extra classes:
-{{< background-subtle.inline >}}
+{{< example >}}
+<div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-black">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue text-black">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink text-black">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-orange text-black">.bg-supporting-orange</div>
+{{< /example >}}
+
+<details>
+  <summary>See list of Bootstrap-specific background color utilities</summary>
+  <br>
+
+Another background utility is `.bg-body-tertiary` but doesn't have any matching color in our [grays colors]({{< docsref "/customize/color-theme#grays" >}}) so shouldn't be used for now.
+
+{{< example >}}
+<p class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</p>
+{{< /example >}}
+
+In Bootstrap, for each `.bg-*` there is a matching `.bg-*-subtle` utility responding to color modes. In Boosted, subtle colors don't exist so these background utilities have exactly the same value and shouldn't be used. Prefer the regular `.bg-*` utilities instead.
+
+{{< example >}}
+{{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-- `.bg-{{ .name }}-subtle`
+<div class="p-3 mb-2 fw-bold bg-{{ .name }}-subtle"><span class="text-bg-{{ .name }}">.bg-{{ .name }}-subtle</span></div>
 {{- end -}}
-{{< /background-subtle.inline >}}
-{{< /callout >}}
-
-{{< callout >}}
-### Color naming
-
-Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color#oranges-colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
-Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
-{{< /callout >}}
+{{< /colors.inline >}}
+{{< /example >}}
+</details>
 
 <!-- Boosted mod: no background gradient -->
 
@@ -110,9 +119,13 @@ Boosted supersedes Bootstrap color variables with Orange brand color.
 
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-color-dark-variables" file="scss/_variables-dark.scss" >}}
 
 <!-- Boosted mod: no background gradient -->
 
@@ -132,6 +145,8 @@ Theme colors are then put into a Sass map so we can loop over them to generate o
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
+
 Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
@@ -139,6 +154,8 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 RGB colors are generated from a separate Sass map:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-colors-rgb-dark" file="scss/_maps.scss" >}}
 
 Background color opacities build on that with their own map that's consumed by the utilities API:
 
@@ -158,7 +175,7 @@ Color mode background colors are also available as a Sass map:
 
 <!-- Boosted mod: no background gradient -->
 
-## Utilities API
+### Sass utilities API
 
 Background utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

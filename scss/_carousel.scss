@@ -86,7 +86,7 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-  --#{$boosted-prefix}control-bg: #{rgba($carousel-indicator-active-bg, .5)}; // Boosted mod
+  --#{$prefix}control-bg: #{rgba($carousel-indicator-active-bg, .5)}; // Boosted mod
   position: absolute;
   top: 0;
   bottom: 0;
@@ -108,7 +108,7 @@
 
   // Hover state - Boosted mod: no focus state
   &:hover {
-    --#{$boosted-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
+    --#{$prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
     color: color-contrast($carousel-control-color);
     text-decoration: none;
     opacity: $carousel-control-hover-opacity;
@@ -122,7 +122,7 @@
   }
 
   &:active {
-    --#{$boosted-prefix}control-bg: #{$carousel-control-icon-active-bg};
+    --#{$prefix}control-bg: #{$carousel-control-icon-active-bg};
     color: $carousel-control-color;
   }
 
@@ -151,7 +151,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  background-color: var(--#{$boosted-prefix}control-bg); // Boosted mod
+  background-color: var(--#{$prefix}control-bg); // Boosted mod
   @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // Boosted mod
   @include border-radius(50%, 50%);
 }
@@ -241,10 +241,10 @@
       // Animation based on Lea Verou's simple pie chart
       // See https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
       background-image: linear-gradient(to right, transparent 50%, color-contrast($carousel-indicator-active-bg) 0);
-      transform: scale($carousel-indicator-hover-scale);
       // No need to feature test mask-*
       // See https://caniuse.com/mdn-css_properties_mask-image
       mask-image: radial-gradient(circle at 50%, transparent 33%, $white add(33%, 1px));
+      transform: scale($carousel-indicator-hover-scale);
 
       &:hover,
       &:focus {
@@ -312,6 +312,7 @@
 
   .carousel-control-play-pause {
     margin-bottom: $carousel-indicators-margin-bottom;
+    color: $carousel-control-icon-color;
     background: rgba($carousel-indicator-active-bg, .5);
     border: 0;
     @include border-radius($spacer, $spacer);
@@ -354,8 +355,7 @@
   left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
   color: $carousel-caption-color;
-  background-color: color-contrast($carousel-caption-color); // Boosted mod: ensure contrast
+  background-color: $carousel-caption-bg; // Boosted mod
 }
 
-// Boosted mod: no dark carousel nor carousel in dark mode since Boosted doesn't have any dark mode for now
-
+// Boosted mod: no specific rules for dark carousel or dark mode carousel

@@ -19,7 +19,7 @@ import ScrollSpy from './src/scrollspy.js'
 import Tab from './src/tab.js'
 import Toast from './src/toast.js'
 import Tooltip from './src/tooltip.js'
-import '../node_modules/focus-visible/dist/focus-visible.js' // Boosted mod
+import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // Boosted mod
 
 export default {
   Alert,

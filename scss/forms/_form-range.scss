@@ -8,8 +8,8 @@
   width: 100%;
   height: add($form-range-thumb-height, $form-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
-  background-color: transparent;
   appearance: none;
+  background-color: transparent;
 
   &:focus {
     outline: 0;
@@ -41,17 +41,25 @@
     box-sizing: content-box; // Boosted mod
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    margin-top: calc(($form-range-track-height - ($form-range-thumb-height + var(--#{$prefix}border-width) * 2)) * .5); /* stylelint-disable-line function-disallowed-list */ // Webkit specific // Boosted mod
+    // stylelint-disable-next-line function-disallowed-list
+    margin-top: calc((#{$form-range-track-height} - (#{$form-range-thumb-height} + var(--#{$prefix}border-width) * 2)) * .5); // Webkit specific // Boosted mod
+    appearance: none;
     cursor: grab; // Boosted mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
-    appearance: none;
+
+    // Boosted mod
+    &:hover {
+      @include gradient-bg($form-range-thumb-hover-bg);
+    }
+    // End mod
 
     &:active {
       cursor: grabbing; // Boosted mod
+      border-color: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
@@ -70,16 +78,24 @@
   &::-moz-range-thumb {
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
+    appearance: none;
     cursor: grab; // Boosted mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
-    appearance: none;
+
+    // Boosted mod
+    &:hover {
+      border: $form-range-thumb-border;
+      @include gradient-bg($form-range-thumb-hover-bg);
+    }
+    // End mod
 
     &:active {
       cursor: grabbing; // Boosted mod
+      border-color: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }

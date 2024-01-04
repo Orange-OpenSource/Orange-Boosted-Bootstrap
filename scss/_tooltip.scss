@@ -22,7 +22,6 @@
 
   z-index: var(--#{$prefix}tooltip-zindex);
   display: block;
-  padding: var(--#{$prefix}tooltip-arrow-height);
   margin: var(--#{$prefix}tooltip-margin);
   @include deprecate("`$tooltip-margin`", "v5", "v5.x", true);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
@@ -30,7 +29,7 @@
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
   font-weight: var(--#{$prefix}tooltip-font-weight); // Boosted mod
-  line-height: var(--#{$prefix}--#{$prefix}tooltip-line-height); // Boosted mod
+  line-height: var(--#{$prefix}tooltip-line-height); // Boosted mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
   opacity: 0;
@@ -56,7 +55,7 @@
 
 // Boosted mod: needed to generate a border with a different color
 .bs-tooltip-top .tooltip-arrow {
-  bottom: 0;
+  bottom: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
 
   &::before,
   &::after {
@@ -65,7 +64,7 @@
 
   &::before {
     bottom: 0;
-    border-top-color: var(--#{$prefix}--#{$prefix}tooltip-arrow-border);
+    border-top-color: var(--#{$prefix}tooltip-arrow-border);
   }
 
   &::after {
@@ -76,7 +75,7 @@
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow {
-  left: 0;
+  left: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 
@@ -99,7 +98,7 @@
 /* rtl:end:ignore */
 
 .bs-tooltip-bottom .tooltip-arrow {
-  top: 0;
+  top: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
 
   &::before,
   &::after {
@@ -119,7 +118,7 @@
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow {
-  right: 0;
+  right: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 

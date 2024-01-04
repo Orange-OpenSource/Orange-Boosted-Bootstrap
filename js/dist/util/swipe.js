@@ -1,18 +1,18 @@
 /*!
-  * Boosted v5.3.0-alpha2 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap swipe.js v5.3.0-alpha2 (https://boosted.orange.com/)
+  * Bootstrap swipe.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./config.js'), require('../dom/event-handler.js'), require('./index.js')) :
-  typeof define === 'function' && define.amd ? define(['./config', '../dom/event-handler', './index'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swipe = factory(global.Config, global.EventHandler, global.Index));
-})(this, (function (Config, EventHandler, index_js) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/event-handler.js'), require('./config.js'), require('./index.js')) :
+  typeof define === 'function' && define.amd ? define(['../dom/event-handler', './config', './index'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swipe = factory(global.EventHandler, global.Config, global.Index));
+})(this, (function (EventHandler, Config, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
@@ -20,6 +20,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants

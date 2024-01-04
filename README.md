@@ -30,11 +30,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.2.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.2.3`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.2.3`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.2.3`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.2`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.2`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.3.2`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
@@ -42,7 +42,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 
 ## Status
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted?logo=npm&logoColor=fff)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/v/Orange-Opensource/Orange-Boosted-Bootstrap.svg?include_prereleases&logo=packagist&logoColor=fff)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
@@ -52,7 +52,6 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 [![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/css/boosted.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
-[![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)](https://automate.browserstack.com/public-build/ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included
@@ -175,14 +174,6 @@ Our default branch is for development of our Boosted 5 release. Head to the [`v4
 - <https://twitter.com/fat>
 - <https://github.com/fat>
 
-
-### Boosted
-
-**Gaël Poupard**
-
-- <https://github.com/ffoodd>
-
-
 ## Thanks
 
 <a href="https://www.browserstack.com/">
@@ -199,7 +190,7 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2023 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Code and documentation copyright 2011-2024 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-Boosted code and documentation copyright 2015-2023 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Boosted code and documentation copyright 2015-2024 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

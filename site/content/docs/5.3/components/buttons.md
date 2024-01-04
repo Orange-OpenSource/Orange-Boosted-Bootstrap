@@ -25,6 +25,24 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+
+<button type="button" class="btn btn-link">Link</button>
+{{< /example >}}
+
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+{{< design-callout-alert >}}
+Warning, info, light and dark variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -37,6 +55,7 @@ Boosted includes several button variants, each serving its own semantic purpose,
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 <!-- Boosted mod -->
 ## With icon
@@ -74,32 +93,32 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example >}}
-<button type="button" class="btn btn-icon btn-secondary btn-sm">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
   <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Small button with icon only</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary btn-sm">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
   <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-solaris"/>
   </svg>
   <span class="visually-hidden">Small button with icon only</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary btn-sm">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
   <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-optimized"/>
   </svg>
   <span class="visually-hidden">Small button with icon only</span>
 </button>
 <br>
-<button type="button" class="btn btn-icon btn-secondary">
+<button type="button" class="btn btn-icon btn-outline-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Button with icon only</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary btn-lg">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
@@ -146,6 +165,7 @@ Use `.btn-social` to get a rounded button meant to display contact points links 
 <a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
 <a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
 <a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
+<a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
 {{< /example >}}
 
 Supported social networks are declared in a dedicated Sass map—meaning you're able to [add or remove a network from the following map]({{< docsref "/customize/sass#maps-and-loops" >}}).
@@ -154,52 +174,9 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Add `.btn-inverse` to the `.btn` for a dark variant.
-
-{{< example class="bg-dark" >}}
-{{< buttons.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-inverse btn-{{ .name }}">{{ .name | title }}</button>
-{{- end -}}
-{{< /buttons.inline >}}
-
-<button type="button" class="btn btn-inverse btn-link">Link</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<button type="button" class="btn btn-inverse btn-primary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Primary
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
-</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "btn" >}}
 <!-- End mod -->
 
 ## Disable text wrapping
@@ -220,8 +197,36 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
-<!-- Boosted mod: No outline buttons -->
+## Outline buttons
 
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+
+{{< example >}}
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+{{< /example >}}
+
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+
+{{< design-callout-alert >}}
+The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
+{{< /example >}}
+
+{{< callout info >}}
+Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+{{< /callout >}}
+</details>
 
 ## Sizes
 
@@ -260,6 +265,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
 {{< /example >}}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -285,7 +291,7 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
@@ -318,7 +324,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 </div>
 {{< /example >}}
 
-Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they're no longer stacked.
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -369,8 +375,8 @@ const bsButton = new boosted.Button('#myButton')
 | Method | Description |
 | --- | --- |
 | `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `boosted.Button.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)`. |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `boosted.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn't initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)`. |
 | `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 {{< /bs-table >}}
 
@@ -404,11 +410,11 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass mixins
 
-There are three mixins for buttons: button mixins (based on `$theme-colors`), a button size mixin and a button icon mixin.
+There are four mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin, and a button icon mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: no .btn-outline -->
+{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
