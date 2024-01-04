@@ -60,7 +60,7 @@ updates:
       - dependency-name: "karma-rollup-preprocessor"
       - dependency-name: "lockfile-lint"
       - dependency-name: "nodemon"
-      - dependency-name: "npm-run-all"
+      - dependency-name: "npm-run-all2"
       - dependency-name: "postcss"
       - dependency-name: "postcss-cli"
       - dependency-name: "rollup"

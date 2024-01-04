@@ -69,7 +69,7 @@ body {
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  color: var(--#{$prefix}body-color);
+  // Boosted mod: no color
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
@@ -238,7 +238,7 @@ ul {
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
 li::marker {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--#{$prefix}primary);
   vertical-align: middle;
 
   ol & {
@@ -246,15 +246,15 @@ li::marker {
   }
 }
 
-li li::marker { color: $gray-600; }
+li li::marker { color: var(--#{$prefix}secondary-color); }
 
-li li li::marker { color: $gray-500; }
+li li li::marker { color: var(--#{$prefix}tertiary-color); }
 
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--#{$prefix}primary);
   vertical-align: text-top;
 
   ol & {
@@ -262,9 +262,9 @@ li::before {
   }
 }
 
-li li::before { color: $gray-600; }
+li li::before { color: var(--#{$prefix}secondary-color); }
 
-li li li::before { color: $gray-500; }
+li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
 // End mod
 

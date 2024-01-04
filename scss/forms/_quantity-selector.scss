@@ -1,8 +1,13 @@
 .quantity-selector {
+  display: flex;
+  flex-wrap: wrap;
   width: $quantity-selector-width;
 
   .form-control {
     max-width: $quantity-selector-input-max-width;
+    // Add 20% security padding so the input's text isn't clipped when focused
+    padding-right: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
+    padding-left: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
     text-align: center;
     @include transition(none);
     appearance: textfield;
@@ -19,34 +24,65 @@
     }
 
     &:disabled {
-      color: $gray-500;
-      background-color: $white;
+      color: $quantity-selector-disabled-color;
+      background-color: $quantity-selector-disabled-bg;
     }
   }
 
   button {
-    border: var(--#{$prefix}border-width) solid $gray-500;
+    background-color: $quantity-selector-btn-bg;
+    border: $quantity-selector-btn-border;
+
+    &:disabled {
+      background-color: $quantity-selector-btn-bg;
+    }
 
     &:first-of-type {
       @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
       order: -1;
       padding-right: $quantity-selector-btn-padding-x;
-      border-right: none;
+      border-right-width: 0;
+
+      &:focus {
+        &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+          padding-right: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
+          border-right-width: var(--#{$prefix}border-width);
+        }
+      }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
         @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
         padding-right: $quantity-selector-btn-padding-x-sm;
+
+        &:focus {
+          &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+            padding-right: subtract(#{$quantity-selector-btn-padding-x-sm}, var(--#{$prefix}border-width));
+          }
+        }
       }
     }
 
     &:last-of-type {
       @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       padding-left: $quantity-selector-btn-padding-x;
-      border-left: none;
+      border-left-width: 0;
+
+      &:focus {
+        &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+          padding-left: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
+          border-left-width: var(--#{$prefix}border-width);
+        }
+      }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
         @include button-icon($quantity-selector-icon-add-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
         padding-left: $quantity-selector-btn-padding-x-sm;
+
+        &:focus {
+          &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+            padding-left: subtract(#{$quantity-selector-btn-padding-x-sm}, var(--#{$prefix}border-width));
+          }
+        }
       }
     }
   }

@@ -14,12 +14,12 @@
   --#{$prefix}back-to-top-zindex: #{$zindex-back-to-top};
   --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top};
   --#{$prefix}back-to-top-link-icon: #{$back-to-top-icon};
-  --#{$prefix}back-to-top-link-icon-margin-left: #{$spacer * .5};
   --#{$prefix}back-to-top-link-width: #{$back-to-top-icon-width};
   --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
+  --#{$prefix}back-to-top-link-bg: #{$back-to-top-bg};
   --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
   --#{$prefix}back-to-top-title-padding: #{$back-to-top-title-padding};
-  --#{$prefix}back-to-top-title-color: #{color-contrast($back-to-top-title-bg-color)};
+  --#{$prefix}back-to-top-title-color: #{$back-to-top-title-color};
   --#{$prefix}back-to-top-title-bg-color: #{$back-to-top-title-bg-color};
   --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
   // scss-docs-end back-to-top-css-vars
@@ -38,20 +38,18 @@
   bottom: var(--#{$prefix}back-to-top-bottom);
   z-index: var(--#{$prefix}back-to-top-zindex);
   pointer-events: none;
+  background-color: transparent;
 }
 
 .back-to-top-link {
   position: sticky;
   top: var(--#{$prefix}back-to-top-link-offset-top);
   pointer-events: all;
+  background-color: var(--#{$prefix}back-to-top-link-bg);
   @include button-icon(var(--#{$prefix}back-to-top-link-icon), $size: var(--#{$prefix}back-to-top-link-width) var(--#{$prefix}back-to-top-link-height), $pseudo: "after", $position: calc(50% - 1px));
 
   &::after {
     transform: rotate(.25turn) #{"/* rtl:ignore */"};
-  }
-
-  &:not([title]):not([data-#{$prefix}label])::after {
-    margin-left: var(--#{$prefix}back-to-top-link-icon-margin-left);
   }
 
   @include media-breakpoint-up(xl) {
