@@ -255,7 +255,7 @@ const popover = new boosted.Popover(element, {
 const popover = boosted.Popover.getOrCreateInstance('#example') // Returns a Boosted popover instance
 
 // setContent example
-myPopover.setContent({
+popover.setContent({
   '.popover-header': 'another title',
   '.popover-body': 'another content'
 })

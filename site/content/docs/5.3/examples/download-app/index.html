@@ -1,6 +1,7 @@
 ---
 layout: examples
 title: Download app
+theme_selector: false
 extra_css:
   - "download-app.css"
 extra_js:
@@ -32,10 +33,10 @@ aliases:
   </symbol>
 </svg>
 
-<header class="sticky-top">
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation of download app example page">
+<header class="sticky-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation of download app example page">
     <div class="container-xxl">
-      <div class="navbar-brand">
+      <div class="navbar-brand me-auto">
         <a class="stretched-link" href="/">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Go to homepage" loading="lazy">
         </a>
@@ -45,18 +46,54 @@ aliases:
           Mobile code libraries
         </h1>
       </div>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header" aria-controls="global-header" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="global-header" class="navbar-collapse d-lg-flex global-header collapse">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
 
 <main>
-  <div class="text-bg-dark mb-0 mb-md-2 border-dark border-bottom border-1 position-relative">
+  <div class="bg-black mb-0 mb-md-2 border-dark border-bottom border-1 position-relative" data-bs-theme="dark">
     <div class="col-12 col-lg-7 d-flex out-of-grid h-100 end-0 overflow-hidden">
       <img loading="lazy" class="h-100 object-fit-cover" alt="Orange Design System App, winner of the 2023 Red Dot Design Award for User Interface and User Experience within the category of Brand and Communication Design" src="img/Banner_image.png">
     </div>
     <div class="container-xxl position-relative z-1">
       <div class="row">
-        <div class="col-12 col-lg-5 py-2 bg-dark">
+        <div class="col-12 col-lg-5 py-2 bg-black">
           <h2 class="pt-1 pt-md-3 mb-2 mb-md-3 display-2 text-primary">Implementing mobile designs into code</h2>
           <p class="pt-1 mb-2 display-2">A trusted and awarded source for developers</p>
           <p class="ll-sm pt-1 pt-md-3 mb-2 mb-md-3 fw-bold">From documentation, through repositories, to a showcase mobile application, the Orange Design System provides the elements for developers to implement experiences on mobile iOS and Android operating systems, by integrating brand foundations, design standards, societal and environmental commitments.</p>
@@ -66,7 +103,7 @@ aliases:
     </div>
   </div>
 
-  <div class="container-xxl pb-3 pb-md-5">
+  <div class="container-xxl pb-3 pb-md-5 border-bottom border-1 border-subtle">
     <div class="row flex-column align-items-center mb-2 pt-4 pt-md-5">
       <div class="col-12 col-md-6">
         <h2 class="h1 text-primary text-center mb-2 mb-md-4">A showcase mobile application</h2>
@@ -171,7 +208,7 @@ aliases:
     </div>
   </div>
 
-  <div class="py-4 py-md-5 text-dark bg-supporting-blue border-top border-1 border-translucent">
+  <div class="py-4 py-md-5 bg-supporting-blue" data-bs-theme="light">
     <div class="container-xxl d-flex justify-content-center pt-md-2 pb-2">
       <div class="col-12 col-md-6 col-lg-8 col-xl-6">
         <h2 class="h1 mb-4 mb-md-5 text-center">Do you want to start building your app? Get access to the SDK now</h2>
@@ -193,7 +230,7 @@ aliases:
     </div>
   </div>
 
-  <div class="text-bg-dark py-4 py-md-5 border-bottom border-1 border-dark">
+  <div class="bg-black py-4 py-md-5 border-bottom border-1 border-dark" data-bs-theme="dark">
     <div class="container-xxl pt-md-2 pb-2">
       <h2 class="h1 mb-4 mb-md-5 text-primary text-center">What you get from the showcase app</h2>
       <div class="row">
@@ -285,9 +322,9 @@ aliases:
               <li>
                 <span class="tag mt-md-3 mb-3 border-primary">1</span>
                 <span class="d-inline-block fw-bold mb-3">Register with your Google store account to our <a href="https://groups.google.com/g/odsapp" target="_blank" rel="noopener">Beta program list</a></span>
-                <a href="https://groups.google.com/g/odsapp" target="_blank" rel="noopener" class="btn btn-secondary mb-md-3">Register</a>
+                <a href="https://groups.google.com/g/odsapp" target="_blank" rel="noopener" class="btn btn-outline-secondary mb-md-3">Register</a>
               </li>
-              <li class="vr mx-auto my-4 bg-light custom-vr"></li>
+              <li class="vr mx-auto my-4 custom-vr"></li>
               <li>
                 <span class="tag mt-md-3 mb-3 border-primary">2</span>
                 <span class="d-inline-block fw-bold mb-3">Download the app on your device from the Google Play store</span>
@@ -304,9 +341,9 @@ aliases:
     <div class="container-xxl pt-md-2 pb-2">
       <h2 class="col-12 col-md-6 h1 mx-auto mb-4 mb-md-5 text-center">Access this website on your mobile device with the QR code below</h2>
       <div class="d-flex justify-content-center pt-2 pt-md-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="200" height="200" class="bg-dark" aria-labelledby="qr-title">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="200" height="200" class="text-bg-secondary" aria-labelledby="qr-title">
           <title id="qr-title">Flash this QR code to access this page with your mobile</title>
-          <path fill="#ffffff" d="M15 15h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8ZM15 23h8v7h-8v-7Zm46 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm45 0h8v7h-8v-7ZM15 30h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 38h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7ZM15 45h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 53h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm45 0h8v8h-8v-8ZM15 61h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7ZM76 68h7v8h-7v-8Zm38 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8ZM30 76h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm45 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h8v7h-8v-7ZM38 83h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm30 0h8v8h-8v-8Zm46 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8ZM15 91h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm113 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7ZM15 98h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-166 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm91 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm53 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm84 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm-182 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm83 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm98 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-182 7h8v8h-8v-8Zm23 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-189 8h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm30 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-151 7h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm-182 8h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm38 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm46 0h7v7h-7v-7Zm37 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm30 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Z"/>
+          <path fill="currentColor" d="M15 15h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8ZM15 23h8v7h-8v-7Zm46 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm45 0h8v7h-8v-7ZM15 30h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 38h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7ZM15 45h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 53h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm45 0h8v8h-8v-8ZM15 61h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7ZM76 68h7v8h-7v-8Zm38 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8ZM30 76h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm45 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h8v7h-8v-7ZM38 83h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm30 0h8v8h-8v-8Zm46 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8ZM15 91h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm113 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7ZM15 98h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-166 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm91 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm53 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm84 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm-182 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm83 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm98 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-182 7h8v8h-8v-8Zm23 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-189 8h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm30 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-151 7h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm-182 8h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm38 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm46 0h7v7h-7v-7Zm37 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm30 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Z"/>
           <svg x="101" y="101" width="49" height="49" viewBox="0 0 1000 1000">
             <rect rx="130" ry="130" width="1000" height="1000" fill="#ff7900"/>
             <path fill="#fff" d="m843.715 331.562-159.1 159.1-17.678-17.678 159.1-159.1a25.073 25.073 0 0 0 0-35.355L719.971 172.463a25.073 25.073 0 0 0-35.355 0l-17.678 17.678 44.194 44.194a12.5 12.5 0 0 1-17.678 17.678l-44.194-44.195-35.355 35.356 26.516 26.516a12.5 12.5 0 0 1-17.677 17.678l-26.517-26.517-35.355 35.356 44.194 44.193a12.5 12.5 0 1 1-17.678 17.678l-44.194-44.195-17.677 17.678-17.678-17.678 159.1-159.1a50.148 50.148 0 0 1 70.711 0l106.065 106.068a50.148 50.148 0 0 1 0 70.711Zm-30.633 322.01a58.843 58.843 0 0 1 13.786 21.609c.008.02.013.042.021.063a56.343 56.343 0 0 1 2.401 9.564c.079.491.155.982.221 1.475a56.109 56.109 0 0 1-15.976 47.253l-44.21 44.179-34.84 34.814A56.12 56.12 0 0 1 694.7 829h-.064q-2.571 0-5.135-.241c-.172-.016-.344-.035-.515-.052q-2.3-.234-4.581-.657a50.364 50.364 0 0 1-.926-.18c-10.465-2.117-21.09-6.433-29.2-14.542l-246.5-246.7-182.557-182.061-36.335-121.63-17.561-57.828-3.482-13.9c0-.012-.006-.024-.01-.036q-.2-.669-.353-1.335c-.036-.162-.06-.323-.093-.485-.058-.293-.119-.586-.164-.877-.028-.189-.044-.375-.067-.563-.032-.263-.067-.526-.088-.787-.015-.2-.019-.392-.028-.588-.011-.25-.026-.5-.027-.748 0-.038-.005-.078-.005-.116 0-.281.013-.558.026-.836 0-.081 0-.163.007-.244.024-.4.062-.8.111-1.2.013-.1.032-.2.046-.3.042-.292.087-.582.143-.869.027-.14.059-.278.089-.417a15.596 15.596 0 0 1 .295-1.176c.067-.231.137-.46.212-.688.049-.146.1-.292.15-.436.081-.228.169-.454.259-.678.055-.137.109-.274.167-.409.1-.239.214-.474.327-.708.054-.114.106-.229.162-.341q.249-.492.525-.967l.025-.046c.194-.331.4-.654.613-.972.069-.1.143-.2.214-.3.149-.213.3-.424.456-.631.09-.117.182-.231.274-.346q.222-.278.453-.548c.1-.117.2-.231.307-.345q.234-.26.478-.51c.106-.109.213-.219.322-.326.172-.168.349-.331.527-.493.106-.1.21-.194.318-.288.206-.179.417-.35.63-.52.087-.068.171-.141.258-.208q.454-.35.929-.671c.061-.042.126-.08.189-.121.257-.17.518-.336.784-.493.116-.069.236-.133.354-.2.217-.123.436-.243.659-.357.134-.069.27-.134.405-.2l.648-.3q.211-.093.427-.18c.221-.09.444-.174.67-.256l.427-.151c.241-.081.484-.153.728-.224.132-.038.261-.079.394-.114.3-.081.613-.151.923-.217.075-.015.148-.035.223-.05q.579-.114 1.171-.191c.1-.014.211-.021.315-.033.291-.033.583-.062.877-.081.145-.009.292-.013.438-.018.258-.011.516-.018.777-.018a19.616 19.616 0 0 1 1.724.085c.261.025.522.058.784.093.156.022.312.042.469.068.286.046.573.1.86.164.133.028.265.051.4.082.42.1.842.208 1.264.336L232.8 179.7l30.221 9.164 121.462 36.412ZM249.008 201.918l-46.532 46.5 36.59 122.164 21.524-21.716 433.579 433.271 17.682-17.67L278.272 331.2l53.048-53.011L764.9 711.457l17.683-17.67L349 260.514l22.256-22.032Zm82.054 324.1-17.678 17.677 44.195 44.194a12.5 12.5 0 1 1-17.679 17.677l-44.194-44.194-35.356 35.355 26.517 26.517a12.5 12.5 0 0 1-17.678 17.677l-26.516-26.516-35.355 35.355 44.195 44.194a12.5 12.5 0 0 1-17.678 17.678l-44.194-44.194-17.678 17.678a25.073 25.073 0 0 0 0 35.355l106.066 106.066a25.073 25.073 0 0 0 35.355 0l159.1-159.1 17.677 17.678-159.1 159.1a50.148 50.148 0 0 1-70.711 0L154.285 738.149a50.148 50.148 0 0 1 0-70.711l159.1-159.1Z"/>
@@ -316,7 +353,7 @@ aliases:
     </div>
   </div>
 
-  <div class="py-4 py-md-5 text-dark bg-supporting-yellow">
+  <div class="py-4 py-md-5 bg-supporting-yellow" data-bs-theme="light">
     <div class="container-xxl d-flex justify-content-center pt-md-2 pb-2">
       <div class="col-12 col-md-6">
         <h2 class="h1 mb-2 mb-md-3 text-center">Your feedback is valued</h2>
@@ -350,7 +387,7 @@ aliases:
   </div>
 </main>
 
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer navbar" data-bs-theme="dark">
   <h2 class="visually-hidden">Sitemap & information</h2>
   <div class="container-xxl footer-terms">
     <ul class="navbar-nav gap-md-3">

@@ -78,7 +78,7 @@
 
 @each $state, $value in $alert-colors {
   .alert-#{$state} {
-    --#{$prefix}alert-color: var(--#{$prefix}body-color); // Boosted mod: instead of `var(--#{$prefix}#{$state}-text-emphasis)`
+    // Boosted mod: no --#{$prefix}alert-color
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
     // Boosted mod

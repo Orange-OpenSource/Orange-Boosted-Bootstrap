@@ -1,9 +1,10 @@
-.border-translucent {
-  --bs-border-color: var(--bs-border-color-translucent);
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
 }
 
 .custom-vr {
   height: 75px;
+  background-color: var(--bs-border-color-subtle);
 }
 
 @media (max-width: 479.98px) {
@@ -74,18 +75,8 @@
   display: none;
 }
 
-@media (prefers-color-scheme: light) {
-  [data-bs-theme="auto"] .dark-show {
-    display: none;
-  }
-}
-
 iframe {
   min-height: 10.625rem;
-}
-
-footer .nav-link:hover {
-  text-decoration: underline;
 }
 
 .carousel-inner.showcase-images {
@@ -94,7 +85,7 @@ footer .nav-link:hover {
 
 .showcase-images img {
   border-radius: 12% / 5%;
-  box-shadow: 10px 15px 50px -5px rgba(var(--bs-link-color-rgb), .2);
+  box-shadow: 10px 15px 50px -5px rgba(var(--bs-secondary-rgb), .2);
   transition: transform .3s ease-in-out;
   transform-origin: center;
 }

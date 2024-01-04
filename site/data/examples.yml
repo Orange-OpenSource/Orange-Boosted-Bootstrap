@@ -68,6 +68,8 @@
       description: "Demonstration of all responsive and container options for the navbar."
     - name: Navbar sticky
       description: "Single navbar example of a sticky-top navbar along with some additional content."
+    - name: Navbar mode selector
+      description: "Single navbar example with a mode selector to switch between light and dark mode."
 
 - category: Pages
   description: "Complete reusable pages that can be found in the Design Guidelines."
