@@ -70,7 +70,7 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </div>
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -146,21 +146,9 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 
 ## Dark offcanvas
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
-
-{{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" stackblitz_add_js="true" >}}
-<section class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Place offcanvas content here.</p>
-  </div>
-</section>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "offcanvas" >}}
 
 ## Responsive
 
@@ -340,6 +328,7 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
+| `dispose` | Destroys an element's offcanvas. |
 | `getInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element. |
 | `getOrCreateInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs). |

@@ -1,3 +1,32 @@
+## [5.3.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.1...v5.3.2) (2023-09-18)
+
+
+### Bug Fixes
+
+* **carousel:** fix carousel indicator animation with custom interval ([#2203](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2203)) ([059ddbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/059ddbb73babcd7e83290c3ee323c5e839beff44))
+* **carousel:** init carousel properly by setting anim on progress indicator ([#2204](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2204)) ([52c6b12](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/52c6b12e82036eeafaa8e84c53f2755fe49583b3))
+* **css:** remove unnecessary code in Boosted grid dist files ([#2196](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2196)) ([1aa4193](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1aa4193ea6422aa2ab572ff79aea69894a00c256))
+* **docs:** add `/docs/customize/color-modes` redirection ([#2226](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2226)) ([a233c5b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a233c5b70aabc13642f0e155d304338d5d032b08))
+* **docs:** add missing `.is-disabled` for disabled file input label ([#2222](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2222)) ([d249405](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d249405c7f2f748eb451d1a46276efd41291a9ed))
+* **docs:** add missing `/examples/download-app` URL redirection ([#2216](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2216)) ([63742a3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/63742a3fa25708b9d42345629204de8d1cb6a998))
+* **forms:** add required info in mandatory input fields with visually hidden span ([#2114](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2114)) ([851a0e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/851a0e3c759ff3c3c4b6ce35417b4703c76232f0))
+* **worflows:** keep whitespaces description content ([62de233](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/62de233a5440294de7a5a1dc1a85c883d9df5937))
+* **workflows:** add conditions to `update-pr-approved.yml` ([#2214](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2214)) ([5d88cc7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5d88cc75004b4da98885a6c343f4752d7566a4a7))
+* **workflows:** change use of interpolated action vars to fix 'review in progress' workflow ([#2206](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2206)) ([54ae347](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54ae3478ce459132b08836efededd49a86271ac4))
+* **workflows:** PR in PRs board is in review in progress only when changes are requested ([#2213](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2213)) ([8d42e7d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8d42e7d1830a31862343b57d1477d258bff2348c))
+* **workflows:** update GH token ([571814d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/571814d2f8b4704bc5572bb029ad5009aa620095))
+
+
+### Features
+
+* **accordion:** new rendering to improve accessibility ([#1792](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1792)) ([3e189b0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3e189b0b6a8433fcf67a361d90a747b94730e2af))
+* **component:** new Local navigation ([#1468](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1468)) ([1b2f939](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1b2f93968742497c907b3416ef1e1539fbfe9027))
+* **forms:** add a visual cue to form elements on error when focused for a11y ([#2090](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2090)) ([17f6f4d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/17f6f4d7914424796b2ae99c1718f1bb0c7688ae))
+* **orange navbar:** change minimizing behavior ([#1830](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1830)) ([efee64e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/efee64eadaddc7cfe6355aef59cc36068ddc6bb8))
+* **star rating:** add read-only state and enhance accessibility ([#2184](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2184)) ([319b8df](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/319b8dfd1251065ebe277395eaceaf1e3734daf7))
+
+
+
 ## [5.3.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.0...v5.3.1) (2023-07-26)
 
 

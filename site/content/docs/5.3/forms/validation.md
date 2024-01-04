@@ -39,21 +39,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
-    <label for="validationCustom01" class="form-label is-required">First name</label>
+    <label for="validationCustom01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustom02" class="form-label is-required">Last name</label>
+    <label for="validationCustom02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label is-required">Username</label>
+    <label for="validationCustomUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -63,14 +63,14 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom03" class="form-label is-required">City</label>
+    <label for="validationCustom03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom04" class="form-label is-required">State</label>
+    <label for="validationCustom04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select" id="validationCustom04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -80,7 +80,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom05" class="form-label is-required">Zip</label>
+    <label for="validationCustom05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom05" required>
     <div class="invalid-feedback">
       Please provide a valid zip.
@@ -90,7 +90,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
       <div class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -117,40 +117,40 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationDefault01" class="form-label is-required">First name</label>
+    <label for="validationDefault01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefault02" class="form-label is-required">Last name</label>
+    <label for="validationDefault02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefaultUsername" class="form-label is-required">Username</label>
+    <label for="validationDefaultUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend2">@</span>
       <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationDefault03" class="form-label is-required">City</label>
+    <label for="validationDefault03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault03" required>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault04" class="form-label is-required">State</label>
+    <label for="validationDefault04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select" id="validationDefault04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
     </select>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault05" class="form-label is-required">Zip</label>
+    <label for="validationDefault05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault05" required>
   </div>
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
     </div>
   </div>
   <div class="col-12">
@@ -170,21 +170,21 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationServer01" class="form-label is-required">First name</label>
+    <label for="validationServer01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServer02" class="form-label is-required">Last name</label>
+    <label for="validationServer02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServerUsername" class="form-label is-required">Username</label>
+    <label for="validationServerUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
       <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
@@ -194,14 +194,14 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationServer03" class="form-label is-required">City</label>
+    <label for="validationServer03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
     <div id="validationServer03Feedback" class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer04" class="form-label is-required">State</label>
+    <label for="validationServer04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -211,7 +211,7 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer05" class="form-label is-required">Zip</label>
+    <label for="validationServer05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
     <div id="validationServer05Feedback" class="invalid-feedback">
       Please provide a valid zip.
@@ -221,7 +221,7 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -244,7 +244,7 @@ Validation styles are available for the following form controls and components:
 {{< example >}}
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea" class="form-label is-required">Textarea</label>
+    <label for="validationTextarea" class="form-label is-required">Textarea<span class="visually-hidden"> (required)</span></label>
     <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
     <div class="invalid-feedback">
       Please enter a message in the textarea.
@@ -253,22 +253,22 @@ Validation styles are available for the following form controls and components:
 
   <div class="form-check mb-3">
     <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-    <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+    <label class="form-check-label" for="validationFormCheck1">Check this checkbox<span class="visually-hidden"> (required)</span></label>
     <div class="invalid-feedback">Example invalid feedback text</div>
   </div>
 
   <div class="form-check">
     <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
+    <label class="form-check-label" for="validationFormCheck2">Toggle this radio<span class="visually-hidden"> (required)</span></label>
   </div>
   <div class="form-check mb-3">
     <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
+    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio<span class="visually-hidden"> (required)</span></label>
     <div class="invalid-feedback">More example invalid feedback text</div>
   </div>
 
   <div class="mb-3">
-    <select class="form-select" required aria-label="select example">
+    <select class="form-select" required aria-label="Open select menu (required)">
       <option value="">Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -278,18 +278,18 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
-    <input type="file" class="form-control" aria-label="file example" required>
+    <input type="file" class="form-control" aria-label="Select a file (required)" required>
     <div class="invalid-feedback">Example invalid form file feedback</div>
   </div>
 
   <div class="mb-3">
     <label for="inputQuantitySelector" class="form-label">Quantity selector</label>
-    <div class="input-group quantity-selector w-100">
+    <div class="quantity-selector w-100">
       <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="11" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
         <span class="visually-hidden">Step down</span>
       </button>
-      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
         <span class="visually-hidden">Step up</span>
       </button>
       <div class="invalid-feedback">Please enter a valid number.</div>
