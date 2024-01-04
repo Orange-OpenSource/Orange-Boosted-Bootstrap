@@ -133,7 +133,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
   <input class="form-control" type="file" id="formFileMultiple" multiple>
 </div>
 <div class="mb-3">
-  <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+  <label for="formFileDisabled" class="form-label is-disabled">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
 </div>
 <div class="mb-3">

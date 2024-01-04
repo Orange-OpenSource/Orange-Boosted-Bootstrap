@@ -12,7 +12,7 @@ added: "5.1"
 Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Boosted. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
 
 {{< callout warning >}}
-Heads up! Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
+**Heads up!** Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
 {{< /callout >}}
 
 ## Vertical
@@ -64,23 +64,23 @@ And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 
 Use `.vstack` to stack buttons and other elements:
 
-<!-- Boosted mod: primary and secondary buttons -->
+<!-- Boosted mod: primary and outline secondary buttons -->
 {{< example >}}
 <div class="vstack gap-2 col-md-5 mx-auto">
   <button type="button" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn btn-secondary">Cancel</button>
+  <button type="button" class="btn btn-outline-secondary">Cancel</button>
 </div>
 {{< /example >}}
 
 Create an inline form with `.hstack`:
 
-<!-- Boosted mod: primary and secondary button -->
+<!-- Boosted mod: primary and outline secondary button -->
 {{< example >}}
 <div class="hstack gap-3">
   <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
   <button type="button" class="btn btn-primary">Submit</button>
   <div class="vr"></div>
-  <button type="button" class="btn btn-secondary">Reset</button>
+  <button type="button" class="btn btn-outline-secondary">Reset</button>
 </div>
 {{< /example >}}
 

@@ -78,10 +78,25 @@
 
 @each $state, $value in $alert-colors {
   .alert-#{$state} {
-    --#{$prefix}alert-color: var(--#{$prefix}body-color); // Boosted mod: instead of `var(--#{$prefix}#{$state}-text-emphasis)`
+    // Boosted mod: no --#{$prefix}alert-color
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
-    --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
+    // Boosted mod
+    @if type-of(map-get($alert-icons, $state)) == "list" {
+      --#{$prefix}alert-icon-bg-image: #{nth(map-get($alert-icons, $state), 1)};
+
+      .alert-icon::before {
+        background: var(--#{$prefix}alert-icon-bg-image) no-repeat top left / var(--#{$prefix}alert-logo-size);
+
+        /* rtl:raw:
+        background-position: top right;
+        */
+        mask: none;
+      }
+    } @else {
+      --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)};
+    }
+    // End mod
   }
 }
 // scss-docs-end alert-modifiers
@@ -118,13 +133,14 @@
     order: -1;
     height: var(--#{$prefix}alert-logo-size);
     content: "";
-    background-image: var(--#{$prefix}alert-icon-bg-image);
-    background-repeat: no-repeat;
+    background-color: var(--#{$prefix}alert-border-color);
+    mask-image: var(--#{$prefix}alert-icon-bg-image);
+    mask-repeat: no-repeat;
 
     /* rtl:raw:
-    background-position: top right;
+    mask-position: top right;
     */
-    background-size: var(--#{$prefix}alert-logo-size);
+    mask-size: var(--#{$prefix}alert-logo-size);
   }
 }
 

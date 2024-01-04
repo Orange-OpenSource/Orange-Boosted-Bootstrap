@@ -1,0 +1,111 @@
+.local-nav {
+  // scss-docs-start local-nav-css-vars
+  --#{$prefix}local-nav-padding-y: #{$local-nav-padding-y};
+  --#{$prefix}local-nav-color: #{$local-nav-color};
+  --#{$prefix}local-nav-bg: #{$local-nav-bg};
+  --#{$prefix}local-nav-hover-color: #{$local-nav-hover-color};
+  --#{$prefix}local-nav-hover-bg: #{$local-nav-hover-bg};
+  --#{$prefix}local-nav-active-color: #{$local-nav-active-color};
+  --#{$prefix}local-nav-active-bg: #{$local-nav-active-bg};
+  --#{$prefix}local-nav-active-marker-width: #{$local-nav-active-marker-width};
+  --#{$prefix}local-nav-border-color: #{$local-nav-border-color};
+  --#{$prefix}local-nav-border-width: #{$local-nav-border-width};
+  // scss-docs-end local-nav-css-vars
+
+  background-color: var(--#{$prefix}local-nav-bg);
+  border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
+
+  .local-nav-button {
+    display: block;
+    width: 100%;
+    padding: subtract(var(--#{$prefix}local-nav-padding-y), var(--#{$prefix}local-nav-border-width)) 0 var(--#{$prefix}local-nav-padding-y);
+    font-weight: $font-weight-bold;
+    color: var(--#{$prefix}local-nav-color);
+    background-color: transparent;
+    border: 0;
+
+    > [class*="container"] {
+      display: flex;
+      @include caret($accordion: true);
+
+      &::after {
+        margin-right: 0;
+      }
+    }
+
+    &:not(.collapsed) {
+      border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
+
+      > [class*="container"]::after {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  > .local-nav-collapse {
+    @include media-breakpoint-down(lg) {
+      max-width: unset;
+    }
+
+    @include media-breakpoint-up(lg) {
+      [class*="container"] {
+        padding: 0;
+      }
+    }
+  }
+
+  .navbar {
+    --bs-navbar-padding-y: 0px;
+    --bs-navbar-bg: var(--#{$prefix}local-nav-bg);
+    --bs-navbar-border-color: transparent;
+
+    .nav-item {
+      border-top: 0;
+    }
+
+    .nav-link {
+      --bs-navbar-padding-y: 1px;
+
+      &:hover {
+        color: var(--#{$prefix}local-nav-hover-color);
+
+        &::before {
+          color: var(--#{$prefix}local-nav-active-color);
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        --bs-nav-link-padding-x: 0;
+        --bs-navbar-border-width: 0px;
+
+        &:hover {
+          color: var(--#{$prefix}local-nav-color);
+          background-color: var(--#{$prefix}local-nav-hover-bg);
+        }
+      }
+    }
+
+    .nav-link.active {
+      --#{$prefix}navbar-active-color: var(--#{$prefix}local-nav-color);
+
+      &::before {
+        bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
+        color: var(--#{$prefix}local-nav-active-color);
+      }
+
+      @include media-breakpoint-down(lg) {
+        background-color: var(--#{$prefix}local-nav-active-bg);
+
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: var(--#{$prefix}local-nav-active-marker-width);
+          content: "";
+          background-color: var(--#{$prefix}local-nav-active-color);
+        }
+      }
+    }
+  }
+}

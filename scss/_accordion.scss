@@ -34,6 +34,8 @@
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
   // scss-docs-end accordion-css-vars
+
+  background-color: transparent; // Boosted mod
 }
 
 .accordion-button {
@@ -101,7 +103,7 @@
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
 
-    .accordion-button {
+    > .accordion-header .accordion-button {
       @include border-top-radius(var(--#{$prefix}accordion-inner-border-radius));
     }
   }
@@ -114,13 +116,13 @@
     @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     border-bottom: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod: borders are set on .accordion-header
 
-    .accordion-button {
+    > .accordion-header .accordion-button {
       &.collapsed {
         @include border-bottom-radius(var(--#{$prefix}accordion-inner-border-radius));
       }
     }
 
-    .accordion-collapse {
+    > .accordion-collapse {
       @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
   }
@@ -132,12 +134,11 @@
 
 // Boosted mod: no Flush accordion items
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+// Boosted mod: no `@if enable-dark-mode`
 
 //
 // Boosted mod:
 // - Sizes
-// - Dark variant
 //
 
 .accordion-sm {
@@ -155,16 +156,3 @@
   --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing-lg};
   // scss-docs-end accordion-lg-css-vars
 }
-
-.accordion-dark {
-  // scss-docs-start accordion-dark-css-vars
-  --#{$prefix}accordion-btn-color: #{$accordion-dark-button-color};
-  --#{$prefix}accordion-btn-bg: #{$accordion-dark-button-bg};
-  --#{$prefix}accordion-btn-hover-bg: #{$accordion-dark-button-hover-bg};
-  --#{$prefix}accordion-active-color: #{$accordion-dark-button-active-color};
-  --#{$prefix}accordion-border-color: #{$accordion-dark-border-color};
-  --#{$prefix}accordion-color: #{$accordion-dark-color};
-  --#{$prefix}accordion-bg: #{$accordion-dark-bg};
-  // scss-docs-end accordion-dark-css-vars
-}
-// End mod
