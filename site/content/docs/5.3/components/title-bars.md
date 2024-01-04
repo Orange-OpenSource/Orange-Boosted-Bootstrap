@@ -19,15 +19,16 @@ See them in action in our [examples page]({{<docsref "/examples/title-bars">}}).
 
 ## Background color
 
-To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.'
+To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}) such as `.bg-supporting-*`.
 
-Title bars can be displayed with black or white backgrounds. When using black or white backgrounds, illustrations can be included as an option, but it's not necessary.
+When using title bars with the default background color, illustrations can be included as an option, but it's not mandatory.
+
 Supporting colors can also be used as the background color for title bars, but not the supporting light and dark tint colors. When using one of the supporting colors, illustrations must be used.
 
-The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
+The image should not overlap on title and the title shouldn't wrap. If this happens, please transform your title bar into a title bar with the default background color without any image.
 
 {{< example class="p-0">}}
-<div class="bg-body title-bar">
+<div class="title-bar">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
   </div>
@@ -35,15 +36,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
 
 <div class="mt-3"></div>
 
-<div class="bg-dark title-bar">
-  <div class="container-xxl">
-    <h1 class="display-1">Title</h1>
-  </div>
-</div>
-
-<div class="mt-3"></div>
-
-<div class="bg-supporting-green title-bar">
+<div class="bg-supporting-green title-bar" data-bs-theme="light">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
     <picture>
@@ -68,7 +61,7 @@ Several options are available to add an image in a title bar.
 We **strongly recommend** to use `srcset` attribute as it is [well supported](https://caniuse.com/srcset) by browsers and allows you to load an image depending on the user's device. However, it might introduce a delay to display the image while resizing.
 
 {{< example class="p-0">}}
-<div class="bg-supporting-pink title-bar">
+<div class="bg-supporting-pink title-bar" data-bs-theme="light">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
     <picture>
@@ -87,7 +80,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 ### HTML `<svg>` tag
 
 {{< example class="p-0">}}
-<div class="bg-supporting-purple title-bar">
+<div class="bg-supporting-purple title-bar" data-bs-theme="light">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
     <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
@@ -98,7 +91,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 ### HTML `<img>` tag
 
 {{< example class="p-0">}}
-<div class="bg-supporting-green title-bar">
+<div class="bg-supporting-green title-bar" data-bs-theme="light">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt="" class="d-sm-none">

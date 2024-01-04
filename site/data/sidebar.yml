@@ -3,7 +3,7 @@
 
 - title: Getting started
   icon: book-half
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Introduction
     - title: Download
@@ -20,12 +20,13 @@
 
 - title: Customize
   icon: palette2
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Overview
     - title: Sass
     - title: Options
-    - title: Color
+    - title: Color palette
+    - title: Color theme
     - title: Color modes
     - title: Components
     - title: CSS variables
@@ -33,7 +34,7 @@
 
 - title: Layout
   icon: grid-fill
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Breakpoints
     - title: Containers
@@ -46,7 +47,7 @@
 
 - title: Content
   icon: file-earmark-richtext
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Reboot
     - title: Typography
@@ -56,7 +57,7 @@
 
 - title: Forms
   icon: ui-radios
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Overview
     - title: Form control
@@ -70,7 +71,7 @@
 
 - title: Components
   icon: menu-button-wide-fill
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Accordion
     - title: Alerts
@@ -107,7 +108,7 @@
 
 - title: Helpers
   icon: magic
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Clearfix
     - title: Color & background
@@ -124,7 +125,7 @@
 
 - title: Utilities
   icon: braces-asterisk
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: API
     - title: Background
@@ -149,14 +150,14 @@
 
 - title: Extend
   icon: tools
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Approach
     - title: Icons
 
 - title: About
   icon: globe2
-  icon_color: black
+  icon_color: body-color
   pages:
     - title: Overview
     - title: Team
