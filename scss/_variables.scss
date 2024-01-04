@@ -2426,9 +2426,9 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-start side-nav-variables
 $side-nav-min-width:                calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)) !default; // stylelint-disable-line function-disallowed-list
 $side-nav-max-width:                $offcanvas-horizontal-width !default;
-$side-nav-bg:                       var(--#{$prefix}body-bg) !default;
+$side-nav-bg:                       $offcanvas-bg-color !default;
 $side-nav-border-width:             1px !default;
-$side-nav-border-color:             var(--#{$prefix}border-color-translucent) !default;
+$side-nav-border-color:             $offcanvas-border-color !default;
 
 $side-nav-item-min-height:          $spacer * 2 !default;
 $side-nav-item-icon-size:           $spacer * 1.25 !default;
@@ -2439,18 +2439,9 @@ $side-nav-item-padding-bottom:      10px !default;
 $side-nav-item-padding-start:       15px !default;
 $side-nav-item-color:               var(--#{$prefix}body-color) !default;
 $side-nav-item-hover-bg:            var(--#{$prefix}secondary-bg) !default;
-$side-nav-item-active-bg:           $gray-400 !default;
-$side-nav-item-active-border:       $brand-orange !default;
+$side-nav-item-active-bg:           var(--#{$prefix}tertiary-active-bg) !default;
+$side-nav-item-active-border:       var(--#{$prefix}primary) !default;
 // scss-docs-end side-nav-variables
-
-// scss-docs-start side-nav-dark-variables
-$side-nav-bg-dark:                  $gray-900 !default;
-$side-nav-border-color-dark:        $gray-700 !default;
-$side-nav-item-color-dark:          $white !default;
-$side-nav-item-hover-bg-dark:       $black !default;
-$side-nav-item-active-bg-dark:      $gray-700 !default;
-$side-nav-item-active-border-dark:  $brand-orange !default;
-// scss-docs-end side-nav-dark-variables
 // End mod
 
 // Tags

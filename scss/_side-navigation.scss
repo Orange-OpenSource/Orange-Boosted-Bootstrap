@@ -216,15 +216,3 @@
     width: 100%;
   }
 }
-
-// Dark variant
-.side-nav-dark {
-  // scss-docs-start side-nav-dark-css-vars
-  --#{$prefix}side-nav-bg: #{$side-nav-bg-dark};
-  --#{$prefix}side-nav-border-color: #{$side-nav-border-color-dark};
-  --#{$prefix}side-nav-item-color: #{$side-nav-item-color-dark};
-  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg-dark};
-  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg-dark};
-  --#{$prefix}side-nav-item-active-border: #{$side-nav-item-active-border-dark};
-  // scss-docs-end side-nav-dark-css-vars
-}
