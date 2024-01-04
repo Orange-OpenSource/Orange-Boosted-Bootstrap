@@ -16,23 +16,25 @@ Whenever possible, avoid modifying Boosted's core files. For Sass, that means cr
 
 ```text
 your-project/
-├── scss
+├── scss/
 │   └── custom.scss
 └── node_modules/
-    └── boosted
-        ├── js
-        └── scss
+│   └── boosted/
+│       ├── js/
+│       └── scss/
+└── index.html
 ```
 
 If you've downloaded our source files and aren't using a package manager, you'll want to manually create something similar to that structure, keeping Boosted's source files separate from your own.
 
 ```text
 your-project/
-├── scss
+├── scss/
 │   └── custom.scss
-└── boosted/
-    ├── js
-    └── scss
+├── boosted/
+│   ├── js/
+│   └── scss/
+└── index.html
 ```
 
 ## Importing
@@ -86,6 +88,45 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 ```
 
 With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
+
+## Compiling
+
+In order to use your custom Sass code as CSS in the browser, you need a Sass compiler. Sass ships as a CLI package, but you can also compile it with other build tools like [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/), or with a GUI applications. Some IDEs also have Sass compilers built in or as downloadable extensions.
+
+We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
+
+```shell
+# Install Sass globally
+npm install -g sass
+
+# Watch your custom Sass for changes and compile it to CSS
+sass --watch ./scss/custom.scss ./css/custom.css
+```
+
+Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+
+{{< callout info >}}
+**Using Boosted with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). Bootstrap also has production-ready demos in [their examples repository on GitHub](https://github.com/twbs/examples).
+{{< /callout >}}
+
+## Including
+
+Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you'll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you've changed it.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Boosted</title>
+    <link href="/css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
+</html>
+```
 
 ## Variable defaults
 
@@ -194,7 +235,7 @@ For example, we use the `primary`, `success`, and `danger` keys from `$theme-col
 
 ### Colors
 
-Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
+Next to the [Sass maps]({{< docsref "/customize/color-palette#sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
 
 ```scss
 .custom-element {
@@ -204,6 +245,8 @@ Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we h
 ```
 
 You can lighten or darken colors with Boosted's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
+
+`shift-color()` combines these two functions by shading the color if the weight is positive and tinting the color if the weight is negative.
 
 {{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
 
@@ -217,6 +260,11 @@ In practice, you'd call the function and pass in the color and weight parameters
 .custom-element-2 {
   color: shade-color($danger, 30%);
 }
+
+.custom-element-3 {
+  color: shift-color($success, 40%);
+  background-color: shift-color($success, -60%);
+}
 ```
 
 ### Color contrast
@@ -225,12 +273,22 @@ In order to meet the [Web Content Accessibility Guidelines (WCAG)](https://www.w
 
 To help with this, we included the `color-contrast` function in Boosted. It uses the [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) in an `sRGB` color space to automatically return a light (`#fff`), dark (`#212529`) or black (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
-For example, to generate color swatches from our `$theme-colors` map:
+For example, to generate color swatches from our `$theme-colors` and `$theme-colors-dark` maps:
 
 ```scss
 @each $color, $value in $theme-colors {
   .swatch-#{$color} {
     color: color-contrast($value);
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    @each $color, $value in $theme-colors-dark {
+      .swatch-#{$color} {
+        color: color-contrast($value);
+      }
+    }
   }
 }
 ```
@@ -299,18 +357,18 @@ Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted and
 
 ### Color schemes
 
-A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light`, `dark`, and custom color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
+A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light` and `dark` color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 
 ```scss
 .custom-element {
-  @include color-scheme(dark) {
-    // Insert dark mode styles here
+  @include color-scheme(light) {
+    // Insert light mode styles here
   }
 
-  @include color-scheme(custom-named-scheme) {
-    // Insert custom color scheme styles here
+  @include color-scheme(dark) {
+    // Insert dark mode styles here
   }
 }
 ```

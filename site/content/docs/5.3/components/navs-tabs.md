@@ -42,7 +42,7 @@ Instead, please consider using our Boosted tabs [Underline]({{< docsref "/compon
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -54,7 +54,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -64,7 +64,7 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 
 ### Horizontal alignment
 
-Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}). By default, navs are left-aligned, but you can easily change them to center or right aligned.
+Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref "/utilities/flex#justify-content" >}}). By default, navs are left-aligned, but you can easily change them to center or right-aligned.
 
 {{< design-callout-alert >}}
 These **centered** and **right aligned** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left aligned.
@@ -86,7 +86,7 @@ Centered with `.justify-content-center`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -105,7 +105,7 @@ Right-aligned with `.justify-content-end`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -132,7 +132,7 @@ Instead, please consider using our Boosted tabs [Underline]({{< docsref "/compon
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -144,7 +144,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -164,7 +164,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -189,7 +189,7 @@ This variant should not be used because it is a button component in the Orange D
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -197,6 +197,10 @@ This variant should not be used because it is a button component in the Orange D
 ### Underline
 
 Take that same HTML, but use `.nav-underline` instead:
+
+{{< callout warning >}}
+If you want it to wrap nicely on lower breakpoints, consider using [our Local Navigation component]({{< docsref "/components/local-navigation" >}}).
+{{< /callout >}}
 
 {{< example >}}
 <ul class="nav nav-underline">
@@ -210,7 +214,7 @@ Take that same HTML, but use `.nav-underline` instead:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -234,7 +238,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
     <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</a>
+    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false" aria-disabled="true">Tab 4</a>
   </li>
 </ul>
 
@@ -251,7 +255,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
+        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab" aria-disabled="true">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0">
@@ -270,7 +274,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 
 ### Fill and justify
 
-Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
+Force your `.nav`'s contents to extend the full available width with one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 {{< design-callout-alert >}}
 These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications.
@@ -290,7 +294,7 @@ Instead, please consider using our Boosted tabs [Underline]({{< docsref "/compon
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -302,7 +306,7 @@ When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -320,7 +324,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -332,7 +336,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 
 {{< /example >}}
@@ -351,7 +355,7 @@ Instead, please consider using our Boosted tabs [Underline]({{< docsref "/compon
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -365,12 +369,22 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
 
-### Tabs with dropdowns
+{{< callout info >}}
+As a design recommendation, dropdowns are typically placed at the end of the nav after all of the links.
+{{< /callout >}}
 
+### Tabs with dropdowns
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -382,14 +396,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ### Pills with dropdowns
 
@@ -397,10 +406,17 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -412,14 +428,9 @@ This variant should not be used because it is a button component in the Orange D
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ## CSS
 
@@ -667,7 +678,7 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
 
 Dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
 
-In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab, with the plugin changing the [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list's orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
+In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab. The <kbd>Home</kbd> and <kbd>End</kbd> keys activate the first and last tabs, respectively. The plugin will change the [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list's orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
 
 {{< callout warning >}}
 In general, to facilitate keyboard navigation, it's recommended to make the tab panels themselves focusable as well, unless the first element containing meaningful content inside the tab panel is already focusable. The JavaScript plugin does not try to handle this aspect—where appropriate, you'll need to explicitly make your tab panels focusable by adding `tabindex="0"` in your markup.
