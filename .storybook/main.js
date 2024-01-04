@@ -6,7 +6,7 @@ const config = {
     options: {
       measure: false
     }
-  }, "@storybook/preset-scss"],
+  }, "@storybook/addon-themes", "@storybook/preset-scss"],
   "framework": "@storybook/html-webpack5",
   docs: {
     autodocs: true

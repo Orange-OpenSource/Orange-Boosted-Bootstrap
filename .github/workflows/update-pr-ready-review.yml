@@ -1,0 +1,87 @@
+name: Move card to Need Dev Review project column
+on:
+  pull_request_target:
+   types:
+     - ready_for_review
+     - opened
+     - reopened
+
+jobs:
+  move_card_to_need_dev_review:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Project Data
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
+          ORGANIZATION: ${{ github.repository_owner }}
+          PR_ID: ${{ github.event.pull_request.node_id }}
+          PROJECT_NUMBER: ${{ vars.PR_BOARD_PROJECT_NUMBER }}
+          PROJECT_TARGET_COL: ${{ vars.PR_BOARD_NEED_DEV_REVIEW_COL_NAME }}
+        run: |
+          gh api graphql -f query='
+            query($org: String!, $number: Int!) {
+              organization(login: $org){
+                projectV2(number: $number) {
+                  id
+                  fields(first:10) {
+                    nodes {
+                      ... on ProjectV2Field {
+                        id
+                        name
+                      }
+                      ... on ProjectV2SingleSelectField {
+                        id
+                        name
+                        options {
+                          id
+                          name
+                        }
+                      }
+                    }
+                  }
+                  items(first:100) {
+                    nodes {
+                      id
+                      content {
+                        ... on PullRequest {
+                          id
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
+
+          # echo `cat project_data.json`
+
+          echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
+          echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_TARGET_COL }}") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
+
+      - name: Move card to Need Dev Review column
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
+        run: |
+          gh api graphql -f query='
+            mutation (
+              $project: ID!
+              $item: ID!
+              $status_field: ID!
+              $status_value: String!
+            ) {
+              set_status: updateProjectV2ItemFieldValue(input: {
+                projectId: $project
+                itemId: $item
+                fieldId: $status_field
+                value: {
+                  singleSelectOptionId: $status_value
+                }
+              }) {
+                projectV2Item {
+                  id
+                }
+              }
+            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f status_field=$STATUS_FIELD_ID -f status_value=${{ env.TARGET_COL_ID }} --silent

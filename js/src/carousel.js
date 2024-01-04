@@ -119,7 +119,10 @@ class Carousel extends BaseComponent {
 
     if (this._config.ride === CLASS_NAME_CAROUSEL) {
       this.cycle()
+    } else if (this._indicatorsElement) { // Boosted mod: set the animation properly on progress indicator
+      this._element.classList.add(CLASS_NAME_PAUSED)
     }
+    // End mod
   }
 
   // Getters

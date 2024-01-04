@@ -1,6 +1,8 @@
 @import "mixins/banner";
 @include bsBanner(Grid);
 
+$include-column-box-sizing: true !default;
+
 @import "functions";
 @import "variables";
 @import "variables-dark";
@@ -17,18 +19,6 @@
 @import "grid";
 
 @import "utilities";
-@import "utilities/api";
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-get-multiple(
@@ -39,7 +29,7 @@ $utilities: map-get-multiple(
     "flex",
     "flex-direction",
     "flex-grow",
-    "flex-shrink"
+    "flex-shrink",
     "flex-wrap",
     "justify-content",
     "align-items",
@@ -49,7 +39,7 @@ $utilities: map-get-multiple(
     "margin-x",
     "margin-y",
     "margin-top",
-    "margin-right",
+    "margin-end",
     "margin-bottom",
     "margin-start",
     "negative-margin",
@@ -68,3 +58,5 @@ $utilities: map-get-multiple(
     "padding-start",
   )
 );
+
+@import "utilities/api";

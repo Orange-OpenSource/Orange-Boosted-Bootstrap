@@ -29,7 +29,7 @@
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
   font-weight: var(--#{$prefix}tooltip-font-weight); // Boosted mod
-  line-height: var(--#{$prefix}--#{$prefix}tooltip-line-height); // Boosted mod
+  line-height: var(--#{$prefix}tooltip-line-height); // Boosted mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
   opacity: 0;
@@ -64,7 +64,7 @@
 
   &::before {
     bottom: 0;
-    border-top-color: var(--#{$prefix}--#{$prefix}tooltip-arrow-border);
+    border-top-color: var(--#{$prefix}tooltip-arrow-border);
   }
 
   &::after {

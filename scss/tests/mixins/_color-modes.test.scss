@@ -26,7 +26,7 @@
           background-color: var(--bs-primary-bg-subtle);
         }
         [data-bs-theme=dark] {
-          --custom-color: #7d82da; // Boosted mod: instead of `#3aff8`
+          --custom-color: #757bd8; // Boosted mod: instead of `#3aff8`
         }
       }
     }
@@ -58,7 +58,7 @@
         }
         @media (prefers-color-scheme: dark) {
           :root {
-            --custom-color: #7d82da; // Boosted mod: instead of `#3aff8`
+            --custom-color: #757bd8; // Boosted mod: instead of `#3aff8`
           }
         }
       }
