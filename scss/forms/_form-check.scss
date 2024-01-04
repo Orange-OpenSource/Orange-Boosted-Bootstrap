@@ -35,6 +35,7 @@
 .form-check-input {
   --#{$prefix}form-check-bg: #{$form-check-input-bg};
 
+  flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
@@ -118,10 +119,10 @@
 
     // Boosted mod
     &:checked,
-    &:indeterminate {
-      background-color: $form-check-input-disabled-color;
-      filter: $invert-filter;
-      border-color: $form-check-input-disabled-color;
+    &[type="checkbox"]:indeterminate {
+      background-color: var(--#{$prefix}form-check-input-disabled-color);
+      filter: $form-check-input-disabled-filter;
+      border-color: var(--#{$prefix}form-check-input-disabled-color);
     }
     // End mod
   }
@@ -142,7 +143,7 @@
   &:required {
     ~ .form-check-label::after {
       margin-left: $form-label-required-margin-left;
-      color: $accessible-orange;
+      color: $form-label-required-color;
       content: "*";
     }
   }
@@ -159,11 +160,12 @@
 
 .form-switch {
   // Boosted mod
-  --#{$prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+  --#{$prefix}switch-gradient: #{linear-gradient(to right, var(--#{$prefix}form-switch-square-bg) $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
   margin-bottom: $form-switch-margin-bottom;
+  background-color: transparent;
 
   .form-check-input {
     --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
@@ -172,29 +174,29 @@
     width: $form-switch-width;
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
-    background-color: $white; // Boosted mod
+    background-color: $form-switch-bg; // Boosted mod
     background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // Boosted mod: extra param `var(--#{$prefix}switch-gradient)`
-    filter: $invert-filter; // Boosted mod
+    filter: $form-switch-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
-    border-color: $white; // Boosted mod
-    @include border-radius($form-switch-border-radius);
+    border-color: $form-switch-border-color; // Boosted mod
+    @include border-radius($form-switch-border-radius, 0);
     @include transition($form-switch-transition);
 
     &:focus {
       &[data-focus-visible-added] {
-        @include focus-visible($color: var(--#{$prefix}focus-visible-inner-color), $box-color: var(--#{$prefix}focus-visible-outer-color));
+        @include focus-visible($color: $form-switch-focus-visible-outer, $box-color: $form-switch-focus-visible-inner);
       }
     }
 
     &:checked {
-      background-color: $primary;
-      filter: none; // Boosted mod
-      border-color: $primary;
+      background-color: $form-switch-checked-bg;
+      filter: $form-switch-checked-filter; // Boosted mod
+      border-color: $form-switch-checked-border-color;
 
       &:focus {
         &[data-focus-visible-added] {
-          @include focus-visible($color: var(--#{$prefix}focus-visible-outer-color), $box-color: var(--#{$prefix}focus-visible-inner-color));
+          @include focus-visible($color: $form-switch-checked-focus-outer, $box-color: $form-switch-checked-focus-inner);
         }
       }
 
@@ -209,7 +211,7 @@
       }
 
       &:not(:disabled) {
-        --#{$prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
+        --#{$prefix}switch-gradient: #{linear-gradient(to right, $form-switch-checked-square-bg $form-switch-bg-square-size, transparent)};
       }
     }
 
@@ -220,9 +222,9 @@
     }
 
     &:disabled {
-      background-color: $form-check-input-disabled-color;
-      filter: $invert-filter;
-      border-color: $form-check-input-disabled-color;
+      background-color: var(--#{$prefix}form-check-input-disabled-color);
+      filter: $form-check-input-disabled-filter;
+      border-color: var(--#{$prefix}form-check-input-disabled-color);
     }
   }
 
@@ -252,145 +254,23 @@
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
-  // Boosted mod: custom styles for .btn-check
-  // @note almost the same structure than the button-variant() mixin
-  // @note meant to override whatever .btn-* variant is used
-  + .btn {
-    margin-left: 0 !important; // stylelint-disable-line declaration-no-important
-    color: $black;
-    @include gradient-bg($white);
-    border-color: $gray-500;
-    @include box-shadow($btn-box-shadow);
-
-    &.btn-icon:not(.btn-no-outline)::before,
-    &.btn-icon:not(.btn-no-outline)::after {
-      display: inline-block;
-      width: var(--#{$prefix}border-width);
-      height: 100%;
-      content: "";
-    }
-
-    &:not(:first-of-type) {
-      border-left: 0;
-    }
-
-    &:not(:last-of-type) {
-      border-right: 0;
+  &[disabled],
+  &:disabled {
+    + .btn {
+      // Boosted mod: no pointer-events
+      // Boosted mod: no filter
+      opacity: $form-check-btn-check-disabled-opacity;
     }
   }
 
-  &:hover + .btn,
-  + .btn:hover {
-    color: $accessible-orange;
-    background-color: $white;
-    border-color: $gray-500;
-  }
-
-  .btn-group & + .btn:hover {
-    z-index: 0;
-  }
-
+  // Boosted mod
   &[data-focus-visible-added]:focus {
     + .btn,
     + .tag {
       @include focus-visible();
     }
   }
-
-  &:checked {
-    + .btn {
-      color: $white;
-      background-color: $black;
-      // Remove CSS gradients if they're enabled
-      background-image: if($enable-gradients, none, null);
-      border-color: $black;
-    }
-
-    + .btn-no-outline {
-      &,
-      &:hover {
-        color: $accessible-orange;
-        background-color: transparent;
-      }
-    }
-
-    + .tag {
-      color: var(--bs-tag-active-color);
-      background-color: var(--bs-tag-active-decoration-color);
-      border-color: var(--bs-tag-active-decoration-color);
-    }
-  }
-
-  &:active + .btn,
-  + .btn:active,
-  + .btn.active {
-    color: color-contrast($primary);
-    background-color: $primary;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $primary;
-  }
-  // End mod
-
-  &[disabled],
-  &:disabled {
-    + .btn {
-      color: $form-label-disabled-color; // Boosted mod
-      pointer-events: none;
-      background-color: $white; // Boosted mod
-      // Remove CSS gradients if they're enabled
-      background-image: if($enable-gradients, none, null); // Boosted mod
-      filter: none;
-      border-color: currentcolor; // Boosted mod
-      opacity: $form-check-btn-check-disabled-opacity;
-    }
-
-    // Boosted mod
-    &:checked + .btn {
-      color: $white;
-      background-color: $form-label-disabled-color;
-      border-color: $form-label-disabled-color;
-    }
-
-    &:checked + .btn-no-outline {
-      color: $gray-500;
-      background-color: transparent;
-      border-color: currentcolor;
-    }
-
-    + .tag {
-      color: var(--#{$prefix}tag-disabled-color);
-      pointer-events: none;
-      border-color: var(--#{$prefix}tag-disabled-color);
-    }
-
-    &:checked + .tag {
-      color: var(--#{$prefix}tag-active-color);
-      background-color: var(--#{$prefix}tag-disabled-color);
-    }
-    // End mod
-  }
-
-  // Boosted mod: handle no-outline case
-  + .btn-no-outline {
-    // Absurd selector to hack on specifity
-    &:not(:only-of-type) {
-      border: var(--#{$prefix}border-width) solid transparent;
-    }
-
-    &:hover,
-    &:active,
-    &.active {
-      color: $black;
-      border-color: $gray-500;
-    }
-
-    &:active {
-      color: $accessible-orange;
-      background-color: transparent;
-    }
-  }
   // End mod
 }
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+// Boosted mod: no `@if enable-dark-mode`

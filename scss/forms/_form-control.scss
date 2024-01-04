@@ -205,15 +205,15 @@ textarea {
   width: $form-color-width;
   height: $input-height;
   padding: $input-padding-y;
-  border-color: var(--#{$prefix}body-color); // Boosted mod
+  border-color: $form-color-border-color; // Boosted mod
 
   // Boosted mod
   &:hover {
-    background-color: var(--#{$prefix}body-color);
+    background-color: $form-color-hover-bg-color;
   }
 
   &:disabled {
-    background-color: var(--#{$prefix}body-bg);
+    background-color: $form-color-disabled-bg-color;
     border-color: $form-color-disabled-border-color;
 
     &::-moz-color-swatch {
@@ -236,6 +236,7 @@ textarea {
   }
 
   &::-webkit-color-swatch {
+    border: 0 !important; // stylelint-disable-line declaration-no-important
     @include border-radius($input-border-radius);
   }
 

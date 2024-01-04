@@ -3,31 +3,54 @@
 //
 
 .star-rating {
-  &.disabled,
+  --#{$prefix}star-rating-checked-color: #{$form-star-rating-checked-color};
+  --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-unchecked-color};
+  --#{$prefix}star-rating-hover-color: #{$form-star-rating-hover-color};
+  --#{$prefix}star-rating-checked-icon: #{$form-star-rating-checked-icon};
+  --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-unchecked-icon};
+
+  font-size: $form-star-size;
+  background-color: transparent;
+
   &:disabled {
     pointer-events: none;
+    --#{$prefix}star-rating-checked-color: #{$form-star-rating-disabled-color};
+    --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-disabled-color};
   }
 
   > label {
-    display: block;
+    cursor: pointer;
+  }
+
+  > label,
+  span {
     float: left;
     width: 1em;
     height: 1em;
-    font-size: $form-star-size;
-    cursor: pointer;
-    @include form-star-rating($accessible-orange);
+
+    &::before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: var(--#{$prefix}star-rating-checked-color);
+      mask-image: var(--#{$prefix}star-rating-checked-icon);
+    }
 
     &:not(:first-of-type){
       margin-left: $form-star-margin-between;
     }
   }
 
-  > input:checked ~ label {
-    @include form-star-rating($gray-500);
+  > input:checked ~ label::before,
+  .checked ~ span::before {
+    background-color: var(--#{$prefix}star-rating-unchecked-color);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
   }
 
-  > input:checked + label {
-    @include form-star-rating($accessible-orange);
+  > input:checked + label::before {
+    background-color: var(--#{$prefix}star-rating-checked-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 
   > [data-focus-visible-added]:focus + label {
@@ -36,45 +59,24 @@
     box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
   }
 
-  &:hover input + label {
-    @include form-star-rating($black);
+  &:hover input + label::before {
+    background-color: var(--#{$prefix}star-rating-hover-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 
-  > input:hover ~ label {
-    @include form-star-rating($gray-500);
+  > input:hover ~ label::before {
+    background-color: var(--#{$prefix}star-rating-unchecked-color);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
   }
 
-  > input:hover + label {
-    @include form-star-rating($black);
-  }
-}
-
-.star-rating-dark {
-  > label {
-    @include form-star-rating($brand-orange);
-  }
-
-  > input:checked ~ label {
-    @include form-star-rating($gray-700);
-  }
-
-  > input:checked + label {
-    @include form-star-rating($brand-orange);
-  }
-
-  &:hover input + label {
-    @include form-star-rating($white);
-  }
-
-  > input:hover ~ label {
-    @include form-star-rating($gray-700);
-  }
-
-  > input:hover + label {
-    @include form-star-rating($white);
+  > input:hover + label::before {
+    background-color: var(--#{$prefix}star-rating-hover-color);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 }
 
-.star-rating-sm > label {
+.star-rating-sm {
+  --#{$prefix}star-rating-checked-icon: #{$form-star-rating-sm-checked-icon};
+  --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-sm-unchecked-icon};
   font-size: $form-star-size-sm;
 }

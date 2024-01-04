@@ -10,16 +10,16 @@
     flex: 1 1 auto;
   }
 
+  // Boosted mod: rule slightly modified
   // Bring the hover, focused, and "active" buttons to the front to overlay
   // the borders properly
   > .btn-check:checked + .btn,
-  > .btn-check:focus + .btn,
   > .btn:hover,
-  > .btn:focus,
   > .btn:active,
   > .btn.active {
     z-index: 1;
   }
+  // End mod
 
   // Boosted mod
   &:focus-within {
@@ -42,11 +42,13 @@
 .btn-group {
   @include border-radius($border-radius);
 
+  // Boosted mod: rule slightlty modified
   // Prevent double borders when buttons are next to each other
-  > :not(.btn-check:first-child) + .btn,
+  > :not(.btn-check:first-child) + .btn:not(.btn-toggle),
   > .btn-group:not(:first-child) {
     margin-left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
   }
+  // End mod
 
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
@@ -64,6 +66,31 @@
   > .btn-group:not(:first-child) > .btn {
     @include border-start-radius(0);
   }
+
+  // Boosted mod
+  > [class*="btn-outline-"]:not(:last-of-type) {
+    border-right-width: 0;
+
+    &::after {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      margin: 0;
+      content: "";
+      border: 0;
+    }
+
+    &:focus {
+      &[data-focus-visible-added] {
+        border-right-width: var(--#{$prefix}btn-border-width);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  // End mod
 }
 
 // Sizing
@@ -83,7 +110,6 @@
   min-width: add($dropdown-padding-x * 2, calc(#{$caret-width} * 2)); // Boosted mod
   padding-right: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
   padding-left: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
-  border-color: currentcolor; // Boosted mod
 
   // Boosted mod
   .btn-group:not(.dropstart) &,
@@ -101,14 +127,12 @@
         content: "";
         background:
           linear-gradient(
-            currentcolor $btn-border-width,
             transparent $btn-border-width,
             transparent map-get($spacers, 1),
             currentcolor map-get($spacers, 1),
             currentcolor subtract(100%, map-get($spacers, 1)),
             transparent subtract(100%, map-get($spacers, 1)),
-            transparent subtract(100%, $btn-border-width),
-            currentcolor subtract(100%, $btn-border-width)
+            transparent subtract(100%, $btn-border-width)
           );
       }
     }
@@ -118,11 +142,11 @@
   .btn.active + &,
   &:active + * + .btn,
   &.active + * + .btn {
-    border-color: $primary;
+    border-color: $supporting-orange;
   }
 
   .btn-group.show > &:not(:focus):not(:active)::before {
-    color: $primary;
+    color: $supporting-orange;
     background-color: currentcolor;
   }
   // End mod
