@@ -7,6 +7,7 @@
   --#{$prefix}stepped-process-font-size: #{$stepped-process-font-size};
   --#{$prefix}stepped-process-font-weight: #{$stepped-process-font-weight};
   --#{$prefix}stepped-process-counter: #{$stepped-process-counter};
+  --#{$prefix}stepped-process-bg: #{$stepped-process-bg};
   --#{$prefix}stepped-process-item-padding-y: #{$step-item-padding};
   --#{$prefix}stepped-process-item-padding-x: 0;
   --#{$prefix}stepped-process-item-margin-end: #{$step-item-margin-end};
@@ -142,16 +143,4 @@
   .stepped-process-item.active {
     flex: $stepped-process-max-items - 1;
   }
-}
-
-.stepped-process-dark {
-  // scss-docs-start stepped-process-dark-css-vars
-  --#{$prefix}stepped-process-item-bg: #{$step-item-dark-bg};
-  --#{$prefix}stepped-process-item-active-bg: #{$step-item-dark-active-bg};
-  --#{$prefix}stepped-process-item-next-bg: #{$step-item-dark-next-bg};
-  --#{$prefix}stepped-process-item-drop-shadow: #{$step-item-dark-drop-shadow};
-  --#{$prefix}stepped-process-link-color: #{$step-link-dark-color};
-  --#{$prefix}stepped-process-link-active-color: #{$step-link-dark-active-color};
-  --#{$prefix}stepped-process-link-next-color: #{$step-link-dark-next-color};
-  // scss-docs-end stepped-process-dark-css-vars
 }

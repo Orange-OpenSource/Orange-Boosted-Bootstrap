@@ -3,7 +3,6 @@
 
   `args` are all optional and can be one of the following:
     * action: Display action button - default = false
-    * background: Define the card background - default = "dark"
     * borders: Add some borders to the card - default = false
     * buttons: Display share and favorite buttons - default = false
     * caption: Display caption - default = false
@@ -13,7 +12,6 @@
 */ -}}
 
 {{- $action := .Get "action" | default false -}}
-{{- $background := .Get "background" | default "dark" -}}
 {{- $borders := .Get "borders" | default false -}}
 {{- $buttons := .Get "buttons" | default false -}}
 {{- $caption := .Get "caption" | default false -}}
@@ -21,20 +19,20 @@
 {{- $open := .Get "open" | default false -}}
 {{- $rtl := .Get "rtl" | default false -}}
 
-<div class="card{{ if eq $borders false }} border-0{{ end }}{{ if and $borders (eq $background "dark") }} border-dark{{ end }}">
+<div class="card{{ if eq $borders false }} border-0{{ end }}">
   <svg class="bd-placeholder-img card-img-top" width="100%" height="169" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ if $rtl }}العنصر النائب: شرح الصورة{{ else }}Placeholder: Image caption{{ end }}" preserveAspectRatio="xMidYMid slice" focusable="false">
-    <rect width="100%" height="100%" fill="{{ (index $.Site.Data.grays 3).hex }}"/>
-    <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="#00000014" aria-hidden="true" focusable="false">
+    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+    <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-tertiary-color)" aria-hidden="true" focusable="false">
       <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
     </svg>
   </svg>
-  <div class="card-body text-{{ if eq $background "dark" }}white{{ else }}black{{ end }} bg-{{ $background }}{{ if $open }} px-0{{ end }}">
+  <div class="card-body{{ if $open }} px-0{{ end }}">
     <h3 class="card-title{{ if and $metadata (not $caption) }} mb-3{{ end }}">{{ if $rtl }}عنوان{{ else }}Title{{ end }}</h3>
     {{- if $caption -}}
     <p class="card-text fw-bold mb-{{ if or (or $metadata $buttons) $action }}4{{ else }}2{{ end }}">{{ if $rtl }}شرح{{ else }}Caption{{ end }}</p>
     {{- end -}}
     {{- if $metadata -}}
-    <p class="card-text fw-bold text-{{ if eq $background "dark" }}light{{ else }}muted{{ end }}">{{ if $rtl }}البيانات الوصفية{{ else }}Meta data{{ end }}</p>
+    <p class="card-text fw-bold text-body-secondary">{{ if $rtl }}البيانات الوصفية{{ else }}Meta data{{ end }}</p>
     {{- end -}}
     {{- if $buttons -}}
     <ul class="nav flex-row gap-3 lh-1">
@@ -57,7 +55,7 @@
     </ul>
     {{- end -}}
     {{- if $action -}}
-    <a href="#" class="btn btn-secondary{{ if eq $background "dark" }} btn-inverse{{ end }}" aria-label="{{ if $rtl }}وصف الارتباط{{ else }}Link description{{ end }}" title="{{ if $rtl }}وصف الارتباط{{ else }}Link description{{ end }}">{{ if $rtl }}وصلة{{ else }}Link{{ end }}</a>
+    <a href="#" class="btn btn-outline-secondary" aria-label="{{ if $rtl }}وصف الارتباط{{ else }}Link description{{ end }}" title="{{ if $rtl }}وصف الارتباط{{ else }}Link description{{ end }}">{{ if $rtl }}وصلة{{ else }}Link{{ end }}</a>
     {{- end -}}
   </div>
 </div>
