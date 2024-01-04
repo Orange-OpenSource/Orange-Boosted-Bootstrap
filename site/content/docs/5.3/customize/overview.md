@@ -14,7 +14,9 @@ sections:
     description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
   - title: Options
     description: Customize Boosted with built-in variables to easily toggle global CSS preferences.
-  - title: Color
+  - title: Color palette
+    description: Learn about Boosted's color palette.
+  - title: Color theme
     description: Learn about and customize the color systems that support the entire toolkit.
   - title: Color modes
     description: Explore our default light mode and the new dark mode, or create custom color modes yourself.

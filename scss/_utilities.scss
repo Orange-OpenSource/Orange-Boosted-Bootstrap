@@ -77,9 +77,9 @@ $utilities: map-merge(
       property: box-shadow,
       class: shadow,
       values: (
-        null: $box-shadow,
-        sm: $box-shadow-sm,
-        lg: $box-shadow-lg,
+        null: var(--#{$prefix}box-shadow),
+        sm: var(--#{$prefix}box-shadow-sm),
+        lg: var(--#{$prefix}box-shadow-lg),
         none: none,
       )
     ),
@@ -523,14 +523,15 @@ $utilities: map-merge(
         bolder: $font-weight-bolder
       )
     ),
+    // Boosted mod: use hardcoded values instead of variables since our variables can't fit utilities
     "line-height": (
       property: line-height,
       class: lh,
       values: (
         1: 1,
-        sm: $line-height-sm,
-        base: $line-height-base,
-        lg: $line-height-lg,
+        sm: 1.25, // Boosted mod: instead of `$line-height-sm`
+        base: 1.5, // Boosted mod: instead of `$line-height-base`
+        lg: 2, // Boosted mod: instead of `$line-height-lg`
       )
     ),
     "line-length": (
@@ -592,7 +593,6 @@ $utilities: map-merge(
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
           "reset": inherit,
-          "primary": rgba(var(--#{$prefix}primary-text-rgb), var(--#{$prefix}text-opacity)), // Boosted mod: redefine primary value
         )
       )
     ),
@@ -679,7 +679,8 @@ $utilities: map-merge(
           "supporting-blue": $supporting-blue, // Boosted mod
           "supporting-yellow": $supporting-yellow, // Boosted mod
           "supporting-pink": $supporting-pink, // Boosted mod
-          "supporting-purple": $supporting-purple // Boosted mod
+          "supporting-purple": $supporting-purple, // Boosted mod
+          "supporting-orange": $supporting-orange, // Boosted mod
         )
       )
     ),

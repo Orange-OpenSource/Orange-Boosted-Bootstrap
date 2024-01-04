@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.0-alpha3 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap scrollspy.js v5.3.0-alpha3 (https://boosted.orange.com/)
+  * Bootstrap scrollspy.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,6 +20,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -199,11 +200,11 @@
         if (!anchor.hash || index_js.isDisabled(anchor)) {
           continue;
         }
-        const observableSection = SelectorEngine.findOne(anchor.hash, this._element);
+        const observableSection = SelectorEngine.findOne(decodeURI(anchor.hash), this._element);
 
         // ensure that the observableSection exists & is visible
         if (index_js.isVisible(observableSection)) {
-          this._targetLinks.set(anchor.hash, anchor);
+          this._targetLinks.set(decodeURI(anchor.hash), anchor);
           this._observableSections.set(anchor.hash, observableSection);
         }
       }

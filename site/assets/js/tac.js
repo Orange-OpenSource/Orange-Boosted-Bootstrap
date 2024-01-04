@@ -29,10 +29,12 @@
   window.addEventListener('tac.open_alert', () => {
     const alert = document.getElementById('tarteaucitronAlertBig')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-info', 'btn-inverse', 'ms-lg-2')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'btn-inverse', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
+    alert.setAttribute('data-bs-theme', 'dark')
+
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-secondary', 'ms-lg-2')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
-    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'btn-inverse', 'mx-sm-2', 'my-2', 'my-lg-0')
+    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
@@ -74,7 +76,7 @@
       const toggle = document
         .createRange()
         .createContextualFragment(
-          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!googletagmanager=true' ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
+          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
         )
       ask.innerHTML = ''
       ask.append(toggle)

@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.0-alpha3 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap orange-navbar.js v5.3.0-alpha3 (https://boosted.orange.com/)
+  * Bootstrap orange-navbar.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,6 +20,7 @@
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -46,16 +47,10 @@
     // Static
     static enableMinimizing(el) {
       // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
-      const scroll = window.scrollY;
-      const headerChildren = [...el.children];
-      const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'));
-      if (globalHeaderChild) {
-        if (scroll > 0) {
-          // Consider first element not having .supra in array is the first header
-          globalHeaderChild.classList.add('header-minimized');
-        } else {
-          globalHeaderChild.classList.remove('header-minimized');
-        }
+      if (window.scrollY > 0) {
+        el.classList.add('header-minimized');
+      } else {
+        el.classList.remove('header-minimized');
       }
     }
     static jQueryInterface(config) {
