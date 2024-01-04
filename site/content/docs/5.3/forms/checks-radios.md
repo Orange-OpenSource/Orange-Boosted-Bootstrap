@@ -252,17 +252,17 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
+<label class="btn btn-toggle" for="btn-check">Single toggle</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
+<label class="btn btn-toggle" for="btn-check-2">Checked</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Disabled</label>
+<label class="btn btn-toggle" for="btn-check-3">Disabled</label>
 {{< /example >}}
 
 {{< callout info >}}
@@ -278,16 +278,16 @@ Boosted requires to group its radio toggle buttons in a [button group]({{< docsr
 {{< example >}}
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-  <label class="btn btn-secondary" for="option1">Checked</label>
+  <label class="btn btn-toggle" for="option1">Checked</label>
 
   <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-  <label class="btn btn-secondary" for="option2">Radio</label>
+  <label class="btn btn-toggle" for="option2">Radio</label>
 
   <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-  <label class="btn btn-secondary" for="option3">Disabled</label>
+  <label class="btn btn-toggle" for="option3">Disabled</label>
 
   <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-  <label class="btn btn-secondary" for="option4">Radio</label>
+  <label class="btn btn-toggle" for="option4">Radio</label>
 </div>
 {{< /example >}}
 
@@ -301,21 +301,21 @@ Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embe
 {{< example >}}
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
-  <label class="btn btn-icon" for="option5">
+  <label class="btn btn-icon btn-toggle" for="option5">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
-  <label class="btn btn-icon" for="option6">
+  <label class="btn btn-icon btn-toggle" for="option6">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
-  <label class="btn btn-icon" for="option7">
+  <label class="btn btn-icon btn-toggle" for="option7">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
     </svg>
@@ -414,30 +414,9 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 
 ### Dark variant
 
-Add `.star-rating-dark` to the `.star-rating` for a dark variant.
+{{< deprecated-in "5.3.3" >}}
 
-{{< example class="bg-dark" >}}
-<form>
-  <fieldset class="star-rating star-rating-dark">
-    <legend class="visually-hidden">Results relevance</legend>
-
-    <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"><span class="visually-hidden">Terrible</span></label>
-
-    <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"><span class="visually-hidden">Bad</span></label>
-
-    <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-
-    <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"><span class="visually-hidden">Good</span></label>
-
-    <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
-  </fieldset>
-</form>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "star-rating" >}}
 
 ### Readonly
 

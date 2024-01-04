@@ -36,7 +36,7 @@
       display: flex;
       flex-direction: column;
       max-width: 100%;
-      color: var(--#{$prefix}offcanvas-color);
+      // Boosted mod: no color
       visibility: hidden;
       background-color: var(--#{$prefix}offcanvas-bg);
       background-clip: padding-box;
@@ -137,10 +137,12 @@
 .offcanvas-title {
   margin-bottom: 0;
   line-height: var(--#{$prefix}offcanvas-title-line-height);
+  color: var(--#{$prefix}offcanvas-color); // Boosted mod
 }
 
 .offcanvas-body {
   flex-grow: 1;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
+  color: var(--#{$prefix}offcanvas-color); // Boosted mod
 }

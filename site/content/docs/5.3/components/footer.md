@@ -11,7 +11,7 @@ added: "5.2"
 
 ## How it works
 
-Our footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 5 ready-to-use fully responsive bars which should be arranged vertically in the following order:
+Our footer is basically a `<footer>` tag with `.footer` and `.navbar` classes. It comes with 5 ready-to-use fully responsive bars which should be arranged vertically in the following order:
 - Title with content bar
 - Follow us bar
 - Navigation bar
@@ -41,7 +41,7 @@ This footer component is based on the [navbar component]({{< docsref "/component
 The `<h2></h2>` and `<h3></h3>` tags used in the following sections are informative, you **need** to adapt those to your website's title hierarchy.
 {{< /callout >}}
 
-The footer bars are independent from each other. Just add a dark separator between each bar of the final footer.
+The footer bars are independent from each other. Just add a separator between each bar of the final footer.
 
 ```html
 <div class="border-bottom border-1 border-dark"></div>
@@ -139,7 +139,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 
 As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
-{{< scss-docs name="footer-part-css-vars" file="scss/_footer.scss" >}}
+{{< scss-docs name="footer-css-vars" file="scss/_footer.scss" >}}
 
 Each bar redefines its own CSS variables.
 
