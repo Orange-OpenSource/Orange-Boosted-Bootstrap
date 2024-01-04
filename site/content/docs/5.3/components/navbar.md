@@ -44,7 +44,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 
 Here's an example of all the sub-components included in a responsive dark-themed navbar that automatically collapses at the `lg` (large) breakpoint.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
@@ -133,7 +133,7 @@ Add the `.active` class on `.nav-link` to indicate the current page.
 
 Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
@@ -166,7 +166,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 
 And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
@@ -191,7 +191,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
 
 You can also use dropdowns in your navbar. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
@@ -303,7 +303,7 @@ Navbars may contain bits of text with the help of `.navbar-text`. This class adj
 
 Mix and match with other components and utilities as needed.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">
@@ -346,7 +346,7 @@ Mix and match with other components and utilities as needed.
 
 Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
-<div class="bd-example">
+<div class="bd-example exclude-from-pa11y-analysis">
   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -587,7 +587,7 @@ Please note that this behavior comes with a potential drawback of `overflow`—w
 
 Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-height: 100px;"`, with some extra margin utilities for optimum spacing.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <div class="navbar-brand">

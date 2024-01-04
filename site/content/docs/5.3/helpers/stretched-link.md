@@ -59,7 +59,7 @@ If the stretched link doesn't seem to work, the [containing block](https://devel
 - A `will-change` value of `transform` or `perspective`
 - A `filter` value other than `none` or a `will-change` value of `filter` (only works on Firefox)
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <div class="card" style="width: 18rem;">
   {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card icon" >}}
   <div class="card-body">

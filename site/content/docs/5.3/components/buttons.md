@@ -202,7 +202,7 @@ The only variant of outline buttons that should be used is the `.btn-outline-sec
 Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>

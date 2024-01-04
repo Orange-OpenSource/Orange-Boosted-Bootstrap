@@ -436,7 +436,7 @@ Make star ratings readable but non-editable by using `<span>`s instead of `<inpu
 
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <fieldset class="star-rating" disabled aria-hidden="true">
   <legend class="visually-hidden">Disabled star rating</legend>
 

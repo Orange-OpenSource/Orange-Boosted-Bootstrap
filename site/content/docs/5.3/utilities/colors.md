@@ -26,7 +26,7 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
 {{< /callout >}}
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>

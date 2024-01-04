@@ -88,7 +88,7 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 [Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
 
 <!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>

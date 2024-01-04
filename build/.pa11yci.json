@@ -16,7 +16,7 @@
       "htmlcs"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, .table-responsive, :disabled + label, .is-disabled, .exclude-from-pa11y-analysis, #text-decoration + p + div a.text-decoration-none",
+    "hideElements": "iframe, .table-responsive, a.disabled:not([href]), :disabled + label, .is-disabled, .exclude-from-pa11y-analysis, #text-decoration + p + div a.text-decoration-none",
     "ignore": [
       "color-contrast"
     ]

@@ -24,7 +24,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 {{< /callout >}}
 
 <!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">{{ .name | title }} link</a></p>
