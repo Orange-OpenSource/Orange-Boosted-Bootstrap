@@ -23,6 +23,10 @@
       margin-top: add(var(--#{$prefix}navbar-nav-icon-margin-y), .3125rem);
     }
   }
+
+  &.navbar-nav .nav-link {
+    margin-right: 0;
+  }
 }
 
 .header-minimized :first-child:not(.supra),

@@ -7,12 +7,13 @@
   padding: $modal-content-padding;
   background-color: $modal-content-bg;
   background-clip: padding-box;
+  border: $modal-content-border-width solid $modal-content-border-color;
   transform: translateX(-50%);
 
   [role="heading"] {
     display: block;
     font-weight: $font-weight-bold;
-    color: $black;
+    color: $modal-content-color;
   }
 
   @include media-breakpoint-up(sm) {
@@ -53,6 +54,7 @@
   font-weight: $font-weight-bold;
   color: $white;
   background: $black;
+  border-top: var(--bs-border-width) solid var(--bs-border-color-subtle);
 
   &[style*="display: block"] {
     display: flex !important; // stylelint-disable-line declaration-no-important
@@ -69,10 +71,6 @@
 
 @include tac("DisclaimerAlert") {
   font-size: $font-size-sm;
-}
-
-@include tac("CloseAlert") {
-  @include button-variant($white, $white, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
 }
 
 @include tac("ClosePanel") {
@@ -116,7 +114,7 @@
 }
 
 @include tac("Info") {
-  padding: $modal-inner-padding 0;
+  padding: $spacer * .5 0;
   margin-bottom: $spacer;
   font-weight: $font-weight-bold;
 }
@@ -139,7 +137,7 @@
 @include tac("MainLine", true) {
   padding-bottom: $spacer;
   margin-bottom: $spacer;
-  border-bottom: $modal-content-border-width solid $gray-400;
+  border-bottom: $modal-content-border-width solid $modal-content-border-color;
 }
 
 @include tac("Services") {

@@ -20,7 +20,7 @@
     width: 100%;
     padding: subtract(var(--#{$prefix}local-nav-padding-y), var(--#{$prefix}local-nav-border-width)) 0 var(--#{$prefix}local-nav-padding-y);
     font-weight: $font-weight-bold;
-    color: var(--#{$prefix}local-nav-hover-color);
+    color: var(--#{$prefix}local-nav-color);
     background-color: transparent;
     border: 0;
 
@@ -30,19 +30,14 @@
 
       &::after {
         margin-right: 0;
-        color: var(--#{$prefix}local-nav-color);
       }
     }
 
     &:not(.collapsed) {
       border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
 
-      > [class*="container"] {
-        @include caret(up, $accordion: true);
-
-        &::after {
-          margin-right: 0;
-        }
+      > [class*="container"]::after {
+        transform: rotateZ(180deg);
       }
     }
   }
@@ -61,6 +56,7 @@
 
   .navbar {
     --bs-navbar-padding-y: 0px;
+    --bs-navbar-bg: var(--#{$prefix}local-nav-bg);
     --bs-navbar-border-color: transparent;
 
     .nav-item {
@@ -96,11 +92,7 @@
     }
 
     .nav-link.active {
-      color: var(--#{$prefix}local-nav-color);
-
-      @include media-breakpoint-up(lg) {
-        color: var(--#{$prefix}local-nav-hover-color);
-      }
+      --#{$prefix}navbar-active-color: var(--#{$prefix}local-nav-color);
 
       &::after {
         bottom: calc(-1 * (var(--#{$prefix}local-nav-border-width) + var(--bs-nav-link-margin-y))); // stylelint-disable-line function-disallowed-list
@@ -122,16 +114,4 @@
       }
     }
   }
-}
-
-.local-nav-dark {
-  // scss-docs-start local-nav-dark-css-vars
-  --#{$prefix}local-nav-color: #{$local-nav-dark-color};
-  --#{$prefix}local-nav-bg: #{$local-nav-dark-bg};
-  --#{$prefix}local-nav-hover-color: #{$local-nav-dark-hover-color};
-  --#{$prefix}local-nav-hover-bg: #{$local-nav-dark-hover-bg};
-  --#{$prefix}local-nav-active-color: #{$local-nav-dark-active-color};
-  --#{$prefix}local-nav-active-bg: #{$local-nav-dark-active-bg};
-  --#{$prefix}local-nav-border-color: #{$local-nav-dark-border-color};
-  // scss-docs-end local-nav-dark-css-vars
 }

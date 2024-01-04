@@ -17,46 +17,382 @@ Boosted v5.3.3 has landed also including specific Boosted content as usual.
 
 If you need more details about the changes, please refer to the [v5.3.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.3).
 
+### Dark mode!
+
+Bootstrap introduced the inner color modes mechanism in v5.3.0. **The dark mode was not yet available in the Orange Design System specifications at this time, but is now available since v5.3.3!**
+
+Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+
+This change has an impact on how you should use Boosted. Please read carefully the following notes.
+
+From a general point of view, the dark mode is optional on Orange websites. However, a new concept has been introduced and replaces our dark variants for components. It is referred to as "contextual dark mode" and is based on the `data-bs-theme="dark"` attribute. It is used to switch a component or a container to dark mode, independently of the global color mode. It implies that all the `.{component}-dark` classes have been removed from Boosted and that `${component}-*-inverted` Sass variables have been deprecated.
+
+Please note that `data-bs-theme` (default, light or dark) automatically sets the `color` and `background-color` CSS properties to `inherit` on the element it is applied to. This means that some of our components have been adapted to this new behavior by setting their default colors and background colors differently (some of them are not transparent). Please double-check that it doesn't break your design. And more generally, please check carefully that this new version doesn't break your design even if you didn't use the dark variants before.
+
+The use of colors have been revamped to be more consistent and easier to use. During the process, some colors have been modified in light mode to be darker and ensure a better contrast: primary, success and info.
+
+All our helpers and utilities have also been adapted to the new color modes mechanism and automatically switch their colors and background colors depending on the current color mode.
+As a result, you should for instance now rather use `.text-bg-{color}` classes instead of `.bg-{color}` classes when possible for automatic contrast.
+
+Retrieve our color palette in the [new color palette documentation]({{< docsref "/customize/color-palette" >}}).
+
+Retrieve our color theme in the [new color theme documentation]({{< docsref "/customize/color-theme" >}}) that gathers the useful CSS variables switching between light and dark mode.
+
 ### Components
+
+- **Accordion**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the accordion (`.accordion-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Alerts**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the alerts have been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Badge**
   - <span class="badge text-bg-warning">Warning</span> It has been fixed in several places in the documentation that badge background and text colors should be handled by using `.text-bg-{color}` classes and not only `.bg-{color}` classes. Please reflect these modifications into your websites.
 
+- **Back to top**
+  - <span class="badge text-bg-danger">Breaking</span> Its markup has been changed where `.btn-secondary` has been replaced by `.btn-outline-secondary`. Please reflect this modification into your websites.
+
+- **Breadcrumb**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.breadcrumb-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Buttons**
+  - <span class="badge text-bg-danger">Breaking</span> The rendering of the secondary button has changed:
+    - if you were using the secondary button as an outline button and want to keep the same rendering, please use the new `.btn-outline-secondary` class instead of `.btn-secondary`. All the secondary buttons in the documentation, components and examples have been updated to use this new class. Please reflect this modification into your websites.
+    - if you were using a black button with `.btn-info` or `.btn-dark`, please now use `.btn-secondary` instead.
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the buttons (`.btn-inverse`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Button group**
+  - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
+  - <span class="badge text-bg-danger">Breaking</span> Checkbox and radio button groups have changed their markup by replacing `.btn-primary` by `.btn-toggle`. Please reflect this modification into your websites.
+
+- **Close button**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.btn-close-white`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Dropdown**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover and actives states of dropdown menu items.
+  - <span class="badge text-bg-danger">Breaking</span> Dropdown markup has changed by replacing `.btn-secondary` by `.btn-dropdown` class. Please reflect this modification into your websites.
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the dropdown (`.dropdown-menu-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+  - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
+
+- **Footer**
+  - <span class="badge text-bg-danger">Breaking</span> Footer has changed its markup:
+    - `.navbar-dark.bg-dark` classes have been replaced by using the `.navbar` class and the contextual dark mode with `data-bs-theme="dark"` on the `<footer>`.
+    - `.accordion-dark` class has been removed.
+    - if an input was present in your footer, there is no need anymore to add background, color and border utilities to it.
+    - if a button was present in your footer, remove its `.btn-inverse` class. If it was a secondary button, transform it into an outline secondary.
+
+    All examples using a Footer have of course been updated to use this new markup. Make sure to incorporate these changes into your websites.
+
 - **List group**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the list group (`.list-group-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
   - <span class="badge text-bg-success">New</span> The list group variants using contextual classes are now branded correctly. Please check that it doesn't break your design.
   - <span class="badge text-bg-success">New</span> List group with badges has been added to Orange Design System specifications and can now be used in your websites.
   - <span class="badge text-bg-warning">Warning</span> List group font weight is now bold by default. Please check that it doesn't break your design.
+
+- **Local navigation**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover state of navigation items.
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the local navigation (`.local-nav-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Modal**
+  - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
+
+- **Navbar**
+  - <span class="badge text-bg-success">New</span> A new automatic rendering has been added to the navbar's dropdowns containing texts or SVG icons.
+  - <span class="badge text-bg-warning">Warning</span> Navbars are not supposed to be used as is in an Orange website. Anyway, all the variants are not dark by default but white.
+
+- **Offcanvas**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the offcanvas has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Orange navbar**
+  - <span class="badge text-bg-success">New</span> A new Orange navbar with mode selector variant is now available.
+
+  - <span class="badge text-bg-danger">Breaking</span> Orange navbars have changed their markup (including supra bars):
+    - `.navbar-dark.bg-dark` classes have been replaced by using the contextual dark mode with `data-bs-theme="dark"` on the `<header>`.
+    - if an input was present in your navbar, there is no need anymore to add background, color and border utilities to it.
+    - if a notification badge was present in your navbar, the notification text doesn't need `.text-white` anymore. It'll be automatically set to white in dark mode and black in light mode.
+
+    All examples using an Orange navbar have of course been updated to use this new markup. Make sure to incorporate these changes into your websites.
+
+- **Pagination**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover state of page items.
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the pagination (`.pagination-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Progress**
+  - <span class="badge text-bg-warning">Warning</span> Thanks to the automatic contrast mechanism, some progress bars variants with texts have been modified to avoid using text utilities that are set automatically. However the default progress bar and the warning ones still need a `.text-dark`. Please reflect these modifications into your websites.
+
+- **Stepped Process**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the stepped process (`.stepped-process-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Tags**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the tags (`.tag-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- **Title bar**
+  - <span class="badge text-bg-danger">Breaking</span> The variants with background colors have been modified to apply the right `data-bs-theme` attribute. And the `.bg-dark`, `.bg-black`, and `.bg-white` classes have been removed since they don't make sense anymore. Please reflect these modifications into your websites.
+
+- **Toasts**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the toast has been modified by using the contextual dark mode with `data-bs-theme="dark"`. Please reflect this modification into your websites.
 
 ### Contents
 
 - <span class="badge text-bg-warning">Warning</span> The `.lead` class has been updated to reflect the new letter-spacing value for desktop breakpoint, and the line-height values for tablet and mobile breakpoints. Please check that it doesn't break your design.
 
+- <span class="badge text-bg-danger">Breaking</span> Table dark variant has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+- <span class="badge text-bg-warning">Warning</span> Striped table background color has changed to adapt to the new color modes mechanism.
+
 ### Forms
 
-- <span class="badge text-bg-warning">Warning</span> Quantity selector has been updated to ensure a proper visible focus state and the `.input-group` class has been removed. Make sure to incorporate these changes into your websites.
+- **Checks & Radios**
+  - <span class="badge text-bg-danger">Breaking</span> Toggle buttons have changed their markup by removing any `.btn-primary` or `.btn-secondary`, and by adding the new `.btn-toggle` class. Please reflect this modification into your websites.
+
+- **Input group**
+  - <span class="badge text-bg-danger">Breaking</span> The variants using secondary buttons have changed their markup by replacing `.btn-secondary` by `.btn-outline-secondary`. Please reflect this modification into your websites.
+
+- **Quantity Selector**
+  - <span class="badge text-bg-success">New</span> Rendering has been updated to ensure a proper visible focus state.
+  - <span class="badge text-bg-danger">Breaking</span> The markup has been changed:
+    - `.input-group` class has been removed
+    - `.btn-secondary` class has been replaced by `.btn-outline-secondary`
+    
+    Make sure to incorporate these changes into your websites.
+
+- **Star rating**
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the star rating (`.star-rating-dark`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+
+### Utilities
+
+- <span class="badge text-bg-success">New</span> Orange supporting background (`.bg-supporting-orange`) has been added.
+
+### Examples
+
+All the examples have a mode selector on the bottom right corner to switch between light and dark mode to help you check the rendering. These mode selectors are not part of the examples themselves and shouldn't be included in your websites. Please note that these mode selectors are not rendered in the examples that already contain a mode selector in their navbars.
+
+- <span class="badge text-bg-warning">Warning</span> Cards and Cards RTL examples have been simplified to remove the dark variants that can be achieved with a contextual dark mode.
+
+- <span class="badge text-bg-warning">Warning</span> Download page example has been slightly modified to use the new markup of Orange navbar, and footer, but also to change its usage of text and background utilities to work with the new color modes mechanism. The navbar now includes a mode selector. Please reflect these modifications if you have a similar rendering in your websites.
+
+- <span class="badge text-bg-warning">Warning</span> Form example has been slightly modified to use the new markup of Orange navbar, title bar and footer. The navbar now includes a mode selector. Please reflect these modifications if you have a similar rendering in your websites.
+
+- <span class="badge text-bg-success">New</span> A navbar mode selector has been added to the examples to render a single navbar with a mode selector to switch between light and dark mode.
+
+- <span class="badge text-bg-warning">Warning</span> Masonry example has been slightly modified to change its usage of text and background utilities to work with the new color modes mechanism. Please reflect these modifications if you have a similar rendering in your websites.
+
+- <span class="badge text-bg-warning">Warning</span> Title bars example has been slightly modified to drop a `.bg-body` and use `data-bs-theme="light"` in combination with `.bg-supporting-blue` and `.bg-supporting-pink`. Make sure to incorporate these changes into your websites.
 
 ### CSS and Sass variables
+
+- <span class="badge text-bg-success">New</span> A new `scss/_color-palette.scss` file has been added to provide Sass variables representing the color palette. It is automatically imported in `scss/_variables.scss` which uses these variables instead of hex values.
+
+- <span class="badge text-bg-success">New</span> A new `button-outline-variant()` mixin has been added.
+
+- <span class="badge text-bg-danger">Breaking</span> The `button-variant()` mixin has removed its last argument.
+
+- <span class="badge text-bg-danger">Breaking</span> `$accessible-orange` and `$brand-orange` Sass variables have been removed. Please refer to the [new color theme documentation]({{< docsref "/customize/color-theme" >}}) and the [new color palette documentation]({{< docsref "/customize/color-palette" >}}) for more details about the new color modes mechanism.
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-back-to-top-link-bg</code></li>
+      <li><code>--bs-border-color-subtle</code></li>
+      <li><code>--bs-breadcrumb-divider-filter</code></li>
+      <li><code>--bs-disabled-color</code></li>
+      <li><code>--bs-form-check-filter</code></li>
+      <li><code>--bs-form-check-input-disabled-color</code></li>
+      <li><code>--bs-form-color-disabled-filter</code></li>
+      <li><code>--bs-form-select-disabled-indicator</code></li>
+      <li><code>--bs-form-select-indicator</code></li>
+      <li><code>--bs-form-switch-square-bg</code></li>
+      <li><code>--bs-footer-color</code></li>
+      <li><code>--bs-gray-950</code></li>
       <li><code>--bs-list-group-font-weight</code></li>
       <li><code>--bs-list-group-item-icon-margin-x</code></li>
       <li><code>--bs-list-group-item-icon-size</code></li>
+      <li><code>--bs-navbar-bg</code></li>
+      <li><code>--bs-navbar-toggler-icon-color</code></li>
+      <li><code>--bs-navbar-toggler-icon-hover-color</code></li>
+      <li><code>--bs-stepped-process-bg</code></li>
+      <li><code>--bs-sticker-color</code></li>
+      <li><code>--bs-tab-content-border-color</code></li>
+      <li><code>--bs-table-active-bg-factor</code></li>
+      <li><code>--bs-table-hover-bg-factor</code></li>
+      <li><code>--bs-table-striped-bg-factor</code></li>
+      <li><code>--bs-tag-bg</code></li>
+      <li><code>--bs-tag-color</code></li>
+      <li><code>--bs-tertiary-active-bg</code></li>
+      <li><code>--bs-title-bar-bg</code></li>
+      <li><code>--bs-title-bar-color</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$list-group-dark-hover-bg</code></li>
+      <li><code>$back-to-top-bg</code></li>
+      <li><code>$back-to-top-title-color</code></li>
+      <li><code>$border-color-subtle</code></li>
+      <li><code>$border-color-subtle-dark</code></li>
+      <li><code>$breadcrumb-divider-filter</code></li>
+      <li><code>$breadcrumb-divider-filter-dark</code></li>
+      <li><code>$btn-default-active-bg</code></li>
+      <li><code>$btn-default-active-border</code></li>
+      <li><code>$btn-default-active-color</code></li>
+      <li><code>$btn-default-disabled-bg</code></li>
+      <li><code>$btn-default-disabled-border</code></li>
+      <li><code>$btn-default-disabled-color</code></li>
+      <li><code>$btn-default-hover-bg</code></li>
+      <li><code>$btn-default-hover-border</code></li>
+      <li><code>$btn-default-hover-color</code></li>
+      <li><code>$btn-hover-color</code></li>
+      <li><code>$btn-outline-default-active-bg</code></li>
+      <li><code>$btn-outline-default-active-border</code></li>
+      <li><code>$btn-outline-default-active-color</code></li>
+      <li><code>$btn-outline-default-disabled-bg</code></li>
+      <li><code>$btn-outline-default-disabled-border</code></li>
+      <li><code>$btn-outline-default-disabled-color</code></li>
+      <li><code>$btn-outline-default-hover-bg</code></li>
+      <li><code>$btn-outline-default-hover-border</code></li>
+      <li><code>$btn-outline-default-hover-color</code></li>
+      <li><code>$carousel-caption-bg</code></li>
+      <li><code>$carousel-control-icon-color</code></li>
+      <li><code>$danger-dark</code></li>
+      <li><code>$danger-icon-dark</code></li>
+      <li><code>$dark-dark</code></li>
+      <li><code>$disabled-color</code></li>
+      <li><code>$disabled-color-dark</code></li>
+      <li><code>$focus-ring-color-dark</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
+      <li><code>$footer-color</code></li>
+      <li><code>$form-check-filter</code></li>
+      <li><code>$form-check-filter-dark</code></li>
+      <li><code>$form-check-input-disabled-color-dark</code></li>
+      <li><code>$form-check-input-disabled-filter</code></li>
+      <li><code>$form-color-border-color</code></li>
+      <li><code>$form-color-disabled-bg-color</code></li>
+      <li><code>$form-color-disabled-filter</code></li>
+      <li><code>$form-color-disabled-filter-dark</code></li>
+      <li><code>$form-color-hover-bg-color</code></li>
+      <li><code>$form-feedback-color</code></li>
+      <li><code>$form-helper-bg</code></li>
+      <li><code>$form-helper-color</code></li>
+      <li><code>$form-helper-icon</code></li>
+      <li><code>$form-label-required-color</code></li>
+      <li><code>$form-select-disabled-indicator-dark</code></li>
+      <li><code>$form-select-indicator-dark</code></li>
+      <li><code>$form-star-rating-disabled-color</code></li>
+      <li><code>$form-switch-bg</code></li>
+      <li><code>$form-switch-border-color</code></li>
+      <li><code>$form-switch-checked-bg</code></li>
+      <li><code>$form-switch-checked-border-color</code></li>
+      <li><code>$form-switch-checked-filter</code></li>
+      <li><code>$form-switch-checked-focus-inner</code></li>
+      <li><code>$form-switch-checked-focus-outer</code></li>
+      <li><code>$form-switch-checked-square-bg</code></li>
+      <li><code>$form-switch-filter</code></li>
+      <li><code>$form-switch-focus-visible-inner</code></li>
+      <li><code>$form-switch-focus-visible-outer</code></li>
+      <li><code>$form-switch-square-bg</code></li>
+      <li><code>$form-switch-square-bg-dark</code></li>
+      <li><code>$functional-blue-dark</code></li>
+      <li><code>$functional-green-dark</code></li>
+      <li><code>$functional-red-dark</code></li>
+      <li><code>$functional-yellow-dark</code></li>
+      <li><code>$info-dark</code></li>
       <li><code>$list-group-divider-size</code></li>
       <li><code>$list-group-font-weight</code></li>
       <li><code>$list-group-icons</code></li>
       <li><code>$list-group-item-icon-margin-x</code></li>
       <li><code>$list-group-item-icon-size</code></li>
       <li><code>$list-group-numbered-item-margin-end</code></li>
+      <li><code>$nav-tabs-link-hover-bg</code></li>
+      <li><code>$nav-tabs-link-hover-color</code></li>
+      <li><code>$navbar-light-bg</code></li>
+      <li><code>$navbar-light-icon-color</code></li>
+      <li><code>$navbar-light-icon-hover-color</code></li>
+      <li><code>$ods-black-900</code></li>
+      <li><code>$ods-blue-100</code></li>
+      <li><code>$ods-blue-200</code></li>
+      <li><code>$ods-blue-300</code></li>
+      <li><code>$ods-blue-400</code></li>
+      <li><code>$ods-blue-500</code></li>
+      <li><code>$ods-blue-600</code></li>
+      <li><code>$ods-fire-100</code></li>
+      <li><code>$ods-fire-200</code></li>
+      <li><code>$ods-forest-100</code></li>
+      <li><code>$ods-forest-200</code></li>
+      <li><code>$ods-gray-200</code></li>
+      <li><code>$ods-gray-300</code></li>
+      <li><code>$ods-gray-400</code></li>
+      <li><code>$ods-gray-500</code></li>
+      <li><code>$ods-gray-600</code></li>
+      <li><code>$ods-gray-700</code></li>
+      <li><code>$ods-gray-800</code></li>
+      <li><code>$ods-gray-900</code></li>
+      <li><code>$ods-green-100</code></li>
+      <li><code>$ods-green-200</code></li>
+      <li><code>$ods-green-300</code></li>
+      <li><code>$ods-green-400</code></li>
+      <li><code>$ods-green-500</code></li>
+      <li><code>$ods-green-600</code></li>
+      <li><code>$ods-orange-100</code></li>
+      <li><code>$ods-orange-200</code></li>
+      <li><code>$ods-pink-100</code></li>
+      <li><code>$ods-pink-200</code></li>
+      <li><code>$ods-pink-300</code></li>
+      <li><code>$ods-pink-400</code></li>
+      <li><code>$ods-pink-500</code></li>
+      <li><code>$ods-pink-600</code></li>
+      <li><code>$ods-purple-200</code></li>
+      <li><code>$ods-purple-300</code></li>
+      <li><code>$ods-purple-400</code></li>
+      <li><code>$ods-purple-500</code></li>
+      <li><code>$ods-purple-600</code></li>
+      <li><code>$ods-sun-100</code></li>
+      <li><code>$ods-sun-200</code></li>
+      <li><code>$ods-water-100</code></li>
+      <li><code>$ods-water-200</code></li>
+      <li><code>$ods-white-100</code></li>
+      <li><code>$ods-yellow-200</code></li>
+      <li><code>$ods-yellow-300</code></li>
+      <li><code>$ods-yellow-400</code></li>
+      <li><code>$ods-yellow-500</code></li>
+      <li><code>$ods-yellow-600</code></li>
+      <li><code>$light-dark</code></li>
+      <li><code>$primary-dark</code></li>
+      <li><code>$quantity-selector-btn-bg</code></li>
+      <li><code>$quantity-selector-btn-border</code></li>
+      <li><code>$quantity-selector-disabled-bg</code></li>
+      <li><code>$quantity-selector-disabled-color</code></li>
+      <li><code>$secondary-dark</code></li>
+      <li><code>$spinner-color</code></li>
+      <li><code>$stepped-process-bg</code></li>
+      <li><code>$sticker-background-color</code></li>
+      <li><code>$sticker-color</code></li>
+      <li><code>$sticker-font-weight</code></li>
+      <li><code>$success-dark</code></li>
+      <li><code>$success-icon-dark</code></li>
+      <li><code>$supporting-orange</code></li>
+      <li><code>$table-active-bg-factor-dark</code></li>
+      <li><code>$table-bg-scale</code></li>
+      <li><code>$table-hover-bg-factor-dark</code></li>
+      <li><code>$table-striped-bg-factor-dark</code></li>
+      <li><code>$tag-bg</code></li>
+      <li><code>$tag-color</code></li>
+      <li><code>$tertiary-active-bg</code></li>
+      <li><code>$tertiary-active-bg-dark</code></li>
+      <li><code>$title-bar-color</code></li>
+      <li><code>$title-bar-bg</code></li>
+      <li><code>$warning-dark</code></li>
       <li><code>$warning-icon-filled</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$svg-as-custom-props-dark</code></li>
+      <li><code>$theme-colors-dark</code></li>
+      <li><code>$theme-colors-rgb-dark</code></li>
     </ul>
   </details>
 
@@ -64,15 +400,142 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-back-to-top-link-icon-margin-left</code></li>
+      <li><code>--bs-pagination-focus-bg</code></li>
+      <li><code>--bs-pagination-focus-box-shadow</code></li>
+      <li><code>--bs-pagination-focus-color</code></li>
+      <li><code>--bs-primary-text-rgb</code></li>
+      <li><code>--bs-table-striped-hover-bg</code></li>
+      <li><code>--bs-table-striped-hover-color</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$accessible-orange</code></li>
+      <li><code>$accordion-dark-bg</code></li>
+      <li><code>$accordion-dark-border-color</code></li>
+      <li><code>$accordion-dark-button-active-color</code></li>
+      <li><code>$accordion-dark-button-bg</code></li>
+      <li><code>$accordion-dark-button-color</code></li>
+      <li><code>$accordion-dark-button-hover-bg</code></li>
+      <li><code>$accordion-dark-color</code></li>
       <li><code>$background-colors</code></li>
+      <li><code>$brand-orange</code></li>
+      <li><code>$breadcrumb-dark-color</code></li>
+      <li><code>$breadcrumb-dark-bg</code></li>
+      <li><code>$breadcrumb-dark-divider-color</code></li>
+      <li><code>$breadcrumb-dark-active-color</code></li>
+      <li><code>$btn-close-white-active-border-color</code></li>
+      <li><code>$btn-close-white-active-color</code></li>
+      <li><code>$btn-close-white-bg</code></li>
+      <li><code>$btn-close-white-border-color</code></li>
+      <li><code>$btn-close-white-color</code></li>
+      <li><code>$btn-close-white-disabled-color</code></li>
+      <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$code-color-inverted</code></li>
+      <li><code>$dropdown-dark-bg</code></li>
+      <li><code>$dropdown-dark-box-shadow</code></li>
+      <li><code>$dropdown-dark-border-color</code></li>
+      <li><code>$dropdown-dark-divider-bg</code></li>
+      <li><code>$dropdown-dark-color</code></li>
+      <li><code>$dropdown-dark-header-color</code></li>
+      <li><code>$dropdown-dark-link-active-bg</code></li>
+      <li><code>$dropdown-dark-link-active-color</code></li>
+      <li><code>$dropdown-dark-link-disabled-color</code></li>
+      <li><code>$dropdown-dark-link-hover-bg</code></li>
+      <li><code>$dropdown-dark-link-hover-color</code></li>
+      <li><code>$dropdown-dark-link-color</code></li>
+      <li><code>$focus-visible-inner-color-inverted</code></li>
+      <li><code>$focus-visible-outer-color-inverted</code></li>
+      <li><code>$form-star-rating-dark-checked-color</code></li>
+      <li><code>$form-star-rating-dark-hover-color</code></li>
+      <li><code>$form-star-rating-dark-unchecked-color</code></li>
+      <li><code>$kbd-bg-inverted</code></li>
+      <li><code>$kbd-color-inverted</code></li>
+      <li><code>$link-color-inverted</code></li>
+      <li><code>$link-hover-color-inverted</code></li>
+      <li><code>$list-group-dark-active-bg</code></li>
+      <li><code>$list-group-dark-active-border-color</code></li>
+      <li><code>$list-group-dark-active-color</code></li>
+      <li><code>$list-group-dark-action-active-bg</code></li>
+      <li><code>$list-group-dark-action-active-color</code></li>
+      <li><code>$list-group-dark-action-color</code></li>
+      <li><code>$list-group-dark-action-hover-color</code></li>
+      <li><code>$list-group-dark-bg</code></li>
+      <li><code>$list-group-dark-border-color</code></li>
+      <li><code>$list-group-dark-color</code></li>
+      <li><code>$list-group-dark-disabled-bg</code></li>
+      <li><code>$list-group-dark-disabled-color</code></li>
+      <li><code>$list-group-dark-hover-bg</code></li>
+      <li><code>$local-nav-dark-active-bg</code></li>
+      <li><code>$local-nav-dark-active-color</code></li>
+      <li><code>$local-nav-dark-bg</code></li>
+      <li><code>$local-nav-dark-border-color</code></li>
+      <li><code>$local-nav-dark-color</code></li>
+      <li><code>$local-nav-dark-hover-bg</code></li>
+      <li><code>$local-nav-dark-hover-color</code></li>
+      <li><code>$mark-bg-inverted</code></li>
+      <li><code>$mark-color-inverted</code></li>
+      <li><code>$navbar-dark-active-color</code></li>
+      <li><code>$navbar-dark-border-color</code></li>
+      <li><code>$navbar-dark-brand-color</code></li>
+      <li><code>$navbar-dark-brand-hover-color</code></li>
+      <li><code>$navbar-dark-color</code></li>
+      <li><code>$navbar-dark-disabled-color</code></li>
+      <li><code>$navbar-dark-hover-color</code></li>
+      <li><code>$navbar-dark-toggler-border-color</code></li>
+      <li><code>$orange-filter</code></li>
+      <li><code>$pagination-dark-active-bg</code></li>
+      <li><code>$pagination-dark-active-border-color</code></li>
+      <li><code>$pagination-dark-active-color</code></li>
+      <li><code>$pagination-dark-active-item-bg</code></li>
+      <li><code>$pagination-dark-active-item-border-color</code></li>
+      <li><code>$pagination-dark-active-item-color</code></li>
+      <li><code>$pagination-dark-bg</code></li>
+      <li><code>$pagination-dark-border-color</code></li>
+      <li><code>$pagination-dark-color</code></li>
+      <li><code>$pagination-dark-disabled-bg</code></li>
+      <li><code>$pagination-dark-disabled-border-color</code></li>
+      <li><code>$pagination-dark-disabled-color</code></li>
+      <li><code>$pagination-dark-focus-bg</code></li>
+      <li><code>$pagination-dark-focus-color</code></li>
+      <li><code>$pagination-dark-hover-bg</code></li>
+      <li><code>$pagination-dark-hover-border-color</code></li>
+      <li><code>$pagination-dark-hover-color</code></li>
+      <li><code>$pagination-focus-bg</code></li>
+      <li><code>$pagination-focus-box-shadow</code></li>
+      <li><code>$pagination-focus-color</code></li>
+      <li><code>$pagination-focus-outline</code></li>
+      <li><code>$pre-color-inverted</code></li>
+      <li><code>$step-item-dark-active-bg</code></li>
+      <li><code>$step-item-dark-bg</code></li>
+      <li><code>$step-item-dark-drop-shadow</code></li>
+      <li><code>$step-item-dark-next-bg</code></li>
+      <li><code>$step-link-dark-active-color</code></li>
+      <li><code>$step-link-dark-color</code></li>
+      <li><code>$step-link-dark-next-color</code></li>
+      <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$table-striped-hover-bg</code></li>
+      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-hover-color</code></li>
+      <li><code>$tag-active-color-dark</code></li>
+      <li><code>$tag-active-decoration-color-dark</code></li>
+      <li><code>$tag-border-color-dark</code></li>
+      <li><code>$tag-disabled-color-dark</code></li>
+      <li><code>$title-bar-border-color-dark</code></li>
     </ul>
   </details>
+
+### Docs
+
+- <span class="badge text-bg-danger">Removed</span> Customize > Color page has been removed.
+
+- <span class="badge text-bg-success">New</span> [Customize > Color palette]({{< docsref "/customize/color-palette" >}}) page has been added.
+
+- <span class="badge text-bg-success">New</span> [Customize > Color theme]({{< docsref "/customize/color-theme" >}}) page has been added.
+
+- <span class="badge text-bg-warning">Warning</span> If you were using our `#check2` icon, please note that its content has been changed.
 
 ## v5.3.2
 
@@ -81,6 +544,11 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 Boosted v5.3.2 has landed also including specific Boosted content as usual.
 
 If you need more details about the changes, please refer to the [v5.3.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.2).
+
+### Color modes!
+
+- **New colors available.** We introduced the following variables based on brand introduction.
+  - `$gray-950`: `#141414`, a darker gray. Use as body background (dark): `.bg-body`.
 
 ### Components
 
@@ -220,6 +688,10 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
 
+{{< callout danger >}}
+Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. However, the dark mode was not yet available in the Orange Design System specifications at this time. **Please use at least Boosted v5.3.3 to have the dark mode available.**
+{{< /callout >}}
+
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
 - **New extended color system.** We've added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
@@ -260,7 +732,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
-  - <span class="badge text-bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge text-bg-warning">Deprecated</span> The `alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of alerts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Buttons**
@@ -286,7 +758,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **List group**
   - List group item variants are now styled via CSS variables.
 
-  - <span class="badge text-bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge text-bg-warning">Deprecated</span> The `list-group-item-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Modal**
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of modals. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
@@ -1325,7 +1797,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     </ul>
   </details>
 
-- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule]({{< docsref "/customize/css-variables#dark-text-rule" >}}).
+- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables#dark-text-rule).
 
 ## v5.2.0
 
