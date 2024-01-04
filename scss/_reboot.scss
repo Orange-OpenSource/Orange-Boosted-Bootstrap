@@ -69,7 +69,7 @@ body {
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  color: var(--#{$prefix}body-color);
+  // Boosted mod: no color
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
@@ -88,21 +88,23 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 //    See https://github.com/WICG/focus-visible
-//    Note: this rule is not applied for our focus ring helper which
+//    Note 1: this rule is not applied for our focus ring helper which
 //    handles itself outline and box shadow
+//    Note 2: this rule is also not applied for invalid select and invalid input files to ensure
+//    sufficient contrast between select elements on error focused vs. non focused
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
   @include focus-visible(); // 1
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring),
-.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring) { // 2
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible):not(.focus-ring) { // 3
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
   outline: 0 !important;
   box-shadow: none;
 }
@@ -155,7 +157,8 @@ h1 {
   letter-spacing: $h4-spacing;
 }
 
-h2 {
+h2,
+h3 {
   @extend %heading;
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
@@ -164,7 +167,6 @@ h2 {
   letter-spacing: $h5-spacing;
 }
 
-h3,
 h4,
 h5,
 h6 {
@@ -236,7 +238,7 @@ ul {
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
 li::marker {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--#{$prefix}primary);
   vertical-align: middle;
 
   ol & {
@@ -244,15 +246,15 @@ li::marker {
   }
 }
 
-li li::marker { color: $gray-600; }
+li li::marker { color: var(--#{$prefix}secondary-color); }
 
-li li li::marker { color: $gray-500; }
+li li li::marker { color: var(--#{$prefix}tertiary-color); }
 
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--#{$prefix}primary);
   vertical-align: text-top;
 
   ol & {
@@ -260,9 +262,9 @@ li::before {
   }
 }
 
-li li::before { color: $gray-600; }
+li li::before { color: var(--#{$prefix}secondary-color); }
 
-li li li::before { color: $gray-500; }
+li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
 // End mod
 
@@ -313,7 +315,7 @@ small {
 
 mark {
   padding: $mark-padding;
-  color: var(--#{$prefix}highlight-color); // Boosted mod
+  color: var(--#{$prefix}highlight-color);
   background-color: var(--#{$prefix}highlight-bg);
 }
 
@@ -650,15 +652,15 @@ legend {
   height: auto;
 }
 
-// 1. Correct the outline style in Safari.
-// 2. This overrides the extra rounded corners on search inputs in iOS so that our
+// 1. This overrides the extra rounded corners on search inputs in iOS so that our
 //    `.form-control` class can properly style them. Note that this cannot simply
 //    be added to `.form-control` as it's not specific enough. For details, see
 //    https://github.com/twbs/bootstrap/issues/11586.
+// 2. Correct the outline style in Safari.
 
 [type="search"] {
-  outline-offset: -#{$focus-visible-outer-offset}; // 1 // Boosted mod
-  -webkit-appearance: textfield; // 2
+  -webkit-appearance: textfield; // 1
+  outline-offset: -#{$focus-visible-outer-offset}; // 2 // Boosted mod
 }
 
 // 1. A few input types should stay LTR

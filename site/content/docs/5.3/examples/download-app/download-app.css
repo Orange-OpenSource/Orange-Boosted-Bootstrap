@@ -1,0 +1,253 @@
+.border-subtle {
+  --bs-border-color: var(--bs-border-color-subtle);
+}
+
+.custom-vr {
+  height: 75px;
+  background-color: var(--bs-border-color-subtle);
+}
+
+@media (max-width: 479.98px) {
+  .h3 {
+    font-size: 1.125rem;
+    line-height: 1.111111;
+    letter-spacing: -.0125rem;
+  }
+}
+
+.icons-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icons-md {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.icons-lg {
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+@media (min-width: 768px) {
+  .icons-sm {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .icons-md {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .icons-lg {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+.out-of-grid {
+  position: static;
+}
+
+.out-of-grid img {
+  width: 100%;
+  min-width: 100%;
+  min-height: 165px;
+}
+
+@media (min-width: 1024px) {
+  .out-of-grid {
+    position: absolute;
+  }
+
+  .out-of-grid img {
+    width: auto;
+  }
+}
+
+[data-bs-theme="light"] .dark-show {
+  display: none;
+}
+
+[data-bs-theme="dark"] .dark-show + * {
+  display: none;
+}
+
+iframe {
+  min-height: 10.625rem;
+}
+
+.carousel-inner.showcase-images {
+  min-height: calc(216vw - 208px);
+}
+
+.showcase-images img {
+  border-radius: 12% / 5%;
+  box-shadow: 10px 15px 50px -5px rgba(var(--bs-secondary-rgb), .2);
+  transition: transform .3s ease-in-out;
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .showcase-images.active > :hover img {
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .showcase-images.active > :hover img {
+    transform: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .showcase-images > .col {
+    transform: translateY(-50px);
+  }
+
+  .showcase-images.active > .col {
+    animation: enter .75s 4 alternate, enter-smooth 1.25s 1 forwards ease-in-out;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .showcase-images > .col {
+    transform: none;
+  }
+
+  .showcase-images.active > .col {
+    animation: none;
+  }
+}
+
+@keyframes enter {
+  0% {
+    transform: translateY(-50px);
+    animation-timing-function: cubic-bezier(.5, 0, 1, .5);
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, .5, .5, 1);
+  }
+}
+
+@keyframes enter-smooth {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.showcase-images.active > :nth-child(1) {
+  animation-delay: 0ms, 3000ms;
+}
+
+.showcase-images.active > :nth-child(2) {
+  animation-delay: 100ms, 3100ms;
+}
+
+.showcase-images.active > :nth-child(3) {
+  animation-delay: 200ms, 3200ms;
+}
+
+.showcase-images.active > :nth-child(4) {
+  animation-delay: 300ms, 3300ms;
+}
+
+.showcase-images.active > :nth-child(5) {
+  animation-delay: 400ms, 3400ms;
+}
+
+.showcase-images.active > :nth-child(6) {
+  animation-delay: 500ms, 3500ms;
+}
+
+.ticks-list > li {
+  opacity: 0;
+}
+
+.ticks-list.active > li {
+  animation: enter-start-smooth .75s 1 forwards ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+  .ticks-list > li {
+    opacity: 1;
+  }
+
+  .ticks-list.active > li {
+    animation: none;
+  }
+}
+
+@keyframes enter-start-smooth {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ticks-list.active > :nth-child(2) {
+  animation-delay: 250ms;
+}
+
+.ticks-list.active > :nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.ticks-list.active > :nth-child(4) {
+  animation-delay: 750ms;
+}
+
+.ticks-list.active > :nth-child(5) {
+  animation-delay: 1000ms;
+}
+
+.ticks-list.active > :nth-child(6) {
+  animation-delay: 1250ms;
+}
+
+.mobile-steps > * {
+  opacity: 0;
+}
+
+.mobile-steps.active > * {
+  animation: enter-bottom-smooth .75s 1 forwards ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+  .mobile-steps > * {
+    opacity: 1;
+  }
+
+  .mobile-steps.active > * {
+    animation: none;
+  }
+}
+
+@keyframes enter-bottom-smooth {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-steps.active > :nth-child(2) {
+  animation-delay: .75s;
+}
+
+.mobile-steps.active > :nth-child(3) {
+  animation-delay: 2s;
+}

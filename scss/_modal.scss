@@ -50,6 +50,7 @@
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
   // See also https://github.com/twbs/bootstrap/issues/17695
+  background-color: transparent; // Boosted mod
 }
 
 // Shell div to position the modal with bottom padding
@@ -159,7 +160,6 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: var(--#{$prefix}modal-header-padding);
   border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // Boosted mod
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));

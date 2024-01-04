@@ -11,48 +11,42 @@
 
   // Boosted mod: no .navbar-brand
 
-  // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
-  .nav-link {
-    &:hover {
-      color: var(--bs-link-hover-color);
-    }
-
-    &.active {
-      color: var(--bs-link-hover-color);
-    }
-  }
-  // End mod
-
   // Boosted mod: no .navbar-nav-svg
 
   // Boosted mod: no .offcanvas-lg
 
   // Boosted mod: no .dropdown-toggle
 
-  // Boosted mod
-  .dropdown-menu {
-    --bs-dropdown-min-width: 12rem;
-    @include rfs($font-size-sm, --bs-dropdown-font-size);
-    --bs-dropdown-line-height: #{$line-height-sm};
-    --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+  // Boosted mod: no .dropdown-menu
 
-    .active .bi {
-      display: block !important; // stylelint-disable-line declaration-no-important
-    }
-  }
-  // End mod
-
-  .dropdown-menu-end {
-    --bs-dropdown-min-width: 8rem;
-  }
+  // Boosted mod: no .dropdown-menu-end
 
   // Boosted mod: Specificity
   .navbar-nav.flex-row {
     @include media-breakpoint-down(lg) {
-      border-top: 1px solid #666;
+      border-top: 1px solid $gray-700;
+    }
+
+    .dropdown-toggle {
+      line-height: 1.5625rem;
+
+      @include media-breakpoint-up(md) {
+        line-height: 1.875rem;
+      }
     }
   }
   // End mod
 }
 
-// Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode
+// Boosted mod
+.bd-header {
+  max-height: 100vh;
+  overflow: hidden auto;
+
+  @include media-breakpoint-up(lg) {
+    overflow: visible;
+  }
+}
+// End mod
+
+// Boosted mod: no `@include color-mode(dark)`

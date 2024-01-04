@@ -57,14 +57,6 @@ Have a look at our table documentation for some [insight into how we're using CS
 
 Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
 
-### Dark text rule
-
-Using CSS variables allows a better flexibility on certain rules. This way we adapt our text variant color to our dark variants components instead of rewriting rules for each component. This process implies to override some existing CSS variables and to re-initialize those in some cases.
-
-Here is our proposal to handle the different text variants over the website:
-
-{{< scss-docs name="root-dark-rule" file="scss/_root.scss" >}}
-
 ## Prefix
 
 Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that's required on every CSS variable.
@@ -78,15 +70,15 @@ Boosted uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#
 
 ```css
 :root {
-  --o-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
+  --bs-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
 }
 
 .back-to-top-link::after {
-  background-image: var(--o-chevron-icon);
+  background-image: var(--bs-chevron-icon);
 }
 
 .pagination-item:first-child .page-link::before {
-  background-image: var(--o-chevron-icon);
+  background-image: var(--bs-chevron-icon);
 }
 ```
 <!-- End mod -->

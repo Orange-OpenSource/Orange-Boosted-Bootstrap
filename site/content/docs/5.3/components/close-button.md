@@ -12,42 +12,55 @@ toc: true
 
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
-{{< example >}}
-<button type="button" class="btn-close"><span class="visually-hidden">Close</span></button>
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Disabled state
 
 Disabled close buttons change their `color`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
 
-{{< example >}}
-<button type="button" class="btn-close" disabled><span class="visually-hidden">Close</span></button>
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn-close" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Dark variant
 
-Add `.btn-close-white` to the `.btn-close` for a dark variant.
+{{< deprecated-in "5.3.3" >}}
 
-{{< example class="bg-dark" >}}
-<button type="button" class="btn-close btn-close-white"><span class="visually-hidden">Close</span></button>
-<button type="button" class="btn-close btn-close-white" disabled><span class="visually-hidden">Close</span></button>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "btn-close" >}}
 
-## Without specific class
+## Eco-design variant
 
-Close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle.
+{{< callout info >}}
+For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file if you are an advanced Boosted user using **custom Sass imports**.
 
-{{< example >}}
-<button type="button" class="btn btn-icon btn-no-outline">
+If you choose this option, please be aware that if the design of close buttons change in the future, this section might disappear and you would have to use `.btn-close` to your close buttons or change the combinations of classes.
+{{< /callout >}}
+
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 
-<button type="button" class="btn btn-icon btn-no-outline" disabled>
+<button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 {{< /example >}}
+
+{{% enable-btn-close-tooltip 2 %}}
 
 ## CSS
 
@@ -59,16 +72,6 @@ As part of Boosted’s evolving CSS variables approach, close button now use loc
 
 {{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 
-Customization through CSS variables can be seen on the `.btn-close-white` modifier class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="btn-close-white-css-vars" file="scss/_close.scss" >}}
-
 ### Sass variables
 
-Variables for all close buttons:
-
 {{< scss-docs name="close-variables" file="scss/_variables.scss" >}}
-
-Variables for the [dark close button](#dark-variant):
-
-{{< scss-docs name="close-white-variables" file="scss/_variables.scss" >}}

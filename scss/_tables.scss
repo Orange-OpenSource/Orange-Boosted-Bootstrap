@@ -15,8 +15,6 @@
   --#{$prefix}table-accent-bg: #{$table-accent-bg};
   --#{$prefix}table-striped-color: #{$table-striped-color};
   --#{$prefix}table-striped-bg: #{$table-striped-bg};
-  --#{$prefix}table-striped-hover-color: #{$table-striped-hover-color}; // Boosted mod
-  --#{$prefix}table-striped-hover-bg: #{$table-striped-hover-bg}; // Boosted mod
   --#{$prefix}table-active-color: #{$table-active-color};
   --#{$prefix}table-active-bg: #{$table-active-bg};
   --#{$prefix}table-hover-color: #{$table-hover-color};
@@ -146,13 +144,6 @@
     --#{$prefix}table-color-state: var(--#{$prefix}table-hover-color);
     --#{$prefix}table-bg-state: var(--#{$prefix}table-hover-bg);
   }
-
-  // Boosted mod
-  &.table-striped > tbody > tr:hover > * {
-    --#{$prefix}table-color-state: var(--#{$prefix}table-striped-hover-color);
-    --#{$prefix}table-bg-state: var(--#{$prefix}table-striped-hover-bg);
-  }
-  // End mod
 }
 
 // Table variants set the table cell backgrounds, border colors

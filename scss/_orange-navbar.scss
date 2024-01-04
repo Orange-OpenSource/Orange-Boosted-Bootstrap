@@ -23,9 +23,14 @@
       padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
     }
   }
+
+  &.navbar-nav .nav-link {
+    margin-right: 0;
+  }
 }
 
-.header-minimized {
+.header-minimized :first-child:not(.supra),
+.header-minimized .supra + .navbar {
   // scss-docs-start minimized-navbar-css-vars
   @include media-breakpoint-up(md){
     --#{$prefix}navbar-padding-y: 0px;

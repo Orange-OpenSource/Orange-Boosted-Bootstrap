@@ -47,15 +47,6 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
-
-{{< example class="bg-dark" >}}
-<div class="spinner-border text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{< /example >}}
 <!-- End mod -->
 
 {{< callout info >}}
@@ -74,19 +65,10 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 </div>
 {{< /example >}}
 
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in orange, along with a secondary supported variant.
+Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color].
 
 <!-- Boosted mod -->
 {{< example >}}
-<div class="spinner-grow text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow text-secondary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
 <div class="spinner-grow text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
@@ -126,8 +108,8 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <strong>Loading...</strong>
-  <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  <strong role="status">Loading...</strong>
+  <div class="spinner-border ms-auto" aria-hidden="true"></div>
 </div>
 {{< /example >}}
 
@@ -178,23 +160,23 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-  Loading...
+  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
+  <span role="status">Loading...</span>
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
-  Loading...
+  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>
+  <span role="status">Loading...</span>
 </button>
 {{< /example >}}
 

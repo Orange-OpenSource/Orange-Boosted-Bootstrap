@@ -1,5 +1,14 @@
-<header class="sticky-top">
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Main navigation">
+<header class="sticky-top bd-header">
+  <nav class="navbar navbar-expand supra d-none" data-bs-theme="dark" aria-label="Supra-navigation - New release banner">
+    <div class="container-xxl d-flex justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://boosted.orange.com">There's a newer version of Boosted!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="/">
@@ -27,49 +36,49 @@
           <li class="nav-item">
             <a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ .Site.Params.icons }}" target="_blank" rel="noopener" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'icons'});">Solaris icons</a>
+          </li>
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-0">
-        <ul class="navbar-nav flex-row">
+        <ul class="navbar-nav flex-row me-lg-3">
           <li class="nav-item">
             <a class="nav-link nav-icon" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" }}
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          {{ if eq .Layout "docs" }}
-          <li class="nav-item d-flex align-items-md-center mb-0 me-2">
-            <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
+          <li class="nav-item">
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
           </li>
-          {{ end }}
 
           {{ partial "docs-versions" . }}
         </ul>
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item dropdown d-flex">
-            <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
-              <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-              <span class="d-lg-none ms-2" aria-hidden="true" id="bd-theme-text">Toggle theme</span>
-              <span class="visually-hidden">Toggle theme</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute" aria-labelledby="bd-theme-text">
+        <ul class="navbar-nav flex-row ms-lg-3">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon"><use href="#sun-fill"></use></svg>
+                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 theme-icon"><use href="#circle-half"></use></svg>
+                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
