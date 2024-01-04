@@ -26,7 +26,7 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
 const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]'
 const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]'
-const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector'
+const SELECTOR_QUANTITY_SELECTOR = '.quantity-selector'
 
 /**
  * Class definition

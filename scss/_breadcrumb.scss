@@ -41,6 +41,7 @@
       /* rtl:raw:
       transform: scaleX(-1);
       */
+      filter: var(--#{$prefix}breadcrumb-divider-filter);
       // End mod
     }
   }
@@ -87,18 +88,3 @@
     color: var(--#{$prefix}breadcrumb-item-active-color);
   }
 }
-
-// Boosted mod
-.breadcrumb-dark {
-  // scss-docs-start breadcrumb-dark-css-vars
-  --#{$prefix}breadcrumb-color: #{$breadcrumb-dark-color}; // Boosted mod
-  --#{$prefix}breadcrumb-bg: #{$breadcrumb-dark-bg}; // Boosted mod
-  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-dark-divider-color}; // Boosted mod
-  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-dark-active-color}; // Boosted mod
-  // scss-docs-end breadcrumb-dark-css-vars
-
-  .breadcrumb-item::before {
-    filter: $invert-filter;
-  }
-}
-// End mod

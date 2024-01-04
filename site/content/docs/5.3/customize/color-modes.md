@@ -3,6 +3,8 @@ layout: docs
 title: Color modes
 description: Boosted now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
+aliases:
+  - "/docs/customize/color-modes/"
 toc: true
 added: "5.3"
 ---
@@ -13,17 +15,48 @@ added: "5.3"
 
 ## Dark mode
 
-**Boosted now supports color modes, starting with dark mode!** With v5.3.0 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**Boosted now supports color modes, starting with dark mode!** With v5.3.3 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+
+This `data-bs-theme` attribute will automatically apply the corresponding `color` and `background-color` properties of the targeted element.
+
+{{< example class="d-flex flex-column gap-4" >}}
+<div class="p-1">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="p-1" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="p-2" data-bs-theme="dark">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+<div class="bg-supporting-blue p-2" data-bs-theme="light">
+  <h1>Title</h1>
+  <p class="lead mb-0">This is a lead paragraph.</p>
+</div>
+{{< /example >}}
+
+{{< callout warning >}}
+Applying a color mode directly on a component or element (especially with some basic HTML elements, form controls, etc.), some unexpected rendering may occur. It is mostly related to the automatic change of `color` and `background-color` properties linked to the color mode.
+
+Most of the time, the workaround will be to add a `data-bs-theme` attribute on the parent element of the component or element you want to apply a color mode to.
+{{< /callout >}}
 
 Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.
 
+### Contextual dark mode vs. dark variants
+
+Before v5.3.3, Boosted had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
+
 ## Example
 
-For example, to change the color mode of a dropdown menu, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
+For example, to change the color mode of a dropdown, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
 
 {{< example class="d-flex justify-content-between" >}}
 <div class="dropdown" data-bs-theme="light">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
     Default dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
@@ -37,7 +70,7 @@ For example, to change the color mode of a dropdown menu, add `data-bs-theme="li
 </div>
 
 <div class="dropdown" data-bs-theme="dark">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
     Dark dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
@@ -93,6 +126,12 @@ Boosted does not yet ship with a built-in color mode picker, but you can use the
 ### Building with Sass
 
 Our new dark mode option is available to use for all users of Boosted, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
+
+{{< callout warning >}}
+Please be aware that some of Boosted's components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Footer]({{< docsref "/components/footer" >}}).
+
+If you need to use them, you won't be able to disable the dark mode globally.
+{{< /callout >}}
 
 We use a custom Sass mixin, `color-mode()`, to help you control _how_ color modes are applied. By default, we use a `data` attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.
 
@@ -150,14 +189,14 @@ For example, you can create a "blue theme" with the selector `data-bs-theme="blu
 
 {{< scss-docs name="custom-color-mode" file="site/assets/scss/_content.scss" >}}
 
-<div class="bd-example text-body bg-body" data-bs-theme="blue">
+<div class="bd-example" data-bs-theme="blue">
   <div class="h4">Example blue theme</div>
   <p>Some paragraph text to show how the blue theme might look with written copy.</p>
 
   <hr class="my-4">
 
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustom">
@@ -180,6 +219,10 @@ For example, you can create a "blue theme" with the selector `data-bs-theme="blu
 ## JavaScript
 
 To allow visitors or users to toggle color modes, you'll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We've built a toggler in our documentation that initially defers to a user's current system color mode, but provides an option to override that and pick a specific color mode.
+
+{{< callout info >}}
+Check out our [Orange navbar mode selector variant]({{< docsref "/components/orange-navbar#with-mode-selector" >}}) to add a color mode selector to your navbar.
+{{< /callout >}}
 
 Here's a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it's implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
 
@@ -206,6 +249,12 @@ $custom-colors: (
   "custom-color": #712cf9
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Add a custom color to $theme-colors
+$custom-colors-dark: (
+  "custom-color": #e1d2f2
+);
+$theme-colors-dark: map-merge($theme-colors-dark, $custom-colors-dark);
 
 @import "maps";
 @import "mixins";

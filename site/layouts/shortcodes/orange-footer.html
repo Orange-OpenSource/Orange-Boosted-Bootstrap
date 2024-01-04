@@ -22,7 +22,7 @@
 {{- $id := .Get "id" -}}
 {{- $input := .Inner -}}
 
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer navbar" data-bs-theme="dark">
   <h2 class="visually-hidden">Sitemap & information</h2>
 {{- if $title_content }}
   <div class="container-xxl footer-title-content">
@@ -30,8 +30,8 @@
     <div class="row">
       <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
         <label for="inputEmail{{ $id }}" class="visually-hidden">Email</label>
-        <input type="email" class="form-control text-bg-dark border-dark" id="inputEmail{{ $id }}" placeholder="Enter your email">
-        <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
+        <input type="email" class="form-control" id="inputEmail{{ $id }}" placeholder="Enter your email">
+        <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
       </form>
     </div>
   </div>
@@ -43,17 +43,17 @@
   <div class="container-xxl footer-social">
     <h3 class="footer-heading me-md-3">Follow us</h3>
     <ul class="navbar-nav gap-2 flex-row align-self-start">
-      <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
       {{- if $extra_social }}
-        <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
-        <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span class="visually-hidden">Pinterest</span></a></li>
-        <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li>
-        <li><a href="#" class="btn btn-icon btn-social btn-tiktok btn-inverse"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
       {{- end }}
     </ul>
   </div>
@@ -63,7 +63,7 @@
 {{- end }}
 {{- if $nav }}
   <div class="container-xxl footer-nav">
-    <nav class="accordion accordion-dark" id="accordion{{ $id }}" aria-label="Sitemap footer {{ $id }}">
+    <nav class="accordion" id="accordion{{ $id }}" aria-label="Sitemap footer {{ $id }}">
       <div class="row">
         <div class="footer-column col-md-3">
           <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
