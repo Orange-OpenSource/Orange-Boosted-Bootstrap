@@ -33,8 +33,21 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 
 ## Variants
 
-<!-- Boosted mod: only .table-dark is allowed -->
-Use contextual class to color tables, table rows or individual cells.
+{{< callout warning >}}
+Boosted doesn't provide any colored variant.
+
+Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.table` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
+
+<details>
+<summary>See Bootstrap's colored variants</summary>
+<br>
+
+Use contextual classes to color tables, table rows or individual cells.
+
+{{< callout info >}}
+**Heads up!** Because of the more complicated CSS used to generate our table variants, they most likely won't see color mode adaptive styling until v6.
+{{< /callout >}}
 
 <div class="bd-example">
   <table class="table">
@@ -52,33 +65,51 @@ Use contextual class to color tables, table rows or individual cells.
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-    <tr class="table-dark">
-      <th scope="row">Dark</th>
-      <td>Cell</td>
-      <td>Cell</td>
-    </tr>
+      {{< table.inline >}}
+      {{- range (index $.Site.Data "theme-colors") }}
+        <tr class="table-{{ .name }}">
+          <th scope="row">{{ .name | title }}</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      {{- end -}}
+      {{< /table.inline >}}
     </tbody>
   </table>
 </div>
 
 {{< highlight html >}}
-<!-- On tables -->
-<table class="table-dark">...</table>
+<!-- On tables -->{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<table class="table-{{ .name }}">...</table>
+{{- end -}}
+{{< /table.inline >}}
 
-<!-- On rows -->
-<tr class="table-dark">...</tr>
+<!-- On rows -->{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<tr class="table-{{ .name }}">...</tr>
+{{- end -}}
+{{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
-<tr>
-  <td class="table-dark">...</td>
+<tr>{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+  <td class="table-{{ .name }}">...</td>
+{{- end -}}
+{{< /table.inline >}}
 </tr>
 {{< /highlight >}}
 
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 ## Accented tables
+
+{{< design-callout-alert info >}}
+It is possible to use striped rows **or** striped columns in your tables, but you **can't use both in a same table**.
+{{< /design-callout-alert >}}
 
 ### Striped rows
 
@@ -92,13 +123,17 @@ Use .table-striped-columns to add zebra-striping to any table column.
 
 {{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
-These classes can also be added to table variants:
-
+<details>
+<summary>These classes can also be added to Bootstrap's table colored variants.</summary>
+<br>
 {{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
 
 {{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
 
-<!-- Boosted mod : no .table-success -->
+{{< table class="table table-success table-striped" caption="Boosted success striped rows table" >}}
+
+{{< table class="table table-success table-striped-columns" caption="Boosted success striped columns table" >}}
+</details>
 
 ### Hoverable rows
 
@@ -106,13 +141,20 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
 {{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
+<details>
+<summary class="mb-3">See it applied on another Bootstrap's variant</summary>
 {{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
+</details>
 
 These hoverable rows can also be combined with the striped rows variant:
 
 {{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 {{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
+</details>
 
 ### Active tables
 
@@ -173,6 +215,9 @@ Highlight a table row or cell by adding a `.table-active` class.
 </table>
 ```
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 <div class="bd-example">
   <table class="table table-dark">
     <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
@@ -227,6 +272,7 @@ Highlight a table row or cell by adding a `.table-active` class.
   </tbody>
 </table>
 ```
+</details>
 
 ## How do the variants and accented tables work?
 
@@ -254,7 +300,11 @@ To display basic tables, Orange Design System recommends using these compact tab
 
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 {{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
+</details>
 
 ## Table group dividers
 
@@ -361,6 +411,10 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 ```
 
 ## Nesting
+
+{{< design-callout-alert >}}
+This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
+{{< /design-callout-alert >}}
 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
@@ -873,7 +927,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 ### With icons or thumbnails
 
-Use SVG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
+Use SVG or PNG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -906,10 +960,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-              <title id="svg1">Thumbnail</title>
-              <rect width="100%" height="100%" fill="#ffd200"></rect>
-            </svg>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
             Cell text
           </td>
           <td>Cell text</td>
@@ -926,8 +977,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-              <title id="svg2">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
+              <title id="svg1">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -946,10 +997,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
-              <title id="svg3">Thumbnail</title>
-              <rect width="100%" height="100%" fill="#4bb4e6"></rect>
-            </svg>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
             Cell text
           </td>
           <td>Cell text</td>
@@ -966,8 +1014,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
-              <title id="svg4">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg2" class="me-2">
+              <title id="svg2">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -986,8 +1034,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
-              <title id="svg5">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3" class="me-2">
+              <title id="svg3">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1006,8 +1054,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
-              <title id="svg6">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg4" class="me-2">
+              <title id="svg4">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1026,8 +1074,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
-              <title id="svg7">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg5" class="me-2">
+              <title id="svg5">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1046,8 +1094,8 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
-              <title id="svg8">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg6" class="me-2">
+              <title id="svg6">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1066,16 +1114,13 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
   <table class="table table-sm table-hover align-middle has-checkbox">
     ...
     <td>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-        <title id="svg1">Thumbnail</title>
-        <rect width="100%" height="100%" fill="#ffd200"></rect>
-      </svg>
+      <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
       Cell text
     </td>
     ...
     <td>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-        <title id="svg2">Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
+        <title id="svg1">Document</title>
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
       </svg>
       Cell text
@@ -1085,7 +1130,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
 </div>
 ```
 
-Use SVG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
+Use SVG or PNG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
   <div class="table-responsive">

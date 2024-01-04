@@ -1,5 +1,17 @@
+// Boosted mod
+:root,
+[data-bs-theme] {
+  color: var(--#{$prefix}body-color);
+  background-color: var(--#{$prefix}body-bg);
+}
+
+// Note that some of the following variables in `:root, [data-bs-theme="light"]` could be extracted into `:root` only selector since they are not modified by other color modes!
+// End mod
+
 :root,
 [data-bs-theme="light"] {
+  color-scheme: light; // Boosted mod
+
   // Note: Custom variable values only support SassScript inside `#{}`.
 
   // Colors
@@ -34,13 +46,12 @@
     --#{$prefix}#{$color}-border-subtle: #{$value};
   }
 
-  --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)}; // Boosted mod
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
 
   // Boosted mod
   @each $icon, $svg in $svg-as-custom-props {
-    --#{$boosted-prefix}#{$icon}-icon: #{escape-svg($svg)};
+    --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
   }
   // End mod
 
@@ -98,13 +109,16 @@
   }
 
   --#{$prefix}code-color: #{$code-color};
-  --#{$prefix}highlight-color: #{$mark-color}; // Boosted mod
+  --#{$prefix}highlight-color: #{$mark-color};
   --#{$prefix}highlight-bg: #{$mark-bg};
+  --#{$prefix}disabled-color: #{$disabled-color}; // Boosted mod
+  --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg}; // Boosted mod
 
   // scss-docs-start root-border-var
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
+  --#{$prefix}border-color-subtle: #{$border-color-subtle}; // Boosted mod
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
 
   --#{$prefix}border-radius: #{$border-radius};
@@ -137,48 +151,24 @@
   --#{$prefix}form-invalid-color: #{$form-invalid-color};
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
-}
 
-// scss-docs-start root-dark-rule
-// Boosted mod
-[class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
-[class*="bg-secondary"] {
-  --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
-  --#{$prefix}link-color: #{$link-color-inverted};
-  --#{$prefix}link-hover-color: #{$link-hover-color-inverted};
-  --#{$prefix}link-color-rgb: #{to-rgb($link-color-inverted)};
-  --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
-  --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
-  --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
-  --#{$boosted-prefix}caption-color: #{$table-caption-color-inverted};
-  --#{$prefix}code-color: #{$code-color-inverted};
-  --#{$prefix}highlight-color: #{$mark-color-inverted};
-  --#{$prefix}highlight-bg: #{$mark-bg-inverted};
-  --#{$boosted-prefix}kbd-color: #{$kbd-color-inverted};
-  --#{$boosted-prefix}kbd-bg: #{$kbd-bg-inverted};
-  --#{$boosted-prefix}pre-color: #{$pre-color-inverted};
+  --#{$prefix}form-check-filter: #{$form-check-filter}; // Boosted mod
+  --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color}; // Boosted mod
+  --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter}; // Boosted mod
+  --#{$prefix}form-select-indicator: #{$form-select-indicator}; // Boosted mod
+  --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // Boosted mod
+  --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg}; // Boosted mod
 
-  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-  [class*="bg-"]:not(&):not(.bg-transparent) {
-    --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
-    --#{$prefix}link-color: #{$link-color};
-    --#{$prefix}link-hover-color: #{$link-hover-color};
-    --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
-    --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
-    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
-    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
-    --#{$boosted-prefix}caption-color: #{$table-caption-color};
-    --#{$prefix}code-color: #{$code-color};
-    --#{$prefix}highlight-color: #{$mark-color};
-    --#{$prefix}highlight-bg: #{$mark-bg};
-    --#{$boosted-prefix}kbd-color: #{$kbd-color};
-    --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
-    --#{$boosted-prefix}pre-color: #{$pre-color};
-  }
+  // Boosted mod
+  // Table-specific styles
+  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
+  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+  --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+
+  // Breadcrumb-specific styles
+  --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter};
+  // End mod
 }
-// End mod
-// scss-docs-end root-dark-rule
 
 @if $enable-dark-mode {
   @include color-mode(dark, true) {
@@ -203,6 +193,16 @@
     --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
     --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
 
+    // Boosted mod
+    @each $color, $value in $theme-colors-dark {
+      --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-rgb-dark {
+      --#{$prefix}#{$color}-rgb: #{$value};
+    }
+    // End mod
+
     @each $color, $value in $theme-colors-text-dark {
       --#{$prefix}#{$color}-text-emphasis: #{$value};
     }
@@ -215,6 +215,12 @@
       --#{$prefix}#{$color}-border-subtle: #{$value};
     }
 
+    // Boosted mod
+    @each $icon, $svg in $svg-as-custom-props-dark {
+      --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+    }
+    // End mod
+
     --#{$prefix}heading-color: #{$headings-color-dark};
 
     --#{$prefix}link-color: #{$link-color-dark};
@@ -223,14 +229,40 @@
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
 
     --#{$prefix}code-color: #{$code-color-dark};
+    --#{$prefix}highlight-color: #{$mark-color-dark};
+    --#{$prefix}highlight-bg: #{$mark-bg-dark};
+    --#{$prefix}disabled-color: #{$disabled-color-dark}; // Boosted mod
+    --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark}; // Boosted mod
 
     --#{$prefix}border-color: #{$border-color-dark};
+    --#{$prefix}border-color-subtle: #{$border-color-subtle-dark}; // Boosted mod
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+
+    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod
+    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // Boosted mod
+
+    --#{$prefix}focus-ring-color: #{$focus-ring-color-dark}; // Boosted mod
 
     --#{$prefix}form-valid-color: #{$form-valid-color-dark};
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+    --#{$prefix}form-check-filter: #{$form-check-filter-dark}; // Boosted mod
+    --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color-dark}; // Boosted mod
+    --#{$prefix}form-select-indicator: #{$form-select-indicator-dark}; // Boosted mod
+    --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // Boosted mod
+    --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
+    --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg-dark}; // Boosted mod
+
+    // Boosted mod
+    // Table-specific styles
+    --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
+    --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
+    --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
+
+    // Breadcrumb-specific styles
+    --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter-dark};
+    // End mod
     // scss-docs-end root-dark-mode-vars
   }
 }

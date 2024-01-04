@@ -2,6 +2,8 @@
 
 .tag {
   // scss-docs-start tag-css-vars
+  --#{$prefix}tag-color: #{$tag-color};
+  --#{$prefix}tag-bg: #{$tag-bg};
   --#{$prefix}tag-gap: #{$tag-gap};
   --#{$prefix}tag-padding-x: #{$tag-padding-x};
   --#{$prefix}tag-padding-y: #{$tag-padding-y};
@@ -28,8 +30,8 @@
   @include font-size(var(--#{$prefix}tag-font-size));
   font-weight: var(--#{$prefix}tag-font-weight);
   line-height: add(var(--#{$prefix}tag-font-size), .125rem);
-  color: inherit;
-  background-color: transparent;
+  color: var(--#{$prefix}tag-color);
+  background-color: var(--#{$prefix}tag-bg);
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
   @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
@@ -69,8 +71,7 @@
       min-height: subtract(var(--#{$prefix}tag-close-size), .625rem);
       content: "";
       background-color: currentcolor;
-      -webkit-mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem); // stylelint-disable-line property-no-vendor-prefix
-      mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
+      mask: escape-svg(var(--#{$prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
     }
 
     &:hover,
@@ -84,11 +85,19 @@
     }
   }
 
+  .btn-check:disabled + &,
+  .btn-check[disabled] + &,
   &[disabled],
   &.disabled {
     color: var(--#{$prefix}tag-disabled-color);
     pointer-events: none;
     border-color: var(--#{$prefix}tag-disabled-color);
+  }
+
+  .btn-check:checked + & {
+    color: var(--#{$prefix}tag-active-color);
+    background-color: var(--#{$prefix}tag-active-decoration-color);
+    border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 }
 
@@ -96,7 +105,7 @@
 a.tag,
 button.tag,
 label.tag {
-  color: inherit;
+  color: var(--#{$prefix}tag-color);
   text-decoration: none;
   cursor: pointer;
 
@@ -129,13 +138,4 @@ label.tag {
   --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
   // scss-docs-end tag-sm-css-vars
-}
-
-.tag-dark {
-  // scss-docs-start tag-dark-css-vars
-  --#{$prefix}tag-border-color: #{$tag-border-color-dark};
-  --#{$prefix}tag-active-color: #{$tag-active-color-dark};
-  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
-  --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
-  // scss-docs-end tag-dark-css-vars
 }

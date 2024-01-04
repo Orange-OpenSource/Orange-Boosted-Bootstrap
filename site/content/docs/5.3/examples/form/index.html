@@ -1,6 +1,7 @@
 ---
 layout: examples
 title: Form example
+theme_selector: false
 extra_js:
   - src: "form.js"
 aliases:
@@ -8,14 +9,14 @@ aliases:
   - "/docs/examples/form"
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol fill="currentColor" viewBox="0 0 1000 1000" id="user">
     <path fill-rule="evenodd" d="M656.7,422.409a229.959,229.959,0,0,1-315.39.008A224.95,224.95,0,0,0,224.064,615H224V825A100,100,0,0,0,324,925H774V620A224.944,224.944,0,0,0,656.7,422.409ZM679,255A180,180,0,1,1,499,75,180,180,0,0,1,679,255Z"></path>
   </symbol>
 </svg>
 
-<header class="sticky-top">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation">
+<header class="sticky-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation">
     <div class="container-xxl">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
@@ -23,7 +24,7 @@ aliases:
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation">
+  <nav class="navbar navbar-expand-lg" aria-label="Global navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
@@ -31,7 +32,7 @@ aliases:
         </a>
         <h1 class="title">Travel</h1>
       </div>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2 global-header-1.3" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
@@ -46,7 +47,7 @@ aliases:
           <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
         </ul>
       </div>
-      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1 me-lg-3">
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -66,11 +67,44 @@ aliases:
           </li>
         </ul>
       </div>
+      <div id="global-header-1.3" class="navbar-collapse d-lg-flex global-header-1 collapse ms-lg-3">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
-<main class="bd-content order-1">
-  <div class="bg-body title-bar">
+<main class="order-1">
+  <div class="title-bar">
     <div class="container-xxl d-block">
       <div class="row">
         <div class="col-sm-12 col-lg-5 offset-lg-3">
@@ -93,7 +127,7 @@ aliases:
               </p>
             </div>
             <div class="col-sm-4 col-md-6 mb-3">
-              <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title</label>
+              <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title<span class="visually-hidden"> (required)</span></label>
               <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback" autocomplete="sex" required>
                 <option selected disabled value="" aria-hidden="true">Select a title</option>
                 <option value="1">Miss</option>
@@ -111,7 +145,7 @@ aliases:
             </div>
             <div class="col-12">
               <div class="mb-3">
-                <label for="firstName" id="firstNameLabel" class="form-label is-required">First name</label>
+                <label for="firstName" id="firstNameLabel" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
                 <input type="text" class="form-control" id="firstName" aria-labelledby="firstNameLabel firstNameFeedback" autocomplete="given-name" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -121,7 +155,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="lastName" id="lastNameLabel" class="form-label is-required">Last name</label>
+                <label for="lastName" id="lastNameLabel" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
                 <input type="text" class="form-control" id="lastName" aria-labelledby="lastNameLabel lastNameFeedback" autocomplete="family-name" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -131,7 +165,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="email" id="emailLabel" class="form-label is-required">Email</label>
+                <label for="email" id="emailLabel" class="form-label is-required">Email<span class="visually-hidden"> (required)</span></label>
                 <input type="email" class="form-control" id="email" aria-labelledby="emailLabel emailFeedback" autocomplete="email" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -141,7 +175,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="country" id="countryLabel" class="form-label is-required">Country</label>
+                <label for="country" id="countryLabel" class="form-label is-required">Country<span class="visually-hidden"> (required)</span></label>
                 <select class="form-select" id="country" aria-labelledby="countryLabel countryFeedback" autocomplete="country-name" required>
                   <option selected disabled value="" aria-hidden="true">Select a country</option>
                   <option value="1">Australia</option>
@@ -157,7 +191,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="company" id="companyLabel" class="form-label is-required">Name of company</label>
+                <label for="company" id="companyLabel" class="form-label is-required">Name of company<span class="visually-hidden"> (required)</span></label>
                 <input type="text" class="form-control" id="company" aria-labelledby="companyLabel companyFeedback" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -167,7 +201,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="business" id="businessLabel" class="form-label is-required">Business type</label>
+                <label for="business" id="businessLabel" class="form-label is-required">Business type<span class="visually-hidden"> (required)</span></label>
                 <select class="form-select" id="business" aria-labelledby="businessLabel businessFeedback" required>
                   <option selected disabled value="" aria-hidden="true">Select a type</option>
                   <option value="1">Corporation</option>
@@ -183,7 +217,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="website" id="websiteLabel" class="form-label">Website</label>
+                <label for="website" id="websiteLabel" class="form-label">Website<span class="visually-hidden"> (required)</span></label>
                 <input type="text" class="form-control" id="website" aria-labelledby="websiteLabel websiteFeedback">
                 <div class="valid-feedback">
                   Looks good!
@@ -193,7 +227,7 @@ aliases:
                 </div>
               </div>
               <div class="mb-3">
-                <label for="message" id="messageLabel" class="form-label is-required">Message</label>
+                <label for="message" id="messageLabel" class="form-label is-required">Message<span class="visually-hidden"> (required)</span></label>
                 <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for text area">
                   <span class="visually-hidden">Helper for text area</span>
                 </button>
@@ -213,7 +247,7 @@ aliases:
     </div>
   </div>
 </main>
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer navbar" data-bs-theme="dark">
   <h2 class="visually-hidden">Sitemap and information</h2>
   <div class="container-xxl footer-terms">
     <ul class="navbar-nav gap-md-3">
