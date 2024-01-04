@@ -67,6 +67,10 @@ Here is a list of these extra classes:
 
 Or modify the default `border-color` of a component:
 
+{{< design-callout-alert >}}
+These border color variants are just **examples illustrating the use of this color utility**. They should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="mb-4">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -88,6 +92,9 @@ Or modify the default `border-color` of a component:
 
 Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
+{{< design-callout-alert >}}
+These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
 ### How it works
 
 Consider our default `.border-success` utility.
@@ -122,6 +129,10 @@ Or, choose from any of the `.border-opacity` utilities:
 
 ## Width
 
+{{< design-callout-alert >}}
+The three last border utilities with **a width larger than 2px** should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-0"></span>
 <span class="border border-1"></span>
@@ -135,14 +146,18 @@ Or, choose from any of the `.border-opacity` utilities:
 
 Add classes to an element to easily round its corners.
 
+{{< design-callout-alert >}}
+These border variants with **a radius CSS class different than `.rounded-circle` and `.rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" >}}
-{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
+{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
+{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
 {{< /example >}}
 
 ### Sizes
@@ -151,30 +166,30 @@ Add classes to an element to easily round its corners.
 
 Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
 
+{{< design-callout-alert >}}
+These border variants with **a size CSS class different than `.rounded-0`** should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-1" title="Example small rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-2" title="Example default rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-3" title="Example large rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-4" title="Example larger rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-5" title="Example extra large rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-1" title="Example small rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-2" title="Example default rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-3" title="Example large rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-4" title="Example larger rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-5" title="Example extra large rounded image" color="#999" >}}
 {{< /example >}}
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom-1" title="Example small rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-start-2" title="Example default left rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" >}}
-{{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" >}}
-{{< placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Example extra large bottom rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-1" title="Example small rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-2" title="Example default left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Example extra large bottom rounded image" color="#999" >}}
 {{< /example >}}
 
 ## Dividers
 
 {{< example >}}
-<div class="bg-dark p-1">
-  <div class="border-top border-white my-3"></div>
-  <hr>
-</div>
 <div class="border-top border-light my-3"></div>
 <div class="border-top border-light border-1 my-3"></div>
 <div class="border-top border-dark my-3"></div>

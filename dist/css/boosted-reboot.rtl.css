@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v5.3.1 (https://boosted.orange.com/)
+ * Boosted Reboot v5.3.2 (https://boosted.orange.com/)
  * Copyright 2014-2023 The Boosted Authors
  * Copyright 2014-2023 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.3.1 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -224,6 +224,8 @@
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 255, 121, 0;
   --bs-code-color: #a3a3a3;
+  --bs-highlight-color: #eee;
+  --bs-highlight-bg: #665200;
   --bs-border-color: #666;
   --bs-border-color-translucent: #666;
   --bs-form-valid-color: #84de84;
@@ -277,13 +279,13 @@ body {
   box-shadow: 0 0 0 2px var(--bs-focus-visible-inner-color);
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring),
-.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring) {
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type=file]:invalid),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type=file]:invalid) {
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible):not(.focus-ring) {
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type=file]:invalid) {
   outline: 0 !important;
   box-shadow: none;
 }

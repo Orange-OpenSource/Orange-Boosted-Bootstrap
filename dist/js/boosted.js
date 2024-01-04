@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.3.1 (https://boosted.orange.com/)
+  * Bootstrap v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -672,7 +672,7 @@
    * Constants
    */
 
-  const VERSION = '5.3.1';
+  const VERSION = '5.3.2';
 
   /**
    * Class definition
@@ -753,9 +753,9 @@
       if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
         hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== '#' ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return parseSelector(selector);
+    return selector;
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -1202,7 +1202,11 @@
       this._addEventListeners();
       if (this._config.ride === CLASS_NAME_CAROUSEL) {
         this.cycle();
+      } else if (this._indicatorsElement) {
+        // Boosted mod: set the animation properly on progress indicator
+        this._element.classList.add(CLASS_NAME_PAUSED);
       }
+      // End mod
     }
 
     // Getters
@@ -3118,16 +3122,10 @@
     // Static
     static enableMinimizing(el) {
       // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
-      const scroll = window.scrollY;
-      const headerChildren = [...el.children];
-      const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'));
-      if (globalHeaderChild) {
-        if (scroll > 0) {
-          // Consider first element not having .supra in array is the first header
-          globalHeaderChild.classList.add('header-minimized');
-        } else {
-          globalHeaderChild.classList.remove('header-minimized');
-        }
+      if (window.scrollY > 0) {
+        el.classList.add('header-minimized');
+      } else {
+        el.classList.remove('header-minimized');
       }
     }
     static jQueryInterface(config) {
@@ -4408,7 +4406,7 @@
   const CLASS_DROPDOWN = 'dropdown';
   const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
   const SELECTOR_DROPDOWN_MENU = '.dropdown-menu';
-  const NOT_SELECTOR_DROPDOWN_TOGGLE = ':not(.dropdown-toggle)';
+  const NOT_SELECTOR_DROPDOWN_TOGGLE = `:not(${SELECTOR_DROPDOWN_TOGGLE})`;
   const SELECTOR_TAB_PANEL = '.list-group, .nav, [role="tablist"]';
   const SELECTOR_OUTER = '.nav-item, .list-group-item';
   const SELECTOR_INNER = `.nav-link${NOT_SELECTOR_DROPDOWN_TOGGLE}, .list-group-item${NOT_SELECTOR_DROPDOWN_TOGGLE}, [role="tab"]${NOT_SELECTOR_DROPDOWN_TOGGLE}`;

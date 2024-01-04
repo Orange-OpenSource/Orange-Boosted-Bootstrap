@@ -235,7 +235,7 @@ For example, we use the `primary`, `success`, and `danger` keys from `$theme-col
 
 ### Colors
 
-Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
+Next to the [Sass maps]({{< docsref "/customize/color-palette#sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
 
 ```scss
 .custom-element {
@@ -245,6 +245,8 @@ Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we h
 ```
 
 You can lighten or darken colors with Boosted's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
+
+`shift-color()` combines these two functions by shading the color if the weight is positive and tinting the color if the weight is negative.
 
 {{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
 
@@ -258,6 +260,11 @@ In practice, you'd call the function and pass in the color and weight parameters
 .custom-element-2 {
   color: shade-color($danger, 30%);
 }
+
+.custom-element-3 {
+  color: shift-color($success, 40%);
+  background-color: shift-color($success, -60%);
+}
 ```
 
 ### Color contrast
@@ -266,12 +273,22 @@ In order to meet the [Web Content Accessibility Guidelines (WCAG)](https://www.w
 
 To help with this, we included the `color-contrast` function in Boosted. It uses the [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) in an `sRGB` color space to automatically return a light (`#fff`), dark (`#212529`) or black (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
-For example, to generate color swatches from our `$theme-colors` map:
+For example, to generate color swatches from our `$theme-colors` and `$theme-colors-dark` maps:
 
 ```scss
 @each $color, $value in $theme-colors {
   .swatch-#{$color} {
     color: color-contrast($value);
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    @each $color, $value in $theme-colors-dark {
+      .swatch-#{$color} {
+        color: color-contrast($value);
+      }
+    }
   }
 }
 ```
@@ -340,18 +357,18 @@ Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted and
 
 ### Color schemes
 
-A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light`, `dark`, and custom color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
+A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light` and `dark` color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 
 ```scss
 .custom-element {
-  @include color-scheme(dark) {
-    // Insert dark mode styles here
+  @include color-scheme(light) {
+    // Insert light mode styles here
   }
 
-  @include color-scheme(custom-named-scheme) {
-    // Insert custom color scheme styles here
+  @include color-scheme(dark) {
+    // Insert dark mode styles here
   }
 }
 ```

@@ -33,8 +33,21 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 
 ## Variants
 
-<!-- Boosted mod: only .table-dark is allowed -->
-Use contextual class to color tables, table rows or individual cells.
+{{< callout warning >}}
+Boosted doesn't provide any colored variant.
+
+Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.table` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
+
+<details>
+<summary>See Bootstrap's colored variants</summary>
+<br>
+
+Use contextual classes to color tables, table rows or individual cells.
+
+{{< callout info >}}
+**Heads up!** Because of the more complicated CSS used to generate our table variants, they most likely won't see color mode adaptive styling until v6.
+{{< /callout >}}
 
 <div class="bd-example">
   <table class="table">
@@ -52,31 +65,45 @@ Use contextual class to color tables, table rows or individual cells.
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-    <tr class="table-dark">
-      <th scope="row">Dark</th>
-      <td>Cell</td>
-      <td>Cell</td>
-    </tr>
+      {{< table.inline >}}
+      {{- range (index $.Site.Data "theme-colors") }}
+        <tr class="table-{{ .name }}">
+          <th scope="row">{{ .name | title }}</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      {{- end -}}
+      {{< /table.inline >}}
     </tbody>
   </table>
 </div>
 
 {{< highlight html >}}
-<!-- On tables -->
-<table class="table-dark">...</table>
+<!-- On tables -->{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<table class="table-{{ .name }}">...</table>
+{{- end -}}
+{{< /table.inline >}}
 
-<!-- On rows -->
-<tr class="table-dark">...</tr>
+<!-- On rows -->{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<tr class="table-{{ .name }}">...</tr>
+{{- end -}}
+{{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
-<tr>
-  <td class="table-dark">...</td>
+<tr>{{< table.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+  <td class="table-{{ .name }}">...</td>
+{{- end -}}
+{{< /table.inline >}}
 </tr>
 {{< /highlight >}}
 
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 ## Accented tables
 
@@ -96,13 +123,17 @@ Use .table-striped-columns to add zebra-striping to any table column.
 
 {{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
-These classes can also be added to table variants:
-
+<details>
+<summary>These classes can also be added to Bootstrap's table colored variants.</summary>
+<br>
 {{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
 
 {{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
 
-<!-- Boosted mod : no .table-success -->
+{{< table class="table table-success table-striped" caption="Boosted success striped rows table" >}}
+
+{{< table class="table table-success table-striped-columns" caption="Boosted success striped columns table" >}}
+</details>
 
 ### Hoverable rows
 
@@ -110,13 +141,20 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
 {{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
+<details>
+<summary class="mb-3">See it applied on another Bootstrap's variant</summary>
 {{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
+</details>
 
 These hoverable rows can also be combined with the striped rows variant:
 
 {{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 {{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
+</details>
 
 ### Active tables
 
@@ -177,6 +215,9 @@ Highlight a table row or cell by adding a `.table-active` class.
 </table>
 ```
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 <div class="bd-example">
   <table class="table table-dark">
     <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
@@ -231,6 +272,7 @@ Highlight a table row or cell by adding a `.table-active` class.
   </tbody>
 </table>
 ```
+</details>
 
 ## How do the variants and accented tables work?
 
@@ -258,7 +300,11 @@ To display basic tables, Orange Design System recommends using these compact tab
 
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
+<details>
+<summary>See it applied on another Bootstrap's variant</summary>
+<br>
 {{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
+</details>
 
 ## Table group dividers
 

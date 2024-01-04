@@ -10,7 +10,6 @@
     * demo: if the global shortcode is called from the documentation (default: false)
     * labels: use generic labels instead of real-life labels (default: false)
     * labels_end: justify labels at the end (default: false)
-    * minimized: display a minimized global header (default: false)
     * navigation: add a navigation bar under the global header (default: false)
     * supra: if the global header is used with a supra bar (default: false)
     * aria_label: set the aria-label for the current global header
@@ -24,13 +23,12 @@
 {{- $demo := .Get "demo" | default false -}}
 {{- $labels := .Get "labels" | default false -}}
 {{- $labels_end := .Get "labels_end" | default false -}}
-{{- $minimized := .Get "minimized" | default false -}}
 {{- $navigation := .Get "navigation" | default false -}}
 {{- $supra := .Get "supra" | default false -}}
 {{- $aria_label := .Get "aria_label"}}
 {{- $input := .Inner -}}
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{ $aria_label }}">
+<nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
       <a class="stretched-link" href="#">
@@ -91,10 +89,10 @@
 {{- end }}
 {{- if eq $mode "search" }}
     <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
-      <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     </form>
 {{- end }}
-    <div id="{{ $id }}.2" class="navbar-collapse collapse d-sm-flex{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
+    <div id="{{ $id }}.2" class="navbar-collapse collapse{{ cond (not (eq $mode "theme")) " d-sm-flex" " d-lg-flex" }}{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
       <ul class="navbar-nav flex-row">
 {{- if eq $mode "actions" }}
         <li class="nav-item">
@@ -112,7 +110,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -134,13 +132,43 @@
             <span class="visually-hidden">Search</span>
           </a>
         </li>
+{{- else if eq $mode "theme" }}
+        <li class="nav-item dropdown">
+          <button class="nav-link nav-icon dropdown-toggle" id="bd-theme{{ cond $demo "2" ""}}" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+            <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+            <span class="d-lg-none ms-2" id="bd-theme-text{{ cond $demo "2" ""}}">Toggle mode</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text{{ cond $demo "2" ""}}">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                Light
+                <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                Dark
+                <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                Auto
+                <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+              </button>
+            </li>
+          </ul>
+        </li>
 {{- end }}
       </ul>
     </div>
   </div>
 </nav>
 {{- if $navigation }}
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}.2">
+<nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}.2">
   <div class="container-xxl">
     <div id="{{ $id }}.1" class="navbar-collapse collapse m-0 {{ $id }}">
 {{- if $supra }}

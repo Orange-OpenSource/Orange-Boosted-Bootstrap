@@ -30,7 +30,7 @@
           padding-right: $input-height-inner;
           background-image: escape-svg($icon);
           background-repeat: no-repeat;
-          background-position: right $input-height-inner-quarter top subtract($input-height-inner-quarter, 2px);
+          background-position: right subtract($input-height-inner-quarter, $input-border-width) top subtract($input-height-inner-quarter, $input-border-width);
           background-size: $input-height-inner-half $input-height-inner-half;
         }
       }
@@ -49,7 +49,7 @@
 
       .form-control-color {
         @include form-validation-state-selector($state) {
-          width: add($form-color-width, $input-height-inner);
+          width: calc(#{$form-color-width} + #{$input-height-inner-half} + #{$input-height-inner-quarter} - #{$input-border-width}); // stylelint-disable-line function-disallowed-list
         }
       }
     }
@@ -62,6 +62,8 @@
       font-style: $form-feedback-font-style;
       font-weight: $font-weight-bold; // Boosted mod
       line-height: $form-feedback-line-height; // Boosted mod
+      color: $form-feedback-color; // Boosted mod
+      background-color: transparent; // Boosted mod
 
       // Boosted mod: status should not rely on color only
       @if $enable-validation-icons {
@@ -105,12 +107,9 @@
       }
     }
 
-    // Boosted mod: Remove border on input for form element QuantitySelector
+    // Boosted mod: Change border-color when on error for form element QuantitySelector
     .quantity-selector .form-control {
       @include form-validation-state-selector($state) {
-        border-right: none;
-        border-left: none;
-
         // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
           border-color: $border-color;
