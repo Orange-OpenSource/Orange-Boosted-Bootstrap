@@ -51,13 +51,16 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 
 {{< added-in "5.2.0" >}}
 
+If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}).
 
 Instead, consider using our Boosted [Border spinner]({{< docsref "/components/spinners#border-spinner" >}}) component. You can also refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 {{< example >}}
 <div class="spinner-grow" role="status">
@@ -77,6 +80,7 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 </div>
 {{< /example >}}
 <!-- End mod -->
+</details>
 
 ## Alignment
 
@@ -138,6 +142,18 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 <!-- Boosted mod: -sm & -lg -->
 Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that can quickly be used within other components.
 
+{{< example >}}
+<div class="spinner-border spinner-border-sm" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border spinner-border-lg" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 These **small** and **large growing spinner** variants should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}).
 
@@ -159,11 +175,15 @@ Instead, consider using our Boosted [Border spinner]({{< docsref "/components/sp
 </div>
 {{< /example >}}
 <!-- End mod -->
+</details>
 
 ## Buttons
 
 Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These **border spinner** and **growing spinner within buttons** variants should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}).
 
@@ -191,6 +211,7 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
+</details>
 
 ## CSS
 

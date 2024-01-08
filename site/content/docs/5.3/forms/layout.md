@@ -119,6 +119,9 @@ Create horizontal forms with the grid by adding the `.row` class to form groups 
 
 At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
 
@@ -175,11 +178,15 @@ Please refer to our Boosted [Forms]({{< docsref "/examples/form" >}}) example. Y
   <button type="submit" class="btn btn-primary mt-2">Sign in</button>
 </form>
 {{< /example >}}
+</details>
 
 ### Horizontal form label sizing
 
 Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one with a `col-form-label-sm` class because of its height, should not be used because it does not respect the Orange Design System specifications.
 
@@ -206,11 +213,15 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Column sizing
 
 As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
 
@@ -230,11 +241,15 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Auto-sizing
 
 The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These form variants, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because they do not respect the Orange Design System specifications.
 
@@ -314,11 +329,15 @@ You can then remix that once again with size-specific column classes.
   </div>
 </form>
 {{< /example >}}
+</details>
 
 ## Inline forms
 
 Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-check` align properly.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -359,3 +378,4 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </div>
 </form>
 {{< /example >}}
+</details>

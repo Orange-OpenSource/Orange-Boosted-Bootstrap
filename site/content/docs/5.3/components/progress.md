@@ -58,6 +58,9 @@ Boosted provides a handful of [utilities for setting width]({{< docsref "/utilit
 
 You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -72,6 +75,22 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar" style="width: 25%"></div>
 </div>
 {{< /example >}}
+</details>
+
+<!-- Boosted mod -->
+### Sizes
+
+Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
+
+{{< example >}}
+<div class="progress progress-xs" role="progressbar" aria-label="Extra small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+<div class="progress progress-sm" role="progressbar" aria-label="Small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+{{< /example >}}
+<!-- End mod -->
 
 ## Labels
 
@@ -91,25 +110,13 @@ Note that by default, the content inside the `.progress-bar` is controlled with 
 </div>
 {{< /example >}}
 
-<!-- Boosted mod -->
-### Sizes
-
-Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
-
-{{< example >}}
-<div class="progress progress-xs" role="progressbar" aria-label="Extra small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress progress-sm" role="progressbar" aria-label="Small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-{{< /example >}}
-<!-- End mod -->
-
 ## Backgrounds
 
 Use background utility classes to change the appearance of individual progress bars.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
@@ -159,11 +166,15 @@ Alternatively, you can use the new combined [color and background]({{< docsref "
   <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
 </div>
 {{< /example >}}
+</details>
 
 ## Multiple bars
 
 You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -183,11 +194,15 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Striped
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -211,11 +226,15 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
 </div>
 {{< /example >}}
+</details>
 
 ## Animated stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -227,6 +246,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

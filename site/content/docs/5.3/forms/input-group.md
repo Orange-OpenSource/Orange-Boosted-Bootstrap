@@ -12,6 +12,9 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -55,6 +58,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <textarea class="form-control" id="textarea"></textarea>
 </div>
 {{< /example >}}
+</details>
 
 ## Wrapping
 
@@ -73,6 +77,9 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 **Sizing on the individual input group elements isn't supported.**
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one because of its height, should not be used because they do not respect the Orange Design System specifications.
 
@@ -95,6 +102,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
 {{< /example >}}
+</details>
 
 ## Checkboxes and radios
 
@@ -120,6 +128,9 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -133,11 +144,15 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <input type="text" aria-label="Last name" class="form-control">
 </div>
 {{< /example >}}
+</details>
 
 ## Multiple addons
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -157,9 +172,13 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <span class="input-group-text">0.00</span>
 </div>
 {{< /example >}}
+</details>
 
 ## Button addons
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications. They are not recommended for usability reasons.
 
@@ -189,9 +208,39 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <button class="btn btn-outline-secondary" type="button">Button</button>
 </div>
 {{< /example >}}
+</details>
 
 ## Buttons with dropdowns
 
+{{< example >}}
+<div class="input-group mb-3">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This **third** form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -243,6 +292,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ## Segmented buttons
 
@@ -284,6 +334,21 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
+{{< example >}}
+<div class="input-group">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+</div>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These **first 3** form variants should not be used because they do not respect the Orange Design System specifications. The **first 2** form variants should have a vertical layout (i.e., having their label above the input field). The **third** form variant should be split in 2 elements (a button and a dropdown) which should be presented in a more logical way : the dropdown first and then the button.
 
@@ -320,20 +385,14 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
     <option value="3">Three</option>
   </select>
 </div>
-
-<div class="input-group">
-  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  <button class="btn btn-outline-secondary" type="button">Button</button>
-</div>
 {{< /example >}}
+</details>
 
 ### Custom file input
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -361,6 +420,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

@@ -25,6 +25,18 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
+{{< example >}}
+<select class="form-select form-select-lg mb-3" aria-label="Large select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This second variant size variant, with a **height of 30px**, should not be used because it does not respect the Orange Design System specifications.
 
@@ -46,6 +58,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <option value="3">Three</option>
 </select>
 {{< /example >}}
+</details>
 
 The `multiple` attribute is also supported:
 

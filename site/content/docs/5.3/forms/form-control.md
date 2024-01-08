@@ -27,8 +27,16 @@ Form controls are styled with a mix of Sass and CSS variables, allowing them to 
 
 Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
+{{< example >}}
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
-The last variant with a `.form-control-sm` class and and then a height of 30px can not be used because it does not respect the Orange Design System specifications.
+The last variant with a `.form-control-sm` class and a height of 30px can not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -38,6 +46,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
+</details>
 
 ## Form text
 
@@ -59,6 +68,9 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This form version, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
 
@@ -80,6 +92,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Disabled
 
@@ -102,26 +115,25 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct `margin` and `padding`.
 
+{{< example >}}
+  <div class="mb-3">
+    <label for="staticEmail" class="form-label">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="inputPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword">
+  </div>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This form variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-{{< example >}}
-  <div class="mb-3 row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
-  </div>
-  <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword">
-    </div>
-  </div>
-{{< /example >}}
 
 {{< example >}}
 <form class="row g-3">
@@ -138,14 +150,9 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   </div>
 </form>
 {{< /example >}}
+</details>
 
 ## File input
-
-{{< design-callout-alert >}}
-The **Small file input example** below with a height of 30px can not be used because it does not respect the Orange Design System specifications.
-
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
-{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="mb-3">
@@ -160,15 +167,28 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
   <label for="formFileDisabled" class="form-label is-disabled">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
 </div>
-<div class="mb-3">
-  <label for="formFileSm" class="form-label">Small file input example</label>
-  <input class="form-control form-control-sm" id="formFileSm" type="file">
-</div>
 <div>
   <label for="formFileLg" class="form-label">Large file input example</label>
   <input class="form-control form-control-lg" id="formFileLg" type="file">
 </div>
 {{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
+{{< design-callout-alert >}}
+The **Small file input example** below with a height of 30px can not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
+{{< /example >}}
+</details>
 
 ## Color
 

@@ -335,6 +335,9 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -390,6 +393,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 ```
+</details>
 
 ## Dark dropdowns
 
@@ -407,6 +411,9 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -425,6 +432,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropup
 
@@ -489,6 +497,9 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -507,6 +518,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropend
 
@@ -852,6 +864,9 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -868,11 +883,15 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </p>
 </div>
 {{< /example >}}
+</details>
 
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -932,11 +951,15 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </form>
 </div>
 {{< /example >}}
+</details>
 
 ## Dropdown options
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant with a `data-bs-offset` attribute having values different than `"0,0"` should not be used because it does not respect the Orange Design System specifications.
 
@@ -970,11 +993,15 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ### Auto close behavior
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
 {{< /design-callout-alert >}}
@@ -1024,6 +1051,7 @@ The 3 last auto close behavior variants should not be used because featuring a s
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

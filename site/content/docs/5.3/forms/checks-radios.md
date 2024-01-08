@@ -250,6 +250,9 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 ### Checkbox toggle buttons
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
 
@@ -274,11 +277,17 @@ Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#c
 {{< callout info >}}
 Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
+</details>
 
 ### Radio toggle buttons
 
 <!-- Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
 
+Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These **radio toggle button** and **radio toggle button with icon** variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -286,8 +295,6 @@ From the Orange Design System point of view a radio buttons should be represente
 
 You can also refer to [Radio button](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
 
 {{< example >}}
 <div class="btn-group" role="group">
@@ -304,6 +311,7 @@ Boosted requires to group its radio toggle buttons in a [button group]({{< docsr
   <label class="btn btn-toggle" for="option4">Radio</label>
 </div>
 {{< /example >}}
+</details>
 
 <!-- Boosted mod: no .btn-outline-* -->
 

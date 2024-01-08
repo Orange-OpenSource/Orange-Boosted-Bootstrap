@@ -24,13 +24,16 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 
 ### Navbar
 
+Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This navbar version of the Scrollspy component is not compatible with the Orange Design System.
 
 Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
 {{< /design-callout-alert >}}
-
-Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3 mb-3">
@@ -105,6 +108,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
   <p>...</p>
 </div>
 ```
+</details>
 
 ### Nested nav
 

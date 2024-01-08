@@ -36,6 +36,9 @@ These classes can also be added to groups of links, as an alternative to the [`.
 
 ## Mixed styles
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
@@ -49,6 +52,7 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
   <button type="button" class="btn btn-success">Right</button>
 </div>
 {{< /example >}}
+</details>
 
 <!-- Boosted mod: no outline styles -->
 
@@ -56,6 +60,9 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These **checkbox** and **radio button** variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -87,11 +94,15 @@ From the Orange Design System point of view, checkboxes and radio buttons should
   <label class="btn btn-toggle" for="btnradio3">Radio 3</label>
  </div>
  {{< /example >}}
+ </details>
 
 ## Button toolbar
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -144,11 +155,23 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Sizing
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
+{{< example >}}
+<div class="btn-group" role="group" aria-label="Default button group">
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
+</div>
+{{< /example >}}
+
+<details class="mb-2">
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 The **first size variant (50px height) and the last one (30px height)** should not be used because they do not respect the Orange Design System specifications.
 
@@ -174,11 +197,15 @@ Please refer to the [Toggle buttons](https://system.design.orange.com/0c1af118d/
   <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 {{< /example >}}
+</details>
 
 ## Nesting
 
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -200,11 +227,15 @@ This variant should not be used because it does not respect the Orange Design Sy
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Vertical variation
 
 Make a set of buttons appear vertically stacked rather than horizontally.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These 3 vertical variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -271,3 +302,4 @@ These 3 vertical variants should not be used because they do not respect the Ora
   <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
 </div>
 {{< /example >}}
+</details>
