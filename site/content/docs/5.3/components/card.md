@@ -195,6 +195,9 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 </div>
 {{< /example >}}
 
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 This variant with its **centered layout** should not be used because it does not respect the Orange Design System specifications.
 Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) guidelines on the Orange Design System website.
@@ -216,6 +219,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Sizing
 
@@ -288,6 +292,19 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 
 You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{< docsref "/utilities/text#text-alignment" >}}).
 
+{{< example >}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{{< /example >}}
+
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 These second and third variants, **with centered and right-aligned layout**, should not be used because they do not respect the Orange Design System specifications.
 
@@ -319,11 +336,15 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Navigation
 
 Add some navigation to a card's header (or block) with Boosted's [nav components]({{< docsref "/components/navs-tabs" >}}).
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -375,6 +396,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Images
 
@@ -407,6 +429,9 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications. Moreover, it might lead to accessibility issues. Instead, prefer using a card that includes a top image.
 
@@ -427,6 +452,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
 {{< callout info >}}
 Note that content should not be larger than the height of the image. If content is larger than the image the content will be displayed outside the image.
 {{< /callout >}}
+</details>
 
 ## Horizontal
 
@@ -459,6 +485,9 @@ Cards include various options for customizing their backgrounds, borders, and co
 
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants **with a colored background** should not be used because they do not respect the Orange Design System specifications.
 
@@ -482,6 +511,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 ### Border
 
@@ -501,6 +531,9 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 {{< /card.inline >}}
 {{< /example >}}
 
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
 {{< design-callout-alert >}}
 These variants, **with a colored border** should not be used because they do not respect the Orange Design System specifications.
 
@@ -520,11 +553,15 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
 {{- end }}
 {{< /card.inline >}}
 {{< /example >}}
+</details>
 
 ### Mixins utilities
 
 You can also change the borders on the card header and footer as needed, and even remove their `background-color` with `.bg-transparent`.
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -541,6 +578,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
   <div class="card-footer bg-transparent border-success">Footer</div>
 </div>
 {{< /example >}}
+</details>
 
 ## Card layout
 
@@ -550,6 +588,9 @@ In addition to styling the content within cards, Boosted includes a few options 
 
 Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use `display: flex;` to become attached with uniform dimensions starting at the `sm` breakpoint.
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 These variants **with no spacing between cards** should not be used because they do not respect the Orange Design System specifications. Instead, prefer having a gap of at least 20px between cards.
 
@@ -621,6 +662,7 @@ When using card groups with footers, their content will automatically line up.
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ### Grid cards
 
