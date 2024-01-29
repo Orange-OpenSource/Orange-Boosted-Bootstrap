@@ -166,7 +166,7 @@
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
     "storybook": "^7.6.7",
-    "stylelint": "^16.0.2",
+    "stylelint": "^16.1.0",
     "stylelint-config-twbs-bootstrap": "^13.0.0",
     "tarteaucitronjs": "^1.15.0",
     "terser": "^5.26.0",
