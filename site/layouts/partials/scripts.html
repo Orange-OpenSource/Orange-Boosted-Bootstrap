@@ -14,10 +14,7 @@
 {{- $js := resources.Match "js/*.js" -}}
 {{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
 {{- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath -}}
-
-{{- if eq hugo.Environment "production" -}}
-  {{- $docsJs = $docsJs | resources.Minify -}}
-{{- end }}
+{{- $docsJs = $docsJs | resources.Minify -}}
 
 <script src="{{ $docsJs.Permalink | relURL }}"></script>
 
