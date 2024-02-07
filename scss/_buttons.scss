@@ -74,6 +74,8 @@
   }
   // End mod
 
+  // Boosted mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
+
   // Boosted mod: selectors are slightly different to handle `.btn-check`
   .btn-check:disabled + &,
   &:disabled,
