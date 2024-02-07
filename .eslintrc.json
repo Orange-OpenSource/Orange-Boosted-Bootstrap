@@ -199,26 +199,6 @@
     },
     {
       "files": [
-        "stories/**"
-      ],
-      "env": {
-        "browser": false,
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "script"
-      },
-      "rules": {
-        "no-await-in-loop": "off",
-        "no-console": "off",
-        "no-multi-str": "off",
-        "strict": "error",
-        "unicorn/prefer-top-level-await": "off"
-      },
-      "extends": ["plugin:storybook/recommended"]
-    },
-    {
-      "files": [
         "**/*.md"
       ],
       "plugins": [

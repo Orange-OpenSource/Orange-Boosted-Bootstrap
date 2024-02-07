@@ -1,5 +1,7 @@
 import QuantitySelector from '../../src/quantity-selector.js'
-import { clearFixture, getFixture, createEvent, jQueryMock } from '../helpers/fixture.js'
+import {
+  clearFixture, getFixture, createEvent, jQueryMock
+} from '../helpers/fixture.js'
 
 describe('QuantitySelector', () => {
   let fixtureEl
