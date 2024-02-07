@@ -1,5 +1,7 @@
 import OrangeNavbar from '../../src/orange-navbar.js'
-import { clearFixture, getFixture, createEvent, jQueryMock } from '../helpers/fixture.js'
+import {
+  clearFixture, getFixture, createEvent, jQueryMock
+} from '../helpers/fixture.js'
 
 describe('OrangeNavbar', () => {
   let fixtureEl
