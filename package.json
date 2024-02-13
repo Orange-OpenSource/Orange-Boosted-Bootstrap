@@ -116,7 +116,7 @@
     "@storybook/addon-a11y": "^7.6.13",
     "@storybook/addon-essentials": "^7.6.13",
     "@storybook/addon-themes": "^7.6.13",
-    "@storybook/html": "^7.6.13",
+    "@storybook/html": "^7.6.14",
     "@storybook/html-webpack5": "^7.6.13",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^7.6.13",
