@@ -25,9 +25,9 @@ You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` director
 
 ## Setup
 
-We're building a Parcel project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Parcel project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
-1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
+1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
    ```sh
    mkdir my-project && cd my-project
@@ -167,7 +167,7 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted">
 

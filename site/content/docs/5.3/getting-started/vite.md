@@ -25,9 +25,9 @@ You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` director
 
 ## Setup
 
-We're building a Vite project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Vite project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
-1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
+1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
    ```sh
    mkdir my-project && cd my-project
@@ -52,7 +52,7 @@ We're building a Vite project with Boosted from scratch, so there are some prere
    npm i --save-dev sass
    ```
 
-Now that we have all the necessary dependencies installed and setup, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed and set up, we can get to work creating the project files and importing Boosted.
 
 ## Project structure
 
@@ -189,7 +189,7 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-boosted.png" alt="Vite dev server running with Boosted">
 
