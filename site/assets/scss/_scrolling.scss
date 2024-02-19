@@ -10,18 +10,22 @@ main {
   h3,
   h4,
   [tabindex="0"] {
-    scroll-margin-top: 80px;
+    scroll-margin-top: add($offset-top, .5rem);
     scroll-margin-bottom: 100px;
 
     @include media-breakpoint-up(md) {
+      scroll-margin-top: add($offset-top, 4rem);
+
       .header-minimized ~ .bd-gutter & {
-        scroll-margin-top: 8.5rem;
+        scroll-margin-top: add($offset-top, 1.5rem);
       }
     }
 
     @include media-breakpoint-up(lg) {
+      scroll-margin-top: add($offset-top, 2.5rem);
+
       .header-minimized ~ .bd-gutter & {
-        scroll-margin-top: 5.5rem;
+        scroll-margin-top: $offset-top;
       }
     }
   }

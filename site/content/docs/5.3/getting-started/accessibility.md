@@ -78,7 +78,7 @@ Each component then specifies its own visible focus style when needed, for examp
 
 #### Under a fixed header
 
-When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
+When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-margin-top` and `scroll-margin-bottom` properties for such case. This feature is configurable in two ways:
 
 1. `$scroll-offset-top` variable defines the offset,
 2. and [`$enable-fixed-header` allows to drop this rule]({{< docsref "/customize/options" >}}) if you don't use a fixed header.
