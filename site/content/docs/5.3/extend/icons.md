@@ -42,6 +42,9 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
   <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
   </svg>
@@ -60,6 +63,9 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
 </p>
 <p class="p-2" data-bs-theme="dark">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
@@ -189,6 +195,7 @@ SVG symbol to insert into your SVG sprite:
 ```
 
 Then use it like this:
+
 {{< example class="mt-0" >}}
 <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
@@ -200,6 +207,7 @@ Please note that this icon cannot be used in a Web font, due to its two colors.
 
 ### Inline SVG
 SVG code for an inline SVG:
+
 {{< example class="mt-0" >}}
 <svg fill="currentColor" width="1.875em" height="1.875em" class="solaris-icon text-warning" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
   <path d="M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z"/>
@@ -217,12 +225,14 @@ Code to copy in an external SVG file:
 ```
 
 Then use it like this:
+
 {{< example class="mt-0" >}}
 <img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="" width="32" height="32">
 {{< /example >}}
 
 ### CSS background SVG
 CSS code for background SVG image:
+
 {{< example class="mt-0" >}}
 <style>
   .icon-warning {

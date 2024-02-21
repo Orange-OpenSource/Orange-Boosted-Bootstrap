@@ -90,27 +90,7 @@ Here are some compliant combinations examples for texts:
 </div>
 {{< /example >}}
 
-Here are some compliant combinations examples for non-texts elements, such as SVG icons:
-
-{{< example >}}
-<p class="p-2">
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
-  </svg>
-</p>
-{{< /example >}}
+Go to [icons documentation]({{< docsref "extend/icons" >}}) to see how to use text utilities with icons.
 
 <!-- End mod -->
 
