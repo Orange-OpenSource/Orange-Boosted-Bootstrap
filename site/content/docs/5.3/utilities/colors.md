@@ -98,16 +98,16 @@ Here are some compliant combinations examples for non-texts elements, such as SV
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
   </svg>
 </p>
 {{< /example >}}

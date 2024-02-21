@@ -10,221 +10,208 @@ toc: true
 
 While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
-Solaris is a growing library of SVG icons that are designed by [Orange's Global Design Language Team](https://design.orange.com/).
+[Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange's Group Design Team](https://system.design.orange.com/).
+It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development.
+Please refer to the Solaris Icon Library user documentation for full design and development guidelines.
 
-They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal information]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
-
-[Learn more about Solaris]({{< param icons >}}).
+They are not open-source though and should only be used for Orange branded projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
 ## Use Solaris icons
 
-<!-- NOTE: this is partially copied from bootstrap Icons homepage → https://icons.getbootstrap.com -->
-Solaris provides both PNGs and SVGs, but we strongly recommend to use SVGs. There are quite a few ways to include SVG icons into your HTML—depending on how your project is setup.
+There are many ways to use Solaris icons in a web page:
+- Bundled, if you have several icons in your project:
+  - [SVG sprite]({{< docsref "extend/icons#svg-sprite" >}}) (preferred choice for flexibility, performance and accessibility)
+  - [Web font]({{< docsref "extend/icons#web-font" >}})
+- Individually, if you have few icons to render:
+  - [Inline SVG]({{< docsref "extend/icons#inline-svg" >}})
+  - [SVG external image]({{< docsref "extend/icons#svg-external-image" >}})
+  - [CSS background SVG]({{< docsref "extend/icons#css-background-svg" >}})
 
-<div class="row my-4">
-  <div class="col-md-4">
+See Solaris icons library [develop documentation]({{< param icons_doc >}}) for complete information about the different formats and their pros and cons.
 
-### Embedded
+All icons can be retrieved easily in any of these formats in the Solaris icons finder, except for the specific case of [warning icon]({{< docsref "extend/icons#warning-icon" >}}) which can be copied below.
 
-Embed your icons within the HTML of your page (as opposed to an external image file). We recommend you use `em` unit for dimensions to ease resizing via `font-size`.
+### SVG Sprite
 
-  </div>
-  <div class="col-md-8">
+Using the Solaris icons finder, you can generate a SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
+This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors" >}}) or local style.
 
-{{< example class="mt-0" >}}
-<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 9 14" role="img" aria-label="Left arrow"><path d="M9 2L7 0 0 7l7 7 2-2-5-5 5-5z"/></svg>
-{{< /example >}}
-  </div>
-</div>
-
-<div class="row my-4">
-  <div class="col-md-4">
-
-### Sprite
-
-You may use an external SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
-
-SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how icons inherit their color from the parent's `.text-primary` class, whereas the other icons get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
-
-  </div>
-  <div class="col-md-8">
-    {{< example >}}
-<p class="p-2 text-primary">
+{{< example >}}
+<p class="p-2" data-bs-theme="light">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
+  </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
   </svg>
 </p>
-<p class="bg-dark p-2 text-primary">
+<p class="p-2" data-bs-theme="dark">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
+  </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
   </svg>
 </p>
 {{< /example >}}
-  </div>
-</div>
 
-<div class="row my-4">
-  <div class="col-md-4">
+To speed up loading, the sprite file can be preloaded in the `<head>` of the page:
+```html
+<link rel="preload" href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml"></link>
+```
 
-### External image
+### Web font
 
-Copy the Solaris icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
+Using the Solaris icons finder, you can generate a Web font containing all your icons and use it like a classic font.
+Icons can be styled through CSS properties like `font-size` and `color`. However, for websites needing more than 20 icons, you may consider using a web font instead of a SVG sprite.
 
-  </div>
-  <div class="col-md-8">
+It is not the preferred solution, so it is not used in Boosted and cannot be documented here.
+
+### Inline SVG
+
+You can embed your icons directly within the HTML of your page (as opposed to an external image file). This technique should only be used if you have a few icons to render, and not rendering the same icon multiple times.
 
 {{< example class="mt-0" >}}
-<img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" aria-hidden="true" width="32" height="32">
+<svg fill="currentColor" width="2em" height="2em" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+  <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" style="fill-rule:evenodd"></path>
+</svg>
 {{< /example >}}
-  </div>
-</div>
 
-<div class="row my-4">
-  <div class="col-md-4">
+The `fill="currentColor"` attribute is required if you want to change the color of the icons on the fly, and that the foreground color changes in dark/light mode.
 
-### CSS
+### SVG external image
 
-You can also use the SVG within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)).
+You can download the Solaris icons SVGs from the Solaris icons finder, copy them into your project and reference them like normal images with the `<img>` element.
+
+{{< example class="mt-0" >}}
+<img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" width="32" height="32">
+{{< /example >}}
+
+### CSS background SVG
+
+You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)).
 
 When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space.
 
-The `viewBox` attribute is required if you wish to resize icons with `background-size`. Note that the `xmlns` attribute is required.
+Note that the `xmlns` attribute is required.
 
-  </div>
-  <div class="col-md-8">
+{{< example class="mt-0" >}}
+<style>
+  .icon-home::before {
+    content:"";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath d='M553.478 147.416v.017a74.956 74.956 0 0 0-107.08.13v-.021L100 500h150v300a75 75 0 0 0 75 75h350a75 75 0 0 0 75-75V500h150ZM580 537.52V755H362.5a37.5 37.5 0 0 1-37.5-37.5V500h217.5a37.5 37.5 0 0 1 37.5 37.5v.02Z' /%3e%3c/svg%3e");
+    background-size: contain;
+    vertical-align: bottom;
+  }
+</style>
+<span class="icon-home"></span>
+{{< /example >}}
 
-```css
-.icon-warning::before {
-  display: inline-block;
-  content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fc0' d='M15 0a15 15 0 100 30 15 15 0 000-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 1.625rem;
-}
-```
-  </div>
-</div>
+## Modify icons color
 
+For SVGs, we recommend setting `fill="currentColor"` on the `<svg>` tag: it will make the icon inherit color from its parent container.
 
-## About SVGs accessibility
+Then, you can:
+- use [text color utilities classes]({{< docsref "utilities/colors" >}}) like `.text-success` that change current color value
+- specify a color using CSS variables like: `style="color: var(--bs-success)"`
+
+## Icons accessibility
 
 {{< callout warning >}}
-SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, **we haven’t systematically included these attributes and workarounds in our code**.
-{{< /callout >}}
-
-Known issues include:
-
-* On decorative images:
-  * **Focus handling is broken in Edge Legacy.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element.
-* On informative images:
-  * **Browsers inconsistently announce `<svg>` tags as images with voice assistance.** Include `role="img"` to avoid any issues.
-  * **Safari skips `aria-label` when using non-focusable SVGs.** Prefer using `aria-labelledby` referencing a `title` element inside `svg` tag.
-
+Given the numerous ways in which icons can be used and considering Boosted website is a documentation, we haven’t always included accessibility attributes in our code.
 For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
-
-## Create a SVG sprite file
-
-To create your own SVG sprite file, containing only the icons you need:
-1. download the icons needed from [ODS website]({{< param icons >}})
-2. optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
-3. include the path in a tag `<symbol>`, inside a SVG file, like below
-4. you may add the attribute `fill-rule="evenodd"`, but only if needed
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon1">
-    <path d="..."/>
-  </symbol>
-  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon2">
-    <path fill-rule="evenodd" d="..."/>
-  </symbol>
-</svg>
-```
-
-## Icon font
-
-You can also embed Solaris icons in an icon font by using [IcoMoon App](https://icomoon.io/app/).
-
-### Create your own project
-
-Go to the top left menu and select `Manage Projects`:
-
-<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-manage-projects.png" alt="IcoMoon - Manage Projects menu" loading="lazy">
-
-Create a `New Project` and click on `Load`:
-
-<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-new-project.png" alt="IcoMoon - New Project" loading="lazy">
-
-### Select your icons
-
-By default there is no icon in this new project.
-
-Click on `Import icons` and import icons in SVG.
-
-{{< callout warning >}}
-SVG icons must be within a square layout to preserve icons consistency. Otherwise you will have some surprises!
 {{< /callout >}}
 
-<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-import-icons.png" alt="IcoMoon - Import Icons" loading="lazy">
+#### Decorative icons
+Purely **decorative icons** (like repeating information of an adjacent text) must be hidden to assistive technologies:
+- for `<svg>` tag, use the attributes `aria-hidden="true"` and `focusable="false"`.
+- for `<span>` tag, use the attribute `aria-hidden="true"`
+- for `<img>`, use an empty `alt` attribute
+- CSS background images are intended to be decorative
 
-By default there is no selected icon. Check that you are in selection mode (third icon in the top bar, after `Import Icons` and the icon library) and then click on the icons to embed in your font. When an icon is selected, its border becomes yellow.
+#### Informative/meaningful icons
+If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered.
+The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies).
+For this, you use the `.visually-hidden` class.
 
-<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-select-icons.png" alt="IcoMoon - Select Icons" loading="lazy">
+{{< example class="mt-0" >}}
+<button type="button" class="btn btn-icon btn-outline-secondary">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <span class="visually-hidden">Settings</span>
+</button>
+{{< /example >}}
 
-### Download and adapt your font
+## Warning icon
 
-Now you can create your font. Click on `Generate Font` at the bottom right of the page. Depending of the number of selected icons, it can take some time!
+For accessibility reasons, the warning icon, which should always be used with functional yellow, has a black exclamation point inside, regardless of the background color. It can be colored with `.text-warning` class.
 
-<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-generate-font.png" alt="IcoMoon - Generate Font" loading="lazy">
+### SVG sprite
+SVG symbol to insert into your SVG sprite:
+```xml
+<symbol fill="currentColor" viewBox="0 0 1000 1000" id="warning-important-accessible">
+  <path d="M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z"/>
+  <path fill="#000" d="M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507"/>
+</symbol>
+```
 
-Now you have a `Download` button at the bottom right of the page but **WAIT!**.
+### Web font
+Please note that this icon cannot be used in a Web font, due to its two colors.
 
-#### Setting your font preferences
+### Inline SVG
+SVG code for an inline SVG:
+{{< example class="mt-0" >}}
+<svg fill="currentColor" width="1.875em" height="1.875em" class="solaris-icon text-warning" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+  <path d="M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z"/>
+  <path fill="#000" d="M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507"/>
+</svg>
+{{< /example >}}
 
-You need to make some changes into `Preferences` to name your font with a name dedicated to your project.
+### SVG external image
+Code for an external SVG image:
+{{< example class="mt-0" >}}
+<img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="" width="32" height="32">
+{{< /example >}}
 
-1. Click on `Preferences` on the top menu bar.
-2. The default font name is `icomoon`. Rename it for you project (e.g. `myproject-icons`) and customize the class prefix by adding your project name to create a unique CSS selector.
-3. You can also change the version, get SCSS variables, etc.
-4. Don't forget to **uncheck IE8 support**!
-
-<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-preferences.png" alt="IcoMoon - Preferences" loading="lazy">
-
-#### Download your font
-
-Close the preferences modal.
-
-You are now ready to download your font with the button at the bottom right of the page.
-
-<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-download-font.png" alt="IcoMoon - Download Font" loading="lazy">
-
-The zip file will be named in function of what has been defined in the preferences modal (e.g. `myproject-icons-v1.0.zip`).
-
-Unzip it:
-* `demo.html` and `demo-files` fold offer a sample page displaying the icons — they are not mandatory for your project.
-* `fonts` folder contains `myproject-icons.woff`. You can create the `woff2` corresponding file by using [Everything Fonts](https://everythingfonts.com/).
-* `style.css` contains all the CSS classes. Rename it to `myproject-icons.css` and adapt it for SCSS if needed.
+### CSS background SVG
+CSS code for background SVG image:
+{{< example class="mt-0" >}}
+<style>
+  .icon-warning {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath fill='%23fc0' d='M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z' /%3e%3cpath d='M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507' fill='%23000'/%3e%3c/svg%3e");
+    background-size: contain;
+  }
+</style>
+<span class="icon-warning"></span>
+{{< /example >}}

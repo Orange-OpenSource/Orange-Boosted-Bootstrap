@@ -979,7 +979,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
               <title id="svg1">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1016,7 +1016,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg2" class="me-2">
               <title id="svg2">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1036,7 +1036,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3" class="me-2">
               <title id="svg3">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1056,7 +1056,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg4" class="me-2">
               <title id="svg4">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1076,7 +1076,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg5" class="me-2">
               <title id="svg5">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1096,7 +1096,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg6" class="me-2">
               <title id="svg6">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             Cell text
           </td>
@@ -1121,7 +1121,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
     <td>
       <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
         <title id="svg1">Document</title>
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
       </svg>
       Cell text
     </td>
