@@ -32,6 +32,7 @@ See Solaris icons library [develop documentation]({{< param icons_doc >}}) for c
 All icons can be retrieved easily in any of these formats in the Solaris icons finder, except for the specific case of [warning icon]({{< docsref "extend/icons#warning-icon" >}}) which can be copied below.
 
 ### SVG Sprite
+This technique is the preferred choice for flexibility, performance and accessibility.
 
 Using the Solaris icons finder, you can generate a SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
 This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors" >}}) or local style.
@@ -85,15 +86,15 @@ To speed up loading, the sprite file can be preloaded in the `<head>` of the pag
 ```
 
 ### Web font
+Web font is not the preferred solution, so it is not used in Boosted and cannot be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of a SVG sprite.
 
 Using the Solaris icons finder, you can generate a Web font containing all your icons and use it like a classic font.
 Icons can be styled through CSS properties like `font-size` and `color`.
 
-It is not the preferred solution, so it is not used in Boosted and cannot be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of a SVG sprite.
-
 ### Inline SVG
+This technique should only be used if you have a few icons to render, and not rendering the same icon multiple times.
 
-You can embed your icons directly within the HTML of your page (as opposed to an external image file). This technique should only be used if you have a few icons to render, and not rendering the same icon multiple times.
+You can embed your icons directly within the HTML of your page (as opposed to an external image file).
 
 {{< example class="mt-0" >}}
 <svg fill="currentColor" width="2em" height="2em" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
@@ -105,6 +106,10 @@ The `fill="currentColor"` attribute is required if you want to change the color 
 
 ### SVG external image
 
+You can use it when:
+- you only have a few icons to render
+- you don't need to change the style or color of the icon
+
 You can download the Solaris icons SVGs from the Solaris icons finder, copy them into your project and reference them like normal images with the `<img>` element.
 
 {{< example class="mt-0" >}}
@@ -113,10 +118,11 @@ You can download the Solaris icons SVGs from the Solaris icons finder, copy them
 
 ### CSS background SVG
 
+CSS background icons should be used when you can't or don't want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-elements.
+
 You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)).
 
 When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space.
-
 Note that the `xmlns` attribute is required.
 
 {{< example class="mt-0" >}}
@@ -144,8 +150,7 @@ Then, you can:
 
 ## Icons accessibility
 
-{{< callout warning >}}
-Given the numerous ways in which icons can be used and considering Boosted website is a documentation, we haven’t always included accessibility attributes in our code.
+{{< callout info >}}
 For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
 {{< /callout >}}
 
@@ -159,7 +164,7 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 #### Informative/meaningful icons
 If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered.
 The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies).
-For this, you use the `.visually-hidden` class.
+For this, you can use the `.visually-hidden` class.
 
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-outline-secondary">
@@ -183,6 +188,13 @@ SVG symbol to insert into your SVG sprite:
 </symbol>
 ```
 
+Then use it like this:
+{{< example class="mt-0" >}}
+<svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+</svg>
+{{< /example >}}
+
 ### Web font
 Please note that this icon cannot be used in a Web font, due to its two colors.
 
@@ -196,7 +208,15 @@ SVG code for an inline SVG:
 {{< /example >}}
 
 ### SVG external image
-Code for an external SVG image:
+Code to copy in an external SVG file:
+```xml
+<svg xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 1000 1000">
+  <path fill="#fc0" d="M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z"/>
+  <path fill="#000" d="M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507"/>
+</svg>
+```
+
+Then use it like this:
 {{< example class="mt-0" >}}
 <img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="" width="32" height="32">
 {{< /example >}}
