@@ -87,9 +87,9 @@ To speed up loading, the sprite file can be preloaded in the `<head>` of the pag
 ### Web font
 
 Using the Solaris icons finder, you can generate a Web font containing all your icons and use it like a classic font.
-Icons can be styled through CSS properties like `font-size` and `color`. However, for websites needing more than 20 icons, you may consider using a web font instead of a SVG sprite.
+Icons can be styled through CSS properties like `font-size` and `color`.
 
-It is not the preferred solution, so it is not used in Boosted and cannot be documented here.
+It is not the preferred solution, so it is not used in Boosted and cannot be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of a SVG sprite.
 
 ### Inline SVG
 
