@@ -81,7 +81,7 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
 
 To speed up loading, the sprite file can be preloaded in the `<head>` of the page:
 ```html
-<link rel="preload" href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml"></link>
+<link rel="preload" href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
 ```
 
 ### Web font
