@@ -22,7 +22,7 @@ There are many ways to use Solaris icons in a web page:
 - Bundled, if you have several icons in your project:
   - [SVG sprite]({{< docsref "extend/icons#svg-sprite" >}}) (preferred choice for flexibility, performance and accessibility)
   - [Web font]({{< docsref "extend/icons#web-font" >}})
-- Individually, if you have few icons to render:
+- Individually, if you have only few icons to render:
   - [Inline SVG]({{< docsref "extend/icons#inline-svg" >}})
   - [SVG external image]({{< docsref "extend/icons#svg-external-image" >}})
   - [CSS background SVG]({{< docsref "extend/icons#css-background-svg" >}})
@@ -34,7 +34,7 @@ All icons can be retrieved easily in any of these formats in the Solaris icons f
 ### SVG Sprite
 This technique is the preferred choice for flexibility, performance and accessibility.
 
-Using the Solaris icons finder, you can generate a SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
+Using the [Solaris icons finder]({{< param icons >}}), you can generate an SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
 This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors" >}}) or local style.
 
 {{< example >}}
@@ -88,17 +88,17 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
 
 To speed up loading, the sprite file can be preloaded in the `<head>` of the page:
 ```html
-<link rel="preload" href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="/path/to/your/sprite.svg" as="image" type="image/svg+xml">
 ```
 
 ### Web font
-Web font is not the preferred solution, so it is not used in Boosted and cannot be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of a SVG sprite.
+Web font is not the preferred solution. Since it's not used in Boosted, it won't be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of an SVG sprite.
 
-Using the Solaris icons finder, you can generate a Web font containing all your icons and use it like a classic font.
-Icons can be styled through CSS properties like `font-size` and `color`.
+Using the [Solaris icons finder]({{< param icons >}}), you can generate a Web font containing all your icons and use it like a classic font.
+Web font icons can be styled through CSS properties like `font-size` and `color`.
 
 ### Inline SVG
-This technique should only be used if you have a few icons to render, and not rendering the same icon multiple times.
+This technique should only be used if you have few icons to render, and if this icon is used only once in your website.
 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file).
 
@@ -108,15 +108,15 @@ You can embed your icons directly within the HTML of your page (as opposed to an
 </svg>
 {{< /example >}}
 
-The `fill="currentColor"` attribute is required if you want to change the color of the icons on the fly, and that the foreground color changes in dark/light mode.
+The `fill="currentColor"` attribute is required if you want to change the icons color on the fly, and that the foreground color changes in dark/light mode.
 
 ### SVG external image
 
 You can use it when:
-- you only have a few icons to render
-- you don't need to change the style or color of the icon
+- you only have few icons to render
+- you don't need to change the icon style or color
 
-You can download the Solaris icons SVGs from the Solaris icons finder, copy them into your project and reference them like normal images with the `<img>` element.
+You can download the Solaris icons SVGs from the [Solaris icons finder]({{< param icons >}}), copy them into your project and reference them like normal images with the `<img>` element.
 
 {{< example class="mt-0" >}}
 <img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" width="32" height="32">
@@ -132,23 +132,16 @@ When no dimensions are specified via `width` and `height` on the `<svg>`, the ic
 Note that the `xmlns` attribute is required.
 
 {{< example class="mt-0" >}}
-<style>
-  .icon-home::before {
-    content:"";
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath d='M553.478 147.416v.017a74.956 74.956 0 0 0-107.08.13v-.021L100 500h150v300a75 75 0 0 0 75 75h350a75 75 0 0 0 75-75V500h150ZM580 537.52V755H362.5a37.5 37.5 0 0 1-37.5-37.5V500h217.5a37.5 37.5 0 0 1 37.5 37.5v.02Z' /%3e%3c/svg%3e");
-    background-size: contain;
-    vertical-align: bottom;
-  }
-</style>
 <span class="icon-home"></span>
 {{< /example >}}
 
+Using:
+
+{{< scss-docs name="icon-home" file="site/assets/scss/_component-examples.scss" >}}
+
 ## Modify icons color
 
-For SVGs, we recommend setting `fill="currentColor"` on the `<svg>` tag: it will make the icon inherit color from its parent container.
+For SVGs, we recommend setting `fill="currentColor"` on the `<svg>` tag: it will make the icon inherit color from itself or its parent containers.
 
 Then, you can:
 - use [text color utilities classes]({{< docsref "utilities/colors" >}}) like `.text-success` that change current color value
@@ -162,7 +155,7 @@ For more details, **Orange Accessibility Guidelines** provides [a deep-dive arti
 
 #### Decorative icons
 Purely **decorative icons** (like repeating information of an adjacent text) must be hidden to assistive technologies:
-- for `<svg>` tag, use the attributes `aria-hidden="true"` and `focusable="false"`.
+- for `<svg>` tag, use the attributes `aria-hidden="true"` and `focusable="false"`
 - for `<span>` tag, use the attribute `aria-hidden="true"`
 - for `<img>`, use an empty `alt` attribute
 - CSS background images are intended to be decorative
@@ -234,14 +227,9 @@ Then use it like this:
 CSS code for background SVG image:
 
 {{< example class="mt-0" >}}
-<style>
-  .icon-warning {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath fill='%23fc0' d='M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z' /%3e%3cpath d='M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507' fill='%23000'/%3e%3c/svg%3e");
-    background-size: contain;
-  }
-</style>
 <span class="icon-warning"></span>
 {{< /example >}}
+
+Using:
+
+{{< scss-docs name="icon-warning" file="site/assets/scss/_component-examples.scss" >}}
