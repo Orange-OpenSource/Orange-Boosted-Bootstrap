@@ -1,11 +1,11 @@
 - name: "Android"
   description: "Design system for Android"
-  link: "https://system.design.orange.com/0c1af118d/n/40c8b1"
+  link: "https://oran.ge/dsandroid"
   image: "assets/img/platforms/android.png"
 
 - name: "iOS"
   description: "Design system for iOS"
-  link: "https://system.design.orange.com/0c1af118d/n/24511f"
+  link: "https://oran.ge/dsios"
   image: "assets/img/platforms/iOS.png"
 
 - name: "Extended Reality"

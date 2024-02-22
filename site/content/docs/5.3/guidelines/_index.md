@@ -17,7 +17,7 @@ aliases:
         <div class="card border-1 mb-2 mb-md-3 mb-lg-0">
           <img class="card-img-top" src="/docs/{{ $.Site.Params.docs_version }}/{{.image}}" alt="">
           <div class="card-body ps-2 pt-2">
-            <a href="{{.link}}" class="stretched-link text-decoration-none h4" aria-label="{{.description}}" title="{{.description}}">{{.name}}</a>
+            <a href="{{.link}}" class="stretched-link text-decoration-none h4" aria-label="{{.description}}" title="{{.description}}" target="_blank" rel="noopener">{{.name}}</a>
           </div>
         </div>
       </div>
