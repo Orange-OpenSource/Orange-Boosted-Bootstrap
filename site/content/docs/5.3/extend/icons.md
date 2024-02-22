@@ -31,7 +31,8 @@ See Solaris icons library [develop documentation]({{< param icons_doc >}}) for c
 
 All icons can be retrieved easily in any of these formats in the Solaris icons finder, except for the specific case of [warning icon]({{< docsref "extend/icons#warning-icon" >}}) which can be copied below.
 
-### SVG Sprite
+### SVG sprite
+
 This technique is the preferred choice for flexibility, performance and accessibility.
 
 Using the [Solaris icons finder]({{< param icons >}}), you can generate an SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
