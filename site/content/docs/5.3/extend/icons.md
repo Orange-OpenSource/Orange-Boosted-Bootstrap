@@ -161,7 +161,7 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 #### Informative/meaningful icons
 If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered.
 The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies) by using the `.visually-hidden` class.
-For external images, you can also fill the at attribute directly.
+For external images, you can also fill the `alt` attribute directly.
 
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-outline-secondary">
