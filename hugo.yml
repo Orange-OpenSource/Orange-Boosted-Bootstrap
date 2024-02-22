@@ -73,7 +73,7 @@ params:
   icons:                            "https://oran.ge/icons"
   bootstrap:                        "https://getbootstrap.com"
   ods:
-    web:                            "https://system.design.orange.com/0c1af118d/n/76065f"
+    web:                            "https://oran.ge/dsweb"
 
   download:
     source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.2.zip"
