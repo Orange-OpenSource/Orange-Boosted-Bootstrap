@@ -67,7 +67,7 @@ The `.text-primary` color on dark background (`#ff7900`) can be used in any size
 When the interface allows to switch between light and dark backgrounds, the light mode stricter restrictions must be applied!
 {{< /callout >}}
 
-Go to [icons documentation]({{< docsref "extend/icons#modify-icons-color" >}}) to see how to use text utilities with icons.
+Please refer to our [icon color documentation]({{< docsref "extend/icons#modify-icons-color" >}}) to see how to use these text utilities with icons.
 
 Here are some compliant combinations examples for texts:
 
