@@ -21,7 +21,7 @@ Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-col
 {{< /design-callout-alert >}}
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
-If you want to colorize icons, see [icons documentation]({{< docsref "extend/icons#modify-icons-color" >}}).
+To colorize icons, please refer to our [icon color documentation]({{< docsref "extend/icons#modify-icons-color" >}}).
 
 {{< callout info >}}
 Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
