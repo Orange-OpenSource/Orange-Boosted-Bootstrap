@@ -97,10 +97,14 @@ Web font is not the preferred solution. Since it's not used in Boosted, it won't
 Using the [Solaris icons finder]({{< param icons >}}), you can generate a Web font containing all your icons and use it like a classic font.
 Web font icons can be styled through CSS properties like `font-size` and `color`.
 
+{{< callout warning >}}
+Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon]({{< docsref "extend/icons#warning-icon" >}}).
+{{< /callout >}}
+
 ### Inline SVG
 This technique should only be used if you have few icons to render, and if this icon is used only once in your website.
 
-You can embed your icons directly within the HTML of your page (as opposed to an external image file).
+You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy theming.
 
 {{< example class="mt-0" >}}
 <svg fill="currentColor" width="2em" height="2em" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
@@ -114,13 +118,7 @@ The `fill="currentColor"` attribute is required if you want to change the icons 
 
 You can use it when:
 - you only have few icons to render
-- you don't need to change the icon style or color
-
-You can download the Solaris icons SVGs from the [Solaris icons finder]({{< param icons >}}), copy them into your project and reference them like normal images with the `<img>` element.
-
-{{< example class="mt-0" >}}
-<img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" width="32" height="32">
-{{< /example >}}
+- you don't need to change the icons colors. For that reason, **we do not recommend to use that technique**, and it won't be documented here.
 
 ### CSS background SVG
 
@@ -145,7 +143,7 @@ For SVGs, we recommend setting `fill="currentColor"` on the `<svg>` tag: it will
 
 Then, you can:
 - use [text color utilities classes]({{< docsref "utilities/colors" >}}) like `.text-success` that change current color value
-- specify a color using CSS variables like: `style="color: var(--bs-success)"`
+- specify a color using CSS variables like `style="color: var(--bs-success)"`
 
 ## Icons accessibility
 
@@ -162,16 +160,17 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 
 #### Informative/meaningful icons
 If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered.
-The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies).
-For this, you can use the `.visually-hidden` class.
+The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies) by using the `.visually-hidden` class.
+For external images, you can also fill the at attribute directly.
 
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-outline-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <span class="visually-hidden">Settings</span>
+  <span class="visually-hidden">Open settings</span>
 </button>
+<img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="Warning" width="32" height="32">
 {{< /example >}}
 
 ## Warning icon
