@@ -14,7 +14,7 @@ While Boosted doesn't include an icon set by default, Orange does have its own c
 It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development.
 Please refer to the Solaris Icon Library user documentation for full design and development guidelines.
 
-They are not open-source though and should only be used for Orange branded projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
+They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
 ## Use Solaris icons
 
