@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Icons
-description: Guidance and suggestions for using Solaris icon library with Boosted.
+description: Guidance and suggestions for using Solaris icons library with Boosted.
 group: extend
 aliases:
   - "/docs/extend/icons/"
@@ -12,7 +12,7 @@ While Boosted doesn't include an icon set by default, Orange does have its own c
 
 [Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange's Group Design Team](https://system.design.orange.com/).
 It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development.
-Please refer to the Solaris Icon Library user documentation for full design and development guidelines.
+Please refer to the Solaris icons library [usage documentation]({{< param icons_usage >}}) for full design and development guidelines.
 
 They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
@@ -27,7 +27,7 @@ There are many ways to use Solaris icons in a web page:
   - [SVG external image]({{< docsref "extend/icons#svg-external-image" >}})
   - [CSS background SVG]({{< docsref "extend/icons#css-background-svg" >}})
 
-See Solaris icons library [develop documentation]({{< param icons_doc >}}) for complete information about the different formats and their pros and cons.
+See Solaris icons library [development documentation]({{< param icons_develop >}}) for complete information about the different formats and their pros and cons.
 
 All icons can be retrieved easily in any of these formats in the Solaris icons finder, except for the specific case of [warning icon]({{< docsref "extend/icons#warning-icon" >}}) which can be copied below.
 
@@ -36,7 +36,7 @@ All icons can be retrieved easily in any of these formats in the Solaris icons f
 This technique is the preferred choice for flexibility, performance and accessibility.
 
 Using the [Solaris icons finder]({{< param icons >}}), you can generate an SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
-This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors" >}}) or local style.
+This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors#oranges-colors" >}}) or local style.
 
 {{< example >}}
 <p class="p-2" data-bs-theme="light">

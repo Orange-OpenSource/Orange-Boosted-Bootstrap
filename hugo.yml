@@ -72,7 +72,8 @@ params:
   blog:                             "https://blog.getbootstrap.com/"
   icons:                            "https://oran.ge/icons"
   icons_license:                    "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63532c"
-  icons_doc:                        "https://design.orange.com/0c1af118d/p/92bb17-usage"
+  icons_usage:                      "https://design.orange.com/0c1af118d/p/92bb17-usage"
+  icons_develop:                    "https://design.orange.com/0c1af118d/p/12bc75-develop"
   bootstrap:                        "https://getbootstrap.com"
   ods:
     web:                            "https://oran.ge/dsweb"
