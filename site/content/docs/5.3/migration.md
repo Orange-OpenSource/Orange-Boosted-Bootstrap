@@ -29,7 +29,7 @@ From a general point of view, the dark mode is optional on Orange websites. Howe
 
 Please note that `data-bs-theme` (default, light or dark) automatically sets the `color` and `background-color` CSS properties to `inherit` on the element it is applied to. This means that some of our components have been adapted to this new behavior by setting their default colors and background colors differently (some of them are not transparent). Please double-check that it doesn't break your design. And more generally, please check carefully that this new version doesn't break your design even if you didn't use the dark variants before.
 
-The use of colors have been revamped to be more consistent and easier to use. During the process, some colors have been modified in light mode to be darker and ensure a better contrast: primary, success and info.
+The use of colors has been revamped to be more consistent and easier to use. During the process, some colors have been modified in light mode to be darker and ensure a better contrast: primary, success and info.
 
 All our helpers and utilities have also been adapted to the new color modes mechanism and automatically switch their colors and background colors depending on the current color mode.
 As a result, you should for instance now rather use `.text-bg-{color}` classes instead of `.bg-{color}` classes when possible for automatic contrast.
