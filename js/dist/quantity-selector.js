@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.3.2 (https://boosted.orange.com/)
-  * Copyright 2015-2023 The Boosted Authors
-  * Copyright 2015-2023 Orange
+  * Boosted v5.3.3 (https://boosted.orange.com/)
+  * Copyright 2015-2024 The Boosted Authors
+  * Copyright 2015-2024 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap quantity-selector.js v5.3.2 (https://boosted.orange.com/)
-  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap quantity-selector.js v5.3.3 (https://boosted.orange.com/)
+  * Copyright 2011-2024 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -36,7 +36,7 @@
   const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]';
   const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]';
   const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]';
-  const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector';
+  const SELECTOR_QUANTITY_SELECTOR = '.quantity-selector';
 
   /**
    * Class definition
