@@ -16,6 +16,20 @@ Please refer to the Solaris icons library [usage documentation]({{< param icons_
 
 They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
+## Icons rendering
+
+Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
+
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+</svg>
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+</svg>
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
+</svg>
+
 ## Use Solaris icons
 
 There are many ways to use Solaris icons in a web page:
