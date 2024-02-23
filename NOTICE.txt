@@ -57,10 +57,10 @@ site/static/docs/**/assets/brand/orange-logo.svg
 site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
 site/static/docs/**/assets/brand/orange-social.svg
-site/static/docs/**/assets/img/boosted-cross.svg
 site/static/docs/**/assets/img/boosted-guidelines.png
 site/static/docs/**/assets/img/boosted-guidelines@2x.png
 site/static/docs/**/assets/img/boosted-sprite.svg
+site/static/docs/**/assets/img/boosted-warning.svg
 site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
 site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/static/docs/**/assets/img/favicons/apple-touch-icon.png

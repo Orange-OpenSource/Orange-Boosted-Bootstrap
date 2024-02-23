@@ -83,7 +83,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 <div class="bg-supporting-purple title-bar" data-bs-theme="light">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
-    <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
+    <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"/></svg>
   </div>
 </div>
 {{</ example >}}

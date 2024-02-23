@@ -21,6 +21,7 @@ Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-col
 {{< /design-callout-alert >}}
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
+To colorize icons, please refer to our [icon color documentation]({{< docsref "extend/icons#modify-icons-color" >}}).
 
 {{< callout info >}}
 Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
@@ -66,6 +67,8 @@ The `.text-primary` color on dark background (`#ff7900`) can be used in any size
 When the interface allows to switch between light and dark backgrounds, the light mode stricter restrictions must be applied!
 {{< /callout >}}
 
+Please refer to our [icon color documentation]({{< docsref "extend/icons#modify-icons-color" >}}) to see how to use these text utilities with icons.
+
 Here are some compliant combinations examples for texts:
 
 {{< example >}}
@@ -88,28 +91,6 @@ Here are some compliant combinations examples for texts:
   <p class="text-primary fw-bold">bold primary text</p>
   <p class="text-body-secondary fw-bold">bold secondary text</p>
 </div>
-{{< /example >}}
-
-Here are some compliant combinations examples for non-texts elements, such as SVG icons:
-
-{{< example >}}
-<p class="p-2">
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
-  </svg>
-</p>
 {{< /example >}}
 
 <!-- End mod -->
