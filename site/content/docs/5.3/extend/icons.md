@@ -10,7 +10,7 @@ toc: true
 
 While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
-[Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange's Group Design Team](https://system.design.orange.com/).
+[Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange Design System design team](https://system.design.orange.com/).
 It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development.
 Please refer to the Solaris icons library [usage documentation]({{< param icons_usage >}}) for full design and development guidelines.
 
