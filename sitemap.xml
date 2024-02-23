@@ -79,13 +79,16 @@
     <loc>https://boosted.orange.com/docs/5.3/components/collapse/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.3/customize/color/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.3/helpers/color-background/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.3/customize/color-modes/</loc>
+  </url>
+  <url>
+    <loc>https://boosted.orange.com/docs/5.3/customize/color-palette/</loc>
+  </url>
+  <url>
+    <loc>https://boosted.orange.com/docs/5.3/customize/color-theme/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.3/helpers/colored-links/</loc>
@@ -218,6 +221,9 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.3/components/navbar/</loc>
+  </url>
+  <url>
+    <loc>https://boosted.orange.com/docs/5.3/examples/navbar-mode-selector/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.3/examples/navbars/</loc>

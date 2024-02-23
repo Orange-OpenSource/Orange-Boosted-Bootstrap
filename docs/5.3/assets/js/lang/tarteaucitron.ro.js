@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Buna! Acest site este transparent și vă permite să alegeți serviciile terță parte pe care doriți să le permiteți.",
@@ -30,6 +31,7 @@ tarteaucitron.lang = {
     "more": "Citeste mai mult",
     "source": "Vizualizați site-ul oficial",
     "credit": "Cookie manager de către tarteaucitron.js",
+    "noServices": "Acest site web nu utilizează niciun cookie care necesită acordul dumneavoastră.",
 
     "toggleInfoBox": "Afișați / ascundeți informații despre stocarea modulelor cookie",
     "title": "Panoul de gestionare a panourilor cookie",

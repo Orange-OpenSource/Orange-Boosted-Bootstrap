@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Hej! Denna webbplats är transparent och låter dig välja de tredjeparts tjänster du vill tillåta.",
@@ -30,6 +31,7 @@ tarteaucitron.lang = {
     "more": "Läs mer",
     "source": "Visa den officiella webbplatsen",
     "credit": "Cookies manager av tarteaucitron.js",
+    "noServices": "Denna webbplats använder ingen cookie som kräver ditt samtycke.",
 
     "toggleInfoBox": "Visa / dölj information om lagring av cookies",
     "title": "Cookie- hanteringspanel",

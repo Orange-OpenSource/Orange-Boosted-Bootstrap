@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Orange and Boosted contributors">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.122.0">
     <title>Navbars · Boosted v5.3</title>
 
     <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/navbars/">
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -87,6 +88,11 @@
         z-index: 1500;
       }
 
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
@@ -95,11 +101,60 @@
     
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 1000 1000">
+        <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+      </symbol>
+      <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+        <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+      </symbol>
+      <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+        <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+      </symbol>
+      <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+        <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+      </symbol>
+    </svg>
+
     
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle mode (auto)">
+        <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
 <main>
   <h1 class="visually-hidden">Navbars Boosted example</h1>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Left navbar only example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation - Left navbar only example">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -112,8 +167,8 @@
 
   <div class="b-example-divider"></div>
 
-  <header>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Both navbars with languages example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation - Both navbars with languages example">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -130,8 +185,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Both navbars with actions example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation - Both navbars with actions example">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -153,7 +208,7 @@
           </svg>
           <span class="visually-hidden">Basket</span>
           <span class="position-relative align-self-start">
-            <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+            <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
@@ -173,8 +228,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg header-minimized" aria-label="Global navigation - Minimized without title example">
+  <header class="header-minimized" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Minimized without title example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto me-lg-4">
       <a class="stretched-link" href="#">
@@ -211,7 +266,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -232,8 +287,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - No title example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - No title example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto me-lg-4">
       <a class="stretched-link" href="#">
@@ -270,7 +325,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -291,8 +346,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - No title with nav-under example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - No title with nav-under example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto me-lg-4">
       <a class="stretched-link" href="#">
@@ -313,7 +368,7 @@
       </ul>
     </div>
     <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
-      <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
     </form>
     <div id="global-header-2.2" class="navbar-collapse collapse d-sm-flex global-header-2">
       <ul class="navbar-nav flex-row">
@@ -333,8 +388,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With title example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto me-lg-4">
       <a class="stretched-link" href="#">
@@ -372,7 +427,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -393,8 +448,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title and nav-under example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With title and nav-under example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
@@ -422,7 +477,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -439,7 +494,7 @@
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title and nav-under example.2">
+<nav class="navbar navbar-expand-lg" aria-label="Global navigation - With title and nav-under example.2">
   <div class="container-xxl">
     <div id="global-header-3-1.1" class="navbar-collapse collapse m-0 global-header-3-1">
       <ul class="navbar-nav">
@@ -457,8 +512,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With two lined title example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto me-lg-4">
       <a class="stretched-link" href="#">
@@ -498,7 +553,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -519,8 +574,8 @@
   </header>
 
   <div class="b-example-divider"></div>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
@@ -550,7 +605,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -567,7 +622,7 @@
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example.2">
+<nav class="navbar navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example.2">
   <div class="container-xxl">
     <div id="global-header-4-1.1" class="navbar-collapse collapse m-0 global-header-4-1">
       <ul class="navbar-nav">
@@ -586,8 +641,8 @@
 
   <div class="b-example-divider"></div>
   <!-- Should not have buy icon -->
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With custom logo example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
@@ -624,7 +679,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -646,8 +701,8 @@
 
   <div class="b-example-divider"></div>
   <!-- Should not have buy icon -->
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example">
   <div class="container-xxl">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
@@ -674,7 +729,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -691,7 +746,7 @@
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example.2">
+<nav class="navbar navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example.2">
   <div class="container-xxl">
     <div id="global-header-5-1.1" class="navbar-collapse collapse m-0 global-header-5-1">
       <ul class="navbar-nav">
@@ -710,7 +765,7 @@
 
   <div class="b-example-divider"></div>
 </main>
-<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
 
     </body>
 </html>
