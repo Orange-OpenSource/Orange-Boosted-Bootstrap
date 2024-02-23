@@ -535,6 +535,8 @@ All the examples have a mode selector on the bottom right corner to switch betwe
 
 - <span class="badge text-bg-success">New</span> [Customize > Color theme]({{< docsref "/customize/color-theme" >}}) page has been added.
 
+- <span class="badge text-bg-warning">Warning</span> [Extend > Icons]({{< docsref "/extend/icons" >}}) page has been refactored to reflect our recommendation to use Solaris icons in Orange projects.
+
 - <span class="badge text-bg-warning">Warning</span> If you were using our `#check2` icon, please note that its content has been changed.
 
 ## v5.3.2
