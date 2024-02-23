@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Hallo! Deze site is transparant en laat u de services van derden kiezen die u wilt toestaan.",
@@ -30,6 +31,7 @@ tarteaucitron.lang = {
     "more": "Lees meer",
     "source": "Bekijk de officiële website",
     "credit": "Cookie manager mogelijk gemaakt door tarteaucitron.js",
+    "noServices": "Deze website maakt geen gebruik van cookies waarvoor uw toestemming nodig is.",
     
     "fallback": "is uitgeschakeld.",
     "allowed": "toegestaan",

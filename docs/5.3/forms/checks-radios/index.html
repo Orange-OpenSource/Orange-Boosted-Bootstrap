@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.118.2">
+<meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -22,12 +22,13 @@
 <link rel="preload" href="/docs/5.3/dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/docs/5.3/dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-
+<link rel="preload" href="/docs/5.3/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
+<script src="/docs/5.3/assets/js/color-modes.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,17 +59,13 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
-
-
-
   </head>
   <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
     <a id="top"></a>
 <div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
   <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
-    <a class="d-inline-flex p-2 ms-3 bg-dark" href="#content">Skip to main content</a>
-    <a class="d-none d-md-inline-flex p-2 bg-dark" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="d-inline-flex p-2 ms-3 bg-black" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 bg-black" href="#bd-docs-nav">Skip to docs navigation</a>
   </nav>
 </div>
 
@@ -88,14 +85,11 @@
   <symbol id="braces-asterisk" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" d="M198.29,196.607a125,125,0,0,1,176.776,0L799.331,620.871A125,125,0,0,1,622.554,797.648L198.29,373.384A125,125,0,0,1,198.29,196.607Zm53.033,53.033a50,50,0,1,1,0,70.711A50,50,0,0,1,251.323,249.64ZM587.2,479.45L551.843,514.8,587.2,550.16l-35.355,35.356L516.488,550.16l-35.356,35.356L445.777,550.16,481.132,514.8,445.777,479.45l35.355-35.356,35.356,35.356,35.355-35.356ZM529.207,741.656a17.812,17.812,0,0,0-25.456,0L464.86,780.547l-39.082-38.874a17.583,17.583,0,0,0-25.264-.017l-40.305,40.305-53.033-3.535,0,0L348.1,819.351a17.917,17.917,0,0,0,25.544.087l38.89-38.891,38.891,38.891c7.122,7.122,19.013,6.443,26.163-.707l38.184-38.184,38.891,38.891c7.122,7.122,18.857,6.6,26.007-.55L593.554,806Zm68.606-566.422-195.748.018L526.94,300.127l195.748-.018h0C722.694,231.421,666.5,175.227,597.813,175.234Zm-84.88,35.727a12.5,12.5,0,0,1,12.5-12.5h75a12.5,12.5,0,0,1,0,25h-75A12.5,12.5,0,0,1,512.933,210.961Z"/>
   </symbol>
-  <symbol id="check2" viewBox="0 0 15 12">
-    <polygon id="tick" points="13 0 5 8 2 5 0 7 3 10 5 12 7 10 15 2 13 0"/>
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
   </symbol>
   <symbol id="chevron-expand" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
-  </symbol>
-  <symbol id="circle-half" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
   </symbol>
   <symbol id="clipboard" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" d="M650,225H525a25,25,0,0,1-25-25V75ZM325,600H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V500H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V400H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V250H469.113A74.709,74.709,0,0,1,450,200V75H150V650a75,75,0,0,0,75,75H325V600ZM850,425H725a25,25,0,0,1-25-25V275ZM725,475a75,75,0,0,1-75-75V275H350V850a75,75,0,0,0,75,75H850V475H725Zm50,300a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Z"/>
@@ -121,10 +115,6 @@
   <symbol id="menu-button-wide-fill" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" d="M837.5,275H450L375,175H100V762.5A62.5,62.5,0,0,0,162.5,825H900V337.5A62.5,62.5,0,0,0,837.5,275ZM275,625H175L275,450,375,625H275Zm325,0H425V450H600V625Zm137.5,0A87.5,87.5,0,1,1,825,537.5,87.5,87.5,0,0,1,737.5,625Z"/>
   </symbol>
-  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-  </symbol>
   <symbol id="palette2" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" class="cls-1" d="M843.715,331.562l-159.1,159.1-17.678-17.678,159.1-159.1a25.073,25.073,0,0,0,0-35.355L719.971,172.463a25.073,25.073,0,0,0-35.355,0l-17.678,17.678,44.194,44.194a12.5,12.5,0,0,1-17.678,17.678L649.26,207.818l-35.355,35.356,26.516,26.516a12.5,12.5,0,0,1-17.677,17.678l-26.517-26.517-35.355,35.356L605.066,340.4a12.5,12.5,0,1,1-17.678,17.678l-44.194-44.195-17.677,17.678-17.678-17.678,159.1-159.1a50.148,50.148,0,0,1,70.711,0L843.715,260.851A50.148,50.148,0,0,1,843.715,331.562Zm-30.633,322.01a58.843,58.843,0,0,1,13.786,21.609c0.008,0.02.013,0.042,0.021,0.063,0.546,1.567,1.014,3.156,1.417,4.757s0.724,3.194.984,4.807c0.079,0.491.155,0.982,0.221,1.475a56.109,56.109,0,0,1-15.976,47.253l-44.21,44.179-34.84,34.814A56.12,56.12,0,0,1,694.7,829l-0.064,0q-2.571,0-5.135-.241c-0.172-.016-0.344-0.035-0.515-0.052q-2.3-.234-4.581-0.657c-0.309-.057-0.617-0.117-0.926-0.18-10.465-2.117-21.09-6.433-29.2-14.542l-246.5-246.7L225.222,384.567h0l-36.335-121.63h0l-17.561-57.828-3.482-13.9c0-.012-0.006-0.024-0.01-0.036q-0.2-.669-0.353-1.335c-0.036-.162-0.06-0.323-0.093-0.485-0.058-.293-0.119-0.586-0.164-0.877-0.028-.189-0.044-0.375-0.067-0.563-0.032-.263-0.067-0.526-0.088-0.787-0.015-.2-0.019-0.392-0.028-0.588-0.011-.25-0.026-0.5-0.027-0.748,0-.038-0.005-0.078-0.005-0.116,0-.281.013-0.558,0.026-0.836,0-.081,0-0.163.007-0.244,0.024-.4.062-0.8,0.111-1.2,0.013-.1.032-0.2,0.046-0.3,0.042-.292.087-0.582,0.143-0.869,0.027-.14.059-0.278,0.089-0.417,0.053-.245.109-0.491,0.172-0.734,0.039-.148.081-0.3,0.123-0.442,0.067-.231.137-0.46,0.212-0.688,0.049-.146.1-0.292,0.15-0.436,0.081-.228.169-0.454,0.259-0.678,0.055-.137.109-0.274,0.167-0.409,0.1-.239.214-0.474,0.327-0.708,0.054-.114.106-0.229,0.162-0.341q0.249-.492.525-0.967l0.025-.046c0.194-.331.4-0.654,0.613-0.972,0.069-.1.143-0.2,0.214-0.3,0.149-.213.3-0.424,0.456-0.631,0.09-.117.182-0.231,0.274-0.346q0.222-.278.453-0.548c0.1-.117.2-0.231,0.307-0.345q0.234-.26.478-0.51c0.106-.109.213-0.219,0.322-0.326,0.172-.168.349-0.331,0.527-0.493,0.106-.1.21-0.194,0.318-0.288,0.206-.179.417-0.35,0.63-0.52,0.087-.068.171-0.141,0.258-0.208q0.454-.35.929-0.671c0.061-.042.126-0.08,0.189-0.121,0.257-.17.518-0.336,0.784-0.493,0.116-.069.236-0.133,0.354-0.2,0.217-.123.436-0.243,0.659-0.357,0.134-.069.27-0.134,0.405-0.2,0.214-.1.43-0.2,0.648-0.3q0.211-.093.427-0.18c0.221-.09.444-0.174,0.67-0.256,0.142-.051.284-0.1,0.427-0.151,0.241-.081.484-0.153,0.728-0.224,0.132-.038.261-0.079,0.394-0.114,0.3-.081.613-0.151,0.923-0.217,0.075-.015.148-0.035,0.223-0.05q0.579-.114,1.171-0.191c0.1-.014.211-0.021,0.315-0.033,0.291-.033.583-0.062,0.877-0.081,0.145-.009.292-0.013,0.438-0.018,0.258-.011.516-0.018,0.777-0.018,0.158,0,.317,0,0.477.009,0.253,0.007.507,0.02,0.762,0.037,0.162,0.011.323,0.024,0.485,0.039,0.261,0.025.522,0.058,0.784,0.093,0.156,0.022.312,0.042,0.469,0.068,0.286,0.046.573,0.1,0.86,0.164,0.133,0.028.265,0.051,0.4,0.082,0.42,0.1.842,0.208,1.264,0.336L232.8,179.7l30.221,9.164h0l121.462,36.412ZM249.008,201.918l-46.532,46.5,36.59,122.164,21.524-21.716L694.169,782.137l17.682-17.67L278.272,331.2l53.048-53.011L764.9,711.457l17.683-17.67L349,260.514l22.256-22.032Zm82.054,324.1-17.678,17.677,44.195,44.194A12.5,12.5,0,1,1,339.9,605.566l-44.194-44.194-35.356,35.355,26.517,26.517a12.5,12.5,0,0,1-17.678,17.677l-26.516-26.516L207.318,649.76l44.195,44.194a12.5,12.5,0,0,1-17.678,17.678l-44.194-44.194-17.678,17.678a25.073,25.073,0,0,0,0,35.355L278.029,826.537a25.073,25.073,0,0,0,35.355,0l159.1-159.1,17.677,17.678-159.1,159.1a50.148,50.148,0,0,1-70.711,0L154.285,738.149a50.148,50.148,0,0,1,0-70.711l159.1-159.1Z"/>
   </symbol>
@@ -134,11 +124,17 @@
   <symbol id="plus" viewBox="0 0 14 14">
     <polygon fill-rule="evenodd" points="14 6 8 6 8 0 6 0 6 6 0 6 0 8 6 8 6 14 8 14 8 8 14 8 14 6"/>
   </symbol>
-  <symbol id="sun-fill" viewBox="0 0 16 16">
-    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-  </symbol>
   <symbol id="tools" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" d="M889,746.184l-0.079-.076-259.2-259.2L481.566,635.065,740.842,894.342h0A104.763,104.763,0,1,0,889,746.184Zm-370.4-370.395L439.8,296.981A183.371,183.371,0,0,0,197.732,91.954L314.889,209.111a26.192,26.192,0,0,1,0,37.039h0l-74.078,74.078a26.192,26.192,0,0,1-37.04,0l-0.015-.015L86.613,203.072A183.374,183.374,0,0,0,291.639,445.139l78.808,78.808ZM851.92,79.433L685.243,209.071,648.2,283.15l-277.795,277.8-37.04-37.04L110.147,747.128l0.013,0.013A104.755,104.755,0,0,0,258.292,895.274l0.013,0.013,0.985-.984h0L481.526,672.065l-37.04-37.04,277.8-277.8,74.079-37.039L926,153.512ZM166.69,801.7a13.1,13.1,0,0,1-18.521-18.52h0L314.848,616.505a13.1,13.1,0,0,1,18.52,18.521ZM388.926,690.585L222.25,857.262h0a13.1,13.1,0,1,1-18.519-18.52h0L370.408,672.064A13.1,13.1,0,0,1,388.926,690.585Z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
   </symbol>
   <symbol id="ui-radios" viewBox="0 0 1000 1000">
     <path fill-rule="evenodd" d="M500,100C265.279,100,75,251.1,75,437.5c0,144.464,114.3,267.724,275,315.873V925L500,775c234.722,0,425-151.1,425-337.5S734.722,100,500,100Zm0,475H325a25,25,0,0,1,0-50H500A25,25,0,0,1,500,575ZM675,450H325a25,25,0,0,1,0-50H675A25,25,0,0,1,675,450Zm0-125H325a25,25,0,0,1,0-50H675A25,25,0,0,1,675,325Z"/>
@@ -146,8 +142,8 @@
 </svg>
 
 
-    <header class="sticky-top">
-  <nav class="navbar navbar-dark navbar-expand bg-dark supra d-none" aria-label="Supra-navigation - New release banner">
+    <header class="sticky-top bd-header">
+  <nav class="navbar navbar-expand supra d-none" data-bs-theme="dark" aria-label="Supra-navigation - New release banner">
     <div class="container-xxl d-flex justify-content-center">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -156,7 +152,7 @@
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Main navigation">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="/">
@@ -184,27 +180,30 @@
           <li class="nav-item">
             <a class="nav-link" href="/docs/5.3/guidelines/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://oran.ge/icons" target="_blank" rel="noopener" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'icons'});">Solaris icons</a>
+          </li>
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-0">
-        <ul class="navbar-nav flex-row">
+        <ul class="navbar-nav flex-row me-lg-3">
           <li class="nav-item">
             <a class="nav-link nav-icon" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          <li class="nav-item d-flex align-items-md-center mb-0 me-2">
-            <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div>
+          <li class="nav-item">
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="5.3"></div>
           </li>
 
           
 
-<li class="nav-item dropdown d-flex">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-    <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.3 <span class="visually-hidden">(switch to other versions)</span>
-  </a>
-  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute">
+<li class="nav-item dropdown">
+  <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-lg-none" aria-hidden="true">Boosted&nbsp;</span><span class="visually-hidden">Boosted&nbsp;</span>v5.3 <span class="visually-hidden">(switch to other versions)</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end mb-2 mb-lg-0">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/forms/checks-radios/">
@@ -231,6 +230,37 @@
 </li>
 
         </ul>
+        <ul class="navbar-nav flex-row ms-lg-3">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
+              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -240,7 +270,7 @@
 
 <nav class="bd-subnavbar py-2 d-lg-none" aria-label="Secondary navigation">
   <div class="container-xxl d-flex justify-content-end">
-    <button class="btn btn-secondary btn-icon p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+    <button class="btn btn-outline-secondary btn-icon p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
       </svg>
@@ -265,7 +295,7 @@
           <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Getting started
         </strong>
 
@@ -286,7 +316,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
           Customize
         </strong>
 
@@ -294,7 +324,8 @@
             <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block">Overview</a></li>
             <li><a href="/docs/5.3/customize/sass/" class="bd-links-link d-inline-block">Sass</a></li>
             <li><a href="/docs/5.3/customize/options/" class="bd-links-link d-inline-block">Options</a></li>
-            <li><a href="/docs/5.3/customize/color/" class="bd-links-link d-inline-block">Color</a></li>
+            <li><a href="/docs/5.3/customize/color-palette/" class="bd-links-link d-inline-block">Color palette</a></li>
+            <li><a href="/docs/5.3/customize/color-theme/" class="bd-links-link d-inline-block">Color theme</a></li>
             <li><a href="/docs/5.3/customize/color-modes/" class="bd-links-link d-inline-block">Color modes</a></li>
             <li><a href="/docs/5.3/customize/components/" class="bd-links-link d-inline-block">Components</a></li>
             <li><a href="/docs/5.3/customize/css-variables/" class="bd-links-link d-inline-block">CSS variables</a></li>
@@ -303,7 +334,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
           Layout
         </strong>
 
@@ -320,7 +351,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
           Content
         </strong>
 
@@ -334,7 +365,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
           Forms
         </strong>
 
@@ -352,7 +383,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
           Components
         </strong>
 
@@ -393,7 +424,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
           Helpers
         </strong>
 
@@ -414,7 +445,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
           Utilities
         </strong>
 
@@ -443,7 +474,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
           Extend
         </strong>
 
@@ -454,7 +485,7 @@
       </li>
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-            <svg class="bi me-1" style="color: var(--bs-black);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+            <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
           About
         </strong>
 
@@ -483,7 +514,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/forms/checks-radios.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/site/content/docs/5.3/forms/checks-radios.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -495,7 +526,7 @@
 
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-          <button class="btn btn-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+          <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
             On this page
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
@@ -559,7 +590,9 @@
 <p>Structurally, our <code>&lt;input&gt;</code>s and <code>&lt;label&gt;</code>s are sibling elements as opposed to an <code>&lt;input&gt;</code> within a <code>&lt;label&gt;</code>. This is slightly more verbose as you must specify <code>id</code> and <code>for</code> attributes to relate the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>. We use the sibling selector (<code>~</code>) for all our <code>&lt;input&gt;</code> states, like <code>:checked</code> or <code>:disabled</code>. When combined with the <code>.form-check-label</code> class, we can easily style the text for each item based on the <code>&lt;input&gt;</code>&rsquo;s state.</p>
 <p>Our checks use custom Boosted icons to indicate checked or indeterminate states.</p>
 <h2 id="checks">Checks <a class="anchor-link" href="#checks" aria-label="Link to this section: Checks"></a></h2>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
   <label class="form-check-label" for="flexCheckDefault">
@@ -572,7 +605,8 @@
     Checked checkbox
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -593,18 +627,22 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexCheckChecked&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Checked checkbox
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="indeterminate">Indeterminate <a class="anchor-link" href="#indeterminate" aria-label="Link to this section: Indeterminate"></a></h3>
 <p>Checkboxes can utilize the <code>:indeterminate</code> pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-indeterminate">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0 bd-example-indeterminate">
+    
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
   <label class="form-check-label" for="flexCheckIndeterminate">
     Indeterminate checkbox
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" data-sb-js-snippet="true" title="Try it on StackBlitz">
@@ -619,11 +657,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexCheckIndeterminate&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Indeterminate checkbox
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="disabled">Disabled <a class="anchor-link" href="#disabled" aria-label="Link to this section: Disabled"></a></h3>
 <p>Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input&rsquo;s state.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-indeterminate">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0 bd-example-indeterminate">
+    
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
   <label class="form-check-label" for="flexCheckIndeterminateDisabled">
@@ -642,7 +683,8 @@
     Disabled checked checkbox
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" data-sb-js-snippet="true" title="Try it on StackBlitz">
@@ -669,10 +711,13 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexCheckCheckedDisabled&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Disabled checked checkbox
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="radios">Radios <a class="anchor-link" href="#radios" aria-label="Link to this section: Radios"></a></h2>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
   <label class="form-check-label" for="flexRadioDefault1">
@@ -685,7 +730,8 @@
     Default checked radio
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -706,11 +752,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexRadioDefault2&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Default checked radio
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="disabled-1">Disabled <a class="anchor-link" href="#disabled-1" aria-label="Link to this section: Disabled"></a></h3>
 <p>Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input&rsquo;s state.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
   <label class="form-check-label" for="flexRadioDisabled">
@@ -723,7 +772,8 @@
     Disabled checked radio
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -744,11 +794,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexRadioCheckedDisabled&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Disabled checked radio
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="switches">Switches <a class="anchor-link" href="#switches" aria-label="Link to this section: Switches"></a></h2>
 <p>A switch has the markup of a custom checkbox but uses the <code>.form-switch</code> class to render a toggle switch. Consider using <code>role=&quot;switch&quot;</code> to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the <code>disabled</code> attribute.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
   <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
@@ -765,7 +818,8 @@
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
   <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -790,11 +844,14 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;switch&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flexSwitchCheckCheckedDisabled&#34;</span> <span class="na">checked</span> <span class="na">disabled</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexSwitchCheckCheckedDisabled&#34;</span><span class="p">&gt;</span>Disabled checked switch checkbox input<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="default-stacked">Default (stacked) <a class="anchor-link" href="#default-stacked" aria-label="Link to this section: Default (stacked)"></a></h2>
 <p>By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with <code>.form-check</code>.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
@@ -807,7 +864,8 @@
     Disabled checkbox
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -828,9 +886,12 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;defaultCheck2&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Disabled checkbox
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
@@ -849,7 +910,8 @@
     Disabled radio
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -876,11 +938,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleRadios3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    Disabled radio
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="inline">Inline <a class="anchor-link" href="#inline" aria-label="Link to this section: Inline"></a></h2>
 <p>Group checkboxes or radios on the same horizontal row by adding <code>.form-check-inline</code> to any <code>.form-check</code>.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
@@ -893,7 +958,8 @@
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
   <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -914,9 +980,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-check-inline&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineCheckbox3&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option3&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineCheckbox3&#34;</span><span class="p">&gt;</span>3 (disabled)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
   <label class="form-check-label" for="inlineRadio1">1</label>
@@ -929,7 +998,8 @@
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
   <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -950,11 +1020,14 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-check-inline&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;inlineRadioOptions&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineRadio3&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option3&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineRadio3&#34;</span><span class="p">&gt;</span>3 (disabled)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="reverse">Reverse <a class="anchor-link" href="#reverse" aria-label="Link to this section: Reverse"></a></h2>
 <p>Put your checkboxes, radios, and switches on the opposite side with the <code>.form-check-reverse</code> modifier class.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
   <label class="form-check-label" for="reverseCheck1">
@@ -972,7 +1045,8 @@
   <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
   <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -998,11 +1072,14 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch form-check-reverse&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flexSwitchCheckReverse&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;flexSwitchCheckReverse&#34;</span><span class="p">&gt;</span>Reverse switch checkbox input<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="without-labels">Without labels <a class="anchor-link" href="#without-labels" aria-label="Link to this section: Without labels"></a></h2>
 <p>Omit the wrapping <code>.form-check</code> for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using <code>aria-label</code>). See the <a href="/docs/5.3/forms/overview/#accessibility">forms overview accessibility</a> section for details.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div>
   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
 </div>
@@ -1010,7 +1087,8 @@
 <div>
   <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1026,15 +1104,19 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;radioNoLabel&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;radioNoLabel1&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="toggle-buttons">Toggle buttons <a class="anchor-link" href="#toggle-buttons" aria-label="Link to this section: Toggle buttons"></a></h2>
 <p>Create button-like checkboxes and radio buttons by using <code>.btn</code> styles rather than <code>.form-check-label</code> on the <code>&lt;label&gt;</code> elements. These toggle buttons can further be grouped in a <a href="/docs/5.3/components/button-group/">button group</a> if needed.</p>
 <h3 id="checkbox-toggle-buttons">Checkbox toggle buttons <a class="anchor-link" href="#checkbox-toggle-buttons" aria-label="Link to this section: Checkbox toggle buttons"></a></h3>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+<label class="btn btn-toggle" for="btn-check">Single toggle</label>
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1045,12 +1127,16 @@
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span><span class="p">&gt;</span>Single toggle<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span><span class="p">&gt;</span>Single toggle<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+<label class="btn btn-toggle" for="btn-check-2">Checked</label>
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1061,12 +1147,16 @@
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn-check-2&#34;</span> <span class="na">checked</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check-2&#34;</span><span class="p">&gt;</span>Checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check-2&#34;</span><span class="p">&gt;</span>Checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Disabled</label>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+<label class="btn btn-toggle" for="btn-check-3">Disabled</label>
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1077,7 +1167,8 @@
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn-check-3&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check-3&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;btn-check-3&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <div class="bd-callout bd-callout-info">
 Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/components/buttons/#button-plugin">button plugin toggle buttons</a>. However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as &ldquo;checked&rdquo;/&ldquo;not checked&rdquo; (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as &ldquo;button&rdquo;/&ldquo;button pressed&rdquo;. The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
@@ -1086,21 +1177,24 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <h3 id="radio-toggle-buttons">Radio toggle buttons <a class="anchor-link" href="#radio-toggle-buttons" aria-label="Link to this section: Radio toggle buttons"></a></h3>
 <!-- Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
 <p>Boosted requires to group its radio toggle buttons in a <a href="/docs/5.3/components/button-group/">button group</a> to display properly.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-  <label class="btn btn-secondary" for="option1">Checked</label>
+  <label class="btn btn-toggle" for="option1">Checked</label>
 
   <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-  <label class="btn btn-secondary" for="option2">Radio</label>
+  <label class="btn btn-toggle" for="option2">Radio</label>
 
   <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-  <label class="btn btn-secondary" for="option3">Disabled</label>
+  <label class="btn btn-toggle" for="option3">Disabled</label>
 
   <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-  <label class="btn btn-secondary" for="option4">Radio</label>
+  <label class="btn btn-toggle" for="option4">Radio</label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1112,47 +1206,51 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;options&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option1&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option1&#34;</span><span class="p">&gt;</span>Checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option1&#34;</span><span class="p">&gt;</span>Checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;options&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option2&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option2&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option2&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;options&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option3&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option3&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option3&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;options&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option4&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option4&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option4&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <!-- Boosted mod: no .btn-outline-* -->
 <!-- Boosted mod: toggle buttons with icon, no-outline -->
 <h4 id="with-icon">With icon <a class="anchor-link" href="#with-icon" aria-label="Link to this section: With icon"></a></h4>
 <p>Add <a href="/docs/5.3/components/buttons/#icon-only"><code>.btn-icon</code></a> with an <a href="/docs/5.3/extend/icons/">embedded icon</a> to get consistent squared icon buttons working as toggle.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
-  <label class="btn btn-icon" for="option5">
+  <label class="btn btn-icon btn-toggle" for="option5">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#day"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
-  <label class="btn btn-icon" for="option6">
+  <label class="btn btn-icon btn-toggle" for="option6">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#week"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
-  <label class="btn btn-icon" for="option7">
+  <label class="btn btn-icon btn-toggle" for="option7">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#month"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
     </svg>
     <span class="visually-hidden">Month</span>
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1164,54 +1262,58 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;icons&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option5&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option5&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option5&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#day&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-day&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Day<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;icons&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option6&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option6&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option6&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#week&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-week&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Week<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;icons&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option7&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option7&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-toggle&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option7&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#month&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-month&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Month<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <p>Drop borders using <code>.btn-no-outline</code>, too.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
   <label class="btn btn-icon btn-no-outline" for="option8">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#day"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option9">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#week"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option10">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
-      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#month"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
     </svg>
     <span class="visually-hidden">Month</span>
   </label>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1225,25 +1327,26 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;iconsNoOutline&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option8&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-no-outline&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option8&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#day&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-day&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Day<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;iconsNoOutline&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option9&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-no-outline&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option9&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#week&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-week&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Week<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-check&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;iconsNoOutline&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;option10&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-icon btn-no-outline&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;option10&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;1.25rem&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#month&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;/docs/5.3/assets/img/boosted-sprite.svg#calendar-month&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Month<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <!-- End mod -->
 <!-- Boosted mod: star rating -->
@@ -1252,7 +1355,9 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <p>Star rating system is built on top of radios. Simply add <code>.star-rating</code> to a <code>&lt;fieldset&gt;</code> element to use predefined glyphs and compose your star rating system with as much stars as needed.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <form>
   <fieldset class="star-rating">
     <legend class="visually-hidden">Results relevance</legend>
@@ -1273,7 +1378,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
 </form>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1302,11 +1408,14 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="sizes">Sizes <a class="anchor-link" href="#sizes" aria-label="Link to this section: Sizes"></a></h3>
 <p>Star ratings come with a smaller variant: <code>.star-rating-sm</code>.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <form>
   <fieldset class="star-rating star-rating-sm">
     <legend class="visually-hidden">Results relevance</legend>
@@ -1327,7 +1436,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
 </form>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1356,65 +1466,24 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="dark-variant">Dark variant <a class="anchor-link" href="#dark-variant" aria-label="Link to this section: Dark variant"></a></h3>
-<p>Add <code>.star-rating-dark</code> to the <code>.star-rating</code> for a dark variant.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bg-dark">
-<form>
-  <fieldset class="star-rating star-rating-dark">
-    <legend class="visually-hidden">Results relevance</legend>
 
-    <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+<p><span class="tag tag-sm">Deprecated in v5.3.3</span></p>
 
-    <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"><span class="visually-hidden">Bad</span></label>
-
-    <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-
-    <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"><span class="visually-hidden">Good</span></label>
-
-    <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
-  </fieldset>
-</form>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
-        <small class="font-monospace text-body-secondary text-uppercase">html</small>
-        <div class="d-flex ms-auto">
-          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
-            <svg class="bi" aria-hidden="true"><use xlink:href="#lightning-charge-fill"/></svg>
-          </button>
-          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
-            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
-          </button>
-        </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;star-rating star-rating-dark&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">legend</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Results relevance<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Terrible<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Bad<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Mixed<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Good<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+<div class="bd-callout bd-callout-warning">
+  <p>
+    <strong>Heads up!</strong> Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.<br><br>Add <code>data-bs-theme="dark"</code> to the <code>.star-rating</code> or any ancestor element to enable a component-specific color mode. <a href="/docs/customize/color-modes">Learn more about our color modes</a>.
+  </p>
+</div>
 
 <h3 id="readonly">Readonly <a class="anchor-link" href="#readonly" aria-label="Link to this section: Readonly"></a></h3>
 <p>Make star ratings readable but non-editable by using <code>&lt;span&gt;</code>s instead of <code>&lt;input&gt;</code> elements.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <div class="star-rating">
   <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
@@ -1426,7 +1495,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <span></span>
   </div>
 </div>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1446,11 +1516,14 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h3 id="disabled-2">Disabled <a class="anchor-link" href="#disabled-2" aria-label="Link to this section: Disabled"></a></h3>
 <p>Make star ratings look inactive inside or outside a form by adding the <code>disabled</code> boolean attribute to the <code>&lt;fieldset&gt;</code> element and the <code>checked</code> boolean attribute to any <code>&lt;input&gt;</code> element.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <form>
   <fieldset class="star-rating" disabled aria-hidden="true">
     <legend class="visually-hidden">Disabled star rating</legend>
@@ -1472,7 +1545,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
   </fieldset>
   <p class="visually-hidden">Disabled star rating: rated 3 out of 5</p>
 </form>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-subtle border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1502,7 +1576,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Disabled star rating: rated 3 out of 5<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <!-- End mod -->
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
@@ -1510,8 +1585,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <p>Variables for checks:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
-    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1525,7 +1600,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-check-label-color</span><span class="o">:</span>                  <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-label-cursor</span><span class="o">:</span>                 <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-transition</span><span class="o">:</span>                   <span class="n">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$form-check-filter</span><span class="o">:</span>                       <span class="nv">$invert-filter</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-active-filter</span><span class="o">:</span>          <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-active-bg-color</span><span class="o">:</span>        <span class="nv">$component-active-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -1541,6 +1617,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-checked-border-color</span><span class="o">:</span>   <span class="nv">$form-check-input-checked-bg-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-checked-bg-image</span><span class="o">:</span>       <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">check-icon</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-900</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-check-input-disabled-filter</span><span class="o">:</span>        <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">form-check-filter</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-check-radio-checked-bg-image</span><span class="o">:</span>       <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;&gt;&lt;circle r=&#39;2&#39; fill=&#39;</span><span class="si">#{</span><span class="nv">$form-check-input-checked-color</span><span class="si">}</span><span class="sx">&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-input-indeterminate-color</span><span class="o">:</span>          <span class="nv">$form-check-input-checked-color</span><span class="p">;</span>
@@ -1559,18 +1636,15 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl"><span class="nv">$form-star-size-sm</span><span class="o">:</span>                     <span class="mi">1</span><span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-star-margin-between</span><span class="o">:</span>              <span class="o">-</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-color</span><span class="o">:</span>        <span class="nv">$accessible-orange</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-color</span><span class="o">:</span>      <span class="nv">$gray-700</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-hover-color</span><span class="o">:</span>          <span class="nv">$black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-color</span><span class="o">:</span>        <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">primary</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-color</span><span class="o">:</span>      <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">secondary-color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-hover-color</span><span class="o">:</span>          <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">highlight-bg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-disabled-color</span><span class="o">:</span>       <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">disabled-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-checked-color</span><span class="o">:</span>   <span class="nv">$primary</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-unchecked-color</span><span class="o">:</span> <span class="nv">$gray-500</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-hover-color</span><span class="o">:</span>     <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-icon</span><span class="o">:</span>         <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;#000&#39; stroke=&#39;#000&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-icon</span><span class="o">:</span>       <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;#000&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-checked-icon</span><span class="o">:</span>      <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;#000&#39; stroke=&#39;#000&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-unchecked-icon</span><span class="o">:</span>    <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;#000&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-icon</span><span class="o">:</span>         <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; stroke=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-icon</span><span class="o">:</span>       <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-checked-icon</span><span class="o">:</span>      <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; stroke=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-unchecked-icon</span><span class="o">:</span>    <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;</span><span class="si">#{</span><span class="nv">$black</span><span class="si">}</span><span class="sx">&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//fusv-disable
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-color</span><span class="o">:</span>                 <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-outline</span><span class="o">:</span>               <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="ni">solid</span> <span class="nv">$form-star-focus-color</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
@@ -1584,8 +1658,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <p>Variables for switches:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
-    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1601,6 +1675,13 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-border-radius</span><span class="o">:</span>       <span class="n">null</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-transition</span><span class="o">:</span>          <span class="n">background-position</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-switch-square-bg</span><span class="o">:</span>             <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-bg</span><span class="o">:</span>                    <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-border-color</span><span class="o">:</span>          <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-filter</span><span class="o">:</span>                <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">form-check-filter</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-focus-visible-inner</span><span class="o">:</span>   <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-focus-visible-outer</span><span class="o">:</span>   <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $form-switch-focus-color
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $form-switch-focus-bg-image
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -1609,6 +1690,13 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-bg-size</span><span class="o">:</span>     <span class="nf">add</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$spacers</span><span class="o">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">,</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$spacers</span><span class="o">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1">// stylelint-disable-next-line function-disallowed-list
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-bg-position</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-switch-checked-square-bg</span><span class="o">:</span>     <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-bg</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-bg</span><span class="o">:</span>            <span class="nv">$supporting-orange</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-border-color</span><span class="o">:</span>  <span class="nv">$supporting-orange</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-filter</span><span class="o">:</span>        <span class="ni">none</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-focus-inner</span><span class="o">:</span>   <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="ni">focus</span><span class="o">-</span><span class="ni">visible</span><span class="o">-</span><span class="n">inner-color</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-focus-outer</span><span class="o">:</span>   <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="ni">focus</span><span class="o">-</span><span class="ni">visible</span><span class="o">-</span><span class="n">outer-color</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span></span></span></code></pre></div></div>
 <h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins" aria-label="Link to this section: Sass mixins"></a></h3>
 
@@ -1616,8 +1704,8 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
-    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/mixins/_star-rating.scss">scss/mixins/_star-rating.scss</a>
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/scss/mixins/_star-rating.scss">scss/mixins/_star-rating.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1633,10 +1721,10 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
   </div>
 
 
-    <footer class="footer bg-dark navbar-dark bd-footer">
+    <footer class="footer navbar bd-footer" data-bs-theme="dark">
   <h2 class="visually-hidden">Boosted sitemap & information</h2>
   <div class="container-xxl footer-nav">
-    <nav class="accordion accordion-dark" id="sitemapAccordion" aria-label="Boosted sitemap footer">
+    <nav class="accordion" id="sitemapAccordion" aria-label="Boosted sitemap footer">
       <div class="row">
         <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingLinks">
@@ -1651,6 +1739,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
               <li><a class="nav-link active" aria-current="true" href="/docs/5.3/" aria-describedby="headingLinks">Docs</a></li>
               <li><a class="nav-link" href="/docs/5.3/examples/" aria-describedby="headingLinks">Examples</a></li>
               <li><a class="nav-link" href="/docs/5.3/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
+              <li><a class="nav-link" href="https://oran.ge/icons" aria-describedby="headingLinks" target="_blank" rel="noopener">Solaris icons</a></li>
               
             </ul>
           </div>
@@ -1708,7 +1797,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.2.</p>
+          <p class="mb-lg-1">Currently v5.3.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1721,20 +1810,18 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </footer>
 
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-bs-label="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
-
-<script src="/docs/5.3/assets/js/docs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script><script src="/docs/5.3/assets/js/docs.min.js"></script>
 
 <script>
   
@@ -1757,7 +1844,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--
+    \x3C!--
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
@@ -1765,23 +1852,23 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
-    <!-- Example Code -->
+    \x3C!-- Example Code -->
 ${htmlSnippet.replace(/^/gm, '    ')}
-    <!-- End Example Code -->
+    \x3C!-- End Example Code -->
   </body>
 </html>`
 
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2023 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global boosted: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ Boosted mod: Try not using \u0060const\u0060 at the first layer in this file, otherwise Storybook will fail to render some examples.\n\n  \/\/ storybook-start overview\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  \/\/ storybook-start tooltips\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new boosted.Tooltip(tooltip)\n    })\n  \/\/ storybook-end tooltips\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  \/\/ storybook-start popovers\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new boosted.Popover(popover)\n    })\n  \/\/ storybook-end popovers\n  \/\/ storybook-end overview\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  \/\/ storybook-start toasts\n  if (document.getElementById(\u0027toastPlacement\u0027)) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass) {\n        document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass = document.getElementById(\u0027toastPlacement\u0027).className\n      }\n\n      document.getElementById(\u0027toastPlacement\u0027).className = \u0060${document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new boosted.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  if (document.getElementById(\u0027liveToastBtn\u0027)) {\n    document.getElementById(\u0027liveToastBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      boosted.Toast.getOrCreateInstance(document.getElementById(\u0027liveToast\u0027)).show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n  \/\/ storybook-end toasts\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ Boosted mod: adapted innerHTML to have the icon and so added a parameter within \u0060appendAlert()\u0060 and a tooltip on \u0060.btn-close\u0060\n  \/\/ storybook-start alerts\n  \/\/ js-docs-start live-alert\n  function appendAlert(message, type, typeVisuallyHidden) {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0027  \u003cspan class=\u0022alert-icon\u0022\u003e\u0027,\n      \u0060    \u003cspan class=\u0022visually-hidden\u0022\u003e${typeVisuallyHidden}\u003c\/span\u003e\u0060,\n      \u0027  \u003c\/span\u003e\u0027,\n      \u0060  \u003cp\u003e${message}\u003c\/p\u003e\u0060,\n      \u0027  \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 data-bs-toggle=\u0022tooltip\u0022 data-bs-placement=\u0022bottom\u0022 data-bs-title=\u0022Close\u0022\u003e\u0027,\n      \u0027    \u003cspan class=\u0022visually-hidden\u0022\u003eClose\u003c\/span\u003e\u0027,\n      \u0027  \u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    document.getElementById(\u0027liveAlertPlaceholder\u0027).append(wrapper)\n\n    \/\/ Create \u0060.btn-close\u0060 tooltip after \u0060innerHTML\u0060 has been modified\n    const btnClose = wrapper.querySelector(\u0027.btn-close\u0027)\n    const tooltip = new boosted.Tooltip(btnClose)\n    btnClose.addEventListener(\u0027click\u0027, () =\u003e {\n      tooltip.hide()\n    })\n  }\n\n  if (document.getElementById(\u0027liveAlertBtn\u0027)) {\n    document.getElementById(\u0027liveAlertBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027, \u0027Success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n  \/\/ storybook-end alerts\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  \/\/ storybook-start carousel\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      boosted.Carousel.getOrCreateInstance(carousel)\n    })\n  \/\/ storybook-end carousel\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  \/\/ storybook-start checksradios\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n  \/\/ storybook-end checksradios\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ storybook-start modal\n  \/\/ js-docs-start varying-modal-content\n  if (document.getElementById(\u0027exampleModal\u0027)) {\n    document.getElementById(\u0027exampleModal\u0027).addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n  \/\/ storybook-end modal\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  \/\/ storybook-start offcanvas\n  document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n    .forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  \/\/ storybook-end offcanvas\n})()\n' : null
+    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global boosted: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ Boosted mod: Try not using \u0060const\u0060 at the first layer in this file, otherwise Storybook will fail to render some examples.\n\n  \/\/ storybook-start overview\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  \/\/ storybook-start tooltips\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new boosted.Tooltip(tooltip)\n    })\n  \/\/ storybook-end tooltips\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  \/\/ storybook-start popovers\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new boosted.Popover(popover)\n    })\n  \/\/ storybook-end popovers\n  \/\/ storybook-end overview\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  \/\/ storybook-start toasts\n  if (document.getElementById(\u0027toastPlacement\u0027)) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass) {\n        document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass = document.getElementById(\u0027toastPlacement\u0027).className\n      }\n\n      document.getElementById(\u0027toastPlacement\u0027).className = \u0060${document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new boosted.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  if (document.getElementById(\u0027liveToastBtn\u0027)) {\n    document.getElementById(\u0027liveToastBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      boosted.Toast.getOrCreateInstance(document.getElementById(\u0027liveToast\u0027)).show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n  \/\/ storybook-end toasts\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ Boosted mod: adapted innerHTML to have the icon and so added a parameter within \u0060appendAlert()\u0060 and a tooltip on \u0060.btn-close\u0060\n  \/\/ storybook-start alerts\n  \/\/ js-docs-start live-alert\n  function appendAlert(message, type, typeVisuallyHidden) {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0027  \u003cspan class=\u0022alert-icon\u0022\u003e\u0027,\n      \u0060    \u003cspan class=\u0022visually-hidden\u0022\u003e${typeVisuallyHidden}\u003c\/span\u003e\u0060,\n      \u0027  \u003c\/span\u003e\u0027,\n      \u0060  \u003cp\u003e${message}\u003c\/p\u003e\u0060,\n      \u0027  \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 data-bs-toggle=\u0022tooltip\u0022 data-bs-placement=\u0022bottom\u0022 data-bs-title=\u0022Close\u0022\u003e\u0027,\n      \u0027    \u003cspan class=\u0022visually-hidden\u0022\u003eClose\u003c\/span\u003e\u0027,\n      \u0027  \u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    document.getElementById(\u0027liveAlertPlaceholder\u0027).append(wrapper)\n\n    \/\/ Create \u0060.btn-close\u0060 tooltip after \u0060innerHTML\u0060 has been modified\n    const btnClose = wrapper.querySelector(\u0027.btn-close\u0027)\n    const tooltip = new boosted.Tooltip(btnClose)\n    btnClose.addEventListener(\u0027click\u0027, () =\u003e {\n      tooltip.hide()\n    })\n  }\n\n  if (document.getElementById(\u0027liveAlertBtn\u0027)) {\n    document.getElementById(\u0027liveAlertBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027, \u0027Success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n  \/\/ storybook-end alerts\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  \/\/ storybook-start carousel\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      boosted.Carousel.getOrCreateInstance(carousel)\n    })\n  \/\/ storybook-end carousel\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  \/\/ storybook-start checksradios\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n  \/\/ storybook-end checksradios\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ storybook-start modal\n  \/\/ js-docs-start varying-modal-content\n  if (document.getElementById(\u0027exampleModal\u0027)) {\n    document.getElementById(\u0027exampleModal\u0027).addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n  \/\/ storybook-end modal\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  \/\/ storybook-start offcanvas\n  document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n    .forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  \/\/ storybook-end offcanvas\n})()\n' : null
     const project = {
       files: {
         'index.html': markup,

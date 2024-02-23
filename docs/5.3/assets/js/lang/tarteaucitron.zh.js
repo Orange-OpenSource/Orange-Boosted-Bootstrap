@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "adblock": "您好！这是一个透明的网站，您可以选择激活不同的第三方服务。",
     "adblock_call": "感谢您停用广告拦截功能并开始个性化设置。",
@@ -28,6 +29,7 @@ tarteaucitron.lang = {
     "more": "了解更多",
     "source": "查看官网",
     "credit": "通过tarteaucitron.js管理cookie",
+    "noServices": "本网站不使用任何需要您同意的cookie。",
 
     "toggleInfoBox": "显示/隐藏cookie存储信息。",
     "title": "Cookie管理面板",
