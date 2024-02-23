@@ -1,3 +1,37 @@
+## [5.3.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.2...v5.3.3) (2024-02-23)
+
+
+### Bug Fixes
+
+* **back to top:** drop unused CSS rule ([#2340](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2340)) ([b53b87e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b53b87e7206984766c08847ac19456cef221f7a2))
+* **btn-check:** don’t remove left/right borders when not in a `.btn-group` ([#2239](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2239)) ([f7a377a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7a377acb48b8503d3d4de37d971ad3d878c4b87))
+* **css:** remove unused `get-color-from-rgba-string` Sass function ([64b9160](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64b9160ef0ba5be05f810ded93084341cf880632))
+* **dark variant:** some text colors were light gray instead of white ([#2263](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2263)) ([e6a884a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e6a884ae1299cf54825198048158df30031e5e16))
+* **docs:** figure caption of About > Brand logos is rendered ([#2393](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2393)) ([7dee77f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dee77f20ffc353dbd808bbf969b9e08aad8d127))
+* **docs:** improve some alignments of elements in the docs header ([#2398](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2398)) ([e9cf41f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e9cf41f46bd42a8c8579ca86733a52e6dd7b6a15))
+* **dropdown:** add some missing Boosted mods and "instead of" ([#2294](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2294)) ([a58b8bd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a58b8bdb0b784b637c5eec4c41bf23321382efc3))
+* **examples:** apply correctly `.header-minimized` to the Navbars example ([#2354](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2354)) ([24b4afc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/24b4afc43de1dc33e647d685e2bb28130d9aadb9))
+* **examples:** both light/dark images were displayed in 'auto' mode in Download App example ([#2261](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2261)) ([720fe45](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/720fe4599cf1246879f95f8601d08d6bfe8c5959))
+* **examples:** drop underlined hovered footer links in Download page example ([#2415](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2415)) ([70d3e90](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70d3e90256777a023472f948bf99fcbd498a6476))
+* **examples:** remove unused `.bd-content` from Form example ([#2439](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2439)) ([ba93846](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ba9384699fe4ba496ad3ad31041c7007d8178ebf))
+* **form control color:** adjust size when valid feedback ([#2341](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2341)) ([a792e8b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a792e8b20fdcec7498da89bc0c90df92171e3ac1))
+* **form-control:** color picker borders on Chromium based browsers ([765afc1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/765afc188695238942d0c5df87073ff6d7de1b41))
+* **orange navbar:** fix spacing between supra bar links on small breakpoints ([#2428](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2428)) ([dc28e36](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dc28e362b99b5c060f9a9136dabdc8e3b0e12ac3))
+* **quantity selector:** focus state rendering in error ([#2099](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2099)) ([e09dbc1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e09dbc135fadd12568da341b34b53ca4ce8d4341))
+* **tooltips:** two CSS vars had a double prefix ([#2353](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2353)) ([673729b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/673729b3c6b522394f385328063e423cd6dd5f41))
+* **typography:** improve `.lead` modification migration guide note ([61bf996](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/61bf996f1e0f0a7fe129a1fa58f1656826b623d3))
+* **typography:** modify `.lead` values to match the DSM body text ([#2363](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2363)) ([eff2769](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eff2769c5b9708ce1ba81625afb3d6e3f04a2387))
+* **unit tests:** drop `.btn-secondary` from carousel play/pause buttons ([#2306](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2306)) ([18ace87](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/18ace87fdba6f1d9a9bc8d56d2be76dfd14f428e))
+
+
+### Features
+
+* **alerts:** change warning icon ([#2240](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2240)) ([0e9c628](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0e9c6285f20150ac546f1a9454a2a82d8120926e))
+* dark mode ([#2223](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2223)) ([00d701b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/00d701bf47764b15a2e105bbcd3b073e48177d22))
+* **list group:** 2 new variants and change default font-weight ([#1467](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1467)) ([99ca91f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/99ca91f33860d18d4aad5e1f8b77b1cd3c2e60a8))
+
+
+
 ## [5.3.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.1...v5.3.2) (2023-09-18)
 
 
