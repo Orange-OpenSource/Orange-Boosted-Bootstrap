@@ -412,11 +412,14 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 
 ## Nesting
 
+Border styles, active styles, and table variants are not inherited by nested tables.
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 {{< /design-callout-alert >}}
-
-Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
   <table class="table table-striped table-bordered">
@@ -496,6 +499,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
   </tbody>
 </table>
 ```
+</details>
 
 ## How nesting works
 

@@ -146,6 +146,9 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant is just an **example illustrating the use of the layout utility**. It should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -161,6 +164,7 @@ This variant is just an **example illustrating the use of the layout utility**. 
 {{- end -}}
 {{< /list-group.inline >}}
 {{< /example >}}
+</details>
 
 ## Variants
 
@@ -238,6 +242,9 @@ Add badges to any list group item to show unread counts, activity, and more with
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -270,11 +277,15 @@ This variant should not be used because it does not respect the Orange Design Sy
   </a>
 </div>
 {{< /example >}}
+</details>
 
 ## Checkboxes and radios
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -331,6 +342,7 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
   </li>
 </ul>
 {{< /example >}}
+</details>
 
 <!-- Boosted mod -->
 ## Dark variant
