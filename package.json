@@ -162,7 +162,7 @@
     "rtlcss": "^4.1.1",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
-    "sass-true": "^7.0.1",
+    "sass-true": "^8.0.0",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
     "storybook": "^7.6.17",
