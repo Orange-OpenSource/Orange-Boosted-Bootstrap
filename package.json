@@ -150,7 +150,7 @@
     "karma-jasmine-html-reporter": "^2.1.0",
     "karma-rollup-preprocessor": "7.0.7",
     "lockfile-lint": "^4.13.2",
-    "nodemon": "^3.0.3",
+    "nodemon": "^3.1.0",
     "npm-run-all2": "^6.1.2",
     "ods-storybook-theme": "^1.1.0",
     "pa11y-ci": "^3.1.0",
