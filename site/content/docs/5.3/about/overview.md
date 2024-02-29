@@ -29,6 +29,7 @@ Boosted ships with custom accessible components to suit specific needs:
 - [Local navigation]({{< docsref "/components/local-navigation" >}})
 - [Orange navbar]({{< docsref "/components/orange-navbar" >}})
 - [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
+- [Side navigation]({{< docsref "/components/side-navigation" >}})
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
 - [Sticker]({{< docsref "/components/sticker" >}})

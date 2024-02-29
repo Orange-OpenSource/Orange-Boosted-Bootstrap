@@ -2240,11 +2240,11 @@ $btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y:               $modal-inner-padding !default;
 $offcanvas-padding-x:               $modal-inner-padding !default;
-$offcanvas-horizontal-width:        400px !default;
+$offcanvas-horizontal-width:        300px !default; // Boosted mod: instead of `400px`
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-border-color:            $modal-content-border-color !default;
-$offcanvas-border-width:            $modal-content-border-width !default;
+$offcanvas-border-width:            1px !default; // Boosted mod: instead of `$modal-content-border-width`
 $offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                $modal-content-bg !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $offcanvas-color:                   $modal-content-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
@@ -2422,6 +2422,27 @@ $footer-gap:                              $spacer * .75 !default;
 $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
 
+//// Side navigation
+// scss-docs-start side-nav-variables
+$side-nav-min-width:                calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)) !default; // stylelint-disable-line function-disallowed-list
+$side-nav-max-width:                $offcanvas-horizontal-width !default;
+$side-nav-bg:                       $offcanvas-bg-color !default;
+$side-nav-border-width:             1px !default;
+$side-nav-border-color:             $offcanvas-border-color !default;
+
+$side-nav-item-min-height:          $spacer * 2 !default;
+$side-nav-item-icon-size:           $spacer * 1.25 !default;
+$side-nav-item-spacing:             15px !default;
+$side-nav-item-padding-top:         8px !default;
+$side-nav-item-padding-end:         0 !default;
+$side-nav-item-padding-bottom:      10px !default;
+$side-nav-item-padding-start:       15px !default;
+$side-nav-item-color:               var(--#{$prefix}body-color) !default;
+$side-nav-item-hover-bg:            var(--#{$prefix}secondary-bg) !default;
+$side-nav-item-active-bg:           var(--#{$prefix}tertiary-active-bg) !default;
+$side-nav-item-active-border:       var(--#{$prefix}primary) !default;
+// scss-docs-end side-nav-variables
+// End mod
 
 // Tags
 
