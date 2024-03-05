@@ -15,11 +15,11 @@
             <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" }}
             <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary">
                 <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                 Download examples
               </a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3">
                 Download source code
               </a>
             </div>
