@@ -55,6 +55,8 @@ const CLASS_NAME_NEXT = 'carousel-item-next'
 const CLASS_NAME_PREV = 'carousel-item-prev'
 const CLASS_NAME_PAUSED = 'is-paused' // Boosted mod: used for progress indicators
 const CLASS_NAME_DONE = 'is-done' // Boosted mod: used for progress indicators
+const CLASS_NAME_PAUSE = 'pause' // Boosted mod: used for pause button
+const CLASS_NAME_PLAY = 'play' // Boosted mod: used for play button
 
 const SELECTOR_ACTIVE = '.active'
 const SELECTOR_ITEM = '.carousel-item'
@@ -164,9 +166,9 @@ class Carousel extends BaseComponent {
     // End mod
 
     // Boosted mod: if a play-pause button is present, set the button to play
-    if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
-      this._playPauseButton.classList.remove('pause')
-      this._playPauseButton.classList.add('play')
+    if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PAUSE)) {
+      this._playPauseButton.classList.remove(CLASS_NAME_PAUSE)
+      this._playPauseButton.classList.add(CLASS_NAME_PLAY)
 
       if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT)) {
         this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT))
@@ -195,9 +197,9 @@ class Carousel extends BaseComponent {
     // End mod
 
     // Boosted mod: if a play-pause button is present, reset the button to pause
-    if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
-      this._playPauseButton.classList.remove('play')
-      this._playPauseButton.classList.add('pause')
+    if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PLAY)) {
+      this._playPauseButton.classList.remove(CLASS_NAME_PLAY)
+      this._playPauseButton.classList.add(CLASS_NAME_PAUSE)
 
       if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT)) {
         this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT))
@@ -548,7 +550,7 @@ class Carousel extends BaseComponent {
     const pauseButton = event.target
     const pauseButtonAttribute = pauseButton.getAttribute(SELECTOR_CAROUSEL_TO_PAUSE)
     const carouselToPause = Carousel.getOrCreateInstance(document.querySelector(pauseButtonAttribute))
-    if (pauseButton.classList.contains('pause')) {
+    if (pauseButton.classList.contains(CLASS_NAME_PAUSE)) {
       carouselToPause.pause()
     } else {
       carouselToPause.cycle()
