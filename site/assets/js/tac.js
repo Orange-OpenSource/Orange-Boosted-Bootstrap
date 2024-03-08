@@ -40,6 +40,8 @@
 
   window.addEventListener('tac.open_panel',
     () => {
+      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-sm', 'btn-secondary', 'mt-2')
+
       document.querySelectorAll('#tarteaucitronServices_api button').forEach(button => {
         button.classList.add('btn', 'btn-sm', 'ms-2')
       })
