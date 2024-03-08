@@ -98,7 +98,9 @@ if (typeof tarteaucitron !== 'undefined') {
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
-    mandatory: false
+    mandatory: false,
+    googleConsentMode: true,
+    partnersList: true
   })
 
   tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
