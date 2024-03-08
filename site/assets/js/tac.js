@@ -40,6 +40,8 @@
 
   window.addEventListener('tac.open_panel',
     () => {
+      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-secondary', 'd-flex', 'mt-3', 'mx-auto')
+
       document.querySelectorAll('#tarteaucitronServices_api button').forEach(button => {
         button.classList.add('btn', 'btn-sm', 'ms-2')
       })
@@ -96,7 +98,9 @@ if (typeof tarteaucitron !== 'undefined') {
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
-    mandatory: false
+    mandatory: false,
+    googleConsentMode: false,
+    partnersList: true
   })
 
   tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';

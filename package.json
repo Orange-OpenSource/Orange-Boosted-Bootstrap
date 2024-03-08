@@ -168,7 +168,7 @@
     "storybook": "^7.6.17",
     "stylelint": "^16.2.1",
     "stylelint-config-twbs-bootstrap": "^14.0.0",
-    "tarteaucitronjs": "^1.16.1",
+    "tarteaucitronjs": "^1.17.0",
     "terser": "^5.27.1",
     "vnu-jar": "^23.4.11"
   },
