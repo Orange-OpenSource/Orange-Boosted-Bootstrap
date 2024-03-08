@@ -99,7 +99,7 @@ if (typeof tarteaucitron !== 'undefined') {
     handleBrowserDNTRequest: true,
     useExternalCss: true,
     mandatory: false,
-    googleConsentMode: true,
+    googleConsentMode: false,
     partnersList: true
   })
 
