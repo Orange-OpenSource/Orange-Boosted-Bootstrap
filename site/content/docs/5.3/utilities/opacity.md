@@ -3,7 +3,8 @@ layout: docs
 title: Opacity
 description: Control the opacity of elements.
 group: utilities
-added: "5.1"
+added:
+  version: "5.1"
 aliases:
   - "/docs/utilities/opacity/"
 ---

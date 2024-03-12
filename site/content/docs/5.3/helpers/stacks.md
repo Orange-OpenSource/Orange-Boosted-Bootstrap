@@ -6,7 +6,8 @@ group: helpers
 aliases:
   - "/docs/helpers/stacks/"
 toc: true
-added: "5.1"
+added:
+  version: "5.1"
 ---
 
 Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Boosted. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
