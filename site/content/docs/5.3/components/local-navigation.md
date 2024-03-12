@@ -6,7 +6,8 @@ group: components
 aliases:
   - "/docs/components/local-navigation/"
 toc: true
-added: "5.3"
+added:
+  version: "5.3"
 ---
 
 ## Example

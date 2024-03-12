@@ -6,7 +6,8 @@ group: helpers
 aliases:
   - "/docs/helpers/color-background/"
 toc: true
-added: "5.2"
+added:
+  version: "5.2"
 ---
 
 ## Overview

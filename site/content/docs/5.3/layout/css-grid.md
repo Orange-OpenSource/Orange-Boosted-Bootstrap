@@ -6,7 +6,8 @@ group: layout
 aliases:
   - "/docs/layout/css-grid/"
 toc: true
-added: "5.1"
+added:
+  version: "5.1"
 ---
 
 Boosted's default grid system represents the culmination of over a decade of CSS layout techniques, tried and tested by millions of people via Bootstrap. But, it was also created without many of the modern CSS features and techniques we're seeing in browsers like the new CSS Grid.

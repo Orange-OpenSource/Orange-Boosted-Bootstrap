@@ -6,7 +6,8 @@ group: helpers
 aliases:
   - "/docs/helpers/icon-link/"
 toc: true
-added: 5.3
+added:
+  version: "5.3"
 ---
 
 ## Link chevron

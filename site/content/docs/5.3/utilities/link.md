@@ -6,7 +6,8 @@ group: utilities
 aliases:
   - "/docs/utilities/link/"
 toc: true
-added: 5.3
+added:
+  version: "5.3"
 ---
 
 {{< design-callout-alert >}}
