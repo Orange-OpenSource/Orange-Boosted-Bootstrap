@@ -16,22 +16,21 @@ function createDirectoryIfNeeded(path) {
   }
 }
 
-function createMDXDocumentation(content) {
-  return `import { Story, Canvas } from '@storybook/addon-docs/blocks';\n\n${content}`
-}
-
-function createTemplate(component, index, content) {
-  return `import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';\n\
-  export default {\n\
+function createTemplate(component) {
+  return `export default {\n\
     title: 'Components/${component}',\n\
     parameters: {\n\
       docs: {\n\
-        page: CustomMDXDocumentation,\n\
+        toc: true \n\
       }\n\
     },\n\
   }\n\
   \n\
-  export const ${component}_${index} = () => \`${content}\``
+`
+}
+
+function createStories(component, index, content) {
+  return `export const ${component}_${index} = () => \`${content}\``
 }
 
 const convertToKebabCase = string => {
@@ -78,14 +77,16 @@ createDirectoryIfNeeded(outputDirectory);
 
       let index = 0
       let mdxContent = ''
+      let storyContent = ''
+      const outputFileDirectory = `${outputDirectory}/${file[0]}`
+      const outputFile = `${outputFileDirectory}/${file[0]}.stories.js`
+      console.log(`creating ${outputFile}...`)
+
+      storyContent = createTemplate(file[0])
+      mdxContent = `import * as ${file[0]}_Stories from './${file[0]}.stories';\n<Meta title="Components/${file[0]}" of={${file[0]}_Stories} />\n\n`
       for (const example of e) {
-        const outputFileDirectory = `${outputDirectory}/${file[0]}`
-        const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
-
-        console.log(`creating ${outputFile}...`)
-
         // Fill the MDX doc content with this component
-        mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
+        mdxContent += `<Canvas>\n<Story of={${file[0]}_Stories.${file[0]}_${index}}/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
         example[0] = `<div class="${Object.values(example[1]).join(' ')} m-0 border-0">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
@@ -97,20 +98,15 @@ createDirectoryIfNeeded(outputDirectory);
           example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in JS snippets
         }
 
-        createDirectoryIfNeeded(outputFileDirectory)
-
-        try {
-          fs.writeFileSync(outputFile, createTemplate(file[0], index, example[0]))
-        } catch (error) {
-          throw new Error(error)
-        }
+        storyContent += createStories(file[0], index, example[0]) + '\n\n'
 
         index++
       }
 
-      // Create the MDX documentation
+      createDirectoryIfNeeded(outputFileDirectory)
+
       try {
-        fs.writeFileSync(`${outputDirectory}/${file[0]}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
+        fs.writeFileSync(outputFile, storyContent)
       } catch (error) {
         throw new Error(error)
       }
