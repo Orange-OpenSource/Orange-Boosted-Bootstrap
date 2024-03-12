@@ -150,7 +150,7 @@
     {{ .Content }}
 
     {{- if eq hugo.Environment "production" -}}
-      <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
+      <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
     {{- else -}}
       <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
     {{- end }}
