@@ -9,6 +9,14 @@ aliases:
 toc: true
 ---
 
+## v5.3.4
+
+<hr class="mb-4">
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. You don't need the `z-index` parameter anymore. Please reflect these modifications inside your website.
+
 ## v5.3.3
 
 <hr class="mb-4">
@@ -153,7 +161,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The markup has been changed:
     - `.input-group` class has been removed
     - `.btn-secondary` class has been replaced by `.btn-outline-secondary`
-    
+
     Make sure to incorporate these changes into your websites.
 
 - **Star rating**
