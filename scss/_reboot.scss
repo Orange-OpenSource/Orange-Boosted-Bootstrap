@@ -48,6 +48,8 @@
   }
   // scss-docs-end scroll-offset
   // End mod
+
+  min-height: 100vh; // Boosted mod
 }
 
 
@@ -63,6 +65,7 @@
 // scss-docs-start reboot-body-rules
 body {
   position: relative; // Boosted mod: required for back-to-top component
+  min-height: 100vh; // Boosted mod
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
   font-synthesis: none; // Boosted mod // 5

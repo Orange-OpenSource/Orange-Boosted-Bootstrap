@@ -17,6 +17,8 @@
   --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
   --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
 
+  position: sticky;
+  top: 100vh;
   display: block;
   color: var(--#{$prefix}footer-color);
   box-shadow: none;
