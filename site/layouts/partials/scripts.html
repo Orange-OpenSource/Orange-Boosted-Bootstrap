@@ -11,6 +11,11 @@
 {{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
 <script src="{{ $applicationJs.RelPermalink }}"></script>
 
+<!--Boosted mod-->
+{{- $tarteaucitronJs := resources.Get "js/tac.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/tac.js") }}
+<script src="{{ $tarteaucitronJs.RelPermalink }}"></script>
+<!--End mod-->
+
 {{- if (ne .Page.Layout "examples") -}}
 {{- $searchJs := resources.Get "js/search.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/search.js") }}
 <script async src="{{ $searchJs.RelPermalink }}"></script>
@@ -28,5 +33,10 @@
 {{- $esbuildOptions = merge $esbuildOptions (dict "params" $esbuildParams) -}}
 {{- $stackblitzJs := resources.Get "js/stackblitz.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/stackblitz.js") }}
 <script async src="{{ $stackblitzJs.RelPermalink }}"></script>
+
+<!--Boosted mod-->
+{{- $colorJs := resources.Get "js/color.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/color.js") }}
+<script src="{{ $colorJs.RelPermalink }}"></script>
+<!--End mod-->
 {{- end -}}
 

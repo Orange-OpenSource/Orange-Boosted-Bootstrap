@@ -3,7 +3,9 @@
 /* eslint camelcase: 0 */
 /* eslint unicorn/prefer-string-trim-start-end: 0 */
 
-export default () => {
+import tarteaucitron from 'tarteaucitronjs'
+
+(() => {
   window.addEventListener('tac.root_available', () => {
     const tac = document.getElementById('tarteaucitron')
 
@@ -83,7 +85,7 @@ export default () => {
     },
     { once: true }
   )
-}
+})()
 
 if (typeof tarteaucitron !== 'undefined') {
   tarteaucitron.init({

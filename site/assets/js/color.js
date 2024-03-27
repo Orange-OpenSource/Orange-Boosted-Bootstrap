@@ -14,7 +14,7 @@
 
 import ClipboardJS from 'clipboard'
 
-export default () => {
+(() => {
   const copyVariable = new ClipboardJS('.color-copy', {
     text: trigger => trigger.getAttribute('data-clipboard-text')
   })
@@ -33,4 +33,4 @@ export default () => {
     }, { once: true })
     event.clearSelection()
   })
-}
+})()
