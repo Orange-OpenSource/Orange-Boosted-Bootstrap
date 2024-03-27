@@ -12,8 +12,11 @@
 <script src="{{ $applicationJs.RelPermalink }}"></script>
 
 <!--Boosted mod-->
-{{- $tarteaucitronJs := resources.Get "js/tac.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/tac.js") }}
-<script src="{{ $tarteaucitronJs.RelPermalink }}"></script>
+{{- $js := resources.Match "js/tac.js" -}}
+{{- $targetTacJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
+{{- $tacJs := $js | resources.Concat $targetTacJSPath -}}
+{{- $tacJs = $tacJs | resources.Minify -}}
+<script src="{{ $tacJs.Permalink | relURL }}"></script>
 <!--End mod-->
 
 {{- if (ne .Page.Layout "examples") -}}

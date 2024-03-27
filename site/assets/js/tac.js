@@ -3,9 +3,9 @@
 /* eslint camelcase: 0 */
 /* eslint unicorn/prefer-string-trim-start-end: 0 */
 
-import tarteaucitron from 'tarteaucitronjs'
+(function () {
+  'use strict'
 
-(() => {
   window.addEventListener('tac.root_available', () => {
     const tac = document.getElementById('tarteaucitron')
 
