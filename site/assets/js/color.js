@@ -2,11 +2,19 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-/* global ClipboardJS: false, boosted: false */
+/*
+ * JavaScript for Boosted's docs (https://boosted.orange.com/)
+ * Copyright 2015-2024 The Boosted Authors
+ * Copyright 2015-2024 Orange
+ * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
+ * For details, see https://creativecommons.org/licenses/by/3.0/.
+ */
 
-(() => {
-  'use strict'
+/* global boosted: false */
 
+import ClipboardJS from 'clipboard'
+
+export default () => {
   const copyVariable = new ClipboardJS('.color-copy', {
     text: trigger => trigger.getAttribute('data-clipboard-text')
   })
@@ -25,4 +33,4 @@
     }, { once: true })
     event.clearSelection()
   })
-})()
+}

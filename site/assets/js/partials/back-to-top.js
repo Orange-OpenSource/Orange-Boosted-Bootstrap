@@ -11,21 +11,23 @@
  */
 
 // Boosted mod: Remove back-to-top component from all pages when its not needed
-['load', 'resize'].forEach(event => {
-  window.addEventListener(event, () => {
-    const removeClass = 'd-none'
-    const html = document.querySelector('html')
-    const btt = document.querySelector('.back-to-top')
+export default () => {
+  ['load', 'resize'].forEach(event => {
+    window.addEventListener(event, () => {
+      const removeClass = 'd-none'
+      const html = document.querySelector('html')
+      const btt = document.querySelector('.back-to-top')
 
-    // 100(px) comes from:
-    //   - 40px of back-to-top component
-    //   - 40px of navbar-minimized
-    //   - 20px of 'security'
-    if (html.offsetHeight < window.innerHeight + 100) {
-      btt.classList.add(removeClass)
-    } else {
-      btt.classList.remove(removeClass)
-    }
+      // 100(px) comes from:
+      //   - 40px of back-to-top component
+      //   - 40px of navbar-minimized
+      //   - 20px of 'security'
+      if (html.offsetHeight < window.innerHeight + 100) {
+        btt.classList.add(removeClass)
+      } else {
+        btt.classList.remove(removeClass)
+      }
+    })
   })
-})
+}
 // End mod

@@ -3,9 +3,7 @@
 /* eslint camelcase: 0 */
 /* eslint unicorn/prefer-string-trim-start-end: 0 */
 
-(function () {
-  'use strict'
-
+export default () => {
   window.addEventListener('tac.root_available', () => {
     const tac = document.getElementById('tarteaucitron')
 
@@ -85,7 +83,7 @@
     },
     { once: true }
   )
-})()
+}
 
 if (typeof tarteaucitron !== 'undefined') {
   tarteaucitron.init({
