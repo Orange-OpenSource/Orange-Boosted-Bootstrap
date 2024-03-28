@@ -56,7 +56,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 
 We use the following JavaScript to trigger our live alert demo:
 
-{{< js-docs name="live-alert" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="live-alert" file="site/assets/js/partials/snippets.js" >}}
 
 <!-- Boosted mod: no Link color -->
 

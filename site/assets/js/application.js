@@ -9,42 +9,14 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-(() => {
-  'use strict'
+/* eslint-disable import/no-unresolved */
+import sidebarScroll from 'js/partials/sidebar.js'
+import removeBackToTopWhenNotNeeded from 'js/partials/back-to-top.js' // Boosted mod
+import codeExamples from 'js/partials/code-examples.js'
+import snippets from 'js/partials/snippets.js'
+/* eslint-enable import/no-unresolved */
 
-  // Scroll the active sidebar link into view
-  const sidenav = document.querySelector('.bd-sidebar')
-  const sidenavActiveLink = document.querySelector('.bd-links-nav .active')
-
-  if (sidenav && sidenavActiveLink) {
-    const sidenavHeight = sidenav.clientHeight
-    const sidenavActiveLinkTop = sidenavActiveLink.offsetTop
-    const sidenavActiveLinkHeight = sidenavActiveLink.clientHeight
-    const viewportTop = sidenavActiveLinkTop
-    const viewportBottom = viewportTop - sidenavHeight + sidenavActiveLinkHeight
-
-    if (sidenav.scrollTop > viewportTop || sidenav.scrollTop < viewportBottom) {
-      sidenav.scrollTop = viewportTop - (sidenavHeight / 2) + (sidenavActiveLinkHeight / 2)
-    }
-  }
-
-  // Boosted mod: Remove back-to-top component from all pages when its not needed
-  ['load', 'resize'].forEach(event => {
-    window.addEventListener(event, () => {
-      const removeClass = 'd-none'
-      const html = document.querySelector('html')
-      const btt = document.querySelector('.back-to-top')
-
-      // 100(px) comes from:
-      //   - 40px of back-to-top component
-      //   - 40px of navbar-minimized
-      //   - 20px of 'security'
-      if (html.offsetHeight < window.innerHeight + 100) {
-        btt.classList.add(removeClass)
-      } else {
-        btt.classList.remove(removeClass)
-      }
-    })
-  })
-  // End mod
-})()
+sidebarScroll()
+removeBackToTopWhenNotNeeded() // Boosted mod
+codeExamples()
+snippets()

@@ -531,7 +531,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 </div>
 {{< /example >}}
 
-{{< js-docs name="varying-modal-content" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="varying-modal-content" file="site/assets/js/partials/snippets.js" >}}
 
 ### Toggle between modals
 
