@@ -12,7 +12,7 @@
 <script src="{{ $applicationJs.RelPermalink }}"></script>
 
 <!--Boosted mod-->
-<script src="/docs/5.3/assets/js/tarteaucitron.min.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
 
 {{- $js := resources.Match "js/tac.js" -}}
 {{- $targetTacJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
