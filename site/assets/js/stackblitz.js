@@ -14,7 +14,7 @@
 import sdk from '@stackblitz/sdk'
 // https://gohugo.io/hugo-pipes/js/#options
 import {
-  cssCdn, docsVersion, jsBundleCdn, jsSnippetFile
+  cssCdn, docsVersion, helvNeue55W1GCdn, helvNeue55W1GHash, helvNeue75W1GCdn, helvNeue75W1GHash, helveticaCdn, helveticaHash, jsBundleCdn, jsSnippetFile
 } from '@params' // eslint-disable-line import/no-unresolved
 
 // Open in StackBlitz logic
@@ -47,9 +47,9 @@ sdk.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
     If you are not authorized to used it, don’t include the orange-helvetica.css
     See NOTICE.txt for more information.
   -->
-  <link href="{{ .Site.Params.cdn.HelvNeue55_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue55_W1G_hash }}" crossorigin="anonymous">
-  <link href="{{ .Site.Params.cdn.HelvNeue75_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue75_W1G_hash }}" crossorigin="anonymous">
-  <link href="{{ .Site.Params.cdn.helvetica }}" rel="stylesheet" integrity="{{ .Site.Params.cdn.helvetica_hash }}" crossorigin="anonymous">
+  <link href="${helvNeue55W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${helvNeue55W1GHash}" crossorigin="anonymous">
+  <link href="${helvNeue75W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${helvNeue75W1GHash}" crossorigin="anonymous">
+  <link href="${helveticaCdn}" rel="stylesheet" integrity="${helveticaHash}" crossorigin="anonymous">
 
   <link href="${cssCdn}" rel="stylesheet">
   <link href="https://boosted.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
