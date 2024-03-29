@@ -81,6 +81,11 @@ params:
   ods:
     web:                            "https://oran.ge/dsweb"
 
+  algolia:
+    appId:                          "F4PKENW3TB"
+    apiKey:                         "d04e794979727856a09d53f12ead9069"
+    indexName:                      "boosted-orange"
+
   download:
     source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.3.zip"
     dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.3.3/boosted-5.3.3-dist.zip"

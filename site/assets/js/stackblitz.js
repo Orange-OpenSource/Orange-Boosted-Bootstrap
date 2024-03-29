@@ -28,12 +28,12 @@ document.querySelectorAll('.btn-edit').forEach(btn => {
     // Get extra classes for this example
     const classes = Array.from(exampleEl.classList).join(' ')
 
-    sdk.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
+    openBoostedSnippet(htmlSnippet, jsSnippet, classes)
   })
 })
 
-sdk.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
-  const markup = `<!doctype html>
+const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
+  const indexHtml = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -54,20 +54,20 @@ sdk.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
   <link href="${cssCdn}" rel="stylesheet">
   <link href="https://boosted.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
   <title>Boosted Example</title>
-  <${'script'} src="${jsBundleCdn}"></${'script'}>
+  <${'script'} defer src="${jsBundleCdn}"></${'script'}>
 </head>
 <body class="p-3 m-0 border-0 ${classes}">
   <!-- Example Code -->
-  ${htmlSnippet.replace(/^/gm, '    ')}
+${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').trimEnd()}
   <!-- End Example Code -->
 </body>
-</html>`
+</html>
+`
 
-  const jsSnippetContent = jsSnippet ? jsSnippetFile : null
   const project = {
     files: {
-      'index.html': markup,
-      'index.js': jsSnippetContent
+      'index.html': indexHtml,
+      ...(jsSnippet && { 'index.js': jsSnippetFile })
     },
     title: 'Boosted Example',
     description: `Official example from ${window.location.href}`,

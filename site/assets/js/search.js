@@ -10,6 +10,9 @@
  */
 
 import docsearch from '@docsearch/js'
+// https://gohugo.io/hugo-pipes/js/#options
+// eslint-disable-next-line import/no-unresolved
+import { appId, apiKey, indexName } from '@params';
 
 (() => {
   const searchElement = document.getElementById('docsearch')
@@ -21,9 +24,9 @@ import docsearch from '@docsearch/js'
   const siteDocsVersion = searchElement.getAttribute('data-bd-docs-version')
 
   docsearch({
-    apiKey: 'd04e794979727856a09d53f12ead9069',
-    indexName: 'boosted-orange',
-    appId: 'F4PKENW3TB',
+    apiKey,
+    indexName,
+    appId,
     container: searchElement,
     searchParameters: {
       facetFilters: [`version:${siteDocsVersion}`]
