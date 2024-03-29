@@ -54,7 +54,7 @@ const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
   <link href="${cssCdn}" rel="stylesheet">
   <link href="https://boosted.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
   <title>Boosted Example</title>
-  <${'script'} src="${jsBundleCdn}"></${'script'}>
+  <${'script'} defer src="${jsBundleCdn}"></${'script'}>
 </head>
 <body class="p-3 m-0 border-0 ${classes}">
   <!-- Example Code -->
