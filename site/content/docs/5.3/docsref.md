@@ -5,7 +5,8 @@ description: Examples of Boosted's documentation-specific components and styles.
 aliases: "/docsref/"
 toc: true
 robots: noindex,follow
-sitemap_exclude: true
+sitemap:
+  exclude: true
 ---
 
 <!-- Boosted mod: no Buttons section because no `.btn-bd-*` defined -->
