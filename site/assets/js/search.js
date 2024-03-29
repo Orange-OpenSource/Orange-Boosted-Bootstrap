@@ -2,18 +2,25 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-(() => {
-  'use strict'
+/*!
+ * JavaScript for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2024 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ * For details, see https://creativecommons.org/licenses/by/3.0/.
+ */
 
+import docsearch from '@docsearch/js'
+
+(() => {
   const searchElement = document.getElementById('docsearch')
 
-  if (!window.docsearch || !searchElement) {
+  if (!searchElement) {
     return
   }
 
   const siteDocsVersion = searchElement.getAttribute('data-bd-docs-version')
 
-  window.docsearch({
+  docsearch({
     apiKey: 'd04e794979727856a09d53f12ead9069',
     indexName: 'boosted-orange',
     appId: 'F4PKENW3TB',

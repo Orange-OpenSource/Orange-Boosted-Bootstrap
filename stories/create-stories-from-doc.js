@@ -47,7 +47,7 @@ const toPascalCase = str => {
 const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
   .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
   .concat([['Tables', 'content']]) // Manual adding
-const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
+const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/partials/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
