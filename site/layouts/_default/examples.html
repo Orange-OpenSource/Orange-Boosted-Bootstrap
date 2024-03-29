@@ -89,7 +89,7 @@
       }
     </style>
 
-    {{ range .Page.Params.extra_css }}
+    {{ range .Page.Params.extra_css -}}
     {{ "<!-- Custom styles for this template -->" | safeHTML }}
     <link href="{{ . }}" rel="stylesheet">
     {{- end }}
@@ -99,38 +99,7 @@
 
     {{ if ne .Page.Params.theme_selector false }}
     <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle mode (auto)">
-        <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
+      {{ partial "theme-toggler" .}}
     </div>
     {{- end -}}
 
