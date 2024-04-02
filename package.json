@@ -119,7 +119,7 @@
     "@storybook/addon-essentials": "^8.0.4",
     "@storybook/addon-themes": "^8.0.4",
     "@storybook/blocks": "^8.0.4",
-    "@storybook/html": "^8.0.4",
+    "@storybook/html": "^8.0.5",
     "@storybook/html-vite": "^8.0.4",
     "@storybook/test": "^8.0.4",
     "autoprefixer": "^10.4.19",
