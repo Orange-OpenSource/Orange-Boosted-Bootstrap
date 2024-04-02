@@ -39,6 +39,11 @@
     <div class="container-xxl bd-gutter">
     {{ end }}
       {{ .Content }}
+
+      {{ if eq .Title "Examples" -}}
+        {{ partial "examples/main" . }}
+        <!-- Boosted mod: No 'examples/bs-themes' partial -->
+      {{- end }}
     </div>
   </main>
   <!-- End mod -->
