@@ -156,7 +156,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 Take that same HTML, but use `.nav-pills` instead:
 
 {{< design-callout-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used because it should be a `<button>` component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -373,7 +373,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 ### Pills with dropdowns
 
 {{< design-callout-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used because it should be a `<button>` component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 <!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->

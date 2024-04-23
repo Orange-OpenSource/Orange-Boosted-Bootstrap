@@ -8,12 +8,6 @@ aliases:
 toc: true
 ---
 
-{{< design-callout-alert >}}
-This component contains some spinners that should not be used on Orange sites.
-
-**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
-{{< /design-callout-alert >}}
-
 ## About
 
 Boosted "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
@@ -47,6 +41,20 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
+
+<details>
+<summary>Other Bootstrap variants</summary>
+<br>
+{{< example >}}
+{{< spinner.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<div class="spinner-border text-{{ .name }}" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+{{- end -}}
+{{< /spinner.inline >}}
+{{< /example >}}
+</details>
 <!-- End mod -->
 
 {{< callout info >}}
@@ -59,6 +67,15 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
+<details>
+<summary>See Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+This component contains some spinners that should not be used on Orange sites.
+
+**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="spinner-grow" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -69,14 +86,18 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 
 <!-- Boosted mod -->
 {{< example >}}
-<div class="spinner-grow text-primary" role="status">
+{{< example >}}
+{{< spinner.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<div class="spinner-grow text-{{ .name }}" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-grow text-secondary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
+{{- end -}}
+{{< /spinner.inline >}}
+{{< /example >}}
 {{< /example >}}
 <!-- End mod -->
+</details>
 
 ## Alignment
 
@@ -142,6 +163,24 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
 <div class="spinner-border spinner-border-sm" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
+<div class="spinner-border spinner-border-lg" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+{{< /example >}}
+
+<details>
+<summary>Other Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+This component contains some spinners that should not be used on Orange sites.
+
+**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+{{< /design-callout-alert >}}
+
+{{< example >}}
+<div class="spinner-border spinner-border-sm" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
 <div class="spinner-grow spinner-grow-sm" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
@@ -152,6 +191,7 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
+</details>
 <!-- End mod -->
 
 ## Buttons
@@ -169,6 +209,15 @@ Use spinners within buttons to indicate an action is currently processing or tak
 </button>
 {{< /example >}}
 
+<details>
+<summary>Other Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+This component contains some spinners that should not be used on Orange sites.
+
+**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
@@ -179,6 +228,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
+</details>
 
 ## CSS
 

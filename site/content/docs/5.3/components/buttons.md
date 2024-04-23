@@ -195,7 +195,6 @@ In need of a button, but not the hefty background colors they bring? Replace the
 <details>
 <summary>Other variants from Bootstrap</summary>
 <br>
-
 {{< design-callout-alert >}}
 The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
@@ -231,6 +230,9 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 
 You can even roll your own custom sizing with CSS variables:
 
+<details>
+<summary>See Bootstrap's example</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -243,6 +245,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
   Custom button
 </button>
 {{< /example >}}
+</details>
 
 ## Disabled state
 
@@ -280,6 +283,9 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
+<details class="mb-3">
+<summary>See Bootstrap's example</summary>
+<br>
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
@@ -292,6 +298,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
   <button class="btn btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
+</details>
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
 
@@ -324,12 +331,6 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 The button plugin allows you to create simple on/off toggle buttons.
 
-{{< design-callout-alert >}}
-These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
-
-Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
-{{< /design-callout-alert >}}
-
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
@@ -337,6 +338,15 @@ Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{
 ### Toggle states
 
 Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+
+<details>
+<summary>See Bootstrap's examples</summary>
+<br>
+{{< design-callout-alert >}}
+These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
+
+Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
@@ -349,6 +359,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
 <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
 {{< /example >}}
+</details>
 
 ### Methods
 

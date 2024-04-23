@@ -129,6 +129,13 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
 
+{{< example >}}
+<hr>
+{{< /example >}}
+
+<details>
+<summary>Other Bootstrap's examples</summary>
+<br>
 {{< design-callout-alert >}}
 These `<hr>` 2nd, 3rd and 4th variants can not be used because they do not respect the Orange Design System specifications. For the 2nd variant, it is because of its color. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
 {{< /design-callout-alert >}}
@@ -143,6 +150,7 @@ These `<hr>` 2nd, 3rd and 4th variants can not be used because they do not respe
 <hr class="border border-danger border-2 opacity-50">
 <hr class="border border-primary border-3 opacity-75">
 {{< /example >}}
+</details>
 
 ## Lists
 
