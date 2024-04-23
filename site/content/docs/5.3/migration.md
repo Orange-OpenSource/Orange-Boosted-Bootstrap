@@ -9,6 +9,13 @@ aliases:
 toc: true
 ---
 
+## v5.3.4
+
+### Core
+
+- **Color**
+  - <span class="badge text-bg-warning">Warning</span> The red color on dark mode has been changed due to a change in the design specifications. There shouldn't be any change to apply in the Boosted components, but check that you don't have the deprecated color hardcoded or referenced in your websites.
+
 ## v5.3.3
 
 <hr class="mb-4">
@@ -153,7 +160,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> The markup has been changed:
     - `.input-group` class has been removed
     - `.btn-secondary` class has been replaced by `.btn-outline-secondary`
-    
+
     Make sure to incorporate these changes into your websites.
 
 - **Star rating**
