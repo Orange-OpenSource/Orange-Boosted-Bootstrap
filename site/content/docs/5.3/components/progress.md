@@ -242,7 +242,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
 </div>
 {{< /example >}}
-<details>
+</details>
 
 ## CSS
 
