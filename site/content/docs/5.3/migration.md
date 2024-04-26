@@ -13,8 +13,8 @@ toc: true
 
 ### Core
 
-- **Color**
-  - <span class="badge text-bg-warning">Warning</span> The red color on dark mode has been changed due to a change in the design specifications. There shouldn't be any change to apply in the Boosted components, but check that you don't have the deprecated color hardcoded or referenced in your websites.
+- **Colors**
+  - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4f` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
 
 ## v5.3.3
 
