@@ -6,7 +6,7 @@ aliases: "/docsref/"
 toc: true
 robots: noindex,follow
 sitemap:
-  exclude: true
+  disable: true
 ---
 
 <!-- Boosted mod: no Buttons section because no `.btn-bd-*` defined -->
