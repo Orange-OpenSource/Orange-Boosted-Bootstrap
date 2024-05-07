@@ -80,7 +80,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
    </html>
    ```
 
-   You can also include [Popper](https://popper.js.org/) and our JS separately. If you don't plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
+   You can also include [Popper](https://popper.js.org/docs/v2/) and our JS separately. If you don't plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
 
    ```html
    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
@@ -119,7 +119,7 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Carousel for all slide behaviors, controls, and indicators
 - Close button for displaying and positioning tooltip
 - Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
+- Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
 - Footer for extending our Collapse plugin to implement responsive behavior
 - Modals for displaying, positioning, scroll behavior, and Close button tooltip
 - Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors, and Close button tooltip (Offcanvas only)
@@ -129,7 +129,7 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
 - Toasts for displaying, dismissing, and Close button tooltip
-- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
+- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
 
 {{< callout warning >}}
 #### Required script
@@ -219,7 +219,7 @@ Stay up-to-date on the development of Bootstrap and reach out to the community w
 - Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
 - Ask and explore [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
 - Ask questions and explore [Bootstrap GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
-- Discuss, ask questions, and more on [the community Discord](https://discord.gg/bZUvakRU3M) or [Bootstrap subreddit](https://reddit.com/r/bootstrap).
+- Discuss, ask questions, and more on [the community Discord](https://discord.gg/bZUvakRU3M) or [Bootstrap subreddit](https://www.reddit.com/r/bootstrap/).
 - Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Developers should use the keyword `bootstrap` on packages that modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.

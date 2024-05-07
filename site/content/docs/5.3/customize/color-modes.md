@@ -6,7 +6,8 @@ group: customize
 aliases:
   - "/docs/customize/color-modes/"
 toc: true
-added: "5.3"
+added:
+  version: "5.3"
 ---
 
 {{< callout >}}

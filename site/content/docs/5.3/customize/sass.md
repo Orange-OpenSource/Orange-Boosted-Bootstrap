@@ -103,7 +103,7 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install/) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
 
 {{< callout info >}}
 **Using Boosted with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). Bootstrap also has production-ready demos in [their examples repository on GitHub](https://github.com/twbs/examples).

@@ -1,82 +1,59 @@
-{{ if eq hugo.Environment "production" -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
+{{ if hugo.IsProduction -}}
+  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
 {{ else -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
+  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
 {{- end }}
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+{{- $esbuildOptions := dict "target" "es2019" -}}
+{{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version -}}
+{{- $esbuildOptions = merge $esbuildOptions (dict "minify" "true") -}}
+
+{{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
+<script defer src="{{ $applicationJs.RelPermalink }}"></script>
+
+<!--Boosted mod-->
+<script defer src="/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
+
+{{- $js := resources.Match "js/tac.js" -}}
+{{- $targetTacJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
+{{- $tacJs := $js | resources.Concat $targetTacJSPath -}}
+{{- $tacJs = $tacJs | resources.Minify -}}
+<script defer src="{{ $tacJs.Permalink | relURL }}"></script>
+<!--End mod-->
+
+{{- if (ne .Page.Layout "examples") -}}
+{{- $esbuildParams := dict
+  "apiKey" .Site.Params.algolia.apiKey
+  "appId" .Site.Params.algolia.appId
+  "indexName" .Site.Params.algolia.indexName
+-}}
+{{- $esbuildOptions = merge $esbuildOptions (dict "params" $esbuildParams) -}}
+{{- $searchJs := resources.Get "js/search.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/search.js") }}
+<script defer src="{{ $searchJs.RelPermalink }}"></script>
+{{- end -}}
 
 {{ if eq .Page.Layout "docs" -}}
-<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
-{{- end }}
+{{- /* Disable minify options for snippets.js so that the file's readable on StackBlitz */ -}}
+{{- $snippetsFile := resources.Get "js/snippets.js" | js.Build (merge $esbuildOptions (dict "minify" "false")) -}}
+{{- $esbuildParams := dict
+  "helvNeue55W1GCdn" .Site.Params.cdn.HelvNeue55_W1G
+  "helvNeue75W1GCdn" .Site.Params.cdn.HelvNeue75_W1G
+  "helveticaCdn" .Site.Params.cdn.helvetica
+  "helvNeue55W1GHash" .Site.Params.cdn.HelvNeue55_W1G_hash
+  "helvNeue75W1GHash" .Site.Params.cdn.HelvNeue75_W1G_hash
+  "helveticaHash" .Site.Params.cdn.helvetica_hash
+  "cssCdn" .Site.Params.cdn.css
+  "jsBundleCdn" .Site.Params.cdn.js_bundle
+  "docsVersion" .Site.Params.docs_version
+  "jsSnippetFile" $snippetsFile.Content
+-}}
+{{- $esbuildOptions = merge $esbuildOptions (dict "params" $esbuildParams) -}}
+{{- $stackblitzJs := resources.Get "js/stackblitz.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/stackblitz.js") }}
+<script defer src="{{ $stackblitzJs.RelPermalink }}"></script>
 
-{{- $vendor := resources.Match "js/vendor/*.js" -}}
-{{- $js := resources.Match "js/*.js" -}}
-{{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
-{{- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath -}}
-{{- $docsJs = $docsJs | resources.Minify -}}
+<!--Boosted mod-->
+{{- $colorJs := resources.Get "js/color.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/color.js") }}
+<script defer src="{{ $colorJs.RelPermalink }}"></script>
+<!--End mod-->
+{{- end -}}
 
-<script src="{{ $docsJs.Permalink | relURL }}"></script>
-
-{{ if eq .Page.Layout "docs" -}}
-<script>
-  // Open in StackBlitz logic
-  document.querySelectorAll('.btn-edit').forEach(btn => {
-    btn.addEventListener('click', event => {
-      const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
-      
-      // Get extra classes for this example
-      const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
-
-      const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
-      StackBlitzSDK.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
-    })
-  })
-
-  StackBlitzSDK.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
-    const markup = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orange-helvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <link href="{{ .Site.Params.cdn.HelvNeue55_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue55_W1G_hash }}" crossorigin="anonymous">
-    <link href="{{ .Site.Params.cdn.HelvNeue75_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue75_W1G_hash }}" crossorigin="anonymous">
-    <link href="{{ .Site.Params.cdn.helvetica }}" rel="stylesheet" integrity="{{ .Site.Params.cdn.helvetica_hash }}" crossorigin="anonymous">
-
-    <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/{{ .Site.Params.docs_version }}/assets/css/docs.css" rel="stylesheet">
-    <title>Boosted Example</title>
-    <${'script'} src="{{ .Site.Params.cdn.js_bundle }}"></${'script'}>
-  </head>
-  <body class="p-3 m-0 border-0 ${classes}">
-    <!-- Example Code -->
-${htmlSnippet.replace(/^/gm, '    ')}
-    <!-- End Example Code -->
-  </body>
-</html>`
-
-    const jsSnippetContent = jsSnippet ? '{{ os.ReadFile "site/assets/js/snippets.js" }}' : null
-    const project = {
-      files: {
-        'index.html': markup,
-        'index.js': jsSnippetContent
-      },
-      title: 'Boosted Example',
-      description: `Official example from ${window.location.href}`,
-      template: jsSnippet ? 'javascript' : 'html',
-      tags: ['boosted']
-    }
-
-    StackBlitzSDK.openProject(project, { openFile: 'index.html' })
-  }
-</script>
-{{- end }}

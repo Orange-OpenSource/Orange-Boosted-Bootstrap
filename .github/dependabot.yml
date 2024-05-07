@@ -14,6 +14,11 @@ updates:
     labels:
       - dependencies
       - v5
+    groups:
+      storybook-deps:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
     schedule:
       interval: weekly
       day: tuesday

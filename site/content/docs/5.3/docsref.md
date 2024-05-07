@@ -5,7 +5,8 @@ description: Examples of Boosted's documentation-specific components and styles.
 aliases: "/docsref/"
 toc: true
 robots: noindex,follow
-sitemap_exclude: true
+sitemap:
+  disable: true
 ---
 
 <!-- Boosted mod: no Buttons section because no `.btn-bd-*` defined -->
@@ -42,4 +43,4 @@ sitemap_exclude: true
 
 {{< scss-docs name="variable-gradient" file="scss/_variables.scss" >}}
 
-{{< js-docs name="live-toast" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="live-toast" file="site/assets/js/partials/snippets.js" >}}

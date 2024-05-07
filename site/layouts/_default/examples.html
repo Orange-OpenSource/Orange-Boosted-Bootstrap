@@ -1,9 +1,6 @@
 <!doctype html>
 <html {{ if eq .Page.Params.direction "rtl" }}lang="ar" dir="rtl"{{ else }}lang="en"{{ end }}{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }} data-bs-theme="auto">
   <head>
-    {{- $colorModeJS := printf "/docs/%s/assets/js/color-modes.js" $.Site.Params.docs_version -}}
-    <script src="{{ $colorModeJS | relURL }}"></script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -16,6 +13,9 @@
     {{ with .Params.robots -}}
     <meta name="robots" content="{{ . }}">
     {{- end }}
+
+    {{- $colorModeJS := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/js/color-modes.js" -}}
+    <script src="{{ $colorModeJS }}"></script>
 
     {{ partial "stylesheet" . }}
     {{ partial "favicons" . }}
@@ -79,84 +79,42 @@
         z-index: 1500;
       }
 
+      /* Boosted mod: instead of `.bd-mode-toggle .bi` rule */
       .bd-mode-toggle svg {
         width: 1.25rem;
         height: 1.25rem;
       }
+      /* End mod */
 
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
     </style>
 
-    {{ range .Page.Params.extra_css }}
+    {{ range .Page.Params.extra_css -}}
     {{ "<!-- Custom styles for this template -->" | safeHTML }}
     <link href="{{ . }}" rel="stylesheet">
     {{- end }}
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="check2" viewBox="0 0 1000 1000">
-        <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
-      </symbol>
-      <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
-        <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
-      </symbol>
-      <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
-        <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
-      </symbol>
-      <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
-        <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
-      </symbol>
-    </svg>
+    {{ partial "examples/icons" . }}
 
     {{ if ne .Page.Params.theme_selector false }}
     <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle mode (auto)">
-        <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
+      {{ partial "theme-toggler" .}}
     </div>
     {{- end -}}
 
     {{ .Content }}
 
-    {{- if eq hugo.Environment "production" -}}
-      <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
+    {{- if hugo.IsProduction -}}
+      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
     {{- else -}}
-      <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
+      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
     {{- end }}
 
     {{ range .Page.Params.extra_js -}}
-      <script{{ with .async }} async{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
+      <script{{ with .async }} async{{ end }}{{ with .defer }} defer{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
     {{- end -}}
   </body>
 </html>

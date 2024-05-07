@@ -5,7 +5,8 @@ description: Dark mode page helping to debug dark mode
 aliases: "/dark-mode/"
 toc: true
 robots: noindex,follow
-sitemap_exclude: true
+sitemap:
+  disable: true
 ---
 
 ## Components
