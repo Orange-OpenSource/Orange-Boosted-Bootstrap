@@ -37,6 +37,7 @@ updates:
       - dependency-name: "@rollup/plugin-commonjs"
       - dependency-name: "@rollup/plugin-node-resolve"
       - dependency-name: "@rollup/plugin-replace"
+      - dependency-name: "@stackblitz/sdk"
       - dependency-name: "autoprefixer"
       - dependency-name: "bundlewatch"
       - dependency-name: "clean-css-cli"
