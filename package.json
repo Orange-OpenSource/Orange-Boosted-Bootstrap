@@ -114,7 +114,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
-    "@stackblitz/sdk": "^1.9.0",
+    "@stackblitz/sdk": "^1.10.0",
     "@storybook/addon-a11y": "^8.0.9",
     "@storybook/addon-essentials": "^8.0.9",
     "@storybook/addon-themes": "^8.0.9",
