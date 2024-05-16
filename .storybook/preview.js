@@ -14,7 +14,6 @@ const preview = {
       attributeName: 'data-bs-theme',
     }),
   ],
-
   parameters: {
     controls: {
       matchers: {
@@ -24,7 +23,6 @@ const preview = {
     },
     viewport: { viewports: INITIAL_VIEWPORTS },
   },
-
   tags: ['autodocs']
 };
 
