@@ -23,6 +23,7 @@ const preview = {
     },
     viewport: { viewports: INITIAL_VIEWPORTS },
   },
+  tags: ['autodocs'],
 };
 
 export default preview;
