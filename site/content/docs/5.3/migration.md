@@ -2214,7 +2214,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge text-bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed respectively `$o-stepbar-margin-r`and `$o-stepbar-arrow-width` to `$step-item-margin-end` and `$step-item-arrow-width`.
+- <span class="badge text-bg-danger">Breaking</span> Renamed respectively `$o-stepbar-margin-r` and `$o-stepbar-arrow-width` to `$step-item-margin-end` and `$step-item-arrow-width`.
 
 - <span class="badge text-bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
