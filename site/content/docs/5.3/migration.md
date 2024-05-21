@@ -73,7 +73,7 @@ Retrieve our color theme in the [new color theme documentation]({{< docsref "/cu
   - <span class="badge text-bg-danger">Breaking</span> Checkbox and radio button groups have changed their markup by replacing `.btn-primary` by `.btn-toggle`. Please reflect this modification into your websites.
 
 - **Close button**
-  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (`.btn-close-white`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
+  - <span class="badge text-bg-danger">Breaking</span> The dark variant of the close button (`.btn-close-white`) has been replaced by using the contextual dark mode with `data-bs-theme="dark"`.
 
 - **Dropdown**
   - <span class="badge text-bg-success">New</span> Rendering has been updated based on the new design specifications for the hover and actives states of dropdown menu items.
@@ -965,7 +965,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
       <li><code>$kbd-bg-dark</code> → <code>$kbd-bg-inverted</code></li>
       <li><code>$kbd-color-dark</code> → <code>$kbd-color-inverted</code></li>
       <li><code>$link-color-dark</code> → <code>$link-color-inverted</code></li>
-      <li><code>$link-hover-color-dark</code> -> <code>$link-hover-color-inverted</code></li>
+      <li><code>$link-hover-color-dark</code> → <code>$link-hover-color-inverted</code></li>
       <li><code>$mark-bg-dark</code> → <code>$mark-bg-inverted</code></li>
       <li><code>$mark-color-dark</code> → <code>$mark-color-inverted</code></li>
       <li><code>$pre-color-dark</code> → <code>$pre-color-inverted</code></li>
