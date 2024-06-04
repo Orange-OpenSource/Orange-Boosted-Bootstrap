@@ -139,7 +139,7 @@
     "focus-visible": "^5.2.0",
     "globby": "^14.0.1",
     "hammer-simulator": "0.0.1",
-    "hugo-bin": "^0.122.5",
+    "hugo-bin": "^0.123.3",
     "ip": "^2.0.0",
     "jasmine": "^5.1.0",
     "jquery": "^3.7.1",
