@@ -39,7 +39,7 @@
       darkHex: "#fc0"
     - name: Danger
       hex: "#cd3c14"
-      darkHex: "#f66"
+      darkHex: "#ff4d4d"
 - category: Grays
   name: "Grays"
   colors:
@@ -120,7 +120,7 @@
     colors:
       - name: Fire 100
         variable: $ods-fire-100
-        hex: "#f66"
+        hex: "#ff4d4d"
       - name: Fire 200
         variable: $ods-fire-200
         hex: "#cd3c14"
