@@ -20,7 +20,7 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. You don't need the `z-index` parameter anymore. Please reflect these modifications inside your website.
+- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
 
 ## v5.3.3
 
