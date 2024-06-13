@@ -6,7 +6,7 @@ aliases: "/dark-mode/"
 toc: true
 robots: noindex,follow
 sitemap:
-  exclude: true
+  disable: true
 ---
 
 ## Components

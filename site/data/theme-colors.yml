@@ -12,7 +12,7 @@
   description: "<b>Success —</b> Theme color used for positive or successful actions."
 - name: danger
   hex: "#cd3c14"
-  dark_hex: "#ff6666"
+  dark_hex: "#ff4d4d"
   description: "<b>Danger —</b> Theme color used for errors or dangerous actions."
 - name: warning
   hex: "#ffcc00"
