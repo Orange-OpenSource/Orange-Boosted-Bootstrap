@@ -43,8 +43,14 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 {{< /example >}}
 
 <details>
-<summary>Other Bootstrap variants</summary>
+<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
 <br>
+{{< design-callout-alert >}}
+This component contains some spinners that should not be used on Orange sites.
+
+**Colored spinners** are not compatible with the [Orange Design System]({{< param ods.web >}}).
+{{< /design-callout-alert >}}
+
 {{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -68,7 +74,7 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 <details>
-<summary>See Bootstrap's variants</summary>
+<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
 <br>
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
@@ -86,7 +92,6 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 
 <!-- Boosted mod -->
 {{< example >}}
-{{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-grow text-{{ .name }}" role="status">
@@ -94,7 +99,6 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 </div>
 {{- end -}}
 {{< /spinner.inline >}}
-{{< /example >}}
 {{< /example >}}
 <!-- End mod -->
 </details>
@@ -169,7 +173,7 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
 {{< /example >}}
 
 <details>
-<summary>Other Bootstrap's variants</summary>
+<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
 <br>
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
@@ -210,7 +214,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {{< /example >}}
 
 <details>
-<summary>Other Bootstrap's variants</summary>
+<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
 <br>
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.

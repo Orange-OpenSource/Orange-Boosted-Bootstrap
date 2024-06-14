@@ -55,10 +55,11 @@
   > details {
     padding: 5px 10px; // Static even on zoom
     border: transparent solid calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
-  }
 
-  > [open] {
-    border-color: var(--bs-border-color);
+    // stylelint-disable-next-line selector-no-qualifying-type
+    &[open] {
+      border-color: var(--bs-border-color);
+    }
   }
   // End mod
 }

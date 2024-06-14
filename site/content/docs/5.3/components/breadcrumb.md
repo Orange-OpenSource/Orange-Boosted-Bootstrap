@@ -74,7 +74,7 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 ```
 
 <details>
-<summary>Other Bootstrap example</summary>
+<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
 <br>
 {{< design-callout-alert >}}
 This variant **without the breadcrumb dividers** should not be used because it does not respect the Orange Design System specifications.
