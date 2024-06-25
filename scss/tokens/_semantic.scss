@@ -1,0 +1,15 @@
+//// Semantic applications
+//// Depends on raw primitive values
+
+// Opacity
+
+// scss-docs-start opacities-variables-maps
+$opacities: (
+  "transparent": $opacity-0,
+  "weaker":      $opacity-100,
+  "weak":        $opacity-300,
+  "medium":      $opacity-500,
+  "emphasis":    $opacity-700,
+  "opaque":      $opacity-900
+) !default;
+// scss-docs-end opacities-variables-maps

@@ -1,13 +1,27 @@
 ---
 layout: docs
-title: Migrating to v5
-description: Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.
+title: Migrating to recent versions
+description: Track and review changes to the UDS Web source files, documentation, and components to help you migrate from previous versions.
 group: migration
 aliases:
   - "/migration/"
   - "/docs/migration/"
 toc: true
 ---
+
+## v0.1.0
+
+<!-- TODO: write the content correctly -->
+<!-- TODO: make "From Boosted" a specific page? -->
+
+* New `$enable-bootstrap-specificities` option set to `true` by default.
+  * Must be a global migration note as it will impact not only the opacity utilities
+* New opacity utilities: `.opacity-transparent`, etc.
+* Dropped opacity utilities: `.opacity-0`, etc.
+  * Mapping rule between old and new opacity utilities.
+* New Sass variables, Sass maps, etc.
+
+<!-- TODO: the following would be dropped in the future library, it would be the linked to the new releases -->
 
 ## v5.3.4
 
