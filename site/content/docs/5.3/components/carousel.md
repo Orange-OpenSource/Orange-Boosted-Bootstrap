@@ -102,8 +102,6 @@ Carousel progress indicator is paused under multiple conditions:
 <!-- Boosted mod -->
 ### With pause/play button
 
-{{< added-in "5.2.0" >}}
-
 Adding a pause and play button is recommended to setup an accessible carousel.
 When using this button, do not forget to turn off the pause on hover by adding `data-bs-pause="false"` to your carousel.
 

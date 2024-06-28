@@ -393,8 +393,6 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 ## Dark dropdowns
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "dropdown-menu" >}}
 
 ## Directions
@@ -1022,8 +1020,6 @@ The 3 last auto close behavior variants should not be used because featuring a s
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.dropdown-menu` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

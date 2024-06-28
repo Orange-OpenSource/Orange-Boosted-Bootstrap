@@ -161,8 +161,6 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "btn" >}}
 <!-- End mod -->
 
@@ -379,8 +377,6 @@ document.querySelectorAll('.btn').forEach(buttonElement => {
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

@@ -204,8 +204,6 @@ If you want it to wrap nicely on lower breakpoints, consider using [our Local Na
 <!-- Boosted mod -->
 ### Nested tabs
 
-{{< added-in "5.2.0" >}}
-
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
@@ -406,8 +404,6 @@ This variant should not be used because it is a button component in the Orange D
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part of Boosted's evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 On the `.nav` base class:
@@ -425,8 +421,6 @@ On the `.nav-pills` modifier class:
 On the `.tab-content` modifier class:
 
 {{< scss-docs name="tab-content-css-vars" file="scss/_nav.scss" >}}
-
-{{< added-in "5.3.0" >}}
 
 On the `.nav-underline` modifier class:
 

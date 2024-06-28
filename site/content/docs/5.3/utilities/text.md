@@ -107,8 +107,6 @@ Change the line height with `.lh-*` utilities.
 
 ## Line length
 
-{{< added-in "5.2.0" >}}
-
 Limit the line length with `.ll-*` utilities. It applies `max-width` property to an element with a width based on `ch` unit. This one was chosen because it is a font-based unit and because `1ch` is the width of "0" (which is around an average character width). It requires anything but `inline` to be applied.
 
 {{< example >}}

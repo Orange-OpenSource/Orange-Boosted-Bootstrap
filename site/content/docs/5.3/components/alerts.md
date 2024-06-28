@@ -131,15 +131,11 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "alert" >}}
 
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
@@ -154,8 +150,6 @@ Customization through CSS variables can be seen on the `.alert-sm` class where w
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
-
-{{< deprecated-in "5.3.0" >}}
 
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 

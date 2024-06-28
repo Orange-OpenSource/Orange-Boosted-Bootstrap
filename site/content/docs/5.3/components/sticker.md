@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/sticker/"
 toc: true
-added:
-  version: "5.2"
 ---
 
 ## Example
@@ -98,8 +96,6 @@ Since stickers only provide a container, accessibility becomes specific to the s
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, stickers now use local CSS variables on `.sticker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

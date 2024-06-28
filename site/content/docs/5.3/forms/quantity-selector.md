@@ -6,8 +6,6 @@ group: forms
 aliases:
   - "/docs/forms/quantity-selector/"
 toc: true
-added:
-  version: "5.2"
 ---
 
 ## Default

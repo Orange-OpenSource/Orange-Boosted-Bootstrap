@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/local-navigation/"
 toc: true
-added:
-  version: "5.3"
 ---
 
 ## Example
@@ -37,8 +35,6 @@ Since the component is supposed to be rendered on a full-size page, there are so
 {{< /example >}}
 
 ## Dark variant
-
-{{< deprecated-in "5.3.3" >}}
 
 {{< callout-deprecated-dark-variants "local-nav" >}}
 

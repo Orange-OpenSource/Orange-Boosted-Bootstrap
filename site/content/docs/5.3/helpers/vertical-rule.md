@@ -6,8 +6,6 @@ group: helpers
 aliases:
   - "/docs/helpers/vertical-rule/"
 toc: true
-added:
-  version: "5.1"
 ---
 
 ## How it works

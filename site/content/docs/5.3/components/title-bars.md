@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/title-bars/"
 toc: true
-added:
-  version: "5.2"
 ---
 
 ## How it works

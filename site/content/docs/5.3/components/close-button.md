@@ -26,8 +26,6 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "btn-close" >}}
 
 ## Eco-design variant
@@ -65,8 +63,6 @@ If you choose this option, please be aware that if the design of close buttons c
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.1" >}}
 
 As part of Boosted’s evolving CSS variables approach, close button now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

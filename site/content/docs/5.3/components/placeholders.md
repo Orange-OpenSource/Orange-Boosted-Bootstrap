@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/placeholders/"
 toc: true
-added:
-  version: "5.1"
 ---
 
 ## About

@@ -419,8 +419,6 @@ Cards include various options for customizing their backgrounds, borders, and co
 
 ### Background and color
 
-{{< added-in "5.2.0" >}}
-
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
 {{< example >}}
@@ -738,8 +736,6 @@ In `v4` we used a CSS-only technique to mimic the behavior of [Masonry](https://
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, cards now use local CSS variables on `.card` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

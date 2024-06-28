@@ -206,8 +206,6 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "accordion" >}}
 
 ## Accessibility
@@ -217,8 +215,6 @@ Please read the [collapse accessibility section]({{< docsref "/components/collap
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, accordions now use local CSS variables on `.accordion` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

@@ -55,8 +55,6 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 
 ## Growing spinner
 
-{{< added-in "5.2.0" >}}
-
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 {{< example >}}
@@ -183,8 +181,6 @@ Use spinners within buttons to indicate an action is currently processing or tak
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

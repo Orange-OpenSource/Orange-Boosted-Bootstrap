@@ -226,8 +226,6 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part of Boosted's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}

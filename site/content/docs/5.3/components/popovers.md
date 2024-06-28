@@ -98,8 +98,6 @@ const popover = new boosted.Popover('.example-popover', {
 
 ### Custom popovers
 
-{{< added-in "5.2.0" >}}
-
 You can customize the appearance of popovers using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-popover"` to scope our custom appearance and use it to override some of the local CSS variables.
 
 {{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
@@ -147,8 +145,6 @@ For disabled popover triggers, you may also prefer `data-bs-trigger="hover focus
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, popovers now use local CSS variables on `.popover` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

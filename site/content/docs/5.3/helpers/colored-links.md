@@ -40,8 +40,6 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 
 ## Link utilities
 
-{{< added-in "5.3.0" >}}
-
 Colored links can also be modified by [our link utilities]({{< docsref "/utilities/link/" >}}).
 
 <!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors; body-emphasis is treated on its own"-->
