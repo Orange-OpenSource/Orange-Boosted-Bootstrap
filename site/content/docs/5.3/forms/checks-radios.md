@@ -358,8 +358,6 @@ Drop borders using `.btn-no-outline`, too.
 
 ## Star rating
 
-{{< added-in "5.2.0" >}}
-
 Star rating system is built on top of radios. Simply add `.star-rating` to a `<fieldset>` element to use predefined glyphs and compose your star rating system with as much stars as needed.
 
 {{< example >}}
@@ -413,8 +411,6 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 {{< /example >}}
 
 ### Dark variant
-
-{{< deprecated-in "5.3.3" >}}
 
 {{< callout-deprecated-dark-variants "star-rating" >}}
 
@@ -479,7 +475,5 @@ Variables for switches:
 {{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
-
-{{< deprecated-in "5.3.2" >}}
 
 {{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" >}}

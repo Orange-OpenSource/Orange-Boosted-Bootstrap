@@ -88,8 +88,6 @@ These border color variants are just **examples illustrating the use of this col
 
 ## Opacity
 
-{{< added-in "5.2.0" >}}
-
 Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 {{< design-callout-alert >}}
@@ -162,8 +160,6 @@ These border variants with **a radius CSS class different than `.rounded-circle`
 
 ### Sizes
 
-{{< added-in "5.3.0" >}}
-
 Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
 
 {{< design-callout-alert >}}
@@ -203,8 +199,6 @@ These border variants with **a size CSS class different than `.rounded-0`** shou
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 

@@ -62,8 +62,6 @@ Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focu
 
 {{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
 
-{{< added-in "5.2.3" >}}
-
 Boosted provides `focus-visible()` mixin to ensure a proper visible focus state:
 
 {{< scss-docs name="focus-visible" file="scss/mixins/_focus.scss" >}}

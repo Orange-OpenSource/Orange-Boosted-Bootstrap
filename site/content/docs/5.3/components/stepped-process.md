@@ -47,15 +47,11 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "stepped-process" >}}
 
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, stepped processes now use local CSS variables on `.stepped-process` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/orange-navbar/"
 toc: true
-added:
-  version: "5.2"
 ---
 
 ## How it works
@@ -535,8 +533,6 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

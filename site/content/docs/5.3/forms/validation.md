@@ -308,8 +308,6 @@ Validation styles are available for the following form controls and components:
 
 ### Variables
 
-{{< added-in "5.3.0" >}}
-
 As part of Boosted's evolving CSS variables approach, forms now use local CSS variables for validation for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="root-form-validation-variables" file="scss/_root.scss" >}}

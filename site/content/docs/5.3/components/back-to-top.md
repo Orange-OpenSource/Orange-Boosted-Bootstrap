@@ -86,8 +86,6 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part of Boosted's evolving CSS variables approach, Back to tops now use local CSS variables on `.back-to-top` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="back-to-top-css-vars" file="scss/_back-to-top.scss" >}}

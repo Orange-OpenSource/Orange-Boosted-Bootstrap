@@ -335,16 +335,12 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 <!-- Boosted mod -->
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "list-group" >}}
 <!-- End mod -->
 
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
@@ -355,8 +351,6 @@ As part of Boosted's evolving CSS variables approach, list groups now use local 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
-
-{{< deprecated-in "5.3.0" >}}
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 

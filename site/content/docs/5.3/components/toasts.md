@@ -327,8 +327,6 @@ While technically it's possible to add focusable/actionable controls (such as ad
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part of Boosted's evolving CSS variables approach, toasts now use local CSS variables on `.toast` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="toast-css-vars" file="scss/_toasts.scss" >}}

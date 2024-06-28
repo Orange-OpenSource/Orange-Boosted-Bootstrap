@@ -152,8 +152,6 @@ The Boosted supporting colors are meant for backgrounds, data display or illustr
 
 ### Variables
 
-{{< added-in "5.3.0" >}}
-
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-rgb), .5)`.
 
 #### Theming

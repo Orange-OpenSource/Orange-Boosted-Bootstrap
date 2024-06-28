@@ -6,8 +6,6 @@ group: customize
 aliases:
   - "/docs/customize/color-palette/"
 toc: true
-added:
-  version: "5.3"
 ---
 
 ## Palette
@@ -169,8 +167,6 @@ Within `scss/_variables.scss` or `scss/_maps.scss`, you'll find Boosted's color 
 Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
 ## Generating utilities
-
-{{< added-in "5.1.0" >}}
 
 Boosted doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
 

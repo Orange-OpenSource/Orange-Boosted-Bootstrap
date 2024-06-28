@@ -63,8 +63,6 @@ Hover over the links below to see tooltips:
 
 ### Custom tooltips
 
-{{< added-in "5.2.0" >}}
-
 {{< design-callout-alert >}}
 This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 
@@ -160,8 +158,6 @@ With an SVG:
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted’s evolving CSS variables approach, tooltips now use local CSS variables on `.tooltip` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

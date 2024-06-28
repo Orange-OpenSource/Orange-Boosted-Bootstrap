@@ -70,8 +70,6 @@ In Bootstrap, for each `.bg-*` there is a matching `.bg-*-subtle` utility respon
 
 ## Opacity
 
-{{< added-in "5.1.0" >}}
-
 As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works

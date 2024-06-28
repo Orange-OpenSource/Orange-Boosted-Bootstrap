@@ -98,8 +98,6 @@ $breadcrumb-divider: none;
 <!-- Boosted mod: Dark variant -->
 ## Dark variant
 
-{{< deprecated-in "5.3.3" >}}
-
 {{< callout-deprecated-dark-variants "breadcrumb" >}}
 <!-- End mod -->
 
@@ -112,8 +110,6 @@ For more information, see the [ARIA Authoring Practices Guide breadcrumb pattern
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

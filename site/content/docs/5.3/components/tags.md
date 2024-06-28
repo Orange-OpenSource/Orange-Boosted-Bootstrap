@@ -6,8 +6,6 @@ group: components
 aliases:
   - "/docs/components/tags/"
 toc: true
-added:
-  version: "5.2"
 ---
 
 ## Examples
@@ -118,8 +116,6 @@ Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/compon
 {{< /example >}}
 
 ## Dark variant
-
-{{< deprecated-in "5.3.3" >}}
 
 {{< callout-deprecated-dark-variants "tag" >}}
 

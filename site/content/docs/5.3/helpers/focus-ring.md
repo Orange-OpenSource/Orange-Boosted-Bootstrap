@@ -6,8 +6,6 @@ group: helpers
 aliases:
   - "/docs/helpers/focus-ring/"
 toc: true
-added:
-  version: "5.3"
 ---
 
 {{< design-callout-alert >}}

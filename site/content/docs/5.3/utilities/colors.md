@@ -97,8 +97,6 @@ Here are some compliant combinations examples for texts:
 
 ## Opacity
 
-{{< added-in "5.1.0" >}}
-
 As of v5.1.0, text color utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works

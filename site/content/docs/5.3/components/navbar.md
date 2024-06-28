@@ -770,8 +770,6 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part Boosted's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
