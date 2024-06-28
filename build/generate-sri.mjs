@@ -34,14 +34,6 @@ const files = [
     configPropertyName: 'css_rtl_hash'
   },
   {
-    file: 'dist/css/orange-helvetica.min.css',
-    configPropertyName: 'helvetica_hash'
-  },
-  {
-    file: 'dist/css/orange-helvetica.rtl.min.css',
-    configPropertyName: 'helvetica_rtl_hash'
-  },
-  {
     file: 'dist/js/boosted.min.js',
     configPropertyName: 'js_hash'
   },

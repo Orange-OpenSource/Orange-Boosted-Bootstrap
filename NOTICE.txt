@@ -1,29 +1,3 @@
-<version>1.0</version>
-<id><![CDATA[Helvetica Neue LT W07 55 Roman]]></id>
-<vendor>Monotype Imaging Inc.</vendor>
-<credits>
-<name>Fonts.com WebFonts</name>
-<URL>http://webfonts.fonts.com</URL>
-</credits>
-<license>
-<URL>http://webfonts.fonts.com/Legal</URL>
-</license>
-<copyright><![CDATA[Copyright © 2014 Monotype Imaging Inc. All rights reserved.]]></copyright>
-<trademark><![CDATA[Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.]]></trademark>
-Orange has purchased the right to use Helvetica in its websites and mobile applications.
-Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc
-Parts list under Monotype Imaging Inc Copyright
-fonts/HelvNeue55_W1G.woff2
-fonts/HelvNeue75_W1G.woff2
-fonts/HelveticaNeueW20-55Roman.woff2
-fonts/HelveticaNeueW20-75Bold.woff2
-dist/fonts/HelvNeue55_W1G.woff2
-dist/fonts/HelvNeue75_W1G.woff2
-dist/fonts/HelveticaNeueW20-55Roman.woff2
-dist/fonts/HelveticaNeueW20-75Bold.woff2
-End of the parts list under Monotype Imaging Inc Copyright
-
-
 Parts list under Orange SA Copyright
 Copyright (C) 2016 - 2024 Orange SA All rights reserved
 
@@ -87,5 +61,3 @@ site/static/docs/**/assets/img/title-bars-illustrations/illustration-480.png
 site/static/docs/**/assets/img/title-bars-illustrations/illustration-768.png
 
 End of the parts list under Orange SA Copyright
-
-

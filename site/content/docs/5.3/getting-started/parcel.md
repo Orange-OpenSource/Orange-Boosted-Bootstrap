@@ -20,7 +20,7 @@ thumbnail: guides/parcel-dev-server-boosted.png
 {{< callout warning >}}
 **To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
 
-You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
+You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
@@ -129,25 +129,16 @@ In the next and final section to this guide, we'll import all of Boosted's CSS a
 
 Importing Boosted into Parcel requires three imports, two into our `styles.scss` and one into our `main.js`.
 
-1. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
-
-   ```sh
-   mkdir src/fonts
-   cp /path/HelvNeue55_W1G.woff2 src/fonts/
-   cp /path/HelvNeue75_W1G.woff2 src/fonts/
-   ```
-
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
-   @import "boosted/scss/orange-helvetica";
    @import "boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
+2. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
    <!-- eslint-skip -->
    ```js
@@ -167,7 +158,7 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
+3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
    ![Parcel dev server running with Boosted](/assets/img/guides/parcel-dev-server-boosted.png)
 
