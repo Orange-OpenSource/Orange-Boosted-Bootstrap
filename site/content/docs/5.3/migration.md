@@ -15,4 +15,4 @@ toc: true
 
 OUDS Web v0.1.0 has landed, and is based and compatible with Bootstrap v5.3.3.
 
-If you need more details about the changes, please refer to the [v0.1.0, release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v0.1.0-ouds-web).
+If you need more details about the changes, please refer to the [v0.1.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v0.1.0-ouds-web).
