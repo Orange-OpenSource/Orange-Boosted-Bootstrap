@@ -14,7 +14,7 @@
 import sdk from '@stackblitz/sdk'
 // https://gohugo.io/hugo-pipes/js/#options
 import {
-  cssCdn, docsVersion, helvNeue55W1GCdn, helvNeue55W1GHash, helvNeue75W1GCdn, helvNeue75W1GHash, helveticaCdn, helveticaHash, jsBundleCdn, jsSnippetFile
+  cssCdn, docsVersion, jsBundleCdn, jsSnippetFile
 } from '@params' // eslint-disable-line import/no-unresolved
 
 // Open in StackBlitz logic
@@ -38,19 +38,6 @@ const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!--
-    Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-    Patent and Trademark Office and may be registered in certain other jurisdictions.
-    Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-    Orange has purchased the right to use Helvetica in its websites and mobile applications.
-    If you are not authorized to used it, don’t include the orange-helvetica.css
-    See NOTICE.txt for more information.
-  -->
-  <link href="${helvNeue55W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${helvNeue55W1GHash}" crossorigin="anonymous">
-  <link href="${helvNeue75W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${helvNeue75W1GHash}" crossorigin="anonymous">
-  <link href="${helveticaCdn}" rel="stylesheet" integrity="${helveticaHash}" crossorigin="anonymous">
-
   <link href="${cssCdn}" rel="stylesheet">
   <link href="https://boosted.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
   <title>Boosted Example</title>

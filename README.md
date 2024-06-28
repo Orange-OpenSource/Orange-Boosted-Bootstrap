@@ -43,7 +43,6 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 ## Status
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted?logo=npm&logoColor=fff)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/v/Orange-Opensource/Orange-Boosted-Bootstrap.svg?include_prereleases&logo=packagist&logoColor=fff)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/boosted?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/boosted/absoluteLatest)

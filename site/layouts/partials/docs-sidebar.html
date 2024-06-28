@@ -15,33 +15,29 @@
     {{- $group_slug := $group.title | urlize -}}
     {{- $is_active_group := eq $.Page.Params.group $group_slug -}}
 
-    {{- if $group.pages }}
-      <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-          {{- if $group.icon }}
-            <svg class="bi me-1"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
-          {{- end }}
-          {{ $group.title }}
-        </strong>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        {{- if $group.icon }}
+          <svg class="bi me-1"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
+        {{- end }}
+        {{ $group.title }}
+      </strong>
 
-        <ul class="list-unstyled fw-normal mt-1 pb-2 small">
-          {{- range $doc := $group.pages -}}
-            {{- $doc_slug := $doc.title | urlize -}}
-            {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
-            {{- $href := urls.JoinPath "/docs" $.Site.Params.docs_version $group_slug $doc_slug "/" }}
-            <li><a href="{{ $href }}" class="bd-links-link d-inline-block{{ if $is_active }} active{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
-          {{- end }}
-        </ul>
-      </li>
-    {{- else }}
-      <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
-      <li class="bd-links-span-all">
-        {{- $href := urls.JoinPath "/docs" $.Site.Params.docs_version $group_slug "/" }}
-        <a href="{{ $href }}" class="bd-links-link d-inline-block small{{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
-          {{ $group.title }}
-        </a>
-      </li>
-    {{- end }}
+      <ul class="list-unstyled fw-normal mt-1 pb-2 small">
+        {{- range $doc := $group.pages -}}
+          {{- $doc_slug := $doc.title | urlize -}}
+          {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
+          {{ if eq $group_slug "migrations" }}
+            {{- $is_active = eq $page_slug $doc_slug -}}
+          {{ end }}
+          {{- $href := urls.JoinPath "/docs" $.Site.Params.docs_version $group_slug $doc_slug "/" }}
+          {{ if eq $group_slug "migrations" }}
+            {{- $href = urls.JoinPath "/docs" $.Site.Params.docs_version $doc_slug "/" }}
+          {{ end }}
+          <li><a href="{{ $href }}" class="bd-links-link d-inline-block{{ if $is_active }} active{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
+        {{- end }}
+      </ul>
+    </li>
   {{- end }}
   </ul>
 </nav>

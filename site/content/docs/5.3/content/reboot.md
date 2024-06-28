@@ -52,13 +52,12 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 - For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
 
 ## Native font stack
-<!-- Boosted mod -->
-Boosted utilizes a "native font stack" or "system font stack" — as a fallback for Orange’s Helvetica Neue — for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
+Boosted utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+
+<!-- Boosted mod -->
 ```scss
 $font-family-sans-serif:
-  // Web font
-  HelvNeueOrange,
   // Helvetica Neue
   "Helvetica Neue",
   // Web Safe Fallbacks
