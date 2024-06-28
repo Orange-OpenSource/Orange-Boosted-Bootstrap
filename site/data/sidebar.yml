@@ -166,4 +166,9 @@
     - title: Translations
     - title: Cookies
 
-- title: Migration
+- title: Migrations
+  icon: transfers
+  icon_color: body-color
+  pages:
+    - title: Migration
+    - title: Migration from Boosted
