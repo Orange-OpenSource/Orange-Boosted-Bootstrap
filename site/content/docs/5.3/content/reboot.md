@@ -140,8 +140,8 @@ These `<hr>` 2nd, 3rd and 4th variants can not be used because they do not respe
   <hr>
 </div>
 
-<hr class="border border-danger border-2 opacity-50">
-<hr class="border border-primary border-3 opacity-75">
+<hr class="border border-danger border-2 opacity-50"> <!-- TODO -->
+<hr class="border border-primary border-3 opacity-75"> <!-- TODO -->
 {{< /example >}}
 
 ## Lists
