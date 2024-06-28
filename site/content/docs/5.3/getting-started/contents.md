@@ -98,7 +98,6 @@ The Boosted source code download includes the compiled CSS and JavaScript assets
 boosted/
 ├── dist/
 │   ├── css/
-│   ├── fonts/
 │   ├── img/
 │   └── js/
 ├── site/

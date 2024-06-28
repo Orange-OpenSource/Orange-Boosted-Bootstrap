@@ -12,8 +12,7 @@ toc: true
 
 Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
-- Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
-- Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
+- A [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color`.

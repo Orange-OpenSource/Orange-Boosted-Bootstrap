@@ -20,7 +20,7 @@ thumbnail: guides/webpack-dev-server-boosted.png
 {{< callout warning >}}
 **To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
 
-You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
+You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
@@ -222,25 +222,16 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
-
-   ```sh
-   mkdir src/fonts
-   cp /path/HelvNeue55_W1G.woff2 src/fonts/
-   cp /path/HelvNeue75_W1G.woff2 src/fonts/
-   ```
-
-3. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
-   @import "boosted/scss/orange-helvetica";
    @import "boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-4. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+3. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
    <!-- eslint-skip -->
    ```js

@@ -60,8 +60,6 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
 
 2. **Include Boosted's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
 
-   Boosted also provides Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
-
    ```html
    <!doctype html>
    <html lang="en">
@@ -69,8 +67,6 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>Boosted demo</title>
-       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-       <link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
        <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
      </head>
      <body>
@@ -97,7 +93,6 @@ As reference, here are our primary CDN links.
 | Description | URL |
 | --- | --- |
 | CSS | `{{< param "cdn.css" >}}` |
-| CSS for Helvetica Neue | `{{< param "cdn.helvetica" >}}` |
 | JS | `{{< param "cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
@@ -188,13 +183,6 @@ Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box
 
 [Resource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
 It should be used for critical resources only.
-
-#### `preload` fonts
-
-```html
-<link rel="preload" href="dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-```
 
 #### `preconnect` to CDNs
 

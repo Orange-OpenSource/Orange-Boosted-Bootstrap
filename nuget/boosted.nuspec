@@ -9,7 +9,7 @@
     <owners>Orange SA</owners>
     <description>Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.</description>
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
-    <summary>Boosted framework in CSS. Includes fonts and JavaScript.</summary>
+    <summary>Boosted framework in CSS. Includes JavaScript.</summary>
     <language>en-us</language>
     <projectUrl>https://boosted.orange.com/</projectUrl>
     <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="main" />
