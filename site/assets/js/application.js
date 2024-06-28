@@ -11,12 +11,12 @@
 
 /* eslint-disable import/no-unresolved */
 import sidebarScroll from 'js/partials/sidebar.js'
-import removeBackToTopWhenNotNeeded from 'js/partials/back-to-top.js' // Boosted mod
+import removeBackToTopWhenNotNeeded from 'js/partials/back-to-top.js' // OUDS mod
 import codeExamples from 'js/partials/code-examples.js'
 import snippets from 'js/partials/snippets.js'
 /* eslint-enable import/no-unresolved */
 
 sidebarScroll()
-removeBackToTopWhenNotNeeded() // Boosted mod
+removeBackToTopWhenNotNeeded() // OUDS mod
 codeExamples()
 snippets()

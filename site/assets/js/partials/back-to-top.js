@@ -10,7 +10,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-// Boosted mod: Remove back-to-top component from all pages when its not needed
+// OUDS mod: Remove back-to-top component from all pages when its not needed
 export default () => {
   ['load', 'resize'].forEach(event => {
     window.addEventListener(event, () => {

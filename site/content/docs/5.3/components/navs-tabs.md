@@ -201,7 +201,7 @@ If you want it to wrap nicely on lower breakpoints, consider using [our Local Na
 </ul>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ### Nested tabs
 
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
@@ -342,7 +342,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 {{< /callout >}}
 
 ### Tabs with dropdowns
-<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
+<!-- OUDS mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -374,7 +374,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
-<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
+<!-- OUDS mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">

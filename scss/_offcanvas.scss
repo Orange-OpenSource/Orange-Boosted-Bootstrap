@@ -36,7 +36,7 @@
       display: flex;
       flex-direction: column;
       max-width: 100%;
-      // Boosted mod: no color
+      // OUDS mod: no color
       visibility: hidden;
       background-color: var(--#{$prefix}offcanvas-bg);
       background-clip: padding-box;
@@ -116,11 +116,11 @@
 
 .offcanvas-backdrop {
   // scss-docs-start offcanvas-backdrop-css-vars
-  --#{$prefix}offcanvas-backdrop-bg: #{$offcanvas-backdrop-bg}; // Boosted mod
-  --#{$prefix}offcanvas-backdrop-opacity: #{$offcanvas-backdrop-opacity}; // Boosted mod
-  --#{$prefix}offcanvas-backdrop-zindex: #{$zindex-offcanvas-backdrop}; // Boosted mod
+  --#{$prefix}offcanvas-backdrop-bg: #{$offcanvas-backdrop-bg}; // OUDS mod
+  --#{$prefix}offcanvas-backdrop-opacity: #{$offcanvas-backdrop-opacity}; // OUDS mod
+  --#{$prefix}offcanvas-backdrop-zindex: #{$zindex-offcanvas-backdrop}; // OUDS mod
   // scss-docs-end offcanvas-backdrop-css-vars
-  @include overlay-backdrop(var(--#{$prefix}offcanvas-backdrop-zindex), var(--#{$prefix}offcanvas-backdrop-bg), var(--#{$prefix}offcanvas-backdrop-opacity)); // Boosted mod
+  @include overlay-backdrop(var(--#{$prefix}offcanvas-backdrop-zindex), var(--#{$prefix}offcanvas-backdrop-bg), var(--#{$prefix}offcanvas-backdrop-opacity)); // OUDS mod
 }
 
 .offcanvas-header {
@@ -129,20 +129,20 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    // Boosted mod: no extra padding rule
-    margin: 0 0 0 auto; // Boosted mod: instead of `calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) calc(-.5 * var(--#{$prefix}offcanvas-padding-x)) calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) auto;`
+    // OUDS mod: no extra padding rule
+    margin: 0 0 0 auto; // OUDS mod: instead of `calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) calc(-.5 * var(--#{$prefix}offcanvas-padding-x)) calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) auto;`
   }
 }
 
 .offcanvas-title {
   margin-bottom: 0;
   line-height: var(--#{$prefix}offcanvas-title-line-height);
-  color: var(--#{$prefix}offcanvas-color); // Boosted mod
+  color: var(--#{$prefix}offcanvas-color); // OUDS mod
 }
 
 .offcanvas-body {
   flex-grow: 1;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
-  color: var(--#{$prefix}offcanvas-color); // Boosted mod
+  color: var(--#{$prefix}offcanvas-color); // OUDS mod
 }

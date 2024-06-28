@@ -52,7 +52,7 @@ module:
     - source:                       site/static/docs/5.3/assets/img/favicons/favicon.ico
       target:                       static/favicon.ico
 
-      # Boosted mod
+    # OUDS mod
     - source:                       node_modules/tarteaucitronjs/tarteaucitron.min.js
       target:                       static/docs/5.3/assets/js/tarteaucitron.min.js
     - source:                       node_modules/tarteaucitronjs/lang

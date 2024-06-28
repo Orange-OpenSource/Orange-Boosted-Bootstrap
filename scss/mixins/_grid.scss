@@ -3,7 +3,7 @@
 // Generate semantic grid columns with these mixins.
 
 @mixin make-row($gutter: $grid-gutter-width, $gutter-sm: ($gutter * .5)) {
-  --#{$prefix}gutter-x: #{$gutter-sm}; // Boosted mod: gutter depends on breakpoint
+  --#{$prefix}gutter-x: #{$gutter-sm}; // OUDS mod: gutter depends on breakpoint
   --#{$prefix}gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +12,7 @@
   margin-right: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
   margin-left: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
 
-  // Boosted mod: gutter depends on breakpoint
+  // OUDS mod: gutter depends on breakpoint
   @include media-breakpoint-up($grid-gutter-breakpoint) {
     --#{$prefix}gutter-x: #{$gutter};
   }

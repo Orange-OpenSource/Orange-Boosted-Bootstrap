@@ -91,7 +91,7 @@ Note that by default, the content inside the `.progress-bar` is controlled with 
 </div>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ### Sizes
 
 Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.

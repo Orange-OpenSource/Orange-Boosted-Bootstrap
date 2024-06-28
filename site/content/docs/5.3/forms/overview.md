@@ -67,7 +67,7 @@ Add the `disabled` attribute to a `<fieldset>` to disable all the controls withi
 
 However, if your form also includes custom button-like elements such as `<a class="btn btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
 
-<!-- Boosted mod: states for labels -->
+<!-- OUDS mod: states for labels -->
 Use the `.is-disabled` class on `label` to make it appear lighter too.
 
 {{< example >}}
@@ -97,7 +97,7 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
 </form>
 {{< /example >}}
 
-<!-- Boosted mod: states for labels -->
+<!-- OUDS mod: states for labels -->
 ## Required field
 
 Use the `.is-required` class on `label` to add a `*` symbol after it.

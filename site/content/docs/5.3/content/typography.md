@@ -24,7 +24,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 {{< bs-table >}}
 | Heading | Desktop Size | Tablet Size | Mobile Size | Line Height <small class="text-body-secondary">Desktop</small> | Letter Spacing <small class="text-body-secondary">Desktop</small> |
 | --- | --- | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ Use the included utility classes to recreate the small secondary heading text fr
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 <table class="table">
   <thead>
     <tr>
@@ -136,13 +136,13 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-6">Display 6</h1>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 Display headings are configured via two variables each — to set `font-size` and `letter-spacing` —  as well as a shared `$display-line-height`.
 <!-- End mod -->
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ## Regular text
 
 Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight.
@@ -296,7 +296,7 @@ Use text utilities as needed to change the alignment of your blockquote.
 </figure>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ## Links
 
 Links in content are black and underlined. They adapt to their context otherwise, mainly in navigation components like [Navs & tabs]({{< docsref "/components/navs-tabs" >}}) or [Navbar]({{< docsref "/components/navbar" >}}).
@@ -381,7 +381,7 @@ In Bootstrap 5, they enabled responsive font sizes by default, allowing text to 
 
 ### Sass variables
 
-<!-- Boosted mod: finer typography management -->
+<!-- OUDS mod: finer typography management -->
 #### Headings
 
 Headings have some dedicated variables for sizing and spacing.
@@ -403,4 +403,4 @@ Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/con
 
 {{< scss-docs name="type-variables" file="scss/_variables.scss" >}}
 
-<!-- Boosted mod: not using RFS -->
+<!-- OUDS mod: not using RFS -->

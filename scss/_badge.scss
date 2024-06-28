@@ -5,7 +5,7 @@
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-padding: #{subtract(var(--#{$prefix}badge-padding-y), 1px) var(--#{$prefix}badge-padding-x) add(var(--#{$prefix}badge-padding-y), 1px)}; // Boosted mod
+  --#{$prefix}badge-padding: #{subtract(var(--#{$prefix}badge-padding-y), 1px) var(--#{$prefix}badge-padding-x) add(var(--#{$prefix}badge-padding-y), 1px)}; // OUDS mod
   --#{$prefix}badge-padding-x: #{$badge-padding-x};
   --#{$prefix}badge-padding-y: #{$badge-padding-y};
   @include rfs($badge-font-size, --#{$prefix}badge-font-size);
@@ -23,7 +23,7 @@
   text-align: center;
 
   /* rtl:remove */
-  letter-spacing: initial; // Boosted mod
+  letter-spacing: initial; // OUDS mod
   white-space: nowrap;
   vertical-align: baseline;
   @include border-radius(var(--#{$prefix}badge-border-radius));
@@ -37,6 +37,6 @@
 
 // Quick fix for badges in buttons
 .btn .badge {
-  padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x); // Boosted mod
-  margin-left: map-get($spacers, 1); // Boosted mod
+  padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x); // OUDS mod
+  margin-left: map-get($spacers, 1); // OUDS mod
 }

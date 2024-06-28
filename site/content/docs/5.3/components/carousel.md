@@ -58,7 +58,7 @@ Carousels don't automatically normalize slide dimensions. As such, you may need 
 
 You can add indicators to the carousel, alongside the previous/next controls. The indicators let users jump directly to a particular slide.
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 
 Indicators are animated to show the active slide progress, based on its interval. It adapts to [any interval you set](#individual-carousel-item-interval) thanks to the `--bs-carousel-interval` CSS custom property.
 Carousel progress indicator is paused under multiple conditions:
@@ -99,7 +99,7 @@ Carousel progress indicator is paused under multiple conditions:
 </div>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ### With pause/play button
 
 Adding a pause and play button is recommended to setup an accessible carousel.
@@ -294,7 +294,7 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <!-- Boosted mod -->
+  <!-- OUDS mod -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -323,7 +323,7 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: no carousels without controls -->
+<!-- OUDS mod: no carousels without controls -->
 
 ### Disable touch swiping
 
@@ -353,7 +353,7 @@ Carousels support swiping left/right on touchscreen devices to move between slid
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: needed to check carousel indicator's progress when no cycle -->
+<!-- OUDS mod: needed to check carousel indicator's progress when no cycle -->
 ### Prevent cycling
 
 Use `data-bs-wrap="false"` to prevent carousel from cycling continuously.
@@ -388,7 +388,7 @@ Use `data-bs-wrap="false"` to prevent carousel from cycling continuously.
 {{< /example >}}
 <!-- End mod -->
 
-<!-- Boosted mod: needed to check carousel indicators without autoplay -->
+<!-- OUDS mod: needed to check carousel indicators without autoplay -->
 ### Static carousel
 
 To prevent the carousel from autoplaying, use the following attributes combo:
@@ -425,7 +425,7 @@ To prevent the carousel from autoplaying, use the following attributes combo:
 {{< /example >}}
 <!-- End mod -->
 
-<!-- Boosted mod: no dark variant -->
+<!-- OUDS mod: no dark variant -->
 
 ## Custom transition
 

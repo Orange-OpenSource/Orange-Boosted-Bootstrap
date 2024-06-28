@@ -63,7 +63,7 @@ Most CSS variables use a prefix to avoid collisions with your own codebase. This
 
 Customize the prefix via the `$prefix` Sass variable. By default, it's set to `bs-` (note the trailing dash).
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ## Deduping embedded SVGs
 
 Boosted uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#csps-and-embedded-svgs) in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output file size.

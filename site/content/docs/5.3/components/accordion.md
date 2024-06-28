@@ -68,7 +68,7 @@ To render an accordion that's expanded by default:
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: no .accordion flush -->
+<!-- OUDS mod: no .accordion flush -->
 
 ### Sizes
 

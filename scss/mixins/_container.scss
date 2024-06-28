@@ -10,7 +10,7 @@
   margin-right: auto;
   margin-left: auto;
 
-  // Boosted mod: gutter depends on breakpoint
+  // OUDS mod: gutter depends on breakpoint
   // @note Needs both interpolation and parenthesis to prevent stylelint-scss/dimension-no-non-numeric-values to fail
   @include media-breakpoint-up($grid-gutter-breakpoint) {
     --#{$prefix}gutter-x: #{($gutter * 2)};
@@ -18,7 +18,7 @@
   // End mod
 }
 
-// Boosted mod: fluid containers aren't full width → include margins
+// OUDS mod: fluid containers aren't full width → include margins
 @mixin make-container-fluid-margin() {
   @each $breakpoint, $container-margin in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {

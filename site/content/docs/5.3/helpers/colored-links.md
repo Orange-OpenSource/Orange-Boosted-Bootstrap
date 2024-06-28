@@ -23,7 +23,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 **Heads up!** `.link-body-emphasis` is currently the only colored link that adapts to color modes. It's treated as a special case until v6 arrives and we can more thoroughly rebuild our theme colors for color modes. Until then, it's a unique, high-contrast link color with custom `:hover` and `:focus` styles. However, it still responds to the new link utilities.
 {{< /callout >}}
 
-<!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->
+<!--OUDS mod: use `contrast_color` as background to ensure a good contrast-->
 {{< example >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -42,7 +42,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 
 Colored links can also be modified by [our link utilities]({{< docsref "/utilities/link/" >}}).
 
-<!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors; body-emphasis is treated on its own"-->
+<!--OUDS mod: feature limited to primary and light, we don't loop over "theme-colors; body-emphasis is treated on its own"-->
 {{< example >}}
 <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-10 link-underline-opacity-100-hover">Primary link</a></p>
 <p><a href="#" class="link-light link-offset-2 link-underline-opacity-10 link-underline-opacity-100-hover">Light link</a></p>

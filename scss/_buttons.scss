@@ -11,30 +11,30 @@
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   --#{$prefix}btn-line-height: #{$btn-line-height};
   --#{$prefix}btn-color: #{$btn-color};
-  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // Boosted mod
+  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // OUDS mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
-  --#{$prefix}btn-hover-color: #{$btn-hover-color}; // Boosted mod
-  --#{$prefix}btn-hover-border-color: initial; // Boosted mod
+  --#{$prefix}btn-hover-color: #{$btn-hover-color}; // OUDS mod
+  --#{$prefix}btn-hover-border-color: initial; // OUDS mod
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
-  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // Boosted mod
-  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // OUDS mod
+  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // OUDS mod
   // scss-docs-end btn-css-vars
 
-  display: inline-flex; // Boosted mod
-  align-items: center; // Boosted mod: for .badge proper alignment
-  justify-content: center; // Boosted mod
-  padding: subtract(var(--#{$prefix}btn-padding-y), 1px) var(--#{$prefix}btn-padding-x) add(var(--#{$prefix}btn-padding-y), 1px); // Boosted mod
+  display: inline-flex; // OUDS mod
+  align-items: center; // OUDS mod: for .badge proper alignment
+  justify-content: center; // OUDS mod
+  padding: subtract(var(--#{$prefix}btn-padding-y), 1px) var(--#{$prefix}btn-padding-x) add(var(--#{$prefix}btn-padding-y), 1px); // OUDS mod
   font-family: var(--#{$prefix}btn-font-family);
   @include font-size(var(--#{$prefix}btn-font-size));
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
   text-decoration: if($link-decoration == none, null, none);
-  letter-spacing: var(--#{$prefix}btn-letter-spacing); // Boosted mod
+  letter-spacing: var(--#{$prefix}btn-letter-spacing); // OUDS mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -52,13 +52,13 @@
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
 
-  // Boosted mod: no .btn-check + &:hover
+  // OUDS mod: no .btn-check + &:hover
 
-  // Boosted mod: no &:focus-visible to avoid issue in button tags
+  // OUDS mod: no &:focus-visible to avoid issue in button tags
 
-  // Boosted mod: no .btn-check:focus-visible + &
+  // OUDS mod: no .btn-check:focus-visible + &
 
-  // Boosted mod: selectors are slightly different to handle `.btn-check:checked`
+  // OUDS mod: selectors are slightly different to handle `.btn-check:checked`
   .btn-check:checked + &:active,
   .btn-check:checked + &,
   &:active,
@@ -69,14 +69,14 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
-    // Boosted mod: no box shadow modification for the active state
-    // Boosted mod: no &:focus-visible
+    // OUDS mod: no box shadow modification for the active state
+    // OUDS mod: no &:focus-visible
   }
   // End mod
 
-  // Boosted mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
+  // OUDS mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
 
-  // Boosted mod: selectors are slightly different to handle `.btn-check`
+  // OUDS mod: selectors are slightly different to handle `.btn-check`
   .btn-check:disabled + &,
   &:disabled,
   &.disabled,
@@ -91,7 +91,7 @@
   }
   // End mod
 
-  // Boosted mod: with icon
+  // OUDS mod: with icon
   &:not(.btn-icon) > svg {
     transform: translateY(1px);
   }
@@ -149,7 +149,7 @@
 }
 // scss-docs-end btn-variant-loops
 
-// Boosted mod: Boosted-specific no outline button
+// OUDS mod: Boosted-specific no outline button
 .btn-no-outline {
   @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
 
@@ -164,7 +164,7 @@
 // End mod
 
 
-// Boosted mod: Boosted-specific toggle button
+// OUDS mod: Boosted-specific toggle button
 .btn-toggle {
   @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
 
@@ -199,7 +199,7 @@
 // End mod
 
 
-// Boosted mod: Boosted-specific dropdown button
+// OUDS mod: Boosted-specific dropdown button
 .btn-dropdown {
   @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }
@@ -212,18 +212,18 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight
+  // OUDS mod: no redefinition of --#{$prefix}btn-font-weight
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
   --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-active-color: var(--#{$prefix}btn-hover-color); // Boosted mod
+  --#{$prefix}btn-active-color: var(--#{$prefix}btn-hover-color); // OUDS mod
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
   --#{$prefix}btn-box-shadow: 0 0 0 #{$black}; // Can't use `none` as keyword negates all values when used with multiple shadows
-  // Boosted mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
+  // OUDS mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
 
   text-decoration: $link-decoration;
   @if $enable-gradients {
@@ -235,7 +235,7 @@
     text-decoration: $link-hover-decoration;
   }
 
-  // Boosted mod: no focus-visible color change
+  // OUDS mod: no focus-visible color change
 
   // No need for an active state here
 }
@@ -243,8 +243,8 @@
 
 //
 // Button Sizes
-// Boosted mod: 6th argument to set .btn-icon padding
-// Boosted mod: 7th argument to set .btn-letter-spacing
+// OUDS mod: 6th argument to set .btn-icon padding
+// OUDS mod: 7th argument to set .btn-letter-spacing
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
@@ -255,13 +255,13 @@
 }
 
 
-// Boosted mod: icon button
+// OUDS mod: icon button
 .btn-icon {
   padding: var(--#{$prefix}icon-spacing);
 }
 // End mod
 
-// Boosted mod: social button
+// OUDS mod: social button
 .btn-social {
   --#{$prefix}btn-border-color: currentcolor;
   --#{$prefix}btn-hover-color: #{$white};

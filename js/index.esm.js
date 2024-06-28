@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // Boosted mod
+import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // OUDS mod
 
 export { default as Alert } from './src/alert.js'
 export { default as Button } from './src/button.js'
@@ -14,9 +14,9 @@ export { default as Collapse } from './src/collapse.js'
 export { default as Dropdown } from './src/dropdown.js'
 export { default as Modal } from './src/modal.js'
 export { default as Offcanvas } from './src/offcanvas.js'
-export { default as OrangeNavbar } from './src/orange-navbar.js' // Boosted mod
+export { default as OrangeNavbar } from './src/orange-navbar.js' // OUDS mod
 export { default as Popover } from './src/popover.js'
-export { default as QuantitySelector } from './src/quantity-selector.js' // Boosted mod
+export { default as QuantitySelector } from './src/quantity-selector.js' // OUDS mod
 export { default as ScrollSpy } from './src/scrollspy.js'
 export { default as Tab } from './src/tab.js'
 export { default as Toast } from './src/toast.js'

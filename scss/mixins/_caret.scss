@@ -31,12 +31,12 @@
   $width: $caret-width,
   $spacing: $caret-spacing,
   $vertical-align: $caret-vertical-align,
-  $accordion: false // Boosted mod: $accordion param only there in Boosted
+  $accordion: false // OUDS mod: $accordion param only there in Boosted
 ) {
   @if $enable-caret {
     &::after {
       display: inline-block;
-      // Boosted mod: flexbox FTW!
+      // OUDS mod: flexbox FTW!
       align-self: $vertical-align;
       @if ($accordion == false) {
         margin-left: $spacing;
@@ -48,7 +48,7 @@
       @if $direction == down {
         @include caret-down($width);
         // stylelint-disable-next-line function-disallowed-list
-        transform: translateY(calc(var(--#{$prefix}border-width) * .5)); // Boosted mod
+        transform: translateY(calc(var(--#{$prefix}border-width) * .5)); // OUDS mod
       } @else if $direction == up {
         @include caret-up($width);
       } @else if $direction == end {
@@ -63,12 +63,12 @@
 
       &::before {
         // stylelint-disable-next-line declaration-no-important
-        position: static !important; // Boosted mod: prevent custom split buttons to interfere
+        position: static !important; // OUDS mod: prevent custom split buttons to interfere
         display: inline-block;
-        align-self: $vertical-align; // Boosted mod: flexbox FTW!
+        align-self: $vertical-align; // OUDS mod: flexbox FTW!
         margin-right: $spacing;
         // stylelint-disable-next-line declaration-no-important
-        color: unset !important; // Boosted mod: prevent custom split buttons to interfere
+        color: unset !important; // OUDS mod: prevent custom split buttons to interfere
         content: "";
         @include caret-start($width);
       }

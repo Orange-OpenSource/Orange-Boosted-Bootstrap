@@ -38,12 +38,12 @@
 }
 
 // stylelint-disable scss/dollar-variable-pattern
-@function rgba-css-var($identifier, $target, $value: null) { // Boosted mod: $value is an extra parameter
+@function rgba-css-var($identifier, $target, $value: null) { // OUDS mod: $value is an extra parameter
   @if $identifier == "body" and $target == "bg" {
     @return rgba(var(--#{$prefix}#{$identifier}-bg-rgb), var(--#{$prefix}#{$target}-opacity));
-  } @else if $identifier == "body" and $target == "text" { // Boosted mod: missing @else
+  } @else if $identifier == "body" and $target == "text" { // OUDS mod: missing @else
     @return rgba(var(--#{$prefix}#{$identifier}-color-rgb), var(--#{$prefix}#{$target}-opacity));
-    // Boosted mod
+    // OUDS mod
   } @else if ($identifier == "light" or $identifier == "dark") and $target == "border" {
     @return rgba(red($value), green($value), blue($value), var(--#{$prefix}#{$target}-opacity));
     // End mod

@@ -121,7 +121,7 @@ And with custom HTML added:
 
 With an SVG:
 
-<!--Boosted mod: added an aria-label="Default tooltip" because the title is automatically removed by JS-->
+<!--OUDS mod: added an aria-label="Default tooltip" because the title is automatically removed by JS-->
 
 <div class="bd-example tooltip-demo">
   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">

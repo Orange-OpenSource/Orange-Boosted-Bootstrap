@@ -1,7 +1,7 @@
 .bd-gutter {
-  --bs-gutter-x: #{$bd-gutter-x * 2}; // Boosted mod: changed value
+  --bs-gutter-x: #{$bd-gutter-x * 2}; // OUDS mod: changed value
 
-  // Boosted mod
+  // OUDS mod
   @include media-breakpoint-up(md) {
     --bs-gutter-x: #{$bd-gutter-x * 4};
   }
@@ -25,7 +25,7 @@
   grid-area: main;
 
   @include media-breakpoint-down(lg) {
-    // Boosted mod: no max-width
+    // OUDS mod: no max-width
     margin-inline: auto;
   }
 

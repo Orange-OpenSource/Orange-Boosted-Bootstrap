@@ -33,7 +33,7 @@
   // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
-    // Boosted mod: remove a lot of rules to keep our basic rendering
+    // OUDS mod: remove a lot of rules to keep our basic rendering
 
     // Prevent breaking of code
     th,
@@ -42,7 +42,7 @@
     }
   }
 
-  // Boosted mod
+  // OUDS mod
   > .table-typography {
     white-space: nowrap;
 
@@ -66,7 +66,7 @@
 }
 
 .table-swatches {
-  // Boosted mod: no `th`
+  // OUDS mod: no `th`
 
   td code {
     white-space: nowrap;
@@ -116,7 +116,7 @@
 .bi {
   width: 1em;
   height: 1em;
-  // Boosted mod: no `vertical-align`
+  // OUDS mod: no `vertical-align`
   fill: currentcolor;
 }
 
@@ -126,9 +126,9 @@
   }
 }
 
-// Boosted mod: no `.bd-summary-link`
+// OUDS mod: no `.bd-summary-link`
 
-// Boosted mod: some values have been changed in the following `custom-color-mode` and `.btn-dropdown` is used instead of `.btn-secondary`
+// OUDS mod: some values have been changed in the following `custom-color-mode` and `.btn-dropdown` is used instead of `.btn-secondary`
 // scss-docs-start custom-color-mode
 [data-bs-theme="blue"] {
   --bs-body-color: var(--bs-white);

@@ -36,7 +36,7 @@
     }
   }
 
-  // Boosted mod: Improve focus visibility when fixed/sticky header is used
+  // OUDS mod: Improve focus visibility when fixed/sticky header is used
   // See https://caniuse.com/?search=scroll-padding
   // scss-docs-start scroll-offset
   @if $enable-fixed-header {
@@ -62,28 +62,28 @@
 
 // scss-docs-start reboot-body-rules
 body {
-  position: relative; // Boosted mod: required for back-to-top component
+  position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
-  font-synthesis: none; // Boosted mod // 5
+  font-synthesis: none; // OUDS mod // 5
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  // Boosted mod: no color
+  // OUDS mod: no color
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // Boosted mod
+  letter-spacing: $letter-spacing-base; // OUDS mod
   background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
-  -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
-  text-rendering: optimizespeed; // Boosted mod
+  -webkit-font-smoothing: subpixel-antialiased; // OUDS mod
+  text-rendering: optimizespeed; // OUDS mod
 }
 // scss-docs-end reboot-body-rules
 
 
-// Boosted mod: focus state
+// OUDS mod: focus state
 //
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
@@ -134,7 +134,7 @@ hr {
 %heading {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
-  @include font-size($font-size-base);  // Boosted mod
+  @include font-size($font-size-base);  // OUDS mod
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -142,10 +142,10 @@ hr {
   color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // Boosted mod
-  -webkit-font-smoothing: antialiased;  // Boosted mod
-  -moz-osx-font-smoothing: grayscale;   // Boosted mod
-  text-rendering: optimizelegibility;   // Boosted mod
+  letter-spacing: $letter-spacing-base; // OUDS mod
+  -webkit-font-smoothing: antialiased;  // OUDS mod
+  -moz-osx-font-smoothing: grayscale;   // OUDS mod
+  text-rendering: optimizelegibility;   // OUDS mod
 }
 
 h1 {
@@ -228,7 +228,7 @@ ul ol {
   margin-bottom: 0;
 }
 
-// Boosted mod
+// OUDS mod
 // Orange square list-style
 ul {
   list-style-type: square;
@@ -292,9 +292,9 @@ blockquote {
 // Add the correct font weight in Chrome, Edge, and Safari
 
 b,
-em, // Boosted mod
+em, // OUDS mod
 strong {
-  font-weight: $font-weight-bold; // Boosted mod: ensure 700
+  font-weight: $font-weight-bold; // OUDS mod: ensure 700
 }
 
 
@@ -304,7 +304,7 @@ strong {
 
 small {
   @include font-size($small-font-size);
-  // Boosted mod
+  // OUDS mod
   font-weight: $font-weight-normal;
   line-height: $line-height-sm;
   // End mod
@@ -365,7 +365,7 @@ a:not([href]):not([class]) {
 
 // Code
 
-var, // Boosted mod
+var, // OUDS mod
 pre,
 code,
 kbd,
@@ -384,7 +384,7 @@ pre {
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
   @include font-size($code-font-size);
-  line-height: $pre-line-height; // Boosted mod
+  line-height: $pre-line-height; // OUDS mod
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
@@ -395,11 +395,11 @@ pre {
   }
 }
 
-var, // Boosted mod
+var, // OUDS mod
 code {
   @include font-size($code-font-size);
-  font-style: normal; // Boosted mod: <var> is italic in all browsers
-  line-height: $line-height-sm; // Boosted mod
+  font-style: normal; // OUDS mod: <var> is italic in all browsers
+  line-height: $line-height-sm; // OUDS mod
   color: var(--#{$prefix}code-color);
   word-wrap: break-word;
 
@@ -451,25 +451,25 @@ svg {
 //    See https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
 
 table {
-  font-feature-settings: "tnum";      // Boosted mod: 2
-  font-variant-numeric: tabular-nums; // Boosted mod: 2
-  caption-side: top;                  // Boosted mod
+  font-feature-settings: "tnum";      // OUDS mod: 2
+  font-variant-numeric: tabular-nums; // OUDS mod: 2
+  caption-side: top;                  // OUDS mod
   border-collapse: collapse;
 }
 
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
-  @include font-size($h1-font-size);    // Boosted mod
-  font-weight: $font-weight-bold;       // Boosted mod
+  @include font-size($h1-font-size);    // OUDS mod
+  font-weight: $font-weight-bold;       // OUDS mod
   color: $table-caption-color;
   text-align: left;
 
   /* rtl:remove */
-  letter-spacing: $h1-spacing;          // Boosted mod
-  -webkit-font-smoothing: antialiased;  // Boosted mod
-  -moz-osx-font-smoothing: grayscale;   // Boosted mod
-  text-rendering: optimizelegibility;   // Boosted mod
+  letter-spacing: $h1-spacing;          // OUDS mod
+  -webkit-font-smoothing: antialiased;  // OUDS mod
+  -moz-osx-font-smoothing: grayscale;   // OUDS mod
+  text-rendering: optimizelegibility;   // OUDS mod
 }
 
 // 1. Removes font-weight bold by inheriting
@@ -500,7 +500,7 @@ th {
 
 label {
   display: inline-block; // 1
-  font-weight: $form-label-font-weight; // Boosted mod
+  font-weight: $form-label-font-weight; // OUDS mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -537,8 +537,8 @@ textarea {
   line-height: inherit;
 
   /* rtl:remove */
-  letter-spacing: inherit; // Boosted mod
-  box-shadow: none; // Boosted mod: prevent native validation styles to apply
+  letter-spacing: inherit; // OUDS mod
+  box-shadow: none; // OUDS mod: prevent native validation styles to apply
 }
 
 // Remove the inheritance of text transform in Firefox
@@ -660,7 +660,7 @@ legend {
 
 [type="search"] {
   -webkit-appearance: textfield; // 1
-  outline-offset: -#{$focus-visible-outer-offset}; // 2 // Boosted mod
+  outline-offset: -#{$focus-visible-outer-offset}; // 2 // OUDS mod
 }
 
 // 1. A few input types should stay LTR

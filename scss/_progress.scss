@@ -17,8 +17,8 @@
   --#{$prefix}progress-border-radius: #{$progress-border-radius};
   --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
   --#{$prefix}progress-bar-color: #{$progress-bar-color};
-  --#{$prefix}progress-bar-font-weight: #{$progress-bar-font-weight}; // Boosted mod
-  --#{$prefix}progress-bar-text-indent: #{$progress-bar-text-indent}; // Boosted mod
+  --#{$prefix}progress-bar-font-weight: #{$progress-bar-font-weight}; // OUDS mod
+  --#{$prefix}progress-bar-text-indent: #{$progress-bar-text-indent}; // OUDS mod
   --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
   --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
   // scss-docs-end progress-css-vars
@@ -32,7 +32,7 @@
   @include box-shadow(var(--#{$prefix}progress-box-shadow));
 }
 
-// Boosted mod
+// OUDS mod
 .progress-xs {
   // scss-docs-start progress-border-xs-css-vars
   --#{$prefix}progress-height: #{$progress-height-xs};
@@ -51,9 +51,9 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  font-weight: var(--#{$prefix}progress-bar-font-weight); // Boosted mod
+  font-weight: var(--#{$prefix}progress-bar-font-weight); // OUDS mod
   color: var(--#{$prefix}progress-bar-color);
-  text-indent: var(--#{$prefix}progress-bar-text-indent); // Boosted mod
+  text-indent: var(--#{$prefix}progress-bar-text-indent); // OUDS mod
   white-space: nowrap;
   background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));

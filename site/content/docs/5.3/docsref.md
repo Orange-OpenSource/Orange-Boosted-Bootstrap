@@ -9,7 +9,7 @@ sitemap:
   disable: true
 ---
 
-<!-- Boosted mod: no Buttons section because no `.btn-bd-*` defined -->
+<!-- OUDS mod: no Buttons section because no `.btn-bd-*` defined -->
 
 ## Callouts
 

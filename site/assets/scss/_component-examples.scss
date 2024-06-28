@@ -4,7 +4,7 @@
 
 .bd-code-snippet {
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
@@ -21,7 +21,7 @@
   position: relative;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
 
@@ -174,11 +174,11 @@
 .bd-example-ratios {
   .ratio {
     display: inline-block;
-    width: 9rem; // Boosted mod
-    font-weight: $font-weight-bold; // Boosted mod
+    width: 9rem; // OUDS mod
+    font-weight: $font-weight-bold; // OUDS mod
     color: var(--bs-secondary-color);
-    background-color: var(--bs-secondary-bg); // Boosted mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--bs-border-width) solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
+    background-color: var(--bs-secondary-bg); // OUDS mod: instead of `var(--bs-tertiary-bg)`
+    border: var(--bs-border-width) solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
       display: flex;
@@ -230,7 +230,7 @@
   --bs-popover-max-width: 12.5rem;
   --bs-popover-border-color: var(--bd-violet-bg);
   --bs-popover-header-bg: var(--bd-violet-bg);
-  --bs-popover-header-padding-y: .5rem; // Boosted mod
+  --bs-popover-header-padding-y: .5rem; // OUDS mod
   --bs-popover-header-color: var(--bs-white);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
@@ -249,7 +249,7 @@
   overflow: auto;
 }
 
-// Boosted mod
+// OUDS mod
 .simple-list-example-scrollspy .active {
   color: var(--bs-primary);
 }
@@ -311,10 +311,10 @@
 }
 
 .bd-example-zindex-levels {
-  min-height: 16.625rem; // Boosted mod: instead of `15rem`
+  min-height: 16.625rem; // OUDS mod: instead of `15rem`
 
   > div {
-    // Boosted mod: no `color`
+    // OUDS mod: no `color`
     background-color: var(--bd-primary-light);
     border: 1px solid var(--bs-primary);
 
@@ -366,7 +366,7 @@
   pre {
     padding: .25rem 0 .875rem;
     margin-top: .8125rem;
-    // Boosted mod: no margin-right
+    // OUDS mod: no margin-right
     margin-bottom: 0;
     overflow: overlay;
     white-space: pre;
@@ -405,7 +405,7 @@
   margin-bottom: 1rem;
 }
 
-// Boosted mod
+// OUDS mod
 // scss-docs-start sticker-fs-4xl
 .sticker-fs-4xl {
   font-size: 3.75rem;

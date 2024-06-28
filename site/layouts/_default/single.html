@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <!-- Boosted mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
+  <!-- OUDS mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
 
-  <!-- Boosted mod: Orange rendering that handles "Guidelines" page as well -->
+  <!-- OUDS mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1" id="content">
     <div class="title-bar mb-2 mb-md-0">
       <div class="container-xxl">
@@ -29,7 +29,7 @@
             </div>
             {{- end }}
           </div>
-          <!-- Boosted mod: No ads -->
+          <!-- OUDS mod: No ads -->
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
 
       {{ if eq .Title "Examples" -}}
         {{ partial "examples/main" . }}
-        <!-- Boosted mod: No 'examples/bs-themes' partial -->
+        <!-- OUDS mod: No 'examples/bs-themes' partial -->
       {{- end }}
     </div>
   </main>

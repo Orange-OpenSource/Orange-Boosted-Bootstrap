@@ -454,7 +454,7 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
   </div>
 </div>
 {{- end }}
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 <div class="card border-0 mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">

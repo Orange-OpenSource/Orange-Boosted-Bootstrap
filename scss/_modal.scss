@@ -20,8 +20,8 @@
   --#{$prefix}modal-border-radius: #{$modal-content-border-radius};
   --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-xs};
   --#{$prefix}modal-inner-border-radius: #{$modal-content-inner-border-radius};
-  // Boosted mod: no --#{$prefix}modal-header-padding-x
-  // Boosted mod: no --#{$prefix}modal-header-padding-y
+  // OUDS mod: no --#{$prefix}modal-header-padding-x
+  // OUDS mod: no --#{$prefix}modal-header-padding-y
   --#{$prefix}modal-header-padding: #{$modal-header-padding}; // Todo in v6: Split this padding into x and y
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
@@ -30,9 +30,9 @@
   --#{$prefix}modal-footer-bg: #{$modal-footer-bg};
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
-  --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // Boosted mod
-  --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top}; // Boosted mod
-  --#{$prefix}modal-content-padding: #{$modal-content-padding}; // Boosted mod
+  --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // OUDS mod
+  --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top}; // OUDS mod
+  --#{$prefix}modal-content-padding: #{$modal-content-padding}; // OUDS mod
   --#{$prefix}modal-img-margin: #{$modal-img-margin};
   --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
   // scss-docs-end modal-css-vars
@@ -46,11 +46,11 @@
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  // Boosted mod: no `outline: 0` rule
+  // OUDS mod: no `outline: 0` rule
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
   // See also https://github.com/twbs/bootstrap/issues/17695
-  background-color: transparent; // Boosted mod
+  background-color: transparent; // OUDS mod
 }
 
 // Shell div to position the modal with bottom padding
@@ -78,9 +78,9 @@
 
 .modal-dialog-scrollable {
   // scss-docs-start modal-scrollable-css-vars
-  --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // Boosted mod
-  --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // Boosted mod
-  --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // Boosted mod
+  --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // OUDS mod
+  --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // OUDS mod
+  --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // OUDS mod
   // scss-docs-end modal-scrollable-css-vars
 
   height: calc(100% - var(--#{$prefix}modal-margin) * 2);
@@ -91,11 +91,11 @@
   }
 
   .modal-body {
-    padding: var(--#{$prefix}modal-scrollable-inner-padding); // Boosted mod
-    margin: var(--#{$prefix}modal-scrollable-inner-margin); // Boosted mod
+    padding: var(--#{$prefix}modal-scrollable-inner-padding); // OUDS mod
+    margin: var(--#{$prefix}modal-scrollable-inner-margin); // OUDS mod
     overflow-y: auto;
-    border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // Boosted mod
-    border-width: var(--#{$prefix}modal-border-width) 0; // Boosted mod
+    border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // OUDS mod
+    border-width: var(--#{$prefix}modal-border-width) 0; // OUDS mod
   }
 }
 
@@ -105,7 +105,7 @@
   min-height: calc(100% - var(--#{$prefix}modal-margin) * 2);
 }
 
-// Boosted mod
+// OUDS mod
 .modal-dialog .modal-body > :last-child {
   margin-bottom: 0;
 }
@@ -117,7 +117,7 @@
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
-  padding: var(--#{$prefix}modal-content-padding); // Boosted mod
+  padding: var(--#{$prefix}modal-content-padding); // OUDS mod
   // counteract the pointer-events: none; in the .modal-dialog
   color: var(--#{$prefix}modal-color);
   pointer-events: auto;
@@ -140,7 +140,7 @@
 }
 
 
-// Boosted mod
+// OUDS mod
 //// Modal image
 .modal-img {
   margin: var(--#{$prefix}modal-img-margin);
@@ -161,11 +161,11 @@
   flex-shrink: 0;
   align-items: center;
   padding: var(--#{$prefix}modal-header-padding);
-  border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // Boosted mod
+  border-bottom: if($modal-header-border-color == null, null, var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color)); // OUDS mod
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // Boosted mod: using custom properties for padding
+    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // OUDS mod: using custom properties for padding
   }
 }
 
@@ -192,17 +192,17 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: var(--#{$prefix}modal-footer-padding); // Boosted mod
-  margin-top: var(--#{$prefix}modal-footer-margin-top); // Boosted mod
+  padding: var(--#{$prefix}modal-footer-padding); // OUDS mod
+  margin-top: var(--#{$prefix}modal-footer-margin-top); // OUDS mod
   background-color: var(--#{$prefix}modal-footer-bg);
-  border-top: if($modal-footer-border-color == null, null, var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color)); // Boosted mod
+  border-top: if($modal-footer-border-color == null, null, var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color)); // OUDS mod
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
 
   // Place margin between footer elements
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
-    margin: 0 calc(var(--#{$prefix}modal-footer-gap) * .5); // Todo in v6: replace with gap on parent class // Boosted mod
+    margin: 0 calc(var(--#{$prefix}modal-footer-gap) * .5); // Todo in v6: replace with gap on parent class // OUDS mod
   }
 }
 
@@ -211,7 +211,7 @@
   .modal {
     --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
     --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
-    --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top-sm}; // Boosted mod
+    --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top-sm}; // OUDS mod
   }
 
   // Automatically set modal's width for larger viewports

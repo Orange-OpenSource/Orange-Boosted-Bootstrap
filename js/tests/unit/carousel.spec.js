@@ -79,7 +79,7 @@ describe('Carousel', () => {
       expect(carousel._interval).toBeNull()
     })
 
-    // Boosted mod
+    // OUDS mod
     it('should add class if `ride`!==`carousel`', () => {
       fixtureEl.innerHTML = '<div id="myCarousel" class="carousel slide" data-bs-ride="true"><ol class="carousel-indicators"></ol></div>'
 
@@ -357,7 +357,7 @@ describe('Carousel', () => {
       })
     })
 
-    // Boosted mod
+    // OUDS mod
     it('should stay at the end when the next method is called and wrap is false', () => {
       return new Promise((resolve, reject) => {
         fixtureEl.innerHTML = [
@@ -1153,7 +1153,7 @@ describe('Carousel', () => {
   })
 
   describe('pause', () => {
-    // Boosted mod
+    // OUDS mod
     it('should add paused class', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
@@ -1179,7 +1179,7 @@ describe('Carousel', () => {
     })
     // End mod
 
-    // Boosted mod: tests for Play/Pause button
+    // OUDS mod: tests for Play/Pause button
     it('should add pause class on click on Play/Pause button when pause is on', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel is-paused"></div>',
@@ -1527,7 +1527,7 @@ describe('Carousel', () => {
   })
 
   describe('cycle', () => {
-    // Boosted mod
+    // OUDS mod
     it('should remove the paused class', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
@@ -1629,7 +1629,7 @@ describe('Carousel', () => {
       expect(carousel._config.interval).toEqual(9385)
     })
 
-    // Boosted mod
+    // OUDS mod
     it('should set --bs-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',

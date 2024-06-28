@@ -58,9 +58,9 @@ We use the following JavaScript to trigger our live alert demo:
 
 {{< js-docs name="live-alert" file="site/assets/js/partials/snippets.js" >}}
 
-<!-- Boosted mod: no Link color -->
+<!-- OUDS mod: no Link color -->
 
-<!-- Boosted mod: small alerts -->
+<!-- OUDS mod: small alerts -->
 ### Sizes
 
 Alerts come with a smaller variant: `.alert-sm`.
@@ -101,7 +101,7 @@ As of Boosted, it's recommended to wrap your additional content in a `<div>` to 
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: no icons -->
+<!-- OUDS mod: no icons -->
 
 ### Dismissing
 

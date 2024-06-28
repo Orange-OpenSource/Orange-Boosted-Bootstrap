@@ -50,7 +50,7 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: no outline styles -->
+<!-- OUDS mod: no outline styles -->
 
 ## Checkbox and radio button groups
 

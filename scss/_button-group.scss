@@ -10,7 +10,7 @@
     flex: 1 1 auto;
   }
 
-  // Boosted mod: rule slightly modified
+  // OUDS mod: rule slightly modified
   // Bring the hover, focused, and "active" buttons to the front to overlay
   // the borders properly
   > .btn-check:checked + .btn,
@@ -21,7 +21,7 @@
   }
   // End mod
 
-  // Boosted mod
+  // OUDS mod
   &:focus-within {
     z-index: 1;
   }
@@ -42,7 +42,7 @@
 .btn-group {
   @include border-radius($border-radius);
 
-  // Boosted mod: rule slightlty modified
+  // OUDS mod: rule slightlty modified
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn:not(.btn-toggle),
   > .btn-group:not(:first-child) {
@@ -67,7 +67,7 @@
     @include border-start-radius(0);
   }
 
-  // Boosted mod
+  // OUDS mod
   > [class*="btn-outline-"]:not(:last-of-type) {
     border-right-width: 0;
 
@@ -107,11 +107,11 @@
 
 .dropdown-toggle-split {
   // stylelint-disable-next-line function-disallowed-list
-  min-width: add($dropdown-padding-x * 2, calc(#{$caret-width} * 2)); // Boosted mod
-  padding-right: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
-  padding-left: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
+  min-width: add($dropdown-padding-x * 2, calc(#{$caret-width} * 2)); // OUDS mod
+  padding-right: subtract($dropdown-padding-x, $btn-border-width); // OUDS mod
+  padding-left: subtract($dropdown-padding-x, $btn-border-width); // OUDS mod
 
-  // Boosted mod
+  // OUDS mod
   .btn-group:not(.dropstart) &,
   .dropstart & ~ .btn {
     &:not(:hover):not(:focus):not(:active):not(.show) {
@@ -163,13 +163,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .5; // Boosted mod
-  padding-left: $btn-padding-x-sm * .5; // Boosted mod
+  padding-right: $btn-padding-x-sm * .5; // OUDS mod
+  padding-left: $btn-padding-x-sm * .5; // OUDS mod
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .5; // Boosted mod
-  padding-left: $btn-padding-x-lg * .5; // Boosted mod
+  padding-right: $btn-padding-x-lg * .5; // OUDS mod
+  padding-left: $btn-padding-x-lg * .5; // OUDS mod
 }
 
 

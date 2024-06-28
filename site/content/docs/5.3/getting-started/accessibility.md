@@ -26,7 +26,7 @@ Because Boosted's components are purposely designed to be fairly generic, author
 
 ### Color contrast
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
 Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of Boosted color palette’s reached WCAG level.
@@ -55,7 +55,7 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 
 On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they'd prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), Boosted enables smooth scrolling using the `scroll-behavior` property.
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ### Focus visibility
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.

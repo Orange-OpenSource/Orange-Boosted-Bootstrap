@@ -271,7 +271,7 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
 ### Radio toggle buttons
 
-<!-- Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
+<!-- OUDS mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
 
 Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
 
@@ -291,9 +291,9 @@ Boosted requires to group its radio toggle buttons in a [button group]({{< docsr
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: no .btn-outline-* -->
+<!-- OUDS mod: no .btn-outline-* -->
 
-<!-- Boosted mod: toggle buttons with icon, no-outline -->
+<!-- OUDS mod: toggle buttons with icon, no-outline -->
 #### With icon
 
 Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embedded icon]({{< docsref "/extend/icons" >}}) to get consistent squared icon buttons working as toggle.
@@ -354,7 +354,7 @@ Drop borders using `.btn-no-outline`, too.
 
 <!-- End mod -->
 
-<!-- Boosted mod: star rating -->
+<!-- OUDS mod: star rating -->
 
 ## Star rating
 

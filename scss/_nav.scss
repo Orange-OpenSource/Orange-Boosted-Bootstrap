@@ -19,12 +19,12 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  background-color: transparent; // Boosted mod
+  background-color: transparent; // OUDS mod
 }
 
 .nav-link {
-  display: flex; // Boosted mod: instead of `block`
-  align-items: center; // Boosted mod
+  display: flex; // OUDS mod: instead of `block`
+  align-items: center; // OUDS mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);
@@ -34,13 +34,13 @@
   border: 0;
   @include transition($nav-link-transition);
 
-  // Boosted mod: no focus
+  // OUDS mod: no focus
   &:hover {
     color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  // Boosted mod: no `&:focus-visible`
+  // OUDS mod: no `&:focus-visible`
 
   // Disabled state lightens text
   &.disabled,
@@ -60,10 +60,10 @@
   --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
   --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
   --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
-  --#{$prefix}nav-tabs-link-padding-x: #{$nav-tabs-link-padding-x}; // Boosted mod
-  --#{$prefix}nav-tabs-link-hover-color: #{$nav-tabs-link-hover-color}; // Boosted mod
-  --#{$prefix}nav-tabs-link-hover-bg: #{$nav-tabs-link-hover-bg}; // Boosted mod
-  --#{$prefix}nav-tabs-link-border-width: var(--#{$prefix}nav-tabs-border-width) var(--#{$prefix}nav-tabs-border-width) 0; // Boosted mod
+  --#{$prefix}nav-tabs-link-padding-x: #{$nav-tabs-link-padding-x}; // OUDS mod
+  --#{$prefix}nav-tabs-link-hover-color: #{$nav-tabs-link-hover-color}; // OUDS mod
+  --#{$prefix}nav-tabs-link-hover-bg: #{$nav-tabs-link-hover-bg}; // OUDS mod
+  --#{$prefix}nav-tabs-link-border-width: var(--#{$prefix}nav-tabs-border-width) var(--#{$prefix}nav-tabs-border-width) 0; // OUDS mod
   --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
   --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
@@ -72,7 +72,7 @@
 
   border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
 
-  // Boosted mod: margins between tabs on bigger screen
+  // OUDS mod: margins between tabs on bigger screen
   @include media-breakpoint-up(lg) {
     .nav-item + .nav-item {
       margin-left: var(--#{$prefix}nav-link-padding-y);
@@ -81,16 +81,16 @@
   // End mod
 
   .nav-link {
-    padding: subtract(1rem, var(--#{$prefix}nav-tabs-border-width)) subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)); // Boosted mod
+    padding: subtract(1rem, var(--#{$prefix}nav-tabs-border-width)) subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)); // OUDS mod
     margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
-    border-width: var(--#{$prefix}nav-tabs-link-border-width); // Boosted mod
+    border-width: var(--#{$prefix}nav-tabs-link-border-width); // OUDS mod
     @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
 
-    // Boosted mod: no focus
+    // OUDS mod: no focus
     &:hover {
-      color: var(--#{$prefix}nav-tabs-link-hover-color); // Boosted mod
-      background-color: var(--#{$prefix}nav-tabs-link-hover-bg); // Boosted mod
+      color: var(--#{$prefix}nav-tabs-link-hover-color); // OUDS mod
+      background-color: var(--#{$prefix}nav-tabs-link-hover-bg); // OUDS mod
       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
       isolation: isolate;
       border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
@@ -118,15 +118,15 @@
 
 .nav-pills {
   // scss-docs-start nav-pills-css-vars
-  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // Boosted mod
+  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // OUDS mod
   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
   // scss-docs-end nav-pills-css-vars
 
   .nav-link {
-    padding-right: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
-    padding-left: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
+    padding-right: var(--#{$prefix}nav-pills-padding-x); // OUDS mod
+    padding-left: var(--#{$prefix}nav-pills-padding-x); // OUDS mod
     @include border-radius(var(--#{$prefix}nav-pills-border-radius));
   }
 
@@ -136,7 +136,7 @@
     @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
   }
 
-  // Boosted mod
+  // OUDS mod
   .nav-item + .nav-item {
     margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); // stylelint-disable-line function-disallowed-list
   }
@@ -151,29 +151,29 @@
   // scss-docs-start nav-underline-css-vars
   --#{$prefix}nav-underline-gap: #{$nav-underline-gap};
   --#{$prefix}nav-underline-border-width: #{$nav-underline-border-width};
-  --#{$prefix}nav-underline-border-color: #{$nav-underline-border-color}; // Boosted mod
-  --#{$prefix}nav-underline-border-radius: #{$nav-underline-border-radius}; // Boosted mod
-  --#{$prefix}nav-underline-link-padding-x: #{$nav-underline-link-padding-x}; // Boosted mod
-  --#{$prefix}nav-underline-link-hover-color: #{$nav-underline-link-hover-color}; // Boosted mod
-  --#{$prefix}nav-underline-link-hover-bg: transparent; // Boosted mod
-  --#{$prefix}nav-underline-link-border-width: #{$nav-underline-link-border-width}; // Boosted mod
-  --#{$prefix}nav-underline-link-hover-border-color: transparent; // Boosted mod
+  --#{$prefix}nav-underline-border-color: #{$nav-underline-border-color}; // OUDS mod
+  --#{$prefix}nav-underline-border-radius: #{$nav-underline-border-radius}; // OUDS mod
+  --#{$prefix}nav-underline-link-padding-x: #{$nav-underline-link-padding-x}; // OUDS mod
+  --#{$prefix}nav-underline-link-hover-color: #{$nav-underline-link-hover-color}; // OUDS mod
+  --#{$prefix}nav-underline-link-hover-bg: transparent; // OUDS mod
+  --#{$prefix}nav-underline-link-border-width: #{$nav-underline-link-border-width}; // OUDS mod
+  --#{$prefix}nav-underline-link-hover-border-color: transparent; // OUDS mod
   --#{$prefix}nav-underline-link-active-color: #{$nav-underline-link-active-color};
-  --#{$prefix}nav-underline-link-active-bg: #{$nav-underline-link-active-bg}; // Boosted mod
-  --#{$prefix}nav-underline-link-active-border-color: #{$nav-underline-link-active-border-color}; // Boosted mod
+  --#{$prefix}nav-underline-link-active-bg: #{$nav-underline-link-active-bg}; // OUDS mod
+  --#{$prefix}nav-underline-link-active-border-color: #{$nav-underline-link-active-border-color}; // OUDS mod
   // scss-docs-end nav-underline-css-vars
 
   gap: var(--#{$prefix}nav-underline-gap);
-  border-bottom: var(--#{$prefix}nav-underline-border-width) solid var(--#{$prefix}nav-underline-border-color); // Boosted mod
+  border-bottom: var(--#{$prefix}nav-underline-border-width) solid var(--#{$prefix}nav-underline-border-color); // OUDS mod
 
-  // Boosted mod
+  // OUDS mod
   // Bigger gap between elements from lg breakpoint
   @include media-breakpoint-up(lg) {
     --#{$prefix}nav-underline-gap: #{$nav-underline-gap-lg};
   }
 
   .nav-link {
-    padding: subtract(1rem, var(--#{$prefix}nav-underline-border-width)) subtract(var(--#{$prefix}nav-underline-link-padding-x), var(--#{$prefix}nav-underline-border-width)); // Boosted mod
+    padding: subtract(1rem, var(--#{$prefix}nav-underline-border-width)) subtract(var(--#{$prefix}nav-underline-link-padding-x), var(--#{$prefix}nav-underline-border-width)); // OUDS mod
     margin-bottom: calc(-1 * var(--#{$prefix}nav-underline-border-width)); // stylelint-disable-line function-disallowed-list
     border: var(--#{$prefix}nav-underline-border-width) solid transparent;
     border-width: var(--#{$prefix}nav-underline-link-border-width);
@@ -232,7 +232,7 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-content {
-  // Boosted mod
+  // OUDS mod
   // scss-docs-start tab-content-css-vars
   --#{$prefix}tab-content-padding-y: #{$spacer};
   --#{$prefix}tab-content-padding-x: #{subtract($nav-tabs-link-padding-x, var(--#{$prefix}tab-content-border-width))};
@@ -250,7 +250,7 @@
     display: none;
   }
 
-  // Boosted mod
+  // OUDS mod
   > .tab-pane-with-nested-tab {
     display: none;
     margin: calc(-1 * var(--#{$prefix}tab-content-padding-y)) calc(-1 * var(--#{$prefix}tab-content-padding-x)); // stylelint-disable-line function-disallowed-list
