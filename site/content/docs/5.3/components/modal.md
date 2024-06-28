@@ -17,7 +17,7 @@ Before getting started with Boosted's modal component, be sure to read the follo
 - Boosted only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.
 - Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element.
 - Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}}) for details.
-- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Boosted modals. To achieve the same effect, use some custom JavaScript:
+- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in OUDS modals. To achieve the same effect, use some custom JavaScript:
 
 ```js
 const myModal = document.getElementById('myModal')
@@ -80,7 +80,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 </div>
 ```
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 #### With image
 
 Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag—being `.modal-content`'s first child— and you're done!
@@ -543,7 +543,7 @@ This toggle behavior between multiple modals should not be used because it does 
 Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">

@@ -29,7 +29,7 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 
 Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" stackblitz_add_js="true" >}}
 <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
@@ -51,7 +51,7 @@ Use the buttons below to show and hide an offcanvas element via JavaScript that 
 
 You can use a link with the `href` attribute, or a button with the `data-bs-target` attribute. In both cases, the `data-bs-toggle="offcanvas"` is required.
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   Link with href
@@ -87,7 +87,7 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
 
 Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-bs-scroll` attribute to enable `<body>` scrolling.
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 
@@ -106,7 +106,7 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
 
 You can also enable `<body>` scrolling with a visible backdrop.
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
 
@@ -188,7 +188,7 @@ There's no default placement for offcanvas components, so you must add one of th
 
 Try the top, right, and bottom examples out below.
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
@@ -203,7 +203,7 @@ Try the top, right, and bottom examples out below.
 </div>
 {{< /example >}}
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
@@ -218,7 +218,7 @@ Try the top, right, and bottom examples out below.
 </div>
 {{< /example >}}
 
-<!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
+<!--OUDS mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example stackblitz_add_js="true" >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
 

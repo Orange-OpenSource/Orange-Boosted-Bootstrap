@@ -1,20 +1,20 @@
 @include deprecate("`alert-variant()`", "v5.3.0", "v6.0.0");
 
 // scss-docs-start alert-variant-mixin
-@mixin alert-variant($background, $border, $color, $background-image) { // Boosted mod
+@mixin alert-variant($background, $border, $color, $background-image) { // OUDS mod
   --#{$prefix}alert-color: #{$color};
   --#{$prefix}alert-bg: #{$background};
-  --#{$prefix}alert-border: #{$border}; // Boosted mod
-  // Boosted mod: no --#{$prefix}alert-link-color
+  --#{$prefix}alert-border: #{$border}; // OUDS mod
+  // OUDS mod: no --#{$prefix}alert-link-color
 
-  // Boosted mod
+  // OUDS mod
   .alert-icon::before {
     mask-image: $background-image;
   }
   // End mod
 
-  // Boosted mod: no $enable-gradients test
+  // OUDS mod: no $enable-gradients test
 
-  // Boosted mod: no .alert-link
+  // OUDS mod: no .alert-link
 }
 // scss-docs-end alert-variant-mixin

@@ -38,7 +38,7 @@ Use the border spinners for a lightweight loading indicator.
 
 The border spinner uses `currentColor` for its `border-color`, meaning you can customize the color with [text color utilities][color]. You can use any of our text color utilities on the standard spinner.
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 {{< example >}}
 <div class="spinner-border text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -65,7 +65,7 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 
 Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color].
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 {{< example >}}
 <div class="spinner-grow text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -133,7 +133,7 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 
 ## Size
 
-<!-- Boosted mod: -sm & -lg -->
+<!-- OUDS mod: -sm & -lg -->
 Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that can quickly be used within other components.
 
 {{< example >}}

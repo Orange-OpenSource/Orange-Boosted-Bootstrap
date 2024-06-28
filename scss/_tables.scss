@@ -24,7 +24,7 @@
   margin-bottom: $spacer;
   vertical-align: $table-cell-vertical-align;
 
-  // Boosted mod
+  // OUDS mod
   //// Only rows have border
   //// Set line-height everywhere
   tr {
@@ -62,7 +62,7 @@
     vertical-align: bottom;
   }
 
-  // Boosted mod
+  // OUDS mod
   // When using checkboxes in the first column, force width to ensure correct spacing on this column
   &.has-checkbox tr > :first-child {
     width: $spacer * 2;
@@ -87,7 +87,7 @@
 //
 
 .caption-bottom {
-  caption-side: bottom; // Boosted mod
+  caption-side: bottom; // OUDS mod
 }
 
 
@@ -98,13 +98,13 @@
 .table-sm {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // Boosted mod
+    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // OUDS mod
   }
 }
 
-// Boosted mod: no .table-bordered
+// OUDS mod: no .table-bordered
 
-// Boosted mod: no .table-borderless
+// OUDS mod: no .table-borderless
 
 // Zebra-striping
 //

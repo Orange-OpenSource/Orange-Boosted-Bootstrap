@@ -95,7 +95,7 @@ Please refer to the [Local Headers/Breadcrumb](https://system.design.orange.com/
 $breadcrumb-divider: none;
 ```
 
-<!-- Boosted mod: Dark variant -->
+<!-- OUDS mod: Dark variant -->
 ## Dark variant
 
 {{< callout-deprecated-dark-variants "breadcrumb" >}}

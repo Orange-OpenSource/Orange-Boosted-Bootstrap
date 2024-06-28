@@ -12,7 +12,7 @@ The `opacity` property sets the opacity level for an element. The opacity level 
 Set the `opacity` of an element using `.opacity-{value}` utilities.
 
 <!--
-  Boosted mod:
+  OUDS mod:
   - Removed .text-light and .rounded classes
   - Removed div text content to avoid a11y issue with semi-transparent text
 -->

@@ -7,17 +7,17 @@
   --#{$prefix}tooltip-padding-y: #{$tooltip-padding-y};
   --#{$prefix}tooltip-margin: #{$tooltip-margin};
   @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
-  --#{$prefix}tooltip-font-weight: #{$tooltip-font-weight}; // Boosted mod: extra CSS variable
-  --#{$prefix}tooltip-line-height: #{$tooltip-line-height}; // Boosted mod
+  --#{$prefix}tooltip-font-weight: #{$tooltip-font-weight}; // OUDS mod: extra CSS variable
+  --#{$prefix}tooltip-line-height: #{$tooltip-line-height}; // OUDS mod
   --#{$prefix}tooltip-color: #{$tooltip-color};
   --#{$prefix}tooltip-bg: #{$tooltip-bg};
-  --#{$prefix}tooltip-border-width: #{$tooltip-border-width}; // Boosted mod
-  --#{$prefix}tooltip-border-color: #{$tooltip-border-color}; // Boosted mod
+  --#{$prefix}tooltip-border-width: #{$tooltip-border-width}; // OUDS mod
+  --#{$prefix}tooltip-border-color: #{$tooltip-border-color}; // OUDS mod
   --#{$prefix}tooltip-border-radius: #{$tooltip-border-radius};
   --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
   --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
   --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
-  --#{$prefix}tooltip-arrow-border: var(--#{$prefix}tooltip-border-color); // Boosted mod
+  --#{$prefix}tooltip-arrow-border: var(--#{$prefix}tooltip-border-color); // OUDS mod
   // scss-docs-end tooltip-css-vars
 
   z-index: var(--#{$prefix}tooltip-zindex);
@@ -28,8 +28,8 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
-  font-weight: var(--#{$prefix}tooltip-font-weight); // Boosted mod
-  line-height: var(--#{$prefix}tooltip-line-height); // Boosted mod
+  font-weight: var(--#{$prefix}tooltip-font-weight); // OUDS mod
+  line-height: var(--#{$prefix}tooltip-line-height); // OUDS mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
   opacity: 0;
@@ -42,18 +42,18 @@
     height: var(--#{$prefix}tooltip-arrow-height);
 
     &::before,
-    &::after { // Boosted mod
+    &::after { // OUDS mod
       position: absolute;
-      display: block; // Boosted mod
+      display: block; // OUDS mod
       content: "";
       border-color: transparent;
       border-style: solid;
-      border-width: 0; // Boosted mod
+      border-width: 0; // OUDS mod
     }
   }
 }
 
-// Boosted mod: needed to generate a border with a different color
+// OUDS mod: needed to generate a border with a different color
 .bs-tooltip-top .tooltip-arrow {
   bottom: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
 
@@ -161,8 +161,8 @@
   max-width: var(--#{$prefix}tooltip-max-width);
   padding: var(--#{$prefix}tooltip-padding-y) var(--#{$prefix}tooltip-padding-x);
   color: var(--#{$prefix}tooltip-color);
-  // Boosted mod: no `text-align: center`
+  // OUDS mod: no `text-align: center`
   background-color: var(--#{$prefix}tooltip-bg);
-  border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color); // Boosted mod
+  border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color); // OUDS mod
   @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }

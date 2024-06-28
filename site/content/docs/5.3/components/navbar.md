@@ -93,7 +93,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-dar
 
 The `.navbar-brand` can be used to contain most elements, but an anchor works best, as some elements might require utility classes or custom styles.
 
-<!-- Boosted mod: .navbar-brand must contain Orange logo -->
+<!-- OUDS mod: .navbar-brand must contain Orange logo -->
 {{< example >}}
 <!-- As a link -->
 <header>
@@ -244,7 +244,7 @@ Place various form controls and components within a navbar:
 </nav>
 {{< /example >}}
 
-Immediate child elements of `.navbar` use flex layout<!-- Boosted mod: no justify-content -->. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
+Immediate child elements of `.navbar` use flex layout<!-- OUDS mod: no justify-content -->. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
 
 {{< example >}}
 <nav class="navbar">
@@ -633,7 +633,7 @@ Navbars can use `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-
 
 For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
 
-<!-- Boosted mod: toggler always on the right -->
+<!-- OUDS mod: toggler always on the right -->
 
 ### External content
 

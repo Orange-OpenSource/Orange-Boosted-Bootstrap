@@ -18,7 +18,7 @@ Boosted has a base `.btn` class that sets up basic styles such as padding and co
 
 The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
-<!-- Boosted mod: no warning callout about `:focus`/`:focus-visible` since Boosted provides a default visible focus for each focusable element -->
+<!-- OUDS mod: no warning callout about `:focus`/`:focus-visible` since Boosted provides a default visible focus for each focusable element -->
 
 ## Variants
 
@@ -57,7 +57,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
 {{< /callout >}}
 </details>
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ## With icon
 
 The recommended way of using an icon in a button is [an embedded SVG]({{< docsref "/extend/icons" >}}). You need to:
@@ -246,7 +246,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<!--Boosted mod: no outline buttons-->
+<!--OUDS mod: no outline buttons-->
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary" disabled>Button</button>
@@ -382,10 +382,10 @@ As part of Boosted's evolving CSS variables approach, buttons now use local CSS 
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
-<!--Boosted mod: no outline variant-->
+<!--OUDS mod: no outline variant-->
 Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` and `button-size()` mixins.
 
-<!--Boosted mod: no custom `.btn-*` modifier class-->
+<!--OUDS mod: no custom `.btn-*` modifier class-->
 
 ### Sass variables
 
@@ -401,7 +401,7 @@ There are four mixins for buttons: button and button outline variant mixins (bot
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: .btn-icon -->
+<!-- OUDS mod: .btn-icon -->
 {{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}}
 
 ### Sass loops

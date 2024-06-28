@@ -118,7 +118,7 @@ Or with `.justify-content-end`:
 </nav>
 {{< /example >}}
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ## Responsive behavior
 
 To avoid pagination wrapping or overflowing, we limit the number or pagination item to display depending on breakpoint.
@@ -165,5 +165,5 @@ As part of Boosted's evolving CSS variables approach, pagination now uses local 
 
 {{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}
 
-<!-- Boosted mod: responsive behavior -->
+<!-- OUDS mod: responsive behavior -->
 {{< scss-docs name="pagination-max-items-mixin" file="scss/mixins/_pagination.scss" >}}

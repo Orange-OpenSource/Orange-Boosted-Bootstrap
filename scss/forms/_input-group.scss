@@ -8,7 +8,7 @@
   flex-wrap: wrap; // For form validation feedback
   align-items: stretch;
   width: 100%;
-  background-color: transparent; // Boosted mod
+  background-color: transparent; // OUDS mod
 
   > .form-control,
   > .form-select,
@@ -71,7 +71,7 @@
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: $input-padding-y-lg $input-padding-x-lg;
-  line-height: $h5-line-height; // Boosted mod
+  line-height: $h5-line-height; // OUDS mod
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 }
@@ -81,7 +81,7 @@
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: $input-padding-y-sm $input-padding-x-sm;
-  line-height: $line-height-sm; // Boosted mod
+  line-height: $line-height-sm; // OUDS mod
   @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 }

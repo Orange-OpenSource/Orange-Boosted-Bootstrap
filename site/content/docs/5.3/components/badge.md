@@ -47,7 +47,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 
 ### Positioned
 
-<!-- Boosted mod: replace the button with a link with an icon because notifiers are only authorized with icons -->
+<!-- OUDS mod: replace the button with a link with an icon because notifiers are only authorized with icons -->
 
 Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
 

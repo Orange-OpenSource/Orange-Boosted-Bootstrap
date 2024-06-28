@@ -38,7 +38,7 @@ const browsers = {
     browser: 'Firefox',
     browser_version: '60'
   },
-  // Boosted mod: ESR Firefox used inside Orange
+  // OUDS mod: ESR Firefox used inside Orange
   EsrWin10: {
     base: 'BrowserStack',
     os: 'Windows',

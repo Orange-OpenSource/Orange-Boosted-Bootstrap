@@ -18,7 +18,7 @@ export default () => {
   const btnTitle = 'Copy to clipboard'
   const btnEdit = 'Edit on StackBlitz'
 
-  // Boosted mod: removed unused svg height, width and fill="currentColor"
+  // OUDS mod: removed unused svg height, width and fill="currentColor"
   const btnHtml = [
     '<div class="bd-code-snippet">',
     '  <div class="bd-clipboard">',

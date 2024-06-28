@@ -20,9 +20,9 @@
     &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
     &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
 
-    // Boosted mod: added `&[data-focus-visible-added]`
+    // OUDS mod: added `&[data-focus-visible-added]`
     &[data-focus-visible-added] {
-      // Boosted mod: better focus visibility
+      // OUDS mod: better focus visibility
       &::-webkit-slider-thumb {
         @include focus-visible();
       }
@@ -38,28 +38,28 @@
   }
 
   &::-webkit-slider-thumb {
-    box-sizing: content-box; // Boosted mod
+    box-sizing: content-box; // OUDS mod
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
     // stylelint-disable-next-line function-disallowed-list
-    margin-top: calc((#{$form-range-track-height} - (#{$form-range-thumb-height} + var(--#{$prefix}border-width) * 2)) * .5); // Webkit specific // Boosted mod
+    margin-top: calc((#{$form-range-track-height} - (#{$form-range-thumb-height} + var(--#{$prefix}border-width) * 2)) * .5); // Webkit specific // OUDS mod
     appearance: none;
-    cursor: grab; // Boosted mod
+    cursor: grab; // OUDS mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
-    @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
+    @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // OUDS mod: always rounded
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
 
-    // Boosted mod
+    // OUDS mod
     &:hover {
       @include gradient-bg($form-range-thumb-hover-bg);
     }
     // End mod
 
     &:active {
-      cursor: grabbing; // Boosted mod
-      border-color: $form-range-thumb-active-border; // Boosted mod
+      cursor: grabbing; // OUDS mod
+      border-color: $form-range-thumb-active-border; // OUDS mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
@@ -79,14 +79,14 @@
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
     appearance: none;
-    cursor: grab; // Boosted mod
+    cursor: grab; // OUDS mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
-    @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
+    @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // OUDS mod: always rounded
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
 
-    // Boosted mod
+    // OUDS mod
     &:hover {
       border: $form-range-thumb-border;
       @include gradient-bg($form-range-thumb-hover-bg);
@@ -94,8 +94,8 @@
     // End mod
 
     &:active {
-      cursor: grabbing; // Boosted mod
-      border-color: $form-range-thumb-active-border; // Boosted mod
+      cursor: grabbing; // OUDS mod
+      border-color: $form-range-thumb-active-border; // OUDS mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
@@ -111,7 +111,7 @@
     @include box-shadow($form-range-track-box-shadow);
   }
 
-  // Boosted mod: the same as ::-ms-fill-lower
+  // OUDS mod: the same as ::-ms-fill-lower
   // @see https://developer.mozilla.org/fr/docs/Web/CSS/::-moz-range-progress
   &::-moz-range-progress {
     height: $form-range-track-height;
@@ -123,7 +123,7 @@
   &:disabled {
     pointer-events: none;
 
-    // Boosted mod
+    // OUDS mod
     //// Custom disabled thumbs
     &::-webkit-slider-thumb {
       cursor: default;

@@ -288,7 +288,7 @@ Behind the scenes it looks like this:
 
 {{< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >}}
 
-<!-- Boosted mod : No table borders -->
+<!-- OUDS mod : No table borders -->
 
 ## Small tables
 
@@ -505,7 +505,7 @@ Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be
 
 ## Anatomy
 
-<!-- Boosted mod : no table head or table foot -->
+<!-- OUDS mod : no table head or table foot -->
 
 ### Captions
 
@@ -530,7 +530,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 </table>
 ```
 
-<!-- Boosted mod: default caption-side is top -->
+<!-- OUDS mod: default caption-side is top -->
 You can also put the `<caption>` on the bottom of the table with `.caption-bottom`.
 
 <div class="bd-example">
@@ -1274,4 +1274,4 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
 ### Customizing
 
 The factor variables (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`) are used to determine the contrast in table variants.
-<!-- Boosted mod: no table variant apart from dark and light -->
+<!-- OUDS mod: no table variant apart from dark and light -->

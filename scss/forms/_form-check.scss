@@ -45,7 +45,7 @@
   @include transition($form-check-transition);
 
   &[type="checkbox"] {
-    @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // Boosted mod
+    @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // OUDS mod
   }
 
   &[type="radio"] {
@@ -54,14 +54,14 @@
   }
 
   &:active {
-    background-color: $form-check-input-active-bg-color; // Boosted mod
+    background-color: $form-check-input-active-bg-color; // OUDS mod
     filter: $form-check-input-active-filter;
-    border-color: $form-check-input-active-bg-color; // Boosted mod
+    border-color: $form-check-input-active-bg-color; // OUDS mod
   }
 
   &:focus {
     border-color: $form-check-input-focus-border;
-    // Boosted mod: default outline
+    // OUDS mod: default outline
     box-shadow: $form-check-input-focus-box-shadow;
   }
 
@@ -93,25 +93,25 @@
     @if $enable-gradients {
       --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)}, var(--#{$prefix}gradient);
       // stylelint-disable-next-line function-disallowed-list
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; // Boosted mod
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; // OUDS mod
       // stylelint-disable-next-line function-disallowed-list
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; // Boosted mod
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; // OUDS mod
     } @else {
       --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)};
       // stylelint-disable-next-line function-disallowed-list
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); // Boosted mod
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); // OUDS mod
       // stylelint-disable-next-line function-disallowed-list
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); // Boosted mod
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); // OUDS mod
     }
   }
 
   &:disabled {
     pointer-events: none;
-    background-color: $input-disabled-bg; // Boosted mod
+    background-color: $input-disabled-bg; // OUDS mod
     filter: none;
     opacity: $form-check-input-disabled-opacity;
 
-    // Boosted mod
+    // OUDS mod
     &:checked,
     &[type="checkbox"]:indeterminate {
       background-color: var(--#{$prefix}form-check-input-disabled-color);
@@ -126,14 +126,14 @@
   &[disabled],
   &:disabled {
     ~ .form-check-label {
-      color: $form-label-disabled-color; // Boosted mod
+      color: $form-label-disabled-color; // OUDS mod
       pointer-events: none;
       cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }
   }
 
-  // Boosted mod: required symbol
+  // OUDS mod: required symbol
   &:required {
     ~ .form-check-label::after {
       margin-left: $form-label-required-margin-left;
@@ -153,7 +153,7 @@
 //
 
 .form-switch {
-  // Boosted mod
+  // OUDS mod
   --#{$prefix}switch-gradient: #{linear-gradient(to right, var(--#{$prefix}form-switch-square-bg) $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
@@ -163,16 +163,16 @@
   .form-check-input {
     --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
 
-    position: relative; // Boosted mod: needed because of filter property
+    position: relative; // OUDS mod: needed because of filter property
     width: $form-switch-width;
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
-    background-color: $form-switch-bg; // Boosted mod
-    background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // Boosted mod: extra param `var(--#{$prefix}switch-gradient)`
-    filter: $form-switch-filter; // Boosted mod
+    background-color: $form-switch-bg; // OUDS mod
+    background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // OUDS mod: extra param `var(--#{$prefix}switch-gradient)`
+    filter: $form-switch-filter; // OUDS mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
-    border-color: $form-switch-border-color; // Boosted mod
+    border-color: $form-switch-border-color; // OUDS mod
     @include border-radius($form-switch-border-radius, 0);
     @include transition($form-switch-transition);
 
@@ -184,7 +184,7 @@
 
     &:checked {
       background-color: $form-switch-checked-bg;
-      filter: $form-switch-checked-filter; // Boosted mod
+      filter: $form-switch-checked-filter; // OUDS mod
       border-color: $form-switch-checked-border-color;
 
       &:focus {
@@ -250,13 +250,13 @@
   &[disabled],
   &:disabled {
     + .btn {
-      // Boosted mod: no pointer-events
-      // Boosted mod: no filter
+      // OUDS mod: no pointer-events
+      // OUDS mod: no filter
       opacity: $form-check-btn-check-disabled-opacity;
     }
   }
 
-  // Boosted mod
+  // OUDS mod
   &[data-focus-visible-added]:focus {
     + .btn,
     + .tag {
@@ -266,4 +266,4 @@
   // End mod
 }
 
-// Boosted mod: no `@if enable-dark-mode`
+// OUDS mod: no `@if enable-dark-mode`

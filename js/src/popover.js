@@ -20,7 +20,7 @@ const SELECTOR_CONTENT = '.popover-body'
 const Default = {
   ...Tooltip.Default,
   content: '',
-  offset: [0, 15], // Boosted mod: instead of `offset: [0, 8],`
+  offset: [0, 15], // OUDS mod: instead of `offset: [0, 8],`
   placement: 'right',
   template: '<div class="popover" role="tooltip">' +
               '<div class="popover-arrow"></div>' +

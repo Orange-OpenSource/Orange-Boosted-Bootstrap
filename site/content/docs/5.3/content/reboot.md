@@ -55,7 +55,7 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 
 Boosted utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
-<!-- Boosted mod -->
+<!-- OUDS mod -->
 ```scss
 $font-family-sans-serif:
   // Helvetica Neue

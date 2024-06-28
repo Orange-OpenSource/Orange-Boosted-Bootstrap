@@ -6,40 +6,40 @@
 .navbar {
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
-  --#{$prefix}navbar-padding-y: 0; // Boosted mod: no padding in small breakpoints
-  --#{$prefix}navbar-font-weight: #{$navbar-font-weight}; // Boosted mod
-  --#{$prefix}navbar-border-width: #{$navbar-border-width}; // Boosted mod
-  --#{$prefix}navbar-border-color: #{$navbar-border-color}; // Boosted mod
-  --#{$prefix}navbar-bg: #{$navbar-light-bg}; // Boosted mod
+  --#{$prefix}navbar-padding-y: 0; // OUDS mod: no padding in small breakpoints
+  --#{$prefix}navbar-font-weight: #{$navbar-font-weight}; // OUDS mod
+  --#{$prefix}navbar-border-width: #{$navbar-border-width}; // OUDS mod
+  --#{$prefix}navbar-border-color: #{$navbar-border-color}; // OUDS mod
+  --#{$prefix}navbar-bg: #{$navbar-light-bg}; // OUDS mod
   --#{$prefix}navbar-color: #{$navbar-light-color};
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
   --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
-  --#{$prefix}navbar-brand-margin-y: #{$navbar-brand-margin-y-xs}; // Boosted mod
+  --#{$prefix}navbar-brand-margin-y: #{$navbar-brand-margin-y-xs}; // OUDS mod
   --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs}; // Boosted mod
-  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs}; // Boosted mod
-  --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs}; // Boosted mod
+  --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs}; // OUDS mod
   --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
-  --#{$prefix}navbar-nav-padding-top: 0; // Boosted mod
-  --#{$prefix}navbar-nav-padding-x: 0; // Boosted mod
-  --#{$prefix}navbar-nav-padding-bottom: 0; // Boosted mod
-  --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // Boosted mod
-  --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // Boosted mod
-  --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // Boosted mod
-  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // Boosted mod
-  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // Boosted mod
-  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // Boosted mod
-  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x-xs}; // Boosted mod
-  --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size-xs}; // Boosted mod
+  --#{$prefix}navbar-nav-padding-top: 0; // OUDS mod
+  --#{$prefix}navbar-nav-padding-x: 0; // OUDS mod
+  --#{$prefix}navbar-nav-padding-bottom: 0; // OUDS mod
+  --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // OUDS mod
+  --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // OUDS mod
+  --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // OUDS mod
+  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // OUDS mod
+  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size-xs}; // OUDS mod
   --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
   --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
-  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size-xs}; // Boosted mod
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // Boosted mod
-  --#{$prefix}navbar-toggler-icon-color: #{$navbar-light-icon-color}; // Boosted mod
-  --#{$prefix}navbar-toggler-icon-hover-color: #{$navbar-light-icon-hover-color}; // Boosted mod
+  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size-xs}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-color: #{$navbar-light-icon-color}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-hover-color: #{$navbar-light-icon-hover-color}; // OUDS mod
   --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
   --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
@@ -52,14 +52,14 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
-  // Boosted mod
+  // OUDS mod
   font-weight: var(--#{$prefix}navbar-font-weight);
   box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
   @include transition($navbar-transition);
   // End mod
-  @include gradient-bg(var(--#{$prefix}navbar-bg)); // Boosted mod: instead of `@include gradient-bg()`
+  @include gradient-bg(var(--#{$prefix}navbar-bg)); // OUDS mod: instead of `@include gradient-bg()`
 
-  // Boosted mod: Difference between xs and md breakpoints
+  // OUDS mod: Difference between xs and md breakpoints
   // scss-docs-start orange-navbar-css-vars
   @include media-breakpoint-up(md) {
     --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
@@ -85,8 +85,8 @@
   %container-flex-properties {
     display: flex;
     flex-wrap: inherit;
-    align-items: flex-end; // Boosted mod
-    // Boosted mod: no justify-content
+    align-items: flex-end; // OUDS mod
+    // OUDS mod: no justify-content
   }
 
   > .container,
@@ -100,7 +100,7 @@
     }
   }
 
-  // Boosted mod
+  // OUDS mod
   .dropdown {
     svg {
       width: $spacer;
@@ -136,7 +136,7 @@
 //
 // Used for brand, project, or site names.
 
-// Boosted mod
+// OUDS mod
 .navbar-brand {
   position: relative;
   display: inline-flex;
@@ -197,9 +197,9 @@
 
 .navbar-nav {
   // scss-docs-start navbar-nav-css-vars
-  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
-  --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
-  @include rfs(var(--#{$prefix}navbar-nav-font-size, $font-size-base), --#{$prefix}nav-link-font-size); // Boosted mod
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // OUDS mod
+  --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // OUDS mod
+  @include rfs(var(--#{$prefix}navbar-nav-font-size, $font-size-base), --#{$prefix}nav-link-font-size); // OUDS mod
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
   --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
@@ -208,14 +208,14 @@
 
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // Boosted mod
+  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // OUDS mod
   margin-bottom: 0;
-  @include font-size(var(--#{$prefix}navbar-nav-font-size)); // Boosted mod
-  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // Boosted mod
-  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // Boosted mod
+  @include font-size(var(--#{$prefix}navbar-nav-font-size)); // OUDS mod
+  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
+  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod
   list-style: none;
 
-  // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
+  // OUDS mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
     padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
@@ -277,18 +277,18 @@
 //
 
 .navbar-text {
-  // Boosted mod: no padding-top
-  padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  // OUDS mod: no padding-top
+  padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // OUDS mod
   color: var(--#{$prefix}navbar-color);
 
-  // Boosted mod: no a:focus
+  // OUDS mod: no a:focus
   a,
   a:hover {
     color: var(--#{$prefix}navbar-active-color);
   }
 }
 
-// Boosted mod: Navbar item
+// OUDS mod: Navbar item
 .navbar-item {
   margin-bottom: var(--#{$prefix}navbar-nav-icon-padding-y);
 }
@@ -302,15 +302,15 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
-.navbar-collapse.show, // Boosted mod: always keep nav-items at full width when transitioning
+.navbar-collapse.show, // OUDS mod: always keep nav-items at full width when transitioning
 .navbar-collapse.collapsing {
   flex-basis: 100%;
-  // Boosted mod: no flex-grow to avoid weird behavior in expanded breakpoints and .show
+  // OUDS mod: no flex-grow to avoid weird behavior in expanded breakpoints and .show
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
 
-  // Boosted mod: Handle icons support and padding of expanded navbars
+  // OUDS mod: Handle icons support and padding of expanded navbars
   &[class*="d-"] {
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
@@ -330,14 +330,14 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   // stylelint-disable-next-line function-disallowed-list
-  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // Boosted mod
+  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // OUDS mod
   // stylelint-disable-next-line function-disallowed-list
-  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // Boosted mod
+  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // OUDS mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
   background-color: transparent; // remove default button style
-  border: 0; // Boosted mod: remove border to simplify calculations
+  border: 0; // OUDS mod: remove border to simplify calculations
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$prefix}navbar-toggler-transition));
 
@@ -347,11 +347,11 @@
 
   &:focus {
     text-decoration: none;
-    // Boosted mod: no outline;
-    // Boosted mod: no box-shadow
+    // OUDS mod: no outline;
+    // OUDS mod: no box-shadow
   }
 
-  // Boosted mod: close icon when opened & color state
+  // OUDS mod: close icon when opened & color state
   &:hover,
   &:active {
     .navbar-toggler-icon {
@@ -376,12 +376,12 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  // Boosted mod: no `background-image`
-  // Boosted mod: no `background-repeat`
-  // Boosted mod: no `background-position`
-  // Boosted mod: no `background-size`
-  background-color: var(--#{$prefix}navbar-toggler-icon-color); // Boosted mod
-  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // Boosted mod
+  // OUDS mod: no `background-image`
+  // OUDS mod: no `background-repeat`
+  // OUDS mod: no `background-position`
+  // OUDS mod: no `background-size`
+  background-color: var(--#{$prefix}navbar-toggler-icon-color); // OUDS mod
+  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // OUDS mod
 }
 
 .navbar-nav-scroll {
@@ -389,7 +389,7 @@
   overflow-y: auto;
 }
 
-// Boosted mod: Handle the nav-under responsiveness
+// OUDS mod: Handle the nav-under responsiveness
 .navbar:not(.supra) + .navbar {
   padding: 0;
   margin-top: calc(-1 * var(--#{$prefix}navbar-border-width)); // stylelint-disable-line function-disallowed-list
@@ -417,7 +417,7 @@
             position: absolute;
           }
 
-          // Boosted mod
+          // OUDS mod
           .nav-link {
             margin: 0;
 
@@ -455,7 +455,7 @@
           // End mod
         }
 
-        // Boosted mod: Handle the responsiveness of the collapsing content in a global header
+        // OUDS mod: Handle the responsiveness of the collapsing content in a global header
         .navbar-collapse.show,
         .navbar-collapse.collapsing {
           &[class*="d-"] {
@@ -545,9 +545,9 @@
 }
 
 // Deprecated in v5.3.3
-// Boosted mod: no `navbar[data-bs-theme="dark"]` selector
+// OUDS mod: no `navbar[data-bs-theme="dark"]` selector
 .navbar-dark {
-  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
+  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // OUDS mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
@@ -555,7 +555,7 @@
   --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
+  // OUDS mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
 }
 
-// Boosted mod: no `@if enable-dark-mode`
+// OUDS mod: no `@if enable-dark-mode`

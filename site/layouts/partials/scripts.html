@@ -11,7 +11,7 @@
 {{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
 <script defer src="{{ $applicationJs.RelPermalink }}"></script>
 
-<!--Boosted mod-->
+<!--OUDS mod-->
 <script defer src="/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
 
 {{- $js := resources.Match "js/tac.js" -}}
@@ -45,7 +45,7 @@
 {{- $stackblitzJs := resources.Get "js/stackblitz.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/stackblitz.js") }}
 <script defer src="{{ $stackblitzJs.RelPermalink }}"></script>
 
-<!--Boosted mod-->
+<!--OUDS mod-->
 {{- $colorJs := resources.Get "js/color.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/color.js") }}
 <script defer src="{{ $colorJs.RelPermalink }}"></script>
 <!--End mod-->

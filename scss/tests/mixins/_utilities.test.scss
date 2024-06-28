@@ -2,7 +2,7 @@ $prefix: bs-;
 $enable-important-utilities: false;
 
 // Important: Do not import rfs to check that the mixin just calls the appropriate functions from it
-// Boosted mod
+// OUDS mod
 @import "../../functions"; // Added because needed by "variables"
 @import "../../variables"; // Added to avoid undefined variable error like `$white`
 // End mod

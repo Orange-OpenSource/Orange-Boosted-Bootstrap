@@ -155,7 +155,7 @@
 .bd-white { color: color-contrast($white); background-color: $white; }
 .bd-black { color: color-contrast($black); background-color: $black; }
 
-// Boosted mod
+// OUDS mod
 @function wcag-level($contrast-ratio) {
   $level: "FAIL";
 

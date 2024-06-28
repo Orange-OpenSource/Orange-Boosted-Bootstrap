@@ -8,16 +8,16 @@
 @mixin button-variant(
   $background,
   $border,
-  $color, // Boosted mod
-  $hover-background: $btn-default-hover-bg, // Boosted mod
-  $hover-border: $btn-default-hover-border, // Boosted mod
-  $hover-color: $btn-default-hover-color, // Boosted mod
-  $active-background: $btn-default-active-bg, // Boosted mod
-  $active-border: $btn-default-active-border, // Boosted mod
-  $active-color: $btn-default-active-color, // Boosted mod
-  $disabled-background: $btn-default-disabled-bg, // Boosted mod
-  $disabled-border: $btn-default-disabled-border, // Boosted mod
-  $disabled-color: $btn-default-disabled-color, // Boosted mod
+  $color, // OUDS mod
+  $hover-background: $btn-default-hover-bg, // OUDS mod
+  $hover-border: $btn-default-hover-border, // OUDS mod
+  $hover-color: $btn-default-hover-color, // OUDS mod
+  $active-background: $btn-default-active-bg, // OUDS mod
+  $active-border: $btn-default-active-border, // OUDS mod
+  $active-color: $btn-default-active-color, // OUDS mod
+  $disabled-background: $btn-default-disabled-bg, // OUDS mod
+  $disabled-border: $btn-default-disabled-border, // OUDS mod
+  $disabled-color: $btn-default-disabled-color, // OUDS mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
@@ -25,11 +25,11 @@
   --#{$prefix}btn-hover-color: #{$hover-color};
   --#{$prefix}btn-hover-bg: #{$hover-background};
   --#{$prefix}btn-hover-border-color: #{$hover-border};
-  --#{$prefix}btn-focus-shadow-rgb: #{$white}; // Boosted mod
+  --#{$prefix}btn-focus-shadow-rgb: #{$white}; // OUDS mod
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
   --#{$prefix}btn-active-border-color: #{$active-border};
-  // Boosted mod: no definition of --#{$prefix}btn-active-shadow
+  // OUDS mod: no definition of --#{$prefix}btn-active-shadow
   --#{$prefix}btn-disabled-color: #{$disabled-color};
   --#{$prefix}btn-disabled-bg: #{$disabled-background};
   --#{$prefix}btn-disabled-border-color: #{$disabled-border};
@@ -39,18 +39,18 @@
 // scss-docs-start btn-outline-variant-mixin
 @mixin button-outline-variant(
   $color,
-  $color-hover: $btn-outline-default-hover-color, // Boosted mod: instead of `color-contrast($color)`
-  $active-background: $btn-outline-default-active-bg, // Boosted mod: instead of `$color`
-  $active-border: $btn-outline-default-active-border, // Boosted mod: instead of `$color`
+  $color-hover: $btn-outline-default-hover-color, // OUDS mod: instead of `color-contrast($color)`
+  $active-background: $btn-outline-default-active-bg, // OUDS mod: instead of `$color`
+  $active-border: $btn-outline-default-active-border, // OUDS mod: instead of `$color`
   $active-color: $btn-outline-default-active-color, // Booted mod: `color-contrast($active-background)`
-  $hover-background: $btn-outline-default-hover-bg, // Boosted mod
-  $hover-border: $btn-outline-default-hover-border // Boosted mod
+  $hover-background: $btn-outline-default-hover-bg, // OUDS mod
+  $hover-border: $btn-outline-default-hover-border // OUDS mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-border-color: #{$color};
   --#{$prefix}btn-hover-color: #{$color-hover};
-  --#{$prefix}btn-hover-bg: #{$hover-background}; // Boosted mod: instead of using `#{$active-background}`
-  --#{$prefix}btn-hover-border-color: #{$hover-border}; // Boosted mod: instead of using `#{$active-border}`
+  --#{$prefix}btn-hover-bg: #{$hover-background}; // OUDS mod: instead of using `#{$active-background}`
+  --#{$prefix}btn-hover-border-color: #{$hover-border}; // OUDS mod: instead of using `#{$active-border}`
   --#{$prefix}btn-focus-shadow-rgb: #{$color};
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
@@ -65,17 +65,17 @@
 
 // scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x, $letter-spacing: $letter-spacing-base) {
-  --#{$prefix}icon-spacing: #{$icon-spacing}; // Boosted mod: used for icons
+  --#{$prefix}icon-spacing: #{$icon-spacing}; // OUDS mod: used for icons
   --#{$prefix}btn-padding-y: #{$padding-y};
   --#{$prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}btn-font-size);
-  --#{$prefix}btn-line-height: #{$line-height}; // Boosted mod
-  --#{$prefix}btn-letter-spacing: #{$letter-spacing}; // Boosted mod
+  --#{$prefix}btn-line-height: #{$line-height}; // OUDS mod
+  --#{$prefix}btn-letter-spacing: #{$letter-spacing}; // OUDS mod
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
 
-// Boosted mod: embed an icon as mask-image in a button
+// OUDS mod: embed an icon as mask-image in a button
 // scss-docs-start btn-icon
 @mixin button-icon(
   $icon,

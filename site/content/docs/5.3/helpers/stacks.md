@@ -63,7 +63,7 @@ And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 
 Use `.vstack` to stack buttons and other elements:
 
-<!-- Boosted mod: primary and outline secondary buttons -->
+<!-- OUDS mod: primary and outline secondary buttons -->
 {{< example >}}
 <div class="vstack gap-2 col-md-5 mx-auto">
   <button type="button" class="btn btn-primary">Save changes</button>
@@ -73,7 +73,7 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
-<!-- Boosted mod: primary and outline secondary button -->
+<!-- OUDS mod: primary and outline secondary button -->
 {{< example >}}
 <div class="hstack gap-3">
   <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">

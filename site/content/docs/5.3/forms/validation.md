@@ -302,7 +302,7 @@ Validation styles are available for the following form controls and components:
 </form>
 {{< /example >}}
 
-<!-- Boosted mod: no Form tooltips -->
+<!-- OUDS mod: no Form tooltips -->
 
 ## CSS
 
@@ -334,7 +334,7 @@ This is the validation Sass map from `_variables.scss`. Override or extend this 
 
 {{< scss-docs name="form-validation-states" file="scss/_variables.scss" >}}
 
-Maps of `$form-validation-states` can contain three optional parameters to override focus styles.<!-- Boosted mod: no tooltips -->
+Maps of `$form-validation-states` can contain three optional parameters to override focus styles.<!-- OUDS mod: no tooltips -->
 
 ### Sass loops
 
@@ -344,4 +344,4 @@ Used to iterate over `$form-validation-states` map values to generate our valida
 
 ### Customizing
 
-Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is how we generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color, icon, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.<!-- Boosted mod: no tooltips -->
+Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is how we generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color, icon, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.<!-- OUDS mod: no tooltips -->

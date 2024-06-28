@@ -12,14 +12,14 @@ import Collapse from './src/collapse.js'
 import Dropdown from './src/dropdown.js'
 import Modal from './src/modal.js'
 import Offcanvas from './src/offcanvas.js'
-import OrangeNavbar from './src/orange-navbar.js' // Boosted mod
+import OrangeNavbar from './src/orange-navbar.js' // OUDS mod
 import Popover from './src/popover.js'
-import QuantitySelector from './src/quantity-selector.js' // Boosted mod
+import QuantitySelector from './src/quantity-selector.js' // OUDS mod
 import ScrollSpy from './src/scrollspy.js'
 import Tab from './src/tab.js'
 import Toast from './src/toast.js'
 import Tooltip from './src/tooltip.js'
-import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // Boosted mod
+import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // OUDS mod
 
 export default {
   Alert,
@@ -29,9 +29,9 @@ export default {
   Dropdown,
   Modal,
   Offcanvas,
-  OrangeNavbar, // Boosted mod
+  OrangeNavbar, // OUDS mod
   Popover,
-  QuantitySelector, // Boosted mod
+  QuantitySelector, // OUDS mod
   ScrollSpy,
   Tab,
   Toast,

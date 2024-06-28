@@ -53,10 +53,10 @@ const CLASS_NAME_END = 'carousel-item-end'
 const CLASS_NAME_START = 'carousel-item-start'
 const CLASS_NAME_NEXT = 'carousel-item-next'
 const CLASS_NAME_PREV = 'carousel-item-prev'
-const CLASS_NAME_PAUSED = 'is-paused' // Boosted mod: used for progress indicators
-const CLASS_NAME_DONE = 'is-done' // Boosted mod: used for progress indicators
-const CLASS_NAME_PAUSE = 'pause' // Boosted mod: used for pause button
-const CLASS_NAME_PLAY = 'play' // Boosted mod: used for play button
+const CLASS_NAME_PAUSED = 'is-paused' // OUDS mod: used for progress indicators
+const CLASS_NAME_DONE = 'is-done' // OUDS mod: used for progress indicators
+const CLASS_NAME_PAUSE = 'pause' // OUDS mod: used for pause button
+const CLASS_NAME_PLAY = 'play' // OUDS mod: used for play button
 
 const SELECTOR_ACTIVE = '.active'
 const SELECTOR_ITEM = '.carousel-item'
@@ -65,16 +65,16 @@ const SELECTOR_ITEM_IMG = '.carousel-item img'
 const SELECTOR_INDICATORS = '.carousel-indicators'
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
-const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // Boosted mod
-const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
-const SELECTOR_CONTROL_PAUSE = '.carousel-control-play-pause' // Boosted mod
-const SELECTOR_CAROUSEL_TO_PAUSE = 'data-bs-target' // Boosted mod
-const SELECTOR_CAROUSEL_PLAY_TEXT = 'data-bs-play-text' // Boosted mod
-const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // Boosted mod
-const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel' // Boosted mod
-const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel' // Boosted mod
+const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // OUDS mod
+const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // OUDS mod
+const SELECTOR_CONTROL_PAUSE = '.carousel-control-play-pause' // OUDS mod
+const SELECTOR_CAROUSEL_TO_PAUSE = 'data-bs-target' // OUDS mod
+const SELECTOR_CAROUSEL_PLAY_TEXT = 'data-bs-play-text' // OUDS mod
+const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // OUDS mod
+const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel' // OUDS mod
+const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel' // OUDS mod
 
-const PREFIX_CUSTOM_PROPS = 'bs-' // Boosted mod: should match `$prefix` in scss/_variables.scss
+const PREFIX_CUSTOM_PROPS = 'bs-' // OUDS mod: should match `$prefix` in scss/_variables.scss
 
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
@@ -115,13 +115,13 @@ class Carousel extends BaseComponent {
 
     this._indicatorsElement = SelectorEngine.findOne(SELECTOR_INDICATORS, this._element)
 
-    this._playPauseButton = SelectorEngine.findOne(`${SELECTOR_CONTROL_PAUSE}[${SELECTOR_CAROUSEL_TO_PAUSE}="#${this._element.id}"]`) // Boosted mod
+    this._playPauseButton = SelectorEngine.findOne(`${SELECTOR_CONTROL_PAUSE}[${SELECTOR_CAROUSEL_TO_PAUSE}="#${this._element.id}"]`) // OUDS mod
 
     this._addEventListeners()
 
     if (this._config.ride === CLASS_NAME_CAROUSEL) {
       this.cycle()
-    } else if (this._indicatorsElement) { // Boosted mod: set the animation properly on progress indicator
+    } else if (this._indicatorsElement) { // OUDS mod: set the animation properly on progress indicator
       this._element.classList.add(CLASS_NAME_PAUSED)
     }
     // End mod
@@ -159,13 +159,13 @@ class Carousel extends BaseComponent {
   }
 
   pause() {
-    // Boosted mod: reset the animation on progress indicator
+    // OUDS mod: reset the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.add(CLASS_NAME_PAUSED)
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, set the button to play
+    // OUDS mod: if a play-pause button is present, set the button to play
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PAUSE)) {
       this._playPauseButton.classList.remove(CLASS_NAME_PAUSE)
       this._playPauseButton.classList.add(CLASS_NAME_PLAY)
@@ -190,13 +190,13 @@ class Carousel extends BaseComponent {
   }
 
   cycle() {
-    // Boosted mod: restart the animation on progress indicator
+    // OUDS mod: restart the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.remove(CLASS_NAME_PAUSED)
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, reset the button to pause
+    // OUDS mod: if a play-pause button is present, reset the button to pause
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PLAY)) {
       this._playPauseButton.classList.remove(CLASS_NAME_PLAY)
       this._playPauseButton.classList.add(CLASS_NAME_PAUSE)
@@ -233,7 +233,7 @@ class Carousel extends BaseComponent {
   }
 
   to(index) {
-    // Boosted mod: restart the animation on progress indicator
+    // OUDS mod: restart the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.remove(CLASS_NAME_DONE)
     }
@@ -335,7 +335,7 @@ class Carousel extends BaseComponent {
     }
   }
 
-  // Boosted mod: handle prev/next controls states
+  // OUDS mod: handle prev/next controls states
   _disableControl(element) {
     if (element.nodeName === 'BUTTON') {
       element.disabled = true
@@ -388,7 +388,7 @@ class Carousel extends BaseComponent {
 
     this._config.interval = elementInterval || this._config.defaultInterval
 
-    // Boosted mod: set progress indicator's interval as custom property
+    // OUDS mod: set progress indicator's interval as custom property
     if (this._indicatorsElement && this._config.interval !== Default.interval) {
       const currentIndex = this._getItemIndex(element)
       const currentIndicator = SelectorEngine.findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement)
@@ -405,7 +405,7 @@ class Carousel extends BaseComponent {
     const activeElement = this._getActive()
     const isNext = order === ORDER_NEXT
 
-    // Boosted mod: progress indicators animation when wrapping is disabled
+    // OUDS mod: progress indicators animation when wrapping is disabled
     if (!this._config.wrap) {
       const isPrev = order === ORDER_PREV
       const activeIndex = this._getItemIndex(activeElement)
@@ -465,7 +465,7 @@ class Carousel extends BaseComponent {
     this._setActiveIndicatorElement(nextElementIndex)
     this._activeElement = nextElement
 
-    // Boosted mod: enable/disable prev/next controls when wrap=false
+    // OUDS mod: enable/disable prev/next controls when wrap=false
     if (!this._config.wrap) {
       const prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element)
       const nextControl = SelectorEngine.findOne(SELECTOR_CONTROL_NEXT, this._element)
@@ -545,7 +545,7 @@ class Carousel extends BaseComponent {
   }
 
   // Static
-  // Boosted mod: add pause button
+  // OUDS mod: add pause button
   static PauseCarousel(event) {
     const pauseButton = event.target
     const pauseButtonAttribute = pauseButton.getAttribute(SELECTOR_CAROUSEL_TO_PAUSE)
@@ -610,7 +610,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (e
   carousel._maybeEnableCycle()
 })
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_CONTROL_PAUSE, Carousel.PauseCarousel) // Boosted mod
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_CONTROL_PAUSE, Carousel.PauseCarousel) // OUDS mod
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
   const carousels = SelectorEngine.find(SELECTOR_DATA_RIDE)

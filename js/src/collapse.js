@@ -189,7 +189,7 @@ class Collapse extends BaseComponent {
       this._element.classList.remove(CLASS_NAME_COLLAPSING)
       this._element.classList.add(CLASS_NAME_COLLAPSE)
 
-      // Boosted mod: Change the moment of the appliance of .collapsed
+      // OUDS mod: Change the moment of the appliance of .collapsed
       for (const trigger of this._triggerArray) {
         const element = SelectorEngine.getElementFromSelector(trigger)
 

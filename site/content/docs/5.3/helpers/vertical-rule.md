@@ -24,7 +24,7 @@ Customize them with additional styles as needed.
 <div class="vr"></div>
 {{< /example >}}
 
-<!-- Boosted mod: change color with background utilities -->
+<!-- OUDS mod: change color with background utilities -->
 
 Change their color with [background utilities]({{< docsref "/utilities/background" >}}):
 

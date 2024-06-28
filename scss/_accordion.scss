@@ -13,28 +13,28 @@
   --#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
   --#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
   --#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
-  --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size}; // Boosted mod
-  --#{$prefix}accordion-btn-font-weight: #{$accordion-button-font-weight}; // Boosted mod
-  --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height}; // Boosted mod
-  --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing}; // Boosted mod
+  --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size}; // OUDS mod
+  --#{$prefix}accordion-btn-font-weight: #{$accordion-button-font-weight}; // OUDS mod
+  --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height}; // OUDS mod
+  --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing}; // OUDS mod
   --#{$prefix}accordion-btn-color: #{$accordion-button-color};
   --#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
-  // Boosted mod: no --#{$prefix}accordion-btn-icon
-  // Boosted mod: no --#{$prefix}accordion-btn-icon-width
+  // OUDS mod: no --#{$prefix}accordion-btn-icon
+  // OUDS mod: no --#{$prefix}accordion-btn-icon-width
   --#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
-  // Boosted mod: no --#{$prefix}accordion-btn-icon-transition
-  // Boosted mod: no --#{$prefix}accordion-btn-active-icon
-  // Boosted mod: no --#{$prefix}accordion-btn-focus-box-shadow
-  --#{$prefix}accordion-body-padding-top: #{$accordion-body-padding-top}; // Boosted mod
-  --#{$prefix}accordion-body-padding-end: #{$accordion-body-padding-end}; // Boosted mod
-  --#{$prefix}accordion-body-padding-bottom: #{$accordion-body-padding-bottom}; // Boosted mod
-  --#{$prefix}accordion-body-padding-start: #{$accordion-body-padding-start}; // Boosted mod
-  --#{$prefix}accordion-btn-hover-bg: #{$accordion-button-hover-bg}; // Boosted mod
+  // OUDS mod: no --#{$prefix}accordion-btn-icon-transition
+  // OUDS mod: no --#{$prefix}accordion-btn-active-icon
+  // OUDS mod: no --#{$prefix}accordion-btn-focus-box-shadow
+  --#{$prefix}accordion-body-padding-top: #{$accordion-body-padding-top}; // OUDS mod
+  --#{$prefix}accordion-body-padding-end: #{$accordion-body-padding-end}; // OUDS mod
+  --#{$prefix}accordion-body-padding-bottom: #{$accordion-body-padding-bottom}; // OUDS mod
+  --#{$prefix}accordion-body-padding-start: #{$accordion-body-padding-start}; // OUDS mod
+  --#{$prefix}accordion-btn-hover-bg: #{$accordion-button-hover-bg}; // OUDS mod
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
   // scss-docs-end accordion-css-vars
 
-  background-color: transparent; // Boosted mod
+  background-color: transparent; // OUDS mod
 }
 
 .accordion-button {
@@ -43,15 +43,15 @@
   align-items: center;
   width: 100%;
   padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
-  @include font-size(var(--#{$prefix}accordion-btn-font-size)); // Boosted mod
-  font-weight: var(--#{$prefix}accordion-btn-font-weight); // Boosted mod
-  line-height: var(--#{$prefix}accordion-btn-line-height); // Boosted mod
+  @include font-size(var(--#{$prefix}accordion-btn-font-size)); // OUDS mod
+  font-weight: var(--#{$prefix}accordion-btn-font-weight); // OUDS mod
+  line-height: var(--#{$prefix}accordion-btn-line-height); // OUDS mod
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
-  text-decoration: if($link-decoration == none, null, none); // Boosted mod
+  text-decoration: if($link-decoration == none, null, none); // OUDS mod
 
   /* rtl:remove */
-  letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // Boosted mod
+  letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // OUDS mod
   background-color: var(--#{$prefix}accordion-btn-bg);
   border: 0;
   @include border-radius(0);
@@ -61,25 +61,25 @@
   &:not(.collapsed) {
     color: var(--#{$prefix}accordion-active-color);
     background-color: var(--#{$prefix}accordion-active-bg);
-    // Boosted mod: no `box-shadow` definition
+    // OUDS mod: no `box-shadow` definition
 
     &::after {
-      // Boosted mod: use caret
+      // OUDS mod: use caret
       transform: var(--#{$prefix}accordion-btn-icon-transform);
     }
   }
 
   // Accordion icon
-  @include caret($accordion: true); // Boosted mod: use caret
+  @include caret($accordion: true); // OUDS mod: use caret
 
   &:hover {
     z-index: 2;
-    color: var(--#{$prefix}accordion-active-color); // Boosted mod
-    background-color: var(--#{$prefix}accordion-btn-hover-bg); // Boosted mod
+    color: var(--#{$prefix}accordion-active-color); // OUDS mod
+    background-color: var(--#{$prefix}accordion-btn-hover-bg); // OUDS mod
   }
 
   &:focus {
-    // Boosted mod
+    // OUDS mod
     &[data-focus-visible-added] {
       outline-offset: add($focus-visible-outer-offset, var(--#{$prefix}accordion-border-width));
       box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
@@ -90,14 +90,14 @@
 
 .accordion-header {
   margin-bottom: 0;
-  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod
-  border-width: var(--#{$prefix}accordion-border-width) 0 0; // Boosted mod
+  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // OUDS mod
+  border-width: var(--#{$prefix}accordion-border-width) 0 0; // OUDS mod
 }
 
 .accordion-item {
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
-  // Boosted mod: no border
+  // OUDS mod: no border
 
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
@@ -107,13 +107,13 @@
     }
   }
 
-  // Boosted mod: no `&:not(:first-of-type)` rule
+  // OUDS mod: no `&:not(:first-of-type)` rule
 
   // Only set a border-radius on the last item if the accordion is collapsed
   &:last-of-type {
-    margin-bottom: 0; // Boosted mod
+    margin-bottom: 0; // OUDS mod
     @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
-    border-bottom: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod: borders are set on .accordion-header
+    border-bottom: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // OUDS mod: borders are set on .accordion-header
 
     > .accordion-header .accordion-button {
       &.collapsed {
@@ -128,15 +128,15 @@
 }
 
 .accordion-body {
-  padding: var(--#{$prefix}accordion-body-padding-top) var(--#{$prefix}accordion-body-padding-end) var(--#{$prefix}accordion-body-padding-bottom) var(--#{$prefix}accordion-body-padding-start); // Boosted mod
+  padding: var(--#{$prefix}accordion-body-padding-top) var(--#{$prefix}accordion-body-padding-end) var(--#{$prefix}accordion-body-padding-bottom) var(--#{$prefix}accordion-body-padding-start); // OUDS mod
 }
 
-// Boosted mod: no Flush accordion items
+// OUDS mod: no Flush accordion items
 
-// Boosted mod: no `@if enable-dark-mode`
+// OUDS mod: no `@if enable-dark-mode`
 
 //
-// Boosted mod:
+// OUDS mod:
 // - Sizes
 //
 

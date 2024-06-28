@@ -14,7 +14,7 @@
 /* global boosted: false */
 
 export default () => {
-  // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
+  // OUDS mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
 
   // storybook-start overview
   // --------
@@ -80,7 +80,7 @@ export default () => {
   // -------------------------------
   // Used in 'Show live alert' example in docs or StackBlitz
 
-  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
+  // OUDS mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
   // storybook-start alerts
   // js-docs-start live-alert
   function appendAlert(message, type, typeVisuallyHidden) {
