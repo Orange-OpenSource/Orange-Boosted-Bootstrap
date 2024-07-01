@@ -12,35 +12,6 @@ body {
   min-height: 100vh;
 }
 
-//
-// Boosted logo
-//
-// use HTML+CSS for Boosted 3D logo
-// 1. Everything is em based, so we only play with font-size for RWD
-#boosted {
-  width: 25em;
-  height: 25em;
-  font-size: 36%; // 1
-  box-shadow: -2em 2em $gray-600, -4em 4em $gray-300;
-  transform: rotateX(50deg) rotateY(0deg) rotateZ(-45deg) scale(.7);
-
-  @include media-breakpoint-up(sm) {
-    font-size: xx-small;
-  }
-
-  @include media-breakpoint-up(md) {
-    font-size: x-small;
-  }
-
-  @include media-breakpoint-up(lg) {
-    font-size: small;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: medium;
-  }
-}
-
 .display-0 {
   font-size: 5.25em;
   backface-visibility: hidden;

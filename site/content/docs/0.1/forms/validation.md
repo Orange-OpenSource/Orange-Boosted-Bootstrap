@@ -7,7 +7,7 @@ aliases:
   - "/docs/forms/validation/"
 toc: true
 extra_js:
-  - src: "/docs/5.3/assets/js/validate-forms.js"
+  - src: "/docs/0.1/assets/js/validate-forms.js"
     async: true
 ---
 

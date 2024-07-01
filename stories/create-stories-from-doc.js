@@ -4,7 +4,7 @@ const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
-const version = '5.3'
+const version = '0.1'
 
 function createDirectoryIfNeeded(path) {
   if (!fs.existsSync(path)) {

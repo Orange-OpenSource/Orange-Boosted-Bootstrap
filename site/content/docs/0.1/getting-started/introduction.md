@@ -103,7 +103,7 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
 - Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
-- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.
+- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using OUDS Web as a module]({{< docsref "/getting-started/javascript#using-ouds-web-as-a-module" >}}) section.
 
 ## JS components
 
