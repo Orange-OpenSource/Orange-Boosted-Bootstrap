@@ -24,15 +24,12 @@ site/content/docs/**/examples/download-app/img/Input_dark.png
 site/content/docs/**/examples/download-app/img/List.png
 site/content/docs/**/examples/download-app/img/List_dark.png
 site/layouts/partials/icons.html
-site/layouts/partials/icons/download.svg
 site/static/docs/**/assets/brand/OBS-logo.svg
 site/static/docs/**/assets/brand/OBS-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-logo.svg
 site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
 site/static/docs/**/assets/brand/orange-social.svg
-site/static/docs/**/assets/img/ouds-web-guidelines.png
-site/static/docs/**/assets/img/ouds-web-guidelines@2x.png
 site/static/docs/**/assets/img/boosted-sprite.svg
 site/static/docs/**/assets/img/boosted-warning.svg
 site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
