@@ -350,7 +350,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -388,7 +388,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -426,7 +426,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
