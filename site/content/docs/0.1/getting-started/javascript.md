@@ -28,7 +28,7 @@ A better alternative for those using this type of frameworks is to use a framewo
 - Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, currently in alpha)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
-## Using Boosted as a module
+## Using OUDS Web as a module
 
 {{< callout >}}
 **Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).

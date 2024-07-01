@@ -4,7 +4,7 @@
   </div>
   <h2 class="mb-3 lh-sm fw-semibold">Get started any way you&nbsp;want</h2>
   <p class="lead fw-normal">
-    Jump right into building with Boosted—use the CDN, install it via package manager, or download the source code.
+    Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
   </p>
   <p class="d-flex justify-content-md-start justify-content-md-center lead fw-normal">
     <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="icon-link icon-link-hover fw-semibold ps-md-4">
@@ -19,10 +19,10 @@
     <svg class="bi mb-2 fs-2 text-body-secondary"><use xlink:href="#box-seam"></use></svg>
     <h3 class="fw-semibold">Install via package manager</h3>
     <p class="pe-lg-5">
-      Install Boosted’s source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don’t include documentation or our full build scripts.
+      Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
-    {{ highlight (printf ("npm install boosted@%s") .Site.Params.current_version) "sh" "" }}
-    {{ highlight (printf ("yarn add boosted@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("npm install ouds-web@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("yarn add ouds-web@%s") .Site.Params.current_version) "sh" "" }}
     <p>
       <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>
@@ -31,7 +31,7 @@
     <svg class="bi mb-2 fs-2 text-body-secondary"><use xlink:href="#globe2"></use></svg>
     <h3 class="fw-semibold">Include via CDN</h3>
     <p class="pe-lg-5">
-      When you only need to include Boosted’s compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/boosted">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
+      When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/uds-web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
     </p>
     {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
     {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
@@ -39,7 +39,7 @@
 
   <div class="col-md-8 mx-auto text-center">
     <h4 class="fw-semibold">Read our getting started guides</h4>
-    <p>Get a jump on including Boosted's source files in a new project with our official guides.</p>
+    <p>Get a jump on including OUDS Web's source files in a new project with our official guides.</p>
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-4">
       <a class="d-flex flex-column align-items-center text-decoration-none animate-img" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/">
         <img class="d-block mb-2" src="/docs/{{ .Site.Params.docs_version }}/assets/img/webpack.svg" alt="" width="72" height="72" loading="lazy">
