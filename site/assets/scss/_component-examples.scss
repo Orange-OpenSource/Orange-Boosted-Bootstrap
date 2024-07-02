@@ -250,6 +250,15 @@
 }
 
 // Boosted mod
+.side-nav-example {
+  overflow: auto;
+  resize: vertical;
+
+  @include media-breakpoint-up(lg) {
+    height: 21.875rem;
+  }
+}
+
 .simple-list-example-scrollspy .active {
   color: var(--bs-primary);
 }
