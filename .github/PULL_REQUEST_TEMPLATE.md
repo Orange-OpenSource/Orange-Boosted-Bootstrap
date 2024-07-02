@@ -35,7 +35,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 #### Contribution
 
-- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
+- [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md)
 
 #### Accessibility
 
