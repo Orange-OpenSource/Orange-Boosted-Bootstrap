@@ -11,7 +11,7 @@
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
     <summary>Boosted framework in CSS. Includes JavaScript.</summary>
     <language>en-us</language>
-    <projectUrl>https://boosted.orange.com/</projectUrl>
+    <projectUrl>https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web</projectUrl>
     <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="main" />
     <icon>boosted.png</icon>
     <license type="expression">MIT</license>
