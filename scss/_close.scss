@@ -59,16 +59,3 @@
     // OUDS mod: no opacity
   }
 }
-
-// Deprecated in v5.3.3
-// OUDS mod: changing color instead of using filter
-.btn-close-white {
-  --#{$prefix}btn-close-color: #{$btn-close-white-color}; // OUDS mod
-  --#{$prefix}btn-close-bg: #{$btn-close-white-bg}; // OUDS mod
-  --#{$prefix}btn-close-border-color: #{$btn-close-white-border-color}; // OUDS mod
-  --#{$prefix}btn-close-hover-color: #{$btn-close-white-hover-color}; // OUDS mod
-  --#{$prefix}btn-close-active-color: #{$btn-close-white-active-color}; // OUDS mod
-  --#{$prefix}btn-close-active-border-color: #{$btn-close-white-active-border-color}; // OUDS mod
-  --#{$prefix}btn-close-disabled-color: #{$btn-close-white-disabled-color}; // OUDS mod
-}
-// End mod
