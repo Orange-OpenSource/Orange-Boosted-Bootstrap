@@ -3,7 +3,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++
 
 /*
- * JavaScript for Boosted's docs (https://boosted.orange.com/)
+ * JavaScript for Boosted's docs (https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web/)
  * Copyright 2015-2024 The Boosted Authors
  * Copyright 2015-2024 Orange
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)

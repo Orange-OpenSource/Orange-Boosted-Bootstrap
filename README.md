@@ -3,7 +3,7 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/docs/"><strong>Visit Boosted</strong></a>
+  <a href="https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
@@ -37,7 +37,7 @@ Several quick start options are available:
 - Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.3.3`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
-Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+Read the [Getting started page](https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
 
 ## Status
@@ -121,7 +121,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
+Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web/>. The docs may also be run locally.
 
 Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
@@ -136,7 +136,7 @@ Learn more about using Hugo by reading its [documentation](https://gohugo.io/doc
 
 ### Documentation for previous releases
 
-You can find all our previous releases docs on <https://boosted.orange.com/docs/versions/>.
+You can find all our previous releases docs on <https://orange-opensource.github.io/Orange-Boosted-Bootstrap/ouds-web/docs/versions/>.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
