@@ -146,3 +146,9 @@
   overflow-y: auto;
   color: var(--#{$prefix}offcanvas-color); // Boosted mod
 }
+
+.offcanvas-dark {
+  --#{$prefix}offcanvas-color: #{$white};
+  --#{$prefix}offcanvas-bg: #{$gray-900};
+  --#{$prefix}offcanvas-border-color: #{$gray-700};
+}

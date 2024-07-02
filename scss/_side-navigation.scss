@@ -1,0 +1,218 @@
+.side-nav {
+  // scss-docs-start side-nav-css-vars
+  --#{$prefix}side-nav-min-width: #{$side-nav-min-width};
+  --#{$prefix}side-nav-max-width: #{$side-nav-max-width};
+  --#{$prefix}side-nav-bg: #{$side-nav-bg};
+  --#{$prefix}side-nav-border-width: #{$side-nav-border-width};
+  --#{$prefix}side-nav-border-color: #{$side-nav-border-color};
+  --#{$prefix}side-nav-item-min-height: #{$side-nav-item-min-height};
+  --#{$prefix}side-nav-item-icon-size: #{$side-nav-item-icon-size};
+  --#{$prefix}side-nav-item-spacing: #{$side-nav-item-spacing};
+  --#{$prefix}side-nav-item-padding-top: #{$side-nav-item-padding-top};
+  --#{$prefix}side-nav-item-padding-end: #{$side-nav-item-padding-end};
+  --#{$prefix}side-nav-item-padding-bottom: #{$side-nav-item-padding-bottom};
+  --#{$prefix}side-nav-item-padding-start: #{$side-nav-item-padding-start};
+  --#{$prefix}side-nav-item-color: #{$side-nav-item-color};
+  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg};
+  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg};
+  --#{$prefix}side-nav-item-active-border: #{$side-nav-item-active-border};
+  // scss-docs-end side-nav-css-vars
+
+  position: relative;
+  flex-shrink: 0;
+  min-width: add(var(--#{$prefix}side-nav-min-width), var(--#{$prefix}side-nav-border-width));
+  height: 100%;
+
+  :focus {
+    &[data-focus-visible-added] {
+      outline-offset: -$focus-visible-outer-width;
+      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
+    }
+  }
+
+  .accordion {
+    --#{$prefix}accordion-bg: transparent;
+    --#{$prefix}accordion-border-width: 0;
+    --#{$prefix}accordion-body-padding-top: 0;
+    --#{$prefix}accordion-body-padding-end: 0;
+    --#{$prefix}accordion-body-padding-bottom: 0;
+    --#{$prefix}accordion-body-padding-start: 0;
+
+    .accordion-button::after {
+      margin-right: var(--#{$prefix}side-nav-item-spacing);
+    }
+
+    .accordion-body {
+      --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); // stylelint-disable-line function-disallowed-list
+
+      .accordion-body {
+        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width) * 2); // stylelint-disable-line function-disallowed-list
+      }
+    }
+  }
+
+  > * {
+    overflow: hidden;
+    background: var(--#{$prefix}side-nav-bg);
+  }
+
+  // Small trick to remove `.h-100` inside the markup
+  > div {
+    position: absolute;
+    height: 100%;
+    border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
+  }
+
+  &.side-nav-static > div {
+    position: relative;
+  }
+
+  .side-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: var(--#{$prefix}side-nav-min-width);
+    min-height: var(--#{$prefix}side-nav-item-min-height);
+    padding: var(--#{$prefix}side-nav-item-padding-top) var(--#{$prefix}side-nav-item-padding-end) var(--#{$prefix}side-nav-item-padding-bottom) var(--#{$prefix}side-nav-item-padding-start);
+    margin: 0;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: var(--#{$prefix}side-nav-item-color);
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+
+    &.active,
+    &.active-parent,
+    &:active {
+      background-color: var(--#{$prefix}side-nav-item-active-bg);
+    }
+
+    &:hover {
+      background-color: var(--#{$prefix}side-nav-item-hover-bg);
+    }
+
+    &.active,
+    &.active-parent.collapsed {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        content: "";
+        background-color: var(--#{$prefix}side-nav-item-active-border);
+      }
+    }
+
+    svg,
+    img {
+      width: var(--#{$prefix}side-nav-item-icon-size);
+      min-width: var(--#{$prefix}side-nav-item-icon-size);
+      height: var(--#{$prefix}side-nav-item-icon-size);
+      margin: calc(-1 * var(--#{$prefix}side-nav-item-padding-top)) subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) calc(-1 * var(--#{$prefix}side-nav-item-padding-bottom)) 0; // stylelint-disable-line function-disallowed-list
+    }
+  }
+}
+
+.side-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}side-nav-min-width);
+  height: var(--#{$prefix}side-nav-item-min-height);
+  margin-left: auto;
+  background-color: transparent;
+  border: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--#{$prefix}side-nav-item-min-height);
+    content: "";
+  }
+
+  &::after {
+    margin-right: 1px;
+    content: "";
+    border: $caret-width solid transparent;
+    border-right-color: var(--#{$prefix}side-nav-item-color);
+    border-left: 0;
+  }
+
+  &.collapsed::after {
+    margin-left: 3px;
+    transform: rotate(180deg);
+  }
+}
+
+.side-nav-content {
+  display: flex;
+  height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
+}
+
+.side-nav-scrollable {
+  height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
+  overflow: hidden auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba($black, .1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(192, 192, 192, .5);
+
+    &:hover {
+      background-color: rgba(128, 128, 128, .6);
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $infix: breakpoint-infix($next, $grid-breakpoints);
+
+  .offcanvas#{$infix} {
+    @include media-breakpoint-down($next) {
+      .side-nav > * {
+        border: 0;
+      }
+
+      .side-nav-toggle {
+        display: none;
+      }
+
+      .side-nav-content {
+        height: 100%;
+      }
+    }
+  }
+}
+
+// Themes
+.side-nav-accordion {
+  > * {
+    width: subtract(var(--#{$prefix}side-nav-max-width), var(--#{$prefix}side-nav-border-width));
+  }
+}
+
+.side-nav-collapsible {
+  .collapse-horizontal {
+    margin-left: var(--#{$prefix}side-nav-min-width);
+
+    > * {
+      width: subtract(subtract(var(--#{$prefix}side-nav-max-width), var(--#{$prefix}side-nav-min-width)), var(--#{$prefix}side-nav-border-width));
+      height: 0;
+    }
+  }
+
+  .side-nav-content {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+  }
+}
