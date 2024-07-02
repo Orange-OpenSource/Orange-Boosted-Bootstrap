@@ -11,10 +11,16 @@ toc: true
 
 ## v5.3.4
 
+<hr class="mb-4">
+
 ### Core
 
 - **Colors**
   - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
 
 ## v5.3.3
 
