@@ -24,6 +24,15 @@ The base `.nav` component does not include any `.active` state. The following ex
 To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
 {{< /callout >}}
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+This component variant should not be used because it does not respect the Orange Design System specifications.
+
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <ul class="nav">
   <li class="nav-item">
@@ -51,6 +60,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
+</details>
 
 ## Available styles
 
@@ -59,6 +69,15 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 ### Horizontal alignment
 
 Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref "/utilities/flex#justify-content" >}}). By default, navs are left-aligned, but you can easily change them to center or right-aligned.
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+These **centered** and **right aligned** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left aligned.
+
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 Centered with `.justify-content-center`:
 
@@ -97,10 +116,20 @@ Right-aligned with `.justify-content-end`:
   </li>
 </ul>
 {{< /example >}}
+</details>
 
 ### Vertical
 
 Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
+
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
+{{< design-callout-alert >}}
+These **vertical** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be displayed horizontally.
+
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -129,6 +158,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
+</details>
 
 ### Tabs
 
@@ -155,6 +185,9 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 
 Take that same HTML, but use `.nav-pills` instead:
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -175,6 +208,7 @@ This variant should not be used because it is a button component in the Orange D
   </li>
 </ul>
 {{< /example >}}
+</details>
 
 ### Underline
 
@@ -259,7 +293,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 Force your `.nav`'s contents to extend the full available width with one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 {{< example >}}
-<ul class="nav nav-pills nav-fill">
+<ul class="nav nav-underline nav-fill">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
@@ -278,7 +312,7 @@ Force your `.nav`'s contents to extend the full available width with one of two 
 When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `.nav-link` is required for styling `<a>` elements.
 
 {{< example >}}
-<nav class="nav nav-pills nav-fill">
+<nav class="nav nav-underline nav-fill">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
@@ -289,7 +323,7 @@ When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `
 For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
 
 {{< example >}}
-<ul class="nav nav-pills nav-justified">
+<ul class="nav nav-underline nav-justified">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
@@ -308,7 +342,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 
 {{< example >}}
-<nav class="nav nav-pills nav-justified">
+<nav class="nav nav-underline nav-justified">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
@@ -321,7 +355,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {{< example >}}
-<nav class="nav nav-pills flex-column flex-sm-row">
+<nav class="nav nav-underline flex-column flex-sm-row">
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
@@ -372,6 +406,9 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 
 ### Pills with dropdowns
 
+<details class="mb-2">
+<summary>See Bootstrap's variants</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -401,6 +438,7 @@ This variant should not be used because it is a button component in the Orange D
 </ul>
 {{< /example >}}
 <!-- End mod -->
+</details>
 
 ## CSS
 
