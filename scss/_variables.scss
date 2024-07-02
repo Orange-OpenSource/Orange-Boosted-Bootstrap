@@ -2101,18 +2101,19 @@ $title-bar-border-color-dark:       $gray-700 !default; // Deprecated in v5.3.3
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-font-size:              $font-size-sm !default; // Boosted mod: instead of `null`
 $breadcrumb-font-weight:            $font-weight-bold !default; // Boosted mod
+$breadcrumb-line-height:            $line-height-sm !default; // Boosted mod
 
-$breadcrumb-padding-y:              .5rem !default;
+$breadcrumb-padding-y:              .4375rem !default; // Boosted mod: instead of `0`
 $breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding-x:         $spacer * .5 !default;
+$breadcrumb-item-padding-x:         $spacer * .5 !default; // Boosted mod: instead of `.5rem`
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $black !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-active-color:           null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default; // Boosted mod: instead of `quote("/")`
 $breadcrumb-divider-filter:         none !default; // Boosted mod
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;

@@ -564,6 +564,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Accordion**
   - <span class="badge text-bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
 
+- **Breadcrumb**
+  - <span class="badge bg-success">New</span> Breadcrumbs now support responsive display.
+
 - **Local navigation**
   - <span class="badge text-bg-success">New</span> Added Local Navigation as a new component.
 
@@ -591,6 +594,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
+      <li><code>--bs-breadcrumb-line-height</code></li>
       <li><code>--bs-local-nav-active-bg</code></li>
       <li><code>--bs-local-nav-active-color</code></li>
       <li><code>--bs-local-nav-active-marker-width</code></li>
@@ -609,6 +613,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <ul>
       <li><code>$accordion-button-hover-bg</code></li>
       <li><code>$accordion-dark-button-hover-bg</code></li>
+      <li><code>$breadcrumb-line-height</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
       <li><code>$form-star-rating-checked-color</code></li>
