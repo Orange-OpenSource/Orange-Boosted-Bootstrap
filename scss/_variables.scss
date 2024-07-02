@@ -2226,15 +2226,6 @@ $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !de
 // End mod
 // scss-docs-end close-variables
 
-// Deprecated in v5.3.3: all `$btn-close-white-*`
-$btn-close-white-color:               $white !default; // OUDS mod
-$btn-close-white-bg:                  transparent !default; // OUDS mod
-$btn-close-white-border-color:        transparent !default; // OUDS mod
-$btn-close-white-hover-color:         $btn-close-white-color !default; // OUDS mod
-$btn-close-white-active-color:        $supporting-orange !default; // OUDS mod
-$btn-close-white-active-border-color: $gray-700 !default; // OUDS mod
-$btn-close-white-disabled-color:      $gray-700 !default; // OUDS mod
-
 // Offcanvas
 
 // scss-docs-start offcanvas-variables
