@@ -15,6 +15,7 @@ You can find and customize these variables for key global options in OUDS Web's 
 | Variable                          | Values                                | Description                                                                            |
 | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
 | `$enable-bootstrap-compatibility` | `true` or `false` (default)           | Enforces Bootstrap compatibility. |
+| `$enable-cssgrid`                 | `true` or `false` (default)           | Enables the experimental CSS Grid system (e.g. `.grid`, `.g-col-md-1`, etc.). |
 | `$enable-grid-classes`            | `true` (default) or `false`           | Enables the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.). |
 | `$enable-container-classes`       | `true` (default) or `false`           | Enables the generation of CSS classes for layout containers. |
 | `$enable-important-utilities`     | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
