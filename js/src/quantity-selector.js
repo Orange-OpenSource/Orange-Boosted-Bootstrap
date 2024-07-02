@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
  * Boosted quantity-selector.js
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 

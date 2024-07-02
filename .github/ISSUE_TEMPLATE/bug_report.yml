@@ -13,7 +13,7 @@ body:
           required: true
         - label: I have [validated](https://html5.validator.nu/) any HTML to avoid common problems
           required: true
-        - label: I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
+        - label: I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md)
           required: true
   - type: textarea
     id: what-happened
