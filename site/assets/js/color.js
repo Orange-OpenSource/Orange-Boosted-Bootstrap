@@ -6,7 +6,7 @@
  * JavaScript for Boosted's docs (https://boosted.orange.com/)
  * Copyright 2015-2024 The Boosted Authors
  * Copyright 2015-2024 Orange
- * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-Bootstrap/blob/ouds/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
