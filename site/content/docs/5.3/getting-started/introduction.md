@@ -17,7 +17,7 @@ As Boosted is based on Bootstrap, you'll find in Boosted **all** the Bootstrap's
 
 Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
 
-As for maintainability reasons we have to keep them in this documentation, we tagged them with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+As for maintainability reasons we have to keep them in this documentation, we tagged them under a `<details><summary>` with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
 Thanks for taking this information into account.
 
 Design incompatibility callouts message example:
