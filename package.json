@@ -82,7 +82,7 @@
     "release": "npm-run-all dist release-sri docs-build storybook-build release-zip*",
     "release-sri": "node build/generate-sri.mjs",
     "release-version": "node build/change-version.mjs",
-    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist boosted-$npm_package_version-dist.zip && cp -r dist/ boosted-$npm_package_version-dist && zip -qr9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf ouds-web-$npm_package_version-dist ouds-web-$npm_package_version-dist.zip && cp -r dist/ ouds-web-$npm_package_version-dist && zip -qr9 ouds-web-$npm_package_version-dist.zip ouds-web-$npm_package_version-dist && rm -rf ouds-web-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.mjs",
     "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
@@ -187,12 +187,12 @@
   },
   "jspm": {
     "registry": "npm",
-    "main": "js/boosted",
+    "main": "js/ouds-web",
     "directories": {
       "lib": "dist"
     },
     "shim": {
-      "js/boosted": {
+      "js/ouds-web": {
         "deps": [
           "@popperjs/core"
         ]
