@@ -32,10 +32,10 @@ Several quick start options are available:
 
 - [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.3`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.3`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.3.3`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
+- Install with [npm](https://www.npmjs.com/): `npm install ouds-web@v5.3.3`
+- Install with [yarn](https://yarnpkg.com/): `yarn add ouds-web@v5.3.3`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/ouds-web:5.3.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web` Sass: `Install-Package ouds-web.sass`
 
 Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
