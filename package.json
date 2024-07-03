@@ -1,6 +1,6 @@
 {
-  "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.",
+  "name": "ouds-web",
+  "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
   "version": "0.1.0",
   "config": {
     "version_short": "0.1"
@@ -17,7 +17,7 @@
     "Orange"
   ],
   "homepage": "https://boosted.orange.com/",
-  "author": "The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
+  "author": "The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
   "contributors": [
     "Orange SA"
   ],
@@ -29,10 +29,10 @@
   "bugs": {
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
-  "main": "dist/js/boosted.js",
-  "module": "dist/js/boosted.esm.js",
-  "sass": "scss/boosted.scss",
-  "style": "dist/css/boosted.css",
+  "main": "dist/js/ouds-web.js",
+  "module": "dist/js/ouds-web.esm.js",
+  "sass": "scss/ouds-web.scss",
+  "style": "dist/css/ouds-web.css",
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
@@ -57,9 +57,9 @@
     "js-compile-plugins": "node build/build-plugins.mjs",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .html,.js,.mjs,.md .",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
-    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.js.map,includeSources,url=boosted.min.js.map\" --output dist/js/boosted.min.js dist/js/boosted.js",
-    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.esm.js.map,includeSources,url=boosted.esm.min.js.map\" --output dist/js/boosted.esm.min.js dist/js/boosted.esm.js",
-    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.bundle.js.map,includeSources,url=boosted.bundle.min.js.map\" --output dist/js/boosted.bundle.min.js dist/js/boosted.bundle.js",
+    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.js.map,includeSources,url=ouds-web.min.js.map\" --output dist/js/ouds-web.min.js dist/js/ouds-web.js",
+    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.esm.js.map,includeSources,url=ouds-web.esm.min.js.map\" --output dist/js/ouds-web.esm.min.js dist/js/ouds-web.esm.js",
+    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.bundle.js.map,includeSources,url=ouds-web.bundle.min.js.map\" --output dist/js/ouds-web.bundle.min.js dist/js/ouds-web.bundle.js",
     "js-test": "npm-run-all --aggregate-output --parallel js-test-karma js-test-jquery js-test-integration-*",
     "js-debug": "cross-env DEBUG=true npm run js-test-karma",
     "js-test-karma": "karma start js/tests/karma.conf.js",
@@ -82,7 +82,7 @@
     "release": "npm-run-all dist release-sri docs-build storybook-build release-zip*",
     "release-sri": "node build/generate-sri.mjs",
     "release-version": "node build/change-version.mjs",
-    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist boosted-$npm_package_version-dist.zip && cp -r dist/ boosted-$npm_package_version-dist && zip -qr9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf ouds-web-$npm_package_version-dist ouds-web-$npm_package_version-dist.zip && cp -r dist/ ouds-web-$npm_package_version-dist && zip -qr9 ouds-web-$npm_package_version-dist.zip ouds-web-$npm_package_version-dist && rm -rf ouds-web-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.mjs",
     "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
@@ -187,12 +187,12 @@
   },
   "jspm": {
     "registry": "npm",
-    "main": "js/boosted",
+    "main": "js/ouds-web",
     "directories": {
       "lib": "dist"
     },
     "shim": {
-      "js/boosted": {
+      "js/ouds-web": {
         "deps": [
           "@popperjs/core"
         ]

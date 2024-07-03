@@ -362,7 +362,7 @@ Loop that generates the modifier classes with an overriding of CSS variables.
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our list group to create tabbable panes of local content.
+Use the tab JavaScript plugin—include it individually or through the compiled `ouds-web.js` file—to extend our list group to create tabbable panes of local content.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">

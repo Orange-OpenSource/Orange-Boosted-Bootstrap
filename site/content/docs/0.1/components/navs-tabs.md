@@ -432,7 +432,7 @@ On the `.nav-underline` modifier class:
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
+Use the tab JavaScript plugin—include it individually or through the compiled `ouds-web.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
 
 <div class="bd-example">
   <ul class="nav nav-tabs" id="myTab" role="tablist">

@@ -226,7 +226,7 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    ```scss
    // Import all of Boosted's CSS
-   @import "boosted/scss/boosted";
+   @import "ouds-web/scss/ouds-web";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
@@ -239,17 +239,17 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
    import '../scss/styles.scss'
 
    // Import all of Boosted's JS
-   import * as boosted from 'boosted'
+   import * as boosted from 'ouds-web'
    ```
 
    You can also import JavaScript plugins individually as needed to keep bundle sizes down:
 
    <!-- eslint-skip -->
    ```js
-   import Alert from 'boosted/js/dist/alert'
+   import Alert from 'ouds-web/js/dist/alert'
 
    // or, specify which plugins you need:
-   import { Tooltip, Toast, Popover } from 'boosted'
+   import { Tooltip, Toast, Popover } from 'ouds-web'
    ```
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*

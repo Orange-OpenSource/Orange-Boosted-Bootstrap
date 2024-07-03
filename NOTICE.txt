@@ -9,7 +9,7 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 dist/img/orange-logo.svg
-nuget/boosted.png
+nuget/ouds-web.png
 site/content/docs/**/examples/download-app/img/Banner_image.png
 site/content/docs/**/examples/download-app/img/Buttons.png
 site/content/docs/**/examples/download-app/img/Buttons_dark.png

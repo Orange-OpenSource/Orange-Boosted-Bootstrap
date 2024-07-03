@@ -4,5 +4,5 @@
 # Don't diff or textually merge source maps
 *.map binary
 
-boosted.css linguist-vendored=false
-boosted.js linguist-vendored=false
+ouds-web.css linguist-vendored=false
+ouds-web.js linguist-vendored=false

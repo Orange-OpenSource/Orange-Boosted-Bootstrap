@@ -177,12 +177,12 @@ Boosted doesn't include `color` and `background-color` utilities for every color
 Here's an example that generates text color utilities (e.g., `.text-purple-500`) using the above steps.
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
@@ -203,7 +203,7 @@ $utilities: map-merge(
   )
 );
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.

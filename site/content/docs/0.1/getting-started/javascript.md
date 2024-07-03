@@ -10,7 +10,7 @@ toc: true
 
 ## Individual or compiled
 
-Plugins can be included individually (using Boosted's individual `js/dist/*.js`), or all at once using `boosted.js` or the minified `boosted.min.js` (don't include both).
+Plugins can be included individually (using Boosted's individual `js/dist/*.js`), or all at once using `ouds-web.js` or the minified `ouds-web.min.js` (don't include both).
 
 If you use a bundler (Webpack, Parcel, Vite...), you can use `/js/dist/*.js` files which are UMD ready.
 
@@ -40,19 +40,19 @@ A better alternative for those using this type of frameworks is to use a framewo
 You may need to tweak a bit `scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted with Webpack]({{< docsref "/getting-started/webpack#import-boosted" >}}) for more details.
 {{< /callout >}}
 
-We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
+We provide a version of Boosted built as `ESM` (`ouds-web.esm.js` and `ouds-web.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
 
 <!-- eslint-skip -->
 ```html
 <script type="module">
-  import { Toast } from 'boosted.esm.min.js'
+  import { Toast } from 'ouds-web.esm.min.js'
 
   Array.from(document.querySelectorAll('.toast'))
     .forEach(toastNode => new Toast(toastNode))
 </script>
 ```
 
-Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'boosted.esm.min.js'` instead of `'boosted'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
+Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'ouds-web.esm.min.js'` instead of `'boosted'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
 
 <!-- eslint-skip -->
 ```js
@@ -86,12 +86,12 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     {
       "imports": {
         "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
-        "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
+        "ouds-web": "https://cdn.jsdelivr.net/npm/ouds-web@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
       }
     }
     </script>
     <script type="module">
-      import * as boosted from 'boosted'
+      import * as boosted from 'ouds-web'
       new boosted.Popover(document.getElementById('popoverButton'))
     </script>
   </body>

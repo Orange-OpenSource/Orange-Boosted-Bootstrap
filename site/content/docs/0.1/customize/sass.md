@@ -19,7 +19,7 @@ your-project/
 ├── scss/
 │   └── custom.scss
 └── node_modules/
-│   └── boosted/
+│   └── ouds-web/
 │       ├── js/
 │       └── scss/
 └── index.html
@@ -31,7 +31,7 @@ If you've downloaded our source files and aren't using a package manager, you'll
 your-project/
 ├── scss/
 │   └── custom.scss
-├── boosted/
+├── ouds-web/
 │   ├── js/
 │   └── scss/
 └── index.html
@@ -47,7 +47,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 
 // Include any default variable overrides here (though functions won't be available)
 
-@import "../node_modules/boosted/scss/boosted";
+@import "..//node_modules/ouds-web/scss/ouds-web";
 
 // Then add additional custom code here
 ```
@@ -57,37 +57,37 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Option B: Include parts of Boosted
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/boosted/scss/functions";
+@import "..//node_modules/ouds-web/scss/functions";
 
 // 2. Include any default variable overrides here
 
 // 3. Include remainder of required Boosted stylesheets (including any separate color mode stylesheets)
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/variables-dark";
+@import "..//node_modules/ouds-web/scss/variables";
+@import "..//node_modules/ouds-web/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
 // 5. Include remainder of required parts
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "..//node_modules/ouds-web/scss/maps";
+@import "..//node_modules/ouds-web/scss/mixins";
+@import "..//node_modules/ouds-web/scss/root";
 
 // 6. Optionally include any other parts as needed
-@import "../node_modules/boosted/scss/utilities";
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
-@import "../node_modules/boosted/scss/images";
-@import "../node_modules/boosted/scss/containers";
-@import "../node_modules/boosted/scss/grid";
-@import "../node_modules/boosted/scss/helpers";
+@import "..//node_modules/ouds-web/scss/utilities";
+@import "..//node_modules/ouds-web/scss/reboot";
+@import "..//node_modules/ouds-web/scss/type";
+@import "..//node_modules/ouds-web/scss/images";
+@import "..//node_modules/ouds-web/scss/containers";
+@import "..//node_modules/ouds-web/scss/grid";
+@import "..//node_modules/ouds-web/scss/helpers";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../node_modules/boosted/scss/utilities/api";
+@import "..//node_modules/ouds-web/scss/utilities/api";
 
 // 8. Add additional custom code here
 ```
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
+With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `ouds-web.scss` file as your starting point.
 
 ## Compiling
 
@@ -140,22 +140,22 @@ Here's an example that changes the `background-color` and `color` for the `<body
 
 ```scss
 // Required
-@import "../node_modules/boosted/scss/functions";
+@import "..//node_modules/ouds-web/scss/functions";
 
 // Your variable overrides
 $body-bg: #000;
 $body-color: #111;
 
 // Required
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/variables-dark";
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "..//node_modules/ouds-web/scss/variables";
+@import "..//node_modules/ouds-web/scss/variables-dark";
+@import "..//node_modules/ouds-web/scss/maps";
+@import "..//node_modules/ouds-web/scss/mixins";
+@import "..//node_modules/ouds-web/scss/root";
 
 // Optional Boosted components here
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
+@import "..//node_modules/ouds-web/scss/reboot";
+@import "..//node_modules/ouds-web/scss/type";
 // etc
 ```
 
@@ -209,19 +209,19 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 
 ```scss
 // Required
-@import "../node_modules/boosted/scss/functions";
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/variables-dark";
+@import "..//node_modules/ouds-web/scss/functions";
+@import "..//node_modules/ouds-web/scss/variables";
+@import "..//node_modules/ouds-web/scss/variables-dark";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "..//node_modules/ouds-web/scss/maps";
+@import "..//node_modules/ouds-web/scss/mixins";
+@import "..//node_modules/ouds-web/scss/root";
 
 // Optional
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
+@import "..//node_modules/ouds-web/scss/reboot";
+@import "..//node_modules/ouds-web/scss/type";
 // etc
 ```
 

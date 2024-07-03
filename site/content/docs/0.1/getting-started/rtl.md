@@ -99,12 +99,12 @@ $font-weight-bold: 700 #{/* rtl:600 */} !default;
 Which would output to the following for our default CSS and RTL CSS:
 
 ```css
-/* boosted.css */
+/* ouds-web.css */
 dt {
   font-weight: 700 /* rtl:600 */;
 }
 
-/* boosted.rtl.css */
+/* ouds-web.rtl.css */
 dt {
   font-weight: 600;
 }
@@ -164,7 +164,7 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
   } ]
 } */
 .ltr {
-  @import "../node_modules/boosted/scss/boosted";
+  @import "../node_modules/ouds-web/scss/ouds-web";
 }
 /*rtl:end:options*/
 ```

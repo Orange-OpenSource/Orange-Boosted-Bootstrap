@@ -15,56 +15,56 @@ Once downloaded, unzip the compressed folder and you'll see something like this:
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
 ```text
-boosted/
+ouds-web/
 ├── css/
-│   ├── boosted-grid.css
-│   ├── boosted-grid.css.map
-│   ├── boosted-grid.min.css
-│   ├── boosted-grid.min.css.map
-│   ├── boosted-grid.rtl.css
-│   ├── boosted-grid.rtl.css.map
-│   ├── boosted-grid.rtl.min.css
-│   ├── boosted-grid.rtl.min.css.map
-│   ├── boosted-reboot.css
-│   ├── boosted-reboot.css.map
-│   ├── boosted-reboot.min.css
-│   ├── boosted-reboot.min.css.map
-│   ├── boosted-reboot.rtl.css
-│   ├── boosted-reboot.rtl.css.map
-│   ├── boosted-reboot.rtl.min.css
-│   ├── boosted-reboot.rtl.min.css.map
-│   ├── boosted-utilities.css
-│   ├── boosted-utilities.css.map
-│   ├── boosted-utilities.min.css
-│   ├── boosted-utilities.min.css.map
-│   ├── boosted-utilities.rtl.css
-│   ├── boosted-utilities.rtl.css.map
-│   ├── boosted-utilities.rtl.min.css
-│   ├── boosted-utilities.rtl.min.css.map
-│   ├── boosted.css
-│   ├── boosted.css.map
-│   ├── boosted.min.css
-│   ├── boosted.min.css.map
-│   ├── boosted.rtl.css
-│   ├── boosted.rtl.css.map
-│   ├── boosted.rtl.min.css
-│   └── boosted.rtl.min.css.map
+│   ├── ouds-web-grid.css
+│   ├── ouds-web-grid.css.map
+│   ├── ouds-web-grid.min.css
+│   ├── ouds-web-grid.min.css.map
+│   ├── ouds-web-grid.rtl.css
+│   ├── ouds-web-grid.rtl.css.map
+│   ├── ouds-web-grid.rtl.min.css
+│   ├── ouds-web-grid.rtl.min.css.map
+│   ├── ouds-web-reboot.css
+│   ├── ouds-web-reboot.css.map
+│   ├── ouds-web-reboot.min.css
+│   ├── ouds-web-reboot.min.css.map
+│   ├── ouds-web-reboot.rtl.css
+│   ├── ouds-web-reboot.rtl.css.map
+│   ├── ouds-web-reboot.rtl.min.css
+│   ├── ouds-web-reboot.rtl.min.css.map
+│   ├── ouds-web-utilities.css
+│   ├── ouds-web-utilities.css.map
+│   ├── ouds-web-utilities.min.css
+│   ├── ouds-web-utilities.min.css.map
+│   ├── ouds-web-utilities.rtl.css
+│   ├── ouds-web-utilities.rtl.css.map
+│   ├── ouds-web-utilities.rtl.min.css
+│   ├── ouds-web-utilities.rtl.min.css.map
+│   ├── ouds-web.css
+│   ├── ouds-web.css.map
+│   ├── ouds-web.min.css
+│   ├── ouds-web.min.css.map
+│   ├── ouds-web.rtl.css
+│   ├── ouds-web.rtl.css.map
+│   ├── ouds-web.rtl.min.css
+│   └── ouds-web.rtl.min.css.map
 └── js/
-    ├── boosted.bundle.js
-    ├── boosted.bundle.js.map
-    ├── boosted.bundle.min.js
-    ├── boosted.bundle.min.js.map
-    ├── boosted.esm.js
-    ├── boosted.esm.js.map
-    ├── boosted.esm.min.js
-    ├── boosted.esm.min.js.map
-    ├── boosted.js
-    ├── boosted.js.map
-    ├── boosted.min.js
-    └── boosted.min.js.map
+    ├── ouds-web.bundle.js
+    ├── ouds-web.bundle.js.map
+    ├── ouds-web.bundle.min.js
+    ├── ouds-web.bundle.min.js.map
+    ├── ouds-web.esm.js
+    ├── ouds-web.esm.js.map
+    ├── ouds-web.esm.min.js
+    ├── ouds-web.esm.min.js.map
+    ├── ouds-web.js
+    ├── ouds-web.js.map
+    ├── ouds-web.min.js
+    └── ouds-web.min.js.map
 ```
 
-This is the most basic form of Boosted: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://web.dev/articles/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
+This is the most basic form of Boosted: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
 ### CSS files
 
@@ -73,10 +73,10 @@ Boosted includes a handful of options for including some or all of our compiled 
 {{< bs-table "table" >}}
 | CSS files | Layout | Content | Components | Utilities |
 | --- | --- | --- | --- | --- |
-| `boosted.css`<br> `boosted.min.css`<br> `boosted.rtl.css`<br> `boosted.rtl.min.css` | Included | Included | Included | Included |
-| `boosted-grid.css`<br> `boosted-grid.rtl.css`<br> `boosted-grid.min.css`<br> `boosted-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
-| `boosted-utilities.css`<br> `boosted-utilities.rtl.css`<br> `boosted-utilities.min.css`<br> `boosted-utilities.rtl.min.css` | — | — | — | Included |
-| `boosted-reboot.css`<br> `boosted-reboot.rtl.css`<br> `boosted-reboot.min.css`<br> `boosted-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
+| `ouds-web.css`<br> `ouds-web.min.css`<br> `ouds-web.rtl.css`<br> `ouds-web.rtl.min.css` | Included | Included | Included | Included |
+| `ouds-web-grid.css`<br> `ouds-web-grid.rtl.css`<br> `ouds-web-grid.min.css`<br> `ouds-web-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+| `ouds-web-utilities.css`<br> `ouds-web-utilities.rtl.css`<br> `ouds-web-utilities.min.css`<br> `ouds-web-utilities.rtl.min.css` | — | — | — | Included |
+| `ouds-web-reboot.css`<br> `ouds-web-reboot.rtl.css`<br> `ouds-web-reboot.min.css`<br> `ouds-web-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
 ### JS files
@@ -86,8 +86,8 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 {{< bs-table "table" >}}
 | JS Files | `:focus-visible` Polyfill | Popper |
 | --- | --- | --- |
-| `boosted.bundle.js`<br> `boosted.bundle.min.js`<br> | Included | Included |
-| `boosted.js`<br> `boosted.min.js`<br> | Included | – |
+| `ouds-web.bundle.js`<br> `ouds-web.bundle.min.js`<br> | Included | Included |
+| `ouds-web.js`<br> `ouds-web.min.js`<br> | Included | – |
 {{< /bs-table >}}
 
 ## Boosted source code
@@ -95,7 +95,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 The Boosted source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
-boosted/
+ouds-web/
 ├── dist/
 │   ├── css/
 │   ├── img/
