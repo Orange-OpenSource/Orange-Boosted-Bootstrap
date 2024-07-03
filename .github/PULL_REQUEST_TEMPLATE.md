@@ -117,7 +117,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
     - if you're releasing a pre-release, use `--tag`, e.g. for v5-alpha1 `npm publish boosted-5.0.0-alpha1.tgz --tag next`
     - (v4 only) `npm publish --tag v4.x.y` (if you forgot and v4 becomes the latest version on NPM, you can run `npm dist-tag add boosted@5.x.y latest to fix it)
     - (v5 only) `npm publish`
-- [ ] check release on [NPM](https://www.npmjs.com/package/boosted), [Nuget](https://www.nuget.org/packages/boosted/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
+- [ ] check release on [NPM](https://www.npmjs.com/package/boosted), [Nuget](https://www.nuget.org/packages/ouds-web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `gh-pages`:
   - [ ] copy `../_site` to the `gh-pages` branch (don't forget to update Storybook as well)
   - [ ] check every `index.html` used as redirections to redirect to the new release

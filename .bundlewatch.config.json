@@ -1,66 +1,65 @@
 {
   "files": [
     {
-      "path": "./dist/css/boosted-grid.css",
+      "path": "./dist/css/ouds-web-grid.css",
       "maxSize": "7.0 kB"
     },
     {
-      "path": "./dist/css/boosted-grid.min.css",
+      "path": "./dist/css/ouds-web-grid.min.css",
       "maxSize": "6.25 kB"
     },
     {
-      "path": "./dist/css/boosted-reboot.css",
+      "path": "./dist/css/ouds-web-reboot.css",
       "maxSize": "4.5 kB"
     },
     {
-      "path": "./dist/css/boosted-reboot.min.css",
+      "path": "./dist/css/ouds-web-reboot.min.css",
       "maxSize": "4.5 kB"
     },
     {
-      "path": "./dist/css/boosted-utilities.css",
+      "path": "./dist/css/ouds-web-utilities.css",
       "maxSize": "12.75 kB"
     },
     {
-      "path": "./dist/css/boosted-utilities.min.css",
+      "path": "./dist/css/ouds-web-utilities.min.css",
       "maxSize": "12.0 kB"
     },
     {
-      "path": "./dist/css/boosted.css",
+      "path": "./dist/css/ouds-web.css",
       "maxSize": "44.5 kB"
     },
     {
-      "path": "./dist/css/boosted.min.css",
+      "path": "./dist/css/ouds-web.min.css",
       "maxSize": "41.5 kB"
     },
     {
-      "path": "./dist/js/boosted.bundle.js",
+      "path": "./dist/js/ouds-web.bundle.js",
       "maxSize": "48.25 kB"
     },
     {
-      "path": "./dist/js/boosted.bundle.min.js",
+      "path": "./dist/js/ouds-web.bundle.min.js",
       "maxSize": "25.5 kB"
     },
     {
-      "path": "./dist/js/boosted.esm.js",
+      "path": "./dist/js/ouds-web.esm.js",
       "maxSize": "33.25 kB"
     },
     {
-      "path": "./dist/js/boosted.esm.min.js",
+      "path": "./dist/js/ouds-web.esm.min.js",
       "maxSize": "20.5 kB"
     },
     {
-      "path": "./dist/js/boosted.js",
+      "path": "./dist/js/ouds-web.js",
       "maxSize": "34.0 kB"
     },
     {
-      "path": "./dist/js/boosted.min.js",
+      "path": "./dist/js/ouds-web.min.js",
       "maxSize": "18.25 kB"
     }
   ],
   "ci": {
     "trackBranches": [
-      "main",
-      "v4-dev"
+      "ouds/main"
     ]
   }
 }

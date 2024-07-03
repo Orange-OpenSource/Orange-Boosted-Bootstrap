@@ -26,19 +26,19 @@ const configFile = path.join(__dirname, '../hugo.yml')
 // `configPropertyName` is the hugo.yml variable's name of the file
 const files = [
   {
-    file: 'dist/css/boosted.min.css',
+    file: 'dist/css/ouds-web.min.css',
     configPropertyName: 'css_hash'
   },
   {
-    file: 'dist/css/boosted.rtl.min.css',
+    file: 'dist/css/ouds-web.rtl.min.css',
     configPropertyName: 'css_rtl_hash'
   },
   {
-    file: 'dist/js/boosted.min.js',
+    file: 'dist/js/ouds-web.min.js',
     configPropertyName: 'js_hash'
   },
   {
-    file: 'dist/js/boosted.bundle.min.js',
+    file: 'dist/js/ouds-web.bundle.min.js',
     configPropertyName: 'js_bundle_hash'
   },
   {

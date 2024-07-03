@@ -12,7 +12,7 @@ toc: true
 
 Things to know when using the tooltip plugin:
 
-- Tooltips rely on the third party library [Popper](https://popper.js.org/docs/v2/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before `boosted.js`, or use one `boosted.bundle.min.js` which contains Popper.
+- Tooltips rely on the third party library [Popper](https://popper.js.org/docs/v2/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before `ouds-web.js`, or use one `ouds-web.bundle.min.js` which contains Popper.
 - Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
 - Tooltips with zero-length titles are never displayed.
 - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).

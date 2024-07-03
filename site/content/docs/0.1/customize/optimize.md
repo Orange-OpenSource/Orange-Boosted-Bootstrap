@@ -10,16 +10,16 @@ toc: true
 
 ## Lean Sass imports
 
-When using Sass in your asset pipeline, make sure you optimize Boosted by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `boosted.scss`.
+When using Sass in your asset pipeline, make sure you optimize Boosted by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `ouds-web.scss`.
 
-{{< scss-docs name="import-stack" file="scss/boosted.scss" >}}
+{{< scss-docs name="import-stack" file="scss/ouds-web.scss" >}}
 
 
 If you're not using a component, comment it out or delete it entirely. For example, if you're not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.
 
 ## Lean JavaScript
 
-Boosted's JavaScript includes every component in our primary dist files (`boosted.js` and `boosted.min.js`), and even our primary dependency (Popper) with our bundle files (`boosted.bundle.js` and `boosted.bundle.min.js`). While you're customizing via Sass, be sure to remove related JavaScript.
+Boosted's JavaScript includes every component in our primary dist files (`ouds-web.js` and `ouds-web.min.js`), and even our primary dependency (Popper) with our bundle files (`ouds-web.bundle.js` and `ouds-web.bundle.min.js`). While you're customizing via Sass, be sure to remove related JavaScript.
 
 For instance, assuming you're using your own JavaScript bundler like Webpack, Parcel, or Vite, you'd only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:
 
