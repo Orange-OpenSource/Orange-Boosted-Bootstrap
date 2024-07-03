@@ -30,8 +30,6 @@ site/static/docs/**/assets/brand/orange-logo.svg
 site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
 site/static/docs/**/assets/brand/orange-social.svg
-site/static/docs/**/assets/img/boosted-sprite.svg
-site/static/docs/**/assets/img/boosted-warning.svg
 site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
 site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/static/docs/**/assets/img/favicons/apple-touch-icon.png
@@ -46,6 +44,8 @@ site/static/docs/**/assets/img/favicons/mstile-310x310.png
 site/static/docs/**/assets/img/favicons/mstile-70x70.png
 site/static/docs/**/assets/img/favicons/safari-pinned-tab.svg
 site/static/docs/**/assets/img/navbar-contact.png
+site/static/docs/**/assets/img/ouds-web-sprite.svg
+site/static/docs/**/assets/img/ouds-web-warning.svg
 site/static/docs/**/assets/img/platforms/android.png
 site/static/docs/**/assets/img/platforms/conversational.png
 site/static/docs/**/assets/img/platforms/extended-reality.png

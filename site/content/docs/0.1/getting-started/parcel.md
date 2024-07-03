@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/docs/getting-started/parcel/"
 toc: true
-thumbnail: guides/parcel-dev-server-boosted.png
+thumbnail: guides/parcel-dev-server-ouds-web.png
 ---
 
 <div class="d-flex justify-content-center">
@@ -160,7 +160,7 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
 3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Parcel dev server running with Boosted](/assets/img/guides/parcel-dev-server-boosted.png)
+   ![Parcel dev server running with Boosted](/assets/img/guides/parcel-dev-server-ouds-web.png)
 
    Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
 
