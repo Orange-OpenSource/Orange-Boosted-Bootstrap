@@ -1,6 +1,6 @@
 {
-  "name": "orange-opensource/orange-boosted-bootstrap",
-  "description": "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.",
+  "name": "orange-opensource/ouds-web",
+  "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
   "keywords": [
     "css",
     "js",
@@ -15,14 +15,6 @@
   ],
   "homepage": "https://boosted.orange.com/",
   "authors": [
-    {
-      "name": "Mark Otto",
-      "email": "markdotto@gmail.com"
-    },
-    {
-      "name": "Jacob Thornton",
-      "email": "jacobthornton@gmail.com"
-    },
     {
       "name": "Loïc Laussel",
       "email": "loic.laussel@orange.com"
