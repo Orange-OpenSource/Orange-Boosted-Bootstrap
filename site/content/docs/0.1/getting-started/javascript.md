@@ -86,12 +86,12 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     {
       "imports": {
         "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
-        "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
+        "ouds-web": "https://cdn.jsdelivr.net/npm/ouds-web@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
       }
     }
     </script>
     <script type="module">
-      import * as boosted from 'boosted'
+      import * as boosted from 'ouds-web'
       new boosted.Popover(document.getElementById('popoverButton'))
     </script>
   </body>

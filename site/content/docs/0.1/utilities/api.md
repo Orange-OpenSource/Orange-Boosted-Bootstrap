@@ -391,12 +391,12 @@ $utilities: (
 New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -410,7 +410,7 @@ $utilities: map-merge(
   )
 );
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 ### Modify utilities
@@ -418,12 +418,12 @@ $utilities: map-merge(
 Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -440,7 +440,7 @@ $utilities: map-merge(
   )
 );
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 #### Enable responsive
@@ -448,12 +448,12 @@ $utilities: map-merge(
 You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 $utilities: map-merge(
   $utilities, (
@@ -464,7 +464,7 @@ $utilities: map-merge(
   )
 );
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 This will now generate responsive variations of `.border` and `.border-0` for each breakpoint. Your generated CSS will look like this:
@@ -504,12 +504,12 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 $utilities: map-merge(
   $utilities, (
@@ -520,7 +520,7 @@ $utilities: map-merge(
   )
 );
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 ### Remove utilities
@@ -528,35 +528,35 @@ $utilities: map-merge(
 Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map/#remove).
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 
 // Remove multiple utilities with a comma-separated list
 $utilities: map-remove($utilities, "width", "float");
 
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge) and set the group key to `null` to remove the utility.
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 $utilities: map-merge(
   $utilities,
   (
     "width": null
   )
 );
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 ### Add, remove, modify
@@ -564,12 +564,12 @@ $utilities: map-merge(
 You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge). Here's how you can combine the previous examples into one larger map.
 
 ```scss
-@import "boosted/scss/functions";
-@import "boosted/scss/variables";
-@import "boosted/scss/variables-dark";
-@import "boosted/scss/maps";
-@import "boosted/scss/mixins";
-@import "boosted/scss/utilities";
+@import "ouds-web/scss/functions";
+@import "ouds-web/scss/variables";
+@import "ouds-web/scss/variables-dark";
+@import "ouds-web/scss/maps";
+@import "ouds-web/scss/mixins";
+@import "ouds-web/scss/utilities";
 $utilities: map-merge(
   $utilities,
   (
@@ -589,7 +589,7 @@ $utilities: map-merge(
     )
   )
 );
-@import "boosted/scss/utilities/api";
+@import "ouds-web/scss/utilities/api";
 ```
 
 #### Remove utility in RTL

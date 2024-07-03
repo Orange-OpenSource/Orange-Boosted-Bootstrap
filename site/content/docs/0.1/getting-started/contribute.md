@@ -60,7 +60,7 @@ Boosted uses [RTLCSS](https://rtlcss.com/) to process compiled CSS and convert t
 Running our documentation locally requires the use of Hugo, which gets installed via the [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here's how to get it started:
 
 1. Run through the [tooling setup](#tooling-setup) above to install all dependencies.
-2. From the root `/boosted` directory, run `npm run docs-serve` in the command line.
+2. From the root `/ouds-web` directory, run `npm run docs-serve` in the command line.
 3. Open `http://localhost:9001/` in your browser, and voilà.
 
 Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).

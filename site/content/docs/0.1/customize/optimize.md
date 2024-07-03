@@ -27,28 +27,28 @@ For instance, assuming you're using your own JavaScript bundler like Webpack, Pa
 ```js
 // Import just what we need
 
-// import 'boosted/js/dist/alert';
-// import 'boosted/js/dist/button';
-// import 'boosted/js/dist/carousel';
-// import 'boosted/js/dist/collapse';
-// import 'boosted/js/dist/dropdown';
-import 'boosted/js/dist/modal';
-// import 'boosted/js/dist/offcanvas';
-// import 'boosted/js/dist/popover';
-// import 'boosted/js/dist/scrollspy';
-// import 'boosted/js/dist/tab';
-// import 'boosted/js/dist/toast';
-// import 'boosted/js/dist/tooltip';
+// import 'ouds-web/js/dist/alert';
+// import 'ouds-web/js/dist/button';
+// import 'ouds-web/js/dist/carousel';
+// import 'ouds-web/js/dist/collapse';
+// import 'ouds-web/js/dist/dropdown';
+import 'ouds-web/js/dist/modal';
+// import 'ouds-web/js/dist/offcanvas';
+// import 'ouds-web/js/dist/popover';
+// import 'ouds-web/js/dist/scrollspy';
+// import 'ouds-web/js/dist/tab';
+// import 'ouds-web/js/dist/toast';
+// import 'ouds-web/js/dist/tooltip';
 ```
 
 This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips. If you're importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your `package.json` file.
 
 {{< callout info >}}
-**Heads up!** Files in `boosted/js/dist` use the **default export**. To use them, do the following:
+**Heads up!** Files in `ouds-web/js/dist` use the **default export**. To use them, do the following:
 
 <!-- eslint-skip -->
 ```js
-import Modal from 'boosted/js/dist/modal'
+import Modal from 'ouds-web/js/dist/modal'
 const modal = new Modal(document.getElementById('myModal'))
 ```
 {{< /callout >}}

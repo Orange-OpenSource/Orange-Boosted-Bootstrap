@@ -19,7 +19,7 @@ your-project/
 ├── scss/
 │   └── custom.scss
 └── node_modules/
-│   └── boosted/
+│   └── ouds-web/
 │       ├── js/
 │       └── scss/
 └── index.html
@@ -31,7 +31,7 @@ If you've downloaded our source files and aren't using a package manager, you'll
 your-project/
 ├── scss/
 │   └── custom.scss
-├── boosted/
+├── ouds-web/
 │   ├── js/
 │   └── scss/
 └── index.html
@@ -47,7 +47,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 
 // Include any default variable overrides here (though functions won't be available)
 
-@import "..//node_modules/ouds-web/scss/boosted";
+@import "..//node_modules/ouds-web/scss/ouds-web";
 
 // Then add additional custom code here
 ```

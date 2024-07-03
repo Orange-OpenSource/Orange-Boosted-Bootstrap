@@ -62,7 +62,7 @@ Make sure to use [`preconnect` resource hint](https://www.w3.org/TR/resource-hin
 
 We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://unpkg.com/).
 
-You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct Boosted package link](https://cdnjs.com/libraries/boosted) to copy and paste ready-to-use HTML snippets for each dist file from any version of Boosted.
+You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct Boosted package link](https://cdnjs.com/libraries/ouds-web) to copy and paste ready-to-use HTML snippets for each dist file from any version of Boosted.
 
 {{< callout warning>}}
 **If the SRI hashes differ for a given file, you shouldn't use the files from that CDN, because it means that the file was modified by someone else.**
@@ -78,7 +78,7 @@ openssl dgst -sha384 -binary ouds-web.min.js | openssl base64 -A
 
 ### npm
 
-Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
+Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/ouds-web):
 
 ```sh
 npm install ouds-web@{{< param "current_version" >}}
@@ -98,7 +98,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 ### yarn
 
-Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
+Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/ouds-web):
 
 ```sh
 yarn add ouds-web@{{< param "current_version" >}}
@@ -114,12 +114,12 @@ composer require orange-opensource/ouds-web:{{< param current_version >}}
 
 ### NuGet
 
-If you develop in .NET Framework, you can also install and manage Boosted's [CSS](https://www.nuget.org/packages/ouds-web/) or [Sass](https://www.nuget.org/packages/boosted.sass/) and JavaScript using [NuGet](https://www.nuget.org/). Newer projects should use [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
+If you develop in .NET Framework, you can also install and manage Boosted's [CSS](https://www.nuget.org/packages/ouds-web/) or [Sass](https://www.nuget.org/packages/ouds-web.sass/) and JavaScript using [NuGet](https://www.nuget.org/). Newer projects should use [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
 
 ```powershell
-Install-Package boosted
+Install-Package ouds-web
 ```
 
 ```powershell
-Install-Package boosted.sass
+Install-Package ouds-web.sass
 ```
