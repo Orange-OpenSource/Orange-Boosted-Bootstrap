@@ -21,13 +21,13 @@ They are not open-source though and should only be used for Orange projects. Ple
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
 <svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
 </svg>
 <svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#buy"/>
 </svg>
 <svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"/>
 </svg>
 
 ## Use Solaris icons
@@ -55,48 +55,48 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
 {{< example >}}
 <p class="p-2" data-bs-theme="light">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick-confirmation"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#warning-important-accessible"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#error-severe"/>
   </svg>
 </p>
 <p class="p-2" data-bs-theme="dark">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick-confirmation"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#warning-important-accessible"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#error-severe"/>
   </svg>
 </p>
 {{< /example >}}
@@ -181,11 +181,11 @@ For external images, you can also fill the `alt` attribute directly.
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-outline-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
   </svg>
   <span class="visually-hidden">Open settings</span>
 </button>
-<img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="Warning" width="32" height="32">
+<img src="/docs/{{< param docs_version >}}/assets/img/ouds-web-warning.svg" alt="Warning" width="32" height="32">
 {{< /example >}}
 
 ## Warning icon
@@ -205,7 +205,7 @@ Then use it like this:
 
 {{< example class="mt-0" >}}
 <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#warning-important-accessible"/>
 </svg>
 {{< /example >}}
 
@@ -234,7 +234,7 @@ Code to copy in an external SVG file:
 Then use it like this:
 
 {{< example class="mt-0" >}}
-<img src="/docs/{{< param docs_version >}}/assets/img/boosted-warning.svg" alt="" width="32" height="32">
+<img src="/docs/{{< param docs_version >}}/assets/img/ouds-web-warning.svg" alt="" width="32" height="32">
 {{< /example >}}
 
 ### CSS background SVG
