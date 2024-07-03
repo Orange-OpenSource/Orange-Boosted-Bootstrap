@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: guides/vite-dev-server-boosted.png
+thumbnail: guides/vite-dev-server-ouds-web.png
 ---
 
 <div class="d-flex justify-content-center">
@@ -182,7 +182,7 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
 
 3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Vite dev server running with Boosted](/assets/img/guides/vite-dev-server-boosted.png)
+   ![Vite dev server running with Boosted](/assets/img/guides/vite-dev-server-ouds-web.png)
 
    Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
 

@@ -107,7 +107,7 @@ Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/compon
   </span></li>
   <li><span class="tag" id="labelTag2">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#buy"/>
     </svg>
     Dismissible tag
     <button class="close" aria-labelledby="labelTag2"><span class="visually-hidden">Close</span></button>
@@ -134,7 +134,7 @@ Add `.tag-sm` to the `.tag` for a small variant.
 <a class="tag tag-sm" href="#">Navigation</a>
 <p><span class="tag tag-sm" id="labelTag4">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#buy"/>
   </svg>
   Input
   <button class="close" aria-labelledby="labelTag4"><span class="visually-hidden">Close</span></button>
@@ -163,7 +163,7 @@ Disabled tags using the `<a>` element behave a bit different:
 <a class="tag disabled" aria-disabled="true">Navigation</a>
 <p><span class="tag disabled" id="labelTag5" aria-disabled="true">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#buy"/>
   </svg>
   Input
   <button class="close" aria-labelledby="labelTag5" disabled><span class="visually-hidden">Close</span></button>

@@ -978,7 +978,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1015,7 +1015,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1035,7 +1035,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1055,7 +1055,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1075,7 +1075,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1095,7 +1095,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             Cell text
@@ -1120,7 +1120,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
     ...
     <td>
       <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true" focusable="false">
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#file-document"></use>
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#file-document"></use>
       </svg>
       <span class="visually-hidden">Document</span>
       Cell text
@@ -1149,56 +1149,40 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <th scope="row" class="fw-normal">Cell text</th>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="fw-normal">Cell text</th>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
         </tr>
         <tr>
           <th scope="row" class="fw-normal">Cell text</th>
-          <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1208,13 +1192,29 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1225,7 +1225,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
            <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1236,7 +1236,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1252,7 +1252,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
     ...
     <td>
       <svg width="1.875rem" height="1.875rem" aria-hidden="true" focusable="false" class="text-success">
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick"></use>
       </svg>
       <span class="visually-hidden">Yes</span>
     </td>
