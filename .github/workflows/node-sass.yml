@@ -2,7 +2,7 @@ name: CSS (node-sass)
 on:
   push:
     branches:
-      - main
+      - ouds/main
     paths:
       - 'scss/**'
   pull_request:

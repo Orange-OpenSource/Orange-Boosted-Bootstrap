@@ -108,7 +108,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - and probably maintain [a ship list (e.g. for v4.4.0)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/226)
 - [ ] Commit and push `dist` with a `chore(release)` commit message
 - [ ] Manually run BrowserStack test
-- [ ] Merge (on `v4-dev` or `main`)
+- [ ] Merge (on `ouds/main`)
 - [ ] Tag your version, and push your tag
 - [ ] Pack and publish
   - `npm pack`
