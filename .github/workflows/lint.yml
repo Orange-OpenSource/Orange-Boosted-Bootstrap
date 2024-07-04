@@ -2,7 +2,7 @@ name: Lint
 on:
   push:
     branches:
-      - main
+      - ouds/main
     paths:
       - 'js/**'
       - 'scss/**'

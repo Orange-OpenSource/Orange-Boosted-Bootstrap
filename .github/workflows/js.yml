@@ -2,7 +2,7 @@ name: JS Tests
 on:
   push:
     branches:
-      - main
+      - ouds/main
     paths:
       - 'js/**'
   pull_request:
