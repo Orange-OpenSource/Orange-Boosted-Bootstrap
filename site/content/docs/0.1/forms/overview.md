@@ -6,7 +6,7 @@ group: forms
 aliases:
   - "/forms/"
   - "/docs/forms/"
-  - "/docs/5.3/forms/"
+  - "/docs/0.1/forms/"
   - "/docs/forms/overview/"
 toc: true
 sections:

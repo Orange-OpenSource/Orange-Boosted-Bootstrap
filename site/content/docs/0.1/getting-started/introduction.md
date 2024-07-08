@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/getting-started/"
   - "/docs/getting-started/"
-  - "/docs/5.3/getting-started/"
+  - "/docs/0.1/getting-started/"
   - "/docs/getting-started/introduction/"
 toc: true
 ---

@@ -5,7 +5,7 @@ description: Boosted is supported by an extensive color system that themes our s
 group: customize
 aliases:
   - "/docs/customize/color/"
-  - "/docs/5.3/customize/color/"
+  - "/docs/0.1/customize/color/"
   - "/docs/customize/color-theme/"
 toc: true
 ---

@@ -6,7 +6,7 @@ group: helpers
 aliases:
   - "/helpers/"
   - "/docs/helpers/"
-  - "/docs/5.3/helpers/"
+  - "/docs/0.1/helpers/"
   - "/docs/helpers/clearfix/"
 ---
 

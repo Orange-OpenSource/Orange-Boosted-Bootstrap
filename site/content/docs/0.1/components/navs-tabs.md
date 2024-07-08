@@ -6,7 +6,7 @@ group: components
 aliases:
   - "/docs/components/navs/"
   - "/docs/components/navs-tabs/"
-  - "/docs/5.3/components/navs/"
+  - "/docs/0.1/components/navs/"
 toc: true
 ---
 
