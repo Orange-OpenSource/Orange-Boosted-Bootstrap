@@ -21,8 +21,8 @@
     <p class="pe-lg-5">
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
-    {{ highlight (printf ("npm install ouds-web@%s") .Site.Params.current_version) "sh" "" }}
-    {{ highlight (printf ("yarn add ouds-web@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("yarn add @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
     <p>
       <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>

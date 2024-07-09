@@ -24,7 +24,7 @@ $enable-shadows: true;
 $prefix: "mo-";
 
 // Then import OUDS Web
-@import "../node_modules/ouds-web/scss/ouds-web";
+@import "../node_modules/@ouds/web/scss/ouds-web";
 `) "scss" "" }}
     <p>Learn more about our <a href="/docs/{{ .Site.Params.docs_version }}/customize/options/">global Sass options</a>.</p>
   </div>
@@ -32,7 +32,7 @@ $prefix: "mo-";
     <h3>Include what you need</h3>
     <p>The easiest way to customize OUDS Web—include only the CSS you need.</p>
 {{ highlight (printf `// Functions first
-@import "../node_modules/ouds-web/scss/functions";
+@import "../node_modules/@ouds/web/scss/functions";
 
 // Variable overrides second
 $primary: #900;
@@ -40,19 +40,19 @@ $enable-shadows: true;
 $prefix: "mo-";
 
 // Required OUDS Web imports
-@import "../node_modules/ouds-web/scss/variables";
-@import "../node_modules/ouds-web/scss/variables-dark";
-@import "../node_modules/ouds-web/scss/maps";
-@import "../node_modules/ouds-web/scss/mixins";
-@import "../node_modules/ouds-web/scss/root";
+@import "../node_modules/@ouds/web/scss/variables";
+@import "../node_modules/@ouds/web/scss/variables-dark";
+@import "../node_modules/@ouds/web/scss/maps";
+@import "../node_modules/@ouds/web/scss/mixins";
+@import "../node_modules/@ouds/web/scss/root";
 
 // Optional components
-@import "../node_modules/ouds-web/scss/utilities";
-@import "../node_modules/ouds-web/scss/reboot";
-@import "../node_modules/ouds-web/scss/containers";
-@import "../node_modules/ouds-web/scss/grid";
-@import "../node_modules/ouds-web/scss/helpers";
-@import "../node_modules/ouds-web/scss/utilities/api";
+@import "../node_modules/@ouds/web/scss/utilities";
+@import "../node_modules/@ouds/web/scss/reboot";
+@import "../node_modules/@ouds/web/scss/containers";
+@import "../node_modules/@ouds/web/scss/grid";
+@import "../node_modules/@ouds/web/scss/helpers";
+@import "../node_modules/@ouds/web/scss/utilities/api";
 `) "scss" "" }}
     <p>Learn more about <a href="/docs/{{ .Site.Params.docs_version }}/customize/sass/">using OUDS Web with Sass</a>.</p>
   </div>

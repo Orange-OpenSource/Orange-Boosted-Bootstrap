@@ -81,7 +81,7 @@ openssl dgst -sha384 -binary ouds-web.min.js | openssl base64 -A
 Install OUDS Web in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/ouds-web):
 
 ```sh
-npm install ouds-web@{{< param "current_version" >}}
+npm install @ouds/web@{{< param "current_version" >}}
 ```
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of OUDS Web's plugins onto a `boosted` object.
@@ -101,7 +101,7 @@ OUDS Web's `package.json` contains some additional metadata under the following 
 Install OUDS Web in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/ouds-web):
 
 ```sh
-yarn add ouds-web@{{< param "current_version" >}}
+yarn add @ouds/web@{{< param "current_version" >}}
 ```
 
 ### Composer
