@@ -1,6 +1,6 @@
-# Contributing to Boosted
+# Contributing to OUDS Web
 
-Looking to contribute something to Boosted? **Here's how you can help.**
+Looking to contribute something to OUDS Web? **Here's how you can help.**
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -19,7 +19,7 @@ and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
 
 - Please **do not** use the issue tracker for personal support requests. Stack Overflow ([`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5) tag), [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions) or [IRC](/README.md#community) are better places to get help for things related to Bootstrap.
-  For Boosted specific personal support requests, please contact directly Boosted Core Team via Orange internal tools.
+  For OUDS Web specific personal support requests, please contact directly OUDS Web Core Team via Orange internal tools.
 
 - Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
@@ -39,7 +39,7 @@ Please keep in mind that the core team is small, has limited resources and that 
 Our bug tracker utilizes several labels to help organize and identify issues. Here's what they represent and how we use them:
 
 - `browser bug` - Issues that are reported to us, but actually are the result of a browser-specific bug. These are diagnosed with reduced test cases and result in an issue opened on that browser's own bug tracker.
-- `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in Boosted.
+- `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in OUDS Web.
 - `css` - Issues stemming from our compiled CSS or source Sass files.
 - `docs` - Issues for improving or updating our documentation.
 - `examples` - Issues involving the example templates included in our docs.
@@ -100,7 +100,7 @@ Example:
 
 ### Reporting upstream browser bugs
 
-Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Boosted per se.
+Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in OUDS Web per se.
 
 | Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                               | Notes                                                    |
 | ------------- | ---------------------------- | ---------------- | ------------------------------------------------------ | -------------------------------------------------------- |
@@ -140,11 +140,11 @@ any dist files (`dist/` or `js/dist`).** Those files are automatically generated
 source files in [`/ouds-web/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/ouds/main/scss)
 and/or [`/ouds-web/js/src/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/ouds/main/js/src) instead.
 
-Similarly, when contributing to Boosted's documentation, you should edit the
+Similarly, when contributing to OUDS Web's documentation, you should edit the
 documentation source files in
 [the `/ouds-web/site/content/docs/` directory of the `ouds/main` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/ouds/main/site/content/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
-documentation source files and is managed separately by the Boosted Core Team.
+documentation source files and is managed separately by the OUDS Web Core Team.
 
 Adhering to the following process is the best way to get your work
 included in the project:
@@ -236,6 +236,3 @@ Run `npm run test` before committing to ensure your changes follow our coding st
 
 By contributing your code, you agree to license your contribution under the [MIT License](../LICENSE).
 By contributing to the documentation, you agree to license your contribution under the [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).
-
-Prior to v3.1.0, Bootstrap's code was released under the Apache License v2.0.
-However there is no prior version to v3.1.0 for Boosted.

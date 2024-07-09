@@ -11,7 +11,7 @@ toc: true
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [links]({{< docsref "/content/typography#links" >}}) section and to the [Text links in body copy](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) guidelines on the Orange Design System website.
+Please refer to our OUDS Web [links]({{< docsref "/content/typography#links" >}}) section and to the [Text links in body copy](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) guidelines on the Orange Design System website.
 
 {{< /design-callout-alert >}}
 

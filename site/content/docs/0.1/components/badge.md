@@ -54,7 +54,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 {{< design-callout-alert >}}
 This component variant should be used **only** inside a header component.
 
-Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
+Please refer to our OUDS Web [Navbars]({{< docsref "/examples/navbars" >}}) examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -100,7 +100,7 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 {{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
 
-Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
+Instead, consider using our OUDS Web [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -114,7 +114,7 @@ Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). 
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, badges now use local CSS variables on `.badge` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, badges now use local CSS variables on `.badge` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="badge-css-vars" file="scss/_badge.scss" >}}
 

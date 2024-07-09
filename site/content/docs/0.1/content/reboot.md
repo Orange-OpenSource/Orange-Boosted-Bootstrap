@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Reboot
-description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Boosted to provide an elegant, consistent, and simple baseline to build upon.
+description: Reboot, a collection of element-specific CSS changes in a single file, kickstart OUDS Web to provide an elegant, consistent, and simple baseline to build upon.
 group: content
 aliases:
   - "/content/"
@@ -24,7 +24,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## CSS variables
 
-With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `ouds-web.css`, `ouds-web-reboot.css`, and `ouds-web-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Boosted 5 will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `ouds-web.css`, `ouds-web-reboot.css`, and `ouds-web-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately OUDS Web will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
 For example, consider these `:root` CSS variables for common `<body>` styles:
 
@@ -53,7 +53,7 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 
 ## Native font stack
 
-Boosted utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+OUDS Web utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 <!-- OUDS mod -->
 ```scss
@@ -76,7 +76,7 @@ $font-family-sans-serif:
 
 Note that because the font stack includes emoji fonts, many common symbol/dingbat Unicode characters will be rendered as multicolored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
 
-This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
+This `font-family` is applied to the `<body>` and automatically inherited globally throughout OUDS Web. To switch the global `font-family`, update `$font-family-base` and recompile OUDS Web.
 
 ## Headings
 
@@ -85,12 +85,12 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-
 {{< bs-table "table" >}}
 | Heading | Example |
 | --- | --- |
-| `<h1></h1>` | <span class="h1">h1. Boosted heading</span> |
-| `<h2></h2>` | <span class="h2">h2. Boosted heading</span> |
-| `<h3></h3>` | <span class="h3">h3. Boosted heading</span> |
-| `<h4></h4>` | <span class="h4">h4. Boosted heading</span> |
-| `<h5></h5>` | <span class="h5">h5. Boosted heading</span> |
-| `<h6></h6>` | <span class="h6">h6. Boosted heading</span> |
+| `<h1></h1>` | <span class="h1">h1. OUDS Web heading</span> |
+| `<h2></h2>` | <span class="h2">h2. OUDS Web heading</span> |
+| `<h3></h3>` | <span class="h3">h3. OUDS Web heading</span> |
+| `<h4></h4>` | <span class="h4">h4. OUDS Web heading</span> |
+| `<h5></h5>` | <span class="h5">h5. OUDS Web heading</span> |
+| `<h6></h6>` | <span class="h6">h6. OUDS Web heading</span> |
 {{< /bs-table >}}
 
 ## Paragraphs

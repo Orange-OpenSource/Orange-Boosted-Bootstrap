@@ -111,7 +111,7 @@ For more information, see the [ARIA Authoring Practices Guide breadcrumb pattern
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 

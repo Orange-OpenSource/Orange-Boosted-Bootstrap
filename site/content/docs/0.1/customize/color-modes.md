@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color modes
-description: Boosted now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
+description: OUDS Web now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
 aliases:
   - "/docs/customize/color-modes/"
@@ -14,7 +14,7 @@ toc: true
 
 ## Dark mode
 
-**Boosted now supports color modes, starting with dark mode!** With v5.3.3 you can implement your own color mode toggler (see below for an example from Boosted's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**OUDS Web now supports color modes, starting with dark mode!** With v5.3.3 you can implement your own color mode toggler (see below for an example from OUDS Web's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
 
 This `data-bs-theme` attribute will automatically apply the corresponding `color` and `background-color` properties of the targeted element.
 
@@ -47,7 +47,7 @@ Alternatively, you can also switch to a media query implementation thanks to our
 
 ### Contextual dark mode vs. dark variants
 
-Before v5.3.3, Boosted had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
+Before v5.3.3, OUDS Web had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
 
 ## Example
 
@@ -85,7 +85,7 @@ For example, to change the color mode of a dropdown, add `data-bs-theme="light"`
 
 ## How it works
 
-- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element, or to any other element or Boosted component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
+- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element, or to any other element or OUDS Web component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
 
 - For each color mode you wish to support, you'll need to add new overrides for the shared global CSS variables. We do this already in our `_root.scss` stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:
 
@@ -110,7 +110,7 @@ Enable the built in dark color mode across your entire project by adding the `da
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Boosted demo</title>
+    <title>OUDS Web demo</title>
     <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
   </head>
   <body>
@@ -120,14 +120,14 @@ Enable the built in dark color mode across your entire project by adding the `da
 </html>
 ```
 
-Boosted does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. [Learn more in the JavaScript section.](#javascript)
+OUDS Web does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. [Learn more in the JavaScript section.](#javascript)
 
 ### Building with Sass
 
-Our new dark mode option is available to use for all users of Boosted, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
+Our new dark mode option is available to use for all users of OUDS Web, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
 
 {{< callout warning >}}
-Please be aware that some of Boosted's components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Footer]({{< docsref "/components/footer" >}}).
+Please be aware that some of OUDS Web's components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Footer]({{< docsref "/components/footer" >}}).
 
 If you need to use them, you won't be able to disable the dark mode globally.
 {{< /callout >}}
@@ -182,7 +182,7 @@ Outputs to:
 
 ## Custom color modes
 
-While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own `data-bs-theme` selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate `_variables-dark.scss` stylesheet to house Boosted's dark mode specific Sass variables, but that's not required for you.
+While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own `data-bs-theme` selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate `_variables-dark.scss` stylesheet to house OUDS Web's dark mode specific Sass variables, but that's not required for you.
 
 For example, you can create a "blue theme" with the selector `data-bs-theme="blue"`. In your custom Sass or CSS file, add the new selector and override any global or component CSS variables as needed. If you're using Sass, you can also use Sass's functions within your CSS variable overrides.
 
@@ -235,7 +235,7 @@ Here's a look at the JavaScript that powers it. Feel free to inspect our own doc
 
 Adding a new color in `$theme-colors` is not enough for some of our components like [alerts]({{< docsref "/components/alerts" >}}) and [list groups]({{< docsref "/components/list-group" >}}). New colors must also be defined in `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` for light theme; but also in `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` for dark theme.
 
-This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Boosted, we'll revisit this setup to reduce the duplication.
+This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of OUDS Web, we'll revisit this setup to reduce the duplication.
 
 ```scss
 // Required
@@ -279,7 +279,7 @@ $theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-
 $theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
 $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
 
-// Remainder of Boosted imports
+// Remainder of OUDS Web imports
 @import "root";
 @import "reboot";
 // etc

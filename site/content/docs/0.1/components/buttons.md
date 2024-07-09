@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Buttons
-description: Use Boosted's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+description: Use OUDS Web's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 group: components
 aliases:
   - "/docs/components/buttons/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Base class
 
-Boosted has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, and lack any explicit focus and hover styles.
+OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, and lack any explicit focus and hover styles.
 
 {{< example >}}
 <button type="button" class="btn">Base class</button>
@@ -18,11 +18,11 @@ Boosted has a base `.btn` class that sets up basic styles such as padding and co
 
 The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
-<!-- OUDS mod: no warning callout about `:focus`/`:focus-visible` since Boosted provides a default visible focus for each focusable element -->
+<!-- OUDS mod: no warning callout about `:focus`/`:focus-visible` since OUDS Web provides a default visible focus for each focusable element -->
 
 ## Variants
 
-Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">Primary</button>
@@ -276,7 +276,7 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" like those in OUDS Web 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
@@ -325,7 +325,7 @@ The button plugin allows you to create simple on/off toggle buttons.
 {{< design-callout-alert >}}
 These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
 
-Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
+Instead, consider using our OUDS Web [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
 {{< /design-callout-alert >}}
 
 {{< callout info >}}
@@ -378,7 +378,7 @@ document.querySelectorAll('.btn').forEach(buttonElement => {
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 

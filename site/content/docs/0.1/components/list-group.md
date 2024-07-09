@@ -273,7 +273,7 @@ This variant should not be used because it does not respect the Orange Design Sy
 
 ## Checkboxes and radios
 
-Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+Place OUDS Web's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -342,7 +342,7 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 

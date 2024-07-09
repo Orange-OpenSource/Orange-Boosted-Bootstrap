@@ -1,20 +1,20 @@
 ---
 layout: docs
 title: CSS variables
-description: Use Boosted's CSS custom properties for fast and forward-looking design and development.
+description: Use OUDS Web's CSS custom properties for fast and forward-looking design and development.
 group: customize
 aliases:
   - "/docs/customize/css-variables/"
 toc: true
 ---
 
-Boosted includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
+OUDS Web includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
 
 **All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
 
 ## Root variables
 
-Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Boosted's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
+Here are the variables we include (note that the `:root` is required) that can be accessed anywhere OUDS Web's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
 
 ### Default
 
@@ -51,7 +51,7 @@ These variables are scoped to our built-in dark mode.
 
 ## Component variables
 
-Boosted 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of Boosted components after Sass compilation.
+OUDS Web is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of OUDS Web components after Sass compilation.
 
 Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}). Our [navbars also use CSS variables]({{< docsref "/components/navbar#css" >}}) as of v5.2.0. We're also using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]({{< docsref "/layout/css-grid" >}})—with more component usage coming in the future.
 
@@ -66,7 +66,7 @@ Customize the prefix via the `$prefix` Sass variable. By default, it's set to `b
 <!-- OUDS mod -->
 ## Deduping embedded SVGs
 
-Boosted uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#csps-and-embedded-svgs) in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output file size.
+OUDS Web uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#csps-and-embedded-svgs) in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output file size.
 
 ```css
 :root {
@@ -98,7 +98,7 @@ a {
 
 ## Focus variables
 
-Boosted provides custom `:focus` styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all `:focus` styles.
+OUDS Web provides custom `:focus` styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all `:focus` styles.
 
 In our Sass, we set default values that can be customized before compiling.
 

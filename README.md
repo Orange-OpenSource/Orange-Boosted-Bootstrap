@@ -1,9 +1,9 @@
-<h1 align="center">Boosted</h1>
+<h1 align="center">OUDS Web</h1>
 
 <p align="center">
-  Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/docs/"><strong>Visit Boosted</strong></a>
+  <a href="https://boosted.orange.com/"><strong>Visit OUDS Web</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
@@ -121,7 +121,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
+OUDS Web's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
 Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
@@ -152,11 +152,11 @@ Editor preferences are available in the [editor config](https://github.com/Orang
 
 ## Versioning
 
-For transparency into our release cycle and in striving to maintain backward compatibility, Boosted is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
+For transparency into our release cycle and in striving to maintain backward compatibility, OUDS Web is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
-See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of Boosted.
+See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of OUDS Web.
 
-Our default branch is for development of our Boosted 5 release. Head to the [`v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Boosted 4.
+Our default branch is for development of our OUDS Web release.
 
 
 ## Creators
@@ -191,5 +191,5 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 Code and documentation copyright 2011-2024 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-Boosted code and documentation copyright 2015-2024 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+OUDS Web code and documentation copyright 2015-2024 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

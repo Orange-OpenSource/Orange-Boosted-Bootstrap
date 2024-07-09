@@ -1,6 +1,6 @@
 ---
 title: Versions
-description: An appendix of hosted documentation for nearly every release of Boosted, from v3 through v5.
+description: An appendix of hosted documentation for nearly every release of OUDS Web.
 ---
 
 {{< list-versions.inline >}}

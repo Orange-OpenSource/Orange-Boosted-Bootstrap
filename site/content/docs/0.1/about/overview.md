@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: About
-description: Boosted is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud Boosted maintainers and contributors.
+description: OUDS Web is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud OUDS Web maintainers and contributors.
 group: about
 aliases:
   - "/about/"
@@ -10,19 +10,19 @@ aliases:
   - "/docs/about/overview/"
 ---
 
-## Boosted history
+## OUDS Web history
 
-"Orange Boosted with Bootstrap" (aka Boosted) is an Orange-branded version of Bootstrap framework.
+OUDS Web is an Orange-branded version of Bootstrap framework.
 
-In addition to the Orange brand recommendations compliance, **Boosted aims at bringing accessibility improvements** as well as some Orange-specific components and user interactions while complying with the framework standards. The components and samples included in Boosted are regularly enhanced with real-life projects feedbacks and components.
+In addition to the Orange brand recommendations compliance, **OUDS Web aims at bringing accessibility improvements** as well as some Orange-specific components and user interactions while complying with the framework standards. The components and samples included in OUDS Web are regularly enhanced with real-life projects feedbacks and components.
 
 Using a common core leverages **a unique brand experience** for our customers in all their interactions.
 
-Boosted can be used for all **responsive web projects** for Orange group —&nbsp;but other developers may also take advantage of the proposed accessibility improvements and additional components.
+OUDS Web can be used for all **responsive web projects** for Orange group —&nbsp;but other developers may also take advantage of the proposed accessibility improvements and additional components.
 
 ### Custom components
 
-Boosted ships with custom accessible components to suit specific needs:
+OUDS Web ships with custom accessible components to suit specific needs:
 
 - [Back to top]({{< docsref "/components/back-to-top" >}})
 - [Footer]({{< docsref "/components/footer" >}})

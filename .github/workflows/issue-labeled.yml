@@ -23,4 +23,4 @@ jobs:
           actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
-            Hello @${{ github.event.issue.user.login }}. Bug reports must include a **live demo** of the issue. Per our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md), please create a reduced test case on [CodePen](https://codepen.io/) or [StackBlitz](https://stackblitz.com/) and report back with your link, Boosted version, and specific browser and Operating System details.
+            Hello @${{ github.event.issue.user.login }}. Bug reports must include a **live demo** of the issue. Per our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/.github/CONTRIBUTING.md), please create a reduced test case on [CodePen](https://codepen.io/) or [StackBlitz](https://stackblitz.com/) and report back with your link, OUDS Web version, and specific browser and Operating System details.

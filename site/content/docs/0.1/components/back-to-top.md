@@ -10,7 +10,7 @@ toc: true
 
 ## Overview
 
-Boosted "back to top" provides a way to get back to the top of the page using a simple link. It's built only with HTML and CSS, meaning you don't need any JavaScript. It only requires a `.back-to-top` wrapper and a `.back-to-top-link`, at the end of your `body`— just before your scripts.
+OUDS Web "back to top" provides a way to get back to the top of the page using a simple link. It's built only with HTML and CSS, meaning you don't need any JavaScript. It only requires a `.back-to-top` wrapper and a `.back-to-top-link`, at the end of your `body`— just before your scripts.
 
 For accessibility purposes, back-to-top link contains a `.visually-hidden` text content and a `data-bs-label` attribute— whose **value should match hidden text content** to make sure it's usable with speech recognition software. The `data-bs-label` attribute content is displayed in a `::before` pseudo-element thanks to the `attr()` CSS function.
 
@@ -86,7 +86,7 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, Back to tops now use local CSS variables on `.back-to-top` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, Back to tops now use local CSS variables on `.back-to-top` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="back-to-top-css-vars" file="scss/_back-to-top.scss" >}}
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color palette
-description: Boosted's color palette is the summary of all the existing and useable colors.
+description: OUDS Web's color palette is the summary of all the existing and useable colors.
 group: customize
 aliases:
   - "/docs/customize/color-palette/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Palette
 
-This section exposes all the existing colors inside the Boosted palette. These variables aren't meant to be used, it's an exposure of the available variables. Be aware that none of the variables presented depend on the theme.
+This section exposes all the existing colors inside the OUDS Web palette. These variables aren't meant to be used, it's an exposure of the available variables. Be aware that none of the variables presented depend on the theme.
 
 Please make sure that none of the [color theme variables]({{< docsref "/customize/color-theme" >}}) fit your needs before getting one here.
 
@@ -40,7 +40,7 @@ Please make sure that none of the [color theme variables]({{< docsref "/customiz
 
 ## Bootstrap's palette
 
-Bootstrap defines a color palette on its own. We worked on a mapping between Orange Design System's colors and Bootstrap's ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with Boosted CSS, provides an acceptable automatic rendering.
+Bootstrap defines a color palette on its own. We worked on a mapping between Orange Design System's colors and Bootstrap's ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with OUDS Web CSS, provides an acceptable automatic rendering.
 
 <details>
 <summary>See Bootstrap's palette</summary>
@@ -50,13 +50,13 @@ Bootstrap defines a color palette on its own. We worked on a mapping between Ora
 {{< design-callout-alert >}}
 Some of the colors below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [color palette](#palette) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our OUDS Web [color palette](#palette) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout warning >}}
-All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#palette).
+All OUDS Web colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#palette).
 
-Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
+Please note that in the OUDS Web colors, the indigo colors are the same as the purple ones.
 {{< /callout >}}
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
@@ -104,8 +104,8 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 
 Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves.
 
-- For `$indigo`, `$purple`, `$pink`, `$teal`, and `$cyan`, we specify first 6 colors (`*-100` to `*-600`) from the Boosted palette (tokens) and build the last ones programmatically to darken our `*-600`.
-- For the grays, the first 2 (`$gray-100` and `$gray-200`) are opinionated values and only the last 8 (`*-300` to `*-950`) are extracted from the Boosted palette.
+- For `$indigo`, `$purple`, `$pink`, `$teal`, and `$cyan`, we specify first 6 colors (`*-100` to `*-600`) from the OUDS Web palette (tokens) and build the last ones programmatically to darken our `*-600`.
+- For the grays, the first 2 (`$gray-100` and `$gray-200`) are opinionated values and only the last 8 (`*-300` to `*-950`) are extracted from the OUDS Web palette.
 - For the remaining, only the `*-500` are correct since we specify the midpoint value and use custom color functions to tint (lighten) or shade (darken) our colors vis Sass's `mix()` color function.
 
 Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
@@ -129,12 +129,12 @@ Here's how you can use these in your Sass:
 
 ## CSS
 
-Boosted sets an additional layer to use Orange Design System's color tokens names—defined first and mapped to Bootstrap core variables.
-Boosted core uses Bootstrap's naming for maintenance ease, but you're encouraged to use Orange color tokens when it comes to custom code.
+OUDS Web sets an additional layer to use Orange Design System's color tokens names—defined first and mapped to Bootstrap core variables.
+OUDS Web core uses Bootstrap's naming for maintenance ease, but you're encouraged to use Orange color tokens when it comes to custom code.
 
 ### Sass variables
 
-A first layer of Sass variables defines the Boosted's color palette.
+A first layer of Sass variables defines the OUDS Web's color palette.
 
 {{< scss-docs name="palette" file="scss/_color-palette.scss" >}}
 
@@ -142,7 +142,7 @@ A second layer of Sass variables defines our functional and supporting colors us
 
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 
-Because Boosted relies on Bootstrap's specific tokens system, we need to map the Boosted's color tokens to the Bootstrap's ones.
+Because OUDS Web relies on Bootstrap's specific tokens system, we need to map the OUDS Web's color tokens to the Bootstrap's ones.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
@@ -150,7 +150,7 @@ Because Boosted relies on Bootstrap's specific tokens system, we need to map the
 
 ### Sass maps
 
-Boosted's source Sass files include maps to help you quickly and easily loop over a list of colors and their hex values.
+OUDS Web's source Sass files include maps to help you quickly and easily loop over a list of colors and their hex values.
 
 - `$colors` lists all our available base colors
 - `$theme-colors` lists all [semantically named light theme colors]({{< docsref "/customize/color-theme" >}})
@@ -160,7 +160,7 @@ Boosted's source Sass files include maps to help you quickly and easily loop ove
 - `$utilities-border` overrides `$theme-colors` specifically used to define `.border-*` utilities
 - `$grays`, `$blues`, `$indigos`, `$purples`, `$pinks`, `$reds`, `$oranges`, `$yellows`, `$greens`, `$teals`, and `$cyans` list all tints and shades of our colors
 
-Within `scss/_variables.scss` or `scss/_maps.scss`, you'll find Boosted's color variables and Sass maps. Here's an example of the `$colors` Sass map:
+Within `scss/_variables.scss` or `scss/_maps.scss`, you'll find OUDS Web's color variables and Sass maps. Here's an example of the `$colors` Sass map:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
@@ -168,7 +168,7 @@ Add, remove, or modify values within the map to update how they're used in many 
 
 ## Generating utilities
 
-Boosted doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
+OUDS Web doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
 
 1. To start, make sure you've imported our functions, variables, mixins, and utilities.
 2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.

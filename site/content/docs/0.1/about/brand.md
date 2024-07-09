@@ -9,10 +9,10 @@ toc: true
 ---
 
 {{< callout info >}}
-Boosted is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/brand/).
+OUDS Web is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/brand/).
 {{</ callout >}}
 
-Have a need for Boosted's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA on the [Orange Design System website]({{< param ods.web >}}).
+Have a need for OUDS Web's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA on the [Orange Design System website]({{< param ods.web >}}).
 
 ## Orange logo
 
@@ -37,7 +37,7 @@ Have a need for Boosted's brand resources? Great! We have only a few guidelines 
 
 ### Responsive SVG
 
-Boosted uses —and recommends to use— **a single SVG file for both logos**, since it's lightweight and easily made responsive. Here is the unminified SVG content:
+OUDS Web uses —and recommends to use— **a single SVG file for both logos**, since it's lightweight and easily made responsive. Here is the unminified SVG content:
 
 {{< svg-docs >}}
 

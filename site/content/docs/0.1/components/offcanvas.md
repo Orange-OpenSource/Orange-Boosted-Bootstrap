@@ -37,7 +37,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body">
-    Content for the offcanvas goes here. You can place just about any Boosted component or custom elements here.
+    Content for the offcanvas goes here. You can place just about any OUDS Web component or custom elements here.
   </div>
 </div>
 {{< /example >}}
@@ -332,7 +332,7 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 
 ### Events
 
-Boosted's offcanvas class exposes a few events for hooking into offcanvas functionality.
+OUDS Web's offcanvas class exposes a few events for hooking into offcanvas functionality.
 
 {{< bs-table "table" >}}
 | Event type | Description |

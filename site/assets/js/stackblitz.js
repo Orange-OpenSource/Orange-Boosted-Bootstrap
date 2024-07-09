@@ -28,11 +28,11 @@ document.querySelectorAll('.btn-edit').forEach(btn => {
     // Get extra classes for this example
     const classes = Array.from(exampleEl.classList).join(' ')
 
-    openBoostedSnippet(htmlSnippet, jsSnippet, classes)
+    openOUDSWebSnippet(htmlSnippet, jsSnippet, classes)
   })
 })
 
-const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
+const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes) => {
   const indexHtml = `<!doctype html>
 <html lang="en">
 <head>
@@ -40,7 +40,7 @@ const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="${cssCdn}" rel="stylesheet">
   <link href="https://boosted.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
-  <title>Boosted Example</title>
+  <title>OUDS Web Example</title>
   <${'script'} defer src="${jsBundleCdn}"></${'script'}>
 </head>
 <body class="p-3 m-0 border-0 ${classes}">
@@ -56,10 +56,10 @@ ${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').trimEnd
       'index.html': indexHtml,
       ...(jsSnippet && { 'index.js': jsSnippetFile })
     },
-    title: 'Boosted Example',
+    title: 'OUDS Web Example',
     description: `Official example from ${window.location.href}`,
     template: jsSnippet ? 'javascript' : 'html',
-    tags: ['boosted']
+    tags: ['ouds-web']
   }
 
   sdk.openProject(project, { openFile: 'index.html' })

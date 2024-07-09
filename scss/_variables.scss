@@ -467,7 +467,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // Spacing
 //
-// Control the default styling of most Boosted elements by modifying these
+// Control the default styling of most OUDS Web elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
@@ -963,7 +963,7 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 
 // Buttons
 //
-// For each of Boosted's buttons, define text, background, and border color.
+// For each of OUDS Web's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
 $btn-color:                   var(--#{$prefix}body-color) !default;

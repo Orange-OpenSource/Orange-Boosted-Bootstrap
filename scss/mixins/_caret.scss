@@ -31,7 +31,7 @@
   $width: $caret-width,
   $spacing: $caret-spacing,
   $vertical-align: $caret-vertical-align,
-  $accordion: false // OUDS mod: $accordion param only there in Boosted
+  $accordion: false // OUDS mod: $accordion param only there in OUDS Web
 ) {
   @if $enable-caret {
     &::after {

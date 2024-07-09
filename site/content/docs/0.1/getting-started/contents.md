@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Contents
-description: Discover what's included in Boosted, including our compiled and source code flavors.
+description: Discover what's included in OUDS Web, including our compiled and source code flavors.
 group: getting-started
 aliases:
   - "/docs/getting-started/contents/"
 toc: true
 ---
 
-## Compiled Boosted
+## Compiled OUDS Web
 
 Once downloaded, unzip the compressed folder and you'll see something like this:
 
@@ -64,11 +64,11 @@ ouds-web/
     └── ouds-web.min.js.map
 ```
 
-This is the most basic form of Boosted: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
+This is the most basic form of OUDS Web: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
 ### CSS files
 
-Boosted includes a handful of options for including some or all of our compiled CSS.
+OUDS Web includes a handful of options for including some or all of our compiled CSS.
 
 {{< bs-table "table" >}}
 | CSS files | Layout | Content | Components | Utilities |
@@ -90,9 +90,9 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 | `ouds-web.js`<br> `ouds-web.min.js`<br> | Included | – |
 {{< /bs-table >}}
 
-## Boosted source code
+## OUDS Web source code
 
-The Boosted source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+The OUDS Web source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
 ouds-web/
@@ -109,4 +109,4 @@ ouds-web/
 └── scss/
 ```
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the compiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Boosted usage. Beyond that, any other included file provides support for packages, license information, and development.
+The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the compiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of OUDS Web usage. Beyond that, any other included file provides support for packages, license information, and development.

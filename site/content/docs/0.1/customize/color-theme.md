@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color theme
-description: Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+description: OUDS Web is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
 aliases:
   - "/docs/customize/color/"
@@ -12,7 +12,7 @@ toc: true
 
 ## Theming
 
-We use a subset of [the full color palette]({{< docsref "/customize/color-palette" >}}) to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
+We use a subset of [the full color palette]({{< docsref "/customize/color-palette" >}}) to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in OUDS Web's `scss/_variables.scss` file.
 
 This smaller color palette is used to generate our components variants and our color-related utilities and helpers.
 
@@ -42,7 +42,7 @@ The corresponding values displayed in these sections are used within the framewo
 
 ### Core
 
-The Boosted core colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
+The OUDS Web core colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
@@ -66,7 +66,7 @@ The Boosted core colors should always dominate other colors inside a page. They 
 
 ### Functional
 
-The Boosted functional colors are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error) and should be used in combination with a meaningful icon.
+The OUDS Web functional colors are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error) and should be used in combination with a meaningful icon.
 
 Please note that the functional colors are not meant to be used as backgrounds or colors.
 
@@ -98,7 +98,7 @@ Please note that the functional colors are not meant to be used as backgrounds o
 
 ### Grays
 
-The Boosted grays are used as backgrounds, colors or borders to highlight some elements or actions (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
+The OUDS Web grays are used as backgrounds, colors or borders to highlight some elements or actions (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
@@ -123,7 +123,7 @@ The Boosted grays are used as backgrounds, colors or borders to highlight some e
 
 ### Supporting
 
-The Boosted supporting colors are meant for backgrounds, data display or illustrations. As you may have noticed, they don't change their color depending on the theme. They should not dominate the page.
+The OUDS Web supporting colors are meant for backgrounds, data display or illustrations. As you may have noticed, they don't change their color depending on the theme. They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
@@ -207,7 +207,7 @@ Please note that only the functional colors are meant to be used directly in a p
 
 Some more contextual CSS variables are provided to create high-level semantic variables for your project that are linked to reusable basic concepts such as disabled, hover, focus, active, etc.
 
-**They are meant to be used directly in a project** and will ease its maintenance, especially after a Boosted update.
+**They are meant to be used directly in a project** and will ease its maintenance, especially after a OUDS Web update.
 
 <div class="table-responsive mb-4">
   <table class="table table-swatches">
@@ -620,7 +620,7 @@ Some more contextual CSS variables are provided to create high-level semantic va
 
 ### Sass variables
 
-#### Boosted variables
+#### OUDS Web variables
 
 Our functional and supporting colors are defined for light and dark modes.
 
@@ -635,7 +635,7 @@ Our functional and supporting colors are defined for light and dark modes.
 
 #### Bootstrap variables
 
-Our Boosted variables are mapped to Bootstrap's basic color variables.
+Our OUDS Web variables are mapped to Bootstrap's basic color variables.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 

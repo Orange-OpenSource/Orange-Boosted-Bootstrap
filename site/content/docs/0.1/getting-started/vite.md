@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Boosted and Vite
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
+title: OUDS Web and Vite
+description: The official guide for how to include and bundle OUDS Web's CSS and JavaScript in your project using Vite.
 group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
@@ -18,14 +18,14 @@ thumbnail: guides/vite-dev-server-ouds-web.png
 {{< /callout >}}
 
 {{< callout warning >}}
-**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+**To get a working OUDS Web demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
 
-You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
+You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import OUDS Web](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
 
-We're building a Vite project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Vite project with OUDS Web from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -40,19 +40,19 @@ We're building a Vite project with Boosted from scratch, so there are some prere
    npm i --save-dev vite
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install OUDS Web.** Now we can install OUDS Web. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
    npm i --save boosted @popperjs/core
    ```
 
-4. **Install additional dependency.** In addition to Vite and Boosted, we need another dependency (Sass) to properly import and bundle Boosted's CSS.
+4. **Install additional dependency.** In addition to Vite and OUDS Web, we need another dependency (Sass) to properly import and bundle OUDS Web's CSS.
 
    ```sh
    npm i --save-dev sass
    ```
 
-Now that we have all the necessary dependencies installed and set up, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed and set up, we can get to work creating the project files and importing OUDS Web.
 
 ## Project structure
 
@@ -109,19 +109,19 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Vite</title>
+       <title>OUDS Web w/ Vite</title>
        <script type="module" src="./js/main.js"></script>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Vite!</h1>
+         <h1>Hello, OUDS Web and Vite!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
      </body>
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Vite.
+   We're including a little bit of OUDS Web styling here with the `div class="container"` and `<button>` so that we see when OUDS Web's CSS is loaded by Vite.
 
 3. **Now we need an npm script to run Vite.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Vite dev server.
 
@@ -144,27 +144,27 @@ With dependencies installed and our project folder ready for us to start coding,
 
    ![Vite dev server running](/assets/img/guides/vite-dev-server.png)
 
-In the next and final section to this guide, we’ll import all of Boosted’s CSS and JavaScript.
+In the next and final section to this guide, we’ll import all of OUDS Web’s CSS and JavaScript.
 
-## Import Boosted
+## Import OUDS Web
 
-1. **Let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Let's import OUDS Web's CSS.** Add the following to `src/scss/styles.scss` to import all of OUDS Web's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
+   // Import all of OUDS Web's CSS
    @import "ouds-web/scss/ouds-web";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-2. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+2. **Next we load the CSS and import OUDS Web's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of OUDS Web's JS. Popper will be imported automatically through OUDS Web.
 
    <!-- eslint-skip -->
    ```js
    // Import our custom CSS
    import '../scss/styles.scss'
 
-   // Import all of Boosted's JS
+   // Import all of OUDS Web's JS
    import * as boosted from 'ouds-web'
    ```
 
@@ -178,13 +178,13 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
    import { Tooltip, Toast, Popover } from 'ouds-web';
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use OUDS Web's plugins.*
 
-3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
+3. **And you're done! 🎉** With OUDS Web's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Vite dev server running with Boosted](/assets/img/guides/vite-dev-server-ouds-web.png)
+   ![Vite dev server running with OUDS Web](/assets/img/guides/vite-dev-server-ouds-web.png)
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any OUDS Web components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of OUDS Web's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

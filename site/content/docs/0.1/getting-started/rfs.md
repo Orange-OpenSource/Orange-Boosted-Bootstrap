@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: RFS
-description: Boosted's resizing engine responsively scales common CSS properties to better utilize available space across viewports and devices.
+description: OUDS Web's resizing engine responsively scales common CSS properties to better utilize available space across viewports and devices.
 group: getting-started
 aliases:
   - "/docs/getting-started/rfs/"
@@ -16,7 +16,7 @@ The mechanism automatically calculates the appropriate values based on the dimen
 
 ## Using RFS
 
-The mixins are included in Boosted and are available once you include Boosted's `scss`. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}#installation) if needed.
+The mixins are included in OUDS Web and are available once you include OUDS Web's `scss`. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}#installation) if needed.
 
 ### Using the mixins
 
@@ -63,7 +63,7 @@ When you don't want to use the includes, there are also two functions:
 - `rfs-value()` converts a value into a `rem` value if a `px` value is passed, in other cases it returns the same result.
 - `rfs-fluid-value()` returns the fluid version of a value if the property needs rescaling.
 
-In this example, we use one of Boosted's built-in [responsive breakpoint mixins]({{< docsref "/layout/breakpoints" >}}) to only apply styling below the `lg` breakpoint.
+In this example, we use one of OUDS Web's built-in [responsive breakpoint mixins]({{< docsref "/layout/breakpoints" >}}) to only apply styling below the `lg` breakpoint.
 
 ```scss
 .selector {

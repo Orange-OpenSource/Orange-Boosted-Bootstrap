@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Contribute
-description: Help develop Boosted with our documentation build scripts and tests.
+description: Help develop OUDS Web with our documentation build scripts and tests.
 group: getting-started
 toc: true
 aliases:
@@ -12,12 +12,12 @@ aliases:
 
 ## Tooling setup
 
-Boosted uses [npm scripts](https://docs.npmjs.com/misc/scripts/) to build the documentation and compile source files. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) houses these scripts for compiling code, running tests, and more. These aren't intended for use outside our repository and documentation.
+OUDS Web uses [npm scripts](https://docs.npmjs.com/misc/scripts/) to build the documentation and compile source files. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) houses these scripts for compiling code, running tests, and more. These aren't intended for use outside our repository and documentation.
 
-To use our build system and run our documentation locally, you'll need a copy of Boosted's source files and Node. Follow these steps and you should be ready to rock:
+To use our build system and run our documentation locally, you'll need a copy of OUDS Web's source files and Node. Follow these steps and you should be ready to rock:
 
 1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Boosted's sources]({{< param "download.source" >}}) or fork and clone [Boosted's repository]({{< param repo >}}).
+2. Either [download OUDS Web's sources]({{< param "download.source" >}}) or fork and clone [OUDS Web's repository]({{< param repo >}}).
 3. Navigate to the root `/Orange-Boosted-Bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
 
 When completed, you'll be able to run the various commands provided from the command line.
@@ -41,19 +41,19 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 
 ## Sass
 
-Boosted uses [Dart Sass](https://sass-lang.com/dart-sass/) for compiling our Sass source files into CSS files (included in our build process), and we recommend you do the same if you're compiling Sass using your own asset pipeline. We previously used Node Sass for Boosted v4, but LibSass and packages built on top of it, including Node Sass, are now [deprecated](https://sass-lang.com/blog/libsass-is-deprecated/).
+OUDS Web uses [Dart Sass](https://sass-lang.com/dart-sass/) for compiling our Sass source files into CSS files (included in our build process), and we recommend you do the same if you're compiling Sass using your own asset pipeline. We previously used Node Sass for OUDS Web v4, but LibSass and packages built on top of it, including Node Sass, are now [deprecated](https://sass-lang.com/blog/libsass-is-deprecated/).
 
 Dart Sass uses a rounding precision of 10 and for efficiency reasons does not allow adjustment of this value. We don't lower this precision during further processing of our generated CSS, such as during minification, but if you chose to do so we recommend maintaining a precision of at least 6 to prevent issues with browser rounding.
 
 ## Autoprefixer
 
-Boosted uses [Autoprefixer](https://github.com/postcss/autoprefixer) (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
+OUDS Web uses [Autoprefixer](https://github.com/postcss/autoprefixer) (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
 
 We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) for details.
 
 ## RTLCSS
 
-Boosted uses [RTLCSS](https://rtlcss.com/) to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (e.g. `padding-left`) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS [control](https://rtlcss.com/learn/usage-guide/control-directives/) and [value](https://rtlcss.com/learn/usage-guide/value-directives/) directives.
+OUDS Web uses [RTLCSS](https://rtlcss.com/) to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (e.g. `padding-left`) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS [control](https://rtlcss.com/learn/usage-guide/control-directives/) and [value](https://rtlcss.com/learn/usage-guide/value-directives/) directives.
 
 ## Local documentation
 

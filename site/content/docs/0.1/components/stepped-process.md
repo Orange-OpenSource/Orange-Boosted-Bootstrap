@@ -53,7 +53,7 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, stepped processes now use local CSS variables on `.stepped-process` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, stepped processes now use local CSS variables on `.stepped-process` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="stepped-process-css-vars" file="scss/_stepped-process.scss" >}}
 

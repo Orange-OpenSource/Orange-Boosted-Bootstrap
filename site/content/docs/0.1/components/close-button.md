@@ -31,7 +31,7 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 ## Eco-design variant
 
 {{< callout info >}}
-For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file if you are an advanced Boosted user using **custom Sass imports**.
+For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file if you are an advanced OUDS Web user using **custom Sass imports**.
 
 If you choose this option, please be aware that if the design of close buttons change in the future, this section might disappear and you would have to use `.btn-close` to your close buttons or change the combinations of classes.
 {{< /callout >}}
@@ -64,7 +64,7 @@ If you choose this option, please be aware that if the design of close buttons c
 
 ### Variables
 
-As part of Boosted’s evolving CSS variables approach, close button now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, close button now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 

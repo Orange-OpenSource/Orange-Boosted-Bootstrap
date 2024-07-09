@@ -80,7 +80,7 @@ The `data-bs-round` attribute will help you to define the number of digits to ap
 
 ### Events
 
-Boosted's quantity selector form component exposes the classic `change` event when the value of an input has been changed.
+OUDS Web's quantity selector form component exposes the classic `change` event when the value of an input has been changed.
 
 <table class="table">
   <thead>

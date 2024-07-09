@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: RTL
-description: Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.
+description: Learn how to enable support for right-to-left text in OUDS Web across our layout, components, and utilities.
 group: getting-started
 aliases:
   - "/docs/getting-started/rtl/"
@@ -10,17 +10,17 @@ toc: true
 
 ## Get familiar
 
-We recommend getting familiar with Boosted first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
+We recommend getting familiar with OUDS Web first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
 
 You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
 
 {{< callout warning >}}
-**Boosted's RTL feature is still experimental** and will evolve based on user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new/choose), we'd love to get your insights.
+**OUDS Web's RTL feature is still experimental** and will evolve based on user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new/choose), we'd love to get your insights.
 {{< /callout >}}
 
 ## Required HTML
 
-There are two strict requirements for enabling RTL in Boosted-powered pages.
+There are two strict requirements for enabling RTL in OUDS Web-powered pages.
 
 1. Set `dir="rtl"` on the `<html>` element.
 2. Add an appropriate `lang` attribute, like `lang="ar"`, on the `<html>` element.
@@ -46,7 +46,7 @@ You can see the above requirements reflected in this modified RTL starter templa
     <!-- Preconnect to CDN: remove if not needed -->
     <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
 
-    <!-- Boosted CSS -->
+    <!-- OUDS Web CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 
     <title>مرحبًا بالعالم!</title>
@@ -56,10 +56,10 @@ You can see the above requirements reflected in this modified RTL starter templa
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Boosted Bundle with Popper -->
+    <!-- Option 1: OUDS Web Bundle with Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Boosted JS -->
+    <!-- Option 2: Separate Popper and OUDS Web JS -->
     <!--
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
@@ -74,7 +74,7 @@ Get started with one of our [RTL examples]({{< docsref "/examples/#rtl" >}}).
 
 ## Approach
 
-Our approach to building RTL support into Boosted comes with two important decisions that impact how we write and use our CSS:
+Our approach to building RTL support into OUDS Web comes with two important decisions that impact how we write and use our CSS:
 
 1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.
 
@@ -140,9 +140,9 @@ $font-family-sans-serif:
 ```
 
 {{< callout warning >}}
-#### Boosted RTL assumes Arabic content
+#### OUDS Web RTL assumes Arabic content
 
-Helvetica Neue Arabic is used as default font in Boosted RTL: if you need our RTL files for a non-arabic content, you'll need to override the `font-family` and ensure to include a more appropriate font.
+Helvetica Neue Arabic is used as default font in OUDS Web RTL: if you need our RTL files for a non-arabic content, you'll need to override the `font-family` and ensure to include a more appropriate font.
 {{< /callout >}}
 
 ### LTR and RTL at the same time

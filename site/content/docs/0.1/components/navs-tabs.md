@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navs and tabs
-description: Documentation and examples for how to use Boosted's included navigation components.
+description: Documentation and examples for how to use OUDS Web's included navigation components.
 group: components
 aliases:
   - "/docs/components/navs/"
@@ -12,7 +12,7 @@ toc: true
 
 ## Base nav
 
-Navigation available in Boosted share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+Navigation available in OUDS Web share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
@@ -404,7 +404,7 @@ This variant should not be used because it is a button component in the Orange D
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 On the `.nav` base class:
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Footer
-description: Documentation and examples for a powerful and responsive Boosted's footer. It includes support for branding, navigation and more.
+description: Documentation and examples for a powerful and responsive OUDS Web's footer. It includes support for branding, navigation and more.
 group: components
 aliases:
   - "/docs/components/footer/"
@@ -134,7 +134,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 
 ### Variables
 
-As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="footer-css-vars" file="scss/_footer.scss" >}}
 

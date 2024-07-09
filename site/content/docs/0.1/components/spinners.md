@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Spinners
-description: Indicate the loading state of a component or page with Boosted spinners, built entirely with HTML, CSS, and no JavaScript.
+description: Indicate the loading state of a component or page with OUDS Web spinners, built entirely with HTML, CSS, and no JavaScript.
 group: components
 aliases:
   - "/docs/components/spinners/"
@@ -16,7 +16,7 @@ This component contains some spinners that should not be used on Orange sites.
 
 ## About
 
-Boosted "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
+OUDS Web "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
 
 For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
 
@@ -78,7 +78,7 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 
 ## Alignment
 
-Spinners in Boosted are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
+Spinners in OUDS Web are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
 
 ### Margin
 
@@ -182,7 +182,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 Border spinner variables:
 

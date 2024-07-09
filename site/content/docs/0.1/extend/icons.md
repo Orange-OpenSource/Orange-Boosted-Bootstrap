@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Icons
-description: Guidance and suggestions for using Solaris icons library with Boosted.
+description: Guidance and suggestions for using Solaris icons library with OUDS Web.
 group: extend
 aliases:
   - "/docs/extend/icons/"
 toc: true
 ---
 
-While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+While OUDS Web doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
 [Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange Design System design team](https://system.design.orange.com/).
 It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development.
@@ -107,7 +107,7 @@ To speed up loading, the sprite file can be preloaded in the `<head>` of the pag
 ```
 
 ### Web font
-Web font is not the preferred solution. Since it's not used in Boosted, it won't be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of an SVG sprite.
+Web font is not the preferred solution. Since it's not used in OUDS Web, it won't be documented here. However, for websites needing more than 20 icons, you may consider using a Web font instead of an SVG sprite.
 
 Using the [Solaris icons finder]({{< param icons >}}), you can generate a Web font containing all your icons and use it like a classic font.
 Web font icons can be styled through CSS properties like `font-size` and `color`.
