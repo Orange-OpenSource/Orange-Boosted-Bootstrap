@@ -30,7 +30,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.1.0-ouds.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.1.0`
 - Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.1.0`

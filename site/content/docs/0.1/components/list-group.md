@@ -165,7 +165,7 @@ This variant is just an **example illustrating the use of the layout utility**. 
 ## Variants
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
+**Heads up!** The `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 <!-- OUDS mod: Add situational icons instead of changing the bg-color -->

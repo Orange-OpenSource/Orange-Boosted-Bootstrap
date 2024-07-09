@@ -19,7 +19,7 @@ OUDS Web also adds a dedicated icon for each contextual class using `.alert-icon
 - danger.
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
+**Heads up!** The `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 {{< example >}}

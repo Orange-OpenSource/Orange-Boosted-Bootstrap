@@ -336,7 +336,7 @@ Mix and match with other components and utilities as needed.
 ## Color schemes
 
 {{< callout warning >}}
-**New dark navbars in v5.3.3 —** We've deprecated `.navbar-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.navbar` to enable a component-specific color mode. [Learn more about our color modes.]({{< docsref "/customize/color-modes" >}})
+**New dark navbars —** We've deprecated `.navbar-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.navbar` to enable a component-specific color mode. [Learn more about our color modes.]({{< docsref "/customize/color-modes" >}})
 
 ---
 

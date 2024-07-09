@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color modes
-description: OUDS Web now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
+description: OUDS Web supports color modes, or themes. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
 aliases:
   - "/docs/customize/color-modes/"
@@ -14,7 +14,7 @@ toc: true
 
 ## Dark mode
 
-**OUDS Web now supports color modes, starting with dark mode!** With v5.3.3 you can implement your own color mode toggler (see below for an example from OUDS Web's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**OUDS Web now supports color modes, starting with dark mode!** You can implement your own color mode toggler (see below for an example from OUDS Web's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
 
 This `data-bs-theme` attribute will automatically apply the corresponding `color` and `background-color` properties of the targeted element.
 
@@ -47,7 +47,7 @@ Alternatively, you can also switch to a media query implementation thanks to our
 
 ### Contextual dark mode vs. dark variants
 
-Before v5.3.3, OUDS Web had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
+Before v0.1.0, OUDS Web had dark variants for some components by applying `.{component}-dark` classes. These classes don't exist anymore and have been replaced by contextual dark mode. This means that all components will automatically switch to dark mode when the `data-bs-theme` attribute is set to `dark` on the parent element or the component itself.
 
 ## Example
 

@@ -109,7 +109,7 @@ Links have a default `color` and underline applied. While links change on `:hove
 <a href="#">This is an example link</a>
 {{< /example >}}
 
-As of v5.3.x, link `color` is set using `rgba()` and new `-rgb` CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the `--bs-link-opacity` CSS variable:
+Link `color` is set using `rgba()` and new `-rgb` CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the `--bs-link-opacity` CSS variable:
 
 {{< example >}}
 <a href="#" style="--bs-link-opacity: .5">This is an example link</a>
