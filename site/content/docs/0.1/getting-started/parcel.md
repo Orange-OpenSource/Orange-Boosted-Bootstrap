@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Boosted and Parcel
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
+title: OUDS Web and Parcel
+description: The official guide for how to include and bundle OUDS Web's CSS and JavaScript in your project using Parcel.
 group: getting-started
 aliases:
   - "/docs/getting-started/parcel/"
@@ -18,14 +18,14 @@ thumbnail: guides/parcel-dev-server-ouds-web.png
 {{< /callout >}}
 
 {{< callout warning >}}
-**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+**To get a working OUDS Web demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
 
-You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
+You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import OUDS Web](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
 
-We're building a Parcel project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Parcel project with OUDS Web from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -40,13 +40,13 @@ We're building a Parcel project with Boosted from scratch, so there are some pre
    npm i --save-dev parcel
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install OUDS Web.** Now we can install OUDS Web. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
    npm i --save boosted @popperjs/core
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing OUDS Web.
 
 ## Project structure
 
@@ -85,20 +85,20 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Parcel</title>
+       <title>OUDS Web w/ Parcel</title>
        <link rel="stylesheet" href="scss/styles.scss">
        <script type="module" src="js/main.js"></script>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Parcel!</h1>
+         <h1>Hello, OUDS Web and Parcel!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
      </body>
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Parcel.
+   We're including a little bit of OUDS Web styling here with the `div class="container"` and `<button>` so that we see when OUDS Web's CSS is loaded by Parcel.
 
    Parcel will automatically detect we're using Sass and install the [Sass Parcel plugin](https://parceljs.org/languages/sass/) to support it. However, if you wish, you can also manually run `npm i --save-dev @parcel/transformer-sass`.
 
@@ -123,26 +123,26 @@ With dependencies installed and our project folder ready for us to start coding,
 
    ![Parcel dev server running](/assets/img/guides/parcel-dev-server.png)
 
-In the next and final section to this guide, we'll import all of Boosted's CSS and JavaScript.
+In the next and final section to this guide, we'll import all of OUDS Web's CSS and JavaScript.
 
-## Import Boosted
+## Import OUDS Web
 
-Importing Boosted into Parcel requires three imports, two into our `styles.scss` and one into our `main.js`.
+Importing OUDS Web into Parcel requires three imports, two into our `styles.scss` and one into our `main.js`.
 
-1. **Let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Let's import OUDS Web's CSS.** Add the following to `src/scss/styles.scss` to import all of OUDS Web's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
+   // Import all of OUDS Web's CSS
    @import "ouds-web/scss/ouds-web";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-2. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
+2. **Import OUDS Web's JS.** Add the following to `src/js/main.js` to import all of OUDS Web's JS. Popper will be imported automatically through OUDS Web.
 
    <!-- eslint-skip -->
    ```js
-   // Import all of Boosted's JS
+   // Import all of OUDS Web's JS
    import * as boosted from 'ouds-web'
    ```
 
@@ -156,13 +156,13 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
    import { Tooltip, Toast, Popover } from 'ouds-web'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use OUDS Web's plugins.*
 
-3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
+3. **And you're done! 🎉** With OUDS Web's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Parcel dev server running with Boosted](/assets/img/guides/parcel-dev-server-ouds-web.png)
+   ![Parcel dev server running with OUDS Web](/assets/img/guides/parcel-dev-server-ouds-web.png)
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any OUDS Web components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of OUDS Web's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

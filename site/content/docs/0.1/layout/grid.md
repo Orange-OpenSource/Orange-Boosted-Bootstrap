@@ -10,7 +10,7 @@ toc: true
 
 ## Example
 
-Boosted's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+OUDS Web's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
 
 {{< callout info >}}
 **New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
@@ -48,13 +48,13 @@ Breaking it down, here's how the grid system comes together:
 
 - **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
 
-- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Boosted, you can use our [grid's source Sass](#sass-variables) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
+- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in OUDS Web, you can use our [grid's source Sass](#sass-variables) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
 
 Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
 
 ## Grid options
 
-Boosted's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follows:
+OUDS Web's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follows:
 
 - Extra small (xs)
 - Small (sm)
@@ -245,7 +245,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ## Responsive classes
 
-Boosted's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+OUDS Web's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
 
 ### All breakpoints
 
@@ -423,7 +423,7 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## CSS
 
-When using Boosted's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+When using OUDS Web's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
 
 ### Sass variables
 

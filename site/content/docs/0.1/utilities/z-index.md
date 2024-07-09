@@ -24,7 +24,7 @@ We call these "low-level" `z-index` utilities because of their default values of
 
 ## Overlays
 
-Boosted overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own `z-index` values to ensure a usable experience with competing "layers" of an interface.
+OUDS Web overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own `z-index` values to ensure a usable experience with competing "layers" of an interface.
 
 Read about them in the [`z-index` layout page]({{< docsref "/layout/z-index" >}}).
 

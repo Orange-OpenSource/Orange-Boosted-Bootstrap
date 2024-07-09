@@ -55,7 +55,7 @@ Change the border color using utilities built on our theme colors.
 {{< /example >}}
 
 {{< callout info >}}
-For each `.border-*` there is a matching `.border-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+For each `.border-*` there is a matching `.border-*-subtle` utility. In OUDS Web, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
 
 Here is a list of these extra classes:
 {{< border-subtle.inline >}}
@@ -88,7 +88,7 @@ These border color variants are just **examples illustrating the use of this col
 
 ## Opacity
 
-Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 {{< design-callout-alert >}}
 These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.

@@ -24,7 +24,7 @@
   --base13: #{$pink-800};
 }
 
-// Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from Boosted's light mode
+// Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from OUDS Web's light mode
 @include color-mode(dark, true) {
   --base00: #{$gray-950};
   --base01: #{$gray-500};

@@ -1,15 +1,15 @@
 ---
 layout: docs
 title: Options
-description: Quickly customize Boosted with built-in variables to easily toggle global CSS preferences for controlling style and behavior.
+description: Quickly customize OUDS Web with built-in variables to easily toggle global CSS preferences for controlling style and behavior.
 group: customize
 aliases:
   - "/docs/customize/options/"
 ---
 
-Customize Boosted with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
+Customize OUDS Web with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
 
-You can find and customize these variables for key global options in Boosted's `scss/_variables.scss` file.
+You can find and customize these variables for key global options in OUDS Web's `scss/_variables.scss` file.
 
 {{< bs-table "table table-options" >}}
 | Variable                       | Values                                | Description                                                                            |

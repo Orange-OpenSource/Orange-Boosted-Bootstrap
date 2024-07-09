@@ -44,7 +44,7 @@
       description: "Finish every page strong with an awesome footer, big or small."
 
 - category: Custom Components
-  description: "Brand-new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
+  description: "Brand-new components and templates to help folks quickly get started with OUDS Web and demonstrate best practices for adding onto the framework."
   examples:
     - name: Cards
       description: "List of all card variants (content and design)."
@@ -56,7 +56,7 @@
       description: "Orange branded title bars to introduce titles."
 
 - category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by Boosted."
+  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
   examples:
     - name: Grid
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
@@ -77,10 +77,10 @@
     - name: Download app
       description: "How to build a download app page (redirect on iOS and Android)."
     - name: Form
-      description: "How to build a form with Boosted."
+      description: "How to build a form with OUDS Web."
 
 - category: RTL
-  description: "See Boosted's RTL version in action with these modified Custom Components examples."
+  description: "See OUDS Web's RTL version in action with these modified Custom Components examples."
   examples:
     - name: "Cards RTL"
       description: "List of all card variants (content and design)."
@@ -89,4 +89,4 @@
   description: "Integrations with external libraries."
   examples:
     - name: "Masonry"
-      description: "Combine the powers of the Boosted grid and the Masonry layout."
+      description: "Combine the powers of the OUDS Web grid and the Masonry layout."

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.
+description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with OUDS Web.
 group: content
 aliases:
   - "/docs/content/tables/"
@@ -10,16 +10,16 @@ toc: true
 
 ## Overview
 
-Due to the widespread use of `<table>` elements across third-party widgets like calendars and date pickers, Boosted's tables are **opt-in**. Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Boosted, meaning any nested tables can be styled independent from the parent.
+Due to the widespread use of `<table>` elements across third-party widgets like calendars and date pickers, OUDS Web's tables are **opt-in**. Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. All table styles are not inherited in OUDS Web, meaning any nested tables can be styled independent from the parent.
 
-Using the most basic table markup, here's how `.table`-based tables look in Boosted.
+Using the most basic table markup, here's how `.table`-based tables look in OUDS Web.
 
 {{< design-callout-alert info >}}
 In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
 You can refer to [small tables]({{< docsref "/content/tables#small-tables" >}}) paragraph.
 {{< /design-callout-alert >}}
 
-{{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
+{{< table class="table" simplified="false" caption="OUDS Web tables basic look" >}}
 
 ## Accessibility
 
@@ -34,7 +34,7 @@ See [more information about the tables structures](https://a11y-guidelines.orang
 ## Variants
 
 {{< callout warning >}}
-Boosted doesn't provide any colored variant.
+OUDS Web doesn't provide any colored variant.
 
 Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.table` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
 {{< /callout >}}
@@ -51,7 +51,7 @@ Use contextual classes to color tables, table rows or individual cells.
 
 <div class="bd-example">
   <table class="table">
-    <caption class="visually-hidden">Boosted table variants</caption>
+    <caption class="visually-hidden">OUDS Web table variants</caption>
     <thead>
       <tr>
         <th scope="col">Class</th>
@@ -115,45 +115,45 @@ It is possible to use striped rows **or** striped columns in your tables, but yo
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
-{{< table class="table table-striped" caption="Boosted striped rows table" >}}
+{{< table class="table table-striped" caption="OUDS Web striped rows table" >}}
 
 ### Striped columns
 
 Use .table-striped-columns to add zebra-striping to any table column.
 
-{{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
+{{< table class="table table-striped-columns" caption="OUDS Web striped columns table" >}}
 
 <details>
 <summary>These classes can also be added to Bootstrap's table colored variants.</summary>
 <br>
-{{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
+{{< table class="table table-dark table-striped" caption="OUDS Web dark striped rows table" >}}
 
-{{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
+{{< table class="table table-dark table-striped-columns" caption="OUDS Web dark striped columns table" >}}
 
-{{< table class="table table-success table-striped" caption="Boosted success striped rows table" >}}
+{{< table class="table table-success table-striped" caption="OUDS Web success striped rows table" >}}
 
-{{< table class="table table-success table-striped-columns" caption="Boosted success striped columns table" >}}
+{{< table class="table table-success table-striped-columns" caption="OUDS Web success striped columns table" >}}
 </details>
 
 ### Hoverable rows
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-{{< table class="table table-hover" caption="Boosted hoverable table" >}}
+{{< table class="table table-hover" caption="OUDS Web hoverable table" >}}
 
 <details>
 <summary class="mb-3">See it applied on another Bootstrap's variant</summary>
-{{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
+{{< table class="table table-dark table-hover" caption="OUDS Web hoverable dark table" >}}
 </details>
 
 These hoverable rows can also be combined with the striped rows variant:
 
-{{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
+{{< table class="table table-striped table-hover" caption="OUDS Web hoverable striped table" >}}
 
 <details>
 <summary>See it applied on another Bootstrap's variant</summary>
 <br>
-{{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
+{{< table class="table table-dark table-striped table-hover" caption="OUDS Web hoverable dark striped table" >}}
 </details>
 
 ### Active tables
@@ -162,7 +162,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
   <table class="table">
-    <caption class="visually-hidden">Boosted table with an active row and cell</caption>
+    <caption class="visually-hidden">OUDS Web table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -220,7 +220,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 <br>
 <div class="bd-example">
   <table class="table table-dark">
-    <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
+    <caption class="visually-hidden">OUDS Web dark table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -298,12 +298,12 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 To display basic tables, Orange Design System recommends using these compact tables.
 {{< /design-callout-alert >}}
 
-{{< table class="table table-sm" caption="Boosted small table" >}}
+{{< table class="table table-sm" caption="OUDS Web small table" >}}
 
 <details>
 <summary>See it applied on another Bootstrap's variant</summary>
 <br>
-{{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
+{{< table class="table table-dark table-sm" caption="OUDS Web dark small table" >}}
 </details>
 
 ## Table group dividers
@@ -312,7 +312,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 
 {{< example >}}
 <table class="table">
-  <caption class="visually-hidden">Boosted group divided table</caption>
+  <caption class="visually-hidden">OUDS Web group divided table</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -350,7 +350,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table align-middle">
-      <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
+      <caption class="visually-hidden">OUDS Web vertical alignment changed table</caption>
       <thead>
         <tr>
           <th scope="col" class="w-25">Heading 1</th>
@@ -420,7 +420,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 
 <div class="bd-example">
   <table class="table table-striped table-bordered">
-    <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
+    <caption class="visually-hidden">OUDS Web table with a nested table inside - table with one level of row and column header</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -439,7 +439,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
       <tr>
         <td colspan="4">
           <table class="table mb-0">
-          <caption class="visually-hidden">Boosted nested table</caption>
+          <caption class="visually-hidden">OUDS Web nested table</caption>
             <thead>
               <tr>
                 <th scope="col">Header</th>
@@ -569,7 +569,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table">
-      <caption class="visually-hidden">Boosted responsive table</caption>
+      <caption class="visually-hidden">OUDS Web responsive table</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -646,7 +646,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 <div class="bd-example">
   <div class="table-responsive{{ .abbr }}">
     <table class="table">
-    <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
+    <caption class="visually-hidden">OUDS Web responsive table for {{ .abbr }} breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -730,7 +730,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table table-sm table-hover has-checkbox">
-      <caption class="visually-hidden">Boosted table with a selection feature</caption>
+      <caption class="visually-hidden">OUDS Web table with a selection feature</caption>
       <thead>
         <tr>
           <th scope="col">
@@ -932,7 +932,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table table-sm table-hover align-middle has-checkbox">
-      <caption class="visually-hidden">Boosted table with icons in a row</caption>
+      <caption class="visually-hidden">OUDS Web table with icons in a row</caption>
       <thead>
         <tr>
           <th scope="col">
@@ -1135,7 +1135,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table align-middle">
-      <caption class="visually-hidden">Boosted table with icons inside a row</caption>
+      <caption class="visually-hidden">OUDS Web table with icons inside a row</caption>
       <thead>
         <tr>
           <th scope="col">Column header</th>

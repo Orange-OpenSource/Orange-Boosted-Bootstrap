@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Boosted and Webpack
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Webpack.
+title: OUDS Web and Webpack
+description: The official guide for how to include and bundle OUDS Web's CSS and JavaScript in your project using Webpack.
 group: getting-started
 aliases:
   - "/docs/getting-started/webpack/"
@@ -18,14 +18,14 @@ thumbnail: guides/webpack-dev-server-ouds-web.png
 {{< /callout >}}
 
 {{< callout warning >}}
-**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+**To get a working OUDS Web demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
 
-You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
+You may need to tweak a bit `src/scss/style.scss`. Please refer to the font sub-section of [how to import OUDS Web](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
 
-We're building a Webpack project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Webpack project with OUDS Web from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -40,19 +40,19 @@ We're building a Webpack project with Boosted from scratch, so there are some pr
    npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install OUDS Web.** Now we can install OUDS Web. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
    npm i --save boosted @popperjs/core
    ```
 
-4. **Install additional dependencies.** In addition to Webpack and Boosted, we need a few more dependencies to properly import and bundle Boosted's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
+4. **Install additional dependencies.** In addition to Webpack and OUDS Web, we need a few more dependencies to properly import and bundle OUDS Web's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
 
    ```sh
    npm i --save-dev autoprefixer css-loader postcss-loader sass sass-loader style-loader
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing OUDS Web.
 
 ## Project structure
 
@@ -119,18 +119,18 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Webpack</title>
+       <title>OUDS Web w/ Webpack</title>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Webpack!</h1>
+         <h1>Hello, OUDS Web and Webpack!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
      </body>
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
+   We're including a little bit of OUDS Web styling here with the `div class="container"` and `<button>` so that we see when OUDS Web's CSS is loaded by Webpack.
 
 3. **Now we need an npm script to run Webpack.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Webpack dev server. You can also add a `build` script shown below to build your project.
 
@@ -154,11 +154,11 @@ With dependencies installed and our project folder ready for us to start coding,
 
    ![Webpack dev server running](/assets/img/guides/webpack-dev-server.png)
 
-In the next and final section to this guide, we'll set up the Webpack loaders and import all of Boosted's CSS and JavaScript.
+In the next and final section to this guide, we'll set up the Webpack loaders and import all of OUDS Web's CSS and JavaScript.
 
-## Import Boosted
+## Import OUDS Web
 
-Importing Boosted into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
+Importing OUDS Web into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
 
 1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
 
@@ -222,23 +222,23 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **Let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Let's import OUDS Web's CSS.** Add the following to `src/scss/styles.scss` to import all of OUDS Web's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
+   // Import all of OUDS Web's CSS
    @import "ouds-web/scss/ouds-web";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+3. **Next we load the CSS and import OUDS Web's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of OUDS Web's JS. Popper will be imported automatically through OUDS Web.
 
    <!-- eslint-skip -->
    ```js
    // Import our custom CSS
    import '../scss/styles.scss'
 
-   // Import all of Boosted's JS
+   // Import all of OUDS Web's JS
    import * as boosted from 'ouds-web'
    ```
 
@@ -252,13 +252,13 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
    import { Tooltip, Toast, Popover } from 'ouds-web'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use OUDS Web's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
+4. **And you're done! 🎉** With OUDS Web's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Webpack dev server running with Boosted](/assets/img/guides/webpack-dev-server-ouds-web.png)
+   ![Webpack dev server running with OUDS Web](/assets/img/guides/webpack-dev-server-ouds-web.png)
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any OUDS Web components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of OUDS Web's CSS and JS that you need.
 
 ## Production optimizations
 
@@ -321,14 +321,14 @@ After running `npm run build` again, there will be a new file `dist/main.css`, w
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 +    <link rel="stylesheet" href="./main.css">
-     <title>Boosted w/ Webpack</title>
+     <title>OUDS Web w/ Webpack</title>
    </head>
    <body>
 ```
 
 ### Extracting SVG files
 
-Boosted's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
+OUDS Web's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
 
 Configure Webpack to extract inline SVG files like this:
 

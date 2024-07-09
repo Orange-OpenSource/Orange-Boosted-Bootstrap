@@ -104,7 +104,7 @@ if (BROWSERSTACK) {
     username: ENV.BROWSER_STACK_USERNAME,
     accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
     build: `boosted-v5-${ENV.GITHUB_SHA ? `${ENV.GITHUB_SHA.slice(0, 7)}-` : ''}${new Date().toISOString()}`,
-    project: 'Boosted',
+    project: 'OUDS Web',
     retryLimit: 2
   }
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')

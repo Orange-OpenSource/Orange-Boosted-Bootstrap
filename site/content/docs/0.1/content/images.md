@@ -10,7 +10,7 @@ toc: true
 
 ## Responsive images
 
-Images in Boosted are made responsive with `.img-fluid`. This applies `max-width: 100%;` and `height: auto;` to the image so that it scales with the parent width.
+Images in OUDS Web are made responsive with `.img-fluid`. This applies `max-width: 100%;` and `height: auto;` to the image so that it scales with the parent width.
 
 {{< example >}}
 {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" color="#999" >}}

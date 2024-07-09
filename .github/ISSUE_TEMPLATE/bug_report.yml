@@ -1,5 +1,5 @@
 name: Report a bug
-description: Tell us about a bug or issue you may have identified in Boosted.
+description: Tell us about a bug or issue you may have identified in OUDS Web.
 title: "Provide a general summary of the issue"
 labels: [bug]
 assignees: "-"
@@ -56,7 +56,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: What version of Boosted are you using?
-      placeholder: "e.g., v5.1.0 or v4.5.2"
+      label: What version of OUDS Web are you using?
+      placeholder: "e.g., v0.1.0"
     validations:
       required: true

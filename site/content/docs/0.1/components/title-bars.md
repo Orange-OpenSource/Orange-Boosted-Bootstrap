@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Title bars
-description: Documentation and examples for Boosted's exclusive Brand responsive title bars.
+description: Documentation and examples for OUDS Web's exclusive Brand responsive title bars.
 group: components
 aliases:
   - "/docs/components/title-bars/"

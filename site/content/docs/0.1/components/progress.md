@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Progress
-description: Documentation and examples for using Boosted custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+description: Documentation and examples for using OUDS Web custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 group: components
 aliases:
   - "/docs/components/progress/"
@@ -46,7 +46,7 @@ Put that all together, and you have the following examples.
 
 ### Width
 
-Boosted provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
+OUDS Web provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -94,7 +94,7 @@ Note that by default, the content inside the `.progress-bar` is controlled with 
 <!-- OUDS mod -->
 ### Sizes
 
-Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
+OUDS Web also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
 
 {{< example >}}
 <div class="progress progress-xs" role="progressbar" aria-label="Extra small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
@@ -226,7 +226,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Orange navbar
-description: Documentation and examples for Boosted's exclusive responsive navbars.
+description: Documentation and examples for OUDS Web's exclusive responsive navbars.
 group: components
 aliases:
   - "/docs/components/orange-navbar/"
@@ -156,7 +156,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       <!-- Orange brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
 
@@ -236,7 +236,7 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
       <!-- Orange brand logo -->
       <div class="navbar-brand me-auto">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
 
@@ -273,7 +273,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
       <!-- Orange brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
         <h1 class="title">Title</h1>
       </div>
@@ -307,7 +307,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
       <!-- Orange brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
         <h1 class="two-lined">
           Title Line 1
@@ -534,7 +534,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 

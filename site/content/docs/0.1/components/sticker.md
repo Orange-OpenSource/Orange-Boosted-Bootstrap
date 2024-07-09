@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Sticker
-description: Use Boosted's custom stickers to inform people about new offers.
+description: Use OUDS Web's custom stickers to inform people about new offers.
 group: components
 aliases:
   - "/docs/components/sticker/"
@@ -97,7 +97,7 @@ Since stickers only provide a container, accessibility becomes specific to the s
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, stickers now use local CSS variables on `.sticker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, stickers now use local CSS variables on `.sticker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="sticker-css-vars" file="scss/_sticker.scss" >}}
 

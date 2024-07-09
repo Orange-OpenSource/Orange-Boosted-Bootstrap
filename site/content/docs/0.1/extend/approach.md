@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Approach
-description: Learn about the guiding principles, strategies, and techniques used to build and maintain Boosted so you can more easily customize and extend it yourself.
+description: Learn about the guiding principles, strategies, and techniques used to build and maintain OUDS Web so you can more easily customize and extend it yourself.
 group: extend
 aliases:
   - "/extend/"
@@ -10,7 +10,7 @@ aliases:
   - "/docs/extend/approach/"
 ---
 
-While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on _why_ we do the things we do in Boosted. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
+While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on _why_ we do the things we do in OUDS Web. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
 
 See something that doesn't sound right, or perhaps could be done better? [Open an issue]({{< param repo >}}/issues/new/choose)—we'd love to discuss it with you.
 
@@ -27,9 +27,9 @@ We'll dive into each of these more throughout, but at a high level, here's what 
 
 ## Responsive
 
-Boosted's responsive styles are built to be responsive, an approach that's often referred to as _mobile-first_. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component _must_ be entirely responsive in Boosted, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.
+OUDS Web's responsive styles are built to be responsive, an approach that's often referred to as _mobile-first_. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component _must_ be entirely responsive in OUDS Web, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.
 
-Across Boosted, you'll see this most clearly in our media queries. In most cases, we use `min-width` queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a `.d-none` applies from `min-width: 0` to infinity. On the other hand, a `.d-md-none` applies from the medium breakpoint and up.
+Across OUDS Web, you'll see this most clearly in our media queries. In most cases, we use `min-width` queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a `.d-none` applies from `min-width: 0` to infinity. On the other hand, a `.d-md-none` applies from the medium breakpoint and up.
 
 At times we'll use `max-width` when a component's inherent complexity requires it. At times, these overrides are functionally and mentally clearer to implement and support than rewriting core functionality from our components. We strive to limit this approach, but will use it from time to time.
 
@@ -43,18 +43,18 @@ Modifier classes should only be used when there are multiple properties or value
 
 ## z-index scales
 
-There are two `z-index` scales in Boosted—elements within a component and overlay components.
+There are two `z-index` scales in OUDS Web—elements within a component and overlay components.
 
 ### Component elements
 
-- Some components in Boosted are built with overlapping elements to prevent double borders without modifying the `border` property. For example, button groups, input groups, and pagination.
+- Some components in OUDS Web are built with overlapping elements to prevent double borders without modifying the `border` property. For example, button groups, input groups, and pagination.
 - These components share a standard `z-index` scale of `0` through `3`.
 - `0` is default (initial), `1` is `:hover`, `2` is `:active`/`.active`, and `3` is `:focus`.
 - This approach matches our expectations of highest user priority. If an element is focused, it's in view and at the user's attention. Active elements are second highest because they indicate state. Hover is third highest because it indicates user intent, but nearly _anything_ can be hovered.
 
 ### Overlay components
 
-Boosted includes several components that function as an overlay of some kind. This includes, in order of highest `z-index`, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own `z-index` scale that begins at `1000`. This starting number was chosen arbitrarily and serves as a small buffer between our styles and your project's custom styles.
+OUDS Web includes several components that function as an overlay of some kind. This includes, in order of highest `z-index`, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own `z-index` scale that begins at `1000`. This starting number was chosen arbitrarily and serves as a small buffer between our styles and your project's custom styles.
 
 Each overlay component increases its `z-index` value slightly in such a way that common UI principles allow user focused or hovered elements to remain in view at all times. For example, a modal is document blocking (e.g., you cannot take any other action save for the modal's action), so we put that above our navbars.
 
@@ -72,7 +72,7 @@ The same goes for more complex components. While we _could_ write our own form v
 
 ## Utilities
 
-Utility classes—formerly helpers in Boosted 3—are a powerful ally in combating CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
+Utility classes—formerly helpers in OUDS Web 3—are a powerful ally in combating CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
 
 Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
 

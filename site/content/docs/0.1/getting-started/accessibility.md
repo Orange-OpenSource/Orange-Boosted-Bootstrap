@@ -1,35 +1,35 @@
 ---
 layout: docs
 title: Accessibility
-description: A brief overview of Boosted's features and limitations for the creation of accessible content.
+description: A brief overview of OUDS Web's features and limitations for the creation of accessible content.
 group: getting-started
 aliases:
   - "/docs/getting-started/accessibility/"
 toc: true
 ---
 
-Boosted provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
+OUDS Web provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
 
 ## Overview and limitations
 
-The overall accessibility of any project built with Boosted depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+The overall accessibility of any project built with OUDS Web depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with OUDS Web that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
 
 ### Structural markup
 
-Boosted's styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Boosted itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+OUDS Web's styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of OUDS Web itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
 
 ### Interactive components
 
-Boosted's interactive components—such as modal dialogs, dropdown menus, and custom tooltips—are designed to work for touch, mouse, and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+OUDS Web's interactive components—such as modal dialogs, dropdown menus, and custom tooltips—are designed to work for touch, mouse, and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
 
-Because Boosted's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
+Because OUDS Web's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
 
 ### Color contrast
 
 <!-- OUDS mod -->
-Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
+Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of Boosted color palette’s reached WCAG level.
+Unlike Bootstrap, in OUDS Web **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.
 <!-- end mod -->
 
 ### Visually hidden content
@@ -43,7 +43,7 @@ Content which should be visually hidden, but remain accessible to assistive tech
 </p>
 ```
 
-For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, since Boosted 5 `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
+For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, since OUDS Web 5 `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
 
 ```html
 <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
@@ -51,18 +51,18 @@ For visually hidden interactive controls, such as traditional "skip" links, use 
 
 ### Reduced motion
 
-Boosted includes support for the [`prefers-reduced-motion` media feature](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
+OUDS Web includes support for the [`prefers-reduced-motion` media feature](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in OUDS Web (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
 
-On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they'd prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), Boosted enables smooth scrolling using the `scroll-behavior` property.
+On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they'd prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), OUDS Web enables smooth scrolling using the `scroll-behavior` property.
 
 <!-- OUDS mod -->
 ### Focus visibility
 
-Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+OUDS Web includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 
 {{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
 
-Boosted provides `focus-visible()` mixin to ensure a proper visible focus state:
+OUDS Web provides `focus-visible()` mixin to ensure a proper visible focus state:
 
 {{< scss-docs name="focus-visible" file="scss/mixins/_focus.scss" >}}
 
@@ -76,7 +76,7 @@ Each component then specifies its own visible focus style when needed, for examp
 
 #### Under a fixed header
 
-When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
+When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. OUDS Web sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
 
 1. `$scroll-offset-top` variable defines the offset,
 2. and [`$enable-fixed-header` allows to drop this rule]({{< docsref "/customize/options" >}}) if you don't use a fixed header.
@@ -85,7 +85,7 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 ### Minimum target size
 
-Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
+OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
 

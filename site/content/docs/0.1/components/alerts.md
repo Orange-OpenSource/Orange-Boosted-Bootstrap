@@ -12,7 +12,7 @@ toc: true
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
-Boosted also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color-theme#functional">}}):
+OUDS Web also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color-theme#functional">}}):
 - success,
 - info,
 - warning,
@@ -89,7 +89,7 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 Alerts can also contain additional HTML elements like headings, links and paragraphs.
 
-As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment and, for headings, to always use the .alert-heading class.
+As of OUDS Web, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment and, for headings, to always use the .alert-heading class.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
@@ -107,7 +107,7 @@ As of Boosted, it's recommended to wrap your additional content in a `<div>` to 
 
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
-- Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
+- Be sure you've loaded the alert plugin, or the compiled OUDS Web JavaScript.
 - Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
 - On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
 - On the close button, add the `data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"` attributes, which add a tooltip for better accessibility. You also need to [enable tooltips]({{< docsref "/components/tooltips#enable-tooltips" >}}) (if not already done).
@@ -137,7 +137,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
 
@@ -210,7 +210,7 @@ alert.close()
 
 ### Events
 
-Boosted's alert plugin exposes a few events for hooking into alert functionality.
+OUDS Web's alert plugin exposes a few events for hooking into alert functionality.
 
 {{< bs-table >}}
 | Event | Description |

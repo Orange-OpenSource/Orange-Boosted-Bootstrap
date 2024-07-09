@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Get started with Boosted
-description: Boosted is based on Bootstrap&#58; a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
+title: Get started with OUDS Web
+description: OUDS Web is based on Bootstrap&#58; a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
 group: getting-started
 aliases:
   - "/getting-started/"
@@ -13,7 +13,7 @@ toc: true
 
 ## About Orange Brand
 
-As Boosted is based on Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
+As OUDS Web is based on Bootstrap, you'll find in OUDS Web **all** the Bootstrap's components and their variants, but with an Orange branded look.
 
 Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
 
@@ -25,7 +25,7 @@ Design incompatibility callouts message example:
 {{< design-callout-alert >}}
 This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our OUDS Web [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 In the same spirit, some blue recommendation design callouts will inform you of specific Orange Design System recommendations.
@@ -38,7 +38,7 @@ To display basic tables, Orange Design System recommends using these compact tab
 
 ## Quick start
 
-Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
+Get started by including OUDS Web's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [OUDS Web CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
 
 <br>
 
@@ -50,7 +50,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted demo</title>
+       <title>OUDS Web demo</title>
      </head>
      <body>
        <h1>Hello, world!</h1>
@@ -58,7 +58,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
    </html>
    ```
 
-2. **Include Boosted's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
+2. **Include OUDS Web's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
 
    ```html
    <!doctype html>
@@ -66,7 +66,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted demo</title>
+       <title>OUDS Web demo</title>
        <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
      </head>
      <body>
@@ -83,7 +83,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
    ```
 
-3. **Hello, world!** Open the page in your browser of choice to see your Boosted page. Now you can start building with Boosted by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
+3. **Hello, world!** Open the page in your browser of choice to see your OUDS Web page. Now you can start building with OUDS Web by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
 
 ## CDN links
 
@@ -100,10 +100,10 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 
 ## Next steps
 
-- Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
-- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
-- Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
-- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using OUDS Web as a module]({{< docsref "/getting-started/javascript#using-ouds-web-as-a-module" >}}) section.
+- Read a bit more about some [important global environment settings](#important-globals) that OUDS Web utilizes.
+- Read about what's included in OUDS Web in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
+- Need a little more power? Consider building with OUDS Web by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
+- Looking to use OUDS Web as a module with `<script type="module">`? Please refer to our [using OUDS Web as a module]({{< docsref "/getting-started/javascript#using-ouds-web-as-a-module" >}}) section.
 
 ## JS components
 
@@ -130,8 +130,8 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 {{< callout warning >}}
 #### Required script
 
-Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
-However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use the polyfill.
+OUDS Web includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+However, if you don't need or want to use OUDS Web's JavaScript files, you'll still need to use the polyfill.
 ```html
 <script src="{{< param "cdn.focus_visible" >}}" integrity="{{< param "cdn.focus_visible_hash" >}}" crossorigin="anonymous"></script>
 ```
@@ -139,11 +139,11 @@ However, if you don't need or want to use Boosted's JavaScript files, you'll sti
 
 ## Important globals
 
-Boosted employs a handful of important global styles and settings, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+OUDS Web employs a handful of important global styles and settings, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
 
 ### HTML5 doctype
 
-Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky and incomplete styling.
+OUDS Web requires the use of the HTML5 doctype. Without it, you'll see some funky and incomplete styling.
 
 ```html
 <!doctype html>
@@ -154,7 +154,7 @@ Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky
 
 ### Viewport meta
 
-Boosted is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
+OUDS Web is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -194,12 +194,12 @@ It should be used for critical resources only.
 
 For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
-## Boosted community
+## OUDS Web community
 
-Stay up-to-date on the development of Boosted and reach out to the community with these helpful resources.
+Stay up-to-date on the development of OUDS Web and reach out to the community with these helpful resources.
 
 - Ask questions and explore [our GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions).
-- Chat with the core team and fellow Boosted users on internal Orange communication tools.
+- Chat with the core team and fellow OUDS Web users on internal Orange communication tools.
 
 ## Bootstrap Community
 

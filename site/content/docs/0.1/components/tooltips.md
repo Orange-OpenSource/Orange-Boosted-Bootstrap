@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips
-description: Documentation and examples for adding custom Boosted tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+description: Documentation and examples for adding custom OUDS Web tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
 group: components
 aliases:
   - "/docs/components/tooltips/"
@@ -35,7 +35,7 @@ Got all that? Great, let's see how they work with some examples.
 ## Accessibility
 
 For accessibility purpose, [content on hover or focus should be dismissible, hoverable and persistent](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html).
-With Boosted tooltips, no mechanism is available to dismiss the tooltip without moving pointer hover or keyboard focus (due to Popper library's limitations).
+With OUDS Web tooltips, no mechanism is available to dismiss the tooltip without moving pointer hover or keyboard focus (due to Popper library's limitations).
 Please pay attention that the tooltip never hides an important content.
 
 ## Examples
@@ -84,7 +84,7 @@ You can customize the appearance of tooltips using [CSS variables](#variables). 
 
 ### Directions
 
-Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using Boosted in RTL.
+Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using OUDS Web in RTL.
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -159,7 +159,7 @@ With an SVG:
 
 ### Variables
 
-As part of Boosted’s evolving CSS variables approach, tooltips now use local CSS variables on `.tooltip` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, tooltips now use local CSS variables on `.tooltip` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="tooltip-css-vars" file="scss/_tooltip.scss" >}}
 
@@ -240,7 +240,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 | `html` | boolean | `false` | Allow HTML in the tooltip. If true, HTML tags in the tooltip's `title` will be rendered in the tooltip. If false, `innerText` property will be used to insert content into the DOM. Use text if you're worried about XSS attacks. |
 | `offset` | array, string, function | `[0, 10]` | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
 | `placement` | string, function | `'top'` | How to position the tooltip: auto, top, bottom, left, right. When `auto` is specified, it will dynamically reorient the tooltip. When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The `this` context is set to the tooltip instance. |
-| `popperConfig` | null, object, function | `null` | To change Boosted's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
+| `popperConfig` | null, object, function | `null` | To change OUDS Web's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the OUDS Web's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
 | `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
 | `sanitizeFn` | null, function | `null` | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization. |
 | `selector` | string, false | `false` | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). **Note**: `title` attribute must not be used as a selector. |
@@ -290,7 +290,7 @@ const tooltip = new boosted.Tooltip(element, {
 {{< /bs-table >}}
 
 ```js
-const tooltip = boosted.Tooltip.getInstance('#example') // Returns a Boosted tooltip instance
+const tooltip = boosted.Tooltip.getInstance('#example') // Returns a OUDS Web tooltip instance
 
 // setContent example
 tooltip.setContent({ '.tooltip-inner': 'another title' })

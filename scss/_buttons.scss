@@ -149,7 +149,7 @@
 }
 // scss-docs-end btn-variant-loops
 
-// OUDS mod: Boosted-specific no outline button
+// OUDS mod: OUDS Web-specific no outline button
 .btn-no-outline {
   @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}disabled-color));
 
@@ -164,7 +164,7 @@
 // End mod
 
 
-// OUDS mod: Boosted-specific toggle button
+// OUDS mod: OUDS Web-specific toggle button
 .btn-toggle {
   @include button-variant(transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}primary), $supporting-orange, $supporting-orange, $black, transparent, var(--#{$prefix}border-color-subtle), var(--#{$prefix}disabled-color));
 
@@ -199,7 +199,7 @@
 // End mod
 
 
-// OUDS mod: Boosted-specific dropdown button
+// OUDS mod: OUDS Web-specific dropdown button
 .btn-dropdown {
   @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-subtle), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }

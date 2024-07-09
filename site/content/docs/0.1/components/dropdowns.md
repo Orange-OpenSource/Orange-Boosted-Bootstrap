@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dropdowns
-description: Toggle contextual overlays for displaying lists of links and more with the Boosted dropdown plugin.
+description: Toggle contextual overlays for displaying lists of links and more with the OUDS Web dropdown plugin.
 group: components
 aliases:
   - "/docs/components/dropdowns/"
@@ -10,17 +10,17 @@ toc: true
 
 ## Overview
 
-Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Boosted dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included OUDS Web dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-Dropdowns are built on a third party library, [Popper](https://popper.js.org/docs/v2/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before Boosted's JavaScript or use `ouds-web.bundle.min.js` / `ouds-web.bundle.js` which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
+Dropdowns are built on a third party library, [Popper](https://popper.js.org/docs/v2/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before OUDS Web's JavaScript or use `ouds-web.bundle.min.js` / `ouds-web.bundle.js` which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
 
 ## Accessibility
 
 The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/TR/wai-aria/#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
 
-Boosted's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Boosted does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
+OUDS Web's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, OUDS Web does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
 
-However, Boosted does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>Esc</kbd> key.
+However, OUDS Web does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>Esc</kbd> key.
 
 ## Examples
 
@@ -680,7 +680,7 @@ Add `.disabled` to items in the dropdown to **style them as disabled**.
 
 By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent.  You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
 
-Add `.dropdown-menu-end` to a `.dropdown-menu` to right align the dropdown menu. Directions are mirrored when using Boosted in RTL, meaning `.dropdown-menu-end` will appear on the left side.
+Add `.dropdown-menu-end` to a `.dropdown-menu` to right align the dropdown menu. Directions are mirrored when using OUDS Web in RTL, meaning `.dropdown-menu-end` will appear on the left side.
 
 {{< callout info >}}
 **Heads up!** Dropdowns are positioned thanks to Popper except when they are contained in a navbar.
@@ -1021,12 +1021,12 @@ The 3 last auto close behavior variants should not be used because featuring a s
 
 ### Variables
 
-As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.dropdown-menu` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, dropdowns now use local CSS variables on `.dropdown-menu` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="dropdown-css-vars" file="scss/_dropdown.scss" >}}
 
 {{< callout info >}}
-Dropdown items include at least one variable that is not set on `.dropdown`. This allows you to provide a new value while Boosted defaults to a fallback value.
+Dropdown items include at least one variable that is not set on `.dropdown`. This allows you to provide a new value while OUDS Web defaults to a fallback value.
 
 - `--bs-dropdown-item-border-radius`
 {{< /callout >}}
@@ -1096,7 +1096,7 @@ const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new booste
 | `boundary` | string, element | `'clippingParents'` | Overflow constraint boundary of the dropdown menu (applies only to Popper's preventOverflow modifier). By default it's `clippingParents` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
 | `display` | string | `'dynamic'` | By default, we use Popper for dynamic positioning. Disable this with `static`. |
 | `offset` | array, string, function | `[0, 2]` | Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
-| `popperConfig` | null, object, function | `null` | To change Boosted's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
+| `popperConfig` | null, object, function | `null` | To change OUDS Web's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the OUDS Web's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
 | `reference` | string, element, object | `'toggle'` | Reference element of the dropdown menu. Accepts the values of `'toggle'`, `'parent'`, an HTMLElement reference or an object providing `getBoundingClientRect`. For more information refer to Popper's [constructor docs](https://popper.js.org/docs/v2/constructors/#createpopper) and [virtual element docs](https://popper.js.org/docs/v2/virtual-elements/). |
 {{< /bs-table >}}
 

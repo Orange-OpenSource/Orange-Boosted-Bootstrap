@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Boosted. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
+Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in OUDS Web. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
 
 {{< callout warning >}}
 **Heads up!** Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).

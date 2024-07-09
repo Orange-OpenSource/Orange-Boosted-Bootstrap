@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navbar
-description: Documentation and examples for Boosted's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+description: Documentation and examples for OUDS Web's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
 aliases:
   - "/docs/components/navbar/"
@@ -9,7 +9,7 @@ toc: true
 ---
 
 {{< design-callout-alert >}}
-This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure. Moreover, Orange navbars have the same rendering in light and dark mode.
+This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with OUDS Web due to a different HTML structure. Moreover, Orange navbars have the same rendering in light and dark mode.
 
 In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
 {{< /design-callout-alert >}}
@@ -49,7 +49,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +101,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
         <h1 class="title">Navbar</h1>
       </div>
@@ -115,7 +115,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <span class="stretched-link">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </span>
         <h1 class="title">Navbar</h1>
       </div>
@@ -138,7 +138,7 @@ Please note that you should also add the `aria-current` attribute on the active 
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,7 +171,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +196,7 @@ You can also use dropdowns in your navbar. Dropdown menus require a wrapping ele
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -251,7 +251,7 @@ Immediate child elements of `.navbar` use flex layout<!-- OUDS mod: no justify-c
   <div class="container-fluid">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <form class="d-flex navbar-item" role="search">
@@ -307,7 +307,7 @@ Mix and match with other components and utilities as needed.
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -350,7 +350,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -388,7 +388,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -426,7 +426,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/0.1/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -485,7 +485,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
     </div>
@@ -500,7 +500,7 @@ Use any of the responsive containers to change how wide the content in your navb
   <div class="container-md">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
     </div>
   </div>
@@ -518,7 +518,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Default</h1>
     </div>
@@ -531,7 +531,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Fixed top</h1>
     </div>
@@ -544,7 +544,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Fixed bottom</h1>
     </div>
@@ -557,7 +557,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Sticky top</h1>
     </div>
@@ -570,7 +570,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Sticky bottom</h1>
     </div>
@@ -591,7 +591,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Scroll</h1>
     </div>
@@ -770,7 +770,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 
 ### Variables
 
-As part Boosted's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part OUDS Web's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 
