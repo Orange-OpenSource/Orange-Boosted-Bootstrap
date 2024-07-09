@@ -164,7 +164,7 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
   } ]
 } */
 .ltr {
-  @import "../node_modules/ouds-web/scss/ouds-web";
+  @import "../node_modules/@ouds/web/scss/ouds-web";
 }
 /*rtl:end:options*/
 ```
