@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and OUDS Web contributors">
+    <meta name="generator" content="Hugo 0.126.3">
+    <title>Tags · OUDS Web v0.1</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/0.1/examples/tags/">
+
+    <script src="/docs/0.1/assets/js/color-modes.js"></script>
+
+    <link href="/docs/0.1/dist/css/ouds-web.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR">
+
+    <link rel="apple-touch-icon" href="/docs/0.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/0.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/0.1/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/0.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+       
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+       
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+  </head>
+  <body class="d-flex flex-column h-100">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+
+    
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+<main>
+  <h1 class="visually-hidden">Present some ways the tags could be used</h1>
+  <div class="container-xxl">
+    <table class="table">
+      <caption class="h2">Use informative tags in a table context</caption>
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Associated tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Larry</td>
+          <td class="p-2">
+            <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
+              <li><span class="tag tag-sm">Bird</span></li>
+              <li><span class="tag tag-sm">Twitter</span></li>
+              <li><span class="tag tag-sm">NBA</span></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Bootstrap</td>
+          <td class="p-2">
+            <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
+              <li><span class="tag tag-sm">Framework</span></li>
+              <li><span class="tag tag-sm">Twitter</span></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Example of anchor links</h2>
+    <h3 class="visually-hidden">Links to anchor in an imaginary page</h3>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+      <li>
+        <a class="tag" href="#">1. Introduction</a>
+      </li>
+      <li>
+        <a class="tag" href="#">2. Exposure</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Checkbox filter</h2>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap mb-0">
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="tag" for="btncheck1">Mobile</label>
+      </li>
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+        <label class="tag" for="btncheck2">Computer</label>
+      </li>
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+        <label class="tag" for="btncheck3">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+          </svg>
+          TV
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Radio filter</h2>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap mb-0">
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck4" autocomplete="off" checked>
+        <label class="tag" for="btncheck4">Mobile</label>
+      </li>
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck5" autocomplete="off">
+        <label class="tag" for="btncheck5">Computer</label>
+      </li>
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck6" autocomplete="off">
+        <label class="tag" for="btncheck6">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+          </svg>
+          TV
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+</main>
+<script defer src="/docs/0.1/dist/js/ouds-web.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/"></script>
+
+    </body>
+</html>
