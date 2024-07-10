@@ -1,5 +1,5 @@
 - group: v0.x
   baseurl: "https://boosted.orange.com/ouds-web/docs"
-  description: "Current major release. Last update was v0.0.1"
+  description: "Current major release. Last update was v0.0.0"
   versions:
-    - "0.1"
+    - "0.0"
