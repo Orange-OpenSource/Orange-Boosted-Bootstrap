@@ -10,22 +10,7 @@ Any use or displaying shall constitute an infringement under intellectual proper
 
 dist/img/orange-logo.svg
 nuget/ouds-web.png
-site/content/docs/**/examples/download-app/img/Banner_image.png
-site/content/docs/**/examples/download-app/img/Buttons.png
-site/content/docs/**/examples/download-app/img/Buttons_dark.png
-site/content/docs/**/examples/download-app/img/Card.png
-site/content/docs/**/examples/download-app/img/Card_dark.png
-site/content/docs/**/examples/download-app/img/Components.png
-site/content/docs/**/examples/download-app/img/Components_dark.png
-site/content/docs/**/examples/download-app/img/Emphasis.png
-site/content/docs/**/examples/download-app/img/Emphasis_dark.png
-site/content/docs/**/examples/download-app/img/Input.png
-site/content/docs/**/examples/download-app/img/Input_dark.png
-site/content/docs/**/examples/download-app/img/List.png
-site/content/docs/**/examples/download-app/img/List_dark.png
 site/layouts/partials/icons.html
-site/static/docs/**/assets/brand/OBS-logo.svg
-site/static/docs/**/assets/brand/OBS-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-logo.svg
 site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
@@ -43,18 +28,11 @@ site/static/docs/**/assets/img/favicons/mstile-310x150.png
 site/static/docs/**/assets/img/favicons/mstile-310x310.png
 site/static/docs/**/assets/img/favicons/mstile-70x70.png
 site/static/docs/**/assets/img/favicons/safari-pinned-tab.svg
-site/static/docs/**/assets/img/navbar-contact.png
 site/static/docs/**/assets/img/ouds-web-sprite.svg
 site/static/docs/**/assets/img/ouds-web-warning.svg
 site/static/docs/**/assets/img/platforms/android.png
 site/static/docs/**/assets/img/platforms/conversational.png
 site/static/docs/**/assets/img/platforms/extended-reality.png
 site/static/docs/**/assets/img/platforms/iOS.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1024.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1280.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1440.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-320.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-480.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-768.png
 
 End of the parts list under Orange SA Copyright

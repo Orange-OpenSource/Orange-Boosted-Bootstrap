@@ -21,8 +21,6 @@ OUDS Web comes with three different containers:
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
-
 Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
 
 {{< bs-table "table" >}}
