@@ -30,11 +30,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.1.0-ouds.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.0.0-ouds.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.1.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.1.0`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/ouds-web:0.1.0`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.0.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.0.0`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/ouds-web:0.0.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web` Sass: `Install-Package ouds-web.sass`
 
 Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
@@ -51,7 +51,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 [![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/css/ouds-web.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/css/ouds-web.min.css)
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
-[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/ouds-web/badge)](https://www.jsdelivr.com/package/npm/ouds-web)
+[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web/badge)](https://www.jsdelivr.com/package/npm/@ouds/web)
 
 ## What's included
 
