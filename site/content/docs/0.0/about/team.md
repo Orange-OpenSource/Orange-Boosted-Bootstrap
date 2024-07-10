@@ -27,5 +27,5 @@ Get involved with OUDS Web development by [opening an issue]({{< param repo >}}/
 {{< callout info >}}
 ## Bootstrap team
 
-OUDS Web is based on [Bootstrap]({{< param bootstrap >}}) —&nbsp;maintained by [its founding team and a small group of invaluable core contributors]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/team/), with the massive support and involvement of their community, **including some proud OUDS Web maintainers and contributors**.
+OUDS Web is based on [Bootstrap]({{< param bootstrap >}}) —&nbsp;maintained by [its founding team and a small group of invaluable core contributors]({{< param bootstrap >}}/docs/{{< param bootstrap_docs_version >}}/about/team/), with the massive support and involvement of their community, **including some proud OUDS Web maintainers and contributors**.
 {{< /callout >}}

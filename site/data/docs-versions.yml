@@ -1,5 +1,5 @@
 - group: v0.x
-  baseurl: "https://boosted.orange.com/ouds-web/docs"
+  baseurl: "https://web.unified-design-system.orange.com/docs"
   description: "Current major release. Last update was v0.0.0"
   versions:
     - "0.0"
