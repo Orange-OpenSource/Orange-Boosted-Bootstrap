@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and OUDS Web contributors">
+    <meta name="generator" content="Hugo 0.126.3">
+    <title>Footers · OUDS Web v0.0</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/0.0/examples/footers/">
+
+    <script src="/docs/0.0/assets/js/color-modes.js"></script>
+
+    <link href="/docs/0.0/dist/css/ouds-web.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR">
+
+    <link rel="apple-touch-icon" href="/docs/0.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/0.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/0.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/0.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/0.0/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/0.0/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/0.0/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+       
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+       
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+
+    
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+<main>
+  <!-- OUDS mod: page must contain a level-one heading (a11y) -->
+  <h1 class="visually-hidden">Footers OUDS Web example</h1>
+
+  <div class="b-example-divider"></div>
+
+  <footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2024</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <div class="b-example-divider"></div>
+
+  <footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion" id="accordion2" aria-label="Sitemap footer 2">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne2">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo2">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree2">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="true" aria-controls="collapseThree2">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour2">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour2" aria-expanded="true" aria-controls="collapseFour2">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2024</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <div class="b-example-divider"></div>
+
+  <footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-social">
+    <h3 class="footer-heading me-md-3">Follow us</h3>
+    <ul class="navbar-nav gap-2 flex-row align-self-start">
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+    </ul>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion" id="accordion3" aria-label="Sitemap footer 3">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne3">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo3">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="true" aria-controls="collapseTwo3">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree3">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="true" aria-controls="collapseThree3">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour3">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour3" aria-expanded="true" aria-controls="collapseFour3">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2024</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <div class="b-example-divider"></div>
+
+  <footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-title-content">
+    <h3 class="footer-heading">Sign up to our mailing list</h3>
+    <div class="row">
+      <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+        <label for="inputEmail4" class="visually-hidden">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email">
+        <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-social">
+    <h3 class="footer-heading me-md-3">Follow us</h3>
+    <ul class="navbar-nav gap-2 flex-row align-self-start">
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+    </ul>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion" id="accordion4" aria-label="Sitemap footer 4">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne4">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo4">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo4" aria-expanded="true" aria-controls="collapseTwo4">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree4">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="true" aria-controls="collapseThree4">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour4">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="true" aria-controls="collapseFour4">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2024</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <div class="b-example-divider"></div>
+
+  <footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-title-content">
+    <h3 class="footer-heading">Sign up to our mailing list</h3>
+    <div class="row">
+      <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+        <label for="inputEmail5" class="visually-hidden">Email</label>
+        <input type="email" class="form-control" id="inputEmail5" placeholder="Enter your email">
+        <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-social">
+    <h3 class="footer-heading me-md-3">Follow us</h3>
+    <ul class="navbar-nav gap-2 flex-row align-self-start">
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+    </ul>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion" id="accordion5" aria-label="Sitemap footer 5">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne5">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo5">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="true" aria-controls="collapseTwo5">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree5">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="true" aria-controls="collapseThree5">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour5">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="true" aria-controls="collapseFour5">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-service">
+    <ul class="navbar-nav gap-3 gap-md-4">
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/0.0/assets/img/ouds-web-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
+    </ul>
+  </div>
+  <div class="border-bottom border-1 border-dark"></div>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2024</li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<script defer src="/docs/0.0/dist/js/ouds-web.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/"></script>
+
+    </body>
+</html>
