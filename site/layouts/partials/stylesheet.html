@@ -12,8 +12,8 @@
 {{- $sassOptions := dict "outputStyle" "expanded" "precision" 6 -}}
 {{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
 
-{{- $targetDocsCssPath := path.Join "/docs" .Site.Params.docs_version "assets/css/docs.css" -}}
-{{- $targetSearchCssPath := path.Join "/docs" .Site.Params.docs_version "assets/css/search.css" -}}
+{{- $targetDocsCssPath := path.Join "/" .Site.Params.docs_prefix "/docs" .Site.Params.docs_version "assets/css/docs.css" -}}
+{{- $targetSearchCssPath := path.Join "/" .Site.Params.docs_prefix "/docs" .Site.Params.docs_version "assets/css/search.css" -}}
 
 {{ if hugo.IsProduction -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
