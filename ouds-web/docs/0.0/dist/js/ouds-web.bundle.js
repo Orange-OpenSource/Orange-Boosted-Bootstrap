@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.0.0 (https://boosted.orange.com/)
+  * OUDS Web v0.1.0 (https://boosted.orange.com/)
   * Copyright 2015-2024 The OUDS Web Authors
   * Copyright 2015-2024 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v0.0.0 (https://boosted.orange.com/)
+  * Bootstrap v0.1.0 (https://boosted.orange.com/)
   * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -652,7 +652,7 @@
    * Constants
    */
 
-  const VERSION = '0.0.0';
+  const VERSION = '5.3.3';
 
   /**
    * Class definition
@@ -4909,7 +4909,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * OUDS Web orange-navbar.js
+   * Boosted orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5810,7 +5810,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * OUDS Web quantity-selector.js
+   * Boosted quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
    * --------------------------------------------------------------------------
    */
