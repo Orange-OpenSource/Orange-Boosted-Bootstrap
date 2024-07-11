@@ -6,7 +6,6 @@ group: getting-started
 aliases:
   - "/docs/getting-started/webpack/"
 toc: true
-thumbnail: guides/webpack-dev-server-ouds-web.png
 ---
 
 {{< callout-soon "page" >}}

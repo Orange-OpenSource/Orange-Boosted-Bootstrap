@@ -6,7 +6,6 @@ group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: guides/vite-dev-server-ouds-web.png
 ---
 
 {{< callout-soon "page" >}}
