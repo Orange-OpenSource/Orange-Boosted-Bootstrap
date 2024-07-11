@@ -5,7 +5,7 @@
 {{- end }}
 
 {{- $esbuildOptions := dict "target" "es2019" -}}
-{{- $targetDocsJSPath := path.Join "/" .Site.Params.docs_prefix "/docs" .Site.Params.docs_version -}}
+{{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version -}}
 {{- $esbuildOptions = merge $esbuildOptions (dict "minify" "true") -}}
 
 {{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
@@ -15,7 +15,7 @@
 <script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
 
 {{- $js := resources.Match "js/tac.js" -}}
-{{- $targetTacJSPath := path.Join "/" .Site.Params.docs_prefix "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
+{{- $targetTacJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
 {{- $tacJs := $js | resources.Concat $targetTacJSPath -}}
 {{- $tacJs = $tacJs | resources.Minify -}}
 <script defer src="{{ $tacJs.Permalink | relURL }}"></script>
