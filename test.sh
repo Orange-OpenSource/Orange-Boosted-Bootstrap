@@ -1,3 +1,4 @@
+if [ -d ouds-web ]; then rm -rf ouds-web; fi;
 mkdir ouds-web;
 mv _site/* ouds-web/;
 mv ouds-web _site/; 

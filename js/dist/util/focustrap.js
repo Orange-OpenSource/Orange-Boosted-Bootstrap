@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2015-2024 The Boosted Authors
+  * OUDS Web v0.0.0 (https://boosted.orange.com/)
+  * Copyright 2015-2024 The OUDS Web Authors
   * Copyright 2015-2024 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
+  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap focustrap.js v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2011-2024 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap focustrap.js v0.0.0 (https://boosted.orange.com/)
+  * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
