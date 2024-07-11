@@ -1,7 +1,7 @@
 {{ if hugo.IsProduction -}}
-  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
+  <script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
 {{ else -}}
-  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
+  <script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
 {{- end }}
 
 {{- $esbuildOptions := dict "target" "es2019" -}}
@@ -12,7 +12,7 @@
 <script defer src="{{ $applicationJs.RelPermalink }}"></script>
 
 <!--OUDS mod-->
-<script defer src="/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
+<script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
 
 {{- $js := resources.Match "js/tac.js" -}}
 {{- $targetTacJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}

@@ -46,9 +46,9 @@
       {{ else -}}
         <div class="col-sm-6 col-md-3 mb-3">
           {{- $exampleNameUrlized := $example.name | urlize -}}
-          {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
+          {{- $exampleUrl := urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
           <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
-            {{ $imageBasePath := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/img/examples" -}}
+            {{ $imageBasePath := urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version "assets/img/examples" -}}
             {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
             {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
             {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}

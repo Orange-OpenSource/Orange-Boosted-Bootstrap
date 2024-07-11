@@ -14,7 +14,7 @@
     <meta name="robots" content="{{ . }}">
     {{- end }}
 
-    {{- $colorModeJS := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/js/color-modes.js" -}}
+    {{- $colorModeJS := urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version "assets/js/color-modes.js" -}}
     <script src="{{ $colorModeJS }}"></script>
 
     {{ partial "stylesheet" . }}
@@ -108,9 +108,9 @@
     {{ .Content }}
 
     {{- if hugo.IsProduction -}}
-      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
+      <script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
     {{- else -}}
-      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
+      <script defer src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
     {{- end }}
 
     {{ range .Page.Params.extra_js -}}

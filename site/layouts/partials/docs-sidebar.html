@@ -31,9 +31,9 @@
           {{ if eq $group_slug "migrations" }}
             {{- $is_active = eq $page_slug $doc_slug -}}
           {{ end }}
-          {{- $href := urls.JoinPath "/docs" $.Site.Params.docs_version $group_slug $doc_slug "/" }}
+          {{- $href := urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version $group_slug $doc_slug "/" }}
           {{ if eq $group_slug "migrations" }}
-            {{- $href = urls.JoinPath "/docs" $.Site.Params.docs_version $doc_slug "/" }}
+            {{- $href = urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version $doc_slug "/" }}
           {{ end }}
           <li><a href="{{ $href }}" class="bd-links-link d-inline-block{{ if $is_active }} active{{ end }}{{if $is_draft }} text-decoration-line-through{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
         {{- end }}

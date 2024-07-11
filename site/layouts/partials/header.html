@@ -21,10 +21,10 @@
 
 <!-- OUDS mod -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-<link rel="preload" href="/docs/{{ .Site.Params.docs_version }}/assets/img/ouds-web-sprite.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/assets/img/ouds-web-sprite.svg" as="image" type="image/svg+xml">
 <!-- end mod -->
 
-{{- $colorModeJS := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/js/color-modes.js" -}}
+{{- $colorModeJS := urls.JoinPath "/" $.Site.Params.docs_prefix "/docs" $.Site.Params.docs_version "assets/js/color-modes.js" -}}
 <script src="{{ $colorModeJS }}"></script>
 
 {{ partial "stylesheet" . }}

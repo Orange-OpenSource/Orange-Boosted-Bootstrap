@@ -11,8 +11,8 @@
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
-        <a class="stretched-link" href="/">
-          <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+        <a class="stretched-link" href="/{{ .Site.Params.docs_prefix }}">
+          <img src="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
       </div>
 
@@ -25,13 +25,13 @@
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-0 border-0">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+            <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/{{ .Site.Params.docs_prefix }}" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+            <a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+            <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
           </li>
         </ul>
       </div>

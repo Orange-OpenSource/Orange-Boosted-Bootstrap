@@ -10,7 +10,7 @@
     <div class="alert-heading mb-1">
       {{- if eq $level "danger" -}}
         Incompatibility with Orange Design System.
-        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">More information</a>
+        <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">More information</a>
       {{- end -}}
       {{- if eq $level "info" -}}
         Orange Design System recommendation.

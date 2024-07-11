@@ -8,7 +8,7 @@
       OUDS Web is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
     </p>
     <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
-      <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="icon-link icon-link-hover fw-semibold mb-3">
+      <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="icon-link icon-link-hover fw-semibold mb-3">
         Learn more about CSS variables
         <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
       </a>
@@ -17,7 +17,7 @@
   <div class="row gx-lg-5">
     <div class="col-lg-6 mb-3">
       <h3 class="fw-semibold">Using CSS variables</h3>
-      <p>Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
+      <p>Use any of our <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
       {{ highlight (printf `.component {
   color: var(--bs-gray-800);
   background-color: var(--bs-gray-100);

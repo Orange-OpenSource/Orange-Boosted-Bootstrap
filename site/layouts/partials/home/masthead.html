@@ -3,7 +3,7 @@
     <div class="col-md-8 mx-auto text-center pt-lg-5">
       <!--
       <p class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none">
-        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-2">New in v0.0</a>
+        <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-2">New in v0.0</a>
         <span class="text-body-secondary">Color mode support, expanded color palette, and more!</span>
       </p>
       -->
@@ -18,7 +18,7 @@
         <div class="d-inline-block v-align-middle fs-5" style="min-width: fit-content;">
           {{ highlight (printf ("npm i @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
         </div>
-        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-primary">
+        <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-primary">
           <svg class="bi me-2 fs-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Read the docs
         </a>
@@ -26,9 +26,9 @@
       <p class="text-body-secondary mb-0">
         Currently <strong>v{{ .Site.Params.current_version }}</strong>
         <span class="px-1">&middot;</span>
-        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="link-secondary">Download</a>
+        <a href="/{{ .Site.Params.docs_prefix }}/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="link-secondary">Download</a>
         <span class="px-1">&middot;</span>
-        <a href="/docs/versions/" class="link-secondary text-nowrap">All releases</a>
+        <a href="/{{ .Site.Params.docs_prefix }}/docs/versions/" class="link-secondary text-nowrap">All releases</a>
       </p>
     </div>
   </div>
