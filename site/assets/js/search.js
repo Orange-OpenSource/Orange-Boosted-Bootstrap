@@ -33,7 +33,7 @@ import { appId, apiKey, indexName } from '@params';
     },
     transformItems(items) {
       return items.map(item => {
-        const liveUrl = 'https://boosted.orange.com/'
+        const liveUrl = 'https://web.unified-design-system.orange.com/'
 
         item.url = window.location.origin.startsWith(liveUrl) ?
           // On production, return the result as is

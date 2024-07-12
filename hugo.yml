@@ -1,6 +1,6 @@
 languageCode:                       "en"
 title:                              "OUDS Web"
-baseURL:                            "https://boosted.orange.com"
+baseURL:                            "https://web.unified-design-system.orange.com"
 
 security:
   enableInlineShortcodes: true
@@ -69,6 +69,8 @@ params:
   current_ruby_version:             "0.0.0"
   docs_version:                     "0.0"
   rfs_version:                      "v10.0.0"
+  bootstrap_current_version:        "5.3.3"
+  bootstrap_docs_version:           "5.3"
   bootstrap_github_org:             "https://github.com/twbs"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
@@ -94,13 +96,13 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.0.0/dist/css/ouds-web.min.css"
-    css_hash:                       "sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR"
+    css_hash:                       "sha384-fHOT6SXojWdcKEICDyY7I95mwzVWSCav3XQaQVXOdj498tAutuHwhjh1U+hh8AdQ"
     css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.0.0/dist/css/ouds-web.rtl.min.css"
-    css_rtl_hash:                   "sha384-u0MzeBZZtzZYfm2QxXQbV14lVgTHrLKdF/uhQkWT4IYfJAPcyVsCOXVHSE9jDiYh"
+    css_rtl_hash:                   "sha384-LRwyF8p6yM/B8QONnBBHSx/5zX+wDTRWZeBVPk7KQgSwqc6Y10E7by0vHsLuK6IR"
     js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.0.0/dist/js/ouds-web.min.js"
-    js_hash:                        "sha384-TfjOlWccrKKSEc/hJqxs6Tofoh4+tlm//VJYb92Ow7aPNtgfaKuuLsnFqObi3xmp"
+    js_hash:                        "sha384-DrpVh+h37Ozmq0hKO4JW3DmWEfusmxPWL/lZtlpwJZLDJRyDyn79dwy7+78Y+RIa"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.0.0/dist/js/ouds-web.bundle.min.js"
-    js_bundle_hash:                 "sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/"
+    js_bundle_hash:                 "sha384-rf5ZNV4RmITG+4Q6UG0UXYWabowFKMQlsRBfxWXOynW2gsf+qtGEFYZ761QNxxoo"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
