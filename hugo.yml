@@ -1,6 +1,6 @@
 languageCode:                       "en"
 title:                              "OUDS Web"
-baseURL:                            "https://boosted.orange.com"
+baseURL:                            "https://web.unified-design-system.orange.com"
 
 security:
   enableInlineShortcodes: true

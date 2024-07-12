@@ -16,7 +16,7 @@
     "bootstrap",
     "Orange"
   ],
-  "homepage": "https://boosted.orange.com/",
+  "homepage": "https://web.unified-design-system.orange.com/",
   "author": "The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
   "contributors": [
     "Orange SA"
@@ -72,7 +72,7 @@
     "docs-compile": "npm run docs-build",
     "docs-vnu": "node build/vnu-jar.mjs",
     "docs-lint": "npm run docs-vnu",
-    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap.xml --sitemap-find https://boosted.orange.com --sitemap-replace http://localhost:9001",
+    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap.xml --sitemap-find https://web.unified-design-system.orange.com --sitemap-replace http://localhost:9001",
     "docs-accessibility": "npm-run-all --parallel --race docs-serve-only docs-pa11y",
     "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
     "docs-serve-only": "sirv _site --no-clear --port 9001",
