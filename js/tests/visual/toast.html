@@ -52,17 +52,17 @@
 
     <script src="../../../dist/js/ouds-web.bundle.js"></script>
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
       window.addEventListener('load', () => {
-        document.querySelectorAll('.toast').forEach(toastEl => new boosted.Toast(toastEl))
+        document.querySelectorAll('.toast').forEach(toastEl => new oudsWeb.Toast(toastEl))
 
         document.getElementById('btnShowToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => boosted.Toast.getInstance(toastEl).show())
+          document.querySelectorAll('.toast').forEach(toastEl => oudsWeb.Toast.getInstance(toastEl).show())
         })
 
         document.getElementById('btnHideToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => boosted.Toast.getInstance(toastEl).hide())
+          document.querySelectorAll('.toast').forEach(toastEl => oudsWeb.Toast.getInstance(toastEl).hide())
         })
       })
     </script>

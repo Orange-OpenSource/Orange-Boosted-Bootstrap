@@ -53,7 +53,7 @@ const rollupConfig = {
 }
 
 if (!ESM) {
-  rollupConfig.output.name = 'ouds-web'
+  rollupConfig.output.name = 'oudsWeb'
 }
 
 export default rollupConfig

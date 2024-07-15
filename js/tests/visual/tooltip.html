@@ -85,7 +85,7 @@
 
     <script src="../../../dist/js/ouds-web.bundle.js"></script>
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
       if (typeof document.body.attachShadow === 'function') {
         const shadowRoot = document.getElementById('shadow').attachShadow({ mode: 'open' })
@@ -97,29 +97,29 @@
           '  Tooltip on top in a shadow dom' +
           '</button>'
 
-        new boosted.Tooltip(shadowRoot.firstChild)
-        new boosted.Tooltip(shadowRoot.getElementById('secondShadowTooltip'), {
+        new oudsWeb.Tooltip(shadowRoot.firstChild)
+        new oudsWeb.Tooltip(shadowRoot.getElementById('secondShadowTooltip'), {
           container: shadowRoot
         })
       }
 
-      new boosted.Tooltip('#tooltipElement', {
+      new oudsWeb.Tooltip('#tooltipElement', {
         container: '#customContainer'
       })
 
-      const targetTooltip = new boosted.Tooltip('#target', {
+      const targetTooltip = new oudsWeb.Tooltip('#target', {
         placement: 'top',
         trigger: 'manual'
       })
       targetTooltip.show()
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new boosted.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new oudsWeb.Tooltip(tooltipEl))
     </script>
 
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
-      new boosted.Tooltip('#wrapperTriggeredBySelector', {
+      new oudsWeb.Tooltip('#wrapperTriggeredBySelector', {
         animation: false,
         selector: '.bs-dynamic-tooltip'
       })

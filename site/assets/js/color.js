@@ -10,7 +10,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-/* global boosted: false */
+/* global oudsWeb: false */
 
 import ClipboardJS from 'clipboard'
 
@@ -20,7 +20,7 @@ import ClipboardJS from 'clipboard'
   })
 
   copyVariable.on('success', event => {
-    const tooltipBtn = boosted.Tooltip.getInstance(event.trigger)
+    const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const originalTitle = event.trigger.getAttribute('data-bs-title')
 
     tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })

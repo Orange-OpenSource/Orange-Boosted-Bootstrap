@@ -26,12 +26,21 @@ const resolvedPlugins = []
 const filenameToEntity = filename => filename.replace('.js', '')
   .replace(/(?:^|-|\/|\\)[a-z]/g, str => str.slice(-1).toUpperCase())
 
+// Transform the entity to camelCase
+// const entityToCamelCase = entity => entity.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })
+
+let i = 0
+  while (i++ < 10) {
+    console.log('------------------------------------')
+  }
+
 for (const file of jsFiles) {
+  console.log(filenameToEntity(path.basename(file)))
   resolvedPlugins.push({
     src: file,
     dist: file.replace('src', 'dist'),
     fileName: path.basename(file),
-    className: filenameToEntity(path.basename(file))
+    className: filenameToEntity(path.basename(file)),
     // safeClassName: filenameToEntity(path.relative(sourcePath, file))
   })
 }
@@ -58,6 +67,9 @@ const build = async plugin => {
 
       // It's not a local file, e.g a Node.js package
       if (!pattern.test(source)) {
+        if (source === 'ouds-web') {
+          source = 'oudsWeb'
+        }
         globals[source] = source
         return true
       }
@@ -72,10 +84,19 @@ const build = async plugin => {
 
       // We can change `Index` with `UtilIndex` etc if we use
       // `safeClassName` instead of `className` everywhere
+      const toto = path.normalize(usedPlugin.src) === 'ouds-web' ? 'oudsWeb' : path.normalize(usedPlugin.src)
       globals[path.normalize(usedPlugin.src)] = usedPlugin.className
       return true
     }
   })
+
+  console.log('#######################')
+  console.log('#######################')
+  console.log('#######################')
+  console.log('#######################')
+  console.log(plugin.className)
+  console.log(plugin.dist)
+  console.log(globals)
 
   await bundle.write({
     banner: banner(plugin.fileName),

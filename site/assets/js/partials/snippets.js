@@ -11,7 +11,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-/* global boosted: false */
+/* global oudsWeb: false */
 
 export default () => {
   // OUDS mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
@@ -24,7 +24,7 @@ export default () => {
   // storybook-start tooltips
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
     .forEach(tooltip => {
-      new boosted.Tooltip(tooltip)
+      new oudsWeb.Tooltip(tooltip)
     })
   // storybook-end tooltips
 
@@ -35,7 +35,7 @@ export default () => {
   // storybook-start popovers
   document.querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(popover => {
-      new boosted.Popover(popover)
+      new oudsWeb.Popover(popover)
     })
   // storybook-end popovers
   // storybook-end overview
@@ -58,7 +58,7 @@ export default () => {
   // Instantiate all toasts in docs pages only
   document.querySelectorAll('.bd-example .toast')
     .forEach(toastNode => {
-      const toast = new boosted.Toast(toastNode, {
+      const toast = new oudsWeb.Toast(toastNode, {
         autohide: false
       })
 
@@ -69,7 +69,7 @@ export default () => {
   // js-docs-start live-toast
   if (document.getElementById('liveToastBtn')) {
     document.getElementById('liveToastBtn').addEventListener('click', () => {
-      boosted.Toast.getOrCreateInstance(document.getElementById('liveToast')).show()
+      oudsWeb.Toast.getOrCreateInstance(document.getElementById('liveToast')).show()
     })
   }
   // js-docs-end live-toast
@@ -101,7 +101,7 @@ export default () => {
 
     // Create `.btn-close` tooltip after `innerHTML` has been modified
     const btnClose = wrapper.querySelector('.btn-close')
-    const tooltip = new boosted.Tooltip(btnClose)
+    const tooltip = new oudsWeb.Tooltip(btnClose)
     btnClose.addEventListener('click', () => {
       tooltip.hide()
     })
@@ -122,7 +122,7 @@ export default () => {
   // storybook-start carousel
   document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
     .forEach(carousel => {
-      boosted.Carousel.getOrCreateInstance(carousel)
+      oudsWeb.Carousel.getOrCreateInstance(carousel)
     })
   // storybook-end carousel
 
