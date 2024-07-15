@@ -11,7 +11,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core')) :
   typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["ouds-web"] = factory(global.Popper));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.oudsWeb = factory(global.Popper));
 })(this, (function (Popper) { 'use strict';
 
   function _interopNamespaceDefault(e) {

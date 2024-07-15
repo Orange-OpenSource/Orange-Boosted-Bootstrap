@@ -205,7 +205,7 @@
 
     <script src="../../../dist/js/ouds-web.bundle.js"></script>
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
       const ffBugTestResult = document.getElementById('ff-bug-test-result')
       const firefoxTestDone = false
@@ -217,9 +217,9 @@
         }
       }
 
-      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new boosted.Popover(popoverEl))
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new oudsWeb.Popover(popoverEl))
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new boosted.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new oudsWeb.Tooltip(tooltipEl))
 
       const tall = document.getElementById('tall')
       document.getElementById('tall-toggle').addEventListener('click', () => {
@@ -236,7 +236,7 @@
 
       ffBugInput.addEventListener('focus', handlerClickFfBugInput)
 
-      const modalFf = new boosted.Modal(firefoxModal)
+      const modalFf = new oudsWeb.Modal(firefoxModal)
 
       document.getElementById('btnPreventModal').addEventListener('click', () => {
         const shownFirefoxModal = () => {
