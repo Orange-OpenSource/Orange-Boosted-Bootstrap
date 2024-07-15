@@ -1,3 +1,11 @@
+/*!
+ * Script to automatically generate Storybook stories from the documentation.
+ *
+ * Copyright (c) 2015-2024 Orange SA
+ * Copyright (c) 2015-2024 The OUDS Web Authors
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ */
+
 'use strict'
 
 const fs = require('node:fs')
@@ -66,7 +74,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/ouds-web/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
