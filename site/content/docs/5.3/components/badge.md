@@ -18,7 +18,7 @@ Badges scale to match the size of the immediate parent element by using relative
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component variant should not be used because it does not exist in the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -62,7 +62,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 {{< design-callout-alert >}}
 This component variant should be used **only** inside a header component.
 
-Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >}}). You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
+Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >}}). You can also refer to the [Global headers guidelines](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -86,7 +86,7 @@ Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >
 
 {{< added-in "5.2.0" >}}
 
-Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
+Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}` utilities]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}` utilities]({{< docsref "/utilities/background" >}}) for styling, which you still may use if you prefer.
 
 <details>
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
@@ -119,7 +119,7 @@ Consider using our [Boosted Tags]({{< docsref "/components/tags" >}}) instead.
 {{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
 
-Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
+Instead, consider using our [Tags component]({{< docsref "/components/tags" >}}). You can also refer to the [Tags guidelines](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

@@ -74,7 +74,7 @@ The following colors are meant to be used with icons.
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
 
-Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-colors" >}}) section underneath and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our [Orange's colors section]({{< docsref "/utilities/colors#colors" >}}) above and to the [Color guidelines](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -136,7 +136,7 @@ To change that opacity, override `--bs-text-opacity` via custom styles or inline
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
 
-Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-colors" >}}) section underneath and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our [Orange's colors section]({{< docsref "/utilities/colors#colors" >}}) above.
 {{< /design-callout-alert >}}
 
 {{< example >}}

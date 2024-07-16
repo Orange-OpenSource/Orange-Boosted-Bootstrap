@@ -39,7 +39,7 @@ Boosted includes several button variants, each serving its own semantic purpose,
 {{< design-callout-alert >}}
 Warning, info, light and dark variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -198,7 +198,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< design-callout-alert >}}
 The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -236,7 +236,7 @@ You can even roll your own custom sizing with CSS variables:
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -289,7 +289,7 @@ Create responsive stacks of full-width, "block buttons" like those in Boosted 4 
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -345,7 +345,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 {{< design-callout-alert >}}
 These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
 
-Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
+Instead, consider using our Boosted [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
 {{< /design-callout-alert >}}
 
 {{< example >}}

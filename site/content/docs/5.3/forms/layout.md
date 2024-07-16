@@ -119,6 +119,15 @@ Create horizontal forms with the grid by adding the `.row` class to form groups 
 
 At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This form variant, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to our Boosted [Forms example]({{< docsref "/examples/form" >}}). You can also refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <form>
   <div class="row mb-3">
@@ -169,10 +178,20 @@ At times, you maybe need to use margin or padding utilities to create that perfe
   <button type="submit" class="btn btn-primary mt-2">Sign in</button>
 </form>
 {{< /example >}}
+</details>
 
 ### Horizontal form label sizing
 
 Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one with a `col-form-label-sm` class because of its height, should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="row mb-3">
@@ -194,10 +213,20 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Column sizing
 
 As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These form variants, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="row g-3">
@@ -212,10 +241,20 @@ As shown in the previous examples, our grid system allows you to place any numbe
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Auto-sizing
 
 The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These form variants, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">
@@ -290,6 +329,7 @@ You can then remix that once again with size-specific column classes.
   </div>
 </form>
 {{< /example >}}
+</details>
 
 ## Inline forms
 
@@ -301,7 +341,7 @@ Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

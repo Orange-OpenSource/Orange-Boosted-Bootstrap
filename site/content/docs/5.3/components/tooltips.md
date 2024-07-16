@@ -73,7 +73,7 @@ You can customize the appearance of tooltips using [CSS variables](#variables). 
 {{< design-callout-alert >}}
 This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 
-Please refer to the [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) guidelines  on the Orange Design System website.
+Please refer to the [Tooltip guidelines](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}

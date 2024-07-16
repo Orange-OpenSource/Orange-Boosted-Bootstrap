@@ -543,7 +543,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
 {{< design-callout-alert >}}
 This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+Please refer to the [Modals guidelines](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
@@ -691,7 +691,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
 {{< design-callout-alert >}}
 These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
 
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+Please refer to the [Modals guidelines](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< bs-table >}}

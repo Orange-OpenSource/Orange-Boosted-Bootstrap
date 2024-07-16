@@ -70,7 +70,7 @@ You only set a `height` value on the `.progress` container, so if you change tha
 {{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -126,7 +126,7 @@ Use background utility classes to change the appearance of individual progress b
 {{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -178,6 +178,13 @@ Alternatively, you can use the new combined [color and background]({{< docsref "
 
 You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These variants should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="progress-stacked">
   <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
@@ -191,6 +198,7 @@ You can include multiple progress components inside a container with `.progress-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Striped
 
@@ -202,7 +210,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -234,7 +242,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

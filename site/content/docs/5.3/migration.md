@@ -16,6 +16,10 @@ toc: true
 - **Colors**
   - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
 
+### Docs
+
+- Some component variants have been hidden from the documentation in order for you to better see the variants you should use and ease the link between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation. These variants are still available under the details of `See Bootstrap example(s) that are incompatible with Orange Design System.`, but know that using them might be a transgression of the Orange Design System rules and try to avoid them as much as possible.
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
@@ -934,7 +938,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - <span class="badge text-bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
 
-- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
+- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#colors" >}}).
 
 ### Examples
 

@@ -65,7 +65,7 @@ While `<button>` is the recommended control for a dropdown toggle, there might b
 {{< design-callout-alert >}}
 Only the `.btn-dropdown` variant should be used because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 The best part is you can do this with any button variant, too:
@@ -178,7 +178,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 {{< design-callout-alert >}}
 Only the `.btn-outline-secondary` variant should be used as a split dropdown because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">
@@ -341,7 +341,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 {{< design-callout-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">
@@ -417,7 +417,7 @@ Make the dropdown menu centered below the toggle with `.dropdown-center` on the 
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -503,7 +503,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -870,7 +870,7 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -895,7 +895,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -960,6 +960,30 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown me-1">
+    <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+      Offset
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This variant with a `data-bs-offset` attribute having values different than `"0,0"` should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+<div class="d-flex">
+  <div class="dropdown me-1">
     <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
       Offset
     </button>
@@ -984,6 +1008,7 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ### Auto close behavior
 

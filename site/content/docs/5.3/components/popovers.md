@@ -102,6 +102,15 @@ const popover = new boosted.Popover('.example-popover', {
 
 You can customize the appearance of popovers using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-popover"` to scope our custom appearance and use it to override some of the local CSS variables.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing popover CSS might lead to mismatch the Orange Design System.
+
+Please refer to the [Popover guidelines](https://system.design.orange.com/0c1af118d/p/644ffa-popovers) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example class="custom-popover-demo" stackblitz_add_js="true" >}}
@@ -113,6 +122,7 @@ You can customize the appearance of popovers using [CSS variables](#variables). 
   Custom popover
 </button>
 {{< /example >}}
+</details>
 
 ### Dismiss on next click
 

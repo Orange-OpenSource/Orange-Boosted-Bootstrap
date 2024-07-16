@@ -42,7 +42,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 {{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
-Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples" >}}) secondary variant component. You can also refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
+Please refer to our Boosted [Buttons secondary variant component]({{< docsref "/components/buttons#examples" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -74,7 +74,7 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 {{< design-callout-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks component]({{< docsref "/forms/checks-radios#checks" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -101,8 +101,8 @@ From the Orange Design System point of view, checkboxes should be represented li
 
   <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
   <label class="btn btn-toggle" for="btnradio3">Radio 3</label>
- </div>
- {{< /example >}}
+</div>
+{{< /example >}}
 
 ## Button toolbar
 
@@ -112,7 +112,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -170,6 +170,23 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
 {{< example >}}
+<div class="btn-group" role="group" aria-label="Default button group">
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
+</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+The **first size variant (50px height) and the last one (30px height)** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Toggle buttons](https://system.design.orange.com/0c1af118d/p/59c349-toggle-buttons/b/91bf23) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
   <button type="button" class="btn btn-outline-secondary">Left</button>
   <button type="button" class="btn btn-outline-secondary">Middle</button>
@@ -188,6 +205,7 @@ Instead of applying button sizing classes to every button in a group, just add `
   <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 {{< /example >}}
+</details>
 
 ## Nesting
 

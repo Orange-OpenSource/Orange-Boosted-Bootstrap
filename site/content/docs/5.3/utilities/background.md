@@ -95,6 +95,17 @@ We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CS
 To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
 
 {{< example >}}
+<div class="bg-success p-2 text-bg-success">This is default success background</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 <div class="bg-success p-2 text-dark">This is default success background</div>
 <div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
 {{< /example >}}
@@ -108,6 +119,7 @@ Or, choose from any of the `.bg-opacity` utilities:
 <div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
 <div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
 {{< /example >}}
+</details>
 
 ## CSS
 
