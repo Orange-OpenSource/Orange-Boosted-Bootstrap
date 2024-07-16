@@ -65,13 +65,16 @@ Hover over the links below to see tooltips:
 
 {{< added-in "5.2.0" >}}
 
+You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 
 Please refer to the [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) guidelines  on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
@@ -83,6 +86,7 @@ You can customize the appearance of tooltips using [CSS variables](#variables). 
   Custom tooltip
 </button>
 {{< /example >}}
+</details>
 
 ### Directions
 

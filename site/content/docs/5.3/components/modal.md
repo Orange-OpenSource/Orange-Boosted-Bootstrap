@@ -537,6 +537,9 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
@@ -579,6 +582,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
 </div>
 <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
 {{< /example >}}
+</details>
 
 ### Change animation
 
@@ -681,6 +685,15 @@ Our default modal without modifier class constitutes the "medium" size modal.
 
 Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a `.modal-dialog`.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
+
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< bs-table >}}
 | Class | Availability |
 | --- | --- |
@@ -691,12 +704,6 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-xl-down` | `1280px` |
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
-
-{{< design-callout-alert >}}
-These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
-
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
-{{< /design-callout-alert >}}
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
@@ -815,6 +822,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     </div>
   </div>
 </div>
+</details>
 
 ## CSS
 

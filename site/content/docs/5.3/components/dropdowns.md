@@ -60,7 +60,7 @@ While `<button>` is the recommended control for a dropdown toggle, there might b
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Only the `.btn-dropdown` variant should be used because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
@@ -173,7 +173,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Only the `.btn-outline-secondary` variant should be used as a split dropdown because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
@@ -335,6 +335,9 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -390,6 +393,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 ```
+</details>
 
 ## Dark dropdowns
 
@@ -407,6 +411,9 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -425,6 +432,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropup
 
@@ -489,6 +497,9 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -507,6 +518,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropend
 
@@ -852,6 +864,9 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -868,11 +883,15 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </p>
 </div>
 {{< /example >}}
+</details>
 
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -932,6 +951,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </form>
 </div>
 {{< /example >}}
+</details>
 
 ## Dropdown options
 
@@ -969,6 +989,22 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
+{{< example >}}
+<div class="btn-group">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+    Default dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+  </ul>
+</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
 {{< /design-callout-alert >}}
@@ -1018,6 +1054,7 @@ The 3 last auto close behavior variants should not be used because featuring a s
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

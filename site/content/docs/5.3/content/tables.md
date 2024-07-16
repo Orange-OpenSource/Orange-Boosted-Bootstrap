@@ -40,8 +40,11 @@ Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.tabl
 {{< /callout >}}
 
 <details>
-<summary>See Bootstrap's colored variants</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+{{< /design-callout-alert >}}
 
 Use contextual classes to color tables, table rows or individual cells.
 
@@ -124,8 +127,14 @@ Use .table-striped-columns to add zebra-striping to any table column.
 {{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
 <details>
-<summary>These classes can also be added to Bootstrap's table colored variants.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+
+If you want dark tables, please consider using [contextual dark mode]({{< docsref "/customize/color-modes/#contextual-dark-mode-vs-dark-variants" >}}).
+{{< /design-callout-alert >}}
+
 {{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
 
 {{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
@@ -141,8 +150,15 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
 {{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
-<details>
-<summary class="mb-3">See it applied on another Bootstrap's variant</summary>
+<details class="mb-3">
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+
+If you want dark tables, please consider using [contextual dark mode]({{< docsref "/customize/color-modes/#contextual-dark-mode-vs-dark-variants" >}}).
+{{< /design-callout-alert >}}
+
 {{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
 </details>
 
@@ -151,8 +167,14 @@ These hoverable rows can also be combined with the striped rows variant:
 {{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
 <details>
-<summary>See it applied on another Bootstrap's variant</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+
+If you want dark tables, please consider using [contextual dark mode]({{< docsref "/customize/color-modes/#contextual-dark-mode-vs-dark-variants" >}}).
+{{< /design-callout-alert >}}
+
 {{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
 </details>
 
@@ -216,8 +238,14 @@ Highlight a table row or cell by adding a `.table-active` class.
 ```
 
 <details>
-<summary>See it applied on another Bootstrap's variant</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+
+If you want dark tables, please consider using [contextual dark mode]({{< docsref "/customize/color-modes/#contextual-dark-mode-vs-dark-variants" >}}).
+{{< /design-callout-alert >}}
+
 <div class="bd-example">
   <table class="table table-dark">
     <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
@@ -301,8 +329,14 @@ To display basic tables, Orange Design System recommends using these compact tab
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
 <details>
-<summary>See it applied on another Bootstrap's variant</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
+{{< design-callout-alert >}}
+These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
+
+If you want dark tables, please consider using [contextual dark mode]({{< docsref "/customize/color-modes/#contextual-dark-mode-vs-dark-variants" >}}).
+{{< /design-callout-alert >}}
+
 {{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
 </details>
 
@@ -412,11 +446,14 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 
 ## Nesting
 
+Border styles, active styles, and table variants are not inherited by nested tables.
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 {{< /design-callout-alert >}}
-
-Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
   <table class="table table-striped table-bordered">
@@ -496,6 +533,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
   </tbody>
 </table>
 ```
+</details>
 
 ## How nesting works
 

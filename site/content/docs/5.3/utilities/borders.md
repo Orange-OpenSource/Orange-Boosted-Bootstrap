@@ -67,6 +67,9 @@ Here is a list of these extra classes:
 
 Or modify the default `border-color` of a component:
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These border color variants are just **examples illustrating the use of this color utility**. They should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -85,6 +88,7 @@ These border color variants are just **examples illustrating the use of this col
   Changing border color and width
 </div>
 {{< /example >}}
+</details>
 
 ## Opacity
 
@@ -92,9 +96,6 @@ These border color variants are just **examples illustrating the use of this col
 
 Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
-{{< design-callout-alert >}}
-These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
-{{< /design-callout-alert >}}
 ### How it works
 
 Consider our default `.border-success` utility.
@@ -113,6 +114,17 @@ We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CS
 To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
 
 {{< example >}}
+<div class="border border-success p-2">This is default success border</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
 <div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>
 {{< /example >}}
@@ -126,9 +138,19 @@ Or, choose from any of the `.border-opacity` utilities:
 <div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
 {{< /example >}}
+</details>
 
 ## Width
 
+{{< example class="bd-example-border-utils" >}}
+<span class="border border-0"></span>
+<span class="border border-1"></span>
+<span class="border border-2"></span>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 The three last border utilities with **a width larger than 2px** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -141,11 +163,20 @@ The three last border utilities with **a width larger than 2px** should not be u
 <span class="border border-4"></span>
 <span class="border border-5"></span>
 {{< /example >}}
+</details>
 
 ## Radius
 
 Add classes to an element to easily round its corners.
 
+{{< example >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
+{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These border variants with **a radius CSS class different than `.rounded-circle` and `.rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -159,6 +190,7 @@ These border variants with **a radius CSS class different than `.rounded-circle`
 {{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
 {{< /example >}}
+</details>
 
 ### Sizes
 
@@ -166,6 +198,13 @@ These border variants with **a radius CSS class different than `.rounded-circle`
 
 Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
 
+{{< example class="bd-example-rounded-utils" >}}
+{{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" color="#999" >}}
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These border variants with **a size CSS class different than `.rounded-0`** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -186,6 +225,7 @@ These border variants with **a size CSS class different than `.rounded-0`** shou
 {{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Example extra large bottom rounded image" color="#999" >}}
 {{< /example >}}
+</details>
 
 ## Dividers
 
