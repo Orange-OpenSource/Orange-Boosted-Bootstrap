@@ -48,7 +48,7 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
-**Colored spinners** are not compatible with the [Orange Design System]({{< param ods.web >}}).
+**Colored spinners** are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -79,7 +79,7 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
-**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+**Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -178,7 +178,7 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
-**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+**Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -219,7 +219,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
-**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+**Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
 
 {{< example >}}
