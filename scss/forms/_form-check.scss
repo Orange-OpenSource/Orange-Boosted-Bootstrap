@@ -187,12 +187,6 @@
       filter: $form-switch-checked-filter; // Boosted mod
       border-color: $form-switch-checked-border-color;
 
-      &:focus {
-        &[data-focus-visible-added] {
-          @include focus-visible($color: $form-switch-checked-focus-outer, $box-color: $form-switch-checked-focus-inner);
-        }
-      }
-
       @if $enable-gradients {
         --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
@@ -201,6 +195,12 @@
         --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)};
         background-position: $form-switch-checked-bg-position, 100% 0;
         background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
+      }
+
+      &:focus {
+        &[data-focus-visible-added] {
+          @include focus-visible($color: $form-switch-checked-focus-outer, $box-color: $form-switch-checked-focus-inner);
+        }
       }
 
       &:not(:disabled) {

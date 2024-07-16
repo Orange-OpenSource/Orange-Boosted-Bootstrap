@@ -55,9 +55,9 @@
   // Boosted mod
   font-weight: var(--#{$prefix}navbar-font-weight);
   box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
+  @include gradient-bg(var(--#{$prefix}navbar-bg)); // Boosted mod: instead of `@include gradient-bg()`
   @include transition($navbar-transition);
   // End mod
-  @include gradient-bg(var(--#{$prefix}navbar-bg)); // Boosted mod: instead of `@include gradient-bg()`
 
   // Boosted mod: Difference between xs and md breakpoints
   // scss-docs-start orange-navbar-css-vars
@@ -155,11 +155,12 @@
 
   // No focus
   &:hover {
+    text-decoration: if($link-hover-decoration == underline, none, null);
+
     .title,
     .two-lined {
       color: var(--#{$prefix}navbar-brand-hover-color);
     }
-    text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
   //// Orange's master logo

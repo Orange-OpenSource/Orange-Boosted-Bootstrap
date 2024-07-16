@@ -152,8 +152,8 @@
 .carousel-control-next-icon {
   display: inline-block;
   background-color: var(--#{$prefix}control-bg); // Boosted mod
-  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // Boosted mod
   @include border-radius(50%, 50%);
+  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // Boosted mod
 }
 
 // Boosted mod
