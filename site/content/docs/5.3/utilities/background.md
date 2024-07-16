@@ -46,7 +46,7 @@ Supporting background utilities are generated from our [supporting colors]({{< d
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Bootstrap-specific background color utilities should not be used because they are not part of the [Orange Design System]({{< param ods.web >}}) as they are inherited from Bootstrap.

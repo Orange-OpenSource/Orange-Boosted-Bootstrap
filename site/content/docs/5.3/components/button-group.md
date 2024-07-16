@@ -37,7 +37,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 ## Mixed styles
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
@@ -69,7 +69,7 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
 <details class="mb-3">
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
@@ -109,7 +109,7 @@ From the Orange Design System point of view, checkboxes should be represented li
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -194,7 +194,7 @@ Instead of applying button sizing classes to every button in a group, just add `
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -224,7 +224,7 @@ This variant should not be used because it does not respect the Orange Design Sy
 Make a set of buttons appear vertically stacked rather than horizontally.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These 3 vertical variants should not be used because they do not respect the Orange Design System specifications.

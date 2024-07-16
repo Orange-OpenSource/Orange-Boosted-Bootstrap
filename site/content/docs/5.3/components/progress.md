@@ -65,7 +65,7 @@ You only set a `height` value on the `.progress` container, so if you change tha
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
@@ -121,7 +121,7 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 Use background utility classes to change the appearance of individual progress bars.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
@@ -197,7 +197,7 @@ You can include multiple progress components inside a container with `.progress-
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
@@ -229,7 +229,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
 <details>
-<summary>See Bootstrap example(s) incompatible with Orange Design System</summary>
+<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
