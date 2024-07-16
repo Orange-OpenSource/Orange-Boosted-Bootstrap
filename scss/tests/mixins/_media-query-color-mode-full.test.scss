@@ -3,6 +3,6 @@ $color-mode-type: media-query;
 @import "../../boosted";
 
 @include describe("global $color-mode-type: media-query") {
-  @include it("compiles entirely Bootstrap CSS with media-query color mode") { // stylelint-disable-line block-no-empty
+  @include it("compiles entirely Boosted CSS with media-query color mode") { // stylelint-disable-line block-no-empty
   }
 }
