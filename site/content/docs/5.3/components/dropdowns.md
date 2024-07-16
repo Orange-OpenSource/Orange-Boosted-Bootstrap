@@ -893,7 +893,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
