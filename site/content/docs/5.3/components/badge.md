@@ -15,7 +15,7 @@ Badges scale to match the size of the immediate parent element by using relative
 ### Headings
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This component variant should not be used because it does not exist in the Orange Design System specifications.
@@ -36,7 +36,7 @@ This component variant should not be used because it does not exist in the Orang
 Badges can be used as part of links or buttons to provide a counter.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
@@ -89,7 +89,7 @@ Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These component variants should not be used because they do not exist in the Orange Design System specifications.
@@ -114,7 +114,7 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 Consider using our [Boosted Tags]({{< docsref "/components/tags" >}}) instead.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.

@@ -156,7 +156,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 Take that same HTML, but use `.nav-pills` instead:
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it should be a `<button>` component in the Orange Design System specifications.
@@ -377,7 +377,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 ### Pills with dropdowns
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with the Orange Design System.</summary>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it should be a `<button>` component in the Orange Design System specifications.
