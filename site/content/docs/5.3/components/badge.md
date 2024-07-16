@@ -62,7 +62,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 {{< design-callout-alert >}}
 This component variant should be used **only** inside a header component.
 
-Please refer to our **[Boosted Navbars]({{< docsref "/examples/navbars" >}})** examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
+Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >}}). You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
