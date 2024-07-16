@@ -158,6 +158,7 @@
   --#{$prefix}form-select-indicator: #{$form-select-indicator}; // Boosted mod
   --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // Boosted mod
   --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg}; // Boosted mod
+  --#{$prefix}form-switch-unchecked-invalid-border-color: #{$form-switch-unchecked-invalid-border-color}; // Boosted mod
 
   // Boosted mod
   // Table-specific styles
@@ -253,6 +254,7 @@
     --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // Boosted mod
     --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
     --#{$prefix}form-switch-square-bg: #{$form-switch-square-bg-dark}; // Boosted mod
+    --#{$prefix}form-switch-unchecked-invalid-border-color: #{$form-switch-unchecked-invalid-border-color-dark}; // Boosted mod
 
     // Boosted mod
     // Table-specific styles
