@@ -53,7 +53,7 @@
   }
 
   > details {
-    padding: 5px 10px; // Static even on zoom
+    padding: 5px 10px; // static even when zoomed
     border: transparent solid calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
 
     // stylelint-disable-next-line selector-no-qualifying-type
