@@ -90,8 +90,8 @@ params:
 
   download:
     source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.0.1-ouds-web.zip"
-    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.0.1-ouds/ouds-web-0.0.1-dist.zip"
-    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.0.1-ouds/ouds-web-0.0.1-examples.zip"
+    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.0.1-ouds-web/ouds-web-0.0.1-dist.zip"
+    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.0.1-ouds-web/ouds-web-0.0.1-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
