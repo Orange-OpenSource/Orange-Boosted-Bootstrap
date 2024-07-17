@@ -26,8 +26,5 @@
   "support": {
     "issues": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
-  "license": "MIT",
-  "replace": {
-    "orange-opensource/orange-boosted-bootstrap": "self.version"
-  }
+  "license": "MIT"
 }
