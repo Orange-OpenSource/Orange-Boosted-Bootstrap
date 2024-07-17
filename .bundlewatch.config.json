@@ -10,7 +10,7 @@
     },
     {
       "path": "./dist/css/boosted-reboot.css",
-      "maxSize": "4.75 kB"
+      "maxSize": "4.5 kB"
     },
     {
       "path": "./dist/css/boosted-reboot.min.css",
@@ -18,7 +18,7 @@
     },
     {
       "path": "./dist/css/boosted-utilities.css",
-      "maxSize": "13.0 kB"
+      "maxSize": "12.75 kB"
     },
     {
       "path": "./dist/css/boosted-utilities.min.css",
