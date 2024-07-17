@@ -128,7 +128,7 @@ $form-valid-color-dark:                           var(--#{$prefix}success-text-e
 $form-valid-border-color-dark:                    var(--#{$prefix}success) !default; // Boosted mod: instead of `$green-300`
 $form-invalid-color-dark:                         var(--#{$prefix}danger-text-emphasis) !default; // Boosted mod: instead of `$red-300`
 $form-invalid-border-color-dark:                  var(--#{$prefix}danger) !default; // Boosted mod: instead of `$red-300`
-$form-switch-unchecked-invalid-border-color-dark: var(--#{$prefix}danger) !default; // Boosted mod
+$form-switch-unchecked-invalid-border-color-dark: $form-invalid-border-color-dark !default; // Boosted mod
 // scss-docs-end form-validation-colors-dark
 
 //

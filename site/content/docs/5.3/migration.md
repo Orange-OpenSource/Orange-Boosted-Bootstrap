@@ -16,6 +16,23 @@ toc: true
 - **Colors**
   - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
 
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-form-switch-unchecked-invalid-border-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$form-switch-unchecked-invalid-border-color</code></li>
+      <li><code>$form-switch-unchecked-invalid-border-color-dark</code></li>
+    </ul>
+  </details>
+
 ## v5.3.3
 
 <hr class="mb-4">
