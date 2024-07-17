@@ -155,8 +155,11 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 
 Take that same HTML, but use `.nav-pills` instead:
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used as is because it should use a `<button>` component as defined in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -175,6 +178,7 @@ This variant should not be used because it is a button component in the Orange D
   </li>
 </ul>
 {{< /example >}}
+</details>
 
 ### Underline
 
@@ -372,8 +376,11 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 
 ### Pills with dropdowns
 
+<details>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used as is because it should use a `<button>` component as defined in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 <!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
@@ -401,6 +408,7 @@ This variant should not be used because it is a button component in the Orange D
 </ul>
 {{< /example >}}
 <!-- End mod -->
+</details>
 
 ## CSS
 

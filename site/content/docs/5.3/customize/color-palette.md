@@ -45,7 +45,7 @@ Please make sure that none of the [color theme variables]({{< docsref "/customiz
 Bootstrap defines a color palette on its own. We worked on a mapping between Orange Design System's colors and Bootstrap's ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with Boosted CSS, provides an acceptable automatic rendering.
 
 <details>
-<summary>See Bootstrap's palette</summary>
+<summary>See Bootstrap palette incompatible with Orange Design System</summary>
 <br>
 <h2>All colors</h2>
 

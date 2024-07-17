@@ -46,8 +46,11 @@ Supporting background utilities are generated from our [supporting colors]({{< d
 {{< /example >}}
 
 <details>
-  <summary>See list of Bootstrap-specific background color utilities</summary>
-  <br>
+<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+Bootstrap-specific background color utilities should not be used because they are not part of the [Orange Design System]({{< param ods.web >}}) as they are inherited from Bootstrap.
+{{< /design-callout-alert >}}
 
 Another background utility is `.bg-body-tertiary` but doesn't have any matching color in our [grays colors]({{< docsref "/customize/color-theme#grays" >}}) so shouldn't be used for now.
 
