@@ -68,7 +68,7 @@ params:
   current_version:                  "0.0.1"
   current_ruby_version:             "0.0.1"
   docs_version:                     "0.0"
-  rfs_version:                      "v10.0.1"
+  rfs_version:                      "v10.0.0"
   bootstrap_current_version:        "5.3.3"
   bootstrap_docs_version:           "5.3"
   bootstrap_github_org:             "https://github.com/twbs"
