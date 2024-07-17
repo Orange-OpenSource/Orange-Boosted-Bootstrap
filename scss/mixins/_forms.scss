@@ -154,14 +154,16 @@
         // Boosted mod: label's color doesn't change
       }
     }
+
     // Boosted mod
     .form-switch .form-check-input:not(:checked) {
       @include form-validation-state-selector($state) {
-        filter: $form-switch-filter; // keep filter
+        filter: $form-switch-filter;
         border-color: var(--#{$prefix}form-switch-unchecked-invalid-border-color);
       }
     }
     // End mod
+
     .form-check-inline .form-check-input {
       ~ .#{$state}-feedback {
         margin-left: .5em;
