@@ -34,7 +34,7 @@ Several quick start options are available:
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.0.1`
 - Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.0.1`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/ouds-web:0.0.1`
+- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web` Sass: `Install-Package ouds-web.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
