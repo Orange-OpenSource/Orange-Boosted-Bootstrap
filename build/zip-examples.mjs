@@ -20,7 +20,7 @@ const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
 const versionShort = pkg.config.version_short
 const distFolder = `ouds-web-${pkg.version}-examples`
 const rootDocsDir = '_site'
-const docsDir = `${rootDocsDir}/docs/${versionShort}/`
+const docsDir = `${rootDocsDir}/ouds-web/docs/${versionShort}/`
 
 // these are the files we need in the examples
 const cssFiles = [
