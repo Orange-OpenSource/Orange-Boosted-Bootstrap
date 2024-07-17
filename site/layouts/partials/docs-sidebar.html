@@ -35,7 +35,7 @@
           {{ if eq $group_slug "migrations" }}
             {{- $href = urls.JoinPath "/docs" $.Site.Params.docs_version $doc_slug "/" }}
           {{ end }}
-          <li><a href="{{ $href }}" class="bd-links-link d-inline-block{{ if $is_active }} active{{ end }}{{if $is_draft }} text-decoration-line-through{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
+          <li><a href="{{ $href }}" class="bd-links-link d-inline-block{{ if $is_active }} active{{ end }}{{if $is_draft }} text-decoration-line-through{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}{{if $is_draft }}<span class="visually-hidden">page is not yet available</span>{{ end }}</a></li>
         {{- end }}
       </ul>
     </li>
