@@ -1,20 +1,20 @@
-name: Bots
-on:
-  release:
-    types:
-      - published
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Mattermost message for release
-        run: |
-          echo "{\"text\": \"## OUDS Web ${{ github.event.release.tag_name }} :tada:\n[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just released ${{ github.event.release.tag_name }}\n***\n[Changelog](${{ github.event.release.html_url }}) — [Download (zip)](${{ github.event.release.zipball_url }})\"}" > mattermost.json
-
-      - uses: mattermost/action-mattermost-notify@2.0.0
-        env:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-          MATTERMOST_USERNAME: "OUDS Web Release"
-          MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
+# name: Bots
+# on:
+#  release:
+#    types:
+#      - published
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Mattermost message for release
+#        run: |
+#          echo "{\"text\": \"## OUDS Web ${{ github.event.release.tag_name }} :tada:\n[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just released ${{ github.event.release.tag_name }}\n***\n[Changelog](${{ github.event.release.html_url }}) — [Download (zip)](${{ github.event.release.zipball_url }})\"}" > mattermost.json
+#
+#      - uses: mattermost/action-mattermost-notify@2.0.0
+#        env:
+#          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+#          MATTERMOST_USERNAME: "OUDS Web Release"
+#          MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
