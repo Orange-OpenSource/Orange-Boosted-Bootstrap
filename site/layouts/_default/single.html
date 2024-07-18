@@ -23,21 +23,13 @@
                 Download source code
               </a>
             </div>
-            {{ else if eq .Title "Orange Design System for web" -}}
-            <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.ods.web }}" class="btn btn-primary" aria-label="Design system for web" title="Design system for web" target="_blank" rel="noopener">Visit system.design.orange.com</a>
-            </div>
             {{- end }}
           </div>
           <!-- OUDS mod: No ads -->
         </div>
       </div>
     </div>
-    {{ if eq .Title "Orange Design System for web" }}
-    <div>
-    {{ else }}
     <div class="container-xxl bd-gutter">
-    {{ end }}
       {{ .Content }}
 
       {{ if eq .Title "Examples" -}}

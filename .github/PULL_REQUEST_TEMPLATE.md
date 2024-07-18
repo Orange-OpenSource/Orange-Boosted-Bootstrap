@@ -43,7 +43,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 #### Design
 
-- [ ] My change respects the design guidelines defined in [Orange Design System](https://oran.ge/dsweb)
+- [ ] My change respects the design guidelines defined in [Orange Unified Design System](https://unified-design-system.orange.com/)
 - [ ] My change is compatible with a responsive display
 
 #### Development

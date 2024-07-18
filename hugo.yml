@@ -80,8 +80,6 @@ params:
   icons_license:                    "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63532c"
   icons_usage:                      "https://design.orange.com/0c1af118d/p/92bb17-usage"
   bootstrap:                        "https://getbootstrap.com"
-  ods:
-    web:                            "https://oran.ge/dsweb"
 
   algolia:
     appId:                          "F4PKENW3TB"
