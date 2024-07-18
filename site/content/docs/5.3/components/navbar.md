@@ -11,7 +11,7 @@ toc: true
 {{< design-callout-alert >}}
 This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure. Moreover, Orange navbars have the same rendering in light and dark mode.
 
-In order to build an Orange navbar please refer to [Orange navbar component]({{< docsref "/components/orange-navbar" >}}).
+In order to build an Orange navbar please refer to the [Orange navbar component]({{< docsref "/components/orange-navbar" >}}).
 {{< /design-callout-alert >}}
 
 ## How it works
