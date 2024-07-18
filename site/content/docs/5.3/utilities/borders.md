@@ -68,7 +68,7 @@ Here is a list of these extra classes:
 Or modify the default `border-color` of a component:
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These border color variants are just **examples illustrating the use of this color utility**. They should not be used because they do not respect the Orange Design System specifications.
@@ -118,7 +118,7 @@ To change that opacity, override `--bs-border-opacity` via custom styles or inli
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
@@ -149,7 +149,7 @@ Or, choose from any of the `.border-opacity` utilities:
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The three last border utilities with **a width larger than 2px** should not be used because they do not respect the Orange Design System specifications.
@@ -175,7 +175,7 @@ Add classes to an element to easily round its corners.
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These border variants with **a radius CSS class different than `.rounded-circle` and `.rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
@@ -203,7 +203,7 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These border variants with **a size CSS class different than `.rounded-0`** should not be used because they do not respect the Orange Design System specifications.

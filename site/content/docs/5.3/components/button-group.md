@@ -37,12 +37,12 @@ These classes can also be added to groups of links, as an alternative to the [`.
 ## Mixed styles
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
-Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples" >}}) secondary variant component. You can also refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
+Please refer to our [Outline buttons secondary variant]({{< docsref "/components/buttons#outline-buttons" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -69,12 +69,12 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
 <details class="mb-3">
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -101,18 +101,18 @@ From the Orange Design System point of view, checkboxes should be represented li
 
   <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
   <label class="btn btn-toggle" for="btnradio3">Radio 3</label>
- </div>
- {{< /example >}}
+</div>
+{{< /example >}}
 
 ## Button toolbar
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -169,6 +169,15 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+The **first size variant (50px height) and the last one (30px height)** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Toggle buttons guidelines](https://system.design.orange.com/0c1af118d/p/59c349-toggle-buttons/b/91bf23) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
   <button type="button" class="btn btn-outline-secondary">Left</button>
@@ -188,13 +197,14 @@ Instead of applying button sizing classes to every button in a group, just add `
   <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 {{< /example >}}
+</details>
 
 ## Nesting
 
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -224,7 +234,7 @@ This variant should not be used because it does not respect the Orange Design Sy
 Make a set of buttons appear vertically stacked rather than horizontally.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These 3 vertical variants should not be used because they do not respect the Orange Design System specifications.

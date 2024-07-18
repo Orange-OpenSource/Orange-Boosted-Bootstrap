@@ -156,12 +156,12 @@ Pausing the carousel by hovering one slide should not be used.
 You can add captions to your slides with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 **Captions** should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Carousel navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) guidelines on the Orange Design System website.
+Please refer to the [Carousel navigation guidelines](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) or to the [Hero banners guidelines](https://system.design.orange.com/0c1af118d/p/925608-promotions/b/685a2d) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

@@ -15,9 +15,9 @@ toc: true
 
 As Boosted is based on Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
 
-Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
+Among those inherited components and variants, some exist in Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
 
-As for maintainability reasons we have to keep them in this documentation, we tagged them under a `<details><summary>` with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+As for maintainability reasons we have to keep them in this documentation, we tagged them under a `<details><summary>` with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities. We tried to hide them as much as possible while keeping the variants in our documentation.
 Thanks for taking this information into account.
 
 Design incompatibility callouts message example:
@@ -25,7 +25,7 @@ Design incompatibility callouts message example:
 {{< design-callout-alert >}}
 This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our [Checks component]({{< docsref "/forms/checks-radios" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 In the same spirit, some blue recommendation design callouts will inform you of specific Orange Design System recommendations.

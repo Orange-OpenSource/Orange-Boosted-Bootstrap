@@ -74,12 +74,12 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 ```
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant **without the breadcrumb dividers** should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Local Headers/Breadcrumb](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) guidelines on the Orange Design System website.
+Please refer to the [Local Headers/Breadcrumb guidelines](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.

@@ -21,7 +21,7 @@ Our footer is basically a `<footer>` tag with `.footer` and `.navbar` classes. I
 
 You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
 
-If these available parts don't meet your specific needs, feel free to develop your own custom part accordingly to the Orange Design System.
+If these available parts don't meet your specific needs, feel free to develop your own custom part accordingly to Orange Design System.
 
 {{< callout warning >}}
 This footer component is based on the [navbar component]({{< docsref "/components/navbar" >}}). Don't forget to import the corresponding SCSS file if you're using [Lean Sass imports]({{< docsref "/customize/optimize#lean-sass-imports" >}}).

@@ -13,12 +13,12 @@ toc: true
 You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors" >}}), these classes have a `:hover` and `:focus` state. Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [links]({{< docsref "/content/typography#links" >}}) section and to the [Text links in body copy](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) guidelines on the Orange Design System website.
+Please refer to our [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout info >}}
@@ -48,12 +48,12 @@ Please refer to our Boosted [links]({{< docsref "/content/typography#links" >}})
 Colored links can also be modified by [our link utilities]({{< docsref "/utilities/link/" >}}).
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [links]({{< docsref "/content/typography#links" >}}) section and to the [Text links in body copy](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) guidelines on the Orange Design System website.
+Please refer to our [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 <!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors; body-emphasis is treated on its own"-->
 {{< example >}}

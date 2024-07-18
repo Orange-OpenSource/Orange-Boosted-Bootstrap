@@ -50,7 +50,7 @@ All icons can be retrieved easily in any of these formats in the Solaris icons f
 This technique is the preferred choice for flexibility, performance and accessibility.
 
 Using the [Solaris icons finder]({{< param icons >}}), you can generate an SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
-This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors#oranges-colors" >}}) or local style.
+This is similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how some icons inherit their color from the parent's light or dark theme, whereas some others get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors#colors" >}}) or local style.
 
 {{< example >}}
 <p class="p-2" data-bs-theme="light">

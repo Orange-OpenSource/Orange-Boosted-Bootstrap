@@ -9,7 +9,7 @@ aliases:
 
 <div class="ods-guidelines py-4 mt-md-2">
   <div class="container-xxl">
-    <h2 class="h1">Other platforms in the Orange Design System</h2>
+    <h2 class="h1">Other platforms in Orange Design System</h2>
     <div class="row pt-3">
       {{< design-guidelines-cards.inline >}}
       {{ range (index $.Site.Data "design-guidelines") -}}

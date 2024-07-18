@@ -32,7 +32,18 @@ You may also choose from small and large custom selects to match our similarly s
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
+{{< /example >}}
 
+<details class="mb-3">
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This small variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 <select class="form-select form-select-sm" aria-label="Small select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
@@ -40,6 +51,7 @@ You may also choose from small and large custom selects to match our similarly s
   <option value="3">Three</option>
 </select>
 {{< /example >}}
+</details>
 
 The `multiple` attribute is also supported:
 

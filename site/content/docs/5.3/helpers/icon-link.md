@@ -33,10 +33,10 @@ When icons are purely decorative, they should be hidden from assistive technolog
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on either the left or right of your link text. The icon is automatically sized, placed, and colored.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
+This helper should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -59,10 +59,10 @@ This helper should be used carefully because the rendering provided in the follo
 Add `.icon-link-hover` to move the icon to the right on hover.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
+This helper should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -82,10 +82,10 @@ Modify the styling of an icon link with our link CSS variables, Sass variables, 
 Modify the `--bs-link-*` and `--bs-icon-link-*` CSS variables as needed to change the default appearance.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
+This helper should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
 {{< /design-callout-alert >}}
 
 Customize the hover `transform` by overriding the `--bs-icon-link-transform` CSS variable:
@@ -118,10 +118,10 @@ Customize the icon link Sass variables to modify all icon link styles across you
 Modify icon links with any of [our link utilities]({{< docsref "/utilities/link/" >}}) for modifying underline color and offset.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
+This helper should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}

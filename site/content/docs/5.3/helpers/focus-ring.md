@@ -17,10 +17,10 @@ The `.focus-ring` helper removes the default `outline` on `:focus`, replacing it
 Click directly on the link below to see the focus ring in action, or into the example below and then press <kbd>Tab</kbd>.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -39,10 +39,10 @@ Modify the styling of a focus ring with our CSS variables, Sass variables, utili
 Modify the `--bs-focus-ring-*` CSS variables as needed to change the default appearance.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -75,10 +75,10 @@ Customize the focus ring Sass variables to modify all usage of the focus ring st
 In addition to `.focus-ring`, we have several `.focus-ring-*` utilities to modify the helper class defaults. Modify the color with any of our [theme colors]({{< docsref "/customize/color-theme#theming" >}}). Note that the light and dark variants may not be visible on all background colors given current color mode support.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}

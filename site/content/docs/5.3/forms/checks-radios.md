@@ -250,6 +250,15 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 ### Checkbox toggle buttons
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
+
+Instead, consider using our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 <label class="btn btn-toggle" for="btn-check">Single toggle</label>
@@ -268,6 +277,7 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 {{< callout info >}}
 Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
+</details>
 
 ### Radio toggle buttons
 

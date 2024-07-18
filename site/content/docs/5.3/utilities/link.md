@@ -15,10 +15,10 @@ added:
 Change the alpha opacity of the link `rgba()` color value with utilities. Please be aware that changes to a color's opacity can lead to links with [*insufficient* contrast]({{< docsref "getting-started/accessibility#color-contrast" >}}).
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -47,10 +47,10 @@ You can even change the opacity level on hover.
 Change the underline's color independent of the link text color.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -67,10 +67,10 @@ Link utilities should be used carefully because the rendering provided in the fo
 Change the underline's distance from your text. Offset is set in `em` units to automatically scale with the element's current `font-size`.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -86,10 +86,10 @@ Link utilities should be used carefully because the rendering provided in the fo
 Change the underline's opacity. Requires adding `.link-underline` to first set an `rgba()` color we use to then modify the alpha opacity.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -107,10 +107,10 @@ Link utilities should be used carefully because the rendering provided in the fo
 Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-underline-opacity` utilities include `:hover` variants by default. Mix and match to create unique link styles.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -125,10 +125,10 @@ Link utilities should be used carefully because the rendering provided in the fo
 [Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not respect the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific use cases or other reusable components.
 {{< /design-callout-alert >}}
 
 <!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->

@@ -16,7 +16,7 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 
 {{< design-callout-alert info >}}
 In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
-You can refer to [small tables]({{< docsref "/content/tables#small-tables" >}}) paragraph.
+You can refer to the [small tables paragraph]({{< docsref "/content/tables#small-tables" >}}).
 {{< /design-callout-alert >}}
 
 {{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
@@ -40,7 +40,7 @@ Darker tables are allowed contextually. Add `data-bs-theme="dark"` to the `.tabl
 {{< /callout >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -127,7 +127,7 @@ Use .table-striped-columns to add zebra-striping to any table column.
 {{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -151,7 +151,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 {{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
 <details class="mb-3">
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -167,7 +167,7 @@ These hoverable rows can also be combined with the striped rows variant:
 {{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -238,7 +238,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 ```
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -329,7 +329,7 @@ To display basic tables, Orange Design System recommends using these compact tab
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These colored tables should not be used because they do not respect the [Orange Design System]({{< param ods.web >}}) specifications as they are inherited from Bootstrap.
@@ -449,10 +449,10 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
+This variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">

@@ -134,10 +134,10 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These `<hr>` 2nd, 3rd and 4th variants can not be used because they do not respect the Orange Design System specifications. For the 2nd variant, it is because of its color. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
+These `<hr>` 2nd, 3rd and 4th variants should not be used because they do not respect the Orange Design System specifications. For the 2nd variant, it is because of its color. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
 {{< /design-callout-alert >}}
 
 {{< example >}}
