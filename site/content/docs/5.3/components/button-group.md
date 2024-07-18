@@ -42,7 +42,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 {{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
-Please refer to our [Buttons secondary variant component]({{< docsref "/components/buttons#examples" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
+Please refer to our [Outline buttons secondary variant]({{< docsref "/components/buttons#outline-buttons" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -112,7 +112,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -168,14 +168,6 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 ## Sizing
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
-
-{{< example >}}
-<div class="btn-group" role="group" aria-label="Default button group">
-  <button type="button" class="btn btn-outline-secondary">Left</button>
-  <button type="button" class="btn btn-outline-secondary">Middle</button>
-  <button type="button" class="btn btn-outline-secondary">Right</button>
-</div>
-{{< /example >}}
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
