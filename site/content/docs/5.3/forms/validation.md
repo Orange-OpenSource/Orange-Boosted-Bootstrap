@@ -118,7 +118,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This form variant, **with browser default validation feedback messages**, should not be used because it does not respect the Orange Design System specifications.
+This variant, **with browser default validation feedback messages**, should not be used because it does not respect the Orange Design System specifications.
 
 Instead, please refer to our [Custom styles section](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1614/files). You can also refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}

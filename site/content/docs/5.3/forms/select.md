@@ -38,7 +38,7 @@ You may also choose from small and large custom selects to match our similarly s
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This size variant, with a **height of 30px**, should not be used because it does not respect the Orange Design System specifications.
+This small variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) on the Orange Design System website.
 {{< /design-callout-alert >}}

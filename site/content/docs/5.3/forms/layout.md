@@ -123,7 +123,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This form variant, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
+This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to our [Forms example]({{< docsref "/examples/form" >}}). You can also refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -188,7 +188,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one with a `col-form-label-sm` class because of its height, should not be used because it does not respect the Orange Design System specifications.
+These 3 variants with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one with a `col-form-label-sm` class because of its height, should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -223,7 +223,7 @@ As shown in the previous examples, our grid system allows you to place any numbe
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These form variants, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because they do not respect the Orange Design System specifications.
+These variants with an **horizontal layout** (i.e. labels not above the input fields) should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -251,7 +251,7 @@ The example below uses a flexbox utility to vertically center the contents and c
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These form variants, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because they do not respect the Orange Design System specifications.
+These variants with an **horizontal layout** (i.e. labels not above the input fields) should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -339,7 +339,7 @@ Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This form variant should not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
