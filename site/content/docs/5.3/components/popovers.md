@@ -106,7 +106,7 @@ You can customize the appearance of popovers using [CSS variables](#variables). 
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing popover CSS might lead to mismatch the Orange Design System.
+This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing popover CSS might lead to mismatch Orange Design System.
 
 Please refer to the [Popover guidelines](https://system.design.orange.com/0c1af118d/p/644ffa-popovers) on the Orange Design System website.
 {{< /design-callout-alert >}}

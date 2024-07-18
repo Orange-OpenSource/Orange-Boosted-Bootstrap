@@ -368,7 +368,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 {{< /callout >}}
 
 ### Tabs with dropdowns
-<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange Design System requirements -->
 {{< example >}}
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -405,7 +405,7 @@ This variant should not be used because it does not respect the Orange Design Sy
 Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
-<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange Design System requirements -->
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">
