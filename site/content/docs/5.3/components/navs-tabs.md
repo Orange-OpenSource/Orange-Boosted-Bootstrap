@@ -179,7 +179,7 @@ Take that same HTML, but use `.nav-pills` instead:
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -400,7 +400,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
 Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}

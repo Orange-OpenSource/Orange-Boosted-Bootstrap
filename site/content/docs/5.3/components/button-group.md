@@ -40,9 +40,9 @@ These classes can also be added to groups of links, as an alternative to the [`.
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
+These variants **using and mixing colored button backgrounds** should not be used because they do not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
-Please refer to our Boosted [Buttons secondary variant component]({{< docsref "/components/buttons#examples" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
+Please refer to our [Buttons secondary variant component]({{< docsref "/components/buttons#examples" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -74,7 +74,7 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 {{< design-callout-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks component]({{< docsref "/forms/checks-radios#checks" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -215,7 +215,7 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}

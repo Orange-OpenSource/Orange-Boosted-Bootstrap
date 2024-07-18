@@ -234,7 +234,7 @@ You can even roll your own custom sizing with CSS variables:
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -345,7 +345,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 {{< design-callout-alert >}}
 These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
 
-Instead, consider using our Boosted [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
+Instead, consider using our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
 {{< /design-callout-alert >}}
 
 {{< example >}}

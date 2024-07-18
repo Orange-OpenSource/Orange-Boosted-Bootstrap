@@ -148,7 +148,7 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant is just an **example illustrating the use of the layout utility**. It should not be used because it does not respect the Orange Design System specifications.
+These variants are just **examples illustrating the use of the layout utility**. They should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
@@ -246,7 +246,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}

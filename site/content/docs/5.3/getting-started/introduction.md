@@ -25,7 +25,7 @@ Design incompatibility callouts message example:
 {{< design-callout-alert >}}
 This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks component]({{< docsref "/forms/checks-radios" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our [Checks component]({{< docsref "/forms/checks-radios" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 In the same spirit, some blue recommendation design callouts will inform you of specific Orange Design System recommendations.

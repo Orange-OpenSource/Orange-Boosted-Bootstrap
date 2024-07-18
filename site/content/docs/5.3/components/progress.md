@@ -240,7 +240,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}

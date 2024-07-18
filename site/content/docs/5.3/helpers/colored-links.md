@@ -18,7 +18,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
+Please refer to our [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout info >}}
@@ -53,7 +53,7 @@ Colored links can also be modified by [our link utilities]({{< docsref "/utiliti
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
+Please refer to our [links section]({{< docsref "/content/typography#links" >}}) and to the [Text links in body copy guidelines](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 <!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors; body-emphasis is treated on its own"-->
 {{< example >}}

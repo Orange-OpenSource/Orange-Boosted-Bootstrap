@@ -256,7 +256,7 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 {{< design-callout-alert >}}
 These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
 
-Instead, consider using our Boosted [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
+Instead, consider using our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
 {{< /design-callout-alert >}}
 
 {{< example >}}
