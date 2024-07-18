@@ -92,7 +92,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not exist in the Orange Design System specifications.
+These variants should not be used because they do not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
