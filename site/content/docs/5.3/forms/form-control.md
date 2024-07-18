@@ -36,7 +36,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-The last variant with a `.form-control-sm` class and a height of 30px can not be used because it does not respect the Orange Design System specifications.
+The last small variant with a `.form-control-sm` class should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -72,7 +72,7 @@ Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This form version, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
+This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -134,7 +134,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This form variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
+These variants with an **horizontal layout** (i.e. labels not above the input fields) should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -196,7 +196,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-The **Small file input example** below with a height of 30px can not be used because it does not respect the Orange Design System specifications.
+This small variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
