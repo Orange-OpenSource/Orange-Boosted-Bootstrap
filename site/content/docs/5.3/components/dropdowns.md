@@ -957,26 +957,11 @@ Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
-{{< example >}}
-<div class="d-flex">
-  <div class="dropdown me-1">
-    <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
-      Offset
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-  </div>
-</div>
-{{< /example >}}
-
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants with a `data-bs-offset` attribute having values different than `"0,0"` should not be used because they do not respect the Orange Design System specifications.
+These variants with a `data-bs-offset` attribute having values different than `"0,0"`, or a specific `data-bs-reference`, should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
