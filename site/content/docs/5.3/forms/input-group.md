@@ -350,7 +350,11 @@ Input groups include support for custom selects and custom file inputs. Browser 
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These **first 3** variants should not be used because they do not respect the Orange Design System specifications. The **first 2** variants should have a vertical layout (i.e., having their label above the input field). The **third** variant should be split in 2 elements (a button and a dropdown) which should be presented in a more logical way : the dropdown first and then the button.
+These **first three** variants should not be used because they do not respect the Orange Design System specifications.
+
+The **first two** variants should have a vertical layout (i.e., having their label above the input field).
+
+The **third** variant should be split in two elements (a button and a dropdown) which should be presented in a more logical way: the dropdown first and then the button.
 
 Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
 {{< /design-callout-alert >}}
