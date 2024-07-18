@@ -57,7 +57,7 @@ This component should be:
 - visible only for the **larger screens** (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 - displayed inside the burger menu for **smaller screens**. There it has to be split in 2 parts.
 
-Refer to [Responsive behavior](#responsive-behavior) to have more details.
+Refer to the [Responsive behavior](#responsive-behavior) to have more details.
 
 ### Standard
 

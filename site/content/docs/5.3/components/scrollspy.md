@@ -27,7 +27,7 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 {{< design-callout-alert >}}
 This navbar version of the Scrollspy component is incompatible with Orange Design System.
 
-Refer to [Orange navbar component]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs component]({{< docsref "/components/navs-tabs" >}}).
+Refer to the [Orange navbar component]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs component]({{< docsref "/components/navs-tabs" >}}).
 {{< /design-callout-alert >}}
 
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.

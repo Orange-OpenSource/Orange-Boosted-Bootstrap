@@ -16,7 +16,7 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 
 {{< design-callout-alert info >}}
 In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
-You can refer to [small tables paragraph]({{< docsref "/content/tables#small-tables" >}}).
+You can refer to the [small tables paragraph]({{< docsref "/content/tables#small-tables" >}}).
 {{< /design-callout-alert >}}
 
 {{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
