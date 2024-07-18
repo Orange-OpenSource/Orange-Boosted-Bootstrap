@@ -13,11 +13,10 @@ toc: true
 A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Boosted 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
 
 {{< design-callout-alert info >}}
-<br>
-
-**On the Orange Design System website**, you'll find the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) component guidelines describing how Orange designers want cards to be represented and used, mainly as static containers.
+The [Cards guidelines](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) defined on the Orange Design System website describe how cards need to be rendered and used, mainly as static containers with specific fixed sizes and spacings.
 <br><br>
-**In this Boosted cards component description page**, you'll find card variants that can be used as cards, but as some variants that are meant to be used as adjustable containers.
+**However, in Boosted**, as some card variants can be used as containers, **more sizing possibilities are offered to adjust their sizes**.
+
 {{< /design-callout-alert >}}
 
 ## Example
@@ -286,16 +285,6 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 ## Text alignment
 
 You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{< docsref "/utilities/text#text-alignment" >}}).
-
-{{< example >}}
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-{{< /example >}}
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
