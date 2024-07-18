@@ -18,10 +18,6 @@ A **card** is a flexible and extensible content container. It includes options f
 **On the Orange Design System website**, you'll find the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) component guidelines describing how Orange designers want cards to be represented and used, mainly as static containers.
 <br><br>
 **In this Boosted cards component description page**, you'll find card variants that can be used as cards, but as some variants that are meant to be used as adjustable containers.
-<!--
-- **In Orange Design System**, a card component is available in **3 sizes** that **can not be modified**. Depending on the size of your screen, you can adjust the cards layout by changing the cards size (choosing among the 3 existing sizes) and/or the number of cards to display on a single line.
-- **In Boosted**, as some card variants can be used as containers, more sizing possibilities are offered to adjust their sizes.
--->
 {{< /design-callout-alert >}}
 
 ## Example
