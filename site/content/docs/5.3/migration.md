@@ -18,7 +18,7 @@ toc: true
 
 ### Docs
 
-- Some component variants have been hidden from the documentation in order for you to better see the variants you should use and ease the link between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation. These variants are still available under the details of `See Bootstrap example(s) that are incompatible with Orange Design System.`, but know that using them might be a transgression of the Orange Design System rules and try to avoid them as much as possible.
+- Some variants of the components have been hidden from the documentation in order for you to better see the variants you should use and ease the link between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation. These variants are still available under the details of `See Bootstrap example(s) that are incompatible with Orange Design System.`, but know that using them might be a transgression of the Orange Design System rules and try to avoid them as much as possible.
 
 ### CSS and Sass variables
 

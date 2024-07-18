@@ -39,7 +39,7 @@ Badges can be used as part of links or buttons to provide a counter.
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component should not be used because it does not exist in the Orange Design System specifications.
+This component should not be used because it does not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -60,7 +60,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
 
 {{< design-callout-alert >}}
-This component variant should be used **only** inside a header component.
+This variant should be used **only** inside a header component.
 
 Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >}}). You can also refer to the [Global headers guidelines](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -92,7 +92,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These component variants should not be used because they do not exist in the Orange Design System specifications.
+These variants should not be used because they do not exist in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -117,7 +117,7 @@ Consider using our [Boosted Tags]({{< docsref "/components/tags" >}}) instead.
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component should not be used because it does not exist in the Orange Design System specifications.
+This component should not be used because it does not respect in the Orange Design System specifications.
 
 Instead, consider using our [Tags component]({{< docsref "/components/tags" >}}). You can also refer to the [Tags guidelines](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) on the Orange Design System website.
 {{< /design-callout-alert >}}

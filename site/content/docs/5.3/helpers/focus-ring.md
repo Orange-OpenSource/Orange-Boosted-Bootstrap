@@ -20,7 +20,7 @@ Click directly on the link below to see the focus ring in action, or into the ex
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -42,7 +42,7 @@ Modify the `--bs-focus-ring-*` CSS variables as needed to change the default app
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -78,7 +78,7 @@ In addition to `.focus-ring`, we have several `.focus-ring-*` utilities to modif
 <summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
+This helper should not be used because the rendering provided in the following examples does not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
