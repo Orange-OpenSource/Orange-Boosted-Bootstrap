@@ -39,7 +39,7 @@ Badges can be used as part of links or buttons to provide a counter.
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect in the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
