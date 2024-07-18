@@ -196,7 +196,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant with its **centered layout** should not be used because it does not respect the Orange Design System specifications.
@@ -302,7 +302,7 @@ You can quickly change the text alignment of any card—in its entirety or speci
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These second and third variants, **with centered and right-aligned layout**, should not be used because they do not respect the Orange Design System specifications.
@@ -342,7 +342,7 @@ Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118
 Add some navigation to a card's header (or block) with Boosted's [nav components]({{< docsref "/components/navs-tabs" >}}).
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
@@ -429,7 +429,7 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications. Moreover, it might lead to accessibility issues. Instead, prefer using a card that includes a top image.
@@ -502,7 +502,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants **with a colored background** should not be used because they do not respect the Orange Design System specifications.
@@ -546,7 +546,7 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 <!-- End mod -->
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants, **with a colored border** should not be used because they do not respect the Orange Design System specifications.
@@ -574,7 +574,7 @@ Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118
 You can also change the borders on the card header and footer as needed, and even remove their `background-color` with `.bg-transparent`.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -603,7 +603,7 @@ In addition to styling the content within cards, Boosted includes a few options 
 Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use `display: flex;` to become attached with uniform dimensions starting at the `sm` breakpoint.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants **with no spacing between cards** should not be used because they do not respect the Orange Design System specifications. Instead, prefer having a gap of at least 20px between cards.

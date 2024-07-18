@@ -13,7 +13,7 @@ toc: true
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
@@ -78,7 +78,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 **Sizing on the individual input group elements isn't supported.**
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one because of its height, should not be used because they do not respect the Orange Design System specifications.
@@ -129,7 +129,7 @@ Place any checkbox or radio option within an input group's addon instead of text
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
@@ -151,7 +151,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
@@ -177,7 +177,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 ## Button addons
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications. They are not recommended for usability reasons.
@@ -239,7 +239,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This **third** form variant should not be used because it does not respect the Orange Design System specifications.
@@ -347,7 +347,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These **first 3** form variants should not be used because they do not respect the Orange Design System specifications. The **first 2** form variants should have a vertical layout (i.e., having their label above the input field). The **third** form variant should be split in 2 elements (a button and a dropdown) which should be presented in a more logical way : the dropdown first and then the button.
@@ -408,7 +408,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.

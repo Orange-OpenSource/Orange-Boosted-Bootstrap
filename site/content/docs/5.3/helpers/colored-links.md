@@ -13,7 +13,7 @@ toc: true
 You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors" >}}), these classes have a `:hover` and `:focus` state. Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.
@@ -48,7 +48,7 @@ Please refer to our Boosted [links section]({{< docsref "/content/typography#lin
 Colored links can also be modified by [our link utilities]({{< docsref "/utilities/link/" >}}).
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The colors combinations below do not belong to the Orange Design System specifications.

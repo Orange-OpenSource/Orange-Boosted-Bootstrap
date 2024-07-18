@@ -15,7 +15,7 @@ Badges scale to match the size of the immediate parent element by using relative
 ### Headings
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
@@ -36,10 +36,10 @@ This variant should not be used because it does not respect the Orange Design Sy
 Badges can be used as part of links or buttons to provide a counter.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component should not be used because it does not respect in the Orange Design System specifications.
+This variant should not be used because it does not respect in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -89,7 +89,7 @@ Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}` utilities]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}` utilities]({{< docsref "/utilities/background" >}}) for styling, which you still may use if you prefer.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect in the Orange Design System specifications.
@@ -114,10 +114,10 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 Consider using our [Boosted Tags]({{< docsref "/components/tags" >}}) instead.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component should not be used because it does not respect in the Orange Design System specifications.
+This variant should not be used because it does not respect in the Orange Design System specifications.
 
 Instead, consider using our [Tags component]({{< docsref "/components/tags" >}}). You can also refer to the [Tags guidelines](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) on the Orange Design System website.
 {{< /design-callout-alert >}}

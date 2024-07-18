@@ -33,7 +33,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The last variant with a `.form-control-sm` class and a height of 30px can not be used because it does not respect the Orange Design System specifications.
@@ -69,7 +69,7 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This form version, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
@@ -131,7 +131,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This form variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
@@ -193,7 +193,7 @@ Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 The **Small file input example** below with a height of 30px can not be used because it does not respect the Orange Design System specifications.

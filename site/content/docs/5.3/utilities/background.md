@@ -46,7 +46,7 @@ Supporting background utilities are generated from our [supporting colors]({{< d
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Bootstrap-specific background color utilities should not be used because they are not part of the [Orange Design System]({{< param ods.web >}}) as they are inherited from Bootstrap.
@@ -99,7 +99,7 @@ To change that opacity, override `--bs-bg-opacity` via custom styles or inline s
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.

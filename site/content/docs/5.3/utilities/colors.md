@@ -69,7 +69,7 @@ The following colors are meant to be used with icons.
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
@@ -131,7 +131,7 @@ When used in dark mode, `--bs-primary-rgb` will use the value of (with the value
 To change that opacity, override `--bs-text-opacity` via custom styles or inline styles.
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.

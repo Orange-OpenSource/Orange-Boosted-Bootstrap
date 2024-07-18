@@ -43,10 +43,10 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component contains some spinners that should not be used on Orange sites.
+This variant contains some spinners that should not be used on Orange sites.
 
 **Colored spinners** are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
@@ -74,10 +74,10 @@ This component contains some spinners that should not be used on Orange sites.
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component contains some spinners that should not be used on Orange sites.
+This variant contains some spinners that should not be used on Orange sites.
 
 **Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
@@ -173,10 +173,10 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component contains some spinners that should not be used on Orange sites.
+This variant contains some spinners that should not be used on Orange sites.
 
 **Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}
@@ -214,10 +214,10 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {{< /example >}}
 
 <details>
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This component contains some spinners that should not be used on Orange sites.
+This variant contains some spinners that should not be used on Orange sites.
 
 **Growing spinner** and its examples are incompatible with Orange Design System.
 {{< /design-callout-alert >}}

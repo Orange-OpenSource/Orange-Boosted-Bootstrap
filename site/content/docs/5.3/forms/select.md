@@ -35,7 +35,7 @@ You may also choose from small and large custom selects to match our similarly s
 {{< /example >}}
 
 <details class="mb-3">
-<summary>See Bootstrap example(s) that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 This size variant, with a **height of 30px**, should not be used because it does not respect the Orange Design System specifications.
