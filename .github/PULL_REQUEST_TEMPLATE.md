@@ -115,7 +115,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - `npm pack`
   - if you are already logged in to NPM (with a personal account, for example), [you'd better use a repository scoped `.npmrc` file](https://stackoverflow.com/questions/30114166/how-to-have-multiple-npm-users-set-up-locally)
   - Publish:
-    - if you're releasing a pre-release, use `--tag`, e.g. for v5-alpha1 `npm publish boosted-5.0.0-alpha1.tgz --tag next`
+    - if you're releasing a pre-release, use `--tag`, e.g. for v1-alpha1 `npm publish ouds-web-1.0.0-alpha1.tgz --tag next`
     - (v0 only) `npm publish --access public`
 - [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
 - [ ] check release on [NPM](https://www.npmjs.com/package/ouds-web), [Nuget](https://www.nuget.org/packages/ouds-web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
