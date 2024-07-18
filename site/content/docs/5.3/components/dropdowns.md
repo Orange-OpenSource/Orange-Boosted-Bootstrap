@@ -415,7 +415,7 @@ Make the dropdown menu centered below the toggle with `.dropdown-center` on the 
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -501,7 +501,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -868,7 +868,7 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}

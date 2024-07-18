@@ -40,7 +40,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants **using and mixing colored button backgrounds** should not be used because they do not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
+This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
 Please refer to our [Buttons secondary variant component]({{< docsref "/components/buttons#examples" >}}). You can also refer to the [Buttons: standard guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -215,7 +215,7 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}

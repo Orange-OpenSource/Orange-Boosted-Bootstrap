@@ -246,7 +246,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}

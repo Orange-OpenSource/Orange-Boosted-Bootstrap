@@ -452,7 +452,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications. It is not recommended for usability reasons.
+This variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">

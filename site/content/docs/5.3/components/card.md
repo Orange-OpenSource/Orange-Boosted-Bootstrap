@@ -199,7 +199,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants with its **centered layout** should not be used because they do not respect the Orange Design System specifications.
+This variant with its **centered layout** should not be used because it does not respect the Orange Design System specifications.
 Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
@@ -432,7 +432,7 @@ Turn an image into a card background and overlay your card's text. Depending on 
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications. Moreover, it might lead to accessibility issues. Instead, prefer using a card that includes a top image.
+This variant should not be used because it does not respect the Orange Design System specifications. Moreover, it might lead to accessibility issues. Instead, prefer using a card that includes a top image.
 
 Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -577,7 +577,7 @@ You can also change the borders on the card header and footer as needed, and eve
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -606,7 +606,7 @@ Use card groups to render cards as a single, attached element with equal width a
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants **with no spacing between cards** should not be used because they do not respect the Orange Design System specifications. Instead, prefer having a gap of at least 20px between cards.
+This variant **with no spacing between cards** should not be used because it does not respect the Orange Design System specifications. Instead, prefer having a gap of at least 20px between cards.
 
 Please refer to the [Cards guidelines](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) on the Orange Design System website.
 {{< /design-callout-alert >}}
