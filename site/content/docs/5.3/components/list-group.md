@@ -287,7 +287,7 @@ Place Boosted's checkboxes and radios within list group items and customize as n
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These variants should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
