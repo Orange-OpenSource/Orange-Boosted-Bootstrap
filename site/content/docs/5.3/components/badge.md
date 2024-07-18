@@ -111,7 +111,7 @@ These variants should not be used because they do not respect in the Orange Desi
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
 
-Consider using our [Boosted Tags]({{< docsref "/components/tags" >}}) instead.
+Consider using our [Tags component]({{< docsref "/components/tags" >}}) instead.
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>

@@ -64,9 +64,9 @@ Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-These **centered** and **right aligned** variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left aligned.
+These **centered** and **right-aligned** variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left-aligned.
 
-Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
+Instead, please consider using our [Tabs Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 Centered with `.justify-content-center`:
@@ -118,7 +118,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 {{< design-callout-alert >}}
 These **vertical** variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be displayed horizontally.
 
-Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
+Instead, please consider using our [Tabs Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -402,7 +402,7 @@ As a design recommendation, dropdowns are typically placed at the end of the nav
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
+Instead, please consider using our [Tabs Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange Design System requirements -->
@@ -630,7 +630,7 @@ The tabs plugin also works with underline.
 {{< design-callout-alert >}}
 These **vertical** variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be displayed horizontally.
 
-Instead, please consider using our Boosted tabs [Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
+Instead, please consider using our [Tabs Underline variant]({{< docsref "/components/navs-tabs#underline" >}}). You can also refer to [Tabs guidelines](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 And with vertical pills. Ideally, for vertical tabs, you should also add `aria-orientation="vertical"` to the tab list container.
