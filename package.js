@@ -5,7 +5,7 @@
 Package.describe({
   name: 'Orange-OpenSource:ouds-web', // https://atmospherejs.com/Orange-OpenSource/Orange-Boosted-Bootstrap
   summary: 'OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.',
-  version: '0.0.1',
+  version: '0.0.2',
   git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
 })
 
