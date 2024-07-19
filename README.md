@@ -43,7 +43,7 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 ## Status
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=ouds/main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
-[![npm version](https://img.shields.io/npm/v/ouds-web?logo=npm&logoColor=fff)](https://www.npmjs.com/package/ouds-web)
+[![npm version](https://img.shields.io/npm/v/@ouds/web?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@ouds/web)
 [![Packagist Prerelease](https://img.shields.io/packagist/v/Orange-Opensource/Orange-Boosted-Bootstrap.svg?include_prereleases&logo=packagist&logoColor=fff)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/ouds-web?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/ouds-web/absoluteLatest)
 [![Coverage Status](https://img.shields.io/coveralls/github/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/Orange-OpenSource/Orange-Boosted-Bootstrap?branch=ouds/main)
