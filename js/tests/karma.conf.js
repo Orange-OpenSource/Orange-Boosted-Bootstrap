@@ -107,7 +107,6 @@ if (BROWSERSTACK) {
     project: 'OUDS Web',
     retryLimit: 2
   }
-  console.log(JSON.stringify(config))
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')
   config.customLaunchers = browsers
   config.browsers = Object.keys(browsers)
