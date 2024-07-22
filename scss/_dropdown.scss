@@ -238,7 +238,7 @@
   color: var(--#{$prefix}dropdown-link-color);
 }
 
-// Deprecated in v5.3.3
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // Dark dropdowns
 .dropdown-menu-dark {
   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
@@ -254,3 +254,4 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
   --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
 }
+// End mod

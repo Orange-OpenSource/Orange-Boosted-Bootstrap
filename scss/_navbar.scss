@@ -544,7 +544,7 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
-// Deprecated in v5.3.3
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // OUDS mod: no `navbar[data-bs-theme="dark"]` selector
 .navbar-dark {
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // OUDS mod
@@ -557,5 +557,6 @@
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   // OUDS mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
 }
+// End mod
 
 // OUDS mod: no `@if enable-dark-mode`

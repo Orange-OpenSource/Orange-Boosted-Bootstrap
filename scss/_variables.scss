@@ -418,9 +418,6 @@ $svg-as-custom-props: (
 //// Filters
 // see https://codepen.io/sosuke/pen/Pjoqqp
 $invert-filter:         invert(1) !default;
-// fusv-disable
-$orange-filter:         invert(46%) sepia(60%) saturate(2878%) hue-rotate(6deg) brightness(98%) contrast(104%) !default; // Deprecated in v5.3.3
-// fusv-enable
 // End mod
 
 // Options
@@ -450,12 +447,8 @@ $color-mode-type:             data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
 
-$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$variable-prefix:             bs- !default; // Deprecated in Bootstrap v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix !default;
-// fusv-disable
-$boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$boosted-prefix:              $boosted-variable-prefix !default; // Deprecated in v5.3.0 for the shorter `$prefix`
-// fusv-enable
 
 // Gradient
 //
@@ -642,12 +635,7 @@ $border-radius-xxl:           2rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
-$border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
-// fusv-enable
-
-// fusv-disable
-$outline-width:               var(--#{$prefix}border-width) !default; // Deprecated in v5.2.3
-$outline-offset:              $outline-width !default; // Deprecated in v5.2.3
+$border-radius-2xl:           $border-radius-xxl !default; // Deprecated in Bootstrap v5.3.0
 // fusv-enable
 
 // scss-docs-start focus-visible-variables
@@ -826,7 +814,7 @@ $small-font-size:             .875rem !default;
 $sub-sup-font-size:           .75em !default;
 
 // fusv-disable
-$text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+$text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in Bootstrap 5.3.0
 // fusv-enable
 
 $initialism-font-size:        $small-font-size !default;
@@ -842,8 +830,8 @@ $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
 
 // fusv-disable
-$hr-bg-color:                 null !default; // Deprecated in v5.2.0
-$hr-height:                   null !default; // Deprecated in v5.2.0
+$hr-bg-color:                 null !default; // Deprecated in Bootstrap v5.2.0
+$hr-height:                   null !default; // Deprecated in Bootstrap v5.2.0
 // fusv-enable
 
 $hr-border-color:             null !default; // Allows for inherited colors
@@ -1228,13 +1216,6 @@ $form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg 
 $form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#{$black}' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
 $form-star-rating-sm-checked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#{$black}' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
 $form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='transparent' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
-//fusv-disable
-$form-star-focus-color:                 $black !default; // Deprecated in v5.2.3
-$form-star-focus-outline:               var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3
-$form-star-focus-color-dark:            $white !default; // Deprecated in v5.2.3
-$form-star-focus-outline-dark:          var(--#{$prefix}border-width) solid $form-star-focus-color-dark !default; // Deprecated in v5.2.3
-$form-star-focus-box-shadow:            $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
-//fusv-enable
 
 // End mod
 // scss-docs-end form-check-variables
@@ -1366,10 +1347,12 @@ $form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
 $form-feedback-font-style:          null !default;
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
-$form-feedback-valid-color:         $success !default; // OUDS mod: deprecated in v5.3.0
-$form-feedback-invalid-color:       $danger !default; // OUDS mod: deprecated in v5.3.0
+$form-feedback-valid-color:         $success !default;
+$form-feedback-invalid-color:       $danger !default;
 // fusv-enable
+// End mod
 
 $form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
 $form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
@@ -1569,7 +1552,7 @@ $navbar-badge-margin-top:                   .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-// Deprecated in v5.3.3: all `$navbar-dark-*`
+// OUDS mod: deprecated all `$navbar-dark-*` in OUDS Web, kept for Bootstrap compatibility
 $navbar-dark-border-color:          $gray-700 !default; // OUDS mod
 $navbar-dark-color:                 $white !default; // OUDS mod: instead of `rgba($white, .55)`
 $navbar-dark-hover-color:           $supporting-orange !default; // OUDS mod: instead of `rgba($white, .75)`
@@ -1580,7 +1563,7 @@ $navbar-dark-disabled-color:        $gray-700 !default; // OUDS mod: instead of 
 $navbar-dark-toggler-border-color:  transparent !default; // OUDS mod: instead of `rgba($white, .1)`
 $navbar-dark-brand-color:           inherit !default; // OUDS mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
-
+// End mod
 
 // Dropdowns
 //
@@ -1619,11 +1602,11 @@ $dropdown-header-color:             null !default; // OUDS mod: instead of `$gra
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // OUDS mod: instead of `$dropdown-padding-y`
 // fusv-disable
-$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0
+$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in Bootstrap v5.2.0
 // fusv-enable
 // scss-docs-end dropdown-variables
 
-// Deprecated in v5.3.3: all `$dropdown-dark-*`
+// OUDS mod: deprecated all `$dropdown-dark-*` in OUDS Web, kept for Bootstrap compatibility
 $dropdown-dark-color:               $white !default; // OUDS mod
 $dropdown-dark-bg:                  $black !default; // OUDS mod
 $dropdown-dark-border-color:        $gray-700 !default; // OUDS mod
@@ -1636,6 +1619,7 @@ $dropdown-dark-link-active-color:   $black !default; // OUDS mod
 $dropdown-dark-link-active-bg:      $white !default; // OUDS mod
 $dropdown-dark-link-disabled-color: $gray-700 !default; // OUDS mod
 $dropdown-dark-header-color:        $white !default; // OUDS mod
+// End mod
 
 // Pagination
 
@@ -1658,13 +1642,14 @@ $pagination-margin-start:           0 !default; // OUDS mod: instead of `calc($p
 $pagination-margin-x-first-last:    $spacer * .5 !default; // OUDS mod
 $pagination-border-color:           transparent !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
-// Deprecated in v5.3.3
+// OUDS mod: deprecated all `$pagination-focus-*` in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
 $pagination-focus-color:            null !default; // OUDS mod
 $pagination-focus-bg:               null !default; // OUDS mod: instead of `var(--#{$prefix}secondary-bg)`
 $pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // OUDS mod: no `$focus-ring-box-shadow`
 $pagination-focus-outline:          null !default; // OUDS mod
 // fusv-enable
+// End mod
 
 $pagination-hover-color:            var(--#{$prefix}body-color) !default; // OUDS mod: instead of `var(--#{$prefix}link-hover-color)`
 $pagination-hover-bg:               var(--#{$prefix}secondary-bg) !default; // OUDS mod: instead of `var(--#{$prefix}tertiary-bg)`
@@ -1709,9 +1694,11 @@ $placeholder-opacity-min:           .2 !default;
 // scss-docs-start card-variables
 $card-spacer-top:                   $spacer * .75 !default; // OUDS mod
 $card-spacer-bottom:                $spacer !default; // OUDS mod
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
-$card-spacer-y:                     $spacer !default; // Deprecated in v5.2.3
+$card-spacer-y:                     $spacer !default;
 // fusv-enable
+// End mod
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-title-color:                  null !default;
@@ -1751,10 +1738,12 @@ $accordion-body-padding-top:              $spacer !default; // OUDS mod
 $accordion-body-padding-end:              0 !default; // OUDS mod
 $accordion-body-padding-bottom:           $spacer * 1.5 !default; // OUDS mod
 $accordion-body-padding-start:            0 !default; // OUDS mod
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
-$accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
-$accordion-body-padding-x:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
+$accordion-body-padding-y:                $spacer !default; // Deprecated in OUDS Web to divide it in -padding<top | end | bottom |start>
+$accordion-body-padding-x:                $spacer !default; // Deprecated in OUDS Web to divide it in -padding<top | end | bottom |start>
 // fusv-enable
+// End mod
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
@@ -1812,7 +1801,7 @@ $tooltip-margin:                    null !default; // TODO: remove this in v6
 $tooltip-arrow-width:               $spacer * .5 !default;
 $tooltip-arrow-height:              $tooltip-arrow-width * .5 !default;
 // fusv-disable
-$tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.0 for CSS variables
+$tooltip-arrow-color:               null !default; // Deprecated in Bootstrap 5.2.0 for CSS variables
 // fusv-enable
 // scss-docs-end tooltip-variables
 
@@ -2091,10 +2080,6 @@ $title-bar-letter-spacing-md:       $display2-spacing !default;
 
 $title-bar-font-size-xl:            $display1-size !default;
 $title-bar-letter-spacing-xl:       $display1-spacing !default;
-
-// fusv-disable
-$title-bar-border-color-dark:       $gray-700 !default; // Deprecated in v5.3.3
-// fusv-enable
 // scss-docs-end title-bars-variables
 // End mod
 
@@ -2208,9 +2193,9 @@ $btn-close-border-width:        var(--#{$prefix}border-width) !default; // OUDS 
 $btn-close-border-color:        transparent !default; // OUDS mod
 $btn-close-color:               var(--#{$prefix}emphasis-color) !default;
 $btn-close-bg:                  var(--#{$prefix}close-icon) !default; // OUDS mod
-// OUDS mod
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
-$btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
+$btn-close-focus-shadow:        $btn-focus-box-shadow !default;
 // fusv-enable
 // End mod
 
@@ -2255,7 +2240,7 @@ $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
 $kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
-$nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
+$nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
 
 $pre-color:                         var(--#{$prefix}code-color) !default;
 $pre-line-height:                   1.25 !default;
@@ -2297,9 +2282,6 @@ $stepped-process-counter:     step !default; // Used as a counter name
 $stepped-process-bg:          var(--#{$prefix}body-bg) !default;
 
 $step-item-padding:           7px !default;
-// fusv-disable
-$step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
-// fusv-enable
 $step-item-margin-end:        var(--#{$prefix}border-width) !default;
 $step-item-bg:                var(--#{$prefix}secondary) !default;
 $step-item-active-bg:         $supporting-orange !default;
@@ -2380,9 +2362,6 @@ $footer-letter-spacing:                   $letter-spacing-base !default;
 $footer-accordion-line-height:            $spacer * 1.45 !default;
 $footer-accordion-active-color:           var(--#{$prefix}primary) !default;
 $footer-accordion-btn-hover-bg:           null !default;
-// fusv-disable
-$footer-nav-link-font-weight:             $font-weight-bold !default; // Deprecated in v5.3.3
-// fusv-enable
 
 $footer-title-content-padding-top:        $spacer * 1.25 !default;
 $footer-title-content-padding-bottom:     $spacer * 1.45 !default;
