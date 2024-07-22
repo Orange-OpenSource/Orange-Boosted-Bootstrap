@@ -6,9 +6,8 @@ group: migration
 aliases:
   - "/migration-from-boosted/"
   - "/docs/migration-from-boosted/"
+toc: true
 ---
-
-# Migrating from Boosted
 
 This guide provides information on how to migrate from Boosted (latest release) to OUDS Web.
 
@@ -23,9 +22,17 @@ Technically, it means that you can get rid of the following things:
 
 ## Components
 
+### Close button
+
 - <span class="badge text-bg-warning">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
-### CSS and Sass variables
+## Forms
+
+### Checks & radios
+
+- <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+
+## CSS and Sass variables
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
