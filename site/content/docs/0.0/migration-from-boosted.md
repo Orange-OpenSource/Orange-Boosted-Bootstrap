@@ -11,6 +11,25 @@ toc: true
 
 This guide provides information on how to migrate from Boosted (latest release) to OUDS Web.
 
+Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
+
+- The NPM package is now `@ouds/web`.
+- The CSS and JS files have been renamed:
+  - `boosted-grid.css` → `ouds-web-grid.css`
+  - `boosted-grid.min.css` → `ouds-web-grid.min.css`
+  - `boosted-reboot.css` → `ouds-web-reboot.css`
+  - `boosted-reboot.min.css` → `ouds-web-reboot.min.css`
+  - `boosted-utilities.css` → `ouds-web-utilities.css`
+  - `boosted-utilities.min.css` → `ouds-web-utilities.min.css`
+  - `boosted.css` → `ouds-web.css`
+  - `boosted.min.css` → `ouds-web.min.css`
+  - `boosted.bundle.js` → `ouds-web.bundle.js`
+  - `boosted.bundle.min.js` → `ouds-web.bundle.min.js`
+  - `boosted.esm.js` → `ouds-web.esm.js`
+  - `boosted.esm.min.js` → `ouds-web.esm.min.js`
+  - `boosted.js` → `ouds-web.js`
+  - `boosted.min.js` → `ouds-web.min.js`
+
 ## Fonts
 
 OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
