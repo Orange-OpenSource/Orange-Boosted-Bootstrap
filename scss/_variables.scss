@@ -936,7 +936,11 @@ $input-btn-focus-width:       $focus-visible-outer-offset !default; // OUDS mod:
 // OUDS mod: no `$input-btn-focus-color-opacity`
 // OUDS mod: no `$input-btn-focus-color`
 // OUDS mod: no `$input-btn-focus-blur`
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
+// fusv-disable
 $input-btn-focus-box-shadow:  $focus-ring-box-shadow !default;
+// fusv-enable
+// End mod
 
 $input-btn-padding-y-sm:      $spacer * .25 !default;
 $input-btn-padding-x-sm:      $spacer * .5 !default;
