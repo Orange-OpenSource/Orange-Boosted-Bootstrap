@@ -39,7 +39,7 @@ const SELECTOR_DROPDOWN = '.dropdown'
 const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
 
 const Default = {
-  offset: null, // TODO: v6 @deprecated, keep it for backwards compatibility reasons
+  offset: null, // TODO: Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
   rootMargin: '0px 0px -25%',
   smoothScroll: false,
   target: null,
@@ -47,7 +47,7 @@ const Default = {
 }
 
 const DefaultType = {
-  offset: '(number|null)', // TODO v6 @deprecated, keep it for backwards compatibility reasons
+  offset: '(number|null)', // TODO Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
   rootMargin: 'string',
   smoothScroll: 'boolean',
   target: 'element',

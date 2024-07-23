@@ -56,25 +56,38 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
     <ul>
-      <li><code>$btn-close-white-color</code></li>
+      <li><code>$boosted-prefix</code></li>
+      <li><code>$boosted-variable-prefix</code></li>
+      <li><code>$btn-close-white-active-border-color</code></li>
+      <li><code>$btn-close-white-active-color</code></li>
       <li><code>$btn-close-white-bg</code></li>
       <li><code>$btn-close-white-border-color</code></li>
-      <li><code>$btn-close-white-hover-color</code></li>
-      <li><code>$btn-close-white-active-color</code></li>
-      <li><code>$btn-close-white-active-border-color</code></li>
+      <li><code>$btn-close-white-color</code></li>
       <li><code>$btn-close-white-disabled-color</code></li>
+      <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$footer-nav-link-font-weight</code></li>
+      <li><code>$form-star-focus-box-shadow</code></li>
+      <li><code>$form-star-focus-color</code></li>
+      <li><code>$form-star-focus-color-dark</code></li>
+      <li><code>$form-star-focus-outline</code></li>
+      <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$orange-filter</code></li>
+      <li><code>$outline-offset</code></li>
+      <li><code>$outline-width</code></li>
+      <li><code>$step-item-padding-end</code></li>
+      <li><code>$title-bar-border-color-dark</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated CSS variables:</summary>
     <ul>
-      <li><code>--bs-btn-close-color</code></li>
+      <li><code>--bs-btn-close-active-border-color</code></li>
+      <li><code>--bs-btn-close-active-color</code></li>
       <li><code>--bs-btn-close-bg</code></li>
       <li><code>--bs-btn-close-border-color</code></li>
-      <li><code>--bs-btn-close-hover-color</code></li>
-      <li><code>--bs-btn-close-active-color</code></li>
-      <li><code>--bs-btn-close-active-border-color</code></li>
+      <li><code>--bs-btn-close-color</code></li>
       <li><code>--bs-btn-close-disabled-color</code></li>
+      <li><code>--bs-btn-close-hover-color</code></li>
     </ul>
   </details>

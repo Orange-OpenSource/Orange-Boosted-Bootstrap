@@ -586,9 +586,9 @@ $utilities: map-merge(
       values: map-merge(
         $utilities-text-colors,
         (
-          "muted": var(--#{$prefix}secondary-color), // deprecated
-          "black-50": rgba($black, .5), // deprecated
-          "white-50": rgba($white, .5), // deprecated
+          "muted": var(--#{$prefix}secondary-color), // Deprecated in Bootstrap
+          "black-50": rgba($black, .5), // Deprecated in Bootstrap
+          "white-50": rgba($white, .5), // Deprecated in Bootstrap
           "body-secondary": var(--#{$prefix}secondary-color),
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
