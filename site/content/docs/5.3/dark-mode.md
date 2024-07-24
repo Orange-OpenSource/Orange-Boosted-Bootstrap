@@ -2144,6 +2144,7 @@ sitemap:
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2284,6 +2285,7 @@ sitemap:
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2424,6 +2426,7 @@ sitemap:
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2564,6 +2567,7 @@ sitemap:
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2704,6 +2708,7 @@ sitemap:
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
