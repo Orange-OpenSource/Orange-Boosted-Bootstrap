@@ -22,7 +22,7 @@ OUDS Web is maintained by the core team and a small group of invaluable core con
 </div>
 {{< /team.inline >}}
 
-Get involved with OUDS Web development by [opening an issue]({{< param repo >}}/issues/new/choose) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how we develop.
+Get involved with OUDS Web development by [opening an issue]({{< param repo >}}/issues/new/choose) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/.github/CONTRIBUTING.md) for information on how we develop.
 
 {{< callout info >}}
 ## Bootstrap team
