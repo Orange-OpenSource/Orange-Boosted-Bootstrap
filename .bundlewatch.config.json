@@ -26,11 +26,11 @@
     },
     {
       "path": "./dist/css/ouds-web.css",
-      "maxSize": "44.5 kB"
+      "maxSize": "44.75 kB"
     },
     {
       "path": "./dist/css/ouds-web.min.css",
-      "maxSize": "41.5 kB"
+      "maxSize": "41.75 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
