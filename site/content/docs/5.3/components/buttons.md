@@ -153,6 +153,7 @@ Use `.btn-social` to get a rounded button meant to display contact points links 
 <a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
 <a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
 <a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
+<a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a>
 {{< /example >}}
 
 Supported social networks are declared in a dedicated Sass map—meaning you're able to [add or remove a network from the following map]({{< docsref "/customize/sass#maps-and-loops" >}}).

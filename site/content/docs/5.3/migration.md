@@ -16,6 +16,11 @@ toc: true
 - **Colors**
   - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
 
+### Components
+
+#### Buttons
+  - <span class="badge text-bg-success">New</span> X social button.
+
 ### Docs
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
