@@ -22,7 +22,7 @@ We'll dive into each of these more throughout, but at a high level, here's what 
 - Components should be built with a base class and extended via modifier classes
 <!--- Component states should obey a common z-index scale-->
 - Whenever possible, prefer an HTML and CSS implementation over JavaScript
-- Whenever possible, use utilities over custom styles
+<!--- Whenever possible, use utilities over custom styles-->
 - Whenever possible, avoid enforcing strict HTML requirements (children selectors)
 
 ## Responsive
@@ -76,11 +76,13 @@ The same goes for more complex components. While we _could_ write our own form v
 
 Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser generally provides a great deal of functionality for you.
 
+<!--
 ## Utilities
 
 Utility classes are a powerful ally in combating CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
 
 Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
+-->
 
 ## Flexible HTML
 
