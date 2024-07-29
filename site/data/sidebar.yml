@@ -259,7 +259,6 @@
   icon_color: body-color
   pages:
     - title: Approach
-      draft: true
     - title: Icons
       draft: true
 
