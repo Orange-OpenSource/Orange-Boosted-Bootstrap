@@ -35,7 +35,7 @@ A better alternative for those using this type of frameworks is to use a framewo
 
 {{< callout warning >}}
 **To set up a functional OUDS Web demo based on the Bootstrap templates**, follow these steps to replace all `bootstrap` references:
-* Change `bootstrap` to `ouds-web` in `scss/style.scss` and within `import` statements in `index.html`.
+* Change `bootstrap` to `ouds-web` in `scss/style.scss`.
 * Replace `bootstrap` with `@ouds/web` in `package.json`, and within `import` statements in `index.html` for the CDN URL.
 * Update JavaScript objects from `bootstrap` to `oudsWeb`.
 {{< /callout >}}
@@ -86,12 +86,12 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     {
       "imports": {
         "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
-        "ouds-web": "https://cdn.jsdelivr.net/npm/@ouds/web@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
+        "@ouds/web": "https://cdn.jsdelivr.net/npm/@ouds/web@{{< param "current_version" >}}/dist/js/ouds-web.esm.min.js"
       }
     }
     </script>
     <script type="module">
-      import * as oudsWeb from 'ouds-web'
+      import * as oudsWeb from '@ouds/web'
 
       new oudsWeb.Popover(document.getElementById('popoverButton'))
     </script>
