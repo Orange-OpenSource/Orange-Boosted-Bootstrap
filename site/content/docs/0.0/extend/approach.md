@@ -20,9 +20,9 @@ We'll dive into each of these more throughout, but at a high level, here's what 
 
 - Components should be responsive and mobile-first
 - Components should be built with a base class and extended via modifier classes
-<!--- Component states should obey a common z-index scale-->
+- Component states should obey a common z-index scale
 - Whenever possible, prefer an HTML and CSS implementation over JavaScript
-<!--- Whenever possible, use utilities over custom styles-->
+- Whenever possible, use utilities over custom styles
 - Whenever possible, avoid enforcing strict HTML requirements (children selectors)
 
 ## Responsive
@@ -73,8 +73,6 @@ This principle is our first-class JavaScript API using `data` attributes. You do
 Lastly, our styles build on the fundamental behaviors of common web elements. Whenever possible, we prefer to use what the browser provides. <!--For example, you can put a `.btn` class on nearly any element, but most elements don't provide any semantic value or browser functionality. So instead, we use `<button>`s and `<a>`s.-->
 
 The same goes for more complex components. While we _could_ write our own form validation plugin to add classes to a parent element based on an input's state, thereby allowing us to style the text say red, we prefer using the `:valid`/`:invalid` pseudo-elements every browser provides us.
-
-Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser generally provides a great deal of functionality for you.
 
 <!--
 ## Utilities
