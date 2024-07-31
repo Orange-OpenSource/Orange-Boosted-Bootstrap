@@ -187,10 +187,10 @@ $utilities: (
 Output:
 
 ```css
-.text-opacity-25 { --bs-text-alpha: .25; }
-.text-opacity-50 { --bs-text-alpha: .5; }
-.text-opacity-75 { --bs-text-alpha: .75; }
-.text-opacity-100 { --bs-text-alpha: 1; }
+.text-opacity-25 { -bs-text-alpha: .25; } // TODO: reinsert hyphens
+.text-opacity-50 { -bs-text-alpha: .5; } // TODO: reinsert hyphens
+.text-opacity-75 { -bs-text-alpha: .75; } // TODO: reinsert hyphens
+.text-opacity-100 { -bs-text-alpha: 1; } // TODO: reinsert hyphens
 ```
 -->
 
@@ -220,8 +220,8 @@ Output:
 
 ```css
 .bg-primary {
-  -bs-bg-opacity: 1;
-  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important;
+  -bs-bg-opacity: 1; // TODO: reinsert hyphens
+  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important; // TODO: reinsert hyphens
 }
 ```-->
 
