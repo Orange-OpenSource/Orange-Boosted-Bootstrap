@@ -214,7 +214,6 @@
   icon_color: body-color
   pages:
     - title: API
-      draft: true
     - title: Background
       draft: true
     - title: Borders
@@ -258,7 +257,6 @@
   icon_color: body-color
   pages:
     - title: Approach
-      draft: true
     - title: Icons
       draft: true
 
