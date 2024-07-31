@@ -219,8 +219,8 @@ Output:
 
 ```css
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  -bs-bg-opacity: 1;  TODO
+  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important;  TODO
 }
 ```-->
 
