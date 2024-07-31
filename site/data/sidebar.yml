@@ -6,7 +6,6 @@
   icon_color: body-color
   pages:
     - title: Introduction
-      draft: true
     - title: Download
       draft: true
     - title: Contents
