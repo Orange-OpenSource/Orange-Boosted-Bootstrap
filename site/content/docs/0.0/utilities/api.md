@@ -23,10 +23,10 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`class`](#class) | Optional | null | Name of the generated class. If not provided and `property` is an array of strings, `class` will default to the first element of the `property` array. If not provided and `property` is a string, the `values` keys are used for the `class` names. |
 | [`css-var`](#css-variable-utilities) | Optional | `false` | Boolean to generate CSS variables instead of CSS rules. |
 | [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
+| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
 | [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
 | `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
-<!--| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |-->
 <!--| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |-->
 <!--| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |-->
 {{< /bs-table >}}
@@ -104,11 +104,10 @@ values: (
 ```
 
 As a Sass variable that sets the list or map<!--, as in our [`position` utilities]({{< docsref "/utilities/position" >}})-->:
-<!--
+
 ```scss
 values: $position-values
 ```
--->
 
 ### Class
 
@@ -166,6 +165,7 @@ Output:
 
 Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Add an optional `css-variable-name` to set a different CSS variable name than the class name.
 
+<!--
 Consider our `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
 
 ```scss
@@ -192,11 +192,12 @@ Output:
 .text-opacity-75 { --bs-text-alpha: .75; }
 .text-opacity-100 { --bs-text-alpha: 1; }
 ```
+-->
 
-<!--### Local CSS variables
+### Local CSS variables
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
-
+Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. <!--For example, consider our `.bg-*` utilities:-->
+<!--
 ```scss
 $utilities: (
   "background-color": (
@@ -219,8 +220,8 @@ Output:
 
 ```css
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  -bs-bg-opacity: 1;
+  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important;
 }
 ```-->
 
@@ -474,7 +475,7 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 .border { ... }
 .border-0 { ... }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .border-sm { ... }
   .border-sm-0 { ... }
 }
@@ -484,17 +485,17 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
   .border-md-0 { ... }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .border-lg { ... }
   .border-lg-0 { ... }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .border-xl { ... }
   .border-xl-0 { ... }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .border-xxl { ... }
   .border-xxl-0 { ... }
 }
