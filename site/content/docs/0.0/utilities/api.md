@@ -23,12 +23,12 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`class`](#class) | Optional | null | Name of the generated class. If not provided and `property` is an array of strings, `class` will default to the first element of the `property` array. If not provided and `property` is a string, the `values` keys are used for the `class` names. |
 | [`css-var`](#css-variable-utilities) | Optional | `false` | Boolean to generate CSS variables instead of CSS rules. |
 | [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
-<!--| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |-->
 | [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
+| `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
+<!--| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |-->
 <!--| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |-->
 <!--| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |-->
-| `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
 {{< /bs-table >}}
 
 ## API explained
