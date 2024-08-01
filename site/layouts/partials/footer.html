@@ -73,9 +73,6 @@
         </div>
         <!-- Boosted mod: footer specific adaptations -->
         <div class="footer-column accordion-header col-md-12 col-lg-4 mb-3 pt-3 pt-lg-0 px-1 px-lg-0 ms-1 ms-lg-0">
-          <ul class="navbar-nav mb-lg-4">
-            <li><a class="nav-link{{ if eq .Page.Title "Accessibility statement: Boosted documentation" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/accessibility-statement/" aria-describedby="headingLinks">Accessibility: partially compliant</a></li>
-          </ul>
           <div class="small fw-bold">
             <p class="mb-lg-1">
               This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
@@ -90,6 +87,9 @@
               </a>
             </p>
           </div>
+          <ul class="navbar-nav mt-lg-4">
+            <li><a class="nav-link{{ if eq .Page.Title "Accessibility statement: Boosted documentation" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/accessibility-statement/" aria-describedby="headingLinks">Accessibility: partially compliant</a></li>
+          </ul>
         </div>
         <!-- End mod -->
       </div>
