@@ -96,7 +96,7 @@ body {
   height: 200px;
   font-size: 3em;
   text-align: center;
-  background: #eee;
+  background: var(--bs-secondary-bg);
   background-image: linear-gradient(to right, transparent 50%, var(--bs-primary) 0);
   border-radius: 50%; // stylelint-disable-line property-disallowed-list
 }
