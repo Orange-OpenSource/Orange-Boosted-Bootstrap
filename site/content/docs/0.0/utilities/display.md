@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Display property
-description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+description: Quickly <!--and responsively -->toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 group: utilities
 aliases:
   - "/docs/utilities/display/"
@@ -10,7 +10,7 @@ toc: true
 
 ## How it works
 
-Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
+Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our <!--responsive -->display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
 
 ## Notation
 
@@ -19,7 +19,7 @@ Display utility classes that apply to all breakpoints<!-- [breakpoints]({{< docs
 As such, the classes are named using the format:
 
 - `.d-{value}`<!-- for `xs`-->
-- `.d-{breakpoint}-{value}`<!-- for `sm`, `md`, `lg`, `xl`, and `xxl`.-->
+<!--- `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, `xl`, and `xxl`.-->
 
 Where *value* is one of:
 
@@ -53,7 +53,7 @@ The media queries affect screen widths with the given breakpoint *or larger*. <!
 
 ## Hiding elements
 
-For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
+<!--For faster mobile-friendly development, use responsive-->Use display classes for showing and hiding elements<!-- by device-->.<!-- Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.-->
 
 To hide elements simply use the `.d-none` class<!-- or one of the `.d-{sm,md,lg,xl,xxl}-none` classes for any responsive screen variation-->.
 
@@ -85,7 +85,7 @@ To hide elements simply use the `.d-none` class<!-- or one of the `.d-{sm,md,lg,
 
 ## Display in print
 
-Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities.
+Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our <!--responsive -->`.d-*` utilities.
 
 - `.d-print-none`
 - `.d-print-inline`
