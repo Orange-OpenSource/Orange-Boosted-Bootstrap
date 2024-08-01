@@ -20,7 +20,7 @@ Apply `display` utilities to create a flexbox container and transform **direct c
 <div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
 {{< /example >}}
 
-Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
+<!--Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -29,7 +29,7 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 - `.d{{ .abbr }}-inline-flex`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Direction
 
@@ -65,7 +65,7 @@ Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to st
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-direction`.
+<!--Responsive variations also exist for `flex-direction`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -76,7 +76,7 @@ Responsive variations also exist for `flex-direction`.
 - `.flex{{ .abbr }}-column-reverse`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Justify content
 
@@ -124,7 +124,7 @@ Use `justify-content` utilities on flexbox containers to change the alignment of
 <div class="d-flex justify-content-evenly">...</div>
 ```
 
-Responsive variations also exist for `justify-content`.
+<!--Responsive variations also exist for `justify-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -137,7 +137,7 @@ Responsive variations also exist for `justify-content`.
 - `.justify-content{{ .abbr }}-evenly`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Align items
 
@@ -179,7 +179,7 @@ Use `align-items` utilities on flexbox containers to change the alignment of fle
 <div class="d-flex align-items-stretch">...</div>
 ```
 
-Responsive variations also exist for `align-items`.
+<!--Responsive variations also exist for `align-items`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -191,7 +191,7 @@ Responsive variations also exist for `align-items`.
 - `.align-items{{ .abbr }}-stretch`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Align self
 
@@ -233,7 +233,7 @@ Use `align-self` utilities on flexbox items to individually change their alignme
 <div class="align-self-stretch">Aligned flex item</div>
 ```
 
-Responsive variations also exist for `align-self`.
+<!--Responsive variations also exist for `align-self`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -245,7 +245,7 @@ Responsive variations also exist for `align-self`.
 - `.align-self{{ .abbr }}-stretch`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Fill
 
@@ -259,7 +259,7 @@ Use the `.flex-fill` class on a series of sibling elements to force them into wi
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-fill`.
+<!--Responsive variations also exist for `flex-fill`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -267,7 +267,7 @@ Responsive variations also exist for `flex-fill`.
 - `.flex{{ .abbr }}-fill`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Grow and shrink
 
@@ -290,7 +290,7 @@ Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if nece
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-grow` and `flex-shrink`.
+<!--Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -299,7 +299,7 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 - `.flex{{ .abbr }}-{grow|shrink}-1`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Auto margins
 
@@ -414,7 +414,7 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 ```
 
 
-Responsive variations also exist for `flex-wrap`.
+<!--Responsive variations also exist for `flex-wrap`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -424,7 +424,7 @@ Responsive variations also exist for `flex-wrap`.
 - `.flex{{ .abbr }}-wrap-reverse`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Order
 
@@ -438,7 +438,7 @@ Change the _visual_ order of specific flex items with a handful of `order` utili
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `order`.
+<!--Responsive variations also exist for `order`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -460,7 +460,7 @@ Additionally there are also responsive `.order-first` and `.order-last` classes 
 {{- end -}}
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Align content
 
@@ -614,7 +614,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 ```
 
-Responsive variations also exist for `align-content`.
+<!--Responsive variations also exist for `align-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -627,7 +627,7 @@ Responsive variations also exist for `align-content`.
 - `.align-content{{ .abbr }}-stretch`
 {{- end -}}
 {{< /flex.inline >}}
-{{< /markdown >}}
+{{< /markdown >}}-->
 
 ## Media object
 
