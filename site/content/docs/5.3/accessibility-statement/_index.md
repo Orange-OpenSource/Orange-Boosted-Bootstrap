@@ -18,7 +18,7 @@ This accessibility statement applies to the Boosted documentation.
 
 "Boosted Documentation" is partially compliant to the criteria with [WCAG version 2.2, level AA](https://www.w3.org/TR/WCAG22/).
 
-ORANGE SA refers to the WCAG international recommendations. [Here is the correspondence link between the RGAA and the WCAG (french)](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/).
+ORANGE SA refers to the WCAG international recommendations. [Here is the correspondence link between the RGAA and the WCAG (French)](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/).
 
 The audit was carried out via [the Orange va11ydette](https://la-va11ydette.orange.com/?lang=en).
 
