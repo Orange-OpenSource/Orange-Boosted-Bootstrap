@@ -20,7 +20,7 @@ This accessibility statement applies to the Boosted documentation.
 
 ORANGE SA refers to the WCAG international recommendations. [Here is the correspondence link between the RGAA and the WCAG (french)](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/).
 
-The audit was carried out via [the va11ydette](https://la-va11ydette.orange.com/?lang=en).
+The audit was carried out via [the Orange va11ydette](https://la-va11ydette.orange.com/?lang=en).
 
 ### Tests result
 
