@@ -222,7 +222,6 @@
       draft: true
     - title: Flex
     - title: Float
-      draft: true
     - title: Interactions
     - title: Link
       draft: true
@@ -231,7 +230,6 @@
       draft: true
     - title: Overflow
     - title: Position
-      draft: true
     - title: Shadows
       draft: true
     - title: Sizing
