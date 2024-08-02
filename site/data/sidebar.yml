@@ -203,7 +203,6 @@
     - title: Stretched link
       draft: true
     - title: Text truncation
-      draft: true
     - title: Vertical rule
       draft: true
     - title: Visually hidden
@@ -230,7 +229,6 @@
     - title: Link
       draft: true
     - title: Object fit
-      draft: true
     - title: Opacity
       draft: true
     - title: Overflow
@@ -245,7 +243,6 @@
     - title: Text
       draft: true
     - title: Vertical align
-      draft: true
     - title: Visibility
     - title: Z-index
       draft: true
