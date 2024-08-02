@@ -103,7 +103,7 @@ values: (
 )
 ```
 
-As a Sass variable that sets the list or map<!--, as in our [`position` utilities]({{< docsref "/utilities/position" >}})-->:
+As a Sass variable that sets the list or map, as in our [`position` utilities]({{< docsref "/utilities/position" >}}):
 
 ```scss
 values: $position-values
