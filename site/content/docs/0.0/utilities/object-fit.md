@@ -37,11 +37,11 @@ Add the `object-fit-{value}` class to the [replaced element](https://developer.m
 Responsive variations also exist for each `object-fit` value using the format `.object-fit-{breakpoint}-{value}`, for the following breakpoint abbreviations: `sm`, `md`, `lg`, `xl`, and `xxl`. Classes can be combined for various effects as you need.
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain on sm" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="80" class="object-fit-md-contain border rounded" text="Contain on md" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="80" class="object-fit-lg-contain border rounded" text="Contain on lg" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="80" class="object-fit-xl-contain border rounded" text="Contain on xl" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain on xxl" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-sm-contain border" text="Contain on sm" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-md-contain border" text="Contain on md" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-lg-contain border" text="Contain on lg" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-xl-contain border" text="Contain on xl" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="80" class="object-fit-xxl-contain border" text="Contain on xxl" markup="img" color="#333" background="#bbb" >}}
 {{< /example >}}-->
 
 ## Video
