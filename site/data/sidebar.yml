@@ -205,7 +205,6 @@
     - title: Vertical rule
       draft: true
     - title: Visually hidden
-      draft: true
 
 - title: Utilities
   icon: braces-asterisk
