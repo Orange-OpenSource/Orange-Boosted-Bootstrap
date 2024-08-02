@@ -25,11 +25,11 @@ Classes for the value of `object-fit` are named using the format `.object-fit-{v
 Add the `object-fit-{value}` class to the [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="120" class="object-fit-contain border rounded" text="Object fit contain" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="120" class="object-fit-cover border rounded" text="Object fit cover" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="120" class="object-fit-fill border rounded" text="Object fit fill" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="120" class="object-fit-scale border rounded" text="Object fit scale down" markup="img" color="#333" background="#bbb" >}}
-{{< placeholder width="140" height="120" class="object-fit-none border rounded" text="Object fit none" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-contain border" text="Object fit contain" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-cover border" text="Object fit cover" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-fill border" text="Object fit fill" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-scale border" text="Object fit scale down" markup="img" color="#333" background="#bbb" >}}
+{{< placeholder width="140" height="120" class="object-fit-none border" text="Object fit none" markup="img" color="#333" background="#bbb" >}}
 {{< /example >}}
 
 <!--## Responsive
