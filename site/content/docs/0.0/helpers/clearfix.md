@@ -4,10 +4,10 @@ title: Clearfix
 description: Quickly and easily clear floated content within a container by adding a clearfix utility.
 group: helpers
 aliases:
-- "/helpers/"
-- "/docs/helpers/"
-- "/docs/0.0/helpers/"
-- "/docs/helpers/clearfix/"
+  - "/helpers/"
+  - "/docs/helpers/"
+  - "/docs/0.0/helpers/"
+  - "/docs/helpers/clearfix/"
 ---
 
 Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
@@ -30,11 +30,11 @@ Use the mixin in SCSS:
 }
 ```
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+<!-- The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
 
 {{< example >}}
 <div class="bg-info clearfix">
   <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
   <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
 </div>
-{{< /example >}}
+{{< /example >}} -->
