@@ -185,7 +185,6 @@
   icon_color: body-color
   pages:
     - title: Clearfix
-      draft: true
     - title: Color & background
       draft: true
     - title: Colored links
