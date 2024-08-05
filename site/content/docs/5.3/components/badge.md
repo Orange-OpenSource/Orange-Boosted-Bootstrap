@@ -67,7 +67,7 @@ Please refer to our [Boosted Navbars examples]({{< docsref "/examples/navbars" >
 
 {{< example >}}
 <a href="#" class="position-relative">
-  <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>

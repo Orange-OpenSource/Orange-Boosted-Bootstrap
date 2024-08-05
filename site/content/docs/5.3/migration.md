@@ -15,6 +15,8 @@ toc: true
 
 - **Colors**
   - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
+- **Accessibility**
+  - <span class="badge text-bg-warning">Warning</span> SVGs have been updated to remove the `focusable="false"` attribute that was useful before only for Internet Explorer support. You may want to update your websites, even if you can keep them as is as it won't break anything.
 
 ### Components
 
@@ -1661,7 +1663,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 ```diff
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
 - <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-+ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
++ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
     <rect width="100%" height="100%" fill="#563d7c"/>
     <circle cx="50" cy="50" r="30" fill="#007bff"/>
   </svg>
