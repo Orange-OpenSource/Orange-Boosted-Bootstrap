@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2015-2024 The Boosted Authors
+  * OUDS Web v0.0.2 (https://web.unified-design-system.orange.com/)
+  * Copyright 2015-2024 The OUDS Web Authors
   * Copyright 2015-2024 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
+  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap popover.js v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2011-2024 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap popover.js v0.0.2 (https://web.unified-design-system.orange.com/)
+  * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -33,7 +33,7 @@
     ...Tooltip.Default,
     content: '',
     offset: [0, 15],
-    // Boosted mod: instead of `offset: [0, 8],`
+    // OUDS mod: instead of `offset: [0, 8],`
     placement: 'right',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
     trigger: 'click'

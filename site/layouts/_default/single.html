@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <!-- Boosted mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
+  <!-- OUDS mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
 
-  <!-- Boosted mod: Orange rendering that handles "Guidelines" page as well -->
+  <!-- OUDS mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1" id="content">
     <div class="title-bar mb-2 mb-md-0">
       <div class="container-xxl">
@@ -23,26 +23,18 @@
                 Download source code
               </a>
             </div>
-            {{ else if eq .Title "Orange Design System for web" -}}
-            <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.ods.web }}" class="btn btn-primary" aria-label="Design system for web" title="Design system for web" target="_blank" rel="noopener">Visit system.design.orange.com</a>
-            </div>
             {{- end }}
           </div>
-          <!-- Boosted mod: No ads -->
+          <!-- OUDS mod: No ads -->
         </div>
       </div>
     </div>
-    {{ if eq .Title "Orange Design System for web" }}
-    <div>
-    {{ else }}
     <div class="container-xxl bd-gutter">
-    {{ end }}
       {{ .Content }}
 
       {{ if eq .Title "Examples" -}}
         {{ partial "examples/main" . }}
-        <!-- Boosted mod: No 'examples/bs-themes' partial -->
+        <!-- OUDS mod: No 'examples/bs-themes' partial -->
       {{- end }}
     </div>
   </main>

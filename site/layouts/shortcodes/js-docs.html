@@ -33,9 +33,9 @@
   {{- end -}}
 
   <div class="bd-example-snippet bd-code-snippet bd-file-ref">
-    <!-- Boosted mod: added `.border-1` and `.border-subtle` -->
+    <!-- OUDS mod: added `.border-1` and `.border-subtle` -->
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}-ouds-web/{{ $file | replaceRE `\\` "/" }}">
         {{- $file -}}
       </a>
       <div class="d-flex ms-auto">

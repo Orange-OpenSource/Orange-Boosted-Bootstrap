@@ -2,11 +2,11 @@
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
-  --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // Boosted mod
-  --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
-  --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // Boosted mod
+  --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // OUDS mod
+  --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // OUDS mod
+  --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // OUDS mod
   @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
-  --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // Boosted mod
+  --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // OUDS mod
   --#{$prefix}pagination-color: #{$pagination-color};
   --#{$prefix}pagination-bg: #{$pagination-bg};
   --#{$prefix}pagination-border-width: #{$pagination-border-width};
@@ -15,46 +15,46 @@
   --#{$prefix}pagination-hover-color: #{$pagination-hover-color};
   --#{$prefix}pagination-hover-bg: #{$pagination-hover-bg};
   --#{$prefix}pagination-hover-border-color: #{$pagination-hover-border-color};
-  // Boosted mod: no --#{$prefix}pagination-focus-color
-  // Boosted mod: no --#{$prefix}pagination-focus-bg
-  // Boosted mod: no --#{$prefix}pagination-focus-box-shadow
+  // OUDS mod: no --#{$prefix}pagination-focus-color
+  // OUDS mod: no --#{$prefix}pagination-focus-bg
+  // OUDS mod: no --#{$prefix}pagination-focus-box-shadow
   --#{$prefix}pagination-active-color: #{$pagination-active-color};
   --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
   --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
-  --#{$prefix}pagination-active-item-color: #{$pagination-active-item-color}; // Boosted mod
-  --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // Boosted mod
-  --#{$prefix}pagination-active-item-border-color: #{$pagination-active-item-border}; // Boosted mod
+  --#{$prefix}pagination-active-item-color: #{$pagination-active-item-color}; // OUDS mod
+  --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // OUDS mod
+  --#{$prefix}pagination-active-item-border-color: #{$pagination-active-item-border}; // OUDS mod
   --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
   --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
   --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
-  --#{$prefix}pagination-icon: #{$pagination-icon}; // Boosted mod
-  --#{$prefix}pagination-icon-size: #{$pagination-icon-size}; // Boosted mod
-  --#{$prefix}pagination-icon-width: #{$pagination-icon-width}; // Boosted mod
-  --#{$prefix}pagination-icon-height: #{$pagination-icon-height}; // Boosted mod
+  --#{$prefix}pagination-icon: #{$pagination-icon}; // OUDS mod
+  --#{$prefix}pagination-icon-size: #{$pagination-icon-size}; // OUDS mod
+  --#{$prefix}pagination-icon-width: #{$pagination-icon-width}; // OUDS mod
+  --#{$prefix}pagination-icon-height: #{$pagination-icon-height}; // OUDS mod
   // scss-docs-end pagination-css-vars
 
   display: flex;
-  flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // Boosted mod
-  margin: var(--#{$prefix}pagination-margin-y) 0; // Boosted mod
-  background-color: transparent; // Boosted mod
+  flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // OUDS mod
+  margin: var(--#{$prefix}pagination-margin-y) 0; // OUDS mod
+  background-color: transparent; // OUDS mod
   @include list-unstyled();
 }
 
 .page-link {
   position: relative;
-  box-sizing: content-box; // Boosted mod
-  display: flex; // Boosted mod
-  align-items: center; // Boosted mod
-  justify-content: center; // Boosted mod
+  box-sizing: content-box; // OUDS mod
+  display: flex; // OUDS mod
+  align-items: center; // OUDS mod
+  justify-content: center; // OUDS mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
   @include font-size(var(--#{$prefix}pagination-font-size));
-  font-weight: var(--#{$prefix}pagination-font-weight); // Boosted mod
+  font-weight: var(--#{$prefix}pagination-font-weight); // OUDS mod
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}pagination-bg);
   border: var(--#{$prefix}pagination-border-width) solid var(--#{$prefix}pagination-border-color);
   @include transition($pagination-transition);
-  // Boosted mod: embed icon as mask-image
+  // OUDS mod: embed icon as mask-image
   @include button-icon(
     var(--#{$prefix}pagination-icon),
     var(--#{$prefix}pagination-icon-size),
@@ -72,9 +72,9 @@
     border-color: var(--#{$prefix}pagination-hover-border-color);
   }
 
-  // Boosted mod: no focus
+  // OUDS mod: no focus
 
-  // Boosted mod
+  // OUDS mod
   &:active,
   &:active > & {
     color: var(--#{$prefix}pagination-active-item-color);
@@ -124,7 +124,7 @@
     }
   }
 
-  // Boosted mod
+  // OUDS mod
   &:first-child:not(.active) .page-link,
   &:last-child:not(.active) .page-link {
     border-color: currentcolor;
@@ -204,4 +204,4 @@
 // Sizing
 //
 
-// Boosted mod: no pagination sizes
+// OUDS mod: no pagination sizes

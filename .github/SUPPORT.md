@@ -4,10 +4,10 @@ See the [contributing guidelines](CONTRIBUTING.md) for sharing bug reports.
 
 ### How-to
 
-For general Boosted troubleshooting or help getting started:
+For general OUDS Web troubleshooting or help getting started:
 
 - Ask questions and explore [our GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions).
-- Chat with the core team and fellow Boosted users on internal Orange communication tools.
+- Chat with the core team and fellow OUDS Web users on internal Orange communication tools.
 
 For general Bootstrap troubleshooting or help getting started:
 

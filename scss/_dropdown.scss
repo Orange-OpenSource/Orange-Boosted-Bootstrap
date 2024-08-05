@@ -9,7 +9,7 @@
 }
 
 .dropdown-toggle {
-  --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // Boosted mod
+  --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // OUDS mod
 
   white-space: nowrap;
   // Generate the caret automatically
@@ -21,11 +21,11 @@
   // scss-docs-start dropdown-css-vars
   --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
   --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
-  // Boosted mod: no --#{$prefix}dropdown-padding-x
+  // OUDS mod: no --#{$prefix}dropdown-padding-x
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
   @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
-  --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // Boosted mod
+  --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // OUDS mod
   --#{$prefix}dropdown-color: #{$dropdown-color};
   --#{$prefix}dropdown-bg: #{$dropdown-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
@@ -43,7 +43,7 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
   --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
   --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
-  --#{$prefix}dropdown-item-font-weight: #{$font-weight-bold}; // Boosted mod
+  --#{$prefix}dropdown-item-font-weight: #{$font-weight-bold}; // OUDS mod
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -56,7 +56,7 @@
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
-  line-height: var(--#{$prefix}dropdown-line-height); // Boosted mod
+  line-height: var(--#{$prefix}dropdown-line-height); // OUDS mod
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
@@ -163,7 +163,7 @@
   height: 0;
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
-  border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // Boosted mod
+  border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
   opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
 }
 
@@ -173,9 +173,9 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) add(var(--#{$prefix}dropdown-item-padding-y), .125rem); // Boosted mod
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) add(var(--#{$prefix}dropdown-item-padding-y), .125rem); // OUDS mod
   clear: both;
-  font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
+  font-weight: var(--#{$prefix}dropdown-item-font-weight); // OUDS mod
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
@@ -184,7 +184,7 @@
   border: 0; // For `<button>`s
   @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0));
 
-  // Boosted mod: no focus
+  // OUDS mod: no focus
   &:hover {
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
@@ -207,7 +207,7 @@
     background-image: if($enable-gradients, none, null);
   }
 
-  // Boosted mod: focus
+  // OUDS mod: focus
   &:focus {
     &[data-focus-visible-added] {
       outline-offset: -$focus-visible-outer-width;
@@ -238,7 +238,7 @@
   color: var(--#{$prefix}dropdown-link-color);
 }
 
-// Deprecated in v5.3.3
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // Dark dropdowns
 .dropdown-menu-dark {
   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
@@ -254,3 +254,4 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
   --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
 }
+// End mod

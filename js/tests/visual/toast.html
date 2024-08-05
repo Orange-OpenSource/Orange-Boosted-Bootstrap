@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../../dist/css/boosted.min.css" rel="stylesheet">
+    <link href="../../../dist/css/ouds-web.min.css" rel="stylesheet">
     <title>Toast</title>
     <style>
       .notifications {
@@ -42,7 +42,7 @@
           <span class="d-block bg-primary rounded me-2" style="width: 20px; height: 20px;"></span>
           <strong class="me-auto">Bootstrap</strong>
           <small class="text-body-secondary">2 seconds ago</small>
-          <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
+          <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
         </div>
         <div class="toast-body">
           Heads up, toasts will stack automatically
@@ -50,19 +50,19 @@
       </div>
     </div>
 
-    <script src="../../../dist/js/boosted.bundle.js"></script>
+    <script src="../../../dist/js/ouds-web.bundle.js"></script>
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
       window.addEventListener('load', () => {
-        document.querySelectorAll('.toast').forEach(toastEl => new boosted.Toast(toastEl))
+        document.querySelectorAll('.toast').forEach(toastEl => new oudsWeb.Toast(toastEl))
 
         document.getElementById('btnShowToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => boosted.Toast.getInstance(toastEl).show())
+          document.querySelectorAll('.toast').forEach(toastEl => oudsWeb.Toast.getInstance(toastEl).show())
         })
 
         document.getElementById('btnHideToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => boosted.Toast.getInstance(toastEl).hide())
+          document.querySelectorAll('.toast').forEach(toastEl => oudsWeb.Toast.getInstance(toastEl).hide())
         })
       })
     </script>

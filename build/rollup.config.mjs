@@ -11,7 +11,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const BUNDLE = process.env.BUNDLE === 'true'
 const ESM = process.env.ESM === 'true'
 
-let destinationFile = `boosted${ESM ? '.esm' : ''}`
+let destinationFile = `ouds-web${ESM ? '.esm' : ''}`
 const external = ['@popperjs/core']
 const plugins = [
   babel({
@@ -53,7 +53,7 @@ const rollupConfig = {
 }
 
 if (!ESM) {
-  rollupConfig.output.name = 'boosted'
+  rollupConfig.output.name = 'oudsWeb'
 }
 
 export default rollupConfig

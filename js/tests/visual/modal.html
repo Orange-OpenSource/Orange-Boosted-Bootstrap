@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../../dist/css/boosted.min.css" rel="stylesheet">
+    <link href="../../../dist/css/ouds-web.min.css" rel="stylesheet">
     <title>Modal</title>
     <style>
       #tall {
@@ -43,7 +43,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title h4" id="myModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
             </div>
             <div class="modal-body">
               <h4>Text in a modal</h4>
@@ -128,7 +128,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title h4" id="firefoxModalLabel">Firefox Bug Test</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
             </div>
             <div class="modal-body">
               <ol>
@@ -152,7 +152,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title h4" id="slowModalLabel">Lorem slowly</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
             </div>
             <div class="modal-body">
               <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
@@ -203,9 +203,9 @@
       </button>
     </div>
 
-    <script src="../../../dist/js/boosted.bundle.js"></script>
+    <script src="../../../dist/js/ouds-web.bundle.js"></script>
     <script>
-      /* global boosted: false */
+      /* global oudsWeb: false */
 
       const ffBugTestResult = document.getElementById('ff-bug-test-result')
       const firefoxTestDone = false
@@ -217,9 +217,9 @@
         }
       }
 
-      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new boosted.Popover(popoverEl))
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new oudsWeb.Popover(popoverEl))
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new boosted.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new oudsWeb.Tooltip(tooltipEl))
 
       const tall = document.getElementById('tall')
       document.getElementById('tall-toggle').addEventListener('click', () => {
@@ -236,7 +236,7 @@
 
       ffBugInput.addEventListener('focus', handlerClickFfBugInput)
 
-      const modalFf = new boosted.Modal(firefoxModal)
+      const modalFf = new oudsWeb.Modal(firefoxModal)
 
       document.getElementById('btnPreventModal').addEventListener('click', () => {
         const shownFirefoxModal = () => {

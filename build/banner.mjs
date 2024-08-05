@@ -11,10 +11,10 @@ const year = new Date().getFullYear()
 
 function getBanner(pluginFilename) {
   return `/*!
-  * Boosted v${pkg.version} (${pkg.homepage})
-  * Copyright 2015-${year} The Boosted Authors
+  * OUDS Web v${pkg.version} (${pkg.homepage})
+  * Copyright 2015-${year} The OUDS Web Authors
   * Copyright 2015-${year} Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
+  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
   * Bootstrap${pluginFilename ? ` ${pluginFilename}` : ''} v${pkg.version} (${pkg.homepage})
   * Copyright 2011-${year} ${pkg.author}

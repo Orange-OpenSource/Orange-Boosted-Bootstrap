@@ -6,16 +6,27 @@
   icon_color: body-color
   pages:
     - title: Introduction
+      draft: true
     - title: Download
+      draft: true
     - title: Contents
+      draft: true
     - title: Browsers & devices
+      draft: true
     - title: JavaScript
+      draft: true
     - title: Webpack
+      draft: true
     - title: Parcel
+      draft: true
     - title: Vite
+      draft: true
     - title: Accessibility
+      draft: true
     - title: RFS
+      draft: true
     - title: RTL
+      draft: true
     - title: Contribute
 
 - title: Customize
@@ -23,88 +34,151 @@
   icon_color: body-color
   pages:
     - title: Overview
+      draft: true
     - title: Sass
+      draft: true
     - title: Options
+      draft: true
     - title: Color palette
+      draft: true
     - title: Color theme
+      draft: true
     - title: Color modes
+      draft: true
     - title: Components
+      draft: true
     - title: CSS variables
+      draft: true
     - title: Optimize
+      draft: true
 
 - title: Layout
   icon: grid-fill
   icon_color: body-color
   pages:
     - title: Breakpoints
+      draft: true
     - title: Containers
+      draft: true
     - title: Grid
+      draft: true
     - title: Columns
+      draft: true
     - title: Gutters
+      draft: true
     - title: Utilities
+      draft: true
     - title: Z-index
+      draft: true
     - title: CSS Grid
+      draft: true
 
 - title: Content
   icon: file-earmark-richtext
   icon_color: body-color
   pages:
     - title: Reboot
+      draft: true
     - title: Typography
+      draft: true
     - title: Images
+      draft: true
     - title: Tables
+      draft: true
     - title: Figures
+      draft: true
 
 - title: Forms
   icon: ui-radios
   icon_color: body-color
   pages:
     - title: Overview
+      draft: true
     - title: Form control
+      draft: true
     - title: Select
+      draft: true
     - title: Checks & radios
+      draft: true
     - title: Range
+      draft: true
     - title: Input group
+      draft: true
     - title: Quantity selector
+      draft: true
     - title: Layout
+      draft: true
     - title: Validation
+      draft: true
 
 - title: Components
   icon: menu-button-wide-fill
   icon_color: body-color
   pages:
     - title: Accordion
+      draft: true
     - title: Alerts
+      draft: true
     - title: Back to top
+      draft: true
     - title: Badge
+      draft: true
     - title: Breadcrumb
+      draft: true
     - title: Buttons
+      draft: true
     - title: Button group
+      draft: true
     - title: Card
+      draft: true
     - title: Carousel
+      draft: true
     - title: Close button
+      draft: true
     - title: Collapse
+      draft: true
     - title: Dropdowns
+      draft: true
     - title: Footer
+      draft: true
     - title: List group
+      draft: true
     - title: Local navigation
+      draft: true
     - title: Modal
+      draft: true
     - title: Navbar
+      draft: true
     - title: Navs & tabs
+      draft: true
     - title: Offcanvas
+      draft: true
     - title: Orange navbar
+      draft: true
     - title: Pagination
+      draft: true
     - title: Placeholders
+      draft: true
     - title: Popovers
+      draft: true
     - title: Progress
+      draft: true
     - title: Scrollspy
+      draft: true
     - title: Spinners
+      draft: true
     - title: Stepped process
+      draft: true
     - title: Sticker
+      draft: true
     - title: Tags
+      draft: true
     - title: Title bars
+      draft: true
     - title: Toasts
+      draft: true
     - title: Tooltips
+      draft: true
 
 - title: Helpers
   icon: magic
@@ -112,15 +186,23 @@
   pages:
     - title: Clearfix
     - title: Color & background
+      draft: true
     - title: Colored links
+      draft: true
     - title: Focus ring
+      draft: true
     - title: Icon link
+      draft: true
     - title: Position
     - title: Ratio
+      draft: true
     - title: Stacks
+      draft: true
     - title: Stretched link
+      draft: true
     - title: Text truncation
     - title: Vertical rule
+      draft: true
     - title: Visually hidden
 
 - title: Utilities
@@ -129,24 +211,35 @@
   pages:
     - title: API
     - title: Background
+      draft: true
     - title: Borders
+      draft: true
     - title: Colors
+      draft: true
     - title: Display
+      draft: true
     - title: Flex
     - title: Float
     - title: Interactions
     - title: Link
+      draft: true
     - title: Object fit
     - title: Opacity
+      draft: true
     - title: Overflow
     - title: Position
     - title: Shadows
+      draft: true
     - title: Sizing
+      draft: true
     - title: Spacing
+      draft: true
     - title: Text
+      draft: true
     - title: Vertical align
     - title: Visibility
     - title: Z-index
+      draft: true
 
 - title: Extend
   icon: tools
@@ -154,18 +247,24 @@
   pages:
     - title: Approach
     - title: Icons
+      draft: true
 
 - title: About
   icon: globe2
   icon_color: body-color
   pages:
     - title: Overview
+      draft: true
     - title: Team
     - title: Brand
+      draft: true
     - title: License
     - title: Translations
     - title: Cookies
 
-- title: Migration
-
-- title: Migration from Boosted
+- title: Migrations
+  icon: transfers
+  icon_color: body-color
+  pages:
+    - title: Migration
+    - title: Migration from Boosted

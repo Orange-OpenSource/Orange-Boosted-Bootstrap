@@ -8,24 +8,24 @@
   --#{$prefix}alert-padding-x: #{$alert-padding-x};
   --#{$prefix}alert-padding-y: #{$alert-padding-y};
   --#{$prefix}alert-margin-bottom: #{$alert-margin-bottom};
-  @include rfs($font-size-base, --#{$prefix}alert-font-size); // Boosted mod
-  --#{$prefix}alert-line-height: #{$line-height-base}; // Boosted mod
-  --#{$prefix}alert-color: #{$alert-color}; // Boosted mod
+  @include rfs($font-size-base, --#{$prefix}alert-font-size); // OUDS mod
+  --#{$prefix}alert-line-height: #{$line-height-base}; // OUDS mod
+  --#{$prefix}alert-color: #{$alert-color}; // OUDS mod
   --#{$prefix}alert-border-color: transparent;
   --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
   --#{$prefix}alert-border-radius: #{$alert-border-radius};
-  // Boosted mod: no `--#{$prefix}alert-link-color`
-  --#{$prefix}alert-logo-size: #{$alert-logo-size}; // Boosted mod
-  --#{$prefix}alert-icon-size: #{$alert-icon-size}; // Boosted mod
-  --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // Boosted mod
-  --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight}; // Boosted mod
-  --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight}; // Boosted mod
-  --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r}; // Boosted mod
-  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset}; // Boosted mod
+  // OUDS mod: no `--#{$prefix}alert-link-color`
+  --#{$prefix}alert-logo-size: #{$alert-logo-size}; // OUDS mod
+  --#{$prefix}alert-icon-size: #{$alert-icon-size}; // OUDS mod
+  --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // OUDS mod
+  --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight}; // OUDS mod
+  --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight}; // OUDS mod
+  --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r}; // OUDS mod
+  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset}; // OUDS mod
   // scss-docs-end alert-css-vars
 
   position: relative;
-  display: flex; // Boosted mod
+  display: flex; // OUDS mod
   padding: var(--#{$prefix}alert-padding-y) var(--#{$prefix}alert-padding-x);
   margin-bottom: var(--#{$prefix}alert-margin-bottom);
   @include font-size(var(--#{$prefix}alert-font-size));
@@ -38,7 +38,7 @@
 
 // Headings for larger alerts
 .alert-heading {
-  // Boosted mod: ensure headings look like paragraphs
+  // OUDS mod: ensure headings look like paragraphs
   margin: 0;
   font-size: inherit;
   font-weight: var(--#{$prefix}alert-heading-font-weight);
@@ -50,8 +50,8 @@
 
 // Provide class for links that match alerts
 .alert-link {
-  font-weight: var(--#{$prefix}alert-link-font-weight); // Boosted mod
-  // Boosted mod: no `color`
+  font-weight: var(--#{$prefix}alert-link-font-weight); // OUDS mod
+  // OUDS mod: no `color`
 }
 
 
@@ -60,15 +60,15 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: var(--#{$prefix}alert-dismissible-padding-right); // Boosted mod
+  padding-right: var(--#{$prefix}alert-dismissible-padding-right); // OUDS mod
 
   // Adjust close link position
   .btn-close {
     position: absolute;
-    top: var(--#{$prefix}alert-btn-close-offset); // Boosted mod
-    right: var(--#{$prefix}alert-btn-close-offset); // Boosted mod
+    top: var(--#{$prefix}alert-btn-close-offset); // OUDS mod
+    right: var(--#{$prefix}alert-btn-close-offset); // OUDS mod
     z-index: $stretched-link-z-index + 1;
-    // Boosted mod: no padding
+    // OUDS mod: no padding
   }
 }
 
@@ -78,10 +78,10 @@
 
 @each $state, $value in $alert-colors {
   .alert-#{$state} {
-    // Boosted mod: no --#{$prefix}alert-color
+    // OUDS mod: no --#{$prefix}alert-color
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
-    // Boosted mod: no `--#{$prefix}alert-link-color`
-    // Boosted mod
+    // OUDS mod: no `--#{$prefix}alert-link-color`
+    // OUDS mod
     @if type-of(map-get($alert-icons, $state)) == "list" {
       --#{$prefix}alert-icon-bg-image: #{nth(map-get($alert-icons, $state), 1)};
 
@@ -102,7 +102,7 @@
 // scss-docs-end alert-modifiers
 
 //
-// Boosted mod
+// OUDS mod
 //
 
 //// Additional content

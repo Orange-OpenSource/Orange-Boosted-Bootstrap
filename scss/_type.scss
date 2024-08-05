@@ -26,7 +26,7 @@
 }
 
 
-// Boosted mod
+// OUDS mod
 // Headings and displays together
 // = Add letter-spacing and line-height
 // = Reduce heading font-sizes for mobile (mobile first, obviously)
@@ -253,10 +253,10 @@ h2,
 .blockquote {
   margin-bottom: $blockquote-margin-y;
   @include font-size($blockquote-font-size);
-  line-height: $blockquote-line-height; // Boosted mod
+  line-height: $blockquote-line-height; // OUDS mod
 
   /* rtl:remove */
-  letter-spacing: $blockquote-letter-spacing; // Boosted mod
+  letter-spacing: $blockquote-letter-spacing; // OUDS mod
 
   > :last-child {
     margin-bottom: 0;
@@ -267,11 +267,11 @@ h2,
   margin-top: -$blockquote-margin-y;
   margin-bottom: $blockquote-margin-y;
   @include font-size($blockquote-footer-font-size);
-  line-height: $line-height-sm; // Boosted mod
+  line-height: $line-height-sm; // OUDS mod
   color: $blockquote-footer-color;
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // Boosted mod
+  letter-spacing: $letter-spacing-base; // OUDS mod
 
   &::before {
     content: "\2014\00A0"; // em dash, nbsp

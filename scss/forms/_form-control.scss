@@ -5,7 +5,7 @@
 .form-control {
   display: block;
   width: 100%;
-  padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // Boosted mod
+  padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // OUDS mod
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
@@ -31,7 +31,7 @@
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  &:not(.form-control-color):focus { // Boosted mod: instead of `&:focus`
+  &:not(.form-control-color):focus { // OUDS mod: instead of `&:focus`
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color !important; // stylelint-disable-line declaration-no-important
@@ -85,7 +85,7 @@
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled {
-    color: $input-disabled-color; // Boosted mod
+    color: $input-disabled-color; // OUDS mod
     background-color: $input-disabled-bg;
     border-color: $input-disabled-border-color;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
@@ -94,7 +94,7 @@
 
   // File input buttons theming
   &::file-selector-button {
-    padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // Boosted mod
+    padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // OUDS mod
     margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
     margin-inline-end: $input-padding-x;
     color: $form-file-button-color;
@@ -108,7 +108,7 @@
     @include transition($btn-transition);
   }
 
-  // Boosted mod
+  // OUDS mod
   &:disabled::file-selector-button {
     color: $input-disabled-color;
     background-color: $input-disabled-bg;
@@ -158,26 +158,26 @@
 
 .form-control-sm {
   min-height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // Boosted mod
-  line-height: $line-height-sm; // Boosted mod
+  padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // OUDS mod
+  line-height: $line-height-sm; // OUDS mod
   @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 
   &::file-selector-button {
-    padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // Boosted mod
-    margin: add(-$input-padding-y-sm, -1px) (-$input-padding-x-sm) add(-$input-padding-y-sm, -3px); // Boosted mod
+    padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // OUDS mod
+    margin: add(-$input-padding-y-sm, -1px) (-$input-padding-x-sm) add(-$input-padding-y-sm, -3px); // OUDS mod
     margin-inline-end: $input-padding-x-sm;
   }
 }
 
 .form-control-lg {
   min-height: $input-height-lg;
-  line-height: $input-line-height-lg; // Boosted mod
+  line-height: $input-line-height-lg; // OUDS mod
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 
   &::file-selector-button {
-    padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // Boosted mod
+    padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // OUDS mod
     margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
     margin-inline-end: $input-padding-x-lg;
   }
@@ -205,9 +205,9 @@ textarea {
   width: $form-color-width;
   height: $input-height;
   padding: $input-padding-y;
-  border-color: $form-color-border-color; // Boosted mod
+  border-color: $form-color-border-color; // OUDS mod
 
-  // Boosted mod
+  // OUDS mod
   &:hover {
     background-color: $form-color-hover-bg-color;
   }

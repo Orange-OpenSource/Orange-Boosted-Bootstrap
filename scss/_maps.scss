@@ -51,7 +51,7 @@ $theme-colors-bg-subtle-dark: null !default;
 $theme-colors-border-subtle-dark: null !default;
 
 @if $enable-dark-mode {
-  // Boosted mod
+  // OUDS mod
   // scss-docs-start theme-colors-rgb-dark
   $theme-colors-rgb-dark: map-loop($theme-colors-dark, to-rgb, "$value") !default;
   // scss-docs-end theme-colors-rgb-dark
@@ -157,12 +157,12 @@ $utilities-border: map-merge(
   $utilities-colors,
   (
     "black": to-rgb($black),
-    "dark": $gray-700, // Boosted mod: handled differently within `rgba-css-var`
-    "light": $gray-500, // Boosted mod: handled differently within `rgba-css-var`
+    "dark": $gray-700, // OUDS mod: handled differently within `rgba-css-var`
+    "light": $gray-500, // OUDS mod: handled differently within `rgba-css-var`
     "white": to-rgb($white),
   )
 ) !default;
-$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // Boosted mod
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // OUDS mod
 
 $utilities-border-subtle: (
   "primary-subtle": var(--#{$prefix}primary-border-subtle),
@@ -182,4 +182,4 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 
 $gutters: $spacers !default;
 
-$alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // Boosted mod
+$alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod

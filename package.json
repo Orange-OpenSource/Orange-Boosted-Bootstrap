@@ -1,9 +1,9 @@
 {
-  "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "5.3.3",
+  "name": "@ouds/web",
+  "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
+  "version": "0.0.2",
   "config": {
-    "version_short": "5.3"
+    "version_short": "0.0"
   },
   "keywords": [
     "css",
@@ -16,8 +16,8 @@
     "bootstrap",
     "Orange"
   ],
-  "homepage": "https://boosted.orange.com/",
-  "author": "The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
+  "homepage": "https://web.unified-design-system.orange.com/",
+  "author": "The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
   "contributors": [
     "Orange SA"
   ],
@@ -29,10 +29,10 @@
   "bugs": {
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
-  "main": "dist/js/boosted.js",
-  "module": "dist/js/boosted.esm.js",
-  "sass": "scss/boosted.scss",
-  "style": "dist/css/boosted.css",
+  "main": "dist/js/ouds-web.js",
+  "module": "dist/js/ouds-web.esm.js",
+  "sass": "scss/ouds-web.scss",
+  "style": "dist/css/ouds-web.css",
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
@@ -48,7 +48,6 @@
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-prefix-examples": "postcss --config build/postcss.config.mjs --replace \"site/content/**/*.css\"",
-    "fonts": "cross-env mkdir -p dist/fonts && cp -r ./fonts/* dist/fonts/",
     "css-test": "jasmine --config=scss/tests/jasmine.js",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
@@ -58,9 +57,9 @@
     "js-compile-plugins": "node build/build-plugins.mjs",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .html,.js,.mjs,.md .",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
-    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.js.map,includeSources,url=boosted.min.js.map\" --output dist/js/boosted.min.js dist/js/boosted.js",
-    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.esm.js.map,includeSources,url=boosted.esm.min.js.map\" --output dist/js/boosted.esm.min.js dist/js/boosted.esm.js",
-    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.bundle.js.map,includeSources,url=boosted.bundle.min.js.map\" --output dist/js/boosted.bundle.min.js dist/js/boosted.bundle.js",
+    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.js.map,includeSources,url=ouds-web.min.js.map\" --output dist/js/ouds-web.min.js dist/js/ouds-web.js",
+    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.esm.js.map,includeSources,url=ouds-web.esm.min.js.map\" --output dist/js/ouds-web.esm.min.js dist/js/ouds-web.esm.js",
+    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/ouds-web.bundle.js.map,includeSources,url=ouds-web.bundle.min.js.map\" --output dist/js/ouds-web.bundle.min.js dist/js/ouds-web.bundle.js",
     "js-test": "npm-run-all --aggregate-output --parallel js-test-karma js-test-jquery js-test-integration-*",
     "js-debug": "cross-env DEBUG=true npm run js-test-karma",
     "js-test-karma": "karma start js/tests/karma.conf.js",
@@ -69,12 +68,12 @@
     "js-test-cloud": "cross-env BROWSERSTACK=true npm run js-test-karma",
     "js-test-jquery": "cross-env JQUERY=true npm run js-test-karma",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
-    "docs": "npm-run-all docs-build docs-lint",
+    "docs": "npm-run-all docs-build docs-lint && node build/modify-site.mjs",
     "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
     "docs-compile": "npm run docs-build",
     "docs-vnu": "node build/vnu-jar.mjs",
     "docs-lint": "npm run docs-vnu",
-    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap.xml --sitemap-find https://boosted.orange.com --sitemap-replace http://localhost:9001",
+    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap.xml --sitemap-find https://web.unified-design-system.orange.com --sitemap-replace http://localhost:9001",
     "docs-accessibility": "npm-run-all --parallel --race docs-serve-only docs-pa11y",
     "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
     "docs-serve-only": "sirv _site --no-clear --port 9001",
@@ -83,9 +82,9 @@
     "release": "npm-run-all dist release-sri docs-build storybook-build release-zip*",
     "release-sri": "node build/generate-sri.mjs",
     "release-version": "node build/change-version.mjs",
-    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist boosted-$npm_package_version-dist.zip && cp -r dist/ boosted-$npm_package_version-dist && zip -qr9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf ouds-web-$npm_package_version-dist ouds-web-$npm_package_version-dist.zip && cp -r dist/ ouds-web-$npm_package_version-dist && zip -qr9 ouds-web-$npm_package_version-dist.zip ouds-web-$npm_package_version-dist && rm -rf ouds-web-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.mjs",
-    "dist": "npm-run-all --aggregate-output --parallel css js fonts",
+    "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri storybook-build-netlify docs-build",
     "watch": "npm-run-all --parallel watch-*",
@@ -97,7 +96,7 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "npm run storybook-generate && storybook dev -p 6006",
     "storybook-generate": "npm run docs && node stories/create-stories-from-doc.js",
-    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook",
+    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/ouds-web/storybook",
     "storybook-build-netlify": "npm run storybook-generate && storybook build -o ./site/storybook"
   },
   "peerDependencies": {
@@ -108,20 +107,20 @@
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
     "@docsearch/js": "^3.6.0",
-    "@percy/cli": "^1.28.8",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.8",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "@stackblitz/sdk": "^1.9.0",
-    "@storybook/addon-a11y": "^8.1.10",
-    "@storybook/addon-essentials": "^8.1.10",
-    "@storybook/addon-themes": "^8.1.10",
-    "@storybook/blocks": "^8.1.1",
-    "@storybook/html": "^8.1.10",
-    "@storybook/html-vite": "^8.1.10",
-    "@storybook/test": "^8.1.10",
+    "@storybook/addon-a11y": "^8.2.6",
+    "@storybook/addon-essentials": "^8.2.6",
+    "@storybook/addon-themes": "^8.2.6",
+    "@storybook/blocks": "^8.2.6",
+    "@storybook/html": "^8.2.6",
+    "@storybook/html-vite": "^8.2.6",
+    "@storybook/manager-api": "^8.2.6",
+    "@storybook/test": "^8.2.6",
     "autoprefixer": "^10.4.19",
     "babel-loader": "^9.1.2",
     "bundlewatch": "^0.3.3",
@@ -164,11 +163,11 @@
     "rollup-plugin-istanbul": "^5.0.0",
     "rtlcss": "^4.1.1",
     "sass": "^1.77.4",
-    "sass-loader": "^14.2.1",
+    "sass-loader": "^16.0.0",
     "sass-true": "^8.0.0",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
-    "storybook": "^8.1.10",
+    "storybook": "^8.2.6",
     "stylelint": "^16.6.1",
     "stylelint-config-twbs-bootstrap": "^14.1.0",
     "tarteaucitronjs": "^1.19.0",
@@ -176,7 +175,7 @@
     "vnu-jar": "^23.4.11"
   },
   "files": [
-    "dist/{css,js,fonts}/*.{css,js,map,svg,woff2}",
+    "dist/{css,js}/*.{css,js,map,svg}",
     "js/{src,dist}/**/*.{js,map}",
     "js/index.{esm,umd}.js",
     "scss/**/*.scss",
@@ -189,12 +188,12 @@
   },
   "jspm": {
     "registry": "npm",
-    "main": "js/boosted",
+    "main": "js/ouds-web",
     "directories": {
       "lib": "dist"
     },
     "shim": {
-      "js/boosted": {
+      "js/ouds-web": {
         "deps": [
           "@popperjs/core"
         ]

@@ -4,11 +4,11 @@
 // https://primer.github.io/.
 
 .form-select {
-  --#{$prefix}form-select-bg-img: var(--#{$prefix}form-select-indicator); // Boosted mod: instead of `#{escape-svg($form-select-indicator)}`
+  --#{$prefix}form-select-bg-img: var(--#{$prefix}form-select-indicator); // OUDS mod: instead of `#{escape-svg($form-select-indicator)}`
 
   display: block;
   width: 100%;
-  padding: subtract($form-select-padding-y, 1px) $form-select-indicator-padding add($form-select-padding-y, 1px) $form-select-padding-x; // Boosted mod
+  padding: subtract($form-select-padding-y, 1px) $form-select-indicator-padding add($form-select-padding-y, 1px) $form-select-padding-x; // OUDS mod
   font-family: $form-select-font-family;
   @include font-size($form-select-font-size);
   font-weight: $form-select-font-weight;
@@ -45,7 +45,7 @@
   &:disabled {
     color: $form-select-disabled-color;
     background-color: $form-select-disabled-bg;
-    background-image: var(--#{$prefix}form-select-disabled-indicator); // Boosted mod
+    background-image: var(--#{$prefix}form-select-disabled-indicator); // OUDS mod
     border-color: $form-select-disabled-border-color;
   }
 
@@ -57,21 +57,21 @@
 }
 
 .form-select-sm {
-  padding-top: subtract($form-select-padding-y-sm, 1px); // Boosted mod
-  padding-bottom: add($form-select-padding-y-sm, 1px); // Boosted mod
+  padding-top: subtract($form-select-padding-y-sm, 1px); // OUDS mod
+  padding-bottom: add($form-select-padding-y-sm, 1px); // OUDS mod
   padding-left: $form-select-padding-x-sm;
   @include font-size($form-select-font-size-sm);
   @include border-radius($form-select-border-radius-sm);
-  line-height: $line-height-sm; // Boosted mod
+  line-height: $line-height-sm; // OUDS mod
 }
 
 .form-select-lg {
-  padding-top: subtract($form-select-padding-y-lg, 1px); // Boosted mod
+  padding-top: subtract($form-select-padding-y-lg, 1px); // OUDS mod
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;
   @include font-size($form-select-font-size-lg);
   @include border-radius($form-select-border-radius-lg);
-  line-height: 1.5; // Boosted mod
+  line-height: 1.5; // OUDS mod
 }
 
-// Boosted mod: no `@if enable-dark-mode`
+// OUDS mod: no `@if enable-dark-mode`

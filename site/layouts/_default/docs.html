@@ -22,14 +22,14 @@
             {{- if (or (and (.Page.Params.added) (not (isset .Page.Params.added "show_badge"))) (and (.Page.Params.added) (isset .Page.Params.added "show_badge") (not (eq .Page.Params.added.show_badge false)))) -}}
               <p class="mb-0 me-2"><span class="tag tag-sm">Added in v{{ .Page.Params.added.version }}</span></p>
             {{- end -}}
-            <a class="btn btn-sm btn-outline-secondary" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+            <a class="btn btn-sm btn-outline-secondary" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}-ouds-web/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
         <p class="bd-lead mt-2">{{ .Page.Params.Description | markdownify }}</p>
-        <!-- Boosted mod: No ads -->
+        <!-- OUDS mod: No ads -->
       </div>
 
       {{ if (eq .Page.Params.toc true) }}

@@ -3,10 +3,10 @@
 .bd-toc {
   @include media-breakpoint-up(lg) {
     position: sticky;
-    top: $offset-top; // Boosted mod
+    top: $offset-top; // OUDS mod
     right: 0;
     z-index: 2;
-    height: $sidebar-height; // Boosted mod
+    height: $sidebar-height; // OUDS mod
     overflow-y: auto;
   }
 
@@ -20,7 +20,7 @@
 
       ul {
         padding-left: 1rem;
-        margin-left: -.5rem; // Boosted mod
+        margin-left: -.5rem; // OUDS mod
       }
     }
 
@@ -34,11 +34,11 @@
       &:hover,
       &.active {
         color: var(--bd-toc-color);
-        border-left-color: var(--bs-primary); // Boosted mod: instead of `--bd-toc-color`
+        border-left-color: var(--bs-primary); // OUDS mod: instead of `--bd-toc-color`
       }
 
       &.active {
-        font-weight: 700; // Boosted mod: instead of `500`
+        font-weight: 700; // OUDS mod: instead of `500`
       }
 
       code {
@@ -51,14 +51,14 @@
 .bd-toc-toggle {
   display: flex;
   align-items: center;
-  border-width: 1px; // Boosted mod
+  border-width: 1px; // OUDS mod
 
   @include media-breakpoint-down(sm) {
     justify-content: space-between;
     width: 100%;
   }
 
-  // Boosted mod: no `@include media-breakpoint-down(md)`
+  // OUDS mod: no `@include media-breakpoint-down(md)`
 }
 
 .bd-toc-collapse {
@@ -71,7 +71,7 @@
     }
   }
 
-  // Boosted mod
+  // OUDS mod
   @include media-breakpoint-up(md) {
     display: block !important; // stylelint-disable-line declaration-no-important
   }

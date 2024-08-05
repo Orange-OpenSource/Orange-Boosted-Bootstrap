@@ -10,7 +10,7 @@
     @include make-container();
   }
 
-  // Boosted mod: `.container-fluid` is not full width in Boosted
+  // OUDS mod: `.container-fluid` is not full width in OUDS Web
   .container-fluid {
     @include make-container-fluid-margin();
   }

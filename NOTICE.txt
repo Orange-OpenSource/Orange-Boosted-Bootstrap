@@ -1,66 +1,17 @@
-<version>1.0</version>
-<id><![CDATA[Helvetica Neue LT W07 55 Roman]]></id>
-<vendor>Monotype Imaging Inc.</vendor>
-<credits>
-<name>Fonts.com WebFonts</name>
-<URL>http://webfonts.fonts.com</URL>
-</credits>
-<license>
-<URL>http://webfonts.fonts.com/Legal</URL>
-</license>
-<copyright><![CDATA[Copyright © 2014 Monotype Imaging Inc. All rights reserved.]]></copyright>
-<trademark><![CDATA[Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.]]></trademark>
-Orange has purchased the right to use Helvetica in its websites and mobile applications.
-Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc
-Parts list under Monotype Imaging Inc Copyright
-fonts/HelvNeue55_W1G.woff2
-fonts/HelvNeue75_W1G.woff2
-fonts/HelveticaNeueW20-55Roman.woff2
-fonts/HelveticaNeueW20-75Bold.woff2
-dist/fonts/HelvNeue55_W1G.woff2
-dist/fonts/HelvNeue75_W1G.woff2
-dist/fonts/HelveticaNeueW20-55Roman.woff2
-dist/fonts/HelveticaNeueW20-75Bold.woff2
-End of the parts list under Monotype Imaging Inc Copyright
-
-
 Parts list under Orange SA Copyright
 Copyright (C) 2016 - 2024 Orange SA All rights reserved
 
 The following parts are proprietary information of Orange.
 You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software
-or displayed on this website (https://boosted.orange.com) and owned by Orange SA and its subsidiaries,
+or displayed on this website (https://web.unified-design-system.orange.com) and owned by Orange SA and its subsidiaries,
 in whole or part of, in any medium, except as required for reasonable and customary use in describing the origin of the software
 and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
-dist/img/orange-logo.svg
-nuget/boosted.png
-site/content/docs/**/examples/download-app/img/Banner_image.png
-site/content/docs/**/examples/download-app/img/Buttons.png
-site/content/docs/**/examples/download-app/img/Buttons_dark.png
-site/content/docs/**/examples/download-app/img/Card.png
-site/content/docs/**/examples/download-app/img/Card_dark.png
-site/content/docs/**/examples/download-app/img/Components.png
-site/content/docs/**/examples/download-app/img/Components_dark.png
-site/content/docs/**/examples/download-app/img/Emphasis.png
-site/content/docs/**/examples/download-app/img/Emphasis_dark.png
-site/content/docs/**/examples/download-app/img/Input.png
-site/content/docs/**/examples/download-app/img/Input_dark.png
-site/content/docs/**/examples/download-app/img/List.png
-site/content/docs/**/examples/download-app/img/List_dark.png
+nuget/ouds-web.png
 site/layouts/partials/icons.html
-site/layouts/partials/icons/download.svg
-site/static/docs/**/assets/brand/OBS-logo.svg
-site/static/docs/**/assets/brand/OBS-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-logo.svg
-site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
-site/static/docs/**/assets/brand/orange-social.svg
-site/static/docs/**/assets/img/boosted-guidelines.png
-site/static/docs/**/assets/img/boosted-guidelines@2x.png
-site/static/docs/**/assets/img/boosted-sprite.svg
-site/static/docs/**/assets/img/boosted-warning.svg
 site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
 site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/static/docs/**/assets/img/favicons/apple-touch-icon.png
@@ -74,18 +25,6 @@ site/static/docs/**/assets/img/favicons/mstile-310x150.png
 site/static/docs/**/assets/img/favicons/mstile-310x310.png
 site/static/docs/**/assets/img/favicons/mstile-70x70.png
 site/static/docs/**/assets/img/favicons/safari-pinned-tab.svg
-site/static/docs/**/assets/img/navbar-contact.png
-site/static/docs/**/assets/img/platforms/android.png
-site/static/docs/**/assets/img/platforms/conversational.png
-site/static/docs/**/assets/img/platforms/extended-reality.png
-site/static/docs/**/assets/img/platforms/iOS.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1024.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1280.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-1440.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-320.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-480.png
-site/static/docs/**/assets/img/title-bars-illustrations/illustration-768.png
+site/static/docs/**/assets/img/ouds-web-sprite.svg
 
 End of the parts list under Orange SA Copyright
-
-

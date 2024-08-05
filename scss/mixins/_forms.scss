@@ -15,13 +15,13 @@
   }
 }
 
-// Boosted mod: no .#{$state}-tooltip, so no need for `$tooltip-*` args
+// OUDS mod: no .#{$state}-tooltip, so no need for `$tooltip-*` args
 @mixin form-validation-state($state, $color, $icon, $border-color: $color) {
-  // Boosted mod: valid ≠ invalid
+  // OUDS mod: valid ≠ invalid
   @if $state == "valid" {
     .#{$state}-feedback {
       display: none;
-      @extend .visually-hidden; // Boosted mod: Do not visually display .valid-feedback
+      @extend .visually-hidden; // OUDS mod: Do not visually display .valid-feedback
     }
 
     @if $enable-validation-icons {
@@ -60,12 +60,12 @@
       margin-top: $form-feedback-margin-top;
       @include font-size($form-feedback-font-size);
       font-style: $form-feedback-font-style;
-      font-weight: $font-weight-bold; // Boosted mod
-      line-height: $form-feedback-line-height; // Boosted mod
-      color: $form-feedback-color; // Boosted mod
-      background-color: transparent; // Boosted mod
+      font-weight: $font-weight-bold; // OUDS mod
+      line-height: $form-feedback-line-height; // OUDS mod
+      color: $form-feedback-color; // OUDS mod
+      background-color: transparent; // OUDS mod
 
-      // Boosted mod: status should not rely on color only
+      // OUDS mod: status should not rely on color only
       @if $enable-validation-icons {
         &::before {
           flex-shrink: 0;
@@ -79,12 +79,12 @@
       }
     }
 
-    // Boosted mod: no .#{$state}-tooltip
+    // OUDS mod: no .#{$state}-tooltip
 
     @include form-validation-state-selector($state) {
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
-        display: flex; // Boosted mod
+        display: flex; // OUDS mod
       }
     }
 
@@ -92,13 +92,13 @@
       @include form-validation-state-selector($state) {
         border-color: $border-color;
 
-        // Boosted mod: validation icon in .*-feedback
+        // OUDS mod: validation icon in .*-feedback
 
-        // Boosted mod: no box-shadow
+        // OUDS mod: no box-shadow
 
-        // Boosted mod: focus styles don't match validation state
+        // OUDS mod: focus styles don't match validation state
 
-        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        // OUDS mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
         &:focus {
           @include focus-visible();
           border-color: $border-color !important; // stylelint-disable-line declaration-no-important
@@ -107,7 +107,7 @@
       }
     }
 
-    // Boosted mod: Change border-color when on error for form element QuantitySelector
+    // OUDS mod: Change border-color when on error for form element QuantitySelector
     .quantity-selector .form-control {
       @include form-validation-state-selector($state) {
         // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
@@ -118,19 +118,19 @@
     }
     // End mod
 
-    // Boosted mod: no icon in background for textarea
+    // OUDS mod: no icon in background for textarea
 
     .form-select {
       @include form-validation-state-selector($state) {
         border-color: $border-color;
 
-        // Boosted mod: no icon in background
+        // OUDS mod: no icon in background
 
-        // Boosted mod: no box-shadow
+        // OUDS mod: no box-shadow
 
-        // Boosted mod: focus styles don't match validation state
+        // OUDS mod: focus styles don't match validation state
 
-        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        // OUDS mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
         &:focus {
           @include focus-visible();
           border-color: $border-color !important; // stylelint-disable-line declaration-no-important
@@ -141,7 +141,7 @@
 
     .form-check-input {
       @include form-validation-state-selector($state) {
-        filter: none; // Boosted mod: remove filter to avoid having a blue border (invert of red border)
+        filter: none; // OUDS mod: remove filter to avoid having a blue border (invert of red border)
         border-color: $border-color;
 
         &:checked,
@@ -149,11 +149,21 @@
           background-color: $color;
         }
 
-        // Boosted mod: no box-shadow
+        // OUDS mod: no box-shadow
 
-        // Boosted mod: label's color doesn't change
+        // OUDS mod: label's color doesn't change
       }
     }
+
+    // OUDS mod
+    .form-switch .form-check-input:not(:checked) {
+      @include form-validation-state-selector($state) {
+        filter: $form-switch-filter;
+        border-color: var(--#{$prefix}form-switch-unchecked-invalid-border-color);
+      }
+    }
+    // End mod
+
     .form-check-inline .form-check-input {
       ~ .#{$state}-feedback {
         margin-left: .5em;

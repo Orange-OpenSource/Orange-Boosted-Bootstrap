@@ -516,7 +516,7 @@ $utilities: map-merge(
       class: fs,
       values: $font-sizes
     ),
-    // Boosted mod: no font-style
+    // OUDS mod: no font-style
     "font-weight": (
       property: font-weight,
       class: fw,
@@ -530,15 +530,15 @@ $utilities: map-merge(
         bolder: $font-weight-bolder
       )
     ),
-    // Boosted mod: use hardcoded values instead of variables since our variables can't fit utilities
+    // OUDS mod: use hardcoded values instead of variables since our variables can't fit utilities
     "line-height": (
       property: line-height,
       class: lh,
       values: (
         1: 1,
-        sm: 1.25, // Boosted mod: instead of `$line-height-sm`
-        base: 1.5, // Boosted mod: instead of `$line-height-base`
-        lg: 2, // Boosted mod: instead of `$line-height-lg`
+        sm: 1.25, // OUDS mod: instead of `$line-height-sm`
+        base: 1.5, // OUDS mod: instead of `$line-height-base`
+        lg: 2, // OUDS mod: instead of `$line-height-lg`
       )
     ),
     "line-length": (
@@ -593,9 +593,9 @@ $utilities: map-merge(
       values: map-merge(
         $utilities-text-colors,
         (
-          "muted": var(--#{$prefix}secondary-color), // deprecated
-          "black-50": rgba($black, .5), // deprecated
-          "white-50": rgba($white, .5), // deprecated
+          "muted": var(--#{$prefix}secondary-color), // Deprecated in Bootstrap
+          "black-50": rgba($black, .5), // Deprecated in Bootstrap
+          "white-50": rgba($white, .5), // Deprecated in Bootstrap
           "body-secondary": var(--#{$prefix}secondary-color),
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
@@ -682,12 +682,12 @@ $utilities: map-merge(
           "transparent": transparent,
           "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
           "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "supporting-green": $supporting-green, // Boosted mod
-          "supporting-blue": $supporting-blue, // Boosted mod
-          "supporting-yellow": $supporting-yellow, // Boosted mod
-          "supporting-pink": $supporting-pink, // Boosted mod
-          "supporting-purple": $supporting-purple, // Boosted mod
-          "supporting-orange": $supporting-orange, // Boosted mod
+          "supporting-green": $supporting-green, // OUDS mod
+          "supporting-blue": $supporting-blue, // OUDS mod
+          "supporting-yellow": $supporting-yellow, // OUDS mod
+          "supporting-pink": $supporting-pink, // OUDS mod
+          "supporting-purple": $supporting-purple, // OUDS mod
+          "supporting-orange": $supporting-orange, // OUDS mod
         )
       )
     ),

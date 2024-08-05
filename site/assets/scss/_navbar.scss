@@ -1,27 +1,27 @@
 .bd-navbar {
-  // Boosted mod: no padding
-  // Boosted mod: no background-color
-  // Boosted mod: no box-shadow
+  // OUDS mod: no padding
+  // OUDS mod: no background-color
+  // OUDS mod: no box-shadow
 
-  // Boosted mod: no `&::after`
+  // OUDS mod: no `&::after`
 
-  // Boosted mod: no .bd-navbar-toggle
+  // OUDS mod: no .bd-navbar-toggle
 
-  // Boosted mod: no .navbar-toggler
+  // OUDS mod: no .navbar-toggler
 
-  // Boosted mod: no .navbar-brand
+  // OUDS mod: no .navbar-brand
 
-  // Boosted mod: no .navbar-nav-svg
+  // OUDS mod: no .navbar-nav-svg
 
-  // Boosted mod: no .offcanvas-lg
+  // OUDS mod: no .offcanvas-lg
 
-  // Boosted mod: no .dropdown-toggle
+  // OUDS mod: no .dropdown-toggle
 
-  // Boosted mod: no .dropdown-menu
+  // OUDS mod: no .dropdown-menu
 
-  // Boosted mod: no .dropdown-menu-end
+  // OUDS mod: no .dropdown-menu-end
 
-  // Boosted mod: Specificity
+  // OUDS mod: Specificity
   .navbar-nav.flex-row {
     @include media-breakpoint-down(lg) {
       border-top: 1px solid $gray-700;
@@ -38,7 +38,7 @@
   // End mod
 }
 
-// Boosted mod
+// OUDS mod
 .bd-header {
   max-height: 100vh;
   overflow: hidden auto;
@@ -49,4 +49,4 @@
 }
 // End mod
 
-// Boosted mod: no `@include color-mode(dark)`
+// OUDS mod: no `@include color-mode(dark)`

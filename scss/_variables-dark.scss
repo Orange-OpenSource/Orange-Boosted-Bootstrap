@@ -6,7 +6,7 @@
 // Global colors
 //
 
-// Boosted mod
+// OUDS mod
 // scss-docs-start brand-colors-dark
 $functional-green-dark:  $ods-forest-100 !default;
 $functional-blue-dark:   $ods-water-100 !default;
@@ -41,66 +41,66 @@ $theme-colors-dark: (
 // End mod
 
 // scss-docs-start theme-text-dark-variables
-$primary-text-emphasis-dark:        $primary-dark !default; // Boosted mod: instead of `tint-color($primary, 40%)`
-$secondary-text-emphasis-dark:      $secondary-dark !default; // Boosted mod: instead of `tint-color($secondary, 40%)`
-$success-text-emphasis-dark:        $success-dark !default; // Boosted mod: instead of `tint-color($success, 40%)`
-$info-text-emphasis-dark:           $info-dark !default; // Boosted mod: instead of `tint-color($info, 40%)`
-$warning-text-emphasis-dark:        $warning-dark !default; // Boosted mod: instead of `tint-color($warning, 40%)`
-$danger-text-emphasis-dark:         $danger-dark !default; // Boosted mod: instead of `tint-color($danger, 40%)`
-$light-text-emphasis-dark:          $light-dark !default; // Boosted mod: instead of `$gray-100`
-$dark-text-emphasis-dark:           $dark-dark !default; // Boosted mod: instead of `$gray-300`
+$primary-text-emphasis-dark:        $primary-dark !default; // OUDS mod: instead of `tint-color($primary, 40%)`
+$secondary-text-emphasis-dark:      $secondary-dark !default; // OUDS mod: instead of `tint-color($secondary, 40%)`
+$success-text-emphasis-dark:        $success-dark !default; // OUDS mod: instead of `tint-color($success, 40%)`
+$info-text-emphasis-dark:           $info-dark !default; // OUDS mod: instead of `tint-color($info, 40%)`
+$warning-text-emphasis-dark:        $warning-dark !default; // OUDS mod: instead of `tint-color($warning, 40%)`
+$danger-text-emphasis-dark:         $danger-dark !default; // OUDS mod: instead of `tint-color($danger, 40%)`
+$light-text-emphasis-dark:          $light-dark !default; // OUDS mod: instead of `$gray-100`
+$dark-text-emphasis-dark:           $dark-dark !default; // OUDS mod: instead of `$gray-300`
 // scss-docs-end theme-text-dark-variables
 
 // scss-docs-start theme-bg-subtle-dark-variables
-$primary-bg-subtle-dark:            $primary-dark !default; // Boosted mod: instead of `shade-color($primary, 80%)`
-$secondary-bg-subtle-dark:          $secondary-dark !default; // Boosted mod: instead of `shade-color($secondary, 80%)`
-$success-bg-subtle-dark:            $success-dark !default; // Boosted mod: instead of `shade-color($success, 80%)`
-$info-bg-subtle-dark:               $info-dark !default; // Boosted mod: instead of `shade-color($info, 80%)`
-$warning-bg-subtle-dark:            $warning-dark !default; // Boosted mod: instead of `shade-color($warning, 80%)`
-$danger-bg-subtle-dark:             $danger-dark !default; // Boosted mod: instead of `shade-color($danger, 80%)`
-$light-bg-subtle-dark:              $light-dark !default; // Boosted mod: instead of `$gray-800`
-$dark-bg-subtle-dark:               $dark-dark !default; // Boosted mod: instead of `mix($gray-800, $black)`
+$primary-bg-subtle-dark:            $primary-dark !default; // OUDS mod: instead of `shade-color($primary, 80%)`
+$secondary-bg-subtle-dark:          $secondary-dark !default; // OUDS mod: instead of `shade-color($secondary, 80%)`
+$success-bg-subtle-dark:            $success-dark !default; // OUDS mod: instead of `shade-color($success, 80%)`
+$info-bg-subtle-dark:               $info-dark !default; // OUDS mod: instead of `shade-color($info, 80%)`
+$warning-bg-subtle-dark:            $warning-dark !default; // OUDS mod: instead of `shade-color($warning, 80%)`
+$danger-bg-subtle-dark:             $danger-dark !default; // OUDS mod: instead of `shade-color($danger, 80%)`
+$light-bg-subtle-dark:              $light-dark !default; // OUDS mod: instead of `$gray-800`
+$dark-bg-subtle-dark:               $dark-dark !default; // OUDS mod: instead of `mix($gray-800, $black)`
 // scss-docs-end theme-bg-subtle-dark-variables
 
 // scss-docs-start theme-border-subtle-dark-variables
-$primary-border-subtle-dark:        $primary-dark !default; // Boosted mod: instead of `shade-color($primary, 40%)`
-$secondary-border-subtle-dark:      $secondary-dark !default; // Boosted mod: instead of `shade-color($secondary, 40%)`
-$success-border-subtle-dark:        $success-dark !default; // Boosted mod: instead of `shade-color($success, 40%)`
-$info-border-subtle-dark:           $info-dark !default; // Boosted mod: instead of `shade-color($info, 40%)`
-$warning-border-subtle-dark:        $warning-dark !default; // Boosted mod: instead of `shade-color($warning, 40%)`
-$danger-border-subtle-dark:         $danger-dark !default; // Boosted mod: instead of `shade-color($danger, 40%)`
-$light-border-subtle-dark:          $light-dark !default; // Boosted mod: instead of `$gray-700`
-$dark-border-subtle-dark:           $dark-dark !default; // Boosted mod: instead of `$gray-800`
+$primary-border-subtle-dark:        $primary-dark !default; // OUDS mod: instead of `shade-color($primary, 40%)`
+$secondary-border-subtle-dark:      $secondary-dark !default; // OUDS mod: instead of `shade-color($secondary, 40%)`
+$success-border-subtle-dark:        $success-dark !default; // OUDS mod: instead of `shade-color($success, 40%)`
+$info-border-subtle-dark:           $info-dark !default; // OUDS mod: instead of `shade-color($info, 40%)`
+$warning-border-subtle-dark:        $warning-dark !default; // OUDS mod: instead of `shade-color($warning, 40%)`
+$danger-border-subtle-dark:         $danger-dark !default; // OUDS mod: instead of `shade-color($danger, 40%)`
+$light-border-subtle-dark:          $light-dark !default; // OUDS mod: instead of `$gray-700`
+$dark-border-subtle-dark:           $dark-dark !default; // OUDS mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
-$body-color-dark:                   $white !default; // Boosted mod: instead of `$gray-300`
-$body-bg-dark:                      $gray-950 !default; // Boosted mod: instead of `$gray-900`
-$body-secondary-color-dark:         $gray-600 !default; // Boosted mod: instead of `rgba($body-color-dark, .75)`
-$body-secondary-bg-dark:            $gray-900 !default; // Boosted mod: instead of `$gray-800`
-$body-tertiary-color-dark:          $gray-700 !default; // Boosted mod: instead of `rgba($body-color-dark, .5)`
-$body-tertiary-bg-dark:             $black !default; // Boosted mod: instead of `mix($gray-800, $gray-900, 50%)`
-$body-emphasis-color-dark:          $white !default; // Boosted mod: instead of `$gray-100`
-$disabled-color-dark:               var(--#{$prefix}tertiary-color) !default; // Boosted mod
-$tertiary-active-bg-dark:           $gray-700 !default; // Boosted mod
-$border-color-dark:                 $white !default; // Boosted mod: instead of `$gray-700`
-$border-color-subtle-dark:          $gray-700 !default; // Boosted mod
+$body-color-dark:                   $white !default; // OUDS mod: instead of `$gray-300`
+$body-bg-dark:                      $gray-950 !default; // OUDS mod: instead of `$gray-900`
+$body-secondary-color-dark:         $gray-600 !default; // OUDS mod: instead of `rgba($body-color-dark, .75)`
+$body-secondary-bg-dark:            $gray-900 !default; // OUDS mod: instead of `$gray-800`
+$body-tertiary-color-dark:          $gray-700 !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
+$body-tertiary-bg-dark:             $black !default; // OUDS mod: instead of `mix($gray-800, $gray-900, 50%)`
+$body-emphasis-color-dark:          $white !default; // OUDS mod: instead of `$gray-100`
+$disabled-color-dark:               var(--#{$prefix}tertiary-color) !default; // OUDS mod
+$tertiary-active-bg-dark:           $gray-700 !default; // OUDS mod
+$border-color-dark:                 $white !default; // OUDS mod: instead of `$gray-700`
+$border-color-subtle-dark:          $gray-700 !default; // OUDS mod
 $border-color-translucent-dark:     rgba($white, .15) !default;
 $headings-color-dark:               inherit !default;
-$link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
-$link-hover-color-dark:             $supporting-orange !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
-$code-color-dark:                   $gray-600 !default; // Boosted mod: instead of `tint-color($code-color, 40%)`
-$mark-color-dark:                   $black !default; // Boosted mod: instead of `$body-color-dark`
-$mark-bg-dark:                      $white !default; // Boosted mod: instead of `$yellow-800`
+$link-color-dark:                   $white !default; // OUDS mod: instead of `tint-color($primary, 40%)`
+$link-hover-color-dark:             $supporting-orange !default; // OUDS mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
+$code-color-dark:                   $gray-600 !default; // OUDS mod: instead of `tint-color($code-color, 40%)`
+$mark-color-dark:                   $black !default; // OUDS mod: instead of `$body-color-dark`
+$mark-bg-dark:                      $white !default; // OUDS mod: instead of `$yellow-800`
 
-$focus-ring-color-dark:             rgba($supporting-orange, $focus-ring-opacity) !default; // Boosted mod
+$focus-ring-color-dark:             rgba($supporting-orange, $focus-ring-opacity) !default; // OUDS mod
 
-$focus-visible-inner-color-dark:    $black !default; // Boosted mod
-$focus-visible-outer-color-dark:    $white !default; // Boosted mod
+$focus-visible-inner-color-dark:    $black !default; // OUDS mod
+$focus-visible-outer-color-dark:    $white !default; // OUDS mod
 
-$success-icon-dark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$functional-green-dark}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default; // Boosted mod
-$danger-icon-dark:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$functional-red-dark}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default; // Boosted mod
+$success-icon-dark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$functional-green-dark}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default; // OUDS mod
+$danger-icon-dark:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$functional-red-dark}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default; // OUDS mod
 
-// Boosted mod
+// OUDS mod
 $svg-as-custom-props-dark: (
   "success": $success-icon-dark,
   "error":   $danger-icon-dark
@@ -111,46 +111,47 @@ $svg-as-custom-props-dark: (
 // Forms
 //
 
-$form-check-filter-dark:                none !default; // Boosted mod
-$form-check-input-disabled-color-dark:  $gray-700 !default; // Boosted mod
-$form-color-disabled-filter-dark:       brightness(0) invert(1) brightness(.4) !default; // Boosted mod
-$form-switch-square-bg-dark:            $gray-950 !default; // Boosted mod
+$form-check-filter-dark:                none !default; // OUDS mod
+$form-check-input-disabled-color-dark:  $gray-700 !default; // OUDS mod
+$form-color-disabled-filter-dark:       brightness(0) invert(1) brightness(.4) !default; // OUDS mod
+$form-switch-square-bg-dark:            $gray-950 !default; // OUDS mod
 
-// Boosted mod: no $form-select-indicator-color-dark
-$form-select-indicator-dark:            escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
-$form-select-disabled-indicator-dark:   escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-600}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
+// OUDS mod: no $form-select-indicator-color-dark
+$form-select-indicator-dark:            escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // OUDS mod: instead of Bootstrap svg
+$form-select-disabled-indicator-dark:   escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-600}' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // OUDS mod
 
-// Boosted mod: no $form-switch-color-dark
-// Boosted mod: no $form-switch-bg-image-dark
+// OUDS mod: no $form-switch-color-dark
+// OUDS mod: no $form-switch-bg-image-dark
 
 // scss-docs-start form-validation-colors-dark
-$form-valid-color-dark:                 var(--#{$prefix}success-text-emphasis) !default; // Boosted mod: instead of `$green-300`
-$form-valid-border-color-dark:          var(--#{$prefix}success) !default; // Boosted mod: instead of `$green-300`
-$form-invalid-color-dark:               var(--#{$prefix}danger-text-emphasis) !default; // Boosted mod: instead of `$red-300`
-$form-invalid-border-color-dark:        var(--#{$prefix}danger) !default; // Boosted mod: instead of `$red-300`
+$form-valid-color-dark:                           var(--#{$prefix}success-text-emphasis) !default; // OUDS mod: instead of `$green-300`
+$form-valid-border-color-dark:                    var(--#{$prefix}success) !default; // OUDS mod: instead of `$green-300`
+$form-invalid-color-dark:                         var(--#{$prefix}danger-text-emphasis) !default; // OUDS mod: instead of `$red-300`
+$form-invalid-border-color-dark:                  var(--#{$prefix}danger) !default; // OUDS mod: instead of `$red-300`
+$form-switch-unchecked-invalid-border-color-dark: $form-invalid-border-color-dark !default; // OUDS mod
 // scss-docs-end form-validation-colors-dark
 
 //
 // Accordion
 //
 
-// Boosted mod: no $accordion-icon-color-dark
-// Boosted mod: no $accordion-icon-active-color-dark
+// OUDS mod: no $accordion-icon-color-dark
+// OUDS mod: no $accordion-icon-active-color-dark
 
-// Boosted mod: no $accordion-button-icon-dark
-// Boosted mod: no $accordion-button-active-icon-dark
+// OUDS mod: no $accordion-button-icon-dark
+// OUDS mod: no $accordion-button-active-icon-dark
 
 //
 // Breadcrumb
 //
 
-$breadcrumb-divider-filter-dark:      $invert-filter !default; // Boosted mod
+$breadcrumb-divider-filter-dark:      $invert-filter !default; // OUDS mod
 
 //
 // Tables
 //
 
-$table-striped-bg-factor-dark:        1 !default; // Boosted mod
-$table-active-bg-factor-dark:         .35 !default; // Boosted mod
-$table-hover-bg-factor-dark:          .135 !default; // Boosted mod
+$table-striped-bg-factor-dark:        1 !default; // OUDS mod
+$table-active-bg-factor-dark:         .35 !default; // OUDS mod
+$table-hover-bg-factor-dark:          .135 !default; // OUDS mod
 // scss-docs-end sass-dark-mode-vars

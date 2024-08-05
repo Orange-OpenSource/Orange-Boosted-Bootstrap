@@ -4,8 +4,8 @@
 
 .card {
   // scss-docs-start card-css-vars
-  --#{$prefix}card-spacer-top: #{$card-spacer-top}; // Boosted mod
-  --#{$prefix}card-spacer-bottom: #{$card-spacer-bottom}; // Boosted mod
+  --#{$prefix}card-spacer-top: #{$card-spacer-top}; // OUDS mod
+  --#{$prefix}card-spacer-bottom: #{$card-spacer-bottom}; // OUDS mod
   --#{$prefix}card-spacer-x: #{$card-spacer-x};
   --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
   --#{$prefix}card-title-color: #{$card-title-color};
@@ -19,7 +19,7 @@
   --#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
   --#{$prefix}card-cap-bg: #{$card-cap-bg};
   --#{$prefix}card-cap-color: #{$card-cap-color};
-  --#{$prefix}card-cap-font-weight: #{$card-cap-font-weight}; // Boosted mod
+  --#{$prefix}card-cap-font-weight: #{$card-cap-font-weight}; // OUDS mod
   --#{$prefix}card-height: #{$card-height};
   --#{$prefix}card-color: #{$card-color};
   --#{$prefix}card-bg: #{$card-bg};
@@ -33,7 +33,7 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix}card-height);
-  // Boosted mod: no color
+  // OUDS mod: no color
   word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
@@ -73,16 +73,16 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
-  padding: var(--#{$prefix}card-spacer-top) var(--#{$prefix}card-spacer-x) var(--#{$prefix}card-spacer-bottom); // Boosted mod
+  padding: var(--#{$prefix}card-spacer-top) var(--#{$prefix}card-spacer-x) var(--#{$prefix}card-spacer-bottom); // OUDS mod
   color: var(--#{$prefix}card-color);
 }
 
 .card-title {
-  @extend .h4; // Boosted mod
+  @extend .h4; // OUDS mod
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
   color: var(--#{$prefix}card-title-color);
 
-  // Boosted mod: prevent unwanted margin when nothing follows…
+  // OUDS mod: prevent unwanted margin when nothing follows…
   &:only-child {
     margin-bottom: 0;
   }
@@ -90,9 +90,9 @@
 }
 
 .card-subtitle {
-  @extend .h6; // Boosted mod
-  margin-top: 0; // Boosted mod
-  margin-bottom: var(--#{$prefix}card-title-spacer-y); // Boosted mod
+  @extend .h6; // OUDS mod
+  margin-top: 0; // OUDS mod
+  margin-bottom: var(--#{$prefix}card-title-spacer-y); // OUDS mod
   color: var(--#{$prefix}card-subtitle-color);
 }
 
@@ -117,10 +117,10 @@
 .card-header {
   padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  font-weight: var(--#{$prefix}card-cap-font-weight); // Boosted mod
+  font-weight: var(--#{$prefix}card-cap-font-weight); // OUDS mod
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
-  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-cap-bg); // Boosted mod
+  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-cap-bg); // OUDS mod
 
   &:first-child {
     @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0);
@@ -128,7 +128,7 @@
 }
 
 .card-footer {
-  // Boosted mod
+  // OUDS mod
   padding: 0 var(--#{$prefix}card-cap-padding-x) var(--#{$prefix}card-cap-padding-x);
   font-weight: var(--#{$prefix}card-cap-font-weight);
   color: var(--#{$prefix}card-footer-color);

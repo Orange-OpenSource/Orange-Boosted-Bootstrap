@@ -73,13 +73,13 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      /* Boosted mod: no `.btn-bd-primary` custom style */
+      /* OUDS mod: no `.btn-bd-primary` custom style */
 
       .bd-mode-toggle {
         z-index: 1500;
       }
 
-      /* Boosted mod: instead of `.bd-mode-toggle .bi` rule */
+      /* OUDS mod: instead of `.bd-mode-toggle .bi` rule */
       .bd-mode-toggle svg {
         width: 1.25rem;
         height: 1.25rem;
@@ -108,9 +108,9 @@
     {{ .Content }}
 
     {{- if hugo.IsProduction -}}
-      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
+      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
     {{- else -}}
-      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
+      <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
     {{- end }}
 
     {{ range .Page.Params.extra_js -}}

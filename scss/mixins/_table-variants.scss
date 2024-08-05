@@ -1,11 +1,11 @@
-// Boosted mod: Variants have a different hover and striped management
+// OUDS mod: Variants have a different hover and striped management
 // scss-docs-start table-variant
 @mixin table-variant($state, $background) {
   .table-#{$state} {
     $color: color-contrast(opaque($body-bg, $background));
-    $hover-bg: mix($color, $background, percentage($table-variant-hover-bg-factor));// Boosted mod
-    $striped-bg: mix($color, $background, percentage($table-variant-striped-bg-factor)); // Boosted mod
-    $active-bg: mix($color, $background, percentage($table-variant-active-bg-factor)); // Boosted mod
+    $hover-bg: mix($color, $background, percentage($table-variant-hover-bg-factor));// OUDS mod
+    $striped-bg: mix($color, $background, percentage($table-variant-striped-bg-factor)); // OUDS mod
+    $active-bg: mix($color, $background, percentage($table-variant-active-bg-factor)); // OUDS mod
     $table-border-color: mix($color, $background, percentage($table-border-factor));
 
     --#{$prefix}table-color: #{$color};

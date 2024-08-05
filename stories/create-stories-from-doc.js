@@ -1,10 +1,18 @@
+/*!
+ * Script to automatically generate Storybook stories from the documentation.
+ *
+ * Copyright (c) 2015-2024 Orange SA
+ * Copyright (c) 2015-2024 The OUDS Web Authors
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
+ */
+
 'use strict'
 
 const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
-const version = '5.3'
+const version = '0.0'
 
 function createDirectoryIfNeeded(path) {
   if (!fs.existsSync(path)) {
@@ -66,7 +74,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/ouds-web/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
@@ -92,7 +100,7 @@ createDirectoryIfNeeded(outputDirectory);
         example[0] = `<div class="${Object.values(example[1]).join(' ')} m-0 border-0">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
-        example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
+        example[0] += '\n<script type="text/javascript">\n  /* global oudsWeb: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
         if (new RegExp(`// storybook-start ${file[0]}\n`, 'si').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gsi') // RegExp to get all used code in `snippets.js`
           example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in JS snippets

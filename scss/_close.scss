@@ -6,41 +6,41 @@
 .btn-close {
   // scss-docs-start close-css-vars
   --#{$prefix}btn-close-color: #{$btn-close-color};
-  --#{$prefix}btn-close-bg: #{$btn-close-bg}; // Boosted mod: don't use escape-svg()
-  // Boosted mod: no --#{$prefix}btn-close-opacity
-  // Boosted mod: no --#{$prefix}btn-close-hover-opacity
-  // Boosted mod: no --#{$prefix}btn-close-focus-shadow
-  // Boosted mod: no --#{$prefix}btn-close-focus-opacity
-  // Boosted mod: no --#{$prefix}btn-close-disabled-opacity
-  // Boosted mod: no --#{$prefix}btn-close-white-filter
-  --#{$prefix}btn-close-padding: #{$btn-close-padding}; // Boosted mod
-  --#{$prefix}btn-close-border-width: #{$btn-close-border-width}; // Boosted mod
-  --#{$prefix}btn-close-border-color: #{$btn-close-border-color}; // Boosted mod
-  --#{$prefix}btn-close-hover-color: #{$btn-close-hover-color}; // Boosted mod
-  --#{$prefix}btn-close-active-color: #{$btn-close-active-color}; // Boosted mod
-  --#{$prefix}btn-close-active-border-color: #{$btn-close-active-border-color}; // Boosted mod
-  --#{$prefix}btn-close-disabled-color: #{$btn-close-disabled-color}; // Boosted mod
+  --#{$prefix}btn-close-bg: #{$btn-close-bg}; // OUDS mod: don't use escape-svg()
+  // OUDS mod: no --#{$prefix}btn-close-opacity
+  // OUDS mod: no --#{$prefix}btn-close-hover-opacity
+  // OUDS mod: no --#{$prefix}btn-close-focus-shadow
+  // OUDS mod: no --#{$prefix}btn-close-focus-opacity
+  // OUDS mod: no --#{$prefix}btn-close-disabled-opacity
+  // OUDS mod: no --#{$prefix}btn-close-white-filter
+  --#{$prefix}btn-close-padding: #{$btn-close-padding}; // OUDS mod
+  --#{$prefix}btn-close-border-width: #{$btn-close-border-width}; // OUDS mod
+  --#{$prefix}btn-close-border-color: #{$btn-close-border-color}; // OUDS mod
+  --#{$prefix}btn-close-hover-color: #{$btn-close-hover-color}; // OUDS mod
+  --#{$prefix}btn-close-active-color: #{$btn-close-active-color}; // OUDS mod
+  --#{$prefix}btn-close-active-border-color: #{$btn-close-active-border-color}; // OUDS mod
+  --#{$prefix}btn-close-disabled-color: #{$btn-close-disabled-color}; // OUDS mod
   // scss-docs-end close-css-vars
 
-  // Boosted mod: no box-sizing, width nor height
-  padding: var(--#{$prefix}btn-close-padding); // Boosted mod
+  // OUDS mod: no box-sizing, width nor height
+  padding: var(--#{$prefix}btn-close-padding); // OUDS mod
   color: var(--#{$prefix}btn-close-color);
-  background-color: var(--#{$prefix}btn-close-bg); // Boosted mod: instead of background
-  border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // Boosted mod
+  background-color: var(--#{$prefix}btn-close-bg); // OUDS mod: instead of background
+  border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // OUDS mod
   @include border-radius();
-  // Boosted mod: no opacity
-  @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // Boosted mod: using mask instead of background
+  // OUDS mod: no opacity
+  @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // OUDS mod: using mask instead of background
 
   // Override <a>'s hover style
   &:hover {
-    color: var(--#{$prefix}btn-close-hover-color); // Boosted mod
+    color: var(--#{$prefix}btn-close-hover-color); // OUDS mod
     text-decoration: none;
-    // Boosted mod: no opacity
+    // OUDS mod: no opacity
   }
 
-  // Boosted mod: no &:focus
+  // OUDS mod: no &:focus
 
-  // Boosted mod: matching .btn-no-outline
+  // OUDS mod: matching .btn-no-outline
   &:hover,
   &:active {
     border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-active-border-color);
@@ -53,22 +53,9 @@
 
   &:disabled,
   &.disabled {
-    color: var(--#{$prefix}btn-close-disabled-color); // Boosted mod
+    color: var(--#{$prefix}btn-close-disabled-color); // OUDS mod
     pointer-events: none;
     user-select: none;
-    // Boosted mod: no opacity
+    // OUDS mod: no opacity
   }
 }
-
-// Deprecated in v5.3.3
-// Boosted mod: changing color instead of using filter
-.btn-close-white {
-  --#{$prefix}btn-close-color: #{$btn-close-white-color}; // Boosted mod
-  --#{$prefix}btn-close-bg: #{$btn-close-white-bg}; // Boosted mod
-  --#{$prefix}btn-close-border-color: #{$btn-close-white-border-color}; // Boosted mod
-  --#{$prefix}btn-close-hover-color: #{$btn-close-white-hover-color}; // Boosted mod
-  --#{$prefix}btn-close-active-color: #{$btn-close-white-active-color}; // Boosted mod
-  --#{$prefix}btn-close-active-border-color: #{$btn-close-white-active-border-color}; // Boosted mod
-  --#{$prefix}btn-close-disabled-color: #{$btn-close-white-disabled-color}; // Boosted mod
-}
-// End mod

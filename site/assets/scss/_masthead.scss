@@ -1,11 +1,11 @@
 .bd-masthead {
-  // Boosted mod: no --bd-pink-rgb
+  // OUDS mod: no --bd-pink-rgb
   padding: 3rem 0;
-  // Boosted mod: no gradient background image
+  // OUDS mod: no gradient background image
 
   h1 {
     --bs-heading-color: var(--bs-emphasis-color);
-    // Boosted mod: no `@include font-size`
+    // OUDS mod: no `@include font-size`
   }
 
   .lead {
@@ -23,7 +23,7 @@
 
   .highlight {
     width: 100%;
-    padding: .625rem 1rem; // Boosted mod
+    padding: .625rem 1rem; // OUDS mod
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -42,12 +42,12 @@
   }
   .btn-clipboard {
     position: absolute;
-    top: .3125rem; // Boosted mod: instead of `-.625rem`
+    top: .3125rem; // OUDS mod: instead of `-.625rem`
     right: 0;
     background-color: transparent;
   }
 
-  // Boosted mod: no `#carbonads`
+  // OUDS mod: no `#carbonads`
 
   @include media-breakpoint-up(md) {
     .lead {
@@ -87,7 +87,7 @@
   }
 }
 
-// Boosted mod: no .masthead-notice
+// OUDS mod: no .masthead-notice
 
 .animate-img {
   > img {

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ouds-web.sass</id>
+    <!-- pulled from package.json -->
+    <version>0</version>
+    <title>OUDS Web Sass</title>
+    <authors>The OUDS Web Authors, Orange SA</authors>
+    <owners>Orange SA</owners>
+    <description>OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.</description>
+    <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
+    <summary>OUDS Web framework in Sass. Includes JavaScript</summary>
+    <language>en-us</language>
+    <projectUrl>https://web.unified-design-system.orange.com/</projectUrl>
+    <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="ouds/main" />
+    <icon>ouds-web.png</icon>
+    <license type="expression">MIT</license>
+    <copyright>Copyright 2015-2024</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>css sass mobile-first responsive front-end framework web bootstrap Orange</tags>
+    <contentFiles>
+      <files include="**/*" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="nuget\ouds-web.png" target="" />
+
+    <file src="scss\**\*.scss" target="content\Content\ouds-web" />
+    <file src="dist\js\ouds-web*.js" target="content\Scripts" />
+    <file src="dist\js\ouds-web*.js.map" target="content\Scripts" />
+
+    <file src="scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
+    <file src="dist\js\ouds-web*.js" target="contentFiles\any\any\wwwroot\js" />
+    <file src="dist\js\ouds-web*.js.map" target="contentFiles\any\any\wwwroot\js" />
+  </files>
+</package>

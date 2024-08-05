@@ -1,7 +1,7 @@
 {{ if hugo.IsProduction -}}
-  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
+  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }}></script>
 {{ else -}}
-  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
+  <script defer src="/docs/{{ .Site.Params.docs_version }}/dist/js/ouds-web.bundle.js"></script>
 {{- end }}
 
 {{- $esbuildOptions := dict "target" "es2019" -}}
@@ -11,7 +11,7 @@
 {{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
 <script defer src="{{ $applicationJs.RelPermalink }}"></script>
 
-<!--Boosted mod-->
+<!--OUDS mod-->
 <script defer src="/docs/{{ .Site.Params.docs_version }}/assets/js/tarteaucitron.min.js"></script>
 
 {{- $js := resources.Match "js/tac.js" -}}
@@ -36,12 +36,6 @@
 {{- /* Disable minify options for snippets.js so that the file's readable on StackBlitz */ -}}
 {{- $snippetsFile := resources.Get "js/snippets.js" | js.Build (merge $esbuildOptions (dict "minify" "false")) -}}
 {{- $esbuildParams := dict
-  "helvNeue55W1GCdn" .Site.Params.cdn.HelvNeue55_W1G
-  "helvNeue75W1GCdn" .Site.Params.cdn.HelvNeue75_W1G
-  "helveticaCdn" .Site.Params.cdn.helvetica
-  "helvNeue55W1GHash" .Site.Params.cdn.HelvNeue55_W1G_hash
-  "helvNeue75W1GHash" .Site.Params.cdn.HelvNeue75_W1G_hash
-  "helveticaHash" .Site.Params.cdn.helvetica_hash
   "cssCdn" .Site.Params.cdn.css
   "jsBundleCdn" .Site.Params.cdn.js_bundle
   "docsVersion" .Site.Params.docs_version
@@ -51,7 +45,7 @@
 {{- $stackblitzJs := resources.Get "js/stackblitz.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/stackblitz.js") }}
 <script defer src="{{ $stackblitzJs.RelPermalink }}"></script>
 
-<!--Boosted mod-->
+<!--OUDS mod-->
 {{- $colorJs := resources.Get "js/color.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/color.js") }}
 <script defer src="{{ $colorJs.RelPermalink }}"></script>
 <!--End mod-->

@@ -4,7 +4,7 @@
  * Script to create the built examples zip archive;
  * requires the `zip` command to be present!
  * Copyright 2020-2024 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/boosted/blob/main/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
 import fs from 'node:fs/promises'
@@ -18,20 +18,20 @@ const pkgJson = path.join(__dirname, '../package.json')
 const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
 
 const versionShort = pkg.config.version_short
-const distFolder = `boosted-${pkg.version}-examples`
+const distFolder = `ouds-web-${pkg.version}-examples`
 const rootDocsDir = '_site'
-const docsDir = `${rootDocsDir}/docs/${versionShort}/`
+const docsDir = `${rootDocsDir}/ouds-web/docs/${versionShort}/`
 
 // these are the files we need in the examples
 const cssFiles = [
-  'boosted.min.css',
-  'boosted.min.css.map',
-  'boosted.rtl.min.css',
-  'boosted.rtl.min.css.map'
+  'ouds-web.min.css',
+  'ouds-web.min.css.map',
+  'ouds-web.rtl.min.css',
+  'ouds-web.rtl.min.css.map'
 ]
 const jsFiles = [
-  'boosted.bundle.min.js',
-  'boosted.bundle.min.js.map'
+  'ouds-web.bundle.min.js',
+  'ouds-web.bundle.min.js.map'
 ]
 const imgFiles = [
   'orange-logo.svg'
