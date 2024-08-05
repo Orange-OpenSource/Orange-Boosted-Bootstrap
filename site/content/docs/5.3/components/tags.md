@@ -53,7 +53,7 @@ Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
   <li>
     <input type="checkbox" class="btn-check" id="btncheck-tv" autocomplete="off" checked>
     <label class="tag" for="btncheck-tv">
-      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
         <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
       </svg>
       <span class="visually-hidden">Filter by</span>TV
@@ -70,7 +70,7 @@ The text of the button must be clear enough to explain the function.
   <li><button class="tag"><span class="visually-hidden">Filter by</span>Mobile</button></li>
   <li>
     <button class="tag active">
-      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
         <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
       </svg>
       <span class="visually-hidden">Filter by</span>TV
@@ -108,7 +108,7 @@ Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/compon
     <button class="close" aria-labelledby="labelTag1"><span class="visually-hidden">Close</span></button>
   </span></li>
   <li><span class="tag" id="labelTag2">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Dismissible tag
@@ -137,7 +137,7 @@ Add `.tag-sm` to the `.tag` for a small variant.
 <button class="tag tag-sm">Filter</button>
 <a class="tag tag-sm" href="#">Navigation</a>
 <p><span class="tag tag-sm" id="labelTag4">
-  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Input
@@ -166,7 +166,7 @@ Disabled tags using the `<a>` element behave a bit different:
 <button class="tag" disabled>Filter</button>
 <a class="tag disabled" aria-disabled="true">Navigation</a>
 <p><span class="tag disabled" id="labelTag5" aria-disabled="true">
-  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Input

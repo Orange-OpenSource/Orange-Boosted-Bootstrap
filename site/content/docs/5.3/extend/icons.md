@@ -20,13 +20,13 @@ They are not open-source though and should only be used for Orange projects. Ple
 
 Icons are designed within a square layout to preserve consistency. Within this square, there exists a designated safety zone to guarantee that icons can be used in various sizes and contexts while maintaining alignment as intended by the designers. The dimensions of the icons encompass this safety zone, ensuring adaptability and consistency across diverse applications.
 
-<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
 </svg>
-<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
 </svg>
-<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true" focusable="false">
+<svg width="8em" height="8em" class="bg-body-secondary" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
 </svg>
 
@@ -54,48 +54,48 @@ This is similar to an `<img>` element, but with the power of `currentColor` for 
 
 {{< example >}}
 <p class="p-2" data-bs-theme="light">
-  <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
   </svg>
 </p>
 <p class="p-2" data-bs-theme="dark">
-  <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-body-tertiary" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#trash"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
   </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#error-severe"/>
   </svg>
 </p>
@@ -122,7 +122,7 @@ This technique should only be used if you have few icons to render, and if this 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy theming.
 
 {{< example class="mt-0" >}}
-<svg fill="currentColor" width="2em" height="2em" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+<svg fill="currentColor" width="2em" height="2em" viewBox="0 0 1000 1000" aria-hidden="true">
   <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" style="fill-rule:evenodd"/>
 </svg>
 {{< /example >}}
@@ -168,8 +168,7 @@ For more details, **Orange Accessibility Guidelines** provides [a deep-dive arti
 
 #### Decorative icons
 Purely **decorative icons** (like repeating information of an adjacent text) must be hidden to assistive technologies:
-- for `<svg>` tag, use the attributes `aria-hidden="true"` and `focusable="false"`
-- for `<span>` tag, use the attribute `aria-hidden="true"`
+- for `<svg>` or `<span>` tags, use the attributes `aria-hidden="true"`
 - for `<img>`, use an empty `alt` attribute
 - CSS background images are intended to be decorative
 
@@ -180,7 +179,7 @@ For external images, you can also fill the `alt` attribute directly.
 
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-outline-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
   <span class="visually-hidden">Open settings</span>
@@ -204,7 +203,7 @@ SVG symbol to insert into your SVG sprite:
 Then use it like this:
 
 {{< example class="mt-0" >}}
-<svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+<svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning-important-accessible"/>
 </svg>
 {{< /example >}}
@@ -216,7 +215,7 @@ Please note that this icon cannot be used in a Web font, due to its two colors.
 SVG code for an inline SVG:
 
 {{< example class="mt-0" >}}
-<svg fill="currentColor" width="1.875em" height="1.875em" class="solaris-icon text-warning" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+<svg fill="currentColor" width="1.875em" height="1.875em" class="solaris-icon text-warning" viewBox="0 0 1000 1000" aria-hidden="true">
   <path d="M500.497 125a93.94 93.94 0 0 1 81.09 46.517l328.62 562.5-.008.005a93.709 93.709 0 0 1-81.09 140.983H171.887a93.71 93.71 0 0 1-81.09-140.983l.765-1.326.036-.062 327.8-561.117C436.254 142.707 467.122 125 500.497 125Z"/>
   <path fill="#000" d="M501.507 680.005c-26.233-.002-47.5 21.262-47.502 47.495s21.26 47.5 47.493 47.505a47.5 47.5 0 0 0 47.507-47.5c0-26.233-21.265-47.5-47.498-47.5m-.01-380.007c-26.238 0-47.507 21.27-47.507 47.507 0 .967.037 1.918.094 2.867l15.74 258.716.004.52c.288 17.092 14.355 23.53 31.667 23.53 17.486 0 31.662-6.568 31.67-24.05l15.7-258.121.057-.86a44 44 0 0 0 .082-2.602c0-26.238-21.27-47.507-47.507-47.507"/>
 </svg>

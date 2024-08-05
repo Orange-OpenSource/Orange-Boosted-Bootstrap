@@ -131,14 +131,14 @@ With an SVG:
 
 <div class="bd-example tooltip-demo">
   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
     </svg>
   </a>
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true" focusable="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
@@ -147,14 +147,14 @@ With an SVG:
 
 ```html
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
     <rect width="100%" height="100%" fill="#563d7c"/>
     <circle cx="50" cy="50" r="30" fill="#007bff"/>
   </svg>
 </a>
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
