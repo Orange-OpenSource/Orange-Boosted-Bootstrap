@@ -1,7 +1,4 @@
-@import "tokens/raw";
-@import "tokens/semantic";
-@import "tokens/component";
-@import "color-palette"; // TODO: should be in "tokens/raw"
+@import "color-palette";
 
 
 // Variables
@@ -445,7 +442,7 @@ $enable-negative-margins:         false !default;
 $enable-deprecation-messages:     false !default;
 $enable-important-utilities:      true !default;
 $enable-fixed-header:             true !default; // OUDS mod: used to apply scroll-padding-top
-$enable-bootstrap-compatibility:  true !default; // OUDS mod: used to apply Bootstrap compatibility naming
+$enable-bootstrap-compatibility:  false !default; // OUDS mod: used to apply Bootstrap compatibility naming
 
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
@@ -1918,7 +1915,7 @@ $modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
 $modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
 $modal-backdrop-bg:                 $black !default;
-$modal-backdrop-opacity:            $overlays-modal-backdrop-opacity !default;
+$modal-backdrop-opacity:            .5 !default;
 
 $modal-header-border-color:         null !default; // OUDS mod
 $modal-header-border-width:         $modal-content-border-width !default;

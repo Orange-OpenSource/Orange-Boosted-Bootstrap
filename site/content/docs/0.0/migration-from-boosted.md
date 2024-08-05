@@ -11,16 +11,6 @@ toc: true
 
 # Migrating from Boosted
 
-<!-- TODO: write the content correctly -->
-<!-- TODO: make "From Boosted" a specific page? -->
-
-* New `$enable-bootstrap-specificities` option set to `true` by default.
-  * Must be a global migration note as it will impact not only the opacity utilities
-* New opacity utilities: `.opacity-transparent`, etc.
-* Dropped opacity utilities: `.opacity-0`, etc.
-  * Mapping rule between old and new opacity utilities.
-* New Sass variables, Sass maps, etc.
-
 This guide provides information on how to migrate from Boosted (latest release) to OUDS Web.
 
 Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
@@ -63,7 +53,16 @@ Technically, it means that you can get rid of the following things:
 
 - <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
+## Utilities
+
+### Opacity
+
+- <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
+
 ## CSS and Sass variables
+
+- New `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
@@ -101,5 +100,28 @@ Technically, it means that you can get rid of the following things:
       <li><code>--bs-btn-close-color</code></li>
       <li><code>--bs-btn-close-disabled-color</code></li>
       <li><code>--bs-btn-close-hover-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$opacity-0</code></li>
+      <li><code>$opacity-100</code></li>
+      <li><code>$opacity-200</code></li>
+      <li><code>$opacity-300</code></li>
+      <li><code>$opacity-400</code></li>
+      <li><code>$opacity-500</code></li>
+      <li><code>$opacity-600</code></li>
+      <li><code>$opacity-700</code></li>
+      <li><code>$opacity-800</code></li>
+      <li><code>$opacity-900</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$opacities</code></li>
     </ul>
   </details>
