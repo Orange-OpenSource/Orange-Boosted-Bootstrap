@@ -185,7 +185,6 @@
   icon_color: body-color
   pages:
     - title: Clearfix
-      draft: true
     - title: Color & background
       draft: true
     - title: Colored links
@@ -195,7 +194,6 @@
     - title: Icon link
       draft: true
     - title: Position
-      draft: true
     - title: Ratio
       draft: true
     - title: Stacks
@@ -203,11 +201,9 @@
     - title: Stretched link
       draft: true
     - title: Text truncation
-      draft: true
     - title: Vertical rule
       draft: true
     - title: Visually hidden
-      draft: true
 
 - title: Utilities
   icon: braces-asterisk
@@ -224,19 +220,14 @@
       draft: true
     - title: Flex
     - title: Float
-      draft: true
     - title: Interactions
-      draft: true
     - title: Link
       draft: true
     - title: Object fit
-      draft: true
     - title: Opacity
       draft: true
     - title: Overflow
-      draft: true
     - title: Position
-      draft: true
     - title: Shadows
       draft: true
     - title: Sizing
@@ -246,7 +237,6 @@
     - title: Text
       draft: true
     - title: Vertical align
-      draft: true
     - title: Visibility
     - title: Z-index
 
