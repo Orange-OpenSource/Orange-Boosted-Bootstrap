@@ -13,8 +13,6 @@ The opacity level describes the semantic transparency level, where `opaque` is n
 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
-<!--TODO-->
-
 <div class="bd-example d-sm-flex">
   <div class="opacity-opaque p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-emphasis p-3 m-2 bg-primary fw-bold"></div>
@@ -41,7 +39,7 @@ The opacity level describes the transparency level, where `1` is not transparent
 Set the `opacity` of an element using `.opacity-{value}` utilities.
 
 <!--
-  Boosted mod:
+  OUDS mod:
   - Removed .text-light and .rounded classes
   - Removed div text content to avoid a11y issue with semi-transparent text
 -->

@@ -9,8 +9,6 @@ aliases:
 toc: true
 ---
 
-# Migrating from Boosted
-
 This guide provides information on how to migrate from Boosted (latest release) to OUDS Web.
 
 Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
@@ -62,7 +60,7 @@ Technically, it means that you can get rid of the following things:
 
 ## CSS and Sass variables
 
-- New `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
+- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>

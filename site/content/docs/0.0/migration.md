@@ -11,17 +11,38 @@ toc: true
 
 ## v0.0.2
 
-<!-- TODO: write the content correctly -->
-<!-- TODO: make "From Boosted" a specific page? -->
+### Utilities
 
-* New `$enable-bootstrap-compatibility` option set to `true` by default.
-  * Must be a global migration note as it will impact not only the opacity utilities
-* New opacity utilities: `.opacity-transparent`, etc.
-* Dropped opacity utilities: `.opacity-0`, etc.
-  * Mapping rule between old and new opacity utilities.
-* New Sass variables, Sass maps, etc.
+#### Opacity
 
-<!-- TODO: the following would be dropped in the future library, it would be the linked to the new releases -->
+- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$opacity-0</code></li>
+      <li><code>$opacity-100</code></li>
+      <li><code>$opacity-200</code></li>
+      <li><code>$opacity-300</code></li>
+      <li><code>$opacity-400</code></li>
+      <li><code>$opacity-500</code></li>
+      <li><code>$opacity-600</code></li>
+      <li><code>$opacity-700</code></li>
+      <li><code>$opacity-800</code></li>
+      <li><code>$opacity-900</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$opacities</code></li>
+    </ul>
+  </details>
 
 ## v0.0.1
 
