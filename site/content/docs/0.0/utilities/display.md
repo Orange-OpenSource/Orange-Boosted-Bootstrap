@@ -14,9 +14,9 @@ Change the value of the [`display` property](https://developer.mozilla.org/en-US
 
 ## Notation
 
-Display utility classes that apply to all breakpoints<!-- [breakpoints]({{< docsref "/layout/breakpoints" >}}), from `xs` to `xxl`-->, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+<!--Display utility classes that apply to all [breakpoints]({{< docsref "/layout/breakpoints" >}}), from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.-->
 
-As such, the classes are named using the format:
+<!--As such, t-->The classes are named using the format:
 
 - `.d-{value}`<!-- for `xs`-->
 <!--- `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, `xl`, and `xxl`.-->
@@ -37,9 +37,9 @@ Where *value* is one of:
 
 The display values can be altered by changing the `display` values defined in `$utilities` and recompiling the SCSS.
 
-The media queries affect screen widths with the given breakpoint *or larger*. <!--For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, and `xxl` screens.-->
+<!--The media queries affect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, and `xxl` screens.-->
 
-## Examples
+<!--## Examples
 
 {{< example >}}
 <div class="d-inline p-2 text-bg-primary">d-inline</div>
@@ -49,7 +49,7 @@ The media queries affect screen widths with the given breakpoint *or larger*. <!
 {{< example >}}
 <span class="d-block p-2 text-bg-primary">d-block</span>
 <span class="d-block p-2 text-bg-dark">d-block</span>
-{{< /example >}}
+{{< /example >}}-->
 
 ## Hiding elements
 
