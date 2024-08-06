@@ -46,7 +46,7 @@ Compared to the default grid system:
 
 ### Three columns
 
-Three equal-width columns across all viewports and devices can be created by using the `.g-col-4` classes. <!-- Add [responsive classes](#responsive) to change the layout by viewport size. -->
+Three equal-width columns across all viewports and devices can be created by using the `.g-col-4` classes. <!--Add [responsive classes](#responsive) to change the layout by viewport size.-->
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid text-center">
@@ -56,7 +56,7 @@ Three equal-width columns across all viewports and devices can be created by usi
 </div>
 {{< /example >}}
 
-<!-- ### Responsive
+<!--### Responsive
 
 Use responsive classes to adjust your layout across viewports. Here we start with two columns on the narrowest viewports, and then grow to three columns on medium viewports and above.
 
@@ -178,7 +178,7 @@ Customize the number of columns, the number of rows, and the width of the gaps w
 | --- | --- | --- |
 | `--bs-rows` | `1` | The number of rows in your grid template |
 | `--bs-columns` | `12` | The number of columns in your grid template |
-<!--| `--bs-gap` | `1.25rem` | The size of the gap between columns (vertical and horizontal) |-->
+<!--| `-bs-gap` | `1.25rem` | The size of the gap between columns (vertical and horizontal) |-->
 {{< /bs-table >}}
 
 These CSS variables have no default value; instead, they apply fallback values that are used _until_ a local instance is provided. For example, we use `var(--bs-rows, 1)` for our CSS Grid rows, which ignores `--bs-rows` because that hasn't been set anywhere yet. Once it is, the `.grid` instance will use that value instead of the fallback value of `1`.
