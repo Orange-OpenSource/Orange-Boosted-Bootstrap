@@ -38,7 +38,7 @@ To display basic tables, Orange Unified Design System recommends using these com
 
 ## Quick start
 
-Get started by including OUDS Web's production-ready CSS and JavaScript via CDN without the need for any build steps. <!--See it in practice with this [OUDS Web CodePen demo](https://codepen.io/louismaximepiton/pen/NWZdZJm).-->
+Get started by including OUDS Web's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [OUDS Web CodePen demo](https://codepen.io/louismaximepiton/pen/NWZdZJm).
 
 <br>
 
@@ -101,15 +101,15 @@ As reference, here are our primary CDN links.
 ## Next steps
 
 - Read a bit more about some [important global environment settings](#important-globals) that OUDS Web utilizes.
-- Read about what's included in OUDS Web <!--in our [contents section]({{< docsref "/getting-started/contents/" >}})--> and the list of [components that require JavaScript](#js-components) below.
+- Read about what's included in OUDS Web<!-- in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below-->.
 <!--- Need a little more power? Consider building with OUDS Web by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).-->
 <!--- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.-->
 
-## JS components
+<!--## JS components
 
 Curious which components explicitly require our JavaScript and Popper? If you're at all unsure about the general page structure, keep reading for an example page template.
 
-<!--- Accordions for extending our Collapse plugin
+- Accordions for extending our Collapse plugin
 - Alerts for dismissing and Close button tooltip
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
@@ -125,7 +125,7 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
 - Toasts for displaying, dismissing, and Close button tooltip
-- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))-->
+- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
 
 {{< callout warning >}}
 ### Required script
@@ -135,7 +135,7 @@ However, if you don't need or want to use OUDS Web's JavaScript files, you'll st
 ```html
 <script src="{{< param "cdn.focus_visible" >}}" integrity="{{< param "cdn.focus_visible_hash" >}}" crossorigin="anonymous"></script>
 ```
-{{< /callout >}}
+{{< /callout >}}-->
 
 ## Important globals
 
