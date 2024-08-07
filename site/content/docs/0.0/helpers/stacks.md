@@ -73,10 +73,10 @@ Use `.vstack` to stack buttons and other elements:
 Create an inline form with `.hstack`:
 
 <details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Unified Design System.</summary>
 <br>
 {{< design-callout-alert >}}
-This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
+This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Unified Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
