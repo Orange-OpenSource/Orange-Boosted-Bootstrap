@@ -4,7 +4,7 @@
   $values: map-get($utility, values);
   $bootstrap-compatibility: map-get($utility, bootstrap-compatibility); // Boosted mod
 
-  @if (($bootstrap-compatibility != true) or (($bootstrap-compatibility == true) and ($enable-bootstrap-compatibility == true))) { // Boosted mod: filter Bootstrap specificities
+  @if ($bootstrap-compatibility != true or $enable-bootstrap-compatibility == true) { // Boosted mod: filter Bootstrap specificities
     // If the values are a list or string, convert it into a map
     @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
       $values: zip($values, $values);
