@@ -133,7 +133,7 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
 
 {{< callout warning >}}
-#### Required script
+### Required script
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use the polyfill.
