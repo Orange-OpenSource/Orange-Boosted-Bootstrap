@@ -6,7 +6,6 @@
   icon_color: body-color
   pages:
     - title: Introduction
-      draft: true
     - title: Download
       draft: true
     - title: Contents
@@ -22,7 +21,6 @@
     - title: Vite
       draft: true
     - title: Accessibility
-      draft: true
     - title: RFS
       draft: true
     - title: RTL
