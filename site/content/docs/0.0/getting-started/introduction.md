@@ -125,17 +125,19 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
 - Toasts for displaying, dismissing, and Close button tooltip
-- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
+- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))-->
 
-{{< callout warning >}}
-### Required script
+## Required script
 
 OUDS Web includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+
+{{< callout warning >}}
 However, if you don't need or want to use OUDS Web's JavaScript files, you'll still need to use the polyfill.
+{{< /callout >}}
+
 ```html
 <script src="{{< param "cdn.focus_visible" >}}" integrity="{{< param "cdn.focus_visible_hash" >}}" crossorigin="anonymous"></script>
 ```
-{{< /callout >}}-->
 
 ## Important globals
 
