@@ -70,7 +70,6 @@
     - title: Z-index
       draft: true
     - title: CSS Grid
-      draft: true
 
 - title: Content
   icon: file-earmark-richtext
@@ -216,7 +215,6 @@
     - title: Colors
       draft: true
     - title: Display
-      draft: true
     - title: Flex
     - title: Float
     - title: Interactions
@@ -238,7 +236,6 @@
     - title: Vertical align
     - title: Visibility
     - title: Z-index
-      draft: true
 
 - title: Extend
   icon: tools
