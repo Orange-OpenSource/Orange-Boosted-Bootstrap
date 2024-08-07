@@ -2,7 +2,7 @@
   {{- $url := split .Permalink "/" -}}
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
-  <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+  <ul class="bd-links-nav list-unstyled mb-0 pb-3 pe-lg-2">
   {{- range $group := .Site.Data.sidebar -}}
     {{- $link := $group.title -}}
     {{- $link_slug := $link | urlize -}}
