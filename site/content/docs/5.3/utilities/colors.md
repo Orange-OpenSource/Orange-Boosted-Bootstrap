@@ -17,7 +17,7 @@ toc: true
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
 To colorize icons, please refer to our [icon color documentation]({{< docsref "extend/icons#modify-icons-color" >}}).
 
-Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#distinguishable).
 To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
 
 Thus, the `.text-primary` color on white background (`#f16e00`) can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
