@@ -59,7 +59,7 @@ OUDS Web includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/foc
 
 {{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
 
-<!--OUDS Web provides `focus-visible()` mixin to ensure a proper visible focus state:
+OUDS Web provides `focus-visible()` mixin to ensure a proper visible focus state:
 
 {{< scss-docs name="focus-visible" file="scss/mixins/_focus.scss" >}}
 
@@ -67,7 +67,7 @@ This visible focus state is defined by an outer outline and an inner box shadow.
 
 {{< scss-docs name="focus-visible-variables" file="scss/_variables.scss" >}}
 
-Each component then specifies its own visible focus style when needed, for example [carousels]({{< docsref "/components/carousel#with-indicators" >}}).
+<!--Each component then specifies its own visible focus style when needed, for example [carousels]({{< docsref "/components/carousel#with-indicators" >}}).
 
 {{< scss-docs name="focus-visible-carousel" file="scss/_carousel.scss" >}}-->
 
@@ -80,11 +80,11 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 {{< scss-docs name="scroll-offset" file="scss/_reboot.scss" >}}-->
 
-<!--### Minimum target size
+### Minimum target size
 
-OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
+OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.2 "Target Size" Success Criterion (2.5.8)](https://www.w3.org/TR/WCAG/#target-size-minimum)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
-{{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}-->
+{{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
 
 ### Maximum line length
 
