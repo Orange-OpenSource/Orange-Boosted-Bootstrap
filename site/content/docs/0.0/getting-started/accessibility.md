@@ -26,9 +26,9 @@ Because OUDS Web's components are purposely designed to be fairly generic, autho
 
 <!--### Color contrast
 
-Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)), particularly when used against a light background.
+Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-Unlike Bootstrap, in OUDS Web **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.-->
+Unlike Bootstrap, in OUDS Web **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.-->
 
 ### Visually hidden content
 
@@ -41,7 +41,7 @@ Content which should be visually hidden, but remain accessible to assistive tech
 </p>
 ```-->
 
-For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, in OUDS Web `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
+For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
 
 ```html
 <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
@@ -82,7 +82,7 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 ### Minimum target size
 
-OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.2 "Target Size" Success Criterion (2.5.8)](https://www.w3.org/TR/WCAG/#target-size-minimum)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
+OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
 
