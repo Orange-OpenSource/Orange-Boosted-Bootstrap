@@ -50,12 +50,12 @@ $utilities: map-merge(
       bootstrap-compatibility: true
     ),
     // scss-docs-end utils-opacity
-    // scss-docs-start utils-opacity-uds
-    "opacity-uds": (
+    // scss-docs-start utils-opacity-ouds
+    "opacity-ouds": (
       property: opacity,
       values: $opacities
     ),
-    // scss-docs-end utils-opacity-uds
+    // scss-docs-end utils-opacity-ouds
     // scss-docs-start utils-overflow
     "overflow": (
       property: overflow,

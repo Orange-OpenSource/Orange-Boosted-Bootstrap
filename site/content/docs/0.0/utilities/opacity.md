@@ -78,7 +78,7 @@ Opacity utilities are declared via Sass map and then generated with our utilitie
 
 Opacity utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
-{{< scss-docs name="utils-opacity-uds" file="scss/_utilities.scss" >}}
+{{< scss-docs name="utils-opacity-ouds" file="scss/_utilities.scss" >}}
 
 {{< bootstrap-compatibility false >}}
 
