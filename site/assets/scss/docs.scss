@@ -24,13 +24,8 @@
 
 // Load Bootstrap variables and mixins
 @import "../../../scss/functions";
-@import "../../../scss/tokens/raw";
-@import "../../../scss/tokens/semantic";
-@import "../../../scss/tokens/component";
 @import "../../../scss/variables";
-@import "../../../scss/maps";
 @import "../../../scss/mixins";
-@import "../../../scss/utilities";
 
 // fusv-disable
 $enable-grid-classes: false;
@@ -38,7 +33,6 @@ $enable-cssgrid: true;
 $enable-bootstrap-compatibility: true;
 // fusv-enable
 @import "../../../scss/grid";
-
 
 // Load docs components
 @import "variables";
@@ -64,6 +58,5 @@ $enable-bootstrap-compatibility: true;
 
 // OUDS mod
 @import "mixins";
-@import "../../../scss/utilities/api";
 @import "ouds-web";
 @import "tarteaucitron";

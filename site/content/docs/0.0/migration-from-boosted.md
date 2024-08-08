@@ -30,7 +30,29 @@ Let's start with the most obvious change you'll notice: the name. **Boosted is n
   - `boosted.js` → `ouds-web.js`
   - `boosted.min.js` → `ouds-web.min.js`
 
-## Fonts
+If you need the utilities from Bootstrap (the old ones from Boosted), we also provide `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+
+## Imports
+
+### Tokens
+
+OUDS Web now fully use the design tokens. If you were using the custom imports, you must import those in the import stack before importing the variables.
+
+<details>
+<summary>See the newly import stack</summary>
+
+```diff
+  @import "functions";
++ @import "tokens/raw";
++ @import "tokens/semantic";
++ @import "tokens/component";
+  @import "variables";
+  @import "variables-dark";
+  ...
+```
+</details>
+
+### Fonts
 
 OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
 
