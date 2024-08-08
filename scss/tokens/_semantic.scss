@@ -13,3 +13,30 @@ $ouds-opacities: (
   "opaque":      $ouds-opacity-900
 ) !default;
 // scss-docs-end ouds-opacities-variables-maps
+
+// Border
+
+$ouds-border-widths: (
+  "none":                        $ouds-border-width-0,
+  "default":                     $ouds-border-width-25,
+  "thin":                        $ouds-border-width-25,
+  "thick":                       $ouds-border-width-50,
+  "thicker":                     $ouds-border-width-75,
+  "thickest":                    $ouds-border-width-100,
+  "interactive-primary-focus":   $ouds-border-width-100
+) !default;
+
+$ouds-border-radiuses: (
+  "none":    $ouds-border-radius-0,
+  "default": $ouds-border-radius-0,
+  "short":   $ouds-border-radius-75,
+  "medium":  $ouds-border-radius-150,
+  "tall":    $ouds-border-radius-300,
+  "pill":    $ouds-border-radius-9999,
+  "circle":  50%
+) !default;
+
+$ouds-border-styles: (
+  "solid":  $ouds-border-style-solid,
+  "drag": $ouds-border-style-dashed
+) !default;

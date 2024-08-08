@@ -186,7 +186,13 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: $border-widths
+      values: $border-widths,
+      bootstrap-compatibility: true
+    ),
+    "ouds-border-width": (
+      property: border-width,
+      class: border,
+      values: $ouds-border-widths
     ),
     "border-opacity": (
       css-var: true,
