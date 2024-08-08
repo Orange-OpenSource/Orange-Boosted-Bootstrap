@@ -96,12 +96,12 @@ As reference, here are our primary CDN links.
 | JS | `{{< param "cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
-<!--You can also use the CDN to fetch any of our [additional builds listed in the Contents page]({{< docsref "/getting-started/contents" >}}).-->
+You can also use the CDN to fetch any of our [additional builds listed in the Contents page]({{< docsref "/getting-started/contents" >}}).
 
 ## Next steps
 
 - Read a bit more about some [important global environment settings](#important-globals) that OUDS Web utilizes.
-- Read about what's included in OUDS Web<!-- in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below-->.
+- Read about what's included in OUDS Web in our [contents section]({{< docsref "/getting-started/contents/" >}})<!-- and the list of [components that require JavaScript](#js-components) below-->.
 <!--- Need a little more power? Consider building with OUDS Web by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).-->
 <!--- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.-->
 
