@@ -15,7 +15,7 @@ Once downloaded, unzip the compressed folder and you'll see something like this:
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
 ```text
-@ouds/web/
+ouds-web/
 ├── css/
 │   ├── ouds-web-grid.css
 │   ├── ouds-web-grid.css.map
@@ -76,7 +76,7 @@ OUDS Web includes a handful of options for including some or all of our compiled
 | `ouds-web.css`<br> `ouds-web.min.css`<br> `ouds-web.rtl.css`<br> `ouds-web.rtl.min.css` | Included | Included | Included | Included |
 | `ouds-web-grid.css`<br> `ouds-web-grid.rtl.css`<br> `ouds-web-grid.min.css`<br> `ouds-web-grid.rtl.min.css` | <!--[Only grid system]({{< docsref "/layout/grid" >}})-->— | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
 | `ouds-web-utilities.css`<br> `ouds-web-utilities.rtl.css`<br> `ouds-web-utilities.min.css`<br> `ouds-web-utilities.rtl.min.css` | — | — | — | Included |
-| `ouds-web-reboot.css`<br> `ouds-web-reboot.rtl.css`<br> `ouds-web-reboot.min.css`<br> `ouds-web-reboot.rtl.min.css` | — | <!--[Only Reboot]({{< docsref "/content/reboot" >}})--> | — | — |
+| `ouds-web-reboot.css`<br> `ouds-web-reboot.rtl.css`<br> `ouds-web-reboot.min.css`<br> `ouds-web-reboot.rtl.min.css` | — | <!--[Only Reboot]({{< docsref "/content/reboot" >}})-->— | — | — |
 {{< /bs-table >}}
 
 ### JS files
@@ -95,7 +95,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 The OUDS Web source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
-@ouds/web/
+ouds-web/
 ├── dist/
 │   ├── css/
 │   └── js/
