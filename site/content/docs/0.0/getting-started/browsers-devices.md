@@ -14,7 +14,7 @@ OUDS Web supports the **latest, stable releases** of all major browsers and plat
 
 Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, OUDS Web should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
 
-You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc):
+You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/.browserslistrc):
 
 ```text
 {{< rf.inline >}}
