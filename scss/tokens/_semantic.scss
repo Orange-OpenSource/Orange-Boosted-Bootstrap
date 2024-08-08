@@ -16,6 +16,7 @@ $ouds-opacities: (
 
 // Border
 
+// scss-docs-start ouds-borders-variables-maps
 $ouds-border-widths: (
   "none":                        $ouds-border-width-0,
   "default":                     $ouds-border-width-25,
@@ -23,7 +24,7 @@ $ouds-border-widths: (
   "thick":                       $ouds-border-width-50,
   "thicker":                     $ouds-border-width-75,
   "thickest":                    $ouds-border-width-100,
-  "interactive-primary-focus":   $ouds-border-width-100
+  "interactive-primary-focus":   $ouds-border-width-100 // do we add this here, I don't think we need it as a utility class
 ) !default;
 
 $ouds-border-radiuses: (
@@ -40,3 +41,4 @@ $ouds-border-styles: (
   "solid":  $ouds-border-style-solid,
   "drag": $ouds-border-style-dashed
 ) !default;
+// scss-docs-end ouds-borders-variables-maps
