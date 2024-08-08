@@ -19,7 +19,7 @@ $ouds-opacity-900: 1 !default;
 // scss-docs-end ouds-opacities-variables
 
 // Border
-
+// scss-docs-start ouds-borders-variables
 $ouds-border-base:      4px !default;
 $ouds-border-width-0:   0 !default;
 $ouds-border-width-25:  $ouds-border-base * .25 !default;
@@ -47,3 +47,4 @@ $ouds-border-style-none:   none !default;
 $ouds-border-style-solid:  solid !default;
 $ouds-border-style-dashed: dashed !default;
 $ouds-border-style-dotted: dotted !default;
+// scss-docs-end ouds-borders-variables
