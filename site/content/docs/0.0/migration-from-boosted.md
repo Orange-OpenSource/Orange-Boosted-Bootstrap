@@ -104,22 +104,22 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$opacity-0</code></li>
-      <li><code>$opacity-100</code></li>
-      <li><code>$opacity-200</code></li>
-      <li><code>$opacity-300</code></li>
-      <li><code>$opacity-400</code></li>
-      <li><code>$opacity-500</code></li>
-      <li><code>$opacity-600</code></li>
-      <li><code>$opacity-700</code></li>
-      <li><code>$opacity-800</code></li>
-      <li><code>$opacity-900</code></li>
+      <li><code>$ouds-opacity-0</code></li>
+      <li><code>$ouds-opacity-100</code></li>
+      <li><code>$ouds-opacity-200</code></li>
+      <li><code>$ouds-opacity-300</code></li>
+      <li><code>$ouds-opacity-400</code></li>
+      <li><code>$ouds-opacity-500</code></li>
+      <li><code>$ouds-opacity-600</code></li>
+      <li><code>$ouds-opacity-700</code></li>
+      <li><code>$ouds-opacity-800</code></li>
+      <li><code>$ouds-opacity-900</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
-      <li><code>$opacities</code></li>
+      <li><code>$ouds-opacities</code></li>
     </ul>
   </details>

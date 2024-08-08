@@ -3,13 +3,13 @@
 
 // Opacity
 
-// scss-docs-start opacities-variables-maps
-$opacities: (
-  "transparent": $opacity-0,
-  "weaker":      $opacity-100,
-  "weak":        $opacity-300,
-  "medium":      $opacity-500,
-  "emphasis":    $opacity-700,
-  "opaque":      $opacity-900
+// scss-docs-start ouds-opacities-variables-maps
+$ouds-opacities: (
+  "transparent": $ouds-opacity-0,
+  "weaker":      $ouds-opacity-100,
+  "weak":        $ouds-opacity-300,
+  "medium":      $ouds-opacity-500,
+  "emphasis":    $ouds-opacity-700,
+  "opaque":      $ouds-opacity-900
 ) !default;
-// scss-docs-end opacities-variables-maps
+// scss-docs-end ouds-opacities-variables-maps
