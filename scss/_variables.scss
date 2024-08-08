@@ -441,7 +441,7 @@ $enable-negative-margins:         false !default;
 $enable-deprecation-messages:     false !default;
 $enable-important-utilities:      true !default;
 $enable-fixed-header:             true !default; // OUDS mod: used to apply scroll-padding-top
-$enable-bootstrap-compatibility:  false !default; // OUDS mod: used to apply Bootstrap compatibility naming
+$enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce Bootstrap compatibility
 
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
