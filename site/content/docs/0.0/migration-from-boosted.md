@@ -125,13 +125,9 @@ Technically, it means that you can get rid of the following things:
     <ul>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
-      <li><code>$ouds-opacity-200</code></li>
       <li><code>$ouds-opacity-300</code></li>
-      <li><code>$ouds-opacity-400</code></li>
       <li><code>$ouds-opacity-500</code></li>
-      <li><code>$ouds-opacity-600</code></li>
       <li><code>$ouds-opacity-700</code></li>
-      <li><code>$ouds-opacity-800</code></li>
       <li><code>$ouds-opacity-900</code></li>
     </ul>
   </details>
