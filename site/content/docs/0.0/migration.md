@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-## v0.0.2
+## v0.0.3
 
 ### Utilities
 
