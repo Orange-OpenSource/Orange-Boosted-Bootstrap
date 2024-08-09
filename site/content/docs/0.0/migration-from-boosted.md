@@ -32,27 +32,7 @@ Let's start with the most obvious change you'll notice: the name. **Boosted is n
 
 If you need the utilities from Bootstrap (the old ones from Boosted), we also provide `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
 
-## Imports
-
-### Tokens
-
-OUDS Web now fully use the design tokens. If you were using the custom imports, you must import those in the import stack before importing the variables.
-
-<details>
-<summary>See the newly import stack</summary>
-
-```diff
-  @import "functions";
-+ @import "tokens/raw";
-+ @import "tokens/semantic";
-+ @import "tokens/component";
-  @import "variables";
-  @import "variables-dark";
-  ...
-```
-</details>
-
-### Fonts
+## Fonts
 
 OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
 
@@ -83,6 +63,22 @@ Technically, it means that you can get rid of the following things:
 ## CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
+
+- <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
+
+  <details class="mb-3">
+  <summary>See the new import stack</summary>
+
+  ```diff
+    @import "functions";
+  + @import "tokens/raw";
+  + @import "tokens/semantic";
+  + @import "tokens/component";
+    @import "variables";
+    @import "variables-dark";
+    // etc
+  ```
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>

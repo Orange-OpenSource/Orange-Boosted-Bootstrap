@@ -21,6 +21,22 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
 
+- <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
+
+  <details class="mb-3">
+  <summary>See the new import stack</summary>
+
+  ```diff
+    @import "functions";
+  + @import "tokens/raw";
+  + @import "tokens/semantic";
+  + @import "tokens/component";
+    @import "variables";
+    @import "variables-dark";
+    // etc
+  ```
+  </details>
+
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
