@@ -186,7 +186,8 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: $border-widths
+      values: $border-widths,
+      bootstrap-compatibility: true
     ),
     "border-opacity": (
       css-var: true,
@@ -197,9 +198,22 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-borders
+    // scss-docs-start utils-borders-ouds
+    "border-width-ouds": (
+      property: border-width,
+      class: border,
+      values: $ouds-border-widths
+    ),
+    "border-style-ouds": (
+      property: border-style,
+      class: border,
+      values: $ouds-border-styles
+    ),
+    // scss-docs-end utils-borders-ouds
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
@@ -738,7 +752,8 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-top": (
       property: border-top-left-radius border-top-right-radius,
@@ -753,7 +768,8 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-end": (
       property: border-top-right-radius border-bottom-right-radius,
@@ -768,7 +784,8 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
@@ -783,7 +800,8 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-start": (
       property: border-bottom-left-radius border-top-left-radius,
@@ -798,9 +816,37 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-border-radius
+    // scss-docs-start utils-border-radius-ouds
+    "rounded-ouds": (
+      property: border-radius,
+      class: rounded,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-top-ouds": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-end-ouds": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-bottom-ouds": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-start-ouds": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: $ouds-border-radiuses
+    ),
+    // scss-docs-end utils-border-radius-ouds
     // scss-docs-start utils-visibility
     "visibility": (
       property: visibility,

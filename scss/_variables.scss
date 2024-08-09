@@ -611,27 +611,27 @@ $container-padding-x: $grid-gutter-width !default;
 // Define common padding and border radius sizes and more.
 
 // scss-docs-start border-variables
-$border-width:                .125rem !default;
+$border-width:                map-get($ouds-border-widths, "default") !default;
 $border-widths: (
-  1: $border-width * .5,
-  2: $border-width,
-  3: $border-width * 1.5,
-  4: $border-width * 2,
-  5: $border-width * 2.5
+  1: map-get($ouds-border-widths, "thin"),
+  2: map-get($ouds-border-widths, "thick"),
+  3: map-get($ouds-border-widths, "thicker"),
+  4: map-get($ouds-border-widths, "thickest"),
+  5: map-get($ouds-border-widths, "thickest") * 1.5 // OUDS mod : arbitrary value for compatibility
 ) !default;
-$border-style:                solid !default;
+$border-style:                $ouds-border-style-default !default;
 $border-color:                $black !default; // OUDS mod: instead of `$gray-300`
 $border-color-subtle:         $gray-500 !default; // OUDS mod
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius:               map-get($ouds-border-radiuses, "default") !default;
+$border-radius-sm:            map-get($ouds-border-radiuses, "short") !default;
+$border-radius-lg:            map-get($ouds-border-radiuses, "medium") !default;
+$border-radius-xl:            map-get($ouds-border-radiuses, "tall") !default;
+$border-radius-xxl:           map-get($ouds-border-radiuses, "tall") * 2 !default; // OUDS mod : arbitrary value for compatibility
+$border-radius-pill:          map-get($ouds-border-radiuses, "pill") !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in Bootstrap v5.3.0
