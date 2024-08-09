@@ -62,6 +62,14 @@ Within the download you'll find the following directories and files, logically g
   ```text
   ouds-web/
   ├── css/
+  │   ├── ouds-web-bootstrap.css
+  │   ├── ouds-web-bootstrap.css.map
+  │   ├── ouds-web-bootstrap.min.css
+  │   ├── ouds-web-bootstrap.min.css.map
+  │   ├── ouds-web-bootstrap.rtl.css
+  │   ├── ouds-web-bootstrap.rtl.css.map
+  │   ├── ouds-web-bootstrap.rtl.min.css
+  │   ├── ouds-web-bootstrap.rtl.min.css.map
   │   ├── ouds-web-grid.css
   │   ├── ouds-web-grid.css.map
   │   ├── ouds-web-grid.min.css
@@ -112,6 +120,7 @@ Within the download you'll find the following directories and files, logically g
 
 We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
+We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-web-bootstrap.min.*`) enforcing Bootstrap compatibility.
 
 ## Bugs and feature requests
 

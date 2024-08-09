@@ -1,0 +1,16 @@
+{{- $markdown := .Get 0 | default true -}}
+
+<details class="mb-4">
+  <summary class="py-2">Bootstrap <span class="tag tag-sm float-end"><code class="text-body">$enable-bootstrap-compatibility: true</code></span></summary>
+
+  <div class="alert alert-info alert-sm mt-2 mb-4" role="alert">
+    <span class="alert-icon"><span class="visually-hidden">Info</span></span>
+    <p>This part is enabled only with <code>$enable-bootstrap-compatibility</code>.</p>
+  </div>
+
+  {{- if $markdown -}}
+    {{ .Inner | markdownify }}
+  {{- else -}}
+    {{ .Inner }}
+  {{- end -}}
+</details>

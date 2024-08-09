@@ -17,6 +17,14 @@ Once downloaded, unzip the compressed folder and you'll see something like this:
 ```text
 ouds-web/
 ├── css/
+│   ├── ouds-web-bootstrap.css
+│   ├── ouds-web-bootstrap.css.map
+│   ├── ouds-web-bootstrap.min.css
+│   ├── ouds-web-bootstrap.min.css.map
+│   ├── ouds-web-bootstrap.rtl.css
+│   ├── ouds-web-bootstrap.rtl.css.map
+│   ├── ouds-web-bootstrap.rtl.min.css
+│   ├── ouds-web-bootstrap.rtl.min.css.map
 │   ├── ouds-web-grid.css
 │   ├── ouds-web-grid.css.map
 │   ├── ouds-web-grid.min.css
@@ -66,6 +74,8 @@ ouds-web/
 
 This is the most basic form of OUDS Web: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
+We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-web-bootstrap.min.*`) enforcing Bootstrap compatibility.
+
 ### CSS files
 
 OUDS Web includes a handful of options for including some or all of our compiled CSS.
@@ -74,6 +84,7 @@ OUDS Web includes a handful of options for including some or all of our compiled
 | CSS files | Layout | Content | Components | Utilities |
 | --- | --- | --- | --- | --- |
 | `ouds-web.css`<br> `ouds-web.min.css`<br> `ouds-web.rtl.css`<br> `ouds-web.rtl.min.css` | Included | Included | Included | Included |
+| `ouds-web-bootstrap.css`<br> `ouds-web-bootstrap.min.css`<br> `ouds-web-bootstrap.rtl.css`<br> `ouds-web-bootstrap.rtl.min.css` | Included | Included | Included | Included (with Bootstrap utilities) |
 | `ouds-web-grid.css`<br> `ouds-web-grid.rtl.css`<br> `ouds-web-grid.min.css`<br> `ouds-web-grid.rtl.min.css` | <!--[Only grid system]({{< docsref "/layout/grid" >}})-->— | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
 | `ouds-web-utilities.css`<br> `ouds-web-utilities.rtl.css`<br> `ouds-web-utilities.min.css`<br> `ouds-web-utilities.rtl.min.css` | — | — | — | Included |
 | `ouds-web-reboot.css`<br> `ouds-web-reboot.rtl.css`<br> `ouds-web-reboot.min.css`<br> `ouds-web-reboot.rtl.min.css` | — | <!--[Only Reboot]({{< docsref "/content/reboot" >}})-->— | — | — |
