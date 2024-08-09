@@ -53,7 +53,9 @@
   }
 
   > details {
-    padding: 5px 10px; // static even when zoomed
+    padding: 0 10px; // static even when zoomed
+    font-size: 1rem;
+    line-height: 1.5;
     border: var(--bs-border-color) dashed calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
   }
   // End mod

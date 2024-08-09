@@ -30,6 +30,8 @@ Let's start with the most obvious change you'll notice: the name. **Boosted is n
   - `boosted.js` → `ouds-web.js`
   - `boosted.min.js` → `ouds-web.min.js`
 
+From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+
 ## Fonts
 
 OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
@@ -51,7 +53,33 @@ Technically, it means that you can get rid of the following things:
 
 - <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
+## Utilities
+
+### Opacity
+
+- <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
+
 ## CSS and Sass variables
+
+- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc.
+
+- <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
+
+  <details class="mb-3">
+  <summary>See the new import stack</summary>
+
+  ```diff
+    @import "functions";
+  + @import "tokens/raw";
+  + @import "tokens/semantic";
+  + @import "tokens/component";
+    @import "variables";
+    @import "variables-dark";
+    // etc
+  ```
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
@@ -89,5 +117,24 @@ Technically, it means that you can get rid of the following things:
       <li><code>--bs-btn-close-color</code></li>
       <li><code>--bs-btn-close-disabled-color</code></li>
       <li><code>--bs-btn-close-hover-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-opacity-0</code></li>
+      <li><code>$ouds-opacity-100</code></li>
+      <li><code>$ouds-opacity-300</code></li>
+      <li><code>$ouds-opacity-500</code></li>
+      <li><code>$ouds-opacity-700</code></li>
+      <li><code>$ouds-opacity-900</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$ouds-opacities</code></li>
     </ul>
   </details>

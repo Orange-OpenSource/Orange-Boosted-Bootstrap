@@ -31,10 +31,10 @@
   pages:
     - title: Overview
       draft: true
+    - title: Custom libraries
     - title: Sass
       draft: true
     - title: Options
-      draft: true
     - title: Color palette
       draft: true
     - title: Color theme
@@ -218,7 +218,6 @@
       draft: true
     - title: Object fit
     - title: Opacity
-      draft: true
     - title: Overflow
     - title: Position
     - title: Shadows

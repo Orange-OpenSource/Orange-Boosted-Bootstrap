@@ -1,0 +1,136 @@
+@import "../../functions";
+@import "../../tokens/raw";
+@import "../../tokens/semantic";
+@import "../../tokens/component";
+@import "../../variables";
+@import "../../mixins";
+
+$utilities: ();
+
+@include describe("customize/ouds-web-bootstrap") {
+  @include it("generates OUDS and Bootstrap utilities") {
+    $enable-bootstrap-compatibility: false !global;
+
+    $utilities: (
+      "opacity": (
+        property: opacity,
+        values: (
+          0: 0,
+          25: .25,
+          50: .5,
+          75: .75,
+          100: 1,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "opacity-ouds": (
+        property: opacity,
+        values: $ouds-opacities
+      ),
+    ) !global;
+
+    @include assert() {
+      @include output() {
+        @import "../../utilities/api";
+      }
+      @include expect() {
+        .opacity-transparent {
+          opacity: 0 !important;
+        }
+
+        .opacity-weaker {
+          opacity: .04 !important;
+        }
+
+        .opacity-weak {
+          opacity: .16 !important;
+        }
+
+        .opacity-medium {
+          opacity: .32 !important;
+        }
+
+        .opacity-emphasis {
+          opacity: .64 !important;
+        }
+
+        .opacity-opaque {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  @include it("generates only OUDS utilities") {
+    $enable-bootstrap-compatibility: true !global;
+
+    $utilities: (
+      "opacity": (
+        property: opacity,
+        values: (
+          0: 0,
+          25: .25,
+          50: .5,
+          75: .75,
+          100: 1,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "opacity-ouds": (
+        property: opacity,
+        values: $ouds-opacities
+      ),
+    ) !global;
+
+    @include assert() {
+      @include output() {
+        @import "../../utilities/api"; // stylelint-disable-line no-duplicate-at-import-rules
+      }
+      @include expect() {
+        .opacity-0 {
+          opacity: 0 !important;
+        }
+
+        .opacity-25 {
+          opacity: .25 !important;
+        }
+
+        .opacity-50 {
+          opacity: .5 !important;
+        }
+
+        .opacity-75 {
+          opacity: .75 !important;
+        }
+
+        .opacity-100 {
+          opacity: 1 !important;
+        }
+
+        .opacity-transparent {
+          opacity: 0 !important;
+        }
+
+        .opacity-weaker {
+          opacity: .04 !important;
+        }
+
+        .opacity-weak {
+          opacity: .16 !important;
+        }
+
+        .opacity-medium {
+          opacity: .32 !important;
+        }
+
+        .opacity-emphasis {
+          opacity: .64 !important;
+        }
+
+        .opacity-opaque {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+}
