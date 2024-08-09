@@ -7,9 +7,7 @@ aliases:
   - "/docs/utilities/opacity/"
 ---
 
-The `opacity` property sets the opacity level for an element.
-
-The opacity level describes the semantic transparency level, where `opaque` is not transparent at all, `emphasis` to `weaker` are various levels of transparency, and `transparent` is completely transparent.
+The `opacity` property sets the opacity level for an element. The opacity level describes the semantic transparency level, where `opaque` is not transparent at all, `emphasis` to `weaker` are various levels of transparency, and `transparent` is completely transparent.
 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
@@ -32,9 +30,7 @@ Set the opacity of an element using `.opacity-{value}` utilities.
 ```
 
 {{< bootstrap-compatibility >}}
-The `opacity` property sets the opacity level for an element.
-
-The opacity level describes the transparency level, where `1` is not transparent at all, `.5` is 50% visible, and `0` is completely transparent.
+The `opacity` property sets the opacity level for an element. The opacity level describes the transparency level, where `1` is not transparent at all, `.5` is 50% visible, and `0` is completely transparent.
 
 Set the `opacity` of an element using `.opacity-{value}` utilities.
 
@@ -64,13 +60,13 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 
 ### Sass tokens
 
-Opacity tokens are generated via StyleDictionary as Sass variables.
+Opacity tokens as Sass variables.
 
 {{< scss-docs name="ouds-opacities-variables" file="scss/tokens/_raw.scss" >}}
 
 ### Sass maps
 
-Opacity utilities are declared via Sass map and then generated with our utilities API.
+Opacity utilities are declared via a Sass map and then generated with our utilities API.
 
 {{< scss-docs name="ouds-opacities-variables-maps" file="scss/tokens/_semantic.scss" >}}
 
