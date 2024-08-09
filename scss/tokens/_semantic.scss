@@ -24,8 +24,12 @@ $ouds-border-widths: (
   "thick":                       $ouds-border-width-50,
   "thicker":                     $ouds-border-width-75,
   "thickest":                    $ouds-border-width-100,
-  "interactive-primary-focus":   $ouds-border-width-100 // do we add this here, I don't think we need it as a utility class
 ) !default;
+
+// fusv-disable
+// following variable could be used by b-brand/countries libraries
+$ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
+// fusv-enable
 
 $ouds-border-radiuses: (
   "none":    $ouds-border-radius-0,
@@ -37,8 +41,10 @@ $ouds-border-radiuses: (
   "circle":  50%
 ) !default;
 
+$ouds-border-style-default: $ouds-border-style-solid !default;
+
 $ouds-border-styles: (
-  "solid":  $ouds-border-style-solid,
   "drag": $ouds-border-style-dashed
 ) !default;
+
 // scss-docs-end ouds-borders-variables-maps

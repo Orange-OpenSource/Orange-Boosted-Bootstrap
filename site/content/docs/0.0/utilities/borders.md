@@ -36,15 +36,6 @@ Or remove borders:
 <span class="border border-start-0"></span>
 {{< /example >}}
 
-## Style
-
-TODO : Not sure if we should provide a border-drag helper, maybe it should only be used in components ?
-
-{{< example class="bd-example-border-utils" >}}
-<span class="border border-solid"></span>
-<span class="border border-drag"></span>
-{{< /example >}}
-
 <!-- ## Color
 
 {{< callout info >}}
@@ -237,6 +228,18 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 <hr class="text-body-secondary">
 <hr>
 {{< /example >}}-->
+
+## Drag and drop
+
+Use the `.border-drag` utility to apply the border style for the drop zone.
+
+{{< callout danger >}}
+This utility must not be used in any other context than drag and drop.
+{{< /callout >}}
+
+{{< example class="bd-example-border-utils" >}}
+<span class="border border-drag"></span>
+{{< /example >}}
 
 ## CSS
 
