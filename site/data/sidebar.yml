@@ -31,7 +31,7 @@
   pages:
     - title: Overview
       draft: true
-    - title: Lib for Orange
+    - title: Custom libraries
     - title: Sass
       draft: true
     - title: Options
