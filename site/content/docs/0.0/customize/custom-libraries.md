@@ -4,7 +4,7 @@ title: Custom libraries
 description: Learn how to customize your library for your country/B-brand following the guide.
 group: customize
 aliases:
-  - "/docs/customize/lib-for-orange/"
+  - "/docs/customize/custom-libraries/"
 toc: true
 ---
 
