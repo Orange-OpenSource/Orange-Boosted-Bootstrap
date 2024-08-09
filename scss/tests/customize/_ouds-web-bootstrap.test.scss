@@ -7,7 +7,7 @@
 
 $utilities: ();
 
-@include describe("utilities/api") {
+@include describe("customize/ouds-web-bootstrap") {
   @include it("generates OUDS and Bootstrap utilities") {
     $enable-bootstrap-compatibility: false !global;
 
@@ -39,19 +39,19 @@ $utilities: ();
         }
 
         .opacity-weaker {
-          opacity: 0.04 !important;
+          opacity: .04 !important;
         }
 
         .opacity-weak {
-          opacity: 0.16 !important;
+          opacity: .16 !important;
         }
 
         .opacity-medium {
-          opacity: 0.32 !important;
+          opacity: .32 !important;
         }
 
         .opacity-emphasis {
-          opacity: 0.64 !important;
+          opacity: .64 !important;
         }
 
         .opacity-opaque {
@@ -84,7 +84,7 @@ $utilities: ();
 
     @include assert() {
       @include output() {
-        @import "../../utilities/api";
+        @import "../../utilities/api"; // stylelint-disable-line no-duplicate-at-import-rules
       }
       @include expect() {
         .opacity-0 {
@@ -92,15 +92,15 @@ $utilities: ();
         }
 
         .opacity-25 {
-          opacity: 0.25 !important;
+          opacity: .25 !important;
         }
 
         .opacity-50 {
-          opacity: 0.5 !important;
+          opacity: .5 !important;
         }
 
         .opacity-75 {
-          opacity: 0.75 !important;
+          opacity: .75 !important;
         }
 
         .opacity-100 {
@@ -112,19 +112,19 @@ $utilities: ();
         }
 
         .opacity-weaker {
-          opacity: 0.04 !important;
+          opacity: .04 !important;
         }
 
         .opacity-weak {
-          opacity: 0.16 !important;
+          opacity: .16 !important;
         }
 
         .opacity-medium {
-          opacity: 0.32 !important;
+          opacity: .32 !important;
         }
 
         .opacity-emphasis {
-          opacity: 0.64 !important;
+          opacity: .64 !important;
         }
 
         .opacity-opaque {
