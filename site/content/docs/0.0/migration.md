@@ -11,6 +11,10 @@ toc: true
 
 ## v0.0.3
 
+### Pre-compiled versions
+
+From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+
 ### Utilities
 
 #### Opacity
@@ -19,7 +23,8 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. It allows you to have the Bootstrap utilities (using `*-0, *-1, *-50, ...` in addition to the semantic names like `transparent, weak, weaker, ...`).
+- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc.
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
