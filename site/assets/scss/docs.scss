@@ -24,6 +24,9 @@
 
 // Load Bootstrap variables and mixins
 @import "../../../scss/functions";
+@import "../../../tokens/raw";
+@import "../../../tokens/semantic";
+@import "../../../tokens/component";
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
 
