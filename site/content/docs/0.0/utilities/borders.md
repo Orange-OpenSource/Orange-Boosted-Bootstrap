@@ -165,7 +165,7 @@ Or, choose from any of the `.border-opacity` utilities:
 
 Add classes to an element to easily round its corners.
 
-{{< bootstrap-compatibility >}}
+<!-- TODO : This example with default rounded value doesn't have any sens since the default value is 0. Do we keeo it ? -->
 
 {{< example >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" color="#999" >}}
@@ -173,11 +173,7 @@ Add classes to an element to easily round its corners.
 {{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
-{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
 {{< /example >}}
-
-{{< /bootstrap-compatibility >}}
 
 ### Sizes
 
@@ -191,6 +187,14 @@ Use the scaling classes for larger or smaller rounded corners. Sizes are `none`,
 {{< placeholder width="75" height="75" class="rounded-tall" title="Example tall rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
+{{< /example >}}
+
+{{< example class="bd-example-rounded-utils" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-short" title="Example small rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-medium" title="Example default left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-tall rounded-top-none" title="Example extra large bottom rounded image" color="#999" >}}
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

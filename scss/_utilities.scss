@@ -826,6 +826,26 @@ $utilities: map-merge(
       class: rounded,
       values: $ouds-border-radiuses
     ),
+    "rounded-top-ouds": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-end-ouds": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-bottom-ouds": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-start-ouds": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: $ouds-border-radiuses
+    ),
     // scss-docs-end utils-border-radius-ouds
     // scss-docs-start utils-visibility
     "visibility": (
