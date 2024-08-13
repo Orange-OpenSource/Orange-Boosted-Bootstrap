@@ -100,16 +100,16 @@ Consider our default `.border-success` utility.
 
 ```css
 .border-success {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+  -bs-border-opacity: 1;
+  border-color: rgba(var(-bs-success-rgb), var(-bs-border-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
 ### Example
 
-To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
+To change that opacity, override `-bs-border-opacity` via custom styles or inline styles.
 
 {{< example >}}
 <div class="border border-success p-2">This is default success border</div>
@@ -165,7 +165,7 @@ Or, choose from any of the `.border-opacity` utilities:
 
 Add classes to an element to easily round its corners.
 
-<!-- TODO : This example with default rounded value doesn't have any sens since the default value is 0. Do we keeo it ? -->
+<!-- TODO : This example with default rounded value doesn't have any sens since the default value is 0. Do we keep it ? -->
 
 {{< example >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" color="#999" >}}
