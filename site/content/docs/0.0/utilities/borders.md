@@ -88,13 +88,13 @@ These border color variants are just **examples illustrating the use of this col
   Changing border color and width
 </div>
 {{< /example >}}
-</details>
+</details>-->
 
 ## Opacity
 
 OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
-### How it works
+<!--### How it works
 
 Consider our default `.border-success` utility.
 

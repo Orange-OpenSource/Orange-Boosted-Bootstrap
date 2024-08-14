@@ -21,6 +21,7 @@ $ouds-opacity-900: 1 !default;
 // Border
 // scss-docs-start ouds-borders-variables
 $ouds-border-base:      4px !default; // px or rem for radius ?
+
 $ouds-border-width-0:   0 !default;
 $ouds-border-width-25:  $ouds-border-base * .25 !default;
 $ouds-border-width-50:  $ouds-border-base * .5 !default;
@@ -30,7 +31,7 @@ $ouds-border-width-100: $ouds-border-base !default;
 // $ouds-border-width-200: $ouds-border-base * 2 !default;
 
 $ouds-border-radius-0:    0 !default;
-//$ouds-border-radius-25:   $ouds-border-base * .25 !default;
+// $ouds-border-radius-25:   $ouds-border-base * .25 !default;
 // $ouds-border-radius-50:   $ouds-border-base * .5 !default;
 $ouds-border-radius-75:   $ouds-border-base * .75 !default;
 // $ouds-border-radius-100:  $ouds-border-base !default;
