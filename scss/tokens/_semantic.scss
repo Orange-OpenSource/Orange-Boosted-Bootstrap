@@ -18,8 +18,8 @@ $ouds-opacities: (
 
 // scss-docs-start ouds-borders-variables-maps
 $ouds-border-widths: (
-  null:       $ouds-border-width-25,
   "none":     $ouds-border-width-0,
+  "default":  $ouds-border-width-25,
   "thin":     $ouds-border-width-25,
   "thick":    $ouds-border-width-50,
   "thicker":  $ouds-border-width-75,
@@ -32,13 +32,13 @@ $ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
 // fusv-enable
 
 $ouds-border-radiuses: (
-  null:     $ouds-border-radius-0,
-  "none":   $ouds-border-radius-0,
-  "short":  $ouds-border-radius-75,
-  "medium": $ouds-border-radius-150,
-  "tall":   $ouds-border-radius-300,
-  "pill":   $ouds-border-radius-9999,
-  "circle": 50%
+  "none":     $ouds-border-radius-0,
+  "default":  $ouds-border-radius-0,
+  "short":    $ouds-border-radius-75,
+  "medium":   $ouds-border-radius-150,
+  "tall":     $ouds-border-radius-300,
+  "pill":     $ouds-border-radius-9999,
+  "circle":   50%
 ) !default;
 
 $ouds-border-style-default: $ouds-border-style-solid !default;
