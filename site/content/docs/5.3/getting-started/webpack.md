@@ -295,7 +295,6 @@ Then instantiate and use the plugin in the Webpack configuration:
  const autoprefixer = require('autoprefixer')
  const HtmlWebpackPlugin = require('html-webpack-plugin')
 +const miniCssExtractPlugin = require('mini-css-extract-plugin')
-
  module.exports = {
    mode: 'development',
 @@ -17,7 +18,8 @@ module.exports = {
