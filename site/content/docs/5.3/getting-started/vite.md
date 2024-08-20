@@ -142,7 +142,7 @@ With dependencies installed and our project folder ready for us to start coding,
    npm start
    ```
 
-   ![Unbranded web page displaying a title 'Hello, Boosted and Vite!' and a default button](/assets/img/guides/vite-dev-server.png)
+   ![Unbranded web page displaying a titl 'Hello, Boosted and Vite!' and a default button](/assets/img/guides/vite-dev-server.png)
 
 In the next and final section to this guide, we’ll import all of Boosted’s CSS and JavaScript.
 
