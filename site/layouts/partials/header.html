@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://{{ .Site.Params.algolia.appId | lower }}-dsn.algolia.net" crossorigin>
 {{- end }}
 
-<title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.subtitle | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title | markdownify }} home · {{ .Site.Params.subtitle | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
 
 {{ with .Params.robots -}}
 <meta name="robots" content="{{ . }}">
