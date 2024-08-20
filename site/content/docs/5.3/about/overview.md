@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: About
+title: About Boosted
 description: Boosted is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud Boosted maintainers and contributors.
 group: about
 aliases:
