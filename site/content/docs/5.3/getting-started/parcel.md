@@ -121,7 +121,7 @@ With dependencies installed and our project folder ready for us to start coding,
    npm start
    ```
 
-   ![Parcel dev server running](/assets/img/guides/parcel-dev-server.png)
+   ![Unbranded web page displaying a title 'Hello, Boosted and Parcel!' and a default button](/assets/img/guides/parcel-dev-server.png)
 
 In the next and final section to this guide, we'll import all of Boosted's CSS and JavaScript.
 
@@ -169,7 +169,7 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
 4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Parcel dev server running with Boosted](/assets/img/guides/parcel-dev-server-boosted.png)
+   ![Boosted branded web page displaying a title 'Hello, Boosted and Parcel!' and an orange primary button](/assets/img/guides/parcel-dev-server-boosted.png)
 
    Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
 
