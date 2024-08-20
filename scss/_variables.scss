@@ -2073,7 +2073,7 @@ $thumbnail-box-shadow:              var(--#{$prefix}box-shadow-sm) !default;
 
 // scss-docs-start figure-variables
 $figure-caption-font-size:          $small-font-size !default;
-$figure-caption-color:              $gray-900 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 // scss-docs-end figure-variables
 
 // Boosted mod
