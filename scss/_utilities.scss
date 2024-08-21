@@ -138,14 +138,16 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-top": (
       property: border-top,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-end": (
       property: border-right,
@@ -153,14 +155,16 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-bottom": (
       property: border-bottom,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-start": (
       property: border-left,
@@ -168,7 +172,8 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-color": (
       property: border-color,
@@ -203,6 +208,43 @@ $utilities: map-merge(
     ),
     // scss-docs-end utils-borders
     // scss-docs-start utils-borders-ouds
+    "border-ouds": (
+      property: border,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-top-ouds": (
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-end-ouds": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-bottom-ouds": (
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-start-ouds": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
     "border-width-ouds": (
       property: border-width,
       class: border,
@@ -212,6 +254,11 @@ $utilities: map-merge(
       property: border-style,
       class: border,
       values: $ouds-border-styles
+    ),
+    "border-opacity-ouds": (
+      css-var: true,
+      class: border-opacity,
+      values: $ouds-border-opacities
     ),
     // scss-docs-end utils-borders-ouds
     // Sizing utilities

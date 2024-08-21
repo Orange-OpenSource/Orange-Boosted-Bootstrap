@@ -5,7 +5,7 @@
 
 // Opacity
 
-// scss-docs-start ouds-opacities-variables
+// scss-docs-start ouds-raw-opacity
 $ouds-opacity-0:   0 !default;
 $ouds-opacity-100: .04 !default;
 // $ouds-opacity-200: .08 !default;
@@ -16,11 +16,11 @@ $ouds-opacity-500: .32 !default;
 $ouds-opacity-700: .64 !default;
 // $ouds-opacity-800: .88 !default;
 $ouds-opacity-900: 1 !default;
-// scss-docs-end ouds-opacities-variables
+// scss-docs-end ouds-raw-opacity
 
 // Border
-// scss-docs-start ouds-borders-variables
-$ouds-border-base:      4px !default; // px or rem for radius ?
+// scss-docs-start ouds-raw-border
+$ouds-border-base:      4px !default;
 
 $ouds-border-width-0:   0 !default;
 $ouds-border-width-25:  $ouds-border-base * .25 !default;
@@ -48,4 +48,4 @@ $ouds-border-radius-9999: 2000px !default;
 $ouds-border-style-solid:  solid !default;
 $ouds-border-style-dashed: dashed !default;
 // $ouds-border-style-dotted: dotted !default;
-// scss-docs-end ouds-borders-variables
+// scss-docs-end ouds-raw-border

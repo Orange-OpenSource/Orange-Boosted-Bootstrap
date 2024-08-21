@@ -29,12 +29,24 @@ Add borders to custom elements:
 Or remove borders:
 
 {{< example class="bd-example-border-utils" >}}
+<span class="border border-none"></span>
+<span class="border border-top-none"></span>
+<span class="border border-end-none"></span>
+<span class="border border-bottom-none"></span>
+<span class="border border-start-none"></span>
+{{< /example >}}
+
+{{< bootstrap-compatibility >}}
+
+{{< example class="bd-example-border-utils" >}}
 <span class="border border-0"></span>
 <span class="border border-top-0"></span>
 <span class="border border-end-0"></span>
 <span class="border border-bottom-0"></span>
 <span class="border border-start-0"></span>
 {{< /example >}}
+
+{{< /bootstrap-compatibility >}}
 
 <!-- ## Color
 
@@ -61,9 +73,9 @@ Here is a list of these extra classes:
 {{< border-subtle.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 - `.border-{{ .name }}-subtle`
-  {{- end -}}
-  {{< /border-subtle.inline >}}
-  {{< /callout >}}
+{{- end -}}
+{{< /border-subtle.inline >}}
+{{< /callout >}}
 
 Or modify the default `border-color` of a component:
 
@@ -90,9 +102,13 @@ These border color variants are just **examples illustrating the use of this col
 {{< /example >}}
 </details>-->
 
-<!--## Opacity
+## Opacity
 
-OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+{{< callout danger >}}
+Within **OUDS Web context**, you **should not** be using any opacity effect on borders inside your interfaces.<!-- If you need to make a border disappear, please make sure to use the [`.border-transparent` utility](#color).-->
+{{< /callout >}}
+
+<!--OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works
 
@@ -105,9 +121,9 @@ Consider our default `.border-success` utility.
 }
 ```
 
-We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.-->
 
-### Example
+<!--### Example
 
 To change that opacity, override `-bs-border-opacity` via custom styles or inline styles.
 
@@ -141,8 +157,9 @@ Or, choose from any of the `.border-opacity` utilities:
 ## Width
 
 {{< example class="bd-example-border-utils" >}}
-<span class="border border-none"></span>
 <span class="border border-default"></span>
+<span class="border border-none"></span>
+<span class="border border-thin"></span>
 <span class="border border-thick"></span>
 <span class="border border-thicker"></span>
 <span class="border border-thickest"></span>
@@ -165,23 +182,21 @@ Or, choose from any of the `.border-opacity` utilities:
 
 Add classes to an element to easily round its corners.
 
-<!-- TODO : This example with default rounded value doesn't have any sens since the default value is 0. Do we keep it ? -->
-
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-tall" title="Example rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-top-tall" title="Example top rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end-tall" title="Example right rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-tall" title="Example bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-tall" title="Example left rounded image" color="#999" >}}
 {{< /example >}}
 
 ### Sizes
 
-Use the scaling classes for larger or smaller rounded corners. Sizes are `none`, `default`, `short`, `medium`, `tall`, `circle` and `pill`, and can be configured by modifying the utilities API.
+Use the scaling classes for larger or smaller rounded corners. Sizes are `none`, `short`, `medium`, `tall`, `circle` and `pill`, and can be configured by modifying the utilities API.
 
 {{< example class="bd-example-rounded-utils" >}}
+{{< placeholder width="75" height="75" class="rounded" title="Example default rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-none" title="Example non-rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-default" title="Example default rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-short" title="Example short rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-medium" title="Example medium rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-tall" title="Example tall rounded image" color="#999" >}}
@@ -235,7 +250,7 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 
 ## Drag and drop
 
-Use the `.border-drag` utility to apply the border style for the drop zone.
+Use the `.border-drag` utility to apply the border style for a drop zone.
 
 {{< callout danger >}}
 This utility must not be used in any other context than drag and drop.
@@ -247,33 +262,43 @@ This utility must not be used in any other context than drag and drop.
 
 ## CSS
 
-### Variables
+<!--### Variables
+
+{{< bootstrap-compatibility false >}}
 
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 
+{{< /bootstrap-compatibility >}}-->
+
 ### Sass tokens
 
-Border token are generated via StyleDictionary as Sass variables.
+#### Raw tokens
 
-{{< scss-docs name="ouds-borders-variables" file="scss/tokens/_raw.scss" >}}
+Border raw tokens<!-- generated via StyleDictionary--> as Sass variables. **Not to be used as-is**.
 
-<!--{{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
+{{< scss-docs name="ouds-raw-border" file="scss/tokens/_raw.scss" >}}
+
+#### Semantic tokens
+
+Border semantic tokens as Sass maps and variables. Border utilities are declared via Sass maps and then generated with our utilities API.
+
+{{< scss-docs name="ouds-sem-border" file="scss/tokens/_semantic.scss" >}}
+
+### Sass variables
+
+{{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
+<!--Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}-->
 
-### Sass maps
+<!--### Sass maps
 
-Borders utilities are declared via Sass map and then generated with our utilities API.
-
-{{< scss-docs name="ouds-borders-variables-maps" file="scss/tokens/_semantic.scss" >}}
-
-<!--Color mode adaptive border colors are also available as a Sass map:
+Color mode adaptive border colors are also available as a Sass map:
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 

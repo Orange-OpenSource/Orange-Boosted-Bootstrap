@@ -17,6 +17,23 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 
 ### Utilities
 
+#### Border
+
+- <span class="badge text-bg-success">New</span> Border operative utilities: `.border`, `.border-none`, `.border-top`, `.border-top-none`, `.border-bottom`, `.border-bottom-none`, `.border-start`, `.border-start-none`, `.border-end` and `.border-end-none`.
+
+- <span class="badge text-bg-success">New</span> Border width utilities: `.border-default`, `.border-none`, `.border-thin`, `.border-thick`, `.border-thicker` and `.border-thickest`.
+
+- <span class="badge text-bg-success">New</span> Border radius utilities with all sizes:
+  - Default: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
+  - None: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
+  - Short: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
+  - Medium: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - Tall: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+  - Circle: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
+  - Pill: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
+
+- <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
+
 #### Opacity
 
 - <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
@@ -24,7 +41,7 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 ### CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
-  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc.
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities using numbers. You will only have the semantic OUDS Web utilities words instead.
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
@@ -45,6 +62,20 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$ouds-border-base</code></li>
+      <li><code>$ouds-border-interactive-primary-focus</code></li>
+      <li><code>$ouds-border-radius-0</code></li>
+      <li><code>$ouds-border-radius-300</code></li>
+      <li><code>$ouds-border-radius-75</code></li>
+      <li><code>$ouds-border-radius-9999</code></li>
+      <li><code>$ouds-border-style-dashed</code></li>
+      <li><code>$ouds-border-style-default</code></li>
+      <li><code>$ouds-border-style-solid</code></li>
+      <li><code>$ouds-border-width-0</code></li>
+      <li><code>$ouds-border-width-100</code></li>
+      <li><code>$ouds-border-width-25</code></li>
+      <li><code>$ouds-border-width-50</code></li>
+      <li><code>$ouds-border-width-75</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
@@ -57,6 +88,10 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$ouds-border-opacities</code></li>
+      <li><code>$ouds-border-radiuses</code></li>
+      <li><code>$ouds-border-styles</code></li>
+      <li><code>$ouds-border-widths</code></li>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>

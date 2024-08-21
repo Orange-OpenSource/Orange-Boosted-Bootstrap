@@ -617,7 +617,7 @@ $border-widths: (
   2: map-get($ouds-border-widths, "thick"),
   3: map-get($ouds-border-widths, "thicker"),
   4: map-get($ouds-border-widths, "thickest"),
-  5: map-get($ouds-border-widths, "thickest") * 1.5 // OUDS mod : arbitrary value for compatibility
+  5: map-get($ouds-border-widths, "thickest") * 1.25 // OUDS mod : arbitrary value for compatibility
 ) !default;
 $border-style:                $ouds-border-style-default !default;
 $border-color:                $black !default; // OUDS mod: instead of `$gray-300`
@@ -626,7 +626,7 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               map-get($ouds-border-radiuses, "default") !default;
+$border-radius:               map-get($ouds-border-radiuses, null) !default;
 $border-radius-sm:            map-get($ouds-border-radiuses, "short") !default;
 $border-radius-lg:            map-get($ouds-border-radiuses, "medium") !default;
 $border-radius-xl:            map-get($ouds-border-radiuses, "tall") !default;

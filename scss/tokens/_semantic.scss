@@ -3,7 +3,7 @@
 
 // Opacity
 
-// scss-docs-start ouds-opacities-variables-maps
+// scss-docs-start ouds-sem-opacity
 $ouds-opacities: (
   "transparent": $ouds-opacity-0,
   "weaker":      $ouds-opacity-100,
@@ -12,28 +12,29 @@ $ouds-opacities: (
   "emphasis":    $ouds-opacity-700,
   "opaque":      $ouds-opacity-900
 ) !default;
-// scss-docs-end ouds-opacities-variables-maps
+// scss-docs-end ouds-sem-opacity
 
 // Border
 
-// scss-docs-start ouds-borders-variables-maps
+// scss-docs-start ouds-sem-border
+// fusv-disable
+// following variable could be used by b-brand/countries libraries
+$ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
+// fusv-enable
+$ouds-border-style-default: $ouds-border-style-solid !default;
+
 $ouds-border-widths: (
-  "none":     $ouds-border-width-0,
   "default":  $ouds-border-width-25,
+  "none":     $ouds-border-width-0,
   "thin":     $ouds-border-width-25,
   "thick":    $ouds-border-width-50,
   "thicker":  $ouds-border-width-75,
   "thickest": $ouds-border-width-100,
 ) !default;
 
-// fusv-disable
-// following variable could be used by b-brand/countries libraries
-$ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
-// fusv-enable
-
 $ouds-border-radiuses: (
+  null:       $ouds-border-radius-0,
   "none":     $ouds-border-radius-0,
-  "default":  $ouds-border-radius-0,
   "short":    $ouds-border-radius-75,
   "medium":   $ouds-border-radius-150,
   "tall":     $ouds-border-radius-300,
@@ -41,9 +42,9 @@ $ouds-border-radiuses: (
   "circle":   50%
 ) !default;
 
-$ouds-border-style-default: $ouds-border-style-solid !default;
-
 $ouds-border-styles: (
   "drag": $ouds-border-style-dashed
 ) !default;
-// scss-docs-end ouds-borders-variables-maps
+
+$ouds-border-opacities: null !default;
+// scss-docs-end ouds-sem-border

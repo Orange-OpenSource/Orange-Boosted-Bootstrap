@@ -115,19 +115,21 @@
   --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg}; // OUDS mod
 
   // scss-docs-start root-border-var
-  --#{$prefix}border-width: #{$border-width};
-  --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
   --#{$prefix}border-color-subtle: #{$border-color-subtle}; // OUDS mod
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
 
-  --#{$prefix}border-radius: #{$border-radius};
-  --#{$prefix}border-radius-sm: #{$border-radius-sm};
-  --#{$prefix}border-radius-lg: #{$border-radius-lg};
-  --#{$prefix}border-radius-xl: #{$border-radius-xl};
-  --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
-  --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl); // Deprecated in Bootstrap v5.3.0 for consistency
-  --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}border-width: #{$border-width};
+    --#{$prefix}border-style: #{$border-style};
+    --#{$prefix}border-radius: #{$border-radius};
+    --#{$prefix}border-radius-sm: #{$border-radius-sm};
+    --#{$prefix}border-radius-lg: #{$border-radius-lg};
+    --#{$prefix}border-radius-xl: #{$border-radius-xl};
+    --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
+    --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl); // Deprecated in Bootstrap v5.3.0 for consistency
+    --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  }
   // scss-docs-end root-border-var
 
   --#{$prefix}box-shadow: #{$box-shadow};
