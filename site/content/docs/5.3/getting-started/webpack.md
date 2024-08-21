@@ -10,7 +10,7 @@ thumbnail: guides/webpack-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.svg" alt="Webpack logo" width="145" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.svg" alt="" width="145" loading="lazy">
 </div>
 
 {{< callout >}}
@@ -295,7 +295,7 @@ Then instantiate and use the plugin in the Webpack configuration:
  const autoprefixer = require('autoprefixer')
  const HtmlWebpackPlugin = require('html-webpack-plugin')
 +const miniCssExtractPlugin = require('mini-css-extract-plugin')
- 
+
  module.exports = {
    mode: 'development',
 @@ -17,7 +18,8 @@ module.exports = {
