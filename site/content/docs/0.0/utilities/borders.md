@@ -290,13 +290,13 @@ Border semantic tokens as Sass maps and variables. Border utilities are declared
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-<!--Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
+<!--Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}-->
+{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
 
-<!--### Sass maps
+### Sass maps
 
 Color mode adaptive border colors are also available as a Sass map:
 
