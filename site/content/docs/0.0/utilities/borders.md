@@ -266,7 +266,7 @@ This utility must not be used in any other context than drag and drop.
 
 {{< bootstrap-compatibility false >}}
 
-{{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
+{ {< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 
 {{< /bootstrap-compatibility >}}-->
 
