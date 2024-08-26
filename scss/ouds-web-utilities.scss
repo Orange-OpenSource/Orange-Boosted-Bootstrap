@@ -1,8 +1,6 @@
 @import "mixins/banner";
 @include bsBanner(Utilities);
 
-$enable-bootstrap-compatibility: true !default;
-
 // Configuration
 @import "functions";
 @import "tokens/raw";
