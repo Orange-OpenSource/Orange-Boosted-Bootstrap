@@ -649,9 +649,9 @@ $focus-visible-outer-color:           $black !default; // OUDS mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:        null !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
-$box-shadow-sm:     null !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
-$box-shadow-lg:     null !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
+$box-shadow:        $ouds-box-shadow-overlay-default !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
+$box-shadow-sm:     $ouds-box-shadow-raised !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
+$box-shadow-lg:     $ouds-box-shadow-overlay-emphasis !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
 $box-shadow-inset:  null !default; // OUDS mod: instead of `inset 0 1px 2px rgba($black, .075)`
 // scss-docs-end box-shadow-variables
 
@@ -1401,19 +1401,21 @@ $form-validation-states: (
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
+// OUDS mod: use tokens instead of raw values.
 // scss-docs-start zindex-stack
-$zindex-dropdown:                   1000 !default;
-$zindex-sticky:                     1020 !default;
-$zindex-fixed:                      1030 !default;
-$zindex-back-to-top:                1035 !default; // OUDS mod
-$zindex-offcanvas-backdrop:         1040 !default;
-$zindex-offcanvas:                  1045 !default;
-$zindex-modal-backdrop:             1050 !default;
-$zindex-modal:                      1055 !default;
-$zindex-popover:                    1070 !default;
-$zindex-tooltip:                    1080 !default;
-$zindex-toast:                      1090 !default;
+$zindex-dropdown:                   $ouds-zindex-dropdown !default;
+$zindex-sticky:                     $ouds-zindex-sticky !default;
+$zindex-fixed:                      $ouds-zindex-fixed !default;
+$zindex-back-to-top:                $ouds-zindex-back-to-top !default;
+$zindex-offcanvas-backdrop:         $ouds-zindex-offcanvas-backdrop !default;
+$zindex-offcanvas:                  $ouds-zindex-offcanvas !default;
+$zindex-modal-backdrop:             $ouds-zindex-modal-backdrop !default;
+$zindex-modal:                      $ouds-zindex-modal !default;
+$zindex-popover:                    $ouds-zindex-popover !default;
+$zindex-tooltip:                    $ouds-zindex-tooltip !default;
+$zindex-toast:                      $ouds-zindex-toast !default;
 // scss-docs-end zindex-stack
+// End mod
 
 // scss-docs-start zindex-levels-map
 $zindex-levels: (

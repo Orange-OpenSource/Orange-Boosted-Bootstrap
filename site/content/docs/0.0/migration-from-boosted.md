@@ -60,6 +60,12 @@ Technically, it means that you can get rid of the following things:
 - <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
 
+### Shadows
+
+- <span class="badge text-bg-danger">Breaking</span> Shadow operative utilities have been removed: `.shadow`, `.shadow-sm` and `.shadow-lg`. Please check the new [shadow values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-success">New</span> Shadow utilities: `.shadow-raised` and `.shadow-drag`.
+
 ## CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
@@ -123,18 +129,150 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$ouds-box-shadow-blur-0</code></li>
+      <li><code>$ouds-box-shadow-blur-200</code></li>
+      <li><code>$ouds-box-shadow-blur-300</code></li>
+      <li><code>$ouds-box-shadow-blur-400</code></li>
+      <li><code>$ouds-box-shadow-blur-500</code></li>
+      <li><code>$ouds-box-shadow-blur-600</code></li>
+      <li><code>$ouds-box-shadow-blur-700</code></li>
+      <li><code>$ouds-box-shadow-blur-drag</code></li>
+      <li><code>$ouds-box-shadow-blur-focus</code></li>
+      <li><code>$ouds-box-shadow-blur-none</code></li>
+      <li><code>$ouds-box-shadow-blur-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-blur-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-blur-raised</code></li>
+      <li><code>$ouds-box-shadow-blur-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-blur-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-blur-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-box-shadow-bottom-0</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-1-600</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-2-600</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-3-600</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-4-600</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-5-600</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-100</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-200</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-300</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-400</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-500</code></li>
+      <li><code>$ouds-box-shadow-bottom-6-600</code></li>
+      <li><code>$ouds-box-shadow-drag</code></li>
+      <li><code>$ouds-box-shadow-focus</code></li>
+      <li><code>$ouds-box-shadow-none</code></li>
+      <li><code>$ouds-box-shadow-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-raised</code></li>
+      <li><code>$ouds-box-shadow-spread-0</code></li>
+      <li><code>$ouds-box-shadow-spread-300</code></li>
+      <li><code>$ouds-box-shadow-spread-drag</code></li>
+      <li><code>$ouds-box-shadow-spread-focus</code></li>
+      <li><code>$ouds-box-shadow-spread-n100</code></li>
+      <li><code>$ouds-box-shadow-spread-n200</code></li>
+      <li><code>$ouds-box-shadow-spread-n300</code></li>
+      <li><code>$ouds-box-shadow-spread-n400</code></li>
+      <li><code>$ouds-box-shadow-spread-none</code></li>
+      <li><code>$ouds-box-shadow-spread-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-spread-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-spread-raised</code></li>
+      <li><code>$ouds-box-shadow-spread-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-spread-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-spread-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-box-shadow-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-box-shadow-x-0</code></li>
+      <li><code>$ouds-box-shadow-x-drag</code></li>
+      <li><code>$ouds-box-shadow-x-focus</code></li>
+      <li><code>$ouds-box-shadow-x-none</code></li>
+      <li><code>$ouds-box-shadow-x-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-x-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-x-raised</code></li>
+      <li><code>$ouds-box-shadow-x-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-x-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-x-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-box-shadow-y-0</code></li>
+      <li><code>$ouds-box-shadow-y-100</code></li>
+      <li><code>$ouds-box-shadow-y-200</code></li>
+      <li><code>$ouds-box-shadow-y-300</code></li>
+      <li><code>$ouds-box-shadow-y-400</code></li>
+      <li><code>$ouds-box-shadow-y-500</code></li>
+      <li><code>$ouds-box-shadow-y-600</code></li>
+      <li><code>$ouds-box-shadow-y-drag</code></li>
+      <li><code>$ouds-box-shadow-y-focus</code></li>
+      <li><code>$ouds-box-shadow-y-none</code></li>
+      <li><code>$ouds-box-shadow-y-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-y-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-y-raised</code></li>
+      <li><code>$ouds-box-shadow-y-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-y-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-y-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
       <li><code>$ouds-opacity-500</code></li>
       <li><code>$ouds-opacity-700</code></li>
       <li><code>$ouds-opacity-900</code></li>
+      <li><code>$ouds-zindex-0</code></li>
+      <li><code>$ouds-zindex-1000</code></li>
+      <li><code>$ouds-zindex-1020</code></li>
+      <li><code>$ouds-zindex-1030</code></li>
+      <li><code>$ouds-zindex-1035</code></li>
+      <li><code>$ouds-zindex-1038</code></li>
+      <li><code>$ouds-zindex-1040</code></li>
+      <li><code>$ouds-zindex-1045</code></li>
+      <li><code>$ouds-zindex-1050</code></li>
+      <li><code>$ouds-zindex-1060</code></li>
+      <li><code>$ouds-zindex-1070</code></li>
+      <li><code>$ouds-zindex-1080</code></li>
+      <li><code>$ouds-zindex-1090</code></li>
+      <li><code>$ouds-zindex-deep</code></li>
+      <li><code>$ouds-zindex-back-to-top</code></li>
+      <li><code>$ouds-zindex-default</code></li>
+      <li><code>$ouds-zindex-dropdown</code></li>
+      <li><code>$ouds-zindex-fixed</code></li>
+      <li><code>$ouds-zindex-modal</code></li>
+      <li><code>$ouds-zindex-modal-backdrop</code></li>
+      <li><code>$ouds-zindex-n9999</code></li>
+      <li><code>$ouds-zindex-offcanvas</code></li>
+      <li><code>$ouds-zindex-offcanvas-backdrop</code></li>
+      <li><code>$ouds-zindex-popover</code></li>
+      <li><code>$ouds-zindex-spinner</code></li>
+      <li><code>$ouds-zindex-sticky</code></li>
+      <li><code>$ouds-zindex-toast</code></li>
+      <li><code>$ouds-zindex-tooltip</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$ouds-box-shadows</code></li>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
