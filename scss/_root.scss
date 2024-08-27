@@ -130,10 +130,12 @@
   --#{$prefix}border-radius-pill: #{$border-radius-pill};
   // scss-docs-end root-border-var
 
-  --#{$prefix}box-shadow: #{$box-shadow};
-  --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
-  --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
-  --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}box-shadow: #{$box-shadow};
+    --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
+    --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
+    --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
+  }
 
   --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color}; // OUDS mod
   --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color}; // OUDS mod
