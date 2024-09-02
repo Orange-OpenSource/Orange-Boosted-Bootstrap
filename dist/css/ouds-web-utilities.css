@@ -740,23 +740,27 @@
   object-fit: none !important;
 }
 
-.opacity-0 {
+.opacity-transparent {
   opacity: 0 !important;
 }
 
-.opacity-25 {
-  opacity: 0.25 !important;
+.opacity-weaker {
+  opacity: 0.04 !important;
 }
 
-.opacity-50 {
-  opacity: 0.5 !important;
+.opacity-weak {
+  opacity: 0.16 !important;
 }
 
-.opacity-75 {
-  opacity: 0.75 !important;
+.opacity-medium {
+  opacity: 0.32 !important;
 }
 
-.opacity-100 {
+.opacity-emphasis {
+  opacity: 0.64 !important;
+}
+
+.opacity-opaque {
   opacity: 1 !important;
 }
 

@@ -12,7 +12,7 @@ OUDS Web provides an easy-to-use framework of ready-made styles, layout tools, a
 
 ## Overview and limitations
 
-The overall accessibility of any project built with OUDS Web depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with OUDS Web that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+The overall accessibility of any project built with OUDS Web depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with OUDS Web that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
 
 ### Structural markup
 
