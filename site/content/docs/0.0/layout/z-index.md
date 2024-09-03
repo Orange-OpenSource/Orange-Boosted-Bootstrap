@@ -15,4 +15,4 @@ We don't encourage customization of these individual values; should you change o
 
 {{< scss-docs name="zindex-stack" file="scss/_variables.scss" >}}
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low<!-- single digit--> `z-index` values<!-- of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements-->.
+To handle overlapping borders<!-- within components (e.g., buttons and inputs in input groups)-->, we use low single digit `z-index` values<!-- of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements-->.
