@@ -123,7 +123,7 @@
     "@storybook/html-vite": "^8.2.6",
     "@storybook/manager-api": "^8.2.6",
     "@storybook/test": "^8.2.6",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "babel-loader": "^9.1.2",
     "bundlewatch": "^0.4.0",
     "clean-css-cli": "^5.6.3",
