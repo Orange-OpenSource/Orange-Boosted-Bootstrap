@@ -15,7 +15,7 @@ Multiple links and tap targets are not recommended with stretched links. However
 
 <!--{{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card icon" >}}
+  { {< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card icon" >}}
   <div class="card-body">
     <h5 class="card-title">Card with stretched link</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -40,7 +40,7 @@ Most custom components do not have `position: relative` by default, so we need t
 <!--{{< example >}}
 <div class="row g-0 bg-body-secondary position-relative">
   <div class="col-md-6 mb-md-0 p-md-4">
-    {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
+    { {< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
   </div>
   <div class="col-md-6 p-4 ps-md-0">
     <h5 class="mt-0">Columns with stretched link</h5>
@@ -61,7 +61,7 @@ If the stretched link doesn't seem to work, the [containing block](https://devel
 
 <!--{{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card icon" >}}
+  { {< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card icon" >}}
   <div class="card-body">
     <h5 class="card-title">Card with stretched links</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
