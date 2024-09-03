@@ -15,27 +15,6 @@ $ouds-opacities: (
 // scss-docs-end ouds-opacities-variables-maps
 
 // Elevation
-// TODO: Decide whether the variables are semantic or component.
-// scss-docs-start ouds-sem-zindex
-// fusv-disable
-$ouds-zindex-deep:                $ouds-zindex-n9999 !default;
-$ouds-zindex-default:             $ouds-zindex-0 !default;
-// fusv-enable
-$ouds-zindex-dropdown:            $ouds-zindex-1000 !default;
-$ouds-zindex-sticky:              $ouds-zindex-1020 !default;
-$ouds-zindex-fixed:               $ouds-zindex-1030 !default;
-$ouds-zindex-back-to-top:         $ouds-zindex-1035 !default;
-// fusv-disable
-$ouds-zindex-spinner:             $ouds-zindex-1038 !default;
-// fusv-enable
-$ouds-zindex-offcanvas-backdrop:  $ouds-zindex-1040 !default;
-$ouds-zindex-offcanvas:           $ouds-zindex-1045 !default;
-$ouds-zindex-modal-backdrop:      $ouds-zindex-1050 !default;
-$ouds-zindex-modal:               $ouds-zindex-1060 !default;
-$ouds-zindex-popover:             $ouds-zindex-1070 !default;
-$ouds-zindex-tooltip:             $ouds-zindex-1080 !default;
-$ouds-zindex-toast:               $ouds-zindex-1090 !default;
-// scss-docs-end ouds-sem-zindex
 
 // scss-docs-start ouds-sem-shadow
 // TODO: Decide if we keep all these or not.

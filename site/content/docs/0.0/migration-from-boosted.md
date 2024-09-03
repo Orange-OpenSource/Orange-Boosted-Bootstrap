@@ -238,34 +238,6 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-opacity-500</code></li>
       <li><code>$ouds-opacity-700</code></li>
       <li><code>$ouds-opacity-900</code></li>
-      <li><code>$ouds-zindex-0</code></li>
-      <li><code>$ouds-zindex-1000</code></li>
-      <li><code>$ouds-zindex-1020</code></li>
-      <li><code>$ouds-zindex-1030</code></li>
-      <li><code>$ouds-zindex-1035</code></li>
-      <li><code>$ouds-zindex-1038</code></li>
-      <li><code>$ouds-zindex-1040</code></li>
-      <li><code>$ouds-zindex-1045</code></li>
-      <li><code>$ouds-zindex-1050</code></li>
-      <li><code>$ouds-zindex-1060</code></li>
-      <li><code>$ouds-zindex-1070</code></li>
-      <li><code>$ouds-zindex-1080</code></li>
-      <li><code>$ouds-zindex-1090</code></li>
-      <li><code>$ouds-zindex-deep</code></li>
-      <li><code>$ouds-zindex-back-to-top</code></li>
-      <li><code>$ouds-zindex-default</code></li>
-      <li><code>$ouds-zindex-dropdown</code></li>
-      <li><code>$ouds-zindex-fixed</code></li>
-      <li><code>$ouds-zindex-modal</code></li>
-      <li><code>$ouds-zindex-modal-backdrop</code></li>
-      <li><code>$ouds-zindex-n9999</code></li>
-      <li><code>$ouds-zindex-offcanvas</code></li>
-      <li><code>$ouds-zindex-offcanvas-backdrop</code></li>
-      <li><code>$ouds-zindex-popover</code></li>
-      <li><code>$ouds-zindex-spinner</code></li>
-      <li><code>$ouds-zindex-sticky</code></li>
-      <li><code>$ouds-zindex-toast</code></li>
-      <li><code>$ouds-zindex-tooltip</code></li>
     </ul>
   </details>
 

@@ -2,43 +2,43 @@
   "files": [
     {
       "path": "./dist/css/ouds-web-bootstrap.css",
-      "maxSize": "45.0 kB"
+      "maxSize": "44.75 kB"
     },
     {
       "path": "./dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "42.0 kB"
+      "maxSize": "41.75 kB"
     },
     {
       "path": "./dist/css/ouds-web-grid.css",
-      "maxSize": "7.25 kB"
+      "maxSize": "7.0 kB"
     },
     {
       "path": "./dist/css/ouds-web-grid.min.css",
-      "maxSize": "6.5 kB"
+      "maxSize": "6.25 kB"
     },
     {
       "path": "./dist/css/ouds-web-reboot.css",
-      "maxSize": "5.0 kB"
-    },
-    {
-      "path": "./dist/css/ouds-web-reboot.min.css",
       "maxSize": "4.75 kB"
     },
     {
+      "path": "./dist/css/ouds-web-reboot.min.css",
+      "maxSize": "4.5 kB"
+    },
+    {
       "path": "./dist/css/ouds-web-utilities.css",
-      "maxSize": "13.25 kB"
+      "maxSize": "13.0 kB"
     },
     {
       "path": "./dist/css/ouds-web-utilities.min.css",
-      "maxSize": "12.25 kB"
+      "maxSize": "12.0 kB"
     },
     {
       "path": "./dist/css/ouds-web.css",
-      "maxSize": "45.0 kB"
+      "maxSize": "44.75 kB"
     },
     {
       "path": "./dist/css/ouds-web.min.css",
-      "maxSize": "42.0 kB"
+      "maxSize": "41.5 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",

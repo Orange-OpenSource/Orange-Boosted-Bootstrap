@@ -1401,21 +1401,22 @@ $form-validation-states: (
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
-// OUDS mod: use tokens instead of raw values.
 // scss-docs-start zindex-stack
-$zindex-dropdown:                   $ouds-zindex-dropdown !default;
-$zindex-sticky:                     $ouds-zindex-sticky !default;
-$zindex-fixed:                      $ouds-zindex-fixed !default;
-$zindex-back-to-top:                $ouds-zindex-back-to-top !default;
-$zindex-offcanvas-backdrop:         $ouds-zindex-offcanvas-backdrop !default;
-$zindex-offcanvas:                  $ouds-zindex-offcanvas !default;
-$zindex-modal-backdrop:             $ouds-zindex-modal-backdrop !default;
-$zindex-modal:                      $ouds-zindex-modal !default;
-$zindex-popover:                    $ouds-zindex-popover !default;
-$zindex-tooltip:                    $ouds-zindex-tooltip !default;
-$zindex-toast:                      $ouds-zindex-toast !default;
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-back-to-top:                1035 !default; // OUDS mod
+// fusv-disable
+$zindex-spinner:                    1038 !default; // OUDS mod
+// fusv-enable
+$zindex-offcanvas-backdrop:         1040 !default;
+$zindex-offcanvas:                  1045 !default;
+$zindex-modal-backdrop:             1050 !default;
+$zindex-modal:                      1060 !default;
+$zindex-popover:                    1070 !default;
+$zindex-tooltip:                    1080 !default;
+$zindex-toast:                      1090 !default;
 // scss-docs-end zindex-stack
-// End mod
 
 // scss-docs-start zindex-levels-map
 $zindex-levels: (

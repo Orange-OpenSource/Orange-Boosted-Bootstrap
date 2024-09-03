@@ -20,25 +20,6 @@ $ouds-opacity-900: 1 !default;
 
 // Elevation
 
-// scss-docs-start ouds-raw-zindex
-// Z-index
-$ouds-zindex-0:      0 !default;
-$ouds-zindex-n9999:  -9999 !default;
-$ouds-zindex-1000:   1000 !default;
-// $ouds-zindex-1010:   1010 !default;
-$ouds-zindex-1020:   1020 !default;
-$ouds-zindex-1030:   1030 !default;
-$ouds-zindex-1035:   1035 !default;
-$ouds-zindex-1038:   1038 !default;
-$ouds-zindex-1040:   1040 !default;
-$ouds-zindex-1045:   1045 !default;
-$ouds-zindex-1050:   1050 !default;
-$ouds-zindex-1060:   1060 !default;
-$ouds-zindex-1070:   1070 !default;
-$ouds-zindex-1080:   1080 !default;
-$ouds-zindex-1090:   1090 !default;
-// scss-docs-end ouds-raw-zindex
-
 // scss-docs-start ouds-raw-shadow
 // Box-shadow
 $ouds-box-shadow-x-0:           0 !default;
@@ -105,42 +86,42 @@ $ouds-box-shadow-bottom-6-300:  $ouds-box-shadow-x-0 $ouds-box-shadow-y-600 $oud
 $ouds-box-shadow-bottom-6-400:  $ouds-box-shadow-x-0 $ouds-box-shadow-y-600 $ouds-box-shadow-blur-700 $ouds-box-shadow-spread-n400 rgba(0, 0, 0, .24) !default;
 $ouds-box-shadow-bottom-6-500:  $ouds-box-shadow-x-0 $ouds-box-shadow-y-600 $ouds-box-shadow-blur-700 $ouds-box-shadow-spread-n400 rgba(0, 0, 0, .32) !default;
 $ouds-box-shadow-bottom-6-600:  $ouds-box-shadow-x-0 $ouds-box-shadow-y-600 $ouds-box-shadow-blur-700 $ouds-box-shadow-spread-n400 rgba(0, 0, 0, .48) !default;
-
-.shadow-0 { box-shadow: $ouds-box-shadow-bottom-0; }
-.shadow-1-100 { box-shadow: $ouds-box-shadow-bottom-1-100; }
-.shadow-1-200 { box-shadow: $ouds-box-shadow-bottom-1-200; }
-.shadow-1-300 { box-shadow: $ouds-box-shadow-bottom-1-300; }
-.shadow-1-400 { box-shadow: $ouds-box-shadow-bottom-1-400; }
-.shadow-1-500 { box-shadow: $ouds-box-shadow-bottom-1-500; }
-.shadow-1-600 { box-shadow: $ouds-box-shadow-bottom-1-600; }
-.shadow-2-100 { box-shadow: $ouds-box-shadow-bottom-2-100; }
-.shadow-2-200 { box-shadow: $ouds-box-shadow-bottom-2-200; }
-.shadow-2-300 { box-shadow: $ouds-box-shadow-bottom-2-300; }
-.shadow-2-400 { box-shadow: $ouds-box-shadow-bottom-2-400; }
-.shadow-2-500 { box-shadow: $ouds-box-shadow-bottom-2-500; }
-.shadow-2-600 { box-shadow: $ouds-box-shadow-bottom-2-600; }
-.shadow-3-100 { box-shadow: $ouds-box-shadow-bottom-3-100; }
-.shadow-3-200 { box-shadow: $ouds-box-shadow-bottom-3-200; }
-.shadow-3-300 { box-shadow: $ouds-box-shadow-bottom-3-300; }
-.shadow-3-400 { box-shadow: $ouds-box-shadow-bottom-3-400; }
-.shadow-3-500 { box-shadow: $ouds-box-shadow-bottom-3-500; }
-.shadow-3-600 { box-shadow: $ouds-box-shadow-bottom-3-600; }
-.shadow-4-100 { box-shadow: $ouds-box-shadow-bottom-4-100; }
-.shadow-4-200 { box-shadow: $ouds-box-shadow-bottom-4-200; }
-.shadow-4-300 { box-shadow: $ouds-box-shadow-bottom-4-300; }
-.shadow-4-400 { box-shadow: $ouds-box-shadow-bottom-4-400; }
-.shadow-4-500 { box-shadow: $ouds-box-shadow-bottom-4-500; }
-.shadow-4-600 { box-shadow: $ouds-box-shadow-bottom-4-600; }
-.shadow-5-100 { box-shadow: $ouds-box-shadow-bottom-5-100; }
-.shadow-5-200 { box-shadow: $ouds-box-shadow-bottom-5-200; }
-.shadow-5-300 { box-shadow: $ouds-box-shadow-bottom-5-300; }
-.shadow-5-400 { box-shadow: $ouds-box-shadow-bottom-5-400; }
-.shadow-5-500 { box-shadow: $ouds-box-shadow-bottom-5-500; }
-.shadow-5-600 { box-shadow: $ouds-box-shadow-bottom-5-600; }
-.shadow-6-100 { box-shadow: $ouds-box-shadow-bottom-6-100; }
-.shadow-6-200 { box-shadow: $ouds-box-shadow-bottom-6-200; }
-.shadow-6-300 { box-shadow: $ouds-box-shadow-bottom-6-300; }
-.shadow-6-400 { box-shadow: $ouds-box-shadow-bottom-6-400; }
-.shadow-6-500 { box-shadow: $ouds-box-shadow-bottom-6-500; }
-.shadow-6-600 { box-shadow: $ouds-box-shadow-bottom-6-600; }
 // scss-docs-end ouds-raw-shadow
+
+// .shadow-0 { box-shadow: $ouds-box-shadow-bottom-0; }
+// .shadow-1-100 { box-shadow: $ouds-box-shadow-bottom-1-100; }
+// .shadow-1-200 { box-shadow: $ouds-box-shadow-bottom-1-200; }
+// .shadow-1-300 { box-shadow: $ouds-box-shadow-bottom-1-300; }
+// .shadow-1-400 { box-shadow: $ouds-box-shadow-bottom-1-400; }
+// .shadow-1-500 { box-shadow: $ouds-box-shadow-bottom-1-500; }
+// .shadow-1-600 { box-shadow: $ouds-box-shadow-bottom-1-600; }
+// .shadow-2-100 { box-shadow: $ouds-box-shadow-bottom-2-100; }
+// .shadow-2-200 { box-shadow: $ouds-box-shadow-bottom-2-200; }
+// .shadow-2-300 { box-shadow: $ouds-box-shadow-bottom-2-300; }
+// .shadow-2-400 { box-shadow: $ouds-box-shadow-bottom-2-400; }
+// .shadow-2-500 { box-shadow: $ouds-box-shadow-bottom-2-500; }
+// .shadow-2-600 { box-shadow: $ouds-box-shadow-bottom-2-600; }
+// .shadow-3-100 { box-shadow: $ouds-box-shadow-bottom-3-100; }
+// .shadow-3-200 { box-shadow: $ouds-box-shadow-bottom-3-200; }
+// .shadow-3-300 { box-shadow: $ouds-box-shadow-bottom-3-300; }
+// .shadow-3-400 { box-shadow: $ouds-box-shadow-bottom-3-400; }
+// .shadow-3-500 { box-shadow: $ouds-box-shadow-bottom-3-500; }
+// .shadow-3-600 { box-shadow: $ouds-box-shadow-bottom-3-600; }
+// .shadow-4-100 { box-shadow: $ouds-box-shadow-bottom-4-100; }
+// .shadow-4-200 { box-shadow: $ouds-box-shadow-bottom-4-200; }
+// .shadow-4-300 { box-shadow: $ouds-box-shadow-bottom-4-300; }
+// .shadow-4-400 { box-shadow: $ouds-box-shadow-bottom-4-400; }
+// .shadow-4-500 { box-shadow: $ouds-box-shadow-bottom-4-500; }
+// .shadow-4-600 { box-shadow: $ouds-box-shadow-bottom-4-600; }
+// .shadow-5-100 { box-shadow: $ouds-box-shadow-bottom-5-100; }
+// .shadow-5-200 { box-shadow: $ouds-box-shadow-bottom-5-200; }
+// .shadow-5-300 { box-shadow: $ouds-box-shadow-bottom-5-300; }
+// .shadow-5-400 { box-shadow: $ouds-box-shadow-bottom-5-400; }
+// .shadow-5-500 { box-shadow: $ouds-box-shadow-bottom-5-500; }
+// .shadow-5-600 { box-shadow: $ouds-box-shadow-bottom-5-600; }
+// .shadow-6-100 { box-shadow: $ouds-box-shadow-bottom-6-100; }
+// .shadow-6-200 { box-shadow: $ouds-box-shadow-bottom-6-200; }
+// .shadow-6-300 { box-shadow: $ouds-box-shadow-bottom-6-300; }
+// .shadow-6-400 { box-shadow: $ouds-box-shadow-bottom-6-400; }
+// .shadow-6-500 { box-shadow: $ouds-box-shadow-bottom-6-500; }
+// .shadow-6-600 { box-shadow: $ouds-box-shadow-bottom-6-600; }
