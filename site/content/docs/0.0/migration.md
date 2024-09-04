@@ -13,7 +13,8 @@ toc: true
 
 ### Pre-compiled versions
 
-From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+From now on, by default, OUDS Web won’t embed Bootstrap helpers and utilities that do not comply with Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+
 
 ### Utilities
 
