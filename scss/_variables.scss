@@ -648,6 +648,26 @@ $focus-visible-outer-offset:          $focus-visible-inner-width !default; // OU
 $focus-visible-outer-color:           $black !default; // OUDS mod
 // scss-docs-end focus-visible-variables
 
+// fusv-disable
+// scss-docs-start box-shadow-variables-ouds
+$ouds-box-shadow-none:                $ouds-box-shadow-x-none $ouds-box-shadow-y-none $ouds-box-shadow-blur-none $ouds-box-shadow-spread-none $ouds-box-shadow-color-none !default;
+$ouds-box-shadow-raised:              $ouds-box-shadow-x-raised $ouds-box-shadow-y-raised $ouds-box-shadow-blur-raised $ouds-box-shadow-spread-raised $ouds-box-shadow-color-raised !default;
+$ouds-box-shadow-drag:                $ouds-box-shadow-x-drag $ouds-box-shadow-y-drag $ouds-box-shadow-blur-drag $ouds-box-shadow-spread-drag $ouds-box-shadow-color-drag !default;
+$ouds-box-shadow-overlay-default:     $ouds-box-shadow-x-overlay-default $ouds-box-shadow-y-overlay-default $ouds-box-shadow-blur-overlay-default $ouds-box-shadow-spread-overlay-default $ouds-box-shadow-color-overlay-default !default;
+$ouds-box-shadow-overlay-emphasis:    $ouds-box-shadow-x-overlay-emphasis $ouds-box-shadow-y-overlay-emphasis $ouds-box-shadow-blur-overlay-emphasis $ouds-box-shadow-spread-overlay-emphasis $ouds-box-shadow-color-overlay-emphasis !default;
+$ouds-box-shadow-sticky-default:      $ouds-box-shadow-x-sticky-default $ouds-box-shadow-y-sticky-default $ouds-box-shadow-blur-sticky-default $ouds-box-shadow-spread-sticky-default $ouds-box-shadow-color-sticky-default !default;
+$ouds-box-shadow-emphasis:            $ouds-box-shadow-x-emphasis $ouds-box-shadow-y-emphasis $ouds-box-shadow-blur-emphasis $ouds-box-shadow-spread-emphasis $ouds-box-shadow-color-emphasis !default;
+$ouds-box-shadow-navigation-scrolled: $ouds-box-shadow-x-navigation-scrolled $ouds-box-shadow-y-navigation-scrolled $ouds-box-shadow-blur-navigation-scrolled $ouds-box-shadow-spread-navigation-scrolled $ouds-box-shadow-color-navigation-scrolled !default;
+$ouds-box-shadow-focus:               $ouds-box-shadow-x-focus $ouds-box-shadow-y-focus $ouds-box-shadow-blur-focus $ouds-box-shadow-spread-focus $ouds-box-shadow-color-focus !default;
+
+$ouds-box-shadows: (
+  "none": $ouds-box-shadow-none,
+  "raised": $ouds-box-shadow-raised,
+  "drag": $ouds-box-shadow-drag,
+) !default;
+// scss-docs-end box-shadow-variables-ouds
+// fusv-enable
+
 // scss-docs-start box-shadow-variables
 $box-shadow:        $ouds-box-shadow-overlay-default !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
 $box-shadow-sm:     $ouds-box-shadow-raised !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`

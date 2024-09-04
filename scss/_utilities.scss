@@ -87,7 +87,6 @@ $utilities: map-merge(
         null: var(--#{$prefix}box-shadow),
         sm: var(--#{$prefix}box-shadow-sm),
         lg: var(--#{$prefix}box-shadow-lg),
-        none: none,
       ),
       bootstrap-compatibility: true
     ),

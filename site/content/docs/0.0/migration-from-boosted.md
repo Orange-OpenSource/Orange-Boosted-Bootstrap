@@ -145,43 +145,15 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-box-shadow-blur-sticky-default</code></li>
       <li><code>$ouds-box-shadow-blur-sticky-emphasis</code></li>
       <li><code>$ouds-box-shadow-blur-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-box-shadow-bottom-0</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-1-600</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-2-600</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-3-600</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-4-600</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-5-600</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-100</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-200</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-300</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-400</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-500</code></li>
-      <li><code>$ouds-box-shadow-bottom-6-600</code></li>
+      <li><code>$ouds-box-shadow-color-drag</code></li>
+      <li><code>$ouds-box-shadow-color-focus</code></li>
+      <li><code>$ouds-box-shadow-color-none</code></li>
+      <li><code>$ouds-box-shadow-color-overlay-default</code></li>
+      <li><code>$ouds-box-shadow-color-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-color-raised</code></li>
+      <li><code>$ouds-box-shadow-color-sticky-default</code></li>
+      <li><code>$ouds-box-shadow-color-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-color-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-drag</code></li>
       <li><code>$ouds-box-shadow-focus</code></li>
       <li><code>$ouds-box-shadow-none</code></li>

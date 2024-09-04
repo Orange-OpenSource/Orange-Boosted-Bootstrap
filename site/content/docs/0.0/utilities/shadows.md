@@ -8,20 +8,6 @@ aliases:
 toc: true
 ---
 
-<!--{{< markdown >}}
-{{< flex.inline >}}
-{{- range $index := (seq 1 6) -}}
-<div class="row mb-5">
-  {{- range (seq 1 6) -}}
-    <div class="col-2">
-      <div class="d-flex align-items-center justify-content-center ratio ratio-1x1 rounded-circle bg-body shadow-{{ $index }}-{{ . }}00">{{ $index }}-{{ . }}00</div>
-    </div>
-  {{- end -}}
-</div>
-{{- end -}}
-{{< /flex.inline >}}
-{{< /markdown >}}-->
-
 ## Examples
 
 While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
@@ -62,6 +48,8 @@ Shadow semantic tokens as variables and Sass map. Shadow utilities are declared 
 {{< scss-docs name="ouds-sem-shadow" file="scss/tokens/_semantic.scss" >}}
 
 ### Sass variables
+
+{{< scss-docs name="box-shadow-variables-ouds" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
