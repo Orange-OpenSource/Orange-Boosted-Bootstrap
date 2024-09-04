@@ -67,7 +67,6 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
       <li><code>$ouds-border-radius-0</code></li>
       <li><code>$ouds-border-radius-300</code></li>
       <li><code>$ouds-border-radius-75</code></li>
-      <li><code>$ouds-border-radius-9999</code></li>
       <li><code>$ouds-border-style-dashed</code></li>
       <li><code>$ouds-border-style-default</code></li>
       <li><code>$ouds-border-style-solid</code></li>
@@ -76,6 +75,7 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
       <li><code>$ouds-border-width-25</code></li>
       <li><code>$ouds-border-width-50</code></li>
       <li><code>$ouds-border-width-75</code></li>
+      <li><code>$ouds-border-width-default</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
@@ -88,7 +88,6 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
-      <li><code>$ouds-border-opacities</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>

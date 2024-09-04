@@ -21,11 +21,10 @@ $ouds-opacities: (
 // following variable could be used by b-brand/countries libraries
 $ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
 // fusv-enable
+$ouds-border-width-default: $ouds-border-width-25 !default;
 $ouds-border-style-default: $ouds-border-style-solid !default;
 
 $ouds-border-widths: (
-  "default":  $ouds-border-width-25,
-  "none":     $ouds-border-width-0,
   "thin":     $ouds-border-width-25,
   "thick":    $ouds-border-width-50,
   "thicker":  $ouds-border-width-75,
@@ -38,13 +37,11 @@ $ouds-border-radiuses: (
   "short":    $ouds-border-radius-75,
   "medium":   $ouds-border-radius-150,
   "tall":     $ouds-border-radius-300,
-  "pill":     $ouds-border-radius-9999,
+  "pill":     50rem,
   "circle":   50%
 ) !default;
 
 $ouds-border-styles: (
   "drag": $ouds-border-style-dashed
 ) !default;
-
-$ouds-border-opacities: null !default;
 // scss-docs-end ouds-sem-border

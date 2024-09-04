@@ -108,6 +108,7 @@ These border color variants are just **examples illustrating the use of this col
 Within **OUDS Web context**, you **should not** be using any opacity effect on borders inside your interfaces.<!-- If you need to make a border disappear, please make sure to use the [`.border-transparent` utility](#color).-->
 {{< /callout >}}
 
+{{< bootstrap-compatibility >}}
 <!--OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works
@@ -121,22 +122,11 @@ Consider our default `.border-success` utility.
 }
 ```
 
-We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.-->
+We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
-<!--### Example
+### Example
 
 To change that opacity, override `-bs-border-opacity` via custom styles or inline styles.
-
-{{< example >}}
-<div class="border border-success p-2">This is default success border</div>
-{{< /example >}}
-
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
-{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
@@ -151,13 +141,12 @@ Or, choose from any of the `.border-opacity` utilities:
 <div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
 <div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
-{{< /example >}}
-</details>-->
+{{< /example >}}-->
+{{< /bootstrap-compatibility >}}
 
 ## Width
 
 {{< example class="bd-example-border-utils" >}}
-<span class="border border-default"></span>
 <span class="border border-none"></span>
 <span class="border border-thin"></span>
 <span class="border border-thick"></span>
@@ -262,13 +251,15 @@ This utility must not be used in any other context than drag and drop.
 
 ## CSS
 
-<!--### Variables
+### Variables
+
+{{< scss-docs name="root-border-var-ouds" file="scss/_root.scss" >}}
 
 {{< bootstrap-compatibility false >}}
 
-{ {< scss-docs name="root-border-var" file="scss/_root.scss" >}}
+{{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 
-{{< /bootstrap-compatibility >}}-->
+{{< /bootstrap-compatibility >}}
 
 ### Sass tokens
 
@@ -311,6 +302,8 @@ Color mode adaptive border colors are also available as a Sass map:
 ### Sass utilities API
 
 Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-border-ouds" file="scss/_utilities.scss" >}}
 
 {{< scss-docs name="utils-borders-ouds" file="scss/_utilities.scss" >}}
 

@@ -132,11 +132,19 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
+    // scss-docs-start utils-border-ouds
+    "border-ouds": (
+      property: border,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    // scss-docs-end utils-border-ouds
     // scss-docs-start utils-borders
     "border": (
       property: border,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -144,7 +152,6 @@ $utilities: map-merge(
     "border-top": (
       property: border-top,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -153,7 +160,6 @@ $utilities: map-merge(
       property: border-right,
       class: border-end,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -161,7 +167,6 @@ $utilities: map-merge(
     "border-bottom": (
       property: border-bottom,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -170,7 +175,6 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -208,13 +212,6 @@ $utilities: map-merge(
     ),
     // scss-docs-end utils-borders
     // scss-docs-start utils-borders-ouds
-    "border-ouds": (
-      property: border,
-      values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-        "none": 0,
-      ),
-    ),
     "border-top-ouds": (
       property: border-top,
       values: (
@@ -254,11 +251,6 @@ $utilities: map-merge(
       property: border-style,
       class: border,
       values: $ouds-border-styles
-    ),
-    "border-opacity-ouds": (
-      css-var: true,
-      class: border-opacity,
-      values: $ouds-border-opacities
     ),
     // scss-docs-end utils-borders-ouds
     // Sizing utilities
@@ -790,15 +782,12 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
-        null: var(--#{$prefix}border-radius),
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
       ),
       bootstrap-compatibility: true
     ),
@@ -806,15 +795,12 @@ $utilities: map-merge(
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
-        null: var(--#{$prefix}border-radius),
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
       ),
       bootstrap-compatibility: true
     ),
@@ -822,15 +808,12 @@ $utilities: map-merge(
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
-        null: var(--#{$prefix}border-radius),
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
       ),
       bootstrap-compatibility: true
     ),
@@ -838,15 +821,12 @@ $utilities: map-merge(
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
-        null: var(--#{$prefix}border-radius),
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
       ),
       bootstrap-compatibility: true
     ),
@@ -854,15 +834,12 @@ $utilities: map-merge(
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
-        null: var(--#{$prefix}border-radius),
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
       ),
       bootstrap-compatibility: true
     ),
