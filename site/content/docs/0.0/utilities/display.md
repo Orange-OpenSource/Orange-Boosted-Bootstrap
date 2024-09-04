@@ -104,8 +104,9 @@ The print and display classes can be combined.
 {{< example >}}
 <div class="d-print-none">Screen Only (Hide on print only)</div>
 <div class="d-none d-print-block">Print Only (Hide on screen only)</div>
-<!--<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>-->
 {{< /example >}}
+
+<!--<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>-->
 
 ## CSS
 
