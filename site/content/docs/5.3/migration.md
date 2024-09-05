@@ -26,8 +26,10 @@ toc: true
 ### Docs
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
-  
+
   Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
+
+- We have checked all SVGs in the documentation to ensure that they are accessible and correctly interpreted by support technologies. Please also check your projects' SVGs, which should have either `aria-hidden="true"`, or `role="img"` with an accessible name (defined by `aria-label`, `aria-labelledby`, a `<title>`, or some visually hidden alternative text).
 
 ### CSS and Sass variables
 
