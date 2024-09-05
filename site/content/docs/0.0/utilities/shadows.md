@@ -10,7 +10,7 @@ toc: true
 
 ## Examples
 
-While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+<!--While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, -->You can<!-- also--> quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
 
 {{< callout danger >}}
 The `.shadow-raised` and `.shadow-drag` utilities must not be used in any other context than drag and drop.
