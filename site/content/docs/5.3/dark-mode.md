@@ -8353,21 +8353,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option5">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option6">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option7">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8376,21 +8376,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option8">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option9">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option10">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8460,21 +8460,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons1" id="option51" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option51">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option61" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option61">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option71" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option71">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8483,21 +8483,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option81" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option81">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option91" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option91">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option01" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option01">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8567,21 +8567,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons2" id="option52" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option52">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option62" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option62">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option72" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option72">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8590,21 +8590,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option82" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option82">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option92" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option92">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option02" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option02">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8674,21 +8674,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons3" id="option53" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option53" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option63" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option63" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option73" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option73" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8697,21 +8697,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option83" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option83" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option93" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option93" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option03" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option03" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8781,21 +8781,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons4" id="option54" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option54" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option64" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option64" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option74" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option74" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8804,21 +8804,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option84" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option84" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option94" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option94" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option04" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option04" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
