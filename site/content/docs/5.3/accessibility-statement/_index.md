@@ -10,7 +10,7 @@ aliases:
 
 Orange undertakes to make its websites internet, intranet, extranet and its mobile applications accessible in accordance with article 47 of Law No. 2005-102 of February 11, 2005.
 
-To this end, it implements the following strategy and actions: [the pluri-annual accessibility framework (French)](https://gallery.orange.com/rse/?od=d4d15fea-9e7a-4497-8b04-c5e7f9290dca&om=b4e153e8-7460-4196-8890-a18eca5a51a9&v=sharedSelection#l=row&ss=3ba60f1d-f9fc-4b21-aca6-056dbdae6b94).
+To this end, it implements the following strategy and actions: [the pluri-annual accessibility framework](https://gallery.orange.com/rse/?od=d4d15fea-9e7a-4497-8b04-c5e7f9290dca&om=b4e153e8-7460-4196-8890-a18eca5a51a9&v=sharedSelection#l=row&ss=3ba60f1d-f9fc-4b21-aca6-056dbdae6b94).
 
 This accessibility statement applies to the Boosted documentation.
 
