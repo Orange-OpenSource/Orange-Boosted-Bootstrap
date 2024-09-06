@@ -28,7 +28,7 @@ Have a need for Boosted's brand resources? Great! We have only a few guidelines 
   <div class="col">
     <div class="ratio ratio-1x1">
     <figure class="d-flex bg-black">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img m-auto" width="30" height="30" role="img" alt="Orange reduced logo" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img m-auto" width="30" height="30" role="img" alt="Orange small logo" loading="lazy">
       <figcaption class="figure-caption fw-bold position-absolute">Small logo</figcaption>
     </figure>
     </div>
