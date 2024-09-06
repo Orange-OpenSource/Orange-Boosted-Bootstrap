@@ -74,13 +74,11 @@ Lastly, our styles build on the fundamental behaviors of common web elements. Wh
 
 The same goes for more complex components. While we _could_ write our own form validation plugin to add classes to a parent element based on an input's state, thereby allowing us to style the text say red, we prefer using the `:valid`/`:invalid` pseudo-elements every browser provides us.
 
-<!--
 ## Utilities
 
 Utility classes are a powerful ally in combating CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
 
 Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
--->
 
 ## Flexible HTML
 
