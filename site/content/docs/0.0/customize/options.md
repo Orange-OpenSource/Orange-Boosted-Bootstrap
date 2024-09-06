@@ -15,7 +15,7 @@ You can find and customize these variables for key global options in OUDS Web's 
 | Variable                          | Values                                | Description                                                                            |
 | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
 | `$enable-bootstrap-compatibility` | `true` or `false` (default)           | Enforces Bootstrap compatibility. |
-| `$enable-grid-classes`         | `true` (default) or `false`           | Enables the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.). |
+| `$enable-grid-classes`            | `true` (default) or `false`           | Enables the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.). |
 <!--| `$spacer`                      | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{< docsref "/utilities/spacing" >}}). |
 | `$enable-dark-mode`            | `true` (default) or `false`           | Enables built-in [dark mode support]({{< docsref "/customize/color-modes#dark-mode" >}}) across the project and its components. |
 | `$enable-rounded`              | `true` or `false` (default)           | Enables predefined `border-radius` styles on various components. |
