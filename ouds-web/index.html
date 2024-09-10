@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
 <meta name="author" content="Orange and OUDS Web contributors">
-<meta name="generator" content="Hugo 0.128.2">
+<meta name="generator" content="Hugo 0.126.3">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="0.0">
@@ -23,7 +23,7 @@
 <link rel="preload" href="/ouds-web/docs/0.0/assets/img/ouds-web-sprite.svg" as="image" type="image/svg+xml">
 <script src="/ouds-web/docs/0.0/assets/js/color-modes.js"></script>
 
-<link href="/ouds-web/docs/0.0/dist/css/ouds-web.min.css" rel="stylesheet" integrity="sha384-aKNl1OdFCdf9tv76WnZ6LWOmIyKf8OxA4IkLvU8N+uqGLgJeBJXyT890JLvJMmMe"><link href="/ouds-web/docs/0.0/assets/css/docs.css" rel="stylesheet">
+<link href="/ouds-web/docs/0.0/dist/css/ouds-web-bootstrap.min.css" rel="stylesheet"><link href="/ouds-web/docs/0.0/assets/css/docs.css" rel="stylesheet">
 <link href="/ouds-web/docs/0.0/assets/css/search.css" rel="stylesheet">
 
 <link rel="apple-touch-icon" href="/ouds-web/docs/0.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -267,7 +267,7 @@
       </p>
       <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
         <div class="d-inline-block v-align-middle fs-5" style="min-width: fit-content;">
-          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i @ouds/web@0.0.2</span></span></code></pre></div>
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i @ouds/web@0.0.3</span></span></code></pre></div>
         </div>
         <a href="/ouds-web/docs/0.0/getting-started/introduction/" class="btn btn-lg btn-primary">
           <svg class="bi me-2 fs-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
@@ -275,7 +275,7 @@
         </a>
       </div>
       <p class="text-body-secondary mb-0">
-        Currently <strong>v0.0.2</strong>
+        Currently <strong>v0.0.3</strong>
         <span class="px-1">&middot;</span>
         <a href="/ouds-web/docs/0.0/getting-started/download/" class="link-secondary">Download</a>
         <span class="px-1">&middot;</span>
@@ -309,8 +309,8 @@
     <p class="pe-lg-5">
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install @ouds/web@0.0.2</span></span></code></pre></div>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add @ouds/web@0.0.2</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install @ouds/web@0.0.3</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add @ouds/web@0.0.3</span></span></code></pre></div>
     <p>
       <a href="/ouds-web/docs/0.0/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>
@@ -321,8 +321,8 @@
     <p class="pe-lg-5">
       When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/uds-web">jsDelivr</a>. See it in action with our simple <a href="/ouds-web/docs/0.0/getting-started/introduction/#quick-start">quick start</a>, or <a href="/ouds-web/docs/0.0/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/ouds-web/docs/0.0/getting-started/introduction/#separate">separately</a>.
     </p>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@ouds/web@0.0.2/dist/css/ouds-web.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-aKNl1OdFCdf9tv76WnZ6LWOmIyKf8OxA4IkLvU8N+uqGLgJeBJXyT890JLvJMmMe&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@ouds/web@0.0.2/dist/js/ouds-web.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-WbRbVK8IAxAPT1Lxoho7M9yUW05xOPxt/2mDCmRtbg+t0nGeq+H1lxrfPjjGLYEO&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@ouds/web@0.0.3/dist/css/ouds-web.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-l5hs5VMvg/5jo/sqjf86ElmOICAqJV32d7l1MKhOpNQ9gP4Y/MLm6cYowYlGL/QK&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@ouds/web@0.0.3/dist/js/ouds-web.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-uopY5oncQMUdszreKABzOYFhn1eB8a8CiUpxy39KAT6dh8TJ6jUxgKup7G1WLL7y&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
   </div>
 </section>
 
@@ -368,7 +368,10 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$prefix</span><span class="o">:</span> <span class="s2">&#34;mo-&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Required OUDS Web imports
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/variables&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/tokens/raw&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/tokens/semantic&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/tokens/component&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/variables&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/variables-dark&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/maps&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/@ouds/web/scss/mixins&#34;</span><span class="p">;</span>
@@ -385,6 +388,7 @@
     <p>Learn more about <a href="/ouds-web/docs/0.0/customize/sass/">using OUDS Web with Sass</a>.</p>
   </div>
 </section>
+
       <section class="row g-lg-5 pb-md-5 mb-5 align-items-center">
   <div class="col-lg-8 mb-5">
     <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
@@ -510,7 +514,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v0.0.2.</p>
+          <p class="mb-lg-1">Currently v0.0.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -529,7 +533,7 @@
 </nav>
 
 
-    <script defer src="/ouds-web/docs/0.0/dist/js/ouds-web.bundle.min.js" integrity="sha384-WbRbVK8IAxAPT1Lxoho7M9yUW05xOPxt/2mDCmRtbg+t0nGeq+H1lxrfPjjGLYEO"></script>
+    <script defer src="/ouds-web/docs/0.0/dist/js/ouds-web.bundle.min.js" integrity="sha384-uopY5oncQMUdszreKABzOYFhn1eB8a8CiUpxy39KAT6dh8TJ6jUxgKup7G1WLL7y"></script>
 
 <script defer src="/ouds-web/docs/0.0/assets/js/application.js"></script>
 

@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.0.2 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.0.3 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2024 The OUDS Web Authors
   * Copyright 2015-2024 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v0.0.2 (https://web.unified-design-system.orange.com/)
+  * Bootstrap v0.0.3 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -960,7 +960,7 @@ class Config {
  * Constants
  */
 
-const VERSION = '0.0.2';
+const VERSION = '0.0.3';
 
 /**
  * Class definition
@@ -4434,7 +4434,7 @@ const SELECTOR_DROPDOWN = '.dropdown';
 const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
 const Default$1 = {
   offset: null,
-  // TODO: v6 @deprecated, keep it for backwards compatibility reasons
+  // TODO: Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
   rootMargin: '0px 0px -25%',
   smoothScroll: false,
   target: null,
@@ -4442,7 +4442,7 @@ const Default$1 = {
 };
 const DefaultType$1 = {
   offset: '(number|null)',
-  // TODO v6 @deprecated, keep it for backwards compatibility reasons
+  // TODO Bootstrap v6 @deprecated, keep it for backwards compatibility reasons
   rootMargin: 'string',
   smoothScroll: 'boolean',
   target: 'element',
@@ -4956,7 +4956,7 @@ const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
 const EVENT_SHOW = `show${EVENT_KEY}`;
 const EVENT_SHOWN = `shown${EVENT_KEY}`;
 const CLASS_NAME_FADE = 'fade';
-const CLASS_NAME_HIDE = 'hide'; // @deprecated - kept here only for backwards compatibility
+const CLASS_NAME_HIDE = 'hide'; // Bootstrap @deprecated - kept here only for backwards compatibility
 const CLASS_NAME_SHOW = 'show';
 const CLASS_NAME_SHOWING = 'showing';
 const DefaultType = {
@@ -5009,7 +5009,7 @@ class Toast extends BaseComponent {
       EventHandler.trigger(this._element, EVENT_SHOWN);
       this._maybeScheduleHide();
     };
-    this._element.classList.remove(CLASS_NAME_HIDE); // @deprecated
+    this._element.classList.remove(CLASS_NAME_HIDE); // Bootstrap @deprecated
     reflow(this._element);
     this._element.classList.add(CLASS_NAME_SHOW, CLASS_NAME_SHOWING);
     this._queueCallback(complete, this._element, this._config.animation);
@@ -5023,7 +5023,7 @@ class Toast extends BaseComponent {
       return;
     }
     const complete = () => {
-      this._element.classList.add(CLASS_NAME_HIDE); // @deprecated
+      this._element.classList.add(CLASS_NAME_HIDE); // Bootstrap @deprecated
       this._element.classList.remove(CLASS_NAME_SHOWING, CLASS_NAME_SHOW);
       EventHandler.trigger(this._element, EVENT_HIDDEN);
     };

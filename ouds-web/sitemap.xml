@@ -18,8 +18,6 @@
   </url><url>
     <loc>https://web.unified-design-system.orange.com/docs/0.0/components/badge/</loc>
   </url><url>
-    <loc>https://web.unified-design-system.orange.com/docs/0.0/getting-started/best-practices/</loc>
-  </url><url>
     <loc>https://web.unified-design-system.orange.com/docs/0.0/utilities/borders/</loc>
   </url><url>
     <loc>https://web.unified-design-system.orange.com/docs/0.0/components/breadcrumb/</loc>
@@ -71,6 +69,8 @@
     <loc>https://web.unified-design-system.orange.com/docs/0.0/layout/css-grid/</loc>
   </url><url>
     <loc>https://web.unified-design-system.orange.com/docs/0.0/customize/css-variables/</loc>
+  </url><url>
+    <loc>https://web.unified-design-system.orange.com/docs/0.0/customize/custom-libraries/</loc>
   </url><url>
     <loc>https://web.unified-design-system.orange.com/docs/0.0/customize/overview/</loc>
   </url><url>
