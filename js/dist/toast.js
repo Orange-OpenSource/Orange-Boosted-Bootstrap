@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.0.2 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.0.3 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2024 The OUDS Web Authors
   * Copyright 2015-2024 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap toast.js v0.0.2 (https://web.unified-design-system.orange.com/)
+  * Bootstrap toast.js v0.0.3 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -38,7 +38,7 @@
   const EVENT_SHOW = `show${EVENT_KEY}`;
   const EVENT_SHOWN = `shown${EVENT_KEY}`;
   const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_HIDE = 'hide'; // @deprecated - kept here only for backwards compatibility
+  const CLASS_NAME_HIDE = 'hide'; // Bootstrap @deprecated - kept here only for backwards compatibility
   const CLASS_NAME_SHOW = 'show';
   const CLASS_NAME_SHOWING = 'showing';
   const DefaultType = {
@@ -91,7 +91,7 @@
         EventHandler.trigger(this._element, EVENT_SHOWN);
         this._maybeScheduleHide();
       };
-      this._element.classList.remove(CLASS_NAME_HIDE); // @deprecated
+      this._element.classList.remove(CLASS_NAME_HIDE); // Bootstrap @deprecated
       index_js.reflow(this._element);
       this._element.classList.add(CLASS_NAME_SHOW, CLASS_NAME_SHOWING);
       this._queueCallback(complete, this._element, this._config.animation);
@@ -105,7 +105,7 @@
         return;
       }
       const complete = () => {
-        this._element.classList.add(CLASS_NAME_HIDE); // @deprecated
+        this._element.classList.add(CLASS_NAME_HIDE); // Bootstrap @deprecated
         this._element.classList.remove(CLASS_NAME_SHOWING, CLASS_NAME_SHOW);
         EventHandler.trigger(this._element, EVENT_HIDDEN);
       };

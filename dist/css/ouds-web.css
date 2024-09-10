@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * OUDS Web  v0.0.2 (https://web.unified-design-system.orange.com/)
+ * OUDS Web  v0.0.3 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2024 The OUDS Web Authors
  * Copyright 2014-2024 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
@@ -3890,6 +3890,10 @@ textarea.form-control-lg {
 .btn-tiktok {
   --bs-network-color: #ff2c55;
   --bs-network-logo: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3e%3cpath d='M7.024 30.054C4.584 28.212 3 25.235 3 21.876c0-5.59 4.39-10.123 9.805-10.123.45 0 .899.031 1.345.094v5.6a4.363 4.363 0 0 0-1.361-.218c-2.477 0-4.485 2.074-4.485 4.631 0 1.809 1.003 3.374 2.467 4.137l.31.146a4.348 4.348 0 0 0 1.708.348c2.471 0 4.476-2.065 4.484-4.615V0h5.335v.704c.02.211.046.42.082.63l.08.404a7.668 7.668 0 0 0 3.306 4.769A7.22 7.22 0 0 0 30 7.665V8.83l-.199-.047-.182-.047.381.094v4.312a12.4 12.4 0 0 1-7.392-2.443v11.177c0 5.591-4.39 10.124-9.804 10.124-2.02 0-3.898-.63-5.458-1.712l-.322-.234Z'/%3e%3c/svg%3e");
+}
+.btn-x {
+  --bs-network-color: #1da1f2;
+  --bs-network-logo: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 19'%3e%3cpath d='m15.751 0-5.053 5.776L6.328 0H0l7.561 9.888-7.166 8.19h3.068l5.531-6.32 4.834 6.32H20l-7.883-10.42L18.817 0h-3.066ZM3.581 1.74h1.824l10.97 14.502h-1.7L3.58 1.74Z'/%3e%3c/svg%3e");
 }
 .fade {
   transition: opacity ease-in-out linear;
@@ -9324,23 +9328,27 @@ label.tag:active.disabled {
   object-fit: none !important;
 }
 
-.opacity-0 {
+.opacity-transparent {
   opacity: 0 !important;
 }
 
-.opacity-25 {
-  opacity: 0.25 !important;
+.opacity-weaker {
+  opacity: 0.04 !important;
 }
 
-.opacity-50 {
-  opacity: 0.5 !important;
+.opacity-weak {
+  opacity: 0.16 !important;
 }
 
-.opacity-75 {
-  opacity: 0.75 !important;
+.opacity-medium {
+  opacity: 0.32 !important;
 }
 
-.opacity-100 {
+.opacity-emphasis {
+  opacity: 0.64 !important;
+}
+
+.opacity-opaque {
   opacity: 1 !important;
 }
 
