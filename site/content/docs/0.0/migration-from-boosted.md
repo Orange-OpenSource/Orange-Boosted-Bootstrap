@@ -140,25 +140,25 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-box-shadow-blur-focus</code></li>
       <li><code>$ouds-box-shadow-blur-none</code></li>
       <li><code>$ouds-box-shadow-blur-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-blur-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-blur-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-blur-raised</code></li>
       <li><code>$ouds-box-shadow-blur-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-blur-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-blur-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-blur-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-color-drag</code></li>
       <li><code>$ouds-box-shadow-color-focus</code></li>
       <li><code>$ouds-box-shadow-color-none</code></li>
       <li><code>$ouds-box-shadow-color-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-color-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-color-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-color-raised</code></li>
       <li><code>$ouds-box-shadow-color-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-color-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-color-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-color-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-drag</code></li>
       <li><code>$ouds-box-shadow-focus</code></li>
       <li><code>$ouds-box-shadow-none</code></li>
       <li><code>$ouds-box-shadow-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-raised</code></li>
       <li><code>$ouds-box-shadow-spread-0</code></li>
       <li><code>$ouds-box-shadow-spread-300</code></li>
@@ -170,23 +170,23 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-box-shadow-spread-n400</code></li>
       <li><code>$ouds-box-shadow-spread-none</code></li>
       <li><code>$ouds-box-shadow-spread-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-spread-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-spread-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-spread-raised</code></li>
       <li><code>$ouds-box-shadow-spread-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-spread-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-spread-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-spread-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-x-0</code></li>
       <li><code>$ouds-box-shadow-x-drag</code></li>
       <li><code>$ouds-box-shadow-x-focus</code></li>
       <li><code>$ouds-box-shadow-x-none</code></li>
       <li><code>$ouds-box-shadow-x-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-x-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-x-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-x-raised</code></li>
       <li><code>$ouds-box-shadow-x-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-x-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-x-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-x-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-box-shadow-y-0</code></li>
       <li><code>$ouds-box-shadow-y-100</code></li>
@@ -199,10 +199,10 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-box-shadow-y-focus</code></li>
       <li><code>$ouds-box-shadow-y-none</code></li>
       <li><code>$ouds-box-shadow-y-overlay-default</code></li>
-      <li><code>$ouds-box-shadow-y-overlay-emphasis</code></li>
+      <li><code>$ouds-box-shadow-y-overlay-emphasized</code></li>
       <li><code>$ouds-box-shadow-y-raised</code></li>
       <li><code>$ouds-box-shadow-y-sticky-default</code></li>
-      <li><code>$ouds-box-shadow-y-sticky-emphasis</code></li>
+      <li><code>$ouds-box-shadow-y-sticky-emphasized</code></li>
       <li><code>$ouds-box-shadow-y-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>

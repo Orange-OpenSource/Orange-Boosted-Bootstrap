@@ -21,9 +21,9 @@ $ouds-box-shadow-x-none:                      $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-raised:                    $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-drag:                      $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-overlay-default:           $ouds-box-shadow-x-0 !default;
-$ouds-box-shadow-x-overlay-emphasis:          $ouds-box-shadow-x-0 !default;
+$ouds-box-shadow-x-overlay-emphasized:          $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-sticky-default:            $ouds-box-shadow-x-0 !default;
-$ouds-box-shadow-x-emphasis:                  $ouds-box-shadow-x-0 !default;
+$ouds-box-shadow-x-emphasized:                  $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-navigation-scrolled:       $ouds-box-shadow-x-0 !default;
 $ouds-box-shadow-x-focus:                     $ouds-box-shadow-x-0 !default;
 
@@ -31,9 +31,9 @@ $ouds-box-shadow-y-none:                      $ouds-box-shadow-y-0 !default;
 $ouds-box-shadow-y-raised:                    $ouds-box-shadow-y-100 !default;
 $ouds-box-shadow-y-drag:                      $ouds-box-shadow-y-300 !default;
 $ouds-box-shadow-y-overlay-default:           $ouds-box-shadow-y-200 !default;
-$ouds-box-shadow-y-overlay-emphasis:          $ouds-box-shadow-y-500 !default;
+$ouds-box-shadow-y-overlay-emphasized:          $ouds-box-shadow-y-500 !default;
 $ouds-box-shadow-y-sticky-default:            $ouds-box-shadow-y-300 !default;
-$ouds-box-shadow-y-emphasis:                  $ouds-box-shadow-y-300 !default;
+$ouds-box-shadow-y-emphasized:                  $ouds-box-shadow-y-300 !default;
 $ouds-box-shadow-y-navigation-scrolled:       $ouds-box-shadow-y-300 !default;
 $ouds-box-shadow-y-focus:                     $ouds-box-shadow-y-0 !default;
 
@@ -41,9 +41,9 @@ $ouds-box-shadow-blur-none:                   $ouds-box-shadow-blur-0 !default;
 $ouds-box-shadow-blur-raised:                 $ouds-box-shadow-blur-200 !default;
 $ouds-box-shadow-blur-drag:                   $ouds-box-shadow-blur-400 !default;
 $ouds-box-shadow-blur-overlay-default:        $ouds-box-shadow-blur-300 !default;
-$ouds-box-shadow-blur-overlay-emphasis:       $ouds-box-shadow-blur-600 !default;
+$ouds-box-shadow-blur-overlay-emphasized:       $ouds-box-shadow-blur-600 !default;
 $ouds-box-shadow-blur-sticky-default:         $ouds-box-shadow-blur-400 !default;
-$ouds-box-shadow-blur-emphasis:               $ouds-box-shadow-blur-400 !default;
+$ouds-box-shadow-blur-emphasized:               $ouds-box-shadow-blur-400 !default;
 $ouds-box-shadow-blur-navigation-scrolled:    $ouds-box-shadow-blur-400 !default;
 $ouds-box-shadow-blur-focus:                  $ouds-box-shadow-blur-0 !default;
 
@@ -51,9 +51,9 @@ $ouds-box-shadow-spread-none:                 $ouds-box-shadow-spread-0 !default
 $ouds-box-shadow-spread-raised:               $ouds-box-shadow-spread-0 !default;
 $ouds-box-shadow-spread-drag:                 $ouds-box-shadow-spread-n100 !default;
 $ouds-box-shadow-spread-overlay-default:      $ouds-box-shadow-spread-n100 !default;
-$ouds-box-shadow-spread-overlay-emphasis:     $ouds-box-shadow-spread-n300 !default;
+$ouds-box-shadow-spread-overlay-emphasized:     $ouds-box-shadow-spread-n300 !default;
 $ouds-box-shadow-spread-sticky-default:       $ouds-box-shadow-spread-n100 !default;
-$ouds-box-shadow-spread-emphasis:             $ouds-box-shadow-spread-n100 !default;
+$ouds-box-shadow-spread-emphasized:             $ouds-box-shadow-spread-n100 !default;
 $ouds-box-shadow-spread-navigation-scrolled:  $ouds-box-shadow-spread-n100 !default;
 $ouds-box-shadow-spread-focus:                $ouds-box-shadow-spread-300 !default;
 
@@ -62,9 +62,9 @@ $ouds-box-shadow-color-none:                  rgba(0, 0, 0, 0) !default;
 $ouds-box-shadow-color-raised:                rgba(0, 0, 0, .32) !default;
 $ouds-box-shadow-color-drag:                  rgba(0, 0, 0, .48) !default;
 $ouds-box-shadow-color-overlay-default:       rgba(0, 0, 0, .24) !default;
-$ouds-box-shadow-color-overlay-emphasis:      rgba(0, 0, 0, .16) !default;
+$ouds-box-shadow-color-overlay-emphasized:      rgba(0, 0, 0, .16) !default;
 $ouds-box-shadow-color-sticky-default:        rgba(0, 0, 0, .16) !default;
-$ouds-box-shadow-color-emphasis:              rgba(0, 0, 0, .16) !default;
+$ouds-box-shadow-color-emphasized:              rgba(0, 0, 0, .16) !default;
 $ouds-box-shadow-color-navigation-scrolled:   rgba(0, 0, 0, .16) !default;
 $ouds-box-shadow-color-focus:                 rgba(0, 0, 0, 1) !default;
 // scss-docs-end ouds-sem-shadow
