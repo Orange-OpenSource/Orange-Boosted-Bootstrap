@@ -9,11 +9,7 @@ aliases:
 toc: true
 ---
 
-## v0.0.3
-
-### Pre-compiled versions
-
-From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+## v0.0.4
 
 ### Utilities
 
@@ -33,6 +29,14 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
   - Pill: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
+
+## v0.0.3
+
+### Pre-compiled versions
+
+From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`.
+
+### Utilities
 
 #### Opacity
 
