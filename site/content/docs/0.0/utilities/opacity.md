@@ -7,13 +7,13 @@ aliases:
   - "/docs/utilities/opacity/"
 ---
 
-The `opacity` property sets the opacity level for an element. The opacity level describes the semantic transparency level, where `opaque` is not transparent at all, `emphasis` to `weaker` are various levels of transparency, and `transparent` is completely transparent.
+The `opacity` property sets the opacity level for an element. The opacity level describes the semantic transparency level, where `opaque` is not transparent at all, `strong` to `weaker` are various levels of transparency, and `transparent` is completely transparent.
 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
 <div class="bd-example d-sm-flex">
   <div class="opacity-opaque p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-emphasis p-3 m-2 bg-primary fw-bold"></div>
+  <div class="opacity-strong p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-medium p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-weak p-3 m-2 bg-primary fw-bold"></div>
   <div class="opacity-weaker p-3 m-2 bg-primary fw-bold"></div>
@@ -22,7 +22,7 @@ Set the opacity of an element using `.opacity-{value}` utilities.
 
 ```html
 <div class="opacity-opaque">...</div>
-<div class="opacity-emphasis">...</div>
+<div class="opacity-strong">...</div>
 <div class="opacity-medium">...</div>
 <div class="opacity-weak">...</div>
 <div class="opacity-weaker">...</div>

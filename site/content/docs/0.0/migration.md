@@ -9,6 +9,12 @@ aliases:
 toc: true
 ---
 
+## v0.0.4
+
+#### Opacity
+
+- <span class="badge text-bg-danger">Breaking</span>: `.opacity-emphasis` has been renamed to `.opacity-strong`.
+
 ## v0.0.3
 
 ### Pre-compiled versions
