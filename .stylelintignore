@@ -1,5 +1,4 @@
 **/*.min.css
-**/*.test.scss
 **/dist/
 **/vendor/
 /_site/

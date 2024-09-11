@@ -683,18 +683,26 @@ $utilities: ();
         }
 
         .border-opacity-10 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
           --bs-border-opacity: 0.1;
         }
 
         .border-opacity-25 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
           --bs-border-opacity: 0.25;
         }
 
         .border-opacity-50 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
           --bs-border-opacity: 0.5;
         }
 
         .border-opacity-75 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
           --bs-border-opacity: 0.75;
         }
 
