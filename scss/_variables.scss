@@ -650,28 +650,28 @@ $focus-visible-outer-color:           $black !default; // OUDS mod
 
 // fusv-disable
 // scss-docs-start box-shadow-variables-ouds
-$ouds-box-shadow-none:                $ouds-box-shadow-x-none $ouds-box-shadow-y-none $ouds-box-shadow-blur-none $ouds-box-shadow-spread-none $ouds-box-shadow-color-none !default;
-$ouds-box-shadow-raised:              $ouds-box-shadow-x-raised $ouds-box-shadow-y-raised $ouds-box-shadow-blur-raised $ouds-box-shadow-spread-raised $ouds-box-shadow-color-raised !default;
-$ouds-box-shadow-drag:                $ouds-box-shadow-x-drag $ouds-box-shadow-y-drag $ouds-box-shadow-blur-drag $ouds-box-shadow-spread-drag $ouds-box-shadow-color-drag !default;
-$ouds-box-shadow-overlay-default:     $ouds-box-shadow-x-overlay-default $ouds-box-shadow-y-overlay-default $ouds-box-shadow-blur-overlay-default $ouds-box-shadow-spread-overlay-default $ouds-box-shadow-color-overlay-default !default;
-$ouds-box-shadow-overlay-emphasized:  $ouds-box-shadow-x-overlay-emphasized $ouds-box-shadow-y-overlay-emphasized $ouds-box-shadow-blur-overlay-emphasized $ouds-box-shadow-spread-overlay-emphasized $ouds-box-shadow-color-overlay-emphasized !default;
-$ouds-box-shadow-sticky-default:      $ouds-box-shadow-x-sticky-default $ouds-box-shadow-y-sticky-default $ouds-box-shadow-blur-sticky-default $ouds-box-shadow-spread-sticky-default $ouds-box-shadow-color-sticky-default !default;
-$ouds-box-shadow-emphasized:          $ouds-box-shadow-x-emphasized $ouds-box-shadow-y-emphasized $ouds-box-shadow-blur-emphasized $ouds-box-shadow-spread-emphasized $ouds-box-shadow-color-emphasized !default;
-$ouds-box-shadow-navigation-scrolled: $ouds-box-shadow-x-navigation-scrolled $ouds-box-shadow-y-navigation-scrolled $ouds-box-shadow-blur-navigation-scrolled $ouds-box-shadow-spread-navigation-scrolled $ouds-box-shadow-color-navigation-scrolled !default;
-$ouds-box-shadow-focus:               $ouds-box-shadow-x-focus $ouds-box-shadow-y-focus $ouds-box-shadow-blur-focus $ouds-box-shadow-spread-focus $ouds-box-shadow-color-focus !default;
+$ouds-elevation-none:                $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none $ouds-elevation-color-none !default;
+$ouds-elevation-raised:              $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised $ouds-elevation-color-raised !default;
+$ouds-elevation-drag:                $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag $ouds-elevation-color-drag !default;
+$ouds-elevation-overlay-default:     $ouds-elevation-x-overlay-default $ouds-elevation-y-overlay-default $ouds-elevation-blur-overlay-default $ouds-elevation-spread-overlay-default $ouds-elevation-color-overlay-default !default;
+$ouds-elevation-overlay-emphasized:  $ouds-elevation-x-overlay-emphasized $ouds-elevation-y-overlay-emphasized $ouds-elevation-blur-overlay-emphasized $ouds-elevation-spread-overlay-emphasized $ouds-elevation-color-overlay-emphasized !default;
+$ouds-elevation-sticky-default:      $ouds-elevation-x-sticky-default $ouds-elevation-y-sticky-default $ouds-elevation-blur-sticky-default $ouds-elevation-spread-sticky-default $ouds-elevation-color-sticky-default !default;
+$ouds-elevation-emphasized:          $ouds-elevation-x-emphasized $ouds-elevation-y-emphasized $ouds-elevation-blur-emphasized $ouds-elevation-spread-emphasized $ouds-elevation-color-emphasized !default;
+$ouds-elevation-navigation-scrolled: $ouds-elevation-x-navigation-scrolled $ouds-elevation-y-navigation-scrolled $ouds-elevation-blur-navigation-scrolled $ouds-elevation-spread-navigation-scrolled $ouds-elevation-color-navigation-scrolled !default;
+$ouds-elevation-focus:               $ouds-elevation-x-focus $ouds-elevation-y-focus $ouds-elevation-blur-focus $ouds-elevation-spread-focus $ouds-elevation-color-focus !default;
 
 $ouds-box-shadows: (
-  "none": $ouds-box-shadow-none,
-  "raised": $ouds-box-shadow-raised,
-  "drag": $ouds-box-shadow-drag,
+  "none": $ouds-elevation-none,
+  "raised": $ouds-elevation-raised,
+  "drag": $ouds-elevation-drag,
 ) !default;
 // scss-docs-end box-shadow-variables-ouds
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:        $ouds-box-shadow-overlay-default !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
-$box-shadow-sm:     $ouds-box-shadow-raised !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
-$box-shadow-lg:     $ouds-box-shadow-overlay-emphasized !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
+$box-shadow:        $ouds-elevation-overlay-default !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
+$box-shadow-sm:     $ouds-elevation-raised !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
+$box-shadow-lg:     $ouds-elevation-overlay-emphasized !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
 $box-shadow-inset:  null !default; // OUDS mod: instead of `inset 0 1px 2px rgba($black, .075)`
 // scss-docs-end box-shadow-variables
 

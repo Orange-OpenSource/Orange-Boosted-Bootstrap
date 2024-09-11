@@ -22,29 +22,29 @@ $ouds-opacity-900: 1 !default;
 
 // scss-docs-start ouds-raw-shadow
 // Box-shadow
-$ouds-box-shadow-x-0:           0 !default;
+$ouds-elevation-x-0:           0 !default;
 
-$ouds-box-shadow-y-0:           0 !default;
-$ouds-box-shadow-y-100:         1px !default;
-$ouds-box-shadow-y-200:         2px !default;
-$ouds-box-shadow-y-300:         4px !default;
-// $ouds-box-shadow-y-400:         8px !default;
-$ouds-box-shadow-y-500:         12px !default;
-// $ouds-box-shadow-y-600:         20px !default;
+$ouds-elevation-y-0:           0 !default;
+$ouds-elevation-y-100:         1px !default;
+$ouds-elevation-y-200:         2px !default;
+$ouds-elevation-y-300:         4px !default;
+// $ouds-elevation-y-400:         8px !default;
+$ouds-elevation-y-500:         12px !default;
+// $ouds-elevation-y-600:         20px !default;
 
-$ouds-box-shadow-blur-0:        0 !default;
-// $ouds-box-shadow-blur-100:      1px !default;
-$ouds-box-shadow-blur-200:      2px !default;
-$ouds-box-shadow-blur-300:      3px !default;
-$ouds-box-shadow-blur-400:      4px !default;
-// $ouds-box-shadow-blur-500:      8px !default;
-$ouds-box-shadow-blur-600:      12px !default;
-// $ouds-box-shadow-blur-700:      20px !default;
+$ouds-elevation-blur-0:        0 !default;
+// $ouds-elevation-blur-100:      1px !default;
+$ouds-elevation-blur-200:      2px !default;
+$ouds-elevation-blur-300:      3px !default;
+$ouds-elevation-blur-400:      4px !default;
+// $ouds-elevation-blur-500:      8px !default;
+$ouds-elevation-blur-600:      12px !default;
+// $ouds-elevation-blur-700:      20px !default;
 
-// $ouds-box-shadow-spread-n400:   -8px !default;
-$ouds-box-shadow-spread-n300:   -4px !default;
-// $ouds-box-shadow-spread-n200:   -2px !default;
-$ouds-box-shadow-spread-n100:   -1px !default;
-$ouds-box-shadow-spread-0:      0 !default;
-$ouds-box-shadow-spread-300:    3px !default;
+// $ouds-elevation-spread-n400:   -8px !default;
+$ouds-elevation-spread-n300:   -4px !default;
+// $ouds-elevation-spread-n200:   -2px !default;
+$ouds-elevation-spread-n100:   -1px !default;
+$ouds-elevation-spread-0:      0 !default;
+$ouds-elevation-spread-300:    3px !default;
 // scss-docs-end ouds-raw-shadow
