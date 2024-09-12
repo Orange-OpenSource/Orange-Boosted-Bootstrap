@@ -108,6 +108,6 @@ For more information, please [read text utilities]({{< docsref "/utilities/text#
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
 - [Deque Axe testing tools](https://www.deque.com/axe/)
-- [Orange accessibility guidelines](http://a11y-guidelines.orange.com/)
+- [Orange accessibility guidelines](http://a11y-guidelines.orange.com/en/)
 - [Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
 - [`:focus-visible` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
