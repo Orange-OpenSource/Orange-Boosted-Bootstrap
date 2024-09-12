@@ -183,6 +183,10 @@ Add classes to an element to easily round its corners.
 
 Use the scaling classes for larger or smaller rounded corners. Sizes are `none`, `short`, `medium`, `tall`, `circle` and `pill`, and can be configured by modifying the utilities API.
 
+{{< callout info >}}
+The `.rounded` class is mapped to the "default" border radius design token. In Orange brand, the value for this token is zero, explaining why the `.rounded` class does not apply any border radius here.
+{{< /callout >}}
+
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example default rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-none" title="Example non-rounded image" color="#999" >}}

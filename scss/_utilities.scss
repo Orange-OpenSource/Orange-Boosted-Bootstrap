@@ -784,10 +784,10 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        2: var(--#{$prefix}border-radius-lg),
+        3: var(--#{$prefix}border-radius-xl),
+        4: var(--#{$prefix}border-radius-xxl),
+        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
       ),
       bootstrap-compatibility: true
     ),
@@ -797,10 +797,10 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        2: var(--#{$prefix}border-radius-lg),
+        3: var(--#{$prefix}border-radius-xl),
+        4: var(--#{$prefix}border-radius-xxl),
+        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
       ),
       bootstrap-compatibility: true
     ),
@@ -810,10 +810,10 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        2: var(--#{$prefix}border-radius-lg),
+        3: var(--#{$prefix}border-radius-xl),
+        4: var(--#{$prefix}border-radius-xxl),
+        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
       ),
       bootstrap-compatibility: true
     ),
@@ -823,10 +823,10 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        2: var(--#{$prefix}border-radius-lg),
+        3: var(--#{$prefix}border-radius-xl),
+        4: var(--#{$prefix}border-radius-xxl),
+        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
       ),
       bootstrap-compatibility: true
     ),
@@ -836,10 +836,10 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        2: var(--#{$prefix}border-radius-lg),
+        3: var(--#{$prefix}border-radius-xl),
+        4: var(--#{$prefix}border-radius-xxl),
+        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
       ),
       bootstrap-compatibility: true
     ),

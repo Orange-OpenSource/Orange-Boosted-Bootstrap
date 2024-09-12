@@ -630,7 +630,7 @@ $border-radius:               map-get($ouds-border-radiuses, null) !default;
 $border-radius-sm:            map-get($ouds-border-radiuses, "short") !default;
 $border-radius-lg:            map-get($ouds-border-radiuses, "medium") !default;
 $border-radius-xl:            map-get($ouds-border-radiuses, "tall") !default;
-$border-radius-xxl:           map-get($ouds-border-radiuses, "tall") * 2 !default; // OUDS mod : arbitrary value for compatibility
+$border-radius-xxl:           map-get($ouds-border-radiuses, "tall") * 1.5 !default; // OUDS mod : arbitrary value for compatibility
 $border-radius-pill:          map-get($ouds-border-radiuses, "pill") !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
