@@ -9,6 +9,12 @@ aliases:
 toc: true
 ---
 
+## v0.0.4
+
+#### Helpers
+
+- <span class="badge text-bg-success">New</span> Stretched link helper: `.stretched-link` to a link to make its containing block clickable.
+
 ## v0.0.3
 
 ### Pre-compiled versions
