@@ -20,13 +20,16 @@ toc: true
 
 ### Components
 
+- **Orange navbar**
+  - Since the `role="img"` is not needed on a `<img>` tag, we have removed it from the user's avatar in the component. Please reflect this change on your websites. You should also check that you are using a correct label for this image, for example "Access to your account", depending on the context of your project.
+
 #### Buttons
   - <span class="badge text-bg-success">New</span> X social button.
 
 ### Docs
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
-  
+
   Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
 
 ### CSS and Sass variables
