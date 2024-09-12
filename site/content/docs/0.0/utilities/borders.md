@@ -102,14 +102,14 @@ These border color variants are just **examples illustrating the use of this col
 {{< /example >}}
 </details>-->
 
-## Opacity
+<!--## Opacity
 
 {{< callout danger >}}
-Within **OUDS Web context**, you **should not** be using any opacity effect on borders inside your interfaces.<!-- If you need to make a border disappear, please make sure to use the [`.border-transparent` utility](#color).-->
+Within **OUDS Web context**, you **should not** be using any opacity effect on borders inside your interfaces. If you need to make a border disappear, please make sure to use the [`.border-transparent` utility](#color).
 {{< /callout >}}
 
 {{< bootstrap-compatibility >}}
-<!--OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works
 
@@ -141,8 +141,8 @@ Or, choose from any of the `.border-opacity` utilities:
 <div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
 <div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
-{{< /example >}}-->
-{{< /bootstrap-compatibility >}}
+{{< /example >}}
+{{< /bootstrap-compatibility >}}-->
 
 ## Width
 
