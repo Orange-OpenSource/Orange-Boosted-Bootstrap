@@ -704,7 +704,7 @@ $aspect-ratios: (
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
-  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portait videos
+  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portrait videos
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
