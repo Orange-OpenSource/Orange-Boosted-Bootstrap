@@ -132,6 +132,7 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
+    // OUDS mod : border utilities
     // scss-docs-start utils-border-ouds
     "border-ouds": (
       property: border,
@@ -141,10 +142,12 @@ $utilities: map-merge(
       ),
     ),
     // scss-docs-end utils-border-ouds
+    // End mod
     // scss-docs-start utils-borders
     "border": (
       property: border,
       values: (
+        // OUDS mod : null value moved to border-ouds
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -152,6 +155,7 @@ $utilities: map-merge(
     "border-top": (
       property: border-top,
       values: (
+        // OUDS mod : null value moved to border-top-ouds
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -160,6 +164,7 @@ $utilities: map-merge(
       property: border-right,
       class: border-end,
       values: (
+        // OUDS mod : null value moved to border-end-ouds
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -167,6 +172,7 @@ $utilities: map-merge(
     "border-bottom": (
       property: border-bottom,
       values: (
+        // OUDS mod : null value moved to border-bottom-ouds
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -175,6 +181,7 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
+        // OUDS mod : null value moved to border-start-ouds
         0: 0,
       ),
       bootstrap-compatibility: true
@@ -211,6 +218,7 @@ $utilities: map-merge(
       bootstrap-compatibility: true
     ),
     // scss-docs-end utils-borders
+    // OUDS mod: border utilities
     // scss-docs-start utils-borders-ouds
     "border-top-ouds": (
       property: border-top,
@@ -253,6 +261,7 @@ $utilities: map-merge(
       values: $ouds-border-styles
     ),
     // scss-docs-end utils-borders-ouds
+    // End mod
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
@@ -782,12 +791,13 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
+        // OUDS mod : null value moved to rounded-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg),
-        3: var(--#{$prefix}border-radius-xl),
-        4: var(--#{$prefix}border-radius-xxl),
-        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod : instead of var(--#{$prefix}border-radius)
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod : instead of var(--#{$prefix}border-radius-lg)
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod : instead of var(--#{$prefix}border-radius-xl)
+        5: $border-radius-xxl * 1.5, // OUDS mod : instead of var(--#{$prefix}border-radius-xxl)
       ),
       bootstrap-compatibility: true
     ),
@@ -795,12 +805,13 @@ $utilities: map-merge(
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
+        // OUDS mod : null value moved to rounded-top-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg),
-        3: var(--#{$prefix}border-radius-xl),
-        4: var(--#{$prefix}border-radius-xxl),
-        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod : instead of var(--#{$prefix}border-radius)
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod : instead of var(--#{$prefix}border-radius-lg)
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod : instead of var(--#{$prefix}border-radius-xl)
+        5: $border-radius-xxl * 1.5, // OUDS mod : instead of var(--#{$prefix}border-radius-xxl)
       ),
       bootstrap-compatibility: true
     ),
@@ -808,12 +819,13 @@ $utilities: map-merge(
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
+        // OUDS mod : null value moved to rounded-end-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg),
-        3: var(--#{$prefix}border-radius-xl),
-        4: var(--#{$prefix}border-radius-xxl),
-        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod : instead of var(--#{$prefix}border-radius)
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod : instead of var(--#{$prefix}border-radius-lg)
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod : instead of var(--#{$prefix}border-radius-xl)
+        5: $border-radius-xxl * 1.5, // OUDS mod : instead of var(--#{$prefix}border-radius-xxl)
       ),
       bootstrap-compatibility: true
     ),
@@ -821,12 +833,13 @@ $utilities: map-merge(
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
+        // OUDS mod : null value moved to rounded-bottom-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg),
-        3: var(--#{$prefix}border-radius-xl),
-        4: var(--#{$prefix}border-radius-xxl),
-        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod : instead of var(--#{$prefix}border-radius)
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod : instead of var(--#{$prefix}border-radius-lg)
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod : instead of var(--#{$prefix}border-radius-xl)
+        5: $border-radius-xxl * 1.5, // OUDS mod : instead of var(--#{$prefix}border-radius-xxl)
       ),
       bootstrap-compatibility: true
     ),
@@ -834,16 +847,18 @@ $utilities: map-merge(
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
+        // OUDS mod : null value moved to rounded-start-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg),
-        3: var(--#{$prefix}border-radius-xl),
-        4: var(--#{$prefix}border-radius-xxl),
-        5: $border-radius-xxl * 1.5, // OUDS mod : arbitrary value to keep radius progression
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod : instead of var(--#{$prefix}border-radius)
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod : instead of var(--#{$prefix}border-radius-lg)
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod : instead of var(--#{$prefix}border-radius-xl)
+        5: $border-radius-xxl * 1.5, // OUDS mod : instead of var(--#{$prefix}border-radius-xxl)
       ),
       bootstrap-compatibility: true
     ),
     // scss-docs-end utils-border-radius
+    // OUDS mod : rounded utilities for border-radius
     // scss-docs-start utils-border-radius-ouds
     "rounded-ouds": (
       property: border-radius,
@@ -871,6 +886,7 @@ $utilities: map-merge(
       values: $ouds-border-radiuses
     ),
     // scss-docs-end utils-border-radius-ouds
+    // End mod
     // scss-docs-start utils-visibility
     "visibility": (
       property: visibility,
