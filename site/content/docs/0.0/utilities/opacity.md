@@ -62,13 +62,13 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 
 #### Raw tokens
 
-Opacity raw tokens<!-- generated via StyleDictionary--> as Sass variables. **Not to be used as-is**.
+Opacity raw tokens as Sass variables. **Not to be used as-is**.
 
 {{< scss-docs name="ouds-raw-opacity" file="scss/tokens/_raw.scss" >}}
 
 #### Semantic tokens
 
-Opacity semantic tokens as Sass map. Opacity utilities are declared via a Sass map and then generated with our utilities API.
+Opacity semantic tokens are defined as a Sass map. The opacity utilities are declared through this map and generated using our utilities API.
 
 {{< scss-docs name="ouds-sem-opacity" file="scss/tokens/_semantic.scss" >}}
 
