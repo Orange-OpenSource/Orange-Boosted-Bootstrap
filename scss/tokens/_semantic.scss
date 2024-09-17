@@ -1,22 +1,9 @@
 //// Semantic applications
 //// Depends on raw primitive values
 
-// Opacity
-
-// scss-docs-start ouds-sem-opacity
-$ouds-opacities: (
-  "transparent": $ouds-opacity-0,
-  "weaker":      $ouds-opacity-100,
-  "weak":        $ouds-opacity-300,
-  "medium":      $ouds-opacity-500,
-  "emphasis":    $ouds-opacity-700,
-  "opaque":      $ouds-opacity-900
-) !default;
-// scss-docs-end ouds-sem-opacity
-
 // Border
 
-// scss-docs-start ouds-sem-border
+// scss-docs-start ouds-semantic-border
 // fusv-disable
 // following variable could be used by b-brand/countries libraries
 $ouds-border-interactive-primary-focus: $ouds-border-width-100 !default;
@@ -44,4 +31,17 @@ $ouds-border-radiuses: (
 $ouds-border-styles: (
   "drag": $ouds-border-style-dashed
 ) !default;
-// scss-docs-end ouds-sem-border
+// scss-docs-end ouds-semantic-border
+
+// Opacity
+
+// scss-docs-start ouds-semantic-opacity
+$ouds-opacities: (
+  "transparent": $ouds-opacity-0,
+  "weaker":      $ouds-opacity-100,
+  "weak":        $ouds-opacity-300,
+  "medium":      $ouds-opacity-500,
+  "emphasis":    $ouds-opacity-700,
+  "opaque":      $ouds-opacity-900
+) !default;
+// scss-docs-end ouds-semantic-opacity

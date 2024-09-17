@@ -277,7 +277,7 @@ Border raw tokens as Sass variables. **Not to be used as-is**.
 
 Border semantic tokens are defined as a Sass map. The border utilities are declared through this map and generated using our utilities API.
 
-{{< scss-docs name="ouds-sem-border" file="scss/tokens/_semantic.scss" >}}
+{{< scss-docs name="ouds-semantic-border" file="scss/tokens/_semantic.scss" >}}
 
 ### Sass variables
 

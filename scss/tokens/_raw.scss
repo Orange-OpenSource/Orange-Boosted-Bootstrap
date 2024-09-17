@@ -3,22 +3,8 @@
 //// Raw primitive values
 //// Insertion of brand foundations
 
-// Opacity
-
-// scss-docs-start ouds-raw-opacity
-$ouds-opacity-0:   0 !default;
-$ouds-opacity-100: .04 !default;
-// $ouds-opacity-200: .08 !default;
-$ouds-opacity-300: .16 !default;
-// $ouds-opacity-400: .24 !default;
-$ouds-opacity-500: .32 !default;
-// $ouds-opacity-600: .48 !default;
-$ouds-opacity-700: .64 !default;
-// $ouds-opacity-800: .80 !default;
-$ouds-opacity-900: 1 !default;
-// scss-docs-end ouds-raw-opacity
-
 // Border
+
 // scss-docs-start ouds-raw-border
 $ouds-border-base:      4px !default;
 
@@ -48,3 +34,18 @@ $ouds-border-style-solid:  solid !default;
 $ouds-border-style-dashed: dashed !default;
 // $ouds-border-style-dotted: dotted !default;
 // scss-docs-end ouds-raw-border
+
+// Opacity
+
+// scss-docs-start ouds-raw-opacity
+$ouds-opacity-0:   0 !default;
+$ouds-opacity-100: .04 !default;
+// $ouds-opacity-200: .08 !default;
+$ouds-opacity-300: .16 !default;
+// $ouds-opacity-400: .24 !default;
+$ouds-opacity-500: .32 !default;
+// $ouds-opacity-600: .48 !default;
+$ouds-opacity-700: .64 !default;
+// $ouds-opacity-800: .80 !default;
+$ouds-opacity-900: 1 !default;
+// scss-docs-end ouds-raw-opacity
