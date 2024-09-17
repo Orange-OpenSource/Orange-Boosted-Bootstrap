@@ -6,15 +6,7 @@
 // Border
 
 // scss-docs-start ouds-raw-border
-$ouds-border-base:      4px !default;
-
-// $ouds-border-width-0:   0 !default;
-$ouds-border-width-25:  $ouds-border-base * .25 !default;
-$ouds-border-width-50:  $ouds-border-base * .5 !default;
-$ouds-border-width-75:  $ouds-border-base * .75 !default;
-$ouds-border-width-100: $ouds-border-base !default;
-// $ouds-border-width-150: $ouds-border-base * 1.5 !default;
-// $ouds-border-width-200: $ouds-border-base * 2 !default;
+$ouds-border-base:        4px !default;
 
 $ouds-border-radius-0:    0 !default;
 // $ouds-border-radius-25:   $ouds-border-base * .25 !default;
@@ -33,6 +25,14 @@ $ouds-border-radius-300:  $ouds-border-base * 3 !default;
 $ouds-border-style-solid:  solid !default;
 $ouds-border-style-dashed: dashed !default;
 // $ouds-border-style-dotted: dotted !default;
+
+$ouds-border-width-0:   0 !default;
+$ouds-border-width-25:  $ouds-border-base * .25 !default;
+$ouds-border-width-50:  $ouds-border-base * .5 !default;
+$ouds-border-width-75:  $ouds-border-base * .75 !default;
+$ouds-border-width-100: $ouds-border-base !default;
+// $ouds-border-width-150: $ouds-border-base * 1.5 !default;
+// $ouds-border-width-200: $ouds-border-base * 2 !default;
 // scss-docs-end ouds-raw-border
 
 // Opacity

@@ -289,11 +289,13 @@ Border semantic tokens are defined as a Sass map. The border utilities are decla
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
+{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}-->
 
 ### Sass maps
 
-Color mode adaptive border colors are also available as a Sass map:
+{{< scss-docs name="ouds-maps-borders" file="scss/_maps.scss" >}}
+
+<!--Color mode adaptive border colors are also available as a Sass map:
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 

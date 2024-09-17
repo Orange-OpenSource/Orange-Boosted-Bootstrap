@@ -1,3 +1,39 @@
+// OUDS mod
+// scss-docs-start ouds-maps-opacities
+$ouds-opacities: (
+  "transparent": $ouds-opacity-transparent,
+  "weaker":      $ouds-opacity-weaker,
+  "weak":        $ouds-opacity-weak,
+  "medium":      $ouds-opacity-medium,
+  "strong":      $ouds-opacity-strong,
+  "opaque":      $ouds-opacity-opaque
+) !default;
+// scss-docs-end ouds-maps-opacities
+
+// scss-docs-start ouds-maps-borders
+$ouds-border-widths: (
+  "thin":     $ouds-border-width-thin,
+  "thick":    $ouds-border-width-thick,
+  "thicker":  $ouds-border-width-thicker,
+  "thickest": $ouds-border-width-thickest,
+) !default;
+
+$ouds-border-radiuses: (
+  null:       $ouds-border-radius-default,
+  "none":     $ouds-border-radius-none,
+  "short":    $ouds-border-radius-short,
+  "medium":   $ouds-border-radius-medium,
+  "tall":     $ouds-border-radius-tall,
+  "pill":     $ouds-border-radius-pill,
+  "circle":   50%
+) !default;
+
+$ouds-border-styles: (
+  "drag":     $ouds-border-style-drag
+) !default;
+// scss-docs-end ouds-maps-borders
+// End mod
+
 // Re-assigned maps
 //
 // Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
