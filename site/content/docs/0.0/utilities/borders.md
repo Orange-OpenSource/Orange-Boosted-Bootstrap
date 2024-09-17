@@ -269,7 +269,7 @@ This utility must not be used in any other context than drag and drop.
 
 #### Raw tokens
 
-Border raw tokens<!-- generated via StyleDictionary--> as Sass variables. **Not to be used as-is**.
+Border raw tokens as Sass variables. **Not to be used as-is**.
 
 {{< scss-docs name="ouds-raw-border" file="scss/tokens/_raw.scss" >}}
 
