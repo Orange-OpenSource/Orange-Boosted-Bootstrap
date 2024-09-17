@@ -43,6 +43,17 @@ As such, components should be built with a base class that houses common, not-to
 
 Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you're actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.
 
+
+## Bootstrap compatibility
+
+OUDS Web is built on the basis of [design tokens]({{< docsref "/customize/custom-libraries/#tokens-architecture" >}}) that capture all the design decisions utilized within our design system. They ensure the consistency of components between them and facilitate the configuration of the library.
+
+These tokens are specific to OUDS Web. They are notably used as a basis for the construction of utilities. This is why the names (and not only the values) of the OUDS Web utilities differ from the Bootstrap utilities.
+
+The [option `$enable-bootstrap-compatibility`]({{< docsref "/customize/options/" >}}), if set to `true`, allows to keep in the library the Bootstrap utilities in addition to the OUDS Web utilities. In this case, we tried to bring the values of the Bootstrap utilities as close as possible to those of OUDS Web.
+
+However, we recommend not to enable this option, even if it is enabled for the OUDS Web site itself, for obvious documentation reasons. You should not need it to build Orange branded sites with OUDS Web.
+
 <!--
 ## z-index scales
 

@@ -14,13 +14,15 @@ toc: true
 
 ## Tokens architecture
 
+OUDS Web is built on the basis of design tokens that capture all the design decisions utilized within our design system. They ensure the consistency of components between them and facilitate the configuration of the library.
+
 ### Raw tokens
 
 The [`scss/tokens/_raw.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_raw.scss) file consolidates all basic tokens. While these tokens don't carry semantic meaning and aren't meant to be used directly in projects, they form the foundation of the Orange Unified Design System. Their primary purpose is to be utilized by semantic tokens, and occasionally, by component tokens.
 
 ### Semantic tokens
 
-The [`scss/tokens/_semantic.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike raw tokens, these are intended to be used directly in projects. They are built on raw tokens, assigning them semantic meaning through media queries or specific contexts. These tokens are ready to be applied either in utilities or directly within component tokens.
+The [`scss/tokens/_semantic.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike raw tokens, these are intended to be used directly in projects. They are built on raw tokens, assigning them semantic meaning through media queries or specific contexts. These tokens are ready to be applied either in utilities or directly within component tokens. The names of these tokens are not intended to be modified for a custom library, only the correspondence between a token and its value, which comes from the raw tokens.
 
 ### Component tokens
 
