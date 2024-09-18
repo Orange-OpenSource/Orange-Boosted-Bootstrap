@@ -9,7 +9,7 @@
 $utilities: ();
 
 @include describe("customize/ouds-web-bootstrap") {
-  @include it("generates OUDS and Bootstrap utilities") {
+  @include it("generates only OUDS utilities") {
     $enable-bootstrap-compatibility: false !global;
 
     $utilities: (
@@ -28,13 +28,6 @@ $utilities: ();
         property: opacity,
         values: $ouds-opacities
       ),
-      "border": (
-        property: border,
-        values: (
-          0: 0,
-        ),
-        bootstrap-compatibility: true
-      ),
       "border-ouds": (
         property: border,
         values: (
@@ -42,19 +35,19 @@ $utilities: ();
           "none": 0,
         ),
       ),
+      "border": (
+        property: border,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
       "border-top": (
         property: border-top,
         values: (
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-top-ouds": (
-        property: border-top,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-end": (
         property: border-right,
@@ -64,27 +57,12 @@ $utilities: ();
         ),
         bootstrap-compatibility: true
       ),
-      "border-end-ouds": (
-        property: border-right,
-        class: border-end,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
-      ),
       "border-bottom": (
         property: border-bottom,
         values: (
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-bottom-ouds": (
-        property: border-bottom,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-start": (
         property: border-left,
@@ -93,14 +71,6 @@ $utilities: ();
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-start-ouds": (
-        property: border-left,
-        class: border-start,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-color": (
         property: border-color,
@@ -121,11 +91,6 @@ $utilities: ();
         values: $border-widths,
         bootstrap-compatibility: true
       ),
-      "border-width-ouds": (
-        property: border-width,
-        class: border,
-        values: $ouds-border-widths
-      ),
       "border-opacity": (
         css-var: true,
         class: border-opacity,
@@ -138,11 +103,46 @@ $utilities: ();
         ),
         bootstrap-compatibility: true
       ),
+      "border-top-ouds": (
+        property: border-top,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": $ouds-border-width-none,
+        ),
+      ),
+      "border-end-ouds": (
+        property: border-right,
+        class: border-end,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-bottom-ouds": (
+        property: border-bottom,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-start-ouds": (
+        property: border-left,
+        class: border-start,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-width-ouds": (
+        property: border-width,
+        class: border,
+        values: $ouds-border-widths
+      ),
       "border-style-ouds": (
         property: border-style,
         class: border,
         values: $ouds-border-styles
-      ),
+      )
     ) !global;
 
     @include assert() {
@@ -177,88 +177,56 @@ $utilities: ();
         .border {
           border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
         }
-
+        
         .border-none {
           border: 0 !important;
-        }
-
-        .border-top {
-          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-top-none {
-          border-top: 0 !important;
-        }
-
-        .border-end {
-          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-end-none {
-          border-right: 0 !important;
-        }
-
-        .border-bottom {
-          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-bottom-none {
-          border-bottom: 0 !important;
-        }
-
-        .border-start {
-          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-start-none {
-          border-left: 0 !important;
         }
 
         .border-primary {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-secondary {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-success {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-info {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-warning {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-danger {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-light {
           --bs-border-opacity: 1;
           border-color: rgba(204, 204, 204, var(--bs-border-opacity)) !important;
         }
-
+       
         .border-dark {
           --bs-border-opacity: 1;
           border-color: rgba(102, 102, 102, var(--bs-border-opacity)) !important;
         }
-
+       
         .border-black {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
         }
-
+       
         .border-white {
           --bs-border-opacity: 1;
           border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
@@ -267,51 +235,83 @@ $utilities: ();
         .border-primary-subtle {
           border-color: var(--bs-primary-border-subtle) !important;
         }
-
+       
         .border-secondary-subtle {
           border-color: var(--bs-secondary-border-subtle) !important;
         }
-
+       
         .border-success-subtle {
           border-color: var(--bs-success-border-subtle) !important;
         }
-
+       
         .border-info-subtle {
           border-color: var(--bs-info-border-subtle) !important;
         }
-
+       
         .border-warning-subtle {
           border-color: var(--bs-warning-border-subtle) !important;
         }
-
+       
         .border-danger-subtle {
           border-color: var(--bs-danger-border-subtle) !important;
         }
-
+       
         .border-light-subtle {
           border-color: var(--bs-light-border-subtle) !important;
         }
-
+       
         .border-dark-subtle {
           border-color: var(--bs-dark-border-subtle) !important;
         }
-
+       
+        .border-top {
+          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+       
+        .border-top-none {
+          border-top: 0 !important;
+        }
+       
+        .border-end {
+          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+       
+        .border-end-none {
+          border-right: 0 !important;
+        }
+       
+        .border-bottom {
+          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+       
+        .border-bottom-none {
+          border-bottom: 0 !important;
+        }
+       
+        .border-start {
+          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+       
+        .border-start-none {
+          border-left: 0 !important;
+        }
+       
         .border-thin {
           border-width: 1px !important;
         }
-
+       
         .border-thick {
           border-width: 2px !important;
         }
-
+       
         .border-thicker {
           border-width: 3px !important;
         }
-
+       
         .border-thickest {
           border-width: 4px !important;
         }
-
+       
         .border-drag {
           border-style: dashed !important;
         }
@@ -319,7 +319,7 @@ $utilities: ();
     }
   }
 
-  @include it("generates only OUDS utilities") {
+  @include it("generates OUDS and Bootstrap utilities") {
     $enable-bootstrap-compatibility: true !global;
 
     $utilities: (
@@ -338,13 +338,6 @@ $utilities: ();
         property: opacity,
         values: $ouds-opacities
       ),
-      "border": (
-        property: border,
-        values: (
-          0: 0,
-        ),
-        bootstrap-compatibility: true
-      ),
       "border-ouds": (
         property: border,
         values: (
@@ -352,19 +345,19 @@ $utilities: ();
           "none": 0,
         ),
       ),
+      "border": (
+        property: border,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
       "border-top": (
         property: border-top,
         values: (
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-top-ouds": (
-        property: border-top,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-end": (
         property: border-right,
@@ -374,27 +367,12 @@ $utilities: ();
         ),
         bootstrap-compatibility: true
       ),
-      "border-end-ouds": (
-        property: border-right,
-        class: border-end,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
-      ),
       "border-bottom": (
         property: border-bottom,
         values: (
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-bottom-ouds": (
-        property: border-bottom,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-start": (
         property: border-left,
@@ -403,14 +381,6 @@ $utilities: ();
           0: 0,
         ),
         bootstrap-compatibility: true
-      ),
-      "border-start-ouds": (
-        property: border-left,
-        class: border-start,
-        values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-          "none": 0,
-        ),
       ),
       "border-color": (
         property: border-color,
@@ -431,11 +401,6 @@ $utilities: ();
         values: $border-widths,
         bootstrap-compatibility: true
       ),
-      "border-width-ouds": (
-        property: border-width,
-        class: border,
-        values: $ouds-border-widths
-      ),
       "border-opacity": (
         css-var: true,
         class: border-opacity,
@@ -448,11 +413,46 @@ $utilities: ();
         ),
         bootstrap-compatibility: true
       ),
+      "border-top-ouds": (
+        property: border-top,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": $ouds-border-width-none,
+        ),
+      ),
+      "border-end-ouds": (
+        property: border-right,
+        class: border-end,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-bottom-ouds": (
+        property: border-bottom,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-start-ouds": (
+        property: border-left,
+        class: border-start,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-width-ouds": (
+        property: border-width,
+        class: border,
+        values: $ouds-border-widths
+      ),
       "border-style-ouds": (
         property: border-style,
         class: border,
         values: $ouds-border-styles
-      ),
+      )
     ) !global;
 
     @include assert() {
@@ -465,15 +465,15 @@ $utilities: ();
         }
 
         .opacity-25 {
-          opacity: .25 !important;
+          opacity: 0.25 !important;
         }
 
         .opacity-50 {
-          opacity: .5 !important;
+          opacity: 0.5 !important;
         }
 
         .opacity-75 {
-          opacity: .75 !important;
+          opacity: 0.75 !important;
         }
 
         .opacity-100 {
@@ -485,27 +485,23 @@ $utilities: ();
         }
 
         .opacity-weaker {
-          opacity: .04 !important;
+          opacity: 0.04 !important;
         }
 
         .opacity-weak {
-          opacity: .16 !important;
+          opacity: 0.16 !important;
         }
 
         .opacity-medium {
-          opacity: .32 !important;
+          opacity: 0.32 !important;
         }
 
         .opacity-strong {
-          opacity: .64 !important;
+          opacity: 0.64 !important;
         }
 
         .opacity-opaque {
           opacity: 1 !important;
-        }
-
-        .border-0 {
-          border: 0 !important;
         }
 
         .border {
@@ -516,15 +512,11 @@ $utilities: ();
           border: 0 !important;
         }
 
+        .border-0 {
+          border: 0 !important;
+        }
+
         .border-top-0 {
-          border-top: 0 !important;
-        }
-
-        .border-top {
-          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-top-none {
           border-top: 0 !important;
         }
 
@@ -532,35 +524,11 @@ $utilities: ();
           border-right: 0 !important;
         }
 
-        .border-end {
-          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-end-none {
-          border-right: 0 !important;
-        }
-
         .border-bottom-0 {
           border-bottom: 0 !important;
         }
 
-        .border-bottom {
-          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-bottom-none {
-          border-bottom: 0 !important;
-        }
-
         .border-start-0 {
-          border-left: 0 !important;
-        }
-
-        .border-start {
-          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-        }
-
-        .border-start-none {
           border-left: 0 !important;
         }
 
@@ -666,6 +634,58 @@ $utilities: ();
           border-width: 5px !important;
         }
 
+        .border-opacity-10 {
+          --bs-border-opacity: 0.1;
+        }
+
+        .border-opacity-25 {
+          --bs-border-opacity: 0.25;
+        }
+
+        .border-opacity-50 {
+          --bs-border-opacity: 0.5;
+        }
+
+        .border-opacity-75 {
+          --bs-border-opacity: 0.75;
+        }
+
+        .border-opacity-100 {
+          --bs-border-opacity: 1;
+        }
+
+        .border-top {
+          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-top-none {
+          border-top: 0 !important;
+        }
+
+        .border-end {
+          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-end-none {
+          border-right: 0 !important;
+        }
+
+        .border-bottom {
+          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-bottom-none {
+          border-bottom: 0 !important;
+        }
+
+        .border-start {
+          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-start-none {
+          border-left: 0 !important;
+        }
+
         .border-thin {
           border-width: 1px !important;
         }
@@ -680,34 +700,6 @@ $utilities: ();
 
         .border-thickest {
           border-width: 4px !important;
-        }
-
-        .border-opacity-10 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.1;
-        }
-
-        .border-opacity-25 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.25;
-        }
-
-        .border-opacity-50 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.5;
-        }
-
-        .border-opacity-75 {
-          // Sass compilation will put a leading zero so we want to keep that one
-          // stylelint-disable-next-line @stylistic/number-leading-zero
-          --bs-border-opacity: 0.75;
-        }
-
-        .border-opacity-100 {
-          --bs-border-opacity: 1;
         }
 
         .border-drag {
