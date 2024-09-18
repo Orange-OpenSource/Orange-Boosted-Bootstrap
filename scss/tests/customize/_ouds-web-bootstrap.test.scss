@@ -3,12 +3,13 @@
 @import "../../tokens/semantic";
 @import "../../tokens/component";
 @import "../../variables";
+@import "../../maps";
 @import "../../mixins";
 
 $utilities: ();
 
 @include describe("customize/ouds-web-bootstrap") {
-  @include it("generates OUDS and Bootstrap utilities") {
+  @include it("generates only OUDS utilities") {
     $enable-bootstrap-compatibility: false !global;
 
     $utilities: (
@@ -27,6 +28,211 @@ $utilities: ();
         property: opacity,
         values: $ouds-opacities
       ),
+      "border-ouds": (
+        property: border,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border": (
+        property: border,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-top": (
+        property: border-top,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-end": (
+        property: border-right,
+        class: border-end,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-bottom": (
+        property: border-bottom,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-start": (
+        property: border-left,
+        class: border-start,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-color": (
+        property: border-color,
+        class: border,
+        local-vars: (
+          "border-opacity": 1
+        ),
+        values: $utilities-border-colors
+      ),
+      "subtle-border-color": (
+        property: border-color,
+        class: border,
+        values: $utilities-border-subtle
+      ),
+      "border-width": (
+        property: border-width,
+        class: border,
+        values: $border-widths,
+        bootstrap-compatibility: true
+      ),
+      "border-opacity": (
+        css-var: true,
+        class: border-opacity,
+        values: (
+          10: .1,
+          25: .25,
+          50: .5,
+          75: .75,
+          100: 1
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-top-ouds": (
+        property: border-top,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": $ouds-border-width-none,
+        ),
+      ),
+      "border-end-ouds": (
+        property: border-right,
+        class: border-end,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-bottom-ouds": (
+        property: border-bottom,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-start-ouds": (
+        property: border-left,
+        class: border-start,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-width-ouds": (
+        property: border-width,
+        class: border,
+        values: $ouds-border-widths
+      ),
+      "border-style-ouds": (
+        property: border-style,
+        class: border,
+        values: $ouds-border-styles
+      ),
+      "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-start": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-ouds": (
+        property: border-radius,
+        class: rounded,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-top-ouds": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-end-ouds": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-bottom-ouds": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-start-ouds": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: $ouds-border-radiuses
+      )
     ) !global;
 
     @include assert() {
@@ -50,18 +256,328 @@ $utilities: ();
           opacity: .32 !important;
         }
 
-        .opacity-emphasis {
+        .opacity-strong {
           opacity: .64 !important;
         }
 
         .opacity-opaque {
           opacity: 1 !important;
         }
+
+        .border {
+          border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-none {
+          border: 0 !important;
+        }
+
+        .border-primary {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-secondary {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-success {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-info {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-warning {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-danger {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-light {
+          --bs-border-opacity: 1;
+          border-color: rgba(204, 204, 204, var(--bs-border-opacity)) !important;
+        }
+
+        .border-dark {
+          --bs-border-opacity: 1;
+          border-color: rgba(102, 102, 102, var(--bs-border-opacity)) !important;
+        }
+
+        .border-black {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-white {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-primary-subtle {
+          border-color: var(--bs-primary-border-subtle) !important;
+        }
+
+        .border-secondary-subtle {
+          border-color: var(--bs-secondary-border-subtle) !important;
+        }
+
+        .border-success-subtle {
+          border-color: var(--bs-success-border-subtle) !important;
+        }
+
+        .border-info-subtle {
+          border-color: var(--bs-info-border-subtle) !important;
+        }
+
+        .border-warning-subtle {
+          border-color: var(--bs-warning-border-subtle) !important;
+        }
+
+        .border-danger-subtle {
+          border-color: var(--bs-danger-border-subtle) !important;
+        }
+
+        .border-light-subtle {
+          border-color: var(--bs-light-border-subtle) !important;
+        }
+
+        .border-dark-subtle {
+          border-color: var(--bs-dark-border-subtle) !important;
+        }
+
+        .border-top {
+          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-top-none {
+          border-top: 0 !important;
+        }
+
+        .border-end {
+          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-end-none {
+          border-right: 0 !important;
+        }
+
+        .border-bottom {
+          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-bottom-none {
+          border-bottom: 0 !important;
+        }
+
+        .border-start {
+          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-start-none {
+          border-left: 0 !important;
+        }
+
+        .border-thin {
+          border-width: 1px !important;
+        }
+
+        .border-thick {
+          border-width: 2px !important;
+        }
+
+        .border-thicker {
+          border-width: 3px !important;
+        }
+
+        .border-thickest {
+          border-width: 4px !important;
+        }
+
+        .border-drag {
+          border-style: dashed !important;
+        }
+
+        .rounded {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-none {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-short {
+          border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-medium {
+          border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-tall {
+          border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-pill {
+          border-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-circle {
+          border-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-none {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-short {
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-medium {
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-tall {
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-pill {
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-circle {
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-none {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-short {
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-medium {
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-tall {
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-pill {
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-circle {
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-none {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-short {
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-medium {
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-tall {
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-pill {
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-circle {
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-none {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-short {
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-medium {
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-tall {
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-pill {
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-circle {
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
       }
     }
   }
 
-  @include it("generates only OUDS utilities") {
+  @include it("generates OUDS and Bootstrap utilities") {
     $enable-bootstrap-compatibility: true !global;
 
     $utilities: (
@@ -80,6 +596,211 @@ $utilities: ();
         property: opacity,
         values: $ouds-opacities
       ),
+      "border-ouds": (
+        property: border,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border": (
+        property: border,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-top": (
+        property: border-top,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-end": (
+        property: border-right,
+        class: border-end,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-bottom": (
+        property: border-bottom,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-start": (
+        property: border-left,
+        class: border-start,
+        values: (
+          0: 0,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-color": (
+        property: border-color,
+        class: border,
+        local-vars: (
+          "border-opacity": 1
+        ),
+        values: $utilities-border-colors
+      ),
+      "subtle-border-color": (
+        property: border-color,
+        class: border,
+        values: $utilities-border-subtle
+      ),
+      "border-width": (
+        property: border-width,
+        class: border,
+        values: $border-widths,
+        bootstrap-compatibility: true
+      ),
+      "border-opacity": (
+        css-var: true,
+        class: border-opacity,
+        values: (
+          10: .1,
+          25: .25,
+          50: .5,
+          75: .75,
+          100: 1
+        ),
+        bootstrap-compatibility: true
+      ),
+      "border-top-ouds": (
+        property: border-top,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": $ouds-border-width-none,
+        ),
+      ),
+      "border-end-ouds": (
+        property: border-right,
+        class: border-end,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-bottom-ouds": (
+        property: border-bottom,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-start-ouds": (
+        property: border-left,
+        class: border-start,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          "none": 0,
+        ),
+      ),
+      "border-width-ouds": (
+        property: border-width,
+        class: border,
+        values: $ouds-border-widths
+      ),
+      "border-style-ouds": (
+        property: border-style,
+        class: border,
+        values: $ouds-border-styles
+      ),
+      "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-start": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-ouds": (
+        property: border-radius,
+        class: rounded,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-top-ouds": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-end-ouds": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-bottom-ouds": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-start-ouds": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: $ouds-border-radiuses
+      )
     ) !global;
 
     @include assert() {
@@ -123,12 +844,534 @@ $utilities: ();
           opacity: .32 !important;
         }
 
-        .opacity-emphasis {
+        .opacity-strong {
           opacity: .64 !important;
         }
 
         .opacity-opaque {
           opacity: 1 !important;
+        }
+
+        .border {
+          border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-none {
+          border: 0 !important;
+        }
+
+        .border-0 {
+          border: 0 !important;
+        }
+
+        .border-top-0 {
+          border-top: 0 !important;
+        }
+
+        .border-end-0 {
+          border-right: 0 !important;
+        }
+
+        .border-bottom-0 {
+          border-bottom: 0 !important;
+        }
+
+        .border-start-0 {
+          border-left: 0 !important;
+        }
+
+        .border-primary {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-secondary {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-success {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-info {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-warning {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-danger {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-light {
+          --bs-border-opacity: 1;
+          border-color: rgba(204, 204, 204, var(--bs-border-opacity)) !important;
+        }
+
+        .border-dark {
+          --bs-border-opacity: 1;
+          border-color: rgba(102, 102, 102, var(--bs-border-opacity)) !important;
+        }
+
+        .border-black {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-white {
+          --bs-border-opacity: 1;
+          border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+        }
+
+        .border-primary-subtle {
+          border-color: var(--bs-primary-border-subtle) !important;
+        }
+
+        .border-secondary-subtle {
+          border-color: var(--bs-secondary-border-subtle) !important;
+        }
+
+        .border-success-subtle {
+          border-color: var(--bs-success-border-subtle) !important;
+        }
+
+        .border-info-subtle {
+          border-color: var(--bs-info-border-subtle) !important;
+        }
+
+        .border-warning-subtle {
+          border-color: var(--bs-warning-border-subtle) !important;
+        }
+
+        .border-danger-subtle {
+          border-color: var(--bs-danger-border-subtle) !important;
+        }
+
+        .border-light-subtle {
+          border-color: var(--bs-light-border-subtle) !important;
+        }
+
+        .border-dark-subtle {
+          border-color: var(--bs-dark-border-subtle) !important;
+        }
+
+        .border-1 {
+          border-width: 1px !important;
+        }
+
+        .border-2 {
+          border-width: 2px !important;
+        }
+
+        .border-3 {
+          border-width: 3px !important;
+        }
+
+        .border-4 {
+          border-width: 4px !important;
+        }
+
+        .border-5 {
+          border-width: 5px !important;
+        }
+
+        .border-opacity-10 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
+          --bs-border-opacity: 0.1;
+        }
+
+        .border-opacity-25 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
+          --bs-border-opacity: 0.25;
+        }
+
+        .border-opacity-50 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
+          --bs-border-opacity: 0.5;
+        }
+
+        .border-opacity-75 {
+          // Sass compilation will put a leading zero so we want to keep that one
+          // stylelint-disable-next-line @stylistic/number-leading-zero
+          --bs-border-opacity: 0.75;
+        }
+
+        .border-opacity-100 {
+          --bs-border-opacity: 1;
+        }
+
+        .border-top {
+          border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-top-none {
+          border-top: 0 !important;
+        }
+
+        .border-end {
+          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-end-none {
+          border-right: 0 !important;
+        }
+
+        .border-bottom {
+          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-bottom-none {
+          border-bottom: 0 !important;
+        }
+
+        .border-start {
+          border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+
+        .border-start-none {
+          border-left: 0 !important;
+        }
+
+        .border-thin {
+          border-width: 1px !important;
+        }
+
+        .border-thick {
+          border-width: 2px !important;
+        }
+
+        .border-thicker {
+          border-width: 3px !important;
+        }
+
+        .border-thickest {
+          border-width: 4px !important;
+        }
+
+        .border-drag {
+          border-style: dashed !important;
+        }
+
+        .rounded-0 {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-1 {
+          border-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-2 {
+          border-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-3 {
+          border-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-4 {
+          border-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-5 {
+          border-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-0 {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-1 {
+          border-top-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-2 {
+          border-top-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-3 {
+          border-top-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-4 {
+          border-top-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-5 {
+          border-top-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-0 {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-1 {
+          border-top-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-2 {
+          border-top-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-3 {
+          border-top-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-4 {
+          border-top-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-5 {
+          border-top-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-0 {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-1 {
+          border-bottom-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-2 {
+          border-bottom-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-3 {
+          border-bottom-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-4 {
+          border-bottom-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-5 {
+          border-bottom-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start-0 {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-1 {
+          border-bottom-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-2 {
+          border-bottom-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-3 {
+          border-bottom-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-4 {
+          border-bottom-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-5 {
+          border-bottom-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-none {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-short {
+          border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-medium {
+          border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-tall {
+          border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-pill {
+          border-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-circle {
+          border-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-none {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-short {
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-medium {
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-tall {
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-pill {
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-circle {
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-none {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-short {
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-medium {
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-tall {
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-pill {
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-circle {
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-none {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-short {
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-medium {
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-tall {
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-pill {
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-circle {
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-none {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-short {
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-medium {
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-tall {
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-pill {
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-circle {
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
       }
     }

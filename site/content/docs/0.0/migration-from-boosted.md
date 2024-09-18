@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web.
+This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off.
 
 Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
 
@@ -55,10 +55,36 @@ Technically, it means that you can get rid of the following things:
 
 ## Utilities
 
+### Border
+
+- <span class="badge text-bg-danger">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]({{< docsref "/utilities/borders#border" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-success">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
+
+- <span class="badge text-bg-danger">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]({{< docsref "/utilities/borders#width" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-success">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-thick`, `.border-thicker` and `.border-thickest`.
+
+- <span class="badge text-bg-danger">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]({{< docsref "/utilities/borders#radius" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+  - 0: `.rounded-0`, `.rounded-top-0`, `.rounded-bottom-0`, `.rounded-start-0` and `.rounded-end-0`.
+  - 1: `.rounded-1`, `.rounded-top-1`, `.rounded-bottom-1`, `.rounded-start-1` and `.rounded-end-1`.
+  - 2: `.rounded-2`, `.rounded-top-2`, `.rounded-bottom-2`, `.rounded-start-2` and `.rounded-end-2`.
+  - 3: `.rounded-3`, `.rounded-top-3`, `.rounded-bottom-3`, `.rounded-start-3` and `.rounded-end-3`.
+  - 4: `.rounded-4`, `.rounded-top-4`, `.rounded-bottom-4`, `.rounded-start-4` and `.rounded-end-4`.
+  - 5: `.rounded-5`, `.rounded-top-5`, `.rounded-bottom-5`, `.rounded-start-5` and `.rounded-end-5`.
+
+- <span class="badge text-bg-success">New</span> Border radius utilities with all sizes:
+  - None: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
+  - Short: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
+  - Medium: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - Tall: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+
+- <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
+
 ### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-emphasis` and `.opacity-opaque`.
+- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
 
 ## CSS and Sass variables
 
@@ -79,6 +105,79 @@ Technically, it means that you can get rid of the following things:
     @import "variables-dark";
     // etc
   ```
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-border-base</code></li>
+      <li><code>$ouds-border-radius-0</code></li>
+      <li><code>$ouds-border-radius-75</code></li>
+      <li><code>$ouds-border-radius-150</code></li>
+      <li><code>$ouds-border-radius-300</code></li>
+      <li><code>$ouds-border-radius-default</code></li>
+      <li><code>$ouds-border-radius-medium</code></li>
+      <li><code>$ouds-border-radius-none</code></li>
+      <li><code>$ouds-border-radius-pill</code></li>
+      <li><code>$ouds-border-radius-short</code></li>
+      <li><code>$ouds-border-radius-tall</code></li>
+      <li><code>$ouds-border-style-dashed</code></li>
+      <li><code>$ouds-border-style-default</code></li>
+      <li><code>$ouds-border-style-drag</code></li>
+      <li><code>$ouds-border-style-solid</code></li>
+      <li><code>$ouds-border-width-0</code></li>
+      <li><code>$ouds-border-width-25</code></li>
+      <li><code>$ouds-border-width-50</code></li>
+      <li><code>$ouds-border-width-75</code></li>
+      <li><code>$ouds-border-width-100</code></li>
+      <li><code>$ouds-border-width-default</code></li>
+      <li><code>$ouds-border-width-none</code></li>
+      <li><code>$ouds-border-width-thick</code></li>
+      <li><code>$ouds-border-width-thicker</code></li>
+      <li><code>$ouds-border-width-thickest</code></li>
+      <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-opacity-0</code></li>
+      <li><code>$ouds-opacity-100</code></li>
+      <li><code>$ouds-opacity-300</code></li>
+      <li><code>$ouds-opacity-500</code></li>
+      <li><code>$ouds-opacity-700</code></li>
+      <li><code>$ouds-opacity-900</code></li>
+      <li><code>$ouds-opacity-medium</code></li>
+      <li><code>$ouds-opacity-opaque</code></li>
+      <li><code>$ouds-opacity-strong</code></li>
+      <li><code>$ouds-opacity-transparent</code></li>
+      <li><code>$ouds-opacity-weak</code></li>
+      <li><code>$ouds-opacity-weaker</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$ouds-border-radiuses</code></li>
+      <li><code>$ouds-border-styles</code></li>
+      <li><code>$ouds-border-widths</code></li>
+      <li><code>$ouds-opacities</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
+    <ul>
+      <li><code>border-bottom-ouds</code></li>
+      <li><code>border-end-ouds</code></li>
+      <li><code>border-ouds</code></li>
+      <li><code>border-start-ouds</code></li>
+      <li><code>border-style-ouds</code></li>
+      <li><code>border-top-ouds</code></li>
+      <li><code>border-width-ouds</code></li>
+      <li><code>opacity-ouds</code></li>
+      <li><code>rounded-bottom-ouds</code></li>
+      <li><code>rounded-end-ouds</code></li>
+      <li><code>rounded-ouds</code></li>
+      <li><code>rounded-start-ouds</code></li>
+      <li><code>rounded-top-ouds</code></li>
+    </ul>
   </details>
 
 - <details class="mb-2">
@@ -121,20 +220,33 @@ Technically, it means that you can get rid of the following things:
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Dropped CSS variables:</summary>
     <ul>
-      <li><code>$ouds-opacity-0</code></li>
-      <li><code>$ouds-opacity-100</code></li>
-      <li><code>$ouds-opacity-300</code></li>
-      <li><code>$ouds-opacity-500</code></li>
-      <li><code>$ouds-opacity-700</code></li>
-      <li><code>$ouds-opacity-900</code></li>
+      <li><code>--bs-border-radius</code></li>
+      <li><code>--bs-border-radius-2xl</code></li>
+      <li><code>--bs-border-radius-lg</code></li>
+      <li><code>--bs-border-radius-pill</code></li>
+      <li><code>--bs-border-radius-sm</code></li>
+      <li><code>--bs-border-radius-xl</code></li>
+      <li><code>--bs-border-radius-xxl</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
-      <li><code>$ouds-opacities</code></li>
+      <li><code>border</code></li>
+      <li><code>border-bottom</code></li>
+      <li><code>border-end</code></li>
+      <li><code>border-opacity</code></li>
+      <li><code>border-start</code></li>
+      <li><code>border-top</code></li>
+      <li><code>border-width</code></li>
+      <li><code>opacity</code></li>
+      <li><code>rounded</code></li>
+      <li><code>rounded-bottom</code></li>
+      <li><code>rounded-end</code></li>
+      <li><code>rounded-start</code></li>
+      <li><code>rounded-top</code></li>
     </ul>
   </details>
