@@ -108,6 +108,79 @@ Technically, it means that you can get rid of the following things:
   </details>
 
 - <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-border-base</code></li>
+      <li><code>$ouds-border-radius-0</code></li>
+      <li><code>$ouds-border-radius-75</code></li>
+      <li><code>$ouds-border-radius-150</code></li>
+      <li><code>$ouds-border-radius-300</code></li>
+      <li><code>$ouds-border-radius-default</code></li>
+      <li><code>$ouds-border-radius-medium</code></li>
+      <li><code>$ouds-border-radius-none</code></li>
+      <li><code>$ouds-border-radius-pill</code></li>
+      <li><code>$ouds-border-radius-short</code></li>
+      <li><code>$ouds-border-radius-tall</code></li>
+      <li><code>$ouds-border-style-dashed</code></li>
+      <li><code>$ouds-border-style-default</code></li>
+      <li><code>$ouds-border-style-drag</code></li>
+      <li><code>$ouds-border-style-solid</code></li>
+      <li><code>$ouds-border-width-0</code></li>
+      <li><code>$ouds-border-width-25</code></li>
+      <li><code>$ouds-border-width-50</code></li>
+      <li><code>$ouds-border-width-75</code></li>
+      <li><code>$ouds-border-width-100</code></li>
+      <li><code>$ouds-border-width-default</code></li>
+      <li><code>$ouds-border-width-none</code></li>
+      <li><code>$ouds-border-width-thick</code></li>
+      <li><code>$ouds-border-width-thicker</code></li>
+      <li><code>$ouds-border-width-thickest</code></li>
+      <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-opacity-0</code></li>
+      <li><code>$ouds-opacity-100</code></li>
+      <li><code>$ouds-opacity-300</code></li>
+      <li><code>$ouds-opacity-500</code></li>
+      <li><code>$ouds-opacity-700</code></li>
+      <li><code>$ouds-opacity-900</code></li>
+      <li><code>$ouds-opacity-medium</code></li>
+      <li><code>$ouds-opacity-opaque</code></li>
+      <li><code>$ouds-opacity-strong</code></li>
+      <li><code>$ouds-opacity-transparent</code></li>
+      <li><code>$ouds-opacity-weak</code></li>
+      <li><code>$ouds-opacity-weaker</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$ouds-border-radiuses</code></li>
+      <li><code>$ouds-border-styles</code></li>
+      <li><code>$ouds-border-widths</code></li>
+      <li><code>$ouds-opacities</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> keys in `$utilities` map:</summary>
+    <ul>
+      <li><code>border-bottom-ouds</code></li>
+      <li><code>border-end-ouds</code></li>
+      <li><code>border-ouds</code></li>
+      <li><code>border-start-ouds</code></li>
+      <li><code>border-style-ouds</code></li>
+      <li><code>border-top-ouds</code></li>
+      <li><code>border-width-ouds</code></li>
+      <li><code>opacity-ouds</code></li>
+      <li><code>rounded-bottom-ouds</code></li>
+      <li><code>rounded-end-ouds</code></li>
+      <li><code>rounded-ouds</code></li>
+      <li><code>rounded-start-ouds</code></li>
+      <li><code>rounded-top-ouds</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
     <ul>
       <li><code>$boosted-prefix</code></li>
@@ -147,37 +220,33 @@ Technically, it means that you can get rid of the following things:
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Dropped CSS variables:</summary>
     <ul>
-      <li><code>$ouds-border-base</code></li>
-      <li><code>$ouds-border-interactive-primary-focus</code></li>
-      <li><code>$ouds-border-radius-0</code></li>
-      <li><code>$ouds-border-radius-300</code></li>
-      <li><code>$ouds-border-radius-75</code></li>
-      <li><code>$ouds-border-style-dashed</code></li>
-      <li><code>$ouds-border-style-default</code></li>
-      <li><code>$ouds-border-style-solid</code></li>
-      <li><code>$ouds-border-width-0</code></li>
-      <li><code>$ouds-border-width-100</code></li>
-      <li><code>$ouds-border-width-25</code></li>
-      <li><code>$ouds-border-width-50</code></li>
-      <li><code>$ouds-border-width-75</code></li>
-      <li><code>$ouds-border-width-default</code></li>
-      <li><code>$ouds-opacity-0</code></li>
-      <li><code>$ouds-opacity-100</code></li>
-      <li><code>$ouds-opacity-300</code></li>
-      <li><code>$ouds-opacity-500</code></li>
-      <li><code>$ouds-opacity-700</code></li>
-      <li><code>$ouds-opacity-900</code></li>
+      <li><code>--bs-border-radius</code></li>
+      <li><code>--bs-border-radius-2xl</code></li>
+      <li><code>--bs-border-radius-lg</code></li>
+      <li><code>--bs-border-radius-pill</code></li>
+      <li><code>--bs-border-radius-sm</code></li>
+      <li><code>--bs-border-radius-xl</code></li>
+      <li><code>--bs-border-radius-xxl</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
+    <summary><span class="badge text-bg-success">Breaking</span> keys in `$utilities` map only available when `$enable-bootstrap-compatibility` is on:</summary>
     <ul>
-      <li><code>$ouds-border-radiuses</code></li>
-      <li><code>$ouds-border-styles</code></li>
-      <li><code>$ouds-border-widths</code></li>
-      <li><code>$ouds-opacities</code></li>
+      <li><code>border</code></li>
+      <li><code>border-bottom</code></li>
+      <li><code>border-end</code></li>
+      <li><code>border-opacity</code></li>
+      <li><code>border-start</code></li>
+      <li><code>border-top</code></li>
+      <li><code>border-width</code></li>
+      <li><code>opacity</code></li>
+      <li><code>rounded</code></li>
+      <li><code>rounded-bottom</code></li>
+      <li><code>rounded-end</code></li>
+      <li><code>rounded-start</code></li>
+      <li><code>rounded-top</code></li>
     </ul>
   </details>
