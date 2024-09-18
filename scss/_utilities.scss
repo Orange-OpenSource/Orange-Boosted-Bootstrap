@@ -132,7 +132,7 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
-    // OUDS mod: border utilities
+    // OUDS mod
     // scss-docs-start utils-border-ouds
     "border-ouds": (
       property: border,
@@ -218,7 +218,7 @@ $utilities: map-merge(
       bootstrap-compatibility: true
     ),
     // scss-docs-end utils-borders
-    // OUDS mod: border utilities
+    // OUDS mod
     // scss-docs-start utils-borders-ouds
     "border-top-ouds": (
       property: border-top,
@@ -794,10 +794,10 @@ $utilities: map-merge(
         // OUDS mod: null value moved to rounded-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of var(--#{$prefix}border-radius)
-        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of var(--#{$prefix}border-radius-lg)
-        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of var(--#{$prefix}border-radius-xl)
-        5: $border-radius-xxl * 1.5, // OUDS mod: instead of var(--#{$prefix}border-radius-xxl)
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
       ),
       bootstrap-compatibility: true
     ),
@@ -808,10 +808,10 @@ $utilities: map-merge(
         // OUDS mod: null value moved to rounded-top-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of var(--#{$prefix}border-radius)
-        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of var(--#{$prefix}border-radius-lg)
-        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of var(--#{$prefix}border-radius-xl)
-        5: $border-radius-xxl * 1.5, // OUDS mod: instead of var(--#{$prefix}border-radius-xxl)
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
       ),
       bootstrap-compatibility: true
     ),
@@ -822,10 +822,10 @@ $utilities: map-merge(
         // OUDS mod: null value moved to rounded-end-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of var(--#{$prefix}border-radius)
-        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of var(--#{$prefix}border-radius-lg)
-        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of var(--#{$prefix}border-radius-xl)
-        5: $border-radius-xxl * 1.5, // OUDS mod: instead of var(--#{$prefix}border-radius-xxl)
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
       ),
       bootstrap-compatibility: true
     ),
@@ -836,10 +836,10 @@ $utilities: map-merge(
         // OUDS mod: null value moved to rounded-bottom-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of var(--#{$prefix}border-radius)
-        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of var(--#{$prefix}border-radius-lg)
-        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of var(--#{$prefix}border-radius-xl)
-        5: $border-radius-xxl * 1.5, // OUDS mod: instead of var(--#{$prefix}border-radius-xxl)
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
       ),
       bootstrap-compatibility: true
     ),
@@ -850,15 +850,15 @@ $utilities: map-merge(
         // OUDS mod: null value moved to rounded-start-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of var(--#{$prefix}border-radius)
-        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of var(--#{$prefix}border-radius-lg)
-        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of var(--#{$prefix}border-radius-xl)
-        5: $border-radius-xxl * 1.5, // OUDS mod: instead of var(--#{$prefix}border-radius-xxl)
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
       ),
       bootstrap-compatibility: true
     ),
     // scss-docs-end utils-border-radius
-    // OUDS mod: rounded utilities for border-radius
+    // OUDS mod
     // scss-docs-start utils-border-radius-ouds
     "rounded-ouds": (
       property: border-radius,

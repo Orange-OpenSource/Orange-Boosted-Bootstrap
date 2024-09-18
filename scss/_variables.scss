@@ -611,27 +611,27 @@ $container-padding-x: $grid-gutter-width !default;
 // Define common padding and border radius sizes and more.
 
 // scss-docs-start border-variables
-$border-width:                $ouds-border-width-default !default; // OUDS mod: instead of .125rem
+$border-width:                $ouds-border-width-default !default; // OUDS mod: instead of `.125rem`
 $border-widths: (
-  1: $ouds-border-width-thin, // OUDS mod: instead of $border-width * .5
-  2: $ouds-border-width-thick, // OUDS mod: instead of $border-width
-  3: $ouds-border-width-thicker, // OUDS mod: instead of $border-width * 1.5
-  4: $ouds-border-width-thickest, // OUDS mod: instead of $border-width * 2
-  5: $ouds-border-width-thickest * 1.25 // OUDS mod: instead of $border-width * 2.5
+  1: $ouds-border-width-thin, // OUDS mod: instead of `$border-width * .5`
+  2: $ouds-border-width-thick, // OUDS mod: instead of `$border-width`
+  3: $ouds-border-width-thicker, // OUDS mod: instead of `$border-width * 1.5`
+  4: $ouds-border-width-thickest, // OUDS mod: instead of `$border-width * 2`
+  5: $ouds-border-width-thickest * 1.25 // OUDS mod: instead of `$border-width * 2.5`
 ) !default;
-$border-style:                $ouds-border-style-default !default; // OUDS mod: instead of solid
+$border-style:                $ouds-border-style-default !default; // OUDS mod: instead of `solid`
 $border-color:                $black !default; // OUDS mod: instead of `$gray-300`
 $border-color-subtle:         $gray-500 !default; // OUDS mod
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               $ouds-border-radius-default !default; // OUDS mod: instead of .375rem
-$border-radius-sm:            $ouds-border-radius-short !default; // OUDS mod: instead of .25rem
-$border-radius-lg:            $ouds-border-radius-medium !default; // OUDS mod: instead of .5rem
-$border-radius-xl:            $ouds-border-radius-tall !default; //OUDS mod: instead of 1rem
-$border-radius-xxl:           $ouds-border-radius-tall * 1.5 !default; // OUDS mod: instead of 2rem
-$border-radius-pill:          $ouds-border-radius-pill !default; // OUDS mod: instead of 50rem
+$border-radius:               $ouds-border-radius-default !default; // OUDS mod: instead of `.375rem`
+$border-radius-sm:            $ouds-border-radius-short !default; // OUDS mod: instead of `.25rem`
+$border-radius-lg:            $ouds-border-radius-medium !default; // OUDS mod: instead of `.5rem`
+$border-radius-xl:            $ouds-border-radius-tall !default; //OUDS mod: instead of `1rem`
+$border-radius-xxl:           $ouds-border-radius-tall * 1.5 !default; // OUDS mod: instead of `2rem`
+$border-radius-pill:          $ouds-border-radius-pill !default; // OUDS mod: instead of `50rem`
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in Bootstrap v5.3.0

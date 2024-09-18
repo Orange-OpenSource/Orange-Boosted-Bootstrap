@@ -14,22 +14,22 @@ $ouds-border-radius-pill:         125rem !default;
 $ouds-border-style-default:       $ouds-border-style-solid !default;
 $ouds-border-style-drag:          $ouds-border-style-dashed !default;
 
-$ouds-border-width-none:                       $ouds-border-width-0 !default;
-$ouds-border-width-default:                    $ouds-border-width-25 !default;
-$ouds-border-width-thin:                       $ouds-border-width-25 !default;
-$ouds-border-width-thick:                      $ouds-border-width-50 !default;
-$ouds-border-width-thicker:                    $ouds-border-width-75 !default;
-$ouds-border-width-thickest:                   $ouds-border-width-100 !default;
-// $ouds-border-width-interactive-primary-focus:  $ouds-border-width-100 !default;
+$ouds-border-width-none:          $ouds-border-width-0 !default;
+$ouds-border-width-default:       $ouds-border-width-25 !default;
+$ouds-border-width-thin:          $ouds-border-width-25 !default;
+$ouds-border-width-thick:         $ouds-border-width-50 !default;
+$ouds-border-width-thicker:       $ouds-border-width-75 !default;
+$ouds-border-width-thickest:      $ouds-border-width-100 !default;
+// $ouds-border-width-interactive-primary-focus: $ouds-border-width-100 !default;
 // scss-docs-end ouds-semantic-border
 
 // Opacity
 
 // scss-docs-start ouds-semantic-opacity
-$ouds-opacity-transparent: $ouds-opacity-0 !default;
-$ouds-opacity-weaker:      $ouds-opacity-100 !default;
-$ouds-opacity-weak:        $ouds-opacity-300 !default;
-$ouds-opacity-medium:      $ouds-opacity-500 !default;
-$ouds-opacity-strong:      $ouds-opacity-700 !default;
-$ouds-opacity-opaque:      $ouds-opacity-900 !default;
+$ouds-opacity-transparent:        $ouds-opacity-0 !default;
+$ouds-opacity-weaker:             $ouds-opacity-100 !default;
+$ouds-opacity-weak:               $ouds-opacity-300 !default;
+$ouds-opacity-medium:             $ouds-opacity-500 !default;
+$ouds-opacity-strong:             $ouds-opacity-700 !default;
+$ouds-opacity-opaque:             $ouds-opacity-900 !default;
 // scss-docs-end ouds-semantic-opacity
