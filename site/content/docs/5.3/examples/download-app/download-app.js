@@ -12,7 +12,7 @@
   // }
 
   if (/ipad|iphone|ipod/i.test(navigator.userAgent)) {
-    window.location.href = 'itms-apps://apps.apple.com/fr/app/id6446178285'
+    window.location.href = 'itms-apps://apps.apple.com/app/id6446178285'
   }
 
   // End of copy paste
