@@ -132,43 +132,59 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
+    // OUDS mod
+    // scss-docs-start utils-border-ouds
+    "border-ouds": (
+      property: border,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": $ouds-border-width-none,
+      ),
+    ),
+    // scss-docs-end utils-border-ouds
+    // End mod
     // scss-docs-start utils-borders
     "border": (
       property: border,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        // OUDS mod: null value moved to border-ouds
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-top": (
       property: border-top,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        // OUDS mod: null value moved to border-top-ouds
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-end": (
       property: border-right,
       class: border-end,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        // OUDS mod: null value moved to border-end-ouds
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-bottom": (
       property: border-bottom,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        // OUDS mod: null value moved to border-bottom-ouds
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-start": (
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        // OUDS mod: null value moved to border-start-ouds
         0: 0,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "border-color": (
       property: border-color,
@@ -186,7 +202,8 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: $border-widths
+      values: $border-widths,
+      bootstrap-compatibility: true
     ),
     "border-opacity": (
       css-var: true,
@@ -197,9 +214,54 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-borders
+    // OUDS mod
+    // scss-docs-start utils-borders-ouds
+    "border-top-ouds": (
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": $ouds-border-width-none,
+      ),
+    ),
+    "border-end-ouds": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": $ouds-border-width-none,
+      ),
+    ),
+    "border-bottom-ouds": (
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": $ouds-border-width-none,
+      ),
+    ),
+    "border-start-ouds": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": $ouds-border-width-none,
+      ),
+    ),
+    "border-width-ouds": (
+      property: border-width,
+      class: border,
+      values: $ouds-border-widths
+    ),
+    "border-style-ouds": (
+      property: border-style,
+      class: border,
+      values: $ouds-border-styles
+    ),
+    // scss-docs-end utils-borders-ouds
+    // End mod
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
@@ -729,78 +791,102 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
-        null: var(--#{$prefix}border-radius),
+        // OUDS mod: null value moved to rounded-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-top": (
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
-        null: var(--#{$prefix}border-radius),
+        // OUDS mod: null value moved to rounded-top-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-end": (
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
-        null: var(--#{$prefix}border-radius),
+        // OUDS mod: null value moved to rounded-end-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
-        null: var(--#{$prefix}border-radius),
+        // OUDS mod: null value moved to rounded-bottom-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
     ),
     "rounded-start": (
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
-        null: var(--#{$prefix}border-radius),
+        // OUDS mod: null value moved to rounded-start-ouds
         0: 0,
         1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-border-radius
+    // OUDS mod
+    // scss-docs-start utils-border-radius-ouds
+    "rounded-ouds": (
+      property: border-radius,
+      class: rounded,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-top-ouds": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-end-ouds": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-bottom-ouds": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-start-ouds": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: $ouds-border-radiuses
+    ),
+    // scss-docs-end utils-border-radius-ouds
+    // End mod
     // scss-docs-start utils-visibility
     "visibility": (
       property: visibility,
