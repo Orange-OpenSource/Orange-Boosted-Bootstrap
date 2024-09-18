@@ -192,7 +192,7 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
     </ul>
