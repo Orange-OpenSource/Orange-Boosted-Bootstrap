@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web (without Bootstrap compatibility on).
+This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off.
 
 Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
 
@@ -89,7 +89,7 @@ Technically, it means that you can get rid of the following things:
 ## CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
-  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities using numbers. You will only have the semantic OUDS Web utilities words instead.
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc.
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
