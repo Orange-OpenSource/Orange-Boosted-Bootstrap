@@ -142,6 +142,96 @@ $utilities: ();
         property: border-style,
         class: border,
         values: $ouds-border-styles
+      ),
+      "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-start": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-ouds": (
+        property: border-radius,
+        class: rounded,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-top-ouds": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-end-ouds": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-bottom-ouds": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-start-ouds": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: $ouds-border-radiuses
       )
     ) !global;
 
@@ -315,6 +405,174 @@ $utilities: ();
         .border-drag {
           border-style: dashed !important;
         }
+
+        .rounded {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-none {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-short {
+          border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-medium {
+          border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-tall {
+          border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-pill {
+          border-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-circle {
+          border-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-none {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-short {
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-medium {
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-tall {
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-pill {
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-circle {
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-none {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-short {
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-medium {
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-tall {
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-pill {
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-circle {
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-none {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-short {
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-medium {
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-tall {
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-pill {
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-circle {
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-none {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-short {
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-medium {
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-tall {
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-pill {
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-circle {
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
       }
     }
   }
@@ -452,6 +710,96 @@ $utilities: ();
         property: border-style,
         class: border,
         values: $ouds-border-styles
+      ),
+      "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-start": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius-lg),
+          3: var(--#{$prefix}border-radius-xl),
+          4: var(--#{$prefix}border-radius-xxl),
+          5: $border-radius-xxl * 1.5,
+        ),
+        bootstrap-compatibility: true
+      ),
+      "rounded-ouds": (
+        property: border-radius,
+        class: rounded,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-top-ouds": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-end-ouds": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-bottom-ouds": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: $ouds-border-radiuses
+      ),
+      "rounded-start-ouds": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: $ouds-border-radiuses
       )
     ) !global;
 
@@ -712,6 +1060,318 @@ $utilities: ();
 
         .border-drag {
           border-style: dashed !important;
+        }
+
+        .rounded-0 {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-1 {
+          border-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-2 {
+          border-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-3 {
+          border-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-4 {
+          border-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-5 {
+          border-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-0 {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-1 {
+          border-top-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-2 {
+          border-top-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-3 {
+          border-top-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-4 {
+          border-top-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-5 {
+          border-top-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-0 {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-1 {
+          border-top-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-2 {
+          border-top-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-3 {
+          border-top-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-4 {
+          border-top-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-5 {
+          border-top-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-0 {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-1 {
+          border-bottom-right-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-2 {
+          border-bottom-right-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-3 {
+          border-bottom-right-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-4 {
+          border-bottom-right-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-5 {
+          border-bottom-right-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start-0 {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-1 {
+          border-bottom-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-sm) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-2 {
+          border-bottom-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-lg) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-3 {
+          border-bottom-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-xl) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-4 {
+          border-bottom-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: var(--bs-border-radius-xxl) !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-5 {
+          border-bottom-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 27px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-none {
+          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-short {
+          border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-medium {
+          border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-tall {
+          border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-pill {
+          border-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-circle {
+          border-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-none {
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-short {
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-medium {
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-tall {
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-pill {
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-top-circle {
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-none {
+          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-short {
+          border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-medium {
+          border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-tall {
+          border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-pill {
+          border-top-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-end-circle {
+          border-top-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-none {
+          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-short {
+          border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-medium {
+          border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-tall {
+          border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-pill {
+          border-bottom-right-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-bottom-circle {
+          border-bottom-right-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+        }
+
+        .rounded-start {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-none {
+          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-short {
+          border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-medium {
+          border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-tall {
+          border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-pill {
+          border-bottom-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 125rem !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .rounded-start-circle {
+          border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
       }
     }
