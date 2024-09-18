@@ -84,7 +84,7 @@ toc: true
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> keys in `$utilities` map:</summary>
+    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
       <li><code>border-end-ouds</code></li>
@@ -115,7 +115,7 @@ toc: true
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">Breaking</span> keys in `$utilities` map only available when `$enable-bootstrap-compatibility` is on:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
@@ -146,7 +146,7 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
+- <span class="badge text-bg-success">New</span> <code>$enable-bootstrap-compatibility</code> option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
   - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc.
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
@@ -185,14 +185,14 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">New</span> keys in `$utilities` map:</summary>
+    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-success">Breaking</span> keys in `$utilities` map only available when `$enable-bootstrap-compatibility` is on:</summary>
+    <summary><span class="badge text-bg-success">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
     </ul>
