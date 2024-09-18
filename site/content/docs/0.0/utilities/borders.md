@@ -48,101 +48,9 @@ Or remove borders:
 
 {{< /bootstrap-compatibility >}}
 
-<!-- ## Color
+<!--## Color-->
 
-{{< callout info >}}
-Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
-{{< /callout >}}
-
-Change the border color using utilities built on our theme colors.
-
-{{< example class="bd-example-border-utils" >}}
-{{< border.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<span class="border border-{{ .name }}"></span>
-{{- end -}}
-{{< /border.inline >}}
-<span class="border border-black"></span>
-<span class="border border-white"></span>
-{{< /example >}}
-
-{{< callout info >}}
-For each `.border-*` there is a matching `.border-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
-
-Here is a list of these extra classes:
-{{< border-subtle.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-- `.border-{{ .name }}-subtle`
-{{- end -}}
-{{< /border-subtle.inline >}}
-{{< /callout >}}
-
-Or modify the default `border-color` of a component:
-
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-These border color variants are just **examples illustrating the use of this color utility**. They should not be used because they do not respect the Orange Design System specifications.
-{{< /design-callout-alert >}}
-
-{{< example >}}
-<div class="mb-4">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-
-<div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
-  Dangerous heading
-</div>
-
-<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0">
-  Changing border color and width
-</div>
-{{< /example >}}
-</details>-->
-
-<!--## Opacity
-
-{{< callout danger >}}
-Within **OUDS Web context**, you **should not** be using any opacity effect on borders inside your interfaces. If you need to make a border disappear, please make sure to use the [`.border-transparent` utility](#color).
-{{< /callout >}}
-
-{{< bootstrap-compatibility >}}
-OUDS Web `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
-
-### How it works
-
-Consider our default `.border-success` utility.
-
-```css
-.border-success {
-  -bs-border-opacity: 1;
-  border-color: rgba(var(-bs-success-rgb), var(-bs-border-opacity)) !important;
-}
-```
-
-We use an RGB version of our `-bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `-bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
-
-### Example
-
-To change that opacity, override `-bs-border-opacity` via custom styles or inline styles.
-
-{{< example >}}
-<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2" style="-bs-border-opacity: .5;">This is 50% opacity success border</div>
-{{< /example >}}
-
-Or, choose from any of the `.border-opacity` utilities:
-
-{{< example >}}
-<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
-<div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
-{{< /example >}}
-{{< /bootstrap-compatibility >}}-->
+<!--## Opacity-->
 
 ## Width
 
@@ -228,18 +136,7 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 
 {{< /bootstrap-compatibility >}}
 
-<!--## Dividers
-
-{{< example >}}
-<div class="border-top border-light my-3"></div>
-<div class="border-top border-light border-1 my-3"></div>
-<div class="border-top border-dark my-3"></div>
-<div class="border-top border-dark border-1 my-3"></div>
-<div class="border-top my-3"></div>
-<hr class="text-light">
-<hr class="text-body-secondary">
-<hr>
-{{< /example >}}-->
+<!--## Dividers-->
 
 ## Drag and drop
 
