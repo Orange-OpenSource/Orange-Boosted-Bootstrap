@@ -23,10 +23,13 @@ toc: true
 #### Buttons
   - <span class="badge text-bg-success">New</span> X social button.
 
+#### Orange navbar
+  - <span class="badge text-bg-warning">Warning</span> Unnecessary `role="img"` has been removed from the user's `<img>`. Please reflect this modification into your websites.
+
 ### Docs
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
-  
+
   Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
 
 ### CSS and Sass variables
