@@ -21,9 +21,9 @@ toc: true
 ### Components
 
 - **Orange navbar**
-  - Since the `role="img"` is not needed on a `<img>` tag, we have removed it from the user's avatar in the component. Please reflect this change on your websites. You should also check that you are using a correct label for this image, for example "Access to your account", depending on the context of your project.
+  - You should check that you are using a correct label for the user's avatar, for example "Access to your account", depending on the context of your project.
 
-#### Buttons
+- **Buttons**
   - <span class="badge text-bg-success">New</span> X social button.
 
 ### Docs
