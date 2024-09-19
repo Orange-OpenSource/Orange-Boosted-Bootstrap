@@ -202,7 +202,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" alt="" loading="lazy">
+              <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="" loading="lazy">
               <span class="visually-hidden">My account</span>
             </a>
           </li>
