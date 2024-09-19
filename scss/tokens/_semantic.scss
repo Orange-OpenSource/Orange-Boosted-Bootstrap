@@ -1,15 +1,35 @@
 //// Semantic applications
 //// Depends on raw primitive values
 
+// Border
+
+// scss-docs-start ouds-semantic-border
+$ouds-border-radius-none:         $ouds-border-radius-0 !default;
+$ouds-border-radius-default:      $ouds-border-radius-0 !default;
+$ouds-border-radius-short:        $ouds-border-radius-75 !default;
+$ouds-border-radius-medium:       $ouds-border-radius-150 !default;
+$ouds-border-radius-tall:         $ouds-border-radius-300 !default;
+$ouds-border-radius-pill:         125rem !default;
+
+$ouds-border-style-default:       $ouds-border-style-solid !default;
+$ouds-border-style-drag:          $ouds-border-style-dashed !default;
+
+$ouds-border-width-none:          $ouds-border-width-0 !default;
+$ouds-border-width-default:       $ouds-border-width-25 !default;
+$ouds-border-width-thin:          $ouds-border-width-25 !default;
+$ouds-border-width-medium:        $ouds-border-width-50 !default;
+$ouds-border-width-thick:         $ouds-border-width-75 !default;
+$ouds-border-width-thicker:       $ouds-border-width-100 !default;
+// $ouds-border-width-outside-focus: $ouds-border-width-50 !default;
+// scss-docs-end ouds-semantic-border
+
 // Opacity
 
-// scss-docs-start ouds-opacities-variables-maps
-$ouds-opacities: (
-  "transparent": $ouds-opacity-0,
-  "weaker":      $ouds-opacity-100,
-  "weak":        $ouds-opacity-300,
-  "medium":      $ouds-opacity-500,
-  "emphasis":    $ouds-opacity-700,
-  "opaque":      $ouds-opacity-900
-) !default;
-// scss-docs-end ouds-opacities-variables-maps
+// scss-docs-start ouds-semantic-opacity
+$ouds-opacity-transparent:        $ouds-opacity-0 !default;
+$ouds-opacity-weaker:             $ouds-opacity-100 !default;
+$ouds-opacity-weak:               $ouds-opacity-300 !default;
+$ouds-opacity-medium:             $ouds-opacity-500 !default;
+$ouds-opacity-strong:             $ouds-opacity-700 !default;
+$ouds-opacity-opaque:             $ouds-opacity-900 !default;
+// scss-docs-end ouds-semantic-opacity
