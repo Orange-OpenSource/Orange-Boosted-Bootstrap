@@ -22,6 +22,20 @@ $ouds-border-widths: (
 ) !default;
 // scss-docs-end ouds-maps-borders
 
+// scss-docs-start ouds-maps-elevations
+$ouds-elevations: (
+  "none":                       $ouds-elevation-x-none $ouds-elevation-y-none $ouds-elevation-blur-none $ouds-elevation-spread-none $ouds-elevation-color-none,
+  "raised":                     $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-elevation-blur-raised $ouds-elevation-spread-raised $ouds-elevation-color-raised,
+  "drag":                       $ouds-elevation-x-drag $ouds-elevation-y-drag $ouds-elevation-blur-drag $ouds-elevation-spread-drag $ouds-elevation-color-drag,
+  "overlay-default":            $ouds-elevation-x-overlay-default $ouds-elevation-y-overlay-default $ouds-elevation-blur-overlay-default $ouds-elevation-spread-overlay-default $ouds-elevation-color-overlay-default,
+  "overlay-emphasized":         $ouds-elevation-x-overlay-emphasized $ouds-elevation-y-overlay-emphasized $ouds-elevation-blur-overlay-emphasized $ouds-elevation-spread-overlay-emphasized $ouds-elevation-color-overlay-emphasized,
+  "sticky-default":             $ouds-elevation-x-sticky-default $ouds-elevation-y-sticky-default $ouds-elevation-blur-sticky-default $ouds-elevation-spread-sticky-default $ouds-elevation-color-sticky-default,
+  "sticky-emphasized":          $ouds-elevation-x-sticky-emphasized $ouds-elevation-y-sticky-emphasized $ouds-elevation-blur-sticky-emphasized $ouds-elevation-spread-sticky-emphasized $ouds-elevation-color-sticky-emphasized,
+  "sticky-navigation-scrolled": $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled $ouds-elevation-color-sticky-navigation-scrolled,
+  "focus":                      $ouds-elevation-x-focus $ouds-elevation-y-focus $ouds-elevation-blur-focus $ouds-elevation-spread-focus $ouds-elevation-color-focus
+) !default;
+// scss-docs-end ouds-maps-elevations
+
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (
   "transparent": $ouds-opacity-transparent,

@@ -35,6 +35,35 @@ $ouds-border-width-100: $ouds-border-base !default;
 // $ouds-border-width-200: $ouds-border-base * 2 !default;
 // scss-docs-end ouds-raw-border
 
+// Elevation
+
+// scss-docs-start ouds-raw-elevation
+$ouds-elevation-x-0:    0 !default;
+$ouds-elevation-y-0:    0 !default;
+$ouds-elevation-y-100:  1 !default;
+$ouds-elevation-y-200:  2 !default;
+$ouds-elevation-y-300:  4 !default;
+// $ouds-elevation-y-400:  8 !default;
+$ouds-elevation-y-500:  12 !default;
+// $ouds-elevation-y-600:  20 !default;
+
+$ouds-elevation-blur-0:   0 !default;
+// $ouds-elevation-blur-100: 1 !default;
+$ouds-elevation-blur-200: 2 !default;
+$ouds-elevation-blur-300: 3 !default;
+$ouds-elevation-blur-400: 4 !default;
+// $ouds-elevation-blur-500: 8 !default;
+$ouds-elevation-blur-600: 12 !default;
+// $ouds-elevation-blur-700: 20 !default;
+
+$ouds-elevation-spread-n100:  -1 !default;
+// $ouds-elevation-spread-n200:  -2 !default;
+$ouds-elevation-spread-n300:  -4 !default;
+// $ouds-elevation-spread-n400:  -8 !default;
+$ouds-elevation-spread-0:     0 !default;
+$ouds-elevation-spread-300:   3 !default;
+// scss-docs-end ouds-raw-elevation
+
 // Opacity
 
 // scss-docs-start ouds-raw-opacity

@@ -88,9 +88,19 @@ $utilities: map-merge(
         sm: var(--#{$prefix}box-shadow-sm),
         lg: var(--#{$prefix}box-shadow-lg),
         none: none,
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-shadow
+    // OUDS mod
+    // scss-docs-start utils-shadow-ouds
+    "shadow-ouds": (
+      property: box-shadow,
+      class: shadow,
+      values: $ouds-elevations
+    ),
+    // scss-docs-end utils-shadow-ouds
+    // End mod
     // scss-docs-start utils-focus-ring
     "focus-ring": (
       css-var: true,
