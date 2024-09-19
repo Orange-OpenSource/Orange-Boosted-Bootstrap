@@ -10,7 +10,22 @@ toc: true
 
 ## Examples
 
-While shadows on components are disabled by default in Boosted and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+
+While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+
+{{< example class="overflow-hidden" >}}
+<div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
+<div class="shadow-raised p-3 mb-5 bg-body-tertiary">Raised shadow</div>
+<div class="shadow-drag p-3 mb-5 bg-body-tertiary">Drag shadow</div>
+<div class="shadow-overlay-default p-3 mb-5 bg-body-tertiary">Overlay default shadow</div>
+<div class="shadow-overlay-emphasized p-3 mb-5 bg-body-tertiary">Overlay emphasized shadow</div>
+<div class="shadow-sticky-default p-3 mb-5 bg-body-tertiary">Sticky default shadow</div>
+<div class="shadow-sticky-emphasized p-3 mb-5 bg-body-tertiary">Sticky emphasized shadow</div>
+<div class="shadow-sticky-navigation-scrolled p-3 mb-5 bg-body-tertiary">Sticky navigation shadow</div>
+<div class="shadow-focus p-3 mb-5 bg-body-tertiary">Focus shadow</div>
+{{< /example >}}
+
+{{< bootstrap-compatibility >}}
 
 {{< example class="overflow-hidden" >}}
 <div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
@@ -18,6 +33,8 @@ While shadows on components are disabled by default in Boosted and can be enable
 <div class="shadow p-3 mb-5 bg-body-tertiary">Regular shadow</div>
 <div class="shadow-lg p-3 mb-5 bg-body-tertiary">Larger shadow</div>
 {{< /example >}}
+
+{{< /bootstrap-compatibility >}}
 
 ## CSS
 
