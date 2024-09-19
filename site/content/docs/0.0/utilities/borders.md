@@ -57,9 +57,9 @@ Or remove borders:
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-none"></span>
 <span class="border border-thin"></span>
+<span class="border border-medium"></span>
 <span class="border border-thick"></span>
 <span class="border border-thicker"></span>
-<span class="border border-thickest"></span>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

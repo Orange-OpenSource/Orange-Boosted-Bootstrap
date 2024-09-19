@@ -17,7 +17,7 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Border operative utilities: `.border`, `.border-none`, `.border-top`, `.border-top-none`, `.border-bottom`, `.border-bottom-none`, `.border-start`, `.border-start-none`, `.border-end` and `.border-end-none`.
 
-- <span class="badge text-bg-success">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-thick`, `.border-thicker` and `.border-thickest`.
+- <span class="badge text-bg-success">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
 - <span class="badge text-bg-success">New</span> Border radius utilities with all sizes:
   - Default: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
@@ -60,10 +60,10 @@ toc: true
       <li><code>$ouds-border-width-75</code></li>
       <li><code>$ouds-border-width-100</code></li>
       <li><code>$ouds-border-width-default</code></li>
+      <li><code>$ouds-border-width-medium</code></li>
       <li><code>$ouds-border-width-none</code></li>
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
-      <li><code>$ouds-border-width-thickest</code></li>
       <li><code>$ouds-border-width-thin</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
