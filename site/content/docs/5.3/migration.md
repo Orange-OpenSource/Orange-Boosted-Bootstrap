@@ -20,11 +20,11 @@ toc: true
 
 ### Components
 
-- **Orange navbar**
-  - You should check that you are using a correct label for the user's avatar, for example "Access to your account", depending on the context of your project.
-
 - **Buttons**
   - <span class="badge text-bg-success">New</span> X social button.
+
+- **Orange navbar**
+  - <span class="badge text-bg-warning">Warning</span> You should check that you are using a correct label for the user's avatar, for example "Access to your account", depending on the context of your project.
 
 ### Docs
 
