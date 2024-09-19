@@ -20,11 +20,12 @@ toc: true
 
 ### Components
 
-#### Buttons
+- **Buttons**
   - <span class="badge text-bg-success">New</span> X social button.
 
-#### Orange navbar
-  - <span class="badge text-bg-warning">Warning</span> Unnecessary `role="img"` has been removed from the user's `<img>`. Please reflect this modification into your websites.
+- **Orange navbar**
+  - <span class="badge text-bg-warning">Warning</span> Since the `role="img"` is not needed on a `<img>` tag, we have removed it from the user's avatar in the component. Please reflect this modification into your websites.
+
 
 ### Docs
 
