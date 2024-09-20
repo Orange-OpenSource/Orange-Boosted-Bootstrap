@@ -16,9 +16,9 @@ $ouds-border-styles: (
 
 $ouds-border-widths: (
   "thin":     $ouds-border-width-thin,
+  "medium":   $ouds-border-width-medium,
   "thick":    $ouds-border-width-thick,
   "thicker":  $ouds-border-width-thicker,
-  "thickest": $ouds-border-width-thickest,
 ) !default;
 // scss-docs-end ouds-maps-borders
 
