@@ -22,7 +22,7 @@ The [`scss/tokens/_raw.scss`]({{< param repo >}}/blob/v{{< param current_version
 
 ### Semantic tokens
 
-The [`scss/tokens/_semantic.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike raw tokens, these are intended to be used directly in projects. They are built on raw tokens, assigning them semantic meaning through media queries or specific contexts. These tokens are ready to be applied either in utilities or directly within component tokens. The names of these tokens are not intended to be modified for a custom library, only the correspondence between a token and its value, which comes from the raw tokens.
+The [`scss/tokens/_semantic.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike raw tokens, these are intended to be used directly in projects. They are built on raw tokens, assigning them semantic meaning through media queries or specific contexts. These tokens are ready to be applied either in utilities or directly within component tokens. The names of these tokens are not intended to be modified for a custom library, only the link between a token and its value defined by a raw token.
 
 ### Component tokens
 
