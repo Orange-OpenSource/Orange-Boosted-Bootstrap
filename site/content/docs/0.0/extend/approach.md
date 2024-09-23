@@ -43,6 +43,17 @@ As such, components should be built with a base class that houses common, not-to
 
 Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you're actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.
 
+
+## Bootstrap compatibility
+
+OUDS Web is built on the basis of [design tokens]({{< docsref "/customize/custom-libraries/#tokens-architecture" >}}) that capture all the design decisions utilized within our design system. They ensure the consistency of components between them and facilitate the configuration of the library.
+
+These tokens are specific to OUDS Web. They are notably used as a basis for the construction of utilities. This is why the names (and not only the values) of the OUDS Web utilities differ from the Bootstrap utilities.
+
+The [option `$enable-bootstrap-compatibility`]({{< docsref "/customize/options/" >}}), if set to `true`, allows to keep in the library the Bootstrap elements in addition to the OUDS Web elements (like helpers, utilities, variables, components variants, etc.). In this case, we made a best-effort attempt to style the Bootstrap elements to resemble those of OUDS.
+
+However, we recommend not to enable this option, even if it is enabled for the OUDS Web site itself, for obvious documentation reasons. You should not need it to build Orange branded sites with OUDS Web. It should only be useful whenever a project relies on external Bootstrap-based libraries or plugins used in combination with OUDS Web CSS.
+
 <!--
 ## z-index scales
 
@@ -74,13 +85,11 @@ Lastly, our styles build on the fundamental behaviors of common web elements. Wh
 
 The same goes for more complex components. While we _could_ write our own form validation plugin to add classes to a parent element based on an input's state, thereby allowing us to style the text say red, we prefer using the `:valid`/`:invalid` pseudo-elements every browser provides us.
 
-<!--
 ## Utilities
 
 Utility classes are a powerful ally in combating CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
 
 Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
--->
 
 ## Flexible HTML
 
