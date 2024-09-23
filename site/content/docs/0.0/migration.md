@@ -115,7 +115,7 @@ toc: true
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on (<a href="{{< docsref "/extend/approach/#bootstrap-compatibility" >}}">learn more about Bootstrap compatibility</a>):</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
@@ -192,7 +192,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on (<a href="{{< docsref "/extend/approach/#bootstrap-compatibility" >}}">learn more about Bootstrap compatibility</a>):</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
     </ul>
