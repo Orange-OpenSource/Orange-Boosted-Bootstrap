@@ -75,7 +75,7 @@ Opacity semantic tokens are defined as a Sass map. The opacity utilities are dec
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-opacities" file="scss/_maps.scss" >}}
+{{< scss-docs name="ouds-maps-opacities" file="scss/_ouds-maps.scss" >}}
 
 ### Sass utilities API
 

@@ -101,6 +101,7 @@ Technically, it means that you can get rid of the following things:
   + @import "tokens/raw";
   + @import "tokens/semantic";
   + @import "tokens/component";
+  + @import "ouds-maps";
     @import "variables";
     @import "variables-dark";
     // etc

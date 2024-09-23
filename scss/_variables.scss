@@ -649,9 +649,9 @@ $focus-visible-outer-color:           $black !default; // OUDS mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:        null !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
-$box-shadow-sm:     null !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
-$box-shadow-lg:     null !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
+$box-shadow:        map-get($ouds-elevations, "overlay-default") !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
+$box-shadow-sm:     map-get($ouds-elevations, "overlay-default") !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
+$box-shadow-lg:     map-get($ouds-elevations, "overlay-emphasized") !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
 $box-shadow-inset:  null !default; // OUDS mod: instead of `inset 0 1px 2px rgba($black, .075)`
 // scss-docs-end box-shadow-variables
 
