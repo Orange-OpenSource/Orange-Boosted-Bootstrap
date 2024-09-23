@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off.
+This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]({{< docsref "/extend/approach/#bootstrap-compatibility" >}}).
 
 Let's start with the most obvious change you'll notice: the name. **Boosted is now OUDS Web.**
 
