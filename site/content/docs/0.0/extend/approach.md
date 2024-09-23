@@ -50,9 +50,9 @@ OUDS Web is built on the basis of [design tokens]({{< docsref "/customize/custom
 
 These tokens are specific to OUDS Web. They are notably used as a basis for the construction of utilities. This is why the names (and not only the values) of the OUDS Web utilities differ from the Bootstrap utilities.
 
-The [option `$enable-bootstrap-compatibility`]({{< docsref "/customize/options/" >}}), if set to `true`, allows to keep in the library the Bootstrap elements in addition to the OUDS Web elements (like utilities, variables, components variants, ...). In this case, we tried to style the Bootstrap elements to look like OUDS' in best-effort.
+The [option `$enable-bootstrap-compatibility`]({{< docsref "/customize/options/" >}}), if set to `true`, allows to keep in the library the Bootstrap elements in addition to the OUDS Web elements (like helpers, utilities, variables, components variants, etc.). In this case, we made a best-effort attempt to style the Bootstrap elements to resemble those of OUDS.
 
-However, we recommend not to enable this option, even if it is enabled for the OUDS Web site itself, for obvious documentation reasons. You should not need it to build Orange branded sites with OUDS Web. It should only be useful whenever a project relies on external Bootstrap-based libraries or plugins used in combination with OUDS CSS.
+However, we recommend not to enable this option, even if it is enabled for the OUDS Web site itself, for obvious documentation reasons. You should not need it to build Orange branded sites with OUDS Web. It should only be useful whenever a project relies on external Bootstrap-based libraries or plugins used in combination with OUDS Web CSS.
 
 <!--
 ## z-index scales
