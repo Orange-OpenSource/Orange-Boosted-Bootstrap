@@ -22,6 +22,8 @@ The [`scss/tokens/_raw.scss`]({{< param repo >}}/blob/v{{< param current_version
 
 The [`scss/tokens/_semantic.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_semantic.scss) file contains all the semantic tokens. Unlike raw tokens, these are intended to be used directly. They are built on raw tokens, assigning them semantic meaning through media queries or specific contexts. These tokens are ready to be applied either in utilities or directly within component tokens.
 
+Some semantic tokens are grouped into maps to simplify their transformation into helpers by the utilities API. These maps are defined in the [`scss/_ouds-maps.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/_ouds-maps.scss) file.
+
 ### Component tokens
 
 The [`scss/tokens/_component.scss`]({{< param repo >}}/blob/v{{< param current_version >}}-ouds-web/scss/tokens/_component.scss) file is dedicated to component tokens. These tokens should be used exclusively within components, often relying on semantic tokens, though they may occasionally reference raw tokens. Essentially, they map the semantic tokens to components.
