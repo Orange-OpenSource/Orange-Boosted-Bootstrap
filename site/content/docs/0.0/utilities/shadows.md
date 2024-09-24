@@ -9,7 +9,7 @@ toc: true
 ---
 
 {{< callout info >}}
-Box-shadow styles are referred to as elevation in the design system.
+Box-shadow styles are referred to as 'elevation' within the design system.
 {{< /callout >}}
 
 ## Examples
