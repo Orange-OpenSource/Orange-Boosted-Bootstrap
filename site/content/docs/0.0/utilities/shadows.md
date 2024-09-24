@@ -14,7 +14,8 @@ Box-shadow styles are referred to as elevation in the design system.
 
 ## Examples
 
-While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
+<!-- While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, -->
+You can <!--also -->quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
 
 {{< example class="overflow-hidden" >}}
 <div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
