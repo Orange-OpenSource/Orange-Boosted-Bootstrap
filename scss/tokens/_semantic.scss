@@ -26,55 +26,55 @@ $ouds-border-width-thicker:       $ouds-border-width-100 !default;
 // Elevation
 
 // scss-docs-start ouds-semantic-elevation
-$ouds-elevation-x-none:                       $ouds-elevation-x-0 !default;
-$ouds-elevation-x-raised:                     $ouds-elevation-x-0 !default;
-$ouds-elevation-x-drag:                       $ouds-elevation-x-0 !default;
-$ouds-elevation-x-overlay-default:            $ouds-elevation-x-0 !default;
-$ouds-elevation-x-overlay-emphasized:         $ouds-elevation-x-0 !default;
-$ouds-elevation-x-sticky-default:             $ouds-elevation-x-0 !default;
-$ouds-elevation-x-sticky-emphasized:          $ouds-elevation-x-0 !default;
-$ouds-elevation-x-sticky-navigation-scrolled: $ouds-elevation-x-0 !default;
-$ouds-elevation-x-focus:                      $ouds-elevation-x-0 !default;
-
-$ouds-elevation-y-none:                       $ouds-elevation-y-0 !default;
-$ouds-elevation-y-raised:                     $ouds-elevation-y-100 !default;
-$ouds-elevation-y-drag:                       $ouds-elevation-y-300 !default;
-$ouds-elevation-y-overlay-default:            $ouds-elevation-y-200 !default;
-$ouds-elevation-y-overlay-emphasized:         $ouds-elevation-y-500 !default;
-$ouds-elevation-y-sticky-default:             $ouds-elevation-y-300 !default;
-$ouds-elevation-y-sticky-emphasized:          $ouds-elevation-y-300 !default;
-$ouds-elevation-y-sticky-navigation-scrolled: $ouds-elevation-y-300 !default;
-$ouds-elevation-y-focus:                      $ouds-elevation-y-0 !default;
-
-$ouds-elevation-blur-none:                       $ouds-elevation-blur-0 !default;
-$ouds-elevation-blur-raised:                     $ouds-elevation-blur-200 !default;
 $ouds-elevation-blur-drag:                       $ouds-elevation-blur-400 !default;
+$ouds-elevation-blur-focus:                      $ouds-elevation-blur-0 !default;
+$ouds-elevation-blur-none:                       $ouds-elevation-blur-0 !default;
 $ouds-elevation-blur-overlay-default:            $ouds-elevation-blur-300 !default;
 $ouds-elevation-blur-overlay-emphasized:         $ouds-elevation-blur-600 !default;
+$ouds-elevation-blur-raised:                     $ouds-elevation-blur-200 !default;
 $ouds-elevation-blur-sticky-default:             $ouds-elevation-blur-400 !default;
 $ouds-elevation-blur-sticky-emphasized:          $ouds-elevation-blur-400 !default;
 $ouds-elevation-blur-sticky-navigation-scrolled: $ouds-elevation-blur-400 !default;
-$ouds-elevation-blur-focus:                      $ouds-elevation-blur-0 !default;
 
-$ouds-elevation-spread-none:                       $ouds-elevation-spread-0 !default;
-$ouds-elevation-spread-raised:                     $ouds-elevation-spread-0 !default;
-$ouds-elevation-spread-drag:                       $ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-overlay-default:            $ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-overlay-emphasized:         $ouds-elevation-spread-n300 !default;
-$ouds-elevation-spread-sticky-default:             $ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-sticky-emphasized:          $ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-sticky-navigation-scrolled: $ouds-elevation-spread-n100 !default;
-$ouds-elevation-spread-focus:                      $ouds-elevation-spread-300 !default;
-
-$ouds-elevation-color-none:                       rgba(0, 0, 0, 0) !default;
-$ouds-elevation-color-raised:                     rgba(0, 0, 0, .32) !default;
 $ouds-elevation-color-drag:                       rgba(0, 0, 0, .32) !default;
+$ouds-elevation-color-focus:                      rgba(0, 0, 0, 1) !default;
+$ouds-elevation-color-none:                       rgba(0, 0, 0, 0) !default;
 $ouds-elevation-color-overlay-default:            rgba(0, 0, 0, .24) !default;
 $ouds-elevation-color-overlay-emphasized:         rgba(0, 0, 0, .16) !default;
+$ouds-elevation-color-raised:                     rgba(0, 0, 0, .32) !default;
 $ouds-elevation-color-sticky-default:             rgba(0, 0, 0, .16) !default;
 $ouds-elevation-color-sticky-emphasized:          rgba(0, 0, 0, .16) !default;
 $ouds-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, .16) !default;
-$ouds-elevation-color-focus:                      rgba(0, 0, 0, 1) !default;
+
+$ouds-elevation-spread-drag:                       $ouds-elevation-spread-n100 !default;
+$ouds-elevation-spread-focus:                      $ouds-elevation-spread-300 !default;
+$ouds-elevation-spread-none:                       $ouds-elevation-spread-0 !default;
+$ouds-elevation-spread-overlay-default:            $ouds-elevation-spread-n100 !default;
+$ouds-elevation-spread-overlay-emphasized:         $ouds-elevation-spread-n300 !default;
+$ouds-elevation-spread-raised:                     $ouds-elevation-spread-0 !default;
+$ouds-elevation-spread-sticky-default:             $ouds-elevation-spread-n100 !default;
+$ouds-elevation-spread-sticky-emphasized:          $ouds-elevation-spread-n100 !default;
+$ouds-elevation-spread-sticky-navigation-scrolled: $ouds-elevation-spread-n100 !default;
+
+$ouds-elevation-x-drag:                       $ouds-elevation-x-0 !default;
+$ouds-elevation-x-focus:                      $ouds-elevation-x-0 !default;
+$ouds-elevation-x-none:                       $ouds-elevation-x-0 !default;
+$ouds-elevation-x-overlay-default:            $ouds-elevation-x-0 !default;
+$ouds-elevation-x-overlay-emphasized:         $ouds-elevation-x-0 !default;
+$ouds-elevation-x-raised:                     $ouds-elevation-x-0 !default;
+$ouds-elevation-x-sticky-default:             $ouds-elevation-x-0 !default;
+$ouds-elevation-x-sticky-emphasized:          $ouds-elevation-x-0 !default;
+$ouds-elevation-x-sticky-navigation-scrolled: $ouds-elevation-x-0 !default;
+
+$ouds-elevation-y-drag:                       $ouds-elevation-y-300 !default;
+$ouds-elevation-y-focus:                      $ouds-elevation-y-0 !default;
+$ouds-elevation-y-none:                       $ouds-elevation-y-0 !default;
+$ouds-elevation-y-overlay-default:            $ouds-elevation-y-200 !default;
+$ouds-elevation-y-overlay-emphasized:         $ouds-elevation-y-500 !default;
+$ouds-elevation-y-raised:                     $ouds-elevation-y-100 !default;
+$ouds-elevation-y-sticky-default:             $ouds-elevation-y-300 !default;
+$ouds-elevation-y-sticky-emphasized:          $ouds-elevation-y-300 !default;
+$ouds-elevation-y-sticky-navigation-scrolled: $ouds-elevation-y-300 !default;
 // scss-docs-end ouds-semantic-elevation
 
 // Opacity
