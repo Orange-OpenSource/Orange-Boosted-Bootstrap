@@ -3,15 +3,19 @@ layout: docs
 title: Shadows
 description: Add or remove shadows to elements with box-shadow utilities.
 group: utilities
+keywords: [shadow, shadows, box-shadow, elevation]
 aliases:
   - "/docs/utilities/shadows/"
 toc: true
 ---
 
+{{< callout info >}}
+Box-shadow styles are referred to as elevation in the design system.
+{{< /callout >}}
+
 ## Examples
 
-
-While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none`.
+While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
 
 {{< example class="overflow-hidden" >}}
 <div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
@@ -40,12 +44,36 @@ Includes support for three default sizes (which have associated variables to mat
 
 ## CSS
 
+### Sass tokens
+
+#### Raw tokens
+
+Shadow raw tokens as Sass variables. **Not to be used as-is**.
+
+{{< scss-docs name="ouds-raw-elevation" file="scss/tokens/_raw.scss" >}}
+
+#### Semantic tokens
+
+Shadow semantic tokens as Sass variables.
+
+{{< scss-docs name="ouds-semantic-elevation" file="scss/tokens/_semantic.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
+
+### Sass maps
+
+{{< scss-docs name="ouds-maps-elevations" file="scss/_ouds-maps.scss" >}}
 
 ### Sass utilities API
 
 Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
+{{< scss-docs name="utils-shadow-ouds" file="scss/_utilities.scss" >}}
+
+{{< bootstrap-compatibility false >}}
+
 {{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}
+
+{{< /bootstrap-compatibility >}}
