@@ -190,7 +190,7 @@ Border semantic tokens are defined as a Sass map. The border utilities are decla
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-borders" file="scss/_maps.scss" >}}
+{{< scss-docs name="ouds-maps-borders" file="scss/_ouds-maps.scss" >}}
 
 <!--Color mode adaptive border colors are also available as a Sass map:
 

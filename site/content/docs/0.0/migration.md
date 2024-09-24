@@ -34,7 +34,24 @@ toc: true
 
 - <span class="badge text-bg-danger">Breaking</span> Opacity utilities: `.opacity-emphasis` has been renamed to `.opacity-strong`.
 
+#### Shadow
+
+- <span class="badge text-bg-success">New</span> Shadows utilities:
+  `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized`, `shadow-sticky-navigation-scrolled` and `shadow-focus`.
+
 ### CSS and Sass variables
+
+- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import the new Sass files before the variables.
+
+  <details class="mb-3">
+    <summary>See the new import stack</summary>
+
+    ```diff
+      @import "tokens/component";
+    + @import "ouds-maps";
+      @import "variables";
+    ```
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
@@ -65,6 +82,66 @@ toc: true
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-elevation-blur-0</code></li>
+      <li><code>$ouds-elevation-blur-200</code></li>
+      <li><code>$ouds-elevation-blur-300</code></li>
+      <li><code>$ouds-elevation-blur-400</code></li>
+      <li><code>$ouds-elevation-blur-600</code></li>
+      <li><code>$ouds-elevation-blur-drag</code></li>
+      <li><code>$ouds-elevation-blur-focus</code></li>
+      <li><code>$ouds-elevation-blur-none</code></li>
+      <li><code>$ouds-elevation-blur-overlay-default</code></li>
+      <li><code>$ouds-elevation-blur-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-blur-raised</code></li>
+      <li><code>$ouds-elevation-blur-sticky-default</code></li>
+      <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-color-drag</code></li>
+      <li><code>$ouds-elevation-color-focus</code></li>
+      <li><code>$ouds-elevation-color-none</code></li>
+      <li><code>$ouds-elevation-color-overlay-default</code></li>
+      <li><code>$ouds-elevation-color-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-color-raised</code></li>
+      <li><code>$ouds-elevation-color-sticky-default</code></li>
+      <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-spread-0</code></li>
+      <li><code>$ouds-elevation-spread-300</code></li>
+      <li><code>$ouds-elevation-spread-drag</code></li>
+      <li><code>$ouds-elevation-spread-focus</code></li>
+      <li><code>$ouds-elevation-spread-n100</code></li>
+      <li><code>$ouds-elevation-spread-n300</code></li>
+      <li><code>$ouds-elevation-spread-none</code></li>
+      <li><code>$ouds-elevation-spread-overlay-default</code></li>
+      <li><code>$ouds-elevation-spread-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-spread-raised</code></li>
+      <li><code>$ouds-elevation-spread-sticky-default</code></li>
+      <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-spread-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-x-0</code></li>
+      <li><code>$ouds-elevation-x-drag</code></li>
+      <li><code>$ouds-elevation-x-focus</code></li>
+      <li><code>$ouds-elevation-x-none</code></li>
+      <li><code>$ouds-elevation-x-overlay-default</code></li>
+      <li><code>$ouds-elevation-x-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-x-raised</code></li>
+      <li><code>$ouds-elevation-x-sticky-default</code></li>
+      <li><code>$ouds-elevation-x-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-x-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-y-0</code></li>
+      <li><code>$ouds-elevation-y-100</code></li>
+      <li><code>$ouds-elevation-y-200</code></li>
+      <li><code>$ouds-elevation-y-300</code></li>
+      <li><code>$ouds-elevation-y-500</code></li>
+      <li><code>$ouds-elevation-y-drag</code></li>
+      <li><code>$ouds-elevation-y-focus</code></li>
+      <li><code>$ouds-elevation-y-none</code></li>
+      <li><code>$ouds-elevation-y-overlay-default</code></li>
+      <li><code>$ouds-elevation-y-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-y-raised</code></li>
+      <li><code>$ouds-elevation-y-sticky-default</code></li>
+      <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>
@@ -80,6 +157,7 @@ toc: true
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
+      <li><code>$ouds-elevations</code></li>
     </ul>
   </details>
 
@@ -98,11 +176,12 @@ toc: true
       <li><code>rounded-ouds</code></li>
       <li><code>rounded-start-ouds</code></li>
       <li><code>rounded-top-ouds</code></li>
+      <li><code>shadow-ouds</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> Dropped CSS variables:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-border-radius</code></li>
       <li><code>--bs-border-radius-2xl</code></li>
@@ -111,6 +190,10 @@ toc: true
       <li><code>--bs-border-radius-sm</code></li>
       <li><code>--bs-border-radius-xl</code></li>
       <li><code>--bs-border-radius-xxl</code></li>
+      <li><code>--bs-box-shadow</code></li>
+      <li><code>--bs-box-shadow-inset</code></li>
+      <li><code>--bs-box-shadow-lg</code></li>
+      <li><code>--bs-box-shadow-sm</code></li>
     </ul>
   </details>
 
@@ -129,6 +212,7 @@ toc: true
       <li><code>rounded-end</code></li>
       <li><code>rounded-start</code></li>
       <li><code>rounded-top</code></li>
+      <li><code>shadow</code></li>
     </ul>
   </details>
 

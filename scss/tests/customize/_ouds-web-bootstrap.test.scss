@@ -2,6 +2,7 @@
 @import "../../tokens/raw";
 @import "../../tokens/semantic";
 @import "../../tokens/component";
+@import "../../ouds-maps";
 @import "../../variables";
 @import "../../maps";
 @import "../../mixins";
@@ -232,7 +233,22 @@ $utilities: ();
         property: border-bottom-left-radius border-top-left-radius,
         class: rounded-start,
         values: $ouds-border-radiuses
-      )
+      ),
+      "shadow": (
+        property: box-shadow,
+        class: shadow,
+        values: (
+          null: var(--#{$prefix}box-shadow),
+          sm: var(--#{$prefix}box-shadow-sm),
+          lg: var(--#{$prefix}box-shadow-lg),
+        ),
+        bootstrap-compatibility: true
+      ),
+      "shadow-ouds": (
+        property: box-shadow,
+        class: shadow,
+        values: $ouds-elevations
+      ),
     ) !global;
 
     @include assert() {
@@ -573,6 +589,42 @@ $utilities: ();
           border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
+
+        .shadow-none {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        }
+
+        .shadow-raised {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-drag {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-overlay-default {
+          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-overlay-emphasized {
+          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-default {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-emphasized {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-navigation-scrolled {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-focus {
+          box-shadow: 0 0 0 3px rgb(0, 0, 0) !important;
+        }
       }
     }
   }
@@ -800,7 +852,22 @@ $utilities: ();
         property: border-bottom-left-radius border-top-left-radius,
         class: rounded-start,
         values: $ouds-border-radiuses
-      )
+      ),
+      "shadow": (
+        property: box-shadow,
+        class: shadow,
+        values: (
+          null: var(--#{$prefix}box-shadow),
+          sm: var(--#{$prefix}box-shadow-sm),
+          lg: var(--#{$prefix}box-shadow-lg),
+        ),
+        bootstrap-compatibility: true
+      ),
+      "shadow-ouds": (
+        property: box-shadow,
+        class: shadow,
+        values: $ouds-elevations
+      ),
     ) !global;
 
     @include assert() {
@@ -1372,6 +1439,54 @@ $utilities: ();
         .rounded-start-circle {
           border-bottom-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 50% !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+        }
+
+        .shadow {
+          box-shadow: var(--bs-box-shadow) !important;
+        }
+
+        .shadow-sm {
+          box-shadow: var(--bs-box-shadow-sm) !important;
+        }
+
+        .shadow-lg {
+          box-shadow: var(--bs-box-shadow-lg) !important;
+        }
+
+        .shadow-none {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        }
+
+        .shadow-raised {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-drag {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-overlay-default {
+          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-overlay-emphasized {
+          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-default {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-emphasized {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-sticky-navigation-scrolled {
+          box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .shadow-focus {
+          box-shadow: 0 0 0 3px rgb(0, 0, 0) !important;
         }
       }
     }
