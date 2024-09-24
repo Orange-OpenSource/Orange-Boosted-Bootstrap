@@ -83,13 +83,10 @@ toc: true
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
       <li><code>$ouds-elevation-blur-0</code></li>
-      <li><code>$ouds-elevation-blur-100</code></li>
       <li><code>$ouds-elevation-blur-200</code></li>
       <li><code>$ouds-elevation-blur-300</code></li>
       <li><code>$ouds-elevation-blur-400</code></li>
-      <li><code>$ouds-elevation-blur-500</code></li>
       <li><code>$ouds-elevation-blur-600</code></li>
-      <li><code>$ouds-elevation-blur-700</code></li>
       <li><code>$ouds-elevation-blur-drag</code></li>
       <li><code>$ouds-elevation-blur-focus</code></li>
       <li><code>$ouds-elevation-blur-none</code></li>
@@ -113,9 +110,7 @@ toc: true
       <li><code>$ouds-elevation-spread-drag</code></li>
       <li><code>$ouds-elevation-spread-focus</code></li>
       <li><code>$ouds-elevation-spread-n100</code></li>
-      <li><code>$ouds-elevation-spread-n200</code></li>
       <li><code>$ouds-elevation-spread-n300</code></li>
-      <li><code>$ouds-elevation-spread-n400</code></li>
       <li><code>$ouds-elevation-spread-none</code></li>
       <li><code>$ouds-elevation-spread-overlay-default</code></li>
       <li><code>$ouds-elevation-spread-overlay-emphasized</code></li>
@@ -137,9 +132,7 @@ toc: true
       <li><code>$ouds-elevation-y-100</code></li>
       <li><code>$ouds-elevation-y-200</code></li>
       <li><code>$ouds-elevation-y-300</code></li>
-      <li><code>$ouds-elevation-y-400</code></li>
       <li><code>$ouds-elevation-y-500</code></li>
-      <li><code>$ouds-elevation-y-600</code></li>
       <li><code>$ouds-elevation-y-drag</code></li>
       <li><code>$ouds-elevation-y-focus</code></li>
       <li><code>$ouds-elevation-y-none</code></li>
