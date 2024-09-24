@@ -41,6 +41,18 @@ toc: true
 
 ### CSS and Sass variables
 
+- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import the new Sass files before the variables.
+
+  <details class="mb-3">
+    <summary>See the new import stack</summary>
+
+    ```diff
+      @import "tokens/component";
+    + @import "ouds-maps";
+      @import "variables";
+    ```
+  </details>
+
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
@@ -238,7 +250,6 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   + @import "tokens/raw";
   + @import "tokens/semantic";
   + @import "tokens/component";
-    @import "ouds-maps";
     @import "variables";
     @import "variables-dark";
     // etc
