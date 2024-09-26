@@ -37,10 +37,10 @@ Most custom components do not have `position: relative` by default, so we need t
 </div>
 {{< /example >}}
 
-<!--{{< example >}}
-<div class="row g-0 bg-body-secondary position-relative">
+{{< example >}}
+<div class="row g-none bg-body-secondary position-relative">
   <div class="col-md-6 mb-md-0 p-md-4">
-    { {< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
+    {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
   </div>
   <div class="col-md-6 p-4 ps-md-0">
     <h5 class="mt-0">Columns with stretched link</h5>
@@ -48,7 +48,7 @@ Most custom components do not have `position: relative` by default, so we need t
     <a href="#" class="stretched-link">Go somewhere</a>
   </div>
 </div>
-{{< /example >}}-->
+{{< /example >}}
 
 ## Identifying the containing block
 

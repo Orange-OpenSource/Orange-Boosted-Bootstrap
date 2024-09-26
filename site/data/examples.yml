@@ -36,3 +36,11 @@
       description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
       url: /examples/tree/main/webpack
       indexPath: src/index.html
+
+- category: Framework
+  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
+  examples:
+    - name: Grid
+      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+    - name: Grid system
+      description: "OUDS Web default grid system illustration."

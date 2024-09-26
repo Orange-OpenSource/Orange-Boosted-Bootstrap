@@ -1,12 +1,4 @@
-.bd-gutter {
-  --bs-gutter-x: #{$bd-gutter-x * 2}; // OUDS mod: changed value
-
-  // OUDS mod
-  @include media-breakpoint-up(md) {
-    --bs-gutter-x: #{$bd-gutter-x * 4};
-  }
-  // End mod
-}
+// OUDS mod: no `.bd-gutter`
 
 .bd-layout {
   @include media-breakpoint-up(lg) {

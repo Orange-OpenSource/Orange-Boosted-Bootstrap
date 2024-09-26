@@ -32,17 +32,19 @@ Position an element at the top of the viewport, from edge to edge, but only afte
 <div class="sticky-top">...</div>
 ```
 
-<!--## Responsive sticky top
+## Responsive sticky top
 
 Responsive variations also exist for `.sticky-top` utility.
 
 ```html
+<div class="sticky-xs-top">Stick to the top on viewports sized XS (extra small) or wider</div>
 <div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
 <div class="sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
 <div class="sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
-<div class="sticky-xl-top">Stick to the top on viewports sized XL (extra-large) or wider</div>
-<div class="sticky-xxl-top">Stick to the top on viewports sized XXL (extra-extra-large) or wider</div>
-```-->
+<div class="sticky-xl-top">Stick to the top on viewports sized XL (extra large) or wider</div>
+<div class="sticky-2xl-top">Stick to the top on viewports sized 2XL (extra extra large) or wider</div>
+<div class="sticky-3xl-top">Stick to the top on viewports sized 3XL (extra extra extra large) or wider</div>
+```
 
 ## Sticky bottom
 
@@ -52,14 +54,16 @@ Position an element at the bottom of the viewport, from edge to edge, but only a
 <div class="sticky-bottom">...</div>
 ```
 
-<!--## Responsive sticky bottom
+## Responsive sticky bottom
 
 Responsive variations also exist for `.sticky-bottom` utility.
 
 ```html
+<div class="sticky-xs-bottom">Stick to the bottom on viewports sized XS (extra small) or wider</div>
 <div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
 <div class="sticky-md-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
 <div class="sticky-lg-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
-<div class="sticky-xl-bottom">Stick to the bottom on viewports sized XL (extra-large) or wider</div>
-<div class="sticky-xxl-bottom">Stick to the bottom on viewports sized XXL (extra-extra-large) or wider</div>
-```-->
+<div class="sticky-xl-bottom">Stick to the bottom on viewports sized XL (extra large) or wider</div>
+<div class="sticky-2xl-bottom">Stick to the bottom on viewports sized 2XL (extra extra large) or wider</div>
+<div class="sticky-3xl-bottom">Stick to the bottom on viewports sized 3XL (extra extra extra large) or wider</div>
+```

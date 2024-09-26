@@ -25,9 +25,9 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
 | [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
 | [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
+| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
 | `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
-<!--| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |-->
 <!--| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |-->
 {{< /bs-table >}}
 
@@ -91,7 +91,7 @@ As a list<!--, like with [`text-decoration` utilities]({{< docsref "/utilities/t
 values: none underline line-through
 ```
 
-As a map<!--, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}})-->:
+As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
 
 ```scss
 values: (
@@ -258,7 +258,7 @@ Output:
 .opacity-100-hover:hover { opacity: 1 !important; }
 ```
 
-<!--### Responsive
+### Responsive
 
 Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
 
@@ -287,6 +287,14 @@ Output:
 .opacity-75 { opacity: .75 !important; }
 .opacity-100 { opacity: 1 !important; }
 
+@media (min-width: 390px) {
+  .opacity-xs-0 { opacity: 0 !important; }
+  .opacity-xs-25 { opacity: .25 !important; }
+  .opacity-xs-50 { opacity: .5 !important; }
+  .opacity-xs-75 { opacity: .75 !important; }
+  .opacity-xs-100 { opacity: 1 !important; }
+}
+
 @media (min-width: 480px) {
   .opacity-sm-0 { opacity: 0 !important; }
   .opacity-sm-25 { opacity: .25 !important; }
@@ -295,7 +303,7 @@ Output:
   .opacity-sm-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 736px) {
   .opacity-md-0 { opacity: 0 !important; }
   .opacity-md-25 { opacity: .25 !important; }
   .opacity-md-50 { opacity: .5 !important; }
@@ -311,7 +319,7 @@ Output:
   .opacity-lg-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1320px) {
   .opacity-xl-0 { opacity: 0 !important; }
   .opacity-xl-25 { opacity: .25 !important; }
   .opacity-xl-50 { opacity: .5 !important; }
@@ -319,14 +327,22 @@ Output:
   .opacity-xl-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1440px) {
-  .opacity-xxl-0 { opacity: 0 !important; }
-  .opacity-xxl-25 { opacity: .25 !important; }
-  .opacity-xxl-50 { opacity: .5 !important; }
-  .opacity-xxl-75 { opacity: .75 !important; }
-  .opacity-xxl-100 { opacity: 1 !important; }
+@media (min-width: 1640px) {
+  .opacity-2xl-0 { opacity: 0 !important; }
+  .opacity-2xl-25 { opacity: .25 !important; }
+  .opacity-2xl-50 { opacity: .5 !important; }
+  .opacity-2xl-75 { opacity: .75 !important; }
+  .opacity-2xl-100 { opacity: 1 !important; }
 }
-```-->
+
+@media (min-width: 1880px) {
+  .opacity-3xl-0 { opacity: 0 !important; }
+  .opacity-3xl-25 { opacity: .25 !important; }
+  .opacity-3xl-50 { opacity: .5 !important; }
+  .opacity-3xl-75 { opacity: .75 !important; }
+  .opacity-3xl-100 { opacity: 1 !important; }
+}
+```
 
 ### Print
 
@@ -388,7 +404,7 @@ $utilities: (
 );
 ```
 
-<!--### Add utilities
+### Add utilities
 
 New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
 
@@ -417,7 +433,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 <!--### Modify utilities
 
@@ -453,7 +469,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```-->
 
-<!--#### Enable responsive
+#### Enable responsive
 
 You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
 
@@ -471,8 +487,8 @@ You can enable responsive classes for an existing set of utilities that are not 
 
 $utilities: map-merge(
   $utilities, (
-    "border": map-merge(
-      map-get($utilities, "border"),
+    "border-ouds": map-merge(
+      map-get($utilities, "border-ouds"),
       ( responsive: true ),
     ),
   )
@@ -485,33 +501,43 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 
 ```css
 .border { ... }
-.border-0 { ... }
+.border-none { ... }
+
+@media (min-width: 390px) {
+  .border-xs { ... }
+  .border-xs-none { ... }
+}
 
 @media (min-width: 480px) {
   .border-sm { ... }
-  .border-sm-0 { ... }
+  .border-sm-none { ... }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 736px) {
   .border-md { ... }
-  .border-md-0 { ... }
+  .border-md-none { ... }
 }
 
 @media (min-width: 1024px) {
   .border-lg { ... }
-  .border-lg-0 { ... }
+  .border-lg-none { ... }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1320px) {
   .border-xl { ... }
-  .border-xl-0 { ... }
+  .border-xl-none { ... }
 }
 
-@media (min-width: 1440px) {
-  .border-xxl { ... }
-  .border-xxl-0 { ... }
+@media (min-width: 1640px) {
+  .border-2xl { ... }
+  .border-2xl-none { ... }
 }
-```-->
+
+@media (min-width: 1880px) {
+  .border-3xl { ... }
+  .border-3xl-none { ... }
+}
+```
 
 <!--#### Rename utilities
 
@@ -587,7 +613,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```-->
 
-<!--### Add, remove, modify
+### Add, remove, modify
 
 You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge). Here's how you can combine the previous examples into one larger map.
 
@@ -610,8 +636,8 @@ $utilities: map-merge(
     "width": null,
 
     // Make an existing utility responsive
-    "border": map-merge(
-      map-get($utilities, "border"),
+    "border-ouds": map-merge(
+      map-get($utilities, "border-ouds"),
       ( responsive: true ),
     ),
 
@@ -626,7 +652,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 #### Remove utility in RTL
 
