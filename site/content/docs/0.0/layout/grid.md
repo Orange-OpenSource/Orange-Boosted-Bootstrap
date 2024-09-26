@@ -10,7 +10,7 @@ toc: true
 
 ## Example
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+OUDS Web's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
 
 {{< callout info >}}
 **New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
@@ -48,13 +48,13 @@ Breaking it down, here's how the grid system comes together:
 
 - **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
 
-- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Bootstrap, you can use our [grid's source Sass](#sass-variables) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
+- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in OUDS Web, you can use our [grid's source Sass](#sass-variables) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
 
 Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
 
 ## Grid options
 
-Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follows:
+OUDS Web's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follows:
 
 - Extra small (xs)
 - Small (sm)
@@ -72,11 +72,11 @@ As noted above, each of these breakpoints have their own container, unique class
         <th scope="col"></th>
         <th scope="col">
           xs<br>
-          <span class="fw-normal">&lt;576px</span>
+          <span class="fw-normal">&lt;480px</span>
         </th>
         <th scope="col">
           sm<br>
-          <span class="fw-normal">&ge;576px</span>
+          <span class="fw-normal">&ge;480px</span>
         </th>
         <th scope="col">
           md<br>
@@ -84,26 +84,26 @@ As noted above, each of these breakpoints have their own container, unique class
         </th>
         <th scope="col">
           lg<br>
-          <span class="fw-normal">&ge;992px</span>
+          <span class="fw-normal">&ge;1024px</span>
         </th>
         <th scope="col">
           xl<br>
-          <span class="fw-normal">&ge;1200px</span>
+          <span class="fw-normal">&ge;1280px</span>
         </th>
         <th scope="col">
           xxl<br>
-          <span class="fw-normal">&ge;1400px</span>
+          <span class="fw-normal">&ge;1440px</span>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>None (auto)</td>
-        <td>540px</td>
-        <td>720px</td>
+        <td>312px</td>
+        <td>468px</td>
+        <td>744px</td>
         <td>960px</td>
-        <td>1140px</td>
+        <td>1200px</td>
         <td>1320px</td>
       </tr>
       <tr>
@@ -120,8 +120,18 @@ As noted above, each of these breakpoints have their own container, unique class
         <td colspan="6">12</td>
       </tr>
       <tr>
+        <th class="text-nowrap" scope="row">Column width</th>
+        <td>16px</td>
+        <td>29px</td>
+        <td>42px</td>
+        <td>60px</td>
+        <td>80px</td>
+        <td>90px</td>
+      </tr>
+      <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="6">1.5rem (.75rem on left and right)</td>
+        <td colspan="2">.625rem (.3125rem on left and right)</td>
+        <td colspan="4">1.25rem (.625rem on left and right)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
@@ -235,7 +245,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ## Responsive classes
 
-Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+OUDS Web's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
 
 ### All breakpoints
 
@@ -413,7 +423,7 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## CSS
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+When using OUDS Web's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
 
 ### Sass variables
 
@@ -421,7 +431,7 @@ Variables and maps determine the number of columns, the gutter width, and the me
 
 ```scss
 $grid-columns:      12;
-$grid-gutter-width: 1.5rem;
+$grid-gutter-width: 1.25rem;
 $grid-row-columns:  6;
 ```
 

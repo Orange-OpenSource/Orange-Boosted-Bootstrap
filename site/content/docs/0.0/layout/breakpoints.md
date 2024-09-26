@@ -17,23 +17,22 @@ toc: true
 
 - **Use media queries to architect your CSS by breakpoint.** Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use `min-width` in our media queries.
 
-- **Mobile first, responsive design is the goal.** Bootstrap's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
+- **Mobile first, responsive design is the goal.** OUDS Web's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
 
 ## Available breakpoints
 
-Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
+OUDS Web includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra small | <em>None</em> |&lt;576px |
-| Small | `sm` | &ge;576px |
+| Extra small | <em>None</em> |&lt;480px |
+| Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;768px |
-| Large | `lg` | &ge;992px |
-| Extra large | `xl` | &ge;1200px |
-| Extra extra large | `xxl` | &ge;1400px |
+| Large | `lg` | &ge;1024px |
+| Extra large | `xl` | &ge;1280px |
+| Extra extra large | `xxl` | &ge;1440px |
 {{< /bs-table >}}
-
 
 Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
 
@@ -45,11 +44,11 @@ For more information and examples on how to modify our Sass maps and variables, 
 
 ## Media queries
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Since OUDS Web is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
 ### Min-width
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+OUDS Web primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 ```scss
 // Source mixins
@@ -77,23 +76,23 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+// X-Small devices (portrait phones, less than 480px)
+// No media query for `xs` since this is the default in OUDS Web
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+// Small devices (landscape phones, 480px and up)
+@media (min-width: 480px) { ... }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) { ... }
 
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+// X-Large devices (large desktops, 1280px and up)
+@media (min-width: 1280px) { ... }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... }
+// XX-Large devices (larger desktops, 1440px and up)
+@media (min-width: 1440px) { ... }
 ```
 
 ### Max-width
@@ -121,21 +120,20 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 ```scss
 // `xs` returns only a ruleset and no media query
 // ... { ... }
-
-// `sm` applies to x-small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
+// `sm` applies to x-small devices (portrait phones, less than 480px)
+@media (max-width: 479.98px) { ... }
 
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
-// `lg` applies to medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
+// `lg` applies to medium devices (tablets, less than 1024px)
+@media (max-width: 1023.98px) { ... }
 
-// `xl` applies to large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
+// `xl` applies to large devices (desktops, less than 1280px)
+@media (max-width: 1279.98px) { ... }
 
-// `xxl` applies to x-large devices (large desktops, less than 1400px)
-@media (max-width: 1399.98px) { ... }
+// `xxl` applies to x-large devices (large desktops, less than 1440px)
+@media (max-width: 1439.98px) { ... }
 ```
 
 {{< callout warning >}}
@@ -155,10 +153,12 @@ There are also media queries and mixins for targeting a single segment of screen
 @include media-breakpoint-only(xxl) { ... }
 ```
 
-For example the `@include media-breakpoint-only(md) { ... }` will result in :
+For example the `@include media-breakpoint-only(md) { ... }` will result in:
 
 ```scss
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
+// Example
+// Apply styles starting from medium devices and up to extra large devices
+@media (min-width: 768px) and (max-width: 1023.98px) { ... }
 ```
 
 ### Between breakpoints
@@ -174,5 +174,5 @@ Which results in:
 ```scss
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1199.98px) { ... }
+@media (min-width: 768px) and (max-width: 1279.98px) { ... }
 ```
