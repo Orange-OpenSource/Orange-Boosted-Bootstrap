@@ -1,6 +1,6 @@
 - category: Starters
   external: true
-  description: "Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
+  description: "Functional examples of using OUDS Web in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
   examples:
     - name: CDN starter
       description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
@@ -36,3 +36,9 @@
       description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
       url: /examples/tree/main/webpack
       indexPath: src/index.html
+
+- category: Framework
+  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
+  examples:
+    - name: Grid
+      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."

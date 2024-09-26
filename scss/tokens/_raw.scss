@@ -77,51 +77,51 @@ $ouds-grid-width-600: 1440px !default; // xl
 $ouds-grid-width-700: 1680px !default; // xxl
 $ouds-grid-width-800: 1920px !default; // 3xl
 
-$ouds-grid-min-width-100: 1 !default;
-$ouds-grid-min-width-200: 390 !default;
-$ouds-grid-min-width-300: 480 !default;
-$ouds-grid-min-width-400: 736 !default;
-$ouds-grid-min-width-500: 1024 !default;
-$ouds-grid-min-width-600: 1320 !default;
-$ouds-grid-min-width-700: 1640 !default;
-$ouds-grid-min-width-800: 1880 !default;
+//$ouds-grid-min-width-100: 1 !default;
+//$ouds-grid-min-width-200: 390 !default;
+//$ouds-grid-min-width-300: 480 !default;
+//$ouds-grid-min-width-400: 736 !default;
+//$ouds-grid-min-width-500: 1024 !default;
+//$ouds-grid-min-width-600: 1320 !default;
+//$ouds-grid-min-width-700: 1640 !default;
+//$ouds-grid-min-width-800: 1880 !default;
+//
+//$ouds-grid-max-width-100: 389 !default;
+//$ouds-grid-max-width-200: 479 !default;
+//$ouds-grid-max-width-300: 735 !default;
+//$ouds-grid-max-width-400: 1023 !default;
+//$ouds-grid-max-width-500: 1319 !default;
+//$ouds-grid-max-width-600: 1639 !default;
+//$ouds-grid-max-width-650: 1680 !default;
+//$ouds-grid-max-width-700: 1879 !default;
+//$ouds-grid-max-width-800: 1920 !default;
 
-$ouds-grid-max-width-100: 389 !default;
-$ouds-grid-max-width-200: 479 !default;
-$ouds-grid-max-width-300: 735 !default;
-$ouds-grid-max-width-400: 1023 !default;
-$ouds-grid-max-width-500: 1319 !default;
-$ouds-grid-max-width-600: 1639 !default;
-$ouds-grid-max-width-650: 1680 !default;
-$ouds-grid-max-width-700: 1879 !default;
-$ouds-grid-max-width-800: 1920 !default;
+//$ouds-grid-margin-100: 16 !default;
+//$ouds-grid-margin-300: 24 !default;
+//$ouds-grid-margin-400: 28 !default;
+//$ouds-grid-margin-500: 32 !default;
+//$ouds-grid-margin-600: 36 !default;
+//$ouds-grid-margin-700: 40 !default;
+//$ouds-grid-margin-1000: 52 !default;
+//$ouds-grid-margin-1100: 56 !default;
+//$ouds-grid-margin-1700: 80 !default;
+//$ouds-grid-margin-2500: 112 !default;
+//
+//$ouds-grid-column-gap-10: 1 !default;
+//$ouds-grid-column-gap-100: 8 !default;
+//$ouds-grid-column-gap-200: 16 !default;
+//$ouds-grid-column-gap-300: 20 !default;
+//$ouds-grid-column-gap-400: 24 !default;
+//$ouds-grid-column-gap-600: 32 !default;
+//$ouds-grid-column-gap-800: 40 !default;
 
-$ouds-grid-margin-100: 16 !default;
-$ouds-grid-margin-300: 24 !default;
-$ouds-grid-margin-400: 28 !default;
-$ouds-grid-margin-500: 32 !default;
-$ouds-grid-margin-600: 36 !default;
-$ouds-grid-margin-700: 40 !default;
-$ouds-grid-margin-1000: 52 !default;
-$ouds-grid-margin-1100: 56 !default;
-$ouds-grid-margin-1700: 80 !default;
-$ouds-grid-margin-2500: 112 !default;
-
-$ouds-grid-column-gap-10: 1 !default;
-$ouds-grid-column-gap-100: 8 !default;
-$ouds-grid-column-gap-200: 16 !default;
-$ouds-grid-column-gap-300: 20 !default;
-$ouds-grid-column-gap-400: 24 !default;
-$ouds-grid-column-gap-600: 32 !default;
-$ouds-grid-column-gap-800: 40 !default;
-
-$ouds-grid-column-count-100: 1 !default;
-$ouds-grid-column-count-200: 2 !default;
-$ouds-grid-column-count-400: 4 !default;
-$ouds-grid-column-count-600: 6 !default;
-$ouds-grid-column-count-800: 8 !default;
-$ouds-grid-column-count-1000: 10 !default;
-$ouds-grid-column-count-1200: 12 !default;
+//$ouds-grid-column-count-100: 1 !default;
+//$ouds-grid-column-count-200: 2 !default;
+//$ouds-grid-column-count-400: 4 !default;
+//$ouds-grid-column-count-600: 6 !default;
+//$ouds-grid-column-count-800: 8 !default;
+//$ouds-grid-column-count-1000: 10 !default;
+//$ouds-grid-column-count-1200: 12 !default;
 // scss-docs-end ouds-raw-grid
 
 // Opacity
