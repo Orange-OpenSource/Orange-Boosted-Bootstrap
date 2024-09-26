@@ -571,7 +571,6 @@ $grid-breakpoints: (
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-// OUDS mod
 // scss-docs-start container-max-widths
 $container-max-widths: (
   2xs: $ouds-grid-2xs-width - (2 * $ouds-grid-2xs-margin), // 328
@@ -584,7 +583,6 @@ $container-max-widths: (
   3xl: $ouds-grid-3xl-width - (2 * $ouds-grid-3xl-margin), // 1696
 ) !default;
 
-// OUDS mod
 $container-fluid-margin: (
   2xs: $ouds-grid-2xs-margin, // 16
   xs: $ouds-grid-xs-margin, // 24
