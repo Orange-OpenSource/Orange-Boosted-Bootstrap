@@ -548,17 +548,18 @@ $paragraph-margin-bottom:   1rem !default;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
+// OUDS mod
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   3xs: 0,
-  2xs: $ouds-grid-2xs-width,
-  xs: $ouds-grid-xs-width,
-  sm: $ouds-grid-sm-width,
-  md: $ouds-grid-md-width,
-  lg: $ouds-grid-lg-width,
-  xl: $ouds-grid-xl-width,
-  2xl: $ouds-grid-2xl-width,
-  3xl: $ouds-grid-3xl-width
+  2xs: $ouds-grid-2xs-width, // 360
+  xs: $ouds-grid-xs-width, // 390
+  sm: $ouds-grid-sm-width, // 480
+  md: $ouds-grid-md-width, // 768
+  lg: $ouds-grid-lg-width, // 1024
+  xl: $ouds-grid-xl-width, // 1140
+  2xl: $ouds-grid-2xl-width, // 1680
+  3xl: $ouds-grid-3xl-width // 1920
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -570,24 +571,29 @@ $grid-breakpoints: (
 //
 // Define the maximum width of `.container` for different screen sizes.
 
+// OUDS mod
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  xs: 312px,
-  sm: 468px,
-  md: 744px,
-  lg: 960px,
-  xl: 1200px,
-  xxl: 1320px
+  2xs: $ouds-grid-2xs-width - (2 * $ouds-grid-2xs-margin), // 328
+  xs: $ouds-grid-xs-width - (2 * $ouds-grid-xs-margin), // 342
+  sm: $ouds-grid-sm-width - (2 * $ouds-grid-sm-margin), // 424
+  md: $ouds-grid-md-width - (2 * $ouds-grid-md-margin), // 704
+  lg: $ouds-grid-lg-width - (2 * $ouds-grid-lg-margin), // 944
+  xl: $ouds-grid-xl-width - (2 * $ouds-grid-xl-margin), // 1328
+  2xl: $ouds-grid-2xl-width - (2 * $ouds-grid-2xl-margin), // 1520
+  3xl: $ouds-grid-3xl-width - (2 * $ouds-grid-3xl-margin), // 1696
 ) !default;
 
 // OUDS mod
 $container-fluid-margin: (
-  xs: 4px,
-  sm: 6px,
-  md: 12px,
-  lg: 32px,
-  xl: 40px,
-  xxl: 60px
+  2xs: $ouds-grid-2xs-margin, // 16
+  xs: $ouds-grid-xs-margin, // 24
+  sm: $ouds-grid-sm-margin, // 28
+  md: $ouds-grid-md-margin, // 32
+  lg: $ouds-grid-lg-margin, // 40
+  xl: $ouds-grid-xl-margin, // 56
+  2xl: $ouds-grid-2xl-margin, // 80
+  3xl: $ouds-grid-3xl-margin // 112
 ) !default;
 // End mod
 // scss-docs-end container-max-widths

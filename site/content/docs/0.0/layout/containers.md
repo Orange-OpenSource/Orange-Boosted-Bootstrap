@@ -26,16 +26,30 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
 
 {{< bs-table "table" >}}
-|  | Extra small<div class="fw-normal">&lt;480px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1280px</div> | XX-Large<div class="fw-normal">&ge;1440px</div> |
-| --- | --- | --- | --- | --- | --- | --- |
-| `.container` | <span class="text-body-secondary">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-sm` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-md` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
-| `.container-lg` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | 960px | 1140px | 1320px |
-| `.container-xl` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | 1140px | 1320px |
-| `.container-xxl` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | 1320px |
-| `.container-fluid` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 60px)</span> |
+|  | XXX-small<div class="fw-normal">&lt;360px</div> | XX-small<div class="fw-normal">&ge;360px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1440px</div> | XX-Large<div class="fw-normal">&ge;1680px</div> | XXX-Large<div class="fw-normal">&ge;1920px</div> |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `.container` | ?px | 328px | 342px | 424px | 704px | 944px | 1328px | 1520px | 1696px |
+| `.container-2xs` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | 328px | 342px | 424px | 704px | 944px | 1328px | 1520px | 1696px |
+| `.container-xs` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | 342px | 424px | 704px | 944px | 1328px | 1520px | 1696px |
+| `.container-sm` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | 424px | 704px | 944px | 1328px | 1520px | 1696px |
+| `.container-md` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | 704px | 944px | 1328px | 1520px | 1696px |
+| `.container-lg` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | 944px | 1328px | 1520px | 1696px |
+| `.container-xl` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | 1328px | 1520px | 1696px |
+| `.container-2xl` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 56px)</span> | 1520px | 1696px |
+| `.container-3xl` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 56px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 80px)</span> | 1696px |
+| `.container-fluid` | <span class="text-body-secondary">100vw -<br>(2 * ?px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 56px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 80px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 112px)</span> |
 {{< /bs-table >}}
+
+<!--
+360px - 16 * 2 = 328
+390px - 24 * 2 = 342
+480px - 28 * 2 = 424
+768px - 32 * 2 = 704
+1024px - 40 * 2 = 944
+1440px - 56 * 2 = 1328
+1680px - 80 * 2 = 1520
+1920px - 112 * 2 = 1696
+-->
 
 ## Default container
 

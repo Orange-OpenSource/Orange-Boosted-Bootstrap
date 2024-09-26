@@ -3,37 +3,37 @@
   description: "Functional examples of using OUDS Web in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
   examples:
     - name: CDN starter
-      description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
+      description: "Instantly include OUDS Web's compiled CSS and JavaScript via the jsDelivr CDN."
       url: /examples/tree/main/starter
     - name: Sass & JS
-      description: "Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
+      description: "Use npm to import and compile OUDS Web's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
       url: /examples/tree/main/sass-js
     - name: Sass & ESM JS
-      description: "Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
+      description: "Import and compile OUDS Web's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
       url: /examples/tree/main/sass-js-esm
-    - name: Bootstrap color modes
-      description: "Import and compile Bootstrap's Sass with Stylelint, and the Bootstrap color modes."
+    - name: OUDS Web color modes
+      description: "Import and compile OUDS Web's Sass with Stylelint, and the OUDS Web color modes."
       url: /examples/tree/main/color-modes
-    - name: Bootstrap Icons
-      description: "Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font."
+    - name: OUDS Web Icons
+      description: "Import and compile OUDS Web's Sass with Stylelint, PurgeCSS, and the OUDS Web Icons web font."
       url: /examples/tree/main/icons-font
     - name: Parcel
-      description: "Import and bundle Bootstrap's source Sass and JavaScript via Parcel."
+      description: "Import and bundle OUDS Web's source Sass and JavaScript via Parcel."
       url: /examples/tree/main/parcel
       indexPath: src/index.html
       indexPath: src/index.html
     - name: React
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with React, Next.js, and React Bootstrap."
+      description: "Import and bundle OUDS Web's source Sass and JavaScript with React, Next.js, and React OUDS Web."
       url: /examples/tree/main/react-nextjs
       indexPath: src/pages/index.tsx
     - name: Vite
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vite."
+      description: "Import and bundle OUDS Web's source Sass and JavaScript with Vite."
       url: /examples/tree/main/vite
     - name: Vue
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vue and Vite."
+      description: "Import and bundle OUDS Web's source Sass and JavaScript with Vue and Vite."
       url: /examples/tree/main/vue
     - name: Webpack
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
+      description: "Import and bundle OUDS Web's source Sass and JavaScript with Webpack."
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
@@ -42,3 +42,5 @@
   examples:
     - name: Grid
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+    - name: Grid system
+      description: "OUDS Web default grid system illustration."

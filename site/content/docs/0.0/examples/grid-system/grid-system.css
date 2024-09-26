@@ -1,0 +1,6 @@
+.padding-color {
+  background-image: linear-gradient(to bottom, #ffe2e2 0%, #ffe2e2 100%), linear-gradient(to bottom, #fff 0%, #fff 100%);
+  background-clip: content-box, padding-box;
+  text-align: center;
+  vertical-align: middle;
+}

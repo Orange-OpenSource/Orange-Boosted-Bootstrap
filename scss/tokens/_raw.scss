@@ -96,17 +96,17 @@ $ouds-grid-width-800: 1920px !default; // 3xl
 //$ouds-grid-max-width-700: 1879 !default;
 //$ouds-grid-max-width-800: 1920 !default;
 
-//$ouds-grid-margin-100: 16 !default;
-//$ouds-grid-margin-300: 24 !default;
-//$ouds-grid-margin-400: 28 !default;
-//$ouds-grid-margin-500: 32 !default;
+$ouds-grid-margin-100: 16 !default;
+$ouds-grid-margin-300: 24 !default;
+$ouds-grid-margin-400: 28 !default;
+$ouds-grid-margin-500: 32 !default;
 //$ouds-grid-margin-600: 36 !default;
-//$ouds-grid-margin-700: 40 !default;
+$ouds-grid-margin-700: 40 !default;
 //$ouds-grid-margin-1000: 52 !default;
-//$ouds-grid-margin-1100: 56 !default;
-//$ouds-grid-margin-1700: 80 !default;
-//$ouds-grid-margin-2500: 112 !default;
-//
+$ouds-grid-margin-1100: 56 !default;
+$ouds-grid-margin-1700: 80 !default;
+$ouds-grid-margin-2500: 112 !default;
+
 //$ouds-grid-column-gap-10: 1 !default;
 //$ouds-grid-column-gap-100: 8 !default;
 //$ouds-grid-column-gap-200: 16 !default;
