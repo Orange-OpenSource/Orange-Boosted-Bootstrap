@@ -550,14 +550,18 @@ $paragraph-margin-bottom:   1rem !default;
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-  xxl: 1440px
+  3xs: 0,
+  2xs: $ouds-grid-2xs-width,
+  xs: $ouds-grid-xs-width,
+  sm: $ouds-grid-sm-width,id
+  md: $ouds-grid-md-width,id
+  lg: $ouds-grid-lg-width,id
+  xl: $ouds-grid-xl-width,1440 au lieu de 1280
+  2xl: $ouds-grid-2xl-width,1680 au lieu de 1440
+  3xl: $ouds-grid-3xl-width
 ) !default;
 // scss-docs-end grid-breakpoints
+// TODO garder xxl en mode de compat
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");

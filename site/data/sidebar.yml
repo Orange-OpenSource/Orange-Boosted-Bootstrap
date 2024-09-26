@@ -53,17 +53,11 @@
   icon_color: body-color
   pages:
     - title: Breakpoints
-      draft: true
     - title: Containers
-      draft: true
     - title: Grid
-      draft: true
     - title: Columns
-      draft: true
     - title: Gutters
-      draft: true
     - title: Utilities
-      draft: true
     - title: Z-index
     - title: CSS Grid
 
