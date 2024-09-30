@@ -26,12 +26,14 @@ OUDS Web includes six default breakpoints, sometimes referred to as _grid tiers_
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra small | <em>None</em> |&lt;480px |
+| 2X-small | <em>None</em> |&lt;390px |
+| X-small | `xs` | &ge;390px |
 | Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;768px |
 | Large | `lg` | &ge;1024px |
-| Extra large | `xl` | &ge;1280px |
-| Extra extra large | `xxl` | &ge;1440px |
+| X-large | `xl` | &ge;1440px |
+| 2X-large | `xxl` | &ge;1680px |
+| 3X-large | `xxxl` | &ge;1920px |
 {{< /bs-table >}}
 
 Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
@@ -53,12 +55,14 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 ```scss
 // Source mixins
 
-// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+// No media query necessary for 2xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
-@include media-breakpoint-up(xxl) { ... }
+@include media-breakpoint-up(2xl) { ... }
+@include media-breakpoint-up(3xl) { ... }
 
 // Usage
 
@@ -79,6 +83,9 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // X-Small devices (portrait phones, less than 480px)
 // No media query for `xs` since this is the default in OUDS Web
 
+// X-Small devices (landscape phones, 390px and up)
+@media (min-width: 390px) { ... }
+
 // Small devices (landscape phones, 480px and up)
 @media (min-width: 480px) { ... }
 
@@ -88,11 +95,14 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // Large devices (desktops, 1024px and up)
 @media (min-width: 1024px) { ... }
 
-// X-Large devices (large desktops, 1280px and up)
-@media (min-width: 1280px) { ... }
-
-// XX-Large devices (larger desktops, 1440px and up)
+// X-Large devices (large desktops, 1440px and up)
 @media (min-width: 1440px) { ... }
+
+// XX-Large devices (larger desktops, 1680px and up)
+@media (min-width: 1680px) { ... }
+
+// XXX-Large devices (larger desktops, 1920px and up)
+@media (min-width: 1920px) { ... }
 ```
 
 ### Max-width
@@ -100,12 +110,14 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss
-// No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
+// No media query necessary for 2xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
+@include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
 @include media-breakpoint-down(xl) { ... }
-@include media-breakpoint-down(xxl) { ... }
+@include media-breakpoint-down(2xl) { ... }
+@include media-breakpoint-down(3xl) { ... }
 
 // Example: Style from medium breakpoint and down
 @include media-breakpoint-down(md) {
@@ -120,6 +132,9 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 ```scss
 // `xs` returns only a ruleset and no media query
 // ... { ... }
+// `xs` applies to xx-small devices (portrait phones, less than 390px)
+@media (max-width: 389.98px) { ... }
+
 // `sm` applies to x-small devices (portrait phones, less than 480px)
 @media (max-width: 479.98px) { ... }
 
@@ -129,11 +144,14 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `lg` applies to medium devices (tablets, less than 1024px)
 @media (max-width: 1023.98px) { ... }
 
-// `xl` applies to large devices (desktops, less than 1280px)
-@media (max-width: 1279.98px) { ... }
-
-// `xxl` applies to x-large devices (large desktops, less than 1440px)
+// `xl` applies to large devices (desktops, less than 1440px)
 @media (max-width: 1439.98px) { ... }
+
+// `2xl` applies to x-large devices (large desktops, less than 1680px)
+@media (max-width: 1679.98px) { ... }
+
+// `3xl` applies to x-large devices (large desktops, less than 1920px)
+@media (max-width: 1919.98px) { ... }
 ```
 
 {{< callout warning >}}
@@ -145,12 +163,14 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
 
 ```scss
+@include media-breakpoint-only(2xs) { ... }
 @include media-breakpoint-only(xs) { ... }
 @include media-breakpoint-only(sm) { ... }
 @include media-breakpoint-only(md) { ... }
 @include media-breakpoint-only(lg) { ... }
 @include media-breakpoint-only(xl) { ... }
-@include media-breakpoint-only(xxl) { ... }
+@include media-breakpoint-only(2xl) { ... }
+@include media-breakpoint-only(3xl) { ... }
 ```
 
 For example the `@include media-breakpoint-only(md) { ... }` will result in:

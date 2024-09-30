@@ -61,7 +61,7 @@ OUDS Web's grid system can adapt across all six default breakpoints, and any bre
 - Medium (md)
 - Large (lg)
 - Extra large (xl)
-- Extra extra large (xxl)
+- Extra extra large (2xl)
 
 As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
 
@@ -113,7 +113,7 @@ As noted above, each of these breakpoints have their own container, unique class
         <td><code>.col-md-</code></td>
         <td><code>.col-lg-</code></td>
         <td><code>.col-xl-</code></td>
-        <td><code>.col-xxl-</code></td>
+        <td><code>.col-2xl-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
@@ -526,17 +526,26 @@ Moving beyond the columns themselves, you may also customize the number of grid 
 
 ```scss
 $grid-breakpoints: (
-  xs: 0,
+  2xs: 0,
+  xs: 390px,
   sm: 480px,
   md: 768px,
-  lg: 1024px
-);
+  lg: 1024px,
+  xl: 1140px,
+  2xl: 1680px,
+  3xl: 1920px
+) !default;
 
 $container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 960px
-);
+  2xs: 328px,
+  xs: 342px,
+  sm: 424px,
+  md: 704px,
+  lg: 944px,
+  xl: 1328px,
+  2xl: 1520px,
+  3xl: 1696px
+) !default;
 ```
 
 When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand-new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).

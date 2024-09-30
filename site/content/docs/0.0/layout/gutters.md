@@ -157,11 +157,13 @@ Classes are built from the `$gutters` Sass map which is inherited from the `$spa
 ```scss
 $grid-gutter-width: 1.5rem;
 $gutters: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-);
+  2xs: 8px,
+  xs: 8px,
+  sm: 8px,
+  md: 24px,
+  lg: 24px,
+  xl: 32px,
+  2xl: 32px,
+  3xl: 40px
+) !default;
 ```
