@@ -180,6 +180,17 @@ $utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "l
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
-$gutters: $spacers !default;
+// OUDS mod
+$gutters: (
+  2xs: $ouds-grid-2xs-column-gap, // 8
+  xs: $ouds-grid-xs-column-gap, // 8
+  sm: $ouds-grid-sm-column-gap, // 8
+  md: $ouds-grid-md-column-gap, // 24
+  lg: $ouds-grid-lg-column-gap, // 24
+  xl: $ouds-grid-xl-column-gap, // 32
+  2xl: $ouds-grid-2xl-column-gap, // 32
+  3xl: $ouds-grid-3xl-column-gap // 40
+) !default;
+// End mod
 
 $alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod
