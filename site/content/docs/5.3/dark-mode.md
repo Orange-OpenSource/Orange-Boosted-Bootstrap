@@ -4072,7 +4072,7 @@ sitemap:
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="" loading="lazy" width="25" height="25">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4160,7 +4160,7 @@ sitemap:
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="" loading="lazy" width="25" height="25">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4248,7 +4248,7 @@ sitemap:
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="" loading="lazy" width="25" height="25">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4336,7 +4336,7 @@ sitemap:
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="" loading="lazy" width="25" height="25">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4424,7 +4424,7 @@ sitemap:
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="" loading="lazy" width="25" height="25">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
