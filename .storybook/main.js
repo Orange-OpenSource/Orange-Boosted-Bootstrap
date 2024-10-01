@@ -18,7 +18,7 @@ const config = {
     options: {},
   },
   docs: {
-    defaultName: 'Docs',
+    defaultName: 'Docs'
   }
 };
 export default config;
