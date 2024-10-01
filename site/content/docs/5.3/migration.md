@@ -24,8 +24,7 @@ toc: true
   - <span class="badge text-bg-success">New</span> X social button.
 
 - **Orange navbar**
-  - <span class="badge text-bg-warning">Warning</span> Since the `role="img"` is not needed on a `<img>` tag, we have removed it from the user's avatar in the component. Please reflect this modification into your websites.
-
+  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use "Access to your account" in certain situations.
 
 ### Docs
 
