@@ -24,7 +24,7 @@ toc: true
   - <span class="badge text-bg-success">New</span> X social button.
 
 - **Orange navbar**
-  - <span class="badge text-bg-warning">Warning</span> You should check that you are using a correct label for the user's avatar, for example "Access to your account", depending on the context of your project.
+  - <span class="badge text-bg-warning">Warning</span> We checked all images for accessibility: in your project, you should pay attention that the user avatar in the navbar has a correct label, depending on its context, for example "Access to your account".
 
 ### Docs
 
