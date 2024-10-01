@@ -7,7 +7,7 @@
 <div class="alert alert-{{ $level }}">
   <span class="alert-icon"><span class="visually-hidden">{{ $level }}</span></span>
   <div>
-    <div class="alert-heading mb-1">
+    <p class="alert-heading mb-1">
       {{- if eq $level "danger" -}}
         Incompatibility with Orange Design System.
         <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">More information</a>
@@ -15,7 +15,7 @@
       {{- if eq $level "info" -}}
         Orange Design System recommendation.
       {{- end -}}
-    </div>
+    </p>
     <div>{{ .Inner | markdownify }}</div>
   </div>
 </div>
