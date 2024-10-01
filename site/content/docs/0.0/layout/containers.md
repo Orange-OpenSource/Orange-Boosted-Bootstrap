@@ -54,7 +54,6 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
 
 ```html
-<div class="container-2xs">100% wide until extra extra breakpoint</div>
 <div class="container-xs">100% wide until extra breakpoint</div>
 <div class="container-sm">100% wide until small breakpoint</div>
 <div class="container-md">100% wide until medium breakpoint</div>

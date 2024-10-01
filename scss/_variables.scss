@@ -572,14 +572,14 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  2xs: subtract($ouds-grid-2xs-width, (2 * $ouds-grid-2xs-margin)), // 328
-  xs: subtract($ouds-grid-xs-width, (2 * $ouds-grid-xs-margin)), // 342
-  sm: subtract($ouds-grid-sm-width, (2 * $ouds-grid-sm-margin)), // 424
-  md: subtract($ouds-grid-md-width, (2 * $ouds-grid-md-margin)), // 704
-  lg: subtract($ouds-grid-lg-width, (2 * $ouds-grid-lg-margin)), // 944
-  xl: subtract($ouds-grid-xl-width, (2 * $ouds-grid-xl-margin)), // 1328
-  2xl: subtract($ouds-grid-2xl-width, (2 * $ouds-grid-2xl-margin)), // 1520
-  3xl: subtract($ouds-grid-3xl-width, (2 * $ouds-grid-3xl-margin)), // 1696
+  2xs: $ouds-grid-2xs-width, // 328
+  xs: $ouds-grid-xs-width, // 342
+  sm: $ouds-grid-sm-width, // 424
+  md: $ouds-grid-md-width, // 704
+  lg: $ouds-grid-lg-width, // 944
+  xl: $ouds-grid-xl-width, // 1328
+  2xl: $ouds-grid-2xl-width, // 1520
+  3xl: $ouds-grid-3xl-width, // 1696
 ) !default;
 
 $container-fluid-margin: (

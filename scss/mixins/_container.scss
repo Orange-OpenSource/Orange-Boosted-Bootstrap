@@ -4,15 +4,15 @@
 @mixin make-container($gutter: $container-padding-x) {
   --#{$prefix}gutter-y: 0;
   width: 100%;
-  padding-right: var(--#{$prefix}gutter-x);
-  padding-left: var(--#{$prefix}gutter-x);
+  padding-right: var(--#{$prefix}margin-x);
+  padding-left: var(--#{$prefix}margin-x);
   margin-right: auto;
   margin-left: auto;
 
   // OUDS mod: gutter depends on breakpoints
   @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {
-      --#{$prefix}gutter-x: #{$container-fluid-marg};
+      --#{$prefix}margin-x: #{$container-fluid-marg};
     }
   }
   // End mod
@@ -22,7 +22,7 @@
 @mixin make-container-fluid-margin() {
   @each $breakpoint, $container-margin in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {
-      max-width: subtract(100vw, $container-margin * 2);
+      max-width: 100vw;
     }
   }
 }
