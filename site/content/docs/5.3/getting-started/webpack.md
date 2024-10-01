@@ -152,7 +152,7 @@ With dependencies installed and our project folder ready for us to start coding,
    npm start
    ```
 
-   ![Webpack dev server running](/assets/img/guides/webpack-dev-server.png)
+   ![Unbranded webpage with the title 'Hello, Boosted and Webpack!' and a default button](/assets/img/guides/webpack-dev-server.png)
 
 In the next and final section to this guide, we'll set up the Webpack loaders and import all of Boosted's CSS and JavaScript.
 
@@ -265,7 +265,7 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
 4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this:
 
-   ![Webpack dev server running with Boosted](/assets/img/guides/webpack-dev-server-boosted.png)
+   ![Boosted-branded webpage with the title 'Hello, Boosted and Webpack!' and an orange primary button](/assets/img/guides/webpack-dev-server-boosted.png)
 
    Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
 
