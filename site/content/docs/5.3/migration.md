@@ -20,13 +20,16 @@ toc: true
 
 ### Components
 
-#### Buttons
+- **Buttons**
   - <span class="badge text-bg-success">New</span> X social button.
+
+- **Orange navbar**
+  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use "Access to your account" in certain situations.
 
 ### Docs
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
-  
+
   Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
 
 ### CSS and Sass variables

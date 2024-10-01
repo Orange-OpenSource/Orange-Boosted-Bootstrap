@@ -10,7 +10,7 @@ thumbnail: guides/vite-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.svg" alt="Vite logo" width="145" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.svg" alt="" width="145" loading="lazy">
 </div>
 
 {{< callout >}}

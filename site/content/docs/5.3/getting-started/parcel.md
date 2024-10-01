@@ -10,7 +10,7 @@ thumbnail: guides/parcel-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/parcel.png" alt="Parcel logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/parcel.png" alt="" loading="lazy">
 </div>
 
 {{< callout >}}
