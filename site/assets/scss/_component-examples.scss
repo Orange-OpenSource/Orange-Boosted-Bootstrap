@@ -3,6 +3,8 @@
 //
 
 .bd-code-snippet {
+  display: flex;
+  flex-direction: column;
   margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
