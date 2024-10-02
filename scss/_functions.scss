@@ -301,3 +301,10 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
   }
   @return $result;
 }
+
+// OUDS mod
+@function px-to-rem($value) {
+  $rem-value: $value * .0625; // Assumes the browser default, typically `16px`
+  @return #{$rem-value}rem;
+}
+// End mod
