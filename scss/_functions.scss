@@ -304,7 +304,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 
 // OUDS mod
 @function strip-units($value) {
-  @return divide($value, $value * 0 + 1)
+  @return divide($value, $value * 0 + 1);
 }
 
 @function px-to-rem($value) {
