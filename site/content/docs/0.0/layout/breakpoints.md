@@ -177,7 +177,7 @@ For example the `@include media-breakpoint-only(md) { ... }` will result in:
 
 ```scss
 // Example
-// Apply styles starting from medium devices and up to extra large devices
+// Apply styles starting from medium devices and up to large devices
 @media (min-width: 768px) and (max-width: 1023.98px) { ... }
 ```
 
@@ -194,5 +194,5 @@ Which results in:
 ```scss
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1279.98px) { ... }
+@media (min-width: 768px) and (max-width: 1439.98px) { ... }
 ```
