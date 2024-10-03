@@ -24,14 +24,6 @@
   --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
   // scss-docs-end back-to-top-css-vars
 
-  // scss-docs-start back-to-top-xl-css-vars
-  @include media-breakpoint-up(xl) {
-    --#{$prefix}back-to-top-right: #{$back-to-top-offset-right * 2};
-    --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom * 2};
-    --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top-xl};
-  }
-  // scss-docs-end back-to-top-xl-css-vars
-
   position: absolute;
   top: var(--#{$prefix}back-to-top-top);
   right: var(--#{$prefix}back-to-top-right);
@@ -39,6 +31,14 @@
   z-index: var(--#{$prefix}back-to-top-zindex);
   pointer-events: none;
   background-color: transparent;
+
+  // scss-docs-start back-to-top-xl-css-vars
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}back-to-top-right: #{$back-to-top-offset-right * 2};
+    --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom * 2};
+    --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top-xl};
+  }
+  // scss-docs-end back-to-top-xl-css-vars
 }
 
 .back-to-top-link {
