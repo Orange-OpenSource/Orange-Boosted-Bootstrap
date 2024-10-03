@@ -31,8 +31,6 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // NOT RECOMMENDED, but it's still valid - we explain in the docs that it's not ideal,
     // and offer more robust alternatives, but also need to show a less-than-ideal example
     'An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.',
-    // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
-    'The “img” role is unnecessary for element “img”.',
     '.*Consider using the “h1” element as a top-level heading only.*'
     // End mod
   ].join('|')
