@@ -122,6 +122,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-border-radius-75</code></li>
       <li><code>$ouds-border-radius-150</code></li>
       <li><code>$ouds-border-radius-300</code></li>
+      <li><code>$ouds-border-radius-9999</code></li>
       <li><code>$ouds-border-radius-default</code></li>
       <li><code>$ouds-border-radius-medium</code></li>
       <li><code>$ouds-border-radius-none</code></li>
