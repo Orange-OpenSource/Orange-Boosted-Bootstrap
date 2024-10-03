@@ -35,7 +35,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3 mb-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -72,7 +72,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 ```html
 <nav id="navbar-example2" class="navbar px-3 mb-3">
   <a class="navbar-brand" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
   </a>
   <ul class="nav nav-pills">
     <li class="nav-item">
