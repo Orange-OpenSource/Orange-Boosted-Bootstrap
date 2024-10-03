@@ -6,7 +6,7 @@ $ouds-border-radiuses: (
   "short":    $ouds-border-radius-short,
   "medium":   $ouds-border-radius-medium,
   "tall":     $ouds-border-radius-tall,
-  "pill":     $ouds-border-radius-pill,
+  "pill":     px-to-rem($ouds-border-radius-pill),
   "circle":   50%
 ) !default;
 
