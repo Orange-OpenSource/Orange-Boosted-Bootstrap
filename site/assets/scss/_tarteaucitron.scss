@@ -4,6 +4,7 @@
   z-index: $zindex-modal;
   display: none;
   width: 100%;
+  max-width: $modal-md;
   padding: $modal-content-padding;
   background-color: $modal-content-bg;
   background-clip: padding-box;
@@ -14,23 +15,6 @@
     display: block;
     font-weight: $font-weight-bold;
     color: $modal-content-color;
-  }
-
-  @include media-breakpoint-up(sm) {
-    max-width: $modal-sm;
-    margin: $modal-dialog-margin-y-sm-up auto;
-  }
-
-  @include media-breakpoint-up(md) {
-    max-width: $modal-md;
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: $modal-lg * 1.125;
-  }
-
-  @include media-breakpoint-up(xl) {
-    max-width: $modal-xl * 1.25;
   }
 }
 
@@ -120,23 +104,28 @@
 }
 
 @include tac("Name", true) {
-  float: left;
   font-size: $font-size-sm;
   color: var(--bs-secondary-color);
 }
 
 @include tac("Ask", true) {
-  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: $spacer * .5;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
 }
 
 @include tac("Line", true) {
+  margin-bottom: $spacer;
   overflow: visible;
   @include clearfix();
 }
 
 @include tac("MainLine", true) {
   padding-bottom: $spacer;
-  margin-bottom: $spacer;
   border-bottom: $modal-content-border-width solid $modal-content-border-color;
 }
 
