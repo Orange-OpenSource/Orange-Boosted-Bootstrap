@@ -11,12 +11,12 @@
     const tac = document.getElementById('tarteaucitron')
 
     tac.querySelectorAll('.tarteaucitronAllow').forEach(button => {
-      button.classList.add('btn', 'btn-sm', 'btn-success', 'my-2', 'my-lg-0')
+      button.classList.add('btn', 'btn-sm', 'btn-success')
       button.innerHTML = tarteaucitron.lang.allowAll
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(button => {
-      button.classList.add('btn', 'btn-sm', 'btn-danger', 'my-2', 'my-lg-0', 'ms-lg-2')
+      button.classList.add('btn', 'btn-sm', 'btn-danger', 'mt-1', 'mt-md-0', 'ms-md-3')
       button.innerHTML = tarteaucitron.lang.denyAll
     })
 
@@ -79,7 +79,7 @@
       const toggle = document
         .createRange()
         .createContextualFragment(
-          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
+          `<div class="form-check form-switch ps-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
         )
       ask.innerHTML = ''
       ask.append(toggle)
