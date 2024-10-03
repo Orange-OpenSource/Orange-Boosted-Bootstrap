@@ -25,9 +25,9 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
 | [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
 | [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
+| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
 | `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
-<!--| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |-->
 <!--| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |-->
 {{< /bs-table >}}
 
@@ -258,7 +258,7 @@ Output:
 .opacity-100-hover:hover { opacity: 1 !important; }
 ```
 
-<!--### Responsive
+### Responsive
 
 Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
 
@@ -287,6 +287,14 @@ Output:
 .opacity-75 { opacity: .75 !important; }
 .opacity-100 { opacity: 1 !important; }
 
+@media (min-width: 390px) {
+  .opacity-sm-0 { opacity: 0 !important; }
+  .opacity-sm-25 { opacity: .25 !important; }
+  .opacity-sm-50 { opacity: .5 !important; }
+  .opacity-sm-75 { opacity: .75 !important; }
+  .opacity-sm-100 { opacity: 1 !important; }
+}
+
 @media (min-width: 480px) {
   .opacity-sm-0 { opacity: 0 !important; }
   .opacity-sm-25 { opacity: .25 !important; }
@@ -295,7 +303,7 @@ Output:
   .opacity-sm-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 736px) {
   .opacity-md-0 { opacity: 0 !important; }
   .opacity-md-25 { opacity: .25 !important; }
   .opacity-md-50 { opacity: .5 !important; }
@@ -311,7 +319,7 @@ Output:
   .opacity-lg-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1320px) {
   .opacity-xl-0 { opacity: 0 !important; }
   .opacity-xl-25 { opacity: .25 !important; }
   .opacity-xl-50 { opacity: .5 !important; }
@@ -319,14 +327,22 @@ Output:
   .opacity-xl-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1640px) {
   .opacity-xxl-0 { opacity: 0 !important; }
   .opacity-xxl-25 { opacity: .25 !important; }
   .opacity-xxl-50 { opacity: .5 !important; }
   .opacity-xxl-75 { opacity: .75 !important; }
   .opacity-xxl-100 { opacity: 1 !important; }
 }
-```-->
+
+@media (min-width: 1880px) {
+  .opacity-xxl-0 { opacity: 0 !important; }
+  .opacity-xxl-25 { opacity: .25 !important; }
+  .opacity-xxl-50 { opacity: .5 !important; }
+  .opacity-xxl-75 { opacity: .75 !important; }
+  .opacity-xxl-100 { opacity: 1 !important; }
+}
+```
 
 ### Print
 
