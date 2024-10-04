@@ -19,8 +19,8 @@
 - breakpoint: md
   abbr: -md
   name: Medium
-  min-width: 768px
-  container: 704px
+  min-width: 736px
+  container: 672px
 
 - breakpoint: lg
   abbr: -lg
@@ -31,17 +31,17 @@
 - breakpoint: xl
   abbr: -xl
   name: X-Large
-  min-width: 1440px
-  container: 1328px
+  min-width: 1320px
+  container: 1208px
 
 - breakpoint: 2xl
   abbr: -2xl
   name: 2X-Large
-  min-width: 1680px
-  container: 1520px
+  min-width: 1640px
+  container: 1480px
 
 - breakpoint: 3xl
   abbr: -3xl
   name: 3X-Large
-  min-width: 1920px
-  container: 1696px
+  min-width: 1880px
+  container: 1656px
