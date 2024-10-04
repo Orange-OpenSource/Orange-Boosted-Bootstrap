@@ -52,7 +52,7 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 
 ## Responsive containers
 
-Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
+Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, `2xl` and `3xl`.
 
 **`.container-2xl` is the maximum container recommended in order to be compliant with the Orange brand.**
 

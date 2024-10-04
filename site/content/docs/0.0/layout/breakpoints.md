@@ -32,8 +32,8 @@ OUDS Web includes eight default breakpoints, sometimes referred to as _grid tier
 | Medium | `md` | &ge;736px |
 | Large | `lg` | &ge;1024px |
 | X-large | `xl` | &ge;1320px |
-| 2X-large | `xxl` | &ge;1640px |
-| 3X-large | `xxxl` | &ge;1880px |
+| 2X-large | `2xl` | &ge;1640px |
+| 3X-large | `3xl` | &ge;1880px |
 {{< /bs-table >}}
 
 Breakpoints are representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
