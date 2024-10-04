@@ -18,7 +18,7 @@ toc: true
 
 - **When building grid layouts, all content goes in columns.** The hierarchy of OUDS Web's grid goes from [container]({{< docsref "/layout/containers" >}}) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
 
-- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [six breakpoints]({{< docsref "/layout/breakpoints" >}}) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
 ## Alignment
 
@@ -205,7 +205,7 @@ You may also apply this break at specific breakpoints with our [responsive displ
 
 ### Order classes
 
-Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all six grid tiers. If you need more `.order-*` classes, you can modify the default number via Sass variable.
+Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all eight grid tiers. If you need more `.order-*` classes, you can modify the default number via Sass variable.
 
 {{< example class="bd-example-row" >}}
 <div class="container text-center">

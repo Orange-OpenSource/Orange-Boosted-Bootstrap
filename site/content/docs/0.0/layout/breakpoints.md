@@ -21,7 +21,7 @@ toc: true
 
 ## Available breakpoints
 
-OUDS Web includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
+OUDS Web includes eight default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
@@ -29,14 +29,14 @@ OUDS Web includes six default breakpoints, sometimes referred to as _grid tiers_
 | 2X-small | <em>None</em> |&lt;390px |
 | X-small | `xs` | &ge;390px |
 | Small | `sm` | &ge;480px |
-| Medium | `md` | &ge;768px |
+| Medium | `md` | &ge;736px |
 | Large | `lg` | &ge;1024px |
-| X-large | `xl` | &ge;1440px |
-| 2X-large | `xxl` | &ge;1680px |
-| 3X-large | `xxxl` | &ge;1920px |
+| X-large | `xl` | &ge;1320px |
+| 2X-large | `xxl` | &ge;1640px |
+| 3X-large | `xxxl` | &ge;1880px |
 {{< /bs-table >}}
 
-Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
+Breakpoints are representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
 
 These breakpoints are customizable via Sass—you'll find them in a Sass map in our `_variables.scss` stylesheet.
 
@@ -89,20 +89,20 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // Small devices (landscape phones, 480px and up)
 @media (min-width: 480px) { ... }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+// Medium devices (tablets, 736px and up)
+@media (min-width: 736px) { ... }
 
 // Large devices (desktops, 1024px and up)
 @media (min-width: 1024px) { ... }
 
-// X-Large devices (large desktops, 1440px and up)
-@media (min-width: 1440px) { ... }
+// X-Large devices (large desktops, 1320px and up)
+@media (min-width: 1320px) { ... }
 
-// XX-Large devices (larger desktops, 1680px and up)
-@media (min-width: 1680px) { ... }
+// XX-Large devices (larger desktops, 1640px and up)
+@media (min-width: 1640px) { ... }
 
-// XXX-Large devices (larger desktops, 1920px and up)
-@media (min-width: 1920px) { ... }
+// XXX-Large devices (larger desktops, 1880px and up)
+@media (min-width: 1880px) { ... }
 ```
 
 ### Max-width
@@ -138,20 +138,20 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `sm` applies to x-small devices (portrait phones, less than 480px)
 @media (max-width: 479.98px) { ... }
 
-// `md` applies to small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
+// `md` applies to small devices (landscape phones, less than 736px)
+@media (max-width: 735.98px) { ... }
 
 // `lg` applies to medium devices (tablets, less than 1024px)
 @media (max-width: 1023.98px) { ... }
 
-// `xl` applies to large devices (desktops, less than 1440px)
-@media (max-width: 1439.98px) { ... }
+// `xl` applies to large devices (desktops, less than 1320px)
+@media (max-width: 1319.98px) { ... }
 
-// `2xl` applies to x-large devices (large desktops, less than 1680px)
-@media (max-width: 1679.98px) { ... }
+// `2xl` applies to x-large devices (large desktops, less than 1640px)
+@media (max-width: 1639.98px) { ... }
 
-// `3xl` applies to x-large devices (large desktops, less than 1920px)
-@media (max-width: 1919.98px) { ... }
+// `3xl` applies to x-large devices (large desktops, less than 1880px)
+@media (max-width: 1879.98px) { ... }
 ```
 
 {{< callout warning >}}
@@ -178,7 +178,7 @@ For example the `@include media-breakpoint-only(md) { ... }` will result in:
 ```scss
 // Example
 // Apply styles starting from medium devices and up to large devices
-@media (min-width: 768px) and (max-width: 1023.98px) { ... }
+@media (min-width: 736px) and (max-width: 1023.98px) { ... }
 ```
 
 ### Between breakpoints
@@ -194,5 +194,5 @@ Which results in:
 ```scss
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1439.98px) { ... }
+@media (min-width: 736px) and (max-width: 1319.98px) { ... }
 ```

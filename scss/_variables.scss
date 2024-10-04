@@ -551,14 +551,14 @@ $paragraph-margin-bottom:   1rem !default;
 // OUDS mod
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-  2xs: 0, // ou 360 et 3xs: 0
-  xs: $ouds-grid-xs-width, // 390
-  sm: $ouds-grid-sm-width, // 480
-  md: $ouds-grid-md-width, // 768
-  lg: $ouds-grid-lg-width, // 1024
-  xl: $ouds-grid-xl-width, // 1140
-  2xl: $ouds-grid-2xl-width, // 1680
-  3xl: $ouds-grid-3xl-width // 1920
+  2xs: $ouds-grid-2xs-min-width, // 0
+  xs: $ouds-grid-xs-min-width, // 390
+  sm: $ouds-grid-sm-min-width, // 480
+  md: $ouds-grid-md-min-width, // 736
+  lg: $ouds-grid-lg-min-width, // 1024
+  xl: $ouds-grid-xl-min-width, // 1320
+  2xl: $ouds-grid-2xl-min-width, // 1640
+  3xl: $ouds-grid-3xl-min-width // 1880
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -572,14 +572,14 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  2xs: $ouds-grid-2xs-width, // 328
-  xs: $ouds-grid-xs-width, // 342
-  sm: $ouds-grid-sm-width, // 424
-  md: $ouds-grid-md-width, // 704
-  lg: $ouds-grid-lg-width, // 944
-  xl: $ouds-grid-xl-width, // 1328
-  2xl: $ouds-grid-2xl-width, // 1520
-  3xl: $ouds-grid-3xl-width, // 1696
+  2xs: 100vw,
+  xs: $ouds-grid-xs-min-width, // 390
+  sm: $ouds-grid-sm-min-width, // 480
+  md: $ouds-grid-md-min-width, // 736
+  lg: $ouds-grid-lg-min-width, // 1024
+  xl: $ouds-grid-xl-min-width, // 1320
+  2xl: $ouds-grid-2xl-min-width, // 1640
+  3xl: $ouds-grid-3xl-min-width, // 1880
 ) !default;
 
 $container-fluid-margin: (
@@ -592,8 +592,9 @@ $container-fluid-margin: (
   2xl: $ouds-grid-2xl-margin, // 80
   3xl: $ouds-grid-3xl-margin // 112
 ) !default;
-// End mod
 // scss-docs-end container-max-widths
+
+// End mod
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 

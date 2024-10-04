@@ -181,6 +181,7 @@ $utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "l
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
 // OUDS mod
+// scss-docs-start grid-gutters
 $gutters: (
   2xs: $ouds-grid-2xs-column-gap, // 8
   xs: $ouds-grid-xs-column-gap, // 8
@@ -191,6 +192,7 @@ $gutters: (
   2xl: $ouds-grid-2xl-column-gap, // 32
   3xl: $ouds-grid-3xl-column-gap // 40
 ) !default;
+// scss-docs-end grid-gutters
 // End mod
 
 $alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod

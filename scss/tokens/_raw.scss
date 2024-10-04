@@ -68,33 +68,33 @@ $ouds-elevation-y-500:  12px !default;
 // Grid
 
 // scss-docs-start ouds-raw-grid
-$ouds-grid-width-100: 360px !default; // 2xs
-$ouds-grid-width-200: 390px !default; // xs
-$ouds-grid-width-300: 480px !default; // sm
-$ouds-grid-width-400: 768px !default; // md
-$ouds-grid-width-500: 1024px !default; // lg
-$ouds-grid-width-600: 1440px !default; // xl
-$ouds-grid-width-700: 1680px !default; // xxl
-$ouds-grid-width-800: 1920px !default; // 3xl
+//$ouds-grid-width-100: 360px !default;
+//$ouds-grid-width-200: 390px !default;
+//$ouds-grid-width-300: 480px !default;
+//$ouds-grid-width-400: 768px !default;
+//$ouds-grid-width-500: 1024px !default;
+//$ouds-grid-width-600: 1440px !default;
+//$ouds-grid-width-700: 1680px !default;
+//$ouds-grid-width-800: 1920px !default;
 
-//$ouds-grid-min-width-100: 1px !default;
-//$ouds-grid-min-width-200: 390px !default;
-//$ouds-grid-min-width-300: 480px !default;
-//$ouds-grid-min-width-400: 736px !default;
-//$ouds-grid-min-width-500: 1024px !default;
-//$ouds-grid-min-width-600: 1320px !default;
-//$ouds-grid-min-width-700: 1640px !default;
-//$ouds-grid-min-width-800: 1880px !default;
-//
+$ouds-grid-min-width-100: 0 !default; // 2xs
+$ouds-grid-min-width-200: 390px !default; // xs
+$ouds-grid-min-width-300: 480px !default; // sm
+$ouds-grid-min-width-400: 736px !default; // md
+$ouds-grid-min-width-500: 1024px !default; // lg
+$ouds-grid-min-width-600: 1320px !default; // xl
+$ouds-grid-min-width-700: 1640px !default; // xxl
+$ouds-grid-min-width-800: 1880px !default; // 3xl
+
 //$ouds-grid-max-width-100: 389px !default;
 //$ouds-grid-max-width-200: 479px !default;
 //$ouds-grid-max-width-300: 735px !default;
 //$ouds-grid-max-width-400: 1023px !default;
 //$ouds-grid-max-width-500: 1319px !default;
 //$ouds-grid-max-width-600: 1639px !default;
-//$ouds-grid-max-width-650: 1680px !default;
+$ouds-grid-max-width-650: 1680px !default;
 //$ouds-grid-max-width-700: 1879px !default;
-//$ouds-grid-max-width-800: 1920px !default;
+$ouds-grid-max-width-800: 1920px !default;
 
 $ouds-grid-margin-100: 16px !default;
 $ouds-grid-margin-300: 24px !default;

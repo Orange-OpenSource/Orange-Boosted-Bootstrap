@@ -80,59 +80,59 @@ $ouds-elevation-y-sticky-navigation-scrolled: $ouds-elevation-y-300 !default;
 // Grid
 
 // scss-docs-start ouds-semantic-grid
-$ouds-grid-2xs-width:         $ouds-grid-width-100 !default;
-//$ouds-grid-2xs-min-width:     $ouds-grid-min-width-100 !default;
+//$ouds-grid-2xs-width:         $ouds-grid-width-100 !default;
+$ouds-grid-2xs-min-width:     $ouds-grid-min-width-100 !default;
 //$ouds-grid-2xs-max-width:     $ouds-grid-max-width-100 !default;
 $ouds-grid-2xs-margin:        $ouds-grid-margin-100 !default;
 $ouds-grid-2xs-column-gap:    $ouds-grid-column-gap-100 !default;
 //$ouds-grid-2xs-column-count:  $ouds-grid-column-count-400 !default;
 
-$ouds-grid-xs-width:          $ouds-grid-width-200 !default;
-//$ouds-grid-xs-min-width:      $ouds-grid-min-width-200 !default;
+//$ouds-grid-xs-width:          $ouds-grid-width-200 !default;
+$ouds-grid-xs-min-width:      $ouds-grid-min-width-200 !default;
 //$ouds-grid-xs-max-width:      $ouds-grid-max-width-200 !default;
 $ouds-grid-xs-margin:         $ouds-grid-margin-300 !default;
 $ouds-grid-xs-column-gap:     $ouds-grid-column-gap-100 !default;
 //$ouds-grid-xs-column-count:   $ouds-grid-column-count-400 !default;
 
-$ouds-grid-sm-width:          $ouds-grid-width-300 !default;
-//$ouds-grid-sm-min-width:      $ouds-grid-min-width-300 !default;
+//$ouds-grid-sm-width:          $ouds-grid-width-300 !default;
+$ouds-grid-sm-min-width:      $ouds-grid-min-width-300 !default;
 //$ouds-grid-sm-max-width:      $ouds-grid-max-width-300 !default;
 $ouds-grid-sm-margin:         $ouds-grid-margin-400 !default;
 $ouds-grid-sm-column-gap:     $ouds-grid-column-gap-100 !default;
 //$ouds-grid-sm-column-count:   $ouds-grid-column-count-400 !default;
 
-$ouds-grid-md-width:          $ouds-grid-width-400 !default;
-//$ouds-grid-md-min-width:      $ouds-grid-min-width-400 !default;
+//$ouds-grid-md-width:          $ouds-grid-width-400 !default;
+$ouds-grid-md-min-width:      $ouds-grid-min-width-400 !default;
 //$ouds-grid-md-max-width:      $ouds-grid-max-width-400 !default;
 $ouds-grid-md-margin:         $ouds-grid-margin-500 !default;
 $ouds-grid-md-column-gap:     $ouds-grid-column-gap-400 !default;
 //$ouds-grid-md-column-count:   $ouds-grid-column-count-600 !default;
 
-$ouds-grid-lg-width:          $ouds-grid-width-500 !default;
-//$ouds-grid-lg-min-width:      $ouds-grid-min-width-500 !default;
+//$ouds-grid-lg-width:          $ouds-grid-width-500 !default;
+$ouds-grid-lg-min-width:      $ouds-grid-min-width-500 !default;
 //$ouds-grid-lg-max-width:      $ouds-grid-max-width-500 !default;
 $ouds-grid-lg-margin:         $ouds-grid-margin-700 !default;
 $ouds-grid-lg-column-gap:     $ouds-grid-column-gap-400 !default;
 //$ouds-grid-lg-column-count:   $ouds-grid-column-count-600 !default;
 
-$ouds-grid-xl-width:          $ouds-grid-width-600 !default;
-//$ouds-grid-xl-min-width:      $ouds-grid-min-width-600 !default;
+//$ouds-grid-xl-width:          $ouds-grid-width-600 !default;
+$ouds-grid-xl-min-width:      $ouds-grid-min-width-600 !default;
 //$ouds-grid-xl-max-width:      $ouds-grid-max-width-600 !default;
 $ouds-grid-xl-margin:         $ouds-grid-margin-1100 !default;
 $ouds-grid-xl-column-gap:     $ouds-grid-column-gap-600 !default;
 //$ouds-grid-xl-column-count:   $ouds-grid-column-count-1200 !default;
 
-$ouds-grid-2xl-width:                     $ouds-grid-width-700 !default;
-//$ouds-grid-2xl-min-width:                 $ouds-grid-min-width-700 !default;
+//$ouds-grid-2xl-width:                     $ouds-grid-width-700 !default;
+$ouds-grid-2xl-min-width:                 $ouds-grid-min-width-700 !default;
 //$ouds-grid-2xl-max-width-specific-tools:  $ouds-grid-max-width-700 !default;
-//$ouds-grid-2xl-max-width-public-website:  $ouds-grid-max-width-650 !default;
+$ouds-grid-2xl-max-width-public-website:  $ouds-grid-max-width-650 !default;
 $ouds-grid-2xl-margin:                    $ouds-grid-margin-1700 !default;
 $ouds-grid-2xl-column-gap:                $ouds-grid-column-gap-600 !default;
 //$ouds-grid-2xl-column-count:              $ouds-grid-column-count-1200 !default;
 
-$ouds-grid-3xl-width:         $ouds-grid-width-800 !default;
-//$ouds-grid-3xl-min-width:     $ouds-grid-min-width-800 !default;
-//$ouds-grid-3xl-max-width:     $ouds-grid-max-width-800 !default;
+//$ouds-grid-3xl-width:         $ouds-grid-width-800 !default;
+$ouds-grid-3xl-min-width:     $ouds-grid-min-width-800 !default;
+$ouds-grid-3xl-max-width:     $ouds-grid-max-width-800 !default;
 $ouds-grid-3xl-margin:        $ouds-grid-margin-2500 !default;
 $ouds-grid-3xl-column-gap:    $ouds-grid-column-gap-800 !default;
 //$ouds-grid-3xl-column-count:  $ouds-grid-column-count-1200 !default;

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, eight default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
 group: layout
 aliases:
   - "/docs/layout/grid/"
@@ -38,7 +38,7 @@ The above example creates three equal-width columns across all devices and viewp
 
 Breaking it down, here's how the grid system comes together:
 
-- **Our grid supports [six responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **Our grid supports [eight responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, `2xl` and `3xl`). This means you can control container and column sizing and behavior by each breakpoint.
 
 - **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
 
@@ -54,14 +54,16 @@ Be aware of the limitations and [bugs around flexbox](https://github.com/philipw
 
 ## Grid options
 
-OUDS Web's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follows:
+OUDS Web's grid system can adapt across all eight default breakpoints, and any breakpoints you customize. The eight default grid tiers are as follows:
 
+- Extra extra small (2xs)
 - Extra small (xs)
 - Small (sm)
 - Medium (md)
 - Large (lg)
 - Extra large (xl)
 - Extra extra large (2xl)
+- Extra extra extra large (3xl)
 
 As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
 
@@ -71,8 +73,12 @@ As noted above, each of these breakpoints have their own container, unique class
       <tr>
         <th scope="col"></th>
         <th scope="col">
+          2xs<br>
+          <span class="fw-normal">&lt;390px</span>
+        </th>
+        <th scope="col">
           xs<br>
-          <span class="fw-normal">&lt;480px</span>
+          <span class="fw-normal">&ge;390px</span>
         </th>
         <th scope="col">
           sm<br>
@@ -80,7 +86,7 @@ As noted above, each of these breakpoints have their own container, unique class
         </th>
         <th scope="col">
           md<br>
-          <span class="fw-normal">&ge;768px</span>
+          <span class="fw-normal">&ge;736px</span>
         </th>
         <th scope="col">
           lg<br>
@@ -88,62 +94,74 @@ As noted above, each of these breakpoints have their own container, unique class
         </th>
         <th scope="col">
           xl<br>
-          <span class="fw-normal">&ge;1280px</span>
+          <span class="fw-normal">&ge;1320px</span>
         </th>
         <th scope="col">
-          xxl<br>
-          <span class="fw-normal">&ge;1440px</span>
+          2xl<br>
+          <span class="fw-normal">&ge;1640px</span>
+        </th>
+        <th scope="col">
+          3xl<br>
+          <span class="fw-normal">&ge;1880px</span>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>312px</td>
-        <td>468px</td>
-        <td>744px</td>
-        <td>960px</td>
-        <td>1200px</td>
-        <td>1320px</td>
+        <td>100vw -<br>(2 * 16px)</td>
+        <td>342px</td>
+        <td>424px</td>
+        <td>672px</td>
+        <td>944px</td>
+        <td>1208px</td>
+        <td>1480px</td>
+        <td>1656px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
         <td><code>.col-</code></td>
+        <td><code>.col-xs-</code></td>
         <td><code>.col-sm-</code></td>
         <td><code>.col-md-</code></td>
         <td><code>.col-lg-</code></td>
         <td><code>.col-xl-</code></td>
         <td><code>.col-2xl-</code></td>
+        <td><code>.col-3xl-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="6">12</td>
+        <td colspan="8">12</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Column width</th>
-        <td>16px</td>
-        <td>29px</td>
-        <td>42px</td>
-        <td>60px</td>
-        <td>80px</td>
-        <td>90px</td>
+        <th class="text-nowrap" scope="row">Container padding width</th>
+        <td>16px (each side)</td>
+        <td>24px (each side)</td>
+        <td>28px (each side)</td>
+        <td>32px (each side)</td>
+        <td>40px (each side)</td>
+        <td>56px (each side)</td>
+        <td>80px (each side)</td>
+        <td>112px (each side)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="2">.625rem (.3125rem on left and right)</td>
-        <td colspan="4">1.25rem (.625rem on left and right)</td>
+        <td colspan="3">8px (4px on left and right)</td>
+        <td colspan="2">24px (12px on left and right)</td>
+        <td colspan="2">32px (16px on left and right)</td>
+        <td colspan="1">40px (20px on left and right)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
-        <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+        <td colspan="8"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Nestable</th>
-        <td colspan="6"><a href="#nesting">Yes</a></td>
+        <td colspan="8"><a href="#nesting">Yes</a></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Column ordering</th>
-        <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+        <td colspan="8"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
       </tr>
     </tbody>
   </table>
@@ -155,7 +173,7 @@ Utilize breakpoint-specific column classes for easy column sizing without an exp
 
 ### Equal-width
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xxl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+For example, here are two grid layouts that apply to every device and viewport, from `2xs` to `3xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
 
 {{< example class="bd-example-row" >}}
 <div class="container text-center">
@@ -245,7 +263,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ## Responsive classes
 
-OUDS Web's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+OUDS Web's grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width from extra extra small to extra extra extra large devices however you see fit.
 
 ### All breakpoints
 
@@ -431,13 +449,14 @@ Variables and maps determine the number of columns, the gutter width, and the me
 
 ```scss
 $grid-columns:      12;
-$grid-gutter-width: 1.25rem;
 $grid-row-columns:  6;
 ```
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="grid-gutters" file="scss/_maps.scss" >}}
 
 ### Sass mixins
 
@@ -512,13 +531,15 @@ Using our built-in grid Sass variables and maps, it's possible to completely cus
 
 ### Columns and gutters
 
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters. `$grid-row-columns` is used to set the maximum number of columns of `.row-cols-*`, any number over this limit is ignored.
+The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column. `$grid-row-columns` is used to set the maximum number of columns of `.row-cols-*`, any number over this limit is ignored.
 
 ```scss
 $grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-gutter-width: 24px !default;
 $grid-row-columns: 6 !default;
 ```
+
+Note that OUDS Web does not use a single value for grid gutters through `$grid-gutter-width` but a map of values, like explained in [Grid tiers](#grid-tiers). This defines different gutter widths for each breakpoint. See [Sass variables](#sass-variables) for current values.
 
 ### Grid tiers
 
@@ -526,26 +547,17 @@ Moving beyond the columns themselves, you may also customize the number of grid 
 
 ```scss
 $grid-breakpoints: (
-  2xs: 0,
-  xs: 390px,
+  xs: 0,
   sm: 480px,
   md: 768px,
-  lg: 1024px,
-  xl: 1140px,
-  2xl: 1680px,
-  3xl: 1920px
-) !default;
+  lg: 1024px
+);
 
 $container-max-widths: (
-  2xs: 328px,
-  xs: 342px,
-  sm: 424px,
-  md: 704px,
-  lg: 944px,
-  xl: 1328px,
-  2xl: 1520px,
-  3xl: 1696px
-) !default;
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
 ```
 
 When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand-new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).

@@ -152,18 +152,7 @@ In practice, here's how it looks. Note that you can continue to use this with al
 
 ## Change the gutters
 
-Classes are built from the `$gutters` Sass map which is inherited from the `$spacers` Sass map.
+Classes are built from the `$gutters` Sass map.
 
-```scss
-$grid-gutter-width: 1.5rem;
-$gutters: (
-  2xs: 8px,
-  xs: 8px,
-  sm: 8px,
-  md: 24px,
-  lg: 24px,
-  xl: 32px,
-  2xl: 32px,
-  3xl: 40px
-) !default;
-```
+{{< scss-docs name="grid-gutters" file="scss/_maps.scss" >}}
+
