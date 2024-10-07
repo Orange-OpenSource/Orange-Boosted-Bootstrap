@@ -38,6 +38,18 @@ Please note that we apply an extra-padding on our containers (see [our mixins](#
 | `.container-fluid` | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 56px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 80px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 112px)</span> |
 {{< /bs-table >}}
 
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl.
+
+{{< bs-table "table" >}}
+|  | 2X-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `.container-xxl` | <span class="text-body-secondary">100vw -<br>(2 * 16px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 24px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 28px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 56px)</span> | 1480px | 1656px |
+{{< /bs-table >}}
+
+{{< /bootstrap-compatibility >}}
+
 ## Default container
 
 Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
@@ -65,6 +77,15 @@ Responsive containers allow you to specify a class that follows the `.container-
 <div class="container-2xl">100% wide until extra extra large breakpoint</div>
 <div class="container-3xl">100% wide until extra extra extra large breakpoint</div>
 ```
+
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl.
+
+```html
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+```
+{{< /bootstrap-compatibility >}}
 
 ## Fluid containers
 

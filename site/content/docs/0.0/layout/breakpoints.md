@@ -44,6 +44,18 @@ These breakpoints are customizable via Sass—you'll find them in a Sass map in 
 
 For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
 
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl.
+
+{{< bs-table "table" >}}
+| Breakpoint | Class infix | Dimensions |
+| --- | --- | --- |
+| XX-large | `xxl` | &ge;1640px |
+{{< /bs-table >}}
+
+{{< /bootstrap-compatibility >}}
+
 ## Media queries
 
 Since OUDS Web is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.

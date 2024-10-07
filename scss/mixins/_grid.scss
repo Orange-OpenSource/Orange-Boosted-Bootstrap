@@ -73,6 +73,14 @@
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @if $enable-bootstrap-compatibility {
+    // Copy 2xl breakpoint into xxl breakpoint
+    $breakpoint-2xl: map-get($breakpoints, "2xl");
+    $breakpoints: map-merge($breakpoints, ("xxl": $breakpoint-2xl));
+    $gutter-2xl: map-get($gutters, "2xl");
+    $gutters: map-merge($gutters, ("xxl": $gutter-2xl));
+  }
+
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 

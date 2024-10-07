@@ -18,7 +18,13 @@ toc: true
 
 - **When building grid layouts, all content goes in columns.** The hierarchy of OUDS Web's grid goes from [container]({{< docsref "/layout/containers" >}}) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
 
-- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl, making `.col-xxl-*` classes available.
+
+{{< /bootstrap-compatibility >}}
 
 ## Alignment
 
