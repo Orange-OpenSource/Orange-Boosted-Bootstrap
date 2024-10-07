@@ -64,7 +64,7 @@ Shadow semantic tokens as Sass variables.
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-elevations" file="scss/_ouds-maps.scss" >}}
+{{< scss-docs name="ouds-maps-elevations" file="scss/_maps.scss" >}}
 
 ### Sass utilities API
 

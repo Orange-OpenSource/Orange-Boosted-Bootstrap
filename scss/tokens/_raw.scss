@@ -36,6 +36,47 @@ $ouds-border-width-100: $ouds-border-base !default;
 // $ouds-border-width-200: $ouds-border-base * 2 !default;
 // scss-docs-end ouds-raw-border
 
+// Dimension
+
+// scss-docs-start ouds-raw-dimension
+$ouds-dimension-base: 4px !default;
+$ouds-dimension-0: $ouds-dimension-base * 0 !default; // 0
+$ouds-dimension-25: $ouds-dimension-base * .5 !default; // 2
+$ouds-dimension-50: $ouds-dimension-base * 1 !default; // 4
+$ouds-dimension-75: $ouds-dimension-base * 1.5 !default; // 6
+$ouds-dimension-100: $ouds-dimension-base * 2 !default; // 8
+// $ouds-dimension-125: $ouds-dimension-base * 2.5 !default; // 10
+$ouds-dimension-150: $ouds-dimension-base * 3 !default; // 12
+$ouds-dimension-200: $ouds-dimension-base * 4 !default; // 16
+$ouds-dimension-250: $ouds-dimension-base * 5 !default; // 20
+$ouds-dimension-300: $ouds-dimension-base * 6 !default; // 24
+$ouds-dimension-350: $ouds-dimension-base * 7 !default; // 28
+$ouds-dimension-400: $ouds-dimension-base * 8 !default; // 32
+$ouds-dimension-450: $ouds-dimension-base * 9 !default; // 36
+$ouds-dimension-500: $ouds-dimension-base * 10 !default; // 40
+$ouds-dimension-550: $ouds-dimension-base * 11 !default; // 44
+$ouds-dimension-600: $ouds-dimension-base * 12 !default; // 48
+$ouds-dimension-650: $ouds-dimension-base * 13 !default; // 52
+$ouds-dimension-700: $ouds-dimension-base * 14 !default; // 56
+$ouds-dimension-750: $ouds-dimension-base * 15 !default; // 60
+$ouds-dimension-800: $ouds-dimension-base * 16 !default; // 64
+// $ouds-dimension-850: $ouds-dimension-base * 17 !default; // 68
+$ouds-dimension-900: $ouds-dimension-base * 18 !default; // 72
+$ouds-dimension-1000: $ouds-dimension-base * 20 !default; // 80
+$ouds-dimension-1200: $ouds-dimension-base * 24 !default; // 96
+$ouds-dimension-1400: $ouds-dimension-base * 28 !default; // 112
+$ouds-dimension-1600: $ouds-dimension-base * 32 !default; // 128
+$ouds-dimension-1800: $ouds-dimension-base * 36 !default; // 144
+// $ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
+// $ouds-dimension-3000: $ouds-dimension-base * 80 !default; // 320
+// $ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
+// $ouds-dimension-5000: $ouds-dimension-base * 140 !default; // 560
+// $ouds-dimension-6000: $ouds-dimension-base * 160 !default; // 640
+// $ouds-dimension-7000: $ouds-dimension-base * 180 !default; // 720
+// $ouds-dimension-9000: $ouds-dimension-base * 220 !default; // 880
+// $ouds-dimension-11000: $ouds-dimension-base * 260 !default; // 1040
+// scss-docs-end ouds-raw-dimension
+
 // Elevation
 
 // scss-docs-start ouds-raw-elevation
