@@ -551,7 +551,7 @@ $paragraph-margin-bottom:   1rem !default;
 // OUDS mod
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-  2xs: $ouds-grid-2xs-min-width, // 0
+  2xs: 0,
   xs: $ouds-grid-xs-min-width, // 390
   sm: $ouds-grid-sm-min-width, // 480
   md: $ouds-grid-md-min-width, // 736
