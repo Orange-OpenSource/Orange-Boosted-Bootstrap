@@ -637,7 +637,7 @@ $border-radius-sm:            $ouds-border-radius-short !default; // OUDS mod: i
 $border-radius-lg:            $ouds-border-radius-medium !default; // OUDS mod: instead of `.5rem`
 $border-radius-xl:            $ouds-border-radius-tall !default; //OUDS mod: instead of `1rem`
 $border-radius-xxl:           $ouds-border-radius-tall * 1.5 !default; // OUDS mod: instead of `2rem`
-$border-radius-pill:          $ouds-border-radius-pill !default; // OUDS mod: instead of `50rem`
+$border-radius-pill:          px-to-rem($ouds-border-radius-pill) !default; // OUDS mod: instead of `50rem`
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in Bootstrap v5.3.0
