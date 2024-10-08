@@ -180,7 +180,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
               </svg>
               <span class="visually-hidden">Search</span>
@@ -188,7 +188,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
               </svg>
               <span class="visually-hidden">Basket</span>
@@ -364,7 +364,7 @@ You can add a search input into your Global header.
         <ul class="navbar-nav flex-row">
           <li class="nav-item d-lg-none">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
               </svg>
               <span class="visually-hidden">Search</span>
