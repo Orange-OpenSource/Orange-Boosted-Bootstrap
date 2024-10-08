@@ -2,6 +2,7 @@
 
 // scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
+  --#{$prefix}gutter-x: #{$gutter};
   --#{$prefix}gutter-y: 0;
   width: 100%;
   padding-right: var(--#{$prefix}margin-x);

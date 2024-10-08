@@ -45,12 +45,6 @@
     }
   }
 
-  @if $enable-bootstrap-compatibility {
-    .container-xxl {
-      @extend .container-2xl;
-    }
-  }
-
   .max-width-specific-tools {
     @include media-breakpoint-up(3xl) {
       max-width: $ouds-grid-3xl-max-width;
