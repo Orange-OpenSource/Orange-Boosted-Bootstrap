@@ -167,59 +167,6 @@ As noted above, each of these breakpoints have their own container, unique class
   </table>
 </div>
 
-{{< bootstrap-compatibility >}}
-
-Includes support for xxl breakpoint, defined like 2xl.
-
-<div class="table-responsive">
-  <table class="table mb-4">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">
-          xxl<br>
-          <span class="fw-normal">&ge;1640px</span>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>1480px</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Class prefix</th>
-        <td><code>.col-xxl-</code></td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row"># of columns</th>
-        <td>12</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Container padding width</th>
-        <td>80px (each side)</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Gutter width</th>
-        <td>32px (16px on left and right)</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Custom gutters</th>
-        <td><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Nestable</th>
-        <td><a href="#nesting">Yes</a></td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Column ordering</th>
-        <td><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-{{< /bootstrap-compatibility >}}
-
 ## Auto-layout columns
 
 Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.

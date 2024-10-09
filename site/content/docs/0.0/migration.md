@@ -11,6 +11,14 @@ toc: true
 
 ## v0.0.4
 
+### Layout
+
+- <span class="badge text-bg-success">New</span> Flexbox grid system is now available to build layouts of all shapes and sizes thanks to a twelve column system and eight default responsive tiers defined at breakpoints 2xs, xs, sm, md, xl, 2xl and 3xl.
+  - Use our flexbox grid containers (`.container`, `.container-fluid` or `.container-{breakpoint}`) as a fundamental building block that contain, pad, and align your content within a given device or viewport.
+  - Use `.col-*` classes to modify columns with a handful of options for alignment, ordering, and offsetting.
+  - Use the responsive `.row-cols-*` classes to quickly set the number of columns that best render your content and layout.
+  -
+
 ### Utilities
 
 #### Border
@@ -29,6 +37,10 @@ toc: true
   - Pill: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
+
+#### Display
+
+- <span class="badge text-bg-success">New</span> Responsive display utility classes are now available.
 
 #### Opacity
 
