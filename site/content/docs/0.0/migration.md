@@ -25,7 +25,6 @@ toc: true
 #### Position
 - <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{breakpoint}-top` and `.sticky-{breakpoint}-bottom`.
 
-
 ### Utilities
 
 #### Border
@@ -274,7 +273,7 @@ toc: true
     </ul>
   </details>
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> Removed Sass variables:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$grid-gutter-breakpoint</code></li>
     </ul>

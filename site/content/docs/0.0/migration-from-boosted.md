@@ -53,6 +53,15 @@ Technically, it means that you can get rid of the following things:
 
 - <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
+## Layout
+
+- <span class="badge text-bg-danger">Breaking</span> Responsive breakpoints have changed:
+  - `xxl` has been renamed `2xl`.
+  - `2xs` and `3xl` have been added.
+  - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
+
+  All responsive classes, helpers and utilities have been changed accordingly.
+
 ## Utilities
 
 ### Border
