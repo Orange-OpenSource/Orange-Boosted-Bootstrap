@@ -4,12 +4,12 @@
   <!-- OUDS mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1" id="content">
     <div class="title-bar mb-2 mb-md-0">
-      <div class="container-2xl">
+      <div class="container-fluid max-width-specific-tools">
         <h1 class="display-1">{{ .Title | markdownify }}</h1>
       </div>
     </div>
     <div class="pb-4 pb-md-2">
-      <div class="container-2xl bd-gutter pt-md-2 pb-md-4">
+      <div class="container-fluid max-width-specific-tools bd-gutter pt-md-2 pb-md-4">
         <div class="row">
           <div class="col-12">
             <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="container-2xl bd-gutter">
+    <div class="container-fluid max-width-specific-tools bd-gutter">
       {{ .Content }}
 
       {{ if eq .Title "Examples" -}}

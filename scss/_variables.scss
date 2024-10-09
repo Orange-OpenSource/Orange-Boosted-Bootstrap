@@ -572,7 +572,7 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  2xs: 100vw,
+  2xs: $ouds-grid-xs-min-width, // 390
   xs: $ouds-grid-xs-min-width, // 390
   sm: $ouds-grid-sm-min-width, // 480
   md: $ouds-grid-md-min-width, // 736
