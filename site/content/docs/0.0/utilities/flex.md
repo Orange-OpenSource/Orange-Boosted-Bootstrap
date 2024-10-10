@@ -21,7 +21,6 @@ Apply `display` utilities to create a flexbox container and transform **direct c
 {{< /example >}}
 
 Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
-<!-- TODO: See if the responsive classes in here should be hidden in a details/summary or not -->
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}

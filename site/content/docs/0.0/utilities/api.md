@@ -91,7 +91,7 @@ As a list<!--, like with [`text-decoration` utilities]({{< docsref "/utilities/t
 values: none underline line-through
 ```
 
-As a map<!--, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}})-->:
+As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
 
 ```scss
 values: (
@@ -404,7 +404,7 @@ $utilities: (
 );
 ```
 
-<!--### Add utilities
+### Add utilities
 
 New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
 
@@ -433,7 +433,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 <!--### Modify utilities
 
@@ -469,7 +469,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```-->
 
-<!--#### Enable responsive
+#### Enable responsive
 
 You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
 
@@ -503,12 +503,17 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 .border { ... }
 .border-0 { ... }
 
+@media (min-width: 390px) {
+  .border-xs { ... }
+  .border-xs-0 { ... }
+}
+
 @media (min-width: 480px) {
   .border-sm { ... }
   .border-sm-0 { ... }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 7336px) {
   .border-md { ... }
   .border-md-0 { ... }
 }
@@ -518,16 +523,21 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
   .border-lg-0 { ... }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1320px) {
   .border-xl { ... }
   .border-xl-0 { ... }
 }
 
-@media (min-width: 1440px) {
-  .border-xxl { ... }
-  .border-xxl-0 { ... }
+@media (min-width: 1640px) {
+  .border-2xl { ... }
+  .border-2xl-0 { ... }
 }
-```-->
+
+@media (min-width: 1880px) {
+  .border-3xl { ... }
+  .border-3xl-0 { ... }
+}
+```
 
 <!--#### Rename utilities
 
@@ -603,7 +613,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```-->
 
-<!--### Add, remove, modify
+### Add, remove, modify
 
 You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge). Here's how you can combine the previous examples into one larger map.
 
@@ -642,7 +652,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 #### Remove utility in RTL
 

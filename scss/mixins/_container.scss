@@ -5,8 +5,8 @@
   --#{$prefix}gutter-x: #{$gutter};
   --#{$prefix}gutter-y: 0;
   width: 100%;
-  padding-right: var(--#{$prefix}margin-x);
-  padding-left: var(--#{$prefix}margin-x);
+  padding-right: var(--#{$prefix}margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
+  padding-left: var(--#{$prefix}margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   margin-right: auto;
   margin-left: auto;
 

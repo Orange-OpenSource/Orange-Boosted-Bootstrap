@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Display property
-description: Quickly <!--and responsively -->toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 group: utilities
 aliases:
   - "/docs/utilities/display/"
@@ -79,7 +79,7 @@ To show an element only on a given interval of screen sizes you can combine one 
 | Visible only on lg | `.d-none .d-lg-block .d-xl-none` |
 | Visible only on xl | `.d-none .d-xl-block .d-2xl-none` |
 | Visible only on 2xl | `.d-none .d-2xl-block .d-3xl-none` |
-| Visible only on 3xl | `.d-none .d-3xl-block` |-->
+| Visible only on 3xl | `.d-none .d-3xl-block` |
 {{< /bs-table >}}
 
 {{< example >}}
@@ -89,7 +89,7 @@ To show an element only on a given interval of screen sizes you can combine one 
 
 ## Display in print
 
-Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our <!--responsive -->`.d-*` utilities.
+Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities.
 
 - `.d-print-none`
 - `.d-print-inline`
