@@ -5,15 +5,15 @@
   --#{$prefix}gutter-x: #{$gutter};
   --#{$prefix}gutter-y: 0;
   width: 100%;
-  padding-right: var(--#{$prefix}margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
-  padding-left: var(--#{$prefix}margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
+  padding-right: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
+  padding-left: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   margin-right: auto;
   margin-left: auto;
 
   // OUDS mod: gutter depends on breakpoints
   @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {
-      --#{$prefix}margin-x: #{$container-fluid-marg};
+      --#{$prefix}container-margin-x: #{$container-fluid-marg};
     }
   }
   // End mod

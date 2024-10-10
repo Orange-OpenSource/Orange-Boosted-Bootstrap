@@ -54,7 +54,7 @@
 
   .max-width-public-website {
     @include media-breakpoint-up(2xl) {
-      --#{$prefix}margin-x: #{$ouds-grid-2xl-margin};
+      --#{$prefix}container-margin-x: #{$ouds-grid-2xl-margin};
       max-width: $ouds-grid-2xl-max-width-public-website;
 
       .row {
