@@ -18,14 +18,4 @@
   }
   // End mod
 }
-
-// OUDS mod: fluid containers aren't full width → include margins
-@mixin make-container-fluid-margin() {
-  @each $breakpoint, $container-margin in $container-fluid-margin {
-    @include media-breakpoint-up($breakpoint) {
-      max-width: 100vw;
-    }
-  }
-}
-// End mod
 // scss-docs-end container-mixins

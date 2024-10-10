@@ -10,9 +10,13 @@
     @include make-container();
   }
 
-  // OUDS mod: `.container-fluid` is not full width in OUDS Web
+  // OUDS mod: `.container-fluid` is not full width in OUDS Web → include margins
   .container-fluid {
-    @include make-container-fluid-margin();
+    @each $breakpoint, $container-margin in $container-fluid-margin {
+      @include media-breakpoint-up($breakpoint) {
+        max-width: 100vw;
+      }
+    }
   }
   // End mod
 
