@@ -183,14 +183,14 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // OUDS mod
 // scss-docs-start grid-gutters
 $grid-gutter-widths: (
-  2xs: $ouds-grid-2xs-column-gap, // 8
-  xs: $ouds-grid-xs-column-gap, // 16
-  sm: $ouds-grid-sm-column-gap, // 16
-  md: $ouds-grid-md-column-gap, // 24
-  lg: $ouds-grid-lg-column-gap, // 24
-  xl: $ouds-grid-xl-column-gap, // 32
-  2xl: $ouds-grid-2xl-column-gap, // 32
-  3xl: $ouds-grid-3xl-column-gap // 40
+  2xs: $ouds-grid-2xs-column-gap, // 8px
+  xs: $ouds-grid-xs-column-gap, // 16px
+  sm: $ouds-grid-sm-column-gap, // 16px
+  md: $ouds-grid-md-column-gap, // 24px
+  lg: $ouds-grid-lg-column-gap, // 24px
+  xl: $ouds-grid-xl-column-gap, // 32px
+  2xl: $ouds-grid-2xl-column-gap, // 32px
+  3xl: $ouds-grid-3xl-column-gap // 40px
 ) !default;
 // scss-docs-end grid-gutters
 
@@ -199,12 +199,12 @@ $gutters: (
   none: 0,
   smash: 2px,
   shortest: 4px,
-  shorter: $ouds-grid-column-gap-100, // 8
+  shorter: $ouds-grid-column-gap-100, // 8px
   short: 12px,
-  medium: $ouds-grid-column-gap-200, // 16
-  tall: $ouds-grid-column-gap-400, // 24
-  taller: $ouds-grid-column-gap-600, // 32
-  tallest: $ouds-grid-column-gap-800, // 40
+  medium: $ouds-grid-column-gap-200, // 16px
+  tall: $ouds-grid-column-gap-400, // 24px
+  taller: $ouds-grid-column-gap-600, // 32px
+  tallest: $ouds-grid-column-gap-800, // 40px
   spacious: 48px,
   huge: 56px,
   jumbo: 64px

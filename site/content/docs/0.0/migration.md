@@ -272,6 +272,7 @@ toc: true
       <li><code>shadow</code></li>
     </ul>
   </details>
+
 - <details class="mb-2">
     <summary><span class="badge text-bg-danger">Breaking</span> Dropped Sass variables:</summary>
     <ul>
@@ -335,6 +336,13 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 

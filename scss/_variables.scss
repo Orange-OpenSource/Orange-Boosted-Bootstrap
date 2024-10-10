@@ -552,13 +552,13 @@ $paragraph-margin-bottom:   1rem !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   2xs: 0,
-  xs: $ouds-grid-xs-min-width, // 390
-  sm: $ouds-grid-sm-min-width, // 480
-  md: $ouds-grid-md-min-width, // 736
-  lg: $ouds-grid-lg-min-width, // 1024
-  xl: $ouds-grid-xl-min-width, // 1320
-  2xl: $ouds-grid-2xl-min-width, // 1640
-  3xl: $ouds-grid-3xl-min-width // 1880
+  xs: $ouds-grid-xs-min-width, // 390px
+  sm: $ouds-grid-sm-min-width, // 480px
+  md: $ouds-grid-md-min-width, // 736px
+  lg: $ouds-grid-lg-min-width, // 1024px
+  xl: $ouds-grid-xl-min-width, // 1320px
+  2xl: $ouds-grid-2xl-min-width, // 1640px
+  3xl: $ouds-grid-3xl-min-width // 1880px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -572,25 +572,25 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  2xs: $ouds-grid-xs-min-width, // 390
-  xs: $ouds-grid-xs-min-width, // 390
-  sm: $ouds-grid-sm-min-width, // 480
-  md: $ouds-grid-md-min-width, // 736
-  lg: $ouds-grid-lg-min-width, // 1024
-  xl: $ouds-grid-xl-min-width, // 1320
-  2xl: $ouds-grid-2xl-min-width, // 1640
-  3xl: $ouds-grid-3xl-min-width, // 1880
+  2xs: $ouds-grid-xs-min-width, // 390px
+  xs: $ouds-grid-xs-min-width, // 390px
+  sm: $ouds-grid-sm-min-width, // 480px
+  md: $ouds-grid-md-min-width, // 736px
+  lg: $ouds-grid-lg-min-width, // 1024px
+  xl: $ouds-grid-xl-min-width, // 1320px
+  2xl: $ouds-grid-2xl-min-width, // 1640px
+  3xl: $ouds-grid-3xl-min-width, // 1880px
 ) !default;
 
 $container-fluid-margin: (
-  2xs: $ouds-grid-2xs-margin, // 16
-  xs: $ouds-grid-xs-margin, // 24
-  sm: $ouds-grid-sm-margin, // 28
-  md: $ouds-grid-md-margin, // 32
-  lg: $ouds-grid-lg-margin, // 40
-  xl: $ouds-grid-xl-margin, // 56
-  2xl: $ouds-grid-2xl-margin, // 80
-  3xl: $ouds-grid-3xl-margin // 112
+  2xs: $ouds-grid-2xs-margin, // 16px
+  xs: $ouds-grid-xs-margin, // 24px
+  sm: $ouds-grid-sm-margin, // 28px
+  md: $ouds-grid-md-margin, // 32px
+  lg: $ouds-grid-lg-margin, // 40px
+  xl: $ouds-grid-xl-margin, // 56px
+  2xl: $ouds-grid-2xl-margin, // 80px
+  3xl: $ouds-grid-3xl-margin // 112px
 ) !default;
 // scss-docs-end container-max-widths
 // End mod

@@ -46,21 +46,23 @@
   }
 
   // OUDS mod
-  .max-width-specific-tools {
-    @include media-breakpoint-up(3xl) {
-      max-width: $ouds-grid-3xl-max-width;
-    }
-  }
-
+  // scss-docs-start containers-max
   .max-width-public-website {
     @include media-breakpoint-up(2xl) {
-      --#{$prefix}container-margin-x: #{$ouds-grid-2xl-margin};
-      max-width: $ouds-grid-2xl-max-width-public-website;
+      --#{$prefix}container-margin-x: #{$ouds-grid-2xl-margin}; // 80px
+      max-width: $ouds-grid-2xl-max-width-public-website; // 1680px
 
       .row {
-        --#{$prefix}gutter-x: #{$ouds-grid-2xl-column-gap};
+        --#{$prefix}gutter-x: #{$ouds-grid-2xl-column-gap}; // 32px
       }
     }
   }
+
+  .max-width-specific-tools {
+    @include media-breakpoint-up(3xl) {
+      max-width: $ouds-grid-3xl-max-width; // 1920px
+    }
+  }
+  // scss-docs-end containers-max
   // End mod
 }
