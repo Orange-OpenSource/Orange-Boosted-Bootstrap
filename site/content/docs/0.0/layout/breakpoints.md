@@ -101,7 +101,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // XX-Large devices (larger desktops, 1640px and up)
 @media (min-width: 1640px) { ... }
 
-// XXX-Large devices (larger desktops, 1880px and up)
+// XXX-Large devices (even larger desktops, 1880px and up)
 @media (min-width: 1880px) { ... }
 ```
 
