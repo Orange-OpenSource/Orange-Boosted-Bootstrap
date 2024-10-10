@@ -274,7 +274,7 @@ In practice, here's how it looks. Note that you can continue to use this with al
 ## Change the gutters
 
 
-Classes are built from the `$gutters-utilities` Sass map.
+Classes are built from the `$gutters` Sass map.
 
 
-{{< scss-docs name="gutters-utilities" file="scss/_maps.scss" >}} -->
+{{< scss-docs name="gutters" file="scss/_maps.scss" >}} -->

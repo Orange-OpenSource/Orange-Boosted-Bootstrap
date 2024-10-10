@@ -182,7 +182,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 
 // OUDS mod
 // scss-docs-start grid-gutters
-$gutters: (
+$grid-gutter-widths: (
   2xs: $ouds-grid-2xs-column-gap, // 8
   xs: $ouds-grid-xs-column-gap, // 16
   sm: $ouds-grid-sm-column-gap, // 16
@@ -194,22 +194,22 @@ $gutters: (
 ) !default;
 // scss-docs-end grid-gutters
 
-// scss-docs-start gutters-utilities
-//$gutters-utilities: (
-//  none: 0,
-//  smash: 2px,
-//  shortest: 4px,
-//  shorter: $ouds-grid-column-gap-100, // 8
-//  short: 12px,
-//  medium: $ouds-grid-column-gap-200, // 16
-//  tall: $ouds-grid-column-gap-400, // 24
-//  taller: $ouds-grid-column-gap-600, // 32
-//  tallest: $ouds-grid-column-gap-800, // 40
-//  spacious: 48px,
-//  huge: 56px,
-//  jumbo: 64px
-//) !default;
-// scss-docs-end gutters-utilities
+// scss-docs-start gutters
+$gutters: (
+  none: 0,
+  smash: 2px,
+  shortest: 4px,
+  shorter: $ouds-grid-column-gap-100, // 8
+  short: 12px,
+  medium: $ouds-grid-column-gap-200, // 16
+  tall: $ouds-grid-column-gap-400, // 24
+  taller: $ouds-grid-column-gap-600, // 32
+  tallest: $ouds-grid-column-gap-800, // 40
+  spacious: 48px,
+  huge: 56px,
+  jumbo: 64px
+) !default;
+// scss-docs-end gutters
 
 // End mod
 
