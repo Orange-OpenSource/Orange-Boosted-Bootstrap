@@ -46,7 +46,7 @@ Compared to the default grid system:
 
 ### Three columns
 
-Three equal-width columns across all viewports and devices can be created by using the `.g-col-4` classes. <!--Add [responsive classes](#responsive) to change the layout by viewport size.-->
+Three equal-width columns across all viewports and devices can be created by using the `.g-col-4` classes. Add [responsive classes](#responsive) to change the layout by viewport size.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid text-center">
@@ -56,7 +56,7 @@ Three equal-width columns across all viewports and devices can be created by usi
 </div>
 {{< /example >}}
 
-<!--### Responsive
+### Responsive
 
 Use responsive classes to adjust your layout across viewports. Here we start with two columns on the narrowest viewports, and then grow to three columns on medium viewports and above.
 
@@ -75,7 +75,7 @@ Compare that to this two column layout at all viewports.
   <div class="g-col-6">.g-col-6</div>
   <div class="g-col-6">.g-col-6</div>
 </div>
-{{< /example >}}-->
+{{< /example >}}
 
 ## Wrapping
 

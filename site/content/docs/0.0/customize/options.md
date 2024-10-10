@@ -16,6 +16,7 @@ You can find and customize these variables for key global options in OUDS Web's 
 | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
 | `$enable-bootstrap-compatibility` | `true` or `false` (default)           | Enforces Bootstrap compatibility. |
 | `$enable-grid-classes`            | `true` (default) or `false`           | Enables the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.). |
+| `$enable-container-classes`       | `true` (default) or `false`           | Enables the generation of CSS classes for layout containers. |
 | `$enable-important-utilities`     | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
 <!--| `$spacer`                      | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{< docsref "/utilities/spacing" >}}). |
 | `$enable-dark-mode`            | `true` (default) or `false`           | Enables built-in [dark mode support]({{< docsref "/customize/color-modes#dark-mode" >}}) across the project and its components. |
@@ -24,7 +25,6 @@ You can find and customize these variables for key global options in OUDS Web's 
 | `$enable-gradients`            | `true` or `false` (default)           | Enables predefined gradients via `background-image` styles on various components. |
 | `$enable-transitions`          | `true` (default) or `false`           | Enables predefined `transition`s on various components. |
 | `$enable-reduced-motion`       | `true` (default) or `false`           | Enables the [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
-| `$enable-container-classes`    | `true` (default) or `false`           | Enables the generation of CSS classes for layout containers. (New in v5.2.0) |
 | `$enable-caret`                | `true` (default) or `false`           | Enables pseudo element caret on `.dropdown-toggle`. |
 | `$enable-button-pointers`      | `true` (default) or `false`           | Add "hand" cursor to non-disabled button elements. |
 | `$enable-rfs`                  | `true` or `false` (default)           | Globally enables [RFS]({{< docsref "/getting-started/rfs" >}}). |

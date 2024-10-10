@@ -11,6 +11,20 @@ toc: true
 
 ## v0.0.4
 
+### Layout
+
+- <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl` and `3xl`.
+  - Containers classes: `.container`, `.container-fluid` and `.container-{breakpoint}`
+  - Row columns classes: `.row-cols-{number}`
+  - Column classes: `.col`, `.col-{breakpoint}`,  and `.offset-{breakpoint}`
+
+- <span class="badge text-bg-success">New</span> Responsive css-grid classes: `.g-col-{breakpoint}-{number}`.
+
+### Helpers
+
+#### Position
+- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{breakpoint}-top` and `.sticky-{breakpoint}-bottom`.
+
 ### Utilities
 
 #### Border
@@ -30,6 +44,23 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
 
+#### Display
+
+- <span class="badge text-bg-success">New</span> Responsive display utilities: `.d-{breakpoint}-{value}`.
+
+#### Flex
+
+- <span class="badge text-bg-success">New</span> Responsive flex utilities:
+  `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
+
+#### Float
+
+- <span class="badge text-bg-success">New</span> Responsive float utilities: `.float-{breakpoint}-{start|end|none}`.
+
+#### Object fit
+
+- <span class="badge text-bg-success">New</span> Responsive object fit utilities: `.object-fit-{breakpoint}-{contain|cover|fill|scale|none}`.
+
 #### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> Opacity utilities: `.opacity-emphasis` has been renamed to `.opacity-strong`.
@@ -41,7 +72,7 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import the new Sass files before the variables.
+- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import this new Sass file before the variables.
 
   <details class="mb-3">
     <summary>See the new import stack</summary>
@@ -149,6 +180,31 @@ toc: true
       <li><code>$ouds-opacity-transparent</code></li>
       <li><code>$ouds-opacity-weak</code></li>
       <li><code>$ouds-opacity-weaker</code></li>
+      <li><code>$ouds-grid-2xs-margin</code></li>
+      <li><code>$ouds-grid-2xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-sm-min-width</code></li>
+      <li><code>$ouds-grid-sm-margin</code></li>
+      <li><code>$ouds-grid-sm-column-gap</code></li>
+      <li><code>$ouds-grid-md-min-width</code></li>
+      <li><code>$ouds-grid-md-margin</code></li>
+      <li><code>$ouds-grid-md-column-gap</code></li>
+      <li><code>$ouds-grid-lg-min-width</code></li>
+      <li><code>$ouds-grid-lg-margin</code></li>
+      <li><code>$ouds-grid-lg-column-gap</code></li>
+      <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xl-margin</code></li>
+      <li><code>$ouds-grid-xl-column-gap</code></li>
+      <li><code>$ouds-grid-2xl-min-width</code></li>
+      <li><code>$ouds-grid-2xl-max-width-public-website</code></li>
+      <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-column-gap</code></li>
+      <li><code>$ouds-grid-3xl-min-width</code></li>
+      <li><code>$ouds-grid-3xl-max-width</code></li>
+      <li><code>$ouds-grid-3xl-margin</code></li>
+      <li><code>$ouds-grid-3xl-column-gap</code></li>
     </ul>
   </details>
 
@@ -217,6 +273,13 @@ toc: true
     </ul>
   </details>
 
+- <details class="mb-2">
+    <summary><span class="badge text-bg-danger">Breaking</span> Dropped Sass variables:</summary>
+    <ul>
+      <li><code>$grid-gutter-breakpoint</code></li>
+    </ul>
+  </details>
+
 ## v0.0.3
 
 ### Pre-compiled versions
@@ -273,6 +336,13 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 
