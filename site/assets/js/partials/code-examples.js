@@ -19,6 +19,7 @@ export default () => {
   const btnEdit = 'Edit on StackBlitz'
 
   // Boosted mod: removed unused svg height, width and fill="currentColor"
+  // Boosted mod: changed the positioning to improve the focus order
   const btnHtml = [
     '<div class="bd-code-snippet position-relative">',
     '  <div class="bd-clipboard position-absolute top-0 end-0">',
