@@ -23,7 +23,7 @@ Please make sure that none of the [color theme variables]({{< docsref "/customiz
     {{- range $color := .colors }}
       <figure class="mb-0" aria-label="{{ $color.name }}">
         <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
-          <svg viewBox="0 0 100 100" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (eq $color.name "White 100") (eq $color.name "Black 900")) (eq $color.name "Gray 900") }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
+          <svg viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (eq $color.name "White 100") (eq $color.name "Black 900")) (eq $color.name "Gray 900") }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
             <rect fill="{{ $color.hex }}" width="100" height="100"/>
           </svg>
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
