@@ -65,11 +65,12 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 - set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `1rem`,
 - apply `.me-1` on it to get consistent spacing,
 - fill it using `currentColor` to respect button color scheme,
-- finally add `.overflow-visible` utility to prevent SVG content from being cropped.
+
+Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" class="me-1 overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   Primary
@@ -81,7 +82,7 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
   Primary
 </button>
 <button type="button" class="btn btn-primary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1 overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   Primary
@@ -94,7 +95,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
@@ -106,7 +107,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
   <span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-outline-secondary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
@@ -119,7 +120,7 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">No outline</span>
@@ -131,7 +132,7 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
   <span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">No outline</span>
