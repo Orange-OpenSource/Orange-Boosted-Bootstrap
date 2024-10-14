@@ -69,13 +69,15 @@ Opacity raw tokens as Sass variables. **Not to be used as-is**.
 
 #### Semantic tokens
 
-Opacity semantic tokens are defined as a Sass map. The opacity utilities are declared through this map and generated using our utilities API.
+Opacity semantic tokens are defined as Sass variables.
 
 {{< scss-docs name="ouds-semantic-opacity" file="scss/tokens/_semantic.scss" >}}
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-opacities" file="scss/_ouds-maps.scss" >}}
+The opacity utilities are declared through this map and generated using our utilities API.
+
+{{< scss-docs name="ouds-maps-opacities" file="scss/_maps.scss" >}}
 
 ### Sass utilities API
 
