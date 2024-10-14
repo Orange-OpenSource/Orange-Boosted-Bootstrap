@@ -3,6 +3,8 @@
 //
 
 .bd-code-snippet {
+  display: flex; // Boosted mod
+  flex-direction: column; // Boosted mod
   margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid var(--bs-border-color-subtle); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
@@ -394,7 +396,11 @@
 }
 
 .bd-file-ref {
+  position: relative; // Boosted mod
+
   .highlight-toolbar {
+    min-height: $spacer * 2.5; // Boosted mod
+
     @include media-breakpoint-up(md) {
       @include border-top-radius(calc(var(--bs-border-radius) - 1px));
     }
