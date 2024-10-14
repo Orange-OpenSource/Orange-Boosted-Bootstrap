@@ -194,6 +194,11 @@ $grid-gutter-widths: (
 ) !default;
 // scss-docs-end grid-gutters
 
+@if $enable-bootstrap-compatibility {
+  // Copy 2xl breakpoint into xxl breakpoint
+  $gutters: map-merge($gutters, ("xxl": map-get($gutters, "2xl")));
+}
+
 // scss-docs-start gutters
 $gutters: (
   none: 0,

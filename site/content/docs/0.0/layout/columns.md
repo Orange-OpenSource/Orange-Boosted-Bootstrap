@@ -20,6 +20,12 @@ toc: true
 
 - **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl, making `.col-xxl-*` classes available.
+
+{{< /bootstrap-compatibility >}}
+
 ## Alignment
 
 Use flexbox alignment utilities to vertically and horizontally align columns.

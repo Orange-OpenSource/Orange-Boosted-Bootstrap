@@ -562,6 +562,11 @@ $grid-breakpoints: (
 ) !default;
 // scss-docs-end grid-breakpoints
 
+@if $enable-bootstrap-compatibility {
+  // Copy 2xl breakpoint into xxl breakpoint
+  $grid-breakpoints: map-merge($grid-breakpoints, ("xxl": map-get($grid-breakpoints, "2xl")));
+}
+
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
