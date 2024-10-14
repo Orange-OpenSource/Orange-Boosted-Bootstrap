@@ -13,7 +13,7 @@
   margin-left: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
 
   // OUDS mod: gutter depends on breakpoints
-  @each $breakpoint, $gutter2 in $gutters {
+  @each $breakpoint, $gutter2 in $grid-gutter-widths {
     @include media-breakpoint-up($breakpoint) {
       --#{$prefix}gutter-x: #{$gutter2};
     }
@@ -119,7 +119,7 @@
       // Gutters
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
-      @each $key, $value in $gutters-utilities {
+      @each $key, $value in $gutters {
         .g#{$infix}-#{$key},
         .gx#{$infix}-#{$key} {
           --#{$prefix}gutter-x: #{$value};

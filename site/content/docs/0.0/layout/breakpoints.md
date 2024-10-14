@@ -80,8 +80,8 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
-// X-Small devices (portrait phones, less than 480px)
-// No media query for `xs` since this is the default in OUDS Web
+// XX-Small devices (portrait phones, less than 390px)
+// No media query for `2xs` since this is the default in OUDS Web
 
 // X-Small devices (landscape phones, 390px and up)
 @media (min-width: 390px) { ... }
@@ -101,7 +101,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // XX-Large devices (larger desktops, 1640px and up)
 @media (min-width: 1640px) { ... }
 
-// XXX-Large devices (larger desktops, 1880px and up)
+// XXX-Large devices (even larger desktops, 1880px and up)
 @media (min-width: 1880px) { ... }
 ```
 
@@ -130,12 +130,12 @@ We occasionally use media queries that go in the other direction (the given scre
 These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
 
 ```scss
-// `xs` returns only a ruleset and no media query
+// `2xs` returns only a ruleset and no media query
 // ... { ... }
-// `xs` applies to xx-small devices (portrait phones, less than 390px)
+// `xs` applies to XX-small devices (portrait phones, less than 390px)
 @media (max-width: 389.98px) { ... }
 
-// `sm` applies to x-small devices (portrait phones, less than 480px)
+// `sm` applies to X-small devices (portrait phones, less than 480px)
 @media (max-width: 479.98px) { ... }
 
 // `md` applies to small devices (landscape phones, less than 736px)
@@ -147,10 +147,10 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `xl` applies to large devices (desktops, less than 1320px)
 @media (max-width: 1319.98px) { ... }
 
-// `2xl` applies to x-large devices (large desktops, less than 1640px)
+// `2xl` applies to X-large devices (large desktops, less than 1640px)
 @media (max-width: 1639.98px) { ... }
 
-// `3xl` applies to x-large devices (large desktops, less than 1880px)
+// `3xl` applies to XX-large devices (larger desktops, less than 1880px)
 @media (max-width: 1879.98px) { ... }
 ```
 

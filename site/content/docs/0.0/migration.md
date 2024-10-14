@@ -32,7 +32,6 @@ toc: true
 #### Position
 - <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{breakpoint}-top` and `.sticky-{breakpoint}-bottom`.
 
-
 ### Utilities
 
 #### Border
@@ -280,8 +279,9 @@ toc: true
       <li><code>shadow</code></li>
     </ul>
   </details>
+
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> Removed Sass variables:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$grid-gutter-breakpoint</code></li>
     </ul>
@@ -343,6 +343,13 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 
