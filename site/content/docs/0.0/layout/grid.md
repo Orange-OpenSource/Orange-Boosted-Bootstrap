@@ -146,7 +146,8 @@ As noted above, each of these breakpoints have their own container, unique class
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="3">8px (4px on left and right)</td>
+        <td>8px (4px on left and right)</td>
+        <td colspan="2">16px (8px on left and right)</td>
         <td colspan="2">24px (12px on left and right)</td>
         <td colspan="2">32px (16px on left and right)</td>
         <td colspan="1">40px (20px on left and right)</td>
@@ -449,6 +450,7 @@ Variables and maps determine the number of columns, the gutter width, and the me
 
 ```scss
 $grid-columns:      12;
+$grid-gutter-width: 1.25rem;
 $grid-row-columns:  6;
 ```
 
@@ -535,7 +537,7 @@ The number of grid columns can be modified via Sass variables. `$grid-columns` i
 
 ```scss
 $grid-columns: 12 !default;
-$grid-gutter-width: 24px !default;
+$grid-gutter-width: 1.25rem !default;
 $grid-row-columns: 6 !default;
 ```
 
