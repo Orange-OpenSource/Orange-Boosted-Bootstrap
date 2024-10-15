@@ -80,7 +80,7 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
-// XX-Small devices (portrait phones, less than 390px)
+// 2X-Small devices (portrait phones, less than 390px)
 // No media query for `2xs` since this is the default in OUDS Web
 
 // X-Small devices (portrait phones, 390px and up)
@@ -98,10 +98,10 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // X-Large devices (desktops, 1320px and up)
 @media (min-width: 1320px) { ... }
 
-// XX-Large devices (large desktops, 1640px and up)
+// 2X-Large devices (large desktops, 1640px and up)
 @media (min-width: 1640px) { ... }
 
-// XXX-Large devices (larger desktops, TV, 1880px and up)
+// 3X-Large devices (larger desktops, TV, 1880px and up)
 @media (min-width: 1880px) { ... }
 ```
 
@@ -132,7 +132,7 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 ```scss
 // `2xs` returns only a ruleset and no media query
 // ... { ... }
-// `xs` applies to XX-small devices (portrait phones, less than 390px)
+// `xs` applies to 2X-small devices (portrait phones, less than 390px)
 @media (max-width: 389.98px) { ... }
 
 // `sm` applies to X-small devices (portrait phones, less than 480px)
@@ -150,7 +150,7 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `2xl` applies to X-large devices (large desktops, less than 1640px)
 @media (max-width: 1639.98px) { ... }
 
-// `3xl` applies to XX-large devices (larger desktops, less than 1880px)
+// `3xl` applies to 2X-large devices (larger desktops, less than 1880px)
 @media (max-width: 1879.98px) { ... }
 ```
 
