@@ -16,7 +16,7 @@ OUDS Web comes with three different containers:
 
 - `.container`, which sets a static `max-width` between each responsive breakpoint. **This container should not be used for Orange sites.**
 - `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one.
-- `.container-fluid`, which sets the `width: 100%` and overrides `max-width: 100vw - $breakpoint_margin` at all breakpoints. **`.container-fluid` is the container recommended for Orange sites in order to be compliant with the Orange brand, associated to `.max-width-public-website` or `.max-width-specific-tools`** (See [Fluid containers](#fluid-containers) for more information).
+- `.container-fluid`, which sets the `width: 100%` at all breakpoints. **`.container-fluid` is the container recommended for Orange sites in order to be compliant with the Orange brand. It should be associated to `.max-width-public-website` or `.max-width-specific-tools`** (See [Fluid containers](#fluid-containers) for more information).
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
