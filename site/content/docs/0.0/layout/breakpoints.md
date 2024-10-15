@@ -92,16 +92,16 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // Medium devices (portrait tablets, 736px and up)
 @media (min-width: 736px) { ... }
 
-// Large devices (desktops, 1024px and up)
+// Large devices (landscape tablets, 1024px and up)
 @media (min-width: 1024px) { ... }
 
-// X-Large devices (large desktops, 1320px and up)
+// X-Large devices (desktops, 1320px and up)
 @media (min-width: 1320px) { ... }
 
 // XX-Large devices (large desktops, 1640px and up)
 @media (min-width: 1640px) { ... }
 
-// XXX-Large devices (even larger desktops, 1880px and up)
+// XXX-Large devices (larger desktops, TV, 1880px and up)
 @media (min-width: 1880px) { ... }
 ```
 
