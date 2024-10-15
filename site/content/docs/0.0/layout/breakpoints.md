@@ -89,7 +89,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // Small devices (landscape phones, 480px and up)
 @media (min-width: 480px) { ... }
 
-// Medium devices (tablets, 736px and up)
+// Medium devices (portrait tablets, 736px and up)
 @media (min-width: 736px) { ... }
 
 // Large devices (desktops, 1024px and up)
