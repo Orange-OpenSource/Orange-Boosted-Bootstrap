@@ -83,7 +83,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // XX-Small devices (portrait phones, less than 390px)
 // No media query for `2xs` since this is the default in OUDS Web
 
-// X-Small devices (landscape phones, 390px and up)
+// X-Small devices (portrait phones, 390px and up)
 @media (min-width: 390px) { ... }
 
 // Small devices (landscape phones, 480px and up)
