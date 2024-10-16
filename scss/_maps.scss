@@ -199,12 +199,12 @@ $gutters: (
   none: 0,
   smash: 2px,
   shortest: 4px,
-  shorter: $ouds-grid-column-gap-100, // 8px
+  shorter: 8px,
   short: 12px,
-  medium: $ouds-grid-column-gap-200, // 16px
-  tall: $ouds-grid-column-gap-400, // 24px
-  taller: $ouds-grid-column-gap-600, // 32px
-  tallest: $ouds-grid-column-gap-800, // 40px
+  medium: 16px,
+  tall: 24px,
+  taller: 32px,
+  tallest: 40px,
   spacious: 48px,
   huge: 56px,
   jumbo: 64px
