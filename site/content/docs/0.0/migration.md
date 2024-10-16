@@ -20,13 +20,6 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Responsive css-grid classes: `.g-col-{breakpoint}-{number}`.
 
-- <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> Breakpoint only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
-    <ul>
-      <li><code>xxl</code></li>
-    </ul>
-  </details>
-
 ### Helpers
 
 #### Position

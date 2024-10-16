@@ -40,7 +40,7 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 
 {{< bootstrap-compatibility >}}
 
-Includes support for xxl breakpoint, defined like 2xl.
+Includes support for xxl breakpoint, defined like 2xl, making `.container-xxl` class available.
 
 {{< bs-table "table" >}}
 |  | 2X-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
