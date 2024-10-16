@@ -288,11 +288,11 @@ Output:
 .opacity-100 { opacity: 1 !important; }
 
 @media (min-width: 390px) {
-  .opacity-sm-0 { opacity: 0 !important; }
-  .opacity-sm-25 { opacity: .25 !important; }
-  .opacity-sm-50 { opacity: .5 !important; }
-  .opacity-sm-75 { opacity: .75 !important; }
-  .opacity-sm-100 { opacity: 1 !important; }
+  .opacity-xs-0 { opacity: 0 !important; }
+  .opacity-xs-25 { opacity: .25 !important; }
+  .opacity-xs-50 { opacity: .5 !important; }
+  .opacity-xs-75 { opacity: .75 !important; }
+  .opacity-xs-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 480px) {
