@@ -58,13 +58,19 @@ Shadow semantic tokens as Sass variables.
 
 {{< scss-docs name="ouds-semantic-elevation" file="scss/tokens/_semantic.scss" >}}
 
+#### Composite tokens
+
+Shadow composite tokens are defined as Sass variables.
+
+{{< scss-docs name="ouds-composite-elevation" file="scss/tokens/_composite.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-elevations" file="scss/_ouds-maps.scss" >}}
+{{< scss-docs name="ouds-maps-elevations" file="scss/_maps.scss" >}}
 
 ### Sass utilities API
 
