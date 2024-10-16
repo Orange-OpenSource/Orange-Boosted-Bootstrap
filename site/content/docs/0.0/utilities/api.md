@@ -328,19 +328,19 @@ Output:
 }
 
 @media (min-width: 1640px) {
-  .opacity-xxl-0 { opacity: 0 !important; }
-  .opacity-xxl-25 { opacity: .25 !important; }
-  .opacity-xxl-50 { opacity: .5 !important; }
-  .opacity-xxl-75 { opacity: .75 !important; }
-  .opacity-xxl-100 { opacity: 1 !important; }
+  .opacity-2xl-0 { opacity: 0 !important; }
+  .opacity-2xl-25 { opacity: .25 !important; }
+  .opacity-2xl-50 { opacity: .5 !important; }
+  .opacity-2xl-75 { opacity: .75 !important; }
+  .opacity-2xl-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1880px) {
-  .opacity-xxl-0 { opacity: 0 !important; }
-  .opacity-xxl-25 { opacity: .25 !important; }
-  .opacity-xxl-50 { opacity: .5 !important; }
-  .opacity-xxl-75 { opacity: .75 !important; }
-  .opacity-xxl-100 { opacity: 1 !important; }
+  .opacity-3xl-0 { opacity: 0 !important; }
+  .opacity-3xl-25 { opacity: .25 !important; }
+  .opacity-3xl-50 { opacity: .5 !important; }
+  .opacity-3xl-75 { opacity: .75 !important; }
+  .opacity-3xl-100 { opacity: 1 !important; }
 }
 ```
 
