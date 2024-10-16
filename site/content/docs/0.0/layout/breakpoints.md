@@ -141,16 +141,16 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `md` applies to small devices (landscape phones, less than 736px)
 @media (max-width: 735.98px) { ... }
 
-// `lg` applies to medium devices (tablets, less than 1024px)
+// `lg` applies to medium devices (portrait tablets, less than 1024px)
 @media (max-width: 1023.98px) { ... }
 
-// `xl` applies to large devices (desktops, less than 1320px)
+// `xl` applies to large devices (landscape tablets, less than 1320px)
 @media (max-width: 1319.98px) { ... }
 
-// `2xl` applies to X-large devices (large desktops, less than 1640px)
+// `2xl` applies to X-large devices (desktops, less than 1640px)
 @media (max-width: 1639.98px) { ... }
 
-// `3xl` applies to 2X-large devices (larger desktops, less than 1880px)
+// `3xl` applies to 2X-large devices (large desktops, less than 1880px)
 @media (max-width: 1879.98px) { ... }
 ```
 
