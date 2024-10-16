@@ -513,7 +513,7 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
   .border-sm-0 { ... }
 }
 
-@media (min-width: 7336px) {
+@media (min-width: 736px) {
   .border-md { ... }
   .border-md-0 { ... }
 }

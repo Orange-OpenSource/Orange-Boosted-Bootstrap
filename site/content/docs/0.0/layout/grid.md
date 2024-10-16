@@ -146,7 +146,8 @@ As noted above, each of these breakpoints have their own container, unique class
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="3">8px (4px on left and right)</td>
+        <td>8px (4px on left and right)</td>
+        <td colspan="2">16px (8px on left and right)</td>
         <td colspan="2">24px (12px on left and right)</td>
         <td colspan="2">32px (16px on left and right)</td>
         <td colspan="1">40px (20px on left and right)</td>
@@ -502,14 +503,17 @@ Variables and maps determine the number of columns, the gutter width, and the me
 
 ```scss
 $grid-columns:      12;
+$grid-gutter-width: 1.25rem;
 $grid-row-columns:  6;
 ```
+
+Note that OUDS Web does not use a single value for grid gutters through `$grid-gutter-width` but a map of values called `$grid-gutter-widths`. It defines different gutter widths for each breakpoint.
+
+{{< scss-docs name="grid-gutters" file="scss/_maps.scss" >}}
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
-
-{{< scss-docs name="grid-gutters" file="scss/_maps.scss" >}}
 
 ### Sass mixins
 
@@ -588,11 +592,9 @@ The number of grid columns can be modified via Sass variables. `$grid-columns` i
 
 ```scss
 $grid-columns: 12 !default;
-$grid-gutter-width: 24px !default;
+$grid-gutter-width: 1.25rem !default;
 $grid-row-columns: 6 !default;
 ```
-
-Note that OUDS Web does not use a single value for grid gutters through `$grid-gutter-width` but a map of values, like explained in [Grid tiers](#grid-tiers). This defines different gutter widths for each breakpoint. See [Sass variables](#sass-variables) for current values.
 
 ### Grid tiers
 
@@ -610,6 +612,20 @@ $container-max-widths: (
   sm: 420px,
   md: 720px,
   lg: 960px
+);
+
+$grid-gutter-widths: (
+  xs: 4px,
+  sm: 8px,
+  md: 16px,
+  lg: 32px
+);
+
+$container-fluid-margin: (
+  xs: 20px,
+  sm: 30px,
+  md: 24px,
+  lg: 32px
 );
 ```
 

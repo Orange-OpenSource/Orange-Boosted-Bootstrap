@@ -20,6 +20,8 @@ toc: true
 
 - **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
+- **Don't use too small columns for the main grid.** In order to respect the design system, on main site grid, you should only use columns with multiple of **3** for small breakpoints (`2xs`, `xs` and `sm`). You also should use multiple of **2** for medium breakpoints (`2xs`, `xs`, `sm`, `md` and `lg`).
+
 {{< bootstrap-compatibility >}}
 
 Includes support for xxl breakpoint, defined like 2xl, making `.col-xxl-*` classes available.
@@ -162,9 +164,9 @@ Change the horizontal alignment with any of the responsive `justify-content-*` c
 If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container">
   <div class="row">
-    <div class="col-9">.col-9</div>
+    <div class="col-9 text-center">.col-9</div>
     <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
     <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
   </div>
@@ -211,7 +213,7 @@ You may also apply this break at specific breakpoints with our [responsive displ
 
 ### Order classes
 
-Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all eight grid tiers. If you need more `.order-*` classes, you can modify the default number via Sass variable.
+Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all eight grid tiers.
 
 {{< example class="bd-example-row" >}}
 <div class="container text-center">
@@ -246,6 +248,27 @@ There are also responsive `.order-first` and `.order-last` classes that change t
   </div>
 </div>
 {{< /example >}}
+
+If you need more `.order-*` classes, you can add new ones by modifying our `$utilities` Sass map. [Read our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) or [our Modify utilities docs]({{< docsref "/utilities/api#modify-utilities" >}}) for details.
+```scss
+$utilities: map-merge(
+  $utilities,
+  (
+    "order": map-merge(
+      map-get($utilities, "order"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "order"), "values"),
+          (
+            6: 6, // Add a new `.order-{breakpoint}-6` utility
+            last: 7 // Change the `.order-{breakpoint}-last` utility to use the next number
+          )
+        ),
+      ),
+    ),
+  )
+);
+```
 
 ### Offsetting columns
 
