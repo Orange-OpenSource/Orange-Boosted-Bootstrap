@@ -15,7 +15,7 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl` and `3xl`.
   - Containers classes: `.container`, `.container-fluid` and `.container-{breakpoint}`
-  - Limiting classes: `.max-width-public-website` and `.max-width-specific-tools`
+  - Limiting class: `.container-max-width`
   - Row columns classes: `.row-cols-{number}`
   - Column classes: `.col-{number}`, `.col-{breakpoint}-{number}`,  and `.offset-{breakpoint}-{number}`
 
@@ -184,7 +184,6 @@ toc: true
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
-      <li><code>$ouds-grid-2xl-max-width-public-website</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
       <li><code>$ouds-grid-2xs-column-gap</code></li>
       <li><code>$ouds-grid-2xs-margin</code></li>
@@ -229,6 +228,7 @@ toc: true
       <li><code>$ouds-grid-xs-column-gap</code></li>
       <li><code>$ouds-grid-xs-margin</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
+      <li><code>$ouds-grid-container-max-width</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>

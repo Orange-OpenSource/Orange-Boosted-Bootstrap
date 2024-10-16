@@ -41,20 +41,14 @@
 
   // OUDS mod
   // scss-docs-start containers-max
-  .max-width-public-website {
-    @include media-breakpoint-up(2xl) {
-      --#{$prefix}container-margin-x: #{$ouds-grid-2xl-margin}; // 80px
-      max-width: $ouds-grid-2xl-max-width-public-website; // 1680px
+  .container-max-width {
+    @include media-breakpoint-up(get-breakpoint-from-width()) {
+      --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
+      max-width: $ouds-grid-container-max-width;
 
       .row {
-        --#{$prefix}gutter-x: #{$ouds-grid-2xl-column-gap}; // 32px
+        --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width())};
       }
-    }
-  }
-
-  .max-width-specific-tools {
-    @include media-breakpoint-up(3xl) {
-      max-width: $ouds-grid-3xl-max-width; // 1920px
     }
   }
   // scss-docs-end containers-max

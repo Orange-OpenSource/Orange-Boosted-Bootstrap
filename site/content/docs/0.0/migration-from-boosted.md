@@ -60,7 +60,7 @@ Technically, it means that you can get rid of the following things:
   - `2xs` and `3xl` have been added.
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
   - `.col-{breakpoint}-{number}`, `.g-col-{}
-  - The default container to use is now `.container-fluid` associated to `.max-width-public-website` or `.max-width-specific-tools` instead of `.container-xxl` (which doesn't exist anymore). Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
+  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl` (which doesn't exist anymore). Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
   - Default gutter inside grid have been changed to have a fully responsive behavior. It should be a transparent change for you.
   - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|smash|shortest|shorter|short|medium|tall|taller|tallest|spacious|huge|jumbo`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
 
@@ -252,7 +252,6 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
-      <li><code>$ouds-grid-2xl-max-width-public-website</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
       <li><code>$ouds-grid-2xs-column-gap</code></li>
       <li><code>$ouds-grid-2xs-margin</code></li>
@@ -297,6 +296,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-grid-xs-column-gap</code></li>
       <li><code>$ouds-grid-xs-margin</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
+      <li><code>$ouds-grid-container-max-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
