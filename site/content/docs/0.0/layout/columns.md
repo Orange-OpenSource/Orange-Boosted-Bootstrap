@@ -20,7 +20,7 @@ toc: true
 
 - **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
-- **Don't use too small columns for the main grid.** In order to respect the design system, on main site grid, you should only use columns with multiple of **3** for small breakpoints (`2xs`, `xs` and `sm`). You also should use multiple of **2** for medium breakpoints (`2xs`, `xs`, `sm`, `md` and `lg`).
+- **Don't use columns that are too small for the main grid.** To align with the design system, for the main site grid, you should only use columns in multiples of **3** for smaller breakpoints (`2xs`, `xs`, and `sm`). For medium and larger breakpoints (`md` and `lg`), use columns in multiples of **2**.
 
 ## Alignment
 
