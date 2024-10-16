@@ -59,9 +59,19 @@ Technically, it means that you can get rid of the following things:
   - `xxl` has been renamed `2xl`.
   - `2xs` and `3xl` have been added.
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
+  - `.col-{breakpoint}-{number}`, `.g-col-{}
   - The default container to use is now `.container-fluid` associated to `.max-width-public-website` or `.max-width-specific-tools` instead of `.container-xxl` (which doesn't exist anymore). Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
+  - Default gutter inside grid have been changed to have a fully responsive behavior. It should be a transparent change for you.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|smash|shortest|shorter|short|medium|tall|taller|tallest|spacious|huge|jumbo`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
 
   All responsive classes, helpers and utilities have been changed accordingly to the new breakpoints.
+
+## Helpers
+
+### Position
+
+- <span class="badge text-bg-danger">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`.
+- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ## Utilities
 
@@ -113,8 +123,6 @@ Technically, it means that you can get rid of the following things:
 - <span class="badge text-bg-danger">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 - <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
 
-
-
 ### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
@@ -125,6 +133,10 @@ Technically, it means that you can get rid of the following things:
 - <span class="badge text-bg-danger">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-success">New</span> Shadows utilities:
 `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized`, `shadow-sticky-navigation-scrolled` and `shadow-focus`.
+
+## Examples
+
+- <span class="badge text-bg-success">New</span> New OUDS Web [example for the usable grids]({{< docsref "/examples/grid-system" >}}).
 
 ## CSS and Sass variables
 
@@ -238,6 +250,53 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-grid-2xl-column-gap</code></li>
+      <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-max-width-public-website</code></li>
+      <li><code>$ouds-grid-2xl-min-width</code></li>
+      <li><code>$ouds-grid-2xs-column-gap</code></li>
+      <li><code>$ouds-grid-2xs-margin</code></li>
+      <li><code>$ouds-grid-3xl-column-gap</code></li>
+      <li><code>$ouds-grid-3xl-margin</code></li>
+      <li><code>$ouds-grid-3xl-max-width</code></li>
+      <li><code>$ouds-grid-3xl-min-width</code></li>
+      <li><code>$ouds-grid-column-gap-100</code></li>
+      <li><code>$ouds-grid-column-gap-200</code></li>
+      <li><code>$ouds-grid-column-gap-400</code></li>
+      <li><code>$ouds-grid-column-gap-600</code></li>
+      <li><code>$ouds-grid-column-gap-800</code></li>
+      <li><code>$ouds-grid-margin-100</code></li>
+      <li><code>$ouds-grid-margin-1100</code></li>
+      <li><code>$ouds-grid-margin-1700</code></li>
+      <li><code>$ouds-grid-margin-2500</code></li>
+      <li><code>$ouds-grid-margin-300</code></li>
+      <li><code>$ouds-grid-margin-400</code></li>
+      <li><code>$ouds-grid-margin-500</code></li>
+      <li><code>$ouds-grid-margin-700</code></li>
+      <li><code>$ouds-grid-max-width-650</code></li>
+      <li><code>$ouds-grid-max-width-800</code></li>
+      <li><code>$ouds-grid-md-column-gap</code></li>
+      <li><code>$ouds-grid-md-margin</code></li>
+      <li><code>$ouds-grid-md-min-width</code></li>
+      <li><code>$ouds-grid-min-width-200</code></li>
+      <li><code>$ouds-grid-min-width-300</code></li>
+      <li><code>$ouds-grid-min-width-400</code></li>
+      <li><code>$ouds-grid-min-width-500</code></li>
+      <li><code>$ouds-grid-min-width-600</code></li>
+      <li><code>$ouds-grid-min-width-700</code></li>
+      <li><code>$ouds-grid-min-width-800</code></li>
+      <li><code>$ouds-grid-lg-column-gap</code></li>
+      <li><code>$ouds-grid-lg-margin</code></li>
+      <li><code>$ouds-grid-lg-min-width</code></li>
+      <li><code>$ouds-grid-sm-column-gap</code></li>
+      <li><code>$ouds-grid-sm-margin</code></li>
+      <li><code>$ouds-grid-sm-min-width</code></li>
+      <li><code>$ouds-grid-xl-column-gap</code></li>
+      <li><code>$ouds-grid-xl-margin</code></li>
+      <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
@@ -256,6 +315,7 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$grid-gutter-widths</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
@@ -309,6 +369,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$form-star-focus-color-dark</code></li>
       <li><code>$form-star-focus-outline</code></li>
       <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$grid-gutter-breakpoint</code></li>
       <li><code>$orange-filter</code></li>
       <li><code>$outline-offset</code></li>
       <li><code>$outline-width</code></li>
@@ -344,7 +405,6 @@ Technically, it means that you can get rid of the following things:
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
-
     </ul>
   </details>
 
@@ -367,3 +427,5 @@ Technically, it means that you can get rid of the following things:
       <li><code>shadow</code></li>
     </ul>
   </details>
+
+- <span class="badge text-bg-warning">Warning</span> OUDS Web changes the signature of `make-row($gutter, $gutter-sm)` to have `make-row($gutter)`.
