@@ -36,6 +36,12 @@ $ouds-border-width-100: $ouds-border-base !default;
 // $ouds-border-width-200: $ouds-border-base * 2 !default;
 // scss-docs-end ouds-raw-border
 
+// Dimension
+
+// scss-docs-start ouds-raw-dimension
+$ouds-dimension-base: 4px !default;
+// scss-docs-end ouds-raw-dimension
+
 // Elevation
 
 // scss-docs-start ouds-raw-elevation
@@ -69,60 +75,55 @@ $ouds-elevation-y-500:  12px !default;
 // Grid
 
 // scss-docs-start ouds-raw-grid
-//$ouds-grid-width-100: 360px !default;
-//$ouds-grid-width-200: 390px !default;
-//$ouds-grid-width-300: 480px !default;
-//$ouds-grid-width-400: 768px !default;
-//$ouds-grid-width-500: 1024px !default;
-//$ouds-grid-width-600: 1440px !default;
-//$ouds-grid-width-700: 1680px !default;
-//$ouds-grid-width-800: 1920px !default;
-
-//$ouds-grid-min-width-100: 1px !default; // 2xs
-$ouds-grid-min-width-200: 390px !default; // xs
-$ouds-grid-min-width-300: 480px !default; // sm
-$ouds-grid-min-width-400: 736px !default; // md
-$ouds-grid-min-width-500: 1024px !default; // lg
-$ouds-grid-min-width-600: 1320px !default; // xl
-$ouds-grid-min-width-700: 1640px !default; // xxl
-$ouds-grid-min-width-800: 1880px !default; // 3xl
-
-//$ouds-grid-max-width-100: 389px !default;
-//$ouds-grid-max-width-200: 479px !default;
-//$ouds-grid-max-width-300: 735px !default;
-//$ouds-grid-max-width-400: 1023px !default;
-//$ouds-grid-max-width-500: 1319px !default;
-//$ouds-grid-max-width-600: 1639px !default;
+// $ouds-grid-column-count-100: 1px !default;
+// $ouds-grid-column-count-200: 2px !default;
+$ouds-grid-column-count-400: 4px !default;
+$ouds-grid-column-count-600: 6px !default;
+// $ouds-grid-column-count-800: 8px !default;
+// $ouds-grid-column-count-1000: 10px !default;
+$ouds-grid-column-count-1200: 12px !default;
+$ouds-grid-max-width-100: 389px !default;
+$ouds-grid-max-width-200: 479px !default;
+$ouds-grid-max-width-300: 735px !default;
+$ouds-grid-max-width-400: 1023px !default;
+$ouds-grid-max-width-500: 1319px !default;
+$ouds-grid-max-width-600: 1639px !default;
 $ouds-grid-max-width-650: 1680px !default;
-//$ouds-grid-max-width-700: 1879px !default;
+$ouds-grid-max-width-700: 1879px !default;
 $ouds-grid-max-width-800: 1920px !default;
-
-$ouds-grid-margin-100: 16px !default;
-$ouds-grid-margin-300: 24px !default;
-$ouds-grid-margin-400: 28px !default;
-$ouds-grid-margin-500: 32px !default;
-//$ouds-grid-margin-600: 36px !default;
-$ouds-grid-margin-700: 40px !default;
-//$ouds-grid-margin-1000: 52px !default;
-$ouds-grid-margin-1100: 56px !default;
-$ouds-grid-margin-1700: 80px !default;
-$ouds-grid-margin-2500: 112px !default;
-
-//$ouds-grid-column-gap-10: 1px !default;
-$ouds-grid-column-gap-100: 8px !default;
-$ouds-grid-column-gap-200: 16px !default;
-//$ouds-grid-column-gap-300: 20px !default;
-$ouds-grid-column-gap-400: 24px !default;
-$ouds-grid-column-gap-600: 32px !default;
-$ouds-grid-column-gap-800: 40px !default;
-
-//$ouds-grid-column-count-100: 1px !default;
-//$ouds-grid-column-count-200: 2px !default;
-//$ouds-grid-column-count-400: 4px !default;
-//$ouds-grid-column-count-600: 6px !default;
-//$ouds-grid-column-count-800: 8px !default;
-//$ouds-grid-column-count-1000: 10px !default;
-//$ouds-grid-column-count-1200: 12px !default;
+$ouds-grid-min-width-100: 1px !default;
+$ouds-grid-min-width-200: 390px !default;
+$ouds-grid-min-width-300: 480px !default;
+$ouds-grid-min-width-400: 736px !default;
+$ouds-grid-min-width-500: 1024px !default;
+$ouds-grid-min-width-600: 1320px !default;
+$ouds-grid-min-width-700: 1640px !default;
+$ouds-grid-min-width-800: 1880px !default;
+$ouds-grid-width-100: 360px !default;
+$ouds-grid-width-200: 390px !default;
+$ouds-grid-width-300: 480px !default;
+$ouds-grid-width-400: 768px !default;
+$ouds-grid-width-500: 1024px !default;
+$ouds-grid-width-600: 1440px !default;
+$ouds-grid-width-700: 1680px !default;
+$ouds-grid-width-800: 1920px !default;
+// $ouds-grid-column-gap-10: $ouds-dimension-base * .25 !default; // 1
+$ouds-grid-column-gap-100: $ouds-dimension-base * 2 !default; // 8
+$ouds-grid-column-gap-200: $ouds-dimension-base * 4 !default; // 16
+// $ouds-grid-column-gap-300: $ouds-dimension-base * 5 !default; // 20
+$ouds-grid-column-gap-400: $ouds-dimension-base * 6 !default; // 24
+$ouds-grid-column-gap-600: $ouds-dimension-base * 8 !default; // 32
+$ouds-grid-column-gap-800: $ouds-dimension-base * 10 !default; // 40
+$ouds-grid-margin-100: $ouds-dimension-base * 4 !default; // 16
+$ouds-grid-margin-300: $ouds-dimension-base * 6 !default; // 24
+$ouds-grid-margin-400: $ouds-dimension-base * 7 !default; // 28
+$ouds-grid-margin-500: $ouds-dimension-base * 8 !default; // 32
+// $ouds-grid-margin-600: $ouds-dimension-base * 9 !default; // 36
+$ouds-grid-margin-700: $ouds-dimension-base * 10 !default; // 40
+// $ouds-grid-margin-1000: $ouds-dimension-base * 13 !default; // 52
+$ouds-grid-margin-1100: $ouds-dimension-base * 14 !default; // 56
+$ouds-grid-margin-1700: $ouds-dimension-base * 20 !default; // 80
+$ouds-grid-margin-2500: $ouds-dimension-base * 28 !default; // 112
 // scss-docs-end ouds-raw-grid
 
 // Opacity
