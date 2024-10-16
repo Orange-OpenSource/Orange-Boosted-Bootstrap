@@ -22,6 +22,12 @@ toc: true
 
 - **Don't use too small columns for the main grid.** In order to respect the design system, on main site grid, you should only use columns with multiple of **3** for small breakpoints (`2xs`, `xs` and `sm`). You also should use multiple of **2** for medium breakpoints (`2xs`, `xs`, `sm`, `md` and `lg`).
 
+{{< bootstrap-compatibility >}}
+
+Includes support for xxl breakpoint, defined like 2xl, making `.col-xxl-*` classes available.
+
+{{< /bootstrap-compatibility >}}
+
 ## Alignment
 
 Use flexbox alignment utilities to vertically and horizontally align columns.
