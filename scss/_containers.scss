@@ -10,12 +10,6 @@
     @include make-container();
   }
 
-  // OUDS mod: `.container-fluid` is not full width in OUDS Web
-  .container-fluid {
-    @include make-container-fluid-margin();
-  }
-  // End mod
-
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
     .container-#{$breakpoint} {
@@ -44,4 +38,19 @@
       }
     }
   }
+
+  // OUDS mod
+  // scss-docs-start containers-max
+  .container-max-width {
+    @include media-breakpoint-up(get-breakpoint-from-width()) {
+      --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
+      max-width: $ouds-grid-container-max-width;
+
+      .row {
+        --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width())};
+      }
+    }
+  }
+  // scss-docs-end containers-max
+  // End mod
 }

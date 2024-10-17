@@ -85,7 +85,7 @@ OUDS Web includes a handful of options for including some or all of our compiled
 | --- | --- | --- | --- | --- |
 | `ouds-web.css`<br> `ouds-web.min.css`<br> `ouds-web.rtl.css`<br> `ouds-web.rtl.min.css` | Included | Included | Included | Included without Bootstrap utilities |
 | `ouds-web-bootstrap.css`<br> `ouds-web-bootstrap.min.css`<br> `ouds-web-bootstrap.rtl.css`<br> `ouds-web-bootstrap.rtl.min.css` | Included | Included | Included | Included with Bootstrap utilities |
-| `ouds-web-grid.css`<br> `ouds-web-grid.rtl.css`<br> `ouds-web-grid.min.css`<br> `ouds-web-grid.rtl.min.css` | <!--[Only grid system]({{< docsref "/layout/grid" >}})-->— | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+| `ouds-web-grid.css`<br> `ouds-web-grid.rtl.css`<br> `ouds-web-grid.min.css`<br> `ouds-web-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
 | `ouds-web-utilities.css`<br> `ouds-web-utilities.rtl.css`<br> `ouds-web-utilities.min.css`<br> `ouds-web-utilities.rtl.min.css` | — | — | — | Included |
 | `ouds-web-reboot.css`<br> `ouds-web-reboot.rtl.css`<br> `ouds-web-reboot.min.css`<br> `ouds-web-reboot.rtl.min.css` | — | <!--[Only Reboot]({{< docsref "/content/reboot" >}})-->— | — | — |
 {{< /bs-table >}}
