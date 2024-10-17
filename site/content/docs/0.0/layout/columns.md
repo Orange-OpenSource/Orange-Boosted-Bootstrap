@@ -266,7 +266,7 @@ $utilities: map-merge(
 
 ### Offsetting columns
 
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{< docsref "/utilities/spacing" >}}). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+You can offset grid columns with <!--in two ways: -->our responsive `.offset-` grid classes<!-- and our [margin utilities]({{< docsref "/utilities/spacing" >}})-->. Grid classes are sized to match columns<!-- while margins are more useful for quick layouts where the width of the offset is variable-->.
 
 #### Offset classes
 
@@ -303,7 +303,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 </div>
 {{< /example >}}
 
-#### Margin utilities
+<!-- #### Margin utilities
 
 With flexbox grids, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
 
@@ -322,7 +322,7 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
     <div class="col-auto">.col-auto</div>
   </div>
 </div>
-{{< /example >}}
+{{< /example >}} -->
 
 ## Standalone column classes
 

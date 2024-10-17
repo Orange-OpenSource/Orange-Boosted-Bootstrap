@@ -316,6 +316,7 @@ Technically, it means that you can get rid of the following things:
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$grid-gutter-widths</code></li>
+      <li><code>$gutters</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>

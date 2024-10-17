@@ -487,8 +487,8 @@ You can enable responsive classes for an existing set of utilities that are not 
 
 $utilities: map-merge(
   $utilities, (
-    "border": map-merge(
-      map-get($utilities, "border"),
+    "border-ouds": map-merge(
+      map-get($utilities, "border-ouds"),
       ( responsive: true ),
     ),
   )
@@ -501,41 +501,41 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 
 ```css
 .border { ... }
-.border-0 { ... }
+.border-none { ... }
 
 @media (min-width: 390px) {
   .border-xs { ... }
-  .border-xs-0 { ... }
+  .border-xs-none { ... }
 }
 
 @media (min-width: 480px) {
   .border-sm { ... }
-  .border-sm-0 { ... }
+  .border-sm-none { ... }
 }
 
 @media (min-width: 736px) {
   .border-md { ... }
-  .border-md-0 { ... }
+  .border-md-none { ... }
 }
 
 @media (min-width: 1024px) {
   .border-lg { ... }
-  .border-lg-0 { ... }
+  .border-lg-none { ... }
 }
 
 @media (min-width: 1320px) {
   .border-xl { ... }
-  .border-xl-0 { ... }
+  .border-xl-none { ... }
 }
 
 @media (min-width: 1640px) {
   .border-2xl { ... }
-  .border-2xl-0 { ... }
+  .border-2xl-none { ... }
 }
 
 @media (min-width: 1880px) {
   .border-3xl { ... }
-  .border-3xl-0 { ... }
+  .border-3xl-none { ... }
 }
 ```
 
@@ -636,8 +636,8 @@ $utilities: map-merge(
     "width": null,
 
     // Make an existing utility responsive
-    "border": map-merge(
-      map-get($utilities, "border"),
+    "border-ouds": map-merge(
+      map-get($utilities, "border-ouds"),
       ( responsive: true ),
     ),
 
