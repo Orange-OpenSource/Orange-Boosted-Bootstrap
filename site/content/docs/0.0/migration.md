@@ -14,7 +14,7 @@ toc: true
 ### Layout
 
 - <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl` and `3xl`.
-  - Containers classes: `.container`, `.container-fluid` and `.container-{breakpoint}`
+  - Container class: `.container-fluid`
   - Limiting class: `.container-max-width`
   - Row columns classes: `.row-cols-{number}`
   - Column classes: `.col-{number}`, `.col-{breakpoint}-{number}`,  and `.offset-{breakpoint}-{number}`

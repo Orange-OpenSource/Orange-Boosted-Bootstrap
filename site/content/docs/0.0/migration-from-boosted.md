@@ -59,14 +59,15 @@ Technically, it means that you can get rid of the following things:
   - `xxl` has been renamed `2xl`.
   - `2xs` and `3xl` have been added.
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
-  - `.col-{breakpoint}-{number}`, `.g-col-{}
-  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
+  - `.col-{breakpoint}-{number}`, `.g-col-{}`
+  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}). Thus, other containers have been removed: `.container` and `.container-{breakpoint}`.
   - Default gutter inside grid have been changed to have a fully responsive behavior. It should be a transparent change for you.
   - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|smash|shortest|shorter|short|medium|tall|taller|tallest|spacious|huge|jumbo`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
 
   All responsive classes, helpers and utilities have been changed accordingly to the new breakpoints.
 
-- <span class="badge text-bg-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`) can still be available when <code>$enable-bootstrap-compatibility</code> is on.
+- <span class="badge text-bg-info">Info</span> `.container` and `.container-{breakpoint}` classes can still be available when <code>$enable-bootstrap-compatibility</code> is on.
+- <span class="badge text-bg-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when <code>$enable-bootstrap-compatibility</code> is on.
 
 ## Helpers
 
