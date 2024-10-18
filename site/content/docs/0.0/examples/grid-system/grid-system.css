@@ -1,0 +1,27 @@
+.padding-color {
+  text-align: center;
+  background-color: #ffe2e2;
+  background-clip: content-box;
+}
+
+div.row .padding-color {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+}
+
+div.row .padding-color:first-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff;
+}
+
+div.row .padding-color:last-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+}
+
+.legend {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.column-color {
+  background-color: #ffe2e2;
+}

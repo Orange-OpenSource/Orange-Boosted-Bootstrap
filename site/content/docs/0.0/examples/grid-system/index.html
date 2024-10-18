@@ -1,0 +1,296 @@
+---
+layout: examples
+title: Grid system
+extra_css:
+- "grid-system.css"
+aliases:
+- "/examples/grid-system"
+- "/docs/examples/grid-system"
+---
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="warning-important-accessible">
+    <path
+      d="M499.352 125a93.95 93.95 0 0 1 81.072 46.494L908.91 733.919A93.676 93.676 0 0 1 827.838 874.9H170.867A93.711 93.711 0 0 1 89.8 733.919l.8-1.3v-.1l327.681-561.025A93.83 93.83 0 0 1 499.352 125"/>
+    <path fill="#000"
+          d="M500.352 679.926a47.494 47.494 0 1 0 47.484 47.494 47.53 47.53 0 0 0-47.484-47.494m0-379.949a47.53 47.53 0 0 0-47.483 47.493 28 28 0 0 0 .1 2.9l15.694 258.665v.5c.3 17.1 14.395 23.5 31.689 23.5 17.494 0 31.689-6.6 31.689-24l15.695-258.065.1-.9a23 23 0 0 0 .1-2.6 47.68 47.68 0 0 0-47.583-47.493"/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="info">
+    <path
+      d="M500 75.5c-234.72 0-425 190.28-425 425s190.28 425 425 425 425-190.28 425-425-190.28-425-425-425m0 100a75 75 0 1 1-75 75 75 75 0 0 1 75-75m125 600H400v-25.737l5.287-.167c15.555-.5 27.115-4.919 34.368-13.136 2.576-2.972 6.956-13.1 6.956-47.153v-227.2c0-32.392-4.523-44.6-8.311-49.141-5.359-6.391-16.516-10.147-33.17-11.156l-5.13-.31v-26h175v313.807c0 32.415 8.457 44.618 12.24 49.142 5.34 6.389 15.68 10.142 32.625 11.152l5.135.3v25.6Z"
+      style="fill-rule:evenodd"/>
+  </symbol>
+</svg>
+
+<main style="background-color: #ff9f9f; min-height: 100vh" data-bs-theme="light">
+
+  <div class="container-fluid container-max-width mb-3 pt-3">
+    <h1>OUDS Web grid system example</h1>
+    <p>Use this page to see how containers behave while resizing the browser window.</p>
+    <h2>Legend</h2>
+    <p><span class="bg-light legend border"></span> <span class="align-middle">Containers padding color (#CCCCCC)</span></p>
+    <p><span class="column-color legend border"></span> <span class="align-middle">Columns color (#FFE2E2)</span></p>
+    <p><span class="bg-white legend border"></span> <span class="align-middle">Gutters color (#FFFFFF)</span></p>
+  </div>
+
+  <div class="container-fluid container-max-width mb-3 pt-3">
+    <p class="text-center">
+      Class <code class="text-black">.container-fluid</code> with class <code class="text-black">.container-max-width</code></p>
+    <p class="text-center">
+      <svg role="img" aria-label="Warning" class="text-info" height="1.5rem" width="1.5rem">
+        <use xlink:href="#info"></use>
+      </svg>
+      To be used by default
+    </p>
+  </div>
+  <div class="container-fluid container-max-width mb-3 bg-light">
+    <div class="row" style="min-height: 150px">
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid container-max-width mb-3 pt-3">
+    <p class="text-center">Class <code class="text-black">.container-fluid</code></p>
+    <p class="text-center">
+      <svg role="img" aria-label="Warning" class="text-info" height="1.5rem" width="1.5rem">
+        <use xlink:href="#info"></use>
+      </svg>
+      To be used if more space is needed
+    </p>
+  </div>
+  <div class="container-fluid mb-3 bg-light">
+    <div class="row" style="min-height: 150px">
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+      <div class="col padding-color"></div>
+    </div>
+  </div>
+
+<!-- Kept for debug -->
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-xs</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-xs mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-sm</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-sm mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-md</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-md mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-lg</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-lg mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-xl</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-xl mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-2xl</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-2xl mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="container-fluid container-max-width mb-3 pt-3">-->
+<!--    <p class="text-center">Class <code class="text-black">.container-3xl</code></p>-->
+<!--    <p class="text-center">-->
+<!--      <svg role="img" aria-label="Warning" class="text-warning" height="1.5rem" width="1.5rem">-->
+<!--        <use xlink:href="#warning-important-accessible"></use>-->
+<!--      </svg>-->
+<!--      Should not be used to be compatible with Orange Unified Design System-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="container-3xl mb-3 bg-light">-->
+<!--    <div class="row" style="min-height: 150px">-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--      <div class="col padding-color"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+</main>
