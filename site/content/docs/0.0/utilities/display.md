@@ -71,7 +71,7 @@ To show an element only on a given interval of screen sizes you can combine one 
 | Hidden only on lg | `.d-lg-none .d-xl-block` |
 | Hidden only on xl | `.d-xl-none .d-2xl-block` |
 | Hidden only on 2xl | `.d-2xl-none .d-3xl-block` |
-| Hidden only on 3xl | `.d-2xl-none .d-3xl-block` |
+| Hidden only on 3xl | `.d-3xl-none` |
 | Visible only on 2xs | `.d-block .d-xs-none` |
 | Visible only on xs | `.d-none .d-xs-block .d-sm-none` |
 | Visible only on sm | `.d-none .d-sm-block .d-md-none` |

@@ -20,7 +20,7 @@ toc: true
 
 - **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
-- **Don't use too small columns for the main grid.** In order to respect the design system, on main site grid, you should only use columns with multiple of **3** for small breakpoints (`2xs`, `xs` and `sm`). You also should use multiple of **2** for medium breakpoints (`2xs`, `xs`, `sm`, `md` and `lg`).
+- **Don't use columns that are too small for the main grid.** To align with the design system, for the main site grid, you should only use columns in multiples of **3** for smaller breakpoints (`2xs`, `xs`, and `sm`). For medium and larger breakpoints (`md` and `lg`), use columns in multiples of **2**.
 
 {{< bootstrap-compatibility >}}
 
@@ -272,7 +272,7 @@ $utilities: map-merge(
 
 ### Offsetting columns
 
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{< docsref "/utilities/spacing" >}}). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+You can offset grid columns with <!--in two ways: -->our responsive `.offset-` grid classes<!-- and our [margin utilities]({{< docsref "/utilities/spacing" >}})-->. Grid classes are sized to match columns<!-- while margins are more useful for quick layouts where the width of the offset is variable-->.
 
 #### Offset classes
 
@@ -309,7 +309,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 </div>
 {{< /example >}}
 
-#### Margin utilities
+<!-- #### Margin utilities
 
 With flexbox grids, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
 
@@ -328,7 +328,7 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
     <div class="col-auto">.col-auto</div>
   </div>
 </div>
-{{< /example >}}
+{{< /example >}} -->
 
 ## Standalone column classes
 

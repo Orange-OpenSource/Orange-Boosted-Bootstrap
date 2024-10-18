@@ -16,7 +16,7 @@ OUDS Web comes with three different containers:
 
 - `.container`, which sets a static `max-width` between each responsive breakpoint. **This container should not be used for Orange sites.**
 - `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one.
-- `.container-fluid`, which sets the `width: 100%` at all breakpoints. **`.container-fluid` is the container recommended for Orange sites in order to be compliant with the Orange brand. It should be associated to `.max-width-public-website` or `.max-width-specific-tools`** (See [Fluid containers](#fluid-containers) for more information).
+- `.container-fluid`, which sets the `width: 100%` at all breakpoints. **`.container-fluid` is the container recommended for Orange sites in order to be compliant with the Orange brand. It should be associated to `.container-max-width`** (See [Fluid containers](#fluid-containers) for more information).
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
@@ -89,27 +89,32 @@ Use `.container-fluid` for a full width container with minimum margins, spanning
 </div>
 ```
 
-This container is the default one to use, associated or not with one of the following class:
-- `.max-width-public-website` to be used for public websites. After breakpoint `2xl`, this class:
-  - limits the container width to 1680px (including margins),
-  - limits container margin to 80px each side,
-  - limits gutters width to 32px.
-- `.max-width-specific-tools` to be used for specific tools which need more horizontal space. After breakpoint `3xl`, this class:
-  - limits the container width to 1920px (including margins).
+### Default max width
 
-They are defined as follows:
+This container is the default one to use, by default associated with the class `.container-max-width`. After breakpoint `2xl`, this class:
+- limits the container width to 1680px (including margins),
+- limits container margin to 80px each side,
+- limits gutters width to 32px.
+
+It is defined as follows:
 
 {{< scss-docs name="containers-max" file="scss/_containers.scss" >}}
 
-Comparison between `.container-fluid`, `.container-fluid` width `.max-width-public-website` and `.container-fluid` width `.max-width-specific-tools` can be seen in the following table:
+Comparison between `.container-fluid` and `.container-fluid` width `.container-max-width` can be seen in the following table:
 
 {{< bs-table "table" >}}
 |  | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- |
 | `.container-fluid` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 112px)`</li><li>Margin `2 * 112px`</li><li>Gutter `40px`</li></ul> |
-| `.container-fluid`<br>with `.max-width-public-website` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li><b>Max-width `1520px`</b></li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li><b>Width `1520px`</b></li><li><b>Margin `2 * 80px`</b></li><li><b>Gutter `32px`</b></li></ul> |
-| `.container-fluid`<br>with `.max-width-specific-tools` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 112px)`</li><li><b>Max-width `1696px`</b></li><li>Margin `2 * 112px`</li><li>Gutter `40px`</li></ul> |
+| `.container-fluid`<br>with `.container-max-width` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li><b>Max-width `1520px`</b></li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li><b>Width `1520px`</b></li><li><b>Margin `2 * 80px`</b></li><li><b>Gutter `32px`</b></li></ul> |
 {{< /bs-table >}}
+
+### Custom max width
+
+You can set a custom maximum width for the fluid container by overloading `$ouds-grid-container-max-width` before importing our OUDS scss files.
+
+This will affect all containers that have `.container-max-width` and will make sure that your layout does not exceed this value.
+When going up the breakpoint above `$ouds-grid-container-max-width` value, the container margins and gutter values are kept as they are.
 
 ## CSS
 

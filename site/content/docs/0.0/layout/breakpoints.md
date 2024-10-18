@@ -78,11 +78,11 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 
 // Usage
 
-// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+// Example: Hide starting at `min-width: 0`, and then show at the `xs` breakpoint
 .custom-class {
   display: none;
 }
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(xs) {
   .custom-class {
     display: block;
   }
