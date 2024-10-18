@@ -194,11 +194,6 @@ $grid-gutter-widths: (
 ) !default;
 // scss-docs-end grid-gutters
 
-@if $enable-bootstrap-compatibility {
-  // Copy 2xl breakpoint into xxl breakpoint
-  $gutters: map-merge($gutters, ("xxl": map-get($gutters, "2xl")));
-}
-
 // scss-docs-start gutters
 $gutters: (
   none: 0,
@@ -216,6 +211,10 @@ $gutters: (
 ) !default;
 // scss-docs-end gutters
 
+@if $enable-bootstrap-compatibility {
+  // Add Bootstrap gutters
+  $gutters: map-merge($gutters, $spacers);
+}
 // End mod
 
 $alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod
