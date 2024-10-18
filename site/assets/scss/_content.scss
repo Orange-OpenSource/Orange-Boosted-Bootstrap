@@ -51,7 +51,7 @@
       line-height: $line-height-base;
     }
   }
-
+// TODO LM
   > details {
     padding: 0 10px; // static even when zoomed
     font-size: 1rem;
@@ -109,7 +109,7 @@
     }
   }
 }
-
+// TODO LM
 .bd-title {
   --bs-heading-color: var(--bs-emphasis-color);
   @include font-size(3rem);

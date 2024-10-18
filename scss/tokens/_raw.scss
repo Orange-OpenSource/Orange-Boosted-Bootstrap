@@ -107,6 +107,82 @@ $ouds-elevation-y-500:  12px !default;
 // $ouds-elevation-y-600:  20px !default;
 // scss-docs-end ouds-raw-elevation
 
+// Font
+
+// scss-docs-start ouds-raw-font
+$ouds-font-family-brand-default: "Helvetica Neue" !default;
+$ouds-font-family-brand-tv: "Helvetica Neue LT" !default;
+$ouds-font-family-monospace-consolas: "Consolas" !default; // TODO LM: Ask for this specific font
+$ouds-font-family-monospace-courier-new: "Courier New" !default; // TODO LM: Ask to remove this one (default monosapce font is better than this one imo)
+$ouds-font-family-monospace-menlo: "Menlo" !default;
+$ouds-font-family-monospace-monaco: "Monaco" !default;
+$ouds-font-family-monospace-sf-mono: "SF Mono" !default;
+$ouds-font-family-system-arial: "Arial" !default;
+$ouds-font-family-system-helvetica: "Helvetica" !default;
+// $ouds-font-family-system-noto-sans: "Noto Sans" !default;
+$ouds-font-family-system-roboto: "Roboto" !default;
+$ouds-font-family-system-sf-pro: "SF Pro" !default;
+$ouds-font-letter-spacing-150: .18px !default; // TODO LM: Ask for px in tokenator.
+// $ouds-font-letter-spacing-175: .19px !default;
+$ouds-font-letter-spacing-200: .17px !default; // TODO LM: Weird value compared to the 5 positive ones.
+$ouds-font-letter-spacing-250: .2px !default;
+$ouds-font-letter-spacing-300: .18px !default;
+$ouds-font-letter-spacing-350: 0 !default;
+$ouds-font-letter-spacing-450: -.12px !default;
+$ouds-font-letter-spacing-550: -.28px !default;
+$ouds-font-letter-spacing-650: -.32px !default;
+$ouds-font-letter-spacing-750: -.36px !default;
+$ouds-font-letter-spacing-850: -.4px !default;
+// $ouds-font-letter-spacing-950: -.55px !default;
+$ouds-font-letter-spacing-1050: -.6px !default;
+// $ouds-font-letter-spacing-1150: -.65px !default;
+$ouds-font-letter-spacing-1250: -.7px !default;
+$ouds-font-letter-spacing-1450: -.96px !default;
+$ouds-font-letter-spacing-1850: -1.08px !default;
+$ouds-font-line-height-250: 16px !default;
+$ouds-font-line-height-350: 20px !default;
+$ouds-font-line-height-450: 24px !default;
+$ouds-font-line-height-550: 28px !default;
+$ouds-font-line-height-650: 32px !default;
+$ouds-font-line-height-750: 36px !default;
+$ouds-font-line-height-850: 40px !default;
+$ouds-font-line-height-950: 44px !default;
+$ouds-font-line-height-1050: 48px !default;
+// $ouds-font-line-height-1150: 52px !default;
+$ouds-font-line-height-1250: 56px !default;
+// $ouds-font-line-height-1350: 60px !default;
+$ouds-font-line-height-1450: 64px !default;
+$ouds-font-line-height-1850: 72px !default;
+$ouds-font-line-height-2050: 80px !default;
+$ouds-font-size-150: 12px !default;
+// $ouds-font-size-175: 13px !default;
+$ouds-font-size-200: 14px !default;
+$ouds-font-size-250: 16px !default;
+$ouds-font-size-300: 18px !default;
+$ouds-font-size-350: 20px !default;
+$ouds-font-size-450: 24px !default;
+$ouds-font-size-550: 28px !default;
+$ouds-font-size-650: 32px !default;
+$ouds-font-size-750: 36px !default;
+$ouds-font-size-850: 40px !default;
+// $ouds-font-size-950: 44px !default;
+$ouds-font-size-1050: 48px !default;
+// $ouds-font-size-1150: 52px !default;
+$ouds-font-size-1250: 56px !default;
+$ouds-font-size-1450: 64px !default;
+$ouds-font-size-1850: 72px !default;
+// $ouds-font-weight-100: 100 !default;
+// $ouds-font-weight-200: 200 !default;
+// $ouds-font-weight-300: 300 !default;
+$ouds-font-weight-400: 400 !default;
+// $ouds-font-weight-500: 500 !default;
+// $ouds-font-weight-600: 600 !default;
+$ouds-font-weight-700: 700 !default;
+// $ouds-font-weight-800: 800 !default;
+// $ouds-font-weight-900: 900 !default;
+// $ouds-font-weight-950: 950 !default;
+// scss-docs-end ouds-raw-font
+
 // Grid
 
 // scss-docs-start ouds-raw-grid

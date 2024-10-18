@@ -107,6 +107,148 @@ $ouds-elevation-y-sticky-emphasized:          $ouds-elevation-y-300 !default;
 $ouds-elevation-y-sticky-navigation-scrolled: $ouds-elevation-y-300 !default;
 // scss-docs-end ouds-semantic-elevation
 
+// Font
+
+// scss-docs-start ouds-semantic-font
+$ouds-font-family-tv: $ouds-font-family-brand-tv !default;
+$ouds-font-family-web: $ouds-font-family-brand-default !default;
+$ouds-font-letter-spacing-body-large-desktop: $ouds-font-letter-spacing-300 !default;
+$ouds-font-letter-spacing-body-large-mobile: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-body-large-tablet: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-body-medium-desktop: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-body-medium-mobile: $ouds-font-letter-spacing-200 !default;
+$ouds-font-letter-spacing-body-medium-tablet: $ouds-font-letter-spacing-200 !default;
+$ouds-font-letter-spacing-body-small-desktop: $ouds-font-letter-spacing-200 !default;
+$ouds-font-letter-spacing-body-small-mobile: $ouds-font-letter-spacing-150 !default;
+$ouds-font-letter-spacing-body-small-tablet: $ouds-font-letter-spacing-150 !default;
+$ouds-font-letter-spacing-code-medium: $ouds-font-letter-spacing-200 !default;
+$ouds-font-letter-spacing-code-small: $ouds-font-letter-spacing-150 !default;
+$ouds-font-letter-spacing-display-large-desktop: $ouds-font-letter-spacing-1850 !default;
+$ouds-font-letter-spacing-display-large-mobile: $ouds-font-letter-spacing-850 !default;
+$ouds-font-letter-spacing-display-large-tablet: $ouds-font-letter-spacing-1450 !default;
+$ouds-font-letter-spacing-display-medium-desktop: $ouds-font-letter-spacing-1250 !default;
+$ouds-font-letter-spacing-display-medium-mobile: $ouds-font-letter-spacing-750 !default;
+$ouds-font-letter-spacing-display-medium-tablet: $ouds-font-letter-spacing-1050 !default;
+$ouds-font-letter-spacing-display-small-desktop: $ouds-font-letter-spacing-1050 !default;
+$ouds-font-letter-spacing-display-small-mobile: $ouds-font-letter-spacing-650 !default;
+$ouds-font-letter-spacing-display-small-tablet: $ouds-font-letter-spacing-850 !default;
+$ouds-font-letter-spacing-heading-large-desktop: $ouds-font-letter-spacing-650 !default;
+$ouds-font-letter-spacing-heading-large-mobile: $ouds-font-letter-spacing-450 !default;
+$ouds-font-letter-spacing-heading-large-tablet: $ouds-font-letter-spacing-550 !default;
+$ouds-font-letter-spacing-heading-medium-desktop: $ouds-font-letter-spacing-550 !default;
+$ouds-font-letter-spacing-heading-medium-mobile: $ouds-font-letter-spacing-350 !default;
+$ouds-font-letter-spacing-heading-medium-tablet: $ouds-font-letter-spacing-450 !default;
+$ouds-font-letter-spacing-heading-small-desktop: $ouds-font-letter-spacing-450 !default;
+$ouds-font-letter-spacing-heading-small-mobile: $ouds-font-letter-spacing-300 !default;
+$ouds-font-letter-spacing-heading-small-tablet: $ouds-font-letter-spacing-350 !default;
+$ouds-font-letter-spacing-heading-xlarge-desktop: $ouds-font-letter-spacing-850 !default;
+$ouds-font-letter-spacing-heading-xlarge-mobile: $ouds-font-letter-spacing-550 !default;
+$ouds-font-letter-spacing-heading-xlarge-tablet: $ouds-font-letter-spacing-750 !default;
+$ouds-font-letter-spacing-heading-xsmall-desktop: $ouds-font-letter-spacing-350 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-letter-spacing-heading-xsmall-mobile: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-heading-xsmall-tablet: $ouds-font-letter-spacing-300 !default; // TODO LM: Until there
+$ouds-font-letter-spacing-label-large: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-label-medium: $ouds-font-letter-spacing-200 !default;
+$ouds-font-letter-spacing-label-small: $ouds-font-letter-spacing-150 !default;
+$ouds-font-letter-spacing-label-xlarge: $ouds-font-letter-spacing-300 !default;
+$ouds-font-line-height-body-large-desktop: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-body-large-mobile: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-body-large-tablet: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-body-medium-desktop: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-body-medium-mobile: $ouds-font-line-height-350 !default;
+$ouds-font-line-height-body-medium-tablet: $ouds-font-line-height-350 !default;
+$ouds-font-line-height-body-small-desktop: $ouds-font-line-height-350 !default;
+$ouds-font-line-height-body-small-mobile: $ouds-font-line-height-250 !default;
+$ouds-font-line-height-body-small-tablet: $ouds-font-line-height-250 !default;
+$ouds-font-line-height-code-medium: $ouds-font-line-height-350 !default;
+$ouds-font-line-height-code-small: $ouds-font-line-height-250 !default;
+$ouds-font-line-height-display-large-desktop: $ouds-font-line-height-2050 !default;
+$ouds-font-line-height-display-large-mobile: $ouds-font-line-height-1050 !default;
+$ouds-font-line-height-display-large-tablet: $ouds-font-line-height-1850 !default;
+$ouds-font-line-height-display-medium-desktop: $ouds-font-line-height-1450 !default;
+$ouds-font-line-height-display-medium-mobile: $ouds-font-line-height-950 !default;
+$ouds-font-line-height-display-medium-tablet: $ouds-font-line-height-1250 !default;
+$ouds-font-line-height-display-small-desktop: $ouds-font-line-height-1250 !default;
+$ouds-font-line-height-display-small-mobile: $ouds-font-line-height-850 !default;
+$ouds-font-line-height-display-small-tablet: $ouds-font-line-height-1050 !default;
+$ouds-font-line-height-heading-large-desktop: $ouds-font-line-height-850 !default;
+$ouds-font-line-height-heading-large-mobile: $ouds-font-line-height-650 !default;
+$ouds-font-line-height-heading-large-tablet: $ouds-font-line-height-750 !default;
+$ouds-font-line-height-heading-medium-desktop: $ouds-font-line-height-750 !default;
+$ouds-font-line-height-heading-medium-mobile: $ouds-font-line-height-550 !default;
+$ouds-font-line-height-heading-medium-tablet: $ouds-font-line-height-650 !default;
+$ouds-font-line-height-heading-small-desktop: $ouds-font-line-height-650 !default;
+$ouds-font-line-height-heading-small-mobile: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-heading-small-tablet: $ouds-font-line-height-550 !default;
+$ouds-font-line-height-heading-xlarge-desktop: $ouds-font-line-height-1050 !default;
+$ouds-font-line-height-heading-xlarge-mobile: $ouds-font-line-height-750 !default;
+$ouds-font-line-height-heading-xlarge-tablet: $ouds-font-line-height-950 !default;
+$ouds-font-line-height-heading-xsmall-desktop: $ouds-font-line-height-550 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-line-height-heading-xsmall-mobile: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-heading-xsmall-tablet: $ouds-font-line-height-450 !default; // TODO LM: Until there
+$ouds-font-line-height-label-large: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-label-medium: $ouds-font-line-height-350 !default;
+$ouds-font-line-height-label-small: $ouds-font-line-height-250 !default;
+$ouds-font-line-height-label-xlarge: $ouds-font-line-height-450 !default;
+$ouds-font-size-body-large-desktop: $ouds-font-size-300 !default;
+$ouds-font-size-body-large-mobile: $ouds-font-size-250 !default;
+$ouds-font-size-body-large-tablet: $ouds-font-size-250 !default;
+$ouds-font-size-body-medium-desktop: $ouds-font-size-250 !default;
+$ouds-font-size-body-medium-mobile: $ouds-font-size-200 !default;
+$ouds-font-size-body-medium-tablet: $ouds-font-size-200 !default;
+$ouds-font-size-body-small-desktop: $ouds-font-size-200 !default;
+$ouds-font-size-body-small-mobile: $ouds-font-size-150 !default;
+$ouds-font-size-body-small-tablet: $ouds-font-size-150 !default;
+$ouds-font-size-code-medium: $ouds-font-size-200 !default;
+$ouds-font-size-code-small: $ouds-font-size-150 !default;
+$ouds-font-size-display-large-desktop: $ouds-font-size-1850 !default;
+$ouds-font-size-display-large-mobile: $ouds-font-size-850 !default;
+$ouds-font-size-display-large-tablet: $ouds-font-size-1450 !default;
+$ouds-font-size-display-medium-desktop: $ouds-font-size-1250 !default;
+$ouds-font-size-display-medium-mobile: $ouds-font-size-750 !default;
+$ouds-font-size-display-medium-tablet: $ouds-font-size-1050 !default;
+$ouds-font-size-display-small-desktop: $ouds-font-size-1050 !default;
+$ouds-font-size-display-small-mobile: $ouds-font-size-650 !default;
+$ouds-font-size-display-small-tablet: $ouds-font-size-850 !default;
+$ouds-font-size-heading-large-desktop: $ouds-font-size-650 !default;
+$ouds-font-size-heading-large-mobile: $ouds-font-size-450 !default;
+$ouds-font-size-heading-large-tablet: $ouds-font-size-550 !default;
+$ouds-font-size-heading-medium-desktop: $ouds-font-size-550 !default;
+$ouds-font-size-heading-medium-mobile: $ouds-font-size-350 !default;
+$ouds-font-size-heading-medium-tablet: $ouds-font-size-450 !default;
+$ouds-font-size-heading-small-desktop: $ouds-font-size-450 !default;
+$ouds-font-size-heading-small-mobile: $ouds-font-size-300 !default;
+$ouds-font-size-heading-small-tablet: $ouds-font-size-350 !default;
+$ouds-font-size-heading-xlarge-desktop: $ouds-font-size-850 !default;
+$ouds-font-size-heading-xlarge-mobile: $ouds-font-size-550 !default;
+$ouds-font-size-heading-xlarge-tablet: $ouds-font-size-750 !default;
+$ouds-font-size-heading-xsmall-desktop: $ouds-font-size-350 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-size-heading-xsmall-mobile: $ouds-font-size-250 !default;
+$ouds-font-size-heading-xsmall-tablet: $ouds-font-size-300 !default; // TODO LM: Until there
+$ouds-font-size-label-large: $ouds-font-size-250 !default;
+$ouds-font-size-label-medium: $ouds-font-size-200 !default;
+$ouds-font-size-label-small: $ouds-font-size-150 !default;
+$ouds-font-size-label-xlarge: $ouds-font-size-300 !default;
+// $ouds-font-weight-tv-code: $ouds-font-weight-400 !default;
+// $ouds-font-weight-tv-default: $ouds-font-weight-400 !default; // TODO LM: Should ask tokenator if we can remove -tv ?
+// $ouds-font-weight-tv-strong: $ouds-font-weight-700 !default;
+// $ouds-font-weight-web-code: $ouds-font-weight-400 !default;
+$ouds-font-weight-web-default: $ouds-font-weight-400 !default;
+$ouds-font-weight-web-strong: $ouds-font-weight-700 !default;
+// $ouds-font-weight-tv-body-default: $ouds-font-weight-tv-default !default;
+// $ouds-font-weight-tv-body-strong: $ouds-font-weight-tv-strong !default;
+// $ouds-font-weight-tv-display: $ouds-font-weight-tv-strong !default;
+// $ouds-font-weight-tv-heading: $ouds-font-weight-tv-strong !default;
+// $ouds-font-weight-tv-label-default: $ouds-font-weight-tv-default !default;
+// $ouds-font-weight-tv-label-strong: $ouds-font-weight-tv-strong !default;
+// $ouds-font-weight-web-body-default: $ouds-font-weight-web-default !default;
+// $ouds-font-weight-web-body-strong: $ouds-font-weight-web-strong !default;
+// $ouds-font-weight-web-display: $ouds-font-weight-web-strong !default;
+$ouds-font-weight-web-heading: $ouds-font-weight-web-strong !default;
+// $ouds-font-weight-web-label-default: $ouds-font-weight-web-default !default;
+// $ouds-font-weight-web-label-strong: $ouds-font-weight-web-strong !default;
+// scss-docs-end ouds-semantic-font
+
 // Grid
 
 // scss-docs-start ouds-semantic-grid

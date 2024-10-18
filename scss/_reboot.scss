@@ -61,7 +61,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-body {
+body { // TODO LM: Check for any modif
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
@@ -134,7 +134,6 @@ hr {
 %heading {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
-  @include font-size($font-size-base);  // OUDS mod
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -142,7 +141,6 @@ hr {
   color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // OUDS mod
   -webkit-font-smoothing: antialiased;  // OUDS mod
   -moz-osx-font-smoothing: grayscale;   // OUDS mod
   text-rendering: optimizelegibility;   // OUDS mod
@@ -150,27 +148,32 @@ hr {
 
 h1 {
   @extend %heading;
-  @include font-size($h4-font-size);
-  line-height: $h4-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h4-spacing;
+  @extend %heading-xlarge;
 }
 
-h2,
+h2 {
+  @extend %heading;
+  @extend %heading-large;
+}
+
 h3 {
   @extend %heading;
-  @include font-size($h5-font-size);
-  line-height: $h5-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h5-spacing;
+  @extend %heading-medium;
 }
 
-h4,
-h5,
+h4 {
+  @extend %heading;
+  @extend %heading-small;
+}
+
+h5 {
+  @extend %heading;
+  @extend %heading-xsmall;
+}
+
 h6 {
   @extend %heading;
+  @extend %body-large; // Makes sense for me to have the smallest title the same font-size as the largest body since it's Bold and spaced correctly
 }
 
 
@@ -291,7 +294,7 @@ blockquote {
 //
 // Add the correct font weight in Chrome, Edge, and Safari
 
-b,
+b, // TODO LM
 em, // OUDS mod
 strong {
   font-weight: $font-weight-bold; // OUDS mod: ensure 700
@@ -303,11 +306,7 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  @include font-size($small-font-size);
-  // OUDS mod
-  font-weight: $font-weight-normal;
-  line-height: $line-height-sm;
-  // End mod
+  @extend %body-small;
 }
 
 
@@ -324,7 +323,7 @@ mark {
 //
 // Prevent `sub` and `sup` elements from affecting the line height in
 // all browsers.
-
+// TODO LM
 sub,
 sup {
   position: relative;
@@ -364,7 +363,7 @@ a:not([href]):not([class]) {
 
 
 // Code
-
+// TODO LM
 var, // OUDS mod
 pre,
 code,
@@ -377,7 +376,7 @@ samp {
 // 1. Remove browser default top margin
 // 2. Reset browser default of `1em` to use `rem`s
 // 3. Don't allow content to break outside
-
+// TODO LM
 pre {
   display: block;
   margin-top: 0; // 1
@@ -394,7 +393,7 @@ pre {
     word-break: normal;
   }
 }
-
+// TODO LM
 var, // OUDS mod
 code {
   @include font-size($code-font-size);
@@ -408,7 +407,7 @@ code {
     color: inherit;
   }
 }
-
+// TODO LM
 kbd {
   padding: $kbd-padding-y $kbd-padding-x;
   @include font-size($kbd-font-size);
@@ -457,6 +456,7 @@ table {
   border-collapse: collapse;
 }
 
+// TODO LM
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
@@ -498,6 +498,7 @@ th {
 //
 // 1. Allow labels to use `margin` for spacing.
 
+// TODO LM
 label {
   display: inline-block; // 1
   font-weight: $form-label-font-weight; // OUDS mod
@@ -526,6 +527,7 @@ button:focus:not(:focus-visible):not(.focus-ring) {
 
 // 1. Remove the margin in Firefox and Safari
 
+// TODO LM
 input,
 button,
 select,
@@ -621,6 +623,7 @@ fieldset {
 // 2. Fix wrapping bug.
 //    See https://github.com/twbs/bootstrap/issues/29712
 
+// TODO LM
 legend {
   float: left; // 1
   width: 100%;

@@ -709,10 +709,8 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // scss-docs-start font-variables
-// stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-// stylelint-enable value-keyword-case
+$font-family-sans-serif:      $ouds-font-family-sans-serif-stack !default;
+$font-family-monospace:       $ouds-font-family-monospace-stack !default;
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
@@ -723,38 +721,36 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;  // 14px
-$font-size-lg:                $font-size-base * 1.125 !default; // 18px
+$font-size-base:              $ouds-font-size-body-medium-desktop !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $ouds-font-size-body-small-desktop !default;  // 14px
+$font-size-lg:                $ouds-font-size-body-large-desktop !default; // 18px
 $font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
 
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
+$font-weight-normal:          $ouds-font-weight-web-default !default;
+$font-weight-medium:          null !default;
+$font-weight-semibold:        null !default;
+$font-weight-bold:            $ouds-font-weight-web-strong !default;
 $font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-// stylelint-disable function-disallowed-list
-$line-height-base:            calc(18 / 16) !default;
-$line-height-sm:              calc(16 / 14) !default;
-$line-height-lg:              calc(30 / 16) !default;
-// stylelint-enable function-disallowed-list
+$line-height-base:            $ouds-font-line-height-body-medium !default;
+$line-height-sm:              $ouds-font-line-height-body-small !default;
+$line-height-lg:              $ouds-font-line-height-body-large !default;
 
 $line-length-sm:              40ch !default;
 $line-length-md:              80ch !default;
 
-$letter-spacing-base:         $spacer * -.005 !default; // -0.1px
+$letter-spacing-base:         $ouds-font-letter-spacing-body-medium-desktop !default;
 
-$h1-font-size:                $font-size-base * 2.125 !default;   // 34px
-$h2-font-size:                $font-size-base * 1.875 !default;   // 30px
-$h3-font-size:                $font-size-base * 1.5 !default;     // 24px
-$h4-font-size:                $font-size-xlg !default;            // 20px
-$h5-font-size:                $font-size-lg !default;             // 18px
-$h6-font-size:                $font-size-base !default;           // 16px
+$h1-font-size:                $ouds-font-size-heading-xlarge-desktop !default;
+$h2-font-size:                $ouds-font-size-heading-large-desktop !default;
+$h3-font-size:                $ouds-font-size-heading-medium-desktop !default;
+$h4-font-size:                $ouds-font-size-heading-small-desktop !default;
+$h5-font-size:                $ouds-font-size-heading-xsmall-desktop !default;
+$h6-font-size:                $ouds-font-size-body-large-desktop !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -769,52 +765,33 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start letter-spacing
-$h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
-$h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
-$mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
-$h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
-$h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
-$h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
-$h6-spacing:                  $letter-spacing-base !default;
 // scss-docs-end letter-spacing
 
-// stylelint-disable function-disallowed-list
 // scss-docs-start line-height
-$h1-line-height:              1 !default;
-$h2-line-height:              calc(32 / 30) !default;
-$h3-line-height:              calc(26 / 24) !default;
-$h4-line-height:              calc(22 / 20) !default;
-$h5-line-height:              calc(20 / 18) !default;
-$h6-line-height:              $line-height-base !default;
 // scss-docs-end line-height
-// stylelint-enable function-disallowed-list
 
 // scss-docs-start headings-variables
 $headings-margin-bottom:      $spacer !default; // OUDS mod
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        700 !default;
-$headings-line-height:        $h6-line-height !default;
+$headings-font-weight:        $ouds-font-weight-web-heading !default;
+$headings-line-height:        null !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
-$display1-size:               $font-size-xlg * 3 !default;        // 60px
-$display2-size:               $font-size-xlg * 2.5 !default;      // 50px
-$display3-size:               $font-size-xlg * 2 !default;        // 40px
-$display4-size:               $h1-font-size !default;             // 34px
-$display1-spacing:            $letter-spacing-base * 20 !default; // -2px
-$display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
-$display3-spacing:            $h1-spacing !default;               // -1px
-$display4-spacing:            $h1-spacing !default;               // -1px
-$display-line-height:         $h1-line-height !default;
+$display-font-sizes: (
+  1: $,
+  2: 4.5rem,
+  3: 4rem
+) !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-xlg !default;
-$lead-font-weight:            400 !default;
-$lead-line-height:            1.5 !default;
-$lead-letter-spacing:         $letter-spacing-base * 4 !default;
+// $lead-font-size:              $font-size-xlg !default;
+// $lead-font-weight:            400 !default;
+// $lead-line-height:            1.5 !default;
+// $lead-letter-spacing:         $letter-spacing-base * 4 !default;
 
 $small-font-size:             .875rem !default;
 

@@ -52,7 +52,7 @@
     }
   }
 }
-
+// TODO LM
 @include tac("DisclaimerAlert") {
   font-size: $font-size-sm;
 }
@@ -79,7 +79,7 @@
   border: 0;
   opacity: $modal-backdrop-opacity;
 }
-
+// TODO LM
 @include tac("H1", true) {
   margin-bottom: $spacer;
   font-size: $h2-font-size;
@@ -89,12 +89,12 @@
 @include tac("H2", true) {
   padding-top: $spacer / 10;
   font-size: $h4-font-size;
-  letter-spacing: $h4-spacing;
+  letter-spacing: -0.4px;
 }
 
 @include tac("H3", true) {
   font-size: $h6-font-size;
-  letter-spacing: $h6-spacing;
+  letter-spacing: -0.1px;
 }
 
 @include tac("Info") {
@@ -147,7 +147,7 @@
   color: $white;
   background-color: $black;
 }
-
+// TODO LM
 @include tac("Allow", true) {
   @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
 

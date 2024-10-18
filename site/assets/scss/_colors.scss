@@ -1,6 +1,7 @@
 //
 // Docs color palette classes
 //
+// TODO LM
 
 @each $color, $value in map-merge($colors, ("gray-500": $gray-500)) {
   .swatch-#{$color} {

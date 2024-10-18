@@ -14,3 +14,8 @@ $ouds-elevation-sticky-emphasized: $ouds-elevation-x-sticky-emphasized $ouds-ele
 $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled $ouds-elevation-color-sticky-navigation-scrolled !default;
 $ouds-elevation-focus: $ouds-elevation-x-focus $ouds-elevation-y-focus $ouds-elevation-blur-focus $ouds-elevation-spread-focus $ouds-elevation-color-focus !default;
 // scss-docs-end ouds-composite-elevation
+
+// scss-docs-start ouds-composite-font
+$ouds-font-family-sans-serif-stack: $ouds-font-family-web, $ouds-font-family-tv, $ouds-font-family-system-helvetica, $ouds-font-family-system-arial, $ouds-font-family-system-sf-pro, $ouds-font-family-system-roboto, sans-serif !default; // TODO LM: Do or check RTL as well
+$ouds-font-family-monospace-stack: $ouds-font-family-monospace-sf-mono, $ouds-font-family-monospace-menlo, $ouds-font-family-monospace-monaco, $ouds-font-family-monospace-consolas, $ouds-font-family-monospace-courier-new, monospace !default;
+// scss-docs-end ouds-composite-font

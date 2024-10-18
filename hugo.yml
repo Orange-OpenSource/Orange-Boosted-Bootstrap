@@ -1,4 +1,5 @@
 languageCode:                       "en"
+timeout:                            600000
 title:                              "OUDS Web"
 baseURL:                            "https://web.unified-design-system.orange.com"
 
