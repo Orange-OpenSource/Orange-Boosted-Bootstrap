@@ -26,7 +26,6 @@ You can <!--also -->quickly add or remove a shadow with our `box-shadow` utility
 <div class="shadow-sticky-default p-3 mb-5 bg-body-tertiary">Sticky default shadow</div>
 <div class="shadow-sticky-emphasized p-3 mb-5 bg-body-tertiary">Sticky emphasized shadow</div>
 <div class="shadow-sticky-navigation-scrolled p-3 mb-5 bg-body-tertiary">Sticky navigation shadow</div>
-<div class="shadow-focus p-3 mb-5 bg-body-tertiary">Focus shadow</div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

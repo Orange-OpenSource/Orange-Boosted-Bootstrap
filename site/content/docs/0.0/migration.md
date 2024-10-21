@@ -37,7 +37,7 @@ toc: true
 #### Shadow
 
 - <span class="badge text-bg-success">New</span> Shadows utilities:
-  `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized`, `shadow-sticky-navigation-scrolled` and `shadow-focus`.
+  `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized` and `shadow-sticky-navigation-scrolled`.
 
 ### CSS and Sass variables
 
@@ -89,7 +89,6 @@ toc: true
       <li><code>$ouds-elevation-blur-400</code></li>
       <li><code>$ouds-elevation-blur-600</code></li>
       <li><code>$ouds-elevation-blur-drag</code></li>
-      <li><code>$ouds-elevation-blur-focus</code></li>
       <li><code>$ouds-elevation-blur-none</code></li>
       <li><code>$ouds-elevation-blur-overlay-default</code></li>
       <li><code>$ouds-elevation-blur-overlay-emphasized</code></li>
@@ -98,7 +97,6 @@ toc: true
       <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-elevation-color-drag</code></li>
-      <li><code>$ouds-elevation-color-focus</code></li>
       <li><code>$ouds-elevation-color-none</code></li>
       <li><code>$ouds-elevation-color-overlay-default</code></li>
       <li><code>$ouds-elevation-color-overlay-emphasized</code></li>
@@ -109,7 +107,6 @@ toc: true
       <li><code>$ouds-elevation-spread-0</code></li>
       <li><code>$ouds-elevation-spread-300</code></li>
       <li><code>$ouds-elevation-spread-drag</code></li>
-      <li><code>$ouds-elevation-spread-focus</code></li>
       <li><code>$ouds-elevation-spread-n100</code></li>
       <li><code>$ouds-elevation-spread-n300</code></li>
       <li><code>$ouds-elevation-spread-none</code></li>
@@ -121,7 +118,6 @@ toc: true
       <li><code>$ouds-elevation-spread-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-elevation-x-0</code></li>
       <li><code>$ouds-elevation-x-drag</code></li>
-      <li><code>$ouds-elevation-x-focus</code></li>
       <li><code>$ouds-elevation-x-none</code></li>
       <li><code>$ouds-elevation-x-overlay-default</code></li>
       <li><code>$ouds-elevation-x-overlay-emphasized</code></li>
@@ -135,7 +131,6 @@ toc: true
       <li><code>$ouds-elevation-y-300</code></li>
       <li><code>$ouds-elevation-y-500</code></li>
       <li><code>$ouds-elevation-y-drag</code></li>
-      <li><code>$ouds-elevation-y-focus</code></li>
       <li><code>$ouds-elevation-y-none</code></li>
       <li><code>$ouds-elevation-y-overlay-default</code></li>
       <li><code>$ouds-elevation-y-overlay-emphasized</code></li>

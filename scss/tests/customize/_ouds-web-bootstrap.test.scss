@@ -621,10 +621,6 @@ $utilities: ();
         .shadow-sticky-navigation-scrolled {
           box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
-
-        .shadow-focus {
-          box-shadow: 0 0 0 3px rgb(0, 0, 0) !important;
-        }
       }
     }
   }
@@ -1483,10 +1479,6 @@ $utilities: ();
 
         .shadow-sticky-navigation-scrolled {
           box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
-        }
-
-        .shadow-focus {
-          box-shadow: 0 0 0 3px rgb(0, 0, 0) !important;
         }
       }
     }
