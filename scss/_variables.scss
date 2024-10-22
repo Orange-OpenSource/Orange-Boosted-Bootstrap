@@ -568,7 +568,6 @@ $grid-breakpoints: (
   $breakpoint-3xl: map-get($grid-breakpoints, 3xl);
   $grid-breakpoints: map-remove($grid-breakpoints, 2xl, 3xl);
   $grid-breakpoints: map-merge($grid-breakpoints, (xxl: $breakpoint-2xl, 2xl: $breakpoint-2xl, 3xl: $breakpoint-3xl));
-  @debug $grid-breakpoints;
 }
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

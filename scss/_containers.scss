@@ -18,6 +18,12 @@
 
     // Responsive containers that are 100% wide until a breakpoint
     @each $breakpoint, $container-max-width in $container-max-widths {
+      @if $breakpoint == 2xl {
+        .container-xxl {
+          @extend .container-fluid;
+        }
+      }
+
       .container-#{$breakpoint} {
         @extend .container-fluid;
       }
