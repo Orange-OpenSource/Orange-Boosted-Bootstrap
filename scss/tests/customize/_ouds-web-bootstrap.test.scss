@@ -375,7 +375,7 @@ $utilities: ();
         }
 
         .border-top-none {
-          border-top: 0 !important;
+          border-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .border-end {
@@ -419,15 +419,15 @@ $utilities: ();
         }
 
         .border-drag {
-          border-style: dashed !important;
+          border-style: "dashed" !important;
         }
 
         .rounded {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-none {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-short {
@@ -451,13 +451,13 @@ $utilities: ();
         }
 
         .rounded-top {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-none {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-short {
@@ -486,13 +486,13 @@ $utilities: ();
         }
 
         .rounded-end {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-none {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-short {
@@ -521,13 +521,13 @@ $utilities: ();
         }
 
         .rounded-bottom {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-none {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-short {
@@ -556,13 +556,13 @@ $utilities: ();
         }
 
         .rounded-start {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-none {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-short {
@@ -1078,7 +1078,7 @@ $utilities: ();
         }
 
         .border-top-none {
-          border-top: 0 !important;
+          border-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .border-end {
@@ -1122,7 +1122,7 @@ $utilities: ();
         }
 
         .border-drag {
-          border-style: dashed !important;
+          border-style: "dashed" !important;
         }
 
         .rounded-0 {
@@ -1270,11 +1270,11 @@ $utilities: ();
         }
 
         .rounded {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-none {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-short {
@@ -1298,13 +1298,13 @@ $utilities: ();
         }
 
         .rounded-top {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-none {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-short {
@@ -1333,13 +1333,13 @@ $utilities: ();
         }
 
         .rounded-end {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-none {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-short {
@@ -1368,13 +1368,13 @@ $utilities: ();
         }
 
         .rounded-bottom {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-none {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-short {
@@ -1403,13 +1403,13 @@ $utilities: ();
         }
 
         .rounded-start {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-none {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-short {
