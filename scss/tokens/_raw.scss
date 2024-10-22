@@ -8,11 +8,11 @@
 // scss-docs-start ouds-raw-border
 $ouds-border-base: 4px !default;
 $ouds-border-radius-9999: 2000px !default;
-$ouds-border-style-dashed: dashed !default;
-// $ouds-border-style-dotted: dotted !default;
-// $ouds-border-style-none: none !default;
-$ouds-border-style-solid: solid !default;
-$ouds-border-radius-0: strip-units($ouds-border-base * 0) !default; // 0
+$ouds-border-style-dashed: "dashed" !default;
+// $ouds-border-style-dotted: "dotted" !default;
+// $ouds-border-style-none: "none" !default;
+$ouds-border-style-solid: "solid" !default;
+$ouds-border-radius-0: $ouds-border-base * 0 !default; // 0
 // $ouds-border-radius-25: $ouds-border-base * .25 !default; // 1
 // $ouds-border-radius-50: $ouds-border-base * .5 !default; // 2
 $ouds-border-radius-75: $ouds-border-base * .75 !default; // 3
@@ -24,7 +24,7 @@ $ouds-border-radius-300: $ouds-border-base * 3 !default; // 12
 // $ouds-border-radius-500: $ouds-border-base * 5 !default; // 20
 // $ouds-border-radius-600: $ouds-border-base * 6 !default; // 24
 // $ouds-border-radius-800: $ouds-border-base * 8 !default; // 32
-$ouds-border-width-0: strip-units($ouds-border-base * 0) !default; // 0
+$ouds-border-width-0: $ouds-border-base * 0 !default; // 0
 $ouds-border-width-25: $ouds-border-base * .25 !default; // 1
 $ouds-border-width-50: $ouds-border-base * .5 !default; // 2
 $ouds-border-width-75: $ouds-border-base * .75 !default; // 3
@@ -198,7 +198,7 @@ $ouds-color-warm-gray-900: #353228 !default;
 
 // scss-docs-start ouds-raw-dimension
 $ouds-dimension-base: 4px !default;
-$ouds-dimension-0: strip-units($ouds-dimension-base * 0) !default; // 0
+$ouds-dimension-0: $ouds-dimension-base * 0 !default; // 0
 $ouds-dimension-25: $ouds-dimension-base * .5 !default; // 2
 $ouds-dimension-50: $ouds-dimension-base * 1 !default; // 4
 $ouds-dimension-75: $ouds-dimension-base * 1.5 !default; // 6
