@@ -91,7 +91,7 @@ As a list<!--, like with [`text-decoration` utilities]({{< docsref "/utilities/t
 values: none underline line-through
 ```
 
-As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
+As a map, like with [`opacity` Bootstrap utilities]({{< docsref "/utilities/opacity" >}}):
 
 ```scss
 values: (
@@ -497,7 +497,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```
 
-This will now generate responsive variations of `.border` and `.border-0` for each breakpoint. Your generated CSS will look like this:
+This will now generate responsive variations of `.border` and `.border-none` for each breakpoint. Your generated CSS will look like this:
 
 ```css
 .border { ... }
