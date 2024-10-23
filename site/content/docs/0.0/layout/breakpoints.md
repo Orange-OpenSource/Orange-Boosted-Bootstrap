@@ -36,14 +36,6 @@ OUDS Web includes eight default breakpoints, sometimes referred to as _grid tier
 | 3x-large | `3xl` | &ge;1880px |
 {{< /bs-table >}}
 
-Breakpoints are representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
-
-These breakpoints are customizable via Sass—you'll find them in a Sass map in our `_variables.scss` stylesheet.
-
-{{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
-
-For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
-
 {{< bootstrap-compatibility >}}
 
 Includes support for xxl breakpoint, defined like 2xl.
@@ -55,6 +47,14 @@ Includes support for xxl breakpoint, defined like 2xl.
 {{< /bs-table >}}
 
 {{< /bootstrap-compatibility >}}
+
+Breakpoints are representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
+
+These breakpoints are customizable via Sass—you'll find them in a Sass map in our `_variables.scss` stylesheet.
+
+{{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
+
+For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
 
 ## Media queries
 
