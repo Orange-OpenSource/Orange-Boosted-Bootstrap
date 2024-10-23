@@ -38,7 +38,7 @@ The above example creates three equal-width columns across all devices and viewp
 
 Breaking it down, here's how the grid system comes together:
 
-- **Our grid supports [eight responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, `2xl` and `3xl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **Our grid supports [eight responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, `2xl`, and `3xl`). This means you can control container and column sizing and behavior by each breakpoint.
 
 - **Containers center and horizontally pad your content.** Use `.container-fluid` for a responsive container of `width: 100%` across all viewports and devices.
 
@@ -370,7 +370,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ## Responsive classes
 
-OUDS Web's grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width from x-small to 3x-large devices however you see fit.
+OUDS Web's grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width, from x-small to 3x-large devices, however you see fit.
 
 ### All breakpoints
 
@@ -560,7 +560,7 @@ $grid-gutter-width: 1.25rem;
 $grid-row-columns:  6;
 ```
 
-Note that OUDS Web does not use a single value for grid gutters through `$grid-gutter-width` but a map of values called `$grid-gutter-widths`. It defines different gutter widths for each breakpoint.
+Note that OUDS Web doesn't rely on a single value for grid gutters via `$grid-gutter-width`; instead, it uses a map of values called `$grid-gutter-widths`, which defines different gutter widths for each breakpoint.
 
 {{< scss-docs name="grid-gutters" file="scss/_maps.scss" >}}
 
@@ -651,7 +651,7 @@ $grid-row-columns: 6 !default;
 
 ### Grid tiers
 
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this:
+Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints`, `$container-max-widths`, `$grid-gutter-widths`, and `$container-fluid-margin` to something like this:
 
 ```scss
 $grid-breakpoints: (
@@ -675,10 +675,10 @@ $grid-gutter-widths: (
 );
 
 $container-fluid-margin: (
-  xs: 20px,
-  sm: 30px,
+  xs: 16px,
+  sm: 16px,
   md: 24px,
-  lg: 32px
+  lg: 24px
 );
 ```
 
