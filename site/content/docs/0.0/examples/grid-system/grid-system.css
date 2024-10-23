@@ -1,19 +1,5 @@
-.padding-color {
-  text-align: center;
-  background-color: #ffe2e2;
-  background-clip: content-box;
-}
-
-div.row .padding-color {
-  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
-}
-
-div.row .padding-color:first-child {
-  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff;
-}
-
-div.row .padding-color:last-child {
-  box-shadow: inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+:root {
+  --bs-example-bg-col: #ffe2e2;
 }
 
 .legend {
@@ -22,6 +8,28 @@ div.row .padding-color:last-child {
   height: 20px;
 }
 
-.column-color {
-  background-color: #ffe2e2;
+.bg-example {
+  background-color: #ff9f9f;
+}
+
+.bg-col {
+  background-color: var(--bs-example-bg-col);
+}
+
+.col {
+  text-align: center;
+  background-color: var(--bs-example-bg-col);
+  background-clip: content-box;
+}
+
+div.row .col {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+}
+
+div.row .col:first-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff;
+}
+
+div.row .col:last-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
 }
