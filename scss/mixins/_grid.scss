@@ -3,7 +3,7 @@
 // Generate semantic grid columns with these mixins.
 
 @mixin make-row($gutter: $grid-gutter-width) {
-  // OUDS mod: définition of this variable is handled differently, see below.
+  // OUDS mod: definition of this variable is handled differently, see below.
   --#{$prefix}gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
