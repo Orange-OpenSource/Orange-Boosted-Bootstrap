@@ -29,6 +29,10 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 
 {{< bootstrap-compatibility >}}
 
+{{< callout danger >}}
+**These containers should not be used for Orange sites.** Instead, use the containers provided by OUDS Web: `.container-fluid` associated or not with `.container-max-width`.
+{{< /callout >}}
+
 Bootstrap compatibility enables the use of three different containers:
 
 - `.container`, which sets a static `max-width` between each responsive breakpoint.
@@ -117,10 +121,24 @@ Comparison between `.container-fluid` with `.container-max-width` and `.containe
 
 ### Custom max width
 
-If needed, in specific cases, you can set a custom maximum width for the fluid container by overloading `$ouds-grid-container-max-width` before importing our OUDS scss files.
+If needed, in specific cases, you can set a custom maximum width for the fluid container by overloading `$ouds-grid-max-width` before importing our OUDS scss files.
 
 This will affect all containers that have `.container-max-width` and will make sure that your layout does not exceed this value.
-When going up the breakpoint above `$ouds-grid-container-max-width` value, the container margins and gutter values are kept as they are.
+When going up the breakpoint above `$ouds-grid-max-width` value, the container margins and gutter values are kept as they are.
+
+```scss
+@import "../node_modules/ouds-web/scss/functions";
+
+$ouds-grid-max-width: 3500px; // Custom container max width
+
+@import "../node_modules/ouds-web/tokens/raw";
+@import "../node_modules/ouds-web/tokens/semantic";
+@import "../node_modules/ouds-web/tokens/component";
+@import "../node_modules/ouds-web/ouds-maps";
+@import "../node_modules/ouds-web/variables";
+@import "../node_modules/ouds-web/variables-dark";
+// etc
+```
 
 ## CSS
 

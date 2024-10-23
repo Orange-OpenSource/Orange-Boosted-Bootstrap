@@ -300,7 +300,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-grid-xs-column-gap</code></li>
       <li><code>$ouds-grid-xs-margin</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
-      <li><code>$ouds-grid-container-max-width</code></li>
+      <li><code>$ouds-grid-max-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>

@@ -223,7 +223,7 @@ toc: true
       <li><code>$ouds-grid-xs-column-gap</code></li>
       <li><code>$ouds-grid-xs-margin</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
-      <li><code>$ouds-grid-container-max-width</code></li>
+      <li><code>$ouds-grid-max-width</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>
