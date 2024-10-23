@@ -567,7 +567,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```-->
 
-<!--### Remove utilities
+### Remove utilities
 
 Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map/#remove).
 
@@ -611,7 +611,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 ### Add, remove, modify
 
