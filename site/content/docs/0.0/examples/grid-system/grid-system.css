@@ -8,6 +8,10 @@
   height: 20px;
 }
 
+.row {
+  min-height: 150px;
+}
+
 .bg-example {
   background-color: #ff9f9f;
 }
