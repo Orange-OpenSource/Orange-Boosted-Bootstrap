@@ -10,7 +10,7 @@
   </nav>
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-fluid container-max-width">
-      <div class="navbar-brand me-auto me-lg-4">
+      <div class="navbar-brand me-auto me-lg-tall">
         <a class="stretched-link" href="/">
           <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
@@ -22,7 +22,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-0 border-0">
+      <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-0">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-0">
-        <ul class="navbar-nav flex-row me-lg-3">
+        <ul class="navbar-nav flex-row me-lg-medium">
           <li class="nav-item">
             <a class="nav-link nav-icon" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" }}
@@ -49,7 +49,7 @@
 
           {{ partial "docs-versions" . }}
         </ul>
-        <ul class="navbar-nav flex-row ms-lg-3">
+        <ul class="navbar-nav flex-row ms-lg-medium">
           <li class="nav-item dropdown">
             {{ partial "theme-toggler" . }}
           </li>

@@ -133,8 +133,8 @@ $ouds-grid-max-width: 3500px; // Custom container max width
 
 @import "../node_modules/ouds-web/tokens/raw";
 @import "../node_modules/ouds-web/tokens/semantic";
+@import "../node_modules/ouds-web/tokens/composite";
 @import "../node_modules/ouds-web/tokens/component";
-@import "../node_modules/ouds-web/ouds-maps";
 @import "../node_modules/ouds-web/variables";
 @import "../node_modules/ouds-web/variables-dark";
 // etc
