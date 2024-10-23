@@ -59,10 +59,8 @@ Technically, it means that you can get rid of the following things:
   - `xxl` has been renamed `2xl`.
   - `2xs` and `3xl` have been added.
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
-  - `.col-{breakpoint}-{number}`, `.g-col-{}`
-  - The default container to use is now `.container-fluid` associated to `.max-width-public-website` or `.max-width-specific-tools` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
-  - Default gutter inside grid have been changed to have a fully responsive behavior. It should be a transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|smash|shortest|shorter|short|medium|tall|taller|tallest|spacious|huge|jumbo`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
+  - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
+  - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
 
   All responsive classes, helpers and utilities have been changed accordingly to the new breakpoints.
 
