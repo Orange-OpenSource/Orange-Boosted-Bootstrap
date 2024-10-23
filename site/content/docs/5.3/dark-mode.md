@@ -841,7 +841,7 @@ sitemap:
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -857,7 +857,7 @@ sitemap:
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -904,7 +904,7 @@ sitemap:
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -920,7 +920,7 @@ sitemap:
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -967,7 +967,7 @@ sitemap:
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -983,7 +983,7 @@ sitemap:
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1030,7 +1030,7 @@ sitemap:
   <div class="col">
     <div class="card" data-bs-theme="dark">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1046,7 +1046,7 @@ sitemap:
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1093,7 +1093,7 @@ sitemap:
   <div class="col">
     <div class="card" data-bs-theme="light">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1109,7 +1109,7 @@ sitemap:
       <div class="row g-0">
         <div class="col-md-4">
           <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -3112,7 +3112,7 @@ sitemap:
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3143,7 +3143,7 @@ sitemap:
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3174,7 +3174,7 @@ sitemap:
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3205,7 +3205,7 @@ sitemap:
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3236,7 +3236,7 @@ sitemap:
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -8353,21 +8353,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option5">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option6">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option7">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8376,21 +8376,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option8">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option9">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option10">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8460,21 +8460,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons1" id="option51" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option51">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option61" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option61">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option71" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option71">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8483,21 +8483,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option81" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option81">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option91" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option91">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option01" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option01">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8567,21 +8567,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons2" id="option52" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option52">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option62" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option62">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option72" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option72">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8590,21 +8590,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option82" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option82">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option92" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option92">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option02" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option02">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8674,21 +8674,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons3" id="option53" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option53" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option63" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option63" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option73" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option73" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8697,21 +8697,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option83" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option83" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option93" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option93" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option03" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option03" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8781,21 +8781,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons4" id="option54" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option54" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option64" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option64" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option74" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option74" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8804,21 +8804,21 @@ sitemap:
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option84" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option84" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option94" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option94" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option04" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option04" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
