@@ -21,7 +21,7 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 Please note that we apply an extra-padding on our containers (see [our mixin](#sass-mixins)).
 
 {{< bs-table "table" >}}
-|  | 2X-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
+|  | 2x-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-large<div class="fw-normal">&ge;1320px</div> | 2x-large<div class="fw-normal">&ge;1640px</div> | 3x-large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `.container-fluid` with `.container-max-width`  | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | 1520px | 1520px |
 | `.container-fluid` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | <span class="text-body-secondary">100% -<br>(2 * 24px)</span> | <span class="text-body-secondary">100% -<br>(2 * 28px)</span> | <span class="text-body-secondary">100% -<br>(2 * 32px)</span> | <span class="text-body-secondary">100% -<br>(2 * 40px)</span> | <span class="text-body-secondary">100% -<br>(2 * 56px)</span> | <span class="text-body-secondary">100% -<br>(2 * 80px)</span> | <span class="text-body-secondary">100% -<br>(2 * 112px)</span> |
@@ -46,7 +46,7 @@ The table below illustrates how each container's `max-width` compares to the ori
 Please note that we apply an extra-padding on our containers (see [our mixin](#sass-mixins)).
 
 {{< bs-table "table" >}}
-|  | 2X-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
+|  | 2x-small<div class="fw-normal">&lt;390px</div> | X-small<div class="fw-normal">&ge;390px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;736px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-large<div class="fw-normal">&ge;1320px</div> | 2x-large<div class="fw-normal">&ge;1640px</div> | 3x-large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `.container` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
 | `.container-xs` | <span class="text-body-secondary">100% -<br>(2 * 16px)</span> | 342px | 424px | 672px | 944px | 1208px | 1480px | 1656px |
@@ -67,7 +67,7 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 **This container should not be used for Orange sites.**
 
 ```html
-<div class="container">
+<div class="container-fluid">
   <!-- Content here -->
 </div>
 ```
@@ -77,14 +77,14 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, `2xl`, `xxl` and `3xl`.
 
 ```html
-<div class="container-xs">100% wide until extra small breakpoint</div>
+<div class="container-xs">100% wide until x-small breakpoint</div>
 <div class="container-sm">100% wide until small breakpoint</div>
 <div class="container-md">100% wide until medium breakpoint</div>
 <div class="container-lg">100% wide until large breakpoint</div>
-<div class="container-xl">100% wide until extra large breakpoint</div>
-<div class="container-2xl">100% wide until extra extra large breakpoint</div>
-<div class="container-xxl">100% wide until extra extra large breakpoint</div>
-<div class="container-3xl">100% wide until extra extra extra large breakpoint</div>
+<div class="container-xl">100% wide until x-large breakpoint</div>
+<div class="container-2xl">100% wide until 2x-large breakpoint</div>
+<div class="container-xxl">100% wide until 2x-large breakpoint</div>
+<div class="container-3xl">100% wide until 3x-large breakpoint</div>
 ```
 
 {{< /bootstrap-compatibility >}}
@@ -113,7 +113,7 @@ It is defined as follows:
 Comparison between `.container-fluid` with `.container-max-width` and `.container-fluid` alone can be seen in the following table:
 
 {{< bs-table "table" >}}
-|  | X-Large<div class="fw-normal">&ge;1320px</div> | 2X-Large<div class="fw-normal">&ge;1640px</div> | 3X-Large<div class="fw-normal">&ge;1880px</div> |
+|  | X-large<div class="fw-normal">&ge;1320px</div> | 2x-large<div class="fw-normal">&ge;1640px</div> | 3x-large<div class="fw-normal">&ge;1880px</div> |
 | --- | --- | --- | --- | --- |
 | `.container-fluid`<br>with `.container-max-width` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li><b>Max-width `1520px`</b></li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li><b>Width `1520px`</b></li><li><b>Margin `2 * 80px`</b></li><li><b>Gutter `32px`</b></li></ul> |
 | `.container-fluid` | <ul><li>Width `100% - (2 * 56px)`</li><li>Margin `2 * 56px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 80px)`</li><li>Margin `2 * 80px`</li><li>Gutter `32px`</li></ul> | <ul><li>Width `100% - (2 * 112px)`</li><li>Margin `2 * 112px`</li><li>Gutter `40px`</li></ul> |
