@@ -435,7 +435,7 @@ $utilities: map-merge(
 @import "ouds-web/scss/utilities/api";
 ```
 
-<!--### Modify utilities
+### Modify utilities
 
 Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
 
@@ -467,7 +467,7 @@ $utilities: map-merge(
 );
 
 @import "ouds-web/scss/utilities/api";
-```-->
+```
 
 #### Enable responsive
 
