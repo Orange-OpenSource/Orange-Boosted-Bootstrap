@@ -122,12 +122,12 @@
       @each $key, $value in $gutters {
         .g#{$infix}-#{$key},
         .gx#{$infix}-#{$key} {
-          --#{$prefix}gutter-x: #{$value} if($enable-important-utilities, !important, null);
+          --#{$prefix}gutter-x: #{$value if($enable-important-utilities, !important, null)};
         }
 
         .g#{$infix}-#{$key},
         .gy#{$infix}-#{$key} {
-          --#{$prefix}gutter-y: #{$value} if($enable-important-utilities, !important, null);
+          --#{$prefix}gutter-y: #{$value if($enable-important-utilities, !important, null)};
         }
       }
     }
