@@ -20,13 +20,9 @@ toc: true
 
 - **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
-- **Don't use columns that are too small for the main grid.** To align with the design system, for the main site grid, you should only use columns in multiples of **3** for smaller breakpoints (`2xs`, `xs`, and `sm`). For medium and larger breakpoints (`md` and `lg`), use columns in multiples of **2**.
-
-{{< bootstrap-compatibility >}}
-
-Includes support for xxl breakpoint, defined like 2xl, making `.col-xxl-*` classes available.
-
-{{< /bootstrap-compatibility >}}
+{{< callout info >}}
+**Don't use columns that are too small for the main grid.** To align with the design system, for the main site grid, you should only use columns in multiples of **3** for smaller breakpoints (`2xs`, `xs`, and `sm`). For medium and larger breakpoints (`md` and `lg`), use columns in multiples of **2**.
+{{< /callout >}}
 
 ## Alignment
 
@@ -37,7 +33,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 Change the vertical alignment with any of the responsive `align-items-*` classes.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row align-items-start">
     <div class="col">
       One of three columns
@@ -53,7 +49,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 {{< /example >}}
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row align-items-center">
     <div class="col">
       One of three columns
@@ -69,7 +65,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 {{< /example >}}
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row align-items-end">
     <div class="col">
       One of three columns
@@ -87,7 +83,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col align-self-start">
       One of three columns
@@ -107,7 +103,7 @@ Or, change the alignment of each column individually with any of the responsive 
 Change the horizontal alignment with any of the responsive `justify-content-*` classes.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row justify-content-start">
     <div class="col-4">
       One of two columns
@@ -164,7 +160,7 @@ Change the horizontal alignment with any of the responsive `justify-content-*` c
 If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
 
 {{< example class="bd-example-row" >}}
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-9 text-center">.col-9</div>
     <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
@@ -178,7 +174,7 @@ If more than 12 columns are placed within a single row, each group of extra colu
 Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
     <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -195,7 +191,7 @@ Breaking columns to a new line in flexbox requires a small hack: add an element 
 You may also apply this break at specific breakpoints with our [responsive display utilities]({{< docsref "/utilities/display" >}}).
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
     <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -216,7 +212,7 @@ You may also apply this break at specific breakpoints with our [responsive displ
 Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all eight grid tiers.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col">
       First in DOM, no order applied
@@ -234,7 +230,7 @@ Use `.order-` classes for controlling the **visual order** of your content. Thes
 There are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively. These classes can also be intermixed with the numbered `.order-*` classes as needed.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col order-last">
       First in DOM, ordered last
@@ -279,7 +275,7 @@ You can offset grid columns with <!--in two ways: -->our responsive `.offset-` g
 Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-4">.col-md-4</div>
     <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
@@ -297,7 +293,7 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
 In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in [the grid example]({{< docsref "/examples/grid" >}}).
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
     <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
@@ -314,7 +310,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 With flexbox grids, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-4">.col-md-4</div>
     <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>

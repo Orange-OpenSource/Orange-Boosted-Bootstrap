@@ -26,14 +26,14 @@ OUDS Web includes eight default breakpoints, sometimes referred to as _grid tier
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| 2X-small | <em>None</em> |&lt;390px |
+| 2x-small | <em>None</em> |&lt;390px |
 | X-small | `xs` | &ge;390px |
 | Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;736px |
 | Large | `lg` | &ge;1024px |
 | X-large | `xl` | &ge;1320px |
-| 2X-large | `2xl` | &ge;1640px |
-| 3X-large | `3xl` | &ge;1880px |
+| 2x-large | `2xl` | &ge;1640px |
+| 3x-large | `3xl` | &ge;1880px |
 {{< /bs-table >}}
 
 Breakpoints are representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
@@ -51,7 +51,7 @@ Includes support for xxl breakpoint, defined like 2xl.
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| XX-large | `xxl` | &ge;1640px |
+| Extra extra large | `xxl` | &ge;1640px |
 {{< /bs-table >}}
 
 {{< /bootstrap-compatibility >}}
@@ -92,10 +92,10 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
-// 2X-Small devices (portrait phones, less than 390px)
+// 2x-small devices (portrait phones, less than 390px)
 // No media query for `2xs` since this is the default in OUDS Web
 
-// X-Small devices (portrait phones, 390px and up)
+// X-small devices (portrait phones, 390px and up)
 @media (min-width: 390px) { ... }
 
 // Small devices (landscape phones, 480px and up)
@@ -107,13 +107,13 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 // Large devices (landscape tablets, 1024px and up)
 @media (min-width: 1024px) { ... }
 
-// X-Large devices (desktops, 1320px and up)
+// X-large devices (desktops, 1320px and up)
 @media (min-width: 1320px) { ... }
 
-// 2X-Large devices (large desktops, 1640px and up)
+// 2x-large devices (large desktops, 1640px and up)
 @media (min-width: 1640px) { ... }
 
-// 3X-Large devices (larger desktops, TV, 1880px and up)
+// 3x-large devices (larger desktops, TV, 1880px and up)
 @media (min-width: 1880px) { ... }
 ```
 
@@ -144,10 +144,10 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 ```scss
 // `2xs` returns only a ruleset and no media query
 // ... { ... }
-// `xs` applies to 2X-small devices (portrait phones, less than 390px)
+// `xs` applies to 2x-small devices (portrait phones, less than 390px)
 @media (max-width: 389.98px) { ... }
 
-// `sm` applies to X-small devices (portrait phones, less than 480px)
+// `sm` applies to x-small devices (portrait phones, less than 480px)
 @media (max-width: 479.98px) { ... }
 
 // `md` applies to small devices (landscape phones, less than 736px)
@@ -159,10 +159,10 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 // `xl` applies to large devices (landscape tablets, less than 1320px)
 @media (max-width: 1319.98px) { ... }
 
-// `2xl` applies to X-large devices (desktops, less than 1640px)
+// `2xl` applies to x-large devices (desktops, less than 1640px)
 @media (max-width: 1639.98px) { ... }
 
-// `3xl` applies to 2X-large devices (large desktops, less than 1880px)
+// `3xl` applies to 2x-large devices (large desktops, less than 1880px)
 @media (max-width: 1879.98px) { ... }
 ```
 
@@ -205,6 +205,6 @@ Which results in:
 
 ```scss
 // Example
-// Apply styles starting from medium devices and up to extra large devices
+// Apply styles starting from medium devices and up to x-large devices
 @media (min-width: 736px) and (max-width: 1319.98px) { ... }
 ```

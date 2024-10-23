@@ -17,7 +17,7 @@ OUDS Web's grid system uses a series of containers, rows, and columns to layout 
 {{< /callout >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col">
       Column
@@ -32,7 +32,7 @@ OUDS Web's grid system uses a series of containers, rows, and columns to layout 
 </div>
 {{< /example >}}
 
-The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container-fluid`.
 
 ## How it works
 
@@ -40,7 +40,7 @@ Breaking it down, here's how the grid system comes together:
 
 - **Our grid supports [eight responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, `2xl` and `3xl`). This means you can control container and column sizing and behavior by each breakpoint.
 
-- **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
+- **Containers center and horizontally pad your content.** Use `.container-fluid` for a responsive container of `width: 100%` across all viewports and devices.
 
 - **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({{< docsref "/layout/gutters" >}}) to change the spacing of your content.
 
@@ -56,16 +56,16 @@ Be aware of the limitations and [bugs around flexbox](https://github.com/philipw
 
 OUDS Web's grid system can adapt across all eight default breakpoints, and any breakpoints you customize. The eight default grid tiers are as follows:
 
-- Extra extra small (2xs)
-- Extra small (xs)
+- 2x-small (2xs)
+- X-small (xs)
 - Small (sm)
 - Medium (md)
 - Large (lg)
-- Extra large (xl)
-- Extra extra large (2xl)
-- Extra extra extra large (3xl)
+- X-large (xl)
+- 2x-large (2xl)
+- 3x-large (3xl)
 
-As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
+As noted above, each of these breakpoints have their own unique class prefix and modifiers. Here's how the grid changes across these breakpoints:
 
 <div class="table-responsive">
   <table class="table mb-4">
@@ -108,15 +108,15 @@ As noted above, each of these breakpoints have their own container, unique class
     </thead>
     <tbody>
       <tr>
-        <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+        <th class="text-nowrap" scope="row">Container fluid <code class="fw-normal">max-width</code></th>
         <td>100vw -<br>(2 * 16px)</td>
-        <td>342px</td>
-        <td>424px</td>
-        <td>672px</td>
-        <td>944px</td>
-        <td>1208px</td>
-        <td>1480px</td>
-        <td>1656px</td>
+        <td>100vw -<br>(2 * 24px)</td>
+        <td>100vw -<br>(2 * 28px)</td>
+        <td>100vw -<br>(2 * 32px)</td>
+        <td>100vw -<br>(2 * 40px)</td>
+        <td>100vw -<br>(2 * 56px)</td>
+        <td>100vw -<br>(2 * 80px)</td>
+        <td>100vw -<br>(2 * 112px)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
@@ -178,43 +178,96 @@ Includes support for xxl breakpoint, defined like 2xl.
       <tr>
         <th scope="col"></th>
         <th scope="col">
-          xxl<br>
+          2xs<br>
+          <span class="fw-normal">&lt;390px</span>
+        </th>
+        <th scope="col">
+          xs<br>
+          <span class="fw-normal">&ge;390px</span>
+        </th>
+        <th scope="col">
+          sm<br>
+          <span class="fw-normal">&ge;480px</span>
+        </th>
+        <th scope="col">
+          md<br>
+          <span class="fw-normal">&ge;736px</span>
+        </th>
+        <th scope="col">
+          lg<br>
+          <span class="fw-normal">&ge;1024px</span>
+        </th>
+        <th scope="col">
+          xl<br>
+          <span class="fw-normal">&ge;1320px</span>
+        </th>
+        <th scope="col">
+          2xl or xxl<br>
           <span class="fw-normal">&ge;1640px</span>
+        </th>
+        <th scope="col">
+          3xl<br>
+          <span class="fw-normal">&ge;1880px</span>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+        <td>100vw -<br>(2 * 16px)</td>
+        <td>342px</td>
+        <td>424px</td>
+        <td>672px</td>
+        <td>944px</td>
+        <td>1208px</td>
         <td>1480px</td>
+        <td>1656px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
-        <td><code>.col-xxl-</code></td>
+        <td><code>.col-</code></td>
+        <td><code>.col-xs-</code></td>
+        <td><code>.col-sm-</code></td>
+        <td><code>.col-md-</code></td>
+        <td><code>.col-lg-</code></td>
+        <td><code>.col-xl-</code></td>
+        <td><code>.col-2xl-</code> or <code>.col-xxl-</code></td>
+        <td><code>.col-3xl-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
-        <td>12</td>
+        <td colspan="8">12</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container padding width</th>
+        <td>16px (each side)</td>
+        <td>24px (each side)</td>
+        <td>28px (each side)</td>
+        <td>32px (each side)</td>
+        <td>40px (each side)</td>
+        <td>56px (each side)</td>
         <td>80px (each side)</td>
+        <td>112px (each side)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td>32px (16px on left and right)</td>
+        <td>8px (4px on left and right)</td>
+        <td colspan="2">16px (8px on left and right)</td>
+        <td colspan="2">24px (12px on left and right)</td>
+        <td colspan="2">32px (16px on left and right)</td>
+        <td colspan="1">40px (20px on left and right)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
-        <td><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+        <td colspan="8"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Nestable</th>
-        <td><a href="#nesting">Yes</a></td>
+        <td colspan="8"><a href="#nesting">Yes</a></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Column ordering</th>
-        <td><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+        <td colspan="8"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
       </tr>
     </tbody>
   </table>
@@ -230,7 +283,7 @@ Utilize breakpoint-specific column classes for easy column sizing without an exp
 For example, here are two grid layouts that apply to every device and viewport, from `2xs` to `3xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col">
       1 of 2
@@ -258,7 +311,7 @@ For example, here are two grid layouts that apply to every device and viewport, 
 Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col">
       1 of 3
@@ -289,7 +342,7 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
 Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
       1 of 3
@@ -317,14 +370,14 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ## Responsive classes
 
-OUDS Web's grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width from extra extra small to extra extra extra large devices however you see fit.
+OUDS Web's grid includes eight tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on any width from x-small to 3x-large devices however you see fit.
 
 ### All breakpoints
 
 For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col">col</div>
     <div class="col">col</div>
@@ -343,7 +396,7 @@ For grids that are the same from the smallest of devices to the largest, use the
 Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-8">col-sm-8</div>
     <div class="col-sm-4">col-sm-4</div>
@@ -361,7 +414,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <!-- Stack the columns on mobile by making one full-width and the other half-width -->
   <div class="row">
     <div class="col-md-8">.col-md-8</div>
@@ -390,7 +443,7 @@ Use the responsive `.row-cols-*` classes to quickly set the number of columns th
 Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-2">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -401,7 +454,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< /example >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-3">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -412,7 +465,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< /example >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-auto">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -423,7 +476,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< /example >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-4">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -434,7 +487,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< /example >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-4">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -445,7 +498,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< /example >}}
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="col">Column</div>
     <div class="col">Column</div>
@@ -474,7 +527,7 @@ You can also use the accompanying Sass mixin, `row-cols()`:
 To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
 
 {{< example class="bd-example-row" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-3">
       Level 1: .col-sm-3

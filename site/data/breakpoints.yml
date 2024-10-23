@@ -1,12 +1,12 @@
 - breakpoint: 2xs
   abbr: ""
-  name: 2X-Small
+  name: 2x-small
   min-width: 0px
   container: ""
 
 - breakpoint: xs
   abbr: -xs
-  name: X-Small
+  name: X-small
   min-width: 390px
   container: 342px
 
@@ -30,18 +30,18 @@
 
 - breakpoint: xl
   abbr: -xl
-  name: X-Large
+  name: X-large
   min-width: 1320px
   container: 1208px
 
 - breakpoint: 2xl
   abbr: -2xl
-  name: 2X-Large
+  name: 2x-large
   min-width: 1640px
   container: 1480px
 
 - breakpoint: 3xl
   abbr: -3xl
-  name: 3X-Large
+  name: 3x-large
   min-width: 1880px
   container: 1656px

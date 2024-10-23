@@ -2408,7 +2408,7 @@ describe('Dropdown', () => {
   it('should open the dropdown when clicking the child element inside `data-bs-toggle="dropdown"`', () => {
     return new Promise(resolve => {
       fixtureEl.innerHTML = [
-        '<div class="container">',
+        '<div class="container-fluid">',
         '  <div class="dropdown">',
         '    <button class="btn dropdown-toggle" data-bs-toggle="dropdown"><span id="childElement">Dropdown</span></button>',
         '    <div class="dropdown-menu">',
