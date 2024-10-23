@@ -4,7 +4,7 @@
   isolation: isolate;
   outline: $width solid $color;
   outline-offset: $offset;
-  box-shadow: 0 0 0 $box-width $box-color;
+  box-shadow: 0 0 0 add($box-width, $width) inset $box-color;
   @include transition($transition-focus);
 }
 // scss-docs-end focus-visible
