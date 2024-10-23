@@ -15,16 +15,6 @@
   background-color: var(--#{$prefix}title-bar-bg);
   border-bottom: var(--#{$prefix}title-bar-border-width) solid var(--#{$prefix}title-bar-border-color);
 
-  @include media-breakpoint-up(md) {
-    --#{$prefix}title-bar-font-size: #{$title-bar-font-size-md};
-    --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-md};
-  }
-
-  @include media-breakpoint-up(xl) {
-    --#{$prefix}title-bar-font-size: #{$title-bar-font-size-xl};
-    --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
-  }
-
   > [class*="container"] {
     display: flex;
     align-items: flex-end;

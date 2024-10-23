@@ -13,3 +13,10 @@ $ouds-elevation-sticky-default: $ouds-elevation-x-sticky-default $ouds-elevation
 $ouds-elevation-sticky-emphasized: $ouds-elevation-x-sticky-emphasized $ouds-elevation-y-sticky-emphasized $ouds-elevation-blur-sticky-emphasized $ouds-elevation-spread-sticky-emphasized $ouds-elevation-color-sticky-emphasized !default;
 $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled $ouds-elevation-color-sticky-navigation-scrolled !default;
 // scss-docs-end ouds-composite-elevation
+
+// stylelint-disable value-keyword-case
+// scss-docs-start ouds-composite-font
+$ouds-font-family-sans-serif-stack: "Helvetica Neue", Helvetica, Arial, "SF Pro", Roboto, sans-serif !default; // TODO LM: Do or check RTL as well
+$ouds-font-family-monospace-stack: "SF Mono", Menlo, Monaco, Consolas, monospace !default;
+// scss-docs-end ouds-composite-font
+// stylelint-enable value-keyword-case

@@ -1,3 +1,4 @@
+// fusv-disable
 // Semantic applications
 // Depends on raw primitive values
 
@@ -333,6 +334,9 @@ $ouds-font-letter-spacing-heading-small-tablet: $ouds-font-letter-spacing-350 !d
 $ouds-font-letter-spacing-heading-xlarge-desktop: $ouds-font-letter-spacing-850 !default;
 $ouds-font-letter-spacing-heading-xlarge-mobile: $ouds-font-letter-spacing-550 !default;
 $ouds-font-letter-spacing-heading-xlarge-tablet: $ouds-font-letter-spacing-750 !default;
+$ouds-font-letter-spacing-heading-xsmall-desktop: $ouds-font-letter-spacing-350 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-letter-spacing-heading-xsmall-mobile: $ouds-font-letter-spacing-250 !default;
+$ouds-font-letter-spacing-heading-xsmall-tablet: $ouds-font-letter-spacing-300 !default; // TODO LM: Until there
 $ouds-font-letter-spacing-label-large: $ouds-font-letter-spacing-250 !default;
 $ouds-font-letter-spacing-label-medium: $ouds-font-letter-spacing-200 !default;
 $ouds-font-letter-spacing-label-small: $ouds-font-letter-spacing-150 !default;
@@ -369,6 +373,9 @@ $ouds-font-line-height-heading-small-tablet: $ouds-font-line-height-550 !default
 $ouds-font-line-height-heading-xlarge-desktop: $ouds-font-line-height-1050 !default;
 $ouds-font-line-height-heading-xlarge-mobile: $ouds-font-line-height-750 !default;
 $ouds-font-line-height-heading-xlarge-tablet: $ouds-font-line-height-950 !default;
+$ouds-font-line-height-heading-xsmall-desktop: $ouds-font-line-height-550 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-line-height-heading-xsmall-mobile: $ouds-font-line-height-450 !default;
+$ouds-font-line-height-heading-xsmall-tablet: $ouds-font-line-height-450 !default; // TODO LM: Until there
 $ouds-font-line-height-label-large: $ouds-font-line-height-450 !default;
 $ouds-font-line-height-label-medium: $ouds-font-line-height-350 !default;
 $ouds-font-line-height-label-small: $ouds-font-line-height-250 !default;
@@ -382,7 +389,7 @@ $ouds-font-size-body-medium-tablet: $ouds-font-size-200 !default;
 $ouds-font-size-body-small-desktop: $ouds-font-size-200 !default;
 $ouds-font-size-body-small-mobile: $ouds-font-size-150 !default;
 $ouds-font-size-body-small-tablet: $ouds-font-size-150 !default;
-$ouds-font-size-code-medium: $ouds-font-size-200 !default;
+$ouds-font-size-code-medium: $ouds-font-size-200 !default; // TODO LM: Decide whether it should be em or rem and apply it
 $ouds-font-size-code-small: $ouds-font-size-150 !default;
 $ouds-font-size-display-large-desktop: $ouds-font-size-1850 !default;
 $ouds-font-size-display-large-mobile: $ouds-font-size-850 !default;
@@ -405,6 +412,9 @@ $ouds-font-size-heading-small-tablet: $ouds-font-size-350 !default;
 $ouds-font-size-heading-xlarge-desktop: $ouds-font-size-850 !default;
 $ouds-font-size-heading-xlarge-mobile: $ouds-font-size-550 !default;
 $ouds-font-size-heading-xlarge-tablet: $ouds-font-size-750 !default;
+$ouds-font-size-heading-xsmall-desktop: $ouds-font-size-350 !default; // TODO LM: Ask designer about these tokens
+$ouds-font-size-heading-xsmall-mobile: $ouds-font-size-250 !default;
+$ouds-font-size-heading-xsmall-tablet: $ouds-font-size-300 !default; // TODO LM: Until there
 $ouds-font-size-label-large: $ouds-font-size-250 !default;
 $ouds-font-size-label-medium: $ouds-font-size-200 !default;
 $ouds-font-size-label-small: $ouds-font-size-150 !default;
@@ -414,7 +424,7 @@ $ouds-font-weight-web-default: $ouds-font-weight-400 !default;
 $ouds-font-weight-web-strong: $ouds-font-weight-700 !default;
 $ouds-font-weight-web-body-default: $ouds-font-weight-web-default !default;
 $ouds-font-weight-web-body-strong: $ouds-font-weight-web-strong !default;
-$ouds-font-weight-web-display: $ouds-font-weight-web-strong !default;
+$ouds-font-weight-web-display: $ouds-font-weight-web-strong !default; // TODO LM: Ask for a color field for code, headings, body, etc
 $ouds-font-weight-web-heading: $ouds-font-weight-web-strong !default;
 $ouds-font-weight-web-label-default: $ouds-font-weight-web-default !default;
 $ouds-font-weight-web-label-strong: $ouds-font-weight-web-strong !default;
@@ -728,3 +738,4 @@ $ouds-space-row-gap-with-icon-shorter: $ouds-dimension-9xs !default;
 $ouds-space-row-gap-with-icon-shortest: $ouds-dimension-10xs !default;
 $ouds-space-row-gap-with-icon-tall: $ouds-dimension-5xs !default;
 // scss-docs-end ouds-semantic-space
+// fusv-enable

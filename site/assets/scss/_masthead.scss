@@ -9,7 +9,7 @@
   }
 
   .lead {
-    @include font-size(1rem);
+    @extend %label-large;
     font-weight: 400;
     color: var(--bs-secondary-color);
   }
@@ -55,7 +55,7 @@
     }
   }
 }
-
+// TODO LM
 .masthead-followup {
   h2,
   h3,
