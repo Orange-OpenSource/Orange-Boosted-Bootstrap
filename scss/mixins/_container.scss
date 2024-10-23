@@ -2,8 +2,7 @@
 
 // scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
-  --#{$prefix}gutter-x: #{$gutter};
-  --#{$prefix}gutter-y: 0;
+  // OUDS mod: no gutter definition inside containers
   width: 100%;
   padding-right: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   padding-left: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
