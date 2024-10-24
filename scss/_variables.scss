@@ -562,8 +562,8 @@ $grid-breakpoints: (
 ) !default;
 // scss-docs-end grid-breakpoints
 
-// This weird change is here to have the map in the correct ascending order for the checks right after.
-// This change implies that the `$enbale-bootstrap-compatibility` is set before the import of this file.
+// This adjustment ensures the map is in the correct ascending order for the checks that follow.
+// Note: This requires `$enable-bootstrap-compatibility` to be set before importing this file.
 @if $enable-bootstrap-compatibility {
   $breakpoint-2xl: map-get($grid-breakpoints, 2xl);
   $breakpoint-3xl: map-get($grid-breakpoints, 3xl);
