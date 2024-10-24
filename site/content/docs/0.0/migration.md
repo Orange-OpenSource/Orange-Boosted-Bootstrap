@@ -102,13 +102,9 @@ toc: true
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$container-fluid-margin</code></li>
-      <li><code>$container-max-widths</code></li>
       <li><code>$enable-container-classes</code></li>
-      <li><code>$grid-breakpoints</code></li>
       <li><code>$grid-columns</code></li>
       <li><code>$grid-gutter-width</code></li>
-      <li><code>$grid-gutter-widths</code></li>
       <li><code>$grid-row-columns</code></li>
       <li><code>$ouds-border-base</code></li>
       <li><code>$ouds-border-radius-0</code></li>
@@ -248,6 +244,9 @@ toc: true
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$container-fluid-margin</code></li>
+      <li><code>$container-max-widths</code></li>
+      <li><code>$grid-breakpoints</code></li>
       <li><code>$grid-gutter-widths</code></li>
       <li><code>$gutters</code></li>
       <li><code>$ouds-border-radiuses</code></li>
