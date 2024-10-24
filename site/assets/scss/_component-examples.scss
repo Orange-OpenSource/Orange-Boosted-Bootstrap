@@ -112,6 +112,15 @@
 // Grid examples
 //
 
+@each $breakpoint, $gutter-width in $grid-gutter-widths {
+  @include media-breakpoint-up($breakpoint) {
+    .bd-example-row [class^="container"] {
+      padding-right: $gutter-width * .5;
+      padding-left: $gutter-width * .5;
+    }
+  }
+}
+
 .bd-example-row [class^="col"],
 .bd-example-cols [class^="col"] > *,
 .bd-example-cssgrid [class*="grid"] > * {
