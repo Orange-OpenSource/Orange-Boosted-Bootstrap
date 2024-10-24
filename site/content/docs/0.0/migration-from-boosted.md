@@ -283,12 +283,12 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-grid-sm-column-gap</code></li>
       <li><code>$ouds-grid-sm-margin</code></li>
       <li><code>$ouds-grid-sm-min-width</code></li>
-      <li><code>$ouds-grid-xs-column-gap</code></li>
-      <li><code>$ouds-grid-xs-margin</code></li>
-      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-grid-xl-column-gap</code></li>
       <li><code>$ouds-grid-xl-margin</code></li>
       <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
@@ -307,6 +307,7 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$grid-gutter-widths</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>

@@ -51,20 +51,20 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
 
-### Display
+#### Display
 
 - <span class="badge text-bg-success">New</span> Responsive display utilities: `.d-{breakpoint}-{value}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
 
-### Flex
+#### Flex
 
 - <span class="badge text-bg-success">New</span> Responsive flex utilities where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`:
   `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
 
-### Float
+#### Float
 
 - <span class="badge text-bg-success">New</span> Responsive float utilities: `.float-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
 
-### Object fit
+#### Object fit
 
 - <span class="badge text-bg-success">New</span> Responsive object fit utilities: `.object-fit-{breakpoint}-{contain|cover|fill|scale|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
 
@@ -230,12 +230,12 @@ toc: true
       <li><code>$ouds-grid-sm-column-gap</code></li>
       <li><code>$ouds-grid-sm-margin</code></li>
       <li><code>$ouds-grid-sm-min-width</code></li>
-      <li><code>$ouds-grid-xs-column-gap</code></li>
-      <li><code>$ouds-grid-xs-margin</code></li>
-      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-grid-xl-column-gap</code></li>
       <li><code>$ouds-grid-xl-margin</code></li>
       <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>
