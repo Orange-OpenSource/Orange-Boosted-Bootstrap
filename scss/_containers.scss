@@ -3,6 +3,7 @@
 // Set the container width, and override it for fixed navbars in media queries.
 
 @if $enable-container-classes {
+  // OUDS mod: `.container` selector is conditionally handle whenever `$enable-bootstrap-compatibility` is true
   // 100% wide container at all breakpoints
   .container-fluid {
     @include make-container();
@@ -18,11 +19,13 @@
 
     // Responsive containers that are 100% wide until a breakpoint
     @each $breakpoint, $container-max-width in $container-max-widths {
+      // OUDS mod: link 2xl breakpoint to xxl
       @if $breakpoint == 2xl {
         .container-xxl {
           @extend .container-fluid;
         }
       }
+      // End mod
 
       .container-#{$breakpoint} {
         @extend .container-fluid;
@@ -52,6 +55,7 @@
     }
   }
 
+  // OUDS mod
   // scss-docs-start containers-max
   .container-max-width {
     @include media-breakpoint-up(get-breakpoint-from-width()) {
