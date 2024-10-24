@@ -12,9 +12,9 @@ toc: true
 
 Containers are the most basic layout element in OUDS Web and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-OUDS Web offers a single responsive container `.container-fluid`, which sets the `width: 100%` at all breakpoints. It should be associated to the class `.container-max-width`** (See [Fluid containers](#fluid-containers) for more information).
+OUDS Web provides a single responsive container, `.container-fluid`, which ensures a `width: 100%` at all breakpoints. To optimize its use, pair it with the `.container-max-width` class. For further details, refer to the [Fluid containers](#fluid-containers) section.
 
-The table below compares `.container-fluid` `max-width` with and without `.container-max-width` and across each breakpoint.
+The table below compares `.container-fluid` `max-width` with and without `.container-max-width` across each breakpoint.
 
 See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}) and [Grid system example]({{< docsref "/examples/grid-system" >}}).
 
@@ -30,7 +30,7 @@ Please note that we apply an extra-padding on our containers (see [our mixin](#s
 {{< bootstrap-compatibility >}}
 
 {{< callout danger >}}
-**These containers should not be used for Orange sites.** Instead, use the containers provided by OUDS Web: `.container-fluid` associated or not with `.container-max-width`.
+**These containers should not be used for Orange websites.** Instead, use the containers provided by OUDS Web: `.container-fluid` associated or not with `.container-max-width`.
 {{< /callout >}}
 
 Bootstrap compatibility enables the use of three different containers:
@@ -121,10 +121,9 @@ Comparison between `.container-fluid` with `.container-max-width` and `.containe
 
 ### Custom max width
 
-If needed, in specific cases, you can set a custom maximum width for the fluid container by overloading `$ouds-grid-max-width` before importing our OUDS scss files.
+If necessary, in specific cases, you can define a custom maximum width for the fluid container by overriding the `$ouds-grid-max-width` variable before importing the OUDS Web SCSS files.
 
-This will affect all containers that have `.container-max-width` and will make sure that your layout does not exceed this value.
-When going up the breakpoint above `$ouds-grid-max-width` value, the container margins and gutter values are kept as they are.
+This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-grid-max-width` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
 
 ```scss
 @import "../node_modules/ouds-web/scss/functions";
