@@ -112,6 +112,7 @@
 // Grid examples
 //
 
+// OUDS mod: Adjust container padding within the documentation to prevent excessive spacing
 @each $breakpoint, $gutter-width in $grid-gutter-widths {
   @include media-breakpoint-up($breakpoint) {
     .bd-example-row [class^="container"] {
@@ -120,6 +121,7 @@
     }
   }
 }
+// End mod
 
 .bd-example-row [class^="col"],
 .bd-example-cols [class^="col"] > *,
