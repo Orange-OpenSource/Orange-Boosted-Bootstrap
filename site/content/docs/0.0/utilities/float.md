@@ -20,16 +20,18 @@ These utility classes float an element to the left or right, or disable floating
 
 Use the [clearfix helper]({{< docsref "/helpers/clearfix" >}}) on a parent element to clear floats.
 
-<!--## Responsive
+## Responsive
 
 Responsive variations also exist for each `float` value.
 
 {{< example >}}
+<div class="float-xs-end">Float end on viewports sized XS (x-small) or wider</div><br>
 <div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
 <div class="float-md-end">Float end on viewports sized MD (medium) or wider</div><br>
 <div class="float-lg-end">Float end on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-end">Float end on viewports sized XL (extra large) or wider</div><br>
-<div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br>
+<div class="float-xl-end">Float end on viewports sized XL (x-large) or wider</div><br>
+<div class="float-2xl-end">Float end on viewports sized 2XL (2x-large) or wider</div><br>
+<div class="float-3xl-end">Float end on viewports sized 3XL (3x-large) or wider</div><br>
 {{< /example >}}
 
 Here are all the support classes:
@@ -42,7 +44,7 @@ Here are all the support classes:
 - `.float{{ .abbr }}-none`
 {{- end -}}
 {{< /float.inline >}}
-{{< /markdown >}}-->
+{{< /markdown >}}
 
 ## CSS
 

@@ -180,6 +180,41 @@ $utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "l
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
-$gutters: $spacers !default;
+// OUDS mod
+// scss-docs-start grid-gutters
+$grid-gutter-widths: (
+  2xs: $ouds-grid-2xs-column-gap, // 8px
+  xs: $ouds-grid-xs-column-gap, // 16px
+  sm: $ouds-grid-sm-column-gap, // 16px
+  md: $ouds-grid-md-column-gap, // 24px
+  lg: $ouds-grid-lg-column-gap, // 24px
+  xl: $ouds-grid-xl-column-gap, // 32px
+  2xl: $ouds-grid-2xl-column-gap, // 32px
+  3xl: $ouds-grid-3xl-column-gap // 40px
+) !default;
+// scss-docs-end grid-gutters
+
+// scss-docs-start gutters
+$gutters: (
+  none: 0,
+  smash: 2px,
+  shortest: 4px,
+  shorter: 8px,
+  short: 12px,
+  medium: 16px,
+  tall: 24px,
+  taller: 32px,
+  tallest: 40px,
+  spacious: 48px,
+  huge: 56px,
+  jumbo: 64px
+) !default;
+// scss-docs-end gutters
+
+@if $enable-bootstrap-compatibility {
+  // Add Bootstrap gutters
+  $gutters: map-merge($gutters, $spacers);
+}
+// End mod
 
 $alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod

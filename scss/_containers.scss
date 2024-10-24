@@ -3,45 +3,70 @@
 // Set the container width, and override it for fixed navbars in media queries.
 
 @if $enable-container-classes {
-  // Single container class with breakpoint max-widths
-  .container,
+  // OUDS mod: `.container` selector is conditionally handle whenever `$enable-bootstrap-compatibility` is true
   // 100% wide container at all breakpoints
   .container-fluid {
     @include make-container();
   }
 
-  // OUDS mod: `.container-fluid` is not full width in OUDS Web
-  .container-fluid {
-    @include make-container-fluid-margin();
-  }
-  // End mod
-
-  // Responsive containers that are 100% wide until a breakpoint
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
-      @extend .container-fluid;
+  @if $enable-bootstrap-compatibility { // OUDS mod
+    // OUDS mod
+    // Single container class with breakpoint max-widths
+    .container {
+      @include make-container();
     }
+    // End mod
 
-    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-      %responsive-container-#{$breakpoint} {
-        max-width: $container-max-width;
+    // Responsive containers that are 100% wide until a breakpoint
+    @each $breakpoint, $container-max-width in $container-max-widths {
+      // OUDS mod: link 2xl breakpoint to xxl
+      @if $breakpoint == 2xl {
+        .container-xxl {
+          @extend .container-fluid;
+        }
+      }
+      // End mod
+
+      .container-#{$breakpoint} {
+        @extend .container-fluid;
       }
 
-      // Extend each breakpoint which is smaller or equal to the current breakpoint
-      $extend-breakpoint: true;
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        %responsive-container-#{$breakpoint} {
+          max-width: $container-max-width;
+        }
 
-      @each $name, $width in $grid-breakpoints {
-        @if ($extend-breakpoint) {
-          .container#{breakpoint-infix($name, $grid-breakpoints)} {
-            @extend %responsive-container-#{$breakpoint};
-          }
+        // Extend each breakpoint which is smaller or equal to the current breakpoint
+        $extend-breakpoint: true;
 
-          // Once the current breakpoint is reached, stop extending
-          @if ($breakpoint == $name) {
-            $extend-breakpoint: false;
+        @each $name, $width in $grid-breakpoints {
+          @if ($extend-breakpoint) {
+            .container#{breakpoint-infix($name, $grid-breakpoints)} {
+              @extend %responsive-container-#{$breakpoint};
+            }
+
+            // Once the current breakpoint is reached, stop extending
+            @if ($breakpoint == $name) {
+              $extend-breakpoint: false;
+            }
           }
         }
       }
     }
   }
+
+  // OUDS mod
+  // scss-docs-start containers-max
+  .container-max-width {
+    @include media-breakpoint-up(get-breakpoint-from-width()) {
+      --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
+      max-width: $ouds-size-max-width-grid-grid;
+
+      .row {
+        --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width())};
+      }
+    }
+  }
+  // scss-docs-end containers-max
+  // End mod
 }

@@ -11,7 +11,28 @@ toc: true
 
 ## v0.0.4
 
+### Layout
+
+- <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl`, and `3xl`.
+  - Container class: `.container-fluid`
+  - Limiting class: `.container-max-width`
+  - Row system with `.row`
+  - Column system with classes: `.col-{number}`, `.col-{breakpoint}-{number}`,  and `.offset-{breakpoint}-{number}`
+  - Row columns classes: `.row-cols-{number}`
+
+<span class="badge text-bg-success">New</span> Responsive CSS grid classes: `.g-col-{breakpoint}-{number}`.
+
+### Helpers
+
+#### Position
+
+- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{breakpoint}-top` and `.sticky-{breakpoint}-bottom` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+
 ### Utilities
+
+#### API
+
+- <span class="badge text-bg-success">New</span> The `responsive` option is now available in the API to indicate if responsive classes should be generated.
 
 #### Border
 
@@ -30,6 +51,23 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
 
+#### Display
+
+- <span class="badge text-bg-success">New</span> Responsive display utilities: `.d-{breakpoint}-{value}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+
+#### Flex
+
+- <span class="badge text-bg-success">New</span> Responsive flex utilities where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`:
+  `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
+
+#### Float
+
+- <span class="badge text-bg-success">New</span> Responsive float utilities: `.float-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+
+#### Object fit
+
+- <span class="badge text-bg-success">New</span> Responsive object fit utilities: `.object-fit-{breakpoint}-{contain|cover|fill|scale|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+
 #### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> Opacity utilities: `.opacity-emphasis` has been renamed to `.opacity-strong`.
@@ -39,9 +77,15 @@ toc: true
 - <span class="badge text-bg-success">New</span> Shadows utilities:
   `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized` and `shadow-sticky-navigation-scrolled`.
 
+### Examples
+
+- <span class="badge text-bg-success">New</span> New [Grid example]({{< docsref "/examples/grid" >}}).
+
+- <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
+
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import the new Sass files before the variables.
+- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import this new Sass file before the variables.
 
   <details class="mb-3">
     <summary>See the new import stack</summary>
@@ -53,9 +97,15 @@ toc: true
     ```
   </details>
 
+- <span class="badge text-bg-success">New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
+
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$enable-container-classes</code></li>
+      <li><code>$grid-columns</code></li>
+      <li><code>$grid-gutter-width</code></li>
+      <li><code>$grid-row-columns</code></li>
       <li><code>$ouds-border-base</code></li>
       <li><code>$ouds-border-radius-0</code></li>
       <li><code>$ouds-border-radius-75</code></li>
@@ -138,6 +188,50 @@ toc: true
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-grid-2xl-column-gap</code></li>
+      <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-min-width</code></li>
+      <li><code>$ouds-grid-2xs-column-gap</code></li>
+      <li><code>$ouds-grid-2xs-margin</code></li>
+      <li><code>$ouds-grid-3xl-column-gap</code></li>
+      <li><code>$ouds-grid-3xl-margin</code></li>
+      <li><code>$ouds-grid-3xl-min-width</code></li>
+      <li><code>$ouds-grid-column-gap-100</code></li>
+      <li><code>$ouds-grid-column-gap-200</code></li>
+      <li><code>$ouds-grid-column-gap-400</code></li>
+      <li><code>$ouds-grid-column-gap-600</code></li>
+      <li><code>$ouds-grid-column-gap-800</code></li>
+      <li><code>$ouds-grid-lg-column-gap</code></li>
+      <li><code>$ouds-grid-lg-margin</code></li>
+      <li><code>$ouds-grid-lg-min-width</code></li>
+      <li><code>$ouds-grid-margin-100</code></li>
+      <li><code>$ouds-grid-margin-1100</code></li>
+      <li><code>$ouds-grid-margin-1700</code></li>
+      <li><code>$ouds-grid-margin-2500</code></li>
+      <li><code>$ouds-grid-margin-300</code></li>
+      <li><code>$ouds-grid-margin-400</code></li>
+      <li><code>$ouds-grid-margin-500</code></li>
+      <li><code>$ouds-grid-margin-700</code></li>
+      <li><code>$ouds-size-max-width-grid-grid</code></li>
+      <li><code>$ouds-grid-md-column-gap</code></li>
+      <li><code>$ouds-grid-md-margin</code></li>
+      <li><code>$ouds-grid-md-min-width</code></li>
+      <li><code>$ouds-grid-min-width-200</code></li>
+      <li><code>$ouds-grid-min-width-300</code></li>
+      <li><code>$ouds-grid-min-width-400</code></li>
+      <li><code>$ouds-grid-min-width-500</code></li>
+      <li><code>$ouds-grid-min-width-600</code></li>
+      <li><code>$ouds-grid-min-width-700</code></li>
+      <li><code>$ouds-grid-min-width-800</code></li>
+      <li><code>$ouds-grid-sm-column-gap</code></li>
+      <li><code>$ouds-grid-sm-margin</code></li>
+      <li><code>$ouds-grid-sm-min-width</code></li>
+      <li><code>$ouds-grid-xl-column-gap</code></li>
+      <li><code>$ouds-grid-xl-margin</code></li>
+      <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>
@@ -150,10 +244,35 @@ toc: true
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$container-fluid-margin</code></li>
+      <li><code>$container-max-widths</code></li>
+      <li><code>$grid-breakpoints</code></li>
+      <li><code>$grid-gutter-widths</code></li>
+      <li><code>$gutters</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
       <li><code>$ouds-elevations</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
+    <ul>
+      <li><code>breakpoint-infix()</code></li>
+      <li><code>breakpoint-min()</code></li>
+      <li><code>breakpoint-max()</code></li>
+      <li><code>breakpoint-next()</code></li>
+      <li><code>get-breakpoint-from-width()</code></li>
+      <li><code>make-container()</code></li>
+      <li><code>make-col()</code></li>
+      <li><code>make-col-offset()</code></li>
+      <li><code>make-col-ready()</code></li>
+      <li><code>make-row()</code></li>
+      <li><code>media-breakpoint-between()</code></li>
+      <li><code>media-breakpoint-down()</code></li>
+      <li><code>media-breakpoint-only()</code></li>
+      <li><code>media-breakpoint-up()</code></li>
     </ul>
   </details>
 
@@ -173,6 +292,13 @@ toc: true
       <li><code>rounded-start-ouds</code></li>
       <li><code>rounded-top-ouds</code></li>
       <li><code>shadow-ouds</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 

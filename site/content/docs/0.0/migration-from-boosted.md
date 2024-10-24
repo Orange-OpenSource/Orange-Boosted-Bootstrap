@@ -41,6 +41,20 @@ Technically, it means that you can get rid of the following things:
 - `orange-helvetica.*.css` file (default, RTL, or minified version).
 - If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
 
+## Layout
+
+- <span class="badge text-bg-danger">Breaking</span> Responsive breakpoints have changed:
+  - `2xs` and `3xl` have been added.
+  - `xxl` has been renamed to `2xl`.
+  - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
+   - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
+   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
+
+   All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
+
+- <span class="badge text-bg-info">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
+
 ## Components
 
 ### Close button
@@ -52,6 +66,13 @@ Technically, it means that you can get rid of the following things:
 ### Checks & radios
 
 - <span class="badge text-bg-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+
+## Helpers
+
+### Position
+
+- <span class="badge text-bg-danger">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ## Utilities
 
@@ -81,6 +102,27 @@ Technically, it means that you can get rid of the following things:
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
 
+### Display
+
+- <span class="badge text-bg-danger">Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+### Flex
+
+- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+### Float
+
+- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+### Object fit
+
+- <span class="badge text-bg-danger">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-success">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+- <span class="badge text-bg-info">Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
+
 ### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
@@ -91,6 +133,10 @@ Technically, it means that you can get rid of the following things:
 - <span class="badge text-bg-danger">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-success">New</span> Shadows utilities:
 `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized` and `shadow-sticky-navigation-scrolled`.
+
+## Examples
+
+- <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
 
 ## CSS and Sass variables
 
@@ -199,6 +245,50 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-grid-2xl-column-gap</code></li>
+      <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-min-width</code></li>
+      <li><code>$ouds-grid-2xs-column-gap</code></li>
+      <li><code>$ouds-grid-2xs-margin</code></li>
+      <li><code>$ouds-grid-3xl-column-gap</code></li>
+      <li><code>$ouds-grid-3xl-margin</code></li>
+      <li><code>$ouds-grid-3xl-min-width</code></li>
+      <li><code>$ouds-grid-column-gap-100</code></li>
+      <li><code>$ouds-grid-column-gap-200</code></li>
+      <li><code>$ouds-grid-column-gap-400</code></li>
+      <li><code>$ouds-grid-column-gap-600</code></li>
+      <li><code>$ouds-grid-column-gap-800</code></li>
+      <li><code>$ouds-grid-lg-column-gap</code></li>
+      <li><code>$ouds-grid-lg-margin</code></li>
+      <li><code>$ouds-grid-lg-min-width</code></li>
+      <li><code>$ouds-grid-margin-100</code></li>
+      <li><code>$ouds-grid-margin-1100</code></li>
+      <li><code>$ouds-grid-margin-1700</code></li>
+      <li><code>$ouds-grid-margin-2500</code></li>
+      <li><code>$ouds-grid-margin-300</code></li>
+      <li><code>$ouds-grid-margin-400</code></li>
+      <li><code>$ouds-grid-margin-500</code></li>
+      <li><code>$ouds-grid-margin-700</code></li>
+      <li><code>$ouds-size-max-width-grid-grid</code></li>
+      <li><code>$ouds-grid-md-column-gap</code></li>
+      <li><code>$ouds-grid-md-margin</code></li>
+      <li><code>$ouds-grid-md-min-width</code></li>
+      <li><code>$ouds-grid-min-width-200</code></li>
+      <li><code>$ouds-grid-min-width-300</code></li>
+      <li><code>$ouds-grid-min-width-400</code></li>
+      <li><code>$ouds-grid-min-width-500</code></li>
+      <li><code>$ouds-grid-min-width-600</code></li>
+      <li><code>$ouds-grid-min-width-700</code></li>
+      <li><code>$ouds-grid-min-width-800</code></li>
+      <li><code>$ouds-grid-sm-column-gap</code></li>
+      <li><code>$ouds-grid-sm-margin</code></li>
+      <li><code>$ouds-grid-sm-min-width</code></li>
+      <li><code>$ouds-grid-xl-column-gap</code></li>
+      <li><code>$ouds-grid-xl-margin</code></li>
+      <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xs-column-gap</code></li>
+      <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
       <li><code>$ouds-opacity-100</code></li>
       <li><code>$ouds-opacity-300</code></li>
@@ -217,11 +307,19 @@ Technically, it means that you can get rid of the following things:
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
+      <li><code>$grid-gutter-widths</code></li>
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
       <li><code>$ouds-elevations</code></li>
       <li><code>$ouds-opacities</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
+    <ul>
+      <li><code>get-breakpoint-from-width()</code></li>
     </ul>
   </details>
 
@@ -246,7 +344,14 @@ Technically, it means that you can get rid of the following things:
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated Sass variables:</summary>
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-container-margin-x</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$boosted-prefix</code></li>
       <li><code>$boosted-variable-prefix</code></li>
@@ -263,6 +368,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$form-star-focus-color-dark</code></li>
       <li><code>$form-star-focus-outline</code></li>
       <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$grid-gutter-breakpoint</code></li>
       <li><code>$orange-filter</code></li>
       <li><code>$outline-offset</code></li>
       <li><code>$outline-width</code></li>
@@ -272,7 +378,7 @@ Technically, it means that you can get rid of the following things:
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-warning">Warning</span> Dropped deprecated CSS variables:</summary>
+    <summary><span class="badge text-bg-warning">Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-close-active-border-color</code></li>
       <li><code>--bs-btn-close-active-color</code></li>
@@ -298,7 +404,13 @@ Technically, it means that you can get rid of the following things:
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
+    </ul>
+  </details>
 
+- <details class="mb-2">
+    <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass mixins:</summary>
+    <ul>
+      <li><code>make-container-fluid-margin()</code></li>
     </ul>
   </details>
 
@@ -321,3 +433,5 @@ Technically, it means that you can get rid of the following things:
       <li><code>shadow</code></li>
     </ul>
   </details>
+
+- <span class="badge text-bg-warning">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.

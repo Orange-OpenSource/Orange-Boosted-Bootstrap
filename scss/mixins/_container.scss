@@ -2,29 +2,19 @@
 
 // scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
-  --#{$prefix}gutter-x: #{$gutter};
-  --#{$prefix}gutter-y: 0;
+  // OUDS mod: no CSS variable gutter definition inside containers
   width: 100%;
-  padding-right: calc(var(--#{$prefix}gutter-x) * .25); // stylelint-disable-line function-disallowed-list
-  padding-left: calc(var(--#{$prefix}gutter-x) * .25); // stylelint-disable-line function-disallowed-list
+  padding-right: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
+  padding-left: var(--#{$prefix}container-margin-x); // OUDS mod: instead of `calc(var(--#{$prefix}gutter-x) * .5)`
   margin-right: auto;
   margin-left: auto;
 
-  // OUDS mod: gutter depends on breakpoint
-  // @note Needs both interpolation and parenthesis to prevent stylelint-scss/dimension-no-non-numeric-values to fail
-  @include media-breakpoint-up($grid-gutter-breakpoint) {
-    --#{$prefix}gutter-x: #{($gutter * 2)};
+  // OUDS mod: gutter depends on breakpoints
+  @each $breakpoint, $container-fluid-marg in $container-fluid-margin {
+    @include media-breakpoint-up($breakpoint) {
+      --#{$prefix}container-margin-x: #{$container-fluid-marg};
+    }
   }
   // End mod
 }
-
-// OUDS mod: fluid containers aren't full width → include margins
-@mixin make-container-fluid-margin() {
-  @each $breakpoint, $container-margin in $container-fluid-margin {
-    @include media-breakpoint-up($breakpoint) {
-      max-width: subtract(100vw, $container-margin * 2);
-    }
-  }
-}
-// End mod
 // scss-docs-end container-mixins

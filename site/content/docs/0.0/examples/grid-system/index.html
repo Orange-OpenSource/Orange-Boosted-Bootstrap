@@ -1,0 +1,259 @@
+---
+layout: examples
+title: Grid system
+extra_css:
+- "grid-system.css"
+aliases:
+- "/examples/grid-system"
+- "/docs/examples/grid-system"
+---
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="warning-important-accessible">
+    <path d="M499.352 125a93.95 93.95 0 0 1 81.072 46.494L908.91 733.919A93.676 93.676 0 0 1 827.838 874.9H170.867A93.711 93.711 0 0 1 89.8 733.919l.8-1.3v-.1l327.681-561.025A93.83 93.83 0 0 1 499.352 125"/>
+    <path fill="#000" d="M500.352 679.926a47.494 47.494 0 1 0 47.484 47.494 47.53 47.53 0 0 0-47.484-47.494m0-379.949a47.53 47.53 0 0 0-47.483 47.493 28 28 0 0 0 .1 2.9l15.694 258.665v.5c.3 17.1 14.395 23.5 31.689 23.5 17.494 0 31.689-6.6 31.689-24l15.695-258.065.1-.9a23 23 0 0 0 .1-2.6 47.68 47.68 0 0 0-47.583-47.493"/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="info">
+    <path d="M500 75.5c-234.72 0-425 190.28-425 425s190.28 425 425 425 425-190.28 425-425-190.28-425-425-425m0 100a75 75 0 1 1-75 75 75 75 0 0 1 75-75m125 600H400v-25.737l5.287-.167c15.555-.5 27.115-4.919 34.368-13.136 2.576-2.972 6.956-13.1 6.956-47.153v-227.2c0-32.392-4.523-44.6-8.311-49.141-5.359-6.391-16.516-10.147-33.17-11.156l-5.13-.31v-26h175v313.807c0 32.415 8.457 44.618 12.24 49.142 5.34 6.389 15.68 10.142 32.625 11.152l5.135.3v25.6Z" style="fill-rule: evenodd"/>
+  </symbol>
+</svg>
+
+<main class="min-vh-100">
+  <div class="container-fluid container-max-width pt-4">
+    <h1>OUDS Web grid system example</h1>
+    <p class="lead">Use this page to see how containers behave while resizing the browser.</p>
+    <h2>Legend</h2>
+    <p class="d-flex align-items-center">
+      <span class="bg-container legend border me-2"></span>Containers padding color (<code>#4ab4e6</code>)
+    </p>
+    <p class="d-flex align-items-center">
+      <span class="bg-col legend border me-2"></span>Columns color (<code>#a5daf3</code>)
+    </p>
+    <p class="d-flex align-items-center">
+      <span class="bg-white legend border me-2"></span>Gutters color (<code>#fff</code>)
+    </p>
+  </div>
+
+  <div class="container-fluid container-max-width mb-3 pt-3">
+    <h2>Default grid</h2>
+    <p>
+      The default grid system to use is the one combining <code>.container-fluid</code> and <code>.container-max-width</code> classes.
+    </p>
+  </div>
+  <div class="bg-example py-3">
+    <div class="container-fluid container-max-width bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid container-max-width mb-3 pt-3">
+    <h2>Need more space?</h2>
+    <p>
+      If more space is needed, use only the <code>.container-fluid</code> class.
+    </p>
+  </div>
+  <div class="bg-example py-3">
+    <div class="container-fluid bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+<!--
+  The following examples must not be used to be compatible with Orange Unified Design System.
+  They're here for debugging purpose for the OUDS Web core team.
+-->
+<!--
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-xs bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-sm bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-md bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-lg bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-2xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-3">
+    <div class="container-3xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+-->
+</main>
