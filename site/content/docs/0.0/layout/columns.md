@@ -18,10 +18,10 @@ toc: true
 
 - **When building grid layouts, all content goes in columns.** The hierarchy of OUDS Web's grid goes from [container]({{< docsref "/layout/containers" >}}) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
 
-- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **OUDS Web includes predefined classes for creating fast, responsive layouts.** With [eight breakpoints]({{< docsref "/layout/breakpoints" >}}) (2xs, xs, sm, md, lg, xl, 2xl and 3xl) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
 {{< callout info >}}
-**Don't use columns that are too small for the main grid.** To align with the design system, for the main site grid, you should only use columns in multiples of **3** for smaller breakpoints (`2xs`, `xs`, and `sm`). For medium and larger breakpoints (`md` and `lg`), use columns in multiples of **2**.
+**Avoid using columns that are too narrow for the main grid.** For smaller breakpoints (`2xs`, `xs`, and `sm`), align with the design system by using columns in multiples of 3. For medium and larger breakpoints (`md` and `lg`), stick to columns in multiples of 2.
 {{< /callout >}}
 
 ## Alignment
