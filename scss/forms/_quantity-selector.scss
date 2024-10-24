@@ -38,10 +38,10 @@
     }
 
     &:first-of-type {
-      @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
       order: -1;
       padding-right: $quantity-selector-btn-padding-x;
       border-right-width: 0;
+      @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
 
       &:focus {
         &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
@@ -51,8 +51,8 @@
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
-        @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
         padding-right: $quantity-selector-btn-padding-x-sm;
+        @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
 
         &:focus {
           &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
@@ -63,9 +63,9 @@
     }
 
     &:last-of-type {
-      @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       padding-left: $quantity-selector-btn-padding-x;
       border-left-width: 0;
+      @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
 
       &:focus {
         &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
@@ -75,8 +75,8 @@
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
-        @include button-icon($quantity-selector-icon-add-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
         padding-left: $quantity-selector-btn-padding-x-sm;
+        @include button-icon($quantity-selector-icon-add-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
 
         &:focus {
           &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
