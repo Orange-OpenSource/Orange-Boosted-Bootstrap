@@ -35,7 +35,7 @@
 
   <p class="text-end">
     <a class="btn btn-primary" href="data:image/svg+xml,{{ $target }}" download="{{ delimit $output "" }}">
-      Download<span class="small ms-1">(SVG, {{div $size 1000}}ko)</span>
+      Download<span class="small ms-shortest">(SVG, {{div $size 1000}}ko)</span>
     </a>
   </p>
 {{- end -}}

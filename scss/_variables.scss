@@ -464,7 +464,10 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-$spacer: 1.25rem !default; // OUDS mod
+// TODO: Decide which value to use here since it could have many impacts on projects
+// $spacer: px-to-rem($ouds-dimension-250) !default; // OUDS mod: instead of: `1rem`
+// $spacer: px-to-rem($ouds-dimension-md) !default; // OUDS mod: instead of: `1rem`
+$spacer: 1.25rem !default; // OUDS mod: instead of: `1rem`
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -662,9 +665,9 @@ $focus-visible-outer-color:           $black !default; // OUDS mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:        map-get($ouds-elevations, "overlay-default") !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
-$box-shadow-sm:     map-get($ouds-elevations, "overlay-default") !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
-$box-shadow-lg:     map-get($ouds-elevations, "overlay-emphasized") !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
+$box-shadow:        $ouds-elevation-overlay-default !default; // OUDS mod: instead of `0 .5rem 1rem rgba($black, .15)`
+$box-shadow-sm:     $ouds-elevation-overlay-default !default; // OUDS mod: instead of `0 .125rem .25rem rgba($black, .075)`
+$box-shadow-lg:     $ouds-elevation-overlay-emphasized !default; // OUDS mod: instead of `0 1rem 3rem rgba($black, .175)`
 $box-shadow-inset:  null !default; // OUDS mod: instead of `inset 0 1px 2px rgba($black, .075)`
 // scss-docs-end box-shadow-variables
 
