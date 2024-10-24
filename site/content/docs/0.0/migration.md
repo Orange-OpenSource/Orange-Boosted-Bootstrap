@@ -274,6 +274,8 @@ toc: true
       <li><code>media-breakpoint-down()</code></li>
       <li><code>media-breakpoint-only()</code></li>
       <li><code>media-breakpoint-up()</code></li>
+    </ul>
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>

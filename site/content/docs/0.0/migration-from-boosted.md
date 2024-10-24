@@ -411,6 +411,7 @@ Technically, it means that you can get rid of the following things:
     <ul>
       <li><code>make-container-fluid-margin()</code></li>
     </ul>
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
