@@ -3,23 +3,23 @@
 
   <!-- OUDS mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1" id="content">
-    <div class="title-bar mb-2 mb-md-0">
+    <div class="title-bar mb-shorter mb-md-none">
       <div class="container-fluid container-max-width">
         <h1 class="display-1">{{ .Title | markdownify }}</h1>
       </div>
     </div>
-    <div class="pb-4 pb-md-2">
-      <div class="container-fluid container-max-width bd-gutter pt-md-2 pb-md-4">
+    <div class="pb-tall pb-md-shorter">
+      <div class="container-fluid container-max-width bd-gutter pt-md-shorter pb-md-tall">
         <div class="row">
           <div class="col-12">
-            <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
+            <p class="ll-sm h3 mb-tall">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" -}}
             <div class="d-flex flex-column flex-sm-row">
               <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary">
-                <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-shortest" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                 Download examples
               </a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3">
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-medium mt-sm-none ms-sm-medium">
                 Download source code
               </a>
             </div>
