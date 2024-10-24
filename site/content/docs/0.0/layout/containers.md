@@ -121,14 +121,14 @@ Comparison between `.container-fluid` with `.container-max-width` and `.containe
 
 ### Custom max width
 
-If necessary, in specific cases, you can define a custom maximum width for the fluid container by overriding the `$ouds-grid-max-width` variable before importing the OUDS Web SCSS files.
+If necessary, in specific cases, you can define a custom maximum width for the fluid container by overriding the `$ouds-size-max-width-grid-grid` variable before importing the OUDS Web SCSS files.
 
-This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-grid-max-width` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
+This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-size-max-width-grid-grid` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
 
 ```scss
 @import "../node_modules/ouds-web/scss/functions";
 
-$ouds-grid-max-width: 3500px; // Custom container max width
+$ouds-size-max-width-grid-grid: 3500px; // Custom container max width
 
 @import "../node_modules/ouds-web/tokens/raw";
 @import "../node_modules/ouds-web/tokens/semantic";
