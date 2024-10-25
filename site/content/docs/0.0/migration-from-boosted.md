@@ -269,7 +269,7 @@ Technically, it means that you can get rid of the following things:
       <li><code>$ouds-grid-margin-400</code></li>
       <li><code>$ouds-grid-margin-500</code></li>
       <li><code>$ouds-grid-margin-700</code></li>
-      <li><code>$ouds-size-max-width-grid-grid</code></li>
+      <li><code>$ouds-size-max-width-grid</code></li>
       <li><code>$ouds-grid-md-column-gap</code></li>
       <li><code>$ouds-grid-md-margin</code></li>
       <li><code>$ouds-grid-md-min-width</code></li>

@@ -60,7 +60,7 @@
   .container-max-width {
     @include media-breakpoint-up(get-breakpoint-from-width()) {
       --#{$prefix}container-margin-x: #{map-get($container-fluid-margin, get-breakpoint-from-width())};
-      max-width: $ouds-size-max-width-grid-grid;
+      max-width: $ouds-size-max-width-grid;
 
       .row {
         --#{$prefix}gutter-x: #{map-get($grid-gutter-widths, get-breakpoint-from-width())};

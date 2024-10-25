@@ -128,7 +128,7 @@
 
 // OUDS mod
 // Get the breakpoint infix corresponding to a given width
-@function get-breakpoint-from-width($width: $ouds-size-max-width-grid-grid, $breakpoints: $grid-breakpoints) {
+@function get-breakpoint-from-width($width: $ouds-size-max-width-grid, $breakpoints: $grid-breakpoints) {
   $breakpoint-infix: "";
   @each $infix, $value in $grid-breakpoints {
     @if $width >= $value {
