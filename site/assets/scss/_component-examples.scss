@@ -121,6 +121,11 @@
       padding-right: $gutter-width * .5;
       padding-left: $gutter-width * .5;
     }
+
+    .bd-example-cols [class^="container"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }
 // End mod

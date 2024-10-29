@@ -42,13 +42,13 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
 <!--## Examples
 
 {{< example >}}
-<div class="d-inline p-2 text-bg-primary">d-inline</div>
-<div class="d-inline p-2 text-bg-dark">d-inline</div>
+<div class="d-inline p-shorter text-bg-primary">d-inline</div>
+<div class="d-inline p-shorter text-bg-dark">d-inline</div>
 {{< /example >}}
 
 {{< example >}}
-<span class="d-block p-2 text-bg-primary">d-block</span>
-<span class="d-block p-2 text-bg-dark">d-block</span>
+<span class="d-block p-shorter text-bg-primary">d-block</span>
+<span class="d-block p-shorter text-bg-dark">d-block</span>
 {{< /example >}}-->
 
 ## Hiding elements

@@ -57,7 +57,6 @@
     - title: Grid
     - title: Columns
     - title: Gutters
-      draft: true
     - title: Utilities
     - title: Z-index
     - title: CSS Grid
@@ -213,9 +212,7 @@
     - title: Position
     - title: Shadows
     - title: Sizing
-      draft: true
     - title: Spacing
-      draft: true
     - title: Text
       draft: true
     - title: Vertical align

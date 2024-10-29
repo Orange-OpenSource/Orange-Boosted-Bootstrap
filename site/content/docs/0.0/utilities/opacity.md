@@ -13,12 +13,12 @@ The `opacity` property sets the opacity level for an element. The opacity level 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
 <div class="bd-example d-sm-flex">
-  <div class="opacity-opaque p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-strong p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-medium p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-weak p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-weaker p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-transparent p-3 m-2 bg-primary fw-bold"></div>
+  <div class="opacity-opaque p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-strong p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-medium p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-weak p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-weaker p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-transparent p-medium m-shorter bg-primary fw-bold"></div>
 </div>
 
 ```html
@@ -41,11 +41,11 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
   - Removed div text content to avoid a11y issue with semi-transparent text
 -->
 <div class="bd-example d-sm-flex">
-  <div class="opacity-100 p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-75 p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-50 p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-25 p-3 m-2 bg-primary fw-bold"></div>
-  <div class="opacity-0 p-3 m-2 bg-primary fw-bold"></div>
+  <div class="opacity-100 p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-75 p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-50 p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-25 p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-0 p-medium m-shorter bg-primary fw-bold"></div>
 </div>
 
 ```html
@@ -69,13 +69,15 @@ Opacity raw tokens as Sass variables. **Not to be used as-is**.
 
 #### Semantic tokens
 
-Opacity semantic tokens are defined as a Sass map. The opacity utilities are declared through this map and generated using our utilities API.
+Opacity semantic tokens are defined as Sass variables.
 
 {{< scss-docs name="ouds-semantic-opacity" file="scss/tokens/_semantic.scss" >}}
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-opacities" file="scss/_ouds-maps.scss" >}}
+The opacity utilities are declared through this map and generated using our utilities API.
+
+{{< scss-docs name="ouds-maps-opacities" file="scss/_maps.scss" >}}
 
 ### Sass utilities API
 
