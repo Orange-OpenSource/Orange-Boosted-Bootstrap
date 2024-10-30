@@ -40,7 +40,7 @@ You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 
 {{< example class="bd-example-flex" >}}
 <div style="height: 100px;">
-  <div class="mh-10none" style="width: 100px; height: 200px;">Max-height 100%</div>
+  <div class="mh-100" style="width: 100px; height: 200px;">Max-height 100%</div>
 </div>
 {{< /example >}}
 
