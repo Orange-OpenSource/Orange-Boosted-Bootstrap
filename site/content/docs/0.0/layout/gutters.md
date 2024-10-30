@@ -10,41 +10,18 @@ toc: true
 
 ## How they work
 
-- **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content.
+- **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content. The default gutter width is described in [our grid options]({{< docsref "/layout/grid#grid-options" >}}).
 
-- **Gutters start at `2px` and go up to `64px` wide.** This allows us to match our grid to the [padding and margin spacers]({{< docsref "/utilities/spacing" >}}) scale.
+- **Gutter utilities start at `2px` and go up to `64px` wide.** This allows us to match our grid to the [padding and margin spacers]({{< docsref "/utilities/spacing" >}}) scale.
 
 - **Gutters can be responsively adjusted.** Use breakpoint-specific gutter classes, from xs to 3xl, to modify horizontal gutters, vertical gutters, and all gutters.
 
-## Horizontal & vertical gutters
-
-Use `.g-*` classes (`*` being among `none`, `smash`, `shortest`, `shorter`, `short`, `medium`, `tall`, `taller`, `tallest`, `spacious`, `huge`, and `jumbo`) to control the horizontal and vertical grid gutters.
-
-{{< example class="bd-example-cols" >}}
-<div class="container text-center">
-  <div class="row g-short">
-    <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
-    </div>
-    <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
-    </div>
-    <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
-    </div>
-    <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
-    </div>
-  </div>
-</div>
-{{< /example >}}
-
 ## Horizontal gutters
 
-`.gx-*` classes can be used to control the horizontal gutter widths. The `.container` or `.container-fluid` parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-tall`. Note that in the previous example, we use a `short` gutter width, so there isn't a need for the `.overflow-hidden` wrapper class.
+`.gx-*` classes can be used to control the horizontal gutter widths. The wrapper element may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-tall`.
 
 {{< example class="bd-example-cols" >}}
-<div class="container px-tall text-center">
+<div class="container-fluid px-tall text-center">
   <div class="row gx-jumbo">
     <div class="col">
      <div class="p-medium">Custom column padding</div>
@@ -59,7 +36,7 @@ Use `.g-*` classes (`*` being among `none`, `smash`, `shortest`, `shorter`, `sho
 An alternative solution is to add a wrapper around the `.row` with the `.overflow-hidden` class:
 
 {{< example class="bd-example-cols" >}}
-<div class="container overflow-hidden text-center">
+<div class="container-fluid overflow-hidden text-center">
   <div class="row gx-jumbo">
     <div class="col">
      <div class="p-medium">Custom column padding</div>
@@ -76,8 +53,31 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 `.gy-*` classes can be used to control the vertical gutter widths within a row when columns wrap to new lines. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
 
 {{< example class="bd-example-cols" >}}
-<div class="container overflow-hidden text-center">
+<div class="container-fluid overflow-hidden text-center">
   <div class="row gy-jumbo">
+    <div class="col-6">
+      <div class="p-medium">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-medium">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-medium">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-medium">Custom column padding</div>
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
+## Horizontal & vertical gutters
+
+Use `.g-*` classes (`*` being among `none`, `smash`, `shortest`, `shorter`, `short`, `medium`, `tall`, `taller`, `tallest`, `spacious`, `huge`, and `jumbo`) to control the horizontal and vertical grid gutters. In the example below, we use a smaller gutter width, so there isn’t a need for the `.overflow-hidden` wrapper class.
+
+{{< example class="bd-example-cols" >}}
+<div class="container-fluid text-center">
+  <div class="row g-short">
     <div class="col-6">
       <div class="p-medium">Custom column padding</div>
     </div>
@@ -99,7 +99,7 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-columns" >}}). In the following example, we use responsive row columns and responsive gutter classes.
 
 {{< example class="bd-example-cols" >}}
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="row row-cols-2 row-cols-lg-5 g-short g-lg-tallest">
     <div class="col">
       <div class="p-medium">Row column</div>
@@ -139,7 +139,7 @@ Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-
 
 The gutters between columns in our predefined grid classes can be removed with `.g-none`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
 
-**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid` and add `.mx-none` to the `.row` to prevent overflow.
+**Need an edge-to-edge design?** Drop the parent `.container-fluid` and add `.mx-none` to the `.row` to prevent overflow.
 
 In practice, here's how it looks. Note that you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
 

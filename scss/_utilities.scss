@@ -601,9 +601,6 @@ $utilities: map-merge(
     ),
     // scss-docs-end utils-spacing
     // OUDS mod
-    // TODO: Decide whether we keep them stacked under or split under each utilities
-    //        First scenario: some issue such as `.gap-none.row-gap-3` doesn't work, but `.gap-0.row-gap-medium`, `.gap-0.row-gap-3` and `.gap-none.row-gap-medium` work well
-    //        Second scenario: some issue regarding the documentation
     // scss-docs-start utils-spacing-ouds
     // Margin utilities
     "margin-ouds": (
