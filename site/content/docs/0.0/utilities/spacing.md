@@ -39,18 +39,18 @@ Where *sides* is one of:
 
 Where *size* is one of:
 
-- `none` - for classes that eliminate the `margin` or `padding` by setting it to `$ouds-dimension-0` aka `0`
-- `smash` - for classes that set the `margin` or `padding` to `$ouds-dimension-25` aka `2px`
-- `shortest` - for classes that set the `margin` or `padding` to `$ouds-dimension-50` aka `4px`
-- `shorter` - for classes that set the `margin` or `padding` to `$ouds-dimension-100` aka `8px`
-- `short` - for classes that set the `margin` or `padding` to `$ouds-dimension-150` aka `12px`
-- `medium` - for classes that set the `margin` or `padding` to `$ouds-dimension-200` aka `16px`
-- `tall` - for classes that set the `margin` or `padding` to `$ouds-dimension-300` aka `24px`
-- `taller` - for classes that set the `margin` or `padding` to `$ouds-dimension-400` aka `32px`
-- `tallest` - for classes that set the `margin` or `padding` to `$ouds-dimension-500` aka `40px`
-- `spacious` - for classes that set the `margin` or `padding` to `$ouds-dimension-600` aka `48px`
-- `huge` - for classes that set the `margin` or `padding` to `$ouds-dimension-700` aka `56px`
-- `jumbo` - for classes that set the `margin` or `padding` to `$ouds-dimension-800` aka `64px`
+- `none` - for classes that eliminate the `margin` or `padding` by setting it to `$ouds-dimension-0`, which is `0`
+- `smash` - for classes that set the `margin` or `padding` to `$ouds-dimension-25`, which is `2px`
+- `shortest` - for classes that set the `margin` or `padding` to `$ouds-dimension-50`, which is `4px`
+- `shorter` - for classes that set the `margin` or `padding` to `$ouds-dimension-100`, which is `8px`
+- `short` - for classes that set the `margin` or `padding` to `$ouds-dimension-150`, which is `12px`
+- `medium` - for classes that set the `margin` or `padding` to `$ouds-dimension-200`, which is `16px`
+- `tall` - for classes that set the `margin` or `padding` to `$ouds-dimension-300`, which is `24px`
+- `taller` - for classes that set the `margin` or `padding` to `$ouds-dimension-400`, which is `32px`
+- `tallest` - for classes that set the `margin` or `padding` to `$ouds-dimension-500`, which is `40px`
+- `spacious` - for classes that set the `margin` or `padding` to `$ouds-dimension-600`, which is `48px`
+- `huge` - for classes that set the `margin` or `padding` to `$ouds-dimension-700`, which is `56px`
+- `jumbo` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
 - `auto` - for classes that set the `margin` to auto
 
 (You can add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
