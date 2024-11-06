@@ -32,6 +32,7 @@ updates:
       - dependency-name: "@babel/cli"
       - dependency-name: "@babel/core"
       - dependency-name: "@babel/preset-env"
+      - dependency-name: "@docsearch/js"
       - dependency-name: "@popperjs/core"
       - dependency-name: "@rollup/plugin-babel"
       - dependency-name: "@rollup/plugin-commonjs"
