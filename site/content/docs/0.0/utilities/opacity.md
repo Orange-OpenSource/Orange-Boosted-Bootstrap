@@ -13,12 +13,12 @@ The `opacity` property sets the opacity level for an element. The opacity level 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
 <div class="bd-example d-sm-flex">
-  <div class="opacity-opaque p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-strong p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-medium p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-weak p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-weaker p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-transparent p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-opaque p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-strong p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-medium p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-weak p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-weaker p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-transparent p-tall m-short bg-primary fw-bold"></div>
 </div>
 
 ```html
@@ -41,11 +41,11 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
   - Removed div text content to avoid a11y issue with semi-transparent text
 -->
 <div class="bd-example d-sm-flex">
-  <div class="opacity-100 p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-75 p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-50 p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-25 p-medium m-shorter bg-primary fw-bold"></div>
-  <div class="opacity-0 p-medium m-shorter bg-primary fw-bold"></div>
+  <div class="opacity-100 p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-75 p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-50 p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-25 p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-0 p-tall m-short bg-primary fw-bold"></div>
 </div>
 
 ```html

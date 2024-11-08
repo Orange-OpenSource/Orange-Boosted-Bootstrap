@@ -331,11 +331,11 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
 The `.col-*` classes can also be used outside a `.row` to give an element a specific width. Whenever column classes are used as non-direct children of a row, the paddings are omitted.
 
 {{< example class="bd-example-row" >}}
-<div class="col-3 p-medium mb-shorter">
+<div class="col-3 p-tall mb-short">
   .col-3: width of 25%
 </div>
 
-<div class="col-sm-9 p-medium">
+<div class="col-sm-9 p-tall">
   .col-sm-9: width of 75% above sm breakpoint
 </div>
 {{< /example >}}
@@ -344,7 +344,7 @@ The classes can be used together with utilities to create responsive floated ima
 
 {{< example >}}
 <div class="clearfix">
-  {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-medium ms-md-medium" text="Responsive floated image" color="#999" >}}
+  {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-tall ms-md-tall" text="Responsive floated image" color="#999" >}}
 
   <p>
     A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.

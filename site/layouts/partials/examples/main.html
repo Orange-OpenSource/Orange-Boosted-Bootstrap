@@ -1,5 +1,5 @@
 {{ range $entry := $.Site.Data.examples -}}
-<div class="bd-content mt-spacious">
+<div class="bd-content mt-huge">
   <h2 id="{{ $entry.category | urlize }}">{{ $entry.category }}</h2>
   <p>{{ $entry.description }}</p>
   {{ if eq $entry.category "RTL" -}}
@@ -11,7 +11,7 @@
     </div>
   {{ end -}}
   {{ if eq $entry.category "Starters" -}}
-    <div class="bd-callout bd-callout-warning mb-tall">
+    <div class="bd-callout bd-callout-warning mb-tallest">
       <p>
         <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>ouds-web</code> in some files.
       </p>
@@ -24,7 +24,7 @@
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       {{ if $entry.external -}}
-        <div class="col-md-6 col-lg-4 mb-medium d-flex gap-medium">
+        <div class="col-md-6 col-lg-4 mb-tall d-flex gap-tall">
           <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-shortest">
@@ -44,7 +44,7 @@
           </div>
         </div>
       {{ else -}}
-        <div class="col-sm-6 col-md-3 mb-medium">
+        <div class="col-sm-6 col-md-3 mb-tall">
           {{- $exampleNameUrlized := $example.name | urlize -}}
           {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
           <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
@@ -52,7 +52,7 @@
             {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
             {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
             {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}
-            <img class="img-thumbnail mb-medium"
+            <img class="img-thumbnail mb-tall"
                  srcset="{{ $imgPath }}, {{ $imgPath2x }} 2x"
                  src="{{ $imgPath }}"
                  alt=""

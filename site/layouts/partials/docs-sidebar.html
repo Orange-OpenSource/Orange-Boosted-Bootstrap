@@ -2,7 +2,7 @@
   {{- $url := split .Permalink "/" -}}
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
-  <ul class="bd-links-nav list-unstyled mb-none pb-medium pb-md-shorter pe-lg-shorter">
+  <ul class="bd-links-nav list-unstyled mb-none pb-tall pb-md-short pe-lg-short">
   {{- range $group := .Site.Data.sidebar -}}
     {{- $link := $group.title -}}
     {{- $link_slug := $link | urlize -}}
@@ -15,7 +15,7 @@
     {{- $group_slug := $group.title | urlize -}}
     {{- $is_active_group := eq $.Page.Params.group $group_slug -}}
 
-    <li class="bd-links-group py-shorter">
+    <li class="bd-links-group py-short">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
         {{- if $group.icon }}
           <svg class="bi me-shortest"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
@@ -23,7 +23,7 @@
         {{ $group.title }}
       </strong>
 
-      <ul class="list-unstyled fw-normal mt-shortest pb-shorter small">
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
         {{- range $doc := $group.pages -}}
           {{- $doc_slug := $doc.title | urlize -}}
           {{- $is_draft := $doc.draft -}}

@@ -168,7 +168,7 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass files between the semantic and component files.
 
-  <details class="mb-medium">
+  <details class="mb-tall">
     <summary>See the new import stack</summary>
 
     ```diff
@@ -180,7 +180,7 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$enable-container-classes</code></li>
@@ -399,7 +399,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$container-fluid-margin</code></li>
@@ -418,7 +418,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
     <ul>
       <li><code>breakpoint-infix()</code></li>
@@ -438,7 +438,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
@@ -505,14 +505,14 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
     <ul>
       <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-border-radius</code></li>
@@ -539,7 +539,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
@@ -601,7 +601,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
-  <details class="mb-medium">
+  <details class="mb-tall">
   <summary>See the new import stack</summary>
 
   ```diff
@@ -615,7 +615,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   ```
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-0</code></li>
@@ -627,21 +627,21 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>

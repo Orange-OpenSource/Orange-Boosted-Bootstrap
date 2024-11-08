@@ -18,16 +18,16 @@ toc: true
 
 ## Horizontal gutters
 
-`.gx-*` classes can be used to control the horizontal gutter widths. The wrapper element may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-tall`.
+`.gx-*` classes can be used to control the horizontal gutter widths. The wrapper element may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-tallest`.
 
 {{< example class="bd-example-cols" >}}
-<div class="container-fluid px-tall text-center">
+<div class="container-fluid px-tallest text-center">
   <div class="row gx-jumbo">
     <div class="col">
-     <div class="p-medium">Custom column padding</div>
+     <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -39,10 +39,10 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 <div class="container-fluid overflow-hidden text-center">
   <div class="row gx-jumbo">
     <div class="col">
-     <div class="p-medium">Custom column padding</div>
+     <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -56,16 +56,16 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 <div class="container-fluid overflow-hidden text-center">
   <div class="row gy-jumbo">
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -79,16 +79,16 @@ Use `.g-*` classes (`*` being among `none`, `smash`, `shortest`, `shorter`, `sho
 <div class="container-fluid text-center">
   <div class="row g-short">
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-medium">Custom column padding</div>
+      <div class="p-tall">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -102,34 +102,34 @@ Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-
 <div class="container-fluid text-center">
   <div class="row row-cols-2 row-cols-lg-5 g-short g-lg-tallest">
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
     <div class="col">
-      <div class="p-medium">Row column</div>
+      <div class="p-tall">Row column</div>
     </div>
   </div>
 </div>

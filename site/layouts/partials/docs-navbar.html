@@ -10,7 +10,7 @@
   </nav>
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-fluid container-max-width">
-      <div class="navbar-brand me-auto me-lg-tall">
+      <div class="navbar-brand me-auto me-lg-tallest">
         <a class="stretched-link" href="/">
           <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
         </a>
@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-0">
-        <ul class="navbar-nav flex-row me-lg-medium">
+        <ul class="navbar-nav flex-row me-lg-tall">
           <li class="nav-item">
             <a class="nav-link nav-icon" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" }}
@@ -49,7 +49,7 @@
 
           {{ partial "docs-versions" . }}
         </ul>
-        <ul class="navbar-nav flex-row ms-lg-medium">
+        <ul class="navbar-nav flex-row ms-lg-tall">
           <li class="nav-item dropdown">
             {{ partial "theme-toggler" . }}
           </li>

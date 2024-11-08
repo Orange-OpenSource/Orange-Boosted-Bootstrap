@@ -19,10 +19,10 @@ Stacks offer a shortcut for applying a number of flexbox properties to quickly a
 Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
-<div class="vstack gap-medium">
-  <div class="p-shorter">First item</div>
-  <div class="p-shorter">Second item</div>
-  <div class="p-shorter">Third item</div>
+<div class="vstack gap-tall">
+  <div class="p-short">First item</div>
+  <div class="p-short">Second item</div>
+  <div class="p-short">Third item</div>
 </div>
 {{< /example >}}
 
@@ -31,31 +31,31 @@ Use `.vstack` to create vertical layouts. Stacked items are full-width by defaul
 Use `.hstack` for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-medium">
-  <div class="p-shorter">First item</div>
-  <div class="p-shorter">Second item</div>
-  <div class="p-shorter">Third item</div>
+<div class="hstack gap-tall">
+  <div class="p-short">First item</div>
+  <div class="p-short">Second item</div>
+  <div class="p-short">Third item</div>
 </div>
 {{< /example >}}
 
 Using horizontal margin utilities like `.ms-auto` as spacers:
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-medium">
-  <div class="p-shorter">First item</div>
-  <div class="p-shorter ms-auto">Second item</div>
-  <div class="p-shorter">Third item</div>
+<div class="hstack gap-tall">
+  <div class="p-short">First item</div>
+  <div class="p-short ms-auto">Second item</div>
+  <div class="p-short">Third item</div>
 </div>
 {{< /example >}}
 
 <!--And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-medium">
-  <div class="p-shorter">First item</div>
-  <div class="p-shorter ms-auto">Second item</div>
+<div class="hstack gap-tall">
+  <div class="p-short">First item</div>
+  <div class="p-short ms-auto">Second item</div>
   <div class="vr"></div>
-  <div class="p-shorter">Third item</div>
+  <div class="p-short">Third item</div>
 </div>
 {{< /example >}}-->
 
@@ -64,7 +64,7 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 Use `.vstack` to stack buttons and other elements:
 
 {{< example >}}
-<div class="vstack gap-shorter col-md-5 mx-auto">
+<div class="vstack gap-short col-md-5 mx-auto">
   <button type="button" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn btn-outline-secondary">Cancel</button>
 </div>
@@ -80,7 +80,7 @@ This variant with an **horizontal layout** (i.e. labels not above the input fiel
 {{< /design-callout-alert >}}
 
 {{< example >}}
-<div class="hstack gap-medium">
+<div class="hstack gap-tall">
   <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
   <button type="button" class="btn btn-primary">Submit</button>
   <div class="vr"></div>

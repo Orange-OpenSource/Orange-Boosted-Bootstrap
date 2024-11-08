@@ -13,16 +13,16 @@ aliases:
 Adjust the `overflow` property on the fly with four default values and classes. These classes are not responsive by default.
 
 <div class="bd-example d-md-flex">
-  <div class="overflow-auto p-medium mb-medium mb-md-none me-md-medium border" style="max-width: 260px; max-height: 100px;" tabindex="0">
+  <div class="overflow-auto p-tall mb-tall mb-md-none me-md-tall border" style="max-width: 260px; max-height: 100px;" tabindex="0">
     This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
   </div>
-  <div class="overflow-hidden p-medium mb-medium mb-md-none me-md-medium border" style="max-width: 260px; max-height: 100px;">
+  <div class="overflow-hidden p-tall mb-tall mb-md-none me-md-tall border" style="max-width: 260px; max-height: 100px;">
     This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
   </div>
-  <div class="overflow-visible p-medium mb-medium mb-md-none me-md-medium border" style="max-width: 260px; max-height: 100px;">
+  <div class="overflow-visible p-tall mb-tall mb-md-none me-md-tall border" style="max-width: 260px; max-height: 100px;">
     This is an example of using <code>.overflow-visible</code> on an element with set width and height dimensions.
   </div>
-  <div class="overflow-scroll p-medium border" style="max-width: 260px; max-height: 100px;" tabindex="0">
+  <div class="overflow-scroll p-tall border" style="max-width: 260px; max-height: 100px;" tabindex="0">
     This is an example of using <code>.overflow-scroll</code> on an element with set width and height dimensions.
   </div>
 </div>
@@ -39,19 +39,19 @@ Adjust the `overflow` property on the fly with four default values and classes. 
 Adjust the `overflow-x` property to affect the overflow of content horizontally.
 
 <div class="bd-example d-md-flex">
-  <div class="overflow-x-auto p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px; white-space: nowrap;">
+  <div class="overflow-x-auto p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px; white-space: nowrap;">
     <div><code>.overflow-x-auto</code> example on an element</div>
     <div> with set width and height dimensions.</div>
   </div>
-  <div class="overflow-x-hidden p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
+  <div class="overflow-x-hidden p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
     <div><code>.overflow-x-hidden</code> example</div>
     <div>on an element with set width and height dimensions.</div>
   </div>
-  <div class="overflow-x-visible p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
+  <div class="overflow-x-visible p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
     <div><code>.overflow-x-visible</code> example </div>
     <div>on an element with set width and height dimensions.</div>
   </div>
-  <div class="overflow-x-scroll p-medium bg-body w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
+  <div class="overflow-x-scroll p-tall bg-body w-100 border" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
     <div><code>.overflow-x-scroll</code> example on an element</div>
     <div> with set width and height dimensions.</div>
   </div>
@@ -69,16 +69,16 @@ Adjust the `overflow-x` property to affect the overflow of content horizontally.
 Adjust the `overflow-y` property to affect the overflow of content vertically.
 
 <div class="bd-example d-md-flex">
-  <div class="overflow-y-auto p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px;">
+  <div class="overflow-y-auto p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px;">
     <code>.overflow-y-auto</code> example on an element with set width and height dimensions.
   </div>
-  <div class="overflow-y-hidden p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px;">
+  <div class="overflow-y-hidden p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px;">
     <code>.overflow-y-hidden</code> example on an element with set width and height dimensions.
   </div>
-  <div class="overflow-y-visible p-medium mb-medium mb-md-none me-md-medium w-100 border" style="max-width: 200px; max-height: 100px;">
+  <div class="overflow-y-visible p-tall mb-tall mb-md-none me-md-tall w-100 border" style="max-width: 200px; max-height: 100px;">
     <code>.overflow-y-visible</code> example on an element with set width and height dimensions.
   </div>
-  <div class="overflow-y-scroll p-medium w-100 border" style="max-width: 200px; max-height: 100px;">
+  <div class="overflow-y-scroll p-tall w-100 border" style="max-width: 200px; max-height: 100px;">
     <code>.overflow-y-scroll</code> example on an element with set width and height dimensions.
   </div>
 </div>

@@ -6,14 +6,14 @@ description: An appendix of hosted documentation for nearly every release of OUD
 {{< list-versions.inline >}}
 <div class="row">
   {{- range $release := sort (index $.Site.Data "docs-versions") "group" "desc" }}
-  <div class="col-md-6 col-lg-4 col-xl mb-tall">
+  <div class="col-md-6 col-lg-4 col-xl mb-tallest">
     <h2>{{ $release.group }}</h2>
     <p>{{ $release.description }}</p>
     {{- $versions := sort $release.versions "" "desc" -}}
     {{- range $i, $version := $versions }}
       {{- $len := len $versions -}}
       {{ if (eq $i 0) }}<div class="list-group">{{ end }}
-        <a class="list-group-item list-group-item-action py-shorter {{ if (eq $version $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}" href="{{ urls.JoinPath $release.baseurl $version "/" }}">
+        <a class="list-group-item list-group-item-action py-short {{ if (eq $version $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}" href="{{ urls.JoinPath $release.baseurl $version "/" }}">
           {{ $version }}
           {{ if (eq $version $.Site.Params.docs_version) -}}
           <span class="badge text-bg-primary">Latest</span>

@@ -249,10 +249,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - Keep the previous behavior and getting one utility for another.
     1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
     2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$1shortest`
-    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1shorter`
-    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1medium`
-    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$1tall`
-    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$1spacious`
+    3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1short`
+    4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1tall`
+    5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$1tallest`
+    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$1huge`
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn't have Bootstrap Spacing utilities anymore
     <!-- Next technique is almost unusable in practice -->
   - Change all the utilities using more precise utilities
@@ -266,7 +266,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
-  <details class="mb-medium">
+  <details class="mb-tall">
   <summary>See the new import stack</summary>
 
   ```diff
@@ -281,7 +281,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   ```
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-border-base</code></li>
@@ -502,7 +502,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$grid-gutter-widths</code></li>
@@ -518,14 +518,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
     <ul>
       <li><code>get-breakpoint-from-width()</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
@@ -593,14 +593,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
     <ul>
       <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$boosted-prefix</code></li>
@@ -627,7 +627,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-close-active-border-color</code></li>
@@ -650,7 +650,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-border-radius</code></li>
@@ -667,14 +667,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass mixins:</summary>
     <ul>
       <li><code>make-container-fluid-margin()</code></li>
     </ul>
   </details>
 
-- <details class="mb-shorter">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
