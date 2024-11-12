@@ -426,156 +426,454 @@ $utilities: map-merge(
       ),
     ),
     // scss-docs-end utils-flex
-    // Margin utilities
     // scss-docs-start utils-spacing
+    // Margin utilities
     "margin": (
       responsive: true,
       property: margin,
       class: m,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-x": (
       responsive: true,
       property: margin-right margin-left,
       class: mx,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-x-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-y": (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-y-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-top": (
       responsive: true,
       property: margin-top,
       class: mt,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-top-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-end": (
       responsive: true,
       property: margin-right,
       class: me,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-end-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-bottom": (
       responsive: true,
       property: margin-bottom,
       class: mb,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-bottom-ouds`
+      bootstrap-compatibility: true
     ),
     "margin-start": (
       responsive: true,
       property: margin-left,
       class: ms,
-      values: map-merge($spacers, (auto: auto))
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-start-ouds`
+      bootstrap-compatibility: true
     ),
     // Negative margin utilities
     "negative-margin": (
       responsive: true,
       property: margin,
       class: m,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-x": (
       responsive: true,
       property: margin-right margin-left,
       class: mx,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-y": (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-top": (
       responsive: true,
       property: margin-top,
       class: mt,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-end": (
       responsive: true,
       property: margin-right,
       class: me,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-bottom": (
       responsive: true,
       property: margin-bottom,
       class: mb,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     "negative-margin-start": (
       responsive: true,
       property: margin-left,
       class: ms,
-      values: $negative-spacers
+      values: $negative-spacers,
+      bootstrap-compatibility: true
     ),
     // Padding utilities
     "padding": (
       responsive: true,
       property: padding,
       class: p,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-x": (
       responsive: true,
       property: padding-right padding-left,
       class: px,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-y": (
       responsive: true,
       property: padding-top padding-bottom,
       class: py,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-top": (
       responsive: true,
       property: padding-top,
       class: pt,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-end": (
       responsive: true,
       property: padding-right,
       class: pe,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-bottom": (
       responsive: true,
       property: padding-bottom,
       class: pb,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "padding-start": (
       responsive: true,
       property: padding-left,
       class: ps,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     // Gap utility
     "gap": (
       responsive: true,
       property: gap,
       class: gap,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "row-gap": (
       responsive: true,
       property: row-gap,
       class: row-gap,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     "column-gap": (
       responsive: true,
       property: column-gap,
       class: column-gap,
-      values: $spacers
+      values: $spacers,
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-spacing
+    // OUDS mod
+    // scss-docs-start utils-spacing-ouds
+    // Scaled margin utilities
+    "margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    // Negative scaled margin utilities
+    "negative-margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    // Fixed margin utilities
+    "margin-ouds": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-x-ouds": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-y-ouds": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-top-ouds": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-end-ouds": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-bottom-ouds": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-start-ouds": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    // Negative fixed margin utilities
+    "negative-margin-ouds": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-x-ouds": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-y-ouds": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-top-ouds": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-end-ouds": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-bottom-ouds": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-start-ouds": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    // Padding utilities
+    "padding-scaled-ouds": (
+      property: padding,
+      class: p-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-x-scaled-ouds": (
+      property: padding-right padding-left,
+      class: px-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-y-scaled-ouds": (
+      property: padding-top padding-bottom,
+      class: py-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-top-scaled-ouds": (
+      property: padding-top,
+      class: pt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-end-scaled-ouds": (
+      property: padding-right,
+      class: pe-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-bottom-scaled-ouds": (
+      property: padding-bottom,
+      class: pb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-start-scaled-ouds": (
+      property: padding-left,
+      class: ps-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-ouds": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-x-ouds": (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-y-ouds": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-top-ouds": (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-end-ouds": (
+      responsive: true,
+      property: padding-right,
+      class: pe,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-bottom-ouds": (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-start-ouds": (
+      responsive: true,
+      property: padding-left,
+      class: ps,
+      values: $ouds-dimension-space-fixed
+    ),
+    // Gap utility
+    "gap-scaled-ouds": (
+      property: gap,
+      class: gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "row-gap-scaled-ouds": (
+      property: row-gap,
+      class: row-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "column-gap-scaled-ouds": (
+      property: column-gap,
+      class: column-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "gap-ouds": (
+      responsive: true,
+      property: gap,
+      class: gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    "row-gap-ouds": (
+      responsive: true,
+      property: row-gap,
+      class: row-gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    "column-gap-ouds": (
+      responsive: true,
+      property: column-gap,
+      class: column-gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    // scss-docs-end utils-spacing-ouds
+    // End mod
     // Text
     // scss-docs-start utils-text
     "font-family": (

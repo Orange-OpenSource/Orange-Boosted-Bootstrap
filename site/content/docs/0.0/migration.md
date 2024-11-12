@@ -41,13 +41,13 @@ toc: true
 - <span class="badge text-bg-success">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
 - <span class="badge text-bg-success">New</span> Border radius utilities with all sizes:
-  - Default: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
-  - None: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
-  - Short: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
-  - Medium: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
-  - Tall: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
-  - Circle: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
-  - Pill: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
+  - **Default**: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
+  - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
+  - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
+  - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+  - **Circle**: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
+  - **Pill**: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
 
 - <span class="badge text-bg-success">New</span> Border style utilities: `.border-drag`.
 
@@ -58,7 +58,7 @@ toc: true
 #### Flex
 
 - <span class="badge text-bg-success">New</span> Responsive flex utilities where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`:
-  `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
+  `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `.flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
 
 #### Float
 
@@ -75,7 +75,88 @@ toc: true
 #### Shadow
 
 - <span class="badge text-bg-success">New</span> Shadows utilities:
-  `shadow-none`, `shadow-raised`, `shadow-drag`, `shadow-overlay-default`, `shadow-overlay-emphasized`, `shadow-sticky-default`, `shadow-sticky-emphasized` and `shadow-sticky-navigation-scrolled`.
+  `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-overlay-default`, `.shadow-overlay-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
+
+#### Spacings
+
+- <span class="badge text-bg-success">New</span> fixed margin spacing utilities:
+  - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
+  - **Smash**: `.m-smash`, `.mx-smash`, `.my-smash`, `.mt-smash`, `.mb-smash`, `.ms-smash`, `.me-smash`, `.m-xs-smash`, etc...
+  - **Shortest**: `.m-shortest`, `.mx-shortest`, `.my-shortest`, `.mt-shortest`, `.mb-shortest`, `.ms-shortest`, `.me-shortest`, `.m-xs-shortest`, etc...
+  - **Shorter**: `.m-shorter`, `.mx-shorter`, `.my-shorter`, `.mt-shorter`, `.mb-shorter`, `.ms-shorter`, `.me-shorter`, `.m-xs-shorter`, etc...
+  - **Short**: `.m-short`, `.mx-short`, `.my-short`, `.mt-short`, `.mb-short`, `.ms-short`, `.me-short`, `.m-xs-short`, etc...
+  - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
+  - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
+  - **Taller**: `.m-taller`, `.mx-taller`, `.my-taller`, `.mt-taller`, `.mb-taller`, `.ms-taller`, `.me-taller`, `.m-xs-taller`, etc...
+  - **Tallest**: `.m-tallest`, `.mx-tallest`, `.my-tallest`, `.mt-tallest`, `.mb-tallest`, `.ms-tallest`, `.me-tallest`, `.m-xs-tallest`, etc...
+  - **Spacious**: `.m-spacious`, `.mx-spacious`, `.my-spacious`, `.mt-spacious`, `.mb-spacious`, `.ms-spacious`, `.me-spacious`, `.m-xs-spacious`, etc...
+  - **Huge**: `.m-huge`, `.mx-huge`, `.my-huge`, `.mt-huge`, `.mb-huge`, `.ms-huge`, `.me-huge`, `.m-xs-huge`, etc...
+  - **Jumbo**: `.m-jumbo`, `.mx-jumbo`, `.my-jumbo`, `.mt-jumbo`, `.mb-jumbo`, `.ms-jumbo`, `.me-jumbo`, `.m-xs-jumbo`, etc...
+  - **Auto**: `.m-auto`, `.mx-auto`, `.my-auto`, `.mt-auto`, `.mb-auto`, `.ms-auto`, `.me-auto`, `.m-xs-auto`, etc...
+
+- <span class="badge text-bg-success">New</span> scaled margin spacing utilities:
+  - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
+  - **Smash**: `.m-scaled-smash`, `.mx-scaled-smash`, `.my-scaled-smash`, `.mt-scaled-smash`, `.mb-scaled-smash`, `.ms-scaled-smash`, `.me-scaled-smash`,
+  - **Shortest**: `.m-scaled-shortest`, `.mx-scaled-shortest`, `.my-scaled-shortest`, `.mt-scaled-shortest`, `.mb-scaled-shortest`, `.ms-scaled-shortest`, `.me-scaled-shortest`,
+  - **Shorter**: `.m-scaled-shorter`, `.mx-scaled-shorter`, `.my-scaled-shorter`, `.mt-scaled-shorter`, `.mb-scaled-shorter`, `.ms-scaled-shorter`, `.me-scaled-shorter`,
+  - **Short**: `.m-scaled-short`, `.mx-scaled-short`, `.my-scaled-short`, `.mt-scaled-short`, `.mb-scaled-short`, `.ms-scaled-short`, `.me-scaled-short`,
+  - **Medium**: `.m-scaled-medium`, `.mx-scaled-medium`, `.my-scaled-medium`, `.mt-scaled-medium`, `.mb-scaled-medium`, `.ms-scaled-medium`, `.me-scaled-medium`,
+  - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
+  - **Taller**: `.m-scaled-taller`, `.mx-scaled-taller`, `.my-scaled-taller`, `.mt-scaled-taller`, `.mb-scaled-taller`, `.ms-scaled-taller`, `.me-scaled-taller`,
+  - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
+  - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
+
+- <span class="badge text-bg-success">New</span> fixed padding spacing utilities:
+  - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
+  - **Smash**: `.p-smash`, `.px-smash`, `.py-smash`, `.pt-smash`, `.pb-smash`, `.ps-smash`, `.pe-smash`, `.p-xs-smash`, etc...
+  - **Shortest**: `.p-shortest`, `.px-shortest`, `.py-shortest`, `.pt-shortest`, `.pb-shortest`, `.ps-shortest`, `.pe-shortest`, `.p-xs-shortest`, etc...
+  - **Shorter**: `.p-shorter`, `.px-shorter`, `.py-shorter`, `.pt-shorter`, `.pb-shorter`, `.ps-shorter`, `.pe-shorter`, `.p-xs-shorter`, etc...
+  - **Short**: `.p-short`, `.px-short`, `.py-short`, `.pt-short`, `.pb-short`, `.ps-short`, `.pe-short`, `.p-xs-short`, etc...
+  - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
+  - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
+  - **Taller**: `.p-taller`, `.px-taller`, `.py-taller`, `.pt-taller`, `.pb-taller`, `.ps-taller`, `.pe-taller`, `.p-xs-taller`, etc...
+  - **Tallest**: `.p-tallest`, `.px-tallest`, `.py-tallest`, `.pt-tallest`, `.pb-tallest`, `.ps-tallest`, `.pe-tallest`, `.p-xs-tallest`, etc...
+  - **Spacious**: `.p-spacious`, `.px-spacious`, `.py-spacious`, `.pt-spacious`, `.pb-spacious`, `.ps-spacious`, `.pe-spacious`, `.p-xs-spacious`, etc...
+  - **Huge**: `.p-huge`, `.px-huge`, `.py-huge`, `.pt-huge`, `.pb-huge`, `.ps-huge`, `.pe-huge`, `.p-xs-huge`, etc...
+  - **Jumbo**: `.p-jumbo`, `.px-jumbo`, `.py-jumbo`, `.pt-jumbo`, `.pb-jumbo`, `.ps-jumbo`, `.pe-jumbo`, `.p-xs-jumbo`, etc...
+
+- <span class="badge text-bg-success">New</span> scaled padding spacing utilities:
+  - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
+  - **Smash**: `.p-scaled-smash`, `.px-scaled-smash`, `.py-scaled-smash`, `.pt-scaled-smash`, `.pb-scaled-smash`, `.ps-scaled-smash`, `.pe-scaled-smash`,
+  - **Shortest**: `.p-scaled-shortest`, `.px-scaled-shortest`, `.py-scaled-shortest`, `.pt-scaled-shortest`, `.pb-scaled-shortest`, `.ps-scaled-shortest`, `.pe-scaled-shortest`,
+  - **Shorter**: `.p-scaled-shorter`, `.px-scaled-shorter`, `.py-scaled-shorter`, `.pt-scaled-shorter`, `.pb-scaled-shorter`, `.ps-scaled-shorter`, `.pe-scaled-shorter`,
+  - **Short**: `.p-scaled-short`, `.px-scaled-short`, `.py-scaled-short`, `.pt-scaled-short`, `.pb-scaled-short`, `.ps-scaled-short`, `.pe-scaled-short`,
+  - **Medium**: `.p-scaled-medium`, `.px-scaled-medium`, `.py-scaled-medium`, `.pt-scaled-medium`, `.pb-scaled-medium`, `.ps-scaled-medium`, `.pe-scaled-medium`,
+  - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
+  - **Taller**: `.p-scaled-taller`, `.px-scaled-taller`, `.py-scaled-taller`, `.pt-scaled-taller`, `.pb-scaled-taller`, `.ps-scaled-taller`, `.pe-scaled-taller`,
+  - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
+  - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
+
+- <span class="badge text-bg-success">New</span> fixed gap spacing utilities:
+  - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
+  - **Smash**: `.gap-smash`, `.row-gap-smash`, `.column-gap-smash`, `.gap-xs-smash`, etc...
+  - **Shortest**: `.gap-shortest`, `.row-gap-shortest`, `.column-gap-shortest`, `.gap-xs-shortest`, etc...
+  - **Shorter**: `.gap-shorter`, `.row-gap-shorter`, `.column-gap-shorter`, `.gap-xs-shorter`, etc...
+  - **Short**: `.gap-short`, `.row-gap-short`, `.column-gap-short`, `.gap-xs-short`, etc...
+  - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
+  - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
+  - **Taller**: `.gap-taller`, `.row-gap-taller`, `.column-gap-taller`, `.gap-xs-taller`, etc...
+  - **Tallest**: `.gap-tallest`, `.row-gap-tallest`, `.column-gap-tallest`, `.gap-xs-tallest`, etc...
+  - **Spacious**: `.gap-spacious`, `.row-gap-spacious`, `.column-gap-spacious`, `.gap-xs-spacious`, etc...
+  - **Huge**: `.gap-huge`, `.row-gap-huge`, `.column-gap-huge`, `.gap-xs-huge`, etc...
+  - **Jumbo**: `.gap-jumbo`, `.row-gap-jumbo`, `.column-gap-jumbo`, `.gap-xs-jumbo`, etc...
+
+- <span class="badge text-bg-success">New</span> scaled gap spacing utilities:
+  - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
+  - **Smash**: `.gap-scaled-smash`, `.row-gap-scaled-smash`, `.column-gap-scaled-smash`
+  - **Shortest**: `.gap-scaled-shortest`, `.row-gap-scaled-shortest`, `.column-gap-scaled-shortest`
+  - **Shorter**: `.gap-scaled-shorter`, `.row-gap-scaled-shorter`, `.column-gap-scaled-shorter`
+  - **Short**: `.gap-scaled-short`, `.row-gap-scaled-short`, `.column-gap-scaled-short`
+  - **Medium**: `.gap-scaled-medium`, `.row-gap-scaled-medium`, `.column-gap-scaled-medium`
+  - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
+  - **Taller**: `.gap-scaled-taller`, `.row-gap-scaled-taller`, `.column-gap-scaled-taller`
+  - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
+  - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
 ### Examples
 
@@ -85,21 +166,21 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> A new file containing maps of token for utilities has been added. If you were using the Sass compilation, you must import this new Sass file before the variables.
+- <span class="badge text-bg-success">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
-  <details class="mb-3">
+  <details class="mb-tall">
     <summary>See the new import stack</summary>
 
     ```diff
+      @import "tokens/semantic";
+    + @import "tokens/composite";
       @import "tokens/component";
-    + @import "ouds-maps";
-      @import "variables";
     ```
   </details>
 
 - <span class="badge text-bg-success">New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$enable-container-classes</code></li>
@@ -133,6 +214,32 @@ toc: true
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-dimension-0</code></li>
+      <li><code>$ouds-dimension-100</code></li>
+      <li><code>$ouds-dimension-1000</code></li>
+      <li><code>$ouds-dimension-1200</code></li>
+      <li><code>$ouds-dimension-1400</code></li>
+      <li><code>$ouds-dimension-150</code></li>
+      <li><code>$ouds-dimension-1600</code></li>
+      <li><code>$ouds-dimension-1800</code></li>
+      <li><code>$ouds-dimension-200</code></li>
+      <li><code>$ouds-dimension-25</code></li>
+      <li><code>$ouds-dimension-250</code></li>
+      <li><code>$ouds-dimension-300</code></li>
+      <li><code>$ouds-dimension-350</code></li>
+      <li><code>$ouds-dimension-400</code></li>
+      <li><code>$ouds-dimension-450</code></li>
+      <li><code>$ouds-dimension-50</code></li>
+      <li><code>$ouds-dimension-500</code></li>
+      <li><code>$ouds-dimension-550</code></li>
+      <li><code>$ouds-dimension-600</code></li>
+      <li><code>$ouds-dimension-650</code></li>
+      <li><code>$ouds-dimension-700</code></li>
+      <li><code>$ouds-dimension-75</code></li>
+      <li><code>$ouds-dimension-750</code></li>
+      <li><code>$ouds-dimension-800</code></li>
+      <li><code>$ouds-dimension-900</code></li>
+      <li><code>$ouds-dimension-base</code></li>
       <li><code>$ouds-elevation-blur-0</code></li>
       <li><code>$ouds-elevation-blur-200</code></li>
       <li><code>$ouds-elevation-blur-300</code></li>
@@ -154,6 +261,12 @@ toc: true
       <li><code>$ouds-elevation-color-sticky-default</code></li>
       <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-drag</code></li>
+      <li><code>$ouds-elevation-focus</code></li>
+      <li><code>$ouds-elevation-none</code></li>
+      <li><code>$ouds-elevation-overlay-default</code></li>
+      <li><code>$ouds-elevation-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-raised</code></li>
       <li><code>$ouds-elevation-spread-0</code></li>
       <li><code>$ouds-elevation-spread-300</code></li>
       <li><code>$ouds-elevation-spread-drag</code></li>
@@ -166,6 +279,9 @@ toc: true
       <li><code>$ouds-elevation-spread-sticky-default</code></li>
       <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-spread-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-sticky-default</code></li>
+      <li><code>$ouds-elevation-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-elevation-x-0</code></li>
       <li><code>$ouds-elevation-x-drag</code></li>
       <li><code>$ouds-elevation-x-none</code></li>
@@ -238,10 +354,52 @@ toc: true
       <li><code>$ouds-opacity-transparent</code></li>
       <li><code>$ouds-opacity-weak</code></li>
       <li><code>$ouds-opacity-weaker</code></li>
+      <li><code>$ouds-space-fixed-huge</code></li>
+      <li><code>$ouds-space-fixed-jumbo</code></li>
+      <li><code>$ouds-space-fixed-medium</code></li>
+      <li><code>$ouds-space-fixed-none</code></li>
+      <li><code>$ouds-space-fixed-short</code></li>
+      <li><code>$ouds-space-fixed-shorter</code></li>
+      <li><code>$ouds-space-fixed-shortest</code></li>
+      <li><code>$ouds-space-fixed-smash</code></li>
+      <li><code>$ouds-space-fixed-spacious</code></li>
+      <li><code>$ouds-space-fixed-tall</code></li>
+      <li><code>$ouds-space-fixed-taller</code></li>
+      <li><code>$ouds-space-fixed-tallest</code></li>
+      <li><code>$ouds-space-scaled-medium-desktop</code></li>
+      <li><code>$ouds-space-scaled-medium-mobile</code></li>
+      <li><code>$ouds-space-scaled-medium-tablet</code></li>
+      <li><code>$ouds-space-scaled-none-desktop</code></li>
+      <li><code>$ouds-space-scaled-none-mobile</code></li>
+      <li><code>$ouds-space-scaled-none-tablet</code></li>
+      <li><code>$ouds-space-scaled-short-desktop</code></li>
+      <li><code>$ouds-space-scaled-short-mobile</code></li>
+      <li><code>$ouds-space-scaled-short-tablet</code></li>
+      <li><code>$ouds-space-scaled-shorter-desktop</code></li>
+      <li><code>$ouds-space-scaled-shorter-mobile</code></li>
+      <li><code>$ouds-space-scaled-shorter-tablet</code></li>
+      <li><code>$ouds-space-scaled-shortest-desktop</code></li>
+      <li><code>$ouds-space-scaled-shortest-mobile</code></li>
+      <li><code>$ouds-space-scaled-shortest-tablet</code></li>
+      <li><code>$ouds-space-scaled-smash-desktop</code></li>
+      <li><code>$ouds-space-scaled-smash-mobile</code></li>
+      <li><code>$ouds-space-scaled-smash-tablet</code></li>
+      <li><code>$ouds-space-scaled-spacious-desktop</code></li>
+      <li><code>$ouds-space-scaled-spacious-mobile</code></li>
+      <li><code>$ouds-space-scaled-spacious-tablet</code></li>
+      <li><code>$ouds-space-scaled-tall-desktop</code></li>
+      <li><code>$ouds-space-scaled-tall-mobile</code></li>
+      <li><code>$ouds-space-scaled-tall-tablet</code></li>
+      <li><code>$ouds-space-scaled-taller-desktop</code></li>
+      <li><code>$ouds-space-scaled-taller-mobile</code></li>
+      <li><code>$ouds-space-scaled-taller-tablet</code></li>
+      <li><code>$ouds-space-scaled-tallest-desktop</code></li>
+      <li><code>$ouds-space-scaled-tallest-mobile</code></li>
+      <li><code>$ouds-space-scaled-tallest-tablet</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$container-fluid-margin</code></li>
@@ -252,11 +410,15 @@ toc: true
       <li><code>$ouds-border-radiuses</code></li>
       <li><code>$ouds-border-styles</code></li>
       <li><code>$ouds-border-widths</code></li>
+      <li><code>$ouds-dimension-negative-space-fixed</code></li>
+      <li><code>$ouds-dimension-negative-space-scaled</code></li>
+      <li><code>$ouds-dimension-space-fixed</code></li>
+      <li><code>$ouds-dimension-space-scaled</code></li>
       <li><code>$ouds-elevations</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
     <ul>
       <li><code>breakpoint-infix()</code></li>
@@ -276,7 +438,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
@@ -286,23 +448,71 @@ toc: true
       <li><code>border-style-ouds</code></li>
       <li><code>border-top-ouds</code></li>
       <li><code>border-width-ouds</code></li>
+      <li><code>column-gap-ouds</code></li>
+      <li><code>column-gap-scaled-ouds</code></li>
+      <li><code>gap-ouds</code></li>
+      <li><code>gap-scaled-ouds</code></li>
+      <li><code>margin-bottom-ouds</code></li>
+      <li><code>margin-bottom-scaled-ouds</code></li>
+      <li><code>margin-end-ouds</code></li>
+      <li><code>margin-end-scaled-ouds</code></li>
+      <li><code>margin-ouds</code></li>
+      <li><code>margin-scaled-ouds</code></li>
+      <li><code>margin-start-ouds</code></li>
+      <li><code>margin-start-scaled-ouds</code></li>
+      <li><code>margin-top-ouds</code></li>
+      <li><code>margin-top-scaled-ouds</code></li>
+      <li><code>margin-x-ouds</code></li>
+      <li><code>margin-x-scaled-ouds</code></li>
+      <li><code>margin-y-ouds</code></li>
+      <li><code>margin-y-scaled-ouds</code></li>
+      <li><code>negative-margin-bottom-ouds</code></li>
+      <li><code>negative-margin-bottom-scaled-ouds</code></li>
+      <li><code>negative-margin-end-ouds</code></li>
+      <li><code>negative-margin-end-scaled-ouds</code></li>
+      <li><code>negative-margin-ouds</code></li>
+      <li><code>negative-margin-scaled-ouds</code></li>
+      <li><code>negative-margin-start-ouds</code></li>
+      <li><code>negative-margin-start-scaled-ouds</code></li>
+      <li><code>negative-margin-top-ouds</code></li>
+      <li><code>negative-margin-top-scaled-ouds</code></li>
+      <li><code>negative-margin-x-ouds</code></li>
+      <li><code>negative-margin-x-scaled-ouds</code></li>
+      <li><code>negative-margin-y-ouds</code></li>
+      <li><code>negative-margin-y-scaled-ouds</code></li>
+      <li><code>padding-bottom-ouds</code></li>
+      <li><code>padding-bottom-scaled-ouds</code></li>
+      <li><code>padding-end-ouds</code></li>
+      <li><code>padding-end-scaled-ouds</code></li>
+      <li><code>padding-ouds</code></li>
+      <li><code>padding-scaled-ouds</code></li>
+      <li><code>padding-start-ouds</code></li>
+      <li><code>padding-start-scaled-ouds</code></li>
+      <li><code>padding-top-ouds</code></li>
+      <li><code>padding-top-scaled-ouds</code></li>
+      <li><code>padding-x-ouds</code></li>
+      <li><code>padding-x-scaled-ouds</code></li>
+      <li><code>padding-y-ouds</code></li>
+      <li><code>padding-y-scaled-ouds</code></li>
       <li><code>rounded-bottom-ouds</code></li>
       <li><code>rounded-end-ouds</code></li>
       <li><code>rounded-ouds</code></li>
       <li><code>rounded-start-ouds</code></li>
       <li><code>rounded-top-ouds</code></li>
+      <li><code>row-gap-ouds</code></li>
+      <li><code>row-gap-scaled-ouds</code></li>
       <li><code>shadow-ouds</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
     <ul>
       <li><code>--bs-container-margin-x</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-border-radius</code></li>
@@ -316,10 +526,20 @@ toc: true
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
+      <li><code>--bs-space-scaled-medium</code></li>
+      <li><code>--bs-space-scaled-none</code></li>
+      <li><code>--bs-space-scaled-short</code></li>
+      <li><code>--bs-space-scaled-shorter</code></li>
+      <li><code>--bs-space-scaled-shortest</code></li>
+      <li><code>--bs-space-scaled-smash</code></li>
+      <li><code>--bs-space-scaled-spacious</code></li>
+      <li><code>--bs-space-scaled-tall</code></li>
+      <li><code>--bs-space-scaled-taller</code></li>
+      <li><code>--bs-space-scaled-tallest</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
@@ -329,11 +549,35 @@ toc: true
       <li><code>border-start</code></li>
       <li><code>border-top</code></li>
       <li><code>border-width</code></li>
+      <li><code>column-gap</code></li>
+      <li><code>gap</code></li>
+      <li><code>margin-bottom</code></li>
+      <li><code>margin-end</code></li>
+      <li><code>margin</code></li>
+      <li><code>margin-start</code></li>
+      <li><code>margin-top</code></li>
+      <li><code>margin-x</code></li>
+      <li><code>margin-y</code></li>
+      <li><code>negative-margin-bottom</code></li>
+      <li><code>negative-margin-end</code></li>
+      <li><code>negative-margin</code></li>
+      <li><code>negative-margin-start</code></li>
+      <li><code>negative-margin-top</code></li>
+      <li><code>negative-margin-x</code></li>
+      <li><code>negative-margin-y</code></li>
+      <li><code>padding-bottom</code></li>
+      <li><code>padding-end</code></li>
+      <li><code>padding</code></li>
+      <li><code>padding-start</code></li>
+      <li><code>padding-top</code></li>
+      <li><code>padding-x</code></li>
+      <li><code>padding-y</code></li>
       <li><code>rounded</code></li>
       <li><code>rounded-bottom</code></li>
       <li><code>rounded-end</code></li>
       <li><code>rounded-start</code></li>
       <li><code>rounded-top</code></li>
+      <li><code>row-gap</code></li>
       <li><code>shadow</code></li>
     </ul>
   </details>
@@ -353,11 +597,11 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 ### CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
-  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `opacity-0`, `opacity-1`, `opacity-50`, etc. You will only have the OUDS Web utilities such as `opacity-transparent`, `opacity-weaker`, `opacity-weak`, etc. [Learn more about Bootstrap compatibility]({{< docsref "/extend/approach/#bootstrap-compatibility" >}}).
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the OUDS Web utilities such as `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, etc. [Learn more about Bootstrap compatibility]({{< docsref "/extend/approach/#bootstrap-compatibility" >}}).
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
-  <details class="mb-3">
+  <details class="mb-tall">
   <summary>See the new import stack</summary>
 
   ```diff
@@ -371,7 +615,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   ```
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-0</code></li>
@@ -383,21 +627,21 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass maps:</summary>
     <ul>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
-- <details class="mb-2">
+- <details class="mb-short">
     <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
@@ -406,7 +650,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 ## v0.0.1
 
-<hr class="mb-4">
+<hr class="mb-tall">
 
 OUDS Web v0.0.1 has landed, and is based and compatible with Bootstrap v5.3.3.
 
@@ -414,6 +658,6 @@ If you need more details about the changes, please refer to the [v0.0.1 release]
 
 ## v0.0.0
 
-<hr class="mb-4">
+<hr class="mb-tall">
 
 OUDS Web v0.0.0 has landed, and is based and compatible with Bootstrap v5.3.3.

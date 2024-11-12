@@ -18,14 +18,14 @@ Box-shadow styles are referred to as 'elevation' within the design system.
 You can <!--also -->quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
 
 {{< example class="overflow-hidden" >}}
-<div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
-<div class="shadow-raised p-3 mb-5 bg-body-tertiary">Raised shadow</div>
-<div class="shadow-drag p-3 mb-5 bg-body-tertiary">Drag shadow</div>
-<div class="shadow-overlay-default p-3 mb-5 bg-body-tertiary">Overlay default shadow</div>
-<div class="shadow-overlay-emphasized p-3 mb-5 bg-body-tertiary">Overlay emphasized shadow</div>
-<div class="shadow-sticky-default p-3 mb-5 bg-body-tertiary">Sticky default shadow</div>
-<div class="shadow-sticky-emphasized p-3 mb-5 bg-body-tertiary">Sticky emphasized shadow</div>
-<div class="shadow-sticky-navigation-scrolled p-3 mb-5 bg-body-tertiary">Sticky navigation shadow</div>
+<div class="shadow-none p-tall mb-huge bg-body-tertiary">No shadow</div>
+<div class="shadow-raised p-tall mb-huge bg-body-tertiary">Raised shadow</div>
+<div class="shadow-drag p-tall mb-huge bg-body-tertiary">Drag shadow</div>
+<div class="shadow-overlay-default p-tall mb-huge bg-body-tertiary">Overlay default shadow</div>
+<div class="shadow-overlay-emphasized p-tall mb-huge bg-body-tertiary">Overlay emphasized shadow</div>
+<div class="shadow-sticky-default p-tall mb-huge bg-body-tertiary">Sticky default shadow</div>
+<div class="shadow-sticky-emphasized p-tall mb-huge bg-body-tertiary">Sticky emphasized shadow</div>
+<div class="shadow-sticky-navigation-scrolled p-tall mb-huge bg-body-tertiary">Sticky navigation shadow</div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
@@ -57,13 +57,19 @@ Shadow semantic tokens as Sass variables.
 
 {{< scss-docs name="ouds-semantic-elevation" file="scss/tokens/_semantic.scss" >}}
 
+#### Composite tokens
+
+Shadow composite tokens are defined as Sass variables.
+
+{{< scss-docs name="ouds-composite-elevation" file="scss/tokens/_composite.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
 ### Sass maps
 
-{{< scss-docs name="ouds-maps-elevations" file="scss/_ouds-maps.scss" >}}
+{{< scss-docs name="ouds-maps-elevations" file="scss/_maps.scss" >}}
 
 ### Sass utilities API
 

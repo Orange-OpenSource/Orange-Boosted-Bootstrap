@@ -47,9 +47,9 @@
 
   <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <!-- OUDS mod: added `.border-1` and `.border-subtle` -->
-    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
+    <div class="d-flex align-items-center highlight-toolbar ps-tall pe-short py-shortest border-bottom border-1 border-subtle">
       <!-- OUDS mod: added `me-5` -->
-      <a class="me-5 font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
+      <a class="me-huge font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
         {{- $file -}}
       </a>
     </div>
@@ -78,8 +78,8 @@
     {{- highlight $output "scss" "" -}}
 
     <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order -->
-    <div class="position-absolute top-0 mt-1 end-0 me-2">
-      <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+    <div class="position-absolute top-0 mt-shortest end-0 me-short">
+      <button type="button" class="btn-clipboard mt-none me-none" title="Copy to clipboard">
         <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
       </button>
     </div>

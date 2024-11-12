@@ -68,7 +68,7 @@ OUDS Web's grid system can adapt across all eight default breakpoints, and any b
 As noted above, each of these breakpoints have their own unique class prefix and modifiers. Here's how the grid changes across these breakpoints:
 
 <div class="table-responsive">
-  <table class="table mb-4">
+  <table class="table mb-tallest">
     <thead>
       <tr>
         <th scope="col"></th>
@@ -173,7 +173,7 @@ As noted above, each of these breakpoints have their own unique class prefix and
 Includes support for xxl breakpoint, defined like 2xl.
 
 <div class="table-responsive">
-  <table class="table mb-4">
+  <table class="table mb-tallest">
     <thead>
       <tr>
         <th scope="col"></th>
