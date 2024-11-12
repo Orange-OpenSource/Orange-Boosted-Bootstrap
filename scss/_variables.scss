@@ -444,7 +444,7 @@ $enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce B
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 
-// Prefix for :root CSS variables has been moved to `_config.scss`
+// OUDS mod: Prefix for :root CSS variables has been moved to `_config.scss`
 
 // Gradient
 //
@@ -711,8 +711,8 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // scss-docs-start font-variables
-$font-family-sans-serif:      $ouds-font-family-sans-serif-stack !default;
-$font-family-monospace:       $ouds-font-family-monospace-stack !default;
+$font-family-sans-serif:      $ouds-font-family-sans-serif-stack !default; // OUDS mod
+$font-family-monospace:       $ouds-font-family-monospace-stack !default; // OUDS mod
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
@@ -741,9 +741,7 @@ $line-height-base:            var(--#{$prefix}font-line-height-body-medium) !def
 $line-height-sm:              var(--#{$prefix}font-line-height-body-small) !default;
 $line-height-lg:              var(--#{$prefix}font-line-height-body-large) !default;
 
-$letter-spacing-base:         var(--#{$prefix}font-letter-spacing-body-medium) !default;
-// $letter-spacing-sm:           var(--#{$prefix}font-letter-spacing-body-small) !default;
-$letter-spacing-lg:           var(--#{$prefix}font-letter-spacing-body-large) !default;
+$letter-spacing-base:         var(--#{$prefix}font-letter-spacing-body-medium) !default; // OUDS mod
 
 $h1-font-size:                var(--#{$prefix}font-size-heading-xlarge) !default;
 $h2-font-size:                var(--#{$prefix}font-size-heading-large) !default;
@@ -803,8 +801,6 @@ $display-line-height: $headings-line-height !default;
 // scss-docs-start type-variables
 $lead-font-size:              $h5-font-size !default;
 $lead-font-weight:            $ouds-font-weight-web-body-default !default;
-// $lead-line-height:            $line-height-lg !default;
-// $lead-letter-spacing:         $letter-spacing-lg !default;
 
 $small-font-size:             .875em !default;
 
@@ -817,9 +813,9 @@ $text-muted:                  var(--#{$prefix}secondary-color) !default; // Depr
 $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
-// $blockquote-font-size:        $font-size-lg !default;
+// OUDS mod: no `$blockquote-font-size`
 $blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // OUDS mod: instead of `$gray-600`
-// $blockquote-footer-font-size: $small-font-size !default;
+// OUDS mod: no `$blockquote-footer-font-size`
 
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
@@ -838,14 +834,14 @@ $vr-border-width:             2px !default; // OUDS mod: instead of `var(--#{$pr
 // scss-docs-end vr-variables
 
 $legend-margin-bottom:        $spacer * .25 !default;
-// $legend-font-size:            $font-size-lg !default;
+// OUDS mod: no `$legend-font-size`
 $legend-font-weight:          $font-weight-bold !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
 $list-inline-padding:         $spacer * .25 !default;
 
-$mark-padding:                .125em .1875em !default; // OUDS mod
+$mark-padding:                .125em !default; // OUDS mod: instead of `.1875rem`
 $mark-color:                  $white !default; // OUDS mod: instead of `$body-color`
 $mark-bg:                     $black !default; // OUDS mod: instead of `$yellow-100`
 // scss-docs-end type-variables
