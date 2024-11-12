@@ -181,7 +181,7 @@ The first two examples show the scaled and fixed margin classes in action. The l
 Please note that if you mix the scaled and fixed classes, the fixed classes will override the scaled ones.
 
 {{< example class="bd-example-spacings" >}}
-<div class="mx-scaled-tall">Tall scaled x margin</span></div>
+<div class="mx-scaled-tall">Tall scaled x margin</div>
 <div class="mx-tall">Tall x margin (fixed)</div>
 <div class="mx-tall mx-md-taller mx-xl-tallest">Tall scaled x margin (manually)</div>
 {{< /example >}}
