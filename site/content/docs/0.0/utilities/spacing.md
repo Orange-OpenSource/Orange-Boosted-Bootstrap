@@ -153,14 +153,6 @@ Here are some representative examples of these classes:
 }
 ```
 
-{{< example class="bd-example-flex" >}}
-<div class="ms-medium p-short mb-shortest">Equivalent for mobile devices.</div>
-<div class="ms-tall p-short mb-shortest">Equivalent for tablet devices.</div>
-<div class="ms-taller p-short mb-shortest">Equivalent for desktop devices.</div>
-<div class="ms-scaled-medium p-short mb-shortest">Resize to see it live!</div>
-<div class="ms-medium ms-md-tall ms-xl-taller p-short mb-shortest">Equivalent using fixed utilities.</div>
-{{< /example >}}
-
 {{< bootstrap-compatibility >}}
 
 ```scss
@@ -183,6 +175,16 @@ Here are some representative examples of these classes:
 ```
 
 {{< /bootstrap-compatibility >}}
+
+The first two examples show the scaled and fixed margin classes in action. The last one shows how to recreate an equivalent of `.mx-scaled-tall` by combining other responsive margin classes.
+
+Please note that if you mix the scaled and fixed classes, the fixed classes will override the scaled ones.
+
+{{< example class="bd-example-spacings" >}}
+<div class="mx-scaled-tall">Tall scaled x margin</span></div>
+<div class="mx-tall">Tall x margin (fixed)</div>
+<div class="mx-tall mx-md-taller mx-xl-tallest">Tall scaled x margin (manually)</div>
+{{< /example >}}
 
 ### Horizontal centering
 
