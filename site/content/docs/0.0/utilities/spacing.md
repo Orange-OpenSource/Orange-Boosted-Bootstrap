@@ -53,7 +53,7 @@ Where *size* is one of:
 - `jumbo` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
 - `auto` - for classes that set the `margin` to auto
 
-(You can add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
+(You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
 
 {{< bootstrap-compatibility >}}
 
@@ -80,10 +80,10 @@ Where *size* is one of:
 
 - `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
 - `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
-- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
-- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
+- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .75`
+- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
+- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 2.5`
+- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3.5`
 - `auto` - for classes that set the `margin` to auto
 
 (You can add more sizes by adding entries to the `$spacers` Sass map variable.)
@@ -128,7 +128,7 @@ Where *size* is one of:
 | `spacious` | `48px` | `56px` | `64px` |
 {{< /bs-table >}}
 
-(You can add more sizes by adding entries to the `$ouds-dimension-space-scaled` Sass map variable.)
+(You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-scaled` Sass map variable.)
 
 ### Examples
 
@@ -152,6 +152,14 @@ Here are some representative examples of these classes:
   padding: $ouds-space-fixed-tall !important;
 }
 ```
+
+{{< example class="bd-example-flex" >}}
+<div class="ms-medium p-short mb-shortest">Equivalent for mobile devices.</div>
+<div class="ms-tall p-short mb-shortest">Equivalent for tablet devices.</div>
+<div class="ms-taller p-short mb-shortest">Equivalent for desktop devices.</div>
+<div class="ms-scaled-medium p-short mb-shortest">Resize to see it live!</div>
+<div class="ms-medium ms-md-tall ms-xl-taller p-short mb-shortest">Equivalent using fixed utilities.</div>
+{{< /example >}}
 
 {{< bootstrap-compatibility >}}
 

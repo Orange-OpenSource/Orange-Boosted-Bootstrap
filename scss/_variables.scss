@@ -464,17 +464,14 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-// TODO: Decide which value to use here since it could have many impacts on projects
-// $spacer: px-to-rem($ouds-dimension-250) !default; // OUDS mod: instead of: `1rem`
-// $spacer: px-to-rem($ouds-dimension-md) !default; // OUDS mod: instead of: `1rem`
-$spacer: 1.25rem !default; // OUDS mod: instead of: `1rem`
+$spacer: 1rem !default; // OUDS mod: instead of: `1rem`
 $spacers: (
   0: 0,
   1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  2: $spacer * .75, // OUDS mod: instead of `.5`
+  3: $spacer * 1.5, // OUDS mod: instead of `1`
+  4: $spacer * 2.5, // OUDS mod: instead of `1.5`
+  5: $spacer * 3.5, // OUDS mod: instead of `3`
 ) !default;
 // scss-docs-end spacer-variables-maps
 

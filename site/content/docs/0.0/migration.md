@@ -77,15 +77,9 @@ toc: true
 - <span class="badge text-bg-success">New</span> Shadows utilities:
   `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-overlay-default`, `.shadow-overlay-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
 
-### Examples
-
-- <span class="badge text-bg-success">New</span> New [Grid example]({{< docsref "/examples/grid" >}}).
-
-- <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
-
 #### Spacings
 
-- <span class="badge text-bg-success">New</span> fixed margin Spacing utilities:
+- <span class="badge text-bg-success">New</span> fixed margin spacing utilities:
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
   - **Smash**: `.m-smash`, `.mx-smash`, `.my-smash`, `.mt-smash`, `.mb-smash`, `.ms-smash`, `.me-smash`, `.m-xs-smash`, etc...
   - **Shortest**: `.m-shortest`, `.mx-shortest`, `.my-shortest`, `.mt-shortest`, `.mb-shortest`, `.ms-shortest`, `.me-shortest`, `.m-xs-shortest`, etc...
@@ -100,7 +94,7 @@ toc: true
   - **Jumbo**: `.m-jumbo`, `.mx-jumbo`, `.my-jumbo`, `.mt-jumbo`, `.mb-jumbo`, `.ms-jumbo`, `.me-jumbo`, `.m-xs-jumbo`, etc...
   - **Auto**: `.m-auto`, `.mx-auto`, `.my-auto`, `.mt-auto`, `.mb-auto`, `.ms-auto`, `.me-auto`, `.m-xs-auto`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled margin Spacing utilities:
+- <span class="badge text-bg-success">New</span> scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
   - **Smash**: `.m-scaled-smash`, `.mx-scaled-smash`, `.my-scaled-smash`, `.mt-scaled-smash`, `.mb-scaled-smash`, `.ms-scaled-smash`, `.me-scaled-smash`,
   - **Shortest**: `.m-scaled-shortest`, `.mx-scaled-shortest`, `.my-scaled-shortest`, `.mt-scaled-shortest`, `.mb-scaled-shortest`, `.ms-scaled-shortest`, `.me-scaled-shortest`,
@@ -112,7 +106,7 @@ toc: true
   - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
   - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
 
-- <span class="badge text-bg-success">New</span> fixed padding Spacing utilities:
+- <span class="badge text-bg-success">New</span> fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
   - **Smash**: `.p-smash`, `.px-smash`, `.py-smash`, `.pt-smash`, `.pb-smash`, `.ps-smash`, `.pe-smash`, `.p-xs-smash`, etc...
   - **Shortest**: `.p-shortest`, `.px-shortest`, `.py-shortest`, `.pt-shortest`, `.pb-shortest`, `.ps-shortest`, `.pe-shortest`, `.p-xs-shortest`, etc...
@@ -126,7 +120,7 @@ toc: true
   - **Huge**: `.p-huge`, `.px-huge`, `.py-huge`, `.pt-huge`, `.pb-huge`, `.ps-huge`, `.pe-huge`, `.p-xs-huge`, etc...
   - **Jumbo**: `.p-jumbo`, `.px-jumbo`, `.py-jumbo`, `.pt-jumbo`, `.pb-jumbo`, `.ps-jumbo`, `.pe-jumbo`, `.p-xs-jumbo`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled padding Spacing utilities:
+- <span class="badge text-bg-success">New</span> scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
   - **Smash**: `.p-scaled-smash`, `.px-scaled-smash`, `.py-scaled-smash`, `.pt-scaled-smash`, `.pb-scaled-smash`, `.ps-scaled-smash`, `.pe-scaled-smash`,
   - **Shortest**: `.p-scaled-shortest`, `.px-scaled-shortest`, `.py-scaled-shortest`, `.pt-scaled-shortest`, `.pb-scaled-shortest`, `.ps-scaled-shortest`, `.pe-scaled-shortest`,
@@ -138,7 +132,7 @@ toc: true
   - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
   - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
 
-- <span class="badge text-bg-success">New</span> fixed gap Spacing utilities:
+- <span class="badge text-bg-success">New</span> fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
   - **Smash**: `.gap-smash`, `.row-gap-smash`, `.column-gap-smash`, `.gap-xs-smash`, etc...
   - **Shortest**: `.gap-shortest`, `.row-gap-shortest`, `.column-gap-shortest`, `.gap-xs-shortest`, etc...
@@ -152,7 +146,7 @@ toc: true
   - **Huge**: `.gap-huge`, `.row-gap-huge`, `.column-gap-huge`, `.gap-xs-huge`, etc...
   - **Jumbo**: `.gap-jumbo`, `.row-gap-jumbo`, `.column-gap-jumbo`, `.gap-xs-jumbo`, etc...
 
-- <span class="badge text-bg-success">New</span> scaled gap Spacing utilities:
+- <span class="badge text-bg-success">New</span> scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
   - **Smash**: `.gap-scaled-smash`, `.row-gap-scaled-smash`, `.column-gap-scaled-smash`
   - **Shortest**: `.gap-scaled-shortest`, `.row-gap-scaled-shortest`, `.column-gap-scaled-shortest`
@@ -164,9 +158,15 @@ toc: true
   - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
   - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
+### Examples
+
+- <span class="badge text-bg-success">New</span> New [Grid example]({{< docsref "/examples/grid" >}}).
+
+- <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
+
 ### CSS and Sass variables
 
-- <span class="badge text-bg-success">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass files between the semantic and component files.
+- <span class="badge text-bg-success">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
   <details class="mb-tall">
     <summary>See the new import stack</summary>
