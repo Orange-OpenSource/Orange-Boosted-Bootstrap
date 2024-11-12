@@ -602,7 +602,7 @@ $utilities: map-merge(
     // scss-docs-end utils-spacing
     // OUDS mod
     // scss-docs-start utils-spacing-ouds
-    // Margin utilities
+    // Scaled margin utilities
     "margin-scaled-ouds": (
       property: margin,
       class: m-scaled,
@@ -638,6 +638,7 @@ $utilities: map-merge(
       class: ms-scaled,
       values: $ouds-dimension-space-scaled
     ),
+    // Negative scaled margin utilities
     "negative-margin-scaled-ouds": (
       property: margin,
       class: m-scaled,
@@ -673,6 +674,7 @@ $utilities: map-merge(
       class: ms-scaled,
       values: $ouds-dimension-negative-space-scaled
     ),
+    // Fixed margin utilities
     "margin-ouds": (
       responsive: true,
       property: margin,
@@ -715,7 +717,7 @@ $utilities: map-merge(
       class: ms,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
-    // Negative margin utilities
+    // Negative fixed margin utilities
     "negative-margin-ouds": (
       responsive: true,
       property: margin,
