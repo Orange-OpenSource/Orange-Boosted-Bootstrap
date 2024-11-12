@@ -313,7 +313,7 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  @include font-size($small-font-size);
+  @extend %body-small; // OUDS mod: instead of `@include font-size($small-font-size)`
 }
 
 

@@ -775,10 +775,24 @@ $headings-color:              inherit !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: "%display-large",
-  2: "%display-medium",
-  3: "%display-small"
+  large: "%display-large",
+  medium: "%display-medium",
+  small: "%display-small"
 ) !default;
+
+@if $enable-bootstrap-compatibility {
+  $display-font-sizes: map-merge(
+    $display-font-sizes,
+    (
+      1: "%display-large",
+      2: "%display-medium",
+      3: "%display-small",
+      4: "%heading-xlarge",
+      5: "%heading-large",
+      6: "%heading-medium",
+    )
+  );
+}
 
 $display-font-family: null !default;
 $display-font-style:  null !default;

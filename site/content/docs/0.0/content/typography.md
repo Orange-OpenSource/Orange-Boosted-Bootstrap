@@ -25,28 +25,28 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
 
 {{< bs-table >}}
-| Heading | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Heading | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `<h1></h1>` | `2.5rem` (40px) | `2.25rem` (36px) | `1.75rem` (28px) |
-| `<h2></h2>` | `2rem` (32px) | `1.75rem` (28px) | `1.5rem` (24px) |
-| `<h3></h3>` | `1.75rem` (28px) | `1.5rem` (24px) | `1.25rem` (20px) |
-| `<h4></h4>` | `1.5rem` (24px) | `1.25rem` (20px) | `1.125rem` (18px) |
-| `<h5></h5>` | `1.25rem` (20px) | `1.125rem` (18px) | `1rem` (16px) |
-| `<h6></h6>` | `1.125rem` (18px) | `1rem` (16px) | `1rem` (16px) |
+| `<h1></h1>` | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
+| `<h2></h2>` | `1.5rem` (24px) | `1.75rem` (28px) | `2rem` (32px) |
+| `<h3></h3>` | `1.25rem` (20px) | `1.5rem` (24px) | `1.75rem` (28px) |
+| `<h4></h4>` | `1.125rem` (18px) | `1.25rem` (20px) | `1.5rem` (24px) |
+| `<h5></h5>` | `1rem` (16px) | `1.125rem` (18px) | `1.25rem` (20px) |
+| `<h6></h6>` | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
   <summary>See more details about the heading classes</summary>
 
 {{< bs-table >}}
-| Heading | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Heading | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `<h1></h1>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `<h2></h2>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `<h3></h3>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> |
-| `<h4></h4>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `<h5></h5>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `<h6></h6>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| `<h1></h1>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| `<h2></h2>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| `<h3></h3>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| `<h4></h4>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| `<h5></h5>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> |
+| `<h6></h6>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
@@ -89,41 +89,69 @@ Traditional heading elements are designed to work best in the meat of your page 
 We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints.
 
 {{< bs-table >}}
-| Display | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Display | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `.display-1` | `4.5rem` (72px) | `4rem` (64px) | `2.5rem` (40px) |
-| `.display-2` | `3.5rem` (56px) | `3rem` (48px) | `2.25rem` (36px) |
-| `.display-3` | `3rem` (48px) | `2.5rem` (40px) | `2rem` (32px) |
+| `.display-large` | `2.5rem` (40px) | `4rem` (64px) | `4.5rem` (72px) |
+| `.display-medium` | `2.25rem` (36px) | `3rem` (48px) | `3.5rem` (56px) |
+| `.display-small` | `2rem` (32px) | `2.5rem` (40px) | `3rem` (48px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
   <summary>See more details about the `.display` classes</summary>
 
 {{< bs-table >}}
-| Display | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Display | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `.display-1` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.display-2` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.display-3` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| `.display-large` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| `.display-medium` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| `.display-small` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
 
 <div class="bd-example">
+  <div class="display-large pb-3 mb-3 border-bottom">Display 1</div>
+  <div class="display-medium pb-3 mb-3 border-bottom">Display 2</div>
+  <div class="display-small">Display 3</div>
+</div>
+
+```html
+<h1 class="display-large">Display 1</h1>
+<h1 class="display-medium">Display 2</h1>
+<h1 class="display-small">Display 3</h1>
+```
+
+Display headings are configured via the `$display-font-sizes` Sass map and the variable `$display-font-weight`.
+
+Display headings are customizable via three variables, `$display-font-family`, `$display-font-style` and `$display-line-height`.
+
+{{< bootstrap-compatibility >}}
+
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
+
+<div class="bd-example">
   <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
   <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
-  <div class="display-3">Display 3</div>
+  <div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
+  <div class="display-4 pb-3 mb-3 border-bottom">Display 4</div>
+  <div class="display-5 pb-3 mb-3 border-bottom">Display 5</div>
+  <div class="display-6">Display 6</div>
 </div>
 
 ```html
 <h1 class="display-1">Display 1</h1>
 <h1 class="display-2">Display 2</h1>
 <h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
 ```
 
-Display headings are configured via the `$display-font-sizes` Sass map and the variable `$display-font-weight`.
+Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
 
-Display headings are customizable via three variables, `$display-font-family`, `$display-font-style` and `$display-line-height`.
+Display headings are customizable via two variables, `$display-font-family` and `$display-font-style`.
+
+{{< /bootstrap-compatibility >}}
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
@@ -132,31 +160,29 @@ Display headings are customizable via three variables, `$display-font-family`, `
 Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
 
 {{< bs-table >}}
-| Regular text | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| X-large | `1.25rem` (20px) | `1.125rem` (18px) | `1rem` (16px) |
-| Large | `1.125rem` (18px) | `1rem` (16px) | `1rem` (16px) |
-| Medium | `1rem` (16px) | `.875rem` (14px) | `.875rem` (14px) |
-| Small | `.875rem` (14px) | `.75rem` (12px) | `.75rem` (12px) |
+| Body large | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
+| Body medium | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
+| Body small | `.75rem` (12px) | `.75rem` (12px) | `.875rem` (14px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
   <summary>See more details about the regular text classes</summary>
 
 {{< bs-table >}}
-| Regular text | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| X-large | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Large | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Medium | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Small | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| Body large | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body medium | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body small | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
 
 ## Lead
 
-Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-text) X-large.
+Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-text) body large.
 
 {{< example >}}
 <p class="lead">
