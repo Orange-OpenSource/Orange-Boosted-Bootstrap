@@ -25,15 +25,13 @@
 
   // OUDS mod
   svg {
-    font-size: 1.5625rem;
+    font-size: var(--#{$prefix}icon-medium-with-body-medium);
   }
   // End mod
 }
 
 .bd-links-nav {
-  @include media-breakpoint-down(lg) {
-    font-size: .875rem;
-  }
+  @extend %body-medium; // OUDS mod: instead of media query
 
   @include media-breakpoint-between(xs, lg) {
     column-count: 2;

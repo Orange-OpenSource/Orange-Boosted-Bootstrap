@@ -55,30 +55,23 @@
           /* rtl:begin:remove */
         }
 
-        @if $is-css-var {
+        @if type-of($value) == "string" and str-slice($value, 1, 1) == "%" {
           .#{$property-class + $infix + $property-class-modifier} {
-            --#{$prefix}#{$css-variable-name}: #{$value};
-          }
-
-          @each $pseudo in $state {
-            .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
-              --#{$prefix}#{$css-variable-name}: #{$value};
-            }
+            @extend #{$value};
           }
         } @else {
-          .#{$property-class + $infix + $property-class-modifier} {
-            @each $property in $properties {
-              @if $is-local-vars {
-                @each $local-var, $variable in $is-local-vars {
-                  --#{$prefix}#{$local-var}: #{$variable};
-                }
-              }
-              #{$property}: $value if($enable-important-utilities, !important, null);
+          @if $is-css-var {
+            .#{$property-class + $infix + $property-class-modifier} {
+              --#{$prefix}#{$css-variable-name}: #{$value};
             }
-          }
 
-          @each $pseudo in $state {
-            .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+            @each $pseudo in $state {
+              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+                --#{$prefix}#{$css-variable-name}: #{$value};
+              }
+            }
+          } @else {
+            .#{$property-class + $infix + $property-class-modifier} {
               @each $property in $properties {
                 @if $is-local-vars {
                   @each $local-var, $variable in $is-local-vars {
@@ -88,11 +81,24 @@
                 #{$property}: $value if($enable-important-utilities, !important, null);
               }
             }
-          }
-        }
 
-        @if $is-rtl == false {
-          /* rtl:end:remove */
+            @each $pseudo in $state {
+              .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+                @each $property in $properties {
+                  @if $is-local-vars {
+                    @each $local-var, $variable in $is-local-vars {
+                      --#{$prefix}#{$local-var}: #{$variable};
+                    }
+                  }
+                  #{$property}: $value if($enable-important-utilities, !important, null);
+                }
+              }
+            }
+          }
+
+          @if $is-rtl == false {
+            /* rtl:end:remove */
+          }
         }
       }
     }

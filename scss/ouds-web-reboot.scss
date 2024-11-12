@@ -1,6 +1,7 @@
 @import "mixins/banner";
 @include bsBanner(Reboot);
 
+@import "config";
 @import "functions";
 @import "tokens/raw";
 @import "tokens/semantic";

@@ -57,7 +57,7 @@
 // 2. As a best practice, apply a default `background-color`.
 // 3. Prevent adjustments of font size after orientation changes in iOS.
 // 4. Change the default tap highlight to be completely transparent in iOS.
-// 5. Prevent faux-bold/italic
+// 5. Prevent faux-bold/italic maybe for some RTL fonts
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
@@ -69,11 +69,11 @@ body {
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  // OUDS mod: no color
+  color: var(--#{$prefix}body-color);
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // OUDS mod
+  letter-spacing: var(--#{$prefix}body-letter-spacing); // OUDS mod
   background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
@@ -134,7 +134,6 @@ hr {
 %heading {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
-  @include font-size($font-size-base);  // OUDS mod
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -142,7 +141,6 @@ hr {
   color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // OUDS mod
   -webkit-font-smoothing: antialiased;  // OUDS mod
   -moz-osx-font-smoothing: grayscale;   // OUDS mod
   text-rendering: optimizelegibility;   // OUDS mod
@@ -150,27 +148,32 @@ hr {
 
 h1 {
   @extend %heading;
-  @include font-size($h4-font-size);
-  line-height: $h4-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h4-spacing;
+  @extend %heading-xlarge; // OUDS mod: instead of `@include font-size($h1-font-size)`
 }
 
-h2,
+h2 {
+  @extend %heading;
+  @extend %heading-large; // OUDS mod: instead of `@include font-size($h2-font-size)`
+}
+
 h3 {
   @extend %heading;
-  @include font-size($h5-font-size);
-  line-height: $h5-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h5-spacing;
+  @extend %heading-medium; // OUDS mod: instead of `@include font-size($h3-font-size)`
 }
 
-h4,
-h5,
+h4 {
+  @extend %heading;
+  @extend %heading-small; // OUDS mod: instead of `@include font-size($h4-font-size)`
+}
+
+h5 {
+  @extend %heading;
+  @extend %body-large; // OUDS mod: instead of `@include font-size($h5-font-size)`
+}
+
 h6 {
   @extend %heading;
+  @extend %body-medium; // OUDS mod: instead of `@include font-size($h6-font-size)`
 }
 
 
@@ -286,6 +289,13 @@ blockquote {
   margin: 0 0 1rem;
 }
 
+// OUDS mod: No italic
+em,
+cite {
+  font-style: normal; // OUDS mod: remove italic.
+}
+// End mod
+
 
 // Strong
 //
@@ -304,10 +314,6 @@ strong {
 
 small {
   @include font-size($small-font-size);
-  // OUDS mod
-  font-weight: $font-weight-normal;
-  line-height: $line-height-sm;
-  // End mod
 }
 
 
@@ -383,8 +389,7 @@ pre {
   margin-top: 0; // 1
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
-  @include font-size($code-font-size);
-  line-height: $pre-line-height; // OUDS mod
+  @extend %code-small; // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
@@ -399,7 +404,6 @@ var, // OUDS mod
 code {
   @include font-size($code-font-size);
   font-style: normal; // OUDS mod: <var> is italic in all browsers
-  line-height: $line-height-sm; // OUDS mod
   color: var(--#{$prefix}code-color);
   word-wrap: break-word;
 
@@ -460,13 +464,10 @@ table {
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
-  @include font-size($h1-font-size);    // OUDS mod
-  font-weight: $font-weight-bold;       // OUDS mod
+  @extend %heading-xlarge; // OUDS mod
+  font-weight: $font-weight-bold; // OUDS mod
   color: $table-caption-color;
   text-align: left;
-
-  /* rtl:remove */
-  letter-spacing: $h1-spacing;          // OUDS mod
   -webkit-font-smoothing: antialiased;  // OUDS mod
   -moz-osx-font-smoothing: grayscale;   // OUDS mod
   text-rendering: optimizelegibility;   // OUDS mod
@@ -500,7 +501,6 @@ th {
 
 label {
   display: inline-block; // 1
-  font-weight: $form-label-font-weight; // OUDS mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -626,9 +626,8 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
-  @include font-size($legend-font-size);
+  @extend %body-large; // OUDS mod: instead of `@include font-size($legend-font-size)`
   font-weight: $legend-font-weight;
-  line-height: inherit;
 
   + * {
     clear: left; // 2

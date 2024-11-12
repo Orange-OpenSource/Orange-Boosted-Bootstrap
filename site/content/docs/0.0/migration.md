@@ -11,6 +11,8 @@ toc: true
 
 ## v0.0.4
 
+### Content
+
 ### Layout
 
 - <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl`, and `3xl`.
@@ -158,6 +160,8 @@ toc: true
   - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
   - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
+#### Text
+
 ### Examples
 
 - <span class="badge text-bg-success">New</span> New [Grid example]({{< docsref "/examples/grid" >}}).
@@ -172,6 +176,9 @@ toc: true
     <summary>See the new import stack</summary>
 
     ```diff
+    + @import "config";
+      @import "functions";
+      @import "tokens/raw";
       @import "tokens/semantic";
     + @import "tokens/composite";
       @import "tokens/component";

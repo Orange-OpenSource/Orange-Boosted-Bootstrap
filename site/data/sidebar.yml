@@ -66,9 +66,7 @@
   icon_color: body-color
   pages:
     - title: Reboot
-      draft: true
     - title: Typography
-      draft: true
     - title: Images
       draft: true
     - title: Tables
@@ -214,7 +212,6 @@
     - title: Sizing
     - title: Spacing
     - title: Text
-      draft: true
     - title: Vertical align
     - title: Visibility
     - title: Z-index

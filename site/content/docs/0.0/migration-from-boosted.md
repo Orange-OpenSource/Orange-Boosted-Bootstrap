@@ -256,6 +256,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]({{< docsref "/utilities/spacing#notation-for-scaled-values" >}}) (for example, `.mb-1.mb-md-2` → `.mb-scaled-shortest`).
     2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
 
+### Text
+
 ## Examples
 
 - <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
@@ -271,6 +273,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   <summary>See the new import stack</summary>
 
   ```diff
+  + @import "config";
     @import "functions";
   + @import "tokens/raw";
   + @import "tokens/semantic";

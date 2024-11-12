@@ -2,6 +2,7 @@
 @include bsBanner(Utilities);
 
 // Configuration
+@import "config";
 @import "functions";
 @import "tokens/raw";
 @import "tokens/semantic";

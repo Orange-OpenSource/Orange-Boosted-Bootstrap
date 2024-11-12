@@ -11,7 +11,7 @@
   }
 
   nav {
-    @include font-size(.875rem);
+    @extend %label-small; // OUDS mod: instead of `.875rem`
 
     ul {
       padding-left: 0;

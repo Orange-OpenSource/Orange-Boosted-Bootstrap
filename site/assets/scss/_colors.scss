@@ -15,8 +15,7 @@
       top: 1rem;
       right: 1rem;
       padding-left: 1rem;
-      font-size: .75rem;
-      line-height: 1.35;
+      @extend %label-small;
       white-space: pre;
       content:
         str-slice($contrast-ratio, 1, 4) "\A"
