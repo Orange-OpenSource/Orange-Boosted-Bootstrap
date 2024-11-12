@@ -603,16 +603,81 @@ $utilities: map-merge(
     // OUDS mod
     // scss-docs-start utils-spacing-ouds
     // Margin utilities
+    "margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "negative-margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
     "margin-ouds": (
       responsive: true,
       property: margin,
       class: m,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
-    ),
-    "margin-scaled-ouds": (
-      property: margin,
-      class: m-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "margin-x-ouds": (
       responsive: true,
@@ -620,21 +685,11 @@ $utilities: map-merge(
       class: mx,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
-    "margin-x-scaled-ouds": (
-      property: margin-right margin-left,
-      class: mx-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "margin-y-ouds": (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
-    ),
-    "margin-y-scaled-ouds": (
-      property: margin-top margin-bottom,
-      class: my-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "margin-top-ouds": (
       responsive: true,
@@ -642,21 +697,11 @@ $utilities: map-merge(
       class: mt,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
-    "margin-top-scaled-ouds": (
-      property: margin-top,
-      class: mt-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "margin-end-ouds": (
       responsive: true,
       property: margin-right,
       class: me,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
-    ),
-    "margin-end-scaled-ouds": (
-      property: margin-right,
-      class: me-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "margin-bottom-ouds": (
       responsive: true,
@@ -664,21 +709,11 @@ $utilities: map-merge(
       class: mb,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
     ),
-    "margin-bottom-scaled-ouds": (
-      property: margin-bottom,
-      class: mb-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "margin-start-ouds": (
       responsive: true,
       property: margin-left,
       class: ms,
       values: map-merge($ouds-dimension-space-fixed, (auto: auto))
-    ),
-    "margin-start-scaled-ouds": (
-      property: margin-left,
-      class: ms-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     // Negative margin utilities
     "negative-margin-ouds": (
@@ -687,21 +722,11 @@ $utilities: map-merge(
       class: m,
       values: $ouds-dimension-negative-space-fixed
     ),
-    "negative-margin-scaled-ouds": (
-      property: margin,
-      class: m-scaled,
-      values: $ouds-dimension-negative-space-scaled
-    ),
     "negative-margin-x-ouds": (
       responsive: true,
       property: margin-right margin-left,
       class: mx,
       values: $ouds-dimension-negative-space-fixed
-    ),
-    "negative-margin-x-scaled-ouds": (
-      property: margin-right margin-left,
-      class: mx-scaled,
-      values: $ouds-dimension-negative-space-scaled
     ),
     "negative-margin-y-ouds": (
       responsive: true,
@@ -709,21 +734,11 @@ $utilities: map-merge(
       class: my,
       values: $ouds-dimension-negative-space-fixed
     ),
-    "negative-margin-y-scaled-ouds": (
-      property: margin-top margin-bottom,
-      class: my-scaled,
-      values: $ouds-dimension-negative-space-scaled
-    ),
     "negative-margin-top-ouds": (
       responsive: true,
       property: margin-top,
       class: mt,
       values: $ouds-dimension-negative-space-fixed
-    ),
-    "negative-margin-top-scaled-ouds": (
-      property: margin-top,
-      class: mt-scaled,
-      values: $ouds-dimension-negative-space-scaled
     ),
     "negative-margin-end-ouds": (
       responsive: true,
@@ -731,21 +746,11 @@ $utilities: map-merge(
       class: me,
       values: $ouds-dimension-negative-space-fixed
     ),
-    "negative-margin-end-scaled-ouds": (
-      property: margin-right,
-      class: me-scaled,
-      values: $ouds-dimension-negative-space-scaled
-    ),
     "negative-margin-bottom-ouds": (
       responsive: true,
       property: margin-bottom,
       class: mb,
       values: $ouds-dimension-negative-space-fixed
-    ),
-    "negative-margin-bottom-scaled-ouds": (
-      property: margin-bottom,
-      class: mb-scaled,
-      values: $ouds-dimension-negative-space-scaled
     ),
     "negative-margin-start-ouds": (
       responsive: true,
@@ -753,22 +758,47 @@ $utilities: map-merge(
       class: ms,
       values: $ouds-dimension-negative-space-fixed
     ),
-    "negative-margin-start-scaled-ouds": (
-      property: margin-left,
-      class: ms-scaled,
-      values: $ouds-dimension-negative-space-scaled
-    ),
     // Padding utilities
+    "padding-scaled-ouds": (
+      property: padding,
+      class: p-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-x-scaled-ouds": (
+      property: padding-right padding-left,
+      class: px-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-y-scaled-ouds": (
+      property: padding-top padding-bottom,
+      class: py-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-top-scaled-ouds": (
+      property: padding-top,
+      class: pt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-end-scaled-ouds": (
+      property: padding-right,
+      class: pe-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-bottom-scaled-ouds": (
+      property: padding-bottom,
+      class: pb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-start-scaled-ouds": (
+      property: padding-left,
+      class: ps-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
     "padding-ouds": (
       responsive: true,
       property: padding,
       class: p,
       values: $ouds-dimension-space-fixed
-    ),
-    "padding-scaled-ouds": (
-      property: padding,
-      class: p-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "padding-x-ouds": (
       responsive: true,
@@ -776,21 +806,11 @@ $utilities: map-merge(
       class: px,
       values: $ouds-dimension-space-fixed
     ),
-    "padding-x-scaled-ouds": (
-      property: padding-right padding-left,
-      class: px-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "padding-y-ouds": (
       responsive: true,
       property: padding-top padding-bottom,
       class: py,
       values: $ouds-dimension-space-fixed
-    ),
-    "padding-y-scaled-ouds": (
-      property: padding-top padding-bottom,
-      class: py-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "padding-top-ouds": (
       responsive: true,
@@ -798,21 +818,11 @@ $utilities: map-merge(
       class: pt,
       values: $ouds-dimension-space-fixed
     ),
-    "padding-top-scaled-ouds": (
-      property: padding-top,
-      class: pt-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "padding-end-ouds": (
       responsive: true,
       property: padding-right,
       class: pe,
       values: $ouds-dimension-space-fixed
-    ),
-    "padding-end-scaled-ouds": (
-      property: padding-right,
-      class: pe-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "padding-bottom-ouds": (
       responsive: true,
@@ -820,33 +830,33 @@ $utilities: map-merge(
       class: pb,
       values: $ouds-dimension-space-fixed
     ),
-    "padding-bottom-scaled-ouds": (
-      property: padding-bottom,
-      class: pb-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "padding-start-ouds": (
       responsive: true,
       property: padding-left,
       class: ps,
       values: $ouds-dimension-space-fixed
     ),
-    "padding-start-scaled-ouds": (
-      property: padding-left,
-      class: ps-scaled,
+    // Gap utility
+    "gap-scaled-ouds": (
+      property: gap,
+      class: gap-scaled,
       values: $ouds-dimension-space-scaled
     ),
-    // Gap utility
+    "row-gap-scaled-ouds": (
+      property: row-gap,
+      class: row-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "column-gap-scaled-ouds": (
+      property: column-gap,
+      class: column-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
     "gap-ouds": (
       responsive: true,
       property: gap,
       class: gap,
       values: $ouds-dimension-space-fixed
-    ),
-    "gap-scaled-ouds": (
-      property: gap,
-      class: gap-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     "row-gap-ouds": (
       responsive: true,
@@ -854,21 +864,11 @@ $utilities: map-merge(
       class: row-gap,
       values: $ouds-dimension-space-fixed
     ),
-    "row-gap-scaled-ouds": (
-      property: row-gap,
-      class: row-gap-scaled,
-      values: $ouds-dimension-space-scaled
-    ),
     "column-gap-ouds": (
       responsive: true,
       property: column-gap,
       class: column-gap,
       values: $ouds-dimension-space-fixed
-    ),
-    "column-gap-scaled-ouds": (
-      property: column-gap,
-      class: column-gap-scaled,
-      values: $ouds-dimension-space-scaled
     ),
     // scss-docs-end utils-spacing-ouds
     // End mod
