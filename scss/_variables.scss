@@ -537,7 +537,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom: $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
 
 
 // Grid breakpoints
@@ -763,7 +763,7 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer !default; // OUDS mod
+$headings-margin-bottom:      $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer * .5`
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        $ouds-font-weight-web-heading !default;
@@ -812,12 +812,12 @@ $text-muted:                  var(--#{$prefix}secondary-color) !default; // Depr
 
 // OUDS mod: no $initialism-font-size
 
-$blockquote-margin-y:         $spacer !default;
+$blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
 // OUDS mod: no `$blockquote-font-size`
 $blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // OUDS mod: instead of `$gray-600`
 // OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $spacer !default;
+$hr-margin-y:                 $ouds-space-fixed-medium !default;
 $hr-color:                    inherit !default;
 
 // fusv-disable

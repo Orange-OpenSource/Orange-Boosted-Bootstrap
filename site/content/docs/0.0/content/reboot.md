@@ -139,6 +139,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 {{< example >}}
 <hr>
+{{< /example >}}
 
 <!--<div class="text-success">
   <hr>
@@ -146,7 +147,6 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 <hr class="border border-danger border-2 opacity-50">
 <hr class="border border-primary border-3 opacity-75">-->
-{{< /example >}}
 
 <!-- ## Lists
 

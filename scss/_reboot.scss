@@ -185,7 +185,8 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
-  // todo lm: @extend %body-medium;
+  // todo lm: Decide if we keep this as-is or not.
+  // @extend %body-medium;
 }
 
 
@@ -205,7 +206,7 @@ abbr[title] {
 // Address
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: $ouds-space-fixed-medium; // OUDS mod: instead of `1rem`
   font-style: normal;
   line-height: inherit;
 }
@@ -287,7 +288,7 @@ dd {
 // Blockquote
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $ouds-space-fixed-medium; // OUDS mod: instead of `0 0 1rem`
 }
 
 // OUDS mod: No italic
@@ -389,7 +390,7 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: 1rem; // 2
+  margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
   @extend %code-medium; // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;

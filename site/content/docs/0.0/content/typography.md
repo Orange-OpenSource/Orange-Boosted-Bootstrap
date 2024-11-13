@@ -101,15 +101,15 @@ We provide `.display-*` from `1` through `3`. Each class sets `font-size` but al
 </details>
 
 <div class="bd-example">
-  <div class="display-large pb-3 mb-3 border-bottom">Display 1</div>
-  <div class="display-medium pb-3 mb-3 border-bottom">Display 2</div>
-  <div class="display-small">Display 3</div>
+  <div class="display-large pb-3 mb-3 border-bottom">Display large</div>
+  <div class="display-medium pb-3 mb-3 border-bottom">Display medium</div>
+  <div class="display-small">Display small</div>
 </div>
 
 ```html
-<h1 class="display-large">Display 1</h1>
-<h1 class="display-medium">Display 2</h1>
-<h1 class="display-small">Display 3</h1>
+<h1 class="display-large">Display large</h1>
+<h1 class="display-medium">Display medium</h1>
+<h1 class="display-small">Display small</h1>
 ```
 
 Display headings are configured via the `$display-font-sizes` Sass map and the variable `$display-font-weight`.

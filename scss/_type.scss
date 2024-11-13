@@ -31,7 +31,6 @@
   font-weight: $lead-font-weight;
 }
 
-// OUDS mod: no @each
 // Type display classes
 @each $display, $font-size in $display-font-sizes {
   .display-#{$display} {
@@ -43,8 +42,6 @@
     @extend #{$font-size}; // OUDS mod: instead of `@include font-size($font-size)`
   }
 }
-// End mod
-
 
 //
 // Emphasis

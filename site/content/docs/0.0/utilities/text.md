@@ -13,6 +13,7 @@ toc: true
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 // TODO LM
+
 {{< callout info >}}
 Note that you may use `.ms-{breakpoint}-auto` (respectively `.mx-{breakpoint}-auto`) in addition of `.text-{breakpoint}-end` (respectively `.text-{breakpoint}-center`) in some cases.
 {{< /callout >}}
