@@ -55,10 +55,12 @@
           /* rtl:begin:remove */
         }
 
+        // OUDS mod
         @if type-of($value) == "string" and str-slice($value, 1, 1) == "%" {
           .#{$property-class + $infix + $property-class-modifier} {
             @extend #{$value};
           }
+          // End mod
         } @else {
           @if $is-css-var {
             .#{$property-class + $infix + $property-class-modifier} {

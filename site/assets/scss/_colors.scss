@@ -15,7 +15,8 @@
       top: 1rem;
       right: 1rem;
       padding-left: 1rem;
-      @extend %label-small;
+      @extend %label-small; // OUDS mod: instead of `.75rem`
+      // OUDS mod: no line-height
       white-space: pre;
       content:
         str-slice($contrast-ratio, 1, 4) "\A"

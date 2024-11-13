@@ -82,10 +82,7 @@
 //
 
 // Builds on `abbr`
-.initialism {
-  @include font-size($initialism-font-size);
-  text-transform: uppercase;
-}
+// OUDS mod: no .initialism
 
 // Blockquotes
 .blockquote {

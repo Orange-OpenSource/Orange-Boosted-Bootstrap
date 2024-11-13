@@ -185,6 +185,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+  // todo lm: @extend %body-medium;
 }
 
 
@@ -290,6 +291,7 @@ blockquote {
 }
 
 // OUDS mod: No italic
+i,
 em,
 cite {
   font-style: normal; // OUDS mod: remove italic.
@@ -389,7 +391,7 @@ pre {
   margin-top: 0; // 1
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
-  @extend %code-small; // OUDS mod: instead of `@include font-size($code-font-size)`
+  @extend %code-medium; // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags

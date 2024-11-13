@@ -15,7 +15,6 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 // scss-docs-end ouds-composite-elevation
 
 // scss-docs-start ouds-composite-font
-// todo lm: Should we add default svg img height and width ? If yes, then we should add it here. Do we introduce new classes in here ?
 %display-large {
   max-width: var(--#{$prefix}font-max-width-display-large);
   font-size: var(--#{$prefix}font-size-display-large);
@@ -50,6 +49,25 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 
   /* rtl:remove */
   letter-spacing: var(--#{$prefix}font-letter-spacing-heading-xlarge);
+  // todo lm: Should we add default svg img height and width ? If yes, then we should add it here. Do we introduce new classes in here ?
+
+  // img,
+  // svg,
+  // .#{$prefix}icon,
+  // .#{$prefix}icon-sm,
+  // .#{$prefix}icon-lg {
+  //   width: 1em;
+  //   height: 1em;
+  //   font-size: var(--#{$prefix}icon-medium-with-heading-xlarge);
+  // }
+
+  // .#{$prefix}icon-sm {
+  //   font-size: var(--#{$prefix}icon-small-with-heading-xlarge);
+  // }
+
+  // .#{$prefix}icon-lg {
+  //   font-size: var(--#{$prefix}icon-large-with-heading-xlarge);
+  // }
 }
 
 %heading-large {

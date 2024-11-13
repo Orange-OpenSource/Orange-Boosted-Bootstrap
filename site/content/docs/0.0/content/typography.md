@@ -71,16 +71,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 <p class="h6">h6. OUDS Web heading</p>
 {{< /example >}}
 
-<!--### Customizing headings
-
-Use the included utility classes to create the small secondary heading text.
-
-{{< example >}}
-<h3>
-  Fancy display heading
-  <small class="text-body-secondary">With faded secondary text</small>
-</h3>
-{{< /example >}}-->
+<!-- OUDS mod: No customizing heading -->
 
 ## Display headings
 
@@ -157,14 +148,19 @@ Display headings are customizable via two variables, `$display-font-family` and 
 
 ## Regular text
 
-Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
+
+{{< callout info >}}
+Body medium is set by default on `body` but we don't set the `max-width` property for usability reasons.
+So if you need to limit width of a default body paragraph, please use `.fs-bm`.
+{{< /callout >}}
 
 {{< bs-table >}}
 | Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| Body large | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
-| Body medium | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
-| Body small | `.75rem` (12px) | `.75rem` (12px) | `.875rem` (14px) |
+| Body large (`.lead`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
+| Body medium (default) | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
+| Body small (`.small`) | `.75rem` (12px) | `.75rem` (12px) | `.875rem` (14px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
@@ -174,19 +170,32 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
 | Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
 | Body large | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body medium | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body medium (default) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> |
 | Body small | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
 
-## Lead
+### Lead
 
 Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-text) body large.
 
 {{< example >}}
 <p class="lead">
   This is a lead paragraph. It stands out from regular paragraphs.
+</p>
+{{< /example >}}
+
+### Small
+
+Render a paragraph with a small `font-size` by adding `.small` or use `<small>`. It uses [Regular text](#regular-text) body small.
+
+{{< example >}}
+<p>
+  <small>This is a small paragraph.</small>
+</p>
+<p class="small">
+  This is a small paragraph.
 </p>
 {{< /example >}}
 
@@ -208,7 +217,7 @@ Styling for common inline HTML5 elements.
 Beware that those tags should be used for semantic purpose:
 
 - `<mark>` represents text which is marked or highlighted for reference or notation purposes.
-- `<small>` represents side-comments and small print, like copyright and legal text.
+- `<small>` represents side-comments and small print, like copyright and legal text. It uses [Regular text](#regular-text) body small.
 - `<s>` represents element that are no longer relevant or no longer accurate.
 - `<u>` represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
 
@@ -219,7 +228,7 @@ If you want to style your text, you should use the following classes instead:
 - `.text-decoration-underline` will apply the same styles as `<u>`.
 - `.text-decoration-line-through` will apply the same styles as `<s>`.
 
-While not shown above, feel free to use `<b>`<!-- and `<i>`--> in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance<!--, while `<i>` is mostly for voice, technical terms, etc-->.
+While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance, while `<i>` is mostly for voice, technical terms, etc.
 
 ## Text utilities
 
@@ -229,16 +238,13 @@ Change text alignment, transform, style, weight, line-height, decoration<!-- and
 
 Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-Add `.initialism` to an abbreviation for a slightly smaller font-size.
-
 {{< example >}}
 <p><abbr title="attribute">attr</abbr></p>
-<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {{< /example >}}
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote. It uses [Regular text](#regular-text) body large.
 
 {{< example >}}
 <blockquote class="blockquote">
@@ -248,7 +254,7 @@ For quoting blocks of content from another source within your document. Wrap `<b
 
 ### Naming a source
 
-The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
+The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well. It uses [Regular text](#regular-text) body small.
 
 {{< example >}}
 <figure>
@@ -295,7 +301,7 @@ Links in content are black and underlined. They adapt to their context otherwise
 
 Use our [link chevron helper]({{< docsref "/helpers/icon-link#link-chevron" >}}) to bold your link and enhance them with a chevron. -->
 
-## Lists
+<!-- ## Lists
 
 ### Unstyled
 
@@ -359,7 +365,7 @@ Align terms and descriptions horizontally by using our grid system's predefined 
     </dl>
   </dd>
 </dl>
-{{< /example >}}
+{{< /example >}} -->
 
 ## CSS
 

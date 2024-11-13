@@ -12,18 +12,23 @@ toc: true
 
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
-{{< example >}}
-<p class="text-start">Start aligned text on all viewport sizes.</p>
-<p class="text-center">Center aligned text on all viewport sizes.</p>
-<p class="text-end">End aligned text on all viewport sizes.</p>
+// TODO LM
+{{< callout info >}}
+Note that you may use `.ms-{breakpoint}-auto` (respectively `.mx-{breakpoint}-auto`) in addition of `.text-{breakpoint}-end` (respectively `.text-{breakpoint}-center`) in some cases.
+{{< /callout >}}
 
-<p class="text-xs-end">End aligned text on viewports sized XS (x-small) or wider.</p>
-<p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
-<p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
-<p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
-<p class="text-xl-end">End aligned text on viewports sized XL (x-large) or wider.</p>
-<p class="text-2xl-end">End aligned text on viewports sized 2XL (2x-large) or wider.</p>
-<p class="text-3xl-end">End aligned text on viewports sized 3XL (3x-large) or wider.</p>
+{{< example class="fs-bm" >}}
+<p class="text-start">Start aligned text on all viewport sizes.</p>
+<p class="text-center mx-auto">Center aligned text on all viewport sizes.</p>
+<p class="text-end ms-auto">End aligned text on all viewport sizes.</p>
+
+<p class="text-xs-end ms-xs-auto">End aligned text on viewports sized XS (x-small) or wider.</p>
+<p class="text-sm-end ms-sm-auto">End aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-end ms-md-auto">End aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-end ms-lg-auto">End aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-end ms-xl-auto">End aligned text on viewports sized XL (x-large) or wider.</p>
+<p class="text-2xl-end ms-2xl-auto">End aligned text on viewports sized 2XL (2x-large) or wider.</p>
+<p class="text-3xl-end ms-3xl-auto">End aligned text on viewports sized 3XL (3x-large) or wider.</p>
 {{< /example >}}
 
 {{< callout info >}}

@@ -11,6 +11,8 @@ toc: true
 
 ## v0.0.4
 
+### Contents
+
 ### Layout
 
 - <span class="badge text-bg-success">New</span> Responsive flexbox grid system is now available with eight default responsive tiers defined at breakpoints `2xs`, `xs`, `sm`, `md`, `xl`, `2xl`, and `3xl`.
