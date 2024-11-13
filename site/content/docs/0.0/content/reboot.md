@@ -17,9 +17,9 @@ Reboot builds upon Normalize, providing many HTML elements with somewhat opinion
 
 Here are our guidelines and reasons for choosing what to override in Reboot:
 
-- Update some browser default values to use `rem`s instead of `em`s for scalable component spacing.
+- Update some browser default values to use `px`s instead of `em`s for scalable component spacing.
 - Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
-- For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
+- For easier scaling across device sizes, block elements should use `px`s for `margin`s.
 - Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
 
 ## CSS variables
@@ -91,8 +91,7 @@ $font-family-sans-serif:
 
 ## Headings
 
-// TODO LM
-All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-bottom: .5rem` set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
+All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-bottom: 16px` set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
 
 {{< bs-table "table" >}}
 | Heading | Example |
@@ -107,7 +106,7 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-
 
 ## Paragraphs
 
-All `<p>` elements have their `margin-top` removed and `margin-bottom: 1rem` set for easy spacing.
+All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set for easy spacing.
 
 {{< example >}}
 <p>This is an example paragraph.</p>
@@ -150,7 +149,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 <!-- ## Lists
 
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 16px`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
 
 <div class="bd-example">
 {{< markdown >}}
@@ -168,7 +167,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 {{< /markdown >}}
 </div>
 
-For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
+For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: 8px`. `<dt>`s are **bolded**.
 
 <div class="bd-example">
   <dl>
@@ -192,7 +191,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 ## Code blocks
 
-Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
+Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `px` units for its `margin-bottom`.
 
 {{< example >}}
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
@@ -416,7 +415,7 @@ Reboot includes an enhancement for `role="button"` to change the default cursor 
 
 ### Address
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
+The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 16px` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
 
 <div class="bd-example">
   <address>
@@ -434,8 +433,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 ### Blockquote
 
-// TODO LM
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
+The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 16px` for something more consistent with other elements.
 
 <div class="bd-example">
   <blockquote class="blockquote">
