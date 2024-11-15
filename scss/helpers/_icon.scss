@@ -1,0 +1,120 @@
+[class*="-icon"] {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
+
+@each $icon-size in $ouds-icon-sizes {
+  .hxl-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-xlarge) if($enable-important-utilities, !important, null);
+  }
+
+  .hl-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-large) if($enable-important-utilities, !important, null);
+  }
+
+  .hm-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-medium) if($enable-important-utilities, !important, null);
+  }
+
+  .hs-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-small) if($enable-important-utilities, !important, null);
+  }
+
+  .bl-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-large) if($enable-important-utilities, !important, null);
+  }
+
+  .bm-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-medium) if($enable-important-utilities, !important, null);
+  }
+
+  .bs-#{$icon-size}-icon {
+    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-small) if($enable-important-utilities, !important, null);
+  }
+}
+
+.lxl-short-icon {
+  font-size: $ouds-size-icon-with-label-xlarge-size-short if($enable-important-utilities, !important, null);
+}
+
+.lxl-medium-icon {
+  font-size: $ouds-size-icon-with-label-xlarge-size-medium if($enable-important-utilities, !important, null);
+}
+
+.lxl-tall-icon {
+  font-size: $ouds-size-icon-with-label-xlarge-size-tall if($enable-important-utilities, !important, null);
+}
+
+// TODO LM: Why is there 2 more sizes for label-large ?
+.ll-shorter-icon {
+  font-size: $ouds-size-icon-with-label-large-size-shorter if($enable-important-utilities, !important, null);
+}
+
+.ll-short-icon {
+  font-size: $ouds-size-icon-with-label-large-size-short if($enable-important-utilities, !important, null);
+}
+
+.ll-medium-icon {
+  font-size: $ouds-size-icon-with-label-large-size-medium if($enable-important-utilities, !important, null);
+}
+
+.ll-tall-icon {
+  font-size: $ouds-size-icon-with-label-large-size-tall if($enable-important-utilities, !important, null);
+}
+
+.ll-taller-icon {
+  font-size: $ouds-size-icon-with-label-large-size-taller if($enable-important-utilities, !important, null);
+}
+
+.lm-short-icon {
+  font-size: $ouds-size-icon-with-label-medium-size-short if($enable-important-utilities, !important, null);
+}
+
+.lm-medium-icon {
+  font-size: $ouds-size-icon-with-label-medium-size-medium if($enable-important-utilities, !important, null);
+}
+
+.lm-tall-icon {
+  font-size: $ouds-size-icon-with-label-medium-size-tall if($enable-important-utilities, !important, null);
+}
+
+.ls-short-icon {
+  font-size: $ouds-size-icon-with-label-small-size-short if($enable-important-utilities, !important, null);
+}
+
+.ls-medium-icon {
+  font-size: $ouds-size-icon-with-label-small-size-medium if($enable-important-utilities, !important, null);
+}
+
+.ls-tall-icon {
+  font-size: $ouds-size-icon-with-label-small-size-tall if($enable-important-utilities, !important, null);
+}
+
+.decorative-shortest-icon {
+  font-size: $ouds-size-icon-decorative-shortest if($enable-important-utilities, !important, null);
+}
+
+.decorative-shorter-icon {
+  font-size: $ouds-size-icon-decorative-shorter if($enable-important-utilities, !important, null);
+}
+
+.decorative-short-icon {
+  font-size: $ouds-size-icon-decorative-short if($enable-important-utilities, !important, null);
+}
+
+.decorative-medium-icon {
+  font-size: $ouds-size-icon-decorative-medium if($enable-important-utilities, !important, null);
+}
+
+.decorative-tall-icon {
+  font-size: $ouds-size-icon-decorative-tall if($enable-important-utilities, !important, null);
+}
+
+.decorative-taller-icon {
+  font-size: $ouds-size-icon-decorative-taller if($enable-important-utilities, !important, null);
+}
+
+.decorative-tallest-icon {
+  font-size: $ouds-size-icon-decorative-tallest if($enable-important-utilities, !important, null);
+}

@@ -185,8 +185,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
-  // todo lm: Decide if we keep this as-is or not.
-  // @extend %body-medium;
+  @extend %body-medium; // OUDS mod
 }
 
 

@@ -107,6 +107,8 @@ $ouds-font-weights: (
   normal: $ouds-font-weight-web-default,
   bold: $ouds-font-weight-web-strong
 ) !default;
+
+$ouds-icon-sizes: ("short", "medium", "tall") !default;
 // scss-docs-end ouds-maps-fonts
 
 // scss-docs-start ouds-maps-opacities
