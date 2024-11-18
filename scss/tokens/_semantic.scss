@@ -307,7 +307,7 @@ $ouds-elevation-color-sticky-navigation-scrolled: $ouds-color-transparent-black-
 // Font
 
 // scss-docs-start ouds-semantic-font
-$ouds-font-family-web: $ouds-font-family-brand-default !default;
+$ouds-font-family: $ouds-font-family-brand-default !default;
 $ouds-font-letter-spacing-body-large-desktop: $ouds-font-letter-spacing-300 !default;
 $ouds-font-letter-spacing-body-large-mobile: $ouds-font-letter-spacing-250 !default;
 $ouds-font-letter-spacing-body-large-tablet: $ouds-font-letter-spacing-250 !default;
@@ -416,15 +416,15 @@ $ouds-font-size-label-large: $ouds-font-size-250 !default;
 $ouds-font-size-label-medium: $ouds-font-size-200 !default;
 $ouds-font-size-label-small: $ouds-font-size-150 !default;
 $ouds-font-size-label-xlarge: $ouds-font-size-300 !default;
-$ouds-font-weight-web-code: $ouds-font-weight-400 !default;
-$ouds-font-weight-web-default: $ouds-font-weight-400 !default;
-$ouds-font-weight-web-strong: $ouds-font-weight-700 !default;
-$ouds-font-weight-web-body-default: $ouds-font-weight-web-default !default;
-$ouds-font-weight-web-body-strong: $ouds-font-weight-web-strong !default;
-$ouds-font-weight-web-display: $ouds-font-weight-web-strong !default;
-$ouds-font-weight-web-heading: $ouds-font-weight-web-strong !default;
-$ouds-font-weight-web-label-default: $ouds-font-weight-web-default !default;
-$ouds-font-weight-web-label-strong: $ouds-font-weight-web-strong !default;
+$ouds-font-weight-code: $ouds-font-weight-400 !default;
+$ouds-font-weight-default: $ouds-font-weight-400 !default;
+$ouds-font-weight-strong: $ouds-font-weight-700 !default;
+$ouds-font-weight-body-default: $ouds-font-weight-default !default;
+$ouds-font-weight-body-strong: $ouds-font-weight-strong !default;
+$ouds-font-weight-display: $ouds-font-weight-strong !default;
+$ouds-font-weight-heading: $ouds-font-weight-strong !default;
+$ouds-font-weight-label-default: $ouds-font-weight-default !default;
+$ouds-font-weight-label-strong: $ouds-font-weight-strong !default;
 // scss-docs-end ouds-semantic-font
 
 // Grid

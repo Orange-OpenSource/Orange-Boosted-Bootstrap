@@ -13,7 +13,7 @@ body {
 }
 
 .display-0 {
-  @extend %display-large; // OUDS mod: instead of `5.25em`
+  @include ouds-font-size("display-large"); // OUDS mod: instead of `5.25em`
   backface-visibility: hidden;
   transform-style: preserve-3d;
   -webkit-font-smoothing: antialiased;

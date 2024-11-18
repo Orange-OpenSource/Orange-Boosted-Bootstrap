@@ -47,12 +47,12 @@
     white-space: nowrap;
 
     .bs-text-standard {
-      @extend %body-medium;
+      @include ouds-font-size("body-medium");
     }
   }
 
   > details {
-    @extend %label-large;
+    @include ouds-font-size("label-large");
     padding: 0 10px; // static even when zoomed
     line-height: 1.5;
     border: var(--bs-border-color) dashed calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
@@ -111,11 +111,11 @@
 
 .bd-title {
   --bs-heading-color: var(--bs-emphasis-color);
-  @extend %display-small; // OUDS mod: instead of `3rem`
+  @include ouds-font-size("display-small"); // OUDS mod: instead of `3rem`
 }
 
 .bd-lead {
-  @extend %heading-small; // OUDS mod: instead of `1.5rem`
+  @include ouds-font-size("heading-small"); // OUDS mod: instead of `1.5rem`
   font-weight: 400;
 }
 

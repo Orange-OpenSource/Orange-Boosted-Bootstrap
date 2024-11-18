@@ -9,7 +9,7 @@
   }
 
   .lead {
-    @extend %heading-small; // OUDS mod: instead of `@include font-size(1rem)`
+    @include ouds-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
     font-weight: 400;
     color: var(--bs-secondary-color);
   }
@@ -59,7 +59,7 @@
   }
 
   .lead {
-    @extend %heading-small; // OUDS mod: instead of `@include font-size(1rem)`
+    @include ouds-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
   }
 
   // OUDS mod: no @media query

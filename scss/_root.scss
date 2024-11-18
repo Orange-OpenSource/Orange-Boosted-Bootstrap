@@ -75,6 +75,10 @@
   --#{$prefix}font-size-body-large: #{px-to-rem($ouds-font-size-body-large-mobile)};
   --#{$prefix}font-size-body-medium: #{px-to-rem($ouds-font-size-body-medium-mobile)};
   --#{$prefix}font-size-body-small: #{px-to-rem($ouds-font-size-body-small-mobile)};
+  --#{$prefix}font-size-label-xlarge: #{px-to-rem($ouds-font-size-label-xlarge)};
+  --#{$prefix}font-size-label-large: #{px-to-rem($ouds-font-size-label-large)};
+  --#{$prefix}font-size-label-medium: #{px-to-rem($ouds-font-size-label-medium)};
+  --#{$prefix}font-size-label-small: #{px-to-rem($ouds-font-size-label-small)};
   --#{$prefix}font-line-height-display-large: #{divide($ouds-font-line-height-display-large-mobile, $ouds-font-size-display-large-mobile)};
   --#{$prefix}font-line-height-display-medium: #{divide($ouds-font-line-height-display-medium-mobile, $ouds-font-size-display-medium-mobile)};
   --#{$prefix}font-line-height-display-small: #{divide($ouds-font-line-height-display-small-mobile, $ouds-font-size-display-small-mobile)};
@@ -85,6 +89,10 @@
   --#{$prefix}font-line-height-body-large: #{divide($ouds-font-line-height-body-large-mobile, $ouds-font-size-body-large-mobile)};
   --#{$prefix}font-line-height-body-medium: #{divide($ouds-font-line-height-body-medium-mobile, $ouds-font-size-body-medium-mobile)};
   --#{$prefix}font-line-height-body-small: #{divide($ouds-font-line-height-body-small-mobile, $ouds-font-size-body-small-mobile)};
+  --#{$prefix}font-line-height-label-xlarge: #{divide($ouds-font-line-height-label-xlarge, $ouds-font-size-label-xlarge)};
+  --#{$prefix}font-line-height-label-large: #{divide($ouds-font-line-height-label-large, $ouds-font-size-label-large)};
+  --#{$prefix}font-line-height-label-medium: #{divide($ouds-font-line-height-label-medium, $ouds-font-size-label-medium)};
+  --#{$prefix}font-line-height-label-small: #{divide($ouds-font-line-height-label-small, $ouds-font-size-label-small)};
   --#{$prefix}font-letter-spacing-display-large: #{px-to-rem($ouds-font-letter-spacing-display-large-mobile)};
   --#{$prefix}font-letter-spacing-display-medium: #{px-to-rem($ouds-font-letter-spacing-display-medium-mobile)};
   --#{$prefix}font-letter-spacing-display-small: #{px-to-rem($ouds-font-letter-spacing-display-small-mobile)};
@@ -95,6 +103,10 @@
   --#{$prefix}font-letter-spacing-body-large: #{px-to-rem($ouds-font-letter-spacing-body-large-mobile)};
   --#{$prefix}font-letter-spacing-body-medium: #{px-to-rem($ouds-font-letter-spacing-body-medium-mobile)};
   --#{$prefix}font-letter-spacing-body-small: #{px-to-rem($ouds-font-letter-spacing-body-small-mobile)};
+  --#{$prefix}font-letter-spacing-label-xlarge: #{px-to-rem($ouds-font-letter-spacing-label-xlarge)};
+  --#{$prefix}font-letter-spacing-label-large: #{px-to-rem($ouds-font-letter-spacing-label-large)};
+  --#{$prefix}font-letter-spacing-label-medium: #{px-to-rem($ouds-font-letter-spacing-label-medium)};
+  --#{$prefix}font-letter-spacing-label-small: #{px-to-rem($ouds-font-letter-spacing-label-small)};
   --#{$prefix}font-max-width-display-large: #{px-to-rem($ouds-size-max-width-type-display-large-mobile)};
   --#{$prefix}font-max-width-display-medium: #{px-to-rem($ouds-size-max-width-type-display-medium-mobile)};
   --#{$prefix}font-max-width-display-small: #{px-to-rem($ouds-size-max-width-type-display-small-mobile)};

@@ -5,11 +5,11 @@
 // Remember to update `site/_layouts/examples.html` too if this changes!
 
 .bd-placeholder-img {
-  @extend %body-large; // OUDS mod: instead of `1.125rem`
+  @include ouds-font-size("body-large"); // OUDS mod: instead of `1.125rem`
   user-select: none;
   text-anchor: middle;
 }
 
 .bd-placeholder-img-lg {
-  @extend %display-medium; // OUDS mod: instead of `3.5rem`
+  @include ouds-font-size("display-medium"); // OUDS mod: instead of `3.5rem`
 }

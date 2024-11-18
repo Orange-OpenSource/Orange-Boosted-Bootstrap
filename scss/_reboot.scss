@@ -148,32 +148,32 @@ hr {
 
 h1 {
   @extend %heading;
-  @extend %heading-xlarge; // OUDS mod: instead of `@include font-size($h1-font-size)`
+  @include ouds-font-size("heading-xlarge"); // OUDS mod: instead of `@include font-size($h1-font-size)`
 }
 
 h2 {
   @extend %heading;
-  @extend %heading-large; // OUDS mod: instead of `@include font-size($h2-font-size)`
+  @include ouds-font-size("heading-large"); // OUDS mod: instead of `@include font-size($h2-font-size)`
 }
 
 h3 {
   @extend %heading;
-  @extend %heading-medium; // OUDS mod: instead of `@include font-size($h3-font-size)`
+  @include ouds-font-size("heading-medium"); // OUDS mod: instead of `@include font-size($h3-font-size)`
 }
 
 h4 {
   @extend %heading;
-  @extend %heading-small; // OUDS mod: instead of `@include font-size($h4-font-size)`
+  @include ouds-font-size("heading-small"); // OUDS mod: instead of `@include font-size($h4-font-size)`
 }
 
 h5 {
   @extend %heading;
-  @extend %body-large; // OUDS mod: instead of `@include font-size($h5-font-size)`
+  @include ouds-font-size("body-large"); // OUDS mod: instead of `@include font-size($h5-font-size)`
 }
 
 h6 {
   @extend %heading;
-  @extend %body-medium; // OUDS mod: instead of `@include font-size($h6-font-size)`
+  @include ouds-font-size("body-medium"); // OUDS mod: instead of `@include font-size($h6-font-size)`
 }
 
 
@@ -185,7 +185,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
-  @extend %body-medium; // OUDS mod
+  @include ouds-font-size("body-medium"); // OUDS mod
 }
 
 
@@ -315,7 +315,7 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  @extend %body-small; // OUDS mod: instead of `@include font-size($small-font-size)`
+  @include ouds-font-size("body-small"); // OUDS mod: instead of `@include font-size($small-font-size)`
 }
 
 
@@ -391,7 +391,7 @@ pre {
   margin-top: 0; // 1
   margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
-  @extend %code-medium; // OUDS mod: instead of `@include font-size($code-font-size)`
+  @include ouds-font-size("code-medium"); // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
@@ -466,7 +466,7 @@ table {
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
-  @extend %heading-xlarge; // OUDS mod
+  @include ouds-font-size("heading-xlarge"); // OUDS mod
   font-weight: $font-weight-bold; // OUDS mod
   color: $table-caption-color;
   text-align: left;
@@ -630,7 +630,7 @@ legend {
   margin-bottom: $legend-margin-bottom;
   font-weight: $legend-font-weight;
   // OUDS mod: no line-height
-  @extend %body-large; // OUDS mod: instead of `@include font-size($legend-font-size)`
+  @include ouds-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
 
   + * {
     clear: left; // 2
@@ -738,3 +738,11 @@ progress {
 [hidden] {
   display: none !important;
 }
+
+// OUDS mod
+// Selection
+::selection {
+  color: var(--#{$prefix}highlight-color);
+  background-color: var(--#{$prefix}highlight-bg);
+}
+// End mod
