@@ -354,14 +354,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-blur-sticky-default</code></li>
       <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-color-drag</code></li>
-      <li><code>$ouds-elevation-color-none</code></li>
-      <li><code>$ouds-elevation-color-overlay-default</code></li>
-      <li><code>$ouds-elevation-color-overlay-emphasized</code></li>
-      <li><code>$ouds-elevation-color-raised</code></li>
-      <li><code>$ouds-elevation-color-sticky-default</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-color-drag-light</code></li>
+      <li><code>$ouds-elevation-color-none-light</code></li>
+      <li><code>$ouds-elevation-color-overlay-default-light</code></li>
+      <li><code>$ouds-elevation-color-overlay-emphasized-light</code></li>
+      <li><code>$ouds-elevation-color-raised-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-default-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-emphasized-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
       <li><code>$ouds-elevation-drag</code></li>
       <li><code>$ouds-elevation-focus</code></li>
       <li><code>$ouds-elevation-none</code></li>
