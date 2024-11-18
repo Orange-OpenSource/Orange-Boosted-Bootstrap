@@ -176,7 +176,6 @@ toc: true
     <summary>See the new import stack</summary>
 
     ```diff
-    + @import "config";
       @import "functions";
       @import "tokens/raw";
       @import "tokens/semantic";

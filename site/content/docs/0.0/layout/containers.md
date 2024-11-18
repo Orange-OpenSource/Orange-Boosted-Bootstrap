@@ -126,7 +126,6 @@ If necessary, in specific cases, you can define a custom maximum width for the f
 This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-size-max-width-grid` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
 
 ```scss
-@import "../node-modules/ouds-web/scss/config";
 @import "../node_modules/ouds-web/scss/functions";
 
 $ouds-size-max-width-grid: 3500px; // Custom container max width

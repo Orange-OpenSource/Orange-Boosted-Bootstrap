@@ -1,8 +1,11 @@
+// scss-docs-start ouds-font-icon-common
 %icon-size {
   width: 1em;
   height: 1em;
+  line-height: 1;
   fill: currentcolor;
 }
+// scss-docs-end ouds-font-icon-common
 
 @each $icon-size in $ouds-icon-sizes {
   .hxl-#{$icon-size}-icon {

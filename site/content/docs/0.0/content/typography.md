@@ -15,38 +15,43 @@ OUDS Web sets basic global display, typography<!--, and link styles-->. When mor
 - Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
 <!--- Set the global link color via `$link-color`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).-->
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
+{{< callout info >}}
+If you need need to include a font reference inside a custom component, please refer to our [font mixin section](#sass-mixins).
+{{< /callout >}}
+
 ## Headings
 
-All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
 
 {{< bs-table >}}
-| Heading | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `<h1></h1>` | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
-| `<h2></h2>` | `1.5rem` (24px) | `1.75rem` (28px) | `2rem` (32px) |
-| `<h3></h3>` | `1.25rem` (20px) | `1.5rem` (24px) | `1.75rem` (28px) |
-| `<h4></h4>` | `1.125rem` (18px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| `<h5></h5>` | `1rem` (16px) | `1.125rem` (18px) | `1.25rem` (20px) |
-| `<h6></h6>` | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
+| Heading xlarge (`<h1></h1>`) | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
+| Heading large (`<h2></h2>`) | `1.5rem` (24px) | `1.75rem` (28px) | `2rem` (32px) |
+| Heading medium (`<h3></h3>`) | `1.25rem` (20px) | `1.5rem` (24px) | `1.75rem` (28px) |
+| Heading small (`<h4></h4>`) | `1.125rem` (18px) | `1.25rem` (20px) | `1.5rem` (24px) |
+| Body large (`<h5></h5>`) | `1rem` (16px) | `1.125rem` (18px) | `1.25rem` (20px) |
+| Body medium (`<h6></h6>`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
   <summary>See more details about the heading classes</summary>
 
 {{< bs-table >}}
-| Heading | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `<h1></h1>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| `<h2></h2>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| `<h3></h3>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| `<h4></h4>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| `<h5></h5>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> |
-| `<h6></h6>` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Heading xlarge (`<h1></h1>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Heading large (`<h2></h2>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Heading medium (`<h3></h3>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Heading small (`<h4></h4>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body large (`<h5></h5>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body medium (`<h6></h6>`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
@@ -71,31 +76,33 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 <p class="h6">h6. OUDS Web heading</p>
 {{< /example >}}
 
+You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
+
 <!-- OUDS mod: No customizing heading -->
 
 ## Display headings
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
-We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints.
+We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints.
 
 {{< bs-table >}}
-| Display | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `.display-large` | `2.5rem` (40px) | `4rem` (64px) | `4.5rem` (72px) |
-| `.display-medium` | `2.25rem` (36px) | `3rem` (48px) | `3.5rem` (56px) |
-| `.display-small` | `2rem` (32px) | `2.5rem` (40px) | `3rem` (48px) |
+| Display large (`.display-large`) | `2.5rem` (40px) | `4rem` (64px) | `4.5rem` (72px) |
+| Display medium (`.display-medium`) | `2.25rem` (36px) | `3rem` (48px) | `3.5rem` (56px) |
+| Display small (`.display-small`) | `2rem` (32px) | `2.5rem` (40px) | `3rem` (48px) |
 {{< /bs-table >}}
 
 <details class="mb-medium">
   <summary>See more details about the `.display` classes</summary>
 
 {{< bs-table >}}
-| Display | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `.display-large` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| `.display-medium` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| `.display-small` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Display large (`.display-large`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Display medium (`.display-medium`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> |
+| Display small (`.display-small`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
@@ -148,18 +155,17 @@ Display headings are customizable via two variables, `$display-font-family` and 
 
 ## Regular text
 
-Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
 
 {{< callout info >}}
 Body medium is set by default on `body` but we don't set the `max-width` property for usability reasons.
-So if you need to limit width of a default body paragraph, please use `.fs-bm`.
 {{< /callout >}}
 
 {{< bs-table >}}
-| Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Regular text reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
 | Body large (`.lead`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
-| Body medium (default) | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
+| Body medium (default `<p>`) | `.875rem` (14px) | `.875rem` (14px) | `1rem` (16px) |
 | Body small (`.small`) | `.75rem` (12px) | `.75rem` (12px) | `.875rem` (14px) |
 {{< /bs-table >}}
 
@@ -167,14 +173,16 @@ So if you need to limit width of a default body paragraph, please use `.fs-bm`.
   <summary>See more details about the regular text classes</summary>
 
 {{< bs-table >}}
-| Regular text | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
+| Regular text reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| Body large | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body large (`.lead`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
 | Body medium (default) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body small | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
+| Body small (`.small`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
+
+You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
 
 ### Lead
 
@@ -273,8 +281,8 @@ Use text utilities as needed to change the alignment of your blockquote.
 
 {{< example >}}
 <figure class="text-center">
-  <blockquote class="blockquote mx-auto">
-    <p>A well-known quote, contained in a blockquote element.</p>
+  <blockquote class="blockquote">
+    <p class="mx-auto">A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <figcaption class="blockquote-footer mx-auto">
     Someone famous in <cite title="Source Title">Source Title</cite>
@@ -284,8 +292,8 @@ Use text utilities as needed to change the alignment of your blockquote.
 
 {{< example >}}
 <figure class="text-end">
-  <blockquote class="blockquote ms-auto">
-    <p>A well-known quote, contained in a blockquote element.</p>
+  <blockquote class="blockquote">
+    <p class="ms-auto">A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <figcaption class="blockquote-footer ms-auto">
     Someone famous in <cite title="Source Title">Source Title</cite>
@@ -369,16 +377,42 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 
 ## CSS
 
-### Sass variables
+### Variables
 
-Headings have some dedicated variables for sizing and spacing.
+{{< scss-docs name="root-font-variables-ouds" file="scss/_root.scss" >}}
 
-{{< scss-docs name="headings-variables" file="scss/_variables.scss" >}}
+### Sass tokens
 
-Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/content/reboot" >}}) also have dedicated variables.
+#### Raw tokens
 
-{{< scss-docs name="type-variables" file="scss/_variables.scss" >}}
+Font raw tokens as Sass variables. **Not to be used as-is**.
+
+{{< scss-docs name="ouds-raw-font" file="scss/tokens/_raw.scss" >}}
+
+#### Semantic tokens
+
+Font semantic tokens are defined as Sass variables.
+
+{{< scss-docs name="ouds-semantic-font" file="scss/tokens/_semantic.scss" >}}
+
+#### Semantic tokens
+
+Font semantic tokens are defined as Sass variables.
+
+{{< scss-docs name="ouds-semantic-font" file="scss/tokens/_semantic.scss" >}}
+
+### Sass maps
+
+The typography utilities are declared through this map and generated using our utilities API. Please refer to [our text utility page]({{< docsref "/utilities/text" >}}) for more information.
+
+{{< scss-docs name="ouds-maps-font" file="scss/_maps.scss" >}}
 
 ### Sass mixins
 
-There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]({{< docsref "/getting-started/rfs" >}}).
+We provide a dedicated mixin for font reference. For instance, the mixin is `ouds-font-size($font-size-reference)`.
+
+{{< scss-docs name="ouds-mixin-font" file="scss/mixins/_fonts.scss" >}}
+
+Whenever you need a font reference inside a custom component or for whatever reason, please follow the same process as us, so you don't miss any information about a font reference.
+
+{{< scss-docs name="ouds-font-implementation" file="scss/_reboot.scss" >}}

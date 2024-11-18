@@ -84,7 +84,10 @@
 // Blockquotes
 .blockquote {
   margin-bottom: $blockquote-margin-y;
-  @include ouds-font-size("body-large"); // OUDS mod: instead of `@include font-size($blockquote-font-size)`
+
+  > p {
+    @include ouds-font-size("body-large"); // OUDS mod: instead of `@include font-size($blockquote-font-size)` in `.blockquote`
+  }
 
   > :last-child {
     margin-bottom: 0;

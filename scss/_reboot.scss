@@ -131,6 +131,7 @@ hr {
 //    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 //    margin for easier control within type scales as it avoids margin collapsing.
 
+// scss-docs-start ouds-font-implementation
 %heading {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
@@ -175,6 +176,7 @@ h6 {
   @extend %heading;
   @include ouds-font-size("body-medium"); // OUDS mod: instead of `@include font-size($h6-font-size)`
 }
+// scss-docs-end ouds-font-implementation
 
 
 // Reset margins on paragraphs
@@ -420,7 +422,7 @@ kbd {
   @include font-size($kbd-font-size);
   color: $kbd-color;
   background-color: $kbd-bg;
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius-sm, $border-radius-sm); // OUDS mod: instead of `@include border-radius($border-radius-sm)`
 
   kbd {
     padding: 0;

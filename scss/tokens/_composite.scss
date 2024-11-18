@@ -15,15 +15,6 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 // scss-docs-end ouds-composite-elevation
 
 // scss-docs-start ouds-composite-font
-@mixin ouds-font-size($font-size-ref: "display-large") {
-  max-width: var(--#{$prefix}font-max-width-#{$font-size-ref});
-  font-size: var(--#{$prefix}font-size-#{$font-size-ref});
-  line-height: var(--#{$prefix}font-line-height-#{$font-size-ref});
-
-  /* rtl:remove */
-  letter-spacing: var(--#{$prefix}font-letter-spacing-#{$font-size-ref});
-}
-
 // stylelint-disable value-keyword-case
 $ouds-font-family-sans-serif-stack: "SF Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $ouds-font-family-monospace-stack: "SF Mono", "Roboto Mono", Consolas, Menlo, monospace !default;

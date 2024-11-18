@@ -83,24 +83,24 @@ $ouds-elevations: (
 ) !default;
 // scss-docs-end ouds-maps-elevations
 
-// scss-docs-start ouds-maps-fonts
+// scss-docs-start ouds-maps-font
 $ouds-font-sizes: (
-  dl: "%display-large",
-  dm: "%display-medium",
-  ds: "%display-small",
-  hxl: "%heading-xlarge",
-  hl: "%heading-large",
-  hm: "%heading-medium",
-  hs: "%heading-small",
-  bl: "%body-large",
-  bm: "%body-medium",
-  bs: "%body-small",
-  lxl: "%label-xlarge",
-  ll: "%label-large",
-  lm: "%label-medium",
-  ls: "%label-small",
-  cm: "%code-medium",
-  cs: "%code-small"
+  dl: "/display-large",
+  dm: "/display-medium",
+  ds: "/display-small",
+  hxl: "/heading-xlarge",
+  hl: "/heading-large",
+  hm: "/heading-medium",
+  hs: "/heading-small",
+  bl: "/body-large",
+  bm: "/body-medium",
+  bs: "/body-small",
+  lxl: "/label-xlarge",
+  ll: "/label-large",
+  lm: "/label-medium",
+  ls: "/label-small",
+  cm: "/code-medium",
+  cs: "/code-small"
 ) !default;
 
 $ouds-font-weights: (
@@ -109,7 +109,7 @@ $ouds-font-weights: (
 ) !default;
 
 $ouds-icon-sizes: ("short", "medium", "tall") !default;
-// scss-docs-end ouds-maps-fonts
+// scss-docs-end ouds-maps-font
 
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (

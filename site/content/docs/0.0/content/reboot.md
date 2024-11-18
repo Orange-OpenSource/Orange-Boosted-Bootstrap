@@ -20,7 +20,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 - Update some browser default values to use `px`s instead of `em`s for scalable component spacing.
 - Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
 - For easier scaling across device sizes, block elements should use `px`s for `margin`s.
-- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
+- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible. We use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
 
 ## CSS variables
 
@@ -106,9 +106,11 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-
 
 ## Paragraphs
 
-All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set for easy spacing.
+All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]({{< docsref "/utilities/spacing" >}}).
 
 {{< example >}}
+<p class="mw-none mb-none">This is an example paragraph which is long enough so it's easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
+<p>This is an example paragraph which is long enough so it's easy to see and compare the <code>max-width</code> in action and compare it to the one above.</p>
 <p>This is an example paragraph.</p>
 {{< /example >}}
 
@@ -140,7 +142,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 <hr>
 {{< /example >}}
 
-<!--<div class="text-success">
+<!-- Should be in example above <div class="text-success">
   <hr>
 </div>
 

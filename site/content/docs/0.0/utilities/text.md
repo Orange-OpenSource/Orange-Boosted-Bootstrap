@@ -16,7 +16,7 @@ Easily realign text to components with text alignment classes. For start, end, a
 We recommend to avoid using center and end alignment but in very specific cases. However, please note that you may use `.ms-{breakpoint}-auto` (respectively `.mx-{breakpoint}-auto`) in addition of `.text-{breakpoint}-end` (respectively `.text-{breakpoint}-center`) in these cases.
 {{< /callout >}}
 
-{{< example class="fs-bm" >}}
+{{< example >}}
 <p class="text-start">Start aligned text on all viewport sizes.</p>
 <p class="text-center mx-auto">Center aligned text on all viewport sizes.</p>
 <p class="text-end ms-auto">End aligned text on all viewport sizes.</p>
@@ -80,30 +80,30 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 
 Quickly change the `font-size` of text. Sizing for these utilities matches our predefined typography placeholders. Don't forget to add one of our [`font-weight`](#font-weight) utility when needed.
 
-These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
 
 <details class="mb-medium">
   <summary>See the <code>font-size</code> associated to classes</summary>
 
 {{< bs-table >}}
-| Font size | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Font reference | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
 | --- | --- | --- | --- |
-| `.fs-dl` | `4.5rem` (72px) | `4rem` (64px) | `2.5rem` (40px) |
-| `.fs-dm` | `3.5rem` (56px) | `3rem` (48px) | `2.25rem` (36px) |
-| `.fs-ds` | `3rem` (48px) | `2.5rem` (40px) | `2rem` (32px) |
-| `.fs-hxl` | `2.5rem` (40px) | `2.25rem` (36px) | `1.75rem` (28px) |
-| `.fs-hl` | `2rem` (32px) | `1.75rem` (28px) | `1.5rem` (24px) |
-| `.fs-hm` | `1.75rem` (28px) | `1.5rem` (24px) | `1.25rem` (20px) |
-| `.fs-hs` | `1.5rem` (24px) | `1.25rem` (20px) | `1.125rem` (18px) |
-| `.fs-bl` | `1.125rem` (18px) | `1rem` (16px) | `1rem` (16px) |
-| `.fs-bm` | `1rem` (16px) | `.875rem` (14px) | `.875rem` (14px) |
-| `.fs-bs` | `.875rem` (14px) | `.75rem` (12px) | `.75rem` (12px) |
-| `.fs-lxl` | `1.125rem` (18px) | `1.125rem` (18px) | `1.125rem` (18px) |
-| `.fs-ll` | `1rem` (16px) | `1rem` (16px) | `1rem` (16px) |
-| `.fs-lm` | `.875rem` (14px) | `.875rem` (14px) | `.875rem` (14px) |
-| `.fs-ls` | `.75rem` (12px) | `.75rem` (12px) | `.75rem` (12px) |
-| `.fs-cm` | `.875rem` (14px) | `.875rem` (14px) | `.875rem` (14px) |
-| `.fs-cs` | `.75rem` (12px) | `.75rem` (12px) | `.75rem` (12px) |
+| Display large (`.fs-dl`) | `4.5rem` (72px) | `4rem` (64px) | `2.5rem` (40px) |
+| Display medium (`.fs-dm`) | `3.5rem` (56px) | `3rem` (48px) | `2.25rem` (36px) |
+| Display small (`.fs-ds`) | `3rem` (48px) | `2.5rem` (40px) | `2rem` (32px) |
+| Heading xlarge (`.fs-hxl`) | `2.5rem` (40px) | `2.25rem` (36px) | `1.75rem` (28px) |
+| Heading large (`.fs-hl`) | `2rem` (32px) | `1.75rem` (28px) | `1.5rem` (24px) |
+| Heading medium (`.fs-hm`) | `1.75rem` (28px) | `1.5rem` (24px) | `1.25rem` (20px) |
+| Heading small (`.fs-hs`) | `1.5rem` (24px) | `1.25rem` (20px) | `1.125rem` (18px) |
+| Body large (`.fs-bl`) | `1.125rem` (18px) | `1rem` (16px) | `1rem` (16px) |
+| Body medium (`.fs-bm`) | `1rem` (16px) | `.875rem` (14px) | `.875rem` (14px) |
+| Body small (`.fs-bs`) | `.875rem` (14px) | `.75rem` (12px) | `.75rem` (12px) |
+| Label xlarge (`.fs-lxl`) | `1.125rem` (18px) | `1.125rem` (18px) | `1.125rem` (18px) |
+| Label large (`.fs-ll`) | `1rem` (16px) | `1rem` (16px) | `1rem` (16px) |
+| Label medium (`.fs-lm`) | `.875rem` (14px) | `.875rem` (14px) | `.875rem` (14px) |
+| Label small (`.fs-ls`) | `.75rem` (12px) | `.75rem` (12px) | `.75rem` (12px) |
+| Code medium (`.fs-cm`) | `.875rem` (14px) | `.875rem` (14px) | `.875rem` (14px) |
+| Code small (`.fs-cs`) | `.75rem` (12px) | `.75rem` (12px) | `.75rem` (12px) |
 {{< /bs-table >}}
 
 </details>
@@ -112,24 +112,24 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
   <summary>See more details about the <code>font-size</code> classes</summary>
 
 {{< bs-table >}}
-| Heading | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
+| Font reference | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
 | --- | --- | --- | --- |
-| `.fs-dl` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-dm` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-ds` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-hxl` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-hl` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-hm` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> |
-| `.fs-hs` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `.fs-bl` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `.fs-bm` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `.fs-bs` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| `.fs-lxl` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
-| `.fs-ll` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> |
-| `.fs-lm` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> |
-| `.fs-ls` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
-| `.fs-cm` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> |
-| `.fs-cs` | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
+| Display large (`.fs-dl`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| Display medium (`.fs-dm`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| Display small (`.fs-ds`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| Heading xlarge (`.fs-hxl`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| Heading large (`.fs-hl`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> |
+| Heading medium (`.fs-hm`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> |
+| Heading small (`.fs-hs`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| Body large (`.fs-bl`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| Body medium (`.fs-bm`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| Body small (`.fs-bs`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
+| Label xlarge (`.fs-lxl`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
+| Label large (`.fs-ll`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li></ul> |
+| Label medium (`.fs-lm`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> |
+| Label small (`.fs-ls`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
+| Code medium (`.fs-cm`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> |
+| Code small (`.fs-cs`) | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-body">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
 {{< /bs-table >}}
 
 </details>
@@ -145,15 +145,17 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
 <p class="fs-bl">.fs-bl text</p>
 <p class="fs-bm">.fs-bm text</p>
 <p class="fs-bs">.fs-bs text</p>
-<p class="fs-lxl">.fs-lxl text</p>
-<p class="fs-ll">.fs-ll text</p>
-<p class="fs-lm">.fs-lm text</p>
-<p class="fs-ls">.fs-ls text</p>
+<p class="fs-lxl">.fs-lxl text (Should not be used outside components)</p>
+<p class="fs-ll">.fs-ll text (Should not be used outside components)</p>
+<p class="fs-lm">.fs-lm text (Should not be used outside components)</p>
+<p class="fs-ls">.fs-ls text (Should not be used outside components)</p>
 <p class="fs-cm font-monospace">.fs-cm.font-monospace text</p>
 <p class="fs-cs font-monospace">.fs-cs.font-monospace text</p>
 {{< /example >}}
 
 Customize your available `font-size`s by modifying the `$ouds-font-sizes` Sass map.
+
+You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
 
 {{< bootstrap-compatibility >}}
 
@@ -274,7 +276,7 @@ Default type and font related Sass variables:
 
 Font-size utilities are generated from these maps, in combination with our utilities API.
 
-{{< scss-docs name="ouds-maps-fonts" file="scss/_maps.scss" >}}
+{{< scss-docs name="ouds-maps-font" file="scss/_maps.scss" >}}
 
 {{< bootstrap-compatibility false >}}
 
@@ -283,6 +285,17 @@ Font-size utilities are generated from these maps, in combination with our utili
 <!--{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}-->
 
 {{< /bootstrap-compatibility >}}
+
+### Sass mixins
+
+We provide a dedicated mixin for font reference. For instance, the mixin is `ouds-font-size($font-size-reference)`.
+
+{{< scss-docs name="ouds-mixin-font" file="scss/mixins/_fonts.scss" >}}
+
+Whenever you need a font reference inside a custom component or for whatever reason, please follow the same process as us, so you don't miss any information about a font reference.
+
+{{< scss-docs name="ouds-font-implementation" file="scss/_reboot.scss" >}}
+
 
 ### Sass utilities API
 
