@@ -262,7 +262,7 @@ Font semantic tokens are defined as Sass variables.
 
 #### Composite tokens
 
-Font composite tokens are defined as Sass placeholders and Sass variables.
+Font composite tokens are defined as Sass variables.
 
 {{< scss-docs name="ouds-composite-font" file="scss/tokens/_composite.scss" >}}
 

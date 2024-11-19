@@ -14,9 +14,9 @@ $ouds-elevation-sticky-emphasized: $ouds-elevation-x-sticky-emphasized $ouds-ele
 $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-scrolled $ouds-elevation-y-sticky-navigation-scrolled $ouds-elevation-blur-sticky-navigation-scrolled $ouds-elevation-spread-sticky-navigation-scrolled $ouds-elevation-color-sticky-navigation-scrolled-light !default;
 // scss-docs-end ouds-composite-elevation
 
-// scss-docs-start ouds-composite-font
 // stylelint-disable value-keyword-case
-$ouds-font-family-sans-serif-stack: "SF Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$ouds-font-family-monospace-stack: "SF Mono", "Roboto Mono", Consolas, Menlo, monospace !default;
-// stylelint-enable value-keyword-case
+// scss-docs-start ouds-composite-font
+$ouds-font-family-sans-serif-stack: "Helvetica Neue", Helvetica, "SF Pro", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$ouds-font-family-monospace-stack: Consolas, "SFMono-Regular", "Roboto Mono", "Liberation Mono", Menlo, monospace !default;
 // scss-docs-end ouds-composite-font
+// stylelint-enable value-keyword-case
