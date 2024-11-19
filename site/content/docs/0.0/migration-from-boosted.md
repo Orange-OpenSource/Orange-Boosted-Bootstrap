@@ -34,7 +34,7 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 
 ## Fonts
 
-OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
+OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.
 
 Technically, it means that you can get rid of the following things:
 - Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
