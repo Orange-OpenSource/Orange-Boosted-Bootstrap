@@ -286,7 +286,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 </details>
 
 <div class="bd-example">
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-shortest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -297,7 +297,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension200 (<code>1rem</code> or <code>16px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-shorter-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -308,7 +308,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension300 (<code>1.5rem</code> or <code>24px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-short-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -319,7 +319,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension400 (<code>2rem</code> or <code>32px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-medium-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -330,7 +330,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension500 (<code>2.5rem</code> or <code>40px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-tall-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -341,7 +341,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension600 (<code>3rem</code> or <code>48px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-taller-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
@@ -352,7 +352,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       <p class="mb-none">coreGlobalDimension700 (<code>3.5rem</code> or <code>56px</code> at zoom 100%)</p>
     </div>
   </div>
-  <div class="d-flex mb-short">
+  <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-tallest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
