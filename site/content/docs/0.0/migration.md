@@ -696,6 +696,8 @@ toc: true
       <li><code>border-top</code></li>
       <li><code>border-width</code></li>
       <li><code>column-gap</code></li>
+      <li><code>font-size</code></li>
+      <li><code>font-weight</code></li>
       <li><code>gap</code></li>
       <li><code>line-height</code></li>
       <li><code>margin-bottom</code></li>
