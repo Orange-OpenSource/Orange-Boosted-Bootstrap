@@ -481,7 +481,7 @@ toc: true
       <li><code>$ouds-font-sizes</code></li>
       <li><code>$ouds-font-weights</code></li>
       <li><code>$ouds-icon-sizes</code></li>
-</ul>
+    </ul>
   </details>
 
 - <details class="mb-short">
