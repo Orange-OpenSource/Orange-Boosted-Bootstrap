@@ -17,10 +17,10 @@ Reboot builds upon Normalize, providing many HTML elements with somewhat opinion
 
 Here are our guidelines and reasons for choosing what to override in Reboot:
 
-- Update some browser default values to use `px`s instead of `em`s for scalable component spacing.
+- Update some browser default values to use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 - Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
 - For easier scaling across device sizes, block elements should use `px`s for `margin`s.
-- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible. We use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible. We use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
 
 ## CSS variables
 

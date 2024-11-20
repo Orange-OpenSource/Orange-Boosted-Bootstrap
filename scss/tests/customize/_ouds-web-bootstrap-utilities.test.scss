@@ -3041,85 +3041,52 @@ $utilities: ();
 
         /* rtl:end:remove */
 
-        .fs-dl {
-          max-width: var(--bs-font-max-width-display-large);
-          font-size: var(--bs-font-size-display-large);
-          line-height: var(--bs-font-line-height-display-large);
+        .fs-cs {
+          font-size: var(--bs-font-size-code-small);
+          line-height: var(--bs-font-line-height-code-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-large);
+          letter-spacing: var(--bs-font-letter-spacing-code-small);
         }
 
-        .fs-dm {
-          max-width: var(--bs-font-max-width-display-medium);
-          font-size: var(--bs-font-size-display-medium);
-          line-height: var(--bs-font-line-height-display-medium);
+        .fs-cm {
+          font-size: var(--bs-font-size-code-medium);
+          line-height: var(--bs-font-line-height-code-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-medium);
+          letter-spacing: var(--bs-font-letter-spacing-code-medium);
         }
 
-        .fs-ds {
-          max-width: var(--bs-font-max-width-display-small);
-          font-size: var(--bs-font-size-display-small);
-          line-height: var(--bs-font-line-height-display-small);
+        .fs-ls {
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-small);
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
         }
 
-        .fs-hxl {
-          max-width: var(--bs-font-max-width-heading-xlarge);
-          font-size: var(--bs-font-size-heading-xlarge);
-          line-height: var(--bs-font-line-height-heading-xlarge);
+        .fs-lm {
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
         }
 
-        .fs-hl {
-          max-width: var(--bs-font-max-width-heading-large);
-          font-size: var(--bs-font-size-heading-large);
-          line-height: var(--bs-font-line-height-heading-large);
+        .fs-ll {
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-large);
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
         }
 
-        .fs-hm {
-          max-width: var(--bs-font-max-width-heading-medium);
-          font-size: var(--bs-font-size-heading-medium);
-          line-height: var(--bs-font-line-height-heading-medium);
+        .fs-lxl {
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-medium);
-        }
-
-        .fs-hs {
-          max-width: var(--bs-font-max-width-heading-small);
-          font-size: var(--bs-font-size-heading-small);
-          line-height: var(--bs-font-line-height-heading-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-small);
-        }
-
-        .fs-bl {
-          max-width: var(--bs-font-max-width-body-large);
-          font-size: var(--bs-font-size-body-large);
-          line-height: var(--bs-font-line-height-body-large);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-body-large);
-        }
-
-        .fs-bm {
-          max-width: var(--bs-font-max-width-body-medium);
-          font-size: var(--bs-font-size-body-medium);
-          line-height: var(--bs-font-line-height-body-medium);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-body-medium);
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
         }
 
         .fs-bs {
@@ -3131,52 +3098,85 @@ $utilities: ();
           letter-spacing: var(--bs-font-letter-spacing-body-small);
         }
 
-        .fs-lxl {
-          font-size: var(--bs-font-size-label-xlarge);
-          line-height: var(--bs-font-line-height-label-xlarge);
+        .fs-bm {
+          max-width: var(--bs-font-max-width-body-medium);
+          font-size: var(--bs-font-size-body-medium);
+          line-height: var(--bs-font-line-height-body-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+          letter-spacing: var(--bs-font-letter-spacing-body-medium);
         }
 
-        .fs-ll {
-          font-size: var(--bs-font-size-label-large);
-          line-height: var(--bs-font-line-height-label-large);
+        .fs-bl {
+          max-width: var(--bs-font-max-width-body-large);
+          font-size: var(--bs-font-size-body-large);
+          line-height: var(--bs-font-line-height-body-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-large);
+          letter-spacing: var(--bs-font-letter-spacing-body-large);
         }
 
-        .fs-lm {
-          font-size: var(--bs-font-size-label-medium);
-          line-height: var(--bs-font-line-height-label-medium);
+        .fs-hs {
+          max-width: var(--bs-font-max-width-heading-small);
+          font-size: var(--bs-font-size-heading-small);
+          line-height: var(--bs-font-line-height-heading-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+          letter-spacing: var(--bs-font-letter-spacing-heading-small);
         }
 
-        .fs-ls {
-          font-size: var(--bs-font-size-label-small);
-          line-height: var(--bs-font-line-height-label-small);
+        .fs-hm {
+          max-width: var(--bs-font-max-width-heading-medium);
+          font-size: var(--bs-font-size-heading-medium);
+          line-height: var(--bs-font-line-height-heading-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-small);
+          letter-spacing: var(--bs-font-letter-spacing-heading-medium);
         }
 
-        .fs-cm {
-          font-size: var(--bs-font-size-code-medium);
-          line-height: var(--bs-font-line-height-code-medium);
+        .fs-hl {
+          max-width: var(--bs-font-max-width-heading-large);
+          font-size: var(--bs-font-size-heading-large);
+          line-height: var(--bs-font-line-height-heading-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-medium);
+          letter-spacing: var(--bs-font-letter-spacing-heading-large);
         }
 
-        .fs-cs {
-          font-size: var(--bs-font-size-code-small);
-          line-height: var(--bs-font-line-height-code-small);
+        .fs-hxl {
+          max-width: var(--bs-font-max-width-heading-xlarge);
+          font-size: var(--bs-font-size-heading-xlarge);
+          line-height: var(--bs-font-line-height-heading-xlarge);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-small);
+          letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+        }
+
+        .fs-ds {
+          max-width: var(--bs-font-max-width-display-small);
+          font-size: var(--bs-font-size-display-small);
+          line-height: var(--bs-font-line-height-display-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-small);
+        }
+
+        .fs-dm {
+          max-width: var(--bs-font-max-width-display-medium);
+          font-size: var(--bs-font-size-display-medium);
+          line-height: var(--bs-font-line-height-display-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-medium);
+        }
+
+        .fs-dl {
+          max-width: var(--bs-font-max-width-display-large);
+          font-size: var(--bs-font-size-display-large);
+          line-height: var(--bs-font-line-height-display-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-large);
         }
 
         .fw-normal {
@@ -13319,85 +13319,52 @@ $utilities: ();
 
         /* rtl:end:remove */
 
-        .fs-dl {
-          max-width: var(--bs-font-max-width-display-large);
-          font-size: var(--bs-font-size-display-large);
-          line-height: var(--bs-font-line-height-display-large);
+        .fs-cs {
+          font-size: var(--bs-font-size-code-small);
+          line-height: var(--bs-font-line-height-code-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-large);
+          letter-spacing: var(--bs-font-letter-spacing-code-small);
         }
 
-        .fs-dm {
-          max-width: var(--bs-font-max-width-display-medium);
-          font-size: var(--bs-font-size-display-medium);
-          line-height: var(--bs-font-line-height-display-medium);
+        .fs-cm {
+          font-size: var(--bs-font-size-code-medium);
+          line-height: var(--bs-font-line-height-code-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-medium);
+          letter-spacing: var(--bs-font-letter-spacing-code-medium);
         }
 
-        .fs-ds {
-          max-width: var(--bs-font-max-width-display-small);
-          font-size: var(--bs-font-size-display-small);
-          line-height: var(--bs-font-line-height-display-small);
+        .fs-ls {
+          font-size: var(--bs-font-size-label-small);
+          line-height: var(--bs-font-line-height-label-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-display-small);
+          letter-spacing: var(--bs-font-letter-spacing-label-small);
         }
 
-        .fs-hxl {
-          max-width: var(--bs-font-max-width-heading-xlarge);
-          font-size: var(--bs-font-size-heading-xlarge);
-          line-height: var(--bs-font-line-height-heading-xlarge);
+        .fs-lm {
+          font-size: var(--bs-font-size-label-medium);
+          line-height: var(--bs-font-line-height-label-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+          letter-spacing: var(--bs-font-letter-spacing-label-medium);
         }
 
-        .fs-hl {
-          max-width: var(--bs-font-max-width-heading-large);
-          font-size: var(--bs-font-size-heading-large);
-          line-height: var(--bs-font-line-height-heading-large);
+        .fs-ll {
+          font-size: var(--bs-font-size-label-large);
+          line-height: var(--bs-font-line-height-label-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-large);
+          letter-spacing: var(--bs-font-letter-spacing-label-large);
         }
 
-        .fs-hm {
-          max-width: var(--bs-font-max-width-heading-medium);
-          font-size: var(--bs-font-size-heading-medium);
-          line-height: var(--bs-font-line-height-heading-medium);
+        .fs-lxl {
+          font-size: var(--bs-font-size-label-xlarge);
+          line-height: var(--bs-font-line-height-label-xlarge);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-medium);
-        }
-
-        .fs-hs {
-          max-width: var(--bs-font-max-width-heading-small);
-          font-size: var(--bs-font-size-heading-small);
-          line-height: var(--bs-font-line-height-heading-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-heading-small);
-        }
-
-        .fs-bl {
-          max-width: var(--bs-font-max-width-body-large);
-          font-size: var(--bs-font-size-body-large);
-          line-height: var(--bs-font-line-height-body-large);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-body-large);
-        }
-
-        .fs-bm {
-          max-width: var(--bs-font-max-width-body-medium);
-          font-size: var(--bs-font-size-body-medium);
-          line-height: var(--bs-font-line-height-body-medium);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-body-medium);
+          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
         }
 
         .fs-bs {
@@ -13409,52 +13376,85 @@ $utilities: ();
           letter-spacing: var(--bs-font-letter-spacing-body-small);
         }
 
-        .fs-lxl {
-          font-size: var(--bs-font-size-label-xlarge);
-          line-height: var(--bs-font-line-height-label-xlarge);
+        .fs-bm {
+          max-width: var(--bs-font-max-width-body-medium);
+          font-size: var(--bs-font-size-body-medium);
+          line-height: var(--bs-font-line-height-body-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
+          letter-spacing: var(--bs-font-letter-spacing-body-medium);
         }
 
-        .fs-ll {
-          font-size: var(--bs-font-size-label-large);
-          line-height: var(--bs-font-line-height-label-large);
+        .fs-bl {
+          max-width: var(--bs-font-max-width-body-large);
+          font-size: var(--bs-font-size-body-large);
+          line-height: var(--bs-font-line-height-body-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-large);
+          letter-spacing: var(--bs-font-letter-spacing-body-large);
         }
 
-        .fs-lm {
-          font-size: var(--bs-font-size-label-medium);
-          line-height: var(--bs-font-line-height-label-medium);
+        .fs-hs {
+          max-width: var(--bs-font-max-width-heading-small);
+          font-size: var(--bs-font-size-heading-small);
+          line-height: var(--bs-font-line-height-heading-small);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-medium);
+          letter-spacing: var(--bs-font-letter-spacing-heading-small);
         }
 
-        .fs-ls {
-          font-size: var(--bs-font-size-label-small);
-          line-height: var(--bs-font-line-height-label-small);
+        .fs-hm {
+          max-width: var(--bs-font-max-width-heading-medium);
+          font-size: var(--bs-font-size-heading-medium);
+          line-height: var(--bs-font-line-height-heading-medium);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-small);
+          letter-spacing: var(--bs-font-letter-spacing-heading-medium);
         }
 
-        .fs-cm {
-          font-size: var(--bs-font-size-code-medium);
-          line-height: var(--bs-font-line-height-code-medium);
+        .fs-hl {
+          max-width: var(--bs-font-max-width-heading-large);
+          font-size: var(--bs-font-size-heading-large);
+          line-height: var(--bs-font-line-height-heading-large);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-medium);
+          letter-spacing: var(--bs-font-letter-spacing-heading-large);
         }
 
-        .fs-cs {
-          font-size: var(--bs-font-size-code-small);
-          line-height: var(--bs-font-line-height-code-small);
+        .fs-hxl {
+          max-width: var(--bs-font-max-width-heading-xlarge);
+          font-size: var(--bs-font-size-heading-xlarge);
+          line-height: var(--bs-font-line-height-heading-xlarge);
 
           /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-small);
+          letter-spacing: var(--bs-font-letter-spacing-heading-xlarge);
+        }
+
+        .fs-ds {
+          max-width: var(--bs-font-max-width-display-small);
+          font-size: var(--bs-font-size-display-small);
+          line-height: var(--bs-font-line-height-display-small);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-small);
+        }
+
+        .fs-dm {
+          max-width: var(--bs-font-max-width-display-medium);
+          font-size: var(--bs-font-size-display-medium);
+          line-height: var(--bs-font-line-height-display-medium);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-medium);
+        }
+
+        .fs-dl {
+          max-width: var(--bs-font-max-width-display-large);
+          font-size: var(--bs-font-size-display-large);
+          line-height: var(--bs-font-line-height-display-large);
+
+          /* rtl:remove */
+          letter-spacing: var(--bs-font-letter-spacing-display-large);
         }
 
         .fw-normal {

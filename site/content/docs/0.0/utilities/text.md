@@ -80,7 +80,7 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 
 Quickly change the `font-size` of text. Sizing for these utilities matches our predefined typography placeholders. Don't forget to add one of our [`font-weight`](#font-weight) utility when needed.
 
-These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
 
 <details class="mb-medium">
   <summary>See the <code>font-size</code> associated to classes</summary>

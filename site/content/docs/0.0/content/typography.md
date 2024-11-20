@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for OUDS Web typography, including global settings, headings, body text, and more.
+description: Documentation and examples for OUDS Web typography, including global settings, headings, body text, <!--lists, -->and more.
 group: content
 aliases:
   - "/docs/content/typography/"
@@ -15,7 +15,7 @@ OUDS Web sets basic global display, typography<!--, and link styles-->. When mor
 - Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
-- Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+- Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
 <!--- Set the global link color via `$link-color`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).-->
 
@@ -27,7 +27,7 @@ If you need need to include a font reference inside a custom component, please r
 
 ## Headings
 
-All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}).
+All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
 
 {{< bs-table >}}
 | Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
@@ -84,7 +84,7 @@ You can easily add an icon with your font reference using [our icon helper]({{< 
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
-We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints.
+We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints.
 
 {{< bs-table >}}
 | Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
@@ -153,9 +153,9 @@ Display headings are customizable via two variables, `$display-font-family` and 
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
-## Regular text
+## Regular texts
 
-Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utilities]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
 
 {{< callout info >}}
 Body medium is set by default on `body` but we don't set the `max-width` property for usability reasons.
@@ -186,7 +186,7 @@ You can easily add an icon with your font reference using [our icon helper]({{< 
 
 ### Lead
 
-Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-text) body large.
+Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-texts) body large.
 
 {{< example >}}
 <p class="lead">
@@ -196,7 +196,7 @@ Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-te
 
 ### Small
 
-Render a paragraph with a small `font-size` by adding `.small` or use `<small>`. It uses [Regular text](#regular-text) body small.
+Render a paragraph with a small `font-size` by adding `.small` or use `<small>`. It uses [Regular text](#regular-texts) body small.
 
 {{< example >}}
 <p>
@@ -225,7 +225,7 @@ Styling for common inline HTML5 elements.
 Beware that those tags should be used for semantic purpose:
 
 - `<mark>` represents text which is marked or highlighted for reference or notation purposes.
-- `<small>` represents side-comments and small print, like copyright and legal text. It uses [Regular text](#regular-text) body small.
+- `<small>` represents side-comments and small print, like copyright and legal text. It uses [Regular text](#regular-texts) body small.
 - `<s>` represents element that are no longer relevant or no longer accurate.
 - `<u>` represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
 
@@ -252,7 +252,7 @@ Stylized implementation of HTML's `<abbr>` element for abbreviations and acronym
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote. It uses [Regular text](#regular-text) body large.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote. It uses [Regular text](#regular-texts) body large.
 
 {{< example >}}
 <blockquote class="blockquote">
@@ -262,7 +262,7 @@ For quoting blocks of content from another source within your document. Wrap `<b
 
 ### Naming a source
 
-The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well. It uses [Regular text](#regular-text) body small.
+The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well. It uses [Regular text](#regular-texts) body small.
 
 {{< example >}}
 <figure>

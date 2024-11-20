@@ -1,31 +1,31 @@
 ---
 layout: docs
 title: Icon
-description: Quickly see the icon sizes you should use with a specific typography.
+description: Quickly see the right icon sizes with a specific typography reference.
 group: helpers
 aliases:
   - "/docs/helpers/icon/"
 toc: true
 ---
 
-## Core concept
+## Approach
 
-The icon classes are quite easy to use. You can use these classes upon `<img>`, `<svg>` or even icon font wherever the icon is. Please make sure to either the rules described in this page or follow the design.
+The icon classes are done to be used upon `<img>`, `<svg>` or even icon font wherever the icon is. Please make sure to either the rules described in this page or follow the design.
 
 Every icon class presented in here has the common following code:
 
 {{< scss-docs name="ouds-font-icon-common" file="scss/helpers/_icon.scss" >}}
 
-## Displays
+## Display headings
 
 You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
 
 ## Headings
 
-Here are the rules to follow for headings. These icons are responsive.
+Here are the rules to follow for headings. These icons' sizes are responsive.
 
 <details class="mb-medium">
-  <summary>See the <code>size</code> associated to classes</summary>
+  <summary>See the <strong>sizes</strong> associated to classes</summary>
 
 {{< bs-table >}}
 | Icon class | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
@@ -53,19 +53,19 @@ Here are the rules to follow for headings. These icons are responsive.
 </details>
 
 {{< example >}}
-<h1> <!-- h1 uses heading-xlarge font reference so all related classes as `.h1`, `.fs-hxl`, etc... -->
+<h1> <!-- h1 uses heading-xlarge font reference like all related classes as `.h1`, `.fs-hxl`, etc... -->
   <svg class="hxl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H1 with tall icon
 </h1>
-<h1> <!-- h1 uses heading-xlarge font reference so all related classes as `.h1`, `.fs-hxl`, etc... -->
+<h1> <!-- h1 uses heading-xlarge font reference like all related classes as `.h1`, `.fs-hxl`, etc... -->
   <svg class="hxl-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H1 with medium icon
 </h1>
-<h1> <!-- h1 uses heading-xlarge font reference so all related classes as `.h1`, `.fs-hxl`, etc... -->
+<h1> <!-- h1 uses heading-xlarge font reference like all related classes as `.h1`, `.fs-hxl`, etc... -->
   <svg class="hxl-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -74,19 +74,19 @@ Here are the rules to follow for headings. These icons are responsive.
 
 <hr>
 
-<h2> <!-- h2 uses heading-large font reference so all related classes as `.h2`, `.fs-hl`, etc... -->
+<h2> <!-- h2 uses heading-large font reference like all related classes as `.h2`, `.fs-hl`, etc... -->
   <svg class="hl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H2 with tall icon
 </h2>
-<h2> <!-- h2 uses heading-large font reference so all related classes as `.h2`, `.fs-hl`, etc... -->
+<h2> <!-- h2 uses heading-large font reference like all related classes as `.h2`, `.fs-hl`, etc... -->
   <svg class="hl-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H2 with medium icon
 </h2>
-<h2> <!-- h2 uses heading-large font reference so all related classes as `.h2`, `.fs-hl`, etc... -->
+<h2> <!-- h2 uses heading-large font reference like all related classes as `.h2`, `.fs-hl`, etc... -->
   <svg class="hl-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -95,19 +95,19 @@ Here are the rules to follow for headings. These icons are responsive.
 
 <hr>
 
-<h3> <!-- h3 uses heading-medium font reference so all related classes as `.h3`, `.fs-hm`, etc... -->
+<h3> <!-- h3 uses heading-medium font reference like all related classes as `.h3`, `.fs-hm`, etc... -->
   <svg class="hm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H3 with tall icon
 </h3>
-<h3> <!-- h3 uses heading-medium font reference so all related classes as `.h3`, `.fs-hm`, etc... -->
+<h3> <!-- h3 uses heading-medium font reference like all related classes as `.h3`, `.fs-hm`, etc... -->
   <svg class="hm-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H3 with medium icon
 </h3>
-<h3> <!-- h3 uses heading-medium font reference so all related classes as `.h3`, `.fs-hm`, etc... -->
+<h3> <!-- h3 uses heading-medium font reference like all related classes as `.h3`, `.fs-hm`, etc... -->
   <svg class="hm-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -116,19 +116,19 @@ Here are the rules to follow for headings. These icons are responsive.
 
 <hr>
 
-<h4> <!-- h4 uses heading-small font reference so all related classes as `.h4`, `.fs-hs`, etc... -->
+<h4> <!-- h4 uses heading-small font reference like all related classes as `.h4`, `.fs-hs`, etc... -->
   <svg class="hs-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H4 with tall icon
 </h4>
-<h4> <!-- h4 uses heading-small font reference so all related classes as `.h4`, `.fs-hs`, etc... -->
+<h4> <!-- h4 uses heading-small font reference like all related classes as `.h4`, `.fs-hs`, etc... -->
   <svg class="hs-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H4 with medium icon
 </h4>
-<h4> <!-- h4 uses heading-small font reference so all related classes as `.h4`, `.fs-hs`, etc... -->
+<h4> <!-- h4 uses heading-small font reference like all related classes as `.h4`, `.fs-hs`, etc... -->
   <svg class="hs-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -137,19 +137,19 @@ Here are the rules to follow for headings. These icons are responsive.
 
 <hr>
 
-<h5> <!-- h5 uses body-large font reference so all related classes as `.h5`, `.fs-bl`, etc... -->
+<h5> <!-- h5 uses body-large font reference like all related classes as `.h5`, `.fs-bl`, etc... -->
   <svg class="bl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H5 with tall icon
 </h5>
-<h5> <!-- h5 uses body-large font reference so all related classes as `.h5`, `.fs-bl`, etc... -->
+<h5> <!-- h5 uses body-large font reference like all related classes as `.h5`, `.fs-bl`, etc... -->
   <svg class="bl-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H5 with medium icon
 </h5>
-<h5> <!-- h5 uses body-large font reference so all related classes as `.h5`, `.fs-bl`, etc... -->
+<h5> <!-- h5 uses body-large font reference like all related classes as `.h5`, `.fs-bl`, etc... -->
   <svg class="bl-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -158,19 +158,19 @@ Here are the rules to follow for headings. These icons are responsive.
 
 <hr>
 
-<h6> <!-- h6 uses body-medium font reference so all related classes as `.h6`, `.fs-bm`, etc... -->
+<h6> <!-- h6 uses body-medium font reference like all related classes as `.h6`, `.fs-bm`, etc... -->
   <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H6 with tall icon
 </h6>
-<h6> <!-- h6 uses body-medium font reference so all related classes as `.h6`, `.fs-bm`, etc... -->
+<h6> <!-- h6 uses body-medium font reference like all related classes as `.h6`, `.fs-bm`, etc... -->
   <svg class="bm-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   H6 with medium icon
 </h6>
-<h6> <!-- h6 uses body-medium font reference so all related classes as `.h6`, `.fs-bm`, etc... -->
+<h6> <!-- h6 uses body-medium font reference like all related classes as `.h6`, `.fs-bm`, etc... -->
   <svg class="bm-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -180,10 +180,10 @@ Here are the rules to follow for headings. These icons are responsive.
 
 ## Regular texts
 
-Here are the rules to follow for the regular texts. These icons are responsive.
+Here are the rules to follow for regular texts. These icons' sizes are responsive.
 
 <details class="mb-medium">
-  <summary>See the <code>size</code> associated to classes</summary>
+  <summary>See the <strong>sizes</strong> associated to classes</summary>
 
 {{< bs-table >}}
 | Icon class | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
@@ -202,19 +202,19 @@ Here are the rules to follow for the regular texts. These icons are responsive.
 </details>
 
 {{< example >}}
-<p class="lead"> <!-- .lead uses body-large font reference so all related classes as `.lead`, `.fs-bl`, etc... -->
+<p class="lead"> <!-- .lead uses body-large font reference like all related classes as `.lead`, `.fs-bl`, etc... -->
   <svg class="bl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Lead paragraph with tall icon
 </p>
-<p class="lead"> <!-- .lead uses body-large font reference so all related classes as `.lead`, `.fs-bl`, etc... -->
+<p class="lead"> <!-- .lead uses body-large font reference like all related classes as `.lead`, `.fs-bl`, etc... -->
   <svg class="bl-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Lead paragraph with medium icon
 </p>
-<p class="lead"> <!-- .lead uses body-large font reference so all related classes as `.lead`, `.fs-bl`, etc... -->
+<p class="lead"> <!-- .lead uses body-large font reference like all related classes as `.lead`, `.fs-bl`, etc... -->
   <svg class="bl-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -223,19 +223,19 @@ Here are the rules to follow for the regular texts. These icons are responsive.
 
 <hr>
 
-<p> <!-- default paragraph uses body-medium font reference so all related classes as `.fs-bm`, etc... -->
+<p> <!-- default paragraph uses body-medium font reference like all related classes as `.fs-bm`, etc... -->
   <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Default paragraph with tall icon
 </p>
-<p> <!-- default paragraph uses body-medium font reference so all related classes as `.fs-bm`, etc... -->
+<p> <!-- default paragraph uses body-medium font reference like all related classes as `.fs-bm`, etc... -->
   <svg class="bm-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Default paragraph with medium icon
 </p>
-<p> <!-- default paragraph uses body-medium font reference so all related classes as `.fs-bm`, etc... -->
+<p> <!-- default paragraph uses body-medium font reference like all related classes as `.fs-bm`, etc... -->
   <svg class="bm-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -244,19 +244,19 @@ Here are the rules to follow for the regular texts. These icons are responsive.
 
 <hr>
 
-<p class="small"> <!-- .small uses body-small font reference so all related classes as `.small`, `.fs-bs`, etc... -->
+<p class="small"> <!-- .small uses body-small font reference like all related classes as `.small`, `.fs-bs`, etc... -->
   <svg class="bs-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Small paragraph with tall icon
 </p>
-<p class="small"> <!-- .small uses body-small font reference so all related classes as `.small`, `.fs-bs`, etc... -->
+<p class="small"> <!-- .small uses body-small font reference like all related classes as `.small`, `.fs-bs`, etc... -->
   <svg class="bs-medium-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   Small paragraph with medium icon
 </p>
-<p class="small"> <!-- .small uses body-small font reference so all related classes as `.small`, `.fs-bs`, etc... -->
+<p class="small"> <!-- .small uses body-small font reference like all related classes as `.small`, `.fs-bs`, etc... -->
   <svg class="bs-short-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
@@ -266,10 +266,10 @@ Here are the rules to follow for the regular texts. These icons are responsive.
 
 ## Decorative
 
-Here are the rules to follow for decorative icons. Be careful using these icons because they are not responsive.
+Here are the rules to follow for decorative icons. Be careful using these icons' sizes because they are not responsive.
 
 <details class="mb-medium">
-  <summary>See the <code>size</code> associated to classes</summary>
+  <summary>See the <strong>size</strong> associated to classes</summary>
 
 {{< bs-table >}}
 | Icon class | Value |

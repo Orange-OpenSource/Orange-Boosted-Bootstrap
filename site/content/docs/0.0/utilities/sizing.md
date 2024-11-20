@@ -34,9 +34,6 @@ You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 
 {{< example class="bd-example-flex" >}}
 <div style="width: 50%; height: 100px;">
-  <div class="mw-none" style="width: 200%;">Max-width none</div>
-</div>
-<div style="width: 50%; height: 100px;">
   <div class="mw-100" style="width: 200%;">Max-width 100%</div>
 </div>
 {{< /example >}}
@@ -44,6 +41,14 @@ You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 {{< example class="bd-example-flex" >}}
 <div style="height: 100px;">
   <div class="mh-100" style="width: 100px; height: 200px;">Max-height 100%</div>
+</div>
+{{< /example >}}
+
+You can also use in some cases (mainly [font references]({{< docsref "/content/typography" >}})) `max-width: none` utility as needed.
+
+{{< example class="bd-example-flex" >}}
+<div style="width: 50%; height: 100px;">
+  <div class="mw-none" style="width: 200%;">Max-width none</div>
 </div>
 {{< /example >}}
 

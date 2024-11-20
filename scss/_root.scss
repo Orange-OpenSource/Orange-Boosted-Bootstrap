@@ -79,6 +79,7 @@
   --#{$prefix}font-size-label-large: #{px-to-rem($ouds-font-size-label-large)};
   --#{$prefix}font-size-label-medium: #{px-to-rem($ouds-font-size-label-medium)};
   --#{$prefix}font-size-label-small: #{px-to-rem($ouds-font-size-label-small)};
+  --#{$prefix}font-size-code-medium: #{px-to-rem($ouds-font-size-code-medium)};
   --#{$prefix}font-line-height-display-large: #{divide($ouds-font-line-height-display-large-mobile, $ouds-font-size-display-large-mobile)};
   --#{$prefix}font-line-height-display-medium: #{divide($ouds-font-line-height-display-medium-mobile, $ouds-font-size-display-medium-mobile)};
   --#{$prefix}font-line-height-display-small: #{divide($ouds-font-line-height-display-small-mobile, $ouds-font-size-display-small-mobile)};
@@ -93,6 +94,7 @@
   --#{$prefix}font-line-height-label-large: #{divide($ouds-font-line-height-label-large, $ouds-font-size-label-large)};
   --#{$prefix}font-line-height-label-medium: #{divide($ouds-font-line-height-label-medium, $ouds-font-size-label-medium)};
   --#{$prefix}font-line-height-label-small: #{divide($ouds-font-line-height-label-small, $ouds-font-size-label-small)};
+  --#{$prefix}font-line-height-code-medium: #{divide($ouds-font-line-height-label-small, $ouds-font-size-code-medium)};
   --#{$prefix}font-letter-spacing-display-large: #{px-to-rem($ouds-font-letter-spacing-display-large-mobile)};
   --#{$prefix}font-letter-spacing-display-medium: #{px-to-rem($ouds-font-letter-spacing-display-medium-mobile)};
   --#{$prefix}font-letter-spacing-display-small: #{px-to-rem($ouds-font-letter-spacing-display-small-mobile)};
@@ -107,6 +109,7 @@
   --#{$prefix}font-letter-spacing-label-large: #{px-to-rem($ouds-font-letter-spacing-label-large)};
   --#{$prefix}font-letter-spacing-label-medium: #{px-to-rem($ouds-font-letter-spacing-label-medium)};
   --#{$prefix}font-letter-spacing-label-small: #{px-to-rem($ouds-font-letter-spacing-label-small)};
+  --#{$prefix}font-letter-spacing-code-medium: #{px-to-rem($ouds-font-letter-spacing-code-medium)};
   --#{$prefix}font-max-width-display-large: #{px-to-rem($ouds-size-max-width-type-display-large-mobile)};
   --#{$prefix}font-max-width-display-medium: #{px-to-rem($ouds-size-max-width-type-display-medium-mobile)};
   --#{$prefix}font-max-width-display-small: #{px-to-rem($ouds-size-max-width-type-display-small-mobile)};

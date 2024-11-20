@@ -85,22 +85,22 @@ $ouds-elevations: (
 
 // scss-docs-start ouds-maps-font
 $ouds-font-sizes: (
-  dl: "/display-large",
-  dm: "/display-medium",
-  ds: "/display-small",
-  hxl: "/heading-xlarge",
-  hl: "/heading-large",
-  hm: "/heading-medium",
-  hs: "/heading-small",
-  bl: "/body-large",
-  bm: "/body-medium",
-  bs: "/body-small",
-  lxl: "/label-xlarge",
-  ll: "/label-large",
-  lm: "/label-medium",
-  ls: "/label-small",
+  cs: "/code-small",
   cm: "/code-medium",
-  cs: "/code-small"
+  ls: "/label-small",
+  lm: "/label-medium",
+  ll: "/label-large",
+  lxl: "/label-xlarge",
+  bs: "/body-small",
+  bm: "/body-medium",
+  bl: "/body-large",
+  hs: "/heading-small",
+  hm: "/heading-medium",
+  hl: "/heading-large",
+  hxl: "/heading-xlarge",
+  ds: "/display-small",
+  dm: "/display-medium",
+  dl: "/display-large",
 ) !default;
 
 $ouds-font-weights: (
