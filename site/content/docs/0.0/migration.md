@@ -11,7 +11,7 @@ toc: true
 
 ## v0.0.4
 
-### Basic styles
+### Content styles
 
 #### Default styles
 
@@ -26,7 +26,7 @@ toc: true
 - <span class="badge text-bg-success">New</span> All typography global settings have been set for:
   - Headings
   - Display headings
-  - Regular text
+  - Regular texts
   - Inline text elements (`<mark>`, `<del>`, `<s>`, `<ins>`, `<u>`, `<small>`, `<strong>`, `<em>`, `<abbr>`, `<hr>`, `<var>`, `<kbd>`, `<samp>`, `<address>`)
   - Code parts (inline, blocks)
   - Abbreviations (`<abbr>`)
@@ -49,11 +49,11 @@ toc: true
 
 #### Icon
 
-- <span class="badge text-bg-success">New</span> Icons' sizes utilities are now available:
+- <span class="badge text-bg-success">New</span> Icons' sizes utilities are now available to help choose the right icon size with a specific typography reference:
   - Responsive icons' sizes in headings:
     - `.h{size}-short-icon`, `.h{size}-medium-icon`, `.h{size}-tall-icon`, where `h` stands for heading and size is one of `s` for small, `m` for medium, `l` for large, or `xl` for x-large
-    - `.b{size}-short-icon`, `.b{size}-medium-icon`, , `.h{size}-tall-icon`, where `b` stands for body and size is one of `m` for medium, `l` for large
-  - Responsive icons' sizes regular texts: `.b{size}-short-icon`, `.b{size}-medium-icon`, `.b{size}-tall-icon`, where size is one of `s` for small, `m` for medium, `l` for large
+    - `.b{size}-short-icon`, `.b{size}-medium-icon`, , `.h{size}-tall-icon`, where `b` stands for body and size is one of `m` for medium, or `l` for large
+  - Responsive icons' sizes in regular texts: `.b{size}-short-icon`, `.b{size}-medium-icon`, `.b{size}-tall-icon`, where `b` stands for body and  size is one of `s` for small, `m` for medium, or `l` for large
   - Fixed icons' sizes for decorative standalone icons: `.decorative-{size}-icon` where size is one of `shortest|shorter|short|medium|tall|taller|tallest`
 
 #### Position
@@ -110,7 +110,8 @@ toc: true
   `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-overlay-default`, `.shadow-overlay-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
 
 #### Sizing
-TODO
+
+- <span class="badge text-bg-success">New</span> Sizing utility `.mw-none` to set `max-width: none`.
 
 #### Spacings
 
@@ -195,13 +196,13 @@ TODO
 
 #### Text
 
-- <span class="badge text-bg-success">New</span> Alignment text utilities: `.text-start`, `.text-center`, `.text-end`, and responsive versions like `.text-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`
+- <span class="badge text-bg-success">New</span> Alignment text utilities: `.text-start`, `.text-center`, `.text-end`, and responsive versions like `.text-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
 
-- <span class="badge text-bg-success">New</span> Wrapping and overflow text utilities: `.text-wrap` and `.text-nowrap`
+- <span class="badge text-bg-success">New</span> Wrapping and overflow text utilities: `.text-wrap` and `.text-nowrap`.
 
-- <span class="badge text-bg-success">New</span> Word break text utility: `.text-break`
+- <span class="badge text-bg-success">New</span> Word break text utility: `.text-break`.
 
-- <span class="badge text-bg-success">New</span> Text transform text utilities: `.text-lowercase`, `.text-uppercase`, and `.text-capitalize`
+- <span class="badge text-bg-success">New</span> Text transform text utilities: `.text-lowercase`, `.text-uppercase`, and `.text-capitalize`.
 
 - <span class="badge text-bg-success">New</span> Font size text utilities:
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
@@ -210,10 +211,9 @@ TODO
   - **Labels**: `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls`
   - **Code**: `.fs-cm`, `.fs-cs`
 
-- <span class="badge text-bg-success">New</span> Font weight text utilities: `.fw-normal` and `.fw-bold`
+- <span class="badge text-bg-success">New</span> Font weight text utilities: `.fw-normal` and `.fw-bold`.
 
-- <span class="badge text-bg-success">New</span> Line height text utilities: `.fw-normal` and `.fw-bold`
-
+- <span class="badge text-bg-success">New</span> Text decoration utilities: `.text-decoration-underline`, `.text-decoration-line-through`, and `.text-decoration-none`.
 
 ### Examples
 
@@ -365,6 +365,8 @@ TODO
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-font-family-monospace-stack</code></li>
+      <li><code>$ouds-font-family-sans-serif-stack</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
@@ -389,7 +391,6 @@ TODO
       <li><code>$ouds-grid-margin-400</code></li>
       <li><code>$ouds-grid-margin-500</code></li>
       <li><code>$ouds-grid-margin-700</code></li>
-      <li><code>$ouds-size-max-width-grid</code></li>
       <li><code>$ouds-grid-md-column-gap</code></li>
       <li><code>$ouds-grid-md-margin</code></li>
       <li><code>$ouds-grid-md-min-width</code></li>
@@ -415,6 +416,7 @@ TODO
       <li><code>$ouds-opacity-transparent</code></li>
       <li><code>$ouds-opacity-weak</code></li>
       <li><code>$ouds-opacity-weaker</code></li>
+      <li><code>$ouds-size-max-width-grid</code></li>
       <li><code>$ouds-space-fixed-huge</code></li>
       <li><code>$ouds-space-fixed-jumbo</code></li>
       <li><code>$ouds-space-fixed-medium</code></li>
@@ -476,7 +478,10 @@ TODO
       <li><code>$ouds-dimension-space-fixed</code></li>
       <li><code>$ouds-dimension-space-scaled</code></li>
       <li><code>$ouds-elevations</code></li>
-    </ul>
+      <li><code>$ouds-font-sizes</code></li>
+      <li><code>$ouds-font-weights</code></li>
+      <li><code>$ouds-icon-sizes</code></li>
+</ul>
   </details>
 
 - <details class="mb-short">
@@ -496,11 +501,12 @@ TODO
       <li><code>media-breakpoint-down()</code></li>
       <li><code>media-breakpoint-only()</code></li>
       <li><code>media-breakpoint-up()</code></li>
+      <li><code>ouds-font-size()</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
+    <summary><span class="badge text-bg-success">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
       <li><code>border-end-ouds</code></li>
@@ -511,6 +517,8 @@ TODO
       <li><code>border-width-ouds</code></li>
       <li><code>column-gap-ouds</code></li>
       <li><code>column-gap-scaled-ouds</code></li>
+      <li><code>font-size-ouds</code></li>
+      <li><code>font-weight-ouds</code></li>
       <li><code>gap-ouds</code></li>
       <li><code>gap-scaled-ouds</code></li>
       <li><code>margin-bottom-ouds</code></li>
@@ -570,6 +578,83 @@ TODO
     <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
     <ul>
       <li><code>--bs-container-margin-x</code></li>
+      <li><code>--bs-body-letter-spacing</code></li>
+      <li><code>--bs-font-size-display-large</code></li>
+      <li><code>--bs-font-size-display-medium</code></li>
+      <li><code>--bs-font-size-display-small</code></li>
+      <li><code>--bs-font-size-heading-xlarge</code></li>
+      <li><code>--bs-font-size-heading-large</code></li>
+      <li><code>--bs-font-size-heading-medium</code></li>
+      <li><code>--bs-font-size-heading-small</code></li>
+      <li><code>--bs-font-size-body-large</code></li>
+      <li><code>--bs-font-size-body-medium</code></li>
+      <li><code>--bs-font-size-body-small</code></li>
+      <li><code>--bs-font-size-label-xlarge</code></li>
+      <li><code>--bs-font-size-label-large</code></li>
+      <li><code>--bs-font-size-label-medium</code></li>
+      <li><code>--bs-font-size-label-small</code></li>
+      <li><code>--bs-font-size-code-medium</code></li>
+      <li><code>--bs-font-line-height-display-large</code></li>
+      <li><code>--bs-font-line-height-display-medium</code></li>
+      <li><code>--bs-font-line-height-display-small</code></li>
+      <li><code>--bs-font-line-height-heading-xlarge</code></li>
+      <li><code>--bs-font-line-height-heading-large</code></li>
+      <li><code>--bs-font-line-height-heading-medium</code></li>
+      <li><code>--bs-font-line-height-heading-small</code></li>
+      <li><code>--bs-font-line-height-body-large</code></li>
+      <li><code>--bs-font-line-height-body-medium</code></li>
+      <li><code>--bs-font-line-height-body-small</code></li>
+      <li><code>--bs-font-line-height-label-xlarge</code></li>
+      <li><code>--bs-font-line-height-label-large</code></li>
+      <li><code>--bs-font-line-height-label-medium</code></li>
+      <li><code>--bs-font-line-height-label-small</code></li>
+      <li><code>--bs-font-line-height-code-medium</code></li>
+      <li><code>--bs-font-letter-spacing-display-large</code></li>
+      <li><code>--bs-font-letter-spacing-display-medium</code></li>
+      <li><code>--bs-font-letter-spacing-display-small</code></li>
+      <li><code>--bs-font-letter-spacing-heading-xlarge</code></li>
+      <li><code>--bs-font-letter-spacing-heading-large</code></li>
+      <li><code>--bs-font-letter-spacing-heading-medium</code></li>
+      <li><code>--bs-font-letter-spacing-heading-small</code></li>
+      <li><code>--bs-font-letter-spacing-body-large</code></li>
+      <li><code>--bs-font-letter-spacing-body-medium</code></li>
+      <li><code>--bs-font-letter-spacing-body-small</code></li>
+      <li><code>--bs-font-letter-spacing-label-xlarge</code></li>
+      <li><code>--bs-font-letter-spacing-label-large</code></li>
+      <li><code>--bs-font-letter-spacing-label-medium</code></li>
+      <li><code>--bs-font-letter-spacing-label-small</code></li>
+      <li><code>--bs-font-letter-spacing-code-medium</code></li>
+      <li><code>--bs-font-max-width-display-large</code></li>
+      <li><code>--bs-font-max-width-display-medium</code></li>
+      <li><code>--bs-font-max-width-display-small</code></li>
+      <li><code>--bs-font-max-width-heading-xlarge</code></li>
+      <li><code>--bs-font-max-width-heading-large</code></li>
+      <li><code>--bs-font-max-width-heading-medium</code></li>
+      <li><code>--bs-font-max-width-heading-small</code></li>
+      <li><code>--bs-font-max-width-body-large</code></li>
+      <li><code>--bs-font-max-width-body-medium</code></li>
+      <li><code>--bs-font-max-width-body-small</code></li>
+      <li><code>--bs-icon-short-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-medium-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-tall-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-short-with-heading-large</code></li>
+      <li><code>--bs-icon-medium-with-heading-large</code></li>
+      <li><code>--bs-icon-tall-with-heading-large</code></li>
+      <li><code>--bs-icon-short-with-heading-medium</code></li>
+      <li><code>--bs-icon-medium-with-heading-medium</code></li>
+      <li><code>--bs-icon-tall-with-heading-medium</code></li>
+      <li><code>--bs-icon-short-with-heading-small</code></li>
+      <li><code>--bs-icon-medium-with-heading-small</code></li>
+      <li><code>--bs-icon-tall-with-heading-small</code></li>
+      <li><code>--bs-icon-short-with-body-large</code></li>
+      <li><code>--bs-icon-medium-with-body-large</code></li>
+      <li><code>--bs-icon-tall-with-body-large</code></li>
+      <li><code>--bs-icon-short-with-body-medium</code></li>
+      <li><code>--bs-icon-medium-with-body-medium</code></li>
+      <li><code>--bs-icon-tall-with-body-medium</code></li>
+      <li><code>--bs-icon-short-with-body-small</code></li>
+      <li><code>--bs-icon-medium-with-body-small</code></li>
+      <li><code>--bs-icon-tall-with-body-small</code></li>
     </ul>
   </details>
 
@@ -601,7 +686,7 @@ TODO
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
@@ -612,6 +697,7 @@ TODO
       <li><code>border-width</code></li>
       <li><code>column-gap</code></li>
       <li><code>gap</code></li>
+      <li><code>line-height</code></li>
       <li><code>margin-bottom</code></li>
       <li><code>margin-end</code></li>
       <li><code>margin</code></li>
@@ -696,14 +782,14 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
+    <summary><span class="badge text-bg-success">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
     </ul>
