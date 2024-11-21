@@ -31,7 +31,7 @@ For a list of tags of an article, for example, add a heading (`<h1>–<h6>`) to 
   <li><span class="tag">Bird</span></li>
   <li>
     <span class="tag">
-      <svg xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox='0 0 32 32'><path d='M32 7a13 13 0 01-3.8 1.1 6.6 6.6 0 003-3.6c-1.4.7-2.8 1.3-4.3 1.6a6.6 6.6 0 00-11.1 6A18.6 18.6 0 012.2 5a6.6 6.6 0 002 8.9c-1 0-2-.4-3-.9v.1c0 3.2 2.4 5.9 5.4 6.5a6.6 6.6 0 01-3 0 6.6 6.6 0 006.1 4.6A13.2 13.2 0 010 27.1a18.6 18.6 0 0028.7-16.6C30 9.5 31.1 8.4 32 7z'/></svg>
+      <svg xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox='0 0 32 32'><path d='M32 7a13 13 0 01-3.8 1.1 6.6 6.6 0 003-3.6c-1.4.7-2.8 1.3-4.3 1.6a6.6 6.6 0 00-11.1 6A18.6 18.6 0 012.2 5a6.6 6.6 0 002 8.9c-1 0-2-.4-3-.9v.1c0 3.2 2.4 5.9 5.4 6.5a6.6 6.6 0 01-3 0 6.6 6.6 0 006.1 4.6A13.2 13.2 0 010 27.1a18.6 18.6 0 0028.7-16.6C30 9.5 31.1 8.4 32 7z' aria-hidden="true"/></svg>
       Twitter
     </span>
   </li>
