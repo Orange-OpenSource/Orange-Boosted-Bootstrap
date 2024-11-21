@@ -38,7 +38,7 @@ To display basic tables, Orange Design System recommends using these compact tab
 
 ## Quick start
 
-Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
+Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/louismaximepiton/pen/eYqwzag).
 
 <br>
 

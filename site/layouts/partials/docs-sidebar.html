@@ -1,4 +1,4 @@
-<nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
+<div class="bd-links w-100" id="bd-docs-nav">
   {{- $url := split .Permalink "/" -}}
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
@@ -44,4 +44,4 @@
     {{- end }}
   {{- end }}
   </ul>
-</nav>
+</div>

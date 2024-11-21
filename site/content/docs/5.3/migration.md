@@ -20,8 +20,21 @@ toc: true
 
 ### Components
 
-#### Buttons
+- **Badge**
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the positioned variant. Please reflect this modification into your websites.
+
+- **Buttons**
   - <span class="badge text-bg-success">New</span> X social button.
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the variants containing icons. Please reflect this modification into your websites.
+
+- **Orange navbar**
+  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use "Access to your account" in certain situations.
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the search and shopping basket SVGs. Please reflect this modification into your websites.
+
+### Examples
+
+- **Form example**
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the search and shopping basket SVGs in the Orange navbar. Please reflect this modification into your websites.
 
 ### Docs
 

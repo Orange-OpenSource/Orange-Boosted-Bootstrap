@@ -48,15 +48,12 @@
   <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <!-- Boosted mod: added `.border-1` and `.border-subtle` -->
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-subtle">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
+      <!-- Boosted mod: added `me-5` -->
+      <a class="me-5 font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
         {{- $file -}}
       </a>
-      <div class="d-flex ms-auto">
-        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
-          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
-        </button>
-      </div>
     </div>
+
     {{- $unindent := 0 -}}
     {{- $found := false -}}
     {{- $first_line:= index (split $match "\n") 0 -}}
@@ -79,5 +76,13 @@
       {{- $output = $match -}}
     {{- end -}}
     {{- highlight $output "scss" "" -}}
+
+    <!-- Boosted mod: moved this section and changed the positioning to handle a different focus order -->
+    <div class="position-absolute top-0 mt-1 end-0 me-2">
+      <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+        <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+      </button>
+    </div>
+    <!-- End mod -->
   </div>
 {{- end -}}
