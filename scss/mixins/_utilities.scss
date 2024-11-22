@@ -58,7 +58,7 @@
         // OUDS mod
         @if type-of($value) == "string" and str-slice($value, 1, 1) == "/" {
           .#{$property-class + $infix + $property-class-modifier} {
-            @include ouds-font-size(#{str-slice($value, 2)});
+            @include get-font-size(#{str-slice($value, 2)});
           }
           // End mod
         } @else {

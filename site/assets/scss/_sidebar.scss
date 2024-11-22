@@ -31,7 +31,7 @@
 }
 
 .bd-links-nav {
-  @include ouds-font-size("body-medium"); // OUDS mod: instead of media query
+  @include get-font-size("body-medium"); // OUDS mod: instead of media query
 
   @include media-breakpoint-between(xs, lg) {
     column-count: 2;

@@ -111,7 +111,7 @@ toc: true
 
 #### Sizing
 
-- <span class="badge text-bg-success">New</span> Sizing utility `.mw-none` to set `max-width: none`.
+- <span class="badge text-bg-success">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful to reset the `max-width` of our font references in some special cases.
 
 #### Spacings
 
@@ -491,7 +491,7 @@ toc: true
       <li><code>breakpoint-min()</code></li>
       <li><code>breakpoint-max()</code></li>
       <li><code>breakpoint-next()</code></li>
-      <li><code>get-breakpoint-from-width()</code></li>
+      <li><code>get-font-size()</code></li>
       <li><code>make-container()</code></li>
       <li><code>make-col()</code></li>
       <li><code>make-col-offset()</code></li>
@@ -501,7 +501,6 @@ toc: true
       <li><code>media-breakpoint-down()</code></li>
       <li><code>media-breakpoint-only()</code></li>
       <li><code>media-breakpoint-up()</code></li>
-      <li><code>ouds-font-size()</code></li>
     </ul>
   </details>
 
@@ -655,23 +654,6 @@ toc: true
       <li><code>--bs-icon-short-with-body-small</code></li>
       <li><code>--bs-icon-medium-with-body-small</code></li>
       <li><code>--bs-icon-tall-with-body-small</code></li>
-    </ul>
-  </details>
-
-- <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
-    <ul>
-      <li><code>--bs-border-radius</code></li>
-      <li><code>--bs-border-radius-2xl</code></li>
-      <li><code>--bs-border-radius-lg</code></li>
-      <li><code>--bs-border-radius-pill</code></li>
-      <li><code>--bs-border-radius-sm</code></li>
-      <li><code>--bs-border-radius-xl</code></li>
-      <li><code>--bs-border-radius-xxl</code></li>
-      <li><code>--bs-box-shadow</code></li>
-      <li><code>--bs-box-shadow-inset</code></li>
-      <li><code>--bs-box-shadow-lg</code></li>
-      <li><code>--bs-box-shadow-sm</code></li>
       <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
       <li><code>--bs-space-scaled-short</code></li>
@@ -685,51 +667,10 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
-    <ul>
-      <li><code>border</code></li>
-      <li><code>border-bottom</code></li>
-      <li><code>border-end</code></li>
-      <li><code>border-opacity</code></li>
-      <li><code>border-start</code></li>
-      <li><code>border-top</code></li>
-      <li><code>border-width</code></li>
-      <li><code>column-gap</code></li>
-      <li><code>font-size</code></li>
-      <li><code>font-weight</code></li>
-      <li><code>gap</code></li>
-      <li><code>line-height</code></li>
-      <li><code>margin-bottom</code></li>
-      <li><code>margin-end</code></li>
-      <li><code>margin</code></li>
-      <li><code>margin-start</code></li>
-      <li><code>margin-top</code></li>
-      <li><code>margin-x</code></li>
-      <li><code>margin-y</code></li>
-      <li><code>negative-margin-bottom</code></li>
-      <li><code>negative-margin-end</code></li>
-      <li><code>negative-margin</code></li>
-      <li><code>negative-margin-start</code></li>
-      <li><code>negative-margin-top</code></li>
-      <li><code>negative-margin-x</code></li>
-      <li><code>negative-margin-y</code></li>
-      <li><code>padding-bottom</code></li>
-      <li><code>padding-end</code></li>
-      <li><code>padding</code></li>
-      <li><code>padding-start</code></li>
-      <li><code>padding-top</code></li>
-      <li><code>padding-x</code></li>
-      <li><code>padding-y</code></li>
-      <li><code>rounded</code></li>
-      <li><code>rounded-bottom</code></li>
-      <li><code>rounded-end</code></li>
-      <li><code>rounded-start</code></li>
-      <li><code>rounded-top</code></li>
-      <li><code>row-gap</code></li>
-      <li><code>shadow</code></li>
-    </ul>
-  </details>
+### Sass mixins
+
+- <span class="badge text-bg-success">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of:  `"code-small"`,  `"code-medium"`,  `"label-small"`,  `"label-medium"`,  `"label-large"`,  `"label-xlarge"`,  `"body-small"`,  `"body-medium"`,  `"body-large"`,  `"heading-small"`,  `"heading-medium"`,  `"heading-large"`,  `"heading-xlarge"`,  `"display-small"`,  `"display-medium"`,  `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.
+
 
 ## v0.0.3
 

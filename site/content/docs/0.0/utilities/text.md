@@ -288,7 +288,7 @@ Font-size utilities are generated from these maps, in combination with our utili
 
 ### Sass mixins
 
-We provide a dedicated mixin for font reference. For instance, the mixin is `ouds-font-size($font-size-reference)`.
+We provide a dedicated mixin for font reference called `get-font-size($font-size-reference)`.
 
 {{< scss-docs name="ouds-mixin-font" file="scss/mixins/_fonts.scss" >}}
 

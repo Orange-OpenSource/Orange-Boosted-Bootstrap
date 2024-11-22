@@ -1,5 +1,5 @@
 // scss-docs-start ouds-mixin-font
-@mixin ouds-font-size($font-size-ref: "display-large") {
+@mixin get-font-size($font-size-ref: "display-large") {
   @if str-slice($font-size-ref, 1, 5) != "label" and str-slice($font-size-ref, 1, 4) != "code" {
     max-width: var(--#{$prefix}font-max-width-#{$font-size-ref});
   }

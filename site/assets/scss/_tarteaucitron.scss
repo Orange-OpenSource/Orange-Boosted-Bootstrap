@@ -54,7 +54,7 @@
 }
 
 @include tac("DisclaimerAlert") {
-  @include ouds-font-size("label-small");
+  @include get-font-size("label-small");
 }
 
 @include tac("ClosePanel") {
@@ -81,17 +81,17 @@
 }
 
 @include tac("H1", true) {
-  @include ouds-font-size("heading-xlarge");
+  @include get-font-size("heading-xlarge");
   margin-bottom: $spacer;
 }
 
 @include tac("H2", true) {
-  @include ouds-font-size("heading-large");
+  @include get-font-size("heading-large");
   padding-top: $spacer / 10;
 }
 
 @include tac("H3", true) {
-  @include ouds-font-size("heading-small");
+  @include get-font-size("heading-small");
 }
 
 @include tac("Info") {
@@ -101,7 +101,7 @@
 }
 
 @include tac("Name", true) {
-  @include ouds-font-size("label-small");
+  @include get-font-size("label-small");
   color: var(--bs-secondary-color);
 }
 
