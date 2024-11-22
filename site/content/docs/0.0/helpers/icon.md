@@ -269,7 +269,7 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
 Here are the rules to follow for decorative icons. Be careful using these icons' sizes because they are not responsive.
 
 <details class="mb-medium">
-  <summary>See the <strong>size</strong> associated to classes</summary>
+  <summary>See the <strong>sizes</strong> associated to classes</summary>
 
 {{< bs-table >}}
 | Icon class | Value |
