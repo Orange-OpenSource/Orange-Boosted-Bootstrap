@@ -117,6 +117,17 @@ You can use these classes with existing components to create new ones. Remember 
 </div>
 {{< /example >}}-->
 
+## Reset
+
+Reset the `transform` by adding the `.translate-none`.
+
+{{< example >}}
+<a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
+  <svg class="bi translate-none" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
+  Icon link
+</a>
+{{< /example >}}
+
 ## CSS
 
 ### Sass maps

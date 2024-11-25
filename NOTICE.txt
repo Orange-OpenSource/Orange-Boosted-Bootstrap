@@ -12,6 +12,7 @@ nuget/ouds-web.png
 site/layouts/partials/icons.html
 site/static/docs/**/assets/brand/orange-logo.svg
 site/static/docs/**/assets/brand/orange-social.png
+site/static/docs/**/assets/fonts/solaris-icons.woff2
 site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
 site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/static/docs/**/assets/img/favicons/apple-touch-icon.png

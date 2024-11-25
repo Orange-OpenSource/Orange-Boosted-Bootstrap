@@ -16,10 +16,6 @@ Every icon class presented in here has the common following code:
 
 {{< scss-docs name="ouds-font-icon-common" file="scss/helpers/_icon.scss" >}}
 
-## Display headings
-
-You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
-
 ## Headings
 
 Here are the rules to follow for headings. These icons' sizes are responsive.
@@ -178,6 +174,10 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 </h6>
 {{< /example >}}
 
+## Display headings
+
+You should not use any icon with our `.display-*` font sizes, because we prefer to keep the place for the text.
+
 ## Regular texts
 
 Here are the rules to follow for regular texts. These icons' sizes are responsive.
@@ -288,7 +288,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 <div class="bd-example">
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-shortest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-shortest-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -299,7 +299,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-shorter-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-shorter-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -310,7 +310,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-short-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-short-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -321,7 +321,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-medium-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-medium-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -332,7 +332,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-tall-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-tall-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -343,7 +343,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-taller-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-taller-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -354,7 +354,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-secondary d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-tallest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-tallest-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -366,14 +366,89 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 </div>
 
 ```html
-<svg class="decorative-shortest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-shorter-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-short-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-medium-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-tall-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-taller-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
-<svg class="decorative-tallest-icon text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-shortest-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-shorter-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-short-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-medium-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-tall-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-taller-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-tallest-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 ```
+
+## `<img>` and font icon
+
+SVG Sprite is the preferred choice for flexibility, performance and accessibility but there are other ways to display icons. <!-- Check out for more information in [our documentation]({{< docsref "/extend/icons" >}}). -->
+
+{{< example >}}
+<h1>
+  <img class="hxl-tall-icon me-short" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
+  H1 with tall icon
+</h1>
+<h1>
+  <span class="hxl-tall-icon me-short si si-settings" aria-hidden="true"></span>
+  H1 with tall icon
+</h1>
+{{< /example >}}
+
+## Multiple lines
+
+Sometimes you need a different structure to handle larger titles, or paragraphs that wrap over several lines. Here are some examples to handle these use cases.
+
+{{< example >}}
+<h1>
+  <svg class="hxl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  H1 with tall icon and a very long title to see how it behaves while being wrapped
+</h1>
+
+<!-- Prefer use this -->
+<div class="d-flex">
+  <svg class="hxl-tall-icon me-scaled-short text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
+</div>
+<div class="d-flex">
+  <img class="hxl-tall-icon me-scaled-short translate-none" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
+  <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
+</div>
+<div class="d-flex">
+  <span class="hxl-tall-icon me-scaled-short si si-settings translate-none" aria-hidden="true"></span>
+  <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
+</div>
+{{< /example >}}
+
+{{< example >}}
+<p>
+  <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+</p>
+
+<!-- Prefer use this -->
+<div class="d-flex">
+  <svg class="bm-tall-icon me-scaled-short text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <p class="pt-smash">
+    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci. class="pt-smash"
+  </p>
+</div>
+<div class="d-flex">
+  <img class="bm-tall-icon me-scaled-short translate-none" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
+  <p class="pt-smash">
+    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  </p>
+</div>
+<div class="d-flex">
+  <span class="bm-tall-icon me-scaled-short si si-settings translate-none" aria-hidden="true"></span>
+  <p class="pt-smash">
+    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  </p>
+</div>
+{{< /example >}}
 
 ## CSS
 

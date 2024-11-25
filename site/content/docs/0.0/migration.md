@@ -58,7 +58,7 @@ toc: true
 
 #### Position
 
-- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{breakpoint}-top` and `.sticky-{breakpoint}-bottom` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+- <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-{value}`, and `.sticky-{breakpoint}-{value}` where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`, and `value` is in `top|bottom`.
 
 ### Utilities
 
@@ -85,20 +85,20 @@ toc: true
 
 #### Display
 
-- <span class="badge text-bg-success">New</span> Responsive display utilities: `.d-{breakpoint}-{value}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+- <span class="badge text-bg-success">New</span> Responsive display utilities: `.d-{value}`, `.d-{breakpoint}-{value}` where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`, and `value` is in `none|inline|inline-block|block|grid|inline-grid|table|table-cell|table-row|flex|inline-flex`.
 
 #### Flex
 
-- <span class="badge text-bg-success">New</span> Responsive flex utilities where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`:
+- <span class="badge text-bg-success">New</span> Responsive flex utilities without `breakpoint` for `2xs`, and where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`:
   `.d-{breakpoint}-flex`, `.d-{breakpoint}-inline-flex`, `.flex-{breakpoint}-{row|column}`, `.flex-{breakpoint}-{row|column}-reverse`, `.justify-content-{breakpoint}-{start|end|center|between|around|evenly}`, `.align-items-{breakpoint}-{start|end|center|baseline|stretch}`, `.align-self-{breakpoint}-{start|end|center|baseline|stretch}`, `.flex-{breakpoint}-fill`, `.flex-{breakpoint}-{grow|shrink}-{0|1}`, `.flex-{breakpoint}-{nowrap|wrap|wrap-reverse}`, `.order-{breakpoint}-{number}`, `.order-{breakpoint}-{first|last}` and `.align-content-{breakpoint}-{start|end|center|between|around|stretch}`.
 
 #### Float
 
-- <span class="badge text-bg-success">New</span> Responsive float utilities: `.float-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+- <span class="badge text-bg-success">New</span> Responsive float utilities: `.float-{start|end|none}`, `.float-{breakpoint}-{start|end|none}` where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`.
 
 #### Object fit
 
-- <span class="badge text-bg-success">New</span> Responsive object fit utilities: `.object-fit-{breakpoint}-{contain|cover|fill|scale|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+- <span class="badge text-bg-success">New</span> Responsive object fit utilities: `.object-fit-{contain|cover|fill|scale|none}`, `.object-fit-{breakpoint}-{contain|cover|fill|scale|none}` where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`.
 
 #### Opacity
 
@@ -196,7 +196,7 @@ toc: true
 
 #### Text
 
-- <span class="badge text-bg-success">New</span> Alignment text utilities: `.text-start`, `.text-center`, `.text-end`, and responsive versions like `.text-{breakpoint}-{start|end|none}` where `breakpoint` is in `|xs|sm|md|lg|xl|2xl|3xl`.
+- <span class="badge text-bg-success">New</span> Alignment text utilities: `.text-start`, `.text-center`, `.text-end`, and responsive versions like `.text-{breakpoint}-{start|center|end}` where `breakpoint` is in `xs|sm|md|lg|xl|2xl|3xl`.
 
 - <span class="badge text-bg-success">New</span> Wrapping and overflow text utilities: `.text-wrap` and `.text-nowrap`.
 

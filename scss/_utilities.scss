@@ -134,11 +134,12 @@ $utilities: map-merge(
     ),
     "translate-middle": (
       property: transform,
-      class: translate-middle,
+      class: translate,
       values: (
-        null: translate(-50%, -50%),
-        x: translateX(-50%),
-        y: translateY(-50%),
+        middle: translate(-50%, -50%), // OUDS mod: instead of `null`
+        middle-x: translateX(-50%), // OUDS mod: instead of `x`
+        middle-y: translateY(-50%), // OUDS mod: instead of `y`
+        none: none // OUDS mod
       )
     ),
     // scss-docs-end utils-position

@@ -1,46 +1,29 @@
 // scss-docs-start ouds-font-icon-common
 %icon-size {
+  display: inline-block;
+  flex-shrink: 0;
   width: 1em;
   height: 1em;
   line-height: 1;
+  vertical-align: middle;
   fill: currentcolor;
+  transform: translateY(-7%);
+
+  // Overrides Solaris icons default
+  &::before {
+    vertical-align: baseline !important; // stylelint-disable-line declaration-no-important
+  }
 }
 // scss-docs-end ouds-font-icon-common
 
-@each $icon-size in $ouds-icon-sizes {
-  .hxl-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-xlarge) if($enable-important-utilities, !important, null);
-  }
-
-  .hl-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-large) if($enable-important-utilities, !important, null);
-  }
-
-  .hm-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-medium) if($enable-important-utilities, !important, null);
-  }
-
-  .hs-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-heading-small) if($enable-important-utilities, !important, null);
-  }
-
-  .bl-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-large) if($enable-important-utilities, !important, null);
-  }
-
-  .bm-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-medium) if($enable-important-utilities, !important, null);
-  }
-
-  .bs-#{$icon-size}-icon {
-    @extend %icon-size;
-    font-size: var(--#{$prefix}icon-#{$icon-size}-with-body-small) if($enable-important-utilities, !important, null);
+@each $font-ref, $font-name in $ouds-font-sizes {
+  @each $icon-size in $ouds-icon-sizes {
+    @if str-slice($font-name, 1, 5) != "/code" {
+      .#{$font-ref}-#{$icon-size}-icon {
+        @extend %icon-size;
+        font-size: var(--#{$prefix}icon-#{$icon-size}-with-#{str-slice($font-name, 2)}) if($enable-important-utilities, !important, null);
+      }
+    }
   }
 }
 

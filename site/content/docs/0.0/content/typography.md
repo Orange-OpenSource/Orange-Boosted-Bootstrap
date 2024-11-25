@@ -413,8 +413,6 @@ We provide a dedicated mixin for font reference. For instance, the mixin is `get
 
 {{< scss-docs name="ouds-mixin-font" file="scss/mixins/_fonts.scss" >}}
 
-`$font-size-ref` can be one of:  `"code-small"`,  `"code-medium"`,  `"label-small"`,  `"label-medium"`,  `"label-large"`,  `"label-xlarge"`,  `"body-small"`,  `"body-medium"`,  `"body-large"`,  `"heading-small"`,  `"heading-medium"`,  `"heading-large"`,  `"heading-xlarge"`,  `"display-small"`,  `"display-medium"`,  `"display-large"`.
-
 Whenever you need a font reference inside a custom component or for whatever reason, please follow the same process as us, so you don't miss any information about a font reference.
 
 {{< scss-docs name="ouds-font-implementation" file="scss/_reboot.scss" >}}

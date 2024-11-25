@@ -805,7 +805,7 @@ $display-line-height: $headings-line-height !default;
 $lead-font-size:              $h5-font-size !default;
 $lead-font-weight:            $ouds-font-weight-body-default !default;
 
-$small-font-size:             .875em !default;
+// OUDS mod: no $small-font-size
 
 $sub-sup-font-size:           .75em !default;
 
@@ -1077,7 +1077,7 @@ $btn-social-networks: (
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .4375rem !default; // OUDS mod
-$form-text-font-size:                   $small-font-size !default;
+$form-text-font-size:                   null !default; // OUDS mod: instead of `$small-font-size`
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // OUDS mod: instead of `null`
 $form-text-line-height:                 $line-height-sm !default; // OUDS mod
@@ -1347,7 +1347,7 @@ $form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
 
 // scss-docs-start form-feedback-variables
 $form-feedback-margin-top:          $form-text-margin-top !default;
-$form-feedback-font-size:           $small-font-size !default;
+$form-feedback-font-size:           null !default; // OUDS mod: instead of `$small-font-size`
 $form-feedback-font-style:          null !default;
 // OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
@@ -2059,7 +2059,7 @@ $thumbnail-box-shadow:              var(--#{$prefix}box-shadow-sm) !default;
 // Figures
 
 // scss-docs-start figure-variables
-$figure-caption-font-size:          $small-font-size !default;
+$figure-caption-font-size:          null !default; // OUDS mod: instead of `$small-font-size`
 $figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 // scss-docs-end figure-variables
 
@@ -2228,7 +2228,7 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 
 // Code
 // OUDS mod
-$code-font-size:                    $small-font-size !default;
+$code-font-size:                    .875em !default; // OUDS mod: instead of `$small-font-size`
 $code-color:                        $gray-700 !default; // instead of `$pink`
 
 $kbd-padding-y:                     px-to-rem($ouds-space-fixed-smash) !default; // instead of `.1875rem`
@@ -2270,7 +2270,7 @@ $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 
 //// Stepped process
 // scss-docs-start stepped-process
-$stepped-process-font-size:   $small-font-size !default;
+$stepped-process-font-size:   null !default;
 $stepped-process-font-weight: $font-weight-bold !default;
 $stepped-process-max-items:   5 !default;
 $stepped-process-counter:     step !default; // Used as a counter name
