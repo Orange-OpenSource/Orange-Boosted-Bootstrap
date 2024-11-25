@@ -3057,38 +3057,6 @@ $utilities: ();
           letter-spacing: var(--bs-font-letter-spacing-code-medium);
         }
 
-        .fs-ls {
-          font-size: var(--bs-font-size-label-small);
-          line-height: var(--bs-font-line-height-label-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-small);
-        }
-
-        .fs-lm {
-          font-size: var(--bs-font-size-label-medium);
-          line-height: var(--bs-font-line-height-label-medium);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-medium);
-        }
-
-        .fs-ll {
-          font-size: var(--bs-font-size-label-large);
-          line-height: var(--bs-font-line-height-label-large);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-large);
-        }
-
-        .fs-lxl {
-          font-size: var(--bs-font-size-label-xlarge);
-          line-height: var(--bs-font-line-height-label-xlarge);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
-        }
-
         .fs-bs {
           max-width: var(--bs-font-max-width-body-small);
           font-size: var(--bs-font-size-body-small);
@@ -13333,38 +13301,6 @@ $utilities: ();
 
           /* rtl:remove */
           letter-spacing: var(--bs-font-letter-spacing-code-medium);
-        }
-
-        .fs-ls {
-          font-size: var(--bs-font-size-label-small);
-          line-height: var(--bs-font-line-height-label-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-small);
-        }
-
-        .fs-lm {
-          font-size: var(--bs-font-size-label-medium);
-          line-height: var(--bs-font-line-height-label-medium);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-medium);
-        }
-
-        .fs-ll {
-          font-size: var(--bs-font-size-label-large);
-          line-height: var(--bs-font-line-height-label-large);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-large);
-        }
-
-        .fs-lxl {
-          font-size: var(--bs-font-size-label-xlarge);
-          line-height: var(--bs-font-line-height-label-xlarge);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-label-xlarge);
         }
 
         .fs-bs {

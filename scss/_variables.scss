@@ -722,6 +722,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // OUDS mod
 //// Type scale & vertical rhythm completely revamped to match Orange Web Guidelines
+
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
@@ -743,7 +744,7 @@ $line-height-base:            var(--#{$prefix}font-line-height-body-medium) !def
 $line-height-sm:              var(--#{$prefix}font-line-height-body-small) !default;
 $line-height-lg:              var(--#{$prefix}font-line-height-body-large) !default;
 
-$letter-spacing-base:         var(--#{$prefix}font-letter-spacing-body-medium) !default; // OUDS mod
+$letter-spacing-base:         var(--#{$prefix}font-letter-spacing-body-medium) !default;
 
 $h1-font-size:                var(--#{$prefix}font-size-heading-xlarge) !default;
 $h2-font-size:                var(--#{$prefix}font-size-heading-large) !default;

@@ -296,7 +296,6 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
-  - **Labels**: `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls`
   - **Code**: `.fs-cm`, `.fs-cs`
 
 - <span class="badge text-bg-danger">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.

@@ -208,7 +208,6 @@ toc: true
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
-  - **Labels**: `.fs-lxl`, `.fs-ll`, `.fs-lm`, `.fs-ls`
   - **Code**: `.fs-cm`, `.fs-cs`
 
 - <span class="badge text-bg-success">New</span> Font weight text utilities: `.fw-normal` and `.fw-bold`.
