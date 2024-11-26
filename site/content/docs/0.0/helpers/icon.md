@@ -375,24 +375,11 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 <svg class="decorative-tallest-icon text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 ```
 
-## `<img>` and font icon
-
-SVG Sprite is the preferred choice for flexibility, performance and accessibility but there are other ways to display icons. <!-- Check out for more information in [our documentation]({{< docsref "/extend/icons" >}}). -->
-
-{{< example >}}
-<h1>
-  <img class="hxl-tall-icon me-short" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
-  H1 with tall icon
-</h1>
-<h1>
-  <span class="hxl-tall-icon me-short si si-settings" aria-hidden="true"></span>
-  H1 with tall icon
-</h1>
-{{< /example >}}
-
 ## Multiple lines
 
-Sometimes you need a different structure to handle larger titles, or paragraphs that wrap over several lines. Here are some examples to handle these use cases.
+Sometimes you need a different structure to handle larger titles, or paragraphs that wrap over several lines. Here are some examples to handle these use cases. We've set arbitrary spacings, but align them your design.
+
+### Centered on the first line
 
 {{< example >}}
 <h1>
@@ -407,14 +394,6 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
   <svg class="hxl-tall-icon me-scaled-short text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
-  <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
-</div>
-<div class="d-flex">
-  <img class="hxl-tall-icon me-scaled-short translate-none" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
-  <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
-</div>
-<div class="d-flex">
-  <span class="hxl-tall-icon me-scaled-short si si-settings translate-none" aria-hidden="true"></span>
   <h1 class="pt-shorter pt-md-short pt-xl-shorter">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
 </div>
 {{< /example >}}
@@ -433,21 +412,100 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="pt-smash">
-    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci. class="pt-smash"
-  </p>
-</div>
-<div class="d-flex">
-  <img class="bm-tall-icon me-scaled-short translate-none" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
-  <p class="pt-smash">
     Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
   </p>
 </div>
-<div class="d-flex">
-  <span class="bm-tall-icon me-scaled-short si si-settings translate-none" aria-hidden="true"></span>
-  <p class="pt-smash">
+{{< /example >}}
+
+### Centered on text block
+
+{{< example >}}
+<h1 class="mb-tallest">
+  <svg class="hxl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  H1 with tall icon and a very long title to see how it behaves while being wrapped
+</h1>
+
+<!-- Prefer use this -->
+<div class="d-flex align-items-center">
+  <svg class="hxl-tall-icon me-scaled-short text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <h1 class="mb-none">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
+</div>
+{{< /example >}}
+
+{{< example >}}
+<p>
+  <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+</p>
+
+<!-- Prefer use this -->
+<div class="d-flex align-items-center">
+  <svg class="bm-tall-icon me-scaled-short text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <p class="mb-none">
     Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
   </p>
 </div>
+{{< /example >}}
+
+### Above text block
+
+{{< example >}}
+<h1 class="mb-tallest">
+  <svg class="hxl-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  H1 with tall icon and a very long title to see how it behaves while being wrapped
+</h1>
+
+<!-- Prefer use this -->
+<div>
+  <svg class="hxl-tall-icon mb-scaled-shorter text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <h1 class="mb-none">H1 with tall icon and a very long title to see how it behaves while being wrapped</h1>
+</div>
+{{< /example >}}
+
+{{< example >}}
+<p class="mb-tallest">
+  <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+</p>
+
+<!-- Prefer use this -->
+<div>
+  <svg class="bm-tall-icon mb-scaled-shortest text-info translate-none" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+  </svg>
+  <p class="mb-none">
+    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  </p>
+</div>
+{{< /example >}}
+
+## `<img>` and font icon
+
+SVG Sprite is the preferred choice for flexibility, performance and accessibility, and this is why all our examples use this method but there are other ways to display icons. It should all behave the same due to our CSS. If you are experiencing any trouble, feel free to search or fill in a new [Github discussion](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions) or contact [our team]({{< docsref "/about/team" >}}). <!-- Check out for more information in [our documentation]({{< docsref "/extend/icons" >}}). -->
+
+{{< example >}}
+<h1>
+  <img class="hxl-tall-icon me-short" alt="" src="/docs/{{< param docs_version >}}/assets/img/vite.svg">
+  H1 with tall icon
+</h1>
+<h1>
+  <span class="hxl-tall-icon me-short si si-settings" aria-hidden="true"></span>
+  H1 with tall icon
+</h1>
 {{< /example >}}
 
 ## CSS
