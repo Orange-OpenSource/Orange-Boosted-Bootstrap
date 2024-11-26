@@ -9,6 +9,18 @@ aliases:
 toc: true
 ---
 
+## v0.2.0
+
+### Components
+
+#### Buttons
+
+- <span class="badge text-bg-success">New</span> Button component has been implemented.
+
+### Examples
+
+- <span class="badge text-bg-success">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+
 ## v0.1.0
 
 ### Foundations
