@@ -104,6 +104,10 @@ toc: true
 
 - <span class="badge text-bg-danger">Breaking</span> Opacity utilities: `.opacity-emphasis` has been renamed to `.opacity-strong`.
 
+#### Position
+
+- <span class="badge text-bg-success">New</span> Transform utility: `.transform-none`.
+
 #### Shadow
 
 - <span class="badge text-bg-success">New</span> Shadows utilities:
