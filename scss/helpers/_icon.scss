@@ -5,14 +5,7 @@
   width: 1em;
   height: 1em;
   line-height: 1;
-  vertical-align: middle;
   fill: currentcolor;
-  transform: translateY(-7%);
-
-  // Overrides Solaris icons default
-  &::before {
-    vertical-align: baseline !important; // stylelint-disable-line declaration-no-important
-  }
 }
 // scss-docs-end ouds-font-icon-common
 
