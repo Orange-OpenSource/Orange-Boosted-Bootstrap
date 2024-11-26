@@ -403,7 +403,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
   <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
-  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
 </p>
 
 <!-- Prefer use this -->
@@ -412,7 +412,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="pt-smash">
-    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+    Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
   </p>
 </div>
 {{< /example >}}
@@ -441,7 +441,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
   <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
-  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
 </p>
 
 <!-- Prefer use this -->
@@ -450,7 +450,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
-    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+    Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
   </p>
 </div>
 {{< /example >}}
@@ -479,7 +479,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
   <svg class="bm-tall-icon me-short text-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
-  Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+  Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
 </p>
 
 <!-- Prefer use this -->
@@ -488,7 +488,7 @@ Sometimes you need a different structure to handle larger titles, or paragraphs 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">
-    Default long paragraph with tall icon. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum diam consequat, fermentum sem nec, malesuada eros. Praesent eu lectus ligula. Nullam et est in augue pharetra ultricies quis non orci.
+    Default long paragraph with tall icon. It stands here in order for you to see how the icon should behave when it's placed next to a long paragraph. Whenever the paragraph stands on multiple lines please prefer using a block element and not an inline element so there will no strange behaviors.
   </p>
 </div>
 {{< /example >}}
