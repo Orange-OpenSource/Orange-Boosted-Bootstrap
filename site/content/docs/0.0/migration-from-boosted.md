@@ -321,9 +321,11 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   <summary>See the new import stack</summary>
 
   ```diff
+  + @import "config";
     @import "functions";
   + @import "tokens/raw";
   + @import "tokens/semantic";
+  + @import "tokens/semantic-colors-custom-props";
   + @import "tokens/composite";
   + @import "tokens/component";
     @import "variables";

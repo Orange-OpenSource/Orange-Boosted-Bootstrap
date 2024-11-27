@@ -46,3 +46,10 @@
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
     - name: Grid system
       description: "OUDS Web default grid system illustration."
+
+- category: "Bootstrap examples"
+  bootstrap: true
+  description: "Example that are the exact one from Bootstrap to see how the enable Bootstrap compatibility work. Do not modify and do not use."
+  examples:
+    - name: Cheatsheet
+      description: "Kitchen sink of Bootstrap components."

@@ -38,7 +38,7 @@
   font-weight: $font-weight-bold;
   color: $white;
   background: $black;
-  border-top: var(--bs-border-width) solid var(--bs-border-color-subtle);
+  border-top: var(--bs-border-width) solid var(--bs-color-border-emphasized);
 
   &[style*="display: block"] {
     display: flex !important; // stylelint-disable-line declaration-no-important
