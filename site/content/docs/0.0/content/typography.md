@@ -108,8 +108,8 @@ We provide `.display-*` from `1` through `3`. Each class sets `font-size` but al
 </details>
 
 <div class="bd-example">
-  <div class="display-large pb-3 mb-3 border-bottom">Display large</div>
-  <div class="display-medium pb-3 mb-3 border-bottom">Display medium</div>
+  <div class="display-large pb-tall mb-tall border-bottom">Display large</div>
+  <div class="display-medium pb-tall mb-tall border-bottom">Display medium</div>
   <div class="display-small">Display small</div>
 </div>
 
