@@ -34,12 +34,28 @@ From now on, OUDS Web won't embed Bootstrap elements that are not part of Orange
 
 ## Fonts
 
-OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be different depending on the operating system and browser being used.
+OUDS Web doesn't use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.
 
 Technically, it means that you can get rid of the following things:
 - Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
 - `orange-helvetica.*.css` file (default, RTL, or minified version).
 - If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
+
+## Content styles
+
+### Typography
+
+- <span class="badge text-bg-success">New</span> Body fonts' sizes are now responsive and can change depending on the screen size. See [Typography]({{< docsref "/content/typography/" >}}) for more details.
+
+- <span class="badge text-bg-success">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
+
+- <span class="badge text-bg-success">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
+
+- <span class="badge text-bg-danger">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-danger">Breaking</span> Abbreviation class `.initialism` has been removed.
+
+- <span class="badge text-bg-warning">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 
 ## Layout
 
@@ -70,9 +86,19 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Helpers
 
+### Icon
+
+- <span class="badge text-bg-success">New</span> Icons' sizes helpers have been added to help choose the right icon size with a specific typography reference. If you need these helpers, and you are using a custom import stack for helpers, don't forget to add the needed file `helpers/_icon.scss`:
+  - Responsive icons' sizes in headings:
+    - `.h{size}-short-icon`, `.h{size}-medium-icon`, `.h{size}-tall-icon`, where `h` stands for heading and size is one of `s` for small, `m` for medium, `l` for large, or `xl` for x-large
+    - `.b{size}-short-icon`, `.b{size}-medium-icon`, , `.h{size}-tall-icon`, where `b` stands for body and size is one of `m` for medium, or `l` for large
+  - Responsive icons' sizes in regular texts: `.b{size}-short-icon`, `.b{size}-medium-icon`, `.b{size}-tall-icon`, where `b` stands for body and size is one of `s` for small, `m` for medium, or `l` for large
+  - Fixed icons' sizes for decorative standalone icons: `.decorative-{size}-icon` where size is one of `shortest|shorter|short|medium|tall|taller|tallest`
+
 ### Position
 
 - <span class="badge text-bg-danger">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
+
 - <span class="badge text-bg-success">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ## Utilities
@@ -134,6 +160,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-danger">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-success">New</span> Shadows utilities:
 `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-overlay-default`, `.shadow-overlay-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
+
+### Sizing
+
+- <span class="badge text-bg-success">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful now that a `max-width` has been added on all font references (for readability reasons), if you want to omit it in some special cases.
 
 ### Spacings
 
@@ -256,7 +286,27 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]({{< docsref "/utilities/spacing#notation-for-scaled-values" >}}) (for example, `.mb-1.mb-md-2` → `.mb-scaled-shortest`).
     2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
 
+### Text
+
+- <span class="badge text-bg-danger">Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-success">New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+- <span class="badge text-bg-danger">Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
+  - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
+  - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
+  - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
+  - **Code**: `.fs-cm`, `.fs-cs`
+
+- <span class="badge text-bg-danger">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
+
+- <span class="badge text-bg-danger">Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
+
+- <span class="badge text-bg-danger">Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
+
 ## Examples
+
+- <span class="badge text-bg-success">New</span> New [Font example]({{< docsref "/examples/font" >}}).
 
 - <span class="badge text-bg-success">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
 
@@ -402,6 +452,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-font-family-monospace-stack</code></li>
+      <li><code>$ouds-font-family-sans-serif-stack</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
@@ -515,6 +567,9 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-dimension-space-fixed</code></li>
       <li><code>$ouds-dimension-space-scaled</code></li>
       <li><code>$ouds-elevations</code></li>
+      <li><code>$ouds-font-sizes</code></li>
+      <li><code>$ouds-font-weights</code></li>
+      <li><code>$ouds-icon-sizes</code></li>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
@@ -522,12 +577,12 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> Sass mixins:</summary>
     <ul>
-      <li><code>get-breakpoint-from-width()</code></li>
+      <li><code>get-font-size()</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-success">New</span> keys in <code>$utilities</code> map:</summary>
+    <summary><span class="badge text-bg-success">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
       <li><code>border-end-ouds</code></li>
@@ -538,6 +593,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>border-width-ouds</code></li>
       <li><code>column-gap-ouds</code></li>
       <li><code>column-gap-scaled-ouds</code></li>
+      <li><code>font-size-ouds</code></li>
+      <li><code>font-weight-ouds</code></li>
       <li><code>gap-ouds</code></li>
       <li><code>gap-scaled-ouds</code></li>
       <li><code>margin-bottom-ouds</code></li>
@@ -597,13 +654,104 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <details class="mb-short">
     <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
     <ul>
+      <li><code>--bs-body-letter-spacing</code></li>
       <li><code>--bs-container-margin-x</code></li>
+      <li><code>--bs-font-size-display-large</code></li>
+      <li><code>--bs-font-size-display-medium</code></li>
+      <li><code>--bs-font-size-display-small</code></li>
+      <li><code>--bs-font-size-heading-xlarge</code></li>
+      <li><code>--bs-font-size-heading-large</code></li>
+      <li><code>--bs-font-size-heading-medium</code></li>
+      <li><code>--bs-font-size-heading-small</code></li>
+      <li><code>--bs-font-size-body-large</code></li>
+      <li><code>--bs-font-size-body-medium</code></li>
+      <li><code>--bs-font-size-body-small</code></li>
+      <li><code>--bs-font-size-label-xlarge</code></li>
+      <li><code>--bs-font-size-label-large</code></li>
+      <li><code>--bs-font-size-label-medium</code></li>
+      <li><code>--bs-font-size-label-small</code></li>
+      <li><code>--bs-font-size-code-medium</code></li>
+      <li><code>--bs-font-line-height-display-large</code></li>
+      <li><code>--bs-font-line-height-display-medium</code></li>
+      <li><code>--bs-font-line-height-display-small</code></li>
+      <li><code>--bs-font-line-height-heading-xlarge</code></li>
+      <li><code>--bs-font-line-height-heading-large</code></li>
+      <li><code>--bs-font-line-height-heading-medium</code></li>
+      <li><code>--bs-font-line-height-heading-small</code></li>
+      <li><code>--bs-font-line-height-body-large</code></li>
+      <li><code>--bs-font-line-height-body-medium</code></li>
+      <li><code>--bs-font-line-height-body-small</code></li>
+      <li><code>--bs-font-line-height-label-xlarge</code></li>
+      <li><code>--bs-font-line-height-label-large</code></li>
+      <li><code>--bs-font-line-height-label-medium</code></li>
+      <li><code>--bs-font-line-height-label-small</code></li>
+      <li><code>--bs-font-line-height-code-medium</code></li>
+      <li><code>--bs-font-letter-spacing-display-large</code></li>
+      <li><code>--bs-font-letter-spacing-display-medium</code></li>
+      <li><code>--bs-font-letter-spacing-display-small</code></li>
+      <li><code>--bs-font-letter-spacing-heading-xlarge</code></li>
+      <li><code>--bs-font-letter-spacing-heading-large</code></li>
+      <li><code>--bs-font-letter-spacing-heading-medium</code></li>
+      <li><code>--bs-font-letter-spacing-heading-small</code></li>
+      <li><code>--bs-font-letter-spacing-body-large</code></li>
+      <li><code>--bs-font-letter-spacing-body-medium</code></li>
+      <li><code>--bs-font-letter-spacing-body-small</code></li>
+      <li><code>--bs-font-letter-spacing-label-xlarge</code></li>
+      <li><code>--bs-font-letter-spacing-label-large</code></li>
+      <li><code>--bs-font-letter-spacing-label-medium</code></li>
+      <li><code>--bs-font-letter-spacing-label-small</code></li>
+      <li><code>--bs-font-letter-spacing-code-medium</code></li>
+      <li><code>--bs-font-max-width-display-large</code></li>
+      <li><code>--bs-font-max-width-display-medium</code></li>
+      <li><code>--bs-font-max-width-display-small</code></li>
+      <li><code>--bs-font-max-width-heading-xlarge</code></li>
+      <li><code>--bs-font-max-width-heading-large</code></li>
+      <li><code>--bs-font-max-width-heading-medium</code></li>
+      <li><code>--bs-font-max-width-heading-small</code></li>
+      <li><code>--bs-font-max-width-body-large</code></li>
+      <li><code>--bs-font-max-width-body-medium</code></li>
+      <li><code>--bs-font-max-width-body-small</code></li>
+      <li><code>--bs-icon-short-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-medium-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-tall-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-short-with-heading-large</code></li>
+      <li><code>--bs-icon-medium-with-heading-large</code></li>
+      <li><code>--bs-icon-tall-with-heading-large</code></li>
+      <li><code>--bs-icon-short-with-heading-medium</code></li>
+      <li><code>--bs-icon-medium-with-heading-medium</code></li>
+      <li><code>--bs-icon-tall-with-heading-medium</code></li>
+      <li><code>--bs-icon-short-with-heading-small</code></li>
+      <li><code>--bs-icon-medium-with-heading-small</code></li>
+      <li><code>--bs-icon-tall-with-heading-small</code></li>
+      <li><code>--bs-icon-short-with-body-large</code></li>
+      <li><code>--bs-icon-medium-with-body-large</code></li>
+      <li><code>--bs-icon-tall-with-body-large</code></li>
+      <li><code>--bs-icon-short-with-body-medium</code></li>
+      <li><code>--bs-icon-medium-with-body-medium</code></li>
+      <li><code>--bs-icon-tall-with-body-medium</code></li>
+      <li><code>--bs-icon-short-with-body-small</code></li>
+      <li><code>--bs-icon-medium-with-body-small</code></li>
+      <li><code>--bs-icon-tall-with-body-small</code></li>
+      <li><code>--bs-space-scaled-medium</code></li>
+      <li><code>--bs-space-scaled-none</code></li>
+      <li><code>--bs-space-scaled-short</code></li>
+      <li><code>--bs-space-scaled-shorter</code></li>
+      <li><code>--bs-space-scaled-shortest</code></li>
+      <li><code>--bs-space-scaled-smash</code></li>
+      <li><code>--bs-space-scaled-spacious</code></li>
+      <li><code>--bs-space-scaled-tall</code></li>
+      <li><code>--bs-space-scaled-taller</code></li>
+      <li><code>--bs-space-scaled-tallest</code></li>
     </ul>
   </details>
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-warning">Warning</span> Dropped Sass variables:</summary>
     <ul>
+      <li><code>$blockquote-font-size</code></li>
+      <li><code>$blockquote-footer-font-size</code></li>
+      <li><code>$blockquote-line-height</code></li>
+      <li><code>$blockquote-letter-spacing</code></li>
       <li><code>$boosted-prefix</code></li>
       <li><code>$boosted-variable-prefix</code></li>
       <li><code>$btn-close-white-active-border-color</code></li>
@@ -613,18 +761,51 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$btn-close-white-color</code></li>
       <li><code>$btn-close-white-disabled-color</code></li>
       <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$display1-size</code></li>
+      <li><code>$display1-spacing</code></li>
+      <li><code>$display2-size</code></li>
+      <li><code>$display2-spacing</code></li>
+      <li><code>$display3-size</code></li>
+      <li><code>$display3-spacing</code></li>
+      <li><code>$display4-size</code></li>
+      <li><code>$display4-spacing</code></li>
       <li><code>$footer-nav-link-font-weight</code></li>
+      <li><code>$font-size-xlg</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
       <li><code>$form-star-focus-color-dark</code></li>
       <li><code>$form-star-focus-outline</code></li>
       <li><code>$form-star-focus-outline-dark</code></li>
       <li><code>$grid-gutter-breakpoint</code></li>
+      <li><code>$h1-line-height</code></li>
+      <li><code>$h1-spacing</code></li>
+      <li><code>$h2-line-height</code></li>
+      <li><code>$h2-spacing</code></li>
+      <li><code>$h3-line-height</code></li>
+      <li><code>$h3-spacing</code></li>
+      <li><code>$h4-line-height</code></li>
+      <li><code>$h4-spacing</code></li>
+      <li><code>$h5-line-height</code></li>
+      <li><code>$h5-spacing</code></li>
+      <li><code>$h6-line-height</code></li>
+      <li><code>$h6-spacing</code></li>
+      <li><code>$initialism-font-size</code></li>
+      <li><code>$lead-letter-spacing</code></li>
+      <li><code>$lead-line-height</code></li>
+      <li><code>$legend-font-size</code></li>
+      <li><code>$line-length-sm</code></li>
+      <li><code>$line-length-md</code></li>
+      <li><code>$mid-spacing</code></li>
       <li><code>$orange-filter</code></li>
       <li><code>$outline-offset</code></li>
       <li><code>$outline-width</code></li>
+      <li><code>$pre-line-height</code></li>
       <li><code>$step-item-padding-end</code></li>
       <li><code>$title-bar-border-color-dark</code></li>
+      <li><code>$title-bar-font-size-md</code></li>
+      <li><code>$title-bar-font-size-xl</code></li>
+      <li><code>$title-bar-line-height-md</code></li>
+      <li><code>$title-bar-line-height-xl</code></li>
     </ul>
   </details>
 
@@ -638,16 +819,6 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>--bs-btn-close-color</code></li>
       <li><code>--bs-btn-close-disabled-color</code></li>
       <li><code>--bs-btn-close-hover-color</code></li>
-      <li><code>--bs-space-scaled-medium</code></li>
-      <li><code>--bs-space-scaled-none</code></li>
-      <li><code>--bs-space-scaled-short</code></li>
-      <li><code>--bs-space-scaled-shorter</code></li>
-      <li><code>--bs-space-scaled-shortest</code></li>
-      <li><code>--bs-space-scaled-smash</code></li>
-      <li><code>--bs-space-scaled-spacious</code></li>
-      <li><code>--bs-space-scaled-tall</code></li>
-      <li><code>--bs-space-scaled-taller</code></li>
-      <li><code>--bs-space-scaled-tallest</code></li>
     </ul>
   </details>
 
@@ -676,7 +847,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   </details>
 
 - <details class="mb-short">
-    <summary><span class="badge text-bg-danger">Breaking</span> keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="badge text-bg-danger">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>border</code></li>
       <li><code>border-bottom</code></li>
@@ -686,7 +857,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>border-top</code></li>
       <li><code>border-width</code></li>
       <li><code>column-gap</code></li>
+      <li><code>font-size</code></li>
+      <li><code>font-weight</code></li>
       <li><code>gap</code></li>
+      <li><code>line-height</code></li>
       <li><code>margin-bottom</code></li>
       <li><code>margin-end</code></li>
       <li><code>margin</code></li>
@@ -719,4 +893,15 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     </ul>
   </details>
 
+- <details class="mb-short">
+    <summary><span class="badge text-bg-warning">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
+    <ul>
+      <li><code>line-length</code></li>
+    </ul>
+  </details>
+
 - <span class="badge text-bg-warning">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
+
+## Sass mixins
+
+- <span class="badge text-bg-success">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of:  `"code-small"`,  `"code-medium"`,  `"label-small"`,  `"label-medium"`,  `"label-large"`,  `"label-xlarge"`,  `"body-small"`,  `"body-medium"`,  `"body-large"`,  `"heading-small"`,  `"heading-medium"`,  `"heading-large"`,  `"heading-xlarge"`,  `"display-small"`,  `"display-medium"`,  `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.

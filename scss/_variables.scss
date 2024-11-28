@@ -540,7 +540,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom: $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
 
 
 // Grid breakpoints
@@ -714,10 +714,8 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // scss-docs-start font-variables
-// stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-// stylelint-enable value-keyword-case
+$font-family-sans-serif:      $ouds-font-family-sans-serif-stack !default; // OUDS mod
+$font-family-monospace:       $ouds-font-family-monospace-stack !default; // OUDS mod
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
@@ -728,38 +726,32 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;  // 14px
-$font-size-lg:                $font-size-base * 1.125 !default; // 18px
-$font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
+$font-size-base:              var(--#{$prefix}font-size-body-medium) !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                var(--#{$prefix}font-size-body-small) !default;  // 14px
+$font-size-lg:                var(--#{$prefix}font-size-body-large) !default; // 18px
 
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
+$font-weight-normal:          $ouds-font-weight-default !default;
+$font-weight-medium:          null !default;
+$font-weight-semibold:        null !default;
+$font-weight-bold:            $ouds-font-weight-strong !default;
 $font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-// stylelint-disable function-disallowed-list
-$line-height-base:            calc(18 / 16) !default;
-$line-height-sm:              calc(16 / 14) !default;
-$line-height-lg:              calc(30 / 16) !default;
-// stylelint-enable function-disallowed-list
+$line-height-base:            var(--#{$prefix}font-line-height-body-medium) !default;
+$line-height-sm:              var(--#{$prefix}font-line-height-body-small) !default;
+$line-height-lg:              var(--#{$prefix}font-line-height-body-large) !default;
 
-$line-length-sm:              40ch !default;
-$line-length-md:              80ch !default;
+$letter-spacing-base:         var(--#{$prefix}font-letter-spacing-body-medium) !default;
 
-$letter-spacing-base:         $spacer * -.005 !default; // -0.1px
-
-$h1-font-size:                $font-size-base * 2.125 !default;   // 34px
-$h2-font-size:                $font-size-base * 1.875 !default;   // 30px
-$h3-font-size:                $font-size-base * 1.5 !default;     // 24px
-$h4-font-size:                $font-size-xlg !default;            // 20px
-$h5-font-size:                $font-size-lg !default;             // 18px
-$h6-font-size:                $font-size-base !default;           // 16px
+$h1-font-size:                var(--#{$prefix}font-size-heading-xlarge) !default;
+$h2-font-size:                var(--#{$prefix}font-size-heading-large) !default;
+$h3-font-size:                var(--#{$prefix}font-size-heading-medium) !default;
+$h4-font-size:                var(--#{$prefix}font-size-heading-small) !default;
+$h5-font-size:                var(--#{$prefix}font-size-body-large) !default;
+$h6-font-size:                var(--#{$prefix}font-size-body-medium) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -773,55 +765,47 @@ $font-sizes: (
 ) !default;
 // scss-docs-end font-sizes
 
-// scss-docs-start letter-spacing
-$h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
-$h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
-$mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
-$h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
-$h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
-$h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
-$h6-spacing:                  $letter-spacing-base !default;
-// scss-docs-end letter-spacing
-
-// stylelint-disable function-disallowed-list
-// scss-docs-start line-height
-$h1-line-height:              1 !default;
-$h2-line-height:              calc(32 / 30) !default;
-$h3-line-height:              calc(26 / 24) !default;
-$h4-line-height:              calc(22 / 20) !default;
-$h5-line-height:              calc(20 / 18) !default;
-$h6-line-height:              $line-height-base !default;
-// scss-docs-end line-height
-// stylelint-enable function-disallowed-list
-
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer !default; // OUDS mod
+$headings-margin-bottom:      $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer * .5`
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        700 !default;
-$headings-line-height:        $h6-line-height !default;
+$headings-font-weight:        $ouds-font-weight-heading !default;
+$headings-line-height:        null !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
-$display1-size:               $font-size-xlg * 3 !default;        // 60px
-$display2-size:               $font-size-xlg * 2.5 !default;      // 50px
-$display3-size:               $font-size-xlg * 2 !default;        // 40px
-$display4-size:               $h1-font-size !default;             // 34px
-$display1-spacing:            $letter-spacing-base * 20 !default; // -2px
-$display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
-$display3-spacing:            $h1-spacing !default;               // -1px
-$display4-spacing:            $h1-spacing !default;               // -1px
-$display-line-height:         $h1-line-height !default;
+$display-font-sizes: (
+  large: "display-large",
+  medium: "display-medium",
+  small: "display-small"
+) !default;
+
+@if $enable-bootstrap-compatibility {
+  $display-font-sizes: map-merge(
+    $display-font-sizes,
+    (
+      1: "display-large",
+      2: "display-medium",
+      3: "display-small",
+      4: "heading-xlarge",
+      5: "heading-large",
+      6: "heading-medium",
+    )
+  );
+}
+
+$display-font-family: null !default;
+$display-font-style:  null !default;
+$display-font-weight: $ouds-font-weight-display !default;
+$display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-xlg !default;
-$lead-font-weight:            400 !default;
-$lead-line-height:            1.5 !default;
-$lead-letter-spacing:         $letter-spacing-base * 4 !default;
+$lead-font-size:              $h5-font-size !default;
+$lead-font-weight:            $ouds-font-weight-body-default !default;
 
-$small-font-size:             .875rem !default;
+// OUDS mod: no $small-font-size
 
 $sub-sup-font-size:           .75em !default;
 
@@ -829,16 +813,14 @@ $sub-sup-font-size:           .75em !default;
 $text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in Bootstrap 5.3.0
 // fusv-enable
 
-$initialism-font-size:        $small-font-size !default;
+// OUDS mod: no $initialism-font-size
 
-$blockquote-margin-y:         $spacer !default;
-$blockquote-font-size:        $font-size-xlg !default;
+$blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
+// OUDS mod: no `$blockquote-font-size`
 $blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // OUDS mod: instead of `$gray-600`
-$blockquote-footer-font-size: $small-font-size !default;
-$blockquote-line-height:      1.5 !default; // OUDS mod
-$blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // OUDS mod
+// OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $spacer !default;
+$hr-margin-y:                 $ouds-space-fixed-medium !default;
 $hr-color:                    inherit !default;
 
 // fusv-disable
@@ -855,14 +837,14 @@ $vr-border-width:             2px !default; // OUDS mod: instead of `var(--#{$pr
 // scss-docs-end vr-variables
 
 $legend-margin-bottom:        $spacer * .25 !default;
-$legend-font-size:            $font-size-xlg !default;
+// OUDS mod: no `$legend-font-size`
 $legend-font-weight:          $font-weight-bold !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
 $list-inline-padding:         $spacer * .25 !default;
 
-$mark-padding:                0 .1875em !default; // OUDS mod
+$mark-padding:                .125em !default; // OUDS mod: instead of `.1875rem`
 $mark-color:                  $white !default; // OUDS mod: instead of `$body-color`
 $mark-bg:                     $black !default; // OUDS mod: instead of `$yellow-100`
 // scss-docs-end type-variables
@@ -989,8 +971,8 @@ $btn-letter-spacing-sm:       $letter-spacing-base !default; // OUDS mod
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
-$btn-line-height-lg:          $h5-line-height !default; // OUDS mod
-$btn-letter-spacing-lg:       $letter-spacing-base * 2 !default; // OUDS mod
+$btn-line-height-lg:          var(--#{$prefix}font-line-height-body-large) !default; // OUDS mod
+$btn-letter-spacing-lg:       calc(#{$letter-spacing-base} * 2) !default; // stylelint-disable-line function-disallowed-list
 
 $btn-border-width:            $input-btn-border-width !default;
 
@@ -1095,7 +1077,7 @@ $btn-social-networks: (
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .4375rem !default; // OUDS mod
-$form-text-font-size:                   $small-font-size !default;
+$form-text-font-size:                   null !default; // OUDS mod: instead of `$small-font-size`
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // OUDS mod: instead of `null`
 $form-text-line-height:                 $line-height-sm !default; // OUDS mod
@@ -1106,7 +1088,7 @@ $form-text-color:                       var(--#{$prefix}secondary-color) !defaul
 $form-label-margin-bottom:              .5rem !default; // OUDS mod
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
-$form-label-font-weight:                $font-weight-bold !default;
+$form-label-font-weight:                null !default;
 $form-label-color:                      null !default;
 $form-label-disabled-color:             var(--#{$prefix}disabled-color) !default; // OUDS mod
 $form-label-required-margin-left:       .1875rem !default; // OUDS mod
@@ -1118,7 +1100,7 @@ $form-helper-size:                      1.25rem !default; // OUDS mod
 $form-helper-color:                     var(--#{$prefix}info) !default; // OUDS mod
 $form-helper-bg:                        var(--#{$prefix}highlight-color) !default; // OUDS mod
 $form-helper-icon:                      escape-svg($helper-icon) !default; // OUDS mod
-$form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($form-helper-size - $font-size-base), 2) !default; // OUDS mod
+$form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($form-helper-size - 1rem), 2) !default; // OUDS mod
 // scss-docs-end form-helper-variables
 
 // scss-docs-start form-input-variables
@@ -1169,7 +1151,7 @@ $input-height-inner-quarter:            map-get($spacers, 2) !default; // OUDS m
 $input-height:                          2.5rem !default;
 $input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
-$input-line-height-lg:                  $h5-line-height !default; // OUDS mod
+$input-line-height-lg:                  var(--#{$prefix}font-line-height-body-large) !default; // OUDS mod
 
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
@@ -1184,7 +1166,7 @@ $form-color-disabled-filter:            brightness(0) invert(1) brightness(.8) !
 
 // scss-docs-start form-check-variables
 $form-check-input-width:                  1em !default;
-$form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
+$form-check-min-height:                   calc(#{$font-size-base} * #{$input-btn-line-height}) !default; // stylelint-disable-line function-disallowed-list
 $form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-padding-top:            .4375rem !default; // OUDS mod
@@ -1365,7 +1347,7 @@ $form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
 
 // scss-docs-start form-feedback-variables
 $form-feedback-margin-top:          $form-text-margin-top !default;
-$form-feedback-font-size:           $small-font-size !default;
+$form-feedback-font-size:           null !default; // OUDS mod: instead of `$small-font-size`
 $form-feedback-font-style:          null !default;
 // OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
 // fusv-disable
@@ -1538,15 +1520,15 @@ $navbar-border-color:                       var(--#{$prefix}border-color-subtle)
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
 $navbar-brand-font-size-xs:                 1.3125rem !default;
-$navbar-brand-letter-spacing-xs:            $letter-spacing-base * 5 !default;
+$navbar-brand-letter-spacing-xs:            calc(#{$letter-spacing-base} * 5) !default; // stylelint-disable-line function-disallowed-list
 $navbar-brand-font-size-two-lined-xs:       1.0625rem !default;
-$navbar-brand-letter-spacing-two-lined-xs:  $letter-spacing-base * 4 !default;
+$navbar-brand-letter-spacing-two-lined-xs:  calc(#{$letter-spacing-base} * 4) !default; // stylelint-disable-line function-disallowed-list
 
 $navbar-brand-margin-y:                     $spacer * .95 !default;
 $navbar-brand-logo-size:                    $spacer * 2.5 !default;
-$navbar-brand-letter-spacing:               $letter-spacing-base * 10 !default;
+$navbar-brand-letter-spacing:               calc(#{$letter-spacing-base} * 10) !default; // stylelint-disable-line function-disallowed-list
 $navbar-brand-font-size-two-lined:          1.8125rem !default;
-$navbar-brand-letter-spacing-two-lined:     $letter-spacing-base * 8 !default;
+$navbar-brand-letter-spacing-two-lined:     calc(#{$letter-spacing-base} * 8) !default; // stylelint-disable-line function-disallowed-list
 
 $navbar-icon-size-xs:                       $spacer * 1.25 !default;
 $navbar-icon-size:                          $spacer * 1.5 !default;
@@ -1790,13 +1772,13 @@ $accordion-icon-transform:                scaleY(-1) !default;
 $accordion-button-font-size:              $h3-font-size !default;
 $accordion-button-line-height:            null !default;
 $accordion-button-font-weight:            $font-weight-bold !default;
-$accordion-button-letter-spacing:         $h3-spacing !default;
+$accordion-button-letter-spacing:         var(--#{$prefix}font-letter-spacing-heading-medium) !default;
 $accordion-button-font-size-sm:           $h5-font-size !default;
-$accordion-button-line-height-sm:         $h5-line-height !default;
-$accordion-button-letter-spacing-sm:      $h5-spacing !default;
+$accordion-button-line-height-sm:         var(--#{$prefix}font-line-height-body-large) !default;
+$accordion-button-letter-spacing-sm:      var(--#{$prefix}font-letter-spacing-body-large) !default;
 $accordion-button-font-size-lg:           $h2-font-size !default;
 $accordion-button-line-height-lg:         calc(40 / 30) !default; // stylelint-disable-line function-disallowed-list
-$accordion-button-letter-spacing-lg:      $h2-spacing !default;
+$accordion-button-letter-spacing-lg:      var(--#{$prefix}font-letter-spacing-heading-large) !default;
 // End mod
 // scss-docs-end accordion-variables
 
@@ -2077,7 +2059,7 @@ $thumbnail-box-shadow:              var(--#{$prefix}box-shadow-sm) !default;
 // Figures
 
 // scss-docs-start figure-variables
-$figure-caption-font-size:          $small-font-size !default;
+$figure-caption-font-size:          null !default; // OUDS mod: instead of `$small-font-size`
 $figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 // scss-docs-end figure-variables
 
@@ -2091,15 +2073,9 @@ $title-bar-image-ratio:             1.8em !default;
 $title-bar-padding-y:               .3333333em !default;
 $title-bar-font-size:               $h2-font-size !default;
 $title-bar-line-height:             $display-line-height !default;
-$title-bar-letter-spacing:          $h2-spacing !default;
+$title-bar-letter-spacing:          var(--#{$prefix}font-letter-spacing-heading-large) !default;
 $title-bar-border-width:            calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
 $title-bar-border-color:            var(--#{$prefix}border-color-subtle) !default;
-
-$title-bar-font-size-md:            $display2-size !default;
-$title-bar-letter-spacing-md:       $display2-spacing !default;
-
-$title-bar-font-size-xl:            $display1-size !default;
-$title-bar-letter-spacing-xl:       $display1-spacing !default;
 // scss-docs-end title-bars-variables
 // End mod
 
@@ -2252,18 +2228,17 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 
 // Code
 // OUDS mod
-$code-font-size:                    .875em !default;
-$code-color:                        $gray-700 !default;
+$code-font-size:                    .875em !default; // OUDS mod: instead of `$small-font-size`
+$code-color:                        $gray-700 !default; // instead of `$pink`
 
-$kbd-padding-y:                     $spacer * .05 !default;
-$kbd-padding-x:                     $spacer * .05 !default;
+$kbd-padding-y:                     px-to-rem($ouds-space-fixed-smash) !default; // instead of `.1875rem`
+$kbd-padding-x:                     px-to-rem($ouds-space-fixed-shortest) !default; // instead of `.375rem`
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
-$kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
+$kbd-color:                         var(--#{$prefix}body-bg) !default;
+$kbd-bg:                            var(--#{$prefix}body-color) !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
 
-$pre-color:                         var(--#{$prefix}code-color) !default;
-$pre-line-height:                   1.25 !default;
+$pre-color:                         var(--#{$prefix}code-color) !default; // instead of `null`
 // End mod
 
 //
@@ -2295,7 +2270,7 @@ $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 
 //// Stepped process
 // scss-docs-start stepped-process
-$stepped-process-font-size:   $small-font-size !default;
+$stepped-process-font-size:   null !default;
 $stepped-process-font-weight: $font-weight-bold !default;
 $stepped-process-max-items:   5 !default;
 $stepped-process-counter:     step !default; // Used as a counter name

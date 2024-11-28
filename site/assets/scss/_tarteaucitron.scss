@@ -54,7 +54,7 @@
 }
 
 @include tac("DisclaimerAlert") {
-  font-size: $font-size-sm;
+  @include get-font-size("label-small");
 }
 
 @include tac("ClosePanel") {
@@ -81,20 +81,17 @@
 }
 
 @include tac("H1", true) {
+  @include get-font-size("heading-xlarge");
   margin-bottom: $spacer;
-  font-size: $h2-font-size;
-  letter-spacing: $h2-spacing;
 }
 
 @include tac("H2", true) {
+  @include get-font-size("heading-large");
   padding-top: $spacer / 10;
-  font-size: $h4-font-size;
-  letter-spacing: $h4-spacing;
 }
 
 @include tac("H3", true) {
-  font-size: $h6-font-size;
-  letter-spacing: $h6-spacing;
+  @include get-font-size("heading-small");
 }
 
 @include tac("Info") {
@@ -104,7 +101,7 @@
 }
 
 @include tac("Name", true) {
-  font-size: $font-size-sm;
+  @include get-font-size("label-small");
   color: var(--bs-secondary-color);
 }
 

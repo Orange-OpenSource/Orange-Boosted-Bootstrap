@@ -44,6 +44,14 @@ You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 </div>
 {{< /example >}}
 
+You can also use in some cases (mainly [font references]({{< docsref "/content/typography" >}})) `max-width: none` utility as needed.
+
+{{< example class="bd-example-flex" >}}
+<div style="width: 50%; height: 100px;">
+  <div class="mw-none" style="width: 200%;">Max-width none</div>
+</div>
+{{< /example >}}
+
 ## Relative to the viewport
 
 You can also use utilities to set the width and height relative to the viewport.

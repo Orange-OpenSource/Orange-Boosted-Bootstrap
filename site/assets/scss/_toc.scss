@@ -11,7 +11,7 @@
   }
 
   nav {
-    @include font-size(.875rem);
+    @include get-font-size("label-medium"); // OUDS mod: instead of `.875rem`
 
     ul {
       padding-left: 0;
@@ -20,16 +20,16 @@
 
       ul {
         padding-left: 1rem;
-        margin-left: -.5rem; // OUDS mod
+        margin-left: -$ouds-space-fixed-shorter; // OUDS mod
       }
     }
 
     a {
       display: block;
-      padding: .3125rem 0 .3125rem .75rem; // OUDS mod
+      padding: $ouds-space-fixed-shortest 0 $ouds-space-fixed-shortest $ouds-space-fixed-medium; // OUDS mod
       color: inherit;
       text-decoration: none;
-      border-left: .125rem solid transparent;
+      // OUDS mod: no border-left
 
       &:hover,
       &.active {
@@ -64,7 +64,7 @@
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
-      padding: 1.25rem 1.25rem 1.25rem 1rem;
+      padding: $ouds-space-fixed-medium; // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
       background-color: var(--bs-tertiary-bg);
       border: 1px solid var(--bs-border-color);
       @include border-radius(var(--bs-border-radius));

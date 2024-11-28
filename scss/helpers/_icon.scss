@@ -1,0 +1,56 @@
+// scss-docs-start ouds-font-icon-common
+%icon-size {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  fill: currentcolor;
+}
+// scss-docs-end ouds-font-icon-common
+
+@each $font-ref, $font-name in $ouds-font-sizes {
+  @each $icon-size in $ouds-icon-sizes {
+    @if str-slice($font-name, 1, 5) != "/code" {
+      .#{$font-ref}-#{$icon-size}-icon {
+        @extend %icon-size;
+        font-size: var(--#{$prefix}icon-#{$icon-size}-with-#{str-slice($font-name, 2)}) if($enable-important-utilities, !important, null);
+      }
+    }
+  }
+}
+
+.decorative-shortest-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-shortest if($enable-important-utilities, !important, null);
+}
+
+.decorative-shorter-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-shorter if($enable-important-utilities, !important, null);
+}
+
+.decorative-short-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-short if($enable-important-utilities, !important, null);
+}
+
+.decorative-medium-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-medium if($enable-important-utilities, !important, null);
+}
+
+.decorative-tall-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-tall if($enable-important-utilities, !important, null);
+}
+
+.decorative-taller-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-taller if($enable-important-utilities, !important, null);
+}
+
+.decorative-tallest-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-tallest if($enable-important-utilities, !important, null);
+}

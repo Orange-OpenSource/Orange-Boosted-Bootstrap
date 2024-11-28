@@ -71,7 +71,7 @@
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: $input-padding-y-lg $input-padding-x-lg;
-  line-height: $h5-line-height; // OUDS mod
+  line-height: var(--#{$prefix}font-line-height-body-large); // OUDS mod
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 }

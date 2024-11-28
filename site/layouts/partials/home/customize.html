@@ -31,7 +31,8 @@ $prefix: "mo-";
   <div class="col-lg-6">
     <h3>Include what you need</h3>
     <p>The easiest way to customize OUDS Web—include only the CSS you need.</p>
-{{ highlight (printf `// Functions first
+{{ highlight (printf `// Functions and config first
+@import "../node_modules/@ouds/web/scss/config";
 @import "../node_modules/@ouds/web/scss/functions";
 
 // Variable overrides second

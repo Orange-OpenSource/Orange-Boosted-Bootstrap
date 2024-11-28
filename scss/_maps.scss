@@ -83,6 +83,30 @@ $ouds-elevations: (
 ) !default;
 // scss-docs-end ouds-maps-elevations
 
+// scss-docs-start ouds-maps-font
+$ouds-font-sizes: (
+  cs: "/code-small",
+  cm: "/code-medium",
+  bs: "/body-small",
+  bm: "/body-medium",
+  bl: "/body-large",
+  hs: "/heading-small",
+  hm: "/heading-medium",
+  hl: "/heading-large",
+  hxl: "/heading-xlarge",
+  ds: "/display-small",
+  dm: "/display-medium",
+  dl: "/display-large",
+) !default;
+
+$ouds-font-weights: (
+  normal: $ouds-font-weight-default,
+  bold: $ouds-font-weight-strong
+) !default;
+
+$ouds-icon-sizes: ("short", "medium", "tall") !default;
+// scss-docs-end ouds-maps-font
+
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (
   "transparent": $ouds-opacity-transparent,

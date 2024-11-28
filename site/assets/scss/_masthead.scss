@@ -9,7 +9,7 @@
   }
 
   .lead {
-    @include font-size(1rem);
+    @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
     font-weight: 400;
     color: var(--bs-secondary-color);
   }
@@ -48,12 +48,7 @@
   }
 
   // OUDS mod: no `#carbonads`
-
-  @include media-breakpoint-up(md) {
-    .lead {
-      @include font-size(1.5rem);
-    }
-  }
+  // OUDS mod: no @media query
 }
 
 .masthead-followup {
@@ -64,14 +59,10 @@
   }
 
   .lead {
-    @include font-size(1rem);
+    @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
   }
 
-  @include media-breakpoint-up(md) {
-    .lead {
-      @include font-size(1.25rem);
-    }
-  }
+  // OUDS mod: no @media query
 }
 
 .masthead-followup-icon {
