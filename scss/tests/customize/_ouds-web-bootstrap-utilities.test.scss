@@ -114,7 +114,7 @@ $utilities: ();
             property: border-top,
             values: (
               null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-              "none": $ouds-border-width-none,
+              "none": strip-units($ouds-border-width-none),
             ),
           ),
           "border-end-ouds": (
@@ -9923,7 +9923,7 @@ $utilities: ();
             property: border-top,
             values: (
               null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-              "none": $ouds-border-width-none,
+              "none": strip-units($ouds-border-width-none),
             ),
           ),
           "border-end-ouds": (

@@ -6,35 +6,37 @@
   // scss-docs-start btn-css-vars
   --#{$prefix}btn-padding-x: #{$btn-padding-x};
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
+  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width}; // TODO need intermediate sass var?
+  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height}; // TODO need intermediate sass var?
   --#{$prefix}btn-font-family: #{$btn-font-family};
-  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
+  // OUDS mod: no `@include rfs($btn-font-size, --#{$prefix}btn-font-size)`
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
-  --#{$prefix}btn-line-height: #{$btn-line-height};
+  // OUDS mod: no `--#{$prefix}btn-line-height`
   --#{$prefix}btn-color: #{$btn-color};
-  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // OUDS mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-color: #{$btn-hover-color}; // OUDS mod
   --#{$prefix}btn-hover-border-color: initial; // OUDS mod
+  --#{$prefix}btn-hover-border-width: #{$btn-default-hover-border-width}; // OUDS mod
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
-  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity}; // TODO to check
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // OUDS mod
-  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // OUDS mod
+  --#{$prefix}icon-spacing: #{$btn-icon-padding-left}; // OUDS mod TODO to check
   // scss-docs-end btn-css-vars
 
-  display: inline-flex; // OUDS mod
-  align-items: center; // OUDS mod: for .badge proper alignment
-  justify-content: center; // OUDS mod
-  padding: subtract(var(--#{$prefix}btn-padding-y), 1px) var(--#{$prefix}btn-padding-x) add(var(--#{$prefix}btn-padding-y), 1px); // OUDS mod
+  display: inline-block;
+  min-width: var(--#{$prefix}btn-min-width);
+  min-height: var(--#{$prefix}btn-min-height);
+  padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-x), var(--#{$prefix}btn-border-width)); // OUDS mod
   font-family: var(--#{$prefix}btn-font-family);
-  @include font-size(var(--#{$prefix}btn-font-size));
+  @include get-font-size("label-large");
   font-weight: var(--#{$prefix}btn-font-weight);
-  line-height: var(--#{$prefix}btn-line-height);
+  // OUDS mod: no line-height, already defined by get-font-size
   color: var(--#{$prefix}btn-color);
+  text-align: center;
   text-decoration: if($link-decoration == none, null, none);
-  letter-spacing: var(--#{$prefix}btn-letter-spacing); // OUDS mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -45,16 +47,20 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  &:hover {
+  &:hover,
+  &:focus-visible, // OUDS mod: apply hover styles to focus visible as well
+  &:focus[data-focus-visible-added] { // OUDS mod: apply hover styles to focus visible as well
+    padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-hover-border-width)) subtract(var(--#{$prefix}btn-padding-x), var(--#{$prefix}btn-hover-border-width)); // OUDS mod
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
+    border-width: var(--#{$prefix}btn-hover-border-width); // OUDS mod
   }
 
   // OUDS mod: no .btn-check + &:hover
 
-  // OUDS mod: no &:focus-visible to avoid issue in button tags
+  // OUDS mod: no &:focus-visible already handled
 
   // OUDS mod: no .btn-check:focus-visible + &
 
@@ -77,6 +83,7 @@
   // OUDS mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
 
   // OUDS mod: selectors are slightly different to handle `.btn-check`
+  // TODO how to handle to disable links with aria-disabled only
   .btn-check:disabled + &,
   &:disabled,
   &.disabled,
@@ -91,11 +98,14 @@
   }
   // End mod
 
-  // OUDS mod: with icon
-  &:not(.btn-icon) > svg {
-    transform: translateY(1px);
+  &:not(.btn-icon) > svg,
+  &:not(.btn-icon) > img,
+  &:not(.btn-icon) > .bm-short-icon {
+    @extend .bm-short-icon;
+    margin-right: $ouds-button-space-column-gap-icon;
+    margin-left: subtract(var(--#{$prefix}icon-spacing), var(--#{$prefix}btn-padding-x));
+    vertical-align: text-bottom;
   }
-  // End mod
 }
 
 
@@ -104,47 +114,112 @@
 //
 
 // scss-docs-start btn-variant-loops
-.btn-primary {
-  @include button-variant($ouds-color-orange-500, $ouds-color-orange-500, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
+.btn-default { // OUDS mod
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
+  --#{$prefix}btn-hover-border-width: #{$ouds-button-border-width-default-interaction};
+  @include button-variant(
+    transparent,
+    $black,
+    $black
+  );
 }
 
-.btn-success {
-  @include button-variant(var(--#{$prefix}success), var(--#{$prefix}success), var(--#{$prefix}highlight-color));
+.btn-minimal { // OUDS mod
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-minimal};
+  --#{$prefix}btn-hover-border-width: #{$ouds-button-border-width-minimal-interaction};
+  @include button-variant(
+    transparent,
+    transparent,
+    $black,
+    $ouds-color-functional-light-gray-160,
+    transparent,
+    $ouds-color-functional-dark-gray-400,
+    $ouds-color-functional-light-gray-160,
+    transparent,
+    $ouds-color-orange-550,
+    transparent,
+    transparent,
+    $ouds-color-content-disabled-light
+  );
 }
 
-.btn-danger {
-  @include button-variant(var(--#{$prefix}danger), var(--#{$prefix}danger), var(--#{$prefix}highlight-color));
+.btn-strong { //OUDS mod
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-hover-border-width: #{$ouds-border-width-none};
+  @include button-variant(
+    $ouds-color-action-primary-enabled-light,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-functional-dark-gray-400,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-orange-550,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-action-disabled-light,
+    transparent,
+    $ouds-color-content-on-action-disabled-light
+  );
 }
 
-.btn-warning {
-  @include button-variant($warning, $warning, $black);
+.btn-negative { // OUDS mod
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-hover-border-width: #{$ouds-border-width-none};
+  @include button-variant(
+    $ouds-color-action-negative-enabled-light,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-action-negative-hover-light,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-action-negative-pressed-light,
+    transparent,
+    $ouds-color-content-on-action-primary-enabled-light,
+    $ouds-color-action-disabled-light,
+    transparent,
+    $ouds-color-content-on-action-disabled-light
+  );
 }
 
-.btn-info {
-  @include button-variant(var(--#{$prefix}info), var(--#{$prefix}info), var(--#{$prefix}highlight-color));
+@if $enable-bootstrap-compatibility { // OUDS mod
+  .btn-primary { // OUDS mod
+    @extend .btn-default;
+  }
+
+  .btn-success { // OUDS mod
+    @extend .btn-default;
+  }
+
+  .btn-danger { // OUDS mod
+    @extend .btn-negative;
+  }
+
+  .btn-warning { // OUDS mod
+    @extend .btn-negative;
+  }
+
+  .btn-info { // OUDS mod
+    @extend .btn-minimal;
+  }
+
+  .btn-light { // OUDS mod
+    @extend .btn-minimal;
+  }
+
+  .btn-dark { // OUDS mod
+    @extend .btn-strong;
+  }
+
+  .btn-secondary { // OUDS mod
+    @extend .btn-strong;
+  }
 }
 
-.btn-light {
-  @include button-variant($light, $light, $black);
-}
-
-.btn-dark {
-  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}border-color), $hover-color: $black);
-}
-
-.btn-secondary {
-  @include button-variant(var(--#{$prefix}secondary), var(--#{$prefix}secondary), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}border-color), $hover-color: var(--#{$prefix}body-color));
-}
-
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    $btn-outline-hover-color: var(--#{$prefix}highlight-color);
-    @if index(("primary", "warning", "light"), #{$color}) {
-      $btn-outline-hover-color: $black;
-    } @else if (#{$color} == "dark") {
-      $btn-outline-hover-color: $white;
+@if $enable-bootstrap-compatibility { // OUDS mod
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @extend .btn-default; // OUDS mod
     }
-    @include button-outline-variant(var(--#{$prefix}#{$color}), $btn-outline-hover-color);
   }
 }
 // scss-docs-end btn-variant-loops
@@ -246,18 +321,24 @@
 // OUDS mod: 6th argument to set .btn-icon padding
 // OUDS mod: 7th argument to set .btn-letter-spacing
 
-.btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
-}
-
-.btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
-}
+//.btn-lg {
+//  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
+//}
+//
+//.btn-sm {
+//  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
+//}
 
 
 // OUDS mod: icon button
 .btn-icon {
-  padding: var(--#{$prefix}icon-spacing);
+  --#{$prefix}btn-padding-x: #{$ouds-button-space-inset-icon-alone};
+
+  > svg,
+  > img,
+  > .bm-medium-icon {
+    @extend .bm-medium-icon;
+  }
 }
 // End mod
 
