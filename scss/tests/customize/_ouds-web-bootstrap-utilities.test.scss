@@ -112,7 +112,7 @@ $utilities: ();
             property: border-top,
             values: (
               null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-              "none": $ouds-border-width-none,
+              "none": 0,
             ),
           ),
           "border-end-ouds": (
@@ -934,11 +934,11 @@ $utilities: ();
         }
 
         .rounded {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-none {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-short {
@@ -962,13 +962,13 @@ $utilities: ();
         }
 
         .rounded-top {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-none {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-short {
@@ -997,13 +997,13 @@ $utilities: ();
         }
 
         .rounded-end {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-none {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-short {
@@ -1032,13 +1032,13 @@ $utilities: ();
         }
 
         .rounded-bottom {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-none {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-short {
@@ -1067,13 +1067,13 @@ $utilities: ();
         }
 
         .rounded-start {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-none {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-short {
@@ -1102,7 +1102,7 @@ $utilities: ();
         }
 
         .m-none {
-          margin: 0 !important;
+          margin: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .m-smash {
@@ -1194,8 +1194,8 @@ $utilities: ();
         }
 
         .mx-none {
-          margin-right: 0 !important;
-          margin-left: 0 !important;
+          margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+          margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mx-smash {
@@ -1309,8 +1309,8 @@ $utilities: ();
         }
 
         .my-none {
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
+          margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+          margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .my-smash {
@@ -1424,7 +1424,7 @@ $utilities: ();
         }
 
         .mt-none {
-          margin-top: 0 !important;
+          margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mt-smash {
@@ -1516,7 +1516,7 @@ $utilities: ();
         }
 
         .me-none {
-          margin-right: 0 !important;
+          margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .me-smash {
@@ -1608,7 +1608,7 @@ $utilities: ();
         }
 
         .mb-none {
-          margin-bottom: 0 !important;
+          margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mb-smash {
@@ -1700,7 +1700,7 @@ $utilities: ();
         }
 
         .ms-none {
-          margin-left: 0 !important;
+          margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .ms-smash {
@@ -2062,7 +2062,7 @@ $utilities: ();
         }
 
         .p-none {
-          padding: 0 !important;
+          padding: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .p-smash {
@@ -2150,8 +2150,8 @@ $utilities: ();
         }
 
         .px-none {
-          padding-right: 0 !important;
-          padding-left: 0 !important;
+          padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+          padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .px-smash {
@@ -2260,8 +2260,8 @@ $utilities: ();
         }
 
         .py-none {
-          padding-top: 0 !important;
-          padding-bottom: 0 !important;
+          padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+          padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .py-smash {
@@ -2370,7 +2370,7 @@ $utilities: ();
         }
 
         .pt-none {
-          padding-top: 0 !important;
+          padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pt-smash {
@@ -2458,7 +2458,7 @@ $utilities: ();
         }
 
         .pe-none {
-          padding-right: 0 !important;
+          padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pe-smash {
@@ -2546,7 +2546,7 @@ $utilities: ();
         }
 
         .pb-none {
-          padding-bottom: 0 !important;
+          padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pb-smash {
@@ -2634,7 +2634,7 @@ $utilities: ();
         }
 
         .ps-none {
-          padding-left: 0 !important;
+          padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .ps-smash {
@@ -2722,7 +2722,7 @@ $utilities: ();
         }
 
         .gap-none {
-          gap: 0 !important;
+          gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .gap-smash {
@@ -2810,7 +2810,7 @@ $utilities: ();
         }
 
         .row-gap-none {
-          row-gap: 0 !important;
+          row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .row-gap-smash {
@@ -2898,7 +2898,7 @@ $utilities: ();
         }
 
         .column-gap-none {
-          column-gap: 0 !important;
+          column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .column-gap-smash {
@@ -3189,7 +3189,7 @@ $utilities: ();
 
         @media (min-width: 390px) {
           .m-xs-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-xs-smash {
@@ -3241,8 +3241,8 @@ $utilities: ();
           }
 
           .mx-xs-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-xs-smash {
@@ -3306,8 +3306,8 @@ $utilities: ();
           }
 
           .my-xs-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-xs-smash {
@@ -3371,7 +3371,7 @@ $utilities: ();
           }
 
           .mt-xs-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-xs-smash {
@@ -3423,7 +3423,7 @@ $utilities: ();
           }
 
           .me-xs-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-xs-smash {
@@ -3475,7 +3475,7 @@ $utilities: ();
           }
 
           .mb-xs-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-xs-smash {
@@ -3527,7 +3527,7 @@ $utilities: ();
           }
 
           .ms-xs-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-xs-smash {
@@ -3579,7 +3579,7 @@ $utilities: ();
           }
 
           .p-xs-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-xs-smash {
@@ -3627,8 +3627,8 @@ $utilities: ();
           }
 
           .px-xs-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-xs-smash {
@@ -3687,8 +3687,8 @@ $utilities: ();
           }
 
           .py-xs-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-xs-smash {
@@ -3747,7 +3747,7 @@ $utilities: ();
           }
 
           .pt-xs-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-xs-smash {
@@ -3795,7 +3795,7 @@ $utilities: ();
           }
 
           .pe-xs-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-xs-smash {
@@ -3843,7 +3843,7 @@ $utilities: ();
           }
 
           .pb-xs-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-xs-smash {
@@ -3891,7 +3891,7 @@ $utilities: ();
           }
 
           .ps-xs-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-xs-smash {
@@ -3939,7 +3939,7 @@ $utilities: ();
           }
 
           .gap-xs-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-xs-smash {
@@ -3987,7 +3987,7 @@ $utilities: ();
           }
 
           .row-gap-xs-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-xs-smash {
@@ -4035,7 +4035,7 @@ $utilities: ();
           }
 
           .column-gap-xs-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-xs-smash {
@@ -4097,7 +4097,7 @@ $utilities: ();
 
         @media (min-width: 480px) {
           .m-sm-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-sm-smash {
@@ -4149,8 +4149,8 @@ $utilities: ();
           }
 
           .mx-sm-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-sm-smash {
@@ -4214,8 +4214,8 @@ $utilities: ();
           }
 
           .my-sm-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-sm-smash {
@@ -4279,7 +4279,7 @@ $utilities: ();
           }
 
           .mt-sm-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-sm-smash {
@@ -4331,7 +4331,7 @@ $utilities: ();
           }
 
           .me-sm-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-sm-smash {
@@ -4383,7 +4383,7 @@ $utilities: ();
           }
 
           .mb-sm-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-sm-smash {
@@ -4435,7 +4435,7 @@ $utilities: ();
           }
 
           .ms-sm-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-sm-smash {
@@ -4487,7 +4487,7 @@ $utilities: ();
           }
 
           .p-sm-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-sm-smash {
@@ -4535,8 +4535,8 @@ $utilities: ();
           }
 
           .px-sm-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-sm-smash {
@@ -4595,8 +4595,8 @@ $utilities: ();
           }
 
           .py-sm-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-sm-smash {
@@ -4655,7 +4655,7 @@ $utilities: ();
           }
 
           .pt-sm-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-sm-smash {
@@ -4703,7 +4703,7 @@ $utilities: ();
           }
 
           .pe-sm-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-sm-smash {
@@ -4751,7 +4751,7 @@ $utilities: ();
           }
 
           .pb-sm-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-sm-smash {
@@ -4799,7 +4799,7 @@ $utilities: ();
           }
 
           .ps-sm-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-sm-smash {
@@ -4847,7 +4847,7 @@ $utilities: ();
           }
 
           .gap-sm-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-sm-smash {
@@ -4895,7 +4895,7 @@ $utilities: ();
           }
 
           .row-gap-sm-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-sm-smash {
@@ -4943,7 +4943,7 @@ $utilities: ();
           }
 
           .column-gap-sm-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-sm-smash {
@@ -5005,7 +5005,7 @@ $utilities: ();
 
         @media (min-width: 736px) {
           .m-md-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-md-smash {
@@ -5057,8 +5057,8 @@ $utilities: ();
           }
 
           .mx-md-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-md-smash {
@@ -5122,8 +5122,8 @@ $utilities: ();
           }
 
           .my-md-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-md-smash {
@@ -5187,7 +5187,7 @@ $utilities: ();
           }
 
           .mt-md-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-md-smash {
@@ -5239,7 +5239,7 @@ $utilities: ();
           }
 
           .me-md-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-md-smash {
@@ -5291,7 +5291,7 @@ $utilities: ();
           }
 
           .mb-md-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-md-smash {
@@ -5343,7 +5343,7 @@ $utilities: ();
           }
 
           .ms-md-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-md-smash {
@@ -5395,7 +5395,7 @@ $utilities: ();
           }
 
           .p-md-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-md-smash {
@@ -5443,8 +5443,8 @@ $utilities: ();
           }
 
           .px-md-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-md-smash {
@@ -5503,8 +5503,8 @@ $utilities: ();
           }
 
           .py-md-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-md-smash {
@@ -5563,7 +5563,7 @@ $utilities: ();
           }
 
           .pt-md-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-md-smash {
@@ -5611,7 +5611,7 @@ $utilities: ();
           }
 
           .pe-md-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-md-smash {
@@ -5659,7 +5659,7 @@ $utilities: ();
           }
 
           .pb-md-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-md-smash {
@@ -5707,7 +5707,7 @@ $utilities: ();
           }
 
           .ps-md-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-md-smash {
@@ -5755,7 +5755,7 @@ $utilities: ();
           }
 
           .gap-md-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-md-smash {
@@ -5803,7 +5803,7 @@ $utilities: ();
           }
 
           .row-gap-md-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-md-smash {
@@ -5851,7 +5851,7 @@ $utilities: ();
           }
 
           .column-gap-md-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-md-smash {
@@ -5913,7 +5913,7 @@ $utilities: ();
 
         @media (min-width: 1024px) {
           .m-lg-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-lg-smash {
@@ -5965,8 +5965,8 @@ $utilities: ();
           }
 
           .mx-lg-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-lg-smash {
@@ -6030,8 +6030,8 @@ $utilities: ();
           }
 
           .my-lg-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-lg-smash {
@@ -6095,7 +6095,7 @@ $utilities: ();
           }
 
           .mt-lg-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-lg-smash {
@@ -6147,7 +6147,7 @@ $utilities: ();
           }
 
           .me-lg-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-lg-smash {
@@ -6199,7 +6199,7 @@ $utilities: ();
           }
 
           .mb-lg-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-lg-smash {
@@ -6251,7 +6251,7 @@ $utilities: ();
           }
 
           .ms-lg-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-lg-smash {
@@ -6303,7 +6303,7 @@ $utilities: ();
           }
 
           .p-lg-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-lg-smash {
@@ -6351,8 +6351,8 @@ $utilities: ();
           }
 
           .px-lg-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-lg-smash {
@@ -6411,8 +6411,8 @@ $utilities: ();
           }
 
           .py-lg-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-lg-smash {
@@ -6471,7 +6471,7 @@ $utilities: ();
           }
 
           .pt-lg-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-lg-smash {
@@ -6519,7 +6519,7 @@ $utilities: ();
           }
 
           .pe-lg-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-lg-smash {
@@ -6567,7 +6567,7 @@ $utilities: ();
           }
 
           .pb-lg-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-lg-smash {
@@ -6615,7 +6615,7 @@ $utilities: ();
           }
 
           .ps-lg-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-lg-smash {
@@ -6663,7 +6663,7 @@ $utilities: ();
           }
 
           .gap-lg-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-lg-smash {
@@ -6711,7 +6711,7 @@ $utilities: ();
           }
 
           .row-gap-lg-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-lg-smash {
@@ -6759,7 +6759,7 @@ $utilities: ();
           }
 
           .column-gap-lg-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-lg-smash {
@@ -6821,7 +6821,7 @@ $utilities: ();
 
         @media (min-width: 1320px) {
           .m-xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-xl-smash {
@@ -6873,8 +6873,8 @@ $utilities: ();
           }
 
           .mx-xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-xl-smash {
@@ -6938,8 +6938,8 @@ $utilities: ();
           }
 
           .my-xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-xl-smash {
@@ -7003,7 +7003,7 @@ $utilities: ();
           }
 
           .mt-xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-xl-smash {
@@ -7055,7 +7055,7 @@ $utilities: ();
           }
 
           .me-xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-xl-smash {
@@ -7107,7 +7107,7 @@ $utilities: ();
           }
 
           .mb-xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-xl-smash {
@@ -7159,7 +7159,7 @@ $utilities: ();
           }
 
           .ms-xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-xl-smash {
@@ -7211,7 +7211,7 @@ $utilities: ();
           }
 
           .p-xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-xl-smash {
@@ -7259,8 +7259,8 @@ $utilities: ();
           }
 
           .px-xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-xl-smash {
@@ -7319,8 +7319,8 @@ $utilities: ();
           }
 
           .py-xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-xl-smash {
@@ -7379,7 +7379,7 @@ $utilities: ();
           }
 
           .pt-xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-xl-smash {
@@ -7427,7 +7427,7 @@ $utilities: ();
           }
 
           .pe-xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-xl-smash {
@@ -7475,7 +7475,7 @@ $utilities: ();
           }
 
           .pb-xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-xl-smash {
@@ -7523,7 +7523,7 @@ $utilities: ();
           }
 
           .ps-xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-xl-smash {
@@ -7571,7 +7571,7 @@ $utilities: ();
           }
 
           .gap-xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-xl-smash {
@@ -7619,7 +7619,7 @@ $utilities: ();
           }
 
           .row-gap-xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-xl-smash {
@@ -7667,7 +7667,7 @@ $utilities: ();
           }
 
           .column-gap-xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-xl-smash {
@@ -7729,7 +7729,7 @@ $utilities: ();
 
         @media (min-width: 1640px) {
           .m-2xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-2xl-smash {
@@ -7781,8 +7781,8 @@ $utilities: ();
           }
 
           .mx-2xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-2xl-smash {
@@ -7846,8 +7846,8 @@ $utilities: ();
           }
 
           .my-2xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-2xl-smash {
@@ -7911,7 +7911,7 @@ $utilities: ();
           }
 
           .mt-2xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-2xl-smash {
@@ -7963,7 +7963,7 @@ $utilities: ();
           }
 
           .me-2xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-2xl-smash {
@@ -8015,7 +8015,7 @@ $utilities: ();
           }
 
           .mb-2xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-2xl-smash {
@@ -8067,7 +8067,7 @@ $utilities: ();
           }
 
           .ms-2xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-2xl-smash {
@@ -8119,7 +8119,7 @@ $utilities: ();
           }
 
           .p-2xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-2xl-smash {
@@ -8167,8 +8167,8 @@ $utilities: ();
           }
 
           .px-2xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-2xl-smash {
@@ -8227,8 +8227,8 @@ $utilities: ();
           }
 
           .py-2xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-2xl-smash {
@@ -8287,7 +8287,7 @@ $utilities: ();
           }
 
           .pt-2xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-2xl-smash {
@@ -8335,7 +8335,7 @@ $utilities: ();
           }
 
           .pe-2xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-2xl-smash {
@@ -8383,7 +8383,7 @@ $utilities: ();
           }
 
           .pb-2xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-2xl-smash {
@@ -8431,7 +8431,7 @@ $utilities: ();
           }
 
           .ps-2xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-2xl-smash {
@@ -8479,7 +8479,7 @@ $utilities: ();
           }
 
           .gap-2xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-2xl-smash {
@@ -8527,7 +8527,7 @@ $utilities: ();
           }
 
           .row-gap-2xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-2xl-smash {
@@ -8575,7 +8575,7 @@ $utilities: ();
           }
 
           .column-gap-2xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-2xl-smash {
@@ -8637,7 +8637,7 @@ $utilities: ();
 
         @media (min-width: 1880px) {
           .m-3xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-3xl-smash {
@@ -8689,8 +8689,8 @@ $utilities: ();
           }
 
           .mx-3xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-3xl-smash {
@@ -8754,8 +8754,8 @@ $utilities: ();
           }
 
           .my-3xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-3xl-smash {
@@ -8819,7 +8819,7 @@ $utilities: ();
           }
 
           .mt-3xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-3xl-smash {
@@ -8871,7 +8871,7 @@ $utilities: ();
           }
 
           .me-3xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-3xl-smash {
@@ -8923,7 +8923,7 @@ $utilities: ();
           }
 
           .mb-3xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-3xl-smash {
@@ -8975,7 +8975,7 @@ $utilities: ();
           }
 
           .ms-3xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-3xl-smash {
@@ -9027,7 +9027,7 @@ $utilities: ();
           }
 
           .p-3xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-3xl-smash {
@@ -9075,8 +9075,8 @@ $utilities: ();
           }
 
           .px-3xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-3xl-smash {
@@ -9135,8 +9135,8 @@ $utilities: ();
           }
 
           .py-3xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-3xl-smash {
@@ -9195,7 +9195,7 @@ $utilities: ();
           }
 
           .pt-3xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-3xl-smash {
@@ -9243,7 +9243,7 @@ $utilities: ();
           }
 
           .pe-3xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-3xl-smash {
@@ -9291,7 +9291,7 @@ $utilities: ();
           }
 
           .pb-3xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-3xl-smash {
@@ -9339,7 +9339,7 @@ $utilities: ();
           }
 
           .ps-3xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-3xl-smash {
@@ -9387,7 +9387,7 @@ $utilities: ();
           }
 
           .gap-3xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-3xl-smash {
@@ -9435,7 +9435,7 @@ $utilities: ();
           }
 
           .row-gap-3xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-3xl-smash {
@@ -9483,7 +9483,7 @@ $utilities: ();
           }
 
           .column-gap-3xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-3xl-smash {
@@ -9654,7 +9654,7 @@ $utilities: ();
             property: border-top,
             values: (
               null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
-              "none": $ouds-border-width-none,
+              "none": 0,
             ),
           ),
           "border-end-ouds": (
@@ -10708,11 +10708,11 @@ $utilities: ();
         }
 
         .rounded {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-none {
-          border-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-short {
@@ -10736,13 +10736,13 @@ $utilities: ();
         }
 
         .rounded-top {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-none {
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-top-short {
@@ -10771,13 +10771,13 @@ $utilities: ();
         }
 
         .rounded-end {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-none {
-          border-top-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-end-short {
@@ -10806,13 +10806,13 @@ $utilities: ();
         }
 
         .rounded-bottom {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-none {
-          border-bottom-right-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
+          border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
         .rounded-bottom-short {
@@ -10841,13 +10841,13 @@ $utilities: ();
         }
 
         .rounded-start {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-none {
-          border-bottom-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list
-          border-top-left-radius: 0 !important; // stylelint-disable-line property-disallowed-list, order/properties-order
+          border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
+          border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
         .rounded-start-short {
@@ -11308,7 +11308,7 @@ $utilities: ();
         }
 
         .m-none {
-          margin: 0 !important;
+          margin: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .m-smash {
@@ -11400,8 +11400,8 @@ $utilities: ();
         }
 
         .mx-none {
-          margin-right: 0 !important;
-          margin-left: 0 !important;
+          margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+          margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mx-smash {
@@ -11515,8 +11515,8 @@ $utilities: ();
         }
 
         .my-none {
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
+          margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+          margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .my-smash {
@@ -11630,7 +11630,7 @@ $utilities: ();
         }
 
         .mt-none {
-          margin-top: 0 !important;
+          margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mt-smash {
@@ -11722,7 +11722,7 @@ $utilities: ();
         }
 
         .me-none {
-          margin-right: 0 !important;
+          margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .me-smash {
@@ -11814,7 +11814,7 @@ $utilities: ();
         }
 
         .mb-none {
-          margin-bottom: 0 !important;
+          margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .mb-smash {
@@ -11906,7 +11906,7 @@ $utilities: ();
         }
 
         .ms-none {
-          margin-left: 0 !important;
+          margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .ms-smash {
@@ -12268,7 +12268,7 @@ $utilities: ();
         }
 
         .p-none {
-          padding: 0 !important;
+          padding: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .p-smash {
@@ -12356,8 +12356,8 @@ $utilities: ();
         }
 
         .px-none {
-          padding-right: 0 !important;
-          padding-left: 0 !important;
+          padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+          padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .px-smash {
@@ -12466,8 +12466,8 @@ $utilities: ();
         }
 
         .py-none {
-          padding-top: 0 !important;
-          padding-bottom: 0 !important;
+          padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+          padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .py-smash {
@@ -12576,7 +12576,7 @@ $utilities: ();
         }
 
         .pt-none {
-          padding-top: 0 !important;
+          padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pt-smash {
@@ -12664,7 +12664,7 @@ $utilities: ();
         }
 
         .pe-none {
-          padding-right: 0 !important;
+          padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pe-smash {
@@ -12752,7 +12752,7 @@ $utilities: ();
         }
 
         .pb-none {
-          padding-bottom: 0 !important;
+          padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .pb-smash {
@@ -12840,7 +12840,7 @@ $utilities: ();
         }
 
         .ps-none {
-          padding-left: 0 !important;
+          padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .ps-smash {
@@ -12928,7 +12928,7 @@ $utilities: ();
         }
 
         .gap-none {
-          gap: 0 !important;
+          gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .gap-smash {
@@ -13016,7 +13016,7 @@ $utilities: ();
         }
 
         .row-gap-none {
-          row-gap: 0 !important;
+          row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .row-gap-smash {
@@ -13104,7 +13104,7 @@ $utilities: ();
         }
 
         .column-gap-none {
-          column-gap: 0 !important;
+          column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
         .column-gap-smash {
@@ -13879,7 +13879,7 @@ $utilities: ();
           }
 
           .m-xs-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-xs-smash {
@@ -13931,8 +13931,8 @@ $utilities: ();
           }
 
           .mx-xs-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-xs-smash {
@@ -13996,8 +13996,8 @@ $utilities: ();
           }
 
           .my-xs-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-xs-smash {
@@ -14061,7 +14061,7 @@ $utilities: ();
           }
 
           .mt-xs-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-xs-smash {
@@ -14113,7 +14113,7 @@ $utilities: ();
           }
 
           .me-xs-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-xs-smash {
@@ -14165,7 +14165,7 @@ $utilities: ();
           }
 
           .mb-xs-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-xs-smash {
@@ -14217,7 +14217,7 @@ $utilities: ();
           }
 
           .ms-xs-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-xs-smash {
@@ -14269,7 +14269,7 @@ $utilities: ();
           }
 
           .p-xs-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-xs-smash {
@@ -14317,8 +14317,8 @@ $utilities: ();
           }
 
           .px-xs-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-xs-smash {
@@ -14377,8 +14377,8 @@ $utilities: ();
           }
 
           .py-xs-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-xs-smash {
@@ -14437,7 +14437,7 @@ $utilities: ();
           }
 
           .pt-xs-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-xs-smash {
@@ -14485,7 +14485,7 @@ $utilities: ();
           }
 
           .pe-xs-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-xs-smash {
@@ -14533,7 +14533,7 @@ $utilities: ();
           }
 
           .pb-xs-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-xs-smash {
@@ -14581,7 +14581,7 @@ $utilities: ();
           }
 
           .ps-xs-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-xs-smash {
@@ -14629,7 +14629,7 @@ $utilities: ();
           }
 
           .gap-xs-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-xs-smash {
@@ -14677,7 +14677,7 @@ $utilities: ();
           }
 
           .row-gap-xs-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-xs-smash {
@@ -14725,7 +14725,7 @@ $utilities: ();
           }
 
           .column-gap-xs-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-xs-smash {
@@ -15219,7 +15219,7 @@ $utilities: ();
           }
 
           .m-sm-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-sm-smash {
@@ -15271,8 +15271,8 @@ $utilities: ();
           }
 
           .mx-sm-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-sm-smash {
@@ -15336,8 +15336,8 @@ $utilities: ();
           }
 
           .my-sm-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-sm-smash {
@@ -15401,7 +15401,7 @@ $utilities: ();
           }
 
           .mt-sm-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-sm-smash {
@@ -15453,7 +15453,7 @@ $utilities: ();
           }
 
           .me-sm-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-sm-smash {
@@ -15505,7 +15505,7 @@ $utilities: ();
           }
 
           .mb-sm-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-sm-smash {
@@ -15557,7 +15557,7 @@ $utilities: ();
           }
 
           .ms-sm-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-sm-smash {
@@ -15609,7 +15609,7 @@ $utilities: ();
           }
 
           .p-sm-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-sm-smash {
@@ -15657,8 +15657,8 @@ $utilities: ();
           }
 
           .px-sm-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-sm-smash {
@@ -15717,8 +15717,8 @@ $utilities: ();
           }
 
           .py-sm-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-sm-smash {
@@ -15777,7 +15777,7 @@ $utilities: ();
           }
 
           .pt-sm-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-sm-smash {
@@ -15825,7 +15825,7 @@ $utilities: ();
           }
 
           .pe-sm-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-sm-smash {
@@ -15873,7 +15873,7 @@ $utilities: ();
           }
 
           .pb-sm-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-sm-smash {
@@ -15921,7 +15921,7 @@ $utilities: ();
           }
 
           .ps-sm-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-sm-smash {
@@ -15969,7 +15969,7 @@ $utilities: ();
           }
 
           .gap-sm-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-sm-smash {
@@ -16017,7 +16017,7 @@ $utilities: ();
           }
 
           .row-gap-sm-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-sm-smash {
@@ -16065,7 +16065,7 @@ $utilities: ();
           }
 
           .column-gap-sm-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-sm-smash {
@@ -16559,7 +16559,7 @@ $utilities: ();
           }
 
           .m-md-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-md-smash {
@@ -16611,8 +16611,8 @@ $utilities: ();
           }
 
           .mx-md-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-md-smash {
@@ -16676,8 +16676,8 @@ $utilities: ();
           }
 
           .my-md-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-md-smash {
@@ -16741,7 +16741,7 @@ $utilities: ();
           }
 
           .mt-md-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-md-smash {
@@ -16793,7 +16793,7 @@ $utilities: ();
           }
 
           .me-md-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-md-smash {
@@ -16845,7 +16845,7 @@ $utilities: ();
           }
 
           .mb-md-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-md-smash {
@@ -16897,7 +16897,7 @@ $utilities: ();
           }
 
           .ms-md-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-md-smash {
@@ -16949,7 +16949,7 @@ $utilities: ();
           }
 
           .p-md-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-md-smash {
@@ -16997,8 +16997,8 @@ $utilities: ();
           }
 
           .px-md-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-md-smash {
@@ -17057,8 +17057,8 @@ $utilities: ();
           }
 
           .py-md-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-md-smash {
@@ -17117,7 +17117,7 @@ $utilities: ();
           }
 
           .pt-md-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-md-smash {
@@ -17165,7 +17165,7 @@ $utilities: ();
           }
 
           .pe-md-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-md-smash {
@@ -17213,7 +17213,7 @@ $utilities: ();
           }
 
           .pb-md-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-md-smash {
@@ -17261,7 +17261,7 @@ $utilities: ();
           }
 
           .ps-md-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-md-smash {
@@ -17309,7 +17309,7 @@ $utilities: ();
           }
 
           .gap-md-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-md-smash {
@@ -17357,7 +17357,7 @@ $utilities: ();
           }
 
           .row-gap-md-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-md-smash {
@@ -17405,7 +17405,7 @@ $utilities: ();
           }
 
           .column-gap-md-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-md-smash {
@@ -17899,7 +17899,7 @@ $utilities: ();
           }
 
           .m-lg-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-lg-smash {
@@ -17951,8 +17951,8 @@ $utilities: ();
           }
 
           .mx-lg-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-lg-smash {
@@ -18016,8 +18016,8 @@ $utilities: ();
           }
 
           .my-lg-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-lg-smash {
@@ -18081,7 +18081,7 @@ $utilities: ();
           }
 
           .mt-lg-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-lg-smash {
@@ -18133,7 +18133,7 @@ $utilities: ();
           }
 
           .me-lg-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-lg-smash {
@@ -18185,7 +18185,7 @@ $utilities: ();
           }
 
           .mb-lg-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-lg-smash {
@@ -18237,7 +18237,7 @@ $utilities: ();
           }
 
           .ms-lg-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-lg-smash {
@@ -18289,7 +18289,7 @@ $utilities: ();
           }
 
           .p-lg-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-lg-smash {
@@ -18337,8 +18337,8 @@ $utilities: ();
           }
 
           .px-lg-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-lg-smash {
@@ -18397,8 +18397,8 @@ $utilities: ();
           }
 
           .py-lg-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-lg-smash {
@@ -18457,7 +18457,7 @@ $utilities: ();
           }
 
           .pt-lg-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-lg-smash {
@@ -18505,7 +18505,7 @@ $utilities: ();
           }
 
           .pe-lg-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-lg-smash {
@@ -18553,7 +18553,7 @@ $utilities: ();
           }
 
           .pb-lg-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-lg-smash {
@@ -18601,7 +18601,7 @@ $utilities: ();
           }
 
           .ps-lg-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-lg-smash {
@@ -18649,7 +18649,7 @@ $utilities: ();
           }
 
           .gap-lg-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-lg-smash {
@@ -18697,7 +18697,7 @@ $utilities: ();
           }
 
           .row-gap-lg-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-lg-smash {
@@ -18745,7 +18745,7 @@ $utilities: ();
           }
 
           .column-gap-lg-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-lg-smash {
@@ -19239,7 +19239,7 @@ $utilities: ();
           }
 
           .m-xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-xl-smash {
@@ -19291,8 +19291,8 @@ $utilities: ();
           }
 
           .mx-xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-xl-smash {
@@ -19356,8 +19356,8 @@ $utilities: ();
           }
 
           .my-xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-xl-smash {
@@ -19421,7 +19421,7 @@ $utilities: ();
           }
 
           .mt-xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-xl-smash {
@@ -19473,7 +19473,7 @@ $utilities: ();
           }
 
           .me-xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-xl-smash {
@@ -19525,7 +19525,7 @@ $utilities: ();
           }
 
           .mb-xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-xl-smash {
@@ -19577,7 +19577,7 @@ $utilities: ();
           }
 
           .ms-xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-xl-smash {
@@ -19629,7 +19629,7 @@ $utilities: ();
           }
 
           .p-xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-xl-smash {
@@ -19677,8 +19677,8 @@ $utilities: ();
           }
 
           .px-xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-xl-smash {
@@ -19737,8 +19737,8 @@ $utilities: ();
           }
 
           .py-xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-xl-smash {
@@ -19797,7 +19797,7 @@ $utilities: ();
           }
 
           .pt-xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-xl-smash {
@@ -19845,7 +19845,7 @@ $utilities: ();
           }
 
           .pe-xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-xl-smash {
@@ -19893,7 +19893,7 @@ $utilities: ();
           }
 
           .pb-xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-xl-smash {
@@ -19941,7 +19941,7 @@ $utilities: ();
           }
 
           .ps-xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-xl-smash {
@@ -19989,7 +19989,7 @@ $utilities: ();
           }
 
           .gap-xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-xl-smash {
@@ -20037,7 +20037,7 @@ $utilities: ();
           }
 
           .row-gap-xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-xl-smash {
@@ -20085,7 +20085,7 @@ $utilities: ();
           }
 
           .column-gap-xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-xl-smash {
@@ -20579,7 +20579,7 @@ $utilities: ();
           }
 
           .m-xxl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-xxl-smash {
@@ -20631,8 +20631,8 @@ $utilities: ();
           }
 
           .mx-xxl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-xxl-smash {
@@ -20696,8 +20696,8 @@ $utilities: ();
           }
 
           .my-xxl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-xxl-smash {
@@ -20761,7 +20761,7 @@ $utilities: ();
           }
 
           .mt-xxl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-xxl-smash {
@@ -20813,7 +20813,7 @@ $utilities: ();
           }
 
           .me-xxl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-xxl-smash {
@@ -20865,7 +20865,7 @@ $utilities: ();
           }
 
           .mb-xxl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-xxl-smash {
@@ -20917,7 +20917,7 @@ $utilities: ();
           }
 
           .ms-xxl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-xxl-smash {
@@ -20969,7 +20969,7 @@ $utilities: ();
           }
 
           .p-xxl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-xxl-smash {
@@ -21017,8 +21017,8 @@ $utilities: ();
           }
 
           .px-xxl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-xxl-smash {
@@ -21077,8 +21077,8 @@ $utilities: ();
           }
 
           .py-xxl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-xxl-smash {
@@ -21137,7 +21137,7 @@ $utilities: ();
           }
 
           .pt-xxl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-xxl-smash {
@@ -21185,7 +21185,7 @@ $utilities: ();
           }
 
           .pe-xxl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-xxl-smash {
@@ -21233,7 +21233,7 @@ $utilities: ();
           }
 
           .pb-xxl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-xxl-smash {
@@ -21281,7 +21281,7 @@ $utilities: ();
           }
 
           .ps-xxl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-xxl-smash {
@@ -21329,7 +21329,7 @@ $utilities: ();
           }
 
           .gap-xxl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-xxl-smash {
@@ -21377,7 +21377,7 @@ $utilities: ();
           }
 
           .row-gap-xxl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-xxl-smash {
@@ -21425,7 +21425,7 @@ $utilities: ();
           }
 
           .column-gap-xxl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-xxl-smash {
@@ -21919,7 +21919,7 @@ $utilities: ();
           }
 
           .m-2xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-2xl-smash {
@@ -21971,8 +21971,8 @@ $utilities: ();
           }
 
           .mx-2xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-2xl-smash {
@@ -22036,8 +22036,8 @@ $utilities: ();
           }
 
           .my-2xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-2xl-smash {
@@ -22101,7 +22101,7 @@ $utilities: ();
           }
 
           .mt-2xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-2xl-smash {
@@ -22153,7 +22153,7 @@ $utilities: ();
           }
 
           .me-2xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-2xl-smash {
@@ -22205,7 +22205,7 @@ $utilities: ();
           }
 
           .mb-2xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-2xl-smash {
@@ -22257,7 +22257,7 @@ $utilities: ();
           }
 
           .ms-2xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-2xl-smash {
@@ -22309,7 +22309,7 @@ $utilities: ();
           }
 
           .p-2xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-2xl-smash {
@@ -22357,8 +22357,8 @@ $utilities: ();
           }
 
           .px-2xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-2xl-smash {
@@ -22417,8 +22417,8 @@ $utilities: ();
           }
 
           .py-2xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-2xl-smash {
@@ -22477,7 +22477,7 @@ $utilities: ();
           }
 
           .pt-2xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-2xl-smash {
@@ -22525,7 +22525,7 @@ $utilities: ();
           }
 
           .pe-2xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-2xl-smash {
@@ -22573,7 +22573,7 @@ $utilities: ();
           }
 
           .pb-2xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-2xl-smash {
@@ -22621,7 +22621,7 @@ $utilities: ();
           }
 
           .ps-2xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-2xl-smash {
@@ -22669,7 +22669,7 @@ $utilities: ();
           }
 
           .gap-2xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-2xl-smash {
@@ -22717,7 +22717,7 @@ $utilities: ();
           }
 
           .row-gap-2xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-2xl-smash {
@@ -22765,7 +22765,7 @@ $utilities: ();
           }
 
           .column-gap-2xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-2xl-smash {
@@ -23259,7 +23259,7 @@ $utilities: ();
           }
 
           .m-3xl-none {
-            margin: 0 !important;
+            margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .m-3xl-smash {
@@ -23311,8 +23311,8 @@ $utilities: ();
           }
 
           .mx-3xl-none {
-            margin-right: 0 !important;
-            margin-left: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mx-3xl-smash {
@@ -23376,8 +23376,8 @@ $utilities: ();
           }
 
           .my-3xl-none {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .my-3xl-smash {
@@ -23441,7 +23441,7 @@ $utilities: ();
           }
 
           .mt-3xl-none {
-            margin-top: 0 !important;
+            margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mt-3xl-smash {
@@ -23493,7 +23493,7 @@ $utilities: ();
           }
 
           .me-3xl-none {
-            margin-right: 0 !important;
+            margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .me-3xl-smash {
@@ -23545,7 +23545,7 @@ $utilities: ();
           }
 
           .mb-3xl-none {
-            margin-bottom: 0 !important;
+            margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .mb-3xl-smash {
@@ -23597,7 +23597,7 @@ $utilities: ();
           }
 
           .ms-3xl-none {
-            margin-left: 0 !important;
+            margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ms-3xl-smash {
@@ -23649,7 +23649,7 @@ $utilities: ();
           }
 
           .p-3xl-none {
-            padding: 0 !important;
+            padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .p-3xl-smash {
@@ -23697,8 +23697,8 @@ $utilities: ();
           }
 
           .px-3xl-none {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .px-3xl-smash {
@@ -23757,8 +23757,8 @@ $utilities: ();
           }
 
           .py-3xl-none {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .py-3xl-smash {
@@ -23817,7 +23817,7 @@ $utilities: ();
           }
 
           .pt-3xl-none {
-            padding-top: 0 !important;
+            padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pt-3xl-smash {
@@ -23865,7 +23865,7 @@ $utilities: ();
           }
 
           .pe-3xl-none {
-            padding-right: 0 !important;
+            padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pe-3xl-smash {
@@ -23913,7 +23913,7 @@ $utilities: ();
           }
 
           .pb-3xl-none {
-            padding-bottom: 0 !important;
+            padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .pb-3xl-smash {
@@ -23961,7 +23961,7 @@ $utilities: ();
           }
 
           .ps-3xl-none {
-            padding-left: 0 !important;
+            padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .ps-3xl-smash {
@@ -24009,7 +24009,7 @@ $utilities: ();
           }
 
           .gap-3xl-none {
-            gap: 0 !important;
+            gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .gap-3xl-smash {
@@ -24057,7 +24057,7 @@ $utilities: ();
           }
 
           .row-gap-3xl-none {
-            row-gap: 0 !important;
+            row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .row-gap-3xl-smash {
@@ -24105,7 +24105,7 @@ $utilities: ();
           }
 
           .column-gap-3xl-none {
-            column-gap: 0 !important;
+            column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
           .column-gap-3xl-smash {
