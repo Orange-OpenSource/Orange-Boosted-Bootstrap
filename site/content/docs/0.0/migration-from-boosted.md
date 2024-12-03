@@ -993,27 +993,27 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>--bs-font-max-width-body-large</code></li>
       <li><code>--bs-font-max-width-body-medium</code></li>
       <li><code>--bs-font-max-width-body-small</code></li>
-      <li><code>--bs-icon-short-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-medium-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-tall-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-short-with-heading-large</code></li>
-      <li><code>--bs-icon-medium-with-heading-large</code></li>
-      <li><code>--bs-icon-tall-with-heading-large</code></li>
-      <li><code>--bs-icon-short-with-heading-medium</code></li>
-      <li><code>--bs-icon-medium-with-heading-medium</code></li>
-      <li><code>--bs-icon-tall-with-heading-medium</code></li>
-      <li><code>--bs-icon-short-with-heading-small</code></li>
-      <li><code>--bs-icon-medium-with-heading-small</code></li>
-      <li><code>--bs-icon-tall-with-heading-small</code></li>
-      <li><code>--bs-icon-short-with-body-large</code></li>
-      <li><code>--bs-icon-medium-with-body-large</code></li>
-      <li><code>--bs-icon-tall-with-body-large</code></li>
-      <li><code>--bs-icon-short-with-body-medium</code></li>
-      <li><code>--bs-icon-medium-with-body-medium</code></li>
-      <li><code>--bs-icon-tall-with-body-medium</code></li>
-      <li><code>--bs-icon-short-with-body-small</code></li>
-      <li><code>--bs-icon-medium-with-body-small</code></li>
-      <li><code>--bs-icon-tall-with-body-small</code></li>
+      <li><code>--bs-icon-lg-with-body-large</code></li>
+      <li><code>--bs-icon-lg-with-body-medium</code></li>
+      <li><code>--bs-icon-lg-with-body-small</code></li>
+      <li><code>--bs-icon-lg-with-heading-large</code></li>
+      <li><code>--bs-icon-lg-with-heading-medium</code></li>
+      <li><code>--bs-icon-lg-with-heading-small</code></li>
+      <li><code>--bs-icon-lg-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-md-with-body-large</code></li>
+      <li><code>--bs-icon-md-with-body-medium</code></li>
+      <li><code>--bs-icon-md-with-body-small</code></li>
+      <li><code>--bs-icon-md-with-heading-large</code></li>
+      <li><code>--bs-icon-md-with-heading-medium</code></li>
+      <li><code>--bs-icon-md-with-heading-small</code></li>
+      <li><code>--bs-icon-md-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-sm-with-body-large</code></li>
+      <li><code>--bs-icon-sm-with-body-medium</code></li>
+      <li><code>--bs-icon-sm-with-body-small</code></li>
+      <li><code>--bs-icon-sm-with-heading-large</code></li>
+      <li><code>--bs-icon-sm-with-heading-medium</code></li>
+      <li><code>--bs-icon-sm-with-heading-small</code></li>
+      <li><code>--bs-icon-sm-with-heading-xlarge</code></li>
       <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
       <li><code>--bs-space-scaled-short</code></li>
