@@ -20,37 +20,37 @@
   }
 }
 
-.decorative-shortest-icon {
+.decorative-2xs-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-shortest if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-2xs if($enable-important-utilities, !important, null);
 }
 
-.decorative-shorter-icon {
+.decorative-xs-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-shorter if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-xs if($enable-important-utilities, !important, null);
 }
 
-.decorative-short-icon {
+.decorative-sm-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-short if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-sm if($enable-important-utilities, !important, null);
 }
 
-.decorative-medium-icon {
+.decorative-md-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-medium if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-md if($enable-important-utilities, !important, null);
 }
 
-.decorative-tall-icon {
+.decorative-lg-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-tall if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-lg if($enable-important-utilities, !important, null);
 }
 
-.decorative-taller-icon {
+.decorative-xl-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-taller if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-xl if($enable-important-utilities, !important, null);
 }
 
-.decorative-tallest-icon {
+.decorative-2xl-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-tallest if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-2xl if($enable-important-utilities, !important, null);
 }
