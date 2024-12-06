@@ -1058,11 +1058,12 @@ $utilities: map-merge(
       values: map-merge(
         $utilities-bg-colors,
         (
-          "transparent": transparent,
+          // OUDS mod: no "transparent"
           "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
           "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
         )
-      )
+      ),
+      bootstrap-compatibility: true,
     ),
     "bg-opacity": (
       css-var: true,
@@ -1073,14 +1074,23 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true,
     ),
     "subtle-background-color": (
       property: background-color,
       class: bg,
-      values: $utilities-bg-subtle
+      values: $utilities-bg-subtle,
+      bootstrap-compatibility: true,
     ),
     // scss-docs-end utils-bg-color
+    // scss-docs-start utils-bg-color-ouds
+    "background-color-ouds": (
+      property: background-color,
+      class: bg,
+      values: $ouds-backgrounds,
+    ),
+    // scss-docs-end utils-bg-color-ouds
     "gradient": (
       property: background-image,
       class: bg,

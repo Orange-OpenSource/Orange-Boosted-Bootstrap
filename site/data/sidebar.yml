@@ -194,7 +194,6 @@
   pages:
     - title: API
     - title: Background
-      draft: true
     - title: Borders
     - title: Colors
       draft: true
