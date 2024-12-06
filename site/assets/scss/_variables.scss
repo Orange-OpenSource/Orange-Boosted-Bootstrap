@@ -27,7 +27,7 @@ $bd-callout-variants: info, warning, danger !default;
   // OUDS mod: no --bd-sidebar-link-bg
   // OUDS mod: no --bd-callout-link
   // OUDS mod: no --bd-callout-code-color
-  --bd-pre-bg: var(--bs-tertiary-bg);
+  --bd-pre-bg: var(--#{$prefix}color-bg-secondary);
 }
 
 @include color-mode(dark, true) {
@@ -39,7 +39,7 @@ $bd-callout-variants: info, warning, danger !default;
   // OUDS mod: no --bd-sidebar-link-bg
   // OUDS mod: no --bd-callout-link
   // OUDS mod: no --bd-callout-code-color
-  --bd-pre-bg: var(--bs-tertiary-bg); // OUDS mod: instead of `#{adjust-color($gray-900, $lightness: -2.5%)}`
+  --bd-pre-bg: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `#{adjust-color($gray-900, $lightness: -2.5%)}`
 }
 
 // OUDS mod

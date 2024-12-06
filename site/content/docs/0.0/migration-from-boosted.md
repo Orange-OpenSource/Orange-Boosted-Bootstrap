@@ -103,6 +103,22 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Utilities
 
+### Background
+
+<!-- TODO LM: Be careful of the order -->
+- .bg-transparent stays the same
+- .bg-white -> .bg-always-white
+- .bg-info -> .bg-status-info-emphasized or .bg-status-info-muted ?
+- .bg-info-subtle -> .bg-status-info-muted
+- .bg-success -> .bg-status-positive-emphasized or .bg-status-positive-muted ?
+- .bg-secondary -> .bg-emphasized
+- .bg-body -> .bg-primary Conflict with $enable-bootstrap-compatibility
+- .bg-primary -> .bg-brand-primary
+- .bg-body-secondary -> .bg-secondary
+- .bg-body-tertiary -> .bg-secondary Conflict with $enable-bootstrap-compatibility
+- .bg-light -> .bg-secondary
+- .bg-dark -> .bg-emphasized
+
 ### Border
 
 - <span class="badge text-bg-danger">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]({{< docsref "/utilities/borders#border" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
