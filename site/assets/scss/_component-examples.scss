@@ -476,11 +476,11 @@
   --bs-border-color: var(--bs-color-border-emphasized);
 }
 
-.color-copy:hover svg {
+.color-copy:hover > svg {
   transform: scale(1.07);
 }
 
-.color-copy svg {
+.color-copy > svg {
   transition: transform .15s ease-in-out; // stylelint-disable-line property-disallowed-list
 }
 

@@ -10,11 +10,11 @@
 $white:    $ouds-color-functional-white !default; // OUDS mod: instead of `#fff`
 $gray-100: $ouds-color-functional-light-gray-80 !default; // OUDS mod: instead of `#f8f9fa`
 $gray-200: $ouds-color-functional-light-gray-160 !default; // OUDS mod: instead of `#e9ecef`
-$gray-300: $ouds-color-functional-light-gray-400 !default; // OUDS mod: instead of `#dee2e6`
+$gray-300: $ouds-color-functional-light-gray-560 !default; // OUDS mod: instead of `#dee2e6`
 $gray-400: $ouds-color-functional-light-gray-560 !default; // OUDS mod: instead of `#ced4da`
-$gray-500: $ouds-color-functional-light-gray-880 !default; // OUDS mod: instead of `#adb5bd`
-$gray-600: $ouds-color-functional-dark-gray-240 !default; // OUDS mod: instead of `#6c757d`
-$gray-700: $ouds-color-functional-dark-gray-640 !default; // OUDS mod: instead of `#495057`
+$gray-500: $ouds-color-functional-dark-gray-400 !default; // OUDS mod: instead of `#adb5bd`
+$gray-600: $ouds-color-functional-dark-gray-640 !default; // OUDS mod: instead of `#6c757d`
+$gray-700: $ouds-color-functional-dark-gray-720 !default; // OUDS mod: instead of `#495057`
 $gray-800: $ouds-color-functional-dark-gray-800 !default; // OUDS mod: instead of `#343a40`
 $gray-900: $ouds-color-functional-dark-gray-880 !default; // OUDS mod: instead of `#212529`
 $black:    $ouds-color-functional-black !default; // OUDS mod: instead of `#000`
@@ -612,7 +612,7 @@ $border-widths: (
   5: $ouds-border-width-thicker * 1.25 // OUDS mod: instead of `$border-width * 2.5`
 ) !default;
 $border-style:                $ouds-border-style-default !default; // OUDS mod: instead of `solid`
-$border-color:                $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-300`
+$border-color:                $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-300` // TODO LM: Decide whether to use default in here or in translucent
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 

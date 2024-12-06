@@ -66,7 +66,7 @@
         hex: "#ff7900"
       - name: Orange 550
         variable: $ouds-color-orange-550
-        hex: "#f16e00"
+        hex: "#f15e00"
   - subcategory: Warm gray
     name: "warm-gray"
     colors:
@@ -91,27 +91,15 @@
       - name: Functional light gray 160
         variable: $ouds-color-functional-light-gray-160
         hex: "#eee"
-      - name: Functional light gray 400
-        variable: $ouds-color-functional-light-gray-400
-        hex: "#ccc"
       - name: Functional light gray 560
         variable: $ouds-color-functional-light-gray-560
         hex: "#ccc"
   - subcategory: Dark gray
     name: "dark-gray"
     colors:
-      - name: Functional dark gray 160
-        variable: $ouds-color-functional-dark-gray-160
-        hex: "#707070"
       - name: Functional dark gray 400
         variable: $ouds-color-functional-dark-gray-400
         hex: "#555"
-      - name: Functional dark gray 480
-        variable: $ouds-color-functional-dark-gray-480
-        hex: "#444"
-      - name: Functional dark gray 560
-        variable: $ouds-color-functional-dark-gray-560
-        hex: "#3d3d3d"
       - name: Functional dark gray 640
         variable: $ouds-color-functional-dark-gray-640
         hex: "#333"
@@ -133,9 +121,9 @@
   - subcategory: Functional malachite
     name: "functional-malachite"
     colors:
-      - name: Functional malachite 100
-        variable: $ouds-color-functional-malachite-100
-        hex: "#edfcf0"
+      - name: Functional malachite 300
+        variable: $ouds-color-functional-malachite-300
+        hex: "#94f0a4"
       - name: Functional malachite 500
         variable: $ouds-color-functional-malachite-500
         hex: "#3de35a"
@@ -148,6 +136,12 @@
       - name: Functional scarlet 100
         variable: $ouds-color-functional-scarlet-100
         hex: "#ffe5e6"
+      - name: Functional scarlet 200
+        variable: $ouds-color-functional-scarlet-200
+        hex: "#ffb2b3"
+      - name: Functional scarlet 300
+        variable: $ouds-color-functional-scarlet-300
+        hex: "#ff8081"
       - name: Functional scarlet 600
         variable: $ouds-color-functional-scarlet-600
         hex: "#ea0305"
@@ -163,9 +157,9 @@
   - subcategory: Functional dodger
     name: "functional-dodger"
     colors:
-      - name: Functional dodger 100
-        variable: $ouds-color-functional-dodger-100
-        hex: "#f0faff"
+      - name: Functional dodger 300
+        variable: $ouds-color-functional-dodger-300
+        hex: "#8ad5ff"
       - name: Functional dodger 500
         variable: $ouds-color-functional-dodger-500
         hex: "#26b2ff"
@@ -175,18 +169,15 @@
   - subcategory: Functional sun
     name: "functional-sun"
     colors:
-      - name: Functional sun 100
-        variable: $ouds-color-functional-sun-100
-        hex: "#fff7d6"
       - name: Functional sun 200
         variable: $ouds-color-functional-sun-200
         hex: "#ffed99"
+      - name: Functional sun 300
+        variable: $ouds-color-functional-sun-300
+        hex: "#ffe270"
       - name: Functional sun 500
         variable: $ouds-color-functional-sun-500
         hex: "#ffd000"
-      - name: Functional sun 600
-        variable: $ouds-color-functional-sun-600
-        hex: "#d6aa00"
       - name: Functional sun 900
         variable: $ouds-color-functional-sun-900
         hex: "#3d3100"
@@ -277,18 +268,72 @@
       - name: Decorative amethyst 800
         variable: $ouds-color-decorative-amethyst-800
         hex: "#2c174a"
-  - category: Transparent black
-    name: "transparent-black"
+  - category: Opacity white
+    name: "opacity-white"
     colors:
-      - name: Transparent black 0
-        variable: $ouds-color-transparent-black-0
+      - name: Opacity white 0
+        variable: $ouds-color-opacity-white-0
+        hex: "rgba(255, 255, 255, 0)"
+      - name: Opacity white 40
+        variable: $ouds-color-opacity-white-40
+        hex: "rgba(255, 255, 255, .04)"
+      - name: Opacity white 80
+        variable: $ouds-color-opacity-white-80
+        hex: "rgba(255, 255, 255, .08)"
+      - name: Opacity white 200
+        variable: $ouds-color-opacity-white-200
+        hex: "rgba(255, 255, 255, .2)"
+      - name: Opacity white 640
+        variable: $ouds-color-opacity-white-640
+        hex: "rgba(255, 255, 255, .64)"
+      - name: Opacity white 800
+        variable: $ouds-color-opacity-white-800
+        hex: "rgba(255, 255, 255, .8)"
+      - name: Opacity white 920
+        variable: $ouds-color-opacity-white-920
+        hex: "rgba(255, 255, 255, .92)"
+  - category: Opacity black
+    name: "opacity-black"
+    colors:
+      - name: Opacity black 0
+        variable: $ouds-color-opacity-black-0
         hex: "rgba(0, 0, 0, 0)"
-      - name: Transparent black 300
-        variable: $ouds-color-transparent-black-300
+      - name: Opacity black 40
+        variable: $ouds-color-opacity-black-40
+        hex: "rgba(0, 0, 0, .04)"
+      - name: Opacity black 80
+        variable: $ouds-color-opacity-black-80
+        hex: "rgba(0, 0, 0, .08)"
+      - name: Opacity black 160
+        variable: $ouds-color-opacity-black-160
         hex: "rgba(0, 0, 0, .16)"
-      - name: Transparent black 400
-        variable: $ouds-color-transparent-black-400
+      - name: Opacity black 200
+        variable: $ouds-color-opacity-black-200
+        hex: "rgba(0, 0, 0, .2)"
+      - name: Opacity black 240
+        variable: $ouds-color-opacity-black-240
         hex: "rgba(0, 0, 0, .24)"
-      - name: Transparent black 500
-        variable: $ouds-color-transparent-black-500
+      - name: Opacity black 320
+        variable: $ouds-color-opacity-black-320
         hex: "rgba(0, 0, 0, .32)"
+      - name: Opacity black 680
+        variable: $ouds-color-opacity-black-680
+        hex: "rgba(0, 0, 0, .68)"
+      - name: Opacity black 840
+        variable: $ouds-color-opacity-black-840
+        hex: "rgba(0, 0, 0, .84)"
+  - category: Opacity colored
+    name: "opacity"
+    colors:
+      - name: Opacity malachite
+        variable: $ouds-color-opacity-malachite
+        hex: "rgba(61, 227, 90, .12)"
+      - name: Opacity scarlet
+        variable: $ouds-color-opacity-scarlet
+        hex: "rgba(234, 3, 5, .08)"
+      - name: Opacity dodger blue
+        variable: $ouds-color-opacity-dodger-blue
+        hex: "rgba(38, 178, 255, .08)"
+      - name: Opacity sun
+        variable: $ouds-color-opacity-sun
+        hex: "rgba(255, 208, 0, .16)"

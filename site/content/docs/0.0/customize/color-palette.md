@@ -22,7 +22,19 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
       <figure class="mb-none" aria-label="{{ $color.name }}">
         <button class="btn border-none p-none color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
           <svg viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (or (eq $color.hex "#141414") (eq $color.hex "#fff")) (eq $color.hex "#000")) (strings.Contains $color.hex "rgba") }} style="border: 1px solid var(--bs-color-border-emphasized)" {{ end }}>
+          {{ if strings.Contains $color.hex "rgba" }}
+            <rect fill="#fff" width="50" height="100"/>
+            <rect fill="#141414" x="50" width="50" height="100"/>
+          {{ end -}}
             <rect fill="{{ $color.hex }}" width="100" height="100"/>
+          {{ if strings.Contains $color.hex "rgba" }}
+            <svg class="decorative-xs-icon text-black" x="15" y="15" width="20" height="20" aria-hidden="true">
+              <use xlink:href="#ui-light-mode"/>
+            </svg>
+            <svg class="decorative-xs-icon text-white" x="65" y="15" width="20" height="20" aria-hidden="true">
+              <use xlink:href="#ui-dark-mode"/>
+            </svg>
+          {{ end -}}
           </svg>
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
         </button>
