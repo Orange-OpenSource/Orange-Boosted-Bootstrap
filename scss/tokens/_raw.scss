@@ -10,7 +10,7 @@ $ouds-border-style-dashed: dashed !default;
 // $ouds-border-style-dotted: dotted !default;
 // $ouds-border-style-none: none !default;
 $ouds-border-style-solid: solid !default;
-$ouds-border-radius-0: strip-units($ouds-border-base * 0) !default; // 0
+$ouds-border-radius-0: $ouds-border-base * 0 !default; // 0
 // $ouds-border-radius-25: $ouds-border-base * .25 !default; // 1
 // $ouds-border-radius-50: $ouds-border-base * .5 !default; // 2
 $ouds-border-radius-75: $ouds-border-base * .75 !default; // 3
@@ -22,11 +22,12 @@ $ouds-border-radius-300: $ouds-border-base * 3 !default; // 12
 // $ouds-border-radius-500: $ouds-border-base * 5 !default; // 20
 // $ouds-border-radius-600: $ouds-border-base * 6 !default; // 24
 // $ouds-border-radius-800: $ouds-border-base * 8 !default; // 32
-$ouds-border-width-0: strip-units($ouds-border-base * 0) !default; // 0
+$ouds-border-width-0: $ouds-border-base * 0 !default; // 0
 $ouds-border-width-25: $ouds-border-base * .25 !default; // 1
 $ouds-border-width-50: $ouds-border-base * .5 !default; // 2
 $ouds-border-width-75: $ouds-border-base * .75 !default; // 3
 $ouds-border-width-100: $ouds-border-base * 1 !default; // 4
+$ouds-border-width-125: $ouds-border-base * 1.25 !default; // 5
 // $ouds-border-width-150: $ouds-border-base * 1.5 !default; // 6
 // $ouds-border-width-200: $ouds-border-base * 2 !default; // 8
 // scss-docs-end ouds-raw-border
@@ -94,8 +95,8 @@ $ouds-color-functional-dark-gray-160: #707070 !default;
 // $ouds-color-functional-dark-gray-240: #666 !default;
 // $ouds-color-functional-dark-gray-320: #5c5c5c !default;
 $ouds-color-functional-dark-gray-400: #555 !default;
-$ouds-color-functional-dark-gray-480: #444 !default;
-$ouds-color-functional-dark-gray-560: #3d3d3d !default;
+// $ouds-color-functional-dark-gray-480: #444 !default;
+// $ouds-color-functional-dark-gray-560: #3d3d3d !default;
 $ouds-color-functional-dark-gray-640: #333 !default;
 $ouds-color-functional-dark-gray-720: #272727 !default;
 $ouds-color-functional-dark-gray-800: #1f1f1f !default;
@@ -114,7 +115,7 @@ $ouds-color-functional-light-gray-80: #f4f4f4 !default;
 $ouds-color-functional-light-gray-160: #eee !default;
 // $ouds-color-functional-light-gray-240: #e0e0e0 !default;
 // $ouds-color-functional-light-gray-320: #d6d6d6 !default;
-$ouds-color-functional-light-gray-400: #ccc !default;
+// $ouds-color-functional-light-gray-400: #ccc !default;
 // $ouds-color-functional-light-gray-480: #c2c2c2 !default;
 $ouds-color-functional-light-gray-560: #bbb !default;
 // $ouds-color-functional-light-gray-640: #adadad !default;
@@ -140,7 +141,7 @@ $ouds-color-functional-scarlet-600: #ea0305 !default;
 $ouds-color-functional-scarlet-700: #b20002 !default;
 $ouds-color-functional-scarlet-800: #800001 !default;
 $ouds-color-functional-scarlet-900: #4d0001 !default;
-$ouds-color-functional-sun-100: #fff7d6 !default;
+// $ouds-color-functional-sun-100: #fff7d6 !default;
 $ouds-color-functional-sun-200: #ffed99 !default;
 $ouds-color-functional-sun-300: #ffe270 !default;
 $ouds-color-functional-sun-400: #ffd73d !default;
@@ -150,26 +151,60 @@ $ouds-color-functional-sun-700: #a38200 !default;
 $ouds-color-functional-sun-800: #665100 !default;
 $ouds-color-functional-sun-900: #3d3100 !default;
 $ouds-color-functional-white: #fff !default;
-$ouds-color-transparent-black-0: rgba(0, 0, 0, 0) !default;
-// $ouds-color-transparent-black-100: rgba(0, 0, 0, .04) !default;
-// $ouds-color-transparent-black-200: rgba(0, 0, 0, .08) !default;
-$ouds-color-transparent-black-300: rgba(0, 0, 0, .16) !default;
-$ouds-color-transparent-black-400: rgba(0, 0, 0, .24) !default;
-$ouds-color-transparent-black-500: rgba(0, 0, 0, .32) !default;
-// $ouds-color-transparent-black-600: rgba(0, 0, 0, .48) !default;
-// $ouds-color-transparent-black-700: rgba(0, 0, 0, .64) !default;
-// $ouds-color-transparent-black-800: rgba(0, 0, 0, .88) !default;
-// $ouds-color-transparent-black-900: #000 !default;
-// $ouds-color-transparent-white-0: rgba(255, 255, 255, 0) !default;
-// $ouds-color-transparent-white-100: rgba(255, 255, 255, .04) !default;
-// $ouds-color-transparent-white-200: rgba(255, 255, 255, .08) !default;
-// $ouds-color-transparent-white-300: rgba(255, 255, 255, .16) !default;
-// $ouds-color-transparent-white-400: rgba(255, 255, 255, .24) !default;
-// $ouds-color-transparent-white-500: rgba(255, 255, 255, .32) !default;
-// $ouds-color-transparent-white-600: rgba(255, 255, 255, .48) !default;
-// $ouds-color-transparent-white-700: rgba(255, 255, 255, .64) !default;
-// $ouds-color-transparent-white-800: rgba(255, 255, 255, .88) !default;
-// $ouds-color-transparent-white-900: #fff !default;
+$ouds-color-opacity-black-0: rgba(0, 0, 0, 0) !default;
+$ouds-color-opacity-black-40: rgba(0, 0, 0, .04) !default;
+$ouds-color-opacity-black-80: rgba(0, 0, 0, .08) !default;
+// $ouds-color-opacity-black-120: rgba(0, 0, 0, .12) !default;
+$ouds-color-opacity-black-160: rgba(0, 0, 0, .16) !default;
+$ouds-color-opacity-black-200: rgba(0, 0, 0, .2) !default;
+$ouds-color-opacity-black-240: rgba(0, 0, 0, .24) !default;
+// $ouds-color-opacity-black-280: rgba(0, 0, 0, .28) !default;
+$ouds-color-opacity-black-320: rgba(0, 0, 0, .32) !default;
+// $ouds-color-opacity-black-360: rgba(0, 0, 0, .36) !default;
+// $ouds-color-opacity-black-400: rgba(0, 0, 0, .4) !default;
+// $ouds-color-opacity-black-440: rgba(0, 0, 0, .44) !default;
+// $ouds-color-opacity-black-480: rgba(0, 0, 0, .48) !default;
+// $ouds-color-opacity-black-520: rgba(0, 0, 0, .52) !default;
+// $ouds-color-opacity-black-560: rgba(0, 0, 0, .56) !default;
+// $ouds-color-opacity-black-600: rgba(0, 0, 0, .6) !default;
+// $ouds-color-opacity-black-640: rgba(0, 0, 0, .64) !default;
+$ouds-color-opacity-black-680: rgba(0, 0, 0, .68) !default;
+// $ouds-color-opacity-black-720: rgba(0, 0, 0, .72) !default;
+// $ouds-color-opacity-black-760: rgba(0, 0, 0, .76) !default;
+// $ouds-color-opacity-black-800: rgba(0, 0, 0, .8) !default;
+$ouds-color-opacity-black-840: rgba(0, 0, 0, .84) !default;
+// $ouds-color-opacity-black-880: rgba(0, 0, 0, .88) !default;
+// $ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
+// $ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
+$ouds-color-opacity-dodger-blue: rgba(38, 178, 255, .08) !default;
+$ouds-color-opacity-malachite: rgba(61, 227, 90, .12) !default;
+$ouds-color-opacity-scarlet: rgba(234, 3, 5, .08) !default;
+$ouds-color-opacity-sun: rgba(255, 208, 0, .16) !default;
+$ouds-color-opacity-white-0: rgba(255, 255, 255, 0) !default;
+$ouds-color-opacity-white-40: rgba(255, 255, 255, .04) !default;
+$ouds-color-opacity-white-80: rgba(255, 255, 255, .08) !default;
+// $ouds-color-opacity-white-120: rgba(255, 255, 255, .12) !default;
+// $ouds-color-opacity-white-160: rgba(255, 255, 255, .16) !default;
+$ouds-color-opacity-white-200: rgba(255, 255, 255, .2) !default;
+// $ouds-color-opacity-white-240: rgba(255, 255, 255, .24) !default;
+// $ouds-color-opacity-white-280: rgba(255, 255, 255, .28) !default;
+// $ouds-color-opacity-white-320: rgba(255, 255, 255, .32) !default;
+// $ouds-color-opacity-white-360: rgba(255, 255, 255, .36) !default;
+// $ouds-color-opacity-white-400: rgba(255, 255, 255, .4) !default;
+// $ouds-color-opacity-white-440: rgba(255, 255, 255, .44) !default;
+// $ouds-color-opacity-white-480: rgba(255, 255, 255, .48) !default;
+// $ouds-color-opacity-white-520: rgba(255, 255, 255, .52) !default;
+// $ouds-color-opacity-white-560: rgba(255, 255, 255, .56) !default;
+// $ouds-color-opacity-white-600: rgba(255, 255, 255, .6) !default;
+$ouds-color-opacity-white-640: rgba(255, 255, 255, .64) !default;
+// $ouds-color-opacity-white-680: rgba(255, 255, 255, .68) !default;
+// $ouds-color-opacity-white-720: rgba(255, 255, 255, .72) !default;
+// $ouds-color-opacity-white-760: rgba(255, 255, 255, .76) !default;
+$ouds-color-opacity-white-800: rgba(255, 255, 255, .8) !default;
+// $ouds-color-opacity-white-840: rgba(255, 255, 255, .84) !default;
+// $ouds-color-opacity-white-880: rgba(255, 255, 255, .88) !default;
+$ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
+// $ouds-color-opacity-white-960: rgba(255, 255, 255, .96) !default;
 // $ouds-color-orange-50: #fff2e6 !default;
 $ouds-color-orange-100: #ffd5b0 !default;
 $ouds-color-orange-200: #ffc18a !default;
@@ -196,7 +231,7 @@ $ouds-color-warm-gray-900: #353228 !default;
 
 // scss-docs-start ouds-raw-dimension
 $ouds-dimension-base: 4px !default;
-$ouds-dimension-0: strip-units($ouds-dimension-base * 0) !default; // 0
+$ouds-dimension-0: $ouds-dimension-base * 0 !default; // 0
 $ouds-dimension-25: $ouds-dimension-base * .5 !default; // 2
 $ouds-dimension-50: $ouds-dimension-base * 1 !default; // 4
 $ouds-dimension-75: $ouds-dimension-base * 1.5 !default; // 6
@@ -393,13 +428,28 @@ $ouds-grid-margin-2500: $ouds-dimension-base * 28 !default; // 112
 
 // scss-docs-start ouds-raw-opacity
 $ouds-opacity-0: 0 !default;
-$ouds-opacity-100: .04 !default;
-// $ouds-opacity-200: .08 !default;
-$ouds-opacity-300: .16 !default;
-// $ouds-opacity-400: .24 !default;
-$ouds-opacity-500: .32 !default;
-// $ouds-opacity-600: .48 !default;
-$ouds-opacity-700: .64 !default;
+$ouds-opacity-40: .04 !default;
+// $ouds-opacity-80: .08 !default;
+// $ouds-opacity-120: .12 !default;
+$ouds-opacity-160: .16 !default;
+// $ouds-opacity-200: .2 !default;
+// $ouds-opacity-240: .24 !default;
+// $ouds-opacity-280: .28 !default;
+$ouds-opacity-320: .32 !default;
+// $ouds-opacity-360: .36 !default;
+// $ouds-opacity-400: .4 !default;
+// $ouds-opacity-440: .44 !default;
+// $ouds-opacity-480: .48 !default;
+// $ouds-opacity-520: .52 !default;
+// $ouds-opacity-560: .56 !default;
+// $ouds-opacity-600: .6 !default;
+$ouds-opacity-640: .64 !default;
+// $ouds-opacity-680: .68 !default;
+// $ouds-opacity-720: .72 !default;
+// $ouds-opacity-760: .76 !default;
 // $ouds-opacity-800: .8 !default;
-$ouds-opacity-900: 1 !default;
+// $ouds-opacity-880: .88 !default;
+// $ouds-opacity-920: .92 !default;
+// $ouds-opacity-960: .96 !default;
+$ouds-opacity-1000: 1 !default;
 // scss-docs-end ouds-raw-opacity

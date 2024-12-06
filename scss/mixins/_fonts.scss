@@ -1,5 +1,5 @@
 // scss-docs-start ouds-mixin-font
-// $font-size-ref can be one of: "code-small", "code-medium", "label-small", "label-medium", "label-large", "label-xlarge", "body-small", "body-medium", "body-large", "heading-small", "heading-medium", "heading-large", "heading-xlarge", "display-small", "display-medium", "display-large"
+// $font-size-ref can be one of: "code-medium", "label-small", "label-medium", "label-large", "label-xlarge", "body-small", "body-medium", "body-large", "heading-small", "heading-medium", "heading-large", "heading-xlarge", "display-small", "display-medium", "display-large"
 
 @mixin get-font-size($font-size-ref: "display-large") {
   @if str-slice($font-size-ref, 1, 5) != "label" and str-slice($font-size-ref, 1, 4) != "code" {
