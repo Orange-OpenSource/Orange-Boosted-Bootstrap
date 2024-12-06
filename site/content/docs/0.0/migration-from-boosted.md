@@ -153,13 +153,13 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 ### Opacity
 
 - <span class="badge text-bg-danger">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]({{< docsref "/utilities/opacity" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
+- <span class="badge text-bg-success">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
 
 ### Shadow
 
 - <span class="badge text-bg-danger">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]({{< docsref "/utilities/shadows" >}}) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-success">New</span> Shadows utilities:
-`.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-overlay-default`, `.shadow-overlay-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
+`.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-default`, `.shadow-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
 
 ### Sizing
 
@@ -313,7 +313,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 ## CSS and Sass variables
 
 - <span class="badge text-bg-success">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
-  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-transparent`, `.opacity-weaker`, `.opacity-weak`, etc.
+  - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc.
 
 - <span class="badge text-bg-success">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
@@ -356,6 +356,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-border-width-50</code></li>
       <li><code>$ouds-border-width-75</code></li>
       <li><code>$ouds-border-width-100</code></li>
+      <li><code>$ouds-border-width-125</code></li>
       <li><code>$ouds-border-width-default</code></li>
       <li><code>$ouds-border-width-medium</code></li>
       <li><code>$ouds-border-width-none</code></li>
@@ -393,27 +394,35 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-blur-300</code></li>
       <li><code>$ouds-elevation-blur-400</code></li>
       <li><code>$ouds-elevation-blur-600</code></li>
+      <li><code>$ouds-elevation-blur-default</code></li>
       <li><code>$ouds-elevation-blur-drag</code></li>
+      <li><code>$ouds-elevation-blur-emphasized</code></li>
       <li><code>$ouds-elevation-blur-none</code></li>
-      <li><code>$ouds-elevation-blur-overlay-default</code></li>
-      <li><code>$ouds-elevation-blur-overlay-emphasized</code></li>
       <li><code>$ouds-elevation-blur-raised</code></li>
       <li><code>$ouds-elevation-blur-sticky-default</code></li>
       <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-elevation-color-default-dark</code></li>
+      <li><code>$ouds-elevation-color-default-light</code></li>
+      <li><code>$ouds-elevation-color-drag-dark</code></li>
       <li><code>$ouds-elevation-color-drag-light</code></li>
+      <li><code>$ouds-elevation-color-emphasized-dark</code></li>
+      <li><code>$ouds-elevation-color-emphasized-light</code></li>
+      <li><code>$ouds-elevation-color-none-dark</code></li>
       <li><code>$ouds-elevation-color-none-light</code></li>
-      <li><code>$ouds-elevation-color-overlay-default-light</code></li>
-      <li><code>$ouds-elevation-color-overlay-emphasized-light</code></li>
+      <li><code>$ouds-elevation-color-raised-dark</code></li>
       <li><code>$ouds-elevation-color-raised-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-default-dark</code></li>
       <li><code>$ouds-elevation-color-sticky-default-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-emphasized-dark</code></li>
       <li><code>$ouds-elevation-color-sticky-emphasized-light</code></li>
       <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-dark</code></li>
+      <li><code>$ouds-elevation-default</code></li>
       <li><code>$ouds-elevation-drag</code></li>
+      <li><code>$ouds-elevation-emphasized</code></li>
       <li><code>$ouds-elevation-focus</code></li>
       <li><code>$ouds-elevation-none</code></li>
-      <li><code>$ouds-elevation-overlay-default</code></li>
-      <li><code>$ouds-elevation-overlay-emphasized</code></li>
       <li><code>$ouds-elevation-raised</code></li>
       <li><code>$ouds-elevation-spread-0</code></li>
       <li><code>$ouds-elevation-spread-300</code></li>
@@ -421,8 +430,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-spread-n100</code></li>
       <li><code>$ouds-elevation-spread-n300</code></li>
       <li><code>$ouds-elevation-spread-none</code></li>
-      <li><code>$ouds-elevation-spread-overlay-default</code></li>
-      <li><code>$ouds-elevation-spread-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-spread-default</code></li>
+      <li><code>$ouds-elevation-spread-emphasized</code></li>
       <li><code>$ouds-elevation-spread-raised</code></li>
       <li><code>$ouds-elevation-spread-sticky-default</code></li>
       <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
@@ -433,8 +442,8 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-x-0</code></li>
       <li><code>$ouds-elevation-x-drag</code></li>
       <li><code>$ouds-elevation-x-none</code></li>
-      <li><code>$ouds-elevation-x-overlay-default</code></li>
-      <li><code>$ouds-elevation-x-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-x-default</code></li>
+      <li><code>$ouds-elevation-x-emphasized</code></li>
       <li><code>$ouds-elevation-x-raised</code></li>
       <li><code>$ouds-elevation-x-sticky-default</code></li>
       <li><code>$ouds-elevation-x-sticky-emphasized</code></li>
@@ -446,14 +455,173 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-elevation-y-500</code></li>
       <li><code>$ouds-elevation-y-drag</code></li>
       <li><code>$ouds-elevation-y-none</code></li>
-      <li><code>$ouds-elevation-y-overlay-default</code></li>
-      <li><code>$ouds-elevation-y-overlay-emphasized</code></li>
+      <li><code>$ouds-elevation-y-default</code></li>
+      <li><code>$ouds-elevation-y-emphasized</code></li>
       <li><code>$ouds-elevation-y-raised</code></li>
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
+      <li><code>$ouds-font-family</code></li>
+      <li><code>$ouds-font-family-brand-default</code></li>
       <li><code>$ouds-font-family-monospace-stack</code></li>
       <li><code>$ouds-font-family-sans-serif-stack</code></li>
+      <li><code>$ouds-font-letter-spacing-150</code></li>
+      <li><code>$ouds-font-letter-spacing-200</code></li>
+      <li><code>$ouds-font-letter-spacing-250</code></li>
+      <li><code>$ouds-font-letter-spacing-300</code></li>
+      <li><code>$ouds-font-letter-spacing-350</code></li>
+      <li><code>$ouds-font-letter-spacing-450</code></li>
+      <li><code>$ouds-font-letter-spacing-550</code></li>
+      <li><code>$ouds-font-letter-spacing-650</code></li>
+      <li><code>$ouds-font-letter-spacing-750</code></li>
+      <li><code>$ouds-font-letter-spacing-850</code></li>
+      <li><code>$ouds-font-letter-spacing-1050</code></li>
+      <li><code>$ouds-font-letter-spacing-1250</code></li>
+      <li><code>$ouds-font-letter-spacing-1450</code></li>
+      <li><code>$ouds-font-letter-spacing-1850</code></li>
+      <li><code>$ouds-font-letter-spacing-body-large-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-body-large-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-body-large-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-body-medium-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-body-medium-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-body-medium-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-body-small-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-body-small-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-body-small-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-code-medium:</code></li>
+      <li><code>$ouds-font-letter-spacing-display-large-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-display-large-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-display-large-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-display-medium-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-display-medium-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-display-medium-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-display-small-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-display-small-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-display-small-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-large-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-large-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-large-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-medium-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-medium-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-medium-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-small-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-small-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-small-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-font-letter-spacing-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-font-letter-spacing-label-large</code></li>
+      <li><code>$ouds-font-letter-spacing-label-medium</code></li>
+      <li><code>$ouds-font-letter-spacing-label-small</code></li>
+      <li><code>$ouds-font-letter-spacing-label-xlarge</code></li>
+      <li><code>$ouds-font-line-height-250</code></li>
+      <li><code>$ouds-font-line-height-350</code></li>
+      <li><code>$ouds-font-line-height-450</code></li>
+      <li><code>$ouds-font-line-height-550</code></li>
+      <li><code>$ouds-font-line-height-650</code></li>
+      <li><code>$ouds-font-line-height-750</code></li>
+      <li><code>$ouds-font-line-height-850</code></li>
+      <li><code>$ouds-font-line-height-950</code></li>
+      <li><code>$ouds-font-line-height-1050</code></li>
+      <li><code>$ouds-font-line-height-1250</code></li>
+      <li><code>$ouds-font-line-height-1450</code></li>
+      <li><code>$ouds-font-line-height-1850</code></li>
+      <li><code>$ouds-font-line-height-2050</code></li>
+      <li><code>$ouds-font-line-height-body-large-desktop</code></li>
+      <li><code>$ouds-font-line-height-body-large-mobile</code></li>
+      <li><code>$ouds-font-line-height-body-large-tablet</code></li>
+      <li><code>$ouds-font-line-height-body-medium-desktop</code></li>
+      <li><code>$ouds-font-line-height-body-medium-mobile</code></li>
+      <li><code>$ouds-font-line-height-body-medium-tablet</code></li>
+      <li><code>$ouds-font-line-height-body-small-desktop</code></li>
+      <li><code>$ouds-font-line-height-body-small-mobile</code></li>
+      <li><code>$ouds-font-line-height-body-small-tablet</code></li>
+      <li><code>$ouds-font-line-height-code-medium</code></li>
+      <li><code>$ouds-font-line-height-display-large-desktop</code></li>
+      <li><code>$ouds-font-line-height-display-large-mobile</code></li>
+      <li><code>$ouds-font-line-height-display-large-tablet</code></li>
+      <li><code>$ouds-font-line-height-display-medium-desktop</code></li>
+      <li><code>$ouds-font-line-height-display-medium-mobile</code></li>
+      <li><code>$ouds-font-line-height-display-medium-tablet</code></li>
+      <li><code>$ouds-font-line-height-display-small-desktop</code></li>
+      <li><code>$ouds-font-line-height-display-small-mobile</code></li>
+      <li><code>$ouds-font-line-height-display-small-tablet</code></li>
+      <li><code>$ouds-font-line-height-heading-large-desktop</code></li>
+      <li><code>$ouds-font-line-height-heading-large-mobile</code></li>
+      <li><code>$ouds-font-line-height-heading-large-tablet</code></li>
+      <li><code>$ouds-font-line-height-heading-medium-desktop</code></li>
+      <li><code>$ouds-font-line-height-heading-medium-mobile</code></li>
+      <li><code>$ouds-font-line-height-heading-medium-tablet</code></li>
+      <li><code>$ouds-font-line-height-heading-small-desktop</code></li>
+      <li><code>$ouds-font-line-height-heading-small-mobile</code></li>
+      <li><code>$ouds-font-line-height-heading-small-tablet</code></li>
+      <li><code>$ouds-font-line-height-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-font-line-height-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-font-line-height-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-font-line-height-label-large</code></li>
+      <li><code>$ouds-font-line-height-label-medium</code></li>
+      <li><code>$ouds-font-line-height-label-small</code></li>
+      <li><code>$ouds-font-line-height-label-xlarge</code></li>
+      <li><code>$ouds-font-size-150</code></li>
+      <li><code>$ouds-font-size-200</code></li>
+      <li><code>$ouds-font-size-250</code></li>
+      <li><code>$ouds-font-size-300</code></li>
+      <li><code>$ouds-font-size-350</code></li>
+      <li><code>$ouds-font-size-450</code></li>
+      <li><code>$ouds-font-size-550</code></li>
+      <li><code>$ouds-font-size-650</code></li>
+      <li><code>$ouds-font-size-750</code></li>
+      <li><code>$ouds-font-size-850</code></li>
+      <li><code>$ouds-font-size-1050</code></li>
+      <li><code>$ouds-font-size-1250</code></li>
+      <li><code>$ouds-font-size-1450</code></li>
+      <li><code>$ouds-font-size-1850</code></li>
+      <li><code>$ouds-font-size-body-large-desktop</code></li>
+      <li><code>$ouds-font-size-body-large-mobile</code></li>
+      <li><code>$ouds-font-size-body-large-tablet</code></li>
+      <li><code>$ouds-font-size-body-medium-desktop</code></li>
+      <li><code>$ouds-font-size-body-medium-mobile</code></li>
+      <li><code>$ouds-font-size-body-medium-tablet</code></li>
+      <li><code>$ouds-font-size-body-small-desktop</code></li>
+      <li><code>$ouds-font-size-body-small-mobile</code></li>
+      <li><code>$ouds-font-size-body-small-tablet</code></li>
+      <li><code>$ouds-font-size-code-medium: $oud</code></li>
+      <li><code>$ouds-font-size-display-large-desktop</code></li>
+      <li><code>$ouds-font-size-display-large-mobile</code></li>
+      <li><code>$ouds-font-size-display-large-tablet</code></li>
+      <li><code>$ouds-font-size-display-medium-desktop</code></li>
+      <li><code>$ouds-font-size-display-medium-mobile</code></li>
+      <li><code>$ouds-font-size-display-medium-tablet</code></li>
+      <li><code>$ouds-font-size-display-small-desktop</code></li>
+      <li><code>$ouds-font-size-display-small-mobile</code></li>
+      <li><code>$ouds-font-size-display-small-tablet</code></li>
+      <li><code>$ouds-font-size-heading-large-desktop</code></li>
+      <li><code>$ouds-font-size-heading-large-mobile</code></li>
+      <li><code>$ouds-font-size-heading-large-tablet</code></li>
+      <li><code>$ouds-font-size-heading-medium-desktop</code></li>
+      <li><code>$ouds-font-size-heading-medium-mobile</code></li>
+      <li><code>$ouds-font-size-heading-medium-tablet</code></li>
+      <li><code>$ouds-font-size-heading-small-desktop</code></li>
+      <li><code>$ouds-font-size-heading-small-mobile</code></li>
+      <li><code>$ouds-font-size-heading-small-tablet</code></li>
+      <li><code>$ouds-font-size-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-font-size-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-font-size-heading-xlarge-tablet</code></li>
+      <li><code>$ouds-font-size-label-large</code></li>
+      <li><code>$ouds-font-size-label-medium</code></li>
+      <li><code>$ouds-font-size-label-small</code></li>
+      <li><code>$ouds-font-size-label-xlarge</code></li>
+      <li><code>$ouds-font-weight-400</code></li>
+      <li><code>$ouds-font-weight-700</code></li>
+      <li><code>$ouds-font-weight-code</code></li>
+      <li><code>$ouds-font-weight-default</code></li>
+      <li><code>$ouds-font-weight-strong</code></li>
+      <li><code>$ouds-font-weight-body-default</code></li>
+      <li><code>$ouds-font-weight-body-strong</code></li>
+      <li><code>$ouds-font-weight-display</code></li>
+      <li><code>$ouds-font-weight-heading</code></li>
+      <li><code>$ouds-font-weight-label-default</code></li>
+      <li><code>$ouds-font-weight-label-strong</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
@@ -478,7 +646,6 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-grid-margin-400</code></li>
       <li><code>$ouds-grid-margin-500</code></li>
       <li><code>$ouds-grid-margin-700</code></li>
-      <li><code>$ouds-size-max-width-grid</code></li>
       <li><code>$ouds-grid-md-column-gap</code></li>
       <li><code>$ouds-grid-md-margin</code></li>
       <li><code>$ouds-grid-md-min-width</code></li>
@@ -499,17 +666,132 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-grid-xs-margin</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
       <li><code>$ouds-opacity-0</code></li>
-      <li><code>$ouds-opacity-100</code></li>
-      <li><code>$ouds-opacity-300</code></li>
-      <li><code>$ouds-opacity-500</code></li>
-      <li><code>$ouds-opacity-700</code></li>
-      <li><code>$ouds-opacity-900</code></li>
+      <li><code>$ouds-opacity-40</code></li>
+      <li><code>$ouds-opacity-160</code></li>
+      <li><code>$ouds-opacity-320</code></li>
+      <li><code>$ouds-opacity-640</code></li>
+      <li><code>$ouds-opacity-1000</code></li>
+      <li><code>$ouds-opacity-invisible</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
       <li><code>$ouds-opacity-strong</code></li>
-      <li><code>$ouds-opacity-transparent</code></li>
       <li><code>$ouds-opacity-weak</code></li>
       <li><code>$ouds-opacity-weaker</code></li>
+      <li><code>$ouds-size-icon-decorative-2xl</code></li>
+      <li><code>$ouds-size-icon-decorative-2xs</code></li>
+      <li><code>$ouds-size-icon-decorative-lg</code></li>
+      <li><code>$ouds-size-icon-decorative-md</code></li>
+      <li><code>$ouds-size-icon-decorative-sm</code></li>
+      <li><code>$ouds-size-icon-decorative-xl</code></li>
+      <li><code>$ouds-size-icon-decorative-xs</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-large-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-medium-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-body-small-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-large-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-medium-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-small-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-lg-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-lg-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-lg-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-md-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-md-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-md-tablet</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-sm-desktop</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-sm-mobile</code></li>
+      <li><code>$ouds-size-icon-with-heading-xlarge-size-sm-tablet</code></li>
+      <li><code>$ouds-size-icon-with-label-large-size-lg</code></li>
+      <li><code>$ouds-size-icon-with-label-large-size-md</code></li>
+      <li><code>$ouds-size-icon-with-label-large-size-sm</code></li>
+      <li><code>$ouds-size-icon-with-label-large-size-xl</code></li>
+      <li><code>$ouds-size-icon-with-label-large-size-xs</code></li>
+      <li><code>$ouds-size-icon-with-label-medium-size-lg</code></li>
+      <li><code>$ouds-size-icon-with-label-medium-size-md</code></li>
+      <li><code>$ouds-size-icon-with-label-medium-size-sm</code></li>
+      <li><code>$ouds-size-icon-with-label-small-size-lg</code></li>
+      <li><code>$ouds-size-icon-with-label-small-size-md</code></li>
+      <li><code>$ouds-size-icon-with-label-small-size-sm</code></li>
+      <li><code>$ouds-size-icon-with-label-xlarge-size-lg</code></li>
+      <li><code>$ouds-size-icon-with-label-xlarge-size-md</code></li>
+      <li><code>$ouds-size-icon-with-label-xlarge-size-sm</code></li>
+      <li><code>$ouds-size-max-width-grid</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-body-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-body-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-body-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-display-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-large-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-medium-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-small-tablet</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-desktop</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-mobile</code></li>
+      <li><code>$ouds-size-max-width-type-heading-xlarge-tablet</code></li>
       <li><code>$ouds-space-fixed-huge</code></li>
       <li><code>$ouds-space-fixed-jumbo</code></li>
       <li><code>$ouds-space-fixed-medium</code></li>
@@ -711,27 +993,27 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>--bs-font-max-width-body-large</code></li>
       <li><code>--bs-font-max-width-body-medium</code></li>
       <li><code>--bs-font-max-width-body-small</code></li>
-      <li><code>--bs-icon-short-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-medium-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-tall-with-heading-xlarge</code></li>
-      <li><code>--bs-icon-short-with-heading-large</code></li>
-      <li><code>--bs-icon-medium-with-heading-large</code></li>
-      <li><code>--bs-icon-tall-with-heading-large</code></li>
-      <li><code>--bs-icon-short-with-heading-medium</code></li>
-      <li><code>--bs-icon-medium-with-heading-medium</code></li>
-      <li><code>--bs-icon-tall-with-heading-medium</code></li>
-      <li><code>--bs-icon-short-with-heading-small</code></li>
-      <li><code>--bs-icon-medium-with-heading-small</code></li>
-      <li><code>--bs-icon-tall-with-heading-small</code></li>
-      <li><code>--bs-icon-short-with-body-large</code></li>
-      <li><code>--bs-icon-medium-with-body-large</code></li>
-      <li><code>--bs-icon-tall-with-body-large</code></li>
-      <li><code>--bs-icon-short-with-body-medium</code></li>
-      <li><code>--bs-icon-medium-with-body-medium</code></li>
-      <li><code>--bs-icon-tall-with-body-medium</code></li>
-      <li><code>--bs-icon-short-with-body-small</code></li>
-      <li><code>--bs-icon-medium-with-body-small</code></li>
-      <li><code>--bs-icon-tall-with-body-small</code></li>
+      <li><code>--bs-icon-lg-with-body-large</code></li>
+      <li><code>--bs-icon-lg-with-body-medium</code></li>
+      <li><code>--bs-icon-lg-with-body-small</code></li>
+      <li><code>--bs-icon-lg-with-heading-large</code></li>
+      <li><code>--bs-icon-lg-with-heading-medium</code></li>
+      <li><code>--bs-icon-lg-with-heading-small</code></li>
+      <li><code>--bs-icon-lg-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-md-with-body-large</code></li>
+      <li><code>--bs-icon-md-with-body-medium</code></li>
+      <li><code>--bs-icon-md-with-body-small</code></li>
+      <li><code>--bs-icon-md-with-heading-large</code></li>
+      <li><code>--bs-icon-md-with-heading-medium</code></li>
+      <li><code>--bs-icon-md-with-heading-small</code></li>
+      <li><code>--bs-icon-md-with-heading-xlarge</code></li>
+      <li><code>--bs-icon-sm-with-body-large</code></li>
+      <li><code>--bs-icon-sm-with-body-medium</code></li>
+      <li><code>--bs-icon-sm-with-body-small</code></li>
+      <li><code>--bs-icon-sm-with-heading-large</code></li>
+      <li><code>--bs-icon-sm-with-heading-medium</code></li>
+      <li><code>--bs-icon-sm-with-heading-small</code></li>
+      <li><code>--bs-icon-sm-with-heading-xlarge</code></li>
       <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
       <li><code>--bs-space-scaled-short</code></li>
@@ -904,4 +1186,4 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Sass mixins
 
-- <span class="badge text-bg-success">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of:  `"code-small"`,  `"code-medium"`,  `"label-small"`,  `"label-medium"`,  `"label-large"`,  `"label-xlarge"`,  `"body-small"`,  `"body-medium"`,  `"body-large"`,  `"heading-small"`,  `"heading-medium"`,  `"heading-large"`,  `"heading-xlarge"`,  `"display-small"`,  `"display-medium"`,  `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.
+- <span class="badge text-bg-success">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.

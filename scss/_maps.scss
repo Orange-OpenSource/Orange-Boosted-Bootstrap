@@ -72,11 +72,11 @@ $ouds-dimension-negative-space-fixed: if($enable-negative-margins, negativify-ma
 
 // scss-docs-start ouds-maps-elevations
 $ouds-elevations: (
+  "default":                    $ouds-elevation-default,
+  "drag":                       $ouds-elevation-drag,
+  "emphasized":                 $ouds-elevation-emphasized,
   "none":                       $ouds-elevation-none,
   "raised":                     $ouds-elevation-raised,
-  "drag":                       $ouds-elevation-drag,
-  "overlay-default":            $ouds-elevation-overlay-default,
-  "overlay-emphasized":         $ouds-elevation-overlay-emphasized,
   "sticky-default":             $ouds-elevation-sticky-default,
   "sticky-emphasized":          $ouds-elevation-sticky-emphasized,
   "sticky-navigation-scrolled": $ouds-elevation-sticky-navigation-scrolled
@@ -85,7 +85,6 @@ $ouds-elevations: (
 
 // scss-docs-start ouds-maps-font
 $ouds-font-sizes: (
-  cs: "/code-small",
   cm: "/code-medium",
   bs: "/body-small",
   bm: "/body-medium",
@@ -104,17 +103,17 @@ $ouds-font-weights: (
   bold: $ouds-font-weight-strong
 ) !default;
 
-$ouds-icon-sizes: ("short", "medium", "tall") !default;
+$ouds-icon-sizes: ("sm", "md", "lg") !default;
 // scss-docs-end ouds-maps-font
 
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (
-  "transparent": $ouds-opacity-transparent,
-  "weaker":      $ouds-opacity-weaker,
-  "weak":        $ouds-opacity-weak,
-  "medium":      $ouds-opacity-medium,
-  "strong":      $ouds-opacity-strong,
-  "opaque":      $ouds-opacity-opaque
+  "invisible":  $ouds-opacity-invisible,
+  "weaker":     $ouds-opacity-weaker,
+  "weak":       $ouds-opacity-weak,
+  "medium":     $ouds-opacity-medium,
+  "strong":     $ouds-opacity-strong,
+  "opaque":     $ouds-opacity-opaque
 ) !default;
 // scss-docs-end ouds-maps-opacities
 // End mod

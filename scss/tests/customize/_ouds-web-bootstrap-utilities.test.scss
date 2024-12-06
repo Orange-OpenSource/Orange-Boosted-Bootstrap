@@ -767,7 +767,7 @@ $utilities: ();
         @import "../../utilities/api";
       }
       @include expect() {
-        .opacity-transparent {
+        .opacity-invisible {
           opacity: 0 !important;
         }
 
@@ -3041,14 +3041,6 @@ $utilities: ();
 
         /* rtl:end:remove */
 
-        .fs-cs {
-          font-size: var(--bs-font-size-code-small);
-          line-height: var(--bs-font-line-height-code-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-small);
-        }
-
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
           line-height: var(--bs-font-line-height-code-medium);
@@ -3155,24 +3147,24 @@ $utilities: ();
           font-weight: 700 !important;
         }
 
-        .shadow-none {
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
-        }
-
-        .shadow-raised {
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-default {
+          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .shadow-drag {
           box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        .shadow-overlay-default {
-          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-emphasized {
+          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        .shadow-overlay-emphasized {
-          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-none {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        }
+
+        .shadow-raised {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .shadow-sticky-default {
@@ -10329,7 +10321,7 @@ $utilities: ();
           opacity: 1 !important;
         }
 
-        .opacity-transparent {
+        .opacity-invisible {
           opacity: 0 !important;
         }
 
@@ -13287,14 +13279,6 @@ $utilities: ();
 
         /* rtl:end:remove */
 
-        .fs-cs {
-          font-size: var(--bs-font-size-code-small);
-          line-height: var(--bs-font-line-height-code-small);
-
-          /* rtl:remove */
-          letter-spacing: var(--bs-font-letter-spacing-code-small);
-        }
-
         .fs-cm {
           font-size: var(--bs-font-size-code-medium);
           line-height: var(--bs-font-line-height-code-medium);
@@ -13413,24 +13397,24 @@ $utilities: ();
           box-shadow: var(--bs-box-shadow-lg) !important;
         }
 
-        .shadow-none {
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
-        }
-
-        .shadow-raised {
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-default {
+          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .shadow-drag {
           box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        .shadow-overlay-default {
-          box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.24) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-emphasized {
+          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        .shadow-overlay-emphasized {
-          box-shadow: 0 12px 12px -4px rgba(0, 0, 0, 0.16) !important; // stylelint-disable-line @stylistic/number-leading-zero
+        .shadow-none {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        }
+
+        .shadow-raised {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32) !important; // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .shadow-sticky-default {

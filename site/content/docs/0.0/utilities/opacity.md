@@ -18,7 +18,7 @@ Set the opacity of an element using `.opacity-{value}` utilities.
   <div class="opacity-medium p-tall m-short bg-primary fw-bold"></div>
   <div class="opacity-weak p-tall m-short bg-primary fw-bold"></div>
   <div class="opacity-weaker p-tall m-short bg-primary fw-bold"></div>
-  <div class="opacity-transparent p-tall m-short bg-primary fw-bold"></div>
+  <div class="opacity-invisible p-tall m-short bg-primary fw-bold"></div>
 </div>
 
 ```html
@@ -27,7 +27,7 @@ Set the opacity of an element using `.opacity-{value}` utilities.
 <div class="opacity-medium">...</div>
 <div class="opacity-weak">...</div>
 <div class="opacity-weaker">...</div>
-<div class="opacity-transparent">...</div>
+<div class="opacity-invisible">...</div>
 ```
 
 {{< bootstrap-compatibility >}}
