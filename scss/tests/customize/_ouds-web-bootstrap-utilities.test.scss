@@ -828,7 +828,7 @@ $utilities: ();
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
           --bs-color-overlay-default: #fff;
-          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04);
+          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-overlay-emphasized: #272727;
           --bs-color-overlay-modal: #fff;
           --bs-color-surface-brand-primary: #ff7900;
@@ -10577,7 +10577,7 @@ $utilities: ();
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
           --bs-color-overlay-default: #fff;
-          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04);
+          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-overlay-emphasized: #272727;
           --bs-color-overlay-modal: #fff;
           --bs-color-surface-brand-primary: #ff7900;
