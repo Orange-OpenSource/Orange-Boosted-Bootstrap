@@ -7,12 +7,12 @@
 - name: 400
   hex: "#bbb"
 - name: 500
-  hex: "#707070"
+  hex: "#8f8f8f"
 - name: 600
-  hex: "#555"
+  hex: "#666"
 - name: 700
-  hex: "#444"
-- name: 800
   hex: "#333"
+- name: 800
+  hex: "#1f1f1f"
 - name: 900
   hex: "#141414"

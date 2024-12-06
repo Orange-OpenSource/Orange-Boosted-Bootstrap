@@ -12,10 +12,10 @@ $gray-100: $ouds-color-functional-light-gray-80 !default; // OUDS mod: instead o
 $gray-200: $ouds-color-functional-light-gray-160 !default; // OUDS mod: instead of `#e9ecef`
 $gray-300: $ouds-color-functional-light-gray-400 !default; // OUDS mod: instead of `#dee2e6`
 $gray-400: $ouds-color-functional-light-gray-560 !default; // OUDS mod: instead of `#ced4da`
-$gray-500: $ouds-color-functional-dark-gray-160 !default; // OUDS mod: instead of `#adb5bd`
-$gray-600: $ouds-color-functional-dark-gray-400 !default; // OUDS mod: instead of `#6c757d`
-$gray-700: $ouds-color-functional-dark-gray-480 !default; // OUDS mod: instead of `#495057`
-$gray-800: $ouds-color-functional-dark-gray-640 !default; // OUDS mod: instead of `#343a40`
+$gray-500: $ouds-color-functional-light-gray-880 !default; // OUDS mod: instead of `#adb5bd`
+$gray-600: $ouds-color-functional-dark-gray-240 !default; // OUDS mod: instead of `#6c757d`
+$gray-700: $ouds-color-functional-dark-gray-640 !default; // OUDS mod: instead of `#495057`
+$gray-800: $ouds-color-functional-dark-gray-800 !default; // OUDS mod: instead of `#343a40`
 $gray-900: $ouds-color-functional-dark-gray-880 !default; // OUDS mod: instead of `#212529`
 $black:    $ouds-color-functional-black !default; // OUDS mod: instead of `#000`
 // scss-docs-end gray-color-variables
@@ -953,7 +953,7 @@ $btn-border-width:            $input-btn-border-width !default;
 $btn-default-hover-bg:        var(--#{$prefix}highlight-bg) !default; // OUDS mod
 $btn-default-hover-border:    var(--#{$prefix}border-color) !default; // OUDS mod
 $btn-default-hover-color:     var(--#{$prefix}highlight-color) !default; // OUDS mod
-$btn-default-active-bg:       $ouds-button-color-background-default-pressed !default; // OUDS mod
+$btn-default-active-bg:       $ouds-button-color-bg-default-pressed !default; // OUDS mod
 $btn-default-active-border:   $ouds-button-color-border-default-pressed !default; // OUDS mod
 $btn-default-active-color:    $black !default; // OUDS mod
 $btn-default-disabled-bg:     var(--#{$prefix}color-content-disabled) !default; // OUDS mod
@@ -963,7 +963,7 @@ $btn-default-disabled-color:  var(--#{$prefix}highlight-color) !default; // OUDS
 $btn-outline-default-hover-bg:        var(--#{$prefix}btn-color) !default; // OUDS mod
 $btn-outline-default-hover-border:    var(--#{$prefix}btn-border-color) !default; // OUDS mod
 $btn-outline-default-hover-color:     $white !default; // OUDS mod
-$btn-outline-default-active-bg:       $ouds-button-color-background-default-pressed !default; // OUDS mod
+$btn-outline-default-active-bg:       $ouds-button-color-bg-default-pressed !default; // OUDS mod
 $btn-outline-default-active-border:   $ouds-button-color-border-default-pressed !default; // OUDS mod
 $btn-outline-default-active-color:    $black !default; // OUDS mod
 $btn-outline-default-disabled-bg:     transparent !default; // OUDS mod
