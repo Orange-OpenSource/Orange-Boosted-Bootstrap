@@ -207,7 +207,7 @@
     width: 9rem; // OUDS mod
     font-weight: $font-weight-bold; // OUDS mod
     color: var(--bs-secondary-color);
-    background-color: var(--bs-secondary-bg); // OUDS mod: instead of `var(--bs-tertiary-bg)`
+    background-color: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `var(--bs-tertiary-bg)`
     border: var(--bs-border-width) solid var(--bs-color-border-emphasized); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
@@ -291,7 +291,7 @@
     width: 5rem;
     height: 5rem;
     margin: .25rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 }
 
@@ -307,13 +307,13 @@
 
   .position-relative {
     height: 12.5rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 
   .position-absolute {
     width: 2rem;
     height: 2rem;
-    background-color: var(--bs-body-color);
+    background-color: var(--#{$prefix}color-bg-emphasized);
     @include border-radius();
   }
 }
