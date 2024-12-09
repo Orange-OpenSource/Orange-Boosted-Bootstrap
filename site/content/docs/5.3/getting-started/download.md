@@ -104,6 +104,16 @@ Install Boosted in your Node.js powered apps with [the yarn package](https://yar
 yarn add boosted@{{< param "current_version" >}}
 ```
 
+{{< callout warning >}}
+**Yarn 2+ (aka Yarn Berry) doesn't support the `node_modules` directory by default**: using the [twbs/examples Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
+```sh
+yarn config set nodeLinker node-modules # Use the node_modules linker
+touch yarn.lock # Create an empty yarn.lock file
+yarn install # Install the dependencies
+yarn start # Start the project
+```
+{{< /callout >}}
+
 ### Composer
 
 You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):

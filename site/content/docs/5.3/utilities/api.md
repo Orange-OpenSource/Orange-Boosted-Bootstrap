@@ -456,7 +456,8 @@ You can enable responsive classes for an existing set of utilities that are not 
 @import "boosted/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "border": map-merge(
       map-get($utilities, "border"),
       ( responsive: true ),
@@ -512,7 +513,8 @@ Missing v4 utilities, or used to another naming convention? The utilities API ca
 @import "boosted/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "margin-start": map-merge(
       map-get($utilities, "margin-start"),
       ( class: ml ),
