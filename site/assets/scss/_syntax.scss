@@ -1,7 +1,6 @@
 // Note: Bootstrap stops at --base0F
 
-:root,
-[data-bs-theme="light"] {
+@include color-mode(light, true) {
   --base00: #{$white};
   --base01: #{$gray-700};
   --base02: #{$red-500};
