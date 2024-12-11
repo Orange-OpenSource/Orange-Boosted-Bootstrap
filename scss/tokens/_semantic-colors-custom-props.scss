@@ -1,5 +1,5 @@
-:root,
-[data-bs-theme="light"] {
+// scss-docs-start ouds-semantic-css-color
+@include color-mode(light, true) {
   --#{$prefix}color-opacity-invisible-black: #{$ouds-color-opacity-invisible-black-light};
   --#{$prefix}color-opacity-invisible-white: #{$ouds-color-opacity-invisible-white-light};
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-light};
@@ -104,8 +104,9 @@
   --#{$prefix}color-decorative-skin-tint-800: #{$ouds-color-decorative-skin-tint-800-light};
   --#{$prefix}color-decorative-skin-tint-900: #{$ouds-color-decorative-skin-tint-900-light};
 }
+// scss-docs-end ouds-semantic-css-color
 
-[data-bs-theme="dark"] {
+@include color-mode(dark, true) {
   --#{$prefix}color-opacity-invisible-black: #{$ouds-color-opacity-invisible-black-dark};
   --#{$prefix}color-opacity-invisible-white: #{$ouds-color-opacity-invisible-white-dark};
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-dark};

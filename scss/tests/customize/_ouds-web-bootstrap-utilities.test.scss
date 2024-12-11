@@ -770,7 +770,9 @@ $utilities: ();
       }
       @include expect() {
         :root,
-        [data-bs-theme="light"] {
+        [data-bs-theme="light"],
+        :root[data-bs-theme="light"] [data-bs-theme="root"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-invisible-black: rgba(0, 0, 0, 0);
           --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
@@ -876,7 +878,9 @@ $utilities: ();
           --bs-color-decorative-skin-tint-900: #2e2014;
         }
 
-        [data-bs-theme="dark"] {
+        [data-bs-theme="dark"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root"],
+        :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-invisible-black: rgba(255, 255, 255, 0);
           --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10519,7 +10523,9 @@ $utilities: ();
       }
       @include expect() {
         :root,
-        [data-bs-theme="light"] {
+        [data-bs-theme="light"],
+        :root[data-bs-theme="light"] [data-bs-theme="root"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-invisible-black: rgba(0, 0, 0, 0);
           --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10625,7 +10631,9 @@ $utilities: ();
           --bs-color-decorative-skin-tint-900: #2e2014;
         }
 
-        [data-bs-theme="dark"] {
+        [data-bs-theme="dark"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root"],
+        :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-invisible-black: rgba(255, 255, 255, 0);
           --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
