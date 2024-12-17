@@ -1,0 +1,70 @@
+---
+layout: examples
+title: Loading buttons
+extra_js:
+- src: "loading-buttons.js"
+defer: true
+---
+
+<div class="container-fluid container-max-width">
+  <h1 class="py-medium">Loading buttons</h1>
+
+  <h2 class="py-short">Loading buttons in an indeterminate time</h2>
+
+  <div class="row py-taller">
+    <div class="col-3">
+      <button type="button" class="btn btn-default" id="load1">
+        Download file 1
+        <span role="status">
+          <span id="update1" class="visually-hidden"></span>
+        </span>
+      </button>
+    </div>
+    <!--    <div class="col-3">-->
+    <!--      <button type="button" class="btn btn-strong">-->
+    <!--        Strong-->
+    <!--      </button>-->
+    <!--    </div>-->
+    <!--    <div class="col-3">-->
+    <!--      <button type="button" class="btn btn-minimal">-->
+    <!--        Minimal-->
+    <!--      </button>-->
+    <!--    </div>-->
+    <!--    <div class="col-3">-->
+    <!--      <button type="button" class="btn btn-negative">-->
+    <!--        Negative-->
+    <!--      </button>-->
+    <!--    </div>-->
+  </div>
+  <!--  <div class="row py-taller bg-primary">-->
+  <!--    <div class="col-3">-->
+  <!--      <button type="button" class="btn btn-default-on-colored-bg">-->
+  <!--        Default-->
+  <!--      </button>-->
+  <!--    </div>-->
+  <!--    <div class="col-3">-->
+  <!--      <button type="button" class="btn btn-strong-on-colored-bg">-->
+  <!--        Strong-->
+  <!--      </button>-->
+  <!--    </div>-->
+  <!--    <div class="col-3">-->
+  <!--      <button type="button" class="btn btn-minimal-on-colored-bg">-->
+  <!--        Minimal-->
+  <!--      </button>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <h2 class="py-short">Loading buttons in a determinate time</h2>
+
+  <div class="row py-taller">
+    <div class="col-3">
+      <button type="button" class="btn btn-default" id="load2" style="--bs-button-loading-time: 10;">
+        Download file 2
+        <span role="status" aria-live="assertive">
+          <span id="update2" class="visually-hidden"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+</div>
