@@ -61,8 +61,8 @@ Bootstrap defines a color palette on its own. We worked on a mapping between Ora
 
 {{< callout danger >}}
 Some of the colors below do not belong to the Orange Unified Design System specifications.
-<!-- TODO LM: Decide how to link to the new DSM -->
-Please refer to our [color palette section](#palette)<!-- and to the [Color guidelines](https://unified-design-system.orange.com/472794e18/p/217ac6-colour/b/4705d3) on the Orange Unified Design System website-->.
+
+Please refer to our [color palette section](#palette) and to the [Color guidelines](https://unified-design-system.orange.com/472794e18/p/217ac6-color) on the Orange Unified Design System website.
 {{< /callout >}}
 
 {{< callout warning >}}
@@ -118,13 +118,13 @@ Sass cannot programmatically generate variables, so we manually created variable
 
 <h3>Example</h3>
 
-Here's how you should not use these in your Sass:
+Here's how you should use these in your Sass:
 
 ```scss
-.alpha { color: $purple; }
+.alpha { color: var(--bs-color-action-visited); } // And not `$ouds-color-decorative-amethyst-600` or `$ouds-color-action-visited-light` directly
 .beta {
-  color: $ouds-color-decorative-sun-100;
-  background-color: $indigo-900;
+  color: $ouds-color-decorative-sun-100; // Because we don't have any CSS variable but prefer avoid the decorative
+  background-color: var(--bs-color-bg-primary); // No hex code, no Sass variable
 }
 ```
 

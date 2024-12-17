@@ -29,7 +29,7 @@
   --docsearch-key-shadow: null;
   // --docsearch-footer-height;
   --docsearch-footer-background: transparent;
-  --docsearch-footer-shadow: 0 -1px var(--bs-border-color);
+  --docsearch-footer-shadow: 0 -1px var(--bs-color-border-emphasized);
 }
 
 .bd-search {
@@ -50,7 +50,7 @@
 }
 
 .DocSearch-Modal {
-  border: var(--bs-border-width) solid var(--bs-color-border-emphasized);
+  border: var(--bs-border-width) solid var(--bs-color-border-default);
   @include border-radius(0, 0);
 }
 
@@ -98,7 +98,7 @@
 }
 
 .DocSearch-Form {
-  box-shadow: var(--bs-color-border-emphasized) 0 0 0 .125rem inset;
+  box-shadow: var(--bs-color-border-default) 0 0 0 .125rem inset;
   @include border-radius(0, 0);
 
   &:focus-within {

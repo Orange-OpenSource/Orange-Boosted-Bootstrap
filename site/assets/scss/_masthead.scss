@@ -16,7 +16,7 @@
 
   .bd-code-snippet {
     margin: 0;
-    border-color: var(--bs-color-border-emphasized);
+    border-color: var(--bs-color-border-default);
     border-width: 1px;
     @include border-radius(calc(.5rem - 1px));
   }
