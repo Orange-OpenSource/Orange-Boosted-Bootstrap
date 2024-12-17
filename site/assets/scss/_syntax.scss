@@ -26,7 +26,7 @@
 
 // Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from OUDS Web's light mode
 @include color-mode(dark, true) {
-  --base00: #{$gray-950};
+  --base00: #{$ouds-color-functional-dark-gray-880};
   --base01: #{$gray-500};
   --base02: #{$teal-300};
   --base03: #{$cyan-300};

@@ -1061,12 +1061,6 @@ $utilities: map-merge(
           "transparent": transparent,
           "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
           "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "supporting-green": $supporting-green, // OUDS mod
-          "supporting-blue": $supporting-blue, // OUDS mod
-          "supporting-yellow": $supporting-yellow, // OUDS mod
-          "supporting-pink": $supporting-pink, // OUDS mod
-          "supporting-purple": $supporting-purple, // OUDS mod
-          "supporting-orange": $supporting-orange, // OUDS mod
         )
       )
     ),

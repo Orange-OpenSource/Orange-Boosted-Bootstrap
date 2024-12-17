@@ -258,14 +258,11 @@
   --#{$prefix}code-color: #{$code-color};
   --#{$prefix}highlight-color: #{$mark-color};
   --#{$prefix}highlight-bg: #{$mark-bg};
-  --#{$prefix}disabled-color: #{$disabled-color}; // OUDS mod
-  --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg}; // OUDS mod
 
   // scss-docs-start root-border-var-ouds
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
-  --#{$prefix}border-color-subtle: #{$border-color-subtle}; // OUDS mod
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
   // scss-docs-end root-border-var-ouds
 
@@ -401,9 +398,6 @@
     --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
   }
 
-  --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color}; // OUDS mod
-  --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color}; // OUDS mod
-
   // Focus styles
   // scss-docs-start root-focus-variables
   --#{$prefix}focus-ring-width: #{$focus-ring-width};
@@ -498,15 +492,9 @@
     --#{$prefix}code-color: #{$code-color-dark};
     --#{$prefix}highlight-color: #{$mark-color-dark};
     --#{$prefix}highlight-bg: #{$mark-bg-dark};
-    --#{$prefix}disabled-color: #{$disabled-color-dark}; // OUDS mod
-    --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark}; // OUDS mod
 
     --#{$prefix}border-color: #{$border-color-dark};
-    --#{$prefix}border-color-subtle: #{$border-color-subtle-dark}; // OUDS mod
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
-
-    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // OUDS mod
-    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // OUDS mod
 
     --#{$prefix}focus-ring-color: #{$focus-ring-color-dark}; // OUDS mod
 

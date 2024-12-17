@@ -126,16 +126,18 @@ If necessary, in specific cases, you can define a custom maximum width for the f
 This adjustment will apply to all containers using the `.container-max-width`class, ensuring that your layout stays within the specific width. Once the layout exceeds the `$ouds-size-max-width-grid` value at larger breakpoints, the container's margins and gutter values will remain unchanged.
 
 ```scss
-@import "../node_modules/ouds-web/scss/functions";
+@import "../node_modules/@ouds/web/scss/config";
+@import "../node_modules/@ouds/web/scss/functions";
 
 $ouds-size-max-width-grid: 3500px; // Custom container max width
 
-@import "../node_modules/ouds-web/tokens/raw";
-@import "../node_modules/ouds-web/tokens/semantic";
-@import "../node_modules/ouds-web/tokens/composite";
-@import "../node_modules/ouds-web/tokens/component";
-@import "../node_modules/ouds-web/variables";
-@import "../node_modules/ouds-web/variables-dark";
+@import "../node_modules/@ouds/web/scss/tokens/raw";
+@import "../node_modules/@ouds/web/scss/tokens/semantic";
+@import "../node_modules/@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "../node_modules/@ouds/web/scss/tokens/composite";
+@import "../node_modules/@ouds/web/scss/tokens/component";
+@import "../node_modules/@ouds/web/scss/variables";
+@import "../node_modules/@ouds/web/scss/variables-dark";
 // etc
 ```
 
