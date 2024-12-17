@@ -40,7 +40,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
         </button>
         <figcaption class="py-shortest">
           <code class="user-select-all">{{ $color.hex }}</code>
-          <hr class="my-shortest bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
+          <hr class="my-shortest border-top" style="border-color:{{ $color.hex }} !important">
           <var class="user-select-all">{{- $color.variable -}}</var>
         </figcaption>
       </figure>
@@ -128,7 +128,8 @@ Here's how you should use these in your Sass:
 }
 ```
 
-<!-- [Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color`. -->
+<!-- [Color]({{< docsref "/utilities/colors" >}}) and -->
+[Background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting <!--`color` and -->`background-color`.
 </details>
 
 ## CSS
