@@ -33,6 +33,6 @@
   .bd-callout-#{$variant} {
     --bd-callout-color: var(--bs-emphasis-color); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
     --bd-callout-bg: var(--#{$prefix}color-surface-status-#{if($variant == "danger", negative, $variant)}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
-    --bd-callout-border: var(--bs-#{$variant}-border-subtle);
+    --bd-callout-border: var(--bs-#{$variant}-border-subtle); // TODO LM: Check after the complete list
   }
 }
