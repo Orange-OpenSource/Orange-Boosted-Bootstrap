@@ -196,8 +196,8 @@ Output:
 
 ### Local CSS variables
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. <!--For example, consider our `.bg-*` utilities:-->
-<!--
+Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
+
 ```scss
 $utilities: (
   "background-color": (
@@ -220,10 +220,15 @@ Output:
 
 ```css
 .bg-primary {
-  -bs-bg-opacity: 1; // TODO: reinsert hyphens
-  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important; // TODO: reinsert hyphens
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
-```-->
+/* ... */
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+```
 
 ### States
 
