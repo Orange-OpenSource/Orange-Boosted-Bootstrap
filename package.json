@@ -106,7 +106,6 @@
     "@babel/cli": "^7.24.5",
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
-    "@chromatic-com/storybook": "^3.2.2",
     "@docsearch/js": "^3.6.2",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
