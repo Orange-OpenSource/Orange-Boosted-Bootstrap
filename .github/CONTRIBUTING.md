@@ -70,7 +70,7 @@ Guidelines for bug reports:
 
 3. **Isolate the problem** &mdash; ideally create a [reduced test
    case](https://css-tricks.com/reduced-test-cases/) and a live example.
-   This [CodePen](https://codepen.io/julien-deramond/pen/RwzRNjG) is helpful template.
+   This [CodePen](https://codepen.io/louismaximepiton/pen/RNbVWVw) is helpful template.
 
 
 A good bug report shouldn't leave others needing to chase you up for more
