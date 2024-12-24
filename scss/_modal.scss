@@ -165,7 +165,7 @@
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // Boosted mod: using custom properties for padding
+    margin: calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // Boosted mod: using custom properties for padding
   }
 }
 

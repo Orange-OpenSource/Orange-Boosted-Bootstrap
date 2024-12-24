@@ -1658,7 +1658,7 @@ $pagination-bg:                     transparent !default; // Boosted mod: instea
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc($pagination-border-width * -1)`
+$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc(-1 * $pagination-border-width)`
 $pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
