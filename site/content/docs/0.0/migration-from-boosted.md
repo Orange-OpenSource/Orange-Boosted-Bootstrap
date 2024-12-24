@@ -755,9 +755,11 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-size-icon-with-label-medium-size-lg</code></li>
       <li><code>$ouds-size-icon-with-label-medium-size-md</code></li>
       <li><code>$ouds-size-icon-with-label-medium-size-sm</code></li>
+      <li><code>$ouds-size-icon-with-label-medium-size-xs</code></li>
       <li><code>$ouds-size-icon-with-label-small-size-lg</code></li>
       <li><code>$ouds-size-icon-with-label-small-size-md</code></li>
       <li><code>$ouds-size-icon-with-label-small-size-sm</code></li>
+      <li><code>$ouds-size-icon-with-label-small-size-xs</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-lg</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-md</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-sm</code></li>
