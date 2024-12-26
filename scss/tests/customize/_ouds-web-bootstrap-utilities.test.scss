@@ -771,8 +771,9 @@ $utilities: ();
       @include expect() {
         :root,
         [data-bs-theme="light"] {
-          --bs-color-opacity-invisible-black: rgba(0, 0, 0, 0);
-          --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
+          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
@@ -816,12 +817,11 @@ $utilities: ();
           --bs-color-content-on-action-highlighted: #fff;
           --bs-color-content-on-action-hover: #fff;
           --bs-color-content-on-action-loading: #fff;
-          --bs-color-content-on-action-negative: #fff;
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #fff;
           --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-neutral: #fff;
+          --bs-color-content-on-status-emphasized-alt: #fff;
           --bs-color-content-on-status-muted: #000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #ea0305;
@@ -877,8 +877,9 @@ $utilities: ();
         }
 
         [data-bs-theme="dark"] {
-          --bs-color-opacity-invisible-black: rgba(255, 255, 255, 0);
-          --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
+          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
@@ -922,12 +923,11 @@ $utilities: ();
           --bs-color-content-on-action-highlighted: #000;
           --bs-color-content-on-action-hover: #000;
           --bs-color-content-on-action-loading: #000;
-          --bs-color-content-on-action-negative: #000;
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #000;
           --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-neutral: #000;
+          --bs-color-content-on-status-emphasized-alt: #000;
           --bs-color-content-on-status-muted: #eee;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #ea0305;
@@ -10520,8 +10520,9 @@ $utilities: ();
       @include expect() {
         :root,
         [data-bs-theme="light"] {
-          --bs-color-opacity-invisible-black: rgba(0, 0, 0, 0);
-          --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
+          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10565,12 +10566,11 @@ $utilities: ();
           --bs-color-content-on-action-highlighted: #fff;
           --bs-color-content-on-action-hover: #fff;
           --bs-color-content-on-action-loading: #fff;
-          --bs-color-content-on-action-negative: #fff;
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #fff;
           --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-neutral: #fff;
+          --bs-color-content-on-status-emphasized-alt: #fff;
           --bs-color-content-on-status-muted: #000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #ea0305;
@@ -10626,8 +10626,9 @@ $utilities: ();
         }
 
         [data-bs-theme="dark"] {
-          --bs-color-opacity-invisible-black: rgba(255, 255, 255, 0);
-          --bs-color-opacity-invisible-white: rgba(255, 255, 255, 0);
+          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10671,12 +10672,11 @@ $utilities: ();
           --bs-color-content-on-action-highlighted: #000;
           --bs-color-content-on-action-hover: #000;
           --bs-color-content-on-action-loading: #000;
-          --bs-color-content-on-action-negative: #000;
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #000;
           --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-neutral: #000;
+          --bs-color-content-on-status-emphasized-alt: #000;
           --bs-color-content-on-status-muted: #eee;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #ea0305;

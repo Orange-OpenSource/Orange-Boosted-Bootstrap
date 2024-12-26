@@ -1,7 +1,8 @@
 :root,
 [data-bs-theme="light"] {
-  --#{$prefix}color-opacity-invisible-black: #{$ouds-color-opacity-invisible-black-light};
-  --#{$prefix}color-opacity-invisible-white: #{$ouds-color-opacity-invisible-white-light};
+  --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-light};
+  --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-light};
+  --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-light};
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-light};
   --#{$prefix}color-action-enabled: #{$ouds-color-action-enabled-light};
   --#{$prefix}color-action-focus: #{$ouds-color-action-focus-light};
@@ -45,12 +46,11 @@
   --#{$prefix}color-content-on-action-highlighted: #{$ouds-color-content-on-action-highlighted-light};
   --#{$prefix}color-content-on-action-hover: #{$ouds-color-content-on-action-hover-light};
   --#{$prefix}color-content-on-action-loading: #{$ouds-color-content-on-action-loading-light};
-  --#{$prefix}color-content-on-action-negative: #{$ouds-color-content-on-action-negative-light};
   --#{$prefix}color-content-on-action-pressed: #{$ouds-color-content-on-action-pressed-light};
   --#{$prefix}color-content-on-brand-primary: #{$ouds-color-content-on-brand-primary-light};
   --#{$prefix}color-content-on-overlay-emphasized: #{$ouds-color-content-on-overlay-emphasized-light};
   --#{$prefix}color-content-on-status-emphasized: #{$ouds-color-content-on-status-emphasized-light};
-  --#{$prefix}color-content-on-status-emphasized-neutral: #{$ouds-color-content-on-status-emphasized-neutral-light};
+  --#{$prefix}color-content-on-status-emphasized-alt: #{$ouds-color-content-on-status-emphasized-alt-light};
   --#{$prefix}color-content-on-status-muted: #{$ouds-color-content-on-status-muted-light};
   --#{$prefix}color-content-status-info: #{$ouds-color-content-status-info-light};
   --#{$prefix}color-content-status-negative: #{$ouds-color-content-status-negative-light};
@@ -106,8 +106,9 @@
 }
 
 [data-bs-theme="dark"] {
-  --#{$prefix}color-opacity-invisible-black: #{$ouds-color-opacity-invisible-black-dark};
-  --#{$prefix}color-opacity-invisible-white: #{$ouds-color-opacity-invisible-white-dark};
+  --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-dark};
+  --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-dark};
+  --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-dark};
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-dark};
   --#{$prefix}color-action-enabled: #{$ouds-color-action-enabled-dark};
   --#{$prefix}color-action-focus: #{$ouds-color-action-focus-dark};
@@ -151,12 +152,11 @@
   --#{$prefix}color-content-on-action-highlighted: #{$ouds-color-content-on-action-highlighted-dark};
   --#{$prefix}color-content-on-action-hover: #{$ouds-color-content-on-action-hover-dark};
   --#{$prefix}color-content-on-action-loading: #{$ouds-color-content-on-action-loading-dark};
-  --#{$prefix}color-content-on-action-negative: #{$ouds-color-content-on-action-negative-dark};
   --#{$prefix}color-content-on-action-pressed: #{$ouds-color-content-on-action-pressed-dark};
   --#{$prefix}color-content-on-brand-primary: #{$ouds-color-content-on-brand-primary-dark};
   --#{$prefix}color-content-on-overlay-emphasized: #{$ouds-color-content-on-overlay-emphasized-dark};
   --#{$prefix}color-content-on-status-emphasized: #{$ouds-color-content-on-status-emphasized-dark};
-  --#{$prefix}color-content-on-status-emphasized-neutral: #{$ouds-color-content-on-status-emphasized-neutral-dark};
+  --#{$prefix}color-content-on-status-emphasized-alt: #{$ouds-color-content-on-status-emphasized-alt-dark};
   --#{$prefix}color-content-on-status-muted: #{$ouds-color-content-on-status-muted-dark};
   --#{$prefix}color-content-status-info: #{$ouds-color-content-status-info-dark};
   --#{$prefix}color-content-status-negative: #{$ouds-color-content-status-negative-dark};
