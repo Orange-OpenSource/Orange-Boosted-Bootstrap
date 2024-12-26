@@ -14,20 +14,18 @@
         @content;
       }
     }
+  } @else if $root == true and $mode == light {
+    #{$ouds-root-selector},
+    [data-bs-theme="#{$mode}"],
+    #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
+    #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
+      @content;
+    }
   } @else {
-    @if $root == true and $mode == light {
-      #{$ouds-root-selector},
-      [data-bs-theme="#{$mode}"],
-      #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
-      #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
-        @content;
-      }
-    } @else {
-      [data-bs-theme="#{$mode}"],
-      #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
-      #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
-        @content;
-      }
+    [data-bs-theme="#{$mode}"],
+    #{$ouds-root-selector}[data-bs-theme="#{$mode}"] [data-bs-theme="root"],
+    #{$ouds-root-selector}[data-bs-theme="#{$inverted-mode}"] [data-bs-theme="root-inverted"] {
+      @content;
     }
   }
 }
