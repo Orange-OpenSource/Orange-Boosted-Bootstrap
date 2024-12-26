@@ -764,13 +764,54 @@ $utilities: ();
             class: shadow,
             values: $ouds-elevations
           ),
+          "background-color": (
+            property: background-color,
+            class: bg,
+            local-vars: (
+              "bg-opacity": 1
+            ),
+            values: map-merge(
+              $utilities-bg-colors,
+              (
+                // OUDS mod: no "transparent"
+                "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
+                "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+              )
+            ),
+            bootstrap-compatibility: true,
+          ),
+          "bg-opacity": (
+            css-var: true,
+            class: bg-opacity,
+            values: (
+              10: .1,
+              25: .25,
+              50: .5,
+              75: .75,
+              100: 1
+            ),
+            bootstrap-compatibility: true,
+          ),
+          "subtle-background-color": (
+            property: background-color,
+            class: bg,
+            values: $utilities-bg-subtle,
+            bootstrap-compatibility: true,
+          ),
+          "background-color-ouds": (
+            property: background-color,
+            class: bg,
+            values: $ouds-backgrounds,
+          ),
         ) !global;
 
         @import "../../utilities/api";
       }
       @include expect() {
         :root,
-        [data-bs-theme="light"] {
+        [data-bs-theme="light"],
+        :root[data-bs-theme="light"] [data-bs-theme="root"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
@@ -884,7 +925,9 @@ $utilities: ();
           --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        [data-bs-theme="dark"] {
+        [data-bs-theme="dark"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root"],
+        :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
@@ -3408,6 +3451,86 @@ $utilities: ();
 
         .shadow-sticky-navigation-scrolled {
           box-shadow: 0 4px 4px -1px var(--bs-elevation-color-sticky-navigation-scrolled) !important;
+        }
+
+        .bg-primary {
+          background-color: var(--bs-color-bg-primary) !important;
+        }
+
+        .bg-secondary {
+          background-color: var(--bs-color-bg-secondary) !important;
+        }
+
+        .bg-tertiary {
+          background-color: var(--bs-color-bg-tertiary) !important;
+        }
+
+        .bg-emphasized {
+          background-color: var(--bs-color-bg-emphasized) !important;
+        }
+
+        .bg-brand-primary {
+          background-color: var(--bs-color-surface-brand-primary) !important;
+        }
+
+        .bg-status-neutral-emphasized {
+          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
+        }
+
+        .bg-status-neutral-muted {
+          background-color: var(--bs-color-surface-status-neutral-muted) !important;
+        }
+
+        .bg-status-accent-emphasized {
+          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
+        }
+
+        .bg-status-accent-muted {
+          background-color: var(--bs-color-surface-status-accent-muted) !important;
+        }
+
+        .bg-status-positive-emphasized {
+          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
+        }
+
+        .bg-status-positive-muted {
+          background-color: var(--bs-color-surface-status-positive-muted) !important;
+        }
+
+        .bg-status-negative-emphasized {
+          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
+        }
+
+        .bg-status-negative-muted {
+          background-color: var(--bs-color-surface-status-negative-muted) !important;
+        }
+
+        .bg-status-warning-emphasized {
+          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
+        }
+
+        .bg-status-warning-muted {
+          background-color: var(--bs-color-surface-status-warning-muted) !important;
+        }
+
+        .bg-status-info-emphasized {
+          background-color: var(--bs-color-surface-status-info-emphasized) !important;
+        }
+
+        .bg-status-info-muted {
+          background-color: var(--bs-color-surface-status-info-muted) !important;
+        }
+
+        .bg-always-black {
+          background-color: var(--bs-color-always-black) !important;
+        }
+
+        .bg-always-white {
+          background-color: var(--bs-color-always-white) !important;
+        }
+
+        .bg-transparent {
+          background-color: transparent !important;
         }
 
         @media (min-width: 390px) {
@@ -10529,13 +10652,54 @@ $utilities: ();
             class: shadow,
             values: $ouds-elevations
           ),
+          "background-color": (
+            property: background-color,
+            class: bg,
+            local-vars: (
+              "bg-opacity": 1
+            ),
+            values: map-merge(
+              $utilities-bg-colors,
+              (
+                // OUDS mod: no "transparent"
+                "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
+                "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+              )
+            ),
+            bootstrap-compatibility: true,
+          ),
+          "bg-opacity": (
+            css-var: true,
+            class: bg-opacity,
+            values: (
+              10: .1,
+              25: .25,
+              50: .5,
+              75: .75,
+              100: 1
+            ),
+            bootstrap-compatibility: true,
+          ),
+          "subtle-background-color": (
+            property: background-color,
+            class: bg,
+            values: $utilities-bg-subtle,
+            bootstrap-compatibility: true,
+          ),
+          "background-color-ouds": (
+            property: background-color,
+            class: bg,
+            values: $ouds-backgrounds,
+          ),
         ) !global;
 
         @import "../../utilities/api";
       }
       @include expect() {
         :root,
-        [data-bs-theme="light"] {
+        [data-bs-theme="light"],
+        :root[data-bs-theme="light"] [data-bs-theme="root"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
@@ -10649,7 +10813,9 @@ $utilities: ();
           --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
-        [data-bs-theme="dark"] {
+        [data-bs-theme="dark"],
+        :root[data-bs-theme="dark"] [data-bs-theme="root"],
+        :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
@@ -13889,6 +14055,203 @@ $utilities: ();
 
         .shadow-sticky-navigation-scrolled {
           box-shadow: 0 4px 4px -1px var(--bs-elevation-color-sticky-navigation-scrolled) !important;
+        }
+
+        .bg-primary {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-secondary {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-success {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-info {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-warning {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-danger {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-light {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-dark {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-black {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-white {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-body {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-body-secondary {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-body-tertiary {
+          --bs-bg-opacity: 1;
+          background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .bg-opacity-10 {
+          --bs-bg-opacity: 0.1; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .bg-opacity-25 {
+          --bs-bg-opacity: 0.25; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .bg-opacity-50 {
+          --bs-bg-opacity: 0.5; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .bg-opacity-75 {
+          --bs-bg-opacity: 0.75; // stylelint-disable-line @stylistic/number-leading-zero
+        }
+
+        .bg-opacity-100 {
+          --bs-bg-opacity: 1;
+        }
+
+        .bg-primary-subtle {
+          background-color: var(--bs-primary-bg-subtle) !important;
+        }
+
+        .bg-secondary-subtle {
+          background-color: var(--bs-secondary-bg-subtle) !important;
+        }
+
+        .bg-success-subtle {
+          background-color: var(--bs-success-bg-subtle) !important;
+        }
+
+        .bg-info-subtle {
+          background-color: var(--bs-info-bg-subtle) !important;
+        }
+
+        .bg-warning-subtle {
+          background-color: var(--bs-warning-bg-subtle) !important;
+        }
+
+        .bg-danger-subtle {
+          background-color: var(--bs-danger-bg-subtle) !important;
+        }
+
+        .bg-light-subtle {
+          background-color: var(--bs-light-bg-subtle) !important;
+        }
+
+        .bg-dark-subtle {
+          background-color: var(--bs-dark-bg-subtle) !important;
+        }
+
+        .bg-primary { // stylelint-disable-line no-duplicate-selectors
+          background-color: var(--bs-color-bg-primary) !important;
+        }
+
+        .bg-secondary { // stylelint-disable-line no-duplicate-selectors
+          background-color: var(--bs-color-bg-secondary) !important;
+        }
+
+        .bg-tertiary {
+          background-color: var(--bs-color-bg-tertiary) !important;
+        }
+
+        .bg-emphasized {
+          background-color: var(--bs-color-bg-emphasized) !important;
+        }
+
+        .bg-brand-primary {
+          background-color: var(--bs-color-surface-brand-primary) !important;
+        }
+
+        .bg-status-neutral-emphasized {
+          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
+        }
+
+        .bg-status-neutral-muted {
+          background-color: var(--bs-color-surface-status-neutral-muted) !important;
+        }
+
+        .bg-status-accent-emphasized {
+          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
+        }
+
+        .bg-status-accent-muted {
+          background-color: var(--bs-color-surface-status-accent-muted) !important;
+        }
+
+        .bg-status-positive-emphasized {
+          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
+        }
+
+        .bg-status-positive-muted {
+          background-color: var(--bs-color-surface-status-positive-muted) !important;
+        }
+
+        .bg-status-negative-emphasized {
+          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
+        }
+
+        .bg-status-negative-muted {
+          background-color: var(--bs-color-surface-status-negative-muted) !important;
+        }
+
+        .bg-status-warning-emphasized {
+          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
+        }
+
+        .bg-status-warning-muted {
+          background-color: var(--bs-color-surface-status-warning-muted) !important;
+        }
+
+        .bg-status-info-emphasized {
+          background-color: var(--bs-color-surface-status-info-emphasized) !important;
+        }
+
+        .bg-status-info-muted {
+          background-color: var(--bs-color-surface-status-info-muted) !important;
+        }
+
+        .bg-always-black {
+          background-color: var(--bs-color-always-black) !important;
+        }
+
+        .bg-always-white {
+          background-color: var(--bs-color-always-white) !important;
+        }
+
+        .bg-transparent {
+          background-color: transparent !important;
         }
 
         @media (min-width: 390px) {

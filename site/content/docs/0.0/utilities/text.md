@@ -47,7 +47,7 @@ Wrap text with a `.text-wrap` class.
 Prevent text from wrapping with a `.text-nowrap` class.
 
 {{< example >}}
-<div class="text-nowrap bg-body-secondary border border-dark" style="width: 8rem;">
+<div class="text-nowrap bg-secondary border border-dark" style="width: 8rem;">
   This text should overflow the parent.
 </div>
 {{< /example >}}

@@ -27,7 +27,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background-color: rgba(var(--bs-body-color-rgb), .075);
+    background-color: var(--#{$prefix}color-bg-secondary);
     @include border-radius(.5rem);
 
     @include media-breakpoint-up(lg) {
