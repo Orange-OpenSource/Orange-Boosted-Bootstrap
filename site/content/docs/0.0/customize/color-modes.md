@@ -39,39 +39,6 @@ By default, we provide two static themes/modes that are `"light"` and `"dark"`. 
 </div>
 {{< /example >}}
 
-<!-- **OUDS Web supports color modes, starting with dark mode!** With OUDS Web, you can apply the different color modes as you see fit. We support a static light mode (default) and a static dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
-
-This `data-bs-theme` attribute will automatically apply the corresponding `color` property of the targeted element. Be careful, if you use the `data-bs-theme` attribute on an element carrying one of our [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), the `background-color` property will also be automatically changed to use the current defined color mode.
-
-{{< example class="d-flex flex-column gap-tallest" >}}
-<div class="p-short">
-  <h1>Title</h1>
-  <p class="lead mb-none">This is a lead paragraph.</p>
-</div>
-<div class="p-short bg-primary" data-bs-theme="light">
-  <h1>Title</h1>
-  <p class="lead mb-none">This is a lead paragraph.</p>
-</div>
-<div class="p-short bg-primary" data-bs-theme="dark">
-  <h1>Title</h1>
-  <p class="lead mb-none">This is a lead paragraph.</p>
-</div>
-<div class="bg-status-neutral-emphasized p-short">
-  <div data-bs-theme="root-inverted">
-    <h1>Title</h1>
-    <p class="lead mb-none">This is a lead paragraph.</p>
-  </div>
-</div>
-{{< /example >}}
-
-{{< callout warning >}}
-Applying a color mode directly on a component or element (especially with some basic HTML elements, form controls, etc.), some unexpected rendering may occur. It is mostly related to the automatic change of `color` property linked to the color mode.
-
-Most of the time, the workaround will be to add a `data-bs-theme` attribute on a specific container of the component or element you want to apply a color mode to.
-{{< /callout >}}
-
-Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below. -->
-
 #### `light` mode
 
 Light mode is the default mode of the page, it allows you to write using black text color and light mode components. To get the light theme independently from the cascade, you can set via <span class="user-select-all">`data-bs-theme="light"`</span> on any element. Feel free to change the color mode of the page to see the effect on the inside background example above.

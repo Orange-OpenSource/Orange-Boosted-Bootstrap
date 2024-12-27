@@ -21,8 +21,8 @@ You can find and customize these variables for key global options in OUDS Web's 
 | `$enable-negative-margins`        | `true` or `false` (default)           | Enables the generation of [negative margin utilities]({{< docsref "/utilities/spacing#negative-margin" >}}). |
 | `$enable-deprecation-messages`    | `true` (default) or `false`           | Set to `false` to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in Bootstrap `v6`. |
 | `$enable-important-utilities`     | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
-<!--| `$enable-dark-mode`            | `true` (default) or `false`           | Enables built-in [dark mode support]({{< docsref "/customize/color-modes#dark-mode" >}}) across the project and its components. |
-| `$enable-rounded`              | `true` or `false` (default)           | Enables predefined `border-radius` styles on various components. |
+| `$enable-dark-mode`               | `true` (default) or `false`           | Enables built-in [dark mode support]({{< docsref "/customize/color-modes#dark-mode" >}}) across the project and its components. |
+<!--| `$enable-rounded`              | `true` or `false` (default)           | Enables predefined `border-radius` styles on various components. |
 | `$enable-shadows`              | `true` or `false` (default)           | Enables predefined decorative `box-shadow` styles on various components. Does not affect `box-shadow`s used for focus states. |
 | `$enable-gradients`            | `true` or `false` (default)           | Enables predefined gradients via `background-image` styles on various components. |
 | `$enable-transitions`          | `true` (default) or `false`           | Enables predefined `transition`s on various components. |
