@@ -20,6 +20,17 @@ $ouds-border-widths: (
   "thick":    $ouds-border-width-thick,
   "thicker":  $ouds-border-width-thicker,
 ) !default;
+
+$ouds-border-colors: (
+  "brand-primary": var(--#{$prefix}color-border-brand-primary),
+  "default": var(--#{$prefix}color-border-default),
+  "emphasized": var(--#{$prefix}color-border-emphasized),
+  "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+) !default;
 // scss-docs-end ouds-maps-borders
 
 // scss-docs-start ouds-maps-dimension
@@ -117,7 +128,7 @@ $ouds-opacities: (
 ) !default;
 // scss-docs-end ouds-maps-opacities
 
-// scss-docs-start ouds-maps-opacities
+// scss-docs-start ouds-maps-backgrounds
 $ouds-backgrounds: (
   "primary": var(--#{$prefix}color-bg-primary),
   "secondary": var(--#{$prefix}color-bg-secondary),
@@ -140,7 +151,7 @@ $ouds-backgrounds: (
   "always-white": var(--#{$prefix}color-always-white),
   "transparent": transparent,
 ) !default;
-// scss-docs-end ouds-maps-opacities
+// scss-docs-end ouds-maps-backgrounds
 // End mod
 
 // Re-assigned maps

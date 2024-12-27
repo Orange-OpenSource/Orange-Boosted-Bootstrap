@@ -202,12 +202,14 @@ $utilities: map-merge(
       local-vars: (
         "border-opacity": 1
       ),
-      values: $utilities-border-colors
+      values: $utilities-border-colors,
+      bootstrap-compatibility: true
     ),
     "subtle-border-color": (
       property: border-color,
       class: border,
-      values: $utilities-border-subtle
+      values: $utilities-border-subtle,
+      bootstrap-compatibility: true
     ),
     "border-width": (
       property: border-width,
@@ -269,6 +271,11 @@ $utilities: map-merge(
       property: border-style,
       class: border,
       values: $ouds-border-styles
+    ),
+    "border-color-ouds": (
+      property: border-color,
+      class: border,
+      values: $ouds-border-colors
     ),
     // scss-docs-end utils-borders-ouds
     // End mod

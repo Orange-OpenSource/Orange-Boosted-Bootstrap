@@ -11,7 +11,7 @@
   margin-bottom: $spacer; // OUDS mod
   color: var(--bd-callout-color, inherit);
   background-color: var(--bd-callout-bg, var(--#{$prefix}color-surface-status-neutral)); // OUDS mod
-  border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-200)); // OUDS mod
+  // OUDS mod: no border-left
 
   h4 {
     margin-bottom: .25rem;
@@ -33,6 +33,6 @@
   .bd-callout-#{$variant} {
     --bd-callout-color: var(--bs-emphasis-color); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
     --bd-callout-bg: var(--#{$prefix}color-surface-status-#{if($variant == "danger", negative, $variant)}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
-    --bd-callout-border: var(--bs-#{$variant}-border-subtle);
+    // OUDS mod: no --bd-callout-border
   }
 }
