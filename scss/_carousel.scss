@@ -355,8 +355,8 @@
   bottom: $carousel-caption-spacer;
   left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
-  color: $carousel-caption-color;
-  background-color: $carousel-caption-bg; // Boosted mod: instead of `var(--#{$prefix}carousel-caption-color)`
+  color: $carousel-caption-color; // Boosted mod: instead of `var(--#{$prefix}carousel-caption-color)`
+  background-color: $carousel-caption-bg; // Boosted mod
 }
 
 // Boosted mod: no specific rules for dark carousel or dark mode carousel
