@@ -23,6 +23,9 @@ thumbnail: guides/webpack-dev-server-boosted.png
 You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
+## What is Webpack?
+[Webpack](https://webpack.js.org/) is a JavaScript module bundler that processes modules and their dependencies to generate static assets. It simplifies managing complex web applications with multiple files and dependencies.
+
 ## Setup
 
 We're building a Webpack project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.

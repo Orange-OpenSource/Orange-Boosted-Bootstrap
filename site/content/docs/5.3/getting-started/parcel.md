@@ -23,6 +23,9 @@ thumbnail: guides/parcel-dev-server-boosted.png
 You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
+## What is Parcel?
+[Parcel](https://parceljs.org/) is a web application bundler designed to simplify the development process with a zero-configuration setup out of the box. It offers features found in more advanced bundlers while focusing on ease of use, making it ideal for developers seeking a quick start.
+
 ## Setup
 
 We're building a Parcel project with Boosted from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.

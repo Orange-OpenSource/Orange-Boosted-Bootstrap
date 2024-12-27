@@ -100,6 +100,7 @@
   color: $carousel-control-color;
   text-align: center;
   background: none;
+  // Boosted mod: no filter
   border: 0;
   outline: 0; // Boosted mod
   box-shadow: none; // Boosted mod
@@ -202,7 +203,7 @@
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
-    background-color: $carousel-control-color; // Boosted mod
+    background-color: $carousel-control-color; // Boosted mod: instead of `var(--#{$prefix}carousel-indicator-active-bg)`
     border: 0;
     // Boosted mod: use our own target-size() mixin instead of transparent borders
     opacity: $carousel-indicator-opacity;
@@ -354,7 +355,7 @@
   bottom: $carousel-caption-spacer;
   left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
-  color: $carousel-caption-color;
+  color: $carousel-caption-color; // Boosted mod: instead of `var(--#{$prefix}carousel-caption-color)`
   background-color: $carousel-caption-bg; // Boosted mod
 }
 

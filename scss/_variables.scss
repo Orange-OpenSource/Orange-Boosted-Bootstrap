@@ -1658,7 +1658,7 @@ $pagination-bg:                     transparent !default; // Boosted mod: instea
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc($pagination-border-width * -1)`
+$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc(-1 * $pagination-border-width)`
 $pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
@@ -2132,6 +2132,7 @@ $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
 $carousel-control-transition:        $transition-focus !default;
+// Boosted mod: no $carousel-control-icon-filter
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;
@@ -2176,7 +2177,7 @@ $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration $transition-timing !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 // scss-docs-end carousel-variables
 
-// Boosted mod: no dark carousel
+// Boosted mod: no dark carousel variables
 
 
 // Spinners
