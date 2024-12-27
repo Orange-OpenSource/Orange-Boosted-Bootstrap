@@ -612,7 +612,7 @@ $border-widths: (
   5: $ouds-border-width-thicker * 1.25 // OUDS mod: instead of `$border-width * 2.5`
 ) !default;
 $border-style:                $ouds-border-style-default !default; // OUDS mod: instead of `solid`
-$border-color:                $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-300` // TODO LM: Decide whether to use default in here or in translucent
+$border-color:                $ouds-color-border-default-light !default; // OUDS mod: instead of `$gray-300`
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
