@@ -60,9 +60,7 @@ In the absence of a designer, it’s advisable to reach out to the [OUDS Web cor
 
 You are responsible for building and deploying your documentation. You can start with our existing documentation, modifying or removing sections as needed to fit your new design. Alternatively, you may choose to build your documentation from scratch using any preferred framework.
 
-### Custom color modes
-
-<!-- TODO LM: Do we Ouds ify this paragraph or remove it ? -->
+<!-- ### Custom color modes
 
 While the primary use case for [color modes]({{< docsref "/customize/color-modes" >}}) is light and dark mode, custom color modes are also possible. Create your own `data-bs-theme` selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate `_variables-dark.scss` stylesheet to house Boosted's dark mode specific Sass variables, but that's not required for you.
 
@@ -95,4 +93,4 @@ For example, you can create a "blue theme" with the selector `data-bs-theme="blu
 <div class="bg-body" data-bs-theme="blue">
   ...
 </div>
-```
+``` -->

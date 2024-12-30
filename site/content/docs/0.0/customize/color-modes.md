@@ -206,17 +206,17 @@ Enable the built in dark color mode across your entire project by adding the `da
 </html>
 ```
 
-OUDS Web do ship with a built-in color mode picker, you can use the one from our own documentation if you like in our [Orange navbar section]({{< docsref "/components/orange-navbar#with-mode-selector" >}}). [Learn more in the JavaScript section.](#javascript)
+OUDS Web do ship with a built-in color mode picker, you can use the one from our own documentation<!-- if you like in our [Orange navbar section]({{< docsref "/components/orange-navbar#with-mode-selector" >}})-->. [Learn more in the JavaScript section.](#javascript)
 
 ### Building with Sass
 
 Our dark mode option is available to use for all users of OUDS Web, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
 
-{{< callout warning >}}
+<!-- {{< callout warning >}}
 Please be aware that some of OUDS Web's components always use the contextual dark mode to have the same rendering both in light and dark mode, such as our [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Footer]({{< docsref "/components/footer" >}}). Please respect this constraint.
 
 If you need to use them, you won't be able to disable the dark mode globally.
-{{< /callout >}}
+{{< /callout >}} -->
 
 #### Change default behavior
 
@@ -303,9 +303,9 @@ Outputs to:
 
 To allow visitors or users to toggle color modes, you'll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We've built a toggler in our documentation that initially defers to a user's current system color mode, but provides an option to override that and pick a specific color mode.
 
-{{< callout info >}}
+<!-- {{< callout info >}}
 Check out our [Orange navbar mode selector variant]({{< docsref "/components/orange-navbar#with-mode-selector" >}}) to add a color mode selector to your navbar.
-{{< /callout >}}
+{{< /callout >}} -->
 
 Here's a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it's implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
 
