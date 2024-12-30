@@ -61,7 +61,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-body {
+#{$ouds-root-selector} > * {
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
