@@ -85,12 +85,14 @@ $utilities: ();
             local-vars: (
               "border-opacity": 1
             ),
-            values: $utilities-border-colors
+            values: $utilities-border-colors,
+            bootstrap-compatibility: true
           ),
           "subtle-border-color": (
             property: border-color,
             class: border,
-            values: $utilities-border-subtle
+            values: $utilities-border-subtle,
+            bootstrap-compatibility: true
           ),
           "border-width": (
             property: border-width,
@@ -149,6 +151,11 @@ $utilities: ();
             property: border-style,
             class: border,
             values: $ouds-border-styles
+          ),
+          "border-color-ouds": (
+            property: border-color,
+            class: border,
+            values: $ouds-border-colors
           ),
           "rounded": (
             property: border-radius,
@@ -1073,88 +1080,6 @@ $utilities: ();
           border: 0 !important;
         }
 
-        .border-primary {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-secondary {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-success {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-info {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-warning {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-danger {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-light {
-          --bs-border-opacity: 1;
-          border-color: rgba(85, 85, 85, var(--bs-border-opacity)) !important;
-        }
-
-        .border-dark {
-          --bs-border-opacity: 1;
-          border-color: rgba(39, 39, 39, var(--bs-border-opacity)) !important;
-        }
-
-        .border-black {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-white {
-          --bs-border-opacity: 1;
-          border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
-        }
-
-        .border-primary-subtle {
-          border-color: var(--bs-primary-border-subtle) !important;
-        }
-
-        .border-secondary-subtle {
-          border-color: var(--bs-secondary-border-subtle) !important;
-        }
-
-        .border-success-subtle {
-          border-color: var(--bs-success-border-subtle) !important;
-        }
-
-        .border-info-subtle {
-          border-color: var(--bs-info-border-subtle) !important;
-        }
-
-        .border-warning-subtle {
-          border-color: var(--bs-warning-border-subtle) !important;
-        }
-
-        .border-danger-subtle {
-          border-color: var(--bs-danger-border-subtle) !important;
-        }
-
-        .border-light-subtle {
-          border-color: var(--bs-light-border-subtle) !important;
-        }
-
-        .border-dark-subtle {
-          border-color: var(--bs-dark-border-subtle) !important;
-        }
-
         .border-top {
           border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
         }
@@ -1205,6 +1130,38 @@ $utilities: ();
 
         .border-drag {
           border-style: dashed !important;
+        }
+
+        .border-brand-primary {
+          border-color: var(--bs-color-border-brand-primary) !important;
+        }
+
+        .border-default {
+          border-color: var(--bs-color-border-default) !important;
+        }
+
+        .border-emphasized {
+          border-color: var(--bs-color-border-emphasized) !important;
+        }
+
+        .border-on-brand-primary {
+          border-color: var(--bs-color-border-on-brand-primary) !important;
+        }
+
+        .border-always-black {
+          border-color: var(--bs-color-always-black) !important;
+        }
+
+        .border-always-white {
+          border-color: var(--bs-color-always-white) !important;
+        }
+
+        .border-always-on-black {
+          border-color: var(--bs-color-always-on-black) !important;
+        }
+
+        .border-always-on-white {
+          border-color: var(--bs-color-always-on-white) !important;
         }
 
         .rounded {
@@ -9973,12 +9930,14 @@ $utilities: ();
             local-vars: (
               "border-opacity": 1
             ),
-            values: $utilities-border-colors
+            values: $utilities-border-colors,
+            bootstrap-compatibility: true
           ),
           "subtle-border-color": (
             property: border-color,
             class: border,
-            values: $utilities-border-subtle
+            values: $utilities-border-subtle,
+            bootstrap-compatibility: true
           ),
           "border-width": (
             property: border-width,
@@ -10037,6 +9996,11 @@ $utilities: ();
             property: border-style,
             class: border,
             values: $ouds-border-styles
+          ),
+          "border-color-ouds": (
+            property: border-color,
+            class: border,
+            values: $ouds-border-colors
           ),
           "rounded": (
             property: border-radius,
@@ -11181,6 +11145,38 @@ $utilities: ();
 
         .border-drag {
           border-style: dashed !important;
+        }
+
+        .border-brand-primary {
+          border-color: var(--bs-color-border-brand-primary) !important;
+        }
+
+        .border-default {
+          border-color: var(--bs-color-border-default) !important;
+        }
+
+        .border-emphasized {
+          border-color: var(--bs-color-border-emphasized) !important;
+        }
+
+        .border-on-brand-primary {
+          border-color: var(--bs-color-border-on-brand-primary) !important;
+        }
+
+        .border-always-black {
+          border-color: var(--bs-color-always-black) !important;
+        }
+
+        .border-always-white {
+          border-color: var(--bs-color-always-white) !important;
+        }
+
+        .border-always-on-black {
+          border-color: var(--bs-color-always-on-black) !important;
+        }
+
+        .border-always-on-white {
+          border-color: var(--bs-color-always-on-white) !important;
         }
 
         .rounded-0 {

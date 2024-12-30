@@ -288,6 +288,7 @@
 .bd-example-border-utils {
   [class^="border"] {
     display: inline-block;
+    flex-shrink: 0;
     width: 5rem;
     height: 5rem;
     margin: .25rem;
@@ -471,10 +472,6 @@
   letter-spacing: -.05rem;
 }
 // scss-docs-end sticker-fs-xl
-
-.border-subtle {
-  --bs-border-color: var(--bs-color-border-default);
-}
 
 .color-copy:hover > svg {
   transform: scale(1.07);
