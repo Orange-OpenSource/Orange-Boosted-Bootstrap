@@ -1,15 +1,13 @@
 // OUDS mod
-:root,
+#{$ouds-root-selector},
 [data-bs-theme] {
   color: var(--#{$prefix}body-color);
-  background-color: var(--#{$prefix}body-bg);
 }
 
-// Note that some of the following variables in `:root, [data-bs-theme="light"]` could be extracted into `:root` only selector since they are not modified by other color modes!
+// Note that some of the following variables in `#{$ouds-root-selector}, [data-bs-theme="light"]` could be extracted into `#{$ouds-root-selector}` only selector since they are not modified by other color modes!
 // End mod
 
-:root,
-[data-bs-theme="light"] {
+@include color-mode(light, true) {
   color-scheme: light; // OUDS mod
 
   // Note: Custom variable values only support SassScript inside `#{}`.

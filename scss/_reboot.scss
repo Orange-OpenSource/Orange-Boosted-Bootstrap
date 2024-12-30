@@ -25,7 +25,7 @@
 // Ability to the value of the root font sizes, affecting the value of `rem`.
 // null by default, thus nothing is generated.
 
-:root {
+#{$ouds-root-selector} {
   @if $font-size-root != null {
     @include font-size(var(--#{$prefix}root-font-size));
   }
@@ -61,7 +61,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-body {
+#{$ouds-root-selector} > * {
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);

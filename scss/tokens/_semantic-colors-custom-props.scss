@@ -1,5 +1,6 @@
-:root,
-[data-bs-theme="light"] {
+// scss-docs-start ouds-all-semantic-css-color
+// scss-docs-start ouds-semantic-css-color
+@include color-mode(light, true) {
   --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-light};
   --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-light};
   --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-light};
@@ -112,8 +113,9 @@
   --#{$prefix}elevation-color-sticky-emphasized: #{$ouds-elevation-color-sticky-emphasized-light};
   --#{$prefix}elevation-color-sticky-navigation-scrolled: #{$ouds-elevation-color-sticky-navigation-scrolled-light};
 }
+// scss-docs-end ouds-semantic-css-color
 
-[data-bs-theme="dark"] {
+@include color-mode(dark, true) {
   --#{$prefix}color-opacity-lower: #{$ouds-color-opacity-lower-dark};
   --#{$prefix}color-opacity-lowest: #{$ouds-color-opacity-lowest-dark};
   --#{$prefix}color-opacity-transparent: #{$ouds-color-opacity-transparent-dark};
@@ -226,3 +228,4 @@
   --#{$prefix}elevation-color-sticky-emphasized: #{$ouds-elevation-color-sticky-emphasized-dark};
   --#{$prefix}elevation-color-sticky-navigation-scrolled: #{$ouds-elevation-color-sticky-navigation-scrolled-dark};
 }
+// scss-docs-end ouds-all-semantic-css-color

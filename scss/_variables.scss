@@ -424,9 +424,9 @@ $enable-fixed-header:             true !default; // OUDS mod: used to apply scro
 $enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce Bootstrap compatibility
 
 $enable-dark-mode:            true !default;
-$color-mode-type:             data !default; // `data` or `media-query`
+// $color-mode-type:             data !default; // `data` or `media-query`
 
-// OUDS mod: Prefix for :root CSS variables has been moved to `_config.scss`
+// OUDS mod: Prefix for $ouds-root-selector CSS variables has been moved to `_config.scss`
 
 // Gradient
 //
