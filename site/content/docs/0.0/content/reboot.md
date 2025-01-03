@@ -140,11 +140,13 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 {{< example >}}
 <hr>
-{{< /example >}}
 
-<!-- Should be in example above <div class="text-success">
+<div class="text-status-positive">
   <hr>
 </div>
+{{< /example >}}
+
+<!-- Should be in example above
 
 <hr class="border border-danger border-medium opacity-medium">
 <hr class="border border-primary border-thick opacity-strong">-->

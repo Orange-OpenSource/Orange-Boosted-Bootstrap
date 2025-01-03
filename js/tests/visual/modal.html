@@ -19,7 +19,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <a class="navbar-brand text-white" href="#">This shouldn't jump!</a>
+          <a class="navbar-brand text-always-on-black" href="#">This shouldn't jump!</a>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" href="#" aria-current="page">Home</a>
@@ -212,7 +212,7 @@
 
       function reportFirefoxTestResult(result) {
         if (!firefoxTestDone) {
-          ffBugTestResult.classList.add(result ? 'text-success' : 'text-danger')
+          ffBugTestResult.classList.add(result ? 'text-status-positive' : 'text-status-negative')
           ffBugTestResult.textContent = result ? 'PASS' : 'FAIL'
         }
       }
