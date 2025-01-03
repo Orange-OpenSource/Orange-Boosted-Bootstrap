@@ -28,10 +28,10 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
           {{ end -}}
             <rect fill="{{ $color.hex }}" width="100" height="100"/>
           {{ if strings.Contains $color.hex "rgba" }}
-            <svg class="decorative-xs-icon text-black" x="15" y="15" width="20" height="20" aria-hidden="true">
+            <svg class="decorative-xs-icon text-always-black" x="15" y="15" width="20" height="20" aria-hidden="true">
               <use xlink:href="#ui-light-mode"/>
             </svg>
-            <svg class="decorative-xs-icon text-white" x="65" y="15" width="20" height="20" aria-hidden="true">
+            <svg class="decorative-xs-icon text-always-white" x="65" y="15" width="20" height="20" aria-hidden="true">
               <use xlink:href="#ui-dark-mode"/>
             </svg>
           {{ end -}}
@@ -101,7 +101,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-tall">
-    <div class="p-tall mb-short bd-black text-white">
+    <div class="p-tall mb-short bd-black text-always-on-black">
       <strong class="d-block">$black</strong>
       #000
     </div>
@@ -128,8 +128,7 @@ Here's how you should use these in your Sass:
 }
 ```
 
-<!-- [Color]({{< docsref "/utilities/colors" >}}) and -->
-[Background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting <!--`color` and -->`background-color`.
+[Color]({{< docsref "/utilities/colors" >}}) and [Background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color`.
 </details>
 
 ## CSS

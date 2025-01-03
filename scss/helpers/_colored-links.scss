@@ -16,6 +16,20 @@
 }
 
 // OUDS mod
+@each $color, $value in $ouds-text-colors {
+  .link-#{$color} {
+    color: $value if($enable-important-utilities, !important, null);
+    text-decoration-color: $value if($enable-important-utilities, !important, null);
+
+    &:hover,
+    &:focus-visible {
+      color: $value if($enable-important-utilities, !important, null);
+      text-decoration-color: $value if($enable-important-utilities, !important, null);
+    }
+  }
+}
+
+// TODO LM: Decide if we keep the dark mode or not
 @if $enable-dark-mode {
   @include color-mode(dark) {
     @each $color, $value in $theme-colors-dark {
