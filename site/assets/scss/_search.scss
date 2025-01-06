@@ -2,7 +2,7 @@
 
 // OUDS mod: the entire file is modified and is specific to OUDS Web
 
-:root {
+#{$ouds-root-selector} {
   // All available CSS vars and specific modifications for OUDS Web
   --docsearch-primary-color: var(--bs-primary);
   --docsearch-text-color: var(--bs-body-color);
@@ -130,7 +130,7 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: var(--bs-highlight-color);
+  background-color: var(--#{$prefix}color-action-highlighted);
 }
 
 .DocSearch-Hits {
@@ -152,18 +152,18 @@
 
   mark {
     color: var(--bs-highlight-color);
-    background: var(--bs-highlight-bg);
+    background: var(--#{$prefix}color-action-highlighted);
   }
 
   &[aria-selected="true"] {
     a {
-      background-color: var(--bs-highlight-bg);
+      background-color: var(--#{$prefix}color-action-highlighted);
     }
 
     mark {
       --docsearch-hit-active-color: var(--bs-body-color);
       text-decoration: none;
-      background: var(--bs-highlight-color);
+      background: var(--#{$prefix}color-action-highlighted);
     }
   }
 }

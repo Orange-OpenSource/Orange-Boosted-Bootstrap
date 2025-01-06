@@ -37,7 +37,7 @@
   padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
   font-weight: $font-weight-bold;
   color: $white;
-  background: $black;
+  background: $ouds-color-functional-black;
   border-top: var(--bs-border-width) solid var(--bs-color-border-default);
 
   &[style*="display: block"] {
@@ -142,7 +142,7 @@
   bottom: add($spacer * -1.5, var(--bs-border-width));
   padding: $spacer / 4 $spacer / 2;
   color: $white;
-  background-color: $black;
+  background-color: $ouds-color-functional-black;
 }
 
 @include tac("Allow", true) {

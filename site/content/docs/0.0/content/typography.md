@@ -14,10 +14,10 @@ OUDS Web sets basic global display, typography<!--, and link styles-->. When mor
 
 - Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `:root` children.
 - Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
-<!--- Set the global link color via `$link-color`.
-- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).-->
+<!-- - Set the global link color via `$link-color`. -->
+- Use `$body-bg` to set a `background-color` on the `:root` children (`#fff` by default).
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
@@ -158,7 +158,7 @@ Display headings are customizable via two variables, `$display-font-family` and 
 Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use `normal` font-weight. Each class sets `font-size` but also `line-height`, `letter-spacing`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}). Here are the associated `font-size`s depending on the breakpoints. See our [Font utilities]({{< docsref "/utilities/text#font-size" >}}).
 
 {{< callout info >}}
-Body medium is set by default on `body` but we don't set the `max-width` property for usability reasons.
+Body medium is set by default on `:root` children but we don't set the `max-width` property for usability reasons.
 {{< /callout >}}
 
 {{< bs-table >}}
