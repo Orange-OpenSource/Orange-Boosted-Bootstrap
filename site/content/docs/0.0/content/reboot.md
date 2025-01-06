@@ -26,7 +26,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 OUDS Web standards require `@import`s across all our CSS bundles (including `ouds-web.css`, `ouds-web-reboot.css`, and `ouds-web-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately OUDS Web will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
-For example, consider these `:root` CSS variables for common `<body>` styles:
+For example, consider these `:root` CSS variables for common `:root` styles:
 
 {{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
 
@@ -44,12 +44,12 @@ Which allows you to make real-time customizations however you like:
 
 ## Page defaults
 
-The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
+The `:root` and child elements are updated to provide better page-wide defaults. More specifically:
 
 - The `box-sizing` is globally set on every element—including `*::before` and `*::after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
-  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach. This browser default can be overridden by modifying the `$font-size-root` variable.
-- The `<body>` also sets a global `font-family`, `font-weight`, `line-height`, and `color`. This is inherited later by some form elements to prevent font inconsistencies.
-- For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
+  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `:root` children for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach. This browser default can be overridden by modifying the `$font-size-root` variable.
+- The `:root` children also sets a global `font-family`, `font-weight`, `line-height`, and `color`. This is inherited later by some form elements to prevent font inconsistencies.
+- For safety, the `:root` children has a declared `background-color`, defaulting to `#fff`.
 
 ## Native font stack
 
