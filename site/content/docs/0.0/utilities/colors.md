@@ -23,7 +23,7 @@ Thus, the `.text-brand-primary` color on light background (`#f15e00`) should onl
 The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
 
 {{< callout info >}}
-Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most of these utilities should be avoided since they are very contextual and you should rather use our [color modes]({{< docsref "/customize/color-modes" >}}) directly as explained in our [background utilities]({{< docsref "/utilities/background" >}}) to set components in the good mode directly as well.
+Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most of these utilities should be avoided since they are very contextual and you should rather use our [color modes]({{< docsref "/customize/color-modes" >}}) directly as explained in our [background utilities]({{< docsref "/utilities/background" >}}) to set nested components in the right mode directly as well.
 {{< /callout >}}
 
 Here are some compliant combinations examples for texts:
