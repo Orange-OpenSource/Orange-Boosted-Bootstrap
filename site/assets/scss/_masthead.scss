@@ -11,7 +11,7 @@
   .lead {
     @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
     font-weight: 400;
-    color: var(--bs-secondary-color);
+    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of: `var(--bs-secondary-color)`
   }
 
   .bd-code-snippet {

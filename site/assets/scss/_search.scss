@@ -79,7 +79,7 @@
   }
 
   .DocSearch-Search-Icon {
-    color: var(--bs-body-color);
+    color: var(--#{$prefix}color-content-default);
   }
 }
 
@@ -151,7 +151,7 @@
   }
 
   mark {
-    color: var(--bs-highlight-color);
+    color: var(--#{$prefix}color-content-on-action-highlighted);
     background: var(--#{$prefix}color-action-highlighted);
   }
 
@@ -182,7 +182,7 @@
 }
 
 .DocSearch-Prefill {
-  color: var(--bs-body-color);
+  color: var(--#{$prefix}color-content-default);
   text-decoration: underline;
   @include border-radius(0, 0);
 

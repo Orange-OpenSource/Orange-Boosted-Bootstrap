@@ -79,8 +79,8 @@ $headings-color-dark:               inherit !default;
 $link-color-dark:                   $white !default; // OUDS mod: instead of `tint-color($primary, 40%)`
 $link-hover-color-dark:             $ouds-color-orange-500 !default; // OUDS mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   $ouds-color-content-muted-dark !default; // OUDS mod: instead of `tint-color($code-color, 40%)`
-$mark-color-dark:                   $ouds-color-bg-primary-dark !default; // OUDS mod: instead of `$body-color-dark`
-$mark-bg-dark:                      $ouds-color-content-default-dark !default; // OUDS mod: instead of `$yellow-800`
+$mark-color-dark:                   $ouds-color-content-on-action-highlighted-dark !default; // OUDS mod: instead of `$body-color-dark`
+$mark-bg-dark:                      $ouds-color-action-highlighted-dark !default; // OUDS mod: instead of `$yellow-800`
 
 $focus-ring-color-dark:             rgba($ouds-color-orange-500, $focus-ring-opacity) !default; // OUDS mod
 
