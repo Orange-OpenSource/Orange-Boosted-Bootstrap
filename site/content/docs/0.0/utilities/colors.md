@@ -20,7 +20,7 @@ OUDS Web provides many `.text-*` and `.bg-*` utilities, but they should be used 
 To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
 
 Thus, the `.text-brand-primary` color on light background (`#f15e00`) should only be used in a font size greater than 24px (using for example `.fs-ds` utility), or 19px bold (using for example `.fs-hm` and `.fw-bold` utilities).
-The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
+The `.text-brand-primary` color on dark background (`#ff7900`) can be used in any size.
 
 {{< callout info >}}
 Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most of these utilities should be avoided since they are very contextual and you should rather use our [color modes]({{< docsref "/customize/color-modes" >}}) directly as explained in our [background utilities]({{< docsref "/utilities/background" >}}) to set components in the good mode directly as well.
@@ -51,23 +51,23 @@ These text categories are some [accessibility text categories](https://www.w3.or
 - **Normal texts** are the remaining texts references.
 {{< /callout >}}
 
-In the next table we assume that the background is used in a color mode switching context and that the associated theme is good, so we have to consider the light and dark mode for the text color.
+In the following table we assume that the context is switching between light and dark mode and the use of `data-bs-theme` is correctly used.
 
 {{< bs-table >}}
-| Color utility | Allowed `.bg-*` utility for normal text | Allowed `.bg-*` utility for large text |
+| Color utility | Allowed `.bg-*` utility for normal and large texts | Allowed `.bg-*` utility for large text only |
 | --- | --- | --- |
-| `.text-brand-primary` | `.bg-emphasized`, `.bg-always-black` | `.bg-primary`, `.bg-secondary`, `.bg-tertiary`, `.bg-emphasized`, `.bg-status-neutral-emphasized`, `.bg-status-neutral-muted`, `.bg-always-black`, `.bg-always-white` |
-| `.text-default` | All `.bg-*` are allowed. | All `.bg-*` are allowed. |
-| `.text-muted` | All `.bg-*` are allowed. | All `.bg-*` are allowed. |
-| `.text-disabled` must be used carefully in a **disabled context only**. | All `.bg-*` are allowed. | All `.bg-*` are allowed. |
-| `.text-always-black` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` |
-| `.text-always-white` | `.bg-emphasized`, `.bg-always-black` | `.bg-emphasized`, `.bg-always-black` |
-| `.text-on-brand-primary` | `.bg-brand-primary` | `.bg-brand-primary` |
-| `.text-on-status-emphasized` | `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized` | `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized` |
-| `.text-on-status-emphasized-alt` | `.bg-status-neutral-emphasized`, `.bg-status-negative-emphasized` | `.bg-status-neutral-emphasized`, `.bg-status-negative-emphasized` |
-| `.text-on-status-muted` | `.bg-status-neutral-muted`, `.bg-status-accent-muted`, `.bg-status-positive-muted`, `.bg-status-negative-muted`, `.bg-status-warning-muted`, `.bg-status-info-muted` | `.bg-status-neutral-muted`, `.bg-status-accent-muted`, `.bg-status-positive-muted`, `.bg-status-negative-muted`, `.bg-status-warning-muted`, `.bg-status-info-muted` |
-| `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | `.bg-emphasized`, `.bg-always-black` |
-| `.text-always-on-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` |
+| `.text-brand-primary` | `.bg-emphasized`, `.bg-always-black` | `.bg-primary`, `.bg-secondary`, `.bg-tertiary`, `.bg-status-neutral-emphasized`, `.bg-status-neutral-muted`, `.bg-always-white` |
+| `.text-default` | All `.bg-*` are allowed. | — |
+| `.text-muted` | All `.bg-*` are allowed. | — |
+| `.text-disabled` must be used carefully in a **disabled context only**. | All `.bg-*` are allowed. | — |
+| `.text-always-black` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
+| `.text-always-white` | `.bg-emphasized`, `.bg-always-black` | — |
+| `.text-on-brand-primary` | `.bg-brand-primary` | — |
+| `.text-on-status-emphasized` | `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized` | — |
+| `.text-on-status-emphasized-alt` | `.bg-status-neutral-emphasized`, `.bg-status-negative-emphasized` | — |
+| `.text-on-status-muted` | `.bg-status-neutral-muted`, `.bg-status-accent-muted`, `.bg-status-positive-muted`, `.bg-status-negative-muted`, `.bg-status-warning-muted`, `.bg-status-info-muted` | — |
+| `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | — |
+| `.text-always-on-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
 {{< /bs-table >}}
 
 ### On icons
