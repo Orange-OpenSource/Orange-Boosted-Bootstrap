@@ -1,0 +1,151 @@
+//
+// Orange component link
+//
+
+%chevron-properties {
+  display: inline-block;
+  width: $ouds-link-size-icon-medium;
+  min-width: $ouds-link-size-icon-medium;
+  height: $ouds-link-size-icon-medium;
+  vertical-align: middle;
+  content: "";
+  background-color: $ouds-link-color-arrow-enabled;
+  mask: var(--#{$prefix}chevron-icon) center no-repeat;
+  mask-size: $ouds-link-size-icon-medium;
+}
+
+.link,
+.link-chevron,
+.icon-link {
+  // scss-docs-start link-css-vars
+  --#{$prefix}link-color-rgb: #{$ouds-link-color-content-enabled};
+  // scss-docs-end link-css-vars
+
+  @include get-font-size("label-large");
+  display: inline-block;
+  min-width: $ouds-link-size-min-width-medium;
+  min-height: $ouds-link-size-min-height-medium;
+  padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+  font-weight: $link-font-weight;
+  color: var(--#{$prefix}link-color-rgb);
+  text-decoration: $link-decoration;// OUDS mod
+  text-wrap: pretty;
+
+  &:hover {
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-hover};
+
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus-visible,
+  &:focus[data-focus-visible-added] {
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-focus};
+
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-pressed};
+  }
+
+  &.link-sm{
+    @include get-font-size("label-medium");
+    min-width: $ouds-link-size-min-width-small;
+    min-height: $ouds-link-size-min-height-small;
+  }
+
+  // OUDS Chevron links
+
+  &.link-chevron {
+
+    &:not(:hover):not(:active):not(:focus) {
+      text-decoration: none;
+    }
+
+    // Chevron right is the default position if no class '.back' is added
+    &:not(.back)::after {
+      @extend %chevron-properties;
+      margin-left: $ouds-link-space-column-gap-arrow-medium;
+      transform: $ouds-link-chevron-after-transform;
+    }
+
+    // Chevron small size
+    &.link-sm::after,
+    &.link-sm::before {
+      width: $ouds-link-size-icon-small;
+      min-width: $ouds-link-size-icon-small;
+      mask-size: $ouds-link-size-icon-small;
+    }
+
+    // Chevron right margin for small size
+    &.link-sm::after {
+      margin-left: $ouds-link-space-column-gap-arrow-small;
+    }
+
+    // Chevron is set on left side when class '.back' is added
+
+    // Left chevron is aligned with the center of the text link on multiple lines
+    &.back {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &.back::before {
+      @extend %chevron-properties;
+      margin-right: $ouds-link-space-column-gap-arrow-medium;
+    }
+
+    // Chevron left margin for small size
+    &.link-sm::before {
+      margin-right: $ouds-link-space-column-gap-arrow-small;
+    }
+
+    // When link is disabled, chevron is styled accordingly
+    &[aria-disabled="true"] {
+      &::after,
+      &::before {
+        background-color: var(--#{$prefix}color-action-disabled);
+      }
+    }
+  }
+
+  // OUDS Icon links
+
+  &.icon-link {
+    display: inline-flex;
+    gap: $ouds-link-space-column-gap-icon-medium;
+    align-items: center;
+    backface-visibility: hidden;
+
+    > .bi {
+      flex-shrink: 0;
+      width: $ouds-link-size-icon-medium;
+      height: $ouds-link-size-icon-medium;
+      fill: currentcolor;
+      @include transition($icon-link-icon-transition);
+    }
+
+    &.link-sm {
+      gap: $ouds-link-space-column-gap-icon-small;
+
+      > .bi {
+        width: $ouds-link-size-icon-small;
+        height: $ouds-link-size-icon-small;
+      }
+    }
+  }
+
+  &.icon-link-hover {
+    &:hover,
+    &:focus-visible {
+      > .bi {
+        transform: var(--#{$prefix}icon-link-transform, $icon-link-icon-transform);
+      }
+    }
+  }
+}
+
+.visited-links a:not(.icon-link):not(.link-chevron):visited {
+  color: var(--#{$prefix}color-action-visited);
+}
+
