@@ -37,9 +37,23 @@
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-- category: Custom Components
-  description: "Brand-new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
+
+- category: Framework
+  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
   examples:
+    - name: Font
+      description: "Multiple examples of fonts to see them in action."
+    - name: Grid
+      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+    - name: Grid system
+      description: "OUDS Web default grid system illustration."
+
+- category: "Bootstrap examples"
+  bootstrap: true
+  description: "Examples that are the exact ones from Bootstrap to see how the enable Bootstrap compatibility work. Do not modify and do not use."
+  examples:
+    - name: Cheatsheet
+      description: "Kitchen sink of Bootstrap components."
     - name: Album
       description: "Simple one-page template for photo galleries, portfolios, and more."
     - name: Pricing
@@ -64,20 +78,3 @@
       description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
     - name: Jumbotron
       description: "Use utilities to recreate and enhance Bootstrap 4's jumbotron."
-
-- category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by OUDS Web."
-  examples:
-    - name: Font
-      description: "Multiple examples of fonts to see them in action."
-    - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
-    - name: Grid system
-      description: "OUDS Web default grid system illustration."
-
-- category: "Bootstrap examples"
-  bootstrap: true
-  description: "Example that are the exact one from Bootstrap to see how the enable Bootstrap compatibility work. Do not modify and do not use."
-  examples:
-    - name: Cheatsheet
-      description: "Kitchen sink of Bootstrap components."
