@@ -170,7 +170,6 @@
   pages:
     - title: Clearfix
     - title: Color & background
-      draft: true
     - title: Colored links
     - title: Focus ring
       draft: true
