@@ -985,9 +985,10 @@ $utilities: map-merge(
           "body-secondary": var(--#{$prefix}secondary-color),
           "body-tertiary": var(--#{$prefix}tertiary-color),
           "body-emphasis": var(--#{$prefix}emphasis-color),
-          "reset": inherit,
+          // OUDS mod: no "reset"
         )
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "text-opacity": (
       css-var: true,
@@ -997,14 +998,23 @@ $utilities: map-merge(
         50: .5,
         75: .75,
         100: 1
-      )
+      ),
+      bootstrap-compatibility: true
     ),
     "text-color": (
       property: color,
       class: text,
-      values: $utilities-text-emphasis-colors
+      values: $utilities-text-emphasis-colors,
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-color
+    // scss-docs-start utils-color-ouds
+    "color-ouds": (
+      property: color,
+      class: text,
+      values: $ouds-text-colors
+    ),
+    // scss-docs-end utils-color-ouds
     // scss-docs-start utils-links
     "link-opacity": (
       css-var: true,

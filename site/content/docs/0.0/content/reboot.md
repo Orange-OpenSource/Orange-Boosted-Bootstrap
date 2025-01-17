@@ -141,14 +141,13 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 {{< example >}}
 <hr>
 
+<div class="text-status-positive">
+  <hr>
+</div>
+
 <hr class="border border-emphasized border-medium opacity-medium">
 <hr class="border border-brand-primary border-thick opacity-strong">
 {{< /example >}}
-
-<!-- Should be in example above
-<div class="text-success">
-  <hr>
-</div>-->
 
 <!-- ## Lists
 
