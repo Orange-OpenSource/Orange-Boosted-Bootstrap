@@ -20,6 +20,12 @@
       </p>
     </div>
   {{ end -}}
+  {{ if $entry.bootstrap}}
+  <div class="col-12">
+    <details class="mb-tallest px-short border border-drag">
+      <summary class="py-short">Bootstrap <span class="tag tag-sm float-end"><code class="text-body">$enable-bootstrap-compatibility: true</code></span></summary>
+      <div class="row">
+  {{- end }}
   {{ range $i, $example := $entry.examples -}}
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
@@ -44,41 +50,35 @@
           </div>
         </div>
       {{ else -}}
-        {{ if $entry.bootstrap}}
-        <div class="col-12">
-          <details class="mb-tallest px-short border border-drag">
-            <summary class="py-short">Bootstrap <span class="tag tag-sm float-end"><code class="text-body">$enable-bootstrap-compatibility: true</code></span></summary>
-            <div class="row">
-        {{- end }}
-            <div class="col-sm-6 col-md-3 mb-tall">
-              {{- $exampleNameUrlized := $example.name | urlize -}}
-              {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
-              <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
-                {{ $imageBasePath := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/img/examples" -}}
-                {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
-                {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
-                {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}
-                <img class="img-thumbnail mb-tall"
-                    srcset="{{ $imgPath }}, {{ $imgPath2x }} 2x"
-                    src="{{ $imgPath }}"
-                    alt=""
-                    width="{{ .Width }}"
-                    height="{{ .Height }}"
-                    loading="lazy">
-                {{- end }}
-                <h3 class="h5 mb-shortest">
-                  {{ $example.name }}
-                </h3>
-              </a>
-              <p class="text-body-secondary">{{ $example.description }}</p>
-            </div>
-        {{ if $entry.bootstrap}}
-            </div>
-          </details>
+        <div class="col-sm-6 col-md-3 mb-tall">
+          {{- $exampleNameUrlized := $example.name | urlize -}}
+          {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
+          <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
+            {{ $imageBasePath := urls.JoinPath "/docs" $.Site.Params.docs_version "assets/img/examples" -}}
+            {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
+            {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
+            {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}
+            <img class="img-thumbnail mb-tall"
+                srcset="{{ $imgPath }}, {{ $imgPath2x }} 2x"
+                src="{{ $imgPath }}"
+                alt=""
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                loading="lazy">
+            {{- end }}
+            <h3 class="h5 mb-shortest">
+              {{ $example.name }}
+            </h3>
+          </a>
+          <p class="text-body-secondary">{{ $example.description }}</p>
         </div>
-        {{- end }}
       {{- end }}
     {{ if (eq (add $i 1) $len) }}</div>{{ end -}}
   {{ end -}}
+  {{ if $entry.bootstrap}}
+      </div>
+    </details>
+  </div>
+  {{- end }}
 </div>
 {{ end -}}
