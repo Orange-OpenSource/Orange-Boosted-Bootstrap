@@ -36,7 +36,7 @@
   align-items: center;
   padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
   font-weight: $font-weight-bold;
-  color: $white;
+  color: $ouds-color-functional-white;
   background: $ouds-color-functional-black;
   border-top: var(--bs-border-width) solid var(--bs-color-border-default);
 
@@ -102,7 +102,7 @@
 
 @include tac("Name", true) {
   @include get-font-size("label-small");
-  color: var(--bs-secondary-color);
+  color: var(--#{$prefix}color-content-muted);
 }
 
 @include tac("Ask", true) {
@@ -141,7 +141,7 @@
   right: $modal-content-padding;
   bottom: add($spacer * -1.5, var(--bs-border-width));
   padding: $spacer / 4 $spacer / 2;
-  color: $white;
+  color: $ouds-color-functional-white;
   background-color: $ouds-color-functional-black;
 }
 

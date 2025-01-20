@@ -152,6 +152,28 @@ $ouds-backgrounds: (
   "transparent": transparent,
 ) !default;
 // scss-docs-end ouds-maps-backgrounds
+
+// scss-docs-start ouds-maps-text-colors
+$ouds-text-colors: (
+  "brand-primary": var(--#{$prefix}color-content-brand-primary),
+  "default": var(--#{$prefix}color-content-default),
+  "disabled": var(--#{$prefix}color-content-disabled),
+  "muted": var(--#{$prefix}color-content-muted),
+  "on-brand-primary": var(--#{$prefix}color-content-on-brand-primary),
+  "on-status-emphasized": var(--#{$prefix}color-content-on-status-emphasized),
+  "on-status-emphasized-alt": var(--#{$prefix}color-content-on-status-emphasized-alt),
+  "on-status-muted": var(--#{$prefix}color-content-on-status-muted),
+  "status-info": var(--#{$prefix}color-content-status-info),
+  "status-negative": var(--#{$prefix}color-content-status-negative),
+  "status-positive": var(--#{$prefix}color-content-status-positive),
+  "status-warning": var(--#{$prefix}color-content-status-warning),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+  "reset": inherit,
+) !default;
+// scss-docs-end ouds-maps-text-colors
 // End mod
 
 // Re-assigned maps

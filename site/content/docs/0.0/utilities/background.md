@@ -17,9 +17,9 @@ toc: true
 Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sass map and respond to color modes.
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you'll want to use an additional:
-* `[data-bs-theme]` [color mode attribute]({{< docsref "/customize/color-modes#how-to-use" >}}) when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
-<!-- * `.text-*` [color utilities]({{< docsref "/utilities/colors" >}}) when the background color remains the same in light and dark mode
-* `.text-bg-*` [color & background helper]({{< docsref "/helpers/color-background" >}}) from our [theme colors]({{< docsref "/customize/color-theme#theming" >}}) -->
+* `[data-bs-theme]` [color mode attribute]({{< docsref "/customize/color-modes#how-to-use" >}}) is the best option all the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
+* `.text-*` [color utilities]({{< docsref "/utilities/colors" >}}) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
+<!-- * `.text-bg-*` [color & background helper]({{< docsref "/helpers/color-background" >}}) from our [theme colors]({{< docsref "/customize/color-theme#theming" >}}) -->
 
 {{< bootstrap-compatibility >}}
 
@@ -63,7 +63,7 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
 <p class="bg-status-accent-muted p-tall fw-bold">.bg-status-accent-muted</p>
 <p class="bg-status-positive-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
 <p class="bg-status-positive-muted p-tall fw-bold">.bg-status-positive-muted</p>
-<p class="bg-status-negative-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-negative-emphasized</span></p>
+<p class="bg-status-negative-emphasized p-tall fw-bold"><span data-bs-theme="root-inverted">.bg-status-negative-emphasized</span></p>
 <p class="bg-status-negative-muted p-tall fw-bold">.bg-status-negative-muted</p>
 <p class="bg-status-warning-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
 <p class="bg-status-warning-muted p-tall fw-bold">.bg-status-warning-muted</p>
@@ -95,7 +95,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       <p class="bg-status-accent-muted p-tall fw-bold">.bg-status-accent-muted</p>
       <p class="bg-status-positive-emphasized p-tall fw-bold">.bg-status-positive-emphasized</p>
       <p class="bg-status-positive-muted p-tall fw-bold">.bg-status-positive-muted</p>
-      <p class="bg-status-negative-emphasized p-tall fw-bold">.bg-status-negative-emphasized</p>
+      <p class="bg-status-negative-emphasized p-tall fw-bold"><span data-bs-theme="dark">.bg-status-negative-emphasized</span></p>
       <p class="bg-status-negative-muted p-tall fw-bold">.bg-status-negative-muted</p>
       <p class="bg-status-warning-emphasized p-tall fw-bold">.bg-status-warning-emphasized</p>
       <p class="bg-status-warning-muted p-tall fw-bold">.bg-status-warning-muted</p>
@@ -163,7 +163,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       <p class="bg-status-accent-muted p-tall fw-bold">.bg-status-accent-muted</p>
       <p class="bg-status-positive-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
       <p class="bg-status-positive-muted p-tall fw-bold">.bg-status-positive-muted</p>
-      <p class="bg-status-negative-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-negative-emphasized</span></p>
+      <p class="bg-status-negative-emphasized p-tall fw-bold"><span data-bs-theme="root">.bg-status-negative-emphasized</span></p>
       <p class="bg-status-negative-muted p-tall fw-bold">.bg-status-negative-muted</p>
       <p class="bg-status-warning-emphasized p-tall fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
       <p class="bg-status-warning-muted p-tall fw-bold">.bg-status-warning-muted</p>

@@ -206,7 +206,7 @@
     display: inline-block;
     width: 9rem; // OUDS mod
     font-weight: $font-weight-bold; // OUDS mod
-    color: var(--bs-secondary-color);
+    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of `var(--bs-secondary-color)`
     background-color: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `var(--bs-tertiary-bg)`
     border: var(--bs-border-width) solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
@@ -281,7 +281,7 @@
 
 // OUDS mod
 .simple-list-example-scrollspy .active {
-  color: var(--bs-primary);
+  color: var(--#{$prefix}color-content-brand-primary);
 }
 // End mod
 
@@ -407,7 +407,7 @@
 
   pre code {
     @include font-size(inherit);
-    color: var(--bs-body-color); // Effectively the base text color
+    color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }
 }
