@@ -23,7 +23,7 @@
   {{ if $entry.bootstrap}}
   <div class="col-12">
     <details class="mb-tallest px-short border border-drag">
-      <summary class="py-short">Bootstrap <span class="tag tag-sm float-end"><code class="text-body">$enable-bootstrap-compatibility: true</code></span></summary>
+      <summary class="py-short">Bootstrap <span class="tag tag-sm float-end"><code class="text-default">$enable-bootstrap-compatibility: true</code></span></summary>
       <div class="row">
   {{- end }}
   {{ range $i, $example := $entry.examples -}}
@@ -38,11 +38,11 @@
                 {{ $example.name }}
               </a>
             </h3>
-            <p class="text-body-secondary">{{ $example.description }}</p>
+            <p class="text-muted">{{ $example.description }}</p>
             <p>
               {{- $indexPath := default "index.html" $example.indexPath -}}
               {{- $stackBlitzUrl := printf "%s%s%s" (urls.JoinPath "https://stackblitz.com/github/twbs" $example.url) "?file=" ($indexPath | urlquery) }}
-              <a class="icon-link link-secondary link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener">
+              <a class="icon-link link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Edit in StackBlitz
               </a>
@@ -70,7 +70,7 @@
               {{ $example.name }}
             </h3>
           </a>
-          <p class="text-body-secondary">{{ $example.description }}</p>
+          <p class="text-muted">{{ $example.description }}</p>
         </div>
       {{- end }}
     {{ if (eq (add $i 1) $len) }}</div>{{ end -}}

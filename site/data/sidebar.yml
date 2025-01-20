@@ -172,7 +172,6 @@
     - title: Color & background
       draft: true
     - title: Colored links
-      draft: true
     - title: Focus ring
       draft: true
     - title: Icon
@@ -195,7 +194,6 @@
     - title: Background
     - title: Borders
     - title: Colors
-      draft: true
     - title: Display
     - title: Flex
     - title: Float

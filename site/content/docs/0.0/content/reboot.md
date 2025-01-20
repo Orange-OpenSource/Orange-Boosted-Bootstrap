@@ -138,17 +138,18 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
 
+<!-- TODO: Check once the dividers have been designed -->
+
 {{< example >}}
 <hr>
+
+<div class="text-status-positive">
+  <hr>
+</div>
 
 <hr class="border border-emphasized border-medium opacity-medium">
 <hr class="border border-brand-primary border-thick opacity-strong">
 {{< /example >}}
-
-<!-- Should be in example above
-<div class="text-success">
-  <hr>
-</div>-->
 
 <!-- ## Lists
 
