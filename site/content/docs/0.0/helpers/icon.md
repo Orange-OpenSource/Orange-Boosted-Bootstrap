@@ -315,7 +315,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 <div class="bd-example">
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -326,7 +326,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -337,7 +337,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-sm-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-sm-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -348,7 +348,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-md-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-md-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -359,7 +359,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-lg-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-lg-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -370,7 +370,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
@@ -381,7 +381,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
   </div>
   <div class="d-flex mb-medium">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-medium flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
-      <svg class="decorative-2xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg class="decorative-2xl-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
       </svg>
     </div>
