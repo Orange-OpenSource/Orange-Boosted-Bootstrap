@@ -89,7 +89,7 @@ Here is a recap table of when to use which contextual theme. Prefer to use `ligh
 However, these 4 themes should be enough to deal with all of your use cases. If it's not the case, you are probably using them wrong. Since the implementation might be quite hard to understand, don't hesitate to contact us via our [GitHub discussions]({{< param repo >}}/discussions) with a reduced test case if you're having trouble implementing.
 
 {{< callout info >}}
-We use **2 different layers to set the `background-color` and the theme** when the theme doesn't inherit directly.
+We use **2 different layers to set the `background-color` and the theme**. Sometimes you won't need to set the theme since it'll be the same as the current one. Please check out our [Background utilities]({{< docsref "/utilities/background" >}}) to know more about this specific topic.
 {{< /callout >}}
 
 {{< bs-table >}}
@@ -341,7 +341,9 @@ We have our OUDS semantic CSS variables, which transform over light and dark mod
 
 {{< bootstrap-compatibility false >}}
 
+{{< markdown >}}
 Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to `data-bs-theme` but [can be configured](#building-with-sass) to use a `prefers-color-scheme` media query. Use these variables as a guideline for generating your own new color modes.
+{{< /markdown >}}
 
 {{< scss-docs name="root-dark-mode-vars" file="scss/_root.scss" >}}
 
@@ -351,7 +353,9 @@ Dozens of root level CSS variables are repeated as overrides for dark mode. Thes
 
 {{< bootstrap-compatibility false >}}
 
+{{< markdown >}}
 CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in `_variables-dark.scss`. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.
+{{< /markdown >}}
 
 {{< scss-docs name="sass-dark-mode-vars" file="scss/_variables-dark.scss" >}}
 

@@ -270,7 +270,7 @@ Font-size utilities are generated from these maps, in combination with our utili
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
-<!--{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}-->
+{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
 
 {{< /bootstrap-compatibility >}}
 

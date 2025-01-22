@@ -41,11 +41,11 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
   - Removed div text content to avoid a11y issue with semi-transparent text
 -->
 <div class="bd-example d-sm-flex">
-  <div class="opacity-100 p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-75 p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-50 p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-25 p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-0 p-tall m-short bg-brand-primary fw-bold"></div>
+  <div class="opacity-100 p-3 m-2 bg-brand-primary fw-bold"></div>
+  <div class="opacity-75 p-3 m-2 bg-brand-primary fw-bold"></div>
+  <div class="opacity-50 p-3 m-2 bg-brand-primary fw-bold"></div>
+  <div class="opacity-25 p-3 m-2 bg-brand-primary fw-bold"></div>
+  <div class="opacity-0 p-3 m-2 bg-brand-primary fw-bold"></div>
 </div>
 
 ```html

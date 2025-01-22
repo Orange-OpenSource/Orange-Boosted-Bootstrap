@@ -85,14 +85,14 @@ Or modify the default `border-color` of a component:
 {{< example >}}
 <div class="mb-4">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control border-brand-primary" id="exampleFormControlInput1" placeholder="name@example.com">
+  <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 
-<div class="h4 pb-2 mb-4 text-danger border-bottom border-emphasized">
+<div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
   Dangerous heading
 </div>
 
-<div class="p-3 text-bg-info bg-opacity-10 border border-emphasized border-start-0 rounded-end">
+<div class="p-3 text-bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
   Changing border color and width
 </div>
 {{< /example >}}
@@ -249,7 +249,9 @@ The same happens for the dark mode by replacing `-light` by `-dark`.
 
 {{< bootstrap-compatibility false >}}
 
-Variables for setting <code>border-color</code> in <code>.border-{direction}-subtle</code> utilities in light and dark mode:
+{{< markdown >}}
+Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
+{{< /markdown >}}
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
@@ -265,7 +267,9 @@ The border utilities are declared through this map and generated using our utili
 
 {{< bootstrap-compatibility false >}}
 
+{{< markdown >}}
 Color mode adaptive border colors are also available as a Sass map:
+{{< /markdown >}}
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 

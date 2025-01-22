@@ -58,7 +58,8 @@ You're encouraged to use Orange semantic color tokens (using CSS variables is ev
 
 {{< bootstrap-compatibility false >}}
 <br>
-<h3>All colors</h3>
+{{< markdown >}}
+### All colors
 
 {{< callout danger >}}
 Some of the colors below do not belong to the Orange Unified Design System specifications.
@@ -73,6 +74,7 @@ Please note that in the OUDS Web colors, the indigo colors are the same as the p
 {{< /callout >}}
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
+{{< /markdown >}}
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -113,11 +115,12 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   </div>
 </div>
 
-<h4>Notes on Sass</h4>
+{{< markdown >}}
+#### Notes on Sass
 
 Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We then map all the created variables to one of our raw color tokens that are coming from the design directly.
 
-<h4>Example</h4>
+#### Example
 
 Here's how you should use these in your Sass:
 
@@ -130,6 +133,7 @@ Here's how you should use these in your Sass:
 ```
 
 [Color]({{< docsref "/utilities/colors" >}}) and [Background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color`.
+{{< /markdown >}}
 {{< /bootstrap-compatibility >}}
 
 ## CSS
@@ -147,7 +151,9 @@ A first layer of color raw tokens Sass variables. **Not to be used as-is**.
 ### Sass variables
 
 {{< bootstrap-compatibility false >}}
+{{< markdown >}}
 Because OUDS Web relies on Bootstrap's specific tokens system, we need to map the OUDS Web's color tokens to the Bootstrap's ones.
+{{< /markdown >}}
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 

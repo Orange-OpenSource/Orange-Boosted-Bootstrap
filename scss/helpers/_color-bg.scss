@@ -1,6 +1,6 @@
 // All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
 @if $enable-bootstrap-compatibility {
-  @each $color, $value in map-remove($utilities-bg, "black", "white", "body") {
+  @each $color, $value in map-remove($utilities-bg-colors, "black", "white", "body") {
     // OUDS mod: Force colors to have a good rendering
     $text-bg-color: var(--#{$prefix}color-content-default);
     @if index(("danger", "dark"), #{$color}) {
