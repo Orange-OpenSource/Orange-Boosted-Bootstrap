@@ -70,7 +70,7 @@ $body-color-dark:                   $ouds-color-content-default-dark !default; /
 $body-bg-dark:                      $ouds-color-bg-primary-dark !default; // OUDS mod: instead of `$gray-900`
 $body-secondary-color-dark:         $ouds-color-content-muted-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .75)`
 $body-secondary-bg-dark:            $ouds-color-bg-secondary-dark !default; // OUDS mod: instead of `$gray-800`
-$body-tertiary-color-dark:          $ouds-color-content-muted-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
+$body-tertiary-color-dark:          $ouds-color-content-disabled-dark !default; // OUDS mod: instead of `rgba($body-color-dark, .5)`
 $body-tertiary-bg-dark:             $ouds-color-bg-tertiary-dark !default; // OUDS mod: instead of `mix($gray-800, $gray-900, 50%)`
 $body-emphasis-color-dark:          $ouds-color-content-default-dark !default; // OUDS mod: instead of `$gray-100`
 $border-color-dark:                 $ouds-color-border-emphasized-dark !default; // OUDS mod: instead of `$gray-700`
