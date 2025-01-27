@@ -33,10 +33,10 @@ You can <!--also -->quickly add or remove a shadow with our `box-shadow` utility
 Includes support for three default sizes (which have associated variables to match).
 
 {{< example class="overflow-hidden" >}}
-<div class="shadow-none p-3 mb-5 bg-secondary">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-secondary">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-secondary">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-secondary">Larger shadow</div>
+<div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary">Small shadow</div>
+<div class="shadow p-3 mb-5 bg-body-tertiary">Regular shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary">Larger shadow</div>
 {{< /example >}}
 
 {{< /bootstrap-compatibility >}}
