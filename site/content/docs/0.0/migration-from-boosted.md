@@ -101,7 +101,11 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]({{< docsref "/helpers/color-background" >}}) to see more.
 
 - <details>
-    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <a href="{{< docsref "/customize/color-modes" >}}"><code>[data-bs-theme]</code></a> to your context:</summary>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+
+  {{< callout info >}}
+  See more details about [`[data-bs-theme]`]({{< docsref "/customize/color-modes" >}}).
+  {{< /callout >}}
 
   1. `.text-bg-primary` → `.text-bg-brand-primary`
   2. `.text-bg-secondary` → `.text-bg-emphasized` or `.text-bg-neutral-emphasized`
@@ -144,7 +148,11 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The new background color utilities are now available. Visit our [background page]({{< docsref "/utilities/background" >}}) to see more.
 
 - <details>
-    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <a href="{{< docsref "/customize/color-modes" >}}"><code>[data-bs-theme]</code></a> to your context:</summary>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+
+  {{< callout info >}}
+  See more details about [`[data-bs-theme]`]({{< docsref "/customize/color-modes" >}}).
+  {{< /callout >}}
 
   1. `.bg-transparent` stays the same
   2. `.bg-white` → `.bg-always-white`
