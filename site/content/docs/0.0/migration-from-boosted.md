@@ -86,10 +86,6 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
-### Form floating
-
-- <span class="badge text-bg-status-positive-emphasized">New</span> Added the Form Floating documentation page.
-
 ## Forms
 
 ### Checks & radios
@@ -105,7 +101,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]({{< docsref "/helpers/color-background" >}}) to see more.
 
 - <details>
-    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <a href="{{< docsref "/customize/color-modes" >}}"><code>[data-bs-theme]</code></a> to your context:</summary>
 
   1. `.text-bg-primary` → `.text-bg-brand-primary`
   2. `.text-bg-secondary` → `.text-bg-emphasized` or `.text-bg-neutral-emphasized`
@@ -148,7 +144,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The new background color utilities are now available. Visit our [background page]({{< docsref "/utilities/background" >}}) to see more.
 
 - <details>
-    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to <strong>adapt the <code>[data-bs-theme]</code></strong> to your context:</summary>
+    <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <a href="{{< docsref "/customize/color-modes" >}}"><code>[data-bs-theme]</code></a> to your context:</summary>
 
   1. `.bg-transparent` stays the same
   2. `.bg-white` → `.bg-always-white`
@@ -240,7 +236,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   8. `.text-dark(-emphasis)` → `.text-default` or see `.text-black` below
   9. `.text-body(-emphasis)` → `.text-default` or `.text-on-status-muted`
   10. `.text-body-secondary` → `.text-muted`
-  11. `.text-body-tertiary` → `.text-muted`
+  11. `.text-body-tertiary` → `.text-disabled` or `.text-muted` in some cases
   12. `.text-black` → `.text-always-black` or `.text-on-brand-primary` or `.text-on-status-emphasized` or `.text-on-status-emphasized-alt` or `.text-always-on-white`
   13. `.text-white` → `.text-always-white` or `.text-always-on-black`
   14. `.text-black-50` → `.text-muted`
@@ -401,7 +397,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
     5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$1tallest`
     6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$1huge`
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn't have Bootstrap spacing utilities anymore
-    <!-- Next technique is almost unusable in practice -→
+    <!-- Next technique is almost unusable in practice -->
   - Change all the utilities using more precise utilities
     1. **Mixing Bootstrap numbers**: Search for `([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?\d`, when you match multiple on one line, consider using one of our [scaled spacing utilities]({{< docsref "/utilities/spacing#notation-for-scaled-values" >}}) (for example, `.mb-1.mb-md-2` → `.mb-scaled-shortest`).
     2. **Remaining standalone classes**: Follow the previous guide going through all the standalone classes.
