@@ -85,7 +85,7 @@ Output:
 
 Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
 
-As a list<!--, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}})-->:
+As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
 
 ```scss
 values: none underline line-through
@@ -165,8 +165,7 @@ Output:
 
 Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Add an optional `css-variable-name` to set a different CSS variable name than the class name.
 
-<!--
-Consider our `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
+Consider a `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
 
 ```scss
 $utilities: (
@@ -192,7 +191,6 @@ Output:
 .text-opacity-75 { -bs-text-alpha: .75; } // TODO: reinsert hyphens
 .text-opacity-100 { -bs-text-alpha: 1; } // TODO: reinsert hyphens
 ```
--->
 
 ### Local CSS variables
 

@@ -15,7 +15,7 @@ Use the ratio helper to manage the aspect ratios of external content like `<ifra
 Aspect ratios are declared in a Sass map and included in each class via CSS variable, which also allows [custom aspect ratios](#custom-ratios).
 
 {{< callout info >}}
-**Pro-Tip!** You don't need `frameborder="0"` on your `<iframe>`s as we override that for you<!-- in [Reboot]({{< docsref "/content/reboot" >}})-->.
+**Pro-Tip!** You don't need `frameborder="0"` on your `<iframe>`s as we override that for you in [Reboot]({{< docsref "/content/reboot" >}}).
 {{< /callout >}}
 
 ## Example

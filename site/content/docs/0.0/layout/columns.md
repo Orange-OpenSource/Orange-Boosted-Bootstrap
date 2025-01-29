@@ -305,7 +305,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 </div>
 {{< /example >}}
 
-<!-- #### Margin utilities
+#### Margin utilities
 
 With flexbox grids, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
 
@@ -324,7 +324,7 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
     <div class="col-auto">.col-auto</div>
   </div>
 </div>
-{{< /example >}} -->
+{{< /example >}}
 
 ## Standalone column classes
 
