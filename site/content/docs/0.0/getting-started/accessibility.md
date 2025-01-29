@@ -36,7 +36,7 @@ Content which should be visually hidden, but remain accessible to assistive tech
 
 ```html
 <p>
-  <svg width="8em" height="8em" class="text-status-negative" aria-hidden="true">
+  <svg width="1.5em" height="1.5em" class="text-status-negative" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#error-severe"/>
   </svg>
   <span class="visually-hidden">Danger: </span>
