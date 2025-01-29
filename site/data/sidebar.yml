@@ -36,11 +36,9 @@
       draft: true
     - title: Options
     - title: Color palette
-      draft: true
     - title: Color theme
       draft: true
     - title: Color modes
-      draft: true
     - title: Components
       draft: true
     - title: CSS variables
@@ -89,6 +87,8 @@
     - title: Range
       draft: true
     - title: Input group
+      draft: true
+    - title: Floating labels
       draft: true
     - title: Quantity selector
       draft: true
@@ -172,9 +172,7 @@
   pages:
     - title: Clearfix
     - title: Color & background
-      draft: true
     - title: Colored links
-      draft: true
     - title: Focus ring
       draft: true
     - title: Icon
@@ -195,10 +193,8 @@
   pages:
     - title: API
     - title: Background
-      draft: true
     - title: Borders
     - title: Colors
-      draft: true
     - title: Display
     - title: Flex
     - title: Float

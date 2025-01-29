@@ -1,15 +1,44 @@
 // All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
-@each $color, $value in $theme-colors {
-  .text-bg-#{$color} {
+@if $enable-bootstrap-compatibility {
+  @each $color, $value in map-remove($utilities-bg-colors, "black", "white", "body") {
     // OUDS mod: Force colors to have a good rendering
-    $text-bg-color: var(--#{$prefix}highlight-color);
-    @if index(("primary", "warning", "light"), #{$color}) {
-      $text-bg-color: $black;
-    } @else if (#{$color} == "dark") {
-      $text-bg-color: $white;
+    $text-bg-color: var(--#{$prefix}color-content-default);
+    @if index(("danger", "dark"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
+    } @else if index(("success", "info", "warning"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized);
     }
     // End mod
-    color: $text-bg-color if($enable-important-utilities, !important, null); // OUDS mod: instead of `color-contrast($value)`
-    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+
+    .text-bg-#{$color} {
+      color: $text-bg-color if($enable-important-utilities, !important, null); // OUDS mod: instead of `color-contrast($value)`
+      background-color: if($value, $value, var(--#{$prefix}color-bg-#{$color})) if($enable-important-utilities, !important, null); // OUDS mod: instead of `RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1))`
+    }
   }
 }
+
+// OUDS mod
+@each $color, $value in map-remove($ouds-backgrounds, "transparent") {
+  $text-bg-color: var(--#{$prefix}color-content-default);
+  @if index(("brand-primary"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);
+  } @else if index(("emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-white);
+  } @else if index(("always-black"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-black);
+  } @else if index(("always-white"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-white);
+  } @else if index(("status-neutral-emphasized", "status-negative-emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
+  } @else if index(("status-accent-emphasized", "status-positive-emphasized", "status-warning-emphasized", "status-info-emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized);
+  } @else if index(("status-neutral-muted", "status-accent-muted", "status-positive-muted", "status-negative-muted", "status-warning-muted", "status-info-muted"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-status-muted);
+  }
+
+  .text-bg-#{$color} {
+    color: $text-bg-color if($enable-important-utilities, !important, null);
+    background-color: $value if($enable-important-utilities, !important, null);
+  }
+}
+// End mod

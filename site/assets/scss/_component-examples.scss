@@ -6,7 +6,7 @@
   display: flex; // OUDS mod
   flex-direction: column; // OUDS mod
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
@@ -23,7 +23,7 @@
   position: relative;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
 
@@ -206,9 +206,9 @@
     display: inline-block;
     width: 9rem; // OUDS mod
     font-weight: $font-weight-bold; // OUDS mod
-    color: var(--bs-secondary-color);
-    background-color: var(--bs-secondary-bg); // OUDS mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--bs-border-width) solid var(--bs-border-color-subtle); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
+    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of `var(--bs-secondary-color)`
+    background-color: var(--#{$prefix}color-bg-secondary); // OUDS mod: instead of `var(--bs-tertiary-bg)`
+    border: var(--bs-border-width) solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
       display: flex;
@@ -251,7 +251,7 @@
 // scss-docs-start custom-tooltip
 .custom-tooltip {
   --bs-tooltip-bg: var(--bd-violet-bg);
-  --bs-tooltip-color: var(--bs-white);
+  --bs-tooltip-color: var(--bs-color-always-white);
 }
 // scss-docs-end custom-tooltip
 
@@ -261,7 +261,7 @@
   --bs-popover-border-color: var(--bd-violet-bg);
   --bs-popover-header-bg: var(--bd-violet-bg);
   --bs-popover-header-padding-y: .5rem; // OUDS mod
-  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-header-color: var(--bs-color-always-white);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
@@ -281,17 +281,18 @@
 
 // OUDS mod
 .simple-list-example-scrollspy .active {
-  color: var(--bs-primary);
+  color: var(--#{$prefix}color-content-brand-primary);
 }
 // End mod
 
 .bd-example-border-utils {
   [class^="border"] {
     display: inline-block;
+    flex-shrink: 0;
     width: 5rem;
     height: 5rem;
     margin: .25rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 }
 
@@ -307,13 +308,13 @@
 
   .position-relative {
     height: 12.5rem;
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--#{$prefix}color-bg-secondary);
   }
 
   .position-absolute {
     width: 2rem;
     height: 2rem;
-    background-color: var(--bs-body-color);
+    background-color: var(--#{$prefix}color-bg-emphasized);
     @include border-radius();
   }
 }
@@ -346,7 +347,7 @@
   > div {
     // OUDS mod: no `color`
     background-color: var(--bd-primary-light);
-    border: 1px solid var(--bs-primary);
+    border: 1px solid var(--bs-color-border-brand-primary);
 
     > span {
       position: absolute;
@@ -406,7 +407,7 @@
 
   pre code {
     @include font-size(inherit);
-    color: var(--bs-body-color); // Effectively the base text color
+    color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--bs-body-color)`
     word-wrap: normal;
   }
 }
@@ -472,28 +473,24 @@
 }
 // scss-docs-end sticker-fs-xl
 
-.border-subtle {
-  --bs-border-color: var(--bs-border-color-subtle);
-}
-
-.color-copy:hover svg {
+.color-copy:hover > svg {
   transform: scale(1.07);
 }
 
-.color-copy svg {
+.color-copy > svg {
   transition: transform .15s ease-in-out; // stylelint-disable-line property-disallowed-list
 }
 
 .double-figure-svg {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $white, $white 50%, $gray-950 50%, $gray-950 100%);
+  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white 50%, $ouds-color-functional-dark-gray-880 50%, $ouds-color-functional-dark-gray-880 100%);
 }
 
 .double-figure {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $white, $white calc((100% - 1.875rem) * .5), $gray-950 calc((100% - 1.875rem) * .5), $gray-950 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
 
   figcaption {
     height: 1.875rem;
@@ -509,7 +506,7 @@
   height: 2rem;
   vertical-align: bottom;
   content: "";
-  background-color: var(--bs-body-color);
+  background-color: var(--bs-color-content-default);
   background-size: contain;
   mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M553.478 147.416v.017a74.956 74.956 0 0 0-107.08.13v-.021L100 500h150v300a75 75 0 0 0 75 75h350a75 75 0 0 0 75-75V500h150ZM580 537.52V755H362.5a37.5 37.5 0 0 1-37.5-37.5V500h217.5a37.5 37.5 0 0 1 37.5 37.5v.02Z'/></svg>");
 }

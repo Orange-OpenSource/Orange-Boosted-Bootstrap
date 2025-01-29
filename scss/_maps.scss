@@ -20,6 +20,17 @@ $ouds-border-widths: (
   "thick":    $ouds-border-width-thick,
   "thicker":  $ouds-border-width-thicker,
 ) !default;
+
+$ouds-border-colors: (
+  "brand-primary": var(--#{$prefix}color-border-brand-primary),
+  "default": var(--#{$prefix}color-border-default),
+  "emphasized": var(--#{$prefix}color-border-emphasized),
+  "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+) !default;
 // scss-docs-end ouds-maps-borders
 
 // scss-docs-start ouds-maps-dimension
@@ -116,6 +127,53 @@ $ouds-opacities: (
   "opaque":     $ouds-opacity-opaque
 ) !default;
 // scss-docs-end ouds-maps-opacities
+
+// scss-docs-start ouds-maps-backgrounds
+$ouds-backgrounds: (
+  "primary": var(--#{$prefix}color-bg-primary),
+  "secondary": var(--#{$prefix}color-bg-secondary),
+  "tertiary": var(--#{$prefix}color-bg-tertiary),
+  "emphasized": var(--#{$prefix}color-bg-emphasized),
+  "brand-primary": var(--#{$prefix}color-surface-brand-primary),
+  "status-neutral-emphasized": var(--#{$prefix}color-surface-status-neutral-emphasized),
+  "status-neutral-muted": var(--#{$prefix}color-surface-status-neutral-muted),
+  "status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
+  "status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
+  "status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
+  "status-positive-muted": var(--#{$prefix}color-surface-status-positive-muted),
+  "status-negative-emphasized": var(--#{$prefix}color-surface-status-negative-emphasized),
+  "status-negative-muted": var(--#{$prefix}color-surface-status-negative-muted),
+  "status-warning-emphasized": var(--#{$prefix}color-surface-status-warning-emphasized),
+  "status-warning-muted": var(--#{$prefix}color-surface-status-warning-muted),
+  "status-info-emphasized": var(--#{$prefix}color-surface-status-info-emphasized),
+  "status-info-muted": var(--#{$prefix}color-surface-status-info-muted),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "transparent": transparent,
+) !default;
+// scss-docs-end ouds-maps-backgrounds
+
+// scss-docs-start ouds-maps-text-colors
+$ouds-text-colors: (
+  "brand-primary": var(--#{$prefix}color-content-brand-primary),
+  "default": var(--#{$prefix}color-content-default),
+  "disabled": var(--#{$prefix}color-content-disabled),
+  "muted": var(--#{$prefix}color-content-muted),
+  "on-brand-primary": var(--#{$prefix}color-content-on-brand-primary),
+  "on-status-emphasized": var(--#{$prefix}color-content-on-status-emphasized),
+  "on-status-emphasized-alt": var(--#{$prefix}color-content-on-status-emphasized-alt),
+  "on-status-muted": var(--#{$prefix}color-content-on-status-muted),
+  "status-info": var(--#{$prefix}color-content-status-info),
+  "status-negative": var(--#{$prefix}color-content-status-negative),
+  "status-positive": var(--#{$prefix}color-content-status-positive),
+  "status-warning": var(--#{$prefix}color-content-status-warning),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+  "reset": inherit,
+) !default;
+// scss-docs-end ouds-maps-text-colors
 // End mod
 
 // Re-assigned maps
@@ -230,12 +288,20 @@ $utilities-colors: $theme-colors-rgb !default;
 $utilities-text: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body": to-rgb($body-color)
+    "primary":    var(--#{$prefix}color-content-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-content-muted), // OUDS mod
+    "success":    var(--#{$prefix}color-content-status-positive), // OUDS mod
+    "info":       var(--#{$prefix}color-content-status-info), // OUDS mod
+    "warning":    var(--#{$prefix}color-content-status-warning), // OUDS mod
+    "danger":     var(--#{$prefix}color-content-status-negative), // OUDS mod
+    "light":      var(--#{$prefix}color-content-disabled), // OUDS mod
+    "dark":       var(--#{$prefix}color-content-default), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
+    "body":       var(--#{$prefix}color-content-default) // OUDS mod: instead of `to-rgb($body-color)`
   )
 ) !default;
-$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
+$utilities-text-colors: $utilities-text !default; // OUDS mod: instead of `map-loop($utilities-text, rgba-css-var, "$key", "text")`
 
 $utilities-text-emphasis-colors: (
   "primary-emphasis": var(--#{$prefix}primary-text-emphasis),
@@ -253,12 +319,20 @@ $utilities-text-emphasis-colors: (
 $utilities-bg: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body": to-rgb($body-bg)
+    "primary":    var(--#{$prefix}color-surface-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-bg-secondary), // OUDS mod
+    "success":    var(--#{$prefix}color-surface-status-positive-emphasized), // OUDS mod
+    "info":       var(--#{$prefix}color-surface-status-info-emphasized), // OUDS mod
+    "warning":    var(--#{$prefix}color-surface-status-warning-emphasized), // OUDS mod
+    "danger":     var(--#{$prefix}color-surface-status-negative-emphasized), // OUDS mod
+    "light":      var(--#{$prefix}color-bg-secondary), // OUDS mod
+    "dark":       var(--#{$prefix}color-surface-status-neutral-emphasized), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
+    "body":       var(--#{$prefix}color-bg-primary) // OUDS mod: instead of `to-rgb($body-bg)`
   )
 ) !default;
-$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
+$utilities-bg-colors: $utilities-bg !default; // OUDS mod: instead of `map-loop($utilities-bg, rgba-css-var, "$key", "bg")`
 
 $utilities-bg-subtle: (
   "primary-subtle": var(--#{$prefix}primary-bg-subtle),
@@ -276,13 +350,19 @@ $utilities-bg-subtle: (
 $utilities-border: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb($black),
-    "dark": $gray-700, // OUDS mod: handled differently within `rgba-css-var`
-    "light": $gray-500, // OUDS mod: handled differently within `rgba-css-var`
-    "white": to-rgb($white),
+    "primary":    var(--#{$prefix}color-border-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "success":    var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "info":       var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "warning":    var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "danger":     var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "light":      var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "dark":       var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
   )
 ) !default;
-$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // OUDS mod
+$utilities-border-colors: $utilities-border !default; // OUDS mod: instead of `map-loop($utilities-border, rgba-css-var, "$key", "border", "$value")`
 
 $utilities-border-subtle: (
   "primary-subtle": var(--#{$prefix}primary-border-subtle),
