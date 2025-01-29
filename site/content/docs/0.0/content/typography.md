@@ -17,7 +17,7 @@ OUDS Web sets basic global display, typography<!--, and link styles-->. When mor
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `:root` children.
 - Use `max-width` on all font references for readability reasons. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]({{< docsref "/utilities/sizing" >}}).
 <!-- - Set the global link color via `$link-color`. -->
-- Use `$body-bg` to set a `background-color` on the `:root` children (`#fff` by default).
+- Use `--bs-color-bg-primary` to set a `background-color` on the `:root` children (`#fff` by default).
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
