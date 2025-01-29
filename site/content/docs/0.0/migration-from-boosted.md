@@ -171,7 +171,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
   15. `.bg-warning-subtle` (that shouldn't have been used) → `.bg-status-warning-muted` or `.bg-status-accent-muted` depending on your context
   16. `.bg-body` → `.bg-primary`
   17. `.bg-body-secondary` → `.bg-secondary`
-  18. `.bg-body-tertiary` → `.bg-secondary`
+  18. `.bg-body-tertiary` (that shouldn't have been used) → `.bg-secondary`
   19. `.bg-light` → `.bg-secondary`
   20. `.bg-light-subtle` (that shouldn't have been used) → `.bg-secondary`
   21. `.bg-dark` → `.bg-emphasized` or `.bg-always-black` depending on your context
