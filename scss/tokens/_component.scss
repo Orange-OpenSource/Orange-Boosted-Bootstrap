@@ -1,317 +1,326 @@
 // Component application
 // Depends on semantic applications
+// Token version 0.4.1
+
+// Badge
+
+// scss-docs-start ouds-component-badge
+$ouds-badge-notification-min-width-l: $ouds-dimension-300 !default;
+$ouds-badge-notification-min-width-m: $ouds-dimension-200 !default;
+$ouds-badge-notification-min-width-s: $ouds-dimension-150 !default;
+$ouds-badge-size-l: $ouds-dimension-3xs !default;
+$ouds-badge-size-m: $ouds-dimension-5xs !default;
+$ouds-badge-size-s: $ouds-dimension-6xs !default;
+$ouds-badge-size-xs: $ouds-dimension-7xs !default;
+// scss-docs-end ouds-component-badge
+
+// Breadcrumb
+
+// scss-docs-start ouds-component-breadcrumb
+$ouds-breadcrumb-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-breadcrumb-color-content-focus: $ouds-color-action-focus !default;
+$ouds-breadcrumb-color-content-hover: $ouds-color-action-hover !default;
+$ouds-breadcrumb-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-breadcrumb-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-breadcrumb-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-breadcrumb-size-min-height-medium: $ouds-dimension-600 !default;
+$ouds-breadcrumb-size-min-height-small: $ouds-dimension-550 !default;
+$ouds-breadcrumb-size-min-width-medium: $ouds-dimension-600 !default;
+$ouds-breadcrumb-size-min-width-small: $ouds-dimension-550 !default;
+$ouds-breadcrumb-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
+$ouds-breadcrumb-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
+$ouds-breadcrumb-space-column-gap-levels-medium: $ouds-space-column-gap-short !default;
+$ouds-breadcrumb-space-column-gap-levels-small: $ouds-space-column-gap-shorter !default;
+$ouds-breadcrumb-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-breadcrumb-space-padding-inline: $ouds-space-padding-inline-none !default;
+// scss-docs-end ouds-component-breadcrumb
+
+// Bullet
+
+// scss-docs-start ouds-component-bullet
+$ouds-bullet-list-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-bullet-list-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-bullet-list-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-bullet-list-size-min-height-medium: $ouds-dimension-600 !default;
+$ouds-bullet-list-size-min-height-small: $ouds-dimension-550 !default;
+$ouds-bullet-list-size-min-width-medium: $ouds-dimension-600 !default;
+$ouds-bullet-list-size-min-width-small: $ouds-dimension-550 !default;
+$ouds-bullet-list-space-column-gap-icon-medium: $ouds-space-column-gap-shorter !default;
+$ouds-bullet-list-space-column-gap-icon-small: $ouds-space-column-gap-shortest !default;
+$ouds-bullet-list-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-bullet-list-space-padding-inline-end-none: $ouds-space-padding-inline-none !default;
+$ouds-bullet-list-space-padding-inline-start-icon-medium: $ouds-space-padding-inline-medium !default;
+$ouds-bullet-list-space-padding-inline-start-icon-small: $ouds-space-padding-inline-short !default;
+// scss-docs-end ouds-component-bullet
 
 // Button
 
 // scss-docs-start ouds-component-button
-// $ouds-button-size-max-height: $ouds-dimension-600 !default;
-// $ouds-button-size-min-height: $ouds-dimension-600 !default;
-// $ouds-button-size-min-width: $ouds-dimension-600 !default;
-// $ouds-button-border-radius: $ouds-border-radius-none !default;
-// $ouds-button-border-width-default: $ouds-border-width-default !default;
-// $ouds-button-border-width-default-interaction: $ouds-border-width-medium !default;
-// $ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
-// $ouds-button-border-width-minimal: $ouds-border-width-none !default;
-// $ouds-button-border-width-minimal-interaction: $ouds-border-width-none !default;
-// $ouds-button-color-bg-default-focus-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-default-hover-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-default-loading-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-bg-default-pressed-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-bg-minimal-focus-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-minimal-hover-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-minimal-loading-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-bg-minimal-pressed-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-bg-strong-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
-// $ouds-button-color-bg-strong-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-bg-strong-focus-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-strong-hover-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-button-color-bg-strong-loading-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-bg-strong-pressed-mono: $ouds-color-repository-opacity-white-higher !default;
-// $ouds-button-color-border-default-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
-// $ouds-button-color-border-default-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-default-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
-// $ouds-button-color-content-default-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-default-focus-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-default-hover-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-default-loading-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-default-pressed-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-minimal-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
-// $ouds-button-color-content-minimal-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-minimal-focus-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-minimal-hover-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-minimal-loading-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-minimal-pressed-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-strong-disabled-mono: $ouds-color-repository-opacity-white-high !default;
-// $ouds-button-color-content-strong-enabled-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-strong-focus-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-strong-hover-mono: $ouds-color-repository-neutral-muted-white !default;
-// $ouds-button-color-content-strong-loading-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-content-strong-pressed-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-button-color-bg-default-disabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-disabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-default-disabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-enabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-enabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-default-enabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-focus: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-focus-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-default-hover: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-hover-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-default-loading: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-loading-inverse: $ouds-color-opacity-transparent-inverse !default;
-$ouds-button-color-bg-default-pressed: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-default-pressed-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-minimal-disabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-minimal-disabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-minimal-disabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-minimal-enabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-minimal-enabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-bg-minimal-enabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-bg-minimal-focus: var(--#{$prefix}color-action-support-focus) !default;
-// $ouds-button-color-bg-minimal-focus-inverse: $ouds-color-action-support-focus-inverse !default;
-// $ouds-button-color-bg-minimal-hover: var(--#{$prefix}color-action-support-hover) !default;
-// $ouds-button-color-bg-minimal-hover-inverse: $ouds-color-action-support-hover-inverse !default;
-// $ouds-button-color-bg-minimal-loading: var(--#{$prefix}color-action-support-loading) !default;
-// $ouds-button-color-bg-minimal-loading-inverse: $ouds-color-action-support-loading-inverse !default;
-// $ouds-button-color-bg-minimal-pressed: var(--#{$prefix}color-action-support-pressed) !default;
-// $ouds-button-color-bg-minimal-pressed-inverse: $ouds-color-action-support-pressed-inverse !default;
-// $ouds-button-color-border-default-disabled: var(--#{$prefix}color-action-disabled) !default;
-// $ouds-button-color-border-default-disabled-inverse: $ouds-color-action-disabled-inverse !default;
-// $ouds-button-color-border-default-enabled: var(--#{$prefix}color-action-enabled) !default;
-// $ouds-button-color-border-default-enabled-inverse: $ouds-color-action-enabled-inverse !default;
-// $ouds-button-color-border-default-focus: var(--#{$prefix}color-action-focus) !default;
-// $ouds-button-color-border-default-focus-inverse: $ouds-color-action-focus-inverse !default;
-// $ouds-button-color-border-default-focus-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-default-hover: var(--#{$prefix}color-action-hover) !default;
-// $ouds-button-color-border-default-hover-inverse: $ouds-color-action-hover-inverse !default;
-// $ouds-button-color-border-default-hover-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-default-loading: var(--#{$prefix}color-action-loading) !default;
-// $ouds-button-color-border-default-loading-inverse: $ouds-color-action-loading-inverse !default;
-// $ouds-button-color-border-default-loading-mono: var(--#{$prefix}color-opacity-transparent) !default;
-$ouds-button-color-border-default-pressed: var(--#{$prefix}color-action-pressed) !default;
-// $ouds-button-color-border-default-pressed-inverse: $ouds-color-action-pressed-inverse !default;
-// $ouds-button-color-border-default-pressed-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-disabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-disabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-disabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-enabled: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-enabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-enabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-focus: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-focus-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-focus-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-hover: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-hover-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-hover-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-loading: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-loading-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-loading-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-pressed: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-minimal-pressed-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-button-color-border-minimal-pressed-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-disabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-enabled-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-focus-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-hover-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-loading-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-border-strong-pressed-mono: var(--#{$prefix}color-opacity-transparent) !default;
-// $ouds-button-color-content-default-disabled: var(--#{$prefix}color-action-disabled) !default;
-// $ouds-button-color-content-default-disabled-inverse: $ouds-color-action-disabled-inverse !default;
-// $ouds-button-color-content-default-enabled: var(--#{$prefix}color-action-enabled) !default;
-// $ouds-button-color-content-default-enabled-inverse: $ouds-color-action-enabled-inverse !default;
-// $ouds-button-color-content-default-focus: var(--#{$prefix}color-action-focus) !default;
-// $ouds-button-color-content-default-focus-inverse: $ouds-color-action-focus-inverse !default;
-// $ouds-button-color-content-default-hover: var(--#{$prefix}color-action-hover) !default;
-// $ouds-button-color-content-default-hover-inverse: $ouds-color-action-hover-inverse !default;
-// $ouds-button-color-content-default-loading: var(--#{$prefix}color-action-loading) !default;
-// $ouds-button-color-content-default-loading-inverse: $ouds-color-action-loading-inverse !default;
-// $ouds-button-color-content-default-pressed: var(--#{$prefix}color-action-pressed) !default;
-// $ouds-button-color-content-default-pressed-inverse: $ouds-color-action-pressed-inverse !default;
-// $ouds-button-color-content-minimal-disabled: var(--#{$prefix}color-action-disabled) !default;
-// $ouds-button-color-content-minimal-disabled-inverse: $ouds-color-action-disabled-inverse !default;
-// $ouds-button-color-content-minimal-enabled: var(--#{$prefix}color-action-enabled) !default;
-// $ouds-button-color-content-minimal-enabled-inverse: $ouds-color-action-enabled-inverse !default;
-// $ouds-button-color-content-minimal-focus: var(--#{$prefix}color-action-focus) !default;
-// $ouds-button-color-content-minimal-focus-inverse: $ouds-color-action-focus-inverse !default;
-// $ouds-button-color-content-minimal-hover: var(--#{$prefix}color-action-hover) !default;
-// $ouds-button-color-content-minimal-hover-inverse: $ouds-color-action-hover-inverse !default;
-// $ouds-button-color-content-minimal-loading: var(--#{$prefix}color-action-loading) !default;
-// $ouds-button-color-content-minimal-loading-inverse: $ouds-color-action-loading-inverse !default;
-// $ouds-button-color-content-minimal-pressed: var(--#{$prefix}color-action-pressed) !default;
-// $ouds-button-color-content-minimal-pressed-inverse: $ouds-color-action-pressed-inverse !default;
-// $ouds-button-size-icon: $ouds-size-icon-with-label-large-size-xs !default;
-// $ouds-button-size-icon-only: $ouds-size-icon-with-label-large-size-sm !default;
-// $ouds-button-size-loader: $ouds-size-icon-with-label-large-size-xs !default;
-// $ouds-button-space-column-gap-arrow: $ouds-space-column-gap-shorter !default;
-// $ouds-button-space-column-gap-icon: $ouds-space-column-gap-short !default;
-// $ouds-button-space-inset-icon-only: $ouds-space-inset-medium !default;
-// $ouds-button-space-padding-block: $ouds-space-padding-block-medium !default;
-// $ouds-button-space-padding-inline-arrow-end: $ouds-space-padding-inline-tall !default;
-// $ouds-button-space-padding-inline-arrow-start: $ouds-space-padding-inline-tall !default;
-// $ouds-button-space-padding-inline-end-icon-start: $ouds-space-padding-inline-spacious !default;
-// $ouds-button-space-padding-inline-icon-none: $ouds-space-padding-inline-huge !default;
-// $ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-taller !default;
-// $ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-spacious !default;
+$ouds-button-border-radius: $ouds-border-radius-none !default;
+$ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
+$ouds-button-border-width-default-interaction: $ouds-border-width-medium !default;
+$ouds-button-border-width-default: $ouds-border-width-default !default;
+$ouds-button-border-width-minimal-interaction: $ouds-border-width-none !default;
+$ouds-button-border-width-minimal: $ouds-border-width-none !default;
+$ouds-button-color-bg-default-disabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-enabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-focus-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-default-focus: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-hover-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-default-hover: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-loading-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-bg-default-loading: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-default-pressed-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-bg-default-pressed: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-minimal-disabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-minimal-disabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-minimal-enabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-minimal-enabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-bg-minimal-focus-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-minimal-focus: $ouds-color-action-support-focus !default;
+$ouds-button-color-bg-minimal-hover-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-minimal-hover: $ouds-color-action-support-hover !default;
+$ouds-button-color-bg-minimal-loading-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-bg-minimal-loading: $ouds-color-action-support-loading !default;
+$ouds-button-color-bg-minimal-pressed-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-bg-minimal-pressed: $ouds-color-action-support-pressed !default;
+$ouds-button-color-bg-strong-disabled-mono: $ouds-color-opacity-black-280 !default;
+$ouds-button-color-bg-strong-enabled-mono: $ouds-color-functional-black !default;
+$ouds-button-color-bg-strong-focus-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-strong-hover-mono: $ouds-color-opacity-black-680 !default;
+$ouds-button-color-bg-strong-loading-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-bg-strong-pressed-mono: $ouds-color-opacity-white-800 !default;
+$ouds-button-color-border-default-disabled-mono: $ouds-color-opacity-black-280 !default;
+$ouds-button-color-border-default-disabled: $ouds-color-action-disabled !default;
+$ouds-button-color-border-default-enabled-mono: $ouds-color-functional-black !default;
+$ouds-button-color-border-default-enabled: $ouds-color-action-enabled !default;
+$ouds-button-color-border-default-focus-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-default-focus: $ouds-color-action-focus !default;
+$ouds-button-color-border-default-hover-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-default-hover: $ouds-color-action-hover !default;
+$ouds-button-color-border-default-loading-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-default-loading: $ouds-color-action-loading !default;
+$ouds-button-color-border-default-pressed-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-default-pressed: $ouds-color-action-pressed !default;
+$ouds-button-color-border-minimal-disabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-disabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-enabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-enabled: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-focus-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-focus: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-hover-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-hover: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-loading-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-loading: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-pressed-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-minimal-pressed: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-disabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-enabled-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-focus-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-hover-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-loading-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-border-strong-pressed-mono: $ouds-color-opacity-transparent !default;
+$ouds-button-color-content-default-disabled-mono: $ouds-color-opacity-black-280 !default;
+$ouds-button-color-content-default-disabled: $ouds-color-action-disabled !default;
+$ouds-button-color-content-default-enabled-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-default-enabled: $ouds-color-action-enabled !default;
+$ouds-button-color-content-default-focus-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-default-focus: $ouds-color-action-focus !default;
+$ouds-button-color-content-default-hover-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-default-hover: $ouds-color-action-hover !default;
+$ouds-button-color-content-default-loading-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-default-loading: $ouds-color-action-loading !default;
+$ouds-button-color-content-default-pressed-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-default-pressed: $ouds-color-action-pressed !default;
+$ouds-button-color-content-minimal-disabled-mono: $ouds-color-opacity-black-280 !default;
+$ouds-button-color-content-minimal-disabled: $ouds-color-action-disabled !default;
+$ouds-button-color-content-minimal-enabled-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-minimal-enabled: $ouds-color-action-enabled !default;
+$ouds-button-color-content-minimal-focus-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-minimal-focus: $ouds-color-action-focus !default;
+$ouds-button-color-content-minimal-hover-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-minimal-hover: $ouds-color-action-hover !default;
+$ouds-button-color-content-minimal-loading-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-minimal-loading: $ouds-color-content-default !default;
+$ouds-button-color-content-minimal-pressed-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-minimal-pressed: $ouds-color-action-pressed !default;
+$ouds-button-color-content-strong-disabled-mono: $ouds-color-opacity-white-640 !default;
+$ouds-button-color-content-strong-enabled-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-strong-focus-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-strong-hover-mono: $ouds-color-functional-white !default;
+$ouds-button-color-content-strong-loading-mono: $ouds-color-functional-black !default;
+$ouds-button-color-content-strong-pressed-mono: $ouds-color-functional-black !default;
+$ouds-button-size-icon-only: $ouds-size-icon-with-label-large-size-sm !default;
+$ouds-button-size-icon: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-button-size-loader: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-button-size-max-height-icon-only: $ouds-dimension-600 !default;
+$ouds-button-size-min-height: $ouds-dimension-600 !default;
+$ouds-button-size-min-width: $ouds-dimension-600 !default;
+$ouds-button-space-column-gap-arrow: $ouds-space-column-gap-shorter !default;
+$ouds-button-space-column-gap-icon: $ouds-space-column-gap-short !default;
+$ouds-button-space-inset-icon-only: $ouds-space-inset-medium !default;
+$ouds-button-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-button-space-padding-inline-arrow-end: $ouds-space-padding-inline-tall !default;
+$ouds-button-space-padding-inline-arrow-start: $ouds-space-padding-inline-tall !default;
+$ouds-button-space-padding-inline-end-icon-start: $ouds-space-padding-inline-spacious !default;
+$ouds-button-space-padding-inline-icon-none: $ouds-space-padding-inline-huge !default;
+$ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-taller !default;
+$ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-spacious !default;
 // scss-docs-end ouds-component-button
+
+// Check
+
+// scss-docs-start ouds-component-check
+$ouds-check-radio-size-max-height-assets-container: $ouds-dimension-1200 !default;
+$ouds-check-radio-size-max-height-selector-only: $ouds-dimension-600 !default;
+$ouds-check-radio-size-min-height-selector-only: $ouds-dimension-600 !default;
+$ouds-check-radio-size-min-width-selector-only: $ouds-dimension-600 !default;
+$ouds-check-radio-size-selector: $ouds-size-icon-with-label-large-size-sm !default;
+// scss-docs-end ouds-component-check
+
+// Chip
+
+// scss-docs-start ouds-component-chip
+$ouds-chip-border-radius: $ouds-border-radius-pill !default;
+$ouds-chip-border-width-default-interaction: $ouds-border-width-medium !default;
+$ouds-chip-border-width-default: $ouds-border-width-default !default;
+$ouds-chip-color-bg-disabled: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-bg-enabled: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-bg-focus: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-bg-hover: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-bg-pressed: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-border-disabled: $ouds-color-action-disabled !default;
+$ouds-chip-color-border-enabled: $ouds-color-action-enabled !default;
+$ouds-chip-color-border-hover: $ouds-color-action-hover !default;
+$ouds-chip-color-border-pressed: $ouds-color-action-pressed !default;
+$ouds-chip-color-border-selected: $ouds-color-action-selected !default;
+$ouds-chip-color-content-disabled: $ouds-color-content-disabled !default;
+$ouds-chip-color-content-enabled: $ouds-color-content-default !default;
+$ouds-chip-color-content-focus: $ouds-color-content-default !default;
+$ouds-chip-color-content-hover: $ouds-color-content-default !default;
+$ouds-chip-color-content-pressed: $ouds-color-content-default !default;
+$ouds-chip-size-icon: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-chip-size-max-height: $ouds-dimension-400 !default;
+$ouds-chip-size-min-height: $ouds-dimension-400 !default;
+$ouds-chip-space-column-gap-column-gap: $ouds-space-column-gap-shorter !default;
+$ouds-chip-space-inset-icon-only: $ouds-space-inset-medium !default;
+$ouds-chip-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-chip-space-padding-inline-icon-end: $ouds-space-padding-inline-medium !default;
+$ouds-chip-space-padding-inline-icon-none: $ouds-space-padding-inline-tall !default;
+$ouds-chip-space-padding-inline-icon-only: $ouds-space-padding-inline-medium !default;
+$ouds-chip-space-padding-inline-icon-start: $ouds-space-padding-inline-medium !default;
+$ouds-chip-space-padding-inline-label-end: $ouds-space-padding-inline-tall !default;
+$ouds-chip-space-padding-inline-label-start: $ouds-space-padding-inline-tall !default;
+$ouds-chip-space-padding-stack-padding-block: $ouds-space-padding-block-shorter !default;
+// scss-docs-end ouds-component-chip
 
 // Input
 
 // scss-docs-start ouds-component-input
-// $ouds-input-text-size-max-height: $ouds-dimension-600 !default;
-// $ouds-input-text-size-min-height: $ouds-dimension-600 !default;
-// $ouds-input-text-size-min-width: $ouds-dimension-600 !default;
-// $ouds-input-text-size-text-height: $ouds-dimension-600 !default;
-// $ouds-input-text-size-icon-height: $ouds-size-icon-decorative-lg !default;
-// $ouds-input-text-size-suffix-text-height: $ouds-font-line-height-heading-xlarge-desktop !default;
-// $ouds-input-text-color-bg-default-disabled: $ouds-color-action-support-enabled !default;
-// $ouds-input-text-color-bg-default-disabled-inverse: $ouds-color-action-support-enabled-inverse !default;
-// $ouds-input-text-color-bg-default-enabled: $ouds-color-action-support-enabled !default;
-// $ouds-input-text-color-bg-default-enabled-inverse: $ouds-color-action-support-enabled-inverse !default;
-// $ouds-input-text-color-bg-default-focus: $ouds-color-action-support-focus !default;
-// $ouds-input-text-color-bg-default-focus-inverse: $ouds-color-action-support-focus-inverse !default;
-// $ouds-input-text-color-bg-default-hover: $ouds-color-action-support-hover !default;
-// $ouds-input-text-color-bg-default-hover-inverse: $ouds-color-action-support-hover-inverse !default;
-// $ouds-input-text-color-bg-default-loading: $ouds-color-action-support-loading !default;
-// $ouds-input-text-color-bg-default-loading-inverse: $ouds-color-action-support-loading-inverse !default;
-// $ouds-input-text-color-bg-default-pressed: $ouds-color-action-support-pressed !default;
-// $ouds-input-text-color-bg-default-pressed-inverse: $ouds-color-action-support-pressed-inverse !default;
-// $ouds-input-text-color-content-default-disabled: $ouds-color-content-disabled !default;
-// $ouds-input-text-color-content-default-disabled-inverse: $ouds-color-content-disabled-inverse !default;
-// $ouds-input-text-color-content-default-enabled: $ouds-color-content-default !default;
-// $ouds-input-text-color-content-default-enabled-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-input-text-color-content-default-focus: $ouds-color-content-default !default;
-// $ouds-input-text-color-content-default-focus-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-input-text-color-content-default-hover: $ouds-color-content-default !default;
-// $ouds-input-text-color-content-default-hover-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-input-text-color-content-default-loading: $ouds-color-content-default !default;
-// $ouds-input-text-color-content-default-loading-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-input-text-color-content-default-pressed: $ouds-color-content-default !default;
-// $ouds-input-text-color-content-default-pressed-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-input-text-size-prefix-text-height: $ouds-size-icon-with-label-large-size-sm !default;
-// $ouds-input-text-space-inset-icon-alone: $ouds-space-inset-medium !default;
-// $ouds-input-text-space-padding-block: $ouds-space-padding-block-medium !default;
-// $ouds-input-text-space-padding-inline-container-end: $ouds-space-padding-inline-shorter !default;
-// $ouds-input-text-space-padding-inline-container-start: $ouds-space-padding-inline-medium !default;
-// $ouds-input-text-space-padding-inline-icon-end: $ouds-space-padding-inline-shorter !default;
-// $ouds-input-text-space-padding-inline-prefix-text-end: $ouds-space-padding-inline-short !default;
-// $ouds-input-text-space-padding-inline-suffix-text-end: $ouds-space-padding-inline-shortest !default;
-// $ouds-input-text-space-padding-inline-text-end: $ouds-space-padding-inline-short !default;
+$ouds-input-text-color-bg-default-disabled: $ouds-color-action-support-enabled !default;
+$ouds-input-text-color-bg-default-enabled: $ouds-color-action-support-enabled !default;
+$ouds-input-text-color-bg-default-focus: $ouds-color-action-support-focus !default;
+$ouds-input-text-color-bg-default-hover: $ouds-color-action-support-hover !default;
+$ouds-input-text-color-bg-default-loading: $ouds-color-action-support-loading !default;
+$ouds-input-text-color-bg-default-pressed: $ouds-color-action-support-pressed !default;
+$ouds-input-text-color-content-default-disabled: $ouds-color-content-disabled !default;
+$ouds-input-text-color-content-default-enabled: $ouds-color-content-default !default;
+$ouds-input-text-color-content-default-focus: $ouds-color-content-default !default;
+$ouds-input-text-color-content-default-hover: $ouds-color-content-default !default;
+$ouds-input-text-color-content-default-loading: $ouds-color-content-default !default;
+$ouds-input-text-color-content-default-pressed: $ouds-color-content-default !default;
+$ouds-input-text-size-max-width: $ouds-dimension-4000 !default;
+$ouds-input-text-size-min-width: $ouds-dimension-1600 !default;
+$ouds-input-text-space-inset-icon-alone: $ouds-space-inset-medium !default;
+$ouds-input-text-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-input-text-space-padding-inline-container-end: $ouds-space-padding-inline-shorter !default;
+$ouds-input-text-space-padding-inline-container-start: $ouds-space-padding-inline-medium !default;
+$ouds-input-text-space-padding-inline-icon-end: $ouds-space-padding-inline-shorter !default;
+$ouds-input-text-space-padding-inline-prefix-text-end: $ouds-space-padding-inline-short !default;
+$ouds-input-text-space-padding-inline-suffix-text-end: $ouds-space-padding-inline-shortest !default;
+$ouds-input-text-space-padding-inline-text-end: $ouds-space-padding-inline-short !default;
 // scss-docs-end ouds-component-input
 
 // Link
 
 // scss-docs-start ouds-component-link
-// $ouds-link-size-min-height-medium: $ouds-dimension-600 !default;
-// $ouds-link-size-min-height-small: $ouds-dimension-550 !default;
-// $ouds-link-size-min-width-medium: $ouds-dimension-600 !default;
-// $ouds-link-size-min-width-small: $ouds-dimension-550 !default;
-// $ouds-link-color-content-disabled-mono: $ouds-color-repository-opacity-black-medium !default;
-// $ouds-link-color-content-enabled-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-link-color-content-focus-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-link-color-content-hover-mono: $ouds-color-repository-neutral-emphasized-black !default;
-// $ouds-link-color-content-pressed-mono: $ouds-color-repository-opacity-black-higher !default;
-// $ouds-link-color-arrow-enabled: $ouds-color-content-brand-primary !default;
-// $ouds-link-color-arrow-enabled-inverse: $ouds-color-content-brand-primary-inverse !default;
-// $ouds-link-color-arrow-focus: $ouds-color-content-brand-primary !default;
-// $ouds-link-color-arrow-focus-inverse: $ouds-color-content-brand-primary-inverse !default;
-// $ouds-link-color-arrow-hover: $ouds-color-content-brand-primary !default;
-// $ouds-link-color-arrow-hover-inverse: $ouds-color-content-brand-primary-inverse !default;
-// $ouds-link-color-arrow-pressed: $ouds-color-content-brand-primary !default;
-// $ouds-link-color-arrow-pressed-inverse: $ouds-color-content-brand-primary-inverse !default;
-// $ouds-link-color-content-enabled: $ouds-color-action-enabled !default;
-// $ouds-link-color-content-enabled-inverse: $ouds-color-action-enabled-inverse !default;
-// $ouds-link-color-content-focus: $ouds-color-action-focus !default;
-// $ouds-link-color-content-focus-inverse: $ouds-color-action-focus-inverse !default;
-// $ouds-link-color-content-hover: $ouds-color-action-hover !default;
-// $ouds-link-color-content-hover-inverse: $ouds-color-action-hover-inverse !default;
-// $ouds-link-color-content-pressed: $ouds-color-action-pressed !default;
-// $ouds-link-color-content-pressed-inverse: $ouds-color-action-pressed-inverse !default;
-// $ouds-link-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
-// $ouds-link-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
-// $ouds-link-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
-// $ouds-link-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
-// $ouds-link-space-column-gap-icon-medium: $ouds-space-column-gap-short !default;
-// $ouds-link-space-column-gap-icon-small: $ouds-space-column-gap-shorter !default;
-// $ouds-link-space-padding-block: $ouds-space-padding-block-medium !default;
-// $ouds-link-space-padding-inline: $ouds-space-padding-inline-none !default;
+$ouds-link-color-arrow-enabled: $ouds-color-content-brand-primary !default;
+$ouds-link-color-arrow-focus: $ouds-color-content-brand-primary !default;
+$ouds-link-color-arrow-hover: $ouds-color-content-brand-primary !default;
+$ouds-link-color-arrow-pressed: $ouds-color-content-brand-primary !default;
+$ouds-link-color-content-disabled-mono: $ouds-color-opacity-black-280 !default;
+$ouds-link-color-content-enabled-mono: $ouds-color-functional-black !default;
+$ouds-link-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-link-color-content-focus-mono: $ouds-color-functional-black !default;
+$ouds-link-color-content-focus: $ouds-color-action-focus !default;
+$ouds-link-color-content-hover-mono: $ouds-color-functional-black !default;
+$ouds-link-color-content-hover: $ouds-color-action-hover !default;
+$ouds-link-color-content-pressed-mono: $ouds-color-opacity-black-680 !default;
+$ouds-link-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-link-size-icon-medium: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-link-size-icon-small: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-link-size-min-height-medium: $ouds-dimension-600 !default;
+$ouds-link-size-min-height-small: $ouds-dimension-550 !default;
+$ouds-link-size-min-width-medium: $ouds-dimension-600 !default;
+$ouds-link-size-min-width-small: $ouds-dimension-550 !default;
+$ouds-link-space-column-gap-arrow-medium: $ouds-space-column-gap-shorter !default;
+$ouds-link-space-column-gap-arrow-small: $ouds-space-column-gap-shortest !default;
+$ouds-link-space-column-gap-icon-medium: $ouds-space-column-gap-short !default;
+$ouds-link-space-column-gap-icon-small: $ouds-space-column-gap-shorter !default;
+$ouds-link-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-link-space-padding-inline: $ouds-space-padding-inline-none !default;
 // scss-docs-end ouds-component-link
 
-// Select
+// List
 
-// scss-docs-start ouds-component-select
-// $ouds-select-size-max-height-container-icon: $ouds-dimension-600 !default;
-// $ouds-select-size-min-height: $ouds-dimension-600 !default;
-// $ouds-select-size-min-height-icon-only: $ouds-dimension-600 !default;
-// $ouds-select-size-min-width: $ouds-dimension-600 !default;
-// $ouds-select-size-min-width-icon-only: $ouds-dimension-600 !default;
-// $ouds-select-color-bg-disabled: $ouds-color-opacity-transparent !default;
-// $ouds-select-color-bg-disabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-select-color-bg-enabled: $ouds-color-opacity-transparent !default;
-// $ouds-select-color-bg-enabled-inverse: $ouds-color-opacity-transparent-inverse !default;
-// $ouds-select-color-bg-focus: $ouds-color-action-support-focus !default;
-// $ouds-select-color-bg-focus-inverse: $ouds-color-action-support-focus-inverse !default;
-// $ouds-select-color-bg-hover: $ouds-color-action-support-hover !default;
-// $ouds-select-color-bg-hover-inverse: $ouds-color-action-support-hover-inverse !default;
-// $ouds-select-color-bg-loading: $ouds-color-action-support-loading !default;
-// $ouds-select-color-bg-loading-inverse: $ouds-color-action-support-loading-inverse !default;
-// $ouds-select-color-bg-pressed: $ouds-color-action-support-pressed !default;
-// $ouds-select-color-bg-pressed-inverse: $ouds-color-action-support-pressed-inverse !default;
-// $ouds-select-color-border-disabled: $ouds-color-action-disabled !default;
-// $ouds-select-color-border-disabled-inverse: $ouds-color-action-disabled-inverse !default;
-// $ouds-select-color-border-enabled: $ouds-color-action-selected !default;
-// $ouds-select-color-border-enabled-inverse: $ouds-color-action-selected-inverse !default;
-// $ouds-select-color-border-hover: $ouds-color-action-hover !default;
-// $ouds-select-color-border-hover-inverse: $ouds-color-action-hover-inverse !default;
-// $ouds-select-color-border-loading: $ouds-color-action-loading !default;
-// $ouds-select-color-border-loading-inverse: $ouds-color-action-loading-inverse !default;
-// $ouds-select-color-border-pressed: $ouds-color-action-pressed !default;
-// $ouds-select-color-border-pressed-inverse: $ouds-color-action-pressed-inverse !default;
-// $ouds-select-color-content-disabled: $ouds-color-content-disabled !default;
-// $ouds-select-color-content-disabled-inverse: $ouds-color-content-disabled-inverse !default;
-// $ouds-select-color-content-enabled: $ouds-color-content-default !default;
-// $ouds-select-color-content-enabled-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-select-color-content-focus: $ouds-color-content-default !default;
-// $ouds-select-color-content-focus-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-select-color-content-helper-text-disabled: $ouds-color-content-disabled !default;
-// $ouds-select-color-content-helper-text-disabled-inverse: $ouds-color-content-disabled-inverse !default;
-// $ouds-select-color-content-helper-text-enabled: $ouds-color-content-muted !default;
-// $ouds-select-color-content-helper-text-enabled-inverse: $ouds-color-content-muted-inverse !default;
-// $ouds-select-color-content-helper-text-focus: $ouds-color-content-muted !default;
-// $ouds-select-color-content-helper-text-focus-inverse: $ouds-color-content-muted-inverse !default;
-// $ouds-select-color-content-helper-text-hover: $ouds-color-content-muted !default;
-// $ouds-select-color-content-helper-text-hover-inverse: $ouds-color-content-muted-inverse !default;
-// $ouds-select-color-content-helper-text-loading: $ouds-color-content-muted !default;
-// $ouds-select-color-content-helper-text-loading-inverse: $ouds-color-content-muted-inverse !default;
-// $ouds-select-color-content-helper-text-pressed: $ouds-color-content-muted !default;
-// $ouds-select-color-content-helper-text-pressed-inverse: $ouds-color-content-muted-inverse !default;
-// $ouds-select-color-content-hover: $ouds-color-content-default !default;
-// $ouds-select-color-content-hover-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-select-color-content-loading: $ouds-color-content-default !default;
-// $ouds-select-color-content-loading-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-select-color-content-pressed: $ouds-color-content-default !default;
-// $ouds-select-color-content-pressed-inverse: $ouds-color-content-default-inverse !default;
-// $ouds-select-size-check-box: $ouds-size-icon-with-label-large-size-sm !default;
-// $ouds-select-size-icon: $ouds-size-icon-with-label-large-size-md !default;
-// $ouds-select-size-loader: $ouds-size-icon-with-label-large-size-sm !default;
-// $ouds-select-space-column-gap: $ouds-space-column-gap-tall !default;
-// $ouds-select-space-padding-inset: $ouds-space-inset-medium !default;
-// $ouds-select-space-row-gap: $ouds-space-row-gap-none !default;
-// scss-docs-end ouds-component-select
+// scss-docs-start ouds-component-list
+$ouds-list-item-color-bg-focus: $ouds-color-action-support-focus !default;
+$ouds-list-item-color-bg-hover: $ouds-color-action-support-hover !default;
+$ouds-list-item-color-bg-loading: $ouds-color-action-support-loading !default;
+$ouds-list-item-color-bg-pressed: $ouds-color-action-support-pressed !default;
+$ouds-list-item-color-content-loader: $ouds-color-content-default !default;
+$ouds-list-item-size-icon: $ouds-size-icon-with-label-large-size-md !default;
+$ouds-list-item-size-loader: $ouds-size-icon-with-label-large-size-sm !default;
+$ouds-list-item-size-min-height: $ouds-dimension-650 !default;
+$ouds-list-item-size-min-width: $ouds-dimension-1400 !default;
+$ouds-list-item-space-column-gap: $ouds-space-column-gap-tall !default;
+$ouds-list-item-space-inset: $ouds-space-inset-medium !default;
+$ouds-list-item-space-row-gap: $ouds-space-row-gap-none !default;
+// scss-docs-end ouds-component-list
 
 // Skeleton
 
 // scss-docs-start ouds-component-skeleton
-// $ouds-skeleton-color-bg: $ouds-color-opacity-lowest !default;
-// $ouds-skeleton-color-bg-inverse: $ouds-color-opacity-lowest-inverse !default;
-// $ouds-skeleton-color-gradient-middle: $ouds-color-opacity-lower !default;
-// $ouds-skeleton-color-gradient-middle-inverse: $ouds-color-opacity-lower-inverse !default;
-// $ouds-skeleton-color-gradient-start-end: $ouds-color-opacity-transparent !default;
-// $ouds-skeleton-color-gradient-start-end-inverse: $ouds-color-opacity-transparent-inverse !default;
+$ouds-skeleton-color-bg: $ouds-color-opacity-lowest !default;
+$ouds-skeleton-color-gradient-middle: $ouds-color-opacity-lower !default;
+$ouds-skeleton-color-gradient-start-end: $ouds-color-opacity-transparent !default;
 // scss-docs-end ouds-component-skeleton
+
+// Switch
+
+// scss-docs-start ouds-component-switch
+$ouds-switch-color-check: $ouds-color-functional-black !default;
+$ouds-switch-color-cursor: $ouds-color-functional-white !default;
+$ouds-switch-color-track-false-interaction: $ouds-color-opacity-black-520 !default;
+$ouds-switch-color-track-false: $ouds-color-opacity-black-440 !default;
+$ouds-switch-color-track-true-interaction: $ouds-color-functional-malachite-600 !default;
+$ouds-switch-color-track-true: $ouds-color-functional-malachite-500 !default;
+$ouds-switch-size: $ouds-size-icon-with-label-large-size-sm !default;
+$ouds-switch-space-padding-inline-false: $ouds-space-fixed-shorter !default;
+$ouds-switch-space-padding-inline-true: $ouds-space-fixed-shortest !default;
+// scss-docs-end ouds-component-switch
 
 // Tag
 
 // scss-docs-start ouds-component-tag
-// $ouds-tag-color-bg-reminder: $ouds-color-opacity-lower !default;
-// $ouds-tag-color-bg-reminder-inverse: $ouds-color-opacity-lower-inverse !default;
+$ouds-tag-color-bg-reminder: $ouds-color-opacity-lower !default;
 // scss-docs-end ouds-component-tag
+
+// Typography
+
+// scss-docs-start ouds-component-typography
+$ouds-typography-color-heading-large: $ouds-color-content-default !default;
+$ouds-typography-size-height-heading-large-marker: $ouds-space-fixed-shorter !default;
+// scss-docs-end ouds-component-typography
