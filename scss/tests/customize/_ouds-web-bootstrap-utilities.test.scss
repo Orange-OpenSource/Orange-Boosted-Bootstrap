@@ -823,16 +823,13 @@ $utilities: ();
         [data-bs-theme="light"],
         :root[data-bs-theme="light"] [data-bs-theme="root"],
         :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
-          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #000;
           --bs-color-action-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #f15e00;
-          --bs-color-action-negative-enabled: #ea0305;
+          --bs-color-action-negative-enabled: #db0002;
           --bs-color-action-negative-focus: #b20002;
           --bs-color-action-negative-hover: #b20002;
           --bs-color-action-negative-loading: #800001;
@@ -846,7 +843,7 @@ $utilities: ();
           --bs-color-action-support-pressed: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #5b2f98;
           --bs-color-always-black: #000;
-          --bs-color-always-on-black: #fff;
+          --bs-color-always-on-black: #eee;
           --bs-color-always-on-white: #000;
           --bs-color-always-white: #fff;
           --bs-color-bg-emphasized: #141414;
@@ -876,26 +873,9 @@ $utilities: ();
           --bs-color-content-on-status-emphasized-alt: #fff;
           --bs-color-content-on-status-muted: #000;
           --bs-color-content-status-info: #26b2ff;
-          --bs-color-content-status-negative: #ea0305;
+          --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-overlay-default: #fff;
-          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #272727;
-          --bs-color-overlay-modal: #fff;
-          --bs-color-surface-brand-primary: #ff7900;
-          --bs-color-surface-status-accent-emphasized: #ffd000;
-          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-info-emphasized: #26b2ff;
-          --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-negative-emphasized: #ea0305;
-          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #3de35a;
-          --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-warning-emphasized: #ffd000;
-          --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-decorative-accent-1-default: #50be87;
           --bs-color-decorative-accent-1-emphasized: #2e7b54;
           --bs-color-decorative-accent-1-muted: #c0e8d4;
@@ -926,6 +906,26 @@ $utilities: ();
           --bs-color-decorative-skin-tint-700: #7e4f2a;
           --bs-color-decorative-skin-tint-800: #553720;
           --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
+          --bs-color-overlay-default: #fff;
+          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-emphasized: #272727;
+          --bs-color-overlay-modal: #fff;
+          --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-status-accent-emphasized: #ffd000;
+          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-info-emphasized: #26b2ff;
+          --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-negative-emphasized: #db0002;
+          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #3de35a;
+          --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-warning-emphasized: #ffd000;
+          --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
@@ -939,9 +939,6 @@ $utilities: ();
         [data-bs-theme="dark"],
         :root[data-bs-theme="dark"] [data-bs-theme="root"],
         :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
-          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
@@ -992,26 +989,9 @@ $utilities: ();
           --bs-color-content-on-status-emphasized-alt: #000;
           --bs-color-content-on-status-muted: #eee;
           --bs-color-content-status-info: #26b2ff;
-          --bs-color-content-status-negative: #ea0305;
+          --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #eee;
-          --bs-color-overlay-modal: #333;
-          --bs-color-surface-brand-primary: #ff7900;
-          --bs-color-surface-status-accent-emphasized: #ffe270;
-          --bs-color-surface-status-accent-muted: #353228;
-          --bs-color-surface-status-info-emphasized: #8ad5ff;
-          --bs-color-surface-status-info-muted: #003857;
-          --bs-color-surface-status-negative-emphasized: #ff8081;
-          --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #94f0a4;
-          --bs-color-surface-status-positive-muted: #0a4715;
-          --bs-color-surface-status-warning-emphasized: #ffe270;
-          --bs-color-surface-status-warning-muted: #3d3100;
           --bs-color-decorative-accent-1-default: #50be87;
           --bs-color-decorative-accent-1-emphasized: #2e7b54;
           --bs-color-decorative-accent-1-muted: #c0e8d4;
@@ -1042,6 +1022,26 @@ $utilities: ();
           --bs-color-decorative-skin-tint-700: #7e4f2a;
           --bs-color-decorative-skin-tint-800: #553720;
           --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
+          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-emphasized: #eee;
+          --bs-color-overlay-modal: #333;
+          --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-status-accent-emphasized: #ffe270;
+          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-info-emphasized: #8ad5ff;
+          --bs-color-surface-status-info-muted: #003857;
+          --bs-color-surface-status-negative-emphasized: #ff8081;
+          --bs-color-surface-status-negative-muted: #4d0001;
+          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #94f0a4;
+          --bs-color-surface-status-positive-muted: #0a4715;
+          --bs-color-surface-status-warning-emphasized: #ffe270;
+          --bs-color-surface-status-warning-muted: #3d3100;
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10740,16 +10740,13 @@ $utilities: ();
         [data-bs-theme="light"],
         :root[data-bs-theme="light"] [data-bs-theme="root"],
         :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
-          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #000;
           --bs-color-action-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #f15e00;
-          --bs-color-action-negative-enabled: #ea0305;
+          --bs-color-action-negative-enabled: #db0002;
           --bs-color-action-negative-focus: #b20002;
           --bs-color-action-negative-hover: #b20002;
           --bs-color-action-negative-loading: #800001;
@@ -10763,7 +10760,7 @@ $utilities: ();
           --bs-color-action-support-pressed: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #5b2f98;
           --bs-color-always-black: #000;
-          --bs-color-always-on-black: #fff;
+          --bs-color-always-on-black: #eee;
           --bs-color-always-on-white: #000;
           --bs-color-always-white: #fff;
           --bs-color-bg-emphasized: #141414;
@@ -10793,26 +10790,9 @@ $utilities: ();
           --bs-color-content-on-status-emphasized-alt: #fff;
           --bs-color-content-on-status-muted: #000;
           --bs-color-content-status-info: #26b2ff;
-          --bs-color-content-status-negative: #ea0305;
+          --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-overlay-default: #fff;
-          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #272727;
-          --bs-color-overlay-modal: #fff;
-          --bs-color-surface-brand-primary: #ff7900;
-          --bs-color-surface-status-accent-emphasized: #ffd000;
-          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-info-emphasized: #26b2ff;
-          --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-negative-emphasized: #ea0305;
-          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #3de35a;
-          --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-warning-emphasized: #ffd000;
-          --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-decorative-accent-1-default: #50be87;
           --bs-color-decorative-accent-1-emphasized: #2e7b54;
           --bs-color-decorative-accent-1-muted: #c0e8d4;
@@ -10843,6 +10823,26 @@ $utilities: ();
           --bs-color-decorative-skin-tint-700: #7e4f2a;
           --bs-color-decorative-skin-tint-800: #553720;
           --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
+          --bs-color-overlay-default: #fff;
+          --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-emphasized: #272727;
+          --bs-color-overlay-modal: #fff;
+          --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-status-accent-emphasized: #ffd000;
+          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-info-emphasized: #26b2ff;
+          --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-negative-emphasized: #db0002;
+          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #3de35a;
+          --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-warning-emphasized: #ffd000;
+          --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10856,9 +10856,6 @@ $utilities: ();
         [data-bs-theme="dark"],
         :root[data-bs-theme="dark"] [data-bs-theme="root"],
         :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
-          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10909,26 +10906,9 @@ $utilities: ();
           --bs-color-content-on-status-emphasized-alt: #000;
           --bs-color-content-on-status-muted: #eee;
           --bs-color-content-status-info: #26b2ff;
-          --bs-color-content-status-negative: #ea0305;
+          --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #eee;
-          --bs-color-overlay-modal: #333;
-          --bs-color-surface-brand-primary: #ff7900;
-          --bs-color-surface-status-accent-emphasized: #ffe270;
-          --bs-color-surface-status-accent-muted: #353228;
-          --bs-color-surface-status-info-emphasized: #8ad5ff;
-          --bs-color-surface-status-info-muted: #003857;
-          --bs-color-surface-status-negative-emphasized: #ff8081;
-          --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #94f0a4;
-          --bs-color-surface-status-positive-muted: #0a4715;
-          --bs-color-surface-status-warning-emphasized: #ffe270;
-          --bs-color-surface-status-warning-muted: #3d3100;
           --bs-color-decorative-accent-1-default: #50be87;
           --bs-color-decorative-accent-1-emphasized: #2e7b54;
           --bs-color-decorative-accent-1-muted: #c0e8d4;
@@ -10959,6 +10939,26 @@ $utilities: ();
           --bs-color-decorative-skin-tint-700: #7e4f2a;
           --bs-color-decorative-skin-tint-800: #553720;
           --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
+          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-emphasized: #eee;
+          --bs-color-overlay-modal: #333;
+          --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-status-accent-emphasized: #ffe270;
+          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-info-emphasized: #8ad5ff;
+          --bs-color-surface-status-info-muted: #003857;
+          --bs-color-surface-status-negative-emphasized: #ff8081;
+          --bs-color-surface-status-negative-muted: #4d0001;
+          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #94f0a4;
+          --bs-color-surface-status-positive-muted: #0a4715;
+          --bs-color-surface-status-warning-emphasized: #ffe270;
+          --bs-color-surface-status-warning-muted: #3d3100;
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
