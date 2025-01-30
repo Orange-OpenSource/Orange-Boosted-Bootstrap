@@ -1095,7 +1095,7 @@ toc: true
       <li><code>$ouds-size-icon-with-label-xlarge-size-lg</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-md</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-sm</code></li>
-      <li><code>$ouds-size-max-width-grid</code></li>
+      <li><code>$ouds-grid-2xl-max-width-alt</code></li>
       <li><code>$ouds-size-max-width-type-body-large-desktop</code></li>
       <li><code>$ouds-size-max-width-type-body-large-mobile</code></li>
       <li><code>$ouds-size-max-width-type-body-large-tablet</code></li>
