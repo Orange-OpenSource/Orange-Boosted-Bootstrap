@@ -193,7 +193,7 @@ It should be used for critical resources only.
 
 ### Reboot
 
-For improved cross-browser rendering, we <!--use [Reboot]({{< docsref "/content/reboot" >}}) to -->correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
 ## OUDS Web community
 

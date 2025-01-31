@@ -28,7 +28,7 @@ Because OUDS Web's components are purposely designed to be fairly generic, autho
 
 Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework<!-- for things such as button variations, alert variations, form validation indicators—-->may lead to *insufficient* color contrast (below the recommended [WCAG 2.2 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.2 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-OUDS Web **contrasts aren't locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color`.<!-- Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.-->
+OUDS Web **contrasts aren't locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color`. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.
 
 ### Visually hidden content
 
@@ -91,9 +91,7 @@ OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding 
 
 ### Maximum line length
 
-When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20).
-
-<!--For more information, please [read text utilities]({{< docsref "/utilities/text#line-length" >}}).-->
+When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20). We apply it by default on all our elements.
 
 ## Additional resources
 
