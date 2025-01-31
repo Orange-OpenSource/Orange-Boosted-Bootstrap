@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-## v0.0.4
+## v0.1.0
 
 ### Foundations
 
@@ -720,6 +720,7 @@ toc: true
       <li><code>$ouds-dimension-750</code></li>
       <li><code>$ouds-dimension-800</code></li>
       <li><code>$ouds-dimension-900</code></li>
+      <li><code>$ouds-dimension-4000</code></li>
       <li><code>$ouds-dimension-base</code></li>
       <li><code>$ouds-elevation-blur-0</code></li>
       <li><code>$ouds-elevation-blur-200</code></li>
@@ -1168,6 +1169,123 @@ toc: true
       <li><code>$ouds-space-scaled-tallest-desktop</code></li>
       <li><code>$ouds-space-scaled-tallest-mobile</code></li>
       <li><code>$ouds-space-scaled-tallest-tablet</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
+    <ul>
+      <li><code>$ouds-color-action-disabled</code></li>
+      <li><code>$ouds-color-action-enabled</code></li>
+      <li><code>$ouds-color-action-focus</code></li>
+      <li><code>$ouds-color-action-highlighted</code></li>
+      <li><code>$ouds-color-action-hover</code></li>
+      <li><code>$ouds-color-action-loading</code></li>
+      <li><code>$ouds-color-action-negative-enabled</code></li>
+      <li><code>$ouds-color-action-negative-focus</code></li>
+      <li><code>$ouds-color-action-negative-hover</code></li>
+      <li><code>$ouds-color-action-negative-loading</code></li>
+      <li><code>$ouds-color-action-negative-pressed</code></li>
+      <li><code>$ouds-color-action-pressed</code></li>
+      <li><code>$ouds-color-action-selected</code></li>
+      <li><code>$ouds-color-action-support-enabled</code></li>
+      <li><code>$ouds-color-action-support-focus</code></li>
+      <li><code>$ouds-color-action-support-hover</code></li>
+      <li><code>$ouds-color-action-support-loading</code></li>
+      <li><code>$ouds-color-action-support-pressed</code></li>
+      <li><code>$ouds-color-action-visited</code></li>
+      <li><code>$ouds-color-always-black</code></li>
+      <li><code>$ouds-color-always-on-black</code></li>
+      <li><code>$ouds-color-always-on-white</code></li>
+      <li><code>$ouds-color-always-white</code></li>
+      <li><code>$ouds-color-bg-emphasized</code></li>
+      <li><code>$ouds-color-bg-primary</code></li>
+      <li><code>$ouds-color-bg-secondary</code></li>
+      <li><code>$ouds-color-bg-tertiary</code></li>
+      <li><code>$ouds-color-border-brand-primary</code></li>
+      <li><code>$ouds-color-border-default</code></li>
+      <li><code>$ouds-color-border-emphasized</code></li>
+      <li><code>$ouds-color-border-focus</code></li>
+      <li><code>$ouds-color-border-focus-inset</code></li>
+      <li><code>$ouds-color-border-on-brand-primary</code></li>
+      <li><code>$ouds-color-content-brand-primary</code></li>
+      <li><code>$ouds-color-content-default</code></li>
+      <li><code>$ouds-color-content-disabled</code></li>
+      <li><code>$ouds-color-content-muted</code></li>
+      <li><code>$ouds-color-content-on-action-disabled</code></li>
+      <li><code>$ouds-color-content-on-action-enabled</code></li>
+      <li><code>$ouds-color-content-on-action-focus</code></li>
+      <li><code>$ouds-color-content-on-action-highlighted</code></li>
+      <li><code>$ouds-color-content-on-action-hover</code></li>
+      <li><code>$ouds-color-content-on-action-loading</code></li>
+      <li><code>$ouds-color-content-on-action-pressed</code></li>
+      <li><code>$ouds-color-content-on-brand-primary</code></li>
+      <li><code>$ouds-color-content-on-overlay-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-emphasized-alt</code></li>
+      <li><code>$ouds-color-content-on-status-muted</code></li>
+      <li><code>$ouds-color-content-status-info</code></li>
+      <li><code>$ouds-color-content-status-negative</code></li>
+      <li><code>$ouds-color-content-status-positive</code></li>
+      <li><code>$ouds-color-content-status-warning</code></li>
+      <li><code>$ouds-color-decorative-accent-1-default</code></li>
+      <li><code>$ouds-color-decorative-accent-1-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-1-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-2-default</code></li>
+      <li><code>$ouds-color-decorative-accent-2-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-2-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-3-default</code></li>
+      <li><code>$ouds-color-decorative-accent-3-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-3-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-4-default</code></li>
+      <li><code>$ouds-color-decorative-accent-4-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-4-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-5-default</code></li>
+      <li><code>$ouds-color-decorative-accent-5-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-5-muted</code></li>
+      <li><code>$ouds-color-decorative-brand-primary</code></li>
+      <li><code>$ouds-color-decorative-brand-secondary</code></li>
+      <li><code>$ouds-color-decorative-brand-tertiary</code></li>
+      <li><code>$ouds-color-decorative-neutral-default</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-100</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-200</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-300</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-400</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-500</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-600</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-700</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-800</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-900</code></li>
+      <li><code>$ouds-color-opacity-lower</code></li>
+      <li><code>$ouds-color-opacity-lowest</code></li>
+      <li><code>$ouds-color-opacity-transparent</code></li>
+      <li><code>$ouds-color-overlay-default</code></li>
+      <li><code>$ouds-color-overlay-drag</code></li>
+      <li><code>$ouds-color-overlay-emphasized</code></li>
+      <li><code>$ouds-color-overlay-modal</code></li>
+      <li><code>$ouds-color-surface-brand-primary</code></li>
+      <li><code>$ouds-color-surface-status-accent-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-accent-muted</code></li>
+      <li><code>$ouds-color-surface-status-info-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-info-muted</code></li>
+      <li><code>$ouds-color-surface-status-negative-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-negative-muted</code></li>
+      <li><code>$ouds-color-surface-status-neutral-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-neutral-muted</code></li>
+      <li><code>$ouds-color-surface-status-positive-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-positive-muted</code></li>
+      <li><code>$ouds-color-surface-status-warning-emphasized</code></li>
+      <li><code>$ouds-color-surface-status-warning-muted</code></li>
+      <li><code>$ouds-elevation-color-default</code></li>
+      <li><code>$ouds-elevation-color-drag</code></li>
+      <li><code>$ouds-elevation-color-emphasized</code></li>
+      <li><code>$ouds-elevation-color-none</code></li>
+      <li><code>$ouds-elevation-color-raised</code></li>
+      <li><code>$ouds-elevation-color-sticky-default</code></li>
+      <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
     </ul>
   </details>
 
