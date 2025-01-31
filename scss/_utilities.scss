@@ -199,15 +199,15 @@ $utilities: map-merge(
     "border-color": (
       property: border-color,
       class: border,
-      local-vars: (
-        "border-opacity": 1
-      ),
-      values: $utilities-border-colors
+      // OUDS mod: no local-vars,
+      values: $utilities-border-colors,
+      bootstrap-compatibility: true
     ),
     "subtle-border-color": (
       property: border-color,
       class: border,
-      values: $utilities-border-subtle
+      values: $utilities-border-subtle,
+      bootstrap-compatibility: true
     ),
     "border-width": (
       property: border-width,
@@ -215,18 +215,7 @@ $utilities: map-merge(
       values: $border-widths,
       bootstrap-compatibility: true
     ),
-    "border-opacity": (
-      css-var: true,
-      class: border-opacity,
-      values: (
-        10: .1,
-        25: .25,
-        50: .5,
-        75: .75,
-        100: 1
-      ),
-      bootstrap-compatibility: true
-    ),
+    // OUDS mod: no "border-opacity"
     // scss-docs-end utils-borders
     // OUDS mod
     // scss-docs-start utils-borders-ouds
@@ -269,6 +258,11 @@ $utilities: map-merge(
       property: border-style,
       class: border,
       values: $ouds-border-styles
+    ),
+    "border-color-ouds": (
+      property: border-color,
+      class: border,
+      values: $ouds-border-colors
     ),
     // scss-docs-end utils-borders-ouds
     // End mod
@@ -966,38 +960,36 @@ $utilities: map-merge(
     "color": (
       property: color,
       class: text,
-      local-vars: (
-        "text-opacity": 1
-      ),
+      // OUDS mod: no local-vars
       values: map-merge(
         $utilities-text-colors,
         (
-          "muted": var(--#{$prefix}secondary-color), // Deprecated in Bootstrap
-          "black-50": rgba($black, .5), // Deprecated in Bootstrap
-          "white-50": rgba($white, .5), // Deprecated in Bootstrap
-          "body-secondary": var(--#{$prefix}secondary-color),
-          "body-tertiary": var(--#{$prefix}tertiary-color),
-          "body-emphasis": var(--#{$prefix}emphasis-color),
-          "reset": inherit,
+          "muted": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+          "black-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($black, .5)`
+          "white-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($white, .5)`
+          "body-secondary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+          "body-tertiary": var(--#{$prefix}color-content-disabled), // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
+          "body-emphasis": var(--#{$prefix}color-content-default), // OUDS mod: instead of `var(--#{$prefix}emphasis-color)`
+          // OUDS mod: no "reset"
         )
-      )
+      ),
+      bootstrap-compatibility: true
     ),
-    "text-opacity": (
-      css-var: true,
-      class: text-opacity,
-      values: (
-        25: .25,
-        50: .5,
-        75: .75,
-        100: 1
-      )
-    ),
+    // OUDS mod: no "text-opacity"
     "text-color": (
       property: color,
       class: text,
-      values: $utilities-text-emphasis-colors
+      values: $utilities-text-emphasis-colors,
+      bootstrap-compatibility: true
     ),
     // scss-docs-end utils-color
+    // scss-docs-start utils-color-ouds
+    "color-ouds": (
+      property: color,
+      class: text,
+      values: $ouds-text-colors
+    ),
+    // scss-docs-end utils-color-ouds
     // scss-docs-start utils-links
     "link-opacity": (
       css-var: true,
@@ -1052,45 +1044,37 @@ $utilities: map-merge(
     "background-color": (
       property: background-color,
       class: bg,
-      local-vars: (
-        "bg-opacity": 1
-      ),
+      // OUDS mod: no local-vars
       values: map-merge(
         $utilities-bg-colors,
         (
-          "transparent": transparent,
-          "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "supporting-green": $supporting-green, // OUDS mod
-          "supporting-blue": $supporting-blue, // OUDS mod
-          "supporting-yellow": $supporting-yellow, // OUDS mod
-          "supporting-pink": $supporting-pink, // OUDS mod
-          "supporting-purple": $supporting-purple, // OUDS mod
-          "supporting-orange": $supporting-orange, // OUDS mod
+          // OUDS mod: no "transparent"
+          "body-secondary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity))`
+          "body-tertiary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity))`
         )
-      )
+      ),
+      bootstrap-compatibility: true,
     ),
-    "bg-opacity": (
-      css-var: true,
-      class: bg-opacity,
-      values: (
-        10: .1,
-        25: .25,
-        50: .5,
-        75: .75,
-        100: 1
-      )
-    ),
+    // OUDS mod: no "bg-opacity"
     "subtle-background-color": (
       property: background-color,
       class: bg,
-      values: $utilities-bg-subtle
+      values: $utilities-bg-subtle,
+      bootstrap-compatibility: true,
     ),
     // scss-docs-end utils-bg-color
+    // scss-docs-start utils-bg-color-ouds
+    "background-color-ouds": (
+      property: background-color,
+      class: bg,
+      values: $ouds-backgrounds,
+    ),
+    // scss-docs-end utils-bg-color-ouds
     "gradient": (
       property: background-image,
       class: bg,
-      values: (gradient: var(--#{$prefix}gradient))
+      values: (gradient: var(--#{$prefix}gradient)),
+      bootstrap-compatibility: true
     ),
     // scss-docs-start utils-interaction
     "user-select": (

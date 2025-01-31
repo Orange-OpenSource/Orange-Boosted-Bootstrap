@@ -85,7 +85,7 @@ Output:
 
 Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
 
-As a list<!--, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}})-->:
+As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
 
 ```scss
 values: none underline line-through
@@ -165,8 +165,7 @@ Output:
 
 Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Add an optional `css-variable-name` to set a different CSS variable name than the class name.
 
-<!--
-Consider our `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
+Consider a `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
 
 ```scss
 $utilities: (
@@ -192,12 +191,11 @@ Output:
 .text-opacity-75 { -bs-text-alpha: .75; } // TODO: reinsert hyphens
 .text-opacity-100 { -bs-text-alpha: 1; } // TODO: reinsert hyphens
 ```
--->
 
 ### Local CSS variables
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. <!--For example, consider our `.bg-*` utilities:-->
-<!--
+Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
+
 ```scss
 $utilities: (
   "background-color": (
@@ -209,6 +207,8 @@ $utilities: (
     values: map-merge(
       $utilities-bg-colors,
       (
+        "primary": rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)),
+        /* ... */
         "transparent": transparent
       )
     )
@@ -220,10 +220,15 @@ Output:
 
 ```css
 .bg-primary {
-  -bs-bg-opacity: 1; // TODO: reinsert hyphens
-  background-color: rgba(var(-bs-primary-rgb), var(-bs-bg-opacity)) !important; // TODO: reinsert hyphens
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
-```-->
+/* ... */
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+```
 
 ### States
 
@@ -409,16 +414,18 @@ $utilities: (
 New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -432,7 +439,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 ### Modify utilities
@@ -440,16 +447,18 @@ $utilities: map-merge(
 Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -466,7 +475,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 #### Enable responsive
@@ -474,16 +483,18 @@ $utilities: map-merge(
 You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities, (
@@ -494,7 +505,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 This will now generate responsive variations of `.border` and `.border-none` for each breakpoint. Your generated CSS will look like this:
@@ -544,16 +555,18 @@ This will now generate responsive variations of `.border` and `.border-none` for
 Used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to `.ml-*`:
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities, (
@@ -564,7 +577,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 ### Remove utilities
@@ -572,36 +585,40 @@ $utilities: map-merge(
 Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map/#remove).
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 // Remove multiple utilities with a comma-separated list
 $utilities: map-remove($utilities, "width", "float");
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge) and set the group key to `null` to remove the utility.
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -610,7 +627,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 ### Add, remove, modify
@@ -618,16 +635,18 @@ $utilities: map-merge(
 You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge). Here's how you can combine the previous examples into one larger map.
 
 ```scss
-@import "ouds-web/scss/functions";
-@import "ouds-web/scss/tokens/raw";
-@import "ouds-web/scss/tokens/semantic";
-@import "ouds-web/scss/tokens/composite";
-@import "ouds-web/scss/tokens/component";
-@import "ouds-web/scss/variables";
-@import "ouds-web/scss/variables-dark";
-@import "ouds-web/scss/maps";
-@import "ouds-web/scss/mixins";
-@import "ouds-web/scss/utilities";
+@import "@ouds/web/scss/config";
+@import "@ouds/web/scss/functions";
+@import "@ouds/web/scss/tokens/raw";
+@import "@ouds/web/scss/tokens/semantic";
+@import "@ouds/web/scss/tokens/semantic-colors-custom-props";
+@import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component";
+@import "@ouds/web/scss/variables";
+@import "@ouds/web/scss/variables-dark";
+@import "@ouds/web/scss/maps";
+@import "@ouds/web/scss/mixins";
+@import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -651,7 +670,7 @@ $utilities: map-merge(
   )
 );
 
-@import "ouds-web/scss/utilities/api";
+@import "@ouds/web/scss/utilities/api";
 ```
 
 #### Remove utility in RTL
