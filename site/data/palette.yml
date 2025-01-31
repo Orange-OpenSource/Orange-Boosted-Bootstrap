@@ -144,7 +144,7 @@
         hex: "#ff8081"
       - name: Functional scarlet 600
         variable: $ouds-color-functional-scarlet-600
-        hex: "#ea0305"
+        hex: "#db0002"
       - name: Functional scarlet 700
         variable: $ouds-color-functional-scarlet-700
         hex: "#b20002"
