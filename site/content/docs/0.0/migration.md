@@ -413,7 +413,7 @@ toc: true
       <li><code>$ouds-color-decorative-accent-1-muted-light</code></li>
       <li><code>$ouds-color-decorative-accent-2-default-dark</code></li>
       <li><code>$ouds-color-decorative-accent-2-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-2-emphasized-dark</code>0</li>
+      <li><code>$ouds-color-decorative-accent-2-emphasized-dark</code></li>
       <li><code>$ouds-color-decorative-accent-2-emphasized-light</code></li>
       <li><code>$ouds-color-decorative-accent-2-muted-dark</code></li>
       <li><code>$ouds-color-decorative-accent-2-muted-light</code></li>
@@ -453,12 +453,12 @@ toc: true
       <li><code>$ouds-color-decorative-amethyst-700</code></li>
       <li><code>$ouds-color-decorative-amethyst-800</code></li>
       <li><code>$ouds-color-decorative-amethyst-900</code></li>
-      <li><code>$ouds-color-decorative-brand-primary-light</code></li>
-      <li><code>$ouds-color-decorative-brand-secondary-light</code></li>
-      <li><code>$ouds-color-decorative-brand-tertiary-light</code></li>
       <li><code>$ouds-color-decorative-brand-primary-dark</code></li>
+      <li><code>$ouds-color-decorative-brand-primary-light</code></li>
       <li><code>$ouds-color-decorative-brand-secondary-dark</code></li>
+      <li><code>$ouds-color-decorative-brand-secondary-light</code></li>
       <li><code>$ouds-color-decorative-brand-tertiary-dark</code></li>
+      <li><code>$ouds-color-decorative-brand-tertiary-light</code></li>
       <li><code>$ouds-color-decorative-deep-peach-100</code></li>
       <li><code>$ouds-color-decorative-deep-peach-200</code></li>
       <li><code>$ouds-color-decorative-deep-peach-300</code></li>
@@ -493,22 +493,22 @@ toc: true
       <li><code>$ouds-color-decorative-shocking-pink-800</code></li>
       <li><code>$ouds-color-decorative-shocking-pink-900</code></li>
       <li><code>$ouds-color-decorative-skin-tint-100-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-200-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-300-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-400-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-500-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-600-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-700-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-800-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-900-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-100-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-200-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-200-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-300-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-300-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-400-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-400-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-500-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-500-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-600-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-600-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-700-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-700-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-800-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-800-light</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-900-dark</code></li>
       <li><code>$ouds-color-decorative-skin-tint-900-light</code></li>
       <li><code>$ouds-color-decorative-sky-100</code></li>
       <li><code>$ouds-color-decorative-sky-200</code></li>
@@ -696,30 +696,30 @@ toc: true
       <li><code>$ouds-color-warm-gray-800</code></li>
       <li><code>$ouds-color-warm-gray-900</code></li>
       <li><code>$ouds-dimension-0</code></li>
-      <li><code>$ouds-dimension-100</code></li>
-      <li><code>$ouds-dimension-1000</code></li>
-      <li><code>$ouds-dimension-1200</code></li>
-      <li><code>$ouds-dimension-1400</code></li>
-      <li><code>$ouds-dimension-150</code></li>
-      <li><code>$ouds-dimension-1600</code></li>
-      <li><code>$ouds-dimension-1800</code></li>
-      <li><code>$ouds-dimension-200</code></li>
       <li><code>$ouds-dimension-25</code></li>
+      <li><code>$ouds-dimension-50</code></li>
+      <li><code>$ouds-dimension-75</code></li>
+      <li><code>$ouds-dimension-100</code></li>
+      <li><code>$ouds-dimension-150</code></li>
+      <li><code>$ouds-dimension-200</code></li>
       <li><code>$ouds-dimension-250</code></li>
       <li><code>$ouds-dimension-300</code></li>
       <li><code>$ouds-dimension-350</code></li>
       <li><code>$ouds-dimension-400</code></li>
       <li><code>$ouds-dimension-450</code></li>
-      <li><code>$ouds-dimension-50</code></li>
       <li><code>$ouds-dimension-500</code></li>
       <li><code>$ouds-dimension-550</code></li>
       <li><code>$ouds-dimension-600</code></li>
       <li><code>$ouds-dimension-650</code></li>
       <li><code>$ouds-dimension-700</code></li>
-      <li><code>$ouds-dimension-75</code></li>
       <li><code>$ouds-dimension-750</code></li>
       <li><code>$ouds-dimension-800</code></li>
       <li><code>$ouds-dimension-900</code></li>
+      <li><code>$ouds-dimension-1000</code></li>
+      <li><code>$ouds-dimension-1200</code></li>
+      <li><code>$ouds-dimension-1400</code></li>
+      <li><code>$ouds-dimension-1600</code></li>
+      <li><code>$ouds-dimension-1800</code></li>
       <li><code>$ouds-dimension-4000</code></li>
       <li><code>$ouds-dimension-base</code></li>
       <li><code>$ouds-elevation-blur-0</code></li>
@@ -749,8 +749,8 @@ toc: true
       <li><code>$ouds-elevation-color-sticky-default-light</code></li>
       <li><code>$ouds-elevation-color-sticky-emphasized-dark</code></li>
       <li><code>$ouds-elevation-color-sticky-emphasized-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
       <li><code>$ouds-elevation-color-sticky-navigation-scrolled-dark</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
       <li><code>$ouds-elevation-default</code></li>
       <li><code>$ouds-elevation-drag</code></li>
       <li><code>$ouds-elevation-emphasized</code></li>
@@ -759,12 +759,12 @@ toc: true
       <li><code>$ouds-elevation-raised</code></li>
       <li><code>$ouds-elevation-spread-0</code></li>
       <li><code>$ouds-elevation-spread-300</code></li>
+      <li><code>$ouds-elevation-spread-default</code></li>
       <li><code>$ouds-elevation-spread-drag</code></li>
+      <li><code>$ouds-elevation-spread-emphasized</code></li>
       <li><code>$ouds-elevation-spread-n100</code></li>
       <li><code>$ouds-elevation-spread-n300</code></li>
       <li><code>$ouds-elevation-spread-none</code></li>
-      <li><code>$ouds-elevation-spread-default</code></li>
-      <li><code>$ouds-elevation-spread-emphasized</code></li>
       <li><code>$ouds-elevation-spread-raised</code></li>
       <li><code>$ouds-elevation-spread-sticky-default</code></li>
       <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
@@ -773,10 +773,10 @@ toc: true
       <li><code>$ouds-elevation-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-elevation-x-0</code></li>
-      <li><code>$ouds-elevation-x-drag</code></li>
-      <li><code>$ouds-elevation-x-none</code></li>
       <li><code>$ouds-elevation-x-default</code></li>
+      <li><code>$ouds-elevation-x-drag</code></li>
       <li><code>$ouds-elevation-x-emphasized</code></li>
+      <li><code>$ouds-elevation-x-none</code></li>
       <li><code>$ouds-elevation-x-raised</code></li>
       <li><code>$ouds-elevation-x-sticky-default</code></li>
       <li><code>$ouds-elevation-x-sticky-emphasized</code></li>
@@ -786,10 +786,10 @@ toc: true
       <li><code>$ouds-elevation-y-200</code></li>
       <li><code>$ouds-elevation-y-300</code></li>
       <li><code>$ouds-elevation-y-500</code></li>
-      <li><code>$ouds-elevation-y-drag</code></li>
-      <li><code>$ouds-elevation-y-none</code></li>
       <li><code>$ouds-elevation-y-default</code></li>
+      <li><code>$ouds-elevation-y-drag</code></li>
       <li><code>$ouds-elevation-y-emphasized</code></li>
+      <li><code>$ouds-elevation-y-none</code></li>
       <li><code>$ouds-elevation-y-raised</code></li>
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
@@ -946,17 +946,18 @@ toc: true
       <li><code>$ouds-font-size-label-xlarge</code></li>
       <li><code>$ouds-font-weight-400</code></li>
       <li><code>$ouds-font-weight-700</code></li>
-      <li><code>$ouds-font-weight-code</code></li>
-      <li><code>$ouds-font-weight-default</code></li>
-      <li><code>$ouds-font-weight-strong</code></li>
       <li><code>$ouds-font-weight-body-default</code></li>
       <li><code>$ouds-font-weight-body-strong</code></li>
+      <li><code>$ouds-font-weight-code</code></li>
+      <li><code>$ouds-font-weight-default</code></li>
       <li><code>$ouds-font-weight-display</code></li>
       <li><code>$ouds-font-weight-heading</code></li>
       <li><code>$ouds-font-weight-label-default</code></li>
       <li><code>$ouds-font-weight-label-strong</code></li>
+      <li><code>$ouds-font-weight-strong</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-max-width-alt</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
       <li><code>$ouds-grid-2xs-column-gap</code></li>
       <li><code>$ouds-grid-2xs-margin</code></li>
@@ -972,13 +973,13 @@ toc: true
       <li><code>$ouds-grid-lg-margin</code></li>
       <li><code>$ouds-grid-lg-min-width</code></li>
       <li><code>$ouds-grid-margin-100</code></li>
-      <li><code>$ouds-grid-margin-1100</code></li>
-      <li><code>$ouds-grid-margin-1700</code></li>
-      <li><code>$ouds-grid-margin-2500</code></li>
       <li><code>$ouds-grid-margin-300</code></li>
       <li><code>$ouds-grid-margin-400</code></li>
       <li><code>$ouds-grid-margin-500</code></li>
       <li><code>$ouds-grid-margin-700</code></li>
+      <li><code>$ouds-grid-margin-1100</code></li>
+      <li><code>$ouds-grid-margin-1700</code></li>
+      <li><code>$ouds-grid-margin-2500</code></li>
       <li><code>$ouds-grid-md-column-gap</code></li>
       <li><code>$ouds-grid-md-margin</code></li>
       <li><code>$ouds-grid-md-min-width</code></li>
@@ -1096,7 +1097,6 @@ toc: true
       <li><code>$ouds-size-icon-with-label-xlarge-size-lg</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-md</code></li>
       <li><code>$ouds-size-icon-with-label-xlarge-size-sm</code></li>
-      <li><code>$ouds-grid-2xl-max-width-alt</code></li>
       <li><code>$ouds-size-max-width-type-body-large-desktop</code></li>
       <li><code>$ouds-size-max-width-type-body-large-mobile</code></li>
       <li><code>$ouds-size-max-width-type-body-large-tablet</code></li>
