@@ -4,8 +4,8 @@
 
 /*
  * JavaScript for OUDS Web's docs (https://web.unified-design-system.orange.com/)
- * Copyright 2015-2024 The OUDS Web Authors
- * Copyright 2015-2024 Orange
+ * Copyright 2015-2025 The OUDS Web Authors
+ * Copyright 2015-2025 Orange
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
