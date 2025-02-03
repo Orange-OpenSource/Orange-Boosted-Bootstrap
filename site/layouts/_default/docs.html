@@ -1,7 +1,8 @@
 {{ define "body_override" }}<body{{ if (eq .Page.Params.toc true) }} data-bs-spy="scroll" data-bs-target="#TableOfContents"{{ end }}>{{ end }}
 {{ define "main" }}
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
-    <nav class="bd-sidebar" aria-label="Docs navigation">
+    <nav class="bd-sidebar" aria-labelledby="docs-nav">
+      <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
