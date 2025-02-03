@@ -1,11 +1,11 @@
 /*!
-  * OUDS Web v0.0.3 (https://web.unified-design-system.orange.com/)
-  * Copyright 2015-2024 The OUDS Web Authors
-  * Copyright 2015-2024 Orange
+  * OUDS Web v0.1.0 (https://web.unified-design-system.orange.com/)
+  * Copyright 2015-2025 The OUDS Web Authors
+  * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap manipulator.js v0.0.3 (https://web.unified-design-system.orange.com/)
-  * Copyright 2011-2024 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap manipulator.js v0.1.0 (https://web.unified-design-system.orange.com/)
+  * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {

@@ -1,5 +1,5 @@
 Parts list under Orange SA Copyright
-Copyright (C) 2016 - 2024 Orange SA All rights reserved
+Copyright (C) 2016 - 2025 Orange SA All rights reserved
 
 The following parts are proprietary information of Orange.
 You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software

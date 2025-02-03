@@ -1,8 +1,8 @@
 /*!
  * Script to automatically generate Storybook stories from the documentation.
  *
- * Copyright (c) 2015-2024 Orange SA
- * Copyright (c) 2015-2024 The OUDS Web Authors
+ * Copyright (c) 2015-2025 Orange SA
+ * Copyright (c) 2015-2025 The OUDS Web Authors
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  */
 
@@ -12,7 +12,7 @@ const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
-const version = '0.0'
+const version = '0.1'
 
 function createDirectoryIfNeeded(path) {
   if (!fs.existsSync(path)) {
