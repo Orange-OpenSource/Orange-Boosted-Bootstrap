@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and OUDS Web contributors">
+    <meta name="generator" content="Hugo 0.142.0">
+    <title>Product example · OUDS Web v0.1</title>
+
+    <link rel="canonical" href="https://web.unified-design-system.orange.com/docs/0.1/examples/product/">
+
+    <script src="/docs/0.1/assets/js/color-modes.js"></script>
+
+    <link href="/docs/0.1/dist/css/ouds-web-bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="/docs/0.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/0.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/0.1/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/0.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+       
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+       
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+
+    
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-tall me-tall bd-mode-toggle">
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+</svg>
+
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand d-md-none" href="#">
+      <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+      Aperture
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 justify-content-between">
+          <li class="nav-item"><a class="nav-link" href="#">
+            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+          </a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+      <h1 class="display-3 fw-bold">Designed for engineers</h1>
+      <h3 class="fw-normal text-muted mb-3">Build anything you want with Aperture</h3>
+      <div class="d-flex gap-3 justify-content-center lead fw-normal">
+        <a class="icon-link" href="#">
+          Learn more
+          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+        </a>
+        <a class="icon-link" href="#">
+          Buy
+          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      <small class="d-block mb-3 text-body-secondary">&copy; 2017–2025</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script defer src="/docs/0.1/dist/js/ouds-web.bundle.min.js" integrity="sha384-CQzFU7t/olo4CWIzycn2V+Kt60xJmaLd3Eb+9IQvC/5gtc3xJpMkIE6EJW9o7P8Q"></script>
+
+    </body>
+</html>

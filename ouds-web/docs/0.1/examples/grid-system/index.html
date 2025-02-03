@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and OUDS Web contributors">
+    <meta name="generator" content="Hugo 0.142.0">
+    <title>Grid system · OUDS Web v0.1</title>
+
+    <link rel="canonical" href="https://web.unified-design-system.orange.com/docs/0.1/examples/grid-system/">
+
+    <script src="/docs/0.1/assets/js/color-modes.js"></script>
+
+    <link href="/docs/0.1/dist/css/ouds-web-bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="/docs/0.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/0.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/0.1/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/0.1/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/0.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+       
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+       
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="grid-system.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+
+    
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-tall me-tall bd-mode-toggle">
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div><svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="warning-important-accessible">
+    <path d="M499.352 125a93.95 93.95 0 0 1 81.072 46.494L908.91 733.919A93.676 93.676 0 0 1 827.838 874.9H170.867A93.711 93.711 0 0 1 89.8 733.919l.8-1.3v-.1l327.681-561.025A93.83 93.83 0 0 1 499.352 125"/>
+    <path fill="#000" d="M500.352 679.926a47.494 47.494 0 1 0 47.484 47.494 47.53 47.53 0 0 0-47.484-47.494m0-379.949a47.53 47.53 0 0 0-47.483 47.493 28 28 0 0 0 .1 2.9l15.694 258.665v.5c.3 17.1 14.395 23.5 31.689 23.5 17.494 0 31.689-6.6 31.689-24l15.695-258.065.1-.9a23 23 0 0 0 .1-2.6 47.68 47.68 0 0 0-47.583-47.493"/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="info">
+    <path d="M500 75.5c-234.72 0-425 190.28-425 425s190.28 425 425 425 425-190.28 425-425-190.28-425-425-425m0 100a75 75 0 1 1-75 75 75 75 0 0 1 75-75m125 600H400v-25.737l5.287-.167c15.555-.5 27.115-4.919 34.368-13.136 2.576-2.972 6.956-13.1 6.956-47.153v-227.2c0-32.392-4.523-44.6-8.311-49.141-5.359-6.391-16.516-10.147-33.17-11.156l-5.13-.31v-26h175v313.807c0 32.415 8.457 44.618 12.24 49.142 5.34 6.389 15.68 10.142 32.625 11.152l5.135.3v25.6Z" style="fill-rule: evenodd"/>
+  </symbol>
+</svg>
+
+<main class="min-vh-100">
+  <div class="container-fluid container-max-width pt-tallest">
+    <h1>OUDS Web grid system example</h1>
+    <p class="lead">Use this page to see how containers behave while resizing the browser.</p>
+    <h2>Legend</h2>
+    <p class="d-flex align-items-center">
+      <span class="bg-container legend border me-short"></span>Containers padding color (<code>#4ab4e6</code>)
+    </p>
+    <p class="d-flex align-items-center">
+      <span class="bg-col legend border me-short"></span>Columns color (<code>#a5daf3</code>)
+    </p>
+    <p class="d-flex align-items-center">
+      <span class="bg-always-white legend border me-short"></span>Gutters color (<code>#fff</code>)
+    </p>
+  </div>
+
+  <div class="container-fluid container-max-width mb-tall pt-tall">
+    <h2>Default grid</h2>
+    <p>
+      The default grid system to use is the one combining <code>.container-fluid</code> and <code>.container-max-width</code> classes.
+    </p>
+  </div>
+  <div class="bg-example py-tall">
+    <div class="container-fluid container-max-width bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid container-max-width mb-tall pt-tall">
+    <h2>Need more space?</h2>
+    <p>
+      If more space is needed, use only the <code>.container-fluid</code> class.
+    </p>
+  </div>
+  <div class="bg-example py-tall">
+    <div class="container-fluid bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+<!--
+  The following examples must not be used to be compatible with Orange Unified Design System.
+  They're here for debugging purpose for the OUDS Web core team.
+-->
+<!--
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-xs bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-sm bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-md bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-lg bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-2xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-none">
+
+  <div class="bg-example py-tall">
+    <div class="container-3xl bg-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+-->
+</main>
+<script defer src="/docs/0.1/dist/js/ouds-web.bundle.min.js" integrity="sha384-CQzFU7t/olo4CWIzycn2V+Kt60xJmaLd3Eb+9IQvC/5gtc3xJpMkIE6EJW9o7P8Q"></script>
+
+    </body>
+</html>
