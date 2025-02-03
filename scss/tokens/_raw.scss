@@ -1,5 +1,6 @@
 // Raw primitive values
 // Insertion of brand foundations
+// Token version 0.4.1
 
 // Border
 
@@ -137,7 +138,7 @@ $ouds-color-functional-scarlet-200: #ffb2b3 !default;
 $ouds-color-functional-scarlet-300: #ff8081 !default;
 $ouds-color-functional-scarlet-400: #ff4d4e !default;
 $ouds-color-functional-scarlet-500: #ff1a1b !default;
-$ouds-color-functional-scarlet-600: #ea0305 !default;
+$ouds-color-functional-scarlet-600: #db0002 !default;
 $ouds-color-functional-scarlet-700: #b20002 !default;
 $ouds-color-functional-scarlet-800: #800001 !default;
 $ouds-color-functional-scarlet-900: #4d0001 !default;
@@ -158,13 +159,13 @@ $ouds-color-opacity-black-80: rgba(0, 0, 0, .08) !default;
 $ouds-color-opacity-black-160: rgba(0, 0, 0, .16) !default;
 $ouds-color-opacity-black-200: rgba(0, 0, 0, .2) !default;
 $ouds-color-opacity-black-240: rgba(0, 0, 0, .24) !default;
-// $ouds-color-opacity-black-280: rgba(0, 0, 0, .28) !default;
+$ouds-color-opacity-black-280: rgba(0, 0, 0, .28) !default;
 $ouds-color-opacity-black-320: rgba(0, 0, 0, .32) !default;
 // $ouds-color-opacity-black-360: rgba(0, 0, 0, .36) !default;
 // $ouds-color-opacity-black-400: rgba(0, 0, 0, .4) !default;
-// $ouds-color-opacity-black-440: rgba(0, 0, 0, .44) !default;
+$ouds-color-opacity-black-440: rgba(0, 0, 0, .44) !default;
 // $ouds-color-opacity-black-480: rgba(0, 0, 0, .48) !default;
-// $ouds-color-opacity-black-520: rgba(0, 0, 0, .52) !default;
+$ouds-color-opacity-black-520: rgba(0, 0, 0, .52) !default;
 // $ouds-color-opacity-black-560: rgba(0, 0, 0, .56) !default;
 // $ouds-color-opacity-black-600: rgba(0, 0, 0, .6) !default;
 // $ouds-color-opacity-black-640: rgba(0, 0, 0, .64) !default;
@@ -260,7 +261,7 @@ $ouds-dimension-1600: $ouds-dimension-base * 32 !default; // 128
 $ouds-dimension-1800: $ouds-dimension-base * 36 !default; // 144
 // $ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
 // $ouds-dimension-3000: $ouds-dimension-base * 80 !default; // 320
-// $ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
+$ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
 // $ouds-dimension-5000: $ouds-dimension-base * 140 !default; // 560
 $ouds-dimension-6000: $ouds-dimension-base * 160 !default; // 640
 $ouds-dimension-7000: $ouds-dimension-base * 180 !default; // 720

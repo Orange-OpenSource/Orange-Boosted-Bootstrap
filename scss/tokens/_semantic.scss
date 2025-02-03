@@ -1,5 +1,6 @@
 // Semantic applications
 // Depends on raw primitive values
+// Token version 0.4.1
 
 // Border
 
@@ -70,7 +71,7 @@ $ouds-color-action-pressed-dark: $ouds-color-orange-500 !default;
 $ouds-color-action-selected-dark: $ouds-color-orange-500 !default;
 $ouds-color-action-visited-dark: $ouds-color-decorative-amethyst-400 !default;
 $ouds-color-always-black-light: $ouds-color-functional-black !default;
-$ouds-color-always-on-black-light: $ouds-color-functional-white !default;
+$ouds-color-always-on-black-light: $ouds-color-functional-light-gray-160 !default;
 $ouds-color-always-on-white-light: $ouds-color-functional-black !default;
 $ouds-color-always-white-light: $ouds-color-functional-white !default;
 $ouds-color-always-black-dark: $ouds-color-functional-black !default;
@@ -443,6 +444,7 @@ $ouds-grid-2xl-column-count: $ouds-grid-column-count-1200 !default;
 $ouds-grid-2xl-column-gap: $ouds-grid-column-gap-600 !default;
 $ouds-grid-2xl-margin: $ouds-grid-margin-1700 !default;
 $ouds-grid-2xl-max-width: $ouds-grid-max-width-700 !default;
+$ouds-grid-2xl-max-width-alt: $ouds-grid-max-width-650 !default;
 $ouds-grid-2xl-min-width: $ouds-grid-min-width-700 !default;
 $ouds-grid-2xl-width: $ouds-grid-width-700 !default;
 $ouds-grid-2xs-column-count: $ouds-grid-column-count-400 !default;
@@ -572,7 +574,6 @@ $ouds-size-icon-with-heading-xlarge-size-md-tablet: $ouds-dimension-700 !default
 $ouds-size-icon-with-heading-xlarge-size-sm-desktop: $ouds-dimension-700 !default;
 $ouds-size-icon-with-heading-xlarge-size-sm-mobile: $ouds-dimension-550 !default;
 $ouds-size-icon-with-heading-xlarge-size-sm-tablet: $ouds-dimension-650 !default;
-$ouds-size-max-width-grid: $ouds-grid-max-width-650 !default;
 $ouds-size-max-width-type-body-large-desktop: $ouds-dimension-7000 !default;
 $ouds-size-max-width-type-body-large-mobile: $ouds-dimension-6000 !default;
 $ouds-size-max-width-type-body-large-tablet: $ouds-dimension-6000 !default;
