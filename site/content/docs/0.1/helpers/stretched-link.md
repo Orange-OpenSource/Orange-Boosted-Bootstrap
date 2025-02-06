@@ -16,7 +16,7 @@ Multiple links and tap targets are not recommended with stretched links.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
+  {< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
   <div class="card-body">
     <h5 class="card-title">Card with stretched link</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
