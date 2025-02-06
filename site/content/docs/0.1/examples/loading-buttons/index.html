@@ -18,7 +18,7 @@ aliases:
   <p>Find here some examples of how to implement a live loading button, for an indeterminate or determinate time. These examples are not part of the OUDS Web library and must be adapted to your project. You can find the code below.</p>
 
   <h2 class="py-short">Loading button in an indeterminate time</h2>
-  <p>For this example, the time is set to 5 seconds by Javascript, but in a real project, you just need a callback when the action is finished. An update to the status is done every second to let the user know the download is still ongoing. Each time, a dot is added to the message to make sure it will change and then be vocalised by the screen readers.</p>
+  <p>For this example, the time is set to 5 seconds by Javascript, but in a real project, you just need a callback when the action is finished. An update to the status is done every second to let the user know the download is still ongoing. Each time, a dot is added to the message to make sure it will change and then be vocalized by the screen readers.</p>
   <div class="row py-taller">
     <div class="col-4">
       <button type="button" class="btn btn-default" id="loading-btn-1">
@@ -48,15 +48,13 @@ aliases:
   <div class="accordion" id="code-accordion">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="false" aria-controls="collapseOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           See Javascript code
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#code-accordion">
         <div class="accordion-body border border-subtle p-none">
-          {{< js-docs name="live-loading-buttons" file="/docs/0.1/examples/loading-buttons/loading-buttons.js"
-          example="true">}}
+          {{< js-docs name="live-loading-buttons" file="/docs/0.1/examples/loading-buttons/loading-buttons.js" example="true">}}
         </div>
       </div>
     </div>

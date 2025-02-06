@@ -36,7 +36,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 {{< /example >}}
 <!-- <button type="button" class="btn btn-link">Link</button> will be implemented with links -->
 
-{{< bootstrap-compatibility >}}
+{{< bootstrap-compatibility false >}}
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -64,7 +64,7 @@ OUDS Web offers a few variations to use on colored backgrounds (meaning neither 
 
 {{< example class="p-none">}}
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
@@ -72,7 +72,7 @@ OUDS Web offers a few variations to use on colored backgrounds (meaning neither 
   </div>
 </div>
 <div class="bg-status-negative-emphasized p-tall">
-  <div data-bs-theme="root-inverted">
+  <div data-bs-theme="root-inverted" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
@@ -92,16 +92,16 @@ The recommended way of using an icon in a button is an embedded SVG<!-- ({{< doc
 - set its dimensions to default `1rem` size, the icon will adapt automatically,
 - fill it using `currentColor` to respect button color scheme.
 
-You don't need to apply `.me-shorter` class on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
+You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
 Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
-If really needed, you can use a font icon associated the `.icon` class to set correct parameters for the `font-size` and `line-height`.
+If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
 We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <button type="button" class="btn btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -133,7 +133,7 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -163,10 +163,10 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 
 ### Icon only
 
-Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
+Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
 {{< example class="p-none">}}
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <button type="button" class="btn btn-icon btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -199,7 +199,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -249,9 +249,11 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Outline buttons
 
-{{< bootstrap-compatibility >}}
+{{< bootstrap-compatibility false >}}
 
+{{< markdown >}}
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+{{< /markdown >}}
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -271,7 +273,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 <!--Boosted mod: no outline buttons-->
 {{< example class="p-none" >}}
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <button type="button" class="btn btn-default" disabled>Default</button>
   <button type="button" class="btn btn-strong" disabled>Strong</button>
   <button type="button" class="btn btn-minimal" disabled>Minimal</button>
@@ -279,7 +281,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg" disabled>Minimal</button>
@@ -295,12 +297,12 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example class="p-none" >}}
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <a class="btn btn-default disabled" role="button" aria-disabled="true">Default link</a>
   <a class="btn btn-strong disabled" role="button" aria-disabled="true">Strong link</a>
 </div>
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <a class="btn btn-default btn-on-colored-bg disabled" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong btn-on-colored-bg disabled" role="button" aria-disabled="true">Strong link</a>
   </div>
@@ -331,8 +333,8 @@ For example, before loading, your button could be like this:
 {{< example >}}
 <button type="button" class="btn btn-default" id="loading-btn-0">
   Download file
-  <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
-    <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+  <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
   </svg>
   <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
 </button>
@@ -340,7 +342,7 @@ For example, before loading, your button could be like this:
 
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
-- Add the `disabled` attribute to the button to avoid any unwanted interactions.
+- Set the disabled state on the button to avoid any unwanted interactions.
 - Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
 - Update regularly the status message `<span>` containing the loading message.
 
@@ -355,88 +357,88 @@ At the end of the loading, you should:
 See the buttons in action in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 {{< example class="p-none" >}}
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
     Download file 1
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
   </button>
   <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
     Download file 2
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
   </button>
   <button type="button" class="btn btn-minimal loading-indeterminate" id="loading-btn-3" disabled>
     Download file 3
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-3" class="visually-hidden">Downloading file 3</span>
   </button>
   <button type="button" class="btn btn-negative loading-indeterminate" id="loading-btn-4" disabled>
     Download file 4
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
   </button>
 </div>
 
-<div class="p-tall">
+<div class="p-tall d-flex gap-shorter">
   <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled>
     Download file 5
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
   </button>
   <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled>
     Download file 6
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
   </button>
   <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled>
     Download file 7
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
   </button>
   <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled>
     Download file 8
-    <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-8" class="visually-hidden">Downloading file 8: xx%</span>
   </button>
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
       Download file 9
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
     </button>
     <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
       Download file 10
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
     </button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
       Download file 11
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
     </button>
@@ -444,25 +446,25 @@ See the buttons in action in our [loading buttons live example]({{< docsref "/ex
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
+  <div data-bs-theme="light" class="d-flex gap-shorter">
     <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled>
       Download file 12
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
     </button>
     <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled>
       Download file 13
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
     </button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled>
       Download file 14
-      <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
     </button>

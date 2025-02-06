@@ -11,7 +11,8 @@ Add `.stretched-link` to a link to make its [containing block](https://developer
 
 <!--Cards have `position: relative` by default in OUDS Web, so in this case you can safely add the `.stretched-link` class to a link in the card without any other HTML changes.-->
 
-Multiple links and tap targets are not recommended with stretched links. However, some `position` and `z-index` styles can help should this be required.
+Multiple links and tap targets are not recommended with stretched links.
+<!-- However, some `position` and `z-index` styles can help should this be required.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -22,7 +23,7 @@ Multiple links and tap targets are not recommended with stretched links. However
     <a href="#" class="btn btn-strong stretched-link">Go somewhere</a>
   </div>
 </div>
-{{< /example >}}
+{{< /example >}} -->
 
 Most custom components do not have `position: relative` by default, so we need to add the `.position-relative` here to prevent the link from stretching outside the parent element.
 
