@@ -26,7 +26,7 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 
 ## Standard variants
 
-OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [Button design specifications](https://unified-design-system.orange.com/472794e18/p/48a788-button/t/5c95fb0c27) to choose the right button for the right action.
 
 {{< example >}}
 <button type="button" class="btn btn-default">Default</button>
@@ -54,7 +54,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 
 ## Variants on colored background
 
-OUDS Web offers a few variations to use on colored backgrounds (meaning neither primary, nor secondary, nor tertiary, nor emphasized backgrounds). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/utilities/background#colored-background" >}}). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
 {{< callout warning >}}
 **Heads up!**
@@ -64,7 +64,7 @@ OUDS Web offers a few variations to use on colored backgrounds (meaning neither 
 
 {{< example class="p-none">}}
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
@@ -72,7 +72,7 @@ OUDS Web offers a few variations to use on colored backgrounds (meaning neither 
   </div>
 </div>
 <div class="bg-status-negative-emphasized p-tall">
-  <div data-bs-theme="root-inverted" class="d-flex gap-shorter">
+  <div data-bs-theme="root-inverted" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
@@ -98,10 +98,10 @@ Please note that if you experience a problem with a cropped SVG, we recommend us
 
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
-We strongly advise not using a `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
+We strongly advise not using an `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
-<div class="p-tall d-flex gap-shorter">
+<div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -133,7 +133,7 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -166,7 +166,7 @@ We strongly advise not using a `<img>`, in particular because the icon will not 
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
 {{< example class="p-none">}}
-<div class="p-tall d-flex gap-shorter">
+<div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -199,7 +199,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -233,7 +233,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-## HTML button tags
+## Button tags
 
 The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 
@@ -271,9 +271,9 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<!--Boosted mod: no outline buttons-->
+<!-- OUDS mod: no outline buttons-->
 {{< example class="p-none" >}}
-<div class="p-tall d-flex gap-shorter">
+<div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default" disabled>Default</button>
   <button type="button" class="btn btn-strong" disabled>Strong</button>
   <button type="button" class="btn btn-minimal" disabled>Minimal</button>
@@ -281,7 +281,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg" disabled>Minimal</button>
@@ -291,18 +291,17 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 Disabled buttons using the `<a>` element behave a bit different:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
-- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
 - Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example class="p-none" >}}
-<div class="p-tall d-flex gap-shorter">
+<div class="p-tall d-flex gap-shorter flex-wrap">
   <a class="btn btn-default disabled" role="button" aria-disabled="true">Default link</a>
   <a class="btn btn-strong disabled" role="button" aria-disabled="true">Strong link</a>
 </div>
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <a class="btn btn-default btn-on-colored-bg disabled" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong btn-on-colored-bg disabled" role="button" aria-disabled="true">Strong link</a>
   </div>
@@ -311,11 +310,11 @@ Disabled buttons using the `<a>` element behave a bit different:
 
 ### Link functionality caveat
 
-To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 
 {{< example >}}
-<a href="#" class="btn btn-default disabled" tabindex="-1" role="button" aria-disabled="true">Default link</a>
-<a href="#" class="btn btn-strong disabled" tabindex="-1" role="button" aria-disabled="true">Strong link</a>
+<a href="#" class="btn btn-default" tabindex="-1" role="button" aria-disabled="true">Default link</a>
+<a href="#" class="btn btn-strong" tabindex="-1" role="button" aria-disabled="true">Strong link</a>
 {{< /example >}}
 
 <!-- OUDS mod: Loading state added -->
@@ -354,10 +353,10 @@ At the end of the loading, you should:
 - Add the `.d-none` class on the animated `<svg>` (we don't add again `.d-none` on the status message `<span>` to let the users know the download has already be done).
 - Put the focus back on the button to ensure similar behavior across browsers and not lose the user after changes.
 
-See the buttons in action in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+You can see it live on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 {{< example class="p-none" >}}
-<div class="p-tall d-flex gap-shorter">
+<div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
     Download file 1
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -386,32 +385,41 @@ See the buttons in action in our [loading buttons live example]({{< docsref "/ex
     </svg>
     <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
   </button>
-</div>
-
-<div class="p-tall d-flex gap-shorter">
-  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled>
-    Download file 5
+  <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-5" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Default</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
   </button>
-  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled>
-    Download file 6
+  <button type="button" class="btn btn-icon btn-strong loading-indeterminate" id="loading-btn-6" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Strong</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
   </button>
-  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled>
-    Download file 7
+  <button type="button" class="btn btn-icon btn-minimal loading-indeterminate" id="loading-btn-7" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Minimal</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
   </button>
-  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled>
-    Download file 8
+  <button type="button" class="btn btn-icon btn-negative loading-indeterminate" id="loading-btn-8" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Negative</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
@@ -419,54 +427,185 @@ See the buttons in action in our [loading buttons live example]({{< docsref "/ex
   </button>
 </div>
 
-<div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
-    <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
-      Download file 9
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
-    </button>
-    <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
-      Download file 10
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
-    </button>
-    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
-      Download file 11
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
-    </button>
+<div class="p-tall d-flex gap-shorter flex-wrap">
+  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-9" disabled>
+    Download file 9
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9: xx%</span>
+  </button>
+  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-10" disabled>
+    Download file 10
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10: xx%</span>
+  </button>
+  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-11" disabled>
+    Download file 11
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11: xx%</span>
+  </button>
+  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-12" disabled>
+    Download file 12
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
+  </button>
+  <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-13" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Default</span>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
+  </button>
+  <button type="button" class="btn btn-icon btn-strong loading-determinate" id="loading-btn-14" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Strong</span>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
+  </button>
+  <button type="button" class="btn btn-icon btn-minimal loading-determinate" id="loading-btn-15" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Minimal</span>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15: xx%</span>
+  </button>
+  <button type="button" class="btn btn-icon btn-negative loading-determinate" id="loading-btn-16" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden d-none">Negative</span>
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
+  </button>
   </div>
-</div>
+
+  <div class="bg-brand-primary p-tall">
+    <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
+      <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-17" disabled>
+        Download file 17
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
+      </button>
+      <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-18" disabled>
+        Download file 18
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18</span>
+      </button>
+      <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-19" disabled>
+        Download file 19
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-19" class="visually-hidden">Downloading file 19</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-20" disabled>
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        <span class="visually-hidden d-none">Default</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-20" class="visually-hidden">Downloading file 20</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-21" disabled>
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        <span class="visually-hidden d-none">Strong</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-21" class="visually-hidden">Downloading file 21</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-22" disabled>
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        <span class="visually-hidden d-none">Minimal</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-btn-msg-22" class="visually-hidden">Downloading file 22</span>
+      </button>
+    </div>
+  </div>
 
 <div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter">
-    <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled>
-      Download file 12
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
+    <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-23" disabled>
+      Download file 23
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
-      <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
+      <span role="status" id="loading-btn-msg-23" class="visually-hidden">Downloading file 23: xx%</span>
     </button>
-    <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled>
-      Download file 13
+    <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-24" disabled>
+      Download file 24
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
-      <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
+      <span role="status" id="loading-btn-msg-24" class="visually-hidden">Downloading file 24: xx%</span>
     </button>
-    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled>
-      Download file 14
+    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-25" disabled>
+      Download file 25
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
-      <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
+      <span role="status" id="loading-btn-msg-25" class="visually-hidden">Downloading file 25: xx%</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-determinate" id="loading-btn-26" disabled>
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden d-none">Default</span>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-26" class="visually-hidden">Downloading file 26</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-27" disabled>
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden d-none">Strong</span>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-27" class="visually-hidden">Downloading file 27</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-28" disabled>
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden d-none">Minimal</span>
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-28" class="visually-hidden">Downloading file 28</span>
     </button>
   </div>
 </div>
@@ -518,12 +657,12 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 ### Variables
 
-As part of OUDS Web's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of OUDS Web's evolving CSS variables approach, buttons use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
-<!--Boosted mod: no outline variant-->
-Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` and `button-size()` mixins.
+<!--OUDS mod: no outline variant-->
+Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` <!--and `button-size()` -->mixin.
 
 <!-- OUDS mod: no custom `.btn-*` modifier class-->
 
@@ -533,21 +672,23 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass mixins
 
-There are four mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`).
+There are one mixin for button colors: button variant mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- OUDS mod: no button-outline-variant mixin -->
+{{< bootstrap-compatibility false >}}
 
-<!-- OUDS mod: no button-size mixin for now  -->
+{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
+
+{{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
+
+{{< /bootstrap-compatibility >}}
 
 <!-- OUDS mod: button-icon mixin not used for now -->
 
 <!-- {{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}} -->
 
-### Sass loops
-
-Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
+Button variants use their respective mixin to generate the modifier classes in `scss/_buttons.scss`. Here are the way we define the OUDS Buttons.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
 

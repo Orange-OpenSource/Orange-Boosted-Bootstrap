@@ -90,12 +90,13 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, and `.btn-dark` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-social` and all its variants have been removed.
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
