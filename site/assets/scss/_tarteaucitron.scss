@@ -161,6 +161,22 @@
   background-color: $ouds-color-functional-black;
 }
 
+@include tac("Allow", true) {
+  @include button-icon($form-switch-checked-bg-image, 1em);
+
+  &::before {
+    margin-right: $spacer / 2;
+  }
+}
+
+@include tac("Deny", true) {
+  @include button-icon($form-switch-bg-image, 1em);
+
+  &::before {
+    margin-right: $spacer / 2;
+  }
+}
+
 .catToggleBtn,
 .#{$tac-prefix}Hidden,
 .#{$tac-prefix}InfoBox,

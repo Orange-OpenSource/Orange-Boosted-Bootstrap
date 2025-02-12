@@ -82,7 +82,7 @@
 }
 // scss-docs-end btn-size-mixin
 
-// TODO LM: Peut-être qu'il faut en faire une mixin globale
+// TODO: We should probably make it more inclusive than just button.
 // OUDS mod: embed an icon as mask-image in a button
 // scss-docs-start btn-icon
 @mixin button-icon(

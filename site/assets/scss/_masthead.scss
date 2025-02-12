@@ -18,7 +18,7 @@
     margin: 0;
     border-color: var(--bs-color-border-default);
     border-width: 1px;
-    @include border-radius(calc(.5rem - 1px));
+    @include border-radius(0); // OUDS mod: instead of `calc(.5rem - 1px)`
   }
 
   .highlight {
@@ -28,7 +28,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     background-color: var(--#{$prefix}color-bg-secondary);
-    @include border-radius(.5rem);
+    @include border-radius(0); // OUDS mod: instead of `.5rem`
 
     @include media-breakpoint-up(lg) {
       padding-right: 4rem;
@@ -70,7 +70,7 @@
   color: rgba(var(--bg-rgb), 1);
   background-color: rgba(var(--bg-rgb), .1);
   background-blend-mode: multiple;
-  @include border-radius(1rem);
+  @include border-radius(0); // OUDS mod: insteaf of `1rem`
   mix-blend-mode: darken;
 
   svg {

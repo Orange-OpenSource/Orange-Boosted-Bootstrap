@@ -50,10 +50,6 @@
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
       const checkboxes = document.querySelectorAll('.form-check-input')
 
-      allowConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
-        '<use xlink:href="/docs/0.1/assets/img/ouds-web-sprite.svg#tick"/>\n' +
-        `</svg>${allowConsentButton.innerHTML}`
-
       allowConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
           if (!checkboxes.checked) {
@@ -61,10 +57,6 @@
           }
         }
       })
-
-      denyConsentButton.innerHTML = '<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">\n' +
-        '<use xlink:href="/docs/0.1/assets/img/ouds-web-sprite.svg#delete"/>\n' +
-        `</svg>${denyConsentButton.innerHTML}`
 
       denyConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {

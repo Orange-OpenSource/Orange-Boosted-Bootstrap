@@ -403,7 +403,7 @@ $invert-filter:         invert(1) !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                    true !default;
-$enable-rounded:                  false !default;
+$enable-rounded:                  true !default;
 $enable-shadows:                  false !default;
 $enable-gradients:                false !default;
 $enable-transitions:              true !default;
@@ -924,8 +924,7 @@ $input-btn-font-size-lg:      $font-size-lg !default;
 // For each of OUDS Web's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-color:                   var(--#{$prefix}body-color) !default;
-$btn-hover-color:             $btn-color !default; // OUDS mod
+$btn-color:                   $ouds-button-color-content-default-enabled !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $btn-padding-y:               $ouds-button-space-padding-block !default; // OUDS mod: instead of $input-btn-padding-y
 $btn-padding-x:               $ouds-button-space-padding-inline-icon-none !default; // OUDS mod: instead of $input-btn-padding-x
 // OUDS mod: no $btn-font-family
@@ -934,11 +933,11 @@ $btn-padding-x:               $ouds-button-space-padding-inline-icon-none !defau
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
 // OUDS mod: no $btn-padding-y-sm
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+// OUDS mod: no $btn-padding-x-sm
 // OUDS mod: no $btn-font-size-sm
 
 // OUDS mod: no $btn-padding-y-lg
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+// OUDS mod: no $btn-padding-x-lg
 // OUDS mod: no $btn-font-size-lg
 
 $btn-border-width:            $ouds-button-border-width-default !default; // OUDS mod: instead of $input-btn-border-width
@@ -965,9 +964,6 @@ $btn-transition:              $transition-focus !default; // OUDS mod
 
 // OUDS mod: icon button
 $btn-icon-padding-x:          subtract($ouds-button-space-padding-inline-icon-start, var(--#{$prefix}border-width)) !default;
-$btn-icon-padding-left:       $ouds-button-space-padding-inline-icon-start !default;
-// OUDS mod: no $btn-icon-padding-x-sm:       $spacer * .25 !default;
-// OUDS mod: no $btn-icon-padding-x-lg:       add($spacer * .5, calc(var(--#{$prefix}border-width) * 1.5)) !default; // stylelint-disable-line function-disallowed-list
 
 // Forms
 

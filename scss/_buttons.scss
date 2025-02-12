@@ -41,21 +41,16 @@
   // OUDS mod: no --#{$prefix}btn-focus-box-shadow
 
   // Additional OUDS variables
-  // TODO LM: Treeshake ces vars
   --#{$prefix}btn-padding-start: #{$btn-padding-x};
   --#{$prefix}btn-padding-end: #{$btn-padding-x};
-  --#{$prefix}btn-hover-color: #{$btn-hover-color};
   --#{$prefix}btn-min-width: #{$ouds-button-size-min-width};
   --#{$prefix}btn-min-height: #{$ouds-button-size-min-height};
   --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
-  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
-  --#{$prefix}btn-icon-spacing: #{$btn-icon-padding-left};
   --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
+  --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
   --#{$prefix}btn-loading-size: #{$ouds-button-size-loader};
   --#{$prefix}btn-loading-time: 5s;
-  --#{$prefix}btn-focus-bg: var(--#{$prefix}btn-hover-bg);
-  --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
-  --#{$prefix}btn-focus-color: var(--#{$prefix}btn-hover-color);
   --#{$prefix}btn-loading-dasharray: 96;
   --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   // End mod
@@ -135,7 +130,7 @@
   // OUDS mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
 
   // OUDS mod: selectors are slightly different to handle `.btn-check`
-  // OUDS mod: no .btn-check:disabled + &, // TODO LM: Check for this line
+  // OUDS mod: no .btn-check:disabled + &,
   // OUDS mod: no fieldset:disabled &,
   &:disabled,
   &[aria-disabled="true"] { // OUDS mod: Defensive CSS to force a11y
@@ -183,7 +178,7 @@
   // OUDS mod: buttons with icon and text
   svg,
   img,
-  .icon { // TODO LM: Any way to make it from an a11y pov ?
+  .icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
     width: 1em;
     height: 1em;
     margin-right: var(--#{$prefix}btn-icon-gap);
@@ -199,7 +194,6 @@
     --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
   }
 
-  // TODO LM: Pas un grand fan de ça, mais pour être assez sélectif comparé au reste
   // icon button (icon only, without text)
   &.btn-icon {
     --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};

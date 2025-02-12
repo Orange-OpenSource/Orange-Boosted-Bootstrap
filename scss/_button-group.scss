@@ -97,8 +97,8 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+// OUDS mod: no .btn-group-sm > .btn
+// OUDS mod: no .btn-group-lg > .btn
 
 
 //
@@ -162,16 +162,7 @@
   }
 }
 
-.btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .5; // OUDS mod
-  padding-left: $btn-padding-x-sm * .5; // OUDS mod
-}
-
-.btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .5; // OUDS mod
-  padding-left: $btn-padding-x-lg * .5; // OUDS mod
-}
-
+// OUDS mod: no .btn-sm, nor .btn-lg
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
