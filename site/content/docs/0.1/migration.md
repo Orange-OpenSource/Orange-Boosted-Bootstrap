@@ -21,6 +21,144 @@ toc: true
 
 - <span class="badge text-bg-success">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
+### CSS and Sass variables
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-rounded` (default <code>true</code>) have been introduced. It allows you to set rounded or flat corners on components.
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$btn-border-radius</code></li>
+      <li><code>$btn-border-width</code></li>
+      <li><code>$btn-color</code></li>
+      <li><code>$btn-font-weight</code></li>
+      <li><code>$btn-padding-x</code></li>
+      <li><code>$btn-padding-y</code></li>
+      <li><code>$btn-white-space</code></li>
+      <li><code>$enable-rounded</code></li>
+      <li><code>$ouds-button-border-radius</code></li>
+      <li><code>$ouds-button-border-width-default-interaction-mono</code></li>
+      <li><code>$ouds-button-border-width-default-interaction</code></li>
+      <li><code>$ouds-button-border-width-default</code></li>
+      <li><code>$ouds-button-border-width-minimal-interaction</code></li>
+      <li><code>$ouds-button-border-width-minimal</code></li>
+      <li><code>$ouds-button-color-bg-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-disabled</code></li>
+      <li><code>$ouds-button-color-bg-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-enabled</code></li>
+      <li><code>$ouds-button-color-bg-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-focus</code></li>
+      <li><code>$ouds-button-color-bg-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-hover</code></li>
+      <li><code>$ouds-button-color-bg-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-loading</code></li>
+      <li><code>$ouds-button-color-bg-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-pressed</code></li>
+      <li><code>$ouds-button-color-bg-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-bg-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-bg-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-focus</code></li>
+      <li><code>$ouds-button-color-bg-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-hover</code></li>
+      <li><code>$ouds-button-color-bg-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-loading</code></li>
+      <li><code>$ouds-button-color-bg-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-bg-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-default-disabled</code></li>
+      <li><code>$ouds-button-color-border-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-default-enabled</code></li>
+      <li><code>$ouds-button-color-border-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-default-focus</code></li>
+      <li><code>$ouds-button-color-border-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-default-hover</code></li>
+      <li><code>$ouds-button-color-border-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-default-loading</code></li>
+      <li><code>$ouds-button-color-border-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-default-pressed</code></li>
+      <li><code>$ouds-button-color-border-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-border-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-border-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-focus</code></li>
+      <li><code>$ouds-button-color-border-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-hover</code></li>
+      <li><code>$ouds-button-color-border-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-loading</code></li>
+      <li><code>$ouds-button-color-border-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-border-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-default-disabled</code></li>
+      <li><code>$ouds-button-color-content-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-default-enabled</code></li>
+      <li><code>$ouds-button-color-content-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-default-focus</code></li>
+      <li><code>$ouds-button-color-content-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-default-hover</code></li>
+      <li><code>$ouds-button-color-content-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-default-loading</code></li>
+      <li><code>$ouds-button-color-content-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-default-pressed</code></li>
+      <li><code>$ouds-button-color-content-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-content-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-content-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-focus</code></li>
+      <li><code>$ouds-button-color-content-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-hover</code></li>
+      <li><code>$ouds-button-color-content-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-loading</code></li>
+      <li><code>$ouds-button-color-content-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-content-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-size-icon-only</code></li>
+      <li><code>$ouds-button-size-icon</code></li>
+      <li><code>$ouds-button-size-loader</code></li>
+      <li><code>$ouds-button-size-max-height-icon-only</code></li>
+      <li><code>$ouds-button-size-min-height</code></li>
+      <li><code>$ouds-button-size-min-width</code></li>
+      <li><code>$ouds-button-space-column-gap-arrow</code></li>
+      <li><code>$ouds-button-space-column-gap-icon</code></li>
+      <li><code>$ouds-button-space-inset-icon-only</code></li>
+      <li><code>$ouds-button-space-padding-block</code></li>
+      <li><code>$ouds-button-space-padding-inline-arrow-end</code></li>
+      <li><code>$ouds-button-space-padding-inline-arrow-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-end-icon-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-icon-none</code></li>
+      <li><code>$ouds-button-space-padding-inline-icon-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-start-icon-end</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
+    <ul>
+      <li><code>button-variant</code></li>
+      <li><code>button-icon</code></li>
+    </ul>
+  </details>
+
 ## v0.1.0
 
 ### Foundations
