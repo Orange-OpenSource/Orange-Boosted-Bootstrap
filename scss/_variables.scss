@@ -492,13 +492,13 @@ $link-decoration:                         underline !default;
 $link-font-weight:                        $ouds-font-weight-strong !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $primary !default; // OUDS mod
-$link-hover-decoration:                   null !default;
+$link-hover-decoration:                   $link-decoration !default;
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
 
 // OUDS mod
-$ouds-link-chevron-after-transform:       rotate(.5turn) translateY(1px) !default;
+// $ouds-link-chevron-after-transform:       rotate(.5turn) translateY(1px) !default;
 // End mod
 
 // Icon links
@@ -506,8 +506,8 @@ $ouds-link-chevron-after-transform:       rotate(.5turn) translateY(1px) !defaul
 // $icon-link-underline-offset:  .25em !default;
 // $icon-link-icon-size:         1em !default;
 // scss-docs-start icon-link-variables
-$icon-link-icon-transition:   .2s ease-in-out transform !default;
-$icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
+// $icon-link-icon-transition:   .2s ease-in-out transform !default;
+// $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 // scss-docs-end icon-link-variables
 
 

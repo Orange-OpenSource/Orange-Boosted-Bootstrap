@@ -350,34 +350,42 @@ sup { top: -.5em; }
 // Links
 
 a {
-  --#{$prefix}link-color-rgb: #{$ouds-link-color-content-enabled}; // OUDS mod
+  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
 
   font-weight: $link-font-weight;
-  color: var(--#{$prefix}link-color-rgb);
+  color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
 
-  &:hover {
-    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-hover};
+  .visited-links &,
+  &.visited-links {
+    color: var(--#{$prefix}link-visited-color);
+  }
 
+  &:hover {
+    color: var(--#{$prefix}link-hover-color);
     text-decoration: $link-hover-decoration;
   }
 
   &:focus-visible,
   &:focus[data-focus-visible-added] {
-    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-focus};
-
+    color: var(--#{$prefix}link-focus-color);
     text-decoration: $link-hover-decoration;
   }
 
   &:active {
-    --#{$prefix}link-color-rgb: #{$ouds-link-color-content-pressed};
+    color: var(--#{$prefix}link-active-color);
+    text-decoration: $link-hover-decoration;
   }
-}
 
-// OUDS mod: disabled links
-a[aria-disabled="true"] {
-  color: var(--#{$prefix}color-action-disabled);
-  pointer-events: none;
+  &[aria-disabled="true"] {
+    color: var(--#{$prefix}link-disabled-color);
+    pointer-events: none;
+  }
 }
 
 // And undo these styles for placeholder links/named anchors (without href).

@@ -22,6 +22,27 @@ Visited links don't have a specific style by default. The `:visited` status can 
 </div>
 {{< /example >}}
 
+{{< example class="p-none">}}
+<div class="bg-brand-primary p-tall">
+  <div data-bs-theme="light">
+    <div><a class="link link-on-colored-bg" href="#">This is an example of a base link</a></div>
+    <div><a class="link link-on-colored-bg link-sm" href="#">This is an example of a small base link</a></div>
+    <div class="visited-links">
+      <a class="link link-on-colored-bg" href=".">This is an example of a visited link</a>
+    </div>
+  </div>
+</div>
+<div class="bg-status-negative-emphasized p-tall">
+  <div data-bs-theme="root-inverted">
+    <div><a class="link link-on-colored-bg" href="#">This is an example of a base link</a></div>
+    <div><a class="link link-on-colored-bg link-sm" href="#">This is an example of a small base link</a></div>
+    <div class="visited-links">
+      <a class="link link-on-colored-bg" href=".">This is an example of a visited link</a>
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
 The `.link` class is intended to be used in conjunction with our link variants used to display chevron or icon, or to serve as a basis for your own custom styles.
 
 ## Link chevron
