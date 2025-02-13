@@ -125,15 +125,21 @@ Links have a default `color` and underline applied. While links change on `:hove
 Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 {{< example >}}
-<a href="#" aria-disabled="true">This is an example of a disabled link</a>
+<a aria-disabled="true">This is an example of a disabled link</a>
 {{< /example >}}
 
 Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied to a parent element to style all the child links.
 
 {{< example >}}
 <div class="visited-links">
-  <a href="#" >This is an example of a visited link</a>
+  <a href="#">This is an example of a visited link</a>
 </div>
+{{< /example >}}
+
+Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
+
+{{< example >}}
+<a>This is a placeholder link</a>
 {{< /example >}}
 
 ## Horizontal rules
