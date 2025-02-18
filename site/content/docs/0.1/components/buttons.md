@@ -341,6 +341,7 @@ For example, before loading, your button could be like this:
 
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
+- For a known loading time, provide a CSS variable `--bs-btn-loading-time` to set the loding time. For example, add `style="--bs-btn-loading-time: 5s;"` to the button, for a 5 seconds loading.
 - Set the disabled state on the button to avoid any unwanted interactions.
 - Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
 - Update regularly the status message `<span>` containing the loading message.
@@ -353,7 +354,7 @@ At the end of the loading, you should:
 - Add the `.d-none` class on the animated `<svg>` (we don't add again `.d-none` on the status message `<span>` to let the users know the download has already be done).
 - Put the focus back on the button to ensure similar behavior across browsers and not lose the user after changes.
 
-You can see it live on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+You can see it live and find a JavaScript example on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 {{< example class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
