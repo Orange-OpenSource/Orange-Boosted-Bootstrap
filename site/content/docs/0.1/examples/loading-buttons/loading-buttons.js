@@ -1,63 +1,53 @@
 // js-docs-start live-loading-buttons
+// Manage loading buttons looks and statuses
 (() => {
   'use strict'
-  // Indeterminate loading time
-  const loadingButton1 = document.querySelector('#loading-btn-1')
-  const statusMessage1 = document.querySelector('#loading-btn-msg-1')
-  const loadingAnimation1 = document.querySelector('#loading-btn-1 svg')
-  let updateStatusMessageCall1
-  loadingButton1.addEventListener('click', () => {
-    // Change button's look by adding a loading icon and disable it
-    loadingButton1.classList.add('loading-indeterminate')
-    loadingAnimation1.classList.remove('d-none')
-    loadingButton1.setAttribute('disabled', '')
-    // Update indeterminate loading status every second
-    statusMessage1.classList.remove('d-none')
-    statusMessage1.innerHTML = 'Downloading file 1'
-    updateStatusMessageCall1 = setInterval(() => {
-      statusMessage1.innerHTML = `${statusMessage1.innerHTML}.`
-    }, 1000)
-    // stop loading after 5 secondes for this demo
-    setTimeout(() => {
-      clearInterval(updateStatusMessageCall1)
-      statusMessage1.innerHTML = 'Downloading file 1 is complete'
-      loadingButton1.classList.remove('loading-indeterminate')
-      loadingAnimation1.classList.add('d-none')
-      loadingButton1.removeAttribute('disabled')
-      loadingButton1.focus()
-    }, 5000)
-  })
+  const loadingButtons = document.querySelectorAll('[id^="loading-btn-"]')
+  loadingButtons.forEach(loadingButton => {
+    loadingButton.addEventListener('click', () => {
+      // Extract the number from the button's ID
+      const num = loadingButton.getAttribute('id').charAt(loadingButton.getAttribute('id').length - 1)
 
-  // Determinate loading time
-  const loadingButton2 = document.querySelector('#loading-btn-2')
-  const statusMessage2 = document.querySelector('#loading-btn-msg-2')
-  const loadingAnimation2 = document.querySelector('#loading-btn-2 svg')
-  const loadingTime = getComputedStyle(loadingButton2).getPropertyValue('--bs-btn-loading-time')
-  let updateStatusMessageCall2
-  const interval = 1000
-  loadingButton2.addEventListener('click', () => {
-    let counter = 0
-    // Change button's look by adding a loading icon and disable it
-    loadingButton2.classList.add('loading-determinate')
-    loadingAnimation2.classList.remove('d-none')
-    loadingButton2.setAttribute('disabled', '')
-    // Update indeterminate loading status every 'interval' seconds
-    statusMessage2.classList.remove('d-none')
-    statusMessage2.innerHTML = 'Downloading file 2: 0%'
-    updateStatusMessageCall2 = setInterval(() => {
-      counter++
-      const percentTime = counter * interval / (loadingTime.slice(0, -1) * 10)
-      statusMessage2.innerHTML = `Downloading file 2: ${percentTime}%`
-    }, interval)
-    // stop loading after 10 secondes for this demo
-    setTimeout(() => {
-      clearInterval(updateStatusMessageCall2)
-      statusMessage2.innerHTML = 'Downloading file 2 is complete'
-      loadingButton2.classList.remove('loading-determinate')
-      loadingAnimation2.classList.add('d-none')
-      loadingButton2.removeAttribute('disabled')
-      loadingButton2.focus()
-    }, (loadingTime.slice(0, -1) * 1000))
+      // Get the loading time from the CSS variable --bs-btn-loading-time, if specified. Otherwise, it means the loading time is undetermined
+      const loadingTime = getComputedStyle(loadingButton).getPropertyValue('--bs-btn-loading-time')
+
+      // Select the corresponding status message and loading animation elements
+      const statusMessage = document.querySelector(`#loading-msg-${num}`)
+      const loadingAnimation = document.querySelector(`#loading-btn-${num} svg.loader`)
+      // Set the interval for updating the status message: it must be adapted to your use case.
+      // It can be 1000 if loading time is indeterminate, and can be something more adapted if loading time is known
+      const interval = 1000
+      let counter = 0
+
+      // Change the button's appearance by adding a loading class and disabling it
+      loadingButton.classList.add(loadingTime ? 'loading-determinate' : 'loading-indeterminate')
+      loadingAnimation.classList.remove('d-none')
+      loadingButton.setAttribute('disabled', '')
+
+      // Show the status message and update it every 'interval' seconds
+      statusMessage.classList.remove('d-none')
+      statusMessage.innerHTML = loadingTime ? `Downloading file ${num} in ${loadingTime}` : `Downloading file ${num}`
+      const updateStatusMessageCall = setInterval(() => {
+        if (loadingTime) {
+          counter++
+          // Calculate the percentage of time that has elapsed to update status message
+          const percentTime = Math.round(counter * interval / (loadingTime.slice(0, -1) * 10))
+          statusMessage.innerHTML = `Downloading file ${num} in ${loadingTime}: ${percentTime}%`
+        } else {
+          statusMessage.innerHTML = `${statusMessage.innerHTML}.`
+        }
+      }, interval)
+
+      // Stop loading after the loading time or after 5 seconds the undetermined loading time of this demo
+      setTimeout(() => {
+        clearInterval(updateStatusMessageCall)
+        statusMessage.innerHTML = `Downloading file ${num} is complete`
+        loadingButton.classList.remove(loadingTime ? 'loading-determinate' : 'loading-indeterminate')
+        loadingAnimation.classList.add('d-none')
+        loadingButton.removeAttribute('disabled')
+        loadingButton.focus() // Set focus back to the button for accessibility reasons
+      }, loadingTime ? (loadingTime.slice(0, -1) * 1000) : 5000)
+    })
   })
 })()
 // js-docs-end live-loading-buttons

@@ -20,27 +20,73 @@ aliases:
   <h2 class="py-short">Loading button in an indeterminate time</h2>
   <p>For this example, the time is set to 5 seconds by Javascript, but in a real project, you just need a callback when the action is finished. An update to the status is done every second to let the user know the download is still ongoing. Each time, a dot is added to the message to make sure it will change and then be vocalized by the screen readers.</p>
   <div class="row py-taller">
-    <div class="col-4">
+    <div class="col-8">
       <button type="button" class="btn btn-default" id="loading-btn-1">
         Download file 1
         <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
           <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
         </svg>
-        <span role="status" id="loading-btn-msg-1" class="visually-hidden d-none">Downloading file 1</span>
+        <span role="status" id="loading-msg-1" class="visually-hidden d-none">Downloading file 1</span>
       </button>
+
+      <button type="button" class="btn btn-icon btn-default" id="loading-btn-2" title="Download file 2">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        <span class="visually-hidden">Download file 2</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-2" class="visually-hidden d-none">Downloading file 2</span>
+      </button>
+
+      <button type="button" class="btn btn-default" id="loading-btn-3">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        Download file 3
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-3" class="visually-hidden d-none">Downloading file 3</span>
+      </button>
+
+
     </div>
   </div>
 
   <h2 class="py-short">Loading buttons in a determinate time</h2>
-  <p>The time must be set to through the CSS variable <code>--bs-button-loading-time</code> directly on the button. In this example, it is set to 4 seconds. An update to the status is done every second, giving the percentage of time that has elapsed.</p>
+  <p>If known, the loading time must be set directly on the button, through the CSS variable <code>--btn-loading-time</code>. In this example, it is set to 4s for the 4th button, 6s for the 5th button and 8s for the 6th button. This value will be used for the icon's animation. An update to the status is done every second, giving the percentage of time that has elapsed.</p>
   <div class="row py-taller">
-    <div class="col-3">
-      <button type="button" class="btn btn-default" id="loading-btn-2" style="--bs-btn-loading-time: 4s;">
-        Download file 2
+    <div class="col-8">
+      <button type="button" class="btn btn-default" id="loading-btn-4" style="--bs-btn-loading-time: 4s;">
+        Download file 4
         <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
           <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
         </svg>
-        <span role="status" id="loading-btn-msg-2" class="visually-hidden d-none">Downloading file 2</span>
+        <span role="status" id="loading-msg-4" class="visually-hidden d-none">Downloading file 4</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-default" id="loading-btn-5" style="--bs-btn-loading-time: 6s;" title="Download file 5">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        <span class="visually-hidden">Download file 5</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-5" class="visually-hidden d-none">Downloading file 5</span>
+      </button>
+
+      <button type="button" class="btn btn-default" id="loading-btn-6" style="--bs-btn-loading-time: 8s;">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        Download file 6
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-6" class="visually-hidden d-none">Downloading file 6</span>
       </button>
     </div>
   </div>
