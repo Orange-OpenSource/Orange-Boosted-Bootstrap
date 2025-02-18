@@ -365,6 +365,9 @@ You can see it live on our [loading buttons live example]({{< docsref "/examples
     <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
   </button>
   <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
     Download file 2
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -385,41 +388,35 @@ You can see it live on our [loading buttons live example]({{< docsref "/examples
     </svg>
     <span role="status" id="loading-btn-msg-4" class="visually-hidden">Downloading file 4</span>
   </button>
-  <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-5" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-    <span class="visually-hidden d-none">Default</span>
+</div>
+
+<div class="p-tall d-flex gap-shorter flex-wrap">
+  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled>
+    Download file 5
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-5" class="visually-hidden">Downloading file 5: xx%</span>
   </button>
-  <button type="button" class="btn btn-icon btn-strong loading-indeterminate" id="loading-btn-6" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-    <span class="visually-hidden d-none">Strong</span>
+  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-6" disabled>
+    Download file 6
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
   </button>
-  <button type="button" class="btn btn-icon btn-minimal loading-indeterminate" id="loading-btn-7" disabled>
+  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled>
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
-    <span class="visually-hidden d-none">Minimal</span>
+    Download file 7
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-7" class="visually-hidden">Downloading file 7: xx%</span>
   </button>
-  <button type="button" class="btn btn-icon btn-negative loading-indeterminate" id="loading-btn-8" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-    <span class="visually-hidden d-none">Negative</span>
+  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-8" disabled>
+    Download file 8
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
@@ -427,185 +424,112 @@ You can see it live on our [loading buttons live example]({{< docsref "/examples
   </button>
 </div>
 
+<div class="bg-brand-primary p-tall">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
+    <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+      Download file 9
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9</span>
+    </button>
+    <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-10" disabled>
+      Download file 10
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10</span>
+    </button>
+    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-11" disabled>
+      Download file 11
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11</span>
+    </button>
+  </div>
+</div>
+
+<div class="bg-brand-primary p-tall">
+  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
+    <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled>
+      Download file 12
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
+    </button>
+    <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+      Download file 13
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
+    </button>
+    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-14" disabled>
+      Download file 14
+      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
+    </button>
+  </div>
+</div>
+{{< /example >}}
+
+Loading state can also be combined with all kind of buttons, including icons.
+
+{{< example >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
-  <button type="button" class="btn btn-default loading-determinate" id="loading-btn-9" disabled>
-    Download file 9
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-9" class="visually-hidden">Downloading file 9: xx%</span>
-  </button>
-  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-10" disabled>
-    Download file 10
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-10" class="visually-hidden">Downloading file 10: xx%</span>
-  </button>
-  <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-11" disabled>
-    Download file 11
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-11" class="visually-hidden">Downloading file 11: xx%</span>
-  </button>
-  <button type="button" class="btn btn-negative loading-determinate" id="loading-btn-12" disabled>
-    Download file 12
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-13" disabled>
+  <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
-    <span class="visually-hidden d-none">Default</span>
+    <span class="visually-hidden d-none">Downloading file 15</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
-    <span role="status" id="loading-btn-msg-13" class="visually-hidden">Downloading file 13: xx%</span>
+    <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15</span>
   </button>
-  <button type="button" class="btn btn-icon btn-strong loading-determinate" id="loading-btn-14" disabled>
+  <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled>
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
-    <span class="visually-hidden d-none">Strong</span>
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-14" class="visually-hidden">Downloading file 14: xx%</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-minimal loading-determinate" id="loading-btn-15" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-    <span class="visually-hidden d-none">Minimal</span>
-    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-    </svg>
-    <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15: xx%</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-negative loading-determinate" id="loading-btn-16" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-    <span class="visually-hidden d-none">Negative</span>
+    <span class="visually-hidden d-none">Downloading file 16</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
     <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
   </button>
-  </div>
-
-  <div class="bg-brand-primary p-tall">
-    <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
-      <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-17" disabled>
-        Download file 17
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
-      </button>
-      <button type="button" class="btn btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-18" disabled>
-        Download file 18
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18</span>
-      </button>
-      <button type="button" class="btn btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-19" disabled>
-        Download file 19
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-19" class="visually-hidden">Downloading file 19</span>
-      </button>
-      <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-20" disabled>
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-        <span class="visually-hidden d-none">Default</span>
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-20" class="visually-hidden">Downloading file 20</span>
-      </button>
-      <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg loading-indeterminate" id="loading-btn-21" disabled>
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-        <span class="visually-hidden d-none">Strong</span>
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-21" class="visually-hidden">Downloading file 21</span>
-      </button>
-      <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg loading-indeterminate" id="loading-btn-22" disabled>
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-        <span class="visually-hidden d-none">Minimal</span>
-        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-        </svg>
-        <span role="status" id="loading-btn-msg-22" class="visually-hidden">Downloading file 22</span>
-      </button>
-    </div>
-  </div>
+</div>
 
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
-    <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-23" disabled>
-      Download file 23
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-23" class="visually-hidden">Downloading file 23: xx%</span>
-    </button>
-    <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-24" disabled>
-      Download file 24
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-24" class="visually-hidden">Downloading file 24: xx%</span>
-    </button>
-    <button type="button" class="btn btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-25" disabled>
-      Download file 25
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-25" class="visually-hidden">Downloading file 25: xx%</span>
-    </button>
-    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-determinate" id="loading-btn-26" disabled>
+    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-17" disabled>
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
-      <span class="visually-hidden d-none">Default</span>
+      <span class="visually-hidden d-none">Downloading file 17</span>
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
-      <span role="status" id="loading-btn-msg-26" class="visually-hidden">Downloading file 26</span>
+      <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
     </button>
-    <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-27" disabled>
+    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-determinate" id="loading-btn-18" disabled>
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
-      <span class="visually-hidden d-none">Strong</span>
+      <span class="visually-hidden d-none">Downloading file 18</span>
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
-      <span role="status" id="loading-btn-msg-27" class="visually-hidden">Downloading file 27</span>
-    </button>
-    <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg loading-determinate" id="loading-btn-28" disabled>
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-      </svg>
-      <span class="visually-hidden d-none">Minimal</span>
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-28" class="visually-hidden">Downloading file 28</span>
+      <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18: xx%</span>
     </button>
   </div>
 </div>
