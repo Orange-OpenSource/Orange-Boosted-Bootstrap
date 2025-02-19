@@ -34,7 +34,7 @@
   {{ $target = replace $target ")" "%29" }}
 
   <p class="ms-auto text-end">
-    <a class="btn btn-primary" href="data:image/svg+xml,{{ $target }}" download="{{ delimit $output "" }}">
+    <a class="btn btn-strong" href="data:image/svg+xml,{{ $target }}" download="{{ delimit $output "" }}">
       Download<span class="small ms-shortest">(SVG, {{div $size 1000}}ko)</span>
     </a>
   </p>
