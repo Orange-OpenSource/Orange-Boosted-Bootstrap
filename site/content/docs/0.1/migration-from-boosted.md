@@ -115,8 +115,8 @@ Now you should write:
 ```html
 <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
   Download file 1
-  <svg viewbox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-    <circle class="loader-inner" cx="60" cy="60" r="50"></circle>
+  <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
   </svg>
   <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
 </button>

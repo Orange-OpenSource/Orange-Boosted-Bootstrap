@@ -479,7 +479,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
-    <span class="visually-hidden d-none">Downloading file 15</span>
+    <span class="visually-hidden">Downloading file 15</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
@@ -489,7 +489,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
-    <span class="visually-hidden d-none">Downloading file 16</span>
+    <span class="visually-hidden">Downloading file 16</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
     </svg>
