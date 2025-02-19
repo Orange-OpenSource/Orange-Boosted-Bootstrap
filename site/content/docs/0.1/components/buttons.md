@@ -341,7 +341,7 @@ For example, before loading, your button could be like this:
 
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
-- For a known loading time, provide a CSS variable `--bs-btn-loading-time` to set the loding time. For example, add `style="--bs-btn-loading-time: 5s;"` to the button, for a 5 seconds loading.
+- For a known loading time, provide a CSS variable `--bs-btn-loading-time` to set the loading time. For example, add `style="--bs-btn-loading-time: 5s;"` to the button, for a 5 seconds loading.
 - Set the disabled state on the button to avoid any unwanted interactions.
 - Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
 - Update regularly the status message `<span>` containing the loading message.
