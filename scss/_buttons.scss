@@ -143,6 +143,10 @@
   }
 
   // OUDS mod: loading buttons
+  .loader {
+    display: none;
+  }
+
   &.loading-indeterminate,
   &.loading-determinate {
     position: relative;
@@ -154,6 +158,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      display: block;
       margin: 0;
       font-size: var(--#{$prefix}btn-loading-size);
       transform: translate(-50%, -50%) rotate(-90deg);
@@ -186,15 +191,15 @@
     line-height: 1;
   }
 
-  &:has(svg),
-  &:has(img),
-  &:has(.icon) {
+  &:has(svg:not(.loader)),
+  &:has(img:not(.loader)),
+  &:has(.icon:not(.loader)) {
     --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
   }
 
   // icon button (icon only, without text)
-  &.btn-icon {
+  &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
     --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
     --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
     --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};

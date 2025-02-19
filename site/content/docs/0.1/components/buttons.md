@@ -332,7 +332,7 @@ For example, before loading, your button could be like this:
 {{< example >}}
 <button type="button" class="btn btn-default" id="loading-btn-0">
   Download file
-  <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader d-none" aria-hidden="true">
+  <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
     <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
   </svg>
   <span role="status" id="loading-btn-msg-0" class="visually-hidden d-none"></span>
@@ -342,16 +342,15 @@ For example, before loading, your button could be like this:
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the button to provide the appropriate styles and animation.
 - For a known loading time, provide a CSS variable `--bs-btn-loading-time` to set the loading time. For example, add `style="--bs-btn-loading-time: 5s;"` to the button, for a 5 seconds loading.
-- Set the disabled state on the button to avoid any unwanted interactions.
-- Remove the `.d-none` from the animated `<svg>` and the status message `<span>`.
+- Set the disabled state on the button to avoid any unwanted interactions (in case you use a `<a>` tag, this can be done by setting `aria-disabled="true"` and removing the `href` attribute).
+- Remove the `.d-none` from the status message `<span>`.
 - Update regularly the status message `<span>` containing the loading message.
 
 At the end of the loading, you should:
 
-- Remove the `disabled` attribute to the button to restore its interactivity.
+- Remove the disabled state on the button to restore its interactivity.
 - Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the button's look.
-- Set a final status message in `<span>`, indicating the loading has ended.
-- Add the `.d-none` class on the animated `<svg>` (we don't add again `.d-none` on the status message `<span>` to let the users know the download has already be done).
+- Set a final status message in `<span>`, indicating the loading has ended (so we don't add again `.d-none` on this status message).
 - Put the focus back on the button to ensure similar behavior across browsers and not lose the user after changes.
 
 You can see it live and find a JavaScript example on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
@@ -366,9 +365,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
   </button>
   <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-2" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
     Download file 2
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -407,9 +403,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
   </button>
   <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled style="--bs-btn-loading-time: 5s;">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
     Download file 7
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -428,9 +421,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
       Download file 9
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -464,9 +454,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
       <span role="status" id="loading-btn-msg-12" class="visually-hidden">Downloading file 12: xx%</span>
     </button>
     <button type="button" class="btn btn-strong btn-on-colored-bg loading-determinate" id="loading-btn-13" disabled style="--bs-btn-loading-time: 5s;">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
       Download file 13
       <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -490,7 +477,7 @@ Loading state can also be combined with all kind of buttons, including icons.
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     <span class="visually-hidden d-none">Downloading file 15</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -500,7 +487,7 @@ Loading state can also be combined with all kind of buttons, including icons.
   </button>
   <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     <span class="visually-hidden d-none">Downloading file 16</span>
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -508,32 +495,28 @@ Loading state can also be combined with all kind of buttons, including icons.
     </svg>
     <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
   </button>
+  <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
+    </svg>
+    Download file 17
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
+  </button>
+  <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
+    </svg>
+    Download file 18
+    <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+      <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+    </svg>
+    <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18</span>
+  </button>
 </div>
 
-<div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
-    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-17" disabled>
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-      </svg>
-      <span class="visually-hidden d-none">Downloading file 17</span>
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
-    </button>
-    <button type="button" class="btn btn-icon btn-default btn-on-colored-bg loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-      </svg>
-      <span class="visually-hidden d-none">Downloading file 18</span>
-      <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-btn-msg-18" class="visually-hidden">Downloading file 18: xx%</span>
-    </button>
-  </div>
-</div>
 {{< /example >}}
 
 ## Block buttons

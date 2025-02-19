@@ -1986,7 +1986,6 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$btn-hover-color</code></li>
       <li><code>$btn-icon-padding-x-lg</code></li>
       <li><code>$btn-icon-padding-x-sm</code></li>
-      <li><code>$btn-icon-padding-x</code></li>
       <li><code>$btn-letter-spacing-lg</code></li>
       <li><code>$btn-letter-spacing-sm</code></li>
       <li><code>$btn-letter-spacing</code></li>
