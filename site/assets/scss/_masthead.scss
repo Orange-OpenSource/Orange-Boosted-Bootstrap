@@ -1,17 +1,14 @@
 .bd-masthead {
   // OUDS mod: no --bd-pink-rgb
-  padding: 3rem 0;
-  // OUDS mod: no gradient background image
+  // OUDS mod: no padding: 3rem 0;
+  background-image: url("../img/ouds-web-home-mobile.png"); // OUDS mod: no gradient as background image
+  background-repeat: no-repeat; // OUDS mod
+  background-position: center right; // OUDS mod
+  background-size: auto 100%; // OUDS mod
 
   h1 {
     --bs-heading-color: var(--bs-emphasis-color);
     // OUDS mod: no `@include font-size`
-  }
-
-  .lead {
-    @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
-    font-weight: 400;
-    color: var(--#{$prefix}color-content-muted); // OUDS mod: instead of: `var(--bs-secondary-color)`
   }
 
   .bd-code-snippet {
@@ -95,5 +92,18 @@
     .masthead-followup-icon {
       mix-blend-mode: lighten;
     }
+  }
+}
+
+// OUDS mod
+@include media-breakpoint-up(md) {
+  .bd-masthead {
+    background-image: url("../img/ouds-web-home-tablet.png");
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bd-masthead {
+    background-image: url("../img/ouds-web-home-desktop.png");
   }
 }
