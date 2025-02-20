@@ -350,12 +350,41 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
+  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
+
+  font-weight: $link-font-weight;
+  color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
 
+  .visited-links &,
+  &.visited-links {
+    color: var(--#{$prefix}link-visited-color);
+  }
+
   &:hover {
-    --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
+    color: var(--#{$prefix}link-hover-color);
     text-decoration: $link-hover-decoration;
+  }
+
+  &:focus-visible,
+  &:focus[data-focus-visible-added] {
+    color: var(--#{$prefix}link-focus-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    color: var(--#{$prefix}link-active-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &[aria-disabled="true"] {
+    color: var(--#{$prefix}link-disabled-color);
+    pointer-events: none;
   }
 }
 

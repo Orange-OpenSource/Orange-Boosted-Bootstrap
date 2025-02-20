@@ -51,6 +51,8 @@
   padding: .1875rem .5rem;
   margin-top: .125rem;
   margin-left: 1.375rem; // OUDS mod: changed value
+  font-size: var(--#{$prefix}font-size-body-small); // OUDS mod: instead of `1rem`
+  font-weight: 400; // OUDS mod: no 'bold' for the sidebar links
   // OUDS mod: no `color`
   text-decoration: if($link-decoration == none, null, none);
 
