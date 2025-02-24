@@ -47,7 +47,7 @@ The compliance audit carried out by ORANGE SA reveals that:
 * The average compliance rate of the online service is 87%.
 
 <div class="table-responsive">
-  <table class="table table-striped"><caption>Summary by levels</caption>
+  <table class="table table-striped"><caption class="bd-caption">Summary by levels</caption>
     <thead><tr>
       <th scope="row">Level</th>
       <th scope="col" class="text-center">A</th>
@@ -92,7 +92,7 @@ The compliance audit carried out by ORANGE SA reveals that:
 
 <div class="table-responsive">
   <table class="table table-striped">
-    <caption>Compliance rate by pages according to the two levels of criteria A and AA</caption>
+    <caption class="bd-caption">Compliance rate by pages according to the two levels of criteria A and AA</caption>
     <tbody>
       <tr>
         <th scope="row">Criteria / Level</th>

@@ -130,6 +130,12 @@ body {
   border-radius: 50%; // stylelint-disable-line property-disallowed-list
 }
 
+.bd-caption {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
 // .pie[data-value="1"]::before { transform: rotate(3.6deg); }
 // .pie[data-value="1"]::after { display: none; }
 // .pie[data-value="2"]::before { transform: rotate(7.2deg); }
