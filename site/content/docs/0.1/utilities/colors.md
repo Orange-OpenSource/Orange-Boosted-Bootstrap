@@ -31,6 +31,7 @@ Here are some compliant combinations examples for texts:
 {{< example >}}
 <p class="text-brand-primary p-short">Text brand-primary</p>
 <p class="text-default p-short">Text default</p>
+<p class="text-default-2 p-short">Text default-2</p>
 <p class="text-muted p-short">Text muted</p>
 <p class="text-disabled p-short">Text disabled</p>
 <p class="text-always-black p-short">Text always-black</p>
