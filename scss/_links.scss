@@ -15,8 +15,10 @@
 }
 
 .link {
+  // scss-docs-start link-css-vars
   --#{$prefix}link-icon-size: #{$ouds-link-size-icon-medium};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-medium};
+  // scss-docs-end link-css-vars
 
   @extend a;
   @include get-font-size("label-large");

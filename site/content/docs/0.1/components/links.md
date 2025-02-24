@@ -22,6 +22,17 @@ Visited links don't have a specific style by default. The `:visited` status can 
 </div>
 {{< /example >}}
 
+The `.link` class is intended to be used in conjunction with our link variants used to display chevron or icon, or to serve as a basis for your own custom styles.
+
+## Variants on colored background
+
+OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/utilities/background#colored-background" >}}). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
+
+{{< callout warning >}}
+**Heads up!**
+- Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [backgrounds documentation]({{< docsref "/utilities/background/#data-bs-theme-attribute" >}})
+{{< /callout >}}
+
 {{< example class="p-none">}}
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light">
@@ -43,15 +54,13 @@ Visited links don't have a specific style by default. The `:visited` status can 
 </div>
 {{< /example >}}
 
-The `.link` class is intended to be used in conjunction with our link variants used to display chevron or icon, or to serve as a basis for your own custom styles.
-
 ## Link chevron
 
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
 
 {{< example >}}
 <div><a class="link link-chevron" href="#">This is an example of a link with chevron</a></div>
-<div><a class="link link-chevron back" href="#">This is an example of a link with chevron</a></div>
+<div><a class="link link-chevron back" href="#">This is an example of a link with a back chevron</a></div>
 {{< /example >}}
 
 ## Icon link
@@ -87,6 +96,20 @@ Add `.icon-link-hover` to move the icon to the right on hover.
 </a>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
+
+## CSS
+
+### Variables
+
+As part of OUDS Web's evolving CSS variables approach, links use local CSS variables on `.link` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported too.
+
+{{< scss-docs name="link-css-vars" file="scss/_links.scss" >}}
+
+Each `.link-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules.
+
+### Sass variables
+
+{{< scss-docs name="link-variables" file="scss/_variables.scss" >}}
 
 ### Component tokens
 
