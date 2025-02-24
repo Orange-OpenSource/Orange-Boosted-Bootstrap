@@ -1,6 +1,6 @@
 // Semantic applications
 // Depends on raw primitive values
-// Token version 0.4.1
+// Token version 0.6.0
 
 // Border
 
@@ -35,6 +35,7 @@ $ouds-color-opacity-transparent-dark: $ouds-color-opacity-white-0 !default;
 $ouds-color-action-disabled-light: $ouds-color-opacity-black-200 !default;
 $ouds-color-action-enabled-light: $ouds-color-functional-black !default;
 $ouds-color-action-focus-light: $ouds-color-opacity-black-680 !default;
+$ouds-color-action-focus-2-light: $ouds-color-opacity-black-680 !default;
 $ouds-color-action-highlighted-light: $ouds-color-functional-black !default;
 $ouds-color-action-hover-light: $ouds-color-opacity-black-680 !default;
 $ouds-color-action-loading-light: $ouds-color-orange-550 !default;
@@ -64,6 +65,7 @@ $ouds-color-action-visited-light: $ouds-color-decorative-amethyst-600 !default;
 $ouds-color-action-disabled-dark: $ouds-color-opacity-white-200 !default;
 $ouds-color-action-enabled-dark: $ouds-color-functional-light-gray-160 !default;
 $ouds-color-action-focus-dark: $ouds-color-opacity-white-640 !default;
+$ouds-color-action-focus-2-dark: $ouds-color-opacity-white-640 !default;
 $ouds-color-action-highlighted-dark: $ouds-color-functional-light-gray-160 !default;
 $ouds-color-action-hover-dark: $ouds-color-opacity-white-640 !default;
 $ouds-color-action-loading-dark: $ouds-color-orange-500 !default;
@@ -91,6 +93,7 @@ $ouds-color-border-default-light: $ouds-color-opacity-black-200 !default;
 $ouds-color-border-emphasized-light: $ouds-color-functional-black !default;
 $ouds-color-border-focus-light: $ouds-color-functional-black !default;
 $ouds-color-border-focus-inset-light: $ouds-color-functional-white !default;
+$ouds-color-border-muted-light: $ouds-color-opacity-black-80 !default;
 $ouds-color-border-on-brand-primary-light: $ouds-color-functional-black !default;
 $ouds-color-border-on-brand-primary-dark: $ouds-color-functional-black !default;
 $ouds-color-border-brand-primary-dark: $ouds-color-orange-500 !default;
@@ -98,8 +101,10 @@ $ouds-color-border-default-dark: $ouds-color-opacity-white-200 !default;
 $ouds-color-border-emphasized-dark: $ouds-color-opacity-white-920 !default;
 $ouds-color-border-focus-dark: $ouds-color-functional-light-gray-160 !default;
 $ouds-color-border-focus-inset-dark: $ouds-color-functional-dark-gray-880 !default;
+$ouds-color-border-muted-dark: $ouds-color-opacity-white-80 !default;
 $ouds-color-content-brand-primary-light: $ouds-color-orange-550 !default;
 $ouds-color-content-default-light: $ouds-color-functional-black !default;
+$ouds-color-content-default-2-light: $ouds-color-functional-black !default;
 $ouds-color-content-disabled-light: $ouds-color-opacity-black-200 !default;
 $ouds-color-content-muted-light: $ouds-color-opacity-black-680 !default;
 $ouds-color-content-on-action-disabled-light: $ouds-color-functional-white !default;
@@ -136,6 +141,7 @@ $ouds-color-content-status-positive-dark: $ouds-color-functional-malachite-500 !
 $ouds-color-content-status-warning-dark: $ouds-color-functional-sun-500 !default;
 $ouds-color-content-brand-primary-dark: $ouds-color-orange-500 !default;
 $ouds-color-content-default-dark: $ouds-color-functional-light-gray-160 !default;
+$ouds-color-content-default-2-dark: $ouds-color-functional-light-gray-160 !default;
 $ouds-color-content-disabled-dark: $ouds-color-opacity-white-200 !default;
 $ouds-color-content-muted-dark: $ouds-color-opacity-white-640 !default;
 $ouds-color-overlay-default-light: $ouds-color-functional-white !default;
@@ -206,14 +212,30 @@ $ouds-color-decorative-brand-primary-light: $ouds-color-orange-500 !default;
 $ouds-color-decorative-brand-secondary-light: $ouds-color-functional-black !default;
 $ouds-color-decorative-brand-tertiary-light: $ouds-color-functional-white !default;
 $ouds-color-decorative-brand-primary-dark: $ouds-color-orange-500 !default;
-$ouds-color-decorative-brand-secondary-dark: $ouds-color-functional-light-gray-160 !default;
-$ouds-color-decorative-brand-tertiary-dark: $ouds-color-functional-dark-gray-880 !default;
-$ouds-color-decorative-neutral-default-light: $ouds-color-functional-dark-gray-400 !default;
-$ouds-color-decorative-neutral-emphasized-light: $ouds-color-functional-dark-gray-640 !default;
-$ouds-color-decorative-neutral-muted-light: $ouds-color-functional-light-gray-160 !default;
-$ouds-color-decorative-neutral-default-dark: $ouds-color-functional-light-gray-560 !default;
-$ouds-color-decorative-neutral-emphasized-dark: $ouds-color-functional-light-gray-160 !default;
-$ouds-color-decorative-neutral-muted-dark: $ouds-color-functional-dark-gray-720 !default;
+$ouds-color-decorative-brand-secondary-dark: $ouds-color-functional-black !default;
+$ouds-color-decorative-brand-tertiary-dark: $ouds-color-functional-white !default;
+$ouds-color-decorative-neutral-emphasized-higher-light: $ouds-color-functional-dark-gray-640 !default;
+$ouds-color-decorative-neutral-emphasized-low-light: $ouds-color-functional-dark-gray-400 !default;
+$ouds-color-decorative-neutral-emphasized-lower-light: $ouds-color-functional-dark-gray-320 !default;
+$ouds-color-decorative-neutral-emphasized-lowest-light: $ouds-color-functional-dark-gray-240 !default;
+$ouds-color-decorative-neutral-emphasized-higher-dark: $ouds-color-functional-dark-gray-640 !default;
+$ouds-color-decorative-neutral-emphasized-low-dark: $ouds-color-functional-dark-gray-400 !default;
+$ouds-color-decorative-neutral-emphasized-lower-dark: $ouds-color-functional-dark-gray-320 !default;
+$ouds-color-decorative-neutral-emphasized-lowest-dark: $ouds-color-functional-dark-gray-240 !default;
+$ouds-color-decorative-neutral-muted-high-light: $ouds-color-functional-light-gray-400 !default;
+$ouds-color-decorative-neutral-muted-higher-light: $ouds-color-functional-light-gray-800 !default;
+$ouds-color-decorative-neutral-muted-highest-light: $ouds-color-functional-light-gray-960 !default;
+$ouds-color-decorative-neutral-muted-low-light: $ouds-color-functional-light-gray-240 !default;
+$ouds-color-decorative-neutral-muted-lower-light: $ouds-color-functional-light-gray-160 !default;
+$ouds-color-decorative-neutral-muted-lowest-light: $ouds-color-functional-light-gray-80 !default;
+$ouds-color-decorative-neutral-muted-medium-light: $ouds-color-functional-light-gray-320 !default;
+$ouds-color-decorative-neutral-muted-high-dark: $ouds-color-functional-light-gray-400 !default;
+$ouds-color-decorative-neutral-muted-higher-dark: $ouds-color-functional-light-gray-800 !default;
+$ouds-color-decorative-neutral-muted-highest-dark: $ouds-color-functional-light-gray-960 !default;
+$ouds-color-decorative-neutral-muted-low-dark: $ouds-color-functional-light-gray-240 !default;
+$ouds-color-decorative-neutral-muted-lower-dark: $ouds-color-functional-light-gray-160 !default;
+$ouds-color-decorative-neutral-muted-lowest-dark: $ouds-color-functional-light-gray-80 !default;
+$ouds-color-decorative-neutral-muted-medium-dark: $ouds-color-functional-light-gray-320 !default;
 $ouds-color-decorative-skin-tint-100-light: $ouds-color-decorative-deep-peach-100 !default;
 $ouds-color-decorative-skin-tint-200-light: $ouds-color-decorative-deep-peach-200 !default;
 $ouds-color-decorative-skin-tint-300-light: $ouds-color-decorative-deep-peach-300 !default;
