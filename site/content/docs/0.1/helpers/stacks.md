@@ -59,7 +59,7 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 </div>
 {{< /example >}}-->
 
-<!--## Examples
+## Examples
 
 Use `.vstack` to stack buttons and other elements:
 
@@ -72,22 +72,14 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Unified Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Unified Design System specifications.
-{{< /design-callout-alert >}}
-
 {{< example >}}
-<div class="hstack gap-tall">
-  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
+<div class="hstack gap-3">
+  <!-- <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">-->
   <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>
-  <button type="button" class="btn btn-default">Reset</button>
+  <button type="button" class="btn btn-negative">Reset</button>
 </div>
 {{< /example >}}
-</details>-->
 
 ## CSS
 

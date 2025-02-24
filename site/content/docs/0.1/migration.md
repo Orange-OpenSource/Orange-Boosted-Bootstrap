@@ -23,7 +23,11 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-rounded` (default <code>true</code>) have been introduced. It allows you to set rounded or flat corners on components.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-button-pointers` (default <code>true</code>) has been introduced. It is used to add a "hand" cursor to non-disabled button elements.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-gradients` (default <code>false</code>) has been introduced. It is used to enable predefined gradients via `background-image` styles on various components.
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-rounded` (default <code>true</code>) has been introduced. It allows you to set rounded or flat corners on components.
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
@@ -35,6 +39,8 @@ toc: true
       <li><code>$btn-padding-x</code></li>
       <li><code>$btn-padding-y</code></li>
       <li><code>$btn-white-space</code></li>
+      <li><code>$enable-button-pointers</code></li>
+      <li><code>$enable-gradients</code></li>
       <li><code>$enable-rounded</code></li>
       <li><code>$ouds-button-border-radius</code></li>
       <li><code>$ouds-button-border-width-default-interaction-mono</code></li>
