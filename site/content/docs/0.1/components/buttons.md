@@ -294,9 +294,9 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 Disabled buttons using the `<a>` element behave a bit different:
 
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 - Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
-- Disabled buttons using `<a>` *should not* include the `href` attribute.
+- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [link functionality caveat](#link-functionality-caveat).
+- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 {{< example class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
