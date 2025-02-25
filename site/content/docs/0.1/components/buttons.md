@@ -165,6 +165,8 @@ We strongly advise not using an `<img>`, in particular because the icon will not
 
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
+<!-- TODO: Add a paragraph about tooltip and/or title -->
+
 {{< example class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default">
@@ -297,13 +299,13 @@ Disabled buttons using the `<a>` element behave a bit different:
 
 {{< example class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
-  <a class="btn btn-default disabled" role="button" aria-disabled="true">Default link</a>
-  <a class="btn btn-strong disabled" role="button" aria-disabled="true">Strong link</a>
+  <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
+  <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
 </div>
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
-    <a class="btn btn-default btn-on-colored-bg disabled" role="button" aria-disabled="true">Default link</a>
-    <a class="btn btn-strong btn-on-colored-bg disabled" role="button" aria-disabled="true">Strong link</a>
+    <a class="btn btn-default btn-on-colored-bg" role="button" aria-disabled="true">Default link</a>
+    <a class="btn btn-strong btn-on-colored-bg" role="button" aria-disabled="true">Strong link</a>
   </div>
 </div>
 {{< /example >}}

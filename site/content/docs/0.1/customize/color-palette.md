@@ -20,7 +20,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-tall">
     {{- range $color := .colors }}
       <figure class="mb-none" aria-label="{{ $color.name }}">
-        <button class="btn border-none p-none color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
+        <button class="border-none p-none color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
           <svg viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (or (eq $color.hex "#141414") (eq $color.hex "#fff")) (eq $color.hex "#000")) (strings.Contains $color.hex "rgba") }} style="border: 1px solid var(--bs-color-border-emphasized)" {{ end }}>
           {{ if strings.Contains $color.hex "rgba" }}
             <rect fill="#fff" width="50" height="100"/>
