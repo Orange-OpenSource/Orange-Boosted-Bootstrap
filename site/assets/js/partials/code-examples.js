@@ -22,9 +22,9 @@ export default () => {
   // OUDS mod: changed the positioning to improve the focus order
   const btnHtml = [
     '<div class="bd-code-snippet position-relative">',
-    '  <div class="bd-clipboard position-absolute top-0 end-0">',
-    '    <button type="button" class="btn-clipboard position-absolute end-0">',
-    '      <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>',
+    '  <div class="position-absolute top-0 end-0">',
+    '    <button type="button" class="btn btn-minimal btn-icon m-shortest">',
+    '      <svg role="img" aria-label="Copy"><use xlink:href="#copy"/></svg>',
     '    </button>',
     '  </div>',
     '</div>'

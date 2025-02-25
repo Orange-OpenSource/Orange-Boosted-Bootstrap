@@ -1,34 +1,31 @@
 .bd-masthead {
-  // OUDS mod: no --bd-pink-rgb
-  // OUDS mod: no padding: 3rem 0;
+  padding-bottom: 120px;
   background-image: url("../img/ouds-web-home-mobile.png"); // OUDS mod: no gradient as background image
   background-repeat: no-repeat; // OUDS mod
   background-position: center right; // OUDS mod
   background-size: auto 100%; // OUDS mod
 
-  h1 {
-    --bs-heading-color: var(--bs-emphasis-color);
-    // OUDS mod: no `@include font-size`
+  @include media-breakpoint-up(md) {
+    padding-bottom: 0;
+    background-image: url("../img/ouds-web-home-tablet.png");
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-image: url("../img/ouds-web-home-desktop.png");
   }
 
   .bd-code-snippet {
     margin: 0;
-    border-color: var(--bs-color-border-default);
-    border-width: 1px;
-    @include border-radius(0); // OUDS mod: instead of `calc(.5rem - 1px)`
   }
 
   .highlight {
-    width: 100%;
-    padding: .625rem 1rem; // OUDS mod
+    padding: .625rem 3.5rem .625rem 1rem; // OUDS mod
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background-color: var(--#{$prefix}color-bg-secondary);
-    @include border-radius(0); // OUDS mod: instead of `.5rem`
 
-    @include media-breakpoint-up(lg) {
-      padding-right: 4rem;
+    @include media-breakpoint-up(md) {
+      padding-right: 6rem;
     }
 
     pre {
@@ -37,45 +34,17 @@
       overflow: hidden;
     }
   }
-  .btn-clipboard {
-    position: absolute;
-    top: .3125rem; // OUDS mod: instead of `-.625rem`
-    right: 0;
-    background-color: transparent;
-  }
 
-  // OUDS mod: no `#carbonads`
-  // OUDS mod: no @media query
+  .bd-summary {
+    text-wrap: balance;
+  }
 }
 
 .masthead-followup {
-  h2,
-  h3,
-  h4 {
-    --bs-heading-color: var(--bs-emphasis-color);
-  }
-
   .lead {
     @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size(1rem)`
   }
-
-  // OUDS mod: no @media query
 }
-
-.masthead-followup-icon {
-  padding: 1rem;
-  color: rgba(var(--bg-rgb), 1);
-  background-color: rgba(var(--bg-rgb), .1);
-  background-blend-mode: multiple;
-  @include border-radius(0); // OUDS mod: insteaf of `1rem`
-  mix-blend-mode: darken;
-
-  svg {
-    filter: drop-shadow(0 1px 1px var(--#{$prefix}color-bg-primary)); // OUDS mod: instead of `var(--bs-body-bg)`
-  }
-}
-
-// OUDS mod: no .masthead-notice
 
 .animate-img {
   > img {
@@ -92,18 +61,5 @@
     .masthead-followup-icon {
       mix-blend-mode: lighten;
     }
-  }
-}
-
-// OUDS mod
-@include media-breakpoint-up(md) {
-  .bd-masthead {
-    background-image: url("../img/ouds-web-home-tablet.png");
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .bd-masthead {
-    background-image: url("../img/ouds-web-home-desktop.png");
   }
 }
