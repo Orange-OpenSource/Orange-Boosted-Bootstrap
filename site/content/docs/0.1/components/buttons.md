@@ -128,7 +128,8 @@ We strongly advise not using an `<img>`, in particular because the icon will not
   </button>
 
   <button type="button" class="btn btn-default">
-    <span class="icon si si-settings" aria-hidden="true"></span>Default
+    <span class="icon si si-settings" aria-hidden="true"></span>
+    Default
   </button>
 </div>
 
