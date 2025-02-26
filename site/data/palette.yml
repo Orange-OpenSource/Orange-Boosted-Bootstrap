@@ -91,14 +91,32 @@
       - name: Functional light gray 160
         variable: $ouds-color-functional-light-gray-160
         hex: "#eee"
-      - name: Functional light gray 560
-        variable: $ouds-color-functional-light-gray-560
+      - name: Functional light gray 240
+        variable: $ouds-color-functional-light-gray-240
+        hex: "#e0e0e0"
+      - name: Functional light gray 320
+        variable: $ouds-color-functional-light-gray-320
+        hex: "#d6d6d6"
+      - name: Functional light gray 400
+        variable: $ouds-color-functional-light-gray-400
         hex: "#ccc"
+      - name: Functional light gray 800
+        variable: $ouds-color-functional-light-gray-800
+        hex: "#999"
+      - name: Functional light gray 960
+        variable: $ouds-color-functional-light-gray-960
+        hex: "#858585"
   - subcategory: Dark gray
     name: "dark-gray"
     colors:
-      - name: Functional dark gray 400
-        variable: $ouds-color-functional-dark-gray-400
+      - name: Functional dark gray 240
+        variable: $ouds-color-functional-dark-gray-240
+        hex: "#666"
+      - name: Functional light gray 320
+        variable: $ouds-color-functional-light-gray-320
+        hex: "#5c5c5c"
+      - name: Functional light gray 400
+        variable: $ouds-color-functional-light-gray-400
         hex: "#555"
       - name: Functional dark gray 640
         variable: $ouds-color-functional-dark-gray-640

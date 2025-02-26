@@ -826,6 +826,7 @@ $utilities: ();
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-focus-2: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #000;
           --bs-color-action-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #f15e00;
@@ -855,9 +856,11 @@ $utilities: ();
           --bs-color-border-emphasized: #000;
           --bs-color-border-focus: #000;
           --bs-color-border-focus-inset: #fff;
+          --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #f15e00;
           --bs-color-content-default: #000;
+          --bs-color-content-default-2: #000;
           --bs-color-content-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-muted: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #fff;
@@ -894,9 +897,17 @@ $utilities: ();
           --bs-color-decorative-brand-primary: #ff7900;
           --bs-color-decorative-brand-secondary: #000;
           --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-default: #555;
-          --bs-color-decorative-neutral-emphasized: #333;
-          --bs-color-decorative-neutral-muted: #eee;
+          --bs-color-decorative-neutral-emphasized-higher: #333;
+          --bs-color-decorative-neutral-emphasized-low: #555;
+          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
+          --bs-color-decorative-neutral-emphasized-lowest: #666;
+          --bs-color-decorative-neutral-muted-high: #ccc;
+          --bs-color-decorative-neutral-muted-higher: #999;
+          --bs-color-decorative-neutral-muted-highest: #858585;
+          --bs-color-decorative-neutral-muted-low: #e0e0e0;
+          --bs-color-decorative-neutral-muted-lower: #eee;
+          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
+          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
           --bs-color-decorative-skin-tint-100: #fbebdf;
           --bs-color-decorative-skin-tint-200: #f4cfb2;
           --bs-color-decorative-skin-tint-300: #e3b591;
@@ -942,6 +953,7 @@ $utilities: ();
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-focus-2: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #eee;
           --bs-color-action-hover: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #ff7900;
@@ -971,9 +983,11 @@ $utilities: ();
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-focus: #eee;
           --bs-color-border-focus-inset: #141414;
+          --bs-color-border-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #ff7900;
           --bs-color-content-default: #eee;
+          --bs-color-content-default-2: #eee;
           --bs-color-content-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-muted: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #000;
@@ -1008,11 +1022,19 @@ $utilities: ();
           --bs-color-decorative-accent-5-emphasized: #ff80d4;
           --bs-color-decorative-accent-5-muted: #ffe5f6;
           --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #eee;
-          --bs-color-decorative-brand-tertiary: #141414;
-          --bs-color-decorative-neutral-default: #bbb;
-          --bs-color-decorative-neutral-emphasized: #eee;
-          --bs-color-decorative-neutral-muted: #272727;
+          --bs-color-decorative-brand-secondary: #000;
+          --bs-color-decorative-brand-tertiary: #fff;
+          --bs-color-decorative-neutral-emphasized-higher: #333;
+          --bs-color-decorative-neutral-emphasized-low: #555;
+          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
+          --bs-color-decorative-neutral-emphasized-lowest: #666;
+          --bs-color-decorative-neutral-muted-high: #ccc;
+          --bs-color-decorative-neutral-muted-higher: #999;
+          --bs-color-decorative-neutral-muted-highest: #858585;
+          --bs-color-decorative-neutral-muted-low: #e0e0e0;
+          --bs-color-decorative-neutral-muted-lower: #eee;
+          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
+          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
           --bs-color-decorative-skin-tint-100: #fbebdf;
           --bs-color-decorative-skin-tint-200: #f4cfb2;
           --bs-color-decorative-skin-tint-300: #e3b591;
@@ -1146,6 +1168,10 @@ $utilities: ();
 
         .border-emphasized {
           border-color: var(--bs-color-border-emphasized) !important;
+        }
+
+        .border-muted {
+          border-color: var(--bs-color-border-muted) !important;
         }
 
         .border-on-brand-primary {
@@ -3388,6 +3414,10 @@ $utilities: ();
 
         .text-default {
           color: var(--bs-color-content-default) !important;
+        }
+
+        .text-default-2 {
+          color: var(--bs-color-content-default-2) !important;
         }
 
         .text-disabled {
@@ -10743,6 +10773,7 @@ $utilities: ();
           --bs-color-action-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #000;
           --bs-color-action-focus: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-focus-2: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #000;
           --bs-color-action-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #f15e00;
@@ -10772,9 +10803,11 @@ $utilities: ();
           --bs-color-border-emphasized: #000;
           --bs-color-border-focus: #000;
           --bs-color-border-focus-inset: #fff;
+          --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #f15e00;
           --bs-color-content-default: #000;
+          --bs-color-content-default-2: #000;
           --bs-color-content-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-muted: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #fff;
@@ -10811,9 +10844,17 @@ $utilities: ();
           --bs-color-decorative-brand-primary: #ff7900;
           --bs-color-decorative-brand-secondary: #000;
           --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-default: #555;
-          --bs-color-decorative-neutral-emphasized: #333;
-          --bs-color-decorative-neutral-muted: #eee;
+          --bs-color-decorative-neutral-emphasized-higher: #333;
+          --bs-color-decorative-neutral-emphasized-low: #555;
+          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
+          --bs-color-decorative-neutral-emphasized-lowest: #666;
+          --bs-color-decorative-neutral-muted-high: #ccc;
+          --bs-color-decorative-neutral-muted-higher: #999;
+          --bs-color-decorative-neutral-muted-highest: #858585;
+          --bs-color-decorative-neutral-muted-low: #e0e0e0;
+          --bs-color-decorative-neutral-muted-lower: #eee;
+          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
+          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
           --bs-color-decorative-skin-tint-100: #fbebdf;
           --bs-color-decorative-skin-tint-200: #f4cfb2;
           --bs-color-decorative-skin-tint-300: #e3b591;
@@ -10859,6 +10900,7 @@ $utilities: ();
           --bs-color-action-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-enabled: #eee;
           --bs-color-action-focus: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-focus-2: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-highlighted: #eee;
           --bs-color-action-hover: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-loading: #ff7900;
@@ -10888,9 +10930,11 @@ $utilities: ();
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-focus: #eee;
           --bs-color-border-focus-inset: #141414;
+          --bs-color-border-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #ff7900;
           --bs-color-content-default: #eee;
+          --bs-color-content-default-2: #eee;
           --bs-color-content-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-muted: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #000;
@@ -10925,11 +10969,19 @@ $utilities: ();
           --bs-color-decorative-accent-5-emphasized: #ff80d4;
           --bs-color-decorative-accent-5-muted: #ffe5f6;
           --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #eee;
-          --bs-color-decorative-brand-tertiary: #141414;
-          --bs-color-decorative-neutral-default: #bbb;
-          --bs-color-decorative-neutral-emphasized: #eee;
-          --bs-color-decorative-neutral-muted: #272727;
+          --bs-color-decorative-brand-secondary: #000;
+          --bs-color-decorative-brand-tertiary: #fff;
+          --bs-color-decorative-neutral-emphasized-higher: #333;
+          --bs-color-decorative-neutral-emphasized-low: #555;
+          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
+          --bs-color-decorative-neutral-emphasized-lowest: #666;
+          --bs-color-decorative-neutral-muted-high: #ccc;
+          --bs-color-decorative-neutral-muted-higher: #999;
+          --bs-color-decorative-neutral-muted-highest: #858585;
+          --bs-color-decorative-neutral-muted-low: #e0e0e0;
+          --bs-color-decorative-neutral-muted-lower: #eee;
+          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
+          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
           --bs-color-decorative-skin-tint-100: #fbebdf;
           --bs-color-decorative-skin-tint-200: #f4cfb2;
           --bs-color-decorative-skin-tint-300: #e3b591;
@@ -11195,6 +11247,10 @@ $utilities: ();
 
         .border-emphasized {
           border-color: var(--bs-color-border-emphasized) !important;
+        }
+
+        .border-muted {
+          border-color: var(--bs-color-border-muted) !important;
         }
 
         .border-on-brand-primary {
@@ -14153,6 +14209,10 @@ $utilities: ();
 
         .text-default {
           color: var(--bs-color-content-default) !important;
+        }
+
+        .text-default-2 {
+          color: var(--bs-color-content-default-2) !important;
         }
 
         .text-disabled {
