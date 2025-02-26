@@ -98,8 +98,6 @@ $svg-as-custom-props-dark: (
 // Forms
 //
 
-$form-check-filter-dark:                none !default; // OUDS mod
-$form-check-input-disabled-color-dark:  $gray-700 !default; // OUDS mod
 $form-color-disabled-filter-dark:       brightness(0) invert(1) brightness(.4) !default; // OUDS mod
 $form-switch-square-bg-dark:            $ouds-color-functional-dark-gray-880 !default; // OUDS mod
 
