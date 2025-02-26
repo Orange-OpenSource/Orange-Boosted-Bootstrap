@@ -73,13 +73,13 @@ Use `.vstack` to stack buttons and other elements:
 Create an inline form with `.hstack`:
 
 {{< example >}}
-<div class="hstack gap-3">
-  <!-- <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">-->
+<div class="hstack gap-tall">
   <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>
   <button type="button" class="btn btn-negative">Reset</button>
 </div>
 {{< /example >}}
+<!-- <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">-->
 
 ## CSS
 

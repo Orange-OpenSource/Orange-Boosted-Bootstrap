@@ -16,7 +16,9 @@
             {{ if eq .Title "Examples" -}}
             <div class="d-flex flex-column flex-sm-row">
               <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-strong">
-                <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="../assets/img/ouds-web-sprite.svg#download"/>
+                </svg>
                 Download examples
               </a>
               <a href="{{ .Site.Params.download.source }}" class="btn btn-default mt-tall mt-sm-none ms-sm-tall">
