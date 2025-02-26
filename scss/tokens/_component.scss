@@ -174,13 +174,13 @@ $ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-spa
 
 // scss-docs-start ouds-component-checkbox
 $ouds-checkbox-border-radius: $ouds-border-radius-default !default;
-// $ouds-checkbox-border-width-selected-focus: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-selected-focus: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-selected-hover: $ouds-border-width-medium !default;
-// $ouds-checkbox-border-width-selected-pressed: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-selected-pressed: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-selected: $ouds-border-width-medium !default;
-// $ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium !default;
-// $ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected: $ouds-border-width-thin !default;
 $ouds-checkbox-color-content-disabled: $ouds-color-action-disabled !default;
 $ouds-checkbox-color-content-enabled: $ouds-color-action-enabled !default;
@@ -192,13 +192,13 @@ $ouds-checkbox-color-content-focus: $ouds-color-action-focus !default;
 $ouds-checkbox-color-content-hover: $ouds-color-action-hover !default;
 $ouds-checkbox-color-content-pressed: $ouds-color-action-pressed !default;
 $ouds-checkbox-color-content-selected: $ouds-color-action-selected !default;
-// $ouds-checkbox-opacity-bg-selected-focus: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-selected-focus: $ouds-opacity-invisible !default;
 $ouds-checkbox-opacity-bg-selected-hover: $ouds-opacity-invisible !default;
-// $ouds-checkbox-opacity-bg-selected-pressed: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-selected-pressed: $ouds-opacity-invisible !default;
 $ouds-checkbox-opacity-bg-selected: $ouds-opacity-invisible !default;
-// $ouds-checkbox-opacity-bg-unselected-focus: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-unselected-focus: $ouds-opacity-invisible !default;
 $ouds-checkbox-opacity-bg-unselected-hover: $ouds-opacity-invisible !default;
-// $ouds-checkbox-opacity-bg-unselected-pressed: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-unselected-pressed: $ouds-opacity-invisible !default;
 $ouds-checkbox-opacity-bg-unselected: $ouds-opacity-invisible !default;
 $ouds-checkbox-size-indicator-inner-icon: $ouds-dimension-5xs !default;
 $ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xs !default;
