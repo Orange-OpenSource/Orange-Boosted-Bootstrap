@@ -170,15 +170,42 @@ $ouds-button-space-padding-inline-icon-start: $ouds-space-padding-inline-taller 
 $ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-spacious !default;
 // scss-docs-end ouds-component-button
 
-// Check
+// Checkbox
 
-// scss-docs-start ouds-component-check
-$ouds-check-radio-size-max-height-assets-container: $ouds-dimension-1200 !default;
-$ouds-check-radio-size-max-height-selector-only: $ouds-dimension-600 !default;
-$ouds-check-radio-size-min-height-selector-only: $ouds-dimension-600 !default;
-$ouds-check-radio-size-min-width-selector-only: $ouds-dimension-600 !default;
-$ouds-check-radio-size-selector: $ouds-size-icon-with-label-large-size-sm !default;
-// scss-docs-end ouds-component-check
+// scss-docs-start ouds-component-checkbox
+$ouds-checkbox-border-radius: $ouds-border-radius-default !default;
+// $ouds-checkbox-border-width-selected-focus: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-selected-hover: $ouds-border-width-medium !default;
+// $ouds-checkbox-border-width-selected-pressed: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-selected: $ouds-border-width-medium !default;
+// $ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium !default;
+// $ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
+$ouds-checkbox-border-width-unselected: $ouds-border-width-thin !default;
+$ouds-checkbox-color-content-disabled: $ouds-color-action-disabled !default;
+$ouds-checkbox-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-checkbox-color-content-error-enabled: $ouds-color-action-negative-enabled !default;
+$ouds-checkbox-color-content-error-focus: $ouds-color-action-negative-focus !default;
+$ouds-checkbox-color-content-error-hover: $ouds-color-action-negative-hover !default;
+$ouds-checkbox-color-content-error-pressed: $ouds-color-action-negative-pressed !default;
+$ouds-checkbox-color-content-focus: $ouds-color-action-focus !default;
+$ouds-checkbox-color-content-hover: $ouds-color-action-hover !default;
+$ouds-checkbox-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-checkbox-color-content-selected: $ouds-color-action-selected !default;
+// $ouds-checkbox-opacity-bg-selected-focus: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-selected-hover: $ouds-opacity-invisible !default;
+// $ouds-checkbox-opacity-bg-selected-pressed: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-selected: $ouds-opacity-invisible !default;
+// $ouds-checkbox-opacity-bg-unselected-focus: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-unselected-hover: $ouds-opacity-invisible !default;
+// $ouds-checkbox-opacity-bg-unselected-pressed: $ouds-opacity-invisible !default;
+$ouds-checkbox-opacity-bg-unselected: $ouds-opacity-invisible !default;
+$ouds-checkbox-size-indicator-inner-icon: $ouds-dimension-5xs !default;
+$ouds-checkbox-size-indicator: $ouds-size-icon-with-label-large-size-xs !default;
+$ouds-checkbox-size-max-height: $ouds-dimension-600 !default;
+$ouds-checkbox-size-min-height: $ouds-dimension-600 !default;
+$ouds-checkbox-size-min-width: $ouds-dimension-600 !default;
+// scss-docs-end ouds-component-checkbox
 
 // Chip
 
@@ -215,6 +242,24 @@ $ouds-chip-space-padding-inline-label-end: $ouds-space-padding-inline-tall !defa
 $ouds-chip-space-padding-inline-label-start: $ouds-space-padding-inline-tall !default;
 $ouds-chip-space-padding-stack-padding-block: $ouds-space-padding-block-shorter !default;
 // scss-docs-end ouds-component-chip
+
+// Control
+
+// scss-docs-start ouds-component-control
+$ouds-control-item-color-bg-focus: $ouds-color-action-support-focus !default;
+$ouds-control-item-color-bg-hover: $ouds-color-action-support-hover !default;
+$ouds-control-item-color-bg-loading: $ouds-color-action-support-loading !default;
+$ouds-control-item-color-bg-pressed: $ouds-color-action-support-pressed !default;
+$ouds-control-item-color-content-loader: $ouds-color-content-default !default;
+$ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-md !default;
+$ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-sm !default;
+$ouds-control-item-size-max-height-assets-container: $ouds-dimension-1200 !default;
+$ouds-control-item-size-min-height: $ouds-dimension-650 !default;
+$ouds-control-item-size-min-width: $ouds-dimension-1400 !default;
+$ouds-control-item-space-column-gap: $ouds-space-column-gap-tall !default;
+$ouds-control-item-space-inset: $ouds-space-inset-medium !default;
+$ouds-control-item-space-row-gap: $ouds-space-row-gap-none !default;
+// scss-docs-end ouds-component-control
 
 // Input
 
