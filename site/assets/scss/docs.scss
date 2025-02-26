@@ -22,6 +22,10 @@
 //
 // Happy Bootstrapping!
 
+// fusv-disable
+$enable-rounded: true;
+// fusv-enable
+
 // Load Bootstrap variables and mixins
 @import "../../../scss/config";
 @import "../../../scss/functions";

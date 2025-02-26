@@ -86,6 +86,48 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
+### Buttons
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
+  - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
+  - `.btn-secondary` and `.btn-success` will look as `.btn-default`
+  - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
+  - `.btn-info` and `.btn-light` will look as `.btn-minimal`
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-social` and all its variants have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
+<div class="ps-taller">
+
+For example, if you used to write:
+
+```html
+<button class="btn btn-secondary" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Loading...</span>
+</button>
+```
+Now you should write:
+
+```html
+<button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
+  Download file 1
+  <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+    <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+  </svg>
+  <span role="status" id="loading-btn-msg-1" class="visually-hidden">Downloading file 1</span>
+</button>
+```
+
+You will have to make some extra Javascript to change the styles and update the status message like explained in the documentation. You can find a complete example in our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+
+</div>
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
+
 ## Forms
 
 ### Checks & radios
@@ -434,10 +476,14 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> New [Grid system example]({{< docsref "/examples/grid-system" >}}).
 
+- <span class="badge text-bg-status-positive-emphasized">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+
 ## CSS and Sass variables
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
   - For instance, without the Bootstrap compatibility mode, you won't have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn't impact your website.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `scss/_color-palette.scss` doesn't exist anymore. If you were importing it in your project, please make sure to remove it.
 
@@ -491,6 +537,118 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
+      <li><code>$ouds-button-border-radius</code></li>
+      <li><code>$ouds-button-border-width-default-interaction-mono</code></li>
+      <li><code>$ouds-button-border-width-default-interaction</code></li>
+      <li><code>$ouds-button-border-width-default</code></li>
+      <li><code>$ouds-button-border-width-minimal-interaction</code></li>
+      <li><code>$ouds-button-border-width-minimal</code></li>
+      <li><code>$ouds-button-color-bg-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-disabled</code></li>
+      <li><code>$ouds-button-color-bg-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-enabled</code></li>
+      <li><code>$ouds-button-color-bg-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-focus</code></li>
+      <li><code>$ouds-button-color-bg-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-hover</code></li>
+      <li><code>$ouds-button-color-bg-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-loading</code></li>
+      <li><code>$ouds-button-color-bg-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-bg-default-pressed</code></li>
+      <li><code>$ouds-button-color-bg-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-bg-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-bg-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-focus</code></li>
+      <li><code>$ouds-button-color-bg-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-hover</code></li>
+      <li><code>$ouds-button-color-bg-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-loading</code></li>
+      <li><code>$ouds-button-color-bg-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-bg-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-bg-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-bg-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-default-disabled</code></li>
+      <li><code>$ouds-button-color-border-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-default-enabled</code></li>
+      <li><code>$ouds-button-color-border-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-default-focus</code></li>
+      <li><code>$ouds-button-color-border-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-default-hover</code></li>
+      <li><code>$ouds-button-color-border-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-default-loading</code></li>
+      <li><code>$ouds-button-color-border-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-default-pressed</code></li>
+      <li><code>$ouds-button-color-border-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-border-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-border-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-focus</code></li>
+      <li><code>$ouds-button-color-border-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-hover</code></li>
+      <li><code>$ouds-button-color-border-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-loading</code></li>
+      <li><code>$ouds-button-color-border-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-border-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-border-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-border-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-default-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-default-disabled</code></li>
+      <li><code>$ouds-button-color-content-default-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-default-enabled</code></li>
+      <li><code>$ouds-button-color-content-default-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-default-focus</code></li>
+      <li><code>$ouds-button-color-content-default-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-default-hover</code></li>
+      <li><code>$ouds-button-color-content-default-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-default-loading</code></li>
+      <li><code>$ouds-button-color-content-default-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-default-pressed</code></li>
+      <li><code>$ouds-button-color-content-minimal-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-disabled</code></li>
+      <li><code>$ouds-button-color-content-minimal-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-enabled</code></li>
+      <li><code>$ouds-button-color-content-minimal-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-focus</code></li>
+      <li><code>$ouds-button-color-content-minimal-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-hover</code></li>
+      <li><code>$ouds-button-color-content-minimal-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-loading</code></li>
+      <li><code>$ouds-button-color-content-minimal-pressed-mono</code></li>
+      <li><code>$ouds-button-color-content-minimal-pressed</code></li>
+      <li><code>$ouds-button-color-content-strong-disabled-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-enabled-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-focus-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-hover-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-loading-mono</code></li>
+      <li><code>$ouds-button-color-content-strong-pressed-mono</code></li>
+      <li><code>$ouds-button-size-icon-only</code></li>
+      <li><code>$ouds-button-size-icon</code></li>
+      <li><code>$ouds-button-size-loader</code></li>
+      <li><code>$ouds-button-size-max-height-icon-only</code></li>
+      <li><code>$ouds-button-size-min-height</code></li>
+      <li><code>$ouds-button-size-min-width</code></li>
+      <li><code>$ouds-button-space-column-gap-arrow</code></li>
+      <li><code>$ouds-button-space-column-gap-icon</code></li>
+      <li><code>$ouds-button-space-inset-icon-only</code></li>
+      <li><code>$ouds-button-space-padding-block</code></li>
+      <li><code>$ouds-button-space-padding-inline-arrow-end</code></li>
+      <li><code>$ouds-button-space-padding-inline-arrow-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-end-icon-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-icon-none</code></li>
+      <li><code>$ouds-button-space-padding-inline-icon-start</code></li>
+      <li><code>$ouds-button-space-padding-inline-start-icon-end</code></li>
       <li><code>$ouds-color-action-disabled-dark</code></li>
       <li><code>$ouds-color-action-disabled-light</code></li>
       <li><code>$ouds-color-action-enabled-dark</code></li>
@@ -1798,6 +1956,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$boosted-variable-prefix</code></li>
       <li><code>$border-color-subtle</code></li>
       <li><code>$border-color-subtle-dark</code></li>
+      <li><code>$btn-active-box-shadow</code></li>
+      <li><code>$btn-border-radius-lg</code></li>
+      <li><code>$btn-border-radius-sm</code></li>
+      <li><code>$btn-box-shadow</code></li>
       <li><code>$btn-close-white-active-border-color</code></li>
       <li><code>$btn-close-white-active-color</code></li>
       <li><code>$btn-close-white-bg</code></li>
@@ -1805,6 +1967,49 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$btn-close-white-color</code></li>
       <li><code>$btn-close-white-disabled-color</code></li>
       <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$btn-default-active-bg</code></li>
+      <li><code>$btn-default-active-border</code></li>
+      <li><code>$btn-default-active-color</code></li>
+      <li><code>$btn-default-disabled-bg</code></li>
+      <li><code>$btn-default-disabled-border</code></li>
+      <li><code>$btn-default-disabled-color</code></li>
+      <li><code>$btn-default-hover-bg</code></li>
+      <li><code>$btn-default-hover-border</code></li>
+      <li><code>$btn-default-hover-color</code></li>
+      <li><code>$btn-disabled-opacity</code></li>
+      <li><code>$btn-focus-box-shadow</code></li>
+      <li><code>$btn-focus-width</code></li>
+      <li><code>$btn-font-family</code></li>
+      <li><code>$btn-font-size-lg</code></li>
+      <li><code>$btn-font-size-sm</code></li>
+      <li><code>$btn-font-size</code></li>
+      <li><code>$btn-hover-color</code></li>
+      <li><code>$btn-icon-padding-x-lg</code></li>
+      <li><code>$btn-icon-padding-x-sm</code></li>
+      <li><code>$btn-letter-spacing-lg</code></li>
+      <li><code>$btn-letter-spacing-sm</code></li>
+      <li><code>$btn-letter-spacing</code></li>
+      <li><code>$btn-line-height-lg</code></li>
+      <li><code>$btn-line-height-sm</code></li>
+      <li><code>$btn-line-height</code></li>
+      <li><code>$btn-link-color</code></li>
+      <li><code>$btn-link-disabled-color</code></li>
+      <li><code>$btn-link-hover-color</code></li>
+      <li><code>$btn-outline-default-active-bg</code></li>
+      <li><code>$btn-outline-default-active-border</code></li>
+      <li><code>$btn-outline-default-active-color</code></li>
+      <li><code>$btn-outline-default-disabled-bg</code></li>
+      <li><code>$btn-outline-default-disabled-border</code></li>
+      <li><code>$btn-outline-default-disabled-color</code></li>
+      <li><code>$btn-outline-default-hover-bg</code></li>
+      <li><code>$btn-outline-default-hover-border</code></li>
+      <li><code>$btn-outline-default-hover-color</code></li>
+      <li><code>$btn-padding-x-lg</code></li>
+      <li><code>$btn-padding-x-sm</code></li>
+      <li><code>$btn-padding-y-lg</code></li>
+      <li><code>$btn-padding-y-sm</code></li>
+      <li><code>$btn-social-networks</code></li>
+      <li><code>$btn-transition</code></li>
       <li><code>$disabled-color</code></li>
       <li><code>$disabled-color-dark</code></li>
       <li><code>$display1-size</code></li>
@@ -1849,6 +2054,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
       <li><code>$h6-line-height</code></li>
       <li><code>$h6-spacing</code></li>
       <li><code>$initialism-font-size</code></li>
+      <li><code>$input-btn-border-width</code></li>
+      <li><code>$input-btn-padding-x</code></li>
+      <li><code>$input-btn-padding-y-sm</code></li>
+      <li><code>$input-btn-padding-y</code></li>
       <li><code>$lead-letter-spacing</code></li>
       <li><code>$lead-line-height</code></li>
       <li><code>$legend-font-size</code></li>
@@ -2074,3 +2283,5 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]({{< docsref "/content/typography/#sass-mixins" >}}) for more details.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]({{< docsref "/components/buttons#sass-mixins" >}}).

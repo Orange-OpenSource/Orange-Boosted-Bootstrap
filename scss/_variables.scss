@@ -403,7 +403,7 @@ $invert-filter:         invert(1) !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                    true !default;
-$enable-rounded:                  false !default;
+$enable-rounded:                  true !default;
 $enable-shadows:                  false !default;
 $enable-gradients:                false !default;
 $enable-transitions:              true !default;
@@ -892,9 +892,9 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .5rem !default;
-$input-btn-padding-x:         1.125rem !default;
-$input-btn-font-family:       inherit !default;
+// OUDS mod: no `$input-btn-padding-y`
+// OUDS mod: no `$input-btn-padding-x`
+$input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
@@ -908,7 +908,7 @@ $input-btn-focus-box-shadow:  $focus-ring-box-shadow !default;
 // fusv-enable
 // End mod
 
-$input-btn-padding-y-sm:      $spacer * .25 !default;
+// OUDS mod: no $input-btn-padding-y-sm
 $input-btn-padding-x-sm:      $spacer * .5 !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
@@ -916,7 +916,7 @@ $input-btn-padding-y-lg:      .8125rem !default;
 $input-btn-padding-x-lg:      $spacer !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
-$input-btn-border-width:      var(--#{$prefix}border-width) !default;
+// OUDS mod: no `$input-btn-border-width`
 // scss-docs-end input-btn-variables
 
 // Buttons
@@ -924,126 +924,46 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of OUDS Web's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-color:                   var(--#{$prefix}body-color) !default;
-$btn-hover-color:             $btn-color !default; // OUDS mod
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
-$btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $input-btn-font-size !default;
-$btn-line-height:             $input-btn-line-height !default;
-$btn-letter-spacing:          $letter-spacing-base !default; // OUDS mod
+$btn-color:                   $ouds-button-color-content-default-enabled !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
+$btn-padding-y:               $ouds-button-space-padding-block !default; // OUDS mod: instead of $input-btn-padding-y
+$btn-padding-x:               $ouds-button-space-padding-inline-icon-none !default; // OUDS mod: instead of $input-btn-padding-x
+// OUDS mod: no $btn-font-family
+// OUDS mod: no `$btn-font-size` which is defined within the font size tokens
+// OUDS mod: no `$btn-line-height` which is defined within the font size tokens
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
-$btn-line-height-sm:          $line-height-sm !default; // OUDS mod
-$btn-letter-spacing-sm:       $letter-spacing-base !default; // OUDS mod
+// OUDS mod: no $btn-padding-y-sm
+// OUDS mod: no $btn-padding-x-sm
+// OUDS mod: no $btn-font-size-sm
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-$btn-font-size-lg:            $input-btn-font-size-lg !default;
-$btn-line-height-lg:          var(--#{$prefix}font-line-height-body-large) !default; // OUDS mod
-$btn-letter-spacing-lg:       calc(#{$letter-spacing-base} * 2) !default; // stylelint-disable-line function-disallowed-list
+// OUDS mod: no $btn-padding-y-lg
+// OUDS mod: no $btn-padding-x-lg
+// OUDS mod: no $btn-font-size-lg
 
-$btn-border-width:            $input-btn-border-width !default;
-
-$btn-default-hover-bg:        var(--#{$prefix}highlight-bg) !default; // OUDS mod
-$btn-default-hover-border:    var(--#{$prefix}color-border-emphasized) !default; // OUDS mod
-$btn-default-hover-color:     var(--#{$prefix}highlight-color) !default; // OUDS mod
-$btn-default-active-bg:       $ouds-button-color-bg-default-pressed !default; // OUDS mod
-$btn-default-active-border:   $ouds-button-color-border-default-pressed !default; // OUDS mod
-$btn-default-active-color:    $black !default; // OUDS mod
-$btn-default-disabled-bg:     var(--#{$prefix}color-content-disabled) !default; // OUDS mod
-$btn-default-disabled-border: var(--#{$prefix}color-content-disabled) !default; // OUDS mod
-$btn-default-disabled-color:  var(--#{$prefix}highlight-color) !default; // OUDS mod
-
-$btn-outline-default-hover-bg:        var(--#{$prefix}btn-color) !default; // OUDS mod
-$btn-outline-default-hover-border:    var(--#{$prefix}btn-border-color) !default; // OUDS mod
-$btn-outline-default-hover-color:     $white !default; // OUDS mod
-$btn-outline-default-active-bg:       $ouds-button-color-bg-default-pressed !default; // OUDS mod
-$btn-outline-default-active-border:   $ouds-button-color-border-default-pressed !default; // OUDS mod
-$btn-outline-default-active-color:    $black !default; // OUDS mod
-$btn-outline-default-disabled-bg:     transparent !default; // OUDS mod
-$btn-outline-default-disabled-border: var(--#{$prefix}color-content-disabled) !default; // OUDS mod
-$btn-outline-default-disabled-color:  var(--#{$prefix}color-content-disabled) !default; // OUDS mod
+$btn-border-width:            $ouds-button-border-width-default !default; // OUDS mod: instead of $input-btn-border-width
 
 $btn-font-weight:             $font-weight-bold !default;
-$btn-box-shadow:              null !default;
+// OUDS mod: no $btn-box-shadow
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
-$btn-disabled-opacity:        1 !default;
+// OUDS mod: no $btn-disabled-opacity
 $btn-active-box-shadow:       null !default;
 
-$btn-link-color:              var(--#{$prefix}link-color) !default;
-$btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
-$btn-link-disabled-color:     var(--#{$prefix}color-content-disabled) !default; // OUDS mod: instead of `$gray-600`
+// OUDS mod: no $btn-link-color
+// OUDS mod: no $btn-link-hover-color
+// OUDS mod: no $btn-link-disabled-color
 // OUDS mod: no `$btn-link-focus-shadow-rgb`
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+$btn-border-radius:           $ouds-button-border-radius !default; // OUDS mod: instead of var(--#{$prefix}border-radius)
+// OUDS mod: no $btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
+// OUDS mod: no $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              $transition-focus !default; // OUDS mod
 // scss-docs-end btn-variables
 
 // OUDS mod: icon button
-$btn-icon-padding-x:          subtract($spacer * .5, var(--#{$prefix}border-width)) !default;
-$btn-icon-padding-x-sm:       $spacer * .25 !default;
-$btn-icon-padding-x-lg:       add($spacer * .5, calc(var(--#{$prefix}border-width) * 1.5)) !default; // stylelint-disable-line function-disallowed-list
-// OUDS mod: social button
-// scss-docs-start social-buttons
-$btn-social-networks: (
-  "facebook": (
-    "color": #3b5998,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M19 6h5V0h-5c-4 0-7 3-7 7v3H8v6h4v16h6V16h5l1-6h-6V7l1-1z'></path></svg>"
-  ),
-  "twitter": (
-    "color": #1da1f2,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M32 7a13 13 0 01-3.8 1.1 6.6 6.6 0 003-3.6c-1.4.7-2.8 1.3-4.3 1.6a6.6 6.6 0 00-11.1 6A18.6 18.6 0 012.2 5a6.6 6.6 0 002 8.9c-1 0-2-.4-3-.9v.1c0 3.2 2.4 5.9 5.4 6.5a6.6 6.6 0 01-3 0 6.6 6.6 0 006.1 4.6A13.2 13.2 0 010 27.1a18.6 18.6 0 0028.7-16.6C30 9.5 31.1 8.4 32 7z'/></svg>"
-  ),
-  "instagram": (
-    "color": #e1306c,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2.9h6.5c1.5.1 2.4.4 3 .6a5 5 0 011.8 1.2c.5.6.9 1.1 1.2 1.9.2.5.4 1.4.5 3a112.7 112.7 0 01-.5 15.8 5 5 0 01-1.2 1.9c-.6.5-1.1.9-1.9 1.2-.5.2-1.4.4-3 .5a112.7 112.7 0 01-15.8-.5 5 5 0 01-1.9-1.2 5 5 0 01-1.2-1.9c-.2-.5-.4-1.4-.5-3a112.7 112.7 0 01.5-15.8 5 5 0 011.2-1.9c.6-.5 1.1-.9 1.9-1.2C7 3.3 8 3 9.6 3l6.4-.1zM16 0H9.4C7.7.3 6.5.5 5.5.9s-2 1-2.8 1.9c-1 .9-1.5 1.8-1.9 2.8-.4 1-.6 2.2-.7 3.9a117.6 117.6 0 00.7 17c.5 1.1 1 2 1.9 3 .9.8 1.8 1.4 2.8 1.8 1 .4 2.2.6 3.9.7a117.2 117.2 0 0017-.7c1.1-.4 2-1 2.9-1.9s1.4-1.8 1.8-2.8c.4-1 .7-2.2.8-3.9a117.2 117.2 0 00-.8-17A7.8 7.8 0 0026.4.8c-1-.5-2.1-.7-3.8-.8L16 0z'/><path d='M16 7.8a8.2 8.2 0 100 16.4 8.2 8.2 0 000-16.4zm0 13.5a5.3 5.3 0 110-10.6 5.3 5.3 0 010 10.6zM26.5 7.5a2 2 0 11-3.9 0 2 2 0 013.9 0z'/></svg>"
-  ),
-  "youtube": (
-    "color": #f00,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M31.7 9.6s-.3-2.2-1.3-3.2c-1.2-1.3-2.6-1.3-3.2-1.3-4.5-.4-11.2-.4-11.2-.4s-6.7 0-11.2.4c-.6 0-2 0-3.2 1.3C.6 7.4.3 9.6.3 9.6S0 12.2 0 14.8v2.4c0 2.6.3 5.2.3 5.2s.3 2.2 1.3 3.2c1.2 1.2 2.8 1.2 3.5 1.3 2.6.3 11 .4 11 .4s6.6 0 11.1-.4c.6 0 2 0 3.2-1.3 1-1 1.3-3.2 1.3-3.2s.3-2.6.3-5.2v-2.4c0-2.6-.3-5.2-.3-5.2zm-19 10.5v-9l8.6 4.6-8.6 4.4z'/></svg>"
-  ),
-  "linkedin": (
-    "color": #0077b5,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M12 12h5.5v2.8h.1a6.1 6.1 0 015.5-2.8c5.8 0 6.9 3.6 6.9 8.4V30h-5.8v-8.5c0-2 0-4.7-3-4.7s-3.4 2.2-3.4 4.5V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 11-6 0 3 3 0 016 0z'/></svg>",
-  ),
-  "whatsapp": (
-    "color": #25d366,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M27.3 4.7a15.9 15.9 0 00-25 19.1L.1 32l8.4-2.2A15.9 15.9 0 0027.3 4.7zM16 29c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-5 1.3 1.3-4.8-.3-.5A13.2 13.2 0 1116.1 29zm7.2-9.8l-2.7-1.3c-.3-.1-.6-.2-1 .2l-1.2 1.5c-.2.3-.4.3-.8.1s-1.7-.6-3.2-2c-1.2-1-2-2.3-2.2-2.7s0-.6.2-.8l.6-.7.4-.6v-.7l-1.3-3c-.3-.7-.6-.6-.9-.7h-.7c-.2 0-.7.1-1.1.5C9 9.4 8 10.4 8 12.3s1.4 3.9 1.6 4.1c.2.3 2.8 4.3 6.8 6l2.3.9c.9.3 1.8.2 2.4.1.8-.1 2.4-1 2.7-1.9s.4-1.7.3-1.9l-.8-.4z'/></svg>"
-  ),
-  "mail": (
-    "color": $ouds-color-orange-500,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M3.2 14.3c0 9.5 0 9 .2 9.5.3.8 1 1.4 1.7 1.7l12.2.1h11.5v-8.8c0-9.3 0-8.9-.2-9.3-.2-.7-.7-1.2-1.3-1.6l-.8-.3H3.2v8.7zm22.9-2.4a246.2 246.2 0 01-4.9 4.7l-.8.7-.5.6-.7.6c-.6.6-1 .9-1.3 1a4 4 0 01-1.8.5 4 4 0 01-2.4-.6 13 13 0 01-1.9-1.7l-2.4-2.4-.6-.6-1.4-1.3L6.1 12l-.5-.5V8.9l.6.5L7.9 11l1.4 1.4 1.3 1.2 1.3 1.3a195 195 0 012.6 2.4c.4.3 1 .5 1.6.4.5 0 1-.1 1.4-.4L19 16l1-1 1-1a214.7 214.7 0 012.2-2l1-1 2-2 .2-.2v2.8l-.3.3z'/></svg>",
-    "size": 1.5rem
-  ),
-  "snapchat": (
-    "color": #fffc00,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 28'><path d='M13 2c3 0 5 2 7 4v6h2l1 1-3 2v1l4 4h1l1 1-4 1-1 2h-2-1c-1 0-2 2-5 2s-4-2-5-2H5l-1-2-4-1 1-1h1l4-4v-1l-3-2 1-1h2V9 6c2-3 4-4 7-4z'/></svg>"
-  ),
-  "pinterest": (
-    "color": red,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2a14 14 0 00-5 27v-4l2-7-1-2c0-2 1-3 3-3l1 2-1 4c0 2 1 3 2 3 3 0 5-3 5-7 0-3-3-5-6-5-4 0-6 3-6 6l1 3a302 302 0 01-1 2c-2-1-3-3-3-5 0-5 3-9 9-9 5 0 9 4 9 8 0 5-3 9-7 9l-4-2v4l-2 3a14 14 0 0018-13c0-8-6-14-14-14z'/></svg>",
-    "size": 1.375rem
-  ),
-  "tiktok": (
-    "color": #ff2c55,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M7.024 30.054C4.584 28.212 3 25.235 3 21.876c0-5.59 4.39-10.123 9.805-10.123.45 0 .899.031 1.345.094v5.6a4.363 4.363 0 0 0-1.361-.218c-2.477 0-4.485 2.074-4.485 4.631 0 1.809 1.003 3.374 2.467 4.137l.31.146a4.348 4.348 0 0 0 1.708.348c2.471 0 4.476-2.065 4.484-4.615V0h5.335v.704c.02.211.046.42.082.63l.08.404a7.668 7.668 0 0 0 3.306 4.769A7.22 7.22 0 0 0 30 7.665V8.83l-.199-.047-.182-.047.381.094v4.312a12.4 12.4 0 0 1-7.392-2.443v11.177c0 5.591-4.39 10.124-9.804 10.124-2.02 0-3.898-.63-5.458-1.712l-.322-.234Z'/></svg>"
-  ),
-  "x": (
-    "color": #1da1f2,
-    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 19'><path d='m15.751 0-5.053 5.776L6.328 0H0l7.561 9.888-7.166 8.19h3.068l5.531-6.32 4.834 6.32H20l-7.883-10.42L18.817 0h-3.066ZM3.581 1.74h1.824l10.97 14.502h-1.7L3.58 1.74Z'/></svg>"
-  )
-) !default;
-// scss-docs-end social-buttons
-// End mod
+$btn-icon-padding-x:          subtract($ouds-button-space-padding-inline-icon-start, var(--#{$prefix}border-width)) !default;
 
 // Forms
 
@@ -1076,7 +996,7 @@ $form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($for
 // scss-docs-end form-helper-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y:                       $input-btn-padding-y !default;
+$input-padding-y:                       .5rem !default; // OUDS mod: instead of $input-btn-padding-y (temporary value waiting for input component)
 $input-padding-x:                       $spacer * .5 !default;
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
@@ -1098,7 +1018,7 @@ $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
 $input-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of var(--#{$prefix}border-color)
-$input-border-width:                    $input-btn-border-width !default;
+$input-border-width:                    0 !default; // OUDS mod TODO to be modified for inputs
 $input-box-shadow:                      none !default; // OUDS mod
 
 $input-border-radius:                   var(--#{$prefix}border-radius) !default;
@@ -2293,7 +2213,7 @@ $quantity-selector-width:                 7.5rem !default;
 $quantity-selector-sm-width:              5.625rem !default;
 
 $quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
-$quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x-sm, 2px) !default;
+$quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x, 2px) !default;
 $quantity-selector-btn-bg:                var(--#{$prefix}body-bg) !default;
 $quantity-selector-btn-border:            var(--#{$prefix}border-width) solid var(--#{$prefix}color-border-default) !default;
 

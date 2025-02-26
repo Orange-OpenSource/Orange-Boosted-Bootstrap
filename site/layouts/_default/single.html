@@ -15,11 +15,13 @@
             <p class="ll-sm h3 mb-tallest">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" -}}
             <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary">
-                <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-shortest" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-strong">
+                <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href="../assets/img/ouds-web-sprite.svg#download"/>
+                </svg>
                 Download examples
               </a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-tall mt-sm-none ms-sm-tall">
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-default mt-tall mt-sm-none ms-sm-tall">
                 Download source code
               </a>
             </div>

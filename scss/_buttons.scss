@@ -2,39 +2,72 @@
 // Base styles
 //
 
+// OUDS mod: Animation keyframes
+@keyframes rotate-determinate {
+  0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate1-indeterminate {
+  0%,
+  10% { stroke-dashoffset: 192 #{"/* rtl:ignore */"}; }
+  50%,
+  60% { stroke-dashoffset: 96 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate2-indeterminate {
+  0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+  100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+}
+// End mod
+
 .btn {
   // scss-docs-start btn-css-vars
-  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  // OUDS mod: no --#{$prefix}btn-padding-x
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
-  --#{$prefix}btn-font-family: #{$btn-font-family};
-  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
+  // OUDS mod: no --#{$prefix}btn-font-family
+  // OUDS mod: no `@include rfs($btn-font-size, --#{$prefix}btn-font-size)`
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
-  --#{$prefix}btn-line-height: #{$btn-line-height};
+  // OUDS mod: no `--#{$prefix}btn-line-height`
   --#{$prefix}btn-color: #{$btn-color};
-  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // OUDS mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
-  --#{$prefix}btn-hover-color: #{$btn-hover-color}; // OUDS mod
-  --#{$prefix}btn-hover-border-color: initial; // OUDS mod
-  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
-  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
-  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // OUDS mod
-  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // OUDS mod
+  --#{$prefix}btn-hover-border-color: initial; // OUDS mod: instead of `transparent`
+  // OUDS mod: no --#{$prefix}btn-box-shadow
+  // OUDS mod: no --#{$prefix}btn-disabled-opacity
+  // OUDS mod: no --#{$prefix}btn-focus-box-shadow
+
+  // Additional OUDS variables
+  --#{$prefix}btn-padding-start: #{$btn-padding-x};
+  --#{$prefix}btn-padding-end: #{$btn-padding-x};
+  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width};
+  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height};
+  --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
+  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
+  --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
+  --#{$prefix}btn-loading-size: #{$ouds-button-size-loader};
+  --#{$prefix}btn-loading-dasharray: 96;
+  --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+  // End mod
   // scss-docs-end btn-css-vars
 
-  display: inline-flex; // OUDS mod
-  align-items: center; // OUDS mod: for .badge proper alignment
+  display: inline-flex; // OUDS mod: instead of `inline-block`
+  align-items: center; // OUDS mod
   justify-content: center; // OUDS mod
-  padding: subtract(var(--#{$prefix}btn-padding-y), 1px) var(--#{$prefix}btn-padding-x) add(var(--#{$prefix}btn-padding-y), 1px); // OUDS mod
-  font-family: var(--#{$prefix}btn-font-family);
-  @include font-size(var(--#{$prefix}btn-font-size));
+  min-width: var(--#{$prefix}btn-min-width); // OUDS mod
+  min-height: var(--#{$prefix}btn-min-height); // OUDS mod
+  padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-end), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-start), var(--#{$prefix}btn-border-width)); // OUDS mod: instead of `var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x)`
+  // OUDS mod: no font-family
+  @include get-font-size("label-large"); // OUDS mod
   font-weight: var(--#{$prefix}btn-font-weight);
-  line-height: var(--#{$prefix}btn-line-height);
+  // OUDS mod: no line-height, already defined by get-font-size
   color: var(--#{$prefix}btn-color);
+  text-align: center;
   text-decoration: if($link-decoration == none, null, none);
-  letter-spacing: var(--#{$prefix}btn-letter-spacing); // OUDS mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -42,8 +75,21 @@
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
-  @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
+  // OUDS mod: no box-shadow
+  // OUDS mod: no transition
+
+  // OUDS mod: apply common styles to hover, focus visible and loading states
+  &:hover,
+  &:focus-visible,
+  &:focus[data-focus-visible-added],
+  &.loading-indeterminate,
+  &.loading-determinate,
+  &:active,
+  &.active {
+    padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-end), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-start), var(--#{$prefix}btn-interaction-border-width));
+    border-width: var(--#{$prefix}btn-interaction-border-width);
+  }
+  // End mod
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
@@ -54,16 +100,23 @@
 
   // OUDS mod: no .btn-check + &:hover
 
-  // OUDS mod: no &:focus-visible to avoid issue in button tags
+  &:focus-visible,
+  &:focus[data-focus-visible-added] { // OUDS mod
+    color: var(--#{$prefix}btn-focus-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-color)`
+    @include gradient-bg(var(--#{$prefix}btn-focus-bg)); // OUDS mod: instead of `var(--#{$prefix}btn-hover-bg)`
+    border-color: var(--#{$prefix}btn-focus-border-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-border-color)`
+    // OUDS mod: no outline
+    // OUDS mod: no box-shadow
+  }
 
   // OUDS mod: no .btn-check:focus-visible + &
 
   // OUDS mod: selectors are slightly different to handle `.btn-check:checked`
-  .btn-check:checked + &:active,
-  .btn-check:checked + &,
+  // OUDS mod: no .btn-check:checked + &:active,
+  // OUDS mod: no .btn-check:checked + &,
+  // OUDS mod: no &.show,
   &:active,
-  &.active,
-  &.show {
+  &.active {
     color: var(--#{$prefix}btn-active-color);
     background-color: var(--#{$prefix}btn-active-bg);
     // Remove CSS gradients if they're enabled
@@ -72,224 +125,316 @@
     // OUDS mod: no box shadow modification for the active state
     // OUDS mod: no &:focus-visible
   }
-  // End mod
 
   // OUDS mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
 
   // OUDS mod: selectors are slightly different to handle `.btn-check`
-  .btn-check:disabled + &,
+  // OUDS mod: no .btn-check:disabled + &,
+  // OUDS mod: no fieldset:disabled &,
   &:disabled,
-  &.disabled,
-  fieldset:disabled & {
+  &[aria-disabled="true"] { // OUDS mod: Defensive CSS to force a11y
     color: var(--#{$prefix}btn-disabled-color);
     pointer-events: none;
     background-color: var(--#{$prefix}btn-disabled-bg);
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-disabled-border-color);
-    opacity: var(--#{$prefix}btn-disabled-opacity);
-    @include box-shadow(none);
+    // OUDS mod: no opacity
+    // OUDS mod: no box-shadow
   }
-  // End mod
 
-  // OUDS mod: with icon
-  &:not(.btn-icon) > svg {
-    transform: translateY(1px);
+  // OUDS mod: loading buttons
+  .loader {
+    display: none;
+  }
+
+  &.loading-indeterminate,
+  &.loading-determinate {
+    position: relative;
+    color: transparent;
+    background-color: var(--#{$prefix}btn-loading-bg);
+    border-color: var(--#{$prefix}btn-loading-border-color);
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin: 0;
+      font-size: var(--#{$prefix}btn-loading-size);
+      transform: translate(-50%, -50%) rotate(-90deg);
+
+      > .loader-inner {
+        fill: none;
+        stroke: var(--#{$prefix}btn-loading-color);
+        stroke-dasharray: var(--#{$prefix}btn-loading-dasharray);
+        stroke-width: 6;
+        transform-origin: center;
+        animation: var(--#{$prefix}btn-loading-animation);
+      }
+    }
+  }
+
+  &.loading-determinate {
+    --#{$prefix}btn-loading-dasharray: 107;
+    --#{$prefix}btn-loading-animation: var(--#{$prefix}btn-loading-time) infinite linear rotate-determinate;
+  }
+
+  // OUDS mod: buttons with icon and text
+  svg,
+  img,
+  .icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
+    width: 1em;
+    height: 1em;
+    margin-right: var(--#{$prefix}btn-icon-gap);
+    overflow: hidden;
+    font-size: var(--#{$prefix}btn-icon-size);
+    line-height: 1;
+  }
+
+  &:has(svg:not(.loader)),
+  &:has(img:not(.loader)),
+  &:has(.icon:not(.loader)) {
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+  }
+
+  // icon button (icon only, without text)
+  &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-icon-gap: 0;
+    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-only};
   }
   // End mod
 }
-
 
 //
 // Alternate buttons
 //
 
+// OUDS mod: define OUDS buttons
 // scss-docs-start btn-variant-loops
-.btn-primary {
-  @include button-variant($ouds-color-orange-500, $ouds-color-orange-500, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}border-color), $active-color: var(--#{$prefix}body-color));
+.btn-default {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction};
+
+  @include button-variant(
+    $ouds-button-color-bg-default-enabled,
+    $ouds-button-color-border-default-enabled,
+    $ouds-button-color-content-default-enabled,
+    $ouds-button-color-bg-default-hover,
+    $ouds-button-color-border-default-hover,
+    $ouds-button-color-content-default-hover,
+    $ouds-button-color-bg-default-pressed,
+    $ouds-button-color-border-default-pressed,
+    $ouds-button-color-content-default-pressed,
+    $ouds-button-color-bg-default-disabled,
+    $ouds-button-color-border-default-disabled,
+    $ouds-button-color-content-default-disabled,
+    $ouds-button-color-bg-default-focus,
+    $ouds-button-color-border-default-focus,
+    $ouds-button-color-content-default-focus,
+    $ouds-button-color-bg-default-loading,
+    $ouds-button-color-border-default-loading,
+    $ouds-button-color-content-default-loading
+  );
 }
 
-.btn-success {
-  @include button-variant(var(--#{$prefix}success), var(--#{$prefix}success), var(--#{$prefix}highlight-color));
+.btn-minimal {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-minimal};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-minimal-interaction};
+
+  @include button-variant(
+    $ouds-button-color-bg-minimal-enabled,
+    $ouds-button-color-border-minimal-enabled,
+    $ouds-button-color-content-minimal-enabled,
+    $ouds-button-color-bg-minimal-hover,
+    $ouds-button-color-border-minimal-hover,
+    $ouds-button-color-content-minimal-hover,
+    $ouds-button-color-bg-minimal-pressed,
+    $ouds-button-color-border-minimal-pressed,
+    $ouds-button-color-content-minimal-pressed,
+    $ouds-button-color-bg-minimal-disabled,
+    $ouds-button-color-border-minimal-disabled,
+    $ouds-button-color-content-minimal-disabled,
+    $ouds-button-color-bg-minimal-focus,
+    $ouds-button-color-border-minimal-focus,
+    $ouds-button-color-content-minimal-focus,
+    $ouds-button-color-bg-minimal-loading,
+    $ouds-button-color-border-minimal-loading,
+    $ouds-button-color-content-minimal-loading
+  );
 }
 
-.btn-danger {
-  @include button-variant(var(--#{$prefix}danger), var(--#{$prefix}danger), var(--#{$prefix}highlight-color));
+.btn-strong {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-action-enabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-enabled),
+    var(--#{$prefix}color-action-hover),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-hover),
+    var(--#{$prefix}color-action-pressed),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-pressed),
+    var(--#{$prefix}color-action-disabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-disabled),
+    var(--#{$prefix}color-action-focus),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-focus),
+    var(--#{$prefix}color-action-loading),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-loading)
+  );
 }
 
-.btn-warning {
-  @include button-variant($warning, $warning, $black);
+.btn-negative {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-action-negative-enabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-action-negative-hover),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-action-negative-pressed),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-action-disabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-disabled),
+    var(--#{$prefix}color-action-negative-focus),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-action-negative-loading),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-emphasized-alt)
+  );
 }
 
-.btn-info {
-  @include button-variant(var(--#{$prefix}info), var(--#{$prefix}info), var(--#{$prefix}highlight-color));
+.btn-default.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
+
+  @include button-variant(
+    $ouds-button-color-bg-default-enabled-mono,
+    $ouds-button-color-border-default-enabled-mono,
+    $ouds-button-color-content-default-enabled-mono,
+    $ouds-button-color-bg-default-hover-mono,
+    $ouds-button-color-border-default-hover-mono,
+    $ouds-button-color-content-default-hover-mono,
+    $ouds-button-color-bg-default-pressed-mono,
+    $ouds-button-color-border-default-pressed-mono,
+    $ouds-button-color-content-default-pressed-mono,
+    $ouds-button-color-bg-default-disabled-mono,
+    $ouds-button-color-border-default-disabled-mono,
+    $ouds-button-color-content-default-disabled-mono,
+    $ouds-button-color-bg-default-focus-mono,
+    $ouds-button-color-border-default-focus-mono,
+    $ouds-button-color-content-default-focus-mono,
+    $ouds-button-color-bg-default-loading-mono,
+    $ouds-button-color-border-default-loading-mono,
+    $ouds-button-color-content-default-loading-mono
+  );
 }
 
-.btn-light {
-  @include button-variant($light, $light, $black);
+.btn-strong.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    $ouds-button-color-bg-strong-enabled-mono,
+    $ouds-button-color-border-strong-enabled-mono,
+    $ouds-button-color-content-strong-enabled-mono,
+    $ouds-button-color-bg-strong-hover-mono,
+    $ouds-button-color-border-strong-hover-mono,
+    $ouds-button-color-content-strong-hover-mono,
+    $ouds-button-color-bg-strong-pressed-mono,
+    $ouds-button-color-border-strong-pressed-mono,
+    $ouds-button-color-content-strong-pressed-mono,
+    $ouds-button-color-bg-strong-disabled-mono,
+    $ouds-button-color-border-strong-disabled-mono,
+    $ouds-button-color-content-strong-disabled-mono,
+    $ouds-button-color-bg-strong-focus-mono,
+    $ouds-button-color-border-strong-focus-mono,
+    $ouds-button-color-content-strong-focus-mono,
+    $ouds-button-color-bg-strong-loading-mono,
+    $ouds-button-color-border-strong-loading-mono,
+    $ouds-button-color-content-strong-loading-mono
+  );
 }
 
-.btn-dark {
-  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}border-color), $hover-color: $black);
+.btn-minimal.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-minimal};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-minimal-interaction};
+
+  @include button-variant(
+    $ouds-button-color-bg-minimal-enabled-mono,
+    $ouds-button-color-border-minimal-enabled-mono,
+    $ouds-button-color-content-minimal-enabled-mono,
+    $ouds-button-color-bg-minimal-hover-mono,
+    $ouds-button-color-border-minimal-hover-mono,
+    $ouds-button-color-content-minimal-hover-mono,
+    $ouds-button-color-bg-minimal-pressed-mono,
+    $ouds-button-color-border-minimal-pressed-mono,
+    $ouds-button-color-content-minimal-pressed-mono,
+    $ouds-button-color-bg-minimal-disabled-mono,
+    $ouds-button-color-border-minimal-disabled-mono,
+    $ouds-button-color-content-minimal-disabled-mono,
+    $ouds-button-color-bg-minimal-focus-mono,
+    $ouds-button-color-border-minimal-focus-mono,
+    $ouds-button-color-content-minimal-focus-mono,
+    $ouds-button-color-bg-minimal-loading-mono,
+    $ouds-button-color-border-minimal-loading-mono,
+    $ouds-button-color-content-minimal-loading-mono
+  );
 }
 
-.btn-secondary {
-  @include button-variant(var(--#{$prefix}secondary), var(--#{$prefix}secondary), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}border-color), $hover-color: var(--#{$prefix}body-color));
-}
+@if $enable-bootstrap-compatibility {
+  .btn-primary {
+    @extend .btn-strong;
+  }
 
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    $btn-outline-hover-color: var(--#{$prefix}highlight-color);
-    @if index(("primary", "warning", "light"), #{$color}) {
-      $btn-outline-hover-color: $black;
-    } @else if (#{$color} == "dark") {
-      $btn-outline-hover-color: $white;
+  .btn-success {
+    @extend .btn-default;
+  }
+
+  .btn-danger {
+    @extend .btn-negative;
+  }
+
+  .btn-warning {
+    @extend .btn-negative;
+  }
+
+  .btn-info {
+    @extend .btn-minimal;
+  }
+
+  .btn-light {
+    @extend .btn-minimal;
+  }
+
+  .btn-dark {
+    @extend .btn-strong;
+  }
+
+  .btn-secondary {
+    @extend .btn-default;
+  }
+
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @extend .btn-default; // OUDS mod
     }
-    @include button-outline-variant(var(--#{$prefix}#{$color}), $btn-outline-hover-color);
   }
 }
 // scss-docs-end btn-variant-loops
-
-// OUDS mod: OUDS Web-specific no outline button
-.btn-no-outline {
-  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}primary), transparent, transparent, var(--#{$prefix}color-content-disabled));
-
-  .btn-check:checked + &.btn {
-    border-color: transparent;
-
-    &:hover {
-      border-color: var(--#{$prefix}btn-hover-border-color);
-    }
-  }
-}
-// End mod
-
-
-// OUDS mod: OUDS Web-specific toggle button
-.btn-toggle {
-  @include button-variant(transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}primary), $ouds-color-orange-500, $ouds-color-orange-500, $black, transparent, var(--#{$prefix}color-border-emphasized), var(--#{$prefix}color-content-disabled));
-
-  .btn-check:checked + & {
-    color: var(--#{$prefix}highlight-color);
-    background-color: var(--#{$prefix}highlight-bg);
-    border-color: var(--#{$prefix}border-color);
-  }
-
-  .btn-group .btn-check + &.btn:not(:first-of-type) {
-    border-left: 0;
-
-    &::before {
-      display: inline-block;
-      width: var(--#{$prefix}btn-border-width);
-      height: 100%;
-      content: "";
-    }
-  }
-
-  .btn-group .btn-check + &.btn:not(:last-of-type) {
-    border-right: 0;
-
-    &::after {
-      display: inline-block;
-      width: var(--#{$prefix}btn-border-width);
-      height: 100%;
-      content: "";
-    }
-  }
-}
-// End mod
-
-
-// OUDS mod: OUDS Web-specific dropdown button
-.btn-dropdown {
-  @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}color-border-emphasized), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}color-content-disabled), var(--#{$prefix}color-content-disabled));
-}
-// End mod
-
-
-//
-// Link buttons
-//
-
-// Make a button look and behave like a link
-.btn-link {
-  // OUDS mod: no redefinition of --#{$prefix}btn-font-weight
-  --#{$prefix}btn-color: #{$btn-link-color};
-  --#{$prefix}btn-bg: transparent;
-  --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-active-color: var(--#{$prefix}btn-hover-color); // OUDS mod
-  --#{$prefix}btn-active-border-color: transparent;
-  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
-  --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: 0 0 0 #{$black}; // Can't use `none` as keyword negates all values when used with multiple shadows
-  // OUDS mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
-
-  text-decoration: $link-decoration;
-  @if $enable-gradients {
-    background-image: none;
-  }
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: $link-hover-decoration;
-  }
-
-  // OUDS mod: no focus-visible color change
-
-  // No need for an active state here
-}
-
-
-//
-// Button Sizes
-// OUDS mod: 6th argument to set .btn-icon padding
-// OUDS mod: 7th argument to set .btn-letter-spacing
-
-.btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
-}
-
-.btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
-}
-
-
-// OUDS mod: icon button
-.btn-icon {
-  padding: var(--#{$prefix}icon-spacing);
-}
-// End mod
-
-// OUDS mod: social button
-.btn-social {
-  --#{$prefix}btn-border-color: currentcolor;
-  --#{$prefix}btn-hover-color: #{$white};
-  --#{$prefix}btn-hover-bg: var(--#{$prefix}network-color, #{$black});
-  --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
-  --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
-  --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
-  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color);
-  --#{$prefix}btn-disabled-color: var(--#{$prefix}color-content-disabled);
-  --#{$prefix}btn-disabled-bg: transparent;
-  @include border-radius(50%, 50%);
-  @include button-icon(var(--#{$prefix}network-logo));
-}
-
-@each $name in map-keys($btn-social-networks) {
-  $network: map-get($btn-social-networks, $name);
-
-  .btn-#{$name} {
-    --#{$prefix}network-color: #{map-get($network, "color")};
-    --#{$prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
-
-    &::before {
-      mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
-
-      @if "linkedin" == $name {
-        transform: translateY(-1px);
-      }
-    }
-  }
-}
 // End mod

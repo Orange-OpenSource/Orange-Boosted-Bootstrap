@@ -59,35 +59,27 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 </div>
 {{< /example >}}-->
 
-<!--## Examples
+## Examples
 
 Use `.vstack` to stack buttons and other elements:
 
 {{< example >}}
 <div class="vstack gap-short col-md-5 mx-auto">
-  <button type="button" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn btn-outline-secondary">Cancel</button>
+  <button type="button" class="btn btn-strong">Save changes</button>
+  <button type="button" class="btn btn-default">Cancel</button>
 </div>
 {{< /example >}}
 
 Create an inline form with `.hstack`:
 
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Unified Design System.</summary>
-<br>
-{{< design-callout-alert >}}
-This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Unified Design System specifications.
-{{< /design-callout-alert >}}
-
 {{< example >}}
 <div class="hstack gap-tall">
-  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
-  <button type="button" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>
-  <button type="button" class="btn btn-outline-secondary">Reset</button>
+  <button type="button" class="btn btn-negative">Reset</button>
 </div>
 {{< /example >}}
-</details>-->
+<!-- <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">-->
 
 ## CSS
 
