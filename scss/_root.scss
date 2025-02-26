@@ -417,8 +417,6 @@
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
 
-  --#{$prefix}form-check-filter: #{$form-check-filter}; // OUDS mod
-  --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color}; // OUDS mod
   --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter}; // OUDS mod
   --#{$prefix}form-select-indicator: #{$form-select-indicator}; // OUDS mod
   --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // OUDS mod
@@ -513,8 +511,6 @@
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
-    --#{$prefix}form-check-filter: #{$form-check-filter-dark}; // OUDS mod
-    --#{$prefix}form-check-input-disabled-color: #{$form-check-input-disabled-color-dark}; // OUDS mod
     --#{$prefix}form-select-indicator: #{$form-select-indicator-dark}; // OUDS mod
     --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // OUDS mod
     --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
