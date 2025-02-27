@@ -7,12 +7,11 @@
   flex-direction: column; // OUDS mod
   margin: 0 ($bd-gutter-x * -.5) 1rem;
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
-  border-width: 1px 0;
+  border-width: 1px;
 
   @include media-breakpoint-up(md) {
     margin-right: 0;
     margin-left: 0;
-    border-width: 1px;
     @include border-radius(var(--bs-border-radius));
   }
 }
