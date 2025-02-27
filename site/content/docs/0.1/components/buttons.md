@@ -58,7 +58,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 {{< callout warning >}}
 **Heads up!**
-- Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [backgrounds documentation]({{< docsref "/utilities/background/#data-bs-theme-attribute" >}})
+- Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]({{< docsref "/utilities/background/#colored-backgrounds" >}})
 - Negative buttons should never be used on colored background.
 {{< /callout >}}
 
@@ -128,7 +128,8 @@ We strongly advise not using an `<img>`, in particular because the icon will not
   </button>
 
   <button type="button" class="btn btn-default">
-    <span class="icon si si-settings" aria-hidden="true"></span>Default
+    <span class="icon si si-settings" aria-hidden="true"></span>
+    Default
   </button>
 </div>
 
@@ -293,9 +294,9 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 Disabled buttons using the `<a>` element behave a bit different:
 
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 - Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
-- Disabled buttons using `<a>` *should not* include the `href` attribute.
+- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [link functionality caveat](#link-functionality-caveat).
+- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 {{< example class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">

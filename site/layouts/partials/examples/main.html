@@ -31,7 +31,9 @@
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       {{ if $entry.external -}}
         <div class="col-md-6 col-lg-4 mb-tall d-flex gap-tall">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+          <div class="bi fs-hm flex-shrink-0" style="margin-top: -5px;">
+            {{ partial "icons/github.svg" }}
+          </div>
           <div>
             <h3 class="h5 mb-shortest">
               <a class="d-block link-offset-1" href="{{ urls.JoinPath $.Site.Params.bootstrap_github_org $example.url }}" target="_blank" rel="noopener">
