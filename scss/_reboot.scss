@@ -357,6 +357,7 @@ a {
   --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
   --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
   --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
+  // End mod
 
   font-weight: $link-font-weight; // OUDS mod
   color: var(--#{$prefix}link-color);
