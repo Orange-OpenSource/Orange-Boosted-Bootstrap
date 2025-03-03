@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.1.0-ouds-web...v0.2.0) (2025-03-03)
+
+
+### Features
+
+* Add Button component and documentation ([#2804](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2804)) ([e8ee751](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e8ee7511e5b3eaa94ffb9f3b9e3b71415a97b00c))
+
+
+
 # [0.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.0.3-ouds-web...v0.1.0) (2025-02-03)
 
 
