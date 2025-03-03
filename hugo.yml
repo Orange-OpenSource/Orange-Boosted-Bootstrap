@@ -96,13 +96,13 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/css/ouds-web.min.css"
-    css_hash:                       "sha384-EXQf0XW7tPWz6fb9p5n1xyah+5Wm4k/GHrvXfsHVmhVndwq4ed404NXnAH8cLNdi"
+    css_hash:                       "sha384-zhqL8VWxv2WssMkf++3c13MyjAzD+5W4LZmhcNjrjfPxmfwGj+USiaq9/AV9WSMY"
     css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/css/ouds-web.rtl.min.css"
-    css_rtl_hash:                   "sha384-K4r5g/Z7FsQcyq5ffpJdHfACj5K7uGPB6pe9He7U3nTHLqMrs2lgdSNc1cwESlQ0"
+    css_rtl_hash:                   "sha384-HQe8KqzUsHAosuwVtd/FpLmLpKQkivVMaaUJbYKbVSjlO8idKyOF5yuS/0DbXtwo"
     js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/js/ouds-web.min.js"
-    js_hash:                        "sha384-AWG+D/XlGKnxS+hLT4BXa3SNCiSfZZ3OWEFbpxY/HGq+sxBlRMc1Jmv4ocrtMiqE"
+    js_hash:                        "sha384-QveupMclNBC998koqSifpPqaKg9eNJ6lHM9MGdF7rckeUTkla7A/JYitdDmlcBDZ"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/js/ouds-web.bundle.min.js"
-    js_bundle_hash:                 "sha384-CQzFU7t/olo4CWIzycn2V+Kt60xJmaLd3Eb+9IQvC/5gtc3xJpMkIE6EJW9o7P8Q"
+    js_bundle_hash:                 "sha384-wsCZDwY5ncWxWFUnwNn6fRNayqcmfMpiUGqG0i54gb/RBOlPNtYrteatYZc+hPPa"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
