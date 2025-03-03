@@ -81,13 +81,12 @@
   &:not(.back)::after {
     @extend %chevron-properties;
     margin-right: var(--#{$prefix}link-arrow-gap);
-    transform: translateY(-1px); // TODO: RTL
   }
 
   &:not(.back)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-arrow-gap);
-    transform: rotate(180deg) translateY(1px); // TODO: RTL
+    transform: rotate(180deg);
   }
 }
 

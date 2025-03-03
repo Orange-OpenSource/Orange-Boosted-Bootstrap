@@ -76,13 +76,26 @@ When icons are purely decorative, they should be hidden from assistive technolog
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on either the left or right of your link text. The icon is automatically sized, placed, and colored.
 
 {{< example >}}
-<a class="link icon-link" href="#">
-  <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-  </svg>
-  This is an example of a link with an icon
-</a>
+  <a class="link icon-link" href="#">
+    <svg class="bi" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    This is an example of a link with an icon
+  </a>
 {{< /example >}}
+
+{{< bootstrap-compatibility >}}
+The `.icon-link` class can be used without the `.link` class to ensure bootstrap comptability.
+
+{{< example >}}
+ <a class="icon-link" href="#">
+    <svg class="bi" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    This is an example of link with icon
+  </a>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
 
 ### Style on hover
 
@@ -96,21 +109,3 @@ Add `.icon-link-hover` to move the icon to the right on hover.
 </a>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
-
-## CSS
-
-### Variables
-
-As part of OUDS Web's evolving CSS variables approach, links use local CSS variables on `.link` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported too.
-
-{{< scss-docs name="link-css-vars" file="scss/_links.scss" >}}
-
-Each `.link-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules.
-
-### Sass variables
-
-{{< scss-docs name="link-variables" file="scss/_variables.scss" >}}
-
-### Component tokens
-
-{{< scss-docs name="ouds-component-link" file="scss/tokens/_component.scss" >}}

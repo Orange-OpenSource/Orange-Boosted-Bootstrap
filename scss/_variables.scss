@@ -490,7 +490,7 @@ $body-emphasis-color:       $ouds-color-content-default-light !default; // OUDS 
 // scss-docs-start link-variables
 $link-color:                              $black !default; // OUDS mod
 $link-decoration:                         underline !default;
-$link-font-weight:                        $ouds-font-weight-strong !default;
+$link-font-weight:                        $ouds-font-weight-strong !default; // OUDS mod
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $primary !default; // OUDS mod
 $link-hover-decoration:                   null !default;
@@ -498,6 +498,18 @@ $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
+
+// OUDS mod: no longer used
+// Icon links
+// scss-docs-start icon-link-variables
+//   $icon-link-gap:               .375rem !default;
+//   $icon-link-underline-offset:  .25em !default;
+//   $icon-link-icon-size:         1em !default;
+//   $icon-link-icon-transition:   .2s ease-in-out transform !default;
+//   $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
+// }
+// scss-docs-end icon-link-variables
+// End mod
 
 // Paragraphs
 //

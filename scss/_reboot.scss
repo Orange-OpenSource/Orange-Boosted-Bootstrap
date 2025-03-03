@@ -350,6 +350,7 @@ sup { top: -.5em; }
 // Links
 
 a {
+  // OUDS mod
   --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
   --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
   --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
@@ -357,7 +358,7 @@ a {
   --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
   --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
 
-  font-weight: $link-font-weight;
+  font-weight: $link-font-weight; // OUDS mod
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
 
@@ -393,7 +394,7 @@ a {
 // causes specificity issues in many other styles that are too complex to fix.
 // See https://github.com/twbs/bootstrap/issues/19402
 
-a:not([href]):not([class]):not([aria-disabled="true"]) {
+a:not([href]):not([class]):not([aria-disabled="true"]) { // OUDS mod: Added `:not([aria-disabled="true])`
   &,
   &:hover {
     color: inherit;

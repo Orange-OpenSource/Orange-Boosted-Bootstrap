@@ -493,6 +493,7 @@
 
     --#{$prefix}link-color: #{$link-color-dark};
     --#{$prefix}link-hover-color: #{$link-hover-color-dark};
+    --#{$prefix}link-color-rgb: #{to-rgb($link-color-dark)};
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
 
     @if $enable-bootstrap-compatibility {
