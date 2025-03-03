@@ -85,8 +85,6 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on either the
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
-The `.icon-link` class can be used without the `.link` class to ensure bootstrap compatibility.
-
 {{< example >}}
  <a class="icon-link" href="#">
     <svg class="bi" aria-hidden="true">
