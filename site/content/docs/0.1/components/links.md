@@ -8,6 +8,10 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Link design guidelines](https://unified-design-system.orange.com/472794e18/p/31c33b-link).
+{{< /callout >}}
+
 ## Base class
 
 OUDS Web has a base `.link` class that sets up basic styles such as padding and content alignment. By default, `.link` controls have a transparent border and background color, but still defines basic focus, hover and active styles. Add `.link-sm` for small size.
