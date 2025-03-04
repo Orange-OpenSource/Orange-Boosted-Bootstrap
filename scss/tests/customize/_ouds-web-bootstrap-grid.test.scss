@@ -447,7 +447,7 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         .col {
-          flex: 1 0 0%;
+          flex: 1 0 0;
         }
 
         .row-cols-auto > * {
@@ -716,7 +716,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 390px) {
           .col-xs {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-xs-auto > * {
@@ -990,7 +990,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 480px) {
           .col-sm {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-sm-auto > * {
@@ -1264,7 +1264,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 736px) {
           .col-md {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-md-auto > * {
@@ -1538,7 +1538,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1024px) {
           .col-lg {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-lg-auto > * {
@@ -1812,7 +1812,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1320px) {
           .col-xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-xl-auto > * {
@@ -2086,7 +2086,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1640px) {
           .col-2xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-2xl-auto > * {
@@ -2360,7 +2360,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1880px) {
           .col-3xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-3xl-auto > * {
@@ -2727,7 +2727,7 @@ $enable-bootstrap-compatibility: null !default;
         }
 
         .col {
-          flex: 1 0 0%;
+          flex: 1 0 0;
         }
 
         .row-cols-auto > * {
@@ -3056,7 +3056,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 390px) {
           .col-xs {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-xs-auto > * {
@@ -3390,7 +3390,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 480px) {
           .col-sm {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-sm-auto > * {
@@ -3724,7 +3724,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 736px) {
           .col-md {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-md-auto > * {
@@ -4058,7 +4058,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1024px) {
           .col-lg {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-lg-auto > * {
@@ -4392,7 +4392,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1320px) {
           .col-xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-xl-auto > * {
@@ -4726,7 +4726,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1640px) {
           .col-xxl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-xxl-auto > * {
@@ -5060,7 +5060,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1640px) {
           .col-2xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-2xl-auto > * {
@@ -5394,7 +5394,7 @@ $enable-bootstrap-compatibility: null !default;
 
         @media (min-width: 1880px) {
           .col-3xl {
-            flex: 1 0 0%;
+            flex: 1 0 0;
           }
 
           .row-cols-3xl-auto > * {

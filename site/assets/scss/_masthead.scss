@@ -69,7 +69,7 @@
   padding: 1rem;
   color: rgba(var(--bg-rgb), 1);
   background-color: rgba(var(--bg-rgb), .1);
-  background-blend-mode: multiple;
+  background-blend-mode: multiply;
   @include border-radius(0); // OUDS mod: insteaf of `1rem`
   mix-blend-mode: darken;
 
