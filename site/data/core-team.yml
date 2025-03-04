@@ -1,3 +1,6 @@
+- name: Samuel Collin
+  user: nilloq
+
 - name: Hannah Issermann
   user: hannahiss
 
@@ -6,3 +9,6 @@
 
 - name: Vincent Prothais
   user: vprothais
+
+- name: Maxime Lardenois
+  user: maxlardenois
