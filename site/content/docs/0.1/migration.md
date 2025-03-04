@@ -11,7 +11,7 @@ toc: true
 
 ## v0.3.0
 
-### Content
+### Content styles
 
 #### Reboot
 
