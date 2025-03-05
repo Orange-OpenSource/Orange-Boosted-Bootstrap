@@ -58,7 +58,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 {{< callout warning >}}
 **Heads up!**
-- Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]({{< docsref "/utilities/background/#colored-backgrounds" >}})
+- Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]({{< docsref "/utilities/background/#colored-backgrounds" >}}).
 - Negative buttons should never be used on colored background.
 {{< /callout >}}
 
