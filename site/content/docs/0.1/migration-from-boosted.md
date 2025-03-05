@@ -128,6 +128,11 @@ You will have to make some extra Javascript to change the styles and update the 
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
+### Links
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.link`, `.link-sm` have been added for new standalone link components.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used with `.link` and `.link-sm` to get variants on colored backgrounds.
+
 ## Forms
 
 ### Checks & radios
@@ -162,7 +167,11 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Colored links
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS. Classes still exist for Bootstrap compatibility.
+
+### Icon link
+
+- <span class="badge text-bg-status-info-emphasized">Info</span> Icon link and chevron link are now documented in Link component. See [Link]({{< docsref "/components/links/" >}}).
 
 ### Icon
 
@@ -309,6 +318,10 @@ You will have to make some extra Javascript to change the styles and update the 
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+### Link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the default build and from the documentation. They are useless in OUDS web.
 
 ### Object fit
 
