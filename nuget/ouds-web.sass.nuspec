@@ -11,7 +11,7 @@
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
     <summary>OUDS Web framework in Sass. Includes JavaScript</summary>
     <language>en-us</language>
-    <projectUrl>https://web.unified-design-system.orange.com/</projectUrl>
+    <projectUrl>https://boosted.orange.com/ouds-web/</projectUrl>
     <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="ouds/main" />
     <icon>ouds-web.png</icon>
     <license type="expression">MIT</license>
