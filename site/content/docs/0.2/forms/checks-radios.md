@@ -11,9 +11,11 @@ toc: true
 ---
 
 {{< example >}}
-<input class="form-check-input" type="checkbox" value="">
+<input class="form-check-input" type="checkbox" value="" id="checkDefault-2">
+<label for="checkDefault-2"></label>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault-1">
+  <label for="checkDefault-1"></label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkDefault0">
