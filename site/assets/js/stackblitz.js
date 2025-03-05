@@ -39,7 +39,7 @@ const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes) => {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="${cssCdn}" rel="stylesheet">
-  <link href="https://web.unified-design-system.orange.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
+  <link href="https://boosted.orange.com/ouds-web/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
   <title>OUDS Web Example</title>
   <${'script'} defer src="${jsBundleCdn}"></${'script'}>
 </head>
