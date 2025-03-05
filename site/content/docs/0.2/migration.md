@@ -9,6 +9,67 @@ aliases:
 toc: true
 ---
 
+## v0.3.0
+
+### Content styles
+
+#### Reboot
+
+- <span class="badge text-bg-success">New</span> Default link styles has been updated.
+
+### Components
+
+#### Links
+
+- <span class="badge text-bg-success">New</span> Link is a new component implemented in OUDS.
+
+### Helpers
+
+#### Icon link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Colors links are unstyled in OUDS, the documentation is only kept for Bootstrap compatibility.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The Icon link documentation has been merged into is the new [Link component]({{< docsref "/components/links" >}}) documentation and removed from Helpers section.
+
+### Utilities
+
+#### Link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Link utilities are no more used in OUDS and the following classes have been removed: <code>.link-opacity-{number}</code>, <code>.link-offset-{number}</code>, <code>.link-underline-{number}</code>, .<code>link-underline-opacity-{number}</code>
+
+### CSS and Sass variables
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-link-color-arrow-enabled</code></li>
+      <li><code>$ouds-link-color-arrow-focus</code></li>
+      <li><code>$ouds-link-color-arrow-hover</code></li>
+      <li><code>$ouds-link-color-arrow-pressed</code></li>
+      <li><code>$ouds-link-color-content-disabled-mono</code></li>
+      <li><code>$ouds-link-color-content-enabled-mono</code></li>
+      <li><code>$ouds-link-color-content-enabled</code></li>
+      <li><code>$ouds-link-color-content-focus-mono</code></li>
+      <li><code>$ouds-link-color-content-focus</code></li>
+      <li><code>$ouds-link-color-content-hover-mono</code></li>
+      <li><code>$ouds-link-color-content-hover</code></li>
+      <li><code>$ouds-link-color-content-pressed-mono</code></li>
+      <li><code>$ouds-link-color-content-pressed:</code></li>
+      <li><code>$ouds-link-size-icon-medium</code></li>
+      <li><code>$ouds-link-size-icon-small</code></li>
+      <li><code>$ouds-link-size-min-height-medium</code></li>
+      <li><code>$ouds-link-size-min-height-small</code></li>
+      <li><code>$ouds-link-size-min-width-medium</code></li>
+      <li><code>$ouds-link-size-min-width-small</code></li>
+      <li><code>$ouds-link-space-column-gap-arrow-medium</code></li>
+      <li><code>$ouds-link-space-column-gap-arrow-small</code></li>
+      <li><code>$ouds-link-space-column-gap-icon-medium</code></li>
+      <li><code>$ouds-link-space-column-gap-icon-small</code></li>
+      <li><code>$ouds-link-space-padding-block</code></li>
+      <li><code>$ouds-link-space-padding-inline</code></li>
+    </ul>
+  </details>
+
 ## v0.2.0
 
 ### Components
