@@ -141,17 +141,41 @@
 
     .form-check-input {
       @include form-validation-state-selector($state) {
-        filter: none; // OUDS mod: remove filter to avoid having a blue border (invert of red border)
-        border-color: $border-color;
+        background-color: $ouds-checkbox-color-content-error-enabled; // OUDS mod
+        // OUDS mod: no `border-color`
 
-        &:checked,
-        &:active {
-          background-color: $color;
+        // OUDS mod: no `:checked`
+        // OUDS mod: no `:focus`
+
+        // OUDS mod
+        &:hover {
+          background-color: $ouds-checkbox-color-content-error-hover;
+
+          ~ .form-check-label {
+            color: $ouds-checkbox-color-content-error-hover;
+          }
         }
 
-        // OUDS mod: no box-shadow
+        &:focus-visible {
+          background-color: $ouds-checkbox-color-content-error-focus;
 
-        // OUDS mod: label's color doesn't change
+          ~ .form-check-label {
+            color: $ouds-checkbox-color-content-error-focus;
+          }
+        }
+
+        &:active {
+          background-color: $ouds-checkbox-color-content-error-pressed;
+
+          ~ .form-check-label {
+            color: $ouds-checkbox-color-content-error-pressed;
+          }
+        }
+        // End mod
+
+        ~ .form-check-label {
+          color: $ouds-checkbox-color-content-error-enabled; // OUDS mod: instead of `$color`
+        }
       }
     }
 

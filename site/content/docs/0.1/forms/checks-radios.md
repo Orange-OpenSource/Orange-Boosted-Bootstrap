@@ -5,21 +5,21 @@ description: Create consistent cross-browser and cross-device checkboxes and rad
 group: forms
 aliases:
   - "/docs/forms/checks/"
-  - "/docs/0.2/forms/checks/"
+  - "/docs/0.1/forms/checks/"
   - "/docs/forms/checks-radios/"
 toc: true
 ---
 
 {{< example >}}
 <input class="form-check-input" type="checkbox" value="" id="checkDefault-2">
-<label for="checkDefault-2"></label>
+<label for="checkDefault-2">Not empty</label>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkDefault-1">
-  <label for="checkDefault-1"></label>
+  <label for="checkDefault-1">Not empty</label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkDefault0">
-  <label class="form-check-label" for="checkDefault0"></label>
+  <label class="form-check-label" for="checkDefault0">Not empty</label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
