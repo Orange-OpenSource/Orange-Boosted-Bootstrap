@@ -47,7 +47,7 @@ Visited links don't have a specific style by default. The `:visited` status can 
 
 Make links look inactive by adding the `aria-disabled="true"` attribute to any `<a>` element. Disabled links have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-Disabled links using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [link functionality caveat](/components/buttons/#link-functionality-caveat).
+Disabled links using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [link functionality caveat](/docs/{{< param docs_version >}}/components/buttons/#link-functionality-caveat).
 
 {{< example >}}
 <div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
