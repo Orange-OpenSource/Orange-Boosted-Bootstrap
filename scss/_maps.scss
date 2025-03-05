@@ -25,6 +25,7 @@ $ouds-border-colors: (
   "brand-primary": var(--#{$prefix}color-border-brand-primary),
   "default": var(--#{$prefix}color-border-default),
   "emphasized": var(--#{$prefix}color-border-emphasized),
+  "muted": var(--#{$prefix}color-border-muted),
   "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
   "always-black": var(--#{$prefix}color-always-black),
   "always-white": var(--#{$prefix}color-always-white),
@@ -157,6 +158,7 @@ $ouds-backgrounds: (
 $ouds-text-colors: (
   "brand-primary": var(--#{$prefix}color-content-brand-primary),
   "default": var(--#{$prefix}color-content-default),
+  "default-2": var(--#{$prefix}color-content-default-2),
   "disabled": var(--#{$prefix}color-content-disabled),
   "muted": var(--#{$prefix}color-content-muted),
   "on-brand-primary": var(--#{$prefix}color-content-on-brand-primary),

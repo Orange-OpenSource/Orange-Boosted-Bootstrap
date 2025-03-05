@@ -1,5 +1,5 @@
 // Semantic custom properties applications
-// Token version 0.4.1
+// Token version 0.6.0
 
 // scss-docs-start ouds-all-semantic-css-color
 // scss-docs-start ouds-semantic-css-color
@@ -7,6 +7,7 @@
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-light};
   --#{$prefix}color-action-enabled: #{$ouds-color-action-enabled-light};
   --#{$prefix}color-action-focus: #{$ouds-color-action-focus-light};
+  --#{$prefix}color-action-focus-2: #{$ouds-color-action-focus-2-light};
   --#{$prefix}color-action-highlighted: #{$ouds-color-action-highlighted-light};
   --#{$prefix}color-action-hover: #{$ouds-color-action-hover-light};
   --#{$prefix}color-action-loading: #{$ouds-color-action-loading-light};
@@ -36,9 +37,11 @@
   --#{$prefix}color-border-emphasized: #{$ouds-color-border-emphasized-light};
   --#{$prefix}color-border-focus: #{$ouds-color-border-focus-light};
   --#{$prefix}color-border-focus-inset: #{$ouds-color-border-focus-inset-light};
+  --#{$prefix}color-border-muted: #{$ouds-color-border-muted-light};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-light};
   --#{$prefix}color-content-brand-primary: #{$ouds-color-content-brand-primary-light};
   --#{$prefix}color-content-default: #{$ouds-color-content-default-light};
+  --#{$prefix}color-content-default-2: #{$ouds-color-content-default-2-light};
   --#{$prefix}color-content-disabled: #{$ouds-color-content-disabled-light};
   --#{$prefix}color-content-muted: #{$ouds-color-content-muted-light};
   --#{$prefix}color-content-on-action-disabled: #{$ouds-color-content-on-action-disabled-light};
@@ -75,9 +78,17 @@
   --#{$prefix}color-decorative-brand-primary: #{$ouds-color-decorative-brand-primary-light};
   --#{$prefix}color-decorative-brand-secondary: #{$ouds-color-decorative-brand-secondary-light};
   --#{$prefix}color-decorative-brand-tertiary: #{$ouds-color-decorative-brand-tertiary-light};
-  --#{$prefix}color-decorative-neutral-default: #{$ouds-color-decorative-neutral-default-light};
-  --#{$prefix}color-decorative-neutral-emphasized: #{$ouds-color-decorative-neutral-emphasized-light};
-  --#{$prefix}color-decorative-neutral-muted: #{$ouds-color-decorative-neutral-muted-light};
+  --#{$prefix}color-decorative-neutral-emphasized-higher: #{$ouds-color-decorative-neutral-emphasized-higher-light};
+  --#{$prefix}color-decorative-neutral-emphasized-low: #{$ouds-color-decorative-neutral-emphasized-low-light};
+  --#{$prefix}color-decorative-neutral-emphasized-lower: #{$ouds-color-decorative-neutral-emphasized-lower-light};
+  --#{$prefix}color-decorative-neutral-emphasized-lowest: #{$ouds-color-decorative-neutral-emphasized-lowest-light};
+  --#{$prefix}color-decorative-neutral-muted-high: #{$ouds-color-decorative-neutral-muted-high-light};
+  --#{$prefix}color-decorative-neutral-muted-higher: #{$ouds-color-decorative-neutral-muted-higher-light};
+  --#{$prefix}color-decorative-neutral-muted-highest: #{$ouds-color-decorative-neutral-muted-highest-light};
+  --#{$prefix}color-decorative-neutral-muted-low: #{$ouds-color-decorative-neutral-muted-low-light};
+  --#{$prefix}color-decorative-neutral-muted-lower: #{$ouds-color-decorative-neutral-muted-lower-light};
+  --#{$prefix}color-decorative-neutral-muted-lowest: #{$ouds-color-decorative-neutral-muted-lowest-light};
+  --#{$prefix}color-decorative-neutral-muted-medium: #{$ouds-color-decorative-neutral-muted-medium-light};
   --#{$prefix}color-decorative-skin-tint-100: #{$ouds-color-decorative-skin-tint-100-light};
   --#{$prefix}color-decorative-skin-tint-200: #{$ouds-color-decorative-skin-tint-200-light};
   --#{$prefix}color-decorative-skin-tint-300: #{$ouds-color-decorative-skin-tint-300-light};
@@ -122,6 +133,7 @@
   --#{$prefix}color-action-disabled: #{$ouds-color-action-disabled-dark};
   --#{$prefix}color-action-enabled: #{$ouds-color-action-enabled-dark};
   --#{$prefix}color-action-focus: #{$ouds-color-action-focus-dark};
+  --#{$prefix}color-action-focus-2: #{$ouds-color-action-focus-2-dark};
   --#{$prefix}color-action-highlighted: #{$ouds-color-action-highlighted-dark};
   --#{$prefix}color-action-hover: #{$ouds-color-action-hover-dark};
   --#{$prefix}color-action-loading: #{$ouds-color-action-loading-dark};
@@ -151,9 +163,11 @@
   --#{$prefix}color-border-emphasized: #{$ouds-color-border-emphasized-dark};
   --#{$prefix}color-border-focus: #{$ouds-color-border-focus-dark};
   --#{$prefix}color-border-focus-inset: #{$ouds-color-border-focus-inset-dark};
+  --#{$prefix}color-border-muted: #{$ouds-color-border-muted-dark};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-dark};
   --#{$prefix}color-content-brand-primary: #{$ouds-color-content-brand-primary-dark};
   --#{$prefix}color-content-default: #{$ouds-color-content-default-dark};
+  --#{$prefix}color-content-default-2: #{$ouds-color-content-default-2-dark};
   --#{$prefix}color-content-disabled: #{$ouds-color-content-disabled-dark};
   --#{$prefix}color-content-muted: #{$ouds-color-content-muted-dark};
   --#{$prefix}color-content-on-action-disabled: #{$ouds-color-content-on-action-disabled-dark};
@@ -190,9 +204,17 @@
   --#{$prefix}color-decorative-brand-primary: #{$ouds-color-decorative-brand-primary-dark};
   --#{$prefix}color-decorative-brand-secondary: #{$ouds-color-decorative-brand-secondary-dark};
   --#{$prefix}color-decorative-brand-tertiary: #{$ouds-color-decorative-brand-tertiary-dark};
-  --#{$prefix}color-decorative-neutral-default: #{$ouds-color-decorative-neutral-default-dark};
-  --#{$prefix}color-decorative-neutral-emphasized: #{$ouds-color-decorative-neutral-emphasized-dark};
-  --#{$prefix}color-decorative-neutral-muted: #{$ouds-color-decorative-neutral-muted-dark};
+  --#{$prefix}color-decorative-neutral-emphasized-higher: #{$ouds-color-decorative-neutral-emphasized-higher-dark};
+  --#{$prefix}color-decorative-neutral-emphasized-low: #{$ouds-color-decorative-neutral-emphasized-low-dark};
+  --#{$prefix}color-decorative-neutral-emphasized-lower: #{$ouds-color-decorative-neutral-emphasized-lower-dark};
+  --#{$prefix}color-decorative-neutral-emphasized-lowest: #{$ouds-color-decorative-neutral-emphasized-lowest-dark};
+  --#{$prefix}color-decorative-neutral-muted-high: #{$ouds-color-decorative-neutral-muted-high-dark};
+  --#{$prefix}color-decorative-neutral-muted-higher: #{$ouds-color-decorative-neutral-muted-higher-dark};
+  --#{$prefix}color-decorative-neutral-muted-highest: #{$ouds-color-decorative-neutral-muted-highest-dark};
+  --#{$prefix}color-decorative-neutral-muted-low: #{$ouds-color-decorative-neutral-muted-low-dark};
+  --#{$prefix}color-decorative-neutral-muted-lower: #{$ouds-color-decorative-neutral-muted-lower-dark};
+  --#{$prefix}color-decorative-neutral-muted-lowest: #{$ouds-color-decorative-neutral-muted-lowest-dark};
+  --#{$prefix}color-decorative-neutral-muted-medium: #{$ouds-color-decorative-neutral-muted-medium-dark};
   --#{$prefix}color-decorative-skin-tint-100: #{$ouds-color-decorative-skin-tint-100-dark};
   --#{$prefix}color-decorative-skin-tint-200: #{$ouds-color-decorative-skin-tint-200-dark};
   --#{$prefix}color-decorative-skin-tint-300: #{$ouds-color-decorative-skin-tint-300-dark};
@@ -236,6 +258,7 @@
 $ouds-color-action-disabled: var(--#{$prefix}color-action-disabled) !default;
 $ouds-color-action-enabled: var(--#{$prefix}color-action-enabled) !default;
 $ouds-color-action-focus: var(--#{$prefix}color-action-focus) !default;
+$ouds-color-action-focus-2: var(--#{$prefix}color-action-focus-2) !default;
 $ouds-color-action-highlighted: var(--#{$prefix}color-action-highlighted) !default;
 $ouds-color-action-hover: var(--#{$prefix}color-action-hover) !default;
 $ouds-color-action-loading: var(--#{$prefix}color-action-loading) !default;
@@ -265,9 +288,11 @@ $ouds-color-border-default: var(--#{$prefix}color-border-default) !default;
 $ouds-color-border-emphasized: var(--#{$prefix}color-border-emphasized) !default;
 $ouds-color-border-focus: var(--#{$prefix}color-border-focus) !default;
 $ouds-color-border-focus-inset: var(--#{$prefix}color-border-focus-inset) !default;
+$ouds-color-border-muted: var(--#{$prefix}color-border-muted) !default;
 $ouds-color-border-on-brand-primary: var(--#{$prefix}color-border-on-brand-primary) !default;
 $ouds-color-content-brand-primary: var(--#{$prefix}color-content-brand-primary) !default;
 $ouds-color-content-default: var(--#{$prefix}color-content-default) !default;
+$ouds-color-content-default-2: var(--#{$prefix}color-content-default-2) !default;
 $ouds-color-content-disabled: var(--#{$prefix}color-content-disabled) !default;
 $ouds-color-content-muted: var(--#{$prefix}color-content-muted) !default;
 $ouds-color-content-on-action-disabled: var(--#{$prefix}color-content-on-action-disabled) !default;
@@ -304,9 +329,17 @@ $ouds-color-decorative-accent-5-muted: var(--#{$prefix}color-decorative-accent-5
 $ouds-color-decorative-brand-primary: var(--#{$prefix}color-decorative-brand-primary) !default;
 $ouds-color-decorative-brand-secondary: var(--#{$prefix}color-decorative-brand-secondary) !default;
 $ouds-color-decorative-brand-tertiary: var(--#{$prefix}color-decorative-brand-tertiary) !default;
-$ouds-color-decorative-neutral-default: var(--#{$prefix}color-decorative-neutral-default) !default;
-$ouds-color-decorative-neutral-emphasized: var(--#{$prefix}color-decorative-neutral-emphasized) !default;
-$ouds-color-decorative-neutral-muted: var(--#{$prefix}color-decorative-neutral-muted) !default;
+$ouds-color-decorative-neutral-emphasized-higher: var(--#{$prefix}color-decorative-neutral-emphasized-higher) !default;
+$ouds-color-decorative-neutral-emphasized-low: var(--#{$prefix}color-decorative-neutral-emphasized-low) !default;
+$ouds-color-decorative-neutral-emphasized-lower: var(--#{$prefix}color-decorative-neutral-emphasized-lower) !default;
+$ouds-color-decorative-neutral-emphasized-lowest: var(--#{$prefix}color-decorative-neutral-emphasized-lowest) !default;
+$ouds-color-decorative-neutral-muted-high: var(--#{$prefix}color-decorative-neutral-muted-high) !default;
+$ouds-color-decorative-neutral-muted-higher: var(--#{$prefix}color-decorative-neutral-muted-higher) !default;
+$ouds-color-decorative-neutral-muted-highest: var(--#{$prefix}color-decorative-neutral-muted-highest) !default;
+$ouds-color-decorative-neutral-muted-low: var(--#{$prefix}color-decorative-neutral-muted-low) !default;
+$ouds-color-decorative-neutral-muted-lower: var(--#{$prefix}color-decorative-neutral-muted-lower) !default;
+$ouds-color-decorative-neutral-muted-lowest: var(--#{$prefix}color-decorative-neutral-muted-lowest) !default;
+$ouds-color-decorative-neutral-muted-medium: var(--#{$prefix}color-decorative-neutral-muted-medium) !default;
 $ouds-color-decorative-skin-tint-100: var(--#{$prefix}color-decorative-skin-tint-100) !default;
 $ouds-color-decorative-skin-tint-200: var(--#{$prefix}color-decorative-skin-tint-200) !default;
 $ouds-color-decorative-skin-tint-300: var(--#{$prefix}color-decorative-skin-tint-300) !default;
