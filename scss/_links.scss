@@ -32,9 +32,14 @@
   background: transparent;
   border: 0;
 
+  &:has(svg, img, .icon):not(:hover, :active, :focus-visible, :focus[data-focus-visible]) {
+    text-decoration: none;
+  }
+
   svg,
   img,
   .icon {
+    flex-shrink: 0;
     width: 1em;
     height: 1em;
     margin-right: var(--#{$prefix}link-icon-gap);
@@ -54,6 +59,13 @@
 
   @extend .link;
   text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &:focus[data-focus-visible] {
+    text-decoration: underline;
+  }
 
   &:hover::before,
   &:hover::after {
@@ -77,6 +89,10 @@
     background-color: var(--#{$prefix}link-arrow-disabled-color);
   }
 
+  &:not(.back) {
+    display: inline-block;
+  }
+
   &.back::before,
   &:not(.back)::after {
     @extend %chevron-properties;
@@ -86,7 +102,7 @@
   &:not(.back)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-arrow-gap);
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(1px);
   }
 }
 

@@ -116,7 +116,7 @@ All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set
 
 ## Links
 
-Links have a default `color` and underline applied. While links change on `:hover`, by default they don't change based on whether someone `:visited` the link.
+Links have bold and underline applied. While links change on `:hover`, by default they don't change based on whether someone `:visited` the link.
 
 {{< example >}}
 <a href="#">This is an example link</a>
