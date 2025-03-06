@@ -85,20 +85,22 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 ## With icon
 
+{{< callout info >}}
+Inside buttons, you should use Solaris icons, either in an SVG sprite (`<symbol>` element in an SVG file), which is the recommended method, or in an icon font. You can generate both with [Solaris Icons Finder](https://oran.ge/icons).
+{{< /callout >}}
+
+We strongly advise against using an `<img>` or other techniques, especially because the icon will not benefit from dynamic color changes across states (hover, focus, active) and the color mode system will not work.
+
 ### Text and icon
 
-The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to:
+With an SVG sprite, you need to:
 
 - set its dimensions to default `1rem` size, the icon will adapt automatically,
 - fill it using `currentColor` to respect button color scheme.
 
-You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
-
-Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
+You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web. Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
-
-We strongly advise not using an `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
@@ -163,7 +165,7 @@ We strongly advise not using an `<img>`, in particular because the icon will not
 {{< /example >}}
 
 ### Icon only
-<!-- TODO add info about solaris icons waiting for icons page -->
+
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
 <!-- TODO: Add a paragraph about tooltip and/or title -->
@@ -563,46 +565,3 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 {{< /example >}}
 
 <!-- OUDS mod: no Button plugin -->
-
-## CSS
-
-### Variables
-
-As part of OUDS Web's evolving CSS variables approach, buttons use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
-
-{{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
-
-<!--OUDS mod: no outline variant-->
-Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()` <!--and `button-size()` -->mixin.
-
-<!-- OUDS mod: no custom `.btn-*` modifier class-->
-
-### Sass variables
-
-{{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
-
-### Sass mixins
-
-There are one mixin for button colors: button variant mixin.
-
-{{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
-
-{{< bootstrap-compatibility false >}}
-
-{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
-
-{{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
-
-{{< /bootstrap-compatibility >}}
-
-<!-- OUDS mod: button-icon mixin not used for now -->
-
-<!-- {{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}} -->
-
-Button variants use their respective mixin to generate the modifier classes in `scss/_buttons.scss`. Here are the way we define the OUDS Buttons.
-
-{{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
-
-### Component tokens
-
-{{< scss-docs name="ouds-component-button" file="scss/tokens/_component.scss" >}}
