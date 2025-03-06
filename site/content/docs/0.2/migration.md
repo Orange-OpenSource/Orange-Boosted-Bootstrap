@@ -9,6 +9,38 @@ aliases:
 toc: true
 ---
 
+## v0.3.0
+
+### Utilities
+
+#### Border
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border color: `.border-muted`.
+
+### CSS and Sass variables
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-color-border-muted-dark</code></li>
+      <li><code>$ouds-color-border-muted-light</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
+    <ul>
+      <li><code>$ouds-color-border-muted</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-color-border-muted</code></li>
+    </ul>
+  </details>
+
 ## v0.2.0
 
 ### Components
