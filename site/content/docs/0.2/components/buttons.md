@@ -163,7 +163,7 @@ We strongly advise not using an `<img>`, in particular because the icon will not
 {{< /example >}}
 
 ### Icon only
-
+<!-- TODO add info about solaris icons waiting for icons page -->
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
 <!-- TODO: Add a paragraph about tooltip and/or title -->
