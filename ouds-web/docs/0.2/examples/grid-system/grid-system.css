@@ -1,0 +1,50 @@
+:root,
+[data-bs-theme="light"] {
+  --bs-example-color-bg-emphasized-primary: #141414;
+  --bs-example-color-decorative-accent-2-default: #4ab4e6;
+  --bs-example-color-decorative-accent-2-muted: #a5daf3;
+}
+
+[data-bs-theme="dark"] {
+  --bs-example-color-bg-emphasized-primary: #333;
+}
+
+.legend {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.row {
+  min-height: 150px;
+}
+
+.bg-container {
+  background-color: var(--bs-example-color-decorative-accent-2-default);
+}
+
+.bg-example {
+  background-color: var(--bs-example-color-bg-emphasized-primary);
+}
+
+.bg-col {
+  background-color: var(--bs-example-color-decorative-accent-2-muted);
+}
+
+.col {
+  text-align: center;
+  background-color: var(--bs-example-color-decorative-accent-2-muted);
+  background-clip: content-box;
+}
+
+div.row .col {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+}
+
+div.row .col:first-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff;
+}
+
+div.row .col:last-child {
+  box-shadow: inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+}

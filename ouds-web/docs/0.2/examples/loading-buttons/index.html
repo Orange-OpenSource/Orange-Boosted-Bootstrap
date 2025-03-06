@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and OUDS Web contributors">
+    <meta name="generator" content="Hugo 0.126.3">
+    <title>Loading buttons · OUDS Web v0.2</title>
+
+    <link rel="canonical" href="https://web.unified-design-system.orange.com/docs/0.2/examples/loading-buttons/">
+
+    <script src="/ouds-web/docs/0.2/assets/js/color-modes.js"></script>
+
+    <link href="/ouds-web/docs/0.2/dist/css/ouds-web-bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="/ouds-web/docs/0.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/ouds-web/docs/0.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/ouds-web/docs/0.2/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/ouds-web/docs/0.2/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+       
+      .bd-mode-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+       
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="loading-buttons.css" rel="stylesheet"><!-- Custom styles for this template -->
+    <link href="../../assets/css/docs.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
+
+    
+    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-tall me-tall bd-mode-toggle">
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+    </div>
+<main class="container-fluid container-max-width">
+  <h1 class="py-medium">Button loading states</h1>
+
+  <p>Find here some examples of how to implement a live loading button, for an indeterminate or determinate time. These examples are not part of the OUDS Web library and must be adapted to your project. You can find the code below.</p>
+
+  <h2 class="py-short">Indeterminate loading</h2>
+  <p>For this example, the time is set to 5 seconds by Javascript, but in a real project, you just need a callback when the action is finished. An update to the status is done every second to let the user know the download is still ongoing. This interval should be adapted to your context. Each time, a dot is added to the message to make sure it will change and then be vocalized by the screen readers.</p>
+  <div class="row py-taller">
+    <div class="col-8">
+      <button type="button" class="btn btn-default" id="loading-btn-1">
+        Download file 1
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-1" class="visually-hidden d-none">Downloading file 1</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-default" id="loading-btn-2" title="Download file 2">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        <span class="visually-hidden">Download file 2</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-2" class="visually-hidden d-none">Downloading file 2</span>
+      </button>
+
+      <button type="button" class="btn btn-default" id="loading-btn-3">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        Download file 3
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-3" class="visually-hidden d-none">Downloading file 3</span>
+      </button>
+
+      <a class="btn btn-default" id="loading-btn-4" href="#" role="button">
+        Download file 4
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-4" class="visually-hidden d-none">Downloading file 4</span>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="py-short">Determinate loading</h2>
+  <p>If known, the loading time must be set directly on the button, through the CSS variable <code>--btn-loading-time</code>. In this example, it is set to 4s for the 1st button, 6s for the 2nd button, 8s for the 3rd button, and 10s for the 4th button. This value will be used for the icon's animation. An update to the status is done every second, giving the percentage of time that has elapsed. This interval should be adapted to your context.</p>
+  <div class="row py-taller">
+    <div class="col-8">
+      <button type="button" class="btn btn-default" id="loading-btn-5" style="--bs-btn-loading-time: 4s;">
+        Download file 5
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-5" class="visually-hidden d-none">Downloading file 5</span>
+      </button>
+
+      <button type="button" class="btn btn-icon btn-default" id="loading-btn-6" style="--bs-btn-loading-time: 6s;" title="Download file 6">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        <span class="visually-hidden">Download file 6</span>
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-6" class="visually-hidden d-none">Downloading file 6</span>
+      </button>
+
+      <button type="button" class="btn btn-default" id="loading-btn-7" style="--bs-btn-loading-time: 8s;">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+        </svg>
+        Download file 7
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-7" class="visually-hidden d-none">Downloading file 7</span>
+      </button>
+
+      <a class="btn btn-default" id="loading-btn-8" href="#" role="button" style="--bs-btn-loading-time: 10s;">
+        Download file 8
+        <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+          <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+        </svg>
+        <span role="status" id="loading-msg-8" class="visually-hidden d-none">Downloading file 8</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="accordion" id="code-accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          See Javascript code
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#code-accordion">
+        <div class="accordion-body border border-subtle p-none">
+          <div class="bd-example-snippet bd-code-snippet bd-file-ref">
+              
+              <div class="d-flex align-items-center highlight-toolbar ps-tall pe-short py-shortest border-bottom border-thin border-default">
+                
+                <a class="me-huge font-monospace link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v0.2.0//docs/0.2/examples/loading-buttons/loading-buttons.js">/docs/0.2/examples/loading-buttons/loading-buttons.js</a>
+              </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Manage loading buttons looks and statuses
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">  <span class="s1">&#39;use strict&#39;</span>
+          </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">loadingButtons</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[id^=&#34;loading-btn-&#34;]&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">  <span class="nx">loadingButtons</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">loadingButton</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">    <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Extract the number from the button&#39;s ID
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">).</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">loadingButton</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Get the loading time from the CSS variable --bs-btn-loading-time, if specified. Otherwise, it means the loading time is undetermined
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">loadingTime</span> <span class="o">=</span> <span class="nx">getComputedStyle</span><span class="p">(</span><span class="nx">loadingButton</span><span class="p">).</span><span class="nx">getPropertyValue</span><span class="p">(</span><span class="s1">&#39;--bs-btn-loading-time&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Select the corresponding status message and loading animation elements
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">statusMessage</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`#loading-msg-</span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Set the interval for updating the status message: it must be adapted to your use case.
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// It can be 1000 if loading time is indeterminate, and can be something more adapted if loading time is known
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">interval</span> <span class="o">=</span> <span class="mi">1000</span>
+          </span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Change the button&#39;s appearance by adding a loading class and disabling it
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">loadingTime</span> <span class="o">?</span> <span class="s1">&#39;loading-determinate&#39;</span> <span class="o">:</span> <span class="s1">&#39;loading-indeterminate&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">href</span> <span class="o">=</span> <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">loadingButton</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">===</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;aria-disabled&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="p">}</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Show the status message and update it every &#39;interval&#39; seconds
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">statusMessage</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;d-none&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">      <span class="nx">statusMessage</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">loadingTime</span> <span class="o">?</span> <span class="sb">`Downloading file </span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> in </span><span class="si">${</span><span class="nx">loadingTime</span><span class="si">}</span><span class="sb">`</span> <span class="o">:</span> <span class="sb">`Downloading file </span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb">`</span>
+          </span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">updateStatusMessageCall</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">loadingTime</span><span class="p">)</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">counter</span><span class="o">++</span>
+          </span></span><span class="line"><span class="cl">          <span class="c1">// Calculate the percentage of time that has elapsed to update status message
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="kr">const</span> <span class="nx">percentTime</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">counter</span> <span class="o">*</span> <span class="nx">interval</span> <span class="o">/</span> <span class="p">(</span><span class="nx">loadingTime</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">))</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">statusMessage</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="sb">`Downloading file </span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> in </span><span class="si">${</span><span class="nx">loadingTime</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">percentTime</span><span class="si">}</span><span class="sb">%`</span>
+          </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">statusMessage</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">statusMessage</span><span class="p">.</span><span class="nx">innerHTML</span><span class="si">}</span><span class="sb">.`</span>
+          </span></span><span class="line"><span class="cl">        <span class="p">}</span>
+          </span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="nx">interval</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">      <span class="c1">// Stop loading after the loading time or after 5 seconds the undetermined loading time of this demo
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">updateStatusMessageCall</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">statusMessage</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="sb">`Downloading file </span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> is complete`</span>
+          </span></span><span class="line"><span class="cl">        <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">loadingTime</span> <span class="o">?</span> <span class="s1">&#39;loading-determinate&#39;</span> <span class="o">:</span> <span class="s1">&#39;loading-indeterminate&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">loadingButton</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">===</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;aria-disabled&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="nx">href</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          </span></span><span class="line"><span class="cl">          <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">        <span class="p">}</span>
+          </span></span><span class="line"><span class="cl">
+          </span></span><span class="line"><span class="cl">        <span class="c1">// Set focus back to the button for accessibility reasons
+          </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">loadingButton</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+          </span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="nx">loadingTime</span> <span class="o">?</span> <span class="p">(</span><span class="nx">loadingTime</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">:</span> <span class="mi">5000</span><span class="p">)</span>
+          </span></span><span class="line"><span class="cl">    <span class="p">})</span>
+          </span></span><span class="line"><span class="cl">  <span class="p">})</span>
+          </span></span><span class="line"><span class="cl"><span class="p">})()</span>
+          </span></span></code></pre></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<script defer src="/ouds-web/docs/0.2/dist/js/ouds-web.bundle.min.js" integrity="sha384-wsCZDwY5ncWxWFUnwNn6fRNayqcmfMpiUGqG0i54gb/RBOlPNtYrteatYZc+hPPa"></script>
+
+    <script src="loading-buttons.js"></script></body>
+</html>
