@@ -75,16 +75,20 @@ When icons are purely decorative, they should be hidden from assistive technolog
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
 
 {{< example >}}
-<a class="link icon-link" href="#">
-  <svg aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-  </svg>
-  This is an example of a link with an icon
-</a>
-<a class="link icon-link" href="#">
-  <span class="icon si si-settings" aria-hidden="true"></span>
-  This is an example of a link with an icon
-</a>
+<div>
+  <a class="link icon-link" href="#">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    This is an example of a link with an SVG icon
+  </a>
+</div>
+<div>
+  <a class="link icon-link" href="#">
+    <span class="icon si si-settings" aria-hidden="true"></span>
+    This is an example of a link with an icon font
+  </a>
+</div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
