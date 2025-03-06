@@ -1,7 +1,7 @@
-<section class="border-top border-medium border-default pt-scaled-short pb-scaled-spacious row">
-  <div class="col-xl-4">
+<section class="row border-top border-medium border-default pt-scaled-short mb-scaled-spacious py-xl-medium">
+  <div class="col-xl-4 pe-xl-jumbo">
     <h2 class="text-brand-primary mb-scaled-shorter">Get started any way you&nbsp;want</h2>
-    <p class="lead fw-bold text-wrap-balance mb-scaled-shorter">
+    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-shorter">
       Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
     </p>
     <p class="mb-scaled-tall">
@@ -15,16 +15,22 @@
     <p class="mb-scaled-medium">
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
-    {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
-    {{ highlight (printf ("yarn add @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
+    <div class="mb-scaled-shorter">
+      {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
+    </div>
+    <div class="mb-scaled-shorter">
+      {{ highlight (printf ("yarn add @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
+    </div>
     <p class="mb-scaled-tall">
       <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>
-    <h3 class="h2 mb-scaled-shorter">Include via CDN</h3>
-    <p class="mb-scaled-medium">
-      When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/uds-web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
-    </p>
-    {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
-    {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
+    <div class="border-top border-medium border-default pt-scaled-short">
+      <h3 class="h2">Include via CDN</h3>
+      <p class="mb-scaled-medium">
+        When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/uds-web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
+      </p>
+      {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
+      {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
+    </div>
   </div>
 </section>

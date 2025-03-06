@@ -68,8 +68,8 @@
     <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order and add a condition -->
     {{- if not $example -}}
     <div class="position-absolute top-0 mt-shortest end-0 me-short">
-      <button type="button" class="btn-clipboard mt-none me-none" title="Copy to clipboard">
-        <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy code to clipboard">
+        <svg aria-hidden="true"><use xlink:href="#copy"/></svg>
       </button>
     </div>
     {{- end -}}

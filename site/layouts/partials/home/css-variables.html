@@ -1,23 +1,22 @@
-<section class="row g-lg-spacious align-items-center">
-  <div class="col-lg-8 mb-huge">
-    <div class="masthead-followup-icon d-inline-block mb-tall" style="--bg-rgb: var(--bd-pink-rgb);">
-      <svg class="bi fs-1"><use xlink:href="#braces"></use></svg>
-    </div>
-    <h2 class="mb-tall fw-semibold lh-sm">Build and extend in real-time with CSS&nbsp;variables</h2>
-    <p class="lead fw-normal">
+<section class="row border-top border-medium border-default pt-scaled-short">
+  <div class="col-xl-4 pe-xl-jumbo">
+    <h2 class="text-brand-primary mb-scaled-shorter">Build and extend in real-time with CSS&nbsp;variables</h2>
+    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-shorter">
       OUDS Web is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
     </p>
-    <p class="d-flex align-items-start flex-column lead fw-normal mb-none">
-      <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="icon-link icon-link-hover fw-semibold mb-tall">
+    <p class="mb-scaled-tall">
+      <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="link link-chevron">
         Learn more about CSS variables
-        <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
       </a>
     </p>
   </div>
-  <div class="row gx-lg-spacious">
-    <div class="col-lg-6 mb-tall">
-      <h3 class="fw-semibold">Using CSS variables</h3>
-      <p>Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
+
+  <div class="col-xl-8">
+    <h3 class="h2 mb-scaled-shorter">Using CSS variables</h3>
+    <p class="mb-scaled-medium">
+      Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.
+    </p>
+    <div class="mb-scaled-tall">
       {{ highlight (printf `.component {
   color: var(--bs-color-content-default);
   background-color: var(--bs-color-bg-secondary);
@@ -29,9 +28,11 @@
   color: var(--bs-color-content-status-negative);
 }`) "scss" "" }}
     </div>
-    <div class="col-lg-6 mb-tall">
-      <h3 class="fw-semibold">Customizing via CSS variables</h3>
-      <p>Override global, component, or utility class variables to customize OUDS Web just how you like. No need to redeclare each rule, just a new variable value.</p>
+    <div class="border-top border-medium border-default pt-scaled-short">
+      <h3 class="h2">Customizing via CSS variables</h3>
+      <p  class="mb-scaled-medium">
+        Override global, component, or utility class variables to customize OUDS Web just how you like. No need to redeclare each rule, just a new variable value.
+      </p>
       {{ highlight (printf `body {
   --bs-body-font-family: var(--bs-font-monospace);
   --bs-body-line-height: 1.4;
