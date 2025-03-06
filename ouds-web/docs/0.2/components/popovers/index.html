@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentation and examples for adding OUDS Web popovers, like those found in iOS, to any element on your site.">
+<meta name="author" content="Orange and OUDS Web contributors">
+<meta name="generator" content="Hugo 0.126.3">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="0.2">
+
+<link rel="canonical" href="https://web.unified-design-system.orange.com/docs/0.2/components/popovers/">
+
+<link rel="preconnect" href="https://f4pkenw3tb-dsn.algolia.net" crossorigin>
+
+<title>Popovers · OUDS Web v0.2</title>
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preload" href="/ouds-web/docs/0.2/assets/img/ouds-web-sprite.svg" as="image" type="image/svg+xml">
+<script src="/ouds-web/docs/0.2/assets/js/color-modes.js"></script>
+
+<link href="/ouds-web/docs/0.2/dist/css/ouds-web-bootstrap.min.css" rel="stylesheet"><link href="/ouds-web/docs/0.2/assets/css/docs.css" rel="stylesheet">
+<link href="/ouds-web/docs/0.2/assets/css/search.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" href="/ouds-web/docs/0.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/ouds-web/docs/0.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/ouds-web/docs/0.2/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/ouds-web/docs/0.2/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/ouds-web/docs/0.2/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Popovers">
+<meta name="twitter:description" content="Documentation and examples for adding OUDS Web popovers, like those found in iOS, to any element on your site.">
+<meta name="twitter:image" content="https://web.unified-design-system.orange.com/docs/0.2/assets/brand/orange-social.png">
+
+<meta property="og:url" content="https://web.unified-design-system.orange.com/docs/0.2/components/popovers/">
+<meta property="og:title" content="Popovers">
+<meta property="og:description" content="Documentation and examples for adding OUDS Web popovers, like those found in iOS, to any element on your site.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://web.unified-design-system.orange.com/docs/0.2/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
+    <a id="top"></a>
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-fluid container-max-width py-shortest ps-huge">
+    <a class="d-inline-flex p-short ms-tall bg-always-black" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-short bg-always-black" href="#bd-docs-nav">Skip to docs navigation</a>
+  </nav>
+</div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="arrow-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </symbol>
+  <symbol id="book-half" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M700,175.031c-75,0-143.182,19.44-200,54.1C443.182,194.471,375,175,300,175H75V679.5c0,25,20,45.469,45,45.469L300,725c40,0,78.156,6.764,112.027,21.09,25.277,10.691,69.509,42.527,69.509,42.527C490,794.5,492.74,796.5,500,796.5s10-2,18.463-7.883c0,0,44.233-31.836,69.51-42.527C621.844,731.764,660,724.969,700,724.969l180-.032A45.186,45.186,0,0,0,925,679.5V174.969ZM875,649.867a25.105,25.105,0,0,1-25,25.123H700c-50,0-91.454,8.1-131.49,25.03C549.572,708.03,515,729.5,515,729.5c-4.11,2.966-10,4.25-15,4.25s-10.89-1.284-15-4.25c0,0-34.572-21.47-53.51-29.48C391.454,683.086,350,674.99,300,674.99H150a25.105,25.105,0,0,1-25-25.123V624.929H299.939c75,0,143.243,19.542,200.061,54.2,56.818-34.657,125-54.138,200-54.138H875v24.877ZM150,274.916H350a25.052,25.052,0,0,1,0,50.1H150A25.052,25.052,0,0,1,150,274.916Zm0,100.1H350a25,25,0,0,1,0,50H150A25,25,0,0,1,150,375.019Zm0,99.907H250a25.053,25.053,0,0,1,0,50.106H150A25.053,25.053,0,0,1,150,474.926ZM713.222,274a34.5,34.5,0,1,1-34.666,34.5A34.584,34.584,0,0,1,713.222,274ZM771,550H667V538.161l2.444-.077c7.19-.231,12.533-2.263,15.886-6.042,1.19-1.367,3.215-6.026,3.215-21.691V405.841c0-14.9-2.091-20.517-3.842-22.605-2.477-2.94-7.634-4.667-15.332-5.132L667,377.962V366h80.889V510.351c0,14.911,3.909,20.524,5.658,22.606,2.468,2.938,7.247,4.665,15.08,5.129l2.373,0.14V550Z"/>
+  </symbol>
+  <symbol id="box-seam" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M824.958,125h-650a50,50,0,0,0-50,50V825a50,50,0,0,0,50,50h650a50.027,50.027,0,0,0,50.031-50l0.031-650A50.053,50.053,0,0,0,824.958,125ZM800.006,800H200.057l0.033-600H399.958V350l100-75,100.049,75V275l-0.014-75.033,200,0.033ZM599.958,575h50V675H725.02V575h49.938l-87.5-100Zm-150,100h75.031V575h49.969l-87.5-100-87.5,100h50V675Zm0,75h275V700h-275v50Z"/>
+  </symbol>
+  <symbol id="braces" viewBox="0 0 16 16">
+    <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"/>
+  </symbol>
+  <symbol id="braces-asterisk" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M198.29,196.607a125,125,0,0,1,176.776,0L799.331,620.871A125,125,0,0,1,622.554,797.648L198.29,373.384A125,125,0,0,1,198.29,196.607Zm53.033,53.033a50,50,0,1,1,0,70.711A50,50,0,0,1,251.323,249.64ZM587.2,479.45L551.843,514.8,587.2,550.16l-35.355,35.356L516.488,550.16l-35.356,35.356L445.777,550.16,481.132,514.8,445.777,479.45l35.355-35.356,35.356,35.356,35.355-35.356ZM529.207,741.656a17.812,17.812,0,0,0-25.456,0L464.86,780.547l-39.082-38.874a17.583,17.583,0,0,0-25.264-.017l-40.305,40.305-53.033-3.535,0,0L348.1,819.351a17.917,17.917,0,0,0,25.544.087l38.89-38.891,38.891,38.891c7.122,7.122,19.013,6.443,26.163-.707l38.184-38.184,38.891,38.891c7.122,7.122,18.857,6.6,26.007-.55L593.554,806Zm68.606-566.422-195.748.018L526.94,300.127l195.748-.018h0C722.694,231.421,666.5,175.227,597.813,175.234Zm-84.88,35.727a12.5,12.5,0,0,1,12.5-12.5h75a12.5,12.5,0,0,1,0,25h-75A12.5,12.5,0,0,1,512.933,210.961Z"/>
+  </symbol>
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="chevron-expand" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+  </symbol>
+  <symbol id="clipboard" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M650,225H525a25,25,0,0,1-25-25V75ZM325,600H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V500H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V400H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V250H469.113A74.709,74.709,0,0,1,450,200V75H150V650a75,75,0,0,0,75,75H325V600ZM850,425H725a25,25,0,0,1-25-25V275ZM725,475a75,75,0,0,1-75-75V275H350V850a75,75,0,0,0,75,75H850V475H725Zm50,300a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Z"/>
+  </symbol>
+  <symbol id="code" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M125,175H875a50,50,0,0,1,50,50V775a50,50,0,0,1-50,50H125a50,50,0,0,1-50-50V225A50,50,0,0,1,125,175Zm0,150H875V775H125V325Zm25-100a25,25,0,1,1-25,25A25,25,0,0,1,150,225ZM250,375v74.889L425,525,250,599.667v74.889L512.231,562.222V487.333ZM524,675H775v50H524V675Z"/>
+  </symbol>
+  <symbol id="file-earmark-richtext" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M625,75V225c0,27.614,19.9,50,44.444,50H825Zm50,250a100,100,0,0,1-100-100V75H175V874.773h0.006c0,0.076-.006.151-0.006,0.227a50,50,0,0,0,50,50H825V325H675ZM325,375H675a25,25,0,0,1,0,50H325A25,25,0,0,1,325,375Zm0,100H675a25,25,0,0,1,0,50H325A25,25,0,0,1,325,475Zm0,100H675a25,25,0,0,1,0,50H325A25,25,0,0,1,325,575ZM425,725H325a25,25,0,0,1,0-50H425A25,25,0,0,1,425,725Z"/>
+  </symbol>
+  <symbol id="globe2" viewBox="0 0 1000 1000">
+  <path fill-rule="evenodd" d="M500,75C265.279,75,75,265.279,75,500S265.279,925,500,925,925,734.721,925,500,734.721,75,500,75ZM831.747,675H705.1c11.063-46.188,17.877-96.781,19.512-150H874.182a371.393,371.393,0,0,1-28.631,120.952Q839.26,660.825,831.747,675Zm-677.3-29.048A371.393,371.393,0,0,1,125.818,525H275.387c1.635,53.219,8.449,103.812,19.512,150H168.253Q160.767,660.817,154.449,645.952ZM168.253,325H294.9c-11.063,46.189-17.877,96.782-19.512,150H125.818a371.393,371.393,0,0,1,28.631-120.952Q160.74,339.175,168.253,325Zm490.274,20.5A697.239,697.239,0,0,1,674.58,475H525V325H653.554Q656.179,335.082,658.527,345.5ZM525,275V129.439c10.492,3.706,20.98,9.722,31.371,18.023,21.1,16.861,41.347,42.939,58.539,75.412A425.68,425.68,0,0,1,637.977,275H525ZM443.629,147.462c10.391-8.3,20.879-14.317,31.371-18.023V275H362.023a425.682,425.682,0,0,1,23.068-52.126C402.282,190.4,422.525,164.323,443.629,147.462ZM475,325V475H325.42a697.239,697.239,0,0,1,16.053-129.5q2.335-10.426,4.973-20.5H475ZM341.473,654.5A697.239,697.239,0,0,1,325.42,525H475V675H346.446Q343.821,664.919,341.473,654.5ZM475,725V870.562c-10.492-3.707-20.98-9.723-31.371-18.024-21.1-16.861-41.347-42.938-58.538-75.412A425.682,425.682,0,0,1,362.023,725H475Zm81.371,127.538c-10.391,8.3-20.879,14.317-31.371,18.024V725H637.977a425.68,425.68,0,0,1-23.067,52.126C597.718,809.6,577.475,835.677,556.371,852.538ZM525,675V525H674.58a697.239,697.239,0,0,1-16.053,129.5q-2.336,10.427-4.973,20.5H525ZM724.613,475c-1.635-53.218-8.449-103.811-19.512-150H831.747q7.487,14.183,13.8,29.048A371.393,371.393,0,0,1,874.182,475H724.613Zm40.552-240.165A378.352,378.352,0,0,1,800.054,275H690.917c-16.979-51.292-39.591-95.245-66.2-128.778q10.711,3.781,21.233,8.227A373.819,373.819,0,0,1,765.165,234.835ZM354.048,154.449q10.518-4.449,21.233-8.227c-26.607,33.533-49.219,77.486-66.2,128.778H199.946a378.352,378.352,0,0,1,34.889-40.165A373.819,373.819,0,0,1,354.048,154.449ZM234.835,765.165A378.352,378.352,0,0,1,199.946,725H309.083c16.979,51.292,39.591,95.245,66.2,128.779q-10.713-3.783-21.234-8.228A373.819,373.819,0,0,1,234.835,765.165Zm411.117,80.386q-10.518,4.449-21.234,8.228c26.608-33.534,49.22-77.487,66.2-128.779H800.054a378.352,378.352,0,0,1-34.889,40.165A373.819,373.819,0,0,1,645.952,845.551Z"/>
+  </symbol>
+  <symbol id="grid-fill" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M175,125H425a50,50,0,0,1,50,50V425a50,50,0,0,1-50,50H175a50,50,0,0,1-50-50V175A50,50,0,0,1,175,125Zm0,400H425a50,50,0,0,1,50,50V825a50,50,0,0,1-50,50H175a50,50,0,0,1-50-50V575A50,50,0,0,1,175,525ZM575,125H825a50,50,0,0,1,50,50V425a50,50,0,0,1-50,50H575a50,50,0,0,1-50-50V175A50,50,0,0,1,575,125Zm0,400H825a50,50,0,0,1,50,50V825a50,50,0,0,1-50,50H575a50,50,0,0,1-50-50V575A50,50,0,0,1,575,525Z"/>
+  </symbol>
+  <symbol id="lightning-charge-fill" viewBox="0 0 16 16">
+    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+  </symbol>
+  <symbol id="magic" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M885.338,813.694l-70.644,70.644a49.937,49.937,0,0,1-70.661,0l-17.666-17.645L434.716,575.042H344.744l44.995-44.978,141.3-141.325,44-43.995v87.993l292.63,292.63,17.666,17.666A49.937,49.937,0,0,1,885.338,813.694ZM672.369,636.057L637.04,600.729a24.982,24.982,0,0,0-35.332,35.328L637.04,671.39A24.983,24.983,0,0,0,672.369,636.057ZM207.1,453.4h-0.021a25.008,25.008,0,0,1,0-35.332L419.071,206.083a25.008,25.008,0,0,1,35.332,0L562.376,314.078,315.078,561.4ZM349.993,175a25.016,25.016,0,0,1-25-25.011V100a25.008,25.008,0,1,1,50.015,0v49.981A25.02,25.02,0,0,1,349.993,175Zm-152.68,56.341-35-35a24.759,24.759,0,0,1,35-35.025l35.024,35.025A24.758,24.758,0,1,1,197.313,231.337ZM175.007,350.014a24.988,24.988,0,0,1-25,25H99.991a25.008,25.008,0,0,1,0-50.015h50.017A25.007,25.007,0,0,1,175.007,350.014Z"/>
+  </symbol>
+  <symbol id="menu-button-wide-fill" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M837.5,275H450L375,175H100V762.5A62.5,62.5,0,0,0,162.5,825H900V337.5A62.5,62.5,0,0,0,837.5,275ZM275,625H175L275,450,375,625H275Zm325,0H425V450H600V625Zm137.5,0A87.5,87.5,0,1,1,825,537.5,87.5,87.5,0,0,1,737.5,625Z"/>
+  </symbol>
+  <symbol id="palette2" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" class="cls-1" d="M843.715,331.562l-159.1,159.1-17.678-17.678,159.1-159.1a25.073,25.073,0,0,0,0-35.355L719.971,172.463a25.073,25.073,0,0,0-35.355,0l-17.678,17.678,44.194,44.194a12.5,12.5,0,0,1-17.678,17.678L649.26,207.818l-35.355,35.356,26.516,26.516a12.5,12.5,0,0,1-17.677,17.678l-26.517-26.517-35.355,35.356L605.066,340.4a12.5,12.5,0,1,1-17.678,17.678l-44.194-44.195-17.677,17.678-17.678-17.678,159.1-159.1a50.148,50.148,0,0,1,70.711,0L843.715,260.851A50.148,50.148,0,0,1,843.715,331.562Zm-30.633,322.01a58.843,58.843,0,0,1,13.786,21.609c0.008,0.02.013,0.042,0.021,0.063,0.546,1.567,1.014,3.156,1.417,4.757s0.724,3.194.984,4.807c0.079,0.491.155,0.982,0.221,1.475a56.109,56.109,0,0,1-15.976,47.253l-44.21,44.179-34.84,34.814A56.12,56.12,0,0,1,694.7,829l-0.064,0q-2.571,0-5.135-.241c-0.172-.016-0.344-0.035-0.515-0.052q-2.3-.234-4.581-0.657c-0.309-.057-0.617-0.117-0.926-0.18-10.465-2.117-21.09-6.433-29.2-14.542l-246.5-246.7L225.222,384.567h0l-36.335-121.63h0l-17.561-57.828-3.482-13.9c0-.012-0.006-0.024-0.01-0.036q-0.2-.669-0.353-1.335c-0.036-.162-0.06-0.323-0.093-0.485-0.058-.293-0.119-0.586-0.164-0.877-0.028-.189-0.044-0.375-0.067-0.563-0.032-.263-0.067-0.526-0.088-0.787-0.015-.2-0.019-0.392-0.028-0.588-0.011-.25-0.026-0.5-0.027-0.748,0-.038-0.005-0.078-0.005-0.116,0-.281.013-0.558,0.026-0.836,0-.081,0-0.163.007-0.244,0.024-.4.062-0.8,0.111-1.2,0.013-.1.032-0.2,0.046-0.3,0.042-.292.087-0.582,0.143-0.869,0.027-.14.059-0.278,0.089-0.417,0.053-.245.109-0.491,0.172-0.734,0.039-.148.081-0.3,0.123-0.442,0.067-.231.137-0.46,0.212-0.688,0.049-.146.1-0.292,0.15-0.436,0.081-.228.169-0.454,0.259-0.678,0.055-.137.109-0.274,0.167-0.409,0.1-.239.214-0.474,0.327-0.708,0.054-.114.106-0.229,0.162-0.341q0.249-.492.525-0.967l0.025-.046c0.194-.331.4-0.654,0.613-0.972,0.069-.1.143-0.2,0.214-0.3,0.149-.213.3-0.424,0.456-0.631,0.09-.117.182-0.231,0.274-0.346q0.222-.278.453-0.548c0.1-.117.2-0.231,0.307-0.345q0.234-.26.478-0.51c0.106-.109.213-0.219,0.322-0.326,0.172-.168.349-0.331,0.527-0.493,0.106-.1.21-0.194,0.318-0.288,0.206-.179.417-0.35,0.63-0.52,0.087-.068.171-0.141,0.258-0.208q0.454-.35.929-0.671c0.061-.042.126-0.08,0.189-0.121,0.257-.17.518-0.336,0.784-0.493,0.116-.069.236-0.133,0.354-0.2,0.217-.123.436-0.243,0.659-0.357,0.134-.069.27-0.134,0.405-0.2,0.214-.1.43-0.2,0.648-0.3q0.211-.093.427-0.18c0.221-.09.444-0.174,0.67-0.256,0.142-.051.284-0.1,0.427-0.151,0.241-.081.484-0.153,0.728-0.224,0.132-.038.261-0.079,0.394-0.114,0.3-.081.613-0.151,0.923-0.217,0.075-.015.148-0.035,0.223-0.05q0.579-.114,1.171-0.191c0.1-.014.211-0.021,0.315-0.033,0.291-.033.583-0.062,0.877-0.081,0.145-.009.292-0.013,0.438-0.018,0.258-.011.516-0.018,0.777-0.018,0.158,0,.317,0,0.477.009,0.253,0.007.507,0.02,0.762,0.037,0.162,0.011.323,0.024,0.485,0.039,0.261,0.025.522,0.058,0.784,0.093,0.156,0.022.312,0.042,0.469,0.068,0.286,0.046.573,0.1,0.86,0.164,0.133,0.028.265,0.051,0.4,0.082,0.42,0.1.842,0.208,1.264,0.336L232.8,179.7l30.221,9.164h0l121.462,36.412ZM249.008,201.918l-46.532,46.5,36.59,122.164,21.524-21.716L694.169,782.137l17.682-17.67L278.272,331.2l53.048-53.011L764.9,711.457l17.683-17.67L349,260.514l22.256-22.032Zm82.054,324.1-17.678,17.677,44.195,44.194A12.5,12.5,0,1,1,339.9,605.566l-44.194-44.194-35.356,35.355,26.517,26.517a12.5,12.5,0,0,1-17.678,17.677l-26.516-26.516L207.318,649.76l44.195,44.194a12.5,12.5,0,0,1-17.678,17.678l-44.194-44.194-17.678,17.678a25.073,25.073,0,0,0,0,35.355L278.029,826.537a25.073,25.073,0,0,0,35.355,0l159.1-159.1,17.677,17.678-159.1,159.1a50.148,50.148,0,0,1-70.711,0L154.285,738.149a50.148,50.148,0,0,1,0-70.711l159.1-159.1Z"/>
+  </symbol>
+  <symbol id="plugin" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M625,420.091H600V320.25a25,25,0,0,0-50,0v99.841H450V320.25a25,25,0,0,0-50,0v99.841H375a25.136,25.136,0,0,0-25,25.159v49.77H650V445.25a25.136,25.136,0,0,0-25-25.159M500,75.25c-234.721,0-425,190.279-425,425C75,680.836,187.638,835.1,346.483,896.661a37.5,37.5,0,1,0,29.83-68.773l0.045-.108c-4.212-1.593-8.408-3.244-12.571-5a350.64,350.64,0,1,1,205.589,20.607l-0.009-.022A24.971,24.971,0,0,1,540,818.75c0-.122.008-0.242,0.009-0.364H540V664.848A150.33,150.33,0,0,0,650,520.02H350A150.315,150.315,0,0,0,465,666.135V820.25h0.019a100.036,100.036,0,0,0,117.07,97.037s3.9-.759,4.767-0.953C779.915,876.237,925,705.2,925,500.25c0-234.721-190.279-425-425-425"/>
+  </symbol>
+  <symbol id="plus" viewBox="0 0 14 14">
+    <polygon fill-rule="evenodd" points="14 6 8 6 8 0 6 0 6 6 0 6 0 8 6 8 6 14 8 14 8 8 14 8 14 6"/>
+  </symbol>
+  <symbol id="tools" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M889,746.184l-0.079-.076-259.2-259.2L481.566,635.065,740.842,894.342h0A104.763,104.763,0,1,0,889,746.184Zm-370.4-370.395L439.8,296.981A183.371,183.371,0,0,0,197.732,91.954L314.889,209.111a26.192,26.192,0,0,1,0,37.039h0l-74.078,74.078a26.192,26.192,0,0,1-37.04,0l-0.015-.015L86.613,203.072A183.374,183.374,0,0,0,291.639,445.139l78.808,78.808ZM851.92,79.433L685.243,209.071,648.2,283.15l-277.795,277.8-37.04-37.04L110.147,747.128l0.013,0.013A104.755,104.755,0,0,0,258.292,895.274l0.013,0.013,0.985-.984h0L481.526,672.065l-37.04-37.04,277.8-277.8,74.079-37.039L926,153.512ZM166.69,801.7a13.1,13.1,0,0,1-18.521-18.52h0L314.848,616.505a13.1,13.1,0,0,1,18.52,18.521ZM388.926,690.585L222.25,857.262h0a13.1,13.1,0,1,1-18.519-18.52h0L370.408,672.064A13.1,13.1,0,0,1,388.926,690.585Z"/>
+  </symbol>
+  <symbol id="transfers" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M950 675a62.48 62.48 0 01-18.094 43.908L700 950V825H450a75 75 0 01-75-75V600a75 75 0 0175-75h250V400l231.908 231.09A62.48 62.48 0 01950 675M550 475H300v125L68.092 368.91a62.32 62.32 0 010-87.816L300 50v125h250a75 75 0 0175 75v150a75 75 0 01-75 75"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+  <symbol id="ui-radios" viewBox="0 0 1000 1000">
+    <path fill-rule="evenodd" d="M500,100C265.279,100,75,251.1,75,437.5c0,144.464,114.3,267.724,275,315.873V925L500,775c234.722,0,425-151.1,425-337.5S734.722,100,500,100Zm0,475H325a25,25,0,0,1,0-50H500A25,25,0,0,1,500,575ZM675,450H325a25,25,0,0,1,0-50H675A25,25,0,0,1,675,450Zm0-125H325a25,25,0,0,1,0-50H675A25,25,0,0,1,675,325Z"/>
+  </symbol>
+</svg>
+
+
+    <header class="sticky-top bd-header">
+  <nav class="navbar navbar-expand supra d-none" data-bs-theme="dark" aria-label="Supra-navigation - New release banner">
+    <div class="container-fluid container-max-width d-flex justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://web.unified-design-system.orange.com">There's a newer version of OUDS Web!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
+    <div class="container-fluid container-max-width">
+      <div class="navbar-brand me-auto me-lg-tallest">
+        <a class="stretched-link" href="/ouds-web">
+          <img src="/ouds-web/docs/0.2/assets/brand/orange-logo.svg" width="50" height="50" alt="OUDS Web - Back to Home" loading="lazy">
+        </a>
+      </div>
+
+      
+
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".bd-navbar" aria-controls="bd-navbar1 bd-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/ouds-web" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="/ouds-web/docs/0.2/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ouds-web/docs/0.2/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+          </li>
+        </ul>
+      </div>
+      <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-none">
+        <ul class="navbar-nav flex-row me-lg-tall">
+          <li class="nav-item">
+            <a class="nav-link nav-icon" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+              <span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="0.2"></div>
+          </li>
+
+          <li class="nav-item dropdown">
+  <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-lg-none" aria-hidden="true">OUDS Web&nbsp;</span><span class="visually-hidden">OUDS Web&nbsp;</span>v0.2 <span class="visually-hidden">(switch to other versions)</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end mb-short mb-lg-none">
+    <li><h6 class="dropdown-header">v0 releases</h6></li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/ouds-web/docs/0.2/components/popovers/">
+        Latest (0.2.x)
+        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
+      </a>
+    </li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/ouds-web/docs/versions/">All versions</a></li>
+  </ul>
+</li>
+
+        </ul>
+        <ul class="navbar-nav flex-row ms-lg-tall">
+          <li class="nav-item dropdown">
+            <button class="nav-link nav-icon dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="d-lg-none ms-short" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end mb-short" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-short" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+    
+
+<nav class="bd-subnavbar py-short d-lg-none" aria-label="Secondary navigation">
+  <div class="container-fluid container-max-width d-flex justify-content-end">
+    <button class="btn btn-default btn-icon p-short" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+  
+</header>
+
+
+    
+  <div class="container-fluid container-max-width bd-gutter mt-tall my-md-tallest bd-layout">
+    <nav class="bd-sidebar" aria-label="Docs navigation">
+      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <div class="bd-links w-100" id="bd-docs-nav"><ul class="bd-links-nav list-unstyled mb-none pb-tall pb-md-short pe-lg-short"><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+        Getting started
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/introduction/" class="bd-links-link d-inline-block">Introduction</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/download/" class="bd-links-link d-inline-block text-decoration-line-through">Download<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/contents/" class="bd-links-link d-inline-block">Contents</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/browsers-devices/" class="bd-links-link d-inline-block">Browsers &amp; devices</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/javascript/" class="bd-links-link d-inline-block text-decoration-line-through">JavaScript<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/webpack/" class="bd-links-link d-inline-block text-decoration-line-through">Webpack<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/parcel/" class="bd-links-link d-inline-block text-decoration-line-through">Parcel<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/vite/" class="bd-links-link d-inline-block text-decoration-line-through">Vite<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/accessibility/" class="bd-links-link d-inline-block">Accessibility</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/rfs/" class="bd-links-link d-inline-block text-decoration-line-through">RFS<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/rtl/" class="bd-links-link d-inline-block text-decoration-line-through">RTL<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/getting-started/contribute/" class="bd-links-link d-inline-block">Contribute</a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+        Customize
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/customize/overview/" class="bd-links-link d-inline-block text-decoration-line-through">Overview<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/custom-libraries/" class="bd-links-link d-inline-block">Custom libraries</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/sass/" class="bd-links-link d-inline-block text-decoration-line-through">Sass<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/options/" class="bd-links-link d-inline-block">Options</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/color-palette/" class="bd-links-link d-inline-block">Color palette</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/color-theme/" class="bd-links-link d-inline-block text-decoration-line-through">Color theme<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/color-modes/" class="bd-links-link d-inline-block">Color modes</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/components/" class="bd-links-link d-inline-block text-decoration-line-through">Components<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/css-variables/" class="bd-links-link d-inline-block text-decoration-line-through">CSS variables<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/customize/optimize/" class="bd-links-link d-inline-block text-decoration-line-through">Optimize<span class="visually-hidden">page is not yet available</span></a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+        Layout
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/layout/breakpoints/" class="bd-links-link d-inline-block">Breakpoints</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/containers/" class="bd-links-link d-inline-block">Containers</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/grid/" class="bd-links-link d-inline-block">Grid</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/columns/" class="bd-links-link d-inline-block">Columns</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/gutters/" class="bd-links-link d-inline-block">Gutters</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/utilities/" class="bd-links-link d-inline-block">Utilities</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/z-index/" class="bd-links-link d-inline-block">Z-index</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/layout/css-grid/" class="bd-links-link d-inline-block">CSS Grid</a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+        Content
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/content/reboot/" class="bd-links-link d-inline-block">Reboot</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/content/typography/" class="bd-links-link d-inline-block">Typography</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/content/images/" class="bd-links-link d-inline-block text-decoration-line-through">Images<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/content/tables/" class="bd-links-link d-inline-block text-decoration-line-through">Tables<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/content/figures/" class="bd-links-link d-inline-block text-decoration-line-through">Figures<span class="visually-hidden">page is not yet available</span></a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+        Forms
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/forms/overview/" class="bd-links-link d-inline-block text-decoration-line-through">Overview<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/form-control/" class="bd-links-link d-inline-block text-decoration-line-through">Form control<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/select/" class="bd-links-link d-inline-block text-decoration-line-through">Select<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/checks-radios/" class="bd-links-link d-inline-block text-decoration-line-through">Checks &amp; radios<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/range/" class="bd-links-link d-inline-block text-decoration-line-through">Range<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/input-group/" class="bd-links-link d-inline-block text-decoration-line-through">Input group<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/floating-labels/" class="bd-links-link d-inline-block text-decoration-line-through">Floating labels<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/quantity-selector/" class="bd-links-link d-inline-block text-decoration-line-through">Quantity selector<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/layout/" class="bd-links-link d-inline-block text-decoration-line-through">Layout<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/forms/validation/" class="bd-links-link d-inline-block text-decoration-line-through">Validation<span class="visually-hidden">page is not yet available</span></a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+        Components
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/components/accordion/" class="bd-links-link d-inline-block text-decoration-line-through">Accordion<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/alerts/" class="bd-links-link d-inline-block text-decoration-line-through">Alerts<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/back-to-top/" class="bd-links-link d-inline-block text-decoration-line-through">Back to top<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/badge/" class="bd-links-link d-inline-block text-decoration-line-through">Badge<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/breadcrumb/" class="bd-links-link d-inline-block text-decoration-line-through">Breadcrumb<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/buttons/" class="bd-links-link d-inline-block">Buttons</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/button-group/" class="bd-links-link d-inline-block text-decoration-line-through">Button group<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/card/" class="bd-links-link d-inline-block text-decoration-line-through">Card<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/carousel/" class="bd-links-link d-inline-block text-decoration-line-through">Carousel<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/close-button/" class="bd-links-link d-inline-block text-decoration-line-through">Close button<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/collapse/" class="bd-links-link d-inline-block text-decoration-line-through">Collapse<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/dropdowns/" class="bd-links-link d-inline-block text-decoration-line-through">Dropdowns<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/footer/" class="bd-links-link d-inline-block text-decoration-line-through">Footer<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/list-group/" class="bd-links-link d-inline-block text-decoration-line-through">List group<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/local-navigation/" class="bd-links-link d-inline-block text-decoration-line-through">Local navigation<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/modal/" class="bd-links-link d-inline-block text-decoration-line-through">Modal<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/navbar/" class="bd-links-link d-inline-block text-decoration-line-through">Navbar<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/navs-tabs/" class="bd-links-link d-inline-block text-decoration-line-through">Navs &amp; tabs<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/offcanvas/" class="bd-links-link d-inline-block text-decoration-line-through">Offcanvas<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/orange-navbar/" class="bd-links-link d-inline-block text-decoration-line-through">Orange navbar<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/pagination/" class="bd-links-link d-inline-block text-decoration-line-through">Pagination<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/placeholders/" class="bd-links-link d-inline-block text-decoration-line-through">Placeholders<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/popovers/" class="bd-links-link d-inline-block active text-decoration-line-through" aria-current="page">Popovers<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/progress/" class="bd-links-link d-inline-block text-decoration-line-through">Progress<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/scrollspy/" class="bd-links-link d-inline-block text-decoration-line-through">Scrollspy<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/spinners/" class="bd-links-link d-inline-block text-decoration-line-through">Spinners<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/stepped-process/" class="bd-links-link d-inline-block text-decoration-line-through">Stepped process<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/sticker/" class="bd-links-link d-inline-block text-decoration-line-through">Sticker<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/tags/" class="bd-links-link d-inline-block text-decoration-line-through">Tags<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/title-bars/" class="bd-links-link d-inline-block text-decoration-line-through">Title bars<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/toasts/" class="bd-links-link d-inline-block text-decoration-line-through">Toasts<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/components/tooltips/" class="bd-links-link d-inline-block text-decoration-line-through">Tooltips<span class="visually-hidden">page is not yet available</span></a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+        Helpers
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/clearfix/" class="bd-links-link d-inline-block">Clearfix</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/color-background/" class="bd-links-link d-inline-block">Color &amp; background</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/colored-links/" class="bd-links-link d-inline-block">Colored links</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/focus-ring/" class="bd-links-link d-inline-block text-decoration-line-through">Focus ring<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/icon/" class="bd-links-link d-inline-block">Icon</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/icon-link/" class="bd-links-link d-inline-block text-decoration-line-through">Icon link<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/position/" class="bd-links-link d-inline-block">Position</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/ratio/" class="bd-links-link d-inline-block">Ratio</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/stacks/" class="bd-links-link d-inline-block">Stacks</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/stretched-link/" class="bd-links-link d-inline-block">Stretched link</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/text-truncation/" class="bd-links-link d-inline-block">Text truncation</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/vertical-rule/" class="bd-links-link d-inline-block text-decoration-line-through">Vertical rule<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/helpers/visually-hidden/" class="bd-links-link d-inline-block">Visually hidden</a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+        Utilities
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/api/" class="bd-links-link d-inline-block">API</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/background/" class="bd-links-link d-inline-block">Background</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/borders/" class="bd-links-link d-inline-block">Borders</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/colors/" class="bd-links-link d-inline-block">Colors</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/display/" class="bd-links-link d-inline-block">Display</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/flex/" class="bd-links-link d-inline-block">Flex</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/float/" class="bd-links-link d-inline-block">Float</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/interactions/" class="bd-links-link d-inline-block">Interactions</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/link/" class="bd-links-link d-inline-block text-decoration-line-through">Link<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/object-fit/" class="bd-links-link d-inline-block">Object fit</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/opacity/" class="bd-links-link d-inline-block">Opacity</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/overflow/" class="bd-links-link d-inline-block">Overflow</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/position/" class="bd-links-link d-inline-block">Position</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/shadows/" class="bd-links-link d-inline-block">Shadows</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/sizing/" class="bd-links-link d-inline-block">Sizing</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/spacing/" class="bd-links-link d-inline-block">Spacing</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/text/" class="bd-links-link d-inline-block">Text</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/vertical-align/" class="bd-links-link d-inline-block">Vertical align</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/visibility/" class="bd-links-link d-inline-block">Visibility</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/utilities/z-index/" class="bd-links-link d-inline-block">Z-index</a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+        Extend
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/extend/approach/" class="bd-links-link d-inline-block">Approach</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/extend/icons/" class="bd-links-link d-inline-block text-decoration-line-through">Icons<span class="visually-hidden">page is not yet available</span></a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+        About
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          <li><a href="/ouds-web/docs/0.2/about/overview/" class="bd-links-link d-inline-block text-decoration-line-through">Overview<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/about/team/" class="bd-links-link d-inline-block">Team</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/about/brand/" class="bd-links-link d-inline-block text-decoration-line-through">Brand<span class="visually-hidden">page is not yet available</span></a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/about/license/" class="bd-links-link d-inline-block">License</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/about/translations/" class="bd-links-link d-inline-block">Translations</a></li>
+          
+          <li><a href="/ouds-web/docs/0.2/about/cookies/" class="bd-links-link d-inline-block">Cookies</a></li>
+      </ul>
+    </li><li class="bd-links-group py-short">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bm-md-icon me-shortest" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#transfers"></use></svg>
+        Migrations
+      </strong>
+
+      <ul class="list-unstyled fw-normal mt-shortest pb-short small">
+          
+          
+          <li><a href="/ouds-web/docs/0.2/migration/" class="bd-links-link d-inline-block">Migration</a></li>
+          
+          
+          <li><a href="/ouds-web/docs/0.2/migration-from-boosted/" class="bd-links-link d-inline-block">Migration from Boosted</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </nav>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-short ps-lg-short">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <div class="mb-tall mb-md-none d-flex text-nowrap"><a class="btn btn-default" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v0.2.0-ouds-web/site/content/docs/0.2/components/popovers.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+              View on GitHub
+            </a>
+          </div>
+          <h1 class="bd-title mb-none" id="content">Popovers</h1>
+        </div>
+        <p class="bd-lead mt-short">Documentation and examples for adding OUDS Web popovers, like those found in iOS, to any element on your site.</p>
+        
+      </div>
+
+      
+        <div class="bd-toc mt-tall mb-huge my-lg-none mb-lg-huge px-sm-shortest text-muted">
+          <h2 class="mb-none">
+            <button class="btn btn-default p-md-none mb-short mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+              On this page
+              <svg class="bi d-md-none ms-short" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+            </button>
+            <span class="d-none d-md-block h6 my-short ms-tall">On this page</span>
+          </h2>
+          <hr class="d-none d-md-block my-short ms-tall">
+          <div class="collapse bd-toc-collapse ms-shorter" id="tocContents">
+            <nav id="TableOfContents"></nav>
+          </div>
+        </div>
+      
+
+      <div class="bd-content ps-lg-short">
+        
+
+        <div class="bd-callout bd-callout-warning">
+  <p><strong>This component is not yet available.</strong></p>
+  <p>Please check back soon.</p>
+</div>
+
+
+      </div>
+    </main>
+  </div>
+
+
+    <footer class="footer navbar bd-footer" data-bs-theme="dark">
+  <h2 class="visually-hidden">OUDS Web sitemap & information</h2>
+  <div class="container-fluid container-max-width footer-nav">
+    <nav class="accordion" id="sitemapAccordion" aria-label="OUDS Web sitemap footer">
+      <div class="row">
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingLinks">
+            <button class="accordion-button collapsed container-fluid container-max-width px-shortest d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinks" aria-expanded="true" aria-controls="collapseLinks">
+              Links
+            </button>
+            <span class="d-none d-md-flex">Links</span>
+          </h3>
+          <div id="collapseLinks" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="/ouds-web" aria-describedby="headingLinks">Home</a></li>
+              <li><a class="nav-link active" aria-current="true" href="/ouds-web/docs/0.2/" aria-describedby="headingLinks">Docs</a></li>
+              <li><a class="nav-link" href="/ouds-web/docs/0.2/examples/" aria-describedby="headingLinks">Examples</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingGuides">
+            <button class="accordion-button collapsed container-fluid container-max-width px-shortest d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGuides" aria-expanded="true" aria-controls="collapseGuides">
+              Guides
+            </button>
+            <span class="d-none d-md-flex">Guides</span>
+          </h3>
+          <div id="collapseGuides" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="/ouds-web/docs/0.2/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingProjects">
+            <button class="accordion-button collapsed container-fluid container-max-width px-shortest d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjects" aria-expanded="true" aria-controls="collapseProjects">
+              Projects
+            </button>
+            <span class="d-none d-md-flex">Projects</span>
+          </h3>
+          <div id="collapseProjects" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects" target="_blank" rel="noopener">OUDS Web</a></li>
+              <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects" target="_blank" rel="noopener">Bootstrap</a></li>
+              <li><a class="nav-link" href="https://ouds-main--boosted.netlify.app/" aria-describedby="headingProjects" target="_blank" rel="noopener">Pre-release on Netlify</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingCommunity">
+            <button class="accordion-button collapsed container-fluid container-max-width px-shortest d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommunity" aria-expanded="true" aria-controls="collapseCommunity">
+              Community
+            </button>
+            <span class="d-none d-md-flex">Community</span>
+          </h3>
+          <div id="collapseCommunity" class="container-fluid container-max-width accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity" target="_blank" rel="noopener">Issues</a></li>
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity" target="_blank" rel="noopener">Discussions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column accordion-header col-md-12 col-lg-4 mb-tall pt-tall pt-lg-tallest px-shortest px-lg-none fw-bold small">
+          <p class="mb-lg-shortest">
+            This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
+          </p>
+          <p class="mb-lg-shortest">
+            Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+          </p>
+          <p class="mb-lg-shortest">Currently v0.2.0.</p>
+          <p class="mb-lg-shortest">
+            <a href="https://www.netlify.com" target="_blank" rel="noopener">
+              <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
+            </a>
+          </p>
+        </div>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-default" data-bs-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
+
+    <script defer src="/ouds-web/docs/0.2/dist/js/ouds-web.bundle.min.js" integrity="sha384-wsCZDwY5ncWxWFUnwNn6fRNayqcmfMpiUGqG0i54gb/RBOlPNtYrteatYZc+hPPa"></script>
+
+<script defer src="/ouds-web/docs/0.2/assets/js/application.js"></script>
+
+
+<script defer src="/ouds-web/docs/0.2/assets/js/tarteaucitron.min.js"></script><script defer src="/ouds-web/docs/0.2/assets/js/docs.min.js"></script>
+
+<script defer src="/ouds-web/docs/0.2/assets/js/search.js"></script>
+<script defer src="/ouds-web/docs/0.2/assets/js/stackblitz.js"></script>
+
+
+<script defer src="/ouds-web/docs/0.2/assets/js/color.js"></script>
+
+
+    
+  <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
+
+  </body>
+</html>
