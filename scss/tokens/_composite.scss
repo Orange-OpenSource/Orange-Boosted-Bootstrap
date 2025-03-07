@@ -16,7 +16,7 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 
 // stylelint-disable value-keyword-case
 // scss-docs-start ouds-composite-font
-$ouds-font-family-sans-serif-stack: "Helvetica Neue", Helvetica, "SF Pro", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$ouds-font-family-sans-serif-stack: Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $ouds-font-family-monospace-stack: Consolas, "SFMono-Regular", "Roboto Mono", "Liberation Mono", Menlo, monospace !default;
 // scss-docs-end ouds-composite-font
 // stylelint-enable value-keyword-case
