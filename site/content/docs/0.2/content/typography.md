@@ -301,14 +301,6 @@ Use text utilities as needed to change the alignment of your blockquote.
 </figure>
 {{< /example >}}
 
-<!-- ## Links
-
-Links in content are black and underlined. They adapt to their context otherwise, mainly in navigation components like [Navs & tabs]({{< docsref "/components/navs-tabs" >}}) or [Navbar]({{< docsref "/components/navbar" >}}).
-
-### With chevron
-
-Use our [link chevron helper]({{< docsref "/helpers/icon-link#link-chevron" >}}) to bold your link and enhance them with a chevron. -->
-
 <!-- ## Lists
 
 ### Unstyled
