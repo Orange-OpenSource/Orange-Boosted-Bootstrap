@@ -1,5 +1,7 @@
-<section class="row border-top border-medium border-default pt-scaled-short mb-scaled-spacious py-xl-medium">
+<section class="row pb-scaled-taller">
+  <div class="col-12 d-none d-xl-block border-top border-medium border-default pb-scaled-short mx-medium"></div>
   <div class="col-xl-4 pe-xl-jumbo">
+    <div class="d-xl-none border-top border-medium border-default pb-scaled-short"></div>
     <h2 class="text-brand-primary mb-scaled-shorter">Get started any way you&nbsp;want</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-shorter">
       Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
@@ -15,12 +17,8 @@
     <p class="mb-scaled-medium">
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
-    <div class="mb-scaled-shorter">
-      {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
-    </div>
-    <div class="mb-scaled-shorter">
-      {{ highlight (printf ("yarn add @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
-    </div>
+    {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("yarn add @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
     <p class="mb-scaled-tall">
       <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>

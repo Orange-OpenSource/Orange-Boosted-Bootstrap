@@ -7,12 +7,7 @@
         Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins. OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.
       </p>
 
-      <p class="d-flex flex-column flex-lg-row justify-content-center align-items-center mx-auto mb-tallest lh-sm text-decoration-none">
-        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-short">New in v0.2</a>
-        <span class="text-muted">Buttons and more examples</span>
-      </p>
-
-      <div class="mb-scaled-medium d-inline-block">
+      <div class="mb-scaled-shorter d-inline-block">
         {{ highlight (printf ("npm i @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
       </div>
 
@@ -23,12 +18,17 @@
         </a>
       </div>
 
-      <div class="hstack gap-short">
+      <div class="hstack gap-short mb-scaled-short">
         <p class="mb-none">Currently v{{ .Site.Params.current_version }}</p>
         <div class="vr"></div>
         <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="fw-bold">Download</a>
         <div class="vr"></div>
         <a href="/docs/versions/" class="text-nowrap fw-bold">All releases</a>
+      </div>
+
+      <div class="">
+        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-short">New in v0.2</a>
+        <span class="text-muted">Buttons and more examples</span>
       </div>
     </div>
   </div>

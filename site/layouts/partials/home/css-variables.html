@@ -1,5 +1,7 @@
-<section class="row border-top border-medium border-default pt-scaled-short">
+<section class="row pb-scaled-taller">
+  <div class="col-12 d-none d-xl-block border-top border-medium border-default pb-scaled-short mx-medium"></div>
   <div class="col-xl-4 pe-xl-jumbo">
+    <div class="d-xl-none border-top border-medium border-default pb-scaled-short"></div>
     <h2 class="text-brand-primary mb-scaled-shorter">Build and extend in real-time with CSS&nbsp;variables</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-shorter">
       OUDS Web is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
@@ -16,7 +18,7 @@
     <p class="mb-scaled-medium">
       Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.
     </p>
-    <div class="mb-scaled-tall">
+    <div class="mb-scaled-medium">
       {{ highlight (printf `.component {
   color: var(--bs-color-content-default);
   background-color: var(--bs-color-bg-secondary);

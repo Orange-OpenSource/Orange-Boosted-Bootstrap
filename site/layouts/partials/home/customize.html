@@ -1,5 +1,7 @@
-<section class="row border-top border-medium border-default pt-scaled-short mb-scaled-spacious">
+<section class="row pb-scaled-taller">
+  <div class="col-12 d-none d-xl-block border-top border-medium border-default pb-scaled-short mx-medium"></div>
   <div class="col-xl-4 pe-xl-jumbo">
+    <div class="d-xl-none border-top border-medium border-default pb-scaled-short"></div>
     <h2 class="text-brand-primary mb-scaled-shorter">Customize everything with&nbsp;Sass</h2>
     <p class="lead fw-bold bd-text-wrap-balance mb-scaled-shorter">
       OUDS Web utilizes Sass for a modular and customizable architecture. Import only the components you need, enable global options like gradients and shadows, and write your own CSS with our variables, maps, functions, and mixins.
@@ -16,7 +18,6 @@
     <p class="mb-scaled-medium">
       Import one stylesheet and you're off to the races with every feature of our CSS.
     </p>
-    <div class="mb-scaled-shorter">
     {{ highlight (printf `// Variable overrides first
 $primary: #900;
 $enable-shadows: true;
@@ -25,7 +26,6 @@ $prefix: "mo-";
 // Then import OUDS Web
 @import "../node_modules/@ouds/web/scss/ouds-web";
 `) "scss" "" }}
-    </div>
     <p class="mb-scaled-tall">
       Learn more about our <a href="/docs/{{ .Site.Params.docs_version }}/customize/options/">global Sass options</a>.
     </p>
@@ -35,7 +35,6 @@ $prefix: "mo-";
       <p class="mb-scaled-medium">
         The easiest way to customize OUDS Web—include only the CSS you need.
       </p>
-      <div class="mb-scaled-shorter">
 {{ highlight (printf `// Functions and config first
 @import "../node_modules/@ouds/web/scss/config";
 @import "../node_modules/@ouds/web/scss/functions";
@@ -65,7 +64,6 @@ $prefix: "mo-";
 @import "../node_modules/@ouds/web/scss/helpers";
 @import "../node_modules/@ouds/web/scss/utilities/api";
 `) "scss" "" }}
-      </div>
       <p class="mb-none">
         Learn more about <a href="/docs/{{ .Site.Params.docs_version }}/customize/sass/">using OUDS Web with Sass</a>.
       </p>

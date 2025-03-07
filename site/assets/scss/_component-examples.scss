@@ -425,7 +425,7 @@
   position: relative; // OUDS mod
 
   .highlight-toolbar {
-    min-height: $spacer * 2.5; // OUDS mod
+    min-height: 3.5625rem; // OUDS mod
 
     @include media-breakpoint-up(md) {
       @include border-top-radius(calc(var(--bs-border-radius) - 1px));
