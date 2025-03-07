@@ -726,6 +726,8 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-color-border-focus-inset-dark</code></li>
       <li><code>$ouds-color-border-focus-inset-light</code></li>
       <li><code>$ouds-color-border-focus-light</code></li>
+      <li><code>$ouds-color-border-muted-dark</code></li>
+      <li><code>$ouds-color-border-muted-light</code></li>
       <li><code>$ouds-color-border-on-brand-primary-dark</code></li>
       <li><code>$ouds-color-border-on-brand-primary-light</code></li>
       <li><code>$ouds-color-content-brand-primary-dark</code></li>
@@ -1570,6 +1572,7 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-color-border-emphasized</code></li>
       <li><code>$ouds-color-border-focus</code></li>
       <li><code>$ouds-color-border-focus-inset</code></li>
+      <li><code>$ouds-color-border-muted</code></li>
       <li><code>$ouds-color-border-on-brand-primary</code></li>
       <li><code>$ouds-color-content-brand-primary</code></li>
       <li><code>$ouds-color-content-default</code></li>
@@ -1789,6 +1792,7 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>--bs-color-border-emphasized</code></li>
       <li><code>--bs-color-border-focus</code></li>
       <li><code>--bs-color-border-focus-inset</code></li>
+      <li><code>--bs-color-border-muted</code></li>
       <li><code>--bs-color-border-on-brand-primary</code></li>
       <li><code>--bs-color-content-brand-primary</code></li>
       <li><code>--bs-color-content-default</code></li>

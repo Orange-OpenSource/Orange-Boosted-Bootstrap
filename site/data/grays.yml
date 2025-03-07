@@ -3,15 +3,15 @@
 - name: 200
   hex: "#eee"
 - name: 300
-  hex: "#bbb"
+  hex: "#e0e0e0"
 - name: 400
-  hex: "#bbb"
+  hex: "#ccc"
 - name: 500
-  hex: "#555"
+  hex: "#999"
 - name: 600
-  hex: "#333"
+  hex: "#666"
 - name: 700
-  hex: "#272727"
+  hex: "#333"
 - name: 800
   hex: "#1f1f1f"
 - name: 900

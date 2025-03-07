@@ -37,6 +37,10 @@ toc: true
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Link utilities are no more used in OUDS and the following classes have been removed: <code>.link-opacity-{number}</code>, <code>.link-offset-{number}</code>, <code>.link-underline-{number}</code>, .<code>link-underline-opacity-{number}</code>
 
+#### Border
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Border color: `.border-muted`.
+
 ### CSS and Sass variables
 
 - <details class="mb-short">
@@ -67,6 +71,22 @@ toc: true
       <li><code>$ouds-link-space-column-gap-icon-small</code></li>
       <li><code>$ouds-link-space-padding-block</code></li>
       <li><code>$ouds-link-space-padding-inline</code></li>
+      <li><code>$ouds-color-border-muted-dark</code></li>
+      <li><code>$ouds-color-border-muted-light</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
+    <ul>
+      <li><code>$ouds-color-border-muted</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-color-border-muted</code></li>
     </ul>
   </details>
 
