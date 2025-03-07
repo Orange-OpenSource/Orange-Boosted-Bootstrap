@@ -5,14 +5,11 @@
 .bd-code-snippet {
   display: flex; // OUDS mod
   flex-direction: column; // OUDS mod
-  margin: 0 ($bd-gutter-x * -.5) 1rem;
+  margin-bottom: var(--bs-space-scaled-shorter); // TODO à vérifier
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
-  border-width: 1px 0;
+  border-width: 1px;
 
   @include media-breakpoint-up(md) {
-    margin-right: 0;
-    margin-left: 0;
-    border-width: 1px;
     @include border-radius(var(--bs-border-radius));
   }
 }
@@ -428,16 +425,12 @@
   position: relative; // OUDS mod
 
   .highlight-toolbar {
-    min-height: $spacer * 2.5; // OUDS mod
+    min-height: 3.5625rem; // OUDS mod
 
     @include media-breakpoint-up(md) {
       @include border-top-radius(calc(var(--bs-border-radius) - 1px));
     }
   }
-}
-
-.bd-content .bd-code-snippet {
-  margin-bottom: 1rem;
 }
 
 // OUDS mod
