@@ -3,267 +3,191 @@
 //
 
 .form-check {
-  display: block;
+  position: relative; // OUDS mod
+  display: flex; // OUDS mod: instead of `block`
+  gap: $ouds-control-item-space-column-gap; // OUDS mod
+  align-items: center; // OUDS mod
+  min-width: $ouds-control-item-size-min-width; // OUDS mod
   min-height: $form-check-min-height;
-  padding-left: $form-check-padding-start;
-  margin-bottom: $form-check-margin-bottom;
+  padding: $ouds-control-item-space-inset; // OUDS mod
+  // OUDS mod: no `padding-left`
+  // OUDS mod: no `margin-bottom`
 
-  .form-check-input {
-    float: left;
-    margin-left: $form-check-padding-start * -1;
+  // OUDS mod: no `.form-check-input`
+
+  // OUDS mod: Handle states more globally
+  &:has(.form-check-input:focus-visible) {
+    @include focus-visible();
   }
+
+  // Label
+  &:has(.form-check-input:disabled),
+  &:has(.form-check-input[disabled]) {
+    .form-check-label {
+      color: $ouds-color-action-disabled;
+      pointer-events: none;
+    }
+  }
+
+  &:has(.form-check-input[readonly]) {
+    .form-check-label {
+      pointer-events: none;
+    }
+  }
+
+  // Background for label in every case
+  &:has(.form-check-input:hover),
+  &:has(.form-check-input:focus-visible),
+  &:has(.form-check-input:active) {
+    .form-check-label::before {
+      background-color: $ouds-control-item-color-bg-hover;
+    }
+  }
+
+  // Label for invalid checkboxes
+  .was-validated &:has(.form-check-input:invalid),
+  &:has(.form-check-input.is-invalid) {
+    .form-check-label {
+      color: $ouds-color-action-negative-enabled;
+    }
+  }
+
+  .was-validated &:has(.form-check-input:invalid:hover),
+  &:has(.form-check-input.is-invalid:hover) {
+    .form-check-label {
+      color: $ouds-color-action-negative-hover;
+    }
+  }
+
+  .was-validated &:has(.form-check-input:invalid:focus-visible),
+  &:has(.form-check-input.is-invalid:focus-visible) {
+    .form-check-label {
+      color: $ouds-color-action-negative-focus;
+    }
+  }
+
+  .was-validated &:has(.form-check-input:invalid:active),
+  &:has(.form-check-input.is-invalid:active) {
+    .form-check-label {
+      color: $ouds-color-action-negative-pressed;
+    }
+  }
+  // End mod
 }
 
+// OUDS mod: handled differently from Bootstrap
 .form-check-reverse {
-  padding-right: $form-check-padding-start;
-  padding-left: 0;
-  text-align: right;
-
-  .form-check-input {
-    float: right;
-    margin-right: $form-check-padding-start * -1;
-    margin-left: 0;
-  }
+  flex-direction: row-reverse;
 }
+// End mod
 
 .form-check-input {
-  --#{$prefix}form-check-bg: #{$form-check-input-bg};
+  // OUDS mod: no `--#{$prefix}form-check-bg`
 
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
-  margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
-  vertical-align: top;
+  // OUDS mod: no margin-top
+  vertical-align: middle; // OUDS mod: instead of `top`
   appearance: none;
-  background-color: var(--#{$prefix}form-check-bg);
-  background-image: var(--#{$prefix}form-check-bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: $form-check-input-border;
+  cursor: $form-check-label-cursor; // OUDS mod
+  background-color: $ouds-color-border-emphasized; // OUDS mod: instead of `var(--#{$prefix}form-check-bg)`
+  // OUDS mod: use mask rather than background
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: $form-check-input-width;
+  // End mod
+  // OUDS mod: no border
   print-color-adjust: exact; // Keep themed appearance for print
-  @include transition($form-check-transition);
+  // OUDS mod: no transition
 
   &[type="checkbox"] {
-    @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // OUDS mod
+    mask: escape-svg($ouds-checkbox-unselected-icon); // OUDS mod: use svg instead of border-radius
   }
 
-  &[type="radio"] {
-    // stylelint-disable-next-line property-disallowed-list
-    border-radius: $form-check-radio-border-radius;
-  }
+  // OUDS mod: no radio
 
+  // OUDS mod: handle differently the checkbox
+  &:hover,
+  &:focus-visible,
   &:active {
-    background-color: $form-check-input-active-bg-color; // OUDS mod
-    filter: $form-check-input-active-filter;
-    border-color: $form-check-input-active-bg-color; // OUDS mod
+    &[type="checkbox"] {
+      mask: escape-svg($ouds-checkbox-unselected-hover-icon);
+    }
   }
 
-  &:focus {
-    border-color: $form-check-input-focus-border;
-    // OUDS mod: default outline
-    box-shadow: $form-check-input-focus-box-shadow;
+  &:indeterminate {
+    background-color: $ouds-color-action-selected;
+
+    &[type="checkbox"] {
+      mask: escape-svg($ouds-checkbox-indeterminate-icon);
+    }
   }
 
   &:checked {
-    background-color: $form-check-input-checked-bg-color;
-    border-color: $form-check-input-checked-border-color;
+    background-color: $ouds-color-action-selected;
 
     &[type="checkbox"] {
-      @if $enable-gradients {
-        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image)}, var(--#{$prefix}gradient);
-      } @else {
-        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image)};
-      }
-    }
-
-    &[type="radio"] {
-      @if $enable-gradients {
-        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image)}, var(--#{$prefix}gradient);
-      } @else {
-        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image)};
-      }
+      mask: escape-svg($ouds-checkbox-selected-icon);
     }
   }
 
-  &[type="checkbox"]:indeterminate {
-    background-color: $form-check-input-indeterminate-bg-color;
-    border-color: $form-check-input-indeterminate-border-color;
-
-    @if $enable-gradients {
-      --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)}, var(--#{$prefix}gradient);
-      // stylelint-disable-next-line function-disallowed-list
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; // OUDS mod
-      // stylelint-disable-next-line function-disallowed-list
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; // OUDS mod
-    } @else {
-      --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)};
-      // stylelint-disable-next-line function-disallowed-list
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); // OUDS mod
-      // stylelint-disable-next-line function-disallowed-list
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); // OUDS mod
-    }
+  &:hover {
+    background-color: $ouds-color-action-hover;
   }
 
-  &:disabled {
-    pointer-events: none;
-    background-color: $input-disabled-bg; // OUDS mod
-    filter: none;
-    opacity: $form-check-input-disabled-opacity;
+  &:focus-visible {
+    background-color: $ouds-color-action-focus;
+  }
 
-    // OUDS mod
-    &:checked,
-    &[type="checkbox"]:indeterminate {
-      background-color: var(--#{$prefix}form-check-input-disabled-color);
-      filter: $form-check-input-disabled-filter;
-      border-color: var(--#{$prefix}form-check-input-disabled-color);
-    }
-    // End mod
+  &:active {
+    background-color: $ouds-color-action-pressed;
   }
 
   // Use disabled attribute in addition of :disabled pseudo-class
   // See: https://github.com/twbs/bootstrap/issues/28247
   &[disabled],
-  &:disabled {
-    ~ .form-check-label {
-      color: $form-label-disabled-color; // OUDS mod
-      pointer-events: none;
-      cursor: default;
-      opacity: $form-check-label-disabled-opacity;
-    }
+  &:disabled,
+  &[readonly] {
+    pointer-events: none;
+    background-color: $ouds-color-action-disabled;
   }
-
-  // OUDS mod: required symbol
-  &:required {
-    ~ .form-check-label::after {
-      margin-left: $form-label-required-margin-left;
-      color: $form-label-required-color;
-      content: "*";
-    }
-  }
+  // End mod
 }
 
 .form-check-label {
-  color: $form-check-label-color;
+  // OUDS mod: no `color`
   cursor: $form-check-label-cursor;
+
+  // OUDS mod
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: transparent;
+  }
+
+  &::before {
+    z-index: -1;
+  }
+  // End mod
 }
 
 //
 // Switch
 //
 
-.form-switch {
-  // OUDS mod
-  --#{$prefix}switch-gradient: #{linear-gradient(to right, var(--#{$prefix}form-switch-square-bg) $form-switch-bg-square-size, transparent)};
-
-  min-height: $form-switch-width * .5;
-  padding-left: $form-switch-padding-start;
-  background-color: transparent;
-
-  .form-check-input {
-    --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
-
-    position: relative; // OUDS mod: needed because of filter property
-    width: $form-switch-width;
-    height: $form-switch-width * .5;
-    margin-left: $form-switch-padding-start * -1;
-    background-color: $form-switch-bg; // OUDS mod
-    background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // OUDS mod: extra param `var(--#{$prefix}switch-gradient)`
-    filter: $form-switch-filter; // OUDS mod
-    background-position: $form-switch-bg-position, 0 0;
-    background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
-    border-color: $form-switch-border-color; // OUDS mod
-    @include border-radius($form-switch-border-radius, 0);
-    @include transition($form-switch-transition);
-
-    &:focus {
-      &[data-focus-visible-added] {
-        @include focus-visible($color: $form-switch-focus-visible-outer, $box-color: $form-switch-focus-visible-inner);
-      }
-    }
-
-    &:checked {
-      background-color: $form-switch-checked-bg;
-      filter: $form-switch-checked-filter; // OUDS mod
-      border-color: $form-switch-checked-border-color;
-
-      &:focus {
-        &[data-focus-visible-added] {
-          @include focus-visible($color: $form-switch-checked-focus-outer, $box-color: $form-switch-checked-focus-inner);
-        }
-      }
-
-      @if $enable-gradients {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient);
-        background-position: $form-switch-checked-bg-position, 100%, 100% 0;
-        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size 100%;
-      } @else {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)};
-        background-position: $form-switch-checked-bg-position, 100% 0;
-        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
-      }
-
-      &:not(:disabled) {
-        --#{$prefix}switch-gradient: #{linear-gradient(to right, $form-switch-checked-square-bg $form-switch-bg-square-size, transparent)};
-      }
-    }
-
-    &:active {
-      background-color: $form-check-input-active-bg-color;
-      filter: none;
-      border-color: $form-check-input-active-bg-color;
-    }
-
-    &:disabled {
-      background-color: var(--#{$prefix}form-check-input-disabled-color);
-      filter: $form-check-input-disabled-filter;
-      border-color: var(--#{$prefix}form-check-input-disabled-color);
-    }
-  }
-
-  .form-check-label {
-    padding-top: $form-check-label-padding-top;
-  }
-  // End mod
-
-  &.form-check-reverse {
-    padding-right: $form-switch-padding-start;
-    padding-left: 0;
-
-    .form-check-input {
-      margin-right: $form-switch-padding-start * -1;
-      margin-left: 0;
-    }
-  }
-}
+// OUDS mod: no `.form-switch`
 
 .form-check-inline {
-  display: inline-block;
-  margin-right: $form-check-inline-margin-end;
+  display: inline-flex; // OUDS mod: instead of `inline-block`
+  // OUDS mod: no `margin-right`
 }
 
-.btn-check {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
-
-  &[disabled],
-  &:disabled {
-    + .btn {
-      // OUDS mod: no pointer-events
-      // OUDS mod: no filter
-      opacity: $form-check-btn-check-disabled-opacity;
-    }
-  }
-
-  // OUDS mod
-  &[data-focus-visible-added]:focus {
-    + .btn,
-    + .tag {
-      @include focus-visible();
-    }
-  }
-  // End mod
-}
+// OUDS mod: no `.btn-check`
 
 // OUDS mod: no `@if enable-dark-mode`
