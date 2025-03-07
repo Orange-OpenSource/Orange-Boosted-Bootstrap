@@ -156,18 +156,18 @@ On colored backgrounds, links should have a different style. Visited links don't
 <div class="colored-bg">
   <div class="bg-brand-primary p-tall">
     <div data-bs-theme="light">
-      Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+      This is an example of a <a href="#">link on colored background</a> in a paragraph.
     </div>
   </div>
   <div class="bg-status-negative-emphasized p-tall">
     <div data-bs-theme="root-inverted">
-      Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+      This is an example of <a href="#">link on colored background</a> in a paragraph.
     </div>
   </div>
 </div>
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light">
-    Lorem ipsum dolor sit amet, <a href="." class="colored-bg visited-links">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+    This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
   </div>
 </div>
 {{< /example >}}
