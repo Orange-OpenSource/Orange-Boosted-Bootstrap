@@ -363,8 +363,8 @@ a {
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
 
-  .visited-links &,
-  &.visited-links {
+  .visited-links &:visited:not(.link, .link-chevron, .icon-link),
+  &:visited.visited-links:not(.link, .link-chevron, .icon-link) {
     color: var(--#{$prefix}link-visited-color);
   }
 
@@ -387,6 +387,16 @@ a {
   &[aria-disabled="true"] {
     color: var(--#{$prefix}link-disabled-color);
     pointer-events: none;
+  }
+
+  .colored-bg &,
+  &.colored-bg {
+    --#{$prefix}link-color: #{$ouds-link-color-content-enabled-mono};
+    --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover-mono};
+    --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus-mono};
+    --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed-mono};
+    --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
+    --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
   }
 }
 

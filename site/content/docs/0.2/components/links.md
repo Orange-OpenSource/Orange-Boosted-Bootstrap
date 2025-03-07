@@ -22,6 +22,8 @@ By default, `.link` defines focus, hover and active styles similar to the `<a>` 
 <a class="link" href="#">This is an example of link</a>
 {{< /example >}}
 
+`:visited` standalone links don't have any specific styling.
+
 ## Variants on colored background
 
 OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/utilities/background#colored-background" >}}). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
@@ -33,12 +35,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 {{< example class="p-none">}}
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light">
-    <div><a class="link link-on-colored-bg" href="#">This is an example of link</a></div>
+    <a class="link link-on-colored-bg" href="#">This is an example of link</a>
   </div>
 </div>
 <div class="bg-status-negative-emphasized p-tall">
   <div data-bs-theme="root-inverted">
-    <div><a class="link link-on-colored-bg" href="#">This is an example of link</a></div>
+    <a class="link link-on-colored-bg" href="#">This is an example of link</a>
   </div>
 </div>
 {{< /example >}}
@@ -69,7 +71,7 @@ We strongly advise against using an `<img>` or other techniques, especially beca
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
 {{< callout >}}
-When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our examples. For icons that convey meaning, provide an appropriate text alternative by adding `role="img"` and an appropriate `aria-label="..."` to the SVGs.
+When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our examples. For icons that convey meaning, provide an appropriate text alternative by adding `role="img"` and an appropriate `aria-label="..."` to the SVGs, or a `.visually-hidden` text for a font icon.
 {{< /callout >}}
 
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
@@ -102,19 +104,6 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-### Style on hover
-
-{{< bootstrap-compatibility >}}
-Add `.icon-link-hover` to move the icon to the right on hover.
-
-{{< example >}}
-<a class="icon-link icon-link-hover" href="#">
-  Icon link
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
-</a>
-{{< /example >}}
-{{< /bootstrap-compatibility >}}
-
 ## Sizes
 
 Links are available in two sizes. Add `.link-sm` for small size.
@@ -122,31 +111,6 @@ Links are available in two sizes. Add `.link-sm` for small size.
 {{< example >}}
 <div><a class="link" href="#">This is an example of a link</a></div>
 <div><a class="link link-sm" href="#">This is an example of a small link</a></div>
-{{< /example >}}
-
-## Visited state
-
-Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied to a parent element to style all the child links.
-
-{{< example >}}
-<div class="visited-links">
-  <a class="link" href=".">This is an example of a visited link</a>
-</div>
-{{< /example >}}
-
-Visited links don't change on colored background.
-
-{{< example class="p-none">}}
-<div class="bg-brand-primary p-tall">
-  <div data-bs-theme="light">
-    <div><a class="link link-on-colored-bg" href="#">This is an example of visited link</a></div>
-  </div>
-</div>
-<div class="bg-status-negative-emphasized p-tall">
-  <div data-bs-theme="root-inverted">
-    <div><a class="link link-on-colored-bg" href="#">This is an example of visited link</a></div>
-  </div>
-</div>
 {{< /example >}}
 
 ## Disabled state

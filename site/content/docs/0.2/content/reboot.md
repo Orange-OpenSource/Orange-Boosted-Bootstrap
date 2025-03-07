@@ -128,11 +128,19 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 <a aria-disabled="true">This is an example of a disabled link</a>
 {{< /example >}}
 
-Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied to a parent element to style all the child links.
+Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 {{< example >}}
 <div class="visited-links">
-  <a href="#">This is an example of a visited link</a>
+  <div>
+    <a href=".">This is an example of a visited link</a>
+  </div>
+  <div>
+    <a href="#">This is an example of an unvisited link</a>
+  </div>
+</div>
+<div>
+  <a href="." class="visited-links">This is an example of a visited link</a>
 </div>
 {{< /example >}}
 
@@ -140,6 +148,28 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 {{< example >}}
 <a>This is a placeholder link</a>
+{{< /example >}}
+
+On colored backgrounds, links should have a different style. Visited links don't have a specific style on colored backgrounds.
+
+{{< example class="p-none">}}
+<div class="colored-bg">
+  <div class="bg-brand-primary p-tall">
+    <div data-bs-theme="light">
+      Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+    </div>
+  </div>
+  <div class="bg-status-negative-emphasized p-tall">
+    <div data-bs-theme="root-inverted">
+      Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+    </div>
+  </div>
+</div>
+<div class="bg-brand-primary p-tall">
+  <div data-bs-theme="light">
+    Lorem ipsum dolor sit amet, <a href="." class="colored-bg visited-links">consectetur adipiscing</a> elit. Mauris massa elit, finibus quis posuere non, scelerisque sit amet ex.
+  </div>
+</div>
 {{< /example >}}
 
 ## Horizontal rules
