@@ -132,6 +132,8 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Checks & radios
 
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.form-check`, `.form-check-input` and `.form-check-label` have been changed. Please make sure that the rendering is still fine.
+
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
 ## Helpers
@@ -649,6 +651,19 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-button-space-padding-inline-icon-none</code></li>
       <li><code>$ouds-button-space-padding-inline-icon-start</code></li>
       <li><code>$ouds-button-space-padding-inline-start-icon-end</code></li>
+      <li><code>$ouds-checkbox-border-radius</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-focus</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-hover</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-pressed</code></li>
+      <li><code>$ouds-checkbox-border-width-selected</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-focus</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-hover</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-pressed</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected</code></li>
+      <li><code>$ouds-checkbox-size-indicator</code></li>
+      <li><code>$ouds-checkbox-size-max-height</code></li>
+      <li><code>$ouds-checkbox-size-min-height</code></li>
+      <li><code>$ouds-checkbox-size-min-width</code></li>
       <li><code>$ouds-color-action-disabled-dark</code></li>
       <li><code>$ouds-color-action-disabled-light</code></li>
       <li><code>$ouds-color-action-enabled-dark</code></li>
@@ -2030,6 +2045,30 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$focus-visible-outer-color-dark</code></li>
       <li><code>$footer-nav-link-font-weight</code></li>
       <li><code>$font-size-xlg</code></li>
+      <li><code>$form-check-btn-check-disabled-opacity</code></li>
+      <li><code>$form-check-filter</code></li>
+      <li><code>$form-check-filter-dark</code></li>
+      <li><code>$form-check-inline-margin-end</code></li>
+      <li><code>$form-check-input-active-filter</code></li>
+      <li><code>$form-check-input-border</code></li>
+      <li><code>$form-check-input-checked-bg-color</code></li>
+      <li><code>$form-check-input-checked-border-color</code></li>
+      <li><code>$form-check-input-checked-color</code></li>
+      <li><code>$form-check-input-color</code></li>
+      <li><code>$form-check-input-disabled-color</code></li>
+      <li><code>$form-check-input-disabled-color-dark</code></li>
+      <li><code>$form-check-input-disabled-opacity</code></li>
+      <li><code>$form-check-input-focus-border</code></li>
+      <li><code>$form-check-input-focus-box-shadow</code></li>
+      <li><code>$form-check-input-indeterminate-bg-color</code></li>
+      <li><code>$form-check-input-indeterminate-border-color</code></li>
+      <li><code>$form-check-input-indeterminate-color</code></li>
+      <li><code>$form-check-label-color</code></li>
+      <li><code>$form-check-label-disabled-opacity</code></li>
+      <li><code>$form-check-margin-bottom</code></li>
+      <li><code>$form-check-padding-start</code></li>
+      <li><code>$form-check-radio-border-radius</code></li>
+      <li><code>$form-check-transition</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
       <li><code>$form-star-focus-color-dark</code></li>
@@ -2104,6 +2143,12 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>--bs-disabled-color</code></li>
       <li><code>--bs-focus-visible-inner-color</code></li>
       <li><code>--bs-focus-visible-outer-color</code></li>
+      <li><code>--bs-form-check-filter</code></li>
+      <li><code>--bs-form-check-input-disabled-color</code></li>
+      <li><code>--bs-form-invalid-border-color</code></li>
+      <li><code>--bs-form-invalid-color</code></li>
+      <li><code>--bs-form-valid-border-color</code></li>
+      <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-gray-950</code></li>
       <li><code>--bs-tertiary-active-bg</code></li>
     </ul>

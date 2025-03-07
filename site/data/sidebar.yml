@@ -83,7 +83,6 @@
     - title: Select
       draft: true
     - title: Checks & radios
-      draft: true
     - title: Range
       draft: true
     - title: Input group
@@ -95,7 +94,6 @@
     - title: Layout
       draft: true
     - title: Validation
-      draft: true
 
 - title: Components
   icon: menu-button-wide-fill

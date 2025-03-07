@@ -9,6 +9,43 @@ aliases:
 toc: true
 ---
 
+## v0.4.0
+
+### Forms
+
+#### Checkboxes
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
+
+### CSS and Sass variables
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-checkbox-border-radius</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-focus</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-hover</code></li>
+      <li><code>$ouds-checkbox-border-width-selected-pressed</code></li>
+      <li><code>$ouds-checkbox-border-width-selected</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-focus</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-hover</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected-pressed</code></li>
+      <li><code>$ouds-checkbox-border-width-unselected</code></li>
+      <li><code>$ouds-checkbox-size-indicator</code></li>
+      <li><code>$ouds-checkbox-size-max-height</code></li>
+      <li><code>$ouds-checkbox-size-min-height</code></li>
+      <li><code>$ouds-checkbox-size-min-width</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
+    <ul>
+      <li><code>form-validation-state</code></li>
+      <li><code>form-validation-state-selector</code></li>
+    </ul>
+  </details>
+
 ## v0.3.0
 
 ### Utilities
@@ -47,11 +84,11 @@ toc: true
 
 #### Buttons
 
-- <span class="badge text-bg-success">New</span> Button component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Button component has been implemented.
 
 ### Examples
 
-- <span class="badge text-bg-success">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+- <span class="badge text-bg-status-positive-emphasized">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 ### CSS and Sass variables
 
