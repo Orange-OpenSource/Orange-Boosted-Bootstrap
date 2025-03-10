@@ -75,7 +75,7 @@
     "docs-lint": "npm run docs-vnu",
     "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap.xml --sitemap-find https://boosted.orange.com/ouds-web --sitemap-replace http://localhost:9001",
     "docs-accessibility": "npm-run-all --parallel --race docs-serve-only docs-pa11y",
-    "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
+    "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates --baseURL http://localhost:9001/",
     "docs-serve-only": "sirv _site --no-clear --port 9001",
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "update-deps": "ncu -u -x eslint,karma-browserstack-launcher,karma-rollup-preprocessor",
