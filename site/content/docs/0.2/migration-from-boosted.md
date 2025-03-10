@@ -130,8 +130,9 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Links
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.link`, `.link-sm` have been added for new standalone link components.
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used with `.link` and `.link-sm` to get variants on colored backgrounds.
+- <span class="badge text-bg-status-positive-emphasized">New</span> New standalone link component has been added. Use `.link` class to get it.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Use `.link-sm` class to get small standalone link.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
 
 ## Forms
 
@@ -167,11 +168,11 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Colored links
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS. Classes still exist for Bootstrap compatibility.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
 
 ### Icon link
 
-- <span class="badge text-bg-status-info-emphasized">Info</span> Icon link and chevron link are now documented in Link component. See [Link]({{< docsref "/components/links/" >}}).
+- <span class="badge text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]({{< docsref "/components/links/#icon-link" >}}) and [link chevron]({{< docsref "/components/links/#link-chevron" >}}).
 
 ### Icon
 
@@ -321,7 +322,7 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Link
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the default build and from the documentation. They are useless in OUDS web.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the build and from the documentation. They are useless in OUDS web.
 
 ### Object fit
 

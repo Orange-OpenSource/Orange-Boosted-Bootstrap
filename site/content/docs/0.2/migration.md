@@ -21,31 +21,33 @@ toc: true
 
 #### Links
 
-- <span class="badge text-bg-success">New</span> Link is a new component implemented in OUDS.
+- <span class="badge text-bg-success">New</span> Link component has been implemented.
 
 ### Helpers
 
 #### Icon link
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Colors links are unstyled in OUDS, the documentation is only kept for Bootstrap compatibility.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Colors links are unstyled in OUDS Web, the documentation is only kept for Bootstrap compatibility.
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> The Icon link documentation has been merged into is the new [Link component]({{< docsref "/components/links" >}}) documentation and removed from Helpers section.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The icon link documentation has been merged into is the new [Link component]({{< docsref "/components/links" >}}) documentation and removed from helpers section.
 
 ### Utilities
-
-#### Link
-
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Link utilities are no more used in OUDS and the following classes have been removed: <code>.link-opacity-{number}</code>, <code>.link-offset-{number}</code>, <code>.link-underline-{number}</code>, .<code>link-underline-opacity-{number}</code>
 
 #### Border
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border color: `.border-muted`.
+
+#### Link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Link utilities are no more used in OUDS Web and the following classes have been removed: <code>.link-opacity-{number}</code>, <code>.link-offset-{number}</code>, <code>.link-underline-{number}</code>, .<code>link-underline-opacity-{number}</code>
 
 ### CSS and Sass variables
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$ouds-color-border-muted-dark</code></li>
+      <li><code>$ouds-color-border-muted-light</code></li>
       <li><code>$ouds-link-color-arrow-enabled</code></li>
       <li><code>$ouds-link-color-arrow-focus</code></li>
       <li><code>$ouds-link-color-arrow-hover</code></li>
@@ -71,8 +73,6 @@ toc: true
       <li><code>$ouds-link-space-column-gap-icon-small</code></li>
       <li><code>$ouds-link-space-padding-block</code></li>
       <li><code>$ouds-link-space-padding-inline</code></li>
-      <li><code>$ouds-color-border-muted-dark</code></li>
-      <li><code>$ouds-color-border-muted-light</code></li>
     </ul>
   </details>
 
