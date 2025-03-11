@@ -25,4 +25,8 @@ for (const file of sh.find('_site').filter(filename => {
   sh.sed('-i', /"\/docs/g, '"/ouds-web/docs', file)
   // Replace href="/" with href="/ouds-web"
   sh.sed('-i', 'href="/"', 'href="/ouds-web"', file)
+  // Replace href="https://boosted.orange.com/docs with href="https://boosted.orange.com/ouds-web/docs"
+  sh.sed('-i', 'href="https://boosted.orange.com/docs', 'href="https://boosted.orange.com/ouds-web/docs', file)
+  // // Replace href="https://boosted.orange.com/docs with href="https://boosted.orange.com/ouds-web/docs"
+  sh.sed('-i', /https:\\\/\\\/boosted.orange.com\\\/docs/g, 'https:\\/\\/boosted.orange.com\\/ouds-web\\/docs', file)
 }
