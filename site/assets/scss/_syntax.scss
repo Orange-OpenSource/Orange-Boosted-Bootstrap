@@ -57,14 +57,14 @@
   .language-bash,
   .language-sh {
     .line::before {
-      // OUDS mod: no color: var(--base12);
+      color: var(--base12);
       content: "$ ";
       user-select: none;
     }
   }
 
   .language-powershell::before {
-    // OUDS mod: no color: var(--base12);
+    color: var(--base12);
     content: "PM> ";
     user-select: none;
   }
