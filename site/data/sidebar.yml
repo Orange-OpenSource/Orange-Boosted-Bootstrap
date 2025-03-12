@@ -218,7 +218,6 @@
   pages:
     - title: Approach
     - title: Icons
-      draft: true
 
 - title: About
   icon: globe2
