@@ -1,48 +1,34 @@
 ---
 layout: docs
 title: Checkbox
-description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
+description: Create consistent cross-browser and cross-device checkboxes.
 group: forms
 aliases:
   - "/docs/forms/checks/"
   - "/docs/0.2/forms/checks/"
   - "/docs/forms/checks-radios/"
+  - "/docs/forms/checkbox"
 toc: true
 ---
 
-<!-- TODO: Remove this part before merging -->
+## Basic example
 
 {{< example >}}
-<input class="form-check-input" type="checkbox" value="" id="checkDefault-2">
-<label for="checkDefault-2">Not empty</label>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkDefault-1">
-  <label for="checkDefault-1">Not empty</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkDefault0">
-  <label class="form-check-label" for="checkDefault0">Not empty</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
-  <label class="form-check-label" for="checkDefault1">
-    Default checkbox
-  </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label ms-auto" for="checkDefault2">
-    Default checkbox
-  </label>
-  <input class="form-check-input" type="checkbox" value="" id="checkDefault2">
-</div>
-
 <div class="checkbox-item">
   <div class="checkbox-item-indicator-container">
-    <input class="checkbox-indicator" type="checkbox" value="" id="checkDefault3">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
   <div class="checkbox-item-text">
-    <label class="checkbox-label" for="checkDefault3">Label</label>
-    <span class="checkbox-helper">Helper text</span>
+    <label class="checkbox-label" for="checkboxDefault">Label</label>
+  </div>
+</div>
+<div class="checkbox-item checkbox-item-divider">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxFullOption" checked>
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxFullOption">Label</label>
+    <p class="checkbox-helper">Helper text</p>
   </div>
   <div class="checkbox-item-icon-container">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -50,43 +36,7 @@ toc: true
     </svg>
   </div>
 </div>
-
-<div class="checkbox-item">
-  <div class="checkbox-item-indicator-container">
-    <input class="checkbox-indicator" type="checkbox" value="" id="checkDefault4">
-  </div>
-  <div class="checkbox-item-text">
-    <label class="checkbox-label" for="checkDefault4">zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk, zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk, zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk,</label>
-    <span class="checkbox-helper">Helper text</span>
-  </div>
-  <div class="checkbox-item-icon-container">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
-  </div>
-</div>
-
-<label class="checkbox-standalone">
-  <input class="checkbox-indicator" type="checkbox" value="">
-  <span class="visually-hidden">Label</span>
-</label>
 {{< /example >}}
-
-## Approach
-
-Browser default checkboxes and radios are replaced with the help of `.form-check`, a series of classes for both input types that improve the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
-
-Structurally, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. We use the future friendly child check selector (`:has`) for all our `<input>` states, like `:checked` or `:disabled`. When combined with the `.form-check-label` class, we can easily style the text for each item based on the `<input>`'s state.
-
-`.form-check-label` extend their clickable area until a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
-
-`.form-check-input` are based on `svg`s that are controlled by design tokens directly.
-
-Our checks use custom OUDS icons to indicate checked or indeterminate states.
-
-## Checks
-
-<!-- TODO: Add control-item using checkbox -->
 
 {{< bootstrap-compatibility false >}}
 {{< example >}}
@@ -105,84 +55,106 @@ Our checks use custom OUDS icons to indicate checked or indeterminate states.
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-### Indeterminate
+## Approach
 
-<!-- TODO: Add control-item using checkbox -->
+Browser default checkboxes are replaced with the help of `.checkbox-indicator`. Checkboxes are for selecting one or several options in a list.
 
-{{< bootstrap-compatibility false >}}
-{{< markdown >}}
-Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
-{{< /markdown >}}
+We use the future friendly child check selector (`:has`) for all our `<input>` states, like `:invalid` or `:disabled`. When combined with the `.checkbox-label` class, we can easily style the text for each item based on the `<input>`'s state.
 
-{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
-  <label class="form-check-label" for="checkIndeterminate">
-    Indeterminate checkbox
-  </label>
-</div>
-{{< /example >}}
-{{< /bootstrap-compatibility >}}
+`.checkbox-item-indicator-container` and `.checkbox-item-icon-container` are containers to better control the position of the `.checkbox-indicator` and the icon.
 
-### Disabled
+`.checkbox-label` extend their clickable area until a `.checkbox-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
 
-<!-- TODO: Add control-item using checkbox -->
+`.checkbox-indicator` are based on SVGs that are controlled by design tokens directly. These SVGs, that indicate unchecked, checked or indeterminate states, are not Solaris icons but custom OUDS icons that are provided in CSS.
 
-{{< bootstrap-compatibility false >}}
-{{< markdown >}}
-Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
-{{< /markdown >}}
+You can mix almost all the variants that we provide in the documentation.
 
-{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
-  <label class="form-check-label" for="checkIndeterminateDisabled">
-    Disabled indeterminate checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
-  <label class="form-check-label" for="checkDisabled">
-    Disabled checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="checkCheckedDisabled">
-    Disabled checked checkbox
-  </label>
-</div>
-{{< /example >}}
-{{< /bootstrap-compatibility >}}
+## Variants
 
-## Default (stacked)
+### Divider
 
-<!-- TODO: Add control-item using checkbox -->
-
-{{< bootstrap-compatibility false >}}
-{{< markdown >}}
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
-{{< /markdown >}}
+You can display a divider by adding `.checkbox-item-divider` to a `.checkbox-item`.
 
 {{< example >}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
+<div class="checkbox-item checkbox-item-divider">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDivider">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxDivider">Label</label>
+  </div>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
-  </label>
+<div class="checkbox-item checkbox-item-divider">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDivider2">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxDivider2">Label</label>
+  </div>
 </div>
 {{< /example >}}
-{{< /bootstrap-compatibility >}}
 
-<!-- OUDS mod: no Inline -->
+### Icon
 
-## Reverse
+You can display an icon by adding `.checkbox-item-icon-container` with an icon (SVG or font-icon most likely) inside as a child of a `.checkbox-item`.
+
+{{< example >}}
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxWithSVG">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxWithSVG">Label</label>
+  </div>
+  <div class="checkbox-item-icon-container">
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxWithIconFont">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxWithIconFont">Label</label>
+  </div>
+  <div class="checkbox-item-icon-container">
+    <span class="icon si si-settings" aria-hidden="true"></span>
+  </div>
+</div>
+{{< /example >}}
+
+### Helper text
+
+You can display an helper text by adding a `.checkbox-helper` as a sibling of a `.checkbox-label`.
+<!-- TODO: Check for a11y and AT text -->
+{{< example >}}
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxHelperText">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxHelperText">Label</label>
+    <p class="checkbox-helper">Helper Text</p>
+  </div>
+</div>
+{{< /example >}}
+
+### Reverse
+
+You can reverse the component by adding `.checkbox-item-reverse` to a `.checkbox-item`.
+
+{{< example >}}
+<div class="checkbox-item checkbox-item-reverse">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxReverse">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxReverse">Label</label>
+  </div>
+</div>
+{{< /example >}}
 
 {{< bootstrap-compatibility false >}}
 {{< markdown >}}
@@ -205,12 +177,137 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-## Without labels
+## States
 
-Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+### Indeterminate
+
+Often used when the checkbox represents a partial selection. For example, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some but not all sub-options are checked. This is not a state the user directly selects but is calculated by the system.
+
+Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+
+{{< callout info >}}
+Indeterminate state can be combined with disabled and error states.
+{{< /callout >}}
+
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxIndeterminate">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxIndeterminate">Label</label>
+  </div>
+</div>
+{{< /example >}}
+
+Here is the associated Javascript to set the indeterminate state.
+
+```javascript
+const checkbox = document.getElementById('checkbox');
+
+checkbox.indeterminate = true;
+```
+
+{{< bootstrap-compatibility false >}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
+  <label class="form-check-label" for="checkIndeterminate">
+    Indeterminate checkbox
+  </label>
+</div>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
+
+### Disabled
+
+Add the `disabled` attribute and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input's state.
+
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" disabled>
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxIndeterminateDisabled">Label</label>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDisabled" disabled>
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxDisabled">Label</label>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked disabled>
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxCheckedDisabled">Label</label>
+  </div>
+</div>
+{{< /example >}}
+
+{{< bootstrap-compatibility false >}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
+  <label class="form-check-label" for="checkIndeterminateDisabled">
+    Disabled indeterminate checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
+  <label class="form-check-label" for="checkDisabled">
+    Disabled checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="checkCheckedDisabled">
+    Disabled checked checkbox
+  </label>
+</div>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
+
+<!-- TODO: Introduce Readonly ? -->
+
+### Invalid state
+
+You can display an invalid checkbox by adding `.is-invalid` to a `.checkbox-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
+
+{{< example >}}
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxInvalid">Label</label>
+  </div>
+</div>
+{{< /example >}}
+
+## Standalone
 
 {{< callout warning >}}
-They are commonly used to build custom component, and shouldn't be used alone. You might need to complete the behavior of this by adding a gray background on `:hover`, `:focus-visible` and `:active`, and handling the `:focus-visible` by yourself.
+They are commonly used to build custom component, and shouldn't be used alone. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-labelledby`, a `.visually-hidden`, `aria-label` or a second label). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+{{< /callout >}}
+
+For the standalone Checkbox, we provide a completely different architecture to ease the integration inside your projects.
+
+{{< example >}}
+<label class="checkbox-standalone">
+  <input class="checkbox-indicator" type="checkbox" value="">
+  <p class="visually-hidden">Label</p>
+</label>
+{{< /example >}}
+
+{{< bootstrap-compatibility false >}}
+{{< callout warning >}}
+Be careful using this, you must implement the background on hover, focus and active states and take care of the focus-visible.
 {{< /callout >}}
 
 {{< example >}}
@@ -218,3 +315,6 @@ They are commonly used to build custom component, and shouldn't be used alone. Y
   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
 </div>
 {{< /example >}}
+{{< /bootstrap-compatibility >}}
+
+## Group

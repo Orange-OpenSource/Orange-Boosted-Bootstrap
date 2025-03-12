@@ -1,5 +1,5 @@
 //
-// Check/radio
+// Control item
 //
 
 .control-item {
@@ -16,7 +16,7 @@
 }
 
 .control-item-border {
-  border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once given
+  border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
 }
 
 .control-item-reverse {
@@ -32,8 +32,10 @@
   svg,
   img,
   .icon {
-    width: $ouds-control-item-size-icon;
-    height: $ouds-control-item-size-icon;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: $ouds-control-item-size-icon;
     line-height: 1;
   }
 }
@@ -46,19 +48,19 @@
   justify-content: center;
 }
 
+//
+// Checkbox item
+//
+
 .checkbox-item {
   @extend .control-item;
 
-  // Label
   &:has(.checkbox-indicator:disabled),
   &:has(.checkbox-indicator[disabled]) {
-    .checkbox-label {
-      color: $ouds-color-action-disabled;
-      pointer-events: none;
-    }
-    .checkbox-helper {
-      color: $ouds-color-action-disabled;
-    }
+    pointer-events: none;
+
+    .checkbox-label,
+    .checkbox-helper,
     svg,
     img,
     .icon {
@@ -66,16 +68,12 @@
     }
   }
 
-  // Background for label in every case
   &:has(.checkbox-indicator:hover),
   &:has(.checkbox-indicator:focus-visible),
   &:has(.checkbox-indicator:active) {
-    .checkbox-label::before {
-      background-color: $ouds-control-item-color-bg-hover;
-    }
+    background-color: $ouds-control-item-color-bg-hover;
   }
 
-  // Label for invalid checkboxes
   .was-validated &:has(.checkbox-indicator:invalid),
   &:has(.checkbox-indicator.is-invalid) {
     .checkbox-label {
@@ -105,31 +103,52 @@
   }
 }
 
+.checkbox-item-indicator-container,
+.checkbox-item-icon-container {
+  @extend .control-item-assets-container;
+}
+
+.checkbox-item-text {
+  @extend .control-item-text;
+}
+
+//
+// Variants
+//
+
+.checkbox-item-border {
+  @extend .control-item-border;
+}
+
+.checkbox-item-reverse {
+  @extend .control-item-reverse;
+}
+
+.checkbox-item-divider {
+  @extend .control-item-border;
+}
+
+//
+// Checkbox indicator
+//
+
 .checkbox-indicator {
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
-  // OUDS mod: no margin-top
-  vertical-align: middle; // OUDS mod: instead of `top`
+  vertical-align: middle;
   appearance: none;
-  cursor: $form-check-label-cursor; // OUDS mod
-  background-color: $ouds-color-border-emphasized; // OUDS mod: instead of `var(--#{$prefix}form-check-bg)`
-  // OUDS mod: use mask rather than background
+  cursor: $form-check-label-cursor;
+  background-color: $ouds-color-border-emphasized;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: $form-check-input-width;
-  // End mod
-  // OUDS mod: no border
-  print-color-adjust: exact; // Keep themed appearance for print
-  // OUDS mod: no transition
+  print-color-adjust: exact;
 
   &[type="checkbox"] {
-    mask: escape-svg($ouds-checkbox-unselected-icon); // OUDS mod: use svg instead of border-radius
+    mask: escape-svg($ouds-checkbox-unselected-icon);
   }
 
-  // OUDS mod: no radio
-
-  // OUDS mod: handle differently the checkbox
   &:hover,
   &:focus-visible,
   &:active {
@@ -173,8 +192,11 @@
     pointer-events: none;
     background-color: $ouds-color-action-disabled;
   }
-  // End mod
 }
+
+//
+// Checkbox texts
+//
 
 .checkbox-label {
   display: block;
@@ -182,9 +204,7 @@
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");
 
-  // OUDS mod
-  &::before,
-  &::after {
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,18 +213,18 @@
     content: "";
     background-color: transparent;
   }
-
-  &::before {
-    z-index: -1;
-  }
-  // End mod
 }
 
 .checkbox-helper {
   display: block;
+  margin: 0;
   color: $ouds-color-content-muted;
   @include get-font-size("label-medium");
 }
+
+//
+// Checkbox standalone
+//
 
 .checkbox-standalone {
   @extend .control-item;
@@ -215,43 +235,13 @@
   justify-content: center;
   min-width: $ouds-checkbox-size-min-width;
   min-height: $ouds-checkbox-size-min-height;
-
-  &:has(.checkbox-indicator:hover)::before {
-    background-color: $ouds-control-item-color-bg-hover;
-  }
 }
 
-.checkbox-item-border {
-  @extend .control-item-border;
-}
-
-.checkbox-item-reverse {
-  @extend .control-item-reverse;
-}
-
-
-.checkbox-item-indicator-container,
-.checkbox-item-icon-container {
-  @extend .control-item-assets-container;
-}
-
-.checkbox-item-text {
-  @extend .control-item-text;
-}
 
 //
-// Switch
+// Bootstrap compatibility
 //
 
-// OUDS mod: no `.form-switch`
-
-// OUDS mod: no `.form-check-inline`
-
-// OUDS mod: no `.btn-check`
-
-// OUDS mod: no `@if enable-dark-mode`
-
-// OUDS mod: Bootstrap compatibility
 @if $enable-bootstrap-compatibility {
   .form-check {
     @extend .checkbox-item;

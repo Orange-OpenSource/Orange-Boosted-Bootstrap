@@ -1076,7 +1076,7 @@ $form-check-input-border-radius:          $ouds-checkbox-border-radius !default;
 // OUDS mod: no `$form-check-input-focus-box-shadow`
 
 // OUDS mod
-$ouds-checkbox-calc-multiplicator: 2 !default; // Here to handle 1px border using svg
+$ouds-checkbox-calc-multiplicator: 2 !default; // Here to avoid float numbers in svg
 $ouds-checkbox-calc-viewbox: calc(strip-units($form-check-input-width) * $ouds-checkbox-calc-multiplicator) !default; // stylelint-disable-line function-disallowed-list
 $ouds-checkbox-calc-border-radius: calc(strip-units($form-check-input-border-radius) * $ouds-checkbox-calc-multiplicator) !default; // stylelint-disable-line function-disallowed-list
 $ouds-checkbox-calc-border-width-unselected: calc(strip-units($ouds-checkbox-border-width-unselected) * $ouds-checkbox-calc-multiplicator) !default; // stylelint-disable-line function-disallowed-list
