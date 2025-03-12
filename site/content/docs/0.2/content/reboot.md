@@ -128,7 +128,7 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 <a aria-disabled="true">This is an example of a disabled link</a>
 {{< /example >}}
 
-Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
+Visited links don't have a specific style by default. The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 {{< example >}}
 <div class="visited-links">

@@ -377,6 +377,9 @@ $utilities-border-subtle: (
 ) !default;
 // scss-docs-end utilities-border-colors
 
+// OUDS mod : no $utilities-links-underline
+// $utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline") !default;
+
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
 // OUDS mod

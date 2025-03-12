@@ -113,6 +113,22 @@ Links are available in two sizes. Add `.link-sm` for small size.
 <div><a class="link link-sm" href="#">This is an example of a small link</a></div>
 {{< /example >}}
 
+## Link tags
+
+The `.link` classes are designed to be used with the `<a>` element. However, you can also use these classes on `<button>` elements.
+
+{{< example >}}
+<div><button class="link link" type="submit">Button link</button></div>
+<div><button class="link link-chevron" type="reset">Button link chevron</button></div>
+<div>
+  <button class="link link-sm icon-link" type="button">
+  <svg class="bi" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+  </svg> Small button link icon
+  </button>
+</div>
+{{< /example >}}
+
 ## Disabled state
 
 Make links look inactive by adding the `aria-disabled="true"` attribute to any `<a>` element. Disabled links have `pointer-events: none` applied to, preventing hover and active states from triggering.
