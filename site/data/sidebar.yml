@@ -82,7 +82,7 @@
       draft: true
     - title: Select
       draft: true
-    - title: Checks & radios
+    - title: Checkbox
     - title: Range
       draft: true
     - title: Input group

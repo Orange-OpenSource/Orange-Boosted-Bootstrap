@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Checks and radios
+title: Checkbox
 description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 group: forms
 aliases:
@@ -35,35 +35,41 @@ toc: true
   </label>
   <input class="form-check-input" type="checkbox" value="" id="checkDefault2">
 </div>
-<!-- Without control item -->
-<div class="form-check">
-  <div>
-    <input class="form-check-input" type="checkbox" value="" id="checkDefault3">
+
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkDefault3">
   </div>
-  <div>
-    <label class="form-check-label ms-auto" for="checkDefault3">
-      Default checkbox
-    </label>
-    <p class="mb-none">Helper text</p>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkDefault3">Label</label>
+    <span class="checkbox-helper">Helper text</span>
   </div>
-  <div class="ms-auto">
-    Obj
-  </div>
-</div>
-<div class="form-check">
-  <div>
-    Obj
-  </div>
-  <div class="ms-auto">
-    <label class="form-check-label ms-auto" for="checkDefault4">
-      Default checkbox
-    </label>
-    <p class="mb-none">Helper text</p>
-  </div>
-  <div>
-    <input class="form-check-input" type="checkbox" value="" id="checkDefault4">
+  <div class="checkbox-item-icon-container">
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
   </div>
 </div>
+
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkDefault4">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkDefault4">zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk, zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk, zeofn ez eof izeof ,zefo kz,eofk ,zeof k,zeof k,zoef k,zoe fk,zoe fk,zoef k,zoe fk,zoek ,fzok e,fozk ,efok ,zeof k,zeo fk,zeofk ,zoekf,zoe kf,zk,</label>
+    <span class="checkbox-helper">Helper text</span>
+  </div>
+  <div class="checkbox-item-icon-container">
+    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </div>
+</div>
+
+<label class="checkbox-standalone">
+  <input class="checkbox-indicator" type="checkbox" value="">
+  <span class="visually-hidden">Label</span>
+</label>
 {{< /example >}}
 
 ## Approach
