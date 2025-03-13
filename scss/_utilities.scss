@@ -990,6 +990,10 @@ $utilities: map-merge(
       values: $ouds-text-colors
     ),
     // scss-docs-end utils-color-ouds
+    // OUDS mod: no "link-opacity"
+    // OUDS mod: no "link-offset"
+    // OUDS mod: no "link-underline
+    // OUDS mod: no "link-underline-opacity"
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
