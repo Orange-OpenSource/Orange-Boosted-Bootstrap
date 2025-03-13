@@ -203,9 +203,9 @@ Indeterminate state can be combined with disabled and error states.
 Here is the associated Javascript to set the indeterminate state.
 
 ```javascript
-const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox')
 
-checkbox.indeterminate = true;
+checkbox.indeterminate = true
 ```
 
 {{< bootstrap-compatibility false >}}
@@ -301,7 +301,7 @@ For the standalone Checkbox, we provide a completely different architecture to e
 {{< example >}}
 <label class="checkbox-standalone">
   <input class="checkbox-indicator" type="checkbox" value="">
-  <p class="visually-hidden">Label</p>
+  <span class="visually-hidden">Label</span>
 </label>
 {{< /example >}}
 

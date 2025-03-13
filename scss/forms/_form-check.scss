@@ -201,6 +201,7 @@
 .checkbox-label {
   display: block;
   color: $ouds-color-content-default;
+  word-break: break-all;
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");
 
@@ -219,6 +220,7 @@
   display: block;
   margin: 0;
   color: $ouds-color-content-muted;
+  word-break: break-all;
   @include get-font-size("label-medium");
 }
 
@@ -227,7 +229,7 @@
 //
 
 .checkbox-standalone {
-  @extend .control-item;
+  @extend .checkbox-item;
   @extend .checkbox-label;
   display: inline-flex;
   gap: 0;
