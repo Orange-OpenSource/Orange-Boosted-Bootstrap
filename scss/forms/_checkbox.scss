@@ -19,7 +19,7 @@
   border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
 }
 
-%control-item-reverse {
+%control-item-inverse {
   flex-direction: row-reverse;
 }
 
@@ -120,8 +120,8 @@
   @extend %control-item-border;
 }
 
-.checkbox-item-reverse {
-  @extend %control-item-reverse;
+.checkbox-item-inverse {
+  @extend %control-item-inverse;
 }
 
 .checkbox-item-divider {
@@ -259,6 +259,6 @@
   }
 
   .form-check-reverse {
-    @extend .checkbox-item-reverse;
+    @extend .checkbox-item-inverse;
   }
 }

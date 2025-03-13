@@ -132,9 +132,45 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Checks & radios
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.form-check`, `.form-check-input` and `.form-check-label` have been changed. Please make sure that the rendering is still fine.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch and radio buttons and the corresponding class `.form-switch` have been removed.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+
+
+#### Checkbox
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.checkbox-item-icon-container`, `.checkbox-item-indicator-container`, `.checkbox-item-text`, `.checkbox-label`, `.checkbox-indicator`, `.checkbox-helper`, `.checkbox-item-divider`, `.checkbox-item-inverse` have been added.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different. 
+<div class="ps-taller">
+For example, if you used to write:
+
+```html
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkboxDefault">
+  <label class="form-check-label" for="checkboxDefault">
+    Default checkbox
+  </label>
+</div>
+```
+Now you should write:
+
+```html
+<div class="checkbox-item">
+  <div class="checkbox-item-indicator-container">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDefault">
+  </div>
+  <div class="checkbox-item-text">
+    <label class="checkbox-label" for="checkboxDefault">Default checkbox</label>
+  </div>
+</div>
+```
+See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more information.
+</div>
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` have been removed.
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in Checkboxes labels are now forbidden (they won't be interactive anyway).
 
 ## Helpers
 
@@ -651,19 +687,6 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-button-space-padding-inline-icon-none</code></li>
       <li><code>$ouds-button-space-padding-inline-icon-start</code></li>
       <li><code>$ouds-button-space-padding-inline-start-icon-end</code></li>
-      <li><code>$ouds-checkbox-border-radius</code></li>
-      <li><code>$ouds-checkbox-border-width-selected-focus</code></li>
-      <li><code>$ouds-checkbox-border-width-selected-hover</code></li>
-      <li><code>$ouds-checkbox-border-width-selected-pressed</code></li>
-      <li><code>$ouds-checkbox-border-width-selected</code></li>
-      <li><code>$ouds-checkbox-border-width-unselected-focus</code></li>
-      <li><code>$ouds-checkbox-border-width-unselected-hover</code></li>
-      <li><code>$ouds-checkbox-border-width-unselected-pressed</code></li>
-      <li><code>$ouds-checkbox-border-width-unselected</code></li>
-      <li><code>$ouds-checkbox-size-indicator</code></li>
-      <li><code>$ouds-checkbox-size-max-height</code></li>
-      <li><code>$ouds-checkbox-size-min-height</code></li>
-      <li><code>$ouds-checkbox-size-min-width</code></li>
       <li><code>$ouds-color-action-disabled-dark</code></li>
       <li><code>$ouds-color-action-disabled-light</code></li>
       <li><code>$ouds-color-action-enabled-dark</code></li>

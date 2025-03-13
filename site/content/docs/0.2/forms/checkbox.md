@@ -145,17 +145,17 @@ You can display an helper text by adding a `.checkbox-helper` as a sibling of a 
 </div>
 {{< /example >}}
 
-### Reverse
+### Inverse
 
-You can reverse the component by adding `.checkbox-item-reverse` to a `.checkbox-item`.
+You can reverse the component by adding `.checkbox-item-inverse` to a `.checkbox-item`.
 
 {{< example >}}
-<div class="checkbox-item checkbox-item-reverse">
+<div class="checkbox-item checkbox-item-inverse">
   <div class="checkbox-item-indicator-container">
-    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxReverse">
+    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxInverse">
   </div>
   <div class="checkbox-item-text">
-    <label class="checkbox-label" for="checkboxReverse">Label</label>
+    <label class="checkbox-label" for="checkboxInverse">Label</label>
   </div>
 </div>
 {{< /example >}}
