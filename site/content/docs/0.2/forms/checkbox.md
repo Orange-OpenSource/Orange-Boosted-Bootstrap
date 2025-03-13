@@ -281,7 +281,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ### Invalid state
 
-You can display an invalid checkbox by adding `.is-invalid` to a `.checkbox-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
+ You can display an invalid checkbox by adding `.is-invalid` to a `.checkbox-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
 
 {{< example >}}
 <div class="checkbox-item">
