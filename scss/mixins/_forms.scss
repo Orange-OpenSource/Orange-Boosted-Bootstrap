@@ -179,20 +179,7 @@
       }
     }
 
-    // OUDS mod
-    .form-switch .form-check-input:not(:checked) {
-      @include form-validation-state-selector($state) {
-        filter: $form-switch-filter;
-        border-color: var(--#{$prefix}form-switch-unchecked-invalid-border-color);
-      }
-    }
-    // End mod
-
-    .form-check-inline .form-check-input {
-      ~ .#{$state}-feedback {
-        margin-left: .5em;
-      }
-    }
+    // OUDS mod no form-check-inline
   }
   // End mod
   .input-group {
