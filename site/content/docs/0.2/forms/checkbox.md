@@ -11,6 +11,10 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox).
+{{< /callout >}}
+
 ## Basic example
 
 {{< example >}}
@@ -318,3 +322,41 @@ Be careful using this, you must implement the background on hover, focus and act
 {{< /bootstrap-compatibility >}}
 
 ## Group
+
+When checkboxes belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
+
+{{< example >}}
+<div class="row">
+  <fieldset class="col-md-6">
+    <legend>Checkboxes group example</legend>
+    <div class="checkbox-item checkbox-item-divider">
+      <div class="checkbox-item-indicator-container">
+        <input class="checkbox-indicator" type="checkbox" value="" id="checkboxGroup1">
+      </div>
+      <div class="checkbox-item-text">
+        <label class="checkbox-label" for="checkboxGroup1">Label</label>
+        <p class="checkbox-helper">Helper text</p>
+      </div>
+      <div class="checkbox-item-icon-container">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+    <div class="checkbox-item checkbox-item-divider">
+      <div class="checkbox-item-indicator-container">
+        <input class="checkbox-indicator" type="checkbox" value="" id="checkboxGroup2" checked>
+      </div>
+      <div class="checkbox-item-text">
+        <label class="checkbox-label" for="checkboxGroup2">Label</label>
+        <p class="checkbox-helper">Helper text</p>
+      </div>
+      <div class="checkbox-item-icon-container">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+  </fieldset>
+</div>
+{{< /example >}}

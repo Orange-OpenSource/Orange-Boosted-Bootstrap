@@ -2,7 +2,7 @@
 // Control item
 //
 
-.control-item {
+%control-item {
   position: relative;
   display: flex;
   gap: $ouds-control-item-space-column-gap;
@@ -15,15 +15,15 @@
   }
 }
 
-.control-item-border {
+%control-item-border {
   border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
 }
 
-.control-item-reverse {
+%control-item-reverse {
   flex-direction: row-reverse;
 }
 
-.control-item-assets-container {
+%control-item-assets-container {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -40,7 +40,7 @@
   }
 }
 
-.control-item-text {
+%control-item-text {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -53,7 +53,7 @@
 //
 
 .checkbox-item {
-  @extend .control-item;
+  @extend %control-item;
 
   &:has(.checkbox-indicator:disabled),
   &:has(.checkbox-indicator[disabled]) {
@@ -105,11 +105,11 @@
 
 .checkbox-item-indicator-container,
 .checkbox-item-icon-container {
-  @extend .control-item-assets-container;
+  @extend %control-item-assets-container;
 }
 
 .checkbox-item-text {
-  @extend .control-item-text;
+  @extend %control-item-text;
 }
 
 //
@@ -117,15 +117,15 @@
 //
 
 .checkbox-item-border {
-  @extend .control-item-border;
+  @extend %control-item-border;
 }
 
 .checkbox-item-reverse {
-  @extend .control-item-reverse;
+  @extend %control-item-reverse;
 }
 
 .checkbox-item-divider {
-  @extend .control-item-border;
+  @extend %control-item-border;
 }
 
 //
@@ -259,6 +259,6 @@
   }
 
   .form-check-reverse {
-    @extend .control-item-reverse;
+    @extend .checkbox-item-reverse;
   }
 }
