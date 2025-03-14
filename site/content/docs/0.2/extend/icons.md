@@ -42,7 +42,7 @@ For SVGs (SVG sprites, inline SVGs or CSS background SVGs), the `fill="currentCo
 
 ### Functional icons
 
-The following colour utilities and CSS variables are intended for use only with functional icons, not with text, and icons should not be used on their own, but only alongside text, as functional colours do not provide sufficient contrast to ensure readability.
+The following color utilities and CSS variables are intended for use only with functional icons, not with text, and icons should not be used on their own, but only alongside text, as functional colors do not provide sufficient contrast to ensure readability.
 
 {{< example >}}
 <div class="d-flex justify-content-center gap-md-tall">
