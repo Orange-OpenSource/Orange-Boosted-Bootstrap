@@ -28,11 +28,11 @@ OUDS Web standards require `@import`s across all our CSS bundles (including `oud
 
 For example, consider these `:root` CSS variables for common `:root` styles:
 
-{{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
+{{< scss-docs button_label="root body variables" name="root-body-variables" file="scss/_root.scss" >}}
 
 In practice, those variables are then applied in Reboot like so:
 
-{{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
+{{< scss-docs button_label="reboot body rules" name="reboot-body-rules" file="scss/_reboot.scss" >}}
 
 Which allows you to make real-time customizations however you like:
 
@@ -108,7 +108,7 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-
 
 All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]({{< docsref "/utilities/spacing" >}}).
 
-{{< example >}}
+{{< example button_label="paragraphs max width">}}
 <p class="mw-none mb-none">This is an example paragraph which is long enough so it's easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
 <p>This is an example paragraph which is long enough so it's easy to see and compare the <code>max-width</code> in action and compare it to the one above.</p>
 <p>This is an example paragraph.</p>
@@ -118,19 +118,19 @@ All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set
 
 Links have bold and underline applied. While links change on `:hover`, by default they don't change based on whether someone `:visited` the link.
 
-{{< example >}}
+{{< example button_label="default inline link">}}
 <a href="#">This is an example link</a>
 {{< /example >}}
 
 Links have a disabled style when using an `aria-disabled="true"` attribute.
 
-{{< example >}}
+{{< example button_label="disabled link">}}
 <a aria-disabled="true">This is an example of a disabled link</a>
 {{< /example >}}
 
 Visited links don't have a specific style by default. The `:visited` status can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
-{{< example >}}
+{{< example button_label="visited link">}}
 <div class="visited-links">
   <div>
     <a href=".">This is an example of a visited link</a>
@@ -146,13 +146,13 @@ Visited links don't have a specific style by default. The `:visited` status can 
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
-{{< example >}}
+{{< example button_label="link without an `href`">}}
 <a>This is a placeholder link</a>
 {{< /example >}}
 
 On colored backgrounds, links should have a different style. Visited links don't have a specific style on colored backgrounds.
 
-{{< example class="p-none">}}
+{{< example button_label="on colored background link" class="p-none">}}
 <div class="colored-bg">
   <div class="bg-brand-primary p-tall">
     <div data-bs-theme="light">
@@ -178,7 +178,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 <!-- TODO: Check once the dividers have been designed -->
 
-{{< example >}}
+{{< example button_label="horizontal rule">}}
 <hr>
 
 <div class="text-status-positive">
@@ -227,7 +227,7 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
 
 Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
 
-{{< example >}}
+{{< example button_label="inline code">}}
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {{< /example >}}
 
@@ -235,7 +235,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `px` units for its `margin-bottom`.
 
-{{< example >}}
+{{< example button_label="code blocks">}}
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 &lt;p&gt;And another line of sample text here...&lt;/p&gt;
 </code></pre>
@@ -245,7 +245,7 @@ Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle
 
 For indicating variables use the `<var>` tag.
 
-{{< example >}}
+{{< example button_label="variables">}}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {{< /example >}}
 
@@ -253,7 +253,7 @@ For indicating variables use the `<var>` tag.
 
 Use the `<kbd>` to indicate input that is typically entered via keyboard.
 
-{{< example >}}
+{{< example button_label="user keyboard input">}}
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
@@ -262,7 +262,7 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 
 For indicating sample output from a program use the `<samp>` tag.
 
-{{< example >}}
+{{< example button_label="sample outpout">}}
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
 {{< /example >}}
 
@@ -270,7 +270,7 @@ For indicating sample output from a program use the `<samp>` tag.
 
 Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{< docsref "/content/tables" >}}).
 
-{{< example >}}
+{{< example button_label="table">}}
 <table>
   <caption>
     This is an example table, and this is its caption to describe the contents.
@@ -449,7 +449,7 @@ These changes, and more, are demonstrated below.
 
 Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
 
-{{< example >}}
+{{< example button_label="pointer on `role='button'` element">}}
 <span role="button" tabindex="0">Non-button element button</span>
 {{< /example >}}
 

@@ -37,10 +37,10 @@ sitemap:
   The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
 </div>
 
-{{< example >}}
+{{< example button_label="test">}}
 <div class="test">This is a test.</div>
 {{< /example >}}
 
-{{< scss-docs name="variable-gradient" file="scss/_variables.scss" >}}
+{{< scss-docs button_label="scss-docs test" name="variable-gradient" file="scss/_variables.scss" >}}
 
-{{< js-docs name="live-toast" file="site/assets/js/partials/snippets.js" >}}
+{{< js-docs button_label="js-docs test" name="live-toast" file="site/assets/js/partials/snippets.js" >}}
