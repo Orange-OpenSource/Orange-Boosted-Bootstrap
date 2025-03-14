@@ -13,7 +13,7 @@ While OUDS Web doesn't include an icon set by default, Orange does have its own 
 [Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange Design System design team](https://system.design.orange.com/). It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
 {{< callout info >}}
-You can find here the [Iconography design guidelines]({{< param icons_usage >}}).
+You can find here the [Iconography design guidelines](https://unified-design-system.orange.com/472794e18/p/275963-iconography).
 {{< /callout >}}
 
 If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons]({{< docsref "extend/icons#use-solaris-icons" >}}).
