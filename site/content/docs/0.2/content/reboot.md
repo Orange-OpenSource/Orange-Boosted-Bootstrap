@@ -262,7 +262,7 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 
 For indicating sample output from a program use the `<samp>` tag.
 
-{{< example button_label="sample outpout">}}
+{{< example button_label="sample output">}}
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
 {{< /example >}}
 
