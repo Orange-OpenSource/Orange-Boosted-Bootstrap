@@ -42,7 +42,7 @@ For SVGs (SVG sprites, inline SVGs or CSS background SVGs), the `fill="currentCo
 
 ### Functional icons
 
-The following color utilities and CSS variables are meant to be used only with functional icons, and not with texts.
+The following colour utilities and CSS variables are intended for use only with functional icons, not with text, and icons should not be used on their own, but only alongside text, as functional colours do not provide sufficient contrast to ensure readability.
 
 {{< example >}}
 <div class="d-flex justify-content-center gap-md-tall">
@@ -113,13 +113,13 @@ Here are some examples of other [color utilities]({{< docsref "utilities/colors#
   <svg class="decorative-sm-icon" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg>
-  <svg class="decorative-sm-icon" class="text-default" aria-hidden="true">
+  <svg class="decorative-sm-icon text-default" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#delete"/>
   </svg>
-  <svg class="decorative-sm-icon" class="text-primary" aria-hidden="true">
+  <svg class="decorative-sm-icon text-primary" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
   </svg>
-  <svg class="decorative-sm-icon" class="text-disabled" aria-hidden="true">
+  <svg class="decorative-sm-icon text-disabled" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
   </svg>
   <span class="icon si si-settings text-muted decorative-sm-icon" aria-hidden="true"></span>

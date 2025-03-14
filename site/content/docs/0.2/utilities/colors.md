@@ -97,7 +97,7 @@ In the following table we assume that the context is switching between light and
 
 ### On icons
 
-See [icons documentation]({{< docsref "/extend/icons/#modify-icons-color" >}}) to learn how to use color utilities on icons.
+See [icons documentation]({{< docsref "/extend/icons/#icons-color" >}}) to learn how to use color utilities on icons.
 
 <!-- ## Opacity -->
 
