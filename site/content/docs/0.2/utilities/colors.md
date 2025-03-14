@@ -97,33 +97,7 @@ In the following table we assume that the context is switching between light and
 
 ### On icons
 
-The following color utilities are meant to be used only with icons and not with text.
-
-{{< example >}}
-<svg width="8em" height="8em" class="text-status-info" aria-hidden="true">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
-</svg>
-<svg width="8em" height="8em" class="text-status-positive" aria-hidden="true">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#tick-confirmation"/>
-</svg>
-<svg width="8em" height="8em" class="text-status-warning" aria-hidden="true">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#important"/>
-</svg>
-<svg width="8em" height="8em" class="text-status-negative" aria-hidden="true">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#error-severe"/>
-</svg>
-{{< /example >}}
-
-Here are [the normal contexts of use of these text color utilities](https://unified-design-system.orange.com/472794e18/p/217ac6-colour/t/9b95834c2e).
-
-{{< bs-table >}}
-| Color utility | Context of use |
-| --- | --- |
-| `.text-status-info` | Use to communicate a feedback. It's more important than a neutral color. |
-| `.text-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
-| `.text-status-warning` | Use to display an information that requires more attention, or an action from the user. |
-| `.text-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
-{{< /bs-table >}}
+See [icons documentation]({{< docsref "/extend/icons/#modify-icons-color" >}}) to learn how to use color utilities on icons.
 
 <!-- ## Opacity -->
 
