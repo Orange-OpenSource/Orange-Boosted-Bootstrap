@@ -349,28 +349,21 @@ sup { top: -.5em; }
 
 // Links
 
-a {
-  // OUDS mod
-  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
-  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
-  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
-  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
-  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
-  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
-  // End mod
-
+// OUDS mod: define link properties in a placeholder to be reused in link component
+%link-properties {
   font-weight: $link-font-weight; // OUDS mod
-  color: var(--#{$prefix}link-color);
+  color: var(--#{$prefix}link-color); // OUDS mod: instead of rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;
 
-  .visited-links &:visited:not(.link, .link-chevron, .icon-link),
-  &:visited.visited-links:not(.link, .link-chevron, .icon-link) {
-    color: var(--#{$prefix}link-visited-color);
+  &:hover {
+    color: var(--#{$prefix}link-hover-color); // OUDS mod
+    text-decoration: $link-hover-decoration;
   }
 
-  &:hover {
-    color: var(--#{$prefix}link-hover-color);
-    text-decoration: $link-hover-decoration;
+
+  .visited-links &:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible, :focus[data-focus-visible]),
+  &:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible, :focus[data-focus-visible]) {
+    color: var(--#{$prefix}link-visited-color);
   }
 
   &:focus-visible,
@@ -398,6 +391,12 @@ a {
     --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
     --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
   }
+}
+// End mod
+
+a {
+  // OUDS mod: use link properties placeholder
+  @extend %link-properties;
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
