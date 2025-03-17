@@ -40,12 +40,37 @@
   }
 }
 
-%control-item-text {
+%control-item-text-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   row-gap: $ouds-control-item-space-row-gap;
   justify-content: center;
+  word-break: break-all;
+}
+
+%control-item-text-main {
+  display: block;
+  color: $ouds-color-content-default;
+  cursor: $form-check-label-cursor;
+  @include get-font-size("label-large");
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: transparent;
+  }
+}
+
+%control-item-text-helper {
+  display: block;
+  margin: 0;
+  color: $ouds-color-content-muted;
+  @include get-font-size("label-medium");
 }
 
 //
@@ -108,8 +133,8 @@
   @extend %control-item-assets-container;
 }
 
-.checkbox-item-text {
-  @extend %control-item-text;
+.checkbox-item-text-container {
+  @extend %control-item-text-container;
 }
 
 //
@@ -199,29 +224,11 @@
 //
 
 .checkbox-label {
-  display: block;
-  color: $ouds-color-content-default;
-  word-break: break-all;
-  cursor: $form-check-label-cursor;
-  @include get-font-size("label-large");
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-color: transparent;
-  }
+  @extend %control-item-text-main;
 }
 
 .checkbox-helper {
-  display: block;
-  margin: 0;
-  color: $ouds-color-content-muted;
-  word-break: break-all;
-  @include get-font-size("label-medium");
+  @extend %control-item-text-helper;
 }
 
 //

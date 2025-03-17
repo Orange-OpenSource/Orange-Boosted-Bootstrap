@@ -22,7 +22,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxDefault">Label</label>
   </div>
 </div>
@@ -30,7 +30,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxFullOption" checked>
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxFullOption">Label</label>
     <p class="checkbox-helper">Helper text</p>
   </div>
@@ -84,7 +84,7 @@ You can display a divider by adding `.checkbox-item-divider` to a `.checkbox-ite
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDivider">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxDivider">Label</label>
   </div>
 </div>
@@ -92,7 +92,7 @@ You can display a divider by adding `.checkbox-item-divider` to a `.checkbox-ite
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDivider2">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxDivider2">Label</label>
   </div>
 </div>
@@ -107,7 +107,7 @@ You can display an icon by adding `.checkbox-item-icon-container` with an icon (
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxWithSVG">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxWithSVG">Label</label>
   </div>
   <div class="checkbox-item-icon-container">
@@ -120,7 +120,7 @@ You can display an icon by adding `.checkbox-item-icon-container` with an icon (
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxWithIconFont">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxWithIconFont">Label</label>
   </div>
   <div class="checkbox-item-icon-container">
@@ -138,7 +138,7 @@ You can display an helper text by adding a `.checkbox-helper` as a sibling of a 
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxHelperText">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxHelperText">Label</label>
     <p class="checkbox-helper">Helper Text</p>
   </div>
@@ -154,7 +154,7 @@ You can reverse the component by adding `.checkbox-item-inverse` to a `.checkbox
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxInverse">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxInverse">Label</label>
   </div>
 </div>
@@ -198,7 +198,7 @@ Indeterminate state can be combined with disabled and error states.
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxIndeterminate">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxIndeterminate">Label</label>
   </div>
 </div>
@@ -232,7 +232,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" disabled>
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxIndeterminateDisabled">Label</label>
   </div>
 </div>
@@ -240,7 +240,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDisabled" disabled>
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxDisabled">Label</label>
   </div>
 </div>
@@ -248,7 +248,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked disabled>
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxCheckedDisabled">Label</label>
   </div>
 </div>
@@ -288,7 +288,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   <div class="checkbox-item-indicator-container">
     <input class="checkbox-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid">
   </div>
-  <div class="checkbox-item-text">
+  <div class="checkbox-item-text-container">
     <label class="checkbox-label" for="checkboxInvalid">Label</label>
   </div>
 </div>
@@ -333,7 +333,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
       <div class="checkbox-item-indicator-container">
         <input class="checkbox-indicator" type="checkbox" value="" id="checkboxGroup1">
       </div>
-      <div class="checkbox-item-text">
+      <div class="checkbox-item-text-container">
         <label class="checkbox-label" for="checkboxGroup1">Label</label>
         <p class="checkbox-helper">Helper text</p>
       </div>
@@ -347,7 +347,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
       <div class="checkbox-item-indicator-container">
         <input class="checkbox-indicator" type="checkbox" value="" id="checkboxGroup2" checked>
       </div>
-      <div class="checkbox-item-text">
+      <div class="checkbox-item-text-container">
         <label class="checkbox-label" for="checkboxGroup2">Label</label>
         <p class="checkbox-helper">Helper text</p>
       </div>
