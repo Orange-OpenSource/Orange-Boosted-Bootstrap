@@ -56,7 +56,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 
 </details>
 
-{{< example >}}
+{{< example button_label="headings">}}
 <h1>h1. OUDS Web heading</h1>
 <h2>h2. OUDS Web heading</h2>
 <h3>h3. OUDS Web heading</h3>
@@ -67,7 +67,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
-{{< example >}}
+{{< example button_label="headings with other tags" >}}
 <p class="h1">h1. OUDS Web heading</p>
 <p class="h2">h2. OUDS Web heading</p>
 <p class="h3">h3. OUDS Web heading</p>
@@ -188,7 +188,7 @@ You can easily add an icon with your font reference using [our icon helper]({{< 
 
 Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-texts) body large.
 
-{{< example >}}
+{{< example button_label="paragraph">}}
 <p class="lead">
   This is a lead paragraph. It stands out from regular paragraphs.
 </p>
@@ -198,7 +198,7 @@ Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-te
 
 Render a paragraph with a small `font-size` by adding `.small` or use `<small>`. It uses [Regular text](#regular-texts) body small.
 
-{{< example >}}
+{{< example button_label="small paragraph" >}}
 <p>
   <small>This is a small paragraph.</small>
 </p>
@@ -211,7 +211,7 @@ Render a paragraph with a small `font-size` by adding `.small` or use `<small>`.
 
 Styling for common inline HTML5 elements.
 
-{{< example >}}
+{{< example  button_label="inline text elements">}}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -246,7 +246,7 @@ Change text alignment, transform, style, weight, line-height, decoration and col
 
 Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-{{< example >}}
+{{< example button_label="abbreviations" >}}
 <p><abbr title="attribute">attr</abbr></p>
 {{< /example >}}
 
@@ -254,7 +254,7 @@ Stylized implementation of HTML's `<abbr>` element for abbreviations and acronym
 
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote. It uses [Regular text](#regular-texts) body large.
 
-{{< example >}}
+{{< example  button_label="blockquotes">}}
 <blockquote class="blockquote">
   <p>A well-known quote, contained in a blockquote element.</p>
 </blockquote>
@@ -264,7 +264,7 @@ For quoting blocks of content from another source within your document. Wrap `<b
 
 The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well. It uses [Regular text](#regular-texts) body small.
 
-{{< example >}}
+{{< example button_label="cite" >}}
 <figure>
   <blockquote class="blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
@@ -279,7 +279,7 @@ The HTML spec requires that blockquote attribution be placed outside the `<block
 
 Use text utilities as needed to change the alignment of your blockquote.
 
-{{< example >}}
+{{< example button_label="centering" >}}
 <figure class="text-center">
   <blockquote class="blockquote">
     <p class="mx-auto">A well-known quote, contained in a blockquote element.</p>
@@ -290,7 +290,7 @@ Use text utilities as needed to change the alignment of your blockquote.
 </figure>
 {{< /example >}}
 
-{{< example >}}
+{{< example button_label="right alignment" >}}
 <figure class="text-end">
   <blockquote class="blockquote">
     <p class="ms-auto">A well-known quote, contained in a blockquote element.</p>
