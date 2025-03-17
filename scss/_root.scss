@@ -503,11 +503,6 @@
 
     --#{$prefix}heading-color: #{$headings-color-dark};
 
-    // OUDS mod
-    --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
-    --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
-    // End mod
-
     @if $enable-bootstrap-compatibility {
       --#{$prefix}link-color-rgb: #{to-rgb($link-color-dark)};
       --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
