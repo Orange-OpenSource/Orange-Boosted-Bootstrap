@@ -18,7 +18,7 @@ Stacks offer a shortcut for applying a number of flexbox properties to quickly a
 
 Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
 
-{{< example class="bd-example-flex" >}}
+{{< example button_label="vertical stack" class="bd-example-flex" >}}
 <div class="vstack gap-tall">
   <div class="p-short">First item</div>
   <div class="p-short">Second item</div>
@@ -30,7 +30,7 @@ Use `.vstack` to create vertical layouts. Stacked items are full-width by defaul
 
 Use `.hstack` for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use `.gap-*` utilities to add space between items.
 
-{{< example class="bd-example-flex" >}}
+{{< example button_label="horizontal stack" class="bd-example-flex" >}}
 <div class="hstack gap-tall">
   <div class="p-short">First item</div>
   <div class="p-short">Second item</div>
@@ -40,7 +40,7 @@ Use `.hstack` for horizontal layouts. Stacked items are vertically centered by d
 
 Using horizontal margin utilities like `.ms-auto` as spacers:
 
-{{< example class="bd-example-flex" >}}
+{{< example button_label="horizontal stack and margins" class="bd-example-flex" >}}
 <div class="hstack gap-tall">
   <div class="p-short">First item</div>
   <div class="p-short ms-auto">Second item</div>
@@ -50,7 +50,7 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 
 <!--And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 
-{{< example class="bd-example-flex" >}}
+{{< example button_label="horizontal stack with vertical rule" class="bd-example-flex" >}}
 <div class="hstack gap-tall">
   <div class="p-short">First item</div>
   <div class="p-short ms-auto">Second item</div>
@@ -63,7 +63,7 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 
 Use `.vstack` to stack buttons and other elements:
 
-{{< example >}}
+{{< example button_label="vertical stack with buttons" >}}
 <div class="vstack gap-short col-md-5 mx-auto">
   <button type="button" class="btn btn-strong">Save changes</button>
   <button type="button" class="btn btn-default">Cancel</button>
@@ -72,7 +72,7 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
-{{< example >}}
+{{< example button_label="inline form with horizontal stack" button_label="" >}}
 <div class="hstack gap-tall">
   <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>

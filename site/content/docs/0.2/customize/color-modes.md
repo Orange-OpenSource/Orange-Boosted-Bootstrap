@@ -24,7 +24,7 @@ Be careful when using the `data-bs-theme` attribute on an element carrying one o
 
 By default, we provide two static themes/modes that are `"light"` and `"dark"`. These themes are named static because once you've set the theme on an element it won't ever change whatever the main theme is. The `"light"` theme will set the text color to black and set the light variant for every components inside, while the `"dark"` theme will set the text color to white and set the dark variant for every components inside.
 
-{{< example >}}
+{{< example button_label="static color modes" >}}
 <div class="bg-emphasized p-short">
   <div data-bs-theme="dark">
     <p>Text and components in here will always be in dark mode</p>
@@ -55,7 +55,7 @@ We have two more dynamic themes that are `"root"` and `"root-inverted"`. These t
 Note that these themes **aren't meant to be used on the root element**.
 {{< /callout >}}
 
-{{< example >}}
+{{< example button_label="dynamic color modes" >}}
 <div class="bg-status-neutral-emphasized p-short">
   <div data-bs-theme="root-inverted">
     <p>Text and components in here will always be inverted compared to the main mode</p>
@@ -109,7 +109,7 @@ We use **2 different layers to set the `background-color` and the theme**. Somet
 
 Here are some examples of how to use the different `data-bs-theme` attribute on different use cases.
 
-{{< example class="d-flex justify-content-between flex-wrap gap-shortest" >}}
+{{< example button_label="color modes uses cases" class="d-flex justify-content-between flex-wrap gap-shortest" >}}
 <div class="dropdown" data-bs-theme="light">
   <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
     Always light dropdown

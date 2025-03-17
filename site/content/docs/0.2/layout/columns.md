@@ -32,7 +32,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 
 Change the vertical alignment with any of the responsive `align-items-*` classes.
 
-{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+{{< example button_label="vertical alignment at the top" class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container-fluid text-center">
   <div class="row align-items-start">
     <div class="col">
@@ -48,7 +48,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 </div>
 {{< /example >}}
 
-{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+{{< example button_label="centered vertical alignment" class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container-fluid text-center">
   <div class="row align-items-center">
     <div class="col">
@@ -64,7 +64,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 </div>
 {{< /example >}}
 
-{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+{{< example button_label="vertical alignment at the bottom" class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container-fluid text-center">
   <div class="row align-items-end">
     <div class="col">
@@ -82,7 +82,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 
 Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
 
-{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+{{< example button_label="vertical alignment on each column" class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col align-self-start">
@@ -102,7 +102,7 @@ Or, change the alignment of each column individually with any of the responsive 
 
 Change the horizontal alignment with any of the responsive `justify-content-*` classes.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="horizontal alignment" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row justify-content-start">
     <div class="col-4">
@@ -159,7 +159,7 @@ Change the horizontal alignment with any of the responsive `justify-content-*` c
 
 If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="column wrapping" class="bd-example-row" >}}
 <div class="container-fluid">
   <div class="row">
     <div class="col-9 text-center">.col-9</div>
@@ -173,7 +173,7 @@ If more than 12 columns are placed within a single row, each group of extra colu
 
 Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="column breaks" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -190,7 +190,7 @@ Breaking columns to a new line in flexbox requires a small hack: add an element 
 
 You may also apply this break at specific breakpoints with our [responsive display utilities]({{< docsref "/utilities/display" >}}).
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="column breaks at specific breakpoint" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -211,7 +211,7 @@ You may also apply this break at specific breakpoints with our [responsive displ
 
 Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all eight grid tiers.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="reordering" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col">
@@ -229,7 +229,7 @@ Use `.order-` classes for controlling the **visual order** of your content. Thes
 
 There are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively. These classes can also be intermixed with the numbered `.order-*` classes as needed.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="first and last reordering"  class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col order-last">
@@ -274,7 +274,7 @@ You can offset grid columns with in two ways: our responsive `.offset-` grid cla
 
 Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="column offset" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-4">.col-md-4</div>
@@ -292,7 +292,7 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
 
 In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in [the grid example]({{< docsref "/examples/grid" >}}).
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="reset column offset" button_label="horizontal alignment" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -309,7 +309,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 
 With flexbox grids, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="margin utilities" class="bd-example-row" >}}
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-4">.col-md-4</div>
@@ -330,7 +330,7 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
 
 The `.col-*` classes can also be used outside a `.row` to give an element a specific width. Whenever column classes are used as non-direct children of a row, the paddings are omitted.
 
-{{< example class="bd-example-row" >}}
+{{< example button_label="standalone column classes" class="bd-example-row" >}}
 <div class="col-3 p-tall mb-short">
   .col-3: width of 25%
 </div>
@@ -342,7 +342,7 @@ The `.col-*` classes can also be used outside a `.row` to give an element a spec
 
 The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.clearfix`]({{< docsref "/helpers/clearfix" >}}) wrapper to clear the float if the text is shorter.
 
-{{< example >}}
+{{< example button_label="standalone column classes with utilities" >}}
 <div class="clearfix">
   {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-tall ms-md-tall" text="Responsive floated image" color="#999" >}}
 

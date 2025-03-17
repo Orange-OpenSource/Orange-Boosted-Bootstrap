@@ -14,7 +14,7 @@ Add `.stretched-link` to a link to make its [containing block](https://developer
 Multiple links and tap targets are not recommended with stretched links.
 <!-- However, some `position` and `z-index` styles can help should this be required.
 
-{{< example >}}
+{{< example button_label="card with stretched link" >}}
 <div class="card" style="width: 18rem;">
   {< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
   <div class="card-body">
@@ -23,11 +23,11 @@ Multiple links and tap targets are not recommended with stretched links.
     <a href="#" class="btn btn-strong stretched-link">Go somewhere</a>
   </div>
 </div>
-{{< /example >}} -->
+{{< /example >}}-->
 
 Most custom components do not have `position: relative` by default, so we need to add the `.position-relative` here to prevent the link from stretching outside the parent element.
 
-{{< example >}}
+{{< example button_label="custom component with stretched link" >}}
 <div class="d-flex position-relative">
   {{< placeholder width="144" height="144" class="flex-shrink-0 me-tall" text="false" title="Generic placeholder image" >}}
   <div>
@@ -38,7 +38,7 @@ Most custom components do not have `position: relative` by default, so we need t
 </div>
 {{< /example >}}
 
-{{< example >}}
+{{< example button_label="columns width stretched link" >}}
 <div class="row g-none bg-secondary position-relative">
   <div class="col-md-6 mb-md-none p-md-tallest">
     {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
@@ -60,7 +60,7 @@ If the stretched link doesn't seem to work, the [containing block](https://devel
 - A `will-change` value of `transform` or `perspective`
 - A `filter` value other than `none` or a `will-change` value of `filter` (only works on Firefox)
 
-<!--{{< example >}}
+<!--{{< example button_label="identifying stretched link container" >}}
 <div class="card" style="width: 18rem;">
   { {< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
   <div class="card-body">

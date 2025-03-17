@@ -188,7 +188,7 @@ You can easily add an icon with your font reference using [our icon helper]({{< 
 
 Make a paragraph stand out by adding `.lead`. It uses [Regular text](#regular-texts) body large.
 
-{{< example button_label="paragraph">}}
+{{< example button_label="lead paragraph">}}
 <p class="lead">
   This is a lead paragraph. It stands out from regular paragraphs.
 </p>
@@ -211,7 +211,7 @@ Render a paragraph with a small `font-size` by adding `.small` or use `<small>`.
 
 Styling for common inline HTML5 elements.
 
-{{< example  button_label="inline text elements">}}
+{{< example button_label="inline text elements">}}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -254,7 +254,7 @@ Stylized implementation of HTML's `<abbr>` element for abbreviations and acronym
 
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote. It uses [Regular text](#regular-texts) body large.
 
-{{< example  button_label="blockquotes">}}
+{{< example button_label="blockquotes">}}
 <blockquote class="blockquote">
   <p>A well-known quote, contained in a blockquote element.</p>
 </blockquote>
@@ -307,7 +307,7 @@ Use text utilities as needed to change the alignment of your blockquote.
 
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
-{{< example >}}
+{{< example button_label="unstyled list" >}}
 <ul class="list-unstyled">
   <li>This is a list.</li>
   <li>It appears completely unstyled.</li>
@@ -328,7 +328,7 @@ Remove the default `list-style` and left margin on list items (immediate childre
 
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
-{{< example >}}
+{{< example button_label="inline list" >}}
 <ul class="list-inline">
   <li class="list-inline-item">This is a list item.</li>
   <li class="list-inline-item">And another one.</li>
@@ -340,7 +340,7 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
-{{< example >}}
+{{< example button_label="description list alignment" >}}
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
