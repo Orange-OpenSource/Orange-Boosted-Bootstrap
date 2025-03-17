@@ -124,6 +124,7 @@
       draft: true
     - title: Dropdowns
       draft: true
+    - title: Links
     - title: Footer
       draft: true
     - title: List group
@@ -174,8 +175,7 @@
     - title: Colored links
     - title: Focus ring
       draft: true
-    - title: Icon link
-      draft: true
+    - title: Icon
     - title: Position
     - title: Ratio
     - title: Stacks
@@ -197,8 +197,6 @@
     - title: Flex
     - title: Float
     - title: Interactions
-    - title: Link
-      draft: true
     - title: Object fit
     - title: Opacity
     - title: Overflow

@@ -128,6 +128,13 @@ You will have to make some extra Javascript to change the styles and update the 
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
+### Links
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> New standalone link component has been added. Use `.link` class to get it.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Use `.link-sm` class to get small standalone link.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+
 ## Forms
 
 ### Checks & radios
@@ -162,7 +169,11 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Colored links
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers have been removed.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
+
+### Icon link
+
+- <span class="badge text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]({{< docsref "/components/links/#icon-link" >}}) and [link chevron]({{< docsref "/components/links/#link-chevron" >}}).
 
 ### Icon
 
@@ -309,6 +320,10 @@ You will have to make some extra Javascript to change the styles and update the 
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}). You can still have it using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints' names]({{< docsref "/layout/breakpoints/#available-breakpoints" >}}).
+
+### Link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the build and from the documentation. They are useless in OUDS web.
 
 ### Object fit
 

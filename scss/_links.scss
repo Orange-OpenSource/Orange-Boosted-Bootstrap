@@ -1,0 +1,136 @@
+//
+// Orange component link
+//
+
+.link {
+  // scss-docs-start link-css-vars
+  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-medium};
+  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-medium};
+  // scss-docs-end link-css-vars
+
+  @extend %link-properties;
+  @include get-font-size("label-large");
+  display: inline-flex;
+  align-items: center;
+  min-width: $ouds-link-size-min-width-medium;
+  min-height: $ouds-link-size-min-height-medium;
+  padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+  text-align: start;
+  text-wrap: pretty;
+  vertical-align: middle;
+  background: transparent;
+  border: 0;
+
+  &:has(svg, img, .icon):not(:hover, :active, :focus-visible, :focus[data-focus-visible]) {
+    text-decoration: none;
+  }
+
+  svg,
+  img,
+  .icon {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    margin-right: var(--#{$prefix}link-icon-gap);
+    overflow: hidden;
+    font-size: var(--#{$prefix}link-icon-size);
+    line-height: 1;
+  }
+}
+
+.link-chevron {
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-medium};
+  --#{$prefix}link-arrow-color: #{$ouds-link-color-arrow-enabled};
+  --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-arrow-hover};
+  --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-arrow-focus};
+  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-color-arrow-pressed};
+  --#{$prefix}link-arrow-disabled-color: #{$ouds-color-action-disabled};
+
+  // Extend for Boosted compatibility in which .link-chevron can be used without .link
+  @extend .link;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &:focus[data-focus-visible] {
+    text-decoration: underline;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: var(--#{$prefix}link-arrow-hover-color);
+  }
+
+  &:focus-visible::before,
+  &:focus[data-focus-visible]::before,
+  &:focus-visible::after,
+  &:focus[data-focus-visible]::after {
+    background-color: var(--#{$prefix}link-arrow-focus-color);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: var(--#{$prefix}link-arrow-pressed-color);
+  }
+
+  &[aria-disabled="true"]::before,
+  &[aria-disabled="true"]::after {
+    background-color: var(--#{$prefix}link-arrow-disabled-color);
+  }
+
+  &:not(.back) {
+    display: inline-block;
+  }
+
+  // Chevron icon
+  &.back::before,
+  &:not(.back)::after {
+    display: inline-block;
+    width: var(--#{$prefix}link-icon-size);
+    min-width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
+    margin-right: var(--#{$prefix}link-arrow-gap);
+    vertical-align: middle;
+    content: "";
+    background-color: var(--#{$prefix}link-arrow-color);
+    mask: var(--#{$prefix}chevron-icon) center no-repeat;
+    mask-size: var(--#{$prefix}link-icon-size);
+  }
+
+  &:not(.back)::after {
+    margin-right: 0;
+    margin-left: var(--#{$prefix}link-arrow-gap);
+    transform: rotate(180deg) translateY(1px);
+  }
+}
+
+.link-on-colored-bg {
+  --#{$prefix}link-color: #{$ouds-link-color-content-enabled-mono};
+  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover-mono};
+  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus-mono};
+  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed-mono};
+  --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
+  --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
+  --#{$prefix}link-arrow-color: #{$ouds-link-color-content-enabled-mono};
+  --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-content-hover-mono};
+  --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-content-focus-mono};
+  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-color-content-pressed-mono};
+  --#{$prefix}link-arrow-disabled-color: #{$ouds-link-color-content-disabled-mono};
+}
+
+.link-sm {
+  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-small};
+  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-small};
+
+  @include get-font-size("label-medium");
+  min-width: $ouds-link-size-min-width-small;
+  min-height: $ouds-link-size-min-height-small;
+}
+
+@if $enable-bootstrap-compatibility {
+  .icon-link {
+    @extend .link;
+  }
+}
