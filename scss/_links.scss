@@ -2,25 +2,13 @@
 // Orange component link
 //
 
-%chevron-properties {
-  display: inline-block;
-  width: var(--#{$prefix}link-icon-size);
-  min-width: var(--#{$prefix}link-icon-size);
-  height: var(--#{$prefix}link-icon-size);
-  vertical-align: middle;
-  content: "";
-  background-color: var(--#{$prefix}link-arrow-color);
-  mask: var(--#{$prefix}chevron-icon) center no-repeat;
-  mask-size: var(--#{$prefix}link-icon-size);
-}
-
 .link {
   // scss-docs-start link-css-vars
   --#{$prefix}link-icon-size: #{$ouds-link-size-icon-medium};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-medium};
   // scss-docs-end link-css-vars
 
-  @extend a;
+  @extend %link-properties;
   @include get-font-size("label-large");
   display: inline-flex;
   align-items: center;
@@ -58,6 +46,7 @@
   --#{$prefix}link-arrow-pressed-color: #{$ouds-link-color-arrow-pressed};
   --#{$prefix}link-arrow-disabled-color: #{$ouds-color-action-disabled};
 
+  // Extend for Boosted compatibility in which .link-chevron can be used without .link
   @extend .link;
   text-decoration: none;
 
@@ -94,10 +83,19 @@
     display: inline-block;
   }
 
+  // Chevron icon
   &.back::before,
   &:not(.back)::after {
-    @extend %chevron-properties;
+    display: inline-block;
+    width: var(--#{$prefix}link-icon-size);
+    min-width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
     margin-right: var(--#{$prefix}link-arrow-gap);
+    vertical-align: middle;
+    content: "";
+    background-color: var(--#{$prefix}link-arrow-color);
+    mask: var(--#{$prefix}chevron-icon) center no-repeat;
+    mask-size: var(--#{$prefix}link-icon-size);
   }
 
   &:not(.back)::after {

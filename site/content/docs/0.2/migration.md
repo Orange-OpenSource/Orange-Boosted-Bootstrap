@@ -60,7 +60,7 @@ toc: true
       <li><code>$ouds-link-color-content-hover-mono</code></li>
       <li><code>$ouds-link-color-content-hover</code></li>
       <li><code>$ouds-link-color-content-pressed-mono</code></li>
-      <li><code>$ouds-link-color-content-pressed:</code></li>
+      <li><code>$ouds-link-color-content-pressed</code></li>
       <li><code>$ouds-link-size-icon-medium</code></li>
       <li><code>$ouds-link-size-icon-small</code></li>
       <li><code>$ouds-link-size-min-height-medium</code></li>

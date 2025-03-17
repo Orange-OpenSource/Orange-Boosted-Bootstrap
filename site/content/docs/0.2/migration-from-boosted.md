@@ -133,6 +133,7 @@ You will have to make some extra Javascript to change the styles and update the 
 - <span class="badge text-bg-status-positive-emphasized">New</span> New standalone link component has been added. Use `.link` class to get it.
 - <span class="badge text-bg-status-positive-emphasized">New</span> Use `.link-sm` class to get small standalone link.
 - <span class="badge text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
 
 ## Forms
 
