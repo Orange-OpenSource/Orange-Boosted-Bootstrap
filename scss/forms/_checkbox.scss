@@ -13,6 +13,53 @@
   &:has(:focus-visible) {
     @include focus-visible();
   }
+
+  &:has([type]:disabled),
+  &:has([type][disabled]) {
+    pointer-events: none;
+
+    .control-item-form-label,
+    .control-item-form-helper,
+    svg,
+    img,
+    .icon {
+      color: $ouds-color-action-disabled;
+    }
+  }
+
+  &:has([type]:hover),
+  &:has([type]:focus-visible),
+  &:has([type]:active) {
+    background-color: $ouds-control-item-color-bg-hover;
+  }
+
+  .was-validated &:has([type]:invalid),
+  &:has([type].is-invalid) {
+    .control-item-form-label {
+      color: $ouds-color-action-negative-enabled;
+    }
+  }
+
+  .was-validated &:has([type]:invalid:hover),
+  &:has([type].is-invalid:hover) {
+    .control-item-form-label {
+      color: $ouds-color-action-negative-hover;
+    }
+  }
+
+  .was-validated &:has([type]:invalid:focus-visible),
+  &:has([type].is-invalid:focus-visible) {
+    .control-item-form-label {
+      color: $ouds-color-action-negative-focus;
+    }
+  }
+
+  .was-validated &:has([type]:invalid:active),
+  &:has([type].is-invalid:active) {
+    .control-item-form-label {
+      color: $ouds-color-action-negative-pressed;
+    }
+  }
 }
 
 %control-item-border {
@@ -49,7 +96,7 @@
   word-break: break-all;
 }
 
-%control-item-text-main {
+.control-item-form-label {
   display: block;
   color: $ouds-color-content-default;
   cursor: $form-check-label-cursor;
@@ -66,7 +113,7 @@
   }
 }
 
-%control-item-text-helper {
+.control-item-form-helper {
   display: block;
   margin: 0;
   color: $ouds-color-content-muted;
@@ -79,53 +126,6 @@
 
 .checkbox-item {
   @extend %control-item;
-
-  &:has(.checkbox-indicator:disabled),
-  &:has(.checkbox-indicator[disabled]) {
-    pointer-events: none;
-
-    .checkbox-label,
-    .checkbox-helper,
-    svg,
-    img,
-    .icon {
-      color: $ouds-color-action-disabled;
-    }
-  }
-
-  &:has(.checkbox-indicator:hover),
-  &:has(.checkbox-indicator:focus-visible),
-  &:has(.checkbox-indicator:active) {
-    background-color: $ouds-control-item-color-bg-hover;
-  }
-
-  .was-validated &:has(.checkbox-indicator:invalid),
-  &:has(.checkbox-indicator.is-invalid) {
-    .checkbox-label {
-      color: $ouds-color-action-negative-enabled;
-    }
-  }
-
-  .was-validated &:has(.checkbox-indicator:invalid:hover),
-  &:has(.checkbox-indicator.is-invalid:hover) {
-    .checkbox-label {
-      color: $ouds-color-action-negative-hover;
-    }
-  }
-
-  .was-validated &:has(.checkbox-indicator:invalid:focus-visible),
-  &:has(.checkbox-indicator.is-invalid:focus-visible) {
-    .checkbox-label {
-      color: $ouds-color-action-negative-focus;
-    }
-  }
-
-  .was-validated &:has(.checkbox-indicator:invalid:active),
-  &:has(.checkbox-indicator.is-invalid:active) {
-    .checkbox-label {
-      color: $ouds-color-action-negative-pressed;
-    }
-  }
 }
 
 .checkbox-item-indicator-container,
@@ -224,11 +224,11 @@
 //
 
 .checkbox-label {
-  @extend %control-item-text-main;
+  @extend .control-item-form-label;
 }
 
 .checkbox-helper {
-  @extend %control-item-text-helper;
+  @extend .control-item-form-helper;
 }
 
 //
