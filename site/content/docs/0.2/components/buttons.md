@@ -295,7 +295,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 Disabled buttons using the `<a>` element behave a bit different:
 
 - Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
-- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [link functionality caveat](#link-functionality-caveat).
+- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning](/docs/{{< param docs_version >}}/components/links#disabled-link-accessibility-warning).
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 {{< example class="p-none" >}}
@@ -309,15 +309,6 @@ Disabled buttons using the `<a>` element behave a bit different:
     <a class="btn btn-strong btn-on-colored-bg" role="button" aria-disabled="true">Strong link</a>
   </div>
 </div>
-{{< /example >}}
-
-### Link functionality caveat
-
-To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
-
-{{< example >}}
-<a href="#" class="btn btn-default" tabindex="-1" role="button" aria-disabled="true">Default link</a>
-<a href="#" class="btn btn-strong" tabindex="-1" role="button" aria-disabled="true">Strong link</a>
 {{< /example >}}
 
 <!-- OUDS mod: Loading state added -->
