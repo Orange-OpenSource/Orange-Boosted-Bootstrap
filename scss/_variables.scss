@@ -1414,7 +1414,7 @@ $navbar-brand-font-size-two-lined-xs:       1.0625rem !default;
 $navbar-brand-letter-spacing-two-lined-xs:  calc(#{$letter-spacing-base} * 4) !default; // stylelint-disable-line function-disallowed-list
 
 $navbar-brand-margin-y:                     $spacer * .95 !default;
-$navbar-brand-logo-size:                    $spacer * 2.5 !default;
+$navbar-brand-logo-size:                    $spacer * 3.125 !default; // TODO to see when Orange navbar will be implemented
 $navbar-brand-letter-spacing:               calc(#{$letter-spacing-base} * 10) !default; // stylelint-disable-line function-disallowed-list
 $navbar-brand-font-size-two-lined:          1.8125rem !default;
 $navbar-brand-letter-spacing-two-lined:     calc(#{$letter-spacing-base} * 8) !default; // stylelint-disable-line function-disallowed-list
@@ -2153,8 +2153,8 @@ $back-to-top-title-color:        var(--#{$prefix}body-color) !default;
 $back-to-top-title-bg-color:     var(--#{$prefix}body-bg) !default;
 $back-to-top-bg:                 var(--#{$prefix}highlight-color) !default;
 $back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
-$back-to-top-icon-width:         add(.5rem, 1px) !default;
-$back-to-top-icon-height:        subtract(1rem, 1px) !default;
+$back-to-top-icon-width:         1.5rem !default; // TODO to see when Back to top will be implemented
+$back-to-top-icon-height:        1.5rem !default; // TODO to see when Back to top will be implemented
 // scss-docs-end back-to-top
 
 //// Stepped process
