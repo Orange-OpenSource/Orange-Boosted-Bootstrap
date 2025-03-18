@@ -8,13 +8,13 @@ aliases:
 toc: true
 ---
 
-While OUDS Web doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
-
-[Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by [Orange Design System design team](https://system.design.orange.com/). It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
-
 {{< callout info >}}
 You can find here the [Iconography design guidelines](https://unified-design-system.orange.com/472794e18/p/275963-iconography).
 {{< /callout >}}
+
+While OUDS Web doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+
+[Solaris icons library]({{< param icons >}}) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]({{< param icons_license >}}) for legal information.
 
 If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons]({{< docsref "extend/icons#use-solaris-icons" >}}).
 
@@ -43,6 +43,17 @@ For SVGs (SVG sprites, inline SVGs or CSS background SVGs), the `fill="currentCo
 ### Functional icons
 
 The following color utilities and CSS variables are intended for use only with functional icons, not with text, and icons should not be used on their own, but only alongside text, as functional colors do not provide sufficient contrast to ensure readability.
+
+Here are [the normal contexts of use of these functional colors](https://unified-design-system.orange.com/472794e18/p/217ac6-colour/t/9b95834c2e).
+
+{{< bs-table >}}
+| Color utility | Color CSS variable | Context of use |
+| --- | --- | --- |
+| `.text-status-info` | `--bs-color-content-status-info` | Use to communicate a feedback. It's more important than a neutral color. |
+| `.text-status-positive` | `--bs-color-content-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
+| `.text-status-warning` | `--bs-color-content-status-warning` | Use to display an information that requires more attention, or an action from the user. |
+| `.text-status-negative` | `--bs-color-content-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
+{{< /bs-table >}}
 
 {{< example >}}
 <div class="d-flex justify-content-center gap-md-tall">
@@ -93,16 +104,6 @@ The following color utilities and CSS variables are intended for use only with f
 </div>
 {{< /example >}}
 
-Here are [the normal contexts of use of these functional colors](https://unified-design-system.orange.com/472794e18/p/217ac6-colour/t/9b95834c2e).
-
-{{< bs-table >}}
-| Color utility | Color CSS variable | Context of use |
-| --- | --- | --- |
-| `.text-status-info` | `--bs-color-content-status-info` | Use to communicate a feedback. It's more important than a neutral color. |
-| `.text-status-positive` | `--bs-color-content-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
-| `.text-status-warning` | `--bs-color-content-status-warning` | Use to display an information that requires more attention, or an action from the user. |
-| `.text-status-negative` | `--bs-color-content-status-negative` | Use to communicate something negative. It can be a destructive action, an error state, or a negative feedback. |
-{{< /bs-table >}}
 
 ### Other icons
 
@@ -617,6 +618,22 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 #### Informative/meaningful icons
 If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered. The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies) by using the `.visually-hidden` class. For external images, you can also fill the `alt` attribute directly.
 
+<!-- todo add tooltip when available -->
+{{< example class="mt-0" >}}
+<button type="button" class="btn btn-icon btn-default">
+  <svg width="1rem" height="1rem" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
+  </svg>
+  <span class="visually-hidden">Delete</span>
+</button>
+<button type="button" class="btn btn-icon btn-strong">
+  <span class="icon si si-settings" aria-hidden="true"></span>
+  <span class="visually-hidden">Open settings</span>
+</button>
+<!-- todo change images -->
+<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="" width="32" height="32"> Parameters
+<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="Add to favorites" width="32" height="32">
+{{< /example >}}
 
 ## Use Solaris icons
 
@@ -714,23 +731,3 @@ Using:
 
 {{< scss-docs name="icon-home" file="site/assets/scss/_component-examples.scss" >}}
 
-<!-- todo add tooltip when available -->
-{{< example class="mt-0" >}}
-<button type="button" class="btn btn-icon btn-default">
-  <svg width="1rem" height="1rem" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
-  </svg>
-  <span class="visually-hidden">Delete</span>
-</button>
-<button type="button" class="btn btn-icon btn-strong">
-  <span class="icon si si-settings" aria-hidden="true"></span>
-  <span class="visually-hidden">Open settings</span>
-</button>
-<button type="button" class="btn btn-icon btn-minimal">
-  <img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="" width="32" height="32">
-  <span class="visually-hidden">Add to favorites</span>
-</button>
-<button type="button" class="btn btn-icon btn-minimal">
-  <img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="Add to favorites" width="32" height="32">
-</button>
-{{< /example >}}
