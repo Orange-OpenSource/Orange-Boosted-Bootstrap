@@ -351,6 +351,15 @@ sup { top: -.5em; }
 
 // OUDS mod: define link properties in a placeholder to be reused in link component
 %link-properties {
+  // scss-docs-start root-link-var-ouds
+  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
+  // scss-docs-end root-link-var-ouds
+
   font-weight: $link-font-weight; // OUDS mod
   color: var(--#{$prefix}link-color); // OUDS mod: instead of rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;

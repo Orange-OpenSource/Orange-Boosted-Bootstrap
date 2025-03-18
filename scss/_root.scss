@@ -246,17 +246,6 @@
 
   --#{$prefix}heading-color: #{$headings-color};
 
-  // OUDS mod
-  // scss-docs-start root-link-var-ouds
-  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
-  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
-  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
-  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
-  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
-  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
-  // scss-docs-end root-link-var-ouds
-  // End mod
-
   @if $enable-bootstrap-compatibility {
     --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
     --#{$prefix}link-decoration: #{$link-decoration};
