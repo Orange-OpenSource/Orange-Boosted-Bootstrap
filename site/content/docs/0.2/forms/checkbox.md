@@ -348,7 +348,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
         <input class="checkbox-indicator" type="checkbox" value="" id="checkboxGroup2" checked>
       </div>
       <div class="checkbox-item-text-container">
-        <label class="checkbox-label" for="checkboxGroup2">Label</label>
+        <label class="checkbox-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component instead of being centered like in a smaller label</label>
         <p class="checkbox-helper">Helper text</p>
       </div>
       <div class="checkbox-item-icon-container">
