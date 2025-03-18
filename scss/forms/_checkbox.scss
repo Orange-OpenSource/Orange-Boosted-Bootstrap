@@ -62,7 +62,8 @@
   }
 }
 
-%control-item-border {
+%control-item-divider {
+  padding-bottom: subtract($ouds-control-item-space-inset, 1px);
   border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
 }
 
@@ -141,16 +142,12 @@
 // Variants
 //
 
-.checkbox-item-border {
-  @extend %control-item-border;
-}
-
 .checkbox-item-inverse {
   @extend %control-item-inverse;
 }
 
 .checkbox-item-divider {
-  @extend %control-item-border;
+  @extend %control-item-divider;
 }
 
 //
