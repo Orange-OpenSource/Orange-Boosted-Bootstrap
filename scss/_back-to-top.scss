@@ -47,9 +47,6 @@
   pointer-events: all;
   background-color: var(--#{$prefix}back-to-top-link-bg);
   @include button-icon(var(--#{$prefix}back-to-top-link-icon), $size: var(--#{$prefix}back-to-top-link-width) var(--#{$prefix}back-to-top-link-height), $pseudo: "after", $position: calc(50% - 1px));
-  // stylelint-disable-next-line
-  min-width: $back-to-top-icon-width; // TODO to see when Back to top will be implemented
-  min-height: $back-to-top-icon-height; // TODO to see when Back to top will be implemented
 
   &::after {
     transform: rotate(.25turn) #{"/* rtl:ignore */"};
