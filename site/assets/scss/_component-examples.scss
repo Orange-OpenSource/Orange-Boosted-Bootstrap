@@ -5,16 +5,24 @@
 .bd-code-snippet {
   display: flex; // OUDS mod
   flex-direction: column; // OUDS mod
-  margin: 0 ($bd-gutter-x * -.5) 1rem;
+  margin-bottom: var(--bs-space-scaled-shorter); // OUDS mod: instead of `margin: 0 ($bd-gutter-x * -.5) 1rem`
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
-  border-width: 1px 0;
+  border-width: 1px; // OUDs mod: instead of `border-width: 1px 0`
 
   @include media-breakpoint-up(md) {
-    margin-right: 0;
-    margin-left: 0;
-    border-width: 1px;
+    // OUDS mod: no margin-right, margin-left, border-width
     @include border-radius(var(--bs-border-radius));
   }
+
+  // OUDS mod
+  .btn-minimal.btn-icon {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+    }
+  }
+  // End mod
 }
 
 .bd-example {
@@ -380,11 +388,12 @@
 
 .highlight {
   position: relative;
-  padding: .75rem ($bd-gutter-x * .5);
+  padding: .75rem .75rem 0; // OUDS mod: instead of ` padding: .75rem ($bd-gutter-x * .5)`
+  white-space: nowrap; // OUDS mod
   background-color: var(--bd-pre-bg);
 
   @include media-breakpoint-up(md) {
-    padding: .75rem 1.25rem;
+    padding-right: 3.5rem; // OUDS mod: instead of `padding: .75rem 1.25rem`
     @include border-radius(calc(var(--bs-border-radius) - 1px));
   }
 
@@ -395,10 +404,8 @@
   }
 
   pre {
-    padding: .25rem 0 .875rem;
-    margin-top: .8125rem;
-    // OUDS mod: no margin-right
-    margin-bottom: 0;
+    padding: 0 0 .75rem; // OUDS mod: instead of `padding: .25rem 0 .875rem`
+    margin: .5rem 0; // OUDS mod: instead of `margin-top: .8125rem` and `margin-bottom: 0`
     overflow: overlay;
     white-space: pre;
     background-color: transparent;
@@ -428,7 +435,7 @@
   position: relative; // OUDS mod
 
   .highlight-toolbar {
-    min-height: $spacer * 2.5; // OUDS mod
+    min-height: 3.5625rem; // OUDS mod
 
     @include media-breakpoint-up(md) {
       @include border-top-radius(calc(var(--bs-border-radius) - 1px));
@@ -436,9 +443,7 @@
   }
 }
 
-.bd-content .bd-code-snippet {
-  margin-bottom: 1rem;
-}
+// OUDS mod: no .bd-content .bd-code-snippet
 
 // OUDS mod
 // scss-docs-start sticker-fs-4xl
