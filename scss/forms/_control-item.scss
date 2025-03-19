@@ -18,8 +18,8 @@
   &:has([type][disabled]) {
     pointer-events: none;
 
-    .control-item-form-label,
-    .control-item-form-helper,
+    .control-item-label,
+    .control-item-helper,
     svg,
     img,
     .icon {
@@ -35,43 +35,43 @@
 
   .was-validated &:has([type]:invalid),
   &:has([type].is-invalid) {
-    .control-item-form-label {
+    .control-item-label {
       color: $ouds-color-action-negative-enabled;
     }
   }
 
   .was-validated &:has([type]:invalid:hover),
   &:has([type].is-invalid:hover) {
-    .control-item-form-label {
+    .control-item-label {
       color: $ouds-color-action-negative-hover;
     }
   }
 
   .was-validated &:has([type]:invalid:focus-visible),
   &:has([type].is-invalid:focus-visible) {
-    .control-item-form-label {
+    .control-item-label {
       color: $ouds-color-action-negative-focus;
     }
   }
 
   .was-validated &:has([type]:invalid:active),
   &:has([type].is-invalid:active) {
-    .control-item-form-label {
+    .control-item-label {
       color: $ouds-color-action-negative-pressed;
     }
   }
 }
 
-%control-item-divider {
+.control-item-divider {
   padding-bottom: subtract($ouds-control-item-space-inset, 1px);
   border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
 }
 
-%control-item-inverse {
+.control-item-inverse {
   flex-direction: row-reverse;
 }
 
-%control-item-assets-container {
+.control-item-assets-container {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -88,7 +88,7 @@
   }
 }
 
-%control-item-text-container {
+.control-item-text-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -96,7 +96,7 @@
   justify-content: center;
 }
 
-.control-item-form-label {
+.control-item-label {
   display: block;
   color: $ouds-color-content-default;
   cursor: $form-check-label-cursor;
@@ -113,7 +113,7 @@
   }
 }
 
-.control-item-form-helper {
+.control-item-helper {
   display: block;
   margin: 0;
   color: $ouds-color-content-muted;
@@ -121,39 +121,10 @@
 }
 
 //
-// Checkbox item
+// Control item indicator
 //
 
-.checkbox-item {
-  @extend %control-item;
-}
-
-.checkbox-item-indicator-container,
-.checkbox-item-icon-container {
-  @extend %control-item-assets-container;
-}
-
-.checkbox-item-text-container {
-  @extend %control-item-text-container;
-}
-
-//
-// Variants
-//
-
-.checkbox-item-inverse {
-  @extend %control-item-inverse;
-}
-
-.checkbox-item-divider {
-  @extend %control-item-divider;
-}
-
-//
-// Checkbox indicator
-//
-
-.checkbox-indicator {
+.control-item-indicator {
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
@@ -216,24 +187,12 @@
 }
 
 //
-// Checkbox texts
+// Control item standalone
 //
 
-.checkbox-label {
-  @extend .control-item-form-label;
-}
-
-.checkbox-helper {
-  @extend .control-item-form-helper;
-}
-
-//
-// Checkbox standalone
-//
-
-.checkbox-standalone {
-  @extend .checkbox-item;
-  @extend .checkbox-label;
+%control-item-standalone {
+  @extend %control-item;
+  @extend .control-item-label;
   display: inline-flex;
   gap: 0;
   align-items: center;
@@ -242,6 +201,18 @@
   min-height: $ouds-checkbox-size-min-height;
 }
 
+
+//
+// Checkbox
+//
+
+.checkbox-item {
+  @extend %control-item;
+}
+
+.checkbox-standalone {
+  @extend %control-item-standalone;
+}
 
 //
 // Bootstrap compatibility
@@ -254,14 +225,14 @@
   }
 
   .form-check-input {
-    @extend .checkbox-indicator;
+    @extend .control-item-indicator;
   }
 
   .form-check-label {
-    @extend .checkbox-label;
+    @extend .control-item-label;
   }
 
   .form-check-reverse {
-    @extend .checkbox-item-inverse;
+    @extend .control-item-inverse;
   }
 }
