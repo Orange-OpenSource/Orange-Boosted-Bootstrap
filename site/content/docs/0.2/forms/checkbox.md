@@ -28,14 +28,14 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 </div>
 <div class="checkbox-item control-item-divider">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxFullOption" checked>
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxFullOption" checked aria-describedby="checkboxFullOptionHelper">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxFullOption">Label</label>
-    <p class="control-item-helper">Helper text</p>
+    <p class="control-item-helper" id="checkboxFullOptionHelper">Helper text</p>
   </div>
   <div class="control-item-assets-container">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
   </div>
@@ -63,8 +63,6 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 Browser default checkboxes are replaced with the help of `.checkbox-item`. Checkboxes are for selecting one or several options in a list.
 
-You can mix almost all the variants that we provide in the documentation.
-
 Checkboxes are implemented using `.control-item-*` classes, see below.
 
 ### Control item
@@ -73,11 +71,13 @@ Control item is an abstraction for several non-text input components that have s
 
 We use the future friendly child check selector (`:has`) for all our `<input>` states, like `:invalid` or `:disabled`. When combined with the `.control-item-label` class, we can easily style the text for each item based on the `<input>`'s state.
 
-`.control-item-assets-container` are containers controlling the position of the `.control-item-indicator` and the optional icon.
+`.control-item-assets-container` controls the position of the `.control-item-indicator` and the optional icon.
 
-`.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
+`.control-item-text-container` contains the label and optional helper text and controls their positionning.
 
-`.control-item-indicator` are based on SVGs that are controlled by design tokens directly. These SVGs, that indicate unchecked, checked or indeterminate states, are not Solaris icons but custom OUDS icons that are provided in CSS.
+`.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
+
+`.control-item-indicator` uses customized Solaris icons that are controlled by design tokens directly to indicate unchecked, checked or indeterminate states.
 
 ## Variants
 
@@ -117,7 +117,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
     <label class="control-item-label" for="checkboxWithSVG">Label</label>
   </div>
   <div class="control-item-assets-container">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
   </div>
@@ -137,16 +137,16 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 
 ### Helper text
 
-You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`.
+You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
 <!-- TODO: Check for a11y and AT text -->
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxHelperText">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxHelperText">Label</label>
-    <p class="control-item-helper">Helper Text</p>
+    <p class="control-item-helper" id="checkboxHelperTextDescription">Helper Text</p>
   </div>
 </div>
 {{< /example >}}
@@ -158,10 +158,24 @@ You can reverse the component by adding `.control-item-inverse` to a `.control-i
 {{< example >}}
 <div class="checkbox-item control-item-inverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxInverse">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxInverse" name="checkboxInverse">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxInverse">Label</label>
+  </div>
+</div>
+<div class="checkbox-item control-item-inverse">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxInverse2" name="checkboxInverse" aria-describedby="checkboxInverse2Description">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxInverse2">Label</label>
+    <p class="control-item-helper" id="checkboxInverse2Description">Helper Text</p>
+  </div>
+  <div class="control-item-assets-container">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
   </div>
 </div>
 {{< /example >}}
@@ -191,12 +205,12 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 ### Indeterminate
 
-Often used when the checkbox represents a partial selection. For example, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some but not all sub-options are checked. This is not a state the user directly selects but is calculated by the system.
+Often used when the checkbox represents a partial selection. For example, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some but not all sub-options are checked. This is not a state the user can directly selects, it must be calculated by the system.
 
 Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
 {{< callout info >}}
-Indeterminate state can be combined with disabled and error states.
+Indeterminate state can be combined with disabled and invalid states.
 {{< /callout >}}
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
@@ -210,7 +224,7 @@ Indeterminate state can be combined with disabled and error states.
 </div>
 {{< /example >}}
 
-Here is the associated Javascript to set the indeterminate state.
+Here is the associated JavaScript to set the indeterminate state.
 
 ```javascript
 const checkbox = document.getElementById('checkbox')
@@ -285,7 +299,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 <!-- TODO: Introduce Readonly ? -->
 
-### Invalid state
+### Invalid
 
  You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
 
@@ -297,6 +311,46 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxInvalid">Label</label>
   </div>
+</div>
+{{< /example >}}
+
+## Group
+
+When checkboxes belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
+
+{{< example >}}
+<div class="row">
+  <fieldset class="col-md-6">
+    <legend>Checkboxes group example</legend>
+    <div class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup1" aria-describedby="checkboxGroup1Description">
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxGroup1">Label</label>
+        <p class="control-item-helper" id="checkboxGroup1Description">Helper text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+    <div class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" checked aria-describedby="checkboxGroup2Description">
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component</label>
+        <p class="control-item-helper" id="checkboxGroup2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+  </fieldset>
 </div>
 {{< /example >}}
 
@@ -326,43 +380,3 @@ Be careful using this, you must implement the background on hover, focus and act
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
-
-## Group
-
-When checkboxes belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
-
-{{< example >}}
-<div class="row">
-  <fieldset class="col-md-6">
-    <legend>Checkboxes group example</legend>
-    <div class="checkbox-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup1">
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup1">Label</label>
-        <p class="control-item-helper">Helper text</p>
-      </div>
-      <div class="control-item-assets-container">
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </div>
-    </div>
-    <div class="checkbox-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" checked>
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component instead of being centered like in a smaller label</label>
-        <p class="control-item-helper">Helper text</p>
-      </div>
-      <div class="control-item-assets-container">
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </div>
-    </div>
-  </fieldset>
-</div>
-{{< /example >}}

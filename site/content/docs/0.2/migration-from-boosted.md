@@ -139,7 +139,7 @@ You will have to make some extra Javascript to change the styles and update the 
 
 #### Checkbox
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.checkbox-item-icon-container`, `.checkbox-item-indicator-container`, `.checkbox-item-text`, `.checkbox-label`, `.checkbox-indicator`, `.checkbox-helper`, `.checkbox-item-divider`, `.checkbox-item-inverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-inverse` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different. 
 <div class="ps-taller">
@@ -157,11 +157,11 @@ Now you should write:
 
 ```html
 <div class="checkbox-item">
-  <div class="checkbox-item-indicator-container">
-    <input class="checkbox-indicator" type="checkbox" value="" id="checkboxDefault">
+  <div class="control-item-indicator-container">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
-  <div class="checkbox-item-text">
-    <label class="checkbox-label" for="checkboxDefault">Default checkbox</label>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
   </div>
 </div>
 ```
@@ -170,7 +170,7 @@ See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more informat
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` have been removed.
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in Checkboxes labels are now forbidden (they won't be interactive anyway).
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in checkboxes' labels are now forbidden (they won't be interactive anyway).
 
 ## Helpers
 
