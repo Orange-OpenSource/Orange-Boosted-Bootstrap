@@ -648,10 +648,6 @@ Remember that you cannot use external images inside interactive elements because
 <button type="button" class="btn btn-icon btn-default" aria-label="Open settings">
   <span class="icon si si-settings" aria-hidden="true"></span>
 </button>
-<button type="button" class="btn btn-icon btn-default">
-  <span class="icon si si-settings" aria-label="Open settings"></span>
-</button>
-
 <img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.svg" alt="Favorite" width="32" height="32">
 {{< /example >}}
 
