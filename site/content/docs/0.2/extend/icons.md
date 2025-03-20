@@ -616,7 +616,12 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 - CSS background images are intended to be decorative
 
 #### Informative/meaningful icons
-If the icon is **meaningful**, e.g. only content of a button, you have to provide an appropriate alternative text: for example, the description of the icon or the description of the action triggered. The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label (which will be perceived by assistive technologies) by using the `.visually-hidden` class. For external images, you can also fill the `alt` attribute directly.
+If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
+- The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class.
+- For external images within the `<img>` tag, you can also fill the `alt` attribute directly.
+- You can also use an `aria-label` on the image or the containing interactive element to provide an accessible name. Remember that you cannot use external images (`<img>` tag) inside interactive elements because the color won't change with the status (hover, active, focus...) .
+
+Example with interactive elements:
 
 <!-- todo add tooltip when available -->
 {{< example class="mt-0" >}}
@@ -626,13 +631,29 @@ If the icon is **meaningful**, e.g. only content of a button, you have to provid
   </svg>
   <span class="visually-hidden">Delete</span>
 </button>
-<button type="button" class="btn btn-icon btn-strong">
+<button type="button" class="btn btn-icon btn-default" aria-label="Delete">
+  <svg width="1rem" height="1rem" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
+  </svg>
+</button>
+<button type="button" class="btn btn-icon btn-default" >
+  <svg width="1rem" height="1rem" aria-label="Delete">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
+  </svg>
+</button>
+<button type="button" class="btn btn-icon btn-default">
   <span class="icon si si-settings" aria-hidden="true"></span>
   <span class="visually-hidden">Open settings</span>
 </button>
-<!-- todo change images -->
-<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="" width="32" height="32"> Parameters
-<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.png" alt="Add to favorites" width="32" height="32">
+<button type="button" class="btn btn-icon btn-default" aria-label="Open settings">
+  <span class="icon si si-settings" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-icon btn-default">
+  <span class="icon si si-settings" aria-label="Open settings"></span>
+</button>
+
+<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.svg" alt="Favorite" width="32" height="32">
+<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.svg" aria-label="Favorite" width="32" height="32">
 {{< /example >}}
 
 ## Use Solaris icons
@@ -658,12 +679,12 @@ SVG sprite file example:
 
 {{< example lang="svg" show_preview="false" >}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-<symbol id="settings" fill="currentColor">
-<path d="..." style="fill-rule:evenodd"/>
-</symbol>
-<symbol id="trash" fill="currentColor" viewBox="0 0 1000 1000">
-<path d="..." style="fill-rule:evenodd"/>
-</symbol>
+  <symbol id="settings" fill="currentColor">
+    <path d="..." style="fill-rule:evenodd"/>
+  </symbol>
+  <symbol id="trash" fill="currentColor" viewBox="0 0 1000 1000">
+    <path d="..." style="fill-rule:evenodd"/>
+  </symbol>
 </svg>
 {{< /example >}}
 
@@ -671,10 +692,10 @@ SVG sprite usage:
 
 {{< example >}}
 <svg width="3rem" height="3rem" aria-hidden="true">
-<use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#settings"/>
 </svg>
 <svg width="3rem" height="3rem" aria-hidden="true">
-<use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
+  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
 </svg>
 {{< /example >}}
 
@@ -713,7 +734,7 @@ You can embed your icons directly within the HTML of your page (as opposed to an
 
 ### SVG external image
 
-You can use it when:
+You can use SVG through an `<img>` tag when:
 - you only have few icons to render
 - you don't need to change the icons colors. For that reason, **we do not recommend to use that technique**, so it won't be documented here.
 
