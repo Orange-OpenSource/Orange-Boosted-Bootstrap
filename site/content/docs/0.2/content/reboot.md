@@ -114,25 +114,63 @@ All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set
 <p>This is an example paragraph.</p>
 {{< /example >}}
 
-<!-- ## Links
+## Links
 
-Links have a default `color` and underline applied. While links change on `:hover`, they don't change based on whether someone `:visited` the link. They also receive no special `:focus` styles.
+Links have bold and underline applied. While links change on `:hover`, by default they don't change based on whether someone `:visited` the link.
 
 {{< example >}}
 <a href="#">This is an example link</a>
 {{< /example >}}
 
-As of Bootstrap v5.3.x, link `color` is set using `rgba()` and new `-rgb` CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the `-bs-link-opacity` CSS variable:
+Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 {{< example >}}
-<a href="#" style="-bs-link-opacity: .5">This is an example link</a>
+<a aria-disabled="true">This is an example of a disabled link</a>
+{{< /example >}}
+
+Visited links don't have a specific style by default. The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
+
+{{< example >}}
+<div class="visited-links">
+  <div>
+    <a href=".">This is an example of a visited link</a>
+  </div>
+  <div>
+    <a href="#">This is an example of an unvisited link</a>
+  </div>
+</div>
+<div>
+  <a href="." class="visited-links">This is an example of a visited link</a>
+</div>
 {{< /example >}}
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
 {{< example >}}
 <a>This is a placeholder link</a>
-{{< /example >}} -->
+{{< /example >}}
+
+On colored backgrounds, links should have a different style. Visited links don't have a specific style on colored backgrounds.
+
+{{< example class="p-none">}}
+<div class="colored-bg">
+  <div class="bg-brand-primary p-tall">
+    <div data-bs-theme="light">
+      This is an example of a <a href="#">link on colored background</a> in a paragraph.
+    </div>
+  </div>
+  <div class="bg-status-negative-emphasized p-tall">
+    <div data-bs-theme="root-inverted">
+      This is an example of <a href="#">link on colored background</a> in a paragraph.
+    </div>
+  </div>
+</div>
+<div class="bg-brand-primary p-tall">
+  <div data-bs-theme="light">
+    This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
+  </div>
+</div>
+{{< /example >}}
 
 ## Horizontal rules
 

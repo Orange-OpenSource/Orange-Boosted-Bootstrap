@@ -4,8 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-      day: tuesday
-      time: "12:00"
+      day: friday
+      time: "06:00"
       timezone: Europe/Paris
   - package-ecosystem: npm
     directory: "/"
@@ -21,8 +21,8 @@ updates:
           - "@storybook/*"
     schedule:
       interval: weekly
-      day: tuesday
-      time: "12:00"
+      day: friday
+      time: "06:00"
       timezone: Europe/Paris
     versioning-strategy: increase
     rebase-strategy: disabled

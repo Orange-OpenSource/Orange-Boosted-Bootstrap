@@ -22,9 +22,9 @@ export default () => {
   // OUDS mod: changed the positioning to improve the focus order
   const btnHtml = [
     '<div class="bd-code-snippet position-relative">',
-    '  <div class="bd-clipboard position-absolute top-0 end-0">',
-    '    <button type="button" class="btn-clipboard position-absolute end-0">',
-    '      <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>',
+    '  <div class="position-absolute top-0 end-0">',
+    '    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy code to clipboard">',
+    '      <svg aria-hidden="true"><use xlink:href="#copy"/></svg>',
     '    </button>',
     '  </div>',
     '</div>'
@@ -60,7 +60,7 @@ export default () => {
   })
 
   clipboard.on('success', event => {
-    const iconFirstChild = event.trigger.querySelector('.bi').firstElementChild
+    const iconFirstChild = event.trigger.querySelector('svg').firstElementChild
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
@@ -71,7 +71,7 @@ export default () => {
       tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
     }, { once: true })
     event.clearSelection()
-    iconFirstChild.setAttributeNS(namespace, 'href', originalXhref.replace('clipboard', 'check2'))
+    iconFirstChild.setAttributeNS(namespace, 'href', originalXhref.replace('copy', 'check2'))
 
     setTimeout(() => {
       iconFirstChild.setAttributeNS(namespace, 'href', originalXhref)

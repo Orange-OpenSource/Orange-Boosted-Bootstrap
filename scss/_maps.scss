@@ -25,6 +25,7 @@ $ouds-border-colors: (
   "brand-primary": var(--#{$prefix}color-border-brand-primary),
   "default": var(--#{$prefix}color-border-default),
   "emphasized": var(--#{$prefix}color-border-emphasized),
+  "muted": var(--#{$prefix}color-border-muted),
   "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
   "always-black": var(--#{$prefix}color-always-black),
   "always-white": var(--#{$prefix}color-always-white),
@@ -376,7 +377,7 @@ $utilities-border-subtle: (
 ) !default;
 // scss-docs-end utilities-border-colors
 
-$utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline") !default;
+// OUDS mod : no $utilities-links-underline
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
