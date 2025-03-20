@@ -77,7 +77,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 
 `.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
 
-`.control-item-indicator` uses customized Solaris icons that are controlled by design tokens directly to indicate unchecked, checked or indeterminate states.
+`.control-item-indicator` uses customized Solaris icons to indicate checked or indeterminate states.
 
 ## Variants
 
@@ -371,11 +371,11 @@ For the standalone Checkbox, we provide a completely different architecture to e
 
 {{< bootstrap-compatibility false >}}
 {{< callout warning >}}
-Be careful using this, you must implement the background on hover, focus and active states and take care of the focus-visible.
+Be careful using this, you must implement the background on hover, focus and active states.
 {{< /callout >}}
 
 {{< example >}}
-<div>
+<div style="position: relative">
   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
 </div>
 {{< /example >}}

@@ -14,6 +14,11 @@
     @include focus-visible();
   }
 
+  .control-item-indicator {
+    outline: 0;
+    box-shadow: none;
+  }
+
   &:has([type]:disabled),
   &:has([type][disabled]) {
     pointer-events: none;
@@ -125,64 +130,87 @@
 //
 
 .control-item-indicator {
+  --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected};
+  position: relative;
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
   vertical-align: middle;
   appearance: none;
   cursor: $form-check-label-cursor;
-  background-color: $ouds-color-border-emphasized;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: $form-check-input-width;
+  background-color: transparent;
+  border: var(--#{$prefix}control-item-indicator-border) solid $ouds-color-action-enabled;
+  @include border-radius($form-check-input-border-radius);
   print-color-adjust: exact;
 
-  &[type="checkbox"] {
-    mask: escape-svg($ouds-checkbox-unselected-icon);
+  &::before {
+    position: absolute;
+    top: calc(-1 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    left: calc(-1 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    display: block;
+    width: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    content: "";
+    background-color: transparent;
   }
 
-  &:hover,
-  &:focus-visible,
-  &:active {
-    &[type="checkbox"] {
-      mask: escape-svg($ouds-checkbox-unselected-hover-icon);
-    }
-  }
-
-  &:indeterminate {
-    background-color: $ouds-color-action-selected;
-
-    &[type="checkbox"] {
-      mask: escape-svg($ouds-checkbox-indeterminate-icon);
-    }
-  }
-
+  &:indeterminate,
   &:checked {
-    background-color: $ouds-color-action-selected;
+    color: $ouds-color-action-selected;
+    border-color: $ouds-color-action-selected;
 
     &[type="checkbox"] {
-      mask: escape-svg($ouds-checkbox-selected-icon);
+      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+
+      &::before {
+        background-color: currentcolor;
+        mask-repeat: no-repeat;
+      }
     }
+  }
+
+  &:indeterminate[type="checkbox"]::before {
+    mask-image: escape-svg($form-check-input-indeterminate-bg-image);
+  }
+
+  &:checked[type="checkbox"]::before {
+    mask-image: escape-svg($form-check-input-checked-bg-image);
   }
 
   &:hover {
-    background-color: $ouds-color-action-hover;
+    color: $ouds-color-action-hover;
+    border-color: $ouds-color-action-hover;
+
+    &[type="checkbox"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-hover};
+    }
   }
 
   &:focus-visible {
-    background-color: $ouds-color-action-focus;
+    color: $ouds-color-action-focus;
+    border-color: $ouds-color-action-focus;
+
+    &[type="checkbox"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-focus};
+    }
   }
 
   &:active {
-    background-color: $ouds-color-action-pressed;
+    color: $ouds-color-action-pressed;
+    border-color: $ouds-color-action-pressed;
+
+    &[type="checkbox"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-pressed};
+    }
   }
 
   // Use disabled attribute in addition of :disabled pseudo-class
   // See: https://github.com/twbs/bootstrap/issues/28247
   &[disabled],
   &:disabled {
+    color: $ouds-color-action-disabled;
     pointer-events: none;
-    background-color: $ouds-color-action-disabled;
+    border-color: $ouds-color-action-disabled;
   }
 }
 
