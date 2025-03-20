@@ -34,7 +34,6 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 <button type="button" class="btn btn-minimal">Minimal</button>
 <button type="button" class="btn btn-negative">Negative</button>
 {{< /example >}}
-<!-- <button type="button" class="btn btn-link">Link</button> will be implemented with links -->
 
 {{< bootstrap-compatibility false >}}
 {{< example >}}
@@ -43,8 +42,6 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}
-
-<!-- <button type="button" class="btn btn-link">Link</button> -->
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
@@ -109,25 +106,25 @@ When icons are purely decorative, they should be hidden from assistive technolog
 {{< example class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Default
   </button>
   <button type="button" class="btn btn-strong">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Strong
   </button>
   <button type="button" class="btn btn-minimal">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Minimal
   </button>
   <button type="button" class="btn btn-negative">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     Negative
@@ -142,19 +139,19 @@ When icons are purely decorative, they should be hidden from assistive technolog
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       Default
     </button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       Strong
     </button>
     <button type="button" class="btn btn-minimal btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       Minimal
@@ -177,25 +174,25 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 {{< example class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Default</span>
   </button>
   <button type="button" class="btn btn-icon btn-strong">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Strong</span>
   </button>
   <button type="button" class="btn btn-icon btn-minimal">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Minimal</span>
   </button>
   <button type="button" class="btn btn-icon btn-negative">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Negative</span>
@@ -210,19 +207,19 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
     <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       <span class="visually-hidden">Strong</span>
     </button>
     <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+      <svg aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       <span class="visually-hidden">Minimal</span>
@@ -476,7 +473,7 @@ Loading state can also be combined with all kind of buttons, including icons.
 {{< example >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     <span class="visually-hidden">Downloading file 15</span>
@@ -486,7 +483,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <span role="status" id="loading-btn-msg-15" class="visually-hidden">Downloading file 15</span>
   </button>
   <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     <span class="visually-hidden">Downloading file 16</span>
@@ -496,7 +493,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <span role="status" id="loading-btn-msg-16" class="visually-hidden">Downloading file 16: xx%</span>
   </button>
   <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     Download file 17
@@ -506,7 +503,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     <span role="status" id="loading-btn-msg-17" class="visually-hidden">Downloading file 17</span>
   </button>
   <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+    <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>
     </svg>
     Download file 18
