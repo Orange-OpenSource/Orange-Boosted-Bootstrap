@@ -616,14 +616,14 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 - CSS background images are intended to be decorative
 
 #### Informative/meaningful icons
+
 If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
-- The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class.
-- For external images within the `<img>` tag, you can also fill the `alt` attribute directly.
-- You can also use an `aria-label` on the image or the containing interactive element to provide an accessible name. Remember that you cannot use external images (`<img>` tag) inside interactive elements because the color won't change with the status (hover, active, focus...) .
 
-Example with interactive elements:
+The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element or the `<svg>` tag to provide an accessible name. For external images within the `<img>` tag, you can also fill the `alt` attribute directly.
 
-<!-- todo add tooltip when available -->
+Remember that you cannot use external images inside interactive elements because the color won't change with the element's status (hover, active, focus...), see [SVG external image]({{< docsref "extend/icons#svg-external-image" >}}).
+
+<!-- todo add tooltip on buttons and explanation when available -->
 {{< example class="mt-0" >}}
 <button type="button" class="btn btn-icon btn-default">
   <svg width="1rem" height="1rem" aria-hidden="true">
@@ -653,7 +653,6 @@ Example with interactive elements:
 </button>
 
 <img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.svg" alt="Favorite" width="32" height="32">
-<img src="/docs/{{< param docs_version >}}/assets/img/heart-recommend.svg" aria-label="Favorite" width="32" height="32">
 {{< /example >}}
 
 ## Use Solaris icons
