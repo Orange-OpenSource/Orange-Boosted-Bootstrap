@@ -63,7 +63,7 @@ Browser default radio buttons are replaced with the help of `.radio-button-item`
 
 You can mix almost all the variants that we provide in the documentation.
 
-Checkboxes are implemented using `.control-item-*` classes, see below.
+Radio buttons are implemented using `.control-item-*` classes, see below.
 
 ### Control item
 
