@@ -85,14 +85,13 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 ## With icon
 
-### Text and icon
-
 {{< callout info >}}
-The recommended way of using an icon in a button is through an [SVG sprite file]({{< docsref "/extend/icons/#svg-sprite" >}}). You need to:
+The recommended way of using an icon in a button is through an [SVG sprite file]({{< docsref "/extend/icons/#svg-sprite" >}}). You need to fill it using `currentColor` to respect the button color scheme (can be set directly inside the SVG sprite).
 
-- set its dimensions to default `1rem` size, the icon will adapt automatically,
-- fill it using `currentColor` to respect the button color scheme (can be set directly inside the SVG sprite).
+When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]({{< docsref "/extend/icons/#icons-accessibility" >}}) for more info.
 {{< /callout >}}
+
+### Text and icon
 
 You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
