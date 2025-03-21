@@ -73,7 +73,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 
 `.control-item-assets-container` controls the position of the `.control-item-indicator` and the optional icon.
 
-`.control-item-text-container` contains the label and optional helper text and controls their positionning.
+`.control-item-text-container` contains the label and optional helper text and controls their positioning.
 
 `.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
 
