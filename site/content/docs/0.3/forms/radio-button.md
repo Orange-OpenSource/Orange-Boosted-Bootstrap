@@ -131,10 +131,10 @@ You can display an additional label for critical information for the option by a
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioHelperText">
+    <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="radioHelperText">Label</label>
+    <label class="control-item-label" for="radioAdditionalLabel">Label</label>
     <p class="radio-button-additional-label">Additional label</p>
   </div>
 </div>
