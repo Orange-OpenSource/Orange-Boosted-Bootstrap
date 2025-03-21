@@ -26,11 +26,12 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 </div>
 <div class="radio-button-item control-item-divider">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioFullOption" checked name="radioBasic">
+    <input class="control-item-indicator" type="radio" value="" id="radioFullOption" checked name="radioBasic" aria-describedby="radioFullOptionAdditionalText radioFullOptionHelper">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioFullOption">Label</label>
-    <p class="control-item-helper">Helper text</p>
+    <p class="radio-button-additional-label" id="radioFullOptionAdditionalText">Additional label</p>
+    <p class="control-item-helper" id="radioFullOptionHelper">Helper text</p>
   </div>
   <div class="control-item-assets-container">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -43,13 +44,13 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 {{< bootstrap-compatibility false >}}
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="radio" value="" id="checkDefault">
+  <input class="form-check-input" type="radio" value="" id="checkDefault" name="radioBasicBs">
   <label class="form-check-label" for="checkDefault">
     Default radio button
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" value="" id="checkChecked" checked>
+  <input class="form-check-input" type="radio" value="" id="checkChecked" checked name="radioBasicBs">
   <label class="form-check-label" for="checkChecked">
     Checked radio button
   </label>
@@ -59,9 +60,7 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.radio-button-item`. Checkboxes are for selecting one or several options in a list.
-
-You can mix almost all the variants that we provide in the documentation.
+Browser default radio buttons are replaced with the help of `.radio-button-item`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
 
 Radio buttons are implemented using `.control-item-*` classes, see below.
 
@@ -73,7 +72,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 
 `.control-item-assets-container` are containers controlling the position of the `.control-item-indicator` and the optional icon.
 
-`.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
+`.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone`, `.radio-button-standalone` or a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
 
 `.control-item-indicator` are based on SVGs that are controlled by design tokens directly. These SVGs, that indicate unchecked, checked or indeterminate states, are not Solaris icons but custom OUDS icons that are provided in CSS.
 
@@ -133,10 +132,26 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 </div>
 {{< /example >}}
 
+### Additional label
+
+You can display an additional label for critical information for the option by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`.
+
+{{< example >}}
+<div class="radio-button-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioHelperText">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioHelperText">Label</label>
+    <p class="radio-button-additional-label">Additional label</p>
+  </div>
+</div>
+{{< /example >}}
+
 ### Helper text
 
 You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`.
-<!-- TODO: Check for a11y and AT text -->
+
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
@@ -246,19 +261,20 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ## Group
 
-When radio buttons belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
+When radio buttons belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the radio buttons.
 
 {{< example >}}
 <div class="row">
   <fieldset class="col-md-6">
-    <legend>Checkboxes group example</legend>
+    <legend>Radio buttons group example</legend>
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup1" name="radioGroup">
+        <input class="control-item-indicator" type="radio" value="" id="radioGroup1" name="radioGroup" aria-describedby="radioGroup1AdditionalLabel radioGroup1Description">
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup1">Label</label>
-        <p class="control-item-helper">Helper text</p>
+        <label class="control-item-label" for="radioGroup1">Label</label>
+        <p class="radio-button-additional-label" id="radioGroup1AdditionalLabel">Additional label</p>
+        <p class="control-item-helper" id="radioGroup1Description">Helper text</p>
       </div>
       <div class="control-item-assets-container">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -268,11 +284,12 @@ When radio buttons belong to a group (e.g., in a form), you must provide clear c
     </div>
     <div class="radio-button-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup2" checked name="radioGroup">
+        <input class="control-item-indicator" type="radio" value="" id="radioGroup2" checked name="radioGroup"  aria-describedby="radioGroup2AdditionalLabel radioGroup2Description">
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-        <p class="control-item-helper">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+        <label class="control-item-label" for="radioGroup2">A longer label for showing behavior in this case, </label>
+        <p class="radio-button-additional-label" id="radioGroup2AdditionalLabel">Radio button indicator and icon will stick to the top area of the component</p>
+        <p class="control-item-helper" id="radioGroup2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
       </div>
       <div class="control-item-assets-container">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -287,10 +304,10 @@ When radio buttons belong to a group (e.g., in a form), you must provide clear c
 ## Standalone
 
 {{< callout warning >}}
-They are commonly used to build custom component, and shouldn't be used alone. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-labelledby`, a `.visually-hidden`, `aria-label` or a second label). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+This is commonly used to build custom component, and shouldn't be used alone. Remember to provide some sort of accessible name for assistive technologies (for instance, using `aria-labelledby`, a `.visually-hidden`, `aria-label` or a second label). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
 {{< /callout >}}
 
-For the standalone Checkbox, we provide a completely different architecture to ease the integration inside your projects.
+For the standalone Radio button, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
 <label class="radio-button-standalone">
@@ -301,7 +318,7 @@ For the standalone Checkbox, we provide a completely different architecture to e
 
 {{< bootstrap-compatibility false >}}
 {{< callout warning >}}
-Be careful using this, you must implement the background on hover, focus and active states and take care of the focus-visible.
+Be careful using this, you must implement the background on hover, focus and active states.
 {{< /callout >}}
 
 {{< example >}}
