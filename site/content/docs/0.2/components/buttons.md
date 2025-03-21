@@ -82,26 +82,17 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 ## With icon
 
-{{< callout info >}}
-Inside buttons, you should use Solaris icons, either in an SVG sprite (`<symbol>` element in an SVG file), which is the recommended method, or in an icon font. You can generate both with [Solaris Icons Finder](https://oran.ge/icons).
+### Text and icon
 
-We strongly advise against using an `<img>` or other techniques, especially because the icon will not benefit from dynamic color changes across states (hover, focus, active) and the color mode system will not work.
-{{< /callout >}}
+The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
 
-With an SVG sprite, you'll need to:
+You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
-- set its dimensions to default `1rem` size, the icon will adapt automatically,
-- fill it using `currentColor` to respect button color scheme.
-
-You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web. Please note that if you experience a problem with a cropped icon, we recommend using the `.overflow-visible` utility to fix its rendering.
+Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
-{{< callout >}}
-When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our examples. For icons that convey meaning, provide an appropriate text alternative by adding `role="img"` and an appropriate `aria-label="..."` to the SVGs.
-{{< /callout >}}
-
-### Text and icon
+We strongly advise not using an `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
