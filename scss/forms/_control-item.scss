@@ -151,13 +151,17 @@
     mask-repeat: no-repeat;
   }
 
-  &:indeterminate,
-  &:checked {
-    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
-  }
-
   &[type="checkbox"] {
     @include border-radius($form-check-input-border-radius);
+  }
+
+  &[type="radio"] {
+    @include border-radius($form-check-radio-border-radius);
+  }
+
+  &:checked,
+  &:indeterminate {
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
   }
 
   &:indeterminate[type="checkbox"] {
@@ -181,9 +185,20 @@
       }
     }
 
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected};
+      &::before {
+        mask-image: escape-svg($form-check-radio-checked-bg-image);
+      }
+    }
+
     &:hover {
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-hover};
+      }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected-hover};
       }
     }
 
@@ -191,11 +206,19 @@
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-focus};
       }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected-focus};
+      }
     }
 
     &:active {
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-pressed};
+      }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected-pressed};
       }
     }
   }
@@ -206,6 +229,10 @@
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-hover};
     }
+
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-unselected-hover};
+    }
   }
 
   &:focus-visible {
@@ -214,6 +241,10 @@
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-focus};
     }
+
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-unselected-focus};
+    }
   }
 
   &:active {
@@ -221,6 +252,9 @@
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-pressed};
+    }
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-unselected-pressed};
     }
   }
 

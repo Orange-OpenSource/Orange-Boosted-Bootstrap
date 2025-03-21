@@ -86,7 +86,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
 {{< example >}}
 <div class="radio-button-item control-item-divider">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioDivider" name="radioDivider">
+    <input class="control-item-indicator" type="radio" value="" id="radioDivider" name="radioDivider" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioDivider">Label</label>
@@ -109,7 +109,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioWithSVG" name="radioIcon">
+    <input class="control-item-indicator" type="radio" value="" id="radioWithSVG" name="radioIcon" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioWithSVG">Label</label>
@@ -171,15 +171,15 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 {{< example >}}
 <div class="form-check form-check-reverse">
-  <input class="form-check-input" type="radio" value="" id="reverseCheck1">
+  <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioInverse">
   <label class="form-check-label" for="reverseCheck1">
     Reverse radio
   </label>
 </div>
 <div class="form-check form-check-reverse">
-  <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled>
+  <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled name="radioInverse">
   <label class="form-check-label" for="reverseCheck2">
-    Disabled reverse radio
+    Disabled reverse radioradio
   </label>
 </div>
 {{< /example >}}
@@ -191,18 +191,10 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 Add the `disabled` attribute and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input's state.
 
-{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioIndeterminateDisabled" disabled>
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="radioIndeterminateDisabled">Label</label>
-  </div>
-</div>
-<div class="radio-button-item">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioDisabled" disabled>
+    <input class="control-item-indicator" type="radio" value="" id="radioDisabled" disabled name="radioDisabled">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioDisabled">Label</label>
@@ -210,7 +202,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 </div>
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioCheckedDisabled" checked disabled>
+    <input class="control-item-indicator" type="radio" value="" id="radioCheckedDisabled" checked disabled name="radioDisabled">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioCheckedDisabled">Label</label>
@@ -219,13 +211,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 
 {{< bootstrap-compatibility false >}}
-{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="" id="checkIndeterminateDisabled" disabled>
-  <label class="form-check-label" for="checkIndeterminateDisabled">
-    Disabled indeterminate radio button
-  </label>
-</div>
+{{< example stackblitz_add_js="true" >}}
 <div class="form-check">
   <input class="form-check-input" type="radio" value="" id="checkDisabled" disabled>
   <label class="form-check-label" for="checkDisabled">
@@ -258,6 +244,46 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 </div>
 {{< /example >}}
 
+## Group
+
+When radio buttons belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
+
+{{< example >}}
+<div class="row">
+  <fieldset class="col-md-6">
+    <legend>Checkboxes group example</legend>
+    <div class="radio-button-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup1" name="radioGroup">
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxGroup1">Label</label>
+        <p class="control-item-helper">Helper text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+    <div class="radio-button-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup2" checked name="radioGroup">
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component instead of being centered like in a smaller label</label>
+        <p class="control-item-helper">Helper text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </div>
+    </div>
+  </fieldset>
+</div>
+{{< /example >}}
+
 ## Standalone
 
 {{< callout warning >}}
@@ -284,43 +310,3 @@ Be careful using this, you must implement the background on hover, focus and act
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
-
-## Group
-
-When radio buttons belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
-
-{{< example >}}
-<div class="row">
-  <fieldset class="col-md-6">
-    <legend>Checkboxes group example</legend>
-    <div class="radio-button-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup1">
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup1">Label</label>
-        <p class="control-item-helper">Helper text</p>
-      </div>
-      <div class="control-item-assets-container">
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </div>
-    </div>
-    <div class="radio-button-item control-item-divider">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="radio" value="" id="checkboxGroup2" checked>
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component instead of being centered like in a smaller label</label>
-        <p class="control-item-helper">Helper text</p>
-      </div>
-      <div class="control-item-assets-container">
-        <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </div>
-    </div>
-  </fieldset>
-</div>
-{{< /example >}}
