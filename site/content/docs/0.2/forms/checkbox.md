@@ -138,7 +138,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 ### Helper text
 
 You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
-<!-- TODO: Check for a11y and AT text -->
+
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
