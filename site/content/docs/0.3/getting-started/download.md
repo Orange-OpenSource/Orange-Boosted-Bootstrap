@@ -59,7 +59,7 @@ If you're using our compiled JavaScript and prefer to include Popper separately,
 
 ### Alternative CDNs
 
-We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://unpkg.com/).
+We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://www.unpkg.com/browse/@ouds/web@0.0.3/).
 
 You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct OUDS Web package link](https://cdnjs.com/libraries/boosted) to copy and paste ready-to-use HTML snippets for each dist file from any version of OUDS Web.
 
