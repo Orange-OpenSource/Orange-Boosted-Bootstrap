@@ -619,7 +619,7 @@ Purely **decorative icons** (like repeating information of an adjacent text) mus
 
 If the icon is **meaningful** with no visible adjacent text, e.g. indication in a table or only content of a button, you have to provide an appropriate alternative text with the description of the icon or the description of the action triggered.
 
-The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element or the `<svg>` tag to provide an accessible name. For external images within the `<img>` tag, you can also fill the `alt` attribute directly.
+The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element to provide an accessible name. For external images within the `<img>` tag, you can also fill the `alt` attribute directly.
 
 Remember that you cannot use external images inside interactive elements because the color won't change with the element's status (hover, active, focus...), see [SVG external image]({{< docsref "extend/icons#svg-external-image" >}}).
 
@@ -633,11 +633,6 @@ Remember that you cannot use external images inside interactive elements because
 </button>
 <button type="button" class="btn btn-icon btn-default" aria-label="Delete">
   <svg width="1rem" height="1rem" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
-  </svg>
-</button>
-<button type="button" class="btn btn-icon btn-default" >
-  <svg width="1rem" height="1rem" aria-label="Delete">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
   </svg>
 </button>
