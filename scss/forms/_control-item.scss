@@ -140,7 +140,6 @@
   cursor: $form-check-label-cursor;
   background-color: transparent;
   border: var(--#{$prefix}control-item-indicator-border) solid $ouds-color-action-enabled;
-  @include border-radius($form-check-input-border-radius);
   print-color-adjust: exact;
 
   &::before {
@@ -152,29 +151,57 @@
     height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
     content: "";
     background-color: transparent;
+    mask-repeat: no-repeat;
   }
 
   &:indeterminate,
   &:checked {
     color: $ouds-color-action-selected;
     border-color: $ouds-color-action-selected;
+  }
 
-    &[type="checkbox"] {
-      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+  &[type="checkbox"] {
+    @include border-radius($form-check-input-border-radius);
+  }
 
-      &::before {
-        background-color: currentcolor;
-        mask-repeat: no-repeat;
-      }
+  &:indeterminate[type="checkbox"] {
+    --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-input-indeterminate-bg-image);
     }
   }
 
-  &:indeterminate[type="checkbox"]::before {
-    mask-image: escape-svg($form-check-input-indeterminate-bg-image);
-  }
+  &:checked {
+    &::before {
+      background-color: currentcolor;
+    }
 
-  &:checked[type="checkbox"]::before {
-    mask-image: escape-svg($form-check-input-checked-bg-image);
+    &[type="checkbox"] {
+      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+      &::before {
+        mask-image: escape-svg($form-check-input-checked-bg-image);
+      }
+    }
+
+    &:hover {
+      &[type="checkbox"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-hover};
+      }
+    }
+
+    &:focus-visible {
+      &[type="checkbox"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-focus};
+      }
+    }
+
+    &:active {
+      &[type="checkbox"] {
+        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-pressed};
+      }
+    }
   }
 
   &:hover {
@@ -228,7 +255,6 @@
   min-width: $ouds-checkbox-size-min-width;
   min-height: $ouds-checkbox-size-min-height;
 }
-
 
 //
 // Checkbox
