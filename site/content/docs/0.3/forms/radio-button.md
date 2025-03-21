@@ -271,8 +271,8 @@ When radio buttons belong to a group (e.g., in a form), you must provide clear c
         <input class="control-item-indicator" type="radio" value="" id="checkboxGroup2" checked name="radioGroup">
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component instead of being centered like in a smaller label</label>
-        <p class="control-item-helper">Helper text</p>
+        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+        <p class="control-item-helper">Also a longer helper text, it will also wrap at some point depending on the component width</p>
       </div>
       <div class="control-item-assets-container">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
