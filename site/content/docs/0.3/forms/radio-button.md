@@ -179,7 +179,7 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled name="radioInverse">
   <label class="form-check-label" for="reverseCheck2">
-    Disabled reverse radioradio
+    Disabled reverse radio
   </label>
 </div>
 {{< /example >}}
