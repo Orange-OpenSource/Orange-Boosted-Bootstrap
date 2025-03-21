@@ -341,7 +341,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" checked aria-describedby="checkboxGroup2Description">
       </div>
       <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behaviour in this case, checkbox indicator and icon will stick to the top area of the component</label>
+        <label class="control-item-label" for="checkboxGroup2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
         <p class="control-item-helper" id="checkboxGroup2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
       </div>
       <div class="control-item-assets-container">
