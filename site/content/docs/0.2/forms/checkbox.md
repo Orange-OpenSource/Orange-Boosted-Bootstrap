@@ -304,7 +304,7 @@ TODO
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonly" aria-readonly="true" disabled>
+    <input class="control-item-indicator control-item-indicator-readonly" type="checkbox" value="" id="checkboxReadonly" disabled>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxReadonly">Label</label>
@@ -312,7 +312,7 @@ TODO
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonlyChecked" aria-describedby="checkboxReadonlyCheckedHelper" aria-readonly="true" disabled checked>
+    <input class="control-item-indicator control-item-indicator-readonly" type="checkbox" value="" id="checkboxReadonlyChecked" aria-describedby="checkboxReadonlyCheckedHelper" disabled checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxReadonlyChecked">Label</label>
@@ -326,7 +326,7 @@ TODO
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonlyIndeterminate" aria-readonly="true" disabled>
+    <input class="control-item-indicator control-item-indicator-readonly" type="checkbox" value="" id="checkboxReadonlyIndeterminate" disabled>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxReadonlyIndeterminate">Label</label>

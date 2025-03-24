@@ -24,8 +24,8 @@
     pointer-events: none;
   }
 
-  &:has([type]:disabled):not(:has([aria-readonly])),
-  &:has([type][disabled]):not(:has([aria-readonly])) {
+  &:has([type]:disabled):not(:has(.control-item-indicator-readonly)),
+  &:has([type][disabled]):not(:has(.control-item-indicator-readonly)) {
     .control-item-label,
     .control-item-helper,
     svg,
