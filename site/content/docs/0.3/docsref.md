@@ -37,7 +37,7 @@ sitemap:
   The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
 </div>
 
-{{< example button_label="test">}}
+{{< example button_label="test doc">}}
 <div class="test">This is a test.</div>
 {{< /example >}}
 

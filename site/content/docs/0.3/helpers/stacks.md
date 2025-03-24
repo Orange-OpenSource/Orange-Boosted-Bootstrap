@@ -72,7 +72,7 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
-{{< example button_label="inline form with horizontal stack" button_label="" >}}
+{{< example button_label="inline form with horizontal stack">}}
 <div class="hstack gap-tall">
   <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>
