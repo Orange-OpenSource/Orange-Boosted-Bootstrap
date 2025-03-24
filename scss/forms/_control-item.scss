@@ -19,6 +19,10 @@
     box-shadow: none;
   }
 
+  &:has([aria-readonly][role="checkbox"]) {
+    pointer-events: none;
+  }
+
   &:has([type]:disabled),
   &:has([type][disabled]) {
     pointer-events: none;
@@ -160,16 +164,26 @@
     border-color: $ouds-color-action-selected;
   }
 
-  &[type="checkbox"] {
+  &[type="checkbox"],
+  &[aria-readonly][role="checkbox"] {
     @include border-radius($form-check-input-border-radius);
   }
 
-  &:indeterminate[type="checkbox"] {
+  &:indeterminate[type="checkbox"],
+  &[aria-readonly][role="checkbox"].indeterminate {
     --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
 
     &::before {
       background-color: currentcolor;
       mask-image: escape-svg($form-check-input-indeterminate-bg-image);
+    }
+  }
+
+  &[role="checkbox"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-input-checked-bg-image);
     }
   }
 
@@ -192,7 +206,8 @@
     }
 
     &:focus-visible {
-      &[type="checkbox"] {
+      &[type="checkbox"],
+      &[aria-readonly][role="checkbox"] {
         --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-focus};
       }
     }
@@ -217,7 +232,8 @@
     color: $ouds-color-action-focus;
     border-color: $ouds-color-action-focus;
 
-    &[type="checkbox"] {
+    &[type="checkbox"],
+    &[aria-readonly][role="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-focus};
     }
   }
@@ -234,7 +250,8 @@
   // Use disabled attribute in addition of :disabled pseudo-class
   // See: https://github.com/twbs/bootstrap/issues/28247
   &[disabled],
-  &:disabled {
+  &:disabled,
+  &[aria-readonly][role="checkbox"] {
     color: $ouds-color-action-disabled;
     pointer-events: none;
     border-color: $ouds-color-action-disabled;
