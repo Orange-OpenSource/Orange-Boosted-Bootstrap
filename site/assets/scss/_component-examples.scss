@@ -81,10 +81,13 @@
   }
 
   // Buttons
-  .btn,
-  .btn-group {
-    margin: .375rem;
+  &.bd-btn-example {
+    .btn,
+    .btn-group {
+      margin: .375rem;
+    }
   }
+
   > .btn-toolbar + .btn-toolbar {
     margin-top: .5rem;
   }
