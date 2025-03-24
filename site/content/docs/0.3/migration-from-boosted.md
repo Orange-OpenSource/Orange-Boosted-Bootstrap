@@ -146,9 +146,9 @@ You will have to make some extra Javascript to change the styles and update the 
 
 #### Checkbox
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-inverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-reverse` have been added.
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different. 
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different.
 <div class="ps-taller">
 For example, if you used to write:
 
@@ -552,6 +552,7 @@ See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more informat
   + @import "tokens/semantic";
   + @import "tokens/semantic-colors-custom-props";
   + @import "tokens/composite";
+  + @import "tokens/component-colors-custom-props";
   + @import "tokens/component";
     @import "variables";
     @import "variables-dark";
