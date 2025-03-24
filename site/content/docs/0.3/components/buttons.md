@@ -16,7 +16,7 @@ You can find here the [OUDS Button design guidelines](https://unified-design-sys
 
 OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
 
-{{< example >}}
+{{< example button_label="button base class">}}
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
@@ -28,7 +28,7 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 
 OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [Button design specifications](https://unified-design-system.orange.com/472794e18/p/48a788-button/t/5c95fb0c27) to choose the right button for the right action.
 
-{{< example >}}
+{{< example button_label="standard button variants">}}
 <button type="button" class="btn btn-default">Default</button>
 <button type="button" class="btn btn-strong">Strong</button>
 <button type="button" class="btn btn-minimal">Minimal</button>
@@ -37,7 +37,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 <!-- <button type="button" class="btn btn-link">Link</button> will be implemented with links -->
 
 {{< bootstrap-compatibility false >}}
-{{< example >}}
+{{< example button_label="standard button variants">}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -62,7 +62,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 - Negative buttons should never be used on colored background.
 {{< /callout >}}
 
-{{< example class="p-none">}}
+{{< example button_label="variants on colored backgrounds" class="p-none">}}
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light" class="d-flex gap-shorter flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
@@ -100,7 +100,7 @@ If really needed, you can use a font icon associated to the `.icon` class to set
 
 We strongly advise not using an `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
-{{< example class="p-none">}}
+{{< example button_label="text and icon buttons" class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -168,7 +168,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 <!-- TODO: Add a paragraph about tooltip and/or title -->
 
-{{< example class="p-none">}}
+{{< example button_label="icon only buttons" class="p-none">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default">
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -242,7 +242,7 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
-{{< example >}}
+{{< example button_label="buttons with other tags">}}
 <a class="btn btn-default" href="#" role="button">Link</a>
 <button class="btn btn-strong" type="submit">Button</button>
 <input class="btn btn-minimal" type="button" value="Input">
@@ -258,7 +258,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 {{< /markdown >}}
 
-{{< example >}}
+{{< example button_label="outline buttons">}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
@@ -275,7 +275,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 <!-- OUDS mod: no outline buttons-->
-{{< example class="p-none" >}}
+{{< example button_label="disabled state" class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default" disabled>Default</button>
   <button type="button" class="btn btn-strong" disabled>Strong</button>
@@ -298,7 +298,7 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning](/docs/{{< param docs_version >}}/components/links#disabled-link-accessibility-warning).
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
-{{< example class="p-none" >}}
+{{< example button_label="disabled state with `<a>` tag" class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
   <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
@@ -323,7 +323,7 @@ To make an animated loading state button, you will add in your standard button:
 
 For example, before loading, your button could be like this:
 
-{{< example >}}
+{{< example button_label="before loading state">}}
 <button type="button" class="btn btn-default" id="loading-btn-0">
   Download file
   <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -349,7 +349,7 @@ At the end of the loading, you should:
 
 You can see it live and find a JavaScript example on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
-{{< example class="p-none" >}}
+{{< example button_label="loading state" class="p-none" >}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
     Download file 1
@@ -467,7 +467,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
 
 Loading state can also be combined with all kind of buttons, including icons.
 
-{{< example >}}
+{{< example button_label="loading state with variants">}}
 <div class="p-tall d-flex gap-shorter flex-wrap">
   <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
     <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -519,7 +519,7 @@ Create responsive stacks of full-width, "block buttons" with a mix of our displa
 
 Please note that these **full-width** buttons should not be used on desktop screens. <!-- OUDS mod -->
 
-{{< example >}}
+{{< example button_label="block buttons">}}
 <div class="d-grid gap-short">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
@@ -528,7 +528,7 @@ Please note that these **full-width** buttons should not be used on desktop scre
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them change.
 
-{{< example >}}
+{{< example button_label="block buttons variation">}}
 <div class="d-grid gap-short d-md-block">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
@@ -537,7 +537,7 @@ Here we create a responsive variation, starting with vertically stacked buttons 
 
 You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
-{{< example >}}
+{{< example button_label="block buttons with grid system">}}
 <div class="d-grid gap-short col-6 mx-auto">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
@@ -546,7 +546,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
-{{< example >}}
+{{< example button_label="block buttons with flex utilities">}}
 <div class="d-grid gap-short d-md-flex justify-content-md-end">
   <button class="btn btn-default me-md-shorter" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
@@ -570,30 +570,30 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass variables
 
-{{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
+{{< scss-docs button_label="button variables" name="btn-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
 
 There are one mixin for button colors: button variant mixin.
 
-{{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
+{{< scss-docs button_label="button variant mixin" name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< bootstrap-compatibility false >}}
 
-{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
+{{< scss-docs button_label="button outline variant mixin" name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-{{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
+{{< scss-docs button_label="button size mixin" name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< /bootstrap-compatibility >}}
 
 <!-- OUDS mod: button-icon mixin not used for now -->
 
-<!-- {{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}} -->
+<!-- {{< scss-docs button_label="button icon mixin" name="btn-icon" file="scss/mixins/_buttons.scss" >}} -->
 
 Button variants use their respective mixin to generate the modifier classes in `scss/_buttons.scss`. Here are the way we define the OUDS Buttons.
 
-{{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
+{{< scss-docs button_label="button variant loops" name="btn-variant-loops" file="scss/_buttons.scss" >}}
 
 ### Component tokens
 
-{{< scss-docs name="ouds-component-button" file="scss/tokens/_component.scss" >}}
+{{< scss-docs button_label="button component tokens" name="ouds-component-button" file="scss/tokens/_component.scss" >}}

@@ -18,7 +18,7 @@ Use OUDS Web `.link` class to set up styles such as padding and content alignmen
 
 By default, `.link` defines focus, hover and active styles similar to the `<a>` tag.
 
-{{< example >}}
+{{< example button_label="standard variant">}}
 <a class="link" href="#">This is an example of link</a>
 {{< /example >}}
 
@@ -32,7 +32,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 **Heads up!** Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]({{< docsref "/utilities/background/#colored-backgrounds" >}}).
 {{< /callout >}}
 
-{{< example class="p-none">}}
+{{< example button_label="variant on colored background" class="p-none">}}
 <div class="bg-brand-primary p-tall">
   <div data-bs-theme="light">
     <a class="link link-on-colored-bg" href="#">This is an example of link</a>
@@ -49,7 +49,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
 
-{{< example >}}
+{{< example button_label="link chevron" >}}
 <div><a class="link link-chevron" href="#">Link with chevron</a></div>
 <div><a class="link link-chevron back" href="#">Link with a back chevron</a></div>
 <div style="width:20rem;">
@@ -76,7 +76,7 @@ When icons are purely decorative, they should be hidden from assistive technolog
 
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
 
-{{< example >}}
+{{< example button_label="icon link">}}
 <div>
   <a class="link icon-link" href="#">
     <svg aria-hidden="true">
@@ -108,7 +108,7 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 
 Links are available in two sizes. Add `.link-sm` for small size.
 
-{{< example >}}
+{{< example button_label="link sizes">}}
 <div><a class="link" href="#">This is an example of a link</a></div>
 <div><a class="link link-sm" href="#">This is an example of a small link</a></div>
 {{< /example >}}
@@ -117,7 +117,7 @@ Links are available in two sizes. Add `.link-sm` for small size.
 
 The `.link` classes are designed to be used with the `<a>` element. However, you can also use these classes on `<button>` elements.
 
-{{< example >}}
+{{< example button_label="link with other tags">}}
 <div><button class="link link" type="submit">Button link</button></div>
 <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
 <div>
@@ -135,7 +135,7 @@ Make links look inactive by adding the `aria-disabled="true"` attribute to any `
 
 Disabled links using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning](#disabled-link-accessibility-warning).
 
-{{< example >}}
+{{< example button_label="disabled state">}}
 <div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
 <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
 <div><a class="link icon-link" aria-disabled="true">
@@ -151,7 +151,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 
 To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 
-{{< example >}}
+{{< example button_label="disabled state while keeping `href`">}}
 <a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link</a>
 {{< /example >}}
 
