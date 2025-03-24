@@ -34,7 +34,7 @@ publishDir:                         "_site"
 module:
   mounts:
     - source:                       dist
-      target:                       static/docs/0.2/dist
+      target:                       static/docs/0.3/dist
     - source:                       site/assets
       target:                       assets
     - source:                       site/content
@@ -47,16 +47,16 @@ module:
       target:                       static
     - source:                       node_modules/@docsearch/css
       target:                       assets/scss/@docsearch/css
-    - source:                       site/static/docs/0.2/assets/img/favicons/apple-touch-icon.png
+    - source:                       site/static/docs/0.3/assets/img/favicons/apple-touch-icon.png
       target:                       static/apple-touch-icon.png
-    - source:                       site/static/docs/0.2/assets/img/favicons/favicon.ico
+    - source:                       site/static/docs/0.3/assets/img/favicons/favicon.ico
       target:                       static/favicon.ico
 
     # OUDS mod
     - source:                       node_modules/tarteaucitronjs/tarteaucitron.min.js
-      target:                       static/docs/0.2/assets/js/tarteaucitron.min.js
+      target:                       static/docs/0.3/assets/js/tarteaucitron.min.js
     - source:                       node_modules/tarteaucitronjs/lang
-      target:                       static/docs/0.2/assets/js/lang
+      target:                       static/docs/0.3/assets/js/lang
     - source:                       site/storybook
       target:                       static/storybook
 
@@ -65,9 +65,9 @@ params:
   description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
   authors:                          "Orange and OUDS Web contributors"
 
-  current_version:                  "0.2.0"
-  current_ruby_version:             "0.2.0"
-  docs_version:                     "0.2"
+  current_version:                  "0.3.0"
+  current_ruby_version:             "0.3.0"
+  docs_version:                     "0.3"
   rfs_version:                      "v10.0.0"
   bootstrap_current_version:        "5.3.3"
   bootstrap_docs_version:           "5.3"
@@ -89,20 +89,20 @@ params:
     indexName:                      "boosted-orange"
 
   download:
-    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.2.0-ouds-web.zip"
-    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.2.0-ouds-web/ouds-web-0.2.0-dist.zip"
-    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.2.0-ouds-web/ouds-web-0.2.0-examples.zip"
+    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.3.0-ouds-web.zip"
+    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.3.0-ouds-web/ouds-web-0.3.0-dist.zip"
+    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.3.0-ouds-web/ouds-web-0.3.0-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/css/ouds-web.min.css"
-    css_hash:                       "sha384-zhqL8VWxv2WssMkf++3c13MyjAzD+5W4LZmhcNjrjfPxmfwGj+USiaq9/AV9WSMY"
-    css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/css/ouds-web.rtl.min.css"
-    css_rtl_hash:                   "sha384-HQe8KqzUsHAosuwVtd/FpLmLpKQkivVMaaUJbYKbVSjlO8idKyOF5yuS/0DbXtwo"
-    js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/js/ouds-web.min.js"
-    js_hash:                        "sha384-QveupMclNBC998koqSifpPqaKg9eNJ6lHM9MGdF7rckeUTkla7A/JYitdDmlcBDZ"
-    js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.2.0/dist/js/ouds-web.bundle.min.js"
-    js_bundle_hash:                 "sha384-wsCZDwY5ncWxWFUnwNn6fRNayqcmfMpiUGqG0i54gb/RBOlPNtYrteatYZc+hPPa"
+    css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.3.0/dist/css/ouds-web.min.css"
+    css_hash:                       "sha384-CzQuGk+NJ/bSe+JTXsWNfzsvNepYeg8RXGgqWaSuW/3uS6p18cMG6OfNoFk3l6Du"
+    css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.3.0/dist/css/ouds-web.rtl.min.css"
+    css_rtl_hash:                   "sha384-ghRR5K+OQM1qedmhKXyJRH/+UZCVkEEgW3KEGcWMUrtcmtM1oT8TZUyQLfxawp7k"
+    js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.3.0/dist/js/ouds-web.min.js"
+    js_hash:                        "sha384-lCN1RCJGHoUYWieMiwMf4zu8QDrAzWoJzKeH3d75junTbtwNaVRhujBbusFwIAoh"
+    js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.3.0/dist/js/ouds-web.bundle.min.js"
+    js_bundle_hash:                 "sha384-KGDz5Efd1+I+DEqyXUVenXr307SAvyxvCRWYATXT2OYeEDizNwaUBjrcbDeSq88C"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
