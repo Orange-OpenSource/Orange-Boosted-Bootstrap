@@ -305,7 +305,7 @@ To create a read only Checkbox the input should be replaced by a `span` element 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <div class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonly" aria-readonly="true" tabindex="0" aria-checked="false"></div>
+    <span class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonly" aria-readonly="true" tabindex="0" aria-checked="false"></span>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonly">Label</label>
@@ -313,7 +313,7 @@ To create a read only Checkbox the input should be replaced by a `span` element 
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <div class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonlyCheckedLabel checkboxReadonlyCheckedHelper" aria-readonly="true" tabindex="0" aria-checked="true"></div>
+    <span class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonlyCheckedLabel checkboxReadonlyCheckedHelper" aria-readonly="true" tabindex="0" aria-checked="true"></span>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</label>
@@ -327,7 +327,7 @@ To create a read only Checkbox the input should be replaced by a `span` element 
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <div class="control-item-indicator indeterminate" role="checkbox" aria-labelledby="checkboxReadonlyIndeterminate" aria-readonly="true" tabindex="0" aria-checked="true"></div>
+    <span class="control-item-indicator indeterminate" role="checkbox" aria-labelledby="checkboxReadonlyIndeterminate" aria-readonly="true" tabindex="0" aria-checked="true"></span>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonlyIndeterminate">Label</label>
