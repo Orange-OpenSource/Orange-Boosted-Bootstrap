@@ -332,6 +332,11 @@ To create a read only Checkbox the input should be replaced by a `span` element 
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonlyIndeterminate">Label</label>
   </div>
+  <div class="control-item-assets-container">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </div>
 </div>
 {{< /example >}}
 
