@@ -1,9 +1,9 @@
 {
   "name": "@ouds/web",
   "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "config": {
-    "version_short": "0.2"
+    "version_short": "0.3"
   },
   "keywords": [
     "css",
@@ -68,7 +68,7 @@
     "js-test-cloud": "cross-env BROWSERSTACK=true npm run js-test-karma",
     "js-test-jquery": "cross-env JQUERY=true npm run js-test-karma",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
-    "docs": "npm-run-all docs-build docs-lint && node build/modify-site.mjs",
+    "docs": "npm-run-all docs-build docs-lint",
     "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
     "docs-compile": "npm run docs-build",
     "docs-vnu": "node build/vnu-jar.mjs",
@@ -95,8 +95,8 @@
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js-lint js-compile\"",
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "npm run storybook-generate && storybook dev -p 6006",
-    "storybook-generate": "npm run docs && node stories/create-stories-from-doc.js",
-    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/ouds-web/storybook",
+    "storybook-generate": "npm run docs-build && node stories/create-stories-from-doc.js",
+    "storybook-build": "npm run storybook-generate && storybook build -o ./_site/storybook",
     "storybook-build-netlify": "npm run storybook-generate && storybook build -o ./site/storybook"
   },
   "peerDependencies": {

@@ -1,3 +1,18 @@
+# [0.3.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.2.0-ouds-web...v0.3.0) (2025-03-21)
+
+
+### Bug Fixes
+
+* link chevron disabled state ([#2894](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2894)) ([6bbac3e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6bbac3e29545637d3ff644d3bd1c3b7df53f27b4))
+
+
+### Features
+
+* **component:** [OUDS] add Link component ([efe2817](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/efe2817b7d7ff4fda0c532c8f98a343c44709d0f))
+* **docs:** [OUDS] Homepage ([f2b89c3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f2b89c3ea9fe0e72b2655a9df99bc25b48fea988))
+
+
+
 # [0.2.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.1.0-ouds-web...v0.2.0) (2025-03-03)
 
 

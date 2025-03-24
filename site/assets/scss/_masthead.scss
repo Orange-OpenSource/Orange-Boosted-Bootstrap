@@ -1,33 +1,6 @@
-.bd-text-wrap-balance {
-  text-wrap: balance;
-}
-
-.bd-code-snippet {
-  .highlight {
-    padding: .75rem .75rem 0;
-    white-space: nowrap;
-
-    @include media-breakpoint-up(md) {
-      padding-right: 3.5rem;
-    }
-
-    pre {
-      padding: 0 0 .75rem;
-      margin: .5rem 0;
-    }
-  }
-
-  .btn-minimal.btn-icon {
-    display: none;
-
-    @include media-breakpoint-up(md) {
-      display: inline-flex;
-    }
-  }
-}
-
+// OUDS mod
 .bd-masthead {
-  padding-bottom: 120px;
+  padding-bottom: 7.5rem;
   background-image: url("../img/ouds-web-home-mobile.png");
   background-repeat: no-repeat;
   background-position: center right;
@@ -42,31 +15,19 @@
     background-image: url("../img/ouds-web-home-desktop.png");
   }
 
-  .bd-code-snippet {
-    .highlight {
-      //padding: .625rem 3.5rem .625rem .625rem;
+  .highlight {
+    padding-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-breakpoint-up(md) {
+      padding-right: 6rem;
+    }
+
+    pre {
+      padding-top: .75rem;
       overflow: hidden;
-      text-overflow: ellipsis;
-
-      @include media-breakpoint-up(md) {
-        padding-right: 6rem;
-      }
-
-      pre {
-        //padding: 0 3.5rem 0 .625rem;
-        overflow: hidden;
-      }
-    }
-  }
-
-  .bd-code-snippet-no-margin-bottom {
-    .bd-code-snippet {
-      margin-bottom: 0;
     }
   }
 }
-
-.bd-tag {
-  padding: 8px 16px; // TODO to remove when tags will be implemented
-  border-width: 2px; // TODO to remove when tags will be implemented
-}
+// End mod

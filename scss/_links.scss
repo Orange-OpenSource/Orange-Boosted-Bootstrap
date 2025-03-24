@@ -57,6 +57,25 @@
     text-decoration: underline;
   }
 
+  // Chevron icon
+  &:not(.back) {
+    display: inline-block;
+  }
+
+  &.back::before,
+  &:not(.back)::after {
+    display: inline-block;
+    width: var(--#{$prefix}link-icon-size);
+    min-width: var(--#{$prefix}link-icon-size);
+    height: var(--#{$prefix}link-icon-size);
+    margin-right: var(--#{$prefix}link-arrow-gap);
+    vertical-align: middle;
+    content: "";
+    background-color: var(--#{$prefix}link-arrow-color);
+    mask: var(--#{$prefix}chevron-icon) center no-repeat;
+    mask-size: var(--#{$prefix}link-icon-size);
+  }
+
   &:hover::before,
   &:hover::after {
     background-color: var(--#{$prefix}link-arrow-hover-color);
@@ -74,34 +93,15 @@
     background-color: var(--#{$prefix}link-arrow-pressed-color);
   }
 
-  &[aria-disabled="true"]::before,
-  &[aria-disabled="true"]::after {
-    background-color: var(--#{$prefix}link-arrow-disabled-color);
-  }
-
-  &:not(.back) {
-    display: inline-block;
-  }
-
-  // Chevron icon
-  &.back::before,
-  &:not(.back)::after {
-    display: inline-block;
-    width: var(--#{$prefix}link-icon-size);
-    min-width: var(--#{$prefix}link-icon-size);
-    height: var(--#{$prefix}link-icon-size);
-    margin-right: var(--#{$prefix}link-arrow-gap);
-    vertical-align: middle;
-    content: "";
-    background-color: var(--#{$prefix}link-arrow-color);
-    mask: var(--#{$prefix}chevron-icon) center no-repeat;
-    mask-size: var(--#{$prefix}link-icon-size);
-  }
-
   &:not(.back)::after {
     margin-right: 0;
     margin-left: var(--#{$prefix}link-arrow-gap);
     transform: rotate(180deg) translateY(1px);
+  }
+
+  &[aria-disabled="true"]::before,
+  &[aria-disabled="true"]::after {
+    background-color: var(--#{$prefix}link-arrow-disabled-color);
   }
 }
 

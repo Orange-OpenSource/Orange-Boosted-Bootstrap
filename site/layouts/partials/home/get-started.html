@@ -27,7 +27,7 @@
     <div class="border-top border-thin border-default pt-scaled-short">
       <h3 class="h2">Include via CDN</h3>
       <p class="mb-scaled-medium">
-        When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/uds-web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
+        When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/@ouds/web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
       </p>
       {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
       {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
