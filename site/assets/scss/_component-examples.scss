@@ -511,7 +511,7 @@
   height: 3rem;
   vertical-align: bottom;
   content: "";
-  background-color: var(--bs-color-content-default);
+  background-color: currentcolor;
   background-size: contain;
   mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M553.478 147.416v.017a74.956 74.956 0 0 0-107.08.13v-.021L100 500h150v300a75 75 0 0 0 75 75h350a75 75 0 0 0 75-75V500h150ZM580 537.52V755H362.5a37.5 37.5 0 0 1-37.5-37.5V500h217.5a37.5 37.5 0 0 1 37.5 37.5v.02Z'/></svg>"));
 }

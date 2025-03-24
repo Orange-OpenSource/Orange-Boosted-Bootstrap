@@ -38,7 +38,7 @@ To color icons, you can:
 - use [color utilities classes]({{< docsref "utilities/colors#colors" >}}) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
 - specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled"` or `--bs-color-content-status-positive"`.
 
-For SVGs (SVG sprites, inline SVGs or CSS background SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. It is set on the icons downloaded from Solaris icons finder.
+For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. It is set on the icons downloaded from Solaris icons finder. For CSS mask image SVGs, the `background-color="currentColor"` CSS property should be set.
 
 ### Functional icons
 
@@ -655,7 +655,7 @@ There are many ways to use Solaris icons in a web page:
 - Individually, if you have only few icons to render:
   - [Inline SVG]({{< docsref "extend/icons#inline-svg" >}})
   - [SVG external image]({{< docsref "extend/icons#svg-external-image" >}})
-  - [CSS background SVG]({{< docsref "extend/icons#css-background-svg" >}})
+  - [CSS mask image SVG]({{< docsref "extend/icons#css-mask-image-svg" >}})
 
 All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]({{< param icons_develop >}}) for complete development guidelines for the different formats, and their pros and cons.
 
@@ -728,11 +728,11 @@ You can use SVG through an `<img>` tag when:
 - you only have few icons to render
 - you don't need to change the icons colors. For that reason, **we do not recommend to use that technique**, so it won't be documented here.
 
-### CSS background SVG
+### CSS mask image SVG
 
-CSS background icons should be used when you can't or don't want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-element.
+CSS mask image icons should be used when you can't or don't want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-element.
 
-You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. CSS background SVGs can be styled through CSS properties like `width`, `height` or `background-color`. Note that the `xmlns` attribute is required.
+You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can alse be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
 {{< example class="mt-0" >}}
 <span class="icon-home"></span>
@@ -741,4 +741,3 @@ You can use the SVG code within your CSS (be sure to escape any characters with 
 Using:
 
 {{< scss-docs name="icon-home" file="site/assets/scss/_component-examples.scss" >}}
-
