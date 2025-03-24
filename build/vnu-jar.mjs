@@ -33,7 +33,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.',
     '.*Consider using the “h1” element as a top-level heading only.*',
     // Poor aria-readonly handling see https://github.com/validator/validator/issues/1199
-    'Attribute "aria-readonly" not allowed on element "span" at this point.'
+    'Attribute “aria-readonly” not allowed on element “span” at this point.'
     // End mod
   ].join('|')
 
