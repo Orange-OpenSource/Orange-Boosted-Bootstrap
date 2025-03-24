@@ -297,7 +297,42 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-<!-- TODO: Introduce Readonly ? -->
+### Read only
+
+TODO
+
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonly" aria-readonly="true" disabled>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxReadonly">Label</label>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonlyChecked" aria-describedby="checkboxReadonlyCheckedHelper" aria-readonly="true" disabled checked>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxReadonlyChecked">Label</label>
+    <p class="control-item-helper" id="checkboxReadonlyCheckedHelper">Helper text</p>
+  </div>
+  <div class="control-item-assets-container">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="form-check-input" type="checkbox" value="" id="checkboxReadonlyIndeterminate" aria-readonly="true" disabled>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxReadonlyIndeterminate">Label</label>
+  </div>
+</div>
+{{< /example >}}
 
 ### Invalid
 

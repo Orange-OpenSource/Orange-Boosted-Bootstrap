@@ -22,7 +22,10 @@
   &:has([type]:disabled),
   &:has([type][disabled]) {
     pointer-events: none;
+  }
 
+  &:has([type]:disabled):not(:has([aria-readonly])),
+  &:has([type][disabled]):not(:has([aria-readonly])) {
     .control-item-label,
     .control-item-helper,
     svg,
