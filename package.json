@@ -1,9 +1,9 @@
 {
   "name": "@ouds/web",
   "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "config": {
-    "version_short": "0.2"
+    "version_short": "0.3"
   },
   "keywords": [
     "css",
