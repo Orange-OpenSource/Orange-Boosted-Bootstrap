@@ -1,7 +1,11 @@
 {{ define "main" }}
   <main>
     {{ partial "home/masthead" . }}
-    <div class="container-fluid container-max-width bd-gutter masthead-followup">
+    <div class="container-fluid container-max-width pt-scaled-medium pb-scaled-spacious bd-masthead-followup">
+      <p class="mb-scaled-medium d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
+        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-medium bd-tag">New in v0.3</a>
+        <span class="lead mt-scaled-short m-md-none">Link, border utiliy and home page</span>
+      </p>
       {{ partial "home/get-started" . }}
       {{ partial "home/customize" . }}
       {{ partial "home/css-variables" . }}

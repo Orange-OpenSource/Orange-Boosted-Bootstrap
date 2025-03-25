@@ -119,8 +119,8 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
     - (v0 only) `npm publish --access public`
 - [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
 - [ ] check release on [NPM](https://www.npmjs.com/package/ouds-web), [Nuget](https://www.nuget.org/packages/ouds-web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
-- [ ] publish documentation on `gh-pages`:
-  - [ ] copy `../_site/ouds-web` to the `gh-pages` branch (don't forget to update Storybook as well)
+- [ ] publish documentation on `gh-pages` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
+  - [ ] copy `../_site/*` to the `main` branch (don't forget to update Storybook as well)
   - [ ] check every `index.html` used as redirections to redirect to the new release
   - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
