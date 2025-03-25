@@ -58,10 +58,10 @@ If you're using our compiled JavaScript and prefer to include Popper separately,
 {{< /callout >}}
 
 ### Alternative CDNs
-<!-- TODO not yet on CDNjs -->
-We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like <!--[cdnjs](https://cdnjs.com/) or -->[unpkg](https://www.unpkg.com).
 
-You'll find the same files on these CDN providers, albeit with different URLs. <!--With cdnjs, you can [use this direct OUDS Web package link](https://cdnjs.com/libraries/@ouds/web) to copy and paste ready-to-use HTML snippets for each dist file from any version of OUDS Web.-->
+We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://www.unpkg.com).
+
+You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct OUDS Web package link](https://cdnjs.com/libraries/@ouds/web) to copy and paste ready-to-use HTML snippets for each dist file from any version of OUDS Web.
 
 {{< callout warning>}}
 **If the SRI hashes differ for a given file, you shouldn't use the files from that CDN, because it means that the file was modified by someone else.**
@@ -112,7 +112,6 @@ yarn start # Start the project
 ```
 {{< /callout >}}
 
-<!-- TODO not yet on composer
 ### Composer
 
 You can also install and manage OUDS Web's Sass and JavaScript using [Composer](https://getcomposer.org/):
@@ -120,7 +119,6 @@ You can also install and manage OUDS Web's Sass and JavaScript using [Composer](
 ```sh
 composer require orange-opensource/orange-boosted-bootstrap:{{< param current_version >}}
 ```
--->
 
 ### NuGet
 
