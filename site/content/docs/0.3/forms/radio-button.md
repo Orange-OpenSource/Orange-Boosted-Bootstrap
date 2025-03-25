@@ -70,6 +70,37 @@ Radio buttons are implemented using `.control-item-*` classes, see below.
 
 ## Variants
 
+### Outlined
+
+You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.radio-button-item`.
+
+{{< example >}}
+<div class="radio-button-item radio-button-item-outlined control-item-divider">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" checked>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioOutlined1">Label</label>
+  </div>
+</div>
+<div class="radio-button-item radio-button-item-outlined control-item-divider">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioOutlined2">Label</label>
+  </div>
+</div>
+<div class="radio-button-item radio-button-item-outlined control-item-divider">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" id="radioOutlined3" name="radioOutlined">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioOutlined3">Label</label>
+  </div>
+</div>
+{{< /example >}}
+
 ### Divider
 
 You can display a divider by adding `.control-item-divider` to a `.control-item`.
