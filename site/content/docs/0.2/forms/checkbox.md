@@ -18,7 +18,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 ## Basic example
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
@@ -26,7 +26,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
     <label class="control-item-label" for="checkboxDefault">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-divider">
+<div class="control-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxFullOption" checked aria-describedby="checkboxFullOptionHelper">
   </div>
@@ -61,7 +61,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 ## Approach
 
-Browser default checkboxes are replaced with the help of `.checkbox-item`. Checkboxes are for selecting one or several options in a list.
+Browser default checkboxes are replaced with the help of `.control-item`. Checkboxes are for selecting one or several options in a list.
 
 Checkboxes are implemented using `.control-item-*` classes, see below.
 
@@ -86,7 +86,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 You can display a divider by adding `.control-item-divider` to a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item control-item-divider">
+<div class="control-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider">
   </div>
@@ -94,7 +94,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
     <label class="control-item-label" for="checkboxDivider">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-divider">
+<div class="control-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2">
   </div>
@@ -109,7 +109,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
 You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithSVG">
   </div>
@@ -122,7 +122,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
     </svg>
   </div>
 </div>
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont">
   </div>
@@ -140,7 +140,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="">
   </div>
@@ -156,7 +156,7 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item control-item-reverse">
+<div class="control-item control-item-reverse">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" name="checkboxReverse">
   </div>
@@ -164,7 +164,7 @@ You can reverse the component by adding `.control-item-reverse` to a `.control-i
     <label class="control-item-label" for="checkboxReverse">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-reverse">
+<div class="control-item control-item-reverse">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse2" name="checkboxReverse" aria-describedby="checkboxReverse2Description">
   </div>
@@ -214,7 +214,7 @@ Indeterminate state can be combined with disabled and invalid states.
 {{< /callout >}}
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate">
   </div>
@@ -248,7 +248,7 @@ checkbox.indeterminate = true
 Add the `disabled` attribute and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input's state.
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" disabled>
   </div>
@@ -256,7 +256,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
     <label class="control-item-label" for="checkboxIndeterminateDisabled">Label</label>
   </div>
 </div>
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" disabled>
   </div>
@@ -264,7 +264,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
     <label class="control-item-label" for="checkboxDisabled">Label</label>
   </div>
 </div>
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked disabled>
   </div>
@@ -304,7 +304,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
  You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="control-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid">
   </div>
@@ -322,7 +322,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
 <div class="row">
   <fieldset class="col-md-6">
     <legend>Checkboxes group example</legend>
-    <div class="checkbox-item control-item-divider">
+    <div class="control-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup1" aria-describedby="checkboxGroup1Description">
       </div>
@@ -336,7 +336,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
         </svg>
       </div>
     </div>
-    <div class="checkbox-item control-item-divider">
+    <div class="control-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" checked aria-describedby="checkboxGroup2Description">
       </div>
@@ -363,7 +363,7 @@ This is commonly used to build custom component and shouldn't be used alone. Rem
 For the standalone Checkbox, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
-<label class="checkbox-standalone">
+<label class="control-item-standalone">
   <input class="control-item-indicator" type="checkbox" value="">
   <span class="visually-hidden">Label</span>
 </label>

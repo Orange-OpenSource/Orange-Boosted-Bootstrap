@@ -2,7 +2,9 @@
 // Control item
 //
 
-%control-item {
+.control-item {
+  --#{$prefix}control-item-label-color: #{$ouds-color-content-default};
+
   position: relative;
   display: flex;
   gap: $ouds-control-item-space-column-gap;
@@ -10,6 +12,7 @@
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-inset;
 
+  // Handle focus
   &:has(:focus-visible) {
     @include focus-visible();
   }
@@ -19,62 +22,48 @@
     box-shadow: none;
   }
 
-  &:has([type]:disabled),
-  &:has([type][disabled]) {
+  // Handle disabled
+  &:has([type]:disabled) {
     pointer-events: none;
 
-    .control-item-label,
-    .control-item-helper,
-    svg,
-    img,
-    .icon {
+    * {
       color: $ouds-color-action-disabled;
     }
   }
 
+  // Handle interactive background
   &:has([type]:hover),
   &:has([type]:focus-visible),
   &:has([type]:active) {
     background-color: $ouds-control-item-color-bg-hover;
   }
 
+  // Handle invalid state
   .was-validated &:has([type]:invalid),
   &:has([type].is-invalid) {
-    .control-item-label {
-      color: $ouds-color-action-negative-enabled;
-    }
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
   }
 
   .was-validated &:has([type]:invalid:hover),
   &:has([type].is-invalid:hover) {
-    .control-item-label {
-      color: $ouds-color-action-negative-hover;
-    }
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
   }
 
   .was-validated &:has([type]:invalid:focus-visible),
   &:has([type].is-invalid:focus-visible) {
-    .control-item-label {
-      color: $ouds-color-action-negative-focus;
-    }
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
   }
 
   .was-validated &:has([type]:invalid:active),
   &:has([type].is-invalid:active) {
-    .control-item-label {
-      color: $ouds-color-action-negative-pressed;
-    }
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
 }
 
-.control-item-divider {
-  padding-bottom: subtract($ouds-control-item-space-inset, 1px);
-  border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
-}
 
-.control-item-reverse {
-  flex-direction: row-reverse;
-}
+//
+// Control item containers
+//
 
 .control-item-assets-container {
   display: flex;
@@ -101,9 +90,15 @@
   justify-content: center;
 }
 
+
+//
+// Control item atoms
+//
+
+// Label
 .control-item-label {
   display: block;
-  color: $ouds-color-content-default;
+  color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");
 
@@ -118,6 +113,7 @@
   }
 }
 
+// Helper
 .control-item-helper {
   display: block;
   margin: 0;
@@ -125,12 +121,10 @@
   @include get-font-size("label-medium");
 }
 
-//
-// Control item indicator
-//
-
+// Indicator
 .control-item-indicator {
   --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected};
+
   position: relative;
   flex-shrink: 0;
   width: $form-check-input-width;
@@ -231,9 +225,6 @@
     }
   }
 
-  // Use disabled attribute in addition of :disabled pseudo-class
-  // See: https://github.com/twbs/bootstrap/issues/28247
-  &[disabled],
   &:disabled {
     color: $ouds-color-action-disabled;
     pointer-events: none;
@@ -241,12 +232,27 @@
   }
 }
 
+
+//
+// Control item variants
+//
+
+.control-item-divider {
+  padding-bottom: subtract($ouds-control-item-space-inset, 1px);
+  border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
+}
+
+.control-item-reverse {
+  flex-direction: row-reverse;
+}
+
+
 //
 // Control item standalone
 //
 
-%control-item-standalone {
-  @extend %control-item;
+.control-item-standalone {
+  @extend .control-item;
   @extend .control-item-label;
   display: inline-flex;
   gap: 0;
@@ -257,24 +263,12 @@
 }
 
 //
-// Checkbox
-//
-
-.checkbox-item {
-  @extend %control-item;
-}
-
-.checkbox-standalone {
-  @extend %control-item-standalone;
-}
-
-//
 // Bootstrap compatibility
 //
 
 @if $enable-bootstrap-compatibility {
   .form-check {
-    @extend .checkbox-item;
+    @extend .control-item;
     align-items: center;
   }
 
