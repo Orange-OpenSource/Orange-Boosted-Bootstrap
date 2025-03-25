@@ -52,7 +52,7 @@ jobs:
               }
             }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
 
-          # echo `cat project_data.json`
+          echo `cat project_data.json`
 
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
@@ -76,10 +76,10 @@ jobs:
                 fieldId: $status_field
                 value: {
                   singleSelectOptionId: $status_value
-                  }
+                }
               }) {
                 projectV2Item {
                   id
-                  }
+                }
               }
             }' -f project=$PROJECT_ID -f item=$ITEM_ID -f status_field=$STATUS_FIELD_ID -f status_value=${{ env.TARGET_COL_ID }} --silent
