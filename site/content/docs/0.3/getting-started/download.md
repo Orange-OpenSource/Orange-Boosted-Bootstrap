@@ -61,7 +61,7 @@ If you're using our compiled JavaScript and prefer to include Popper separately,
 
 We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://www.unpkg.com).
 
-You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct OUDS Web package link](https://cdnjs.com/libraries/@ouds/web) to copy and paste ready-to-use HTML snippets for each dist file from any version of OUDS Web.
+You'll find the same files on these CDN providers, albeit with different URLs. With unpkg, you can [use this direct OUDS Web unpkg link](https://www.unpkg.com/browse/@ouds/web@{{< param "current_version" >}}/) to copy and paste link to each dist file from any version of OUDS Web.
 
 {{< callout warning>}}
 **If the SRI hashes differ for a given file, you shouldn't use the files from that CDN, because it means that the file was modified by someone else.**
