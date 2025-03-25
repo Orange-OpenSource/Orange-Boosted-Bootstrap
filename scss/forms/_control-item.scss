@@ -2,7 +2,7 @@
 // Control item
 //
 
-.control-item {
+%control-item {
   --#{$prefix}control-item-label-color: #{$ouds-color-content-default};
 
   position: relative;
@@ -96,7 +96,7 @@
 //
 
 // Label
-.control-item-label {
+%control-item-label {
   display: block;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
@@ -111,6 +111,10 @@
     content: "";
     background-color: transparent;
   }
+}
+
+.control-item-label {
+  @extend %control-item-label;
 }
 
 // Helper
@@ -251,9 +255,9 @@
 // Control item standalone
 //
 
-.control-item-standalone {
-  @extend .control-item;
-  @extend .control-item-label;
+%control-item-standalone {
+  @extend %control-item;
+  @extend %control-item-label;
   display: inline-flex;
   gap: 0;
   align-items: center;
@@ -262,13 +266,27 @@
   min-height: $ouds-checkbox-size-min-height;
 }
 
+
+//
+// Checkbox
+//
+
+.checkbox-item {
+  @extend %control-item;
+}
+
+.checkbox-item-standalone {
+  @extend %control-item-standalone;
+}
+
+
 //
 // Bootstrap compatibility
 //
 
 @if $enable-bootstrap-compatibility {
   .form-check {
-    @extend .control-item;
+    @extend %control-item;
     align-items: center;
   }
 
