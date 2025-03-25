@@ -187,17 +187,17 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 </div>
 {{< /example >}}
 
-### Inverse
+### Reverse
 
-You can reverse the component by adding `.control-item-inverse` to a `.control-item`.
+You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
 
 {{< example >}}
-<div class="radio-button-item control-item-inverse">
+<div class="radio-button-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioInverse">
+    <input class="control-item-indicator" type="radio" value="" id="radioReverse">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="radioInverse">Label</label>
+    <label class="control-item-label" for="radioReverse">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -209,13 +209,13 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 {{< example >}}
 <div class="form-check form-check-reverse">
-  <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioInverse">
+  <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioReverse">
   <label class="form-check-label" for="reverseCheck1">
     Reverse radio
   </label>
 </div>
 <div class="form-check form-check-reverse">
-  <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled name="radioInverse">
+  <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled name="radioReverse">
   <label class="form-check-label" for="reverseCheck2">
     Disabled reverse radio
   </label>
