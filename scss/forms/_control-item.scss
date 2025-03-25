@@ -309,6 +309,83 @@
 
 
 //
+// Radio button specific
+//
+
+.radio-button-additional-label {
+  display: block;
+  margin: 0;
+  font-weight: $ouds-font-weight-strong;
+  color: $ouds-color-content-default;
+  @include get-font-size("label-medium");
+}
+
+.radio-button-item-outlined {
+  &:hover,
+  &:active,
+  &:has([type]:checked) {
+    padding: subtract($ouds-control-item-space-inset, 1px);
+    border: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
+  }
+
+  &:has([type]:checked) {
+    border-color: $ouds-color-action-selected;
+
+    &:hover {
+      border-color: $ouds-color-action-hover;
+    }
+
+    &:active {
+      border-color: $ouds-color-action-pressed;
+    }
+
+    .was-validated &:has([type]:invalid),
+    &:has([type].is-invalid) {
+      border-color: $ouds-color-action-negative-enabled;
+    }
+
+    .was-validated &:has([type]:invalid:hover),
+    &:has([type].is-invalid:hover) {
+      border-color: $ouds-color-action-negative-hover;
+    }
+
+    .was-validated &:has([type]:invalid:focus-visible),
+    &:has([type].is-invalid:focus-visible) {
+      border-color: $ouds-color-action-negative-focus;
+    }
+
+    .was-validated &:has([type]:invalid:active),
+    &:has([type].is-invalid:active) {
+      border-color: $ouds-color-action-negative-pressed;
+    }
+  }
+
+  &:hover {
+    border-color: $ouds-color-action-hover;
+  }
+
+  &:active {
+    border-color: $ouds-color-action-pressed;
+  }
+
+  .was-validated &:has([type]:invalid:hover),
+  &:has([type].is-invalid:hover) {
+    border-color: $ouds-color-action-negative-hover;
+  }
+
+  .was-validated &:has([type]:invalid:focus-visible),
+  &:has([type].is-invalid:focus-visible) {
+    border-color: $ouds-color-action-negative-focus;
+  }
+
+  .was-validated &:has([type]:invalid:active),
+  &:has([type].is-invalid:active) {
+    border-color: $ouds-color-action-negative-pressed;
+  }
+}
+
+
+//
 // Bootstrap compatibility
 //
 
