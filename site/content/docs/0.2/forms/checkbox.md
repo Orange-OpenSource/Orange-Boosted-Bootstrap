@@ -151,26 +151,26 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 </div>
 {{< /example >}}
 
-### Inverse
+### Reverse
 
-You can reverse the component by adding `.control-item-inverse` to a `.control-item`.
+You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item control-item-inverse">
+<div class="checkbox-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxInverse" name="checkboxInverse">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" name="checkboxReverse">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxInverse">Label</label>
+    <label class="control-item-label" for="checkboxReverse">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-inverse">
+<div class="checkbox-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxInverse2" name="checkboxInverse" aria-describedby="checkboxInverse2Description">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse2" name="checkboxReverse" aria-describedby="checkboxReverse2Description">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxInverse2">Label</label>
-    <p class="control-item-helper" id="checkboxInverse2Description">Helper Text</p>
+    <label class="control-item-label" for="checkboxReverse2">Label</label>
+    <p class="control-item-helper" id="checkboxReverse2Description">Helper Text</p>
   </div>
   <div class="control-item-assets-container">
     <svg aria-hidden="true">
