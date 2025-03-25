@@ -72,7 +72,7 @@ Radio buttons are implemented using `.control-item-*` classes, see below.
 
 ### Outlined
 
-You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.radio-button-item`.
+You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
 
 {{< example >}}
 <div class="radio-button-item radio-button-item-outlined control-item-divider">
