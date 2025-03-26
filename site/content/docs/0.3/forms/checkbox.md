@@ -314,6 +314,17 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 </div>
 {{< /example >}}
 
+{{< bootstrap-compatibility false >}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="form-check">
+  <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid">
+  <label class="form-check-label" for="checkInvalid">
+    Invalid checkbox
+  </label>
+</div>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
+
 ## Group
 
 When checkboxes belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.

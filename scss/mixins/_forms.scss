@@ -141,8 +141,7 @@
 
     .control-item-indicator {
       @include form-validation-state-selector($state) {
-        color: $ouds-color-action-negative-enabled; // OUDS mod
-        border-color: $ouds-color-action-negative-enabled; // OUDS mod
+        --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-enabled}; // OUDS mod
         // OUDS mod: no `border-color`
 
         // OUDS mod: no `:checked`
@@ -150,36 +149,17 @@
 
         // OUDS mod
         &:hover {
-          color: $ouds-color-action-negative-hover;
-          border-color: $ouds-color-action-negative-hover;
-
-          ~ .control-item-label {
-            color: $ouds-color-action-negative-hover;
-          }
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-hover};
         }
 
         &:focus-visible {
-          color: $ouds-color-action-negative-focus;
-          border-color: $ouds-color-action-negative-focus;
-
-          ~ .control-item-label {
-            color: $ouds-color-action-negative-focus;
-          }
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-focus};
         }
 
         &:active {
-          color: $ouds-color-action-negative-pressed;
-          border-color: $ouds-color-action-negative-pressed;
-
-          ~ .control-item-label {
-            color: $ouds-color-action-negative-pressed;
-          }
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-pressed};
         }
-        // End mod
-
-        ~ .control-item-label {
-          color: $ouds-color-action-negative-enabled; // OUDS mod: instead of `$color`
-        }
+        // // End mod
       }
     }
 

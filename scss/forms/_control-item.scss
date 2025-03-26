@@ -96,7 +96,7 @@
 //
 
 // Label
-%control-item-label {
+.control-item-label {
   display: block;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
@@ -113,10 +113,6 @@
   }
 }
 
-.control-item-label {
-  @extend %control-item-label;
-}
-
 // Helper
 .control-item-helper {
   display: block;
@@ -128,16 +124,19 @@
 // Indicator
 .control-item-indicator {
   --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected};
+  --#{$prefix}control-item-indicator-color: #{$ouds-color-border-emphasized};
 
   position: relative;
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
+  color: var(--#{$prefix}control-item-indicator-color);
   vertical-align: middle;
   appearance: none;
   cursor: $form-check-label-cursor;
   background-color: transparent;
   border: var(--#{$prefix}control-item-indicator-border) solid $ouds-color-action-enabled;
+  border-color: var(--#{$prefix}control-item-indicator-color);
   print-color-adjust: exact;
 
   &::before {
@@ -154,8 +153,7 @@
 
   &:indeterminate,
   &:checked {
-    color: $ouds-color-action-selected;
-    border-color: $ouds-color-action-selected;
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
   }
 
   &[type="checkbox"] {
@@ -203,8 +201,7 @@
   }
 
   &:hover {
-    color: $ouds-color-action-hover;
-    border-color: $ouds-color-action-hover;
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-hover};
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-hover};
@@ -212,8 +209,7 @@
   }
 
   &:focus-visible {
-    color: $ouds-color-action-focus;
-    border-color: $ouds-color-action-focus;
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-focus};
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-focus};
@@ -221,8 +217,7 @@
   }
 
   &:active {
-    color: $ouds-color-action-pressed;
-    border-color: $ouds-color-action-pressed;
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-pressed};
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-pressed};
@@ -230,9 +225,8 @@
   }
 
   &:disabled {
-    color: $ouds-color-action-disabled;
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
-    border-color: $ouds-color-action-disabled;
   }
 }
 
@@ -257,7 +251,7 @@
 
 %control-item-standalone {
   @extend %control-item;
-  @extend %control-item-label;
+  @extend .control-item-label;
   display: inline-flex;
   gap: 0;
   align-items: center;
@@ -275,7 +269,7 @@
   @extend %control-item;
 }
 
-.checkbox-item-standalone {
+.checkbox-standalone {
   @extend %control-item-standalone;
 }
 
