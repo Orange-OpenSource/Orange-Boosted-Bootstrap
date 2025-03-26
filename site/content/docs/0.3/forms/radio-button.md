@@ -267,7 +267,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 <!-- TODO: Introduce Readonly ? -->
 
-### Invalid state
+### Invalid
 
  You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
 
@@ -281,6 +281,17 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   </div>
 </div>
 {{< /example >}}
+
+{{< bootstrap-compatibility false >}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="form-check">
+  <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap">
+  <label class="form-check-label" for="radioInvalidBootstrap">
+    Invalid radio
+  </label>
+</div>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
 
 ## Group
 
