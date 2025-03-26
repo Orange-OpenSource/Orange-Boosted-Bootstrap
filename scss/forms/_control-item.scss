@@ -309,8 +309,16 @@
 
 
 //
-// Radio button specific
+// Radio button
 //
+
+.radio-button-item {
+  @extend %control-item;
+}
+
+.radio-button-standalone {
+  @extend %control-item-standalone;
+}
 
 .radio-button-additional-label {
   display: block;
