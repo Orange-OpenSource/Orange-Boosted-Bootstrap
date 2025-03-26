@@ -390,6 +390,11 @@
   &:has([type].is-invalid:active) {
     border-color: $ouds-color-action-negative-pressed;
   }
+
+  &:has([type]:focus-visible) {
+    padding: $ouds-control-item-space-inset;
+    border-width: 0;
+  }
 }
 
 
