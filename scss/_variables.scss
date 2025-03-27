@@ -1945,8 +1945,8 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size:              $font-size-sm !default;
-$breadcrumb-font-weight:            $font-weight-bold !default; // OUDS mod
+$breadcrumb-font-size:              $ouds-font-size-label-medium !default; // OUDS mod
+// $breadcrumb-font-weight:            $font-weight-bold !default; // OUDS mod
 
 $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
@@ -1956,7 +1956,7 @@ $breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; //
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $black !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-active-color:           null !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M6.65104 12.75L11.5 8L6.65104 3.25L5.26562 4.60646L8.72986 8L5.26562 11.3922L6.65104 12.75Z' fill='black'/></svg>") !default; // OUDS mod
 $breadcrumb-divider-filter:         none !default; // OUDS mod
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
