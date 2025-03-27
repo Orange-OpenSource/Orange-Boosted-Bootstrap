@@ -2,7 +2,7 @@
   // scss-docs-start breadcrumb-css-vars
   --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
   --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
-  --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+  --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom}; // TODO : What do we do w/ this?
   @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
   // --#{$prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight}; // OUDS mod
   --#{$prefix}breadcrumb-color: #{$breadcrumb-color}; // OUDS mod
@@ -11,6 +11,10 @@
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
   --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
   --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
+
+  // Additional OUDS variables
+  --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
+  // End mod
   // scss-docs-end breadcrumb-css-vars
 
   display: flex;
@@ -19,7 +23,7 @@
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
   @include font-size($ouds-font-size-label-medium);
   font-weight: var(--#{$prefix}breadcrumb-font-weight); // OUDS mod
-  color: var(--#{$prefix}breadcrumb-color); // OUDS mod
+  // color: var(--#{$prefix}breadcrumb-color); // OUDS mod
   list-style: none;
   background-color: var(--#{$prefix}breadcrumb-bg);
   @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
@@ -34,7 +38,7 @@
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
-    padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
+    padding-left: var(--#{$prefix}breadcrumb-item-padding-icon);
 
     &::before {
       // float: left; // Suppress inline spacings and underlining of the separator
