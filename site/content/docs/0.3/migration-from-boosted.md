@@ -1161,10 +1161,15 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-font-family</code></li>
+      <li><code>$ouds-font-family-body</code></li>
       <li><code>$ouds-font-family-brand-default</code></li>
+      <li><code>$ouds-font-family-code</code></li>
+      <li><code>$ouds-font-family-display</code></li>
+      <li><code>$ouds-font-family-heading</code></li>
+      <li><code>$ouds-font-family-label</code></li>
       <li><code>$ouds-font-family-monospace-stack</code></li>
       <li><code>$ouds-font-family-sans-serif-stack</code></li>
+      <li><code>$ouds-font-family-system-web</code></li>
       <li><code>$ouds-font-letter-spacing-150</code></li>
       <li><code>$ouds-font-letter-spacing-200</code></li>
       <li><code>$ouds-font-letter-spacing-250</code></li>
@@ -1316,12 +1321,12 @@ You will have to make some extra Javascript to change the styles and update the 
       <li><code>$ouds-font-weight-body-default</code></li>
       <li><code>$ouds-font-weight-body-strong</code></li>
       <li><code>$ouds-font-weight-code</code></li>
-      <li><code>$ouds-font-weight-default</code></li>
+      <li><code>$ouds-font-weight-system-default</code></li>
       <li><code>$ouds-font-weight-display</code></li>
       <li><code>$ouds-font-weight-heading</code></li>
       <li><code>$ouds-font-weight-label-default</code></li>
       <li><code>$ouds-font-weight-label-strong</code></li>
-      <li><code>$ouds-font-weight-strong</code></li>
+      <li><code>$ouds-font-weight-system-strong</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
       <li><code>$ouds-grid-2xl-max-width-alt</code></li>
