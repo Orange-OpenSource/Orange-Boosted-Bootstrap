@@ -9,6 +9,7 @@ aliases:
 toc: true
 ---
 
+
 ## v0.4.0
 
 ### Forms
@@ -16,6 +17,31 @@ toc: true
 #### Checkboxes
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
+
+### CSS and Sass variables
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-font-family-body</code></li>
+      <li><code>$ouds-font-family-code</code></li>
+      <li><code>$ouds-font-family-display</code></li>
+      <li><code>$ouds-font-family-heading</code></li>
+      <li><code>$ouds-font-family-label</code></li>
+      <li><code>$ouds-font-family-system-web</code></li>
+      <li><code>$ouds-font-weight-system-default</code></li>
+      <li><code>$ouds-font-weight-system-strong</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-short">
+    <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Removed Sass variables:</summary>
+    <ul>
+      <li><code>$ouds-font-family</code></li>
+      <li><code>$ouds-font-weight-default</code></li>
+      <li><code>$ouds-font-weight-strong</code></li>
+    </ul>
+  </details>
 
 ## v0.3.0
 

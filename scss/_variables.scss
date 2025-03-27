@@ -490,7 +490,7 @@ $body-emphasis-color:       $ouds-color-content-default-light !default; // OUDS 
 // scss-docs-start link-variables
 $link-color:                              $black !default; // OUDS mod
 $link-decoration:                         underline !default;
-$link-font-weight:                        $ouds-font-weight-strong !default; // OUDS mod
+$link-font-weight:                        $ouds-font-weight-system-strong !default; // OUDS mod
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $primary !default; // OUDS mod
 $link-hover-decoration:                   null !default;
@@ -701,10 +701,10 @@ $font-size-lg:                var(--#{$prefix}font-size-body-large) !default; //
 
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
-$font-weight-normal:          $ouds-font-weight-default !default;
+$font-weight-normal:          $ouds-font-weight-system-default !default;
 $font-weight-medium:          null !default;
 $font-weight-semibold:        null !default;
-$font-weight-bold:            $ouds-font-weight-strong !default;
+$font-weight-bold:            $ouds-font-weight-system-strong !default;
 $font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;

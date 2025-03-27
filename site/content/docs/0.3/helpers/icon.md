@@ -38,9 +38,9 @@ Here are the rules to follow for headings. These icons' sizes are responsive.
 | `.hs-lg-icon` | `2.75rem` (44px) | `2.75rem` (44px) | `3rem` (48px) |
 | `.hs-md-icon` | `2.5rem` (40px) | `2.5rem` (40px) | `2.75rem` (44px) |
 | `.hs-sm-icon` | `2rem` (32px) | `2rem` (32px) | `2.5rem` (40px) |
-| `.bl-lg-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (44px) |
-| `.bl-md-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (40px) |
-| `.bl-sm-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (32px) |
+| `.bl-lg-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (32px) |
+| `.bl-md-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (28px) |
+| `.bl-sm-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (24px) |
 | `.bm-lg-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `1.75rem` (28px) |
 | `.bm-md-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `1.5rem` (24px) |
 | `.bm-sm-icon` | `1rem` (16px) | `1rem` (16px) | `1.25rem` (20px) |
@@ -194,9 +194,9 @@ Here are the rules to follow for regular texts. These icons' sizes are responsiv
 {{< bs-table >}}
 | Icon class | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
-| `.bl-lg-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (44px) |
-| `.bl-md-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (40px) |
-| `.bl-sm-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (32px) |
+| `.bl-lg-icon` | `1.75rem` (28px) | `1.75rem` (28px) | `2.75rem` (32px) |
+| `.bl-md-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `2.5rem` (28px) |
+| `.bl-sm-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `2rem` (24px) |
 | `.bm-lg-icon` | `1.5rem` (24px) | `1.5rem` (24px) | `1.75rem` (28px) |
 | `.bm-md-icon` | `1.25rem` (20px) | `1.25rem` (20px) | `1.5rem` (24px) |
 | `.bm-sm-icon` | `1rem` (16px) | `1rem` (16px) | `1.25rem` (20px) |
