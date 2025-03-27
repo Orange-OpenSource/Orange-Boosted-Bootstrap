@@ -4,7 +4,7 @@
   --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
   --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
   @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
-  --#{$prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight}; // OUDS mod
+  // --#{$prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight}; // OUDS mod
   --#{$prefix}breadcrumb-color: #{$breadcrumb-color}; // OUDS mod
   --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
   --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
-  @include font-size(var(--#{$prefix}breadcrumb-font-size));
+  @include font-size($ouds-font-size-label-medium);
   font-weight: var(--#{$prefix}breadcrumb-font-weight); // OUDS mod
   color: var(--#{$prefix}breadcrumb-color); // OUDS mod
   list-style: none;
@@ -26,12 +26,18 @@
 }
 
 .breadcrumb-item {
+  .breadcrumb-link {
+    @extend %link-properties;
+    @include get-font-size("label-medium");
+    text-decoration: none;
+  }
+
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
     padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
 
     &::before {
-      float: left; // Suppress inline spacings and underlining of the separator
+      // float: left; // Suppress inline spacings and underlining of the separator
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x) #{"/* rtl:ignore */"}; // OUDS mod
       color: var(--#{$prefix}breadcrumb-divider-color);
       content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
