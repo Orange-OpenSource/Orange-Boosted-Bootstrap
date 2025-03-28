@@ -23,7 +23,7 @@
   }
 
   // Handle disabled
-  &:has([type]:disabled) {
+  &:has(input:disabled) {
     pointer-events: none;
 
     * {
@@ -32,30 +32,34 @@
   }
 
   // Handle interactive background
-  &:has([type]:hover),
-  &:has([type]:focus-visible),
-  &:has([type]:active) {
+  &:has(input:hover),
+  &:has(input:focus-visible),
+  &:has(input:active) {
     background-color: $ouds-control-item-color-bg-hover;
   }
 
   // Handle invalid state
-  .was-validated &:has([type]:invalid),
-  &:has([type].is-invalid) {
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  .was-validated &:has(input:invalid),
+  &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
   }
 
-  .was-validated &:has([type]:invalid:hover),
-  &:has([type].is-invalid:hover) {
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  .was-validated &:has(input:invalid:hover),
+  &:has(input.is-invalid:hover) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
   }
 
-  .was-validated &:has([type]:invalid:focus-visible),
-  &:has([type].is-invalid:focus-visible) {
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  .was-validated &:has(input:invalid:focus-visible),
+  &:has(input.is-invalid:focus-visible) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
   }
 
-  .was-validated &:has([type]:invalid:active),
-  &:has([type].is-invalid:active) {
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  .was-validated &:has(input:invalid:active),
+  &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
 }
@@ -158,7 +162,7 @@
   }
 
   &:indeterminate[type="checkbox"] {
-    --#{$prefix}control-item-indicator-border-width: #{$ouds-checkbox-border-width-selected};
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
 
     &::before {
       background-color: currentcolor;
