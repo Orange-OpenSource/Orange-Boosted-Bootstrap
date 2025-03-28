@@ -323,7 +323,7 @@
 .radio-button-additional-label {
   display: block;
   margin: 0;
-  font-weight: $ouds-font-weight-strong;
+  font-weight: $ouds-font-weight-system-strong;
   color: $ouds-color-content-default;
   @include get-font-size("label-medium");
 }
