@@ -83,7 +83,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 
 ### Divider
 
-You can display a divider by adding `.control-item-divider` to a `.control-item`.
+You can display a divider by adding `.control-item-divider` to a `.checkbox-item`.
 
 {{< example >}}
 <div class="checkbox-item control-item-divider">
@@ -374,7 +374,7 @@ This is commonly used to build custom component and shouldn't be used alone. Rem
 For the standalone Checkbox, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
-<label class="checkbox-item-standalone">
+<label class="checkbox-standalone">
   <input class="control-item-indicator" type="checkbox" value="">
   <span class="visually-hidden">Label</span>
 </label>

@@ -7,8 +7,8 @@
 
   position: relative;
   display: flex;
-  gap: $ouds-control-item-space-column-gap;
-  min-width: $ouds-control-item-size-min-width;
+  gap: px-to-rem($ouds-control-item-space-column-gap);
+  min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-inset;
 
@@ -69,7 +69,7 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  max-height: $ouds-control-item-size-max-height-assets-container;
+  max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
 
   svg,
   img,
@@ -97,7 +97,6 @@
 
 // Label
 .control-item-label {
-  display: block;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");
@@ -115,7 +114,6 @@
 
 // Helper
 .control-item-helper {
-  display: block;
   margin: 0;
   color: $ouds-color-content-muted;
   @include get-font-size("label-medium");
@@ -123,7 +121,7 @@
 
 // Indicator
 .control-item-indicator {
-  --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected};
+  --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected)};
   --#{$prefix}control-item-indicator-color: #{$ouds-color-border-emphasized};
 
   position: relative;
@@ -135,17 +133,16 @@
   appearance: none;
   cursor: $form-check-label-cursor;
   background-color: transparent;
-  border: var(--#{$prefix}control-item-indicator-border) solid $ouds-color-action-enabled;
-  border-color: var(--#{$prefix}control-item-indicator-color);
+  border: var(--#{$prefix}control-item-indicator-border-width) solid var(--#{$prefix}control-item-indicator-color);
   print-color-adjust: exact;
 
   &::before {
     position: absolute;
-    top: calc(-1 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
-    left: calc(-1 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    top: calc(-1 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
+    left: calc(-1 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
     display: block;
-    width: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
-    height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border)); // stylelint-disable-line function-disallowed-list
+    width: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
+    height: calc(100% + 2 * var(--#{$prefix}control-item-indicator-border-width)); // stylelint-disable-line function-disallowed-list
     content: "";
     background-color: transparent;
     mask-repeat: no-repeat;
@@ -161,7 +158,7 @@
   }
 
   &:indeterminate[type="checkbox"] {
-    --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+    --#{$prefix}control-item-indicator-border-width: #{$ouds-checkbox-border-width-selected};
 
     &::before {
       background-color: currentcolor;
@@ -175,7 +172,7 @@
     }
 
     &[type="checkbox"] {
-      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
       &::before {
         mask-image: escape-svg($form-check-input-checked-bg-image);
       }
@@ -183,19 +180,19 @@
 
     &:hover {
       &[type="checkbox"] {
-        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-hover};
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-hover)};
       }
     }
 
     &:focus-visible {
       &[type="checkbox"] {
-        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-focus};
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
     }
 
     &:active {
       &[type="checkbox"] {
-        --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected-pressed};
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-pressed)};
       }
     }
   }
@@ -204,7 +201,7 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-hover};
 
     &[type="checkbox"] {
-      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-hover};
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-hover)};
     }
   }
 
@@ -212,7 +209,7 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-focus};
 
     &[type="checkbox"] {
-      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-focus};
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-focus)};
     }
   }
 
@@ -220,7 +217,7 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-pressed};
 
     &[type="checkbox"] {
-      --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-unselected-pressed};
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-pressed)};
     }
   }
 
