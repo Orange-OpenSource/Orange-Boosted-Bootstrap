@@ -106,7 +106,7 @@ You can display a divider by adding `.control-item-divider` to a `.checkbox-item
 
 ### Icon
 
-You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.control-item`.
+You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.checkbox-item`.
 
 {{< example >}}
 <div class="checkbox-item">
@@ -153,7 +153,7 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 
 ### Reverse
 
-You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
+You can reverse the component by adding `.control-item-reverse` to a `.checkbox-item`.
 
 {{< example >}}
 <div class="checkbox-item control-item-reverse">
