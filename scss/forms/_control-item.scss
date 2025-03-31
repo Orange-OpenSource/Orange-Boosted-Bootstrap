@@ -39,25 +39,25 @@
   }
 
   // Handle invalid state
-  /* stylelint-disable-next-line selector-no-qualifying-type */
+  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid),
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
   }
 
-  /* stylelint-disable-next-line selector-no-qualifying-type */
+  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:hover),
   &:has(input.is-invalid:hover) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
   }
 
-  /* stylelint-disable-next-line selector-no-qualifying-type */
+  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:focus-visible),
   &:has(input.is-invalid:focus-visible) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
   }
 
-  /* stylelint-disable-next-line selector-no-qualifying-type */
+  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:active),
   &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
