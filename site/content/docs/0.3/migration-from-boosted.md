@@ -164,7 +164,7 @@ Now you should write:
 
 ```html
 <div class="checkbox-item">
-  <div class="control-item-indicator-container">
+  <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
   <div class="control-item-text-container">

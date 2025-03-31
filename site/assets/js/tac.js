@@ -88,7 +88,7 @@
         .createRange()
         .createContextualFragment( // TODO replace with a form-switch
           `<label class="checkbox-standalone ">
-            <input class="checkbox-indicator" type="checkbox" value="" id="googletagmanagerAllowed" aria-labelledby="googletagmanagerLine" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}>
+            <input class="control-item-indicator" type="checkbox" value="" id="googletagmanagerAllowed" aria-labelledby="googletagmanagerLine" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}>
             <span class="visually-hidden">Google Tag Manager</span>
             <input id="googletagmanagerDenied" class="d-none">
           </label>`
