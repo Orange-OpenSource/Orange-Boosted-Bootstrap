@@ -368,7 +368,6 @@ $escaped-characters: (
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767' fill='#{$black}'><path d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/></svg>") !default;
-$check-icon:            url("data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path fill='#000' fill-rule='evenodd' d='M875,240a64.568,64.568,0,0,0-108.864-47.408l-0.011-.012L383.621,565,257.594,424.648l-0.011.014a64.372,64.372,0,0,0-87.784,3.375l-25.862,26a65.23,65.23,0,0,0-4.758,86.56l-0.011.008,206.9,260,0.01-.008a64.407,64.407,0,0,0,100.953,0l0.011,0.009,413.793-520-0.011-.008A64.916,64.916,0,0,0,875,240Z' transform='scale(.1)'/></svg>") !default;
 $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
 $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
@@ -388,7 +387,6 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
   "close":   $cross-icon-stroke,
-  "check":   $check-icon,
   "success": $success-icon,
   "error":   $danger-icon
 ) !default;
