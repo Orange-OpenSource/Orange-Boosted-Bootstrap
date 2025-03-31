@@ -1066,7 +1066,7 @@ $form-check-label-cursor:                 pointer !default; // OUDS mod: instead
 // ouds mod: no `$form-check-input-color`
 // OUDS mod: no `$form-check-input-border`
 $form-check-input-border-radius:          $ouds-checkbox-border-radius !default; // OUDS mod: instead of `0`
-// OUDS mod: no `$form-check-radio-border-radius`
+$form-check-radio-border-radius:          $ouds-radio-button-border-radius !default; // OUDS mod: instead of `0`
 // OUDS mod: no `$form-check-input-focus-border`
 // OUDS mod: no `$form-check-input-focus-box-shadow`
 
@@ -1074,7 +1074,7 @@ $form-check-input-border-radius:          $ouds-checkbox-border-radius !default;
 // OUDS mod: no `$form-check-input-checked-bg-color`
 // OUDS mod: no `$form-check-input-checked-border-color`
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/></svg>") !default; // OUDS mod: custom SVG
-// OUDS mod: no `$form-check-radio-checked-bg-image`
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/></svg>") !default; // OUDS mod: custom SVG
 
 // OUDS mod: no `$form-check-input-indeterminate-color`
 // OUDS mod: no `$form-check-input-indeterminate-bg-color`
