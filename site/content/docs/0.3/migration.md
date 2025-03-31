@@ -9,7 +9,14 @@ aliases:
 toc: true
 ---
 
+
 ## v0.4.0
+
+### Forms
+
+#### Checkboxes
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
 
 ### CSS and Sass variables
 
@@ -123,11 +130,11 @@ toc: true
 
 #### Buttons
 
-- <span class="badge text-bg-success">New</span> Button component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Button component has been implemented.
 
 ### Examples
 
-- <span class="badge text-bg-success">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
+- <span class="badge text-bg-status-positive-emphasized">New</span> New [Loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 ### CSS and Sass variables
 
