@@ -22,6 +22,12 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Radio button component has been implemented.
 
+### Helpers
+
+#### Vertical rule
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into is the new [Dividers helper]({{< docsref "/helpers/dividers" >}}) documentation.
+
 ### CSS and Sass variables
 
 - <details class="mb-short">
