@@ -1,0 +1,22 @@
+// Components custom properties applications
+// Token version 0.8.0
+
+// scss-docs-start ouds-all-component-css-color
+// scss-docs-start ouds-component-css-color
+@include color-mode(light, true) {
+  --#{$prefix}switch-color-cursor: #{$ouds-color-functional-white};
+  --#{$prefix}switch-color-track-selected: #{$ouds-color-functional-malachite-500};
+  --#{$prefix}switch-color-track-selected-interaction: #{$ouds-color-functional-malachite-600};
+  --#{$prefix}switch-color-track-unselected: #{$ouds-color-opacity-black-440};
+  --#{$prefix}switch-color-track-unselected-interaction: #{$ouds-color-opacity-black-520};
+}
+// scss-docs-end ouds-component-css-color
+
+@include color-mode(dark, true) {
+  --#{$prefix}switch-color-cursor: #{$ouds-color-functional-dark-gray-880};
+  --#{$prefix}switch-color-track-selected: #{$ouds-color-functional-malachite-600};
+  --#{$prefix}switch-color-track-selected-interaction: #{$ouds-color-functional-malachite-300};
+  --#{$prefix}switch-color-track-unselected: #{$ouds-color-opacity-white-640};
+  --#{$prefix}switch-color-track-unselected-interaction: #{$ouds-color-opacity-white-800};
+}
+// scss-docs-end ouds-all-component-css-color
