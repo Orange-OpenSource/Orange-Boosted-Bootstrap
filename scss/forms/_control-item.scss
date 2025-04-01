@@ -247,35 +247,6 @@
 
 
 //
-// Control item standalone
-//
-
-%control-item-standalone {
-  @extend %control-item;
-  @extend .control-item-label;
-  display: inline-flex;
-  gap: 0;
-  align-items: center;
-  justify-content: center;
-  min-width: $ouds-checkbox-size-min-width;
-  min-height: $ouds-checkbox-size-min-height;
-}
-
-
-//
-// Checkbox
-//
-
-.checkbox-item {
-  @extend %control-item;
-}
-
-.checkbox-standalone {
-  @extend %control-item-standalone;
-}
-
-
-//
 // Control item switch indicator
 //
 
@@ -308,8 +279,8 @@
     box-shadow: $ouds-elevation-raised;
     mask: none;
     transform: translateY(-50%);
-    @include border-radius($ouds-switch-border-radius, $ouds-switch-border-radius);
-    @include transition(width .15s cubic-bezier(.2, 0, 0, 1), height .15s cubic-bezier(.2, 0, 0, 1), left .15s cubic-bezier(.2, 0, 0, 1));
+    @include border-radius($form-switch-border-radius, $form-switch-border-radius);
+    @include transition($form-switch-transition);
   }
 
   &:hover,
@@ -345,7 +316,7 @@
       content: "";
       background-color: $ouds-switch-color-check;
       opacity: $ouds-switch-opacity-check;
-      mask: escape-svg($form-switch-input-checked-bg-image);
+      mask: escape-svg($form-switch-checked-bg-image);
       transform: translateY(-50%);
       animation: .15s linear 0s switch-check-in;
 
@@ -374,6 +345,49 @@
     }
   }
 }
+
+
+//
+// Control item standalone
+//
+
+%control-item-standalone {
+  @extend %control-item;
+  @extend .control-item-label;
+  display: inline-flex;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: $ouds-checkbox-size-min-width;
+  min-height: $ouds-checkbox-size-min-height;
+}
+
+
+//
+// Checkbox
+//
+
+.checkbox-item {
+  @extend %control-item;
+}
+
+.checkbox-standalone {
+  @extend %control-item-standalone;
+}
+
+
+//
+// Switch
+//
+
+.switch-item {
+  @extend %control-item;
+}
+
+.switch-standalone {
+  @extend %control-item-standalone;
+}
+
 
 //
 // Bootstrap compatibility

@@ -139,14 +139,15 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Checks & radios
 
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` have been removed.
+
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch and radio buttons and the corresponding class `.form-switch` have been removed.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
-
 #### Checkbox
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-reverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.checkbox-standalone`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-reverse` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different.
 <div class="ps-taller">
@@ -175,9 +176,40 @@ Now you should write:
 See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more information.
 </div>
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` have been removed.
-
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in checkboxes' labels are now forbidden (they won't be interactive anyway).
+
+#### Switch
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.switch-item`, `.switch-standalone`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-reverse` have been added.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch is a new component compared to Boosted's Check, the DOM is therefore very different.
+<div class="ps-taller">
+For example, if you used to write:
+
+```html
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" value="" id="switchDefault">
+  <label class="form-check-label" for="switchDefault">
+    Default switch
+  </label>
+</div>
+```
+Now you should write:
+
+```html
+<div class="switch-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="switchDefault">Default switch</label>
+  </div>
+</div>
+```
+See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
+</div>
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in switches' labels are now forbidden (they won't be interactive anyway).
 
 ## Helpers
 

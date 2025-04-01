@@ -16,7 +16,7 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
 ## Basic example
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault">
   </div>
@@ -24,7 +24,7 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
     <label class="control-item-label" for="switchDefault">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-divider">
+<div class="switch-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchFullOption" checked aria-describedby="switchFullOptionHelper">
   </div>
@@ -69,7 +69,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 
 `.control-item-text-container` contains the label and optional helper text and controls their positioning.
 
-`.control-item-label` extend their clickable area until a `.control-item`, `.checkbox-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
+`.control-item-label` extend their clickable area until a `.control-item`, `.switch-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
 
 `.control-item-indicator` uses customized Solaris icons to indicate checked states.
 
@@ -80,7 +80,7 @@ We use the future friendly child check selector (`:has`) for all our `<input>` s
 You can display a divider by adding `.control-item-divider` to a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item control-item-divider">
+<div class="switch-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDivider">
   </div>
@@ -88,7 +88,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
     <label class="control-item-label" for="switchDivider">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-divider">
+<div class="switch-item control-item-divider">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDivider2">
   </div>
@@ -103,7 +103,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
 You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG">
   </div>
@@ -116,7 +116,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
     </svg>
   </div>
 </div>
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithIconFont">
   </div>
@@ -134,7 +134,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" aria-describedby="switchHelperTextDescription" id="switchHelperText" value="">
   </div>
@@ -150,7 +150,7 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
 
 {{< example >}}
-<div class="checkbox-item control-item-reverse">
+<div class="switch-item control-item-reverse">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" name="switchReverse">
   </div>
@@ -158,7 +158,7 @@ You can reverse the component by adding `.control-item-reverse` to a `.control-i
     <label class="control-item-label" for="switchReverse">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-reverse">
+<div class="switch-item control-item-reverse">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse2" name="switchReverse" aria-describedby="switchReverse2Description">
   </div>
@@ -194,7 +194,7 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 Add the `disabled` attribute and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input's state.
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchIndeterminateDisabled" disabled>
   </div>
@@ -202,7 +202,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
     <label class="control-item-label" for="switchIndeterminateDisabled">Label</label>
   </div>
 </div>
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchCheckedDisabled" checked disabled>
   </div>
@@ -232,7 +232,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 You can display an invalid switch by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
 
 {{< example >}}
-<div class="checkbox-item">
+<div class="switch-item">
   <div class="control-item-assets-container">
     <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid">
   </div>
@@ -242,6 +242,17 @@ You can display an invalid switch by adding `.is-invalid` to a `.control-item-in
 </div>
 {{< /example >}}
 
+{{< bootstrap-compatibility false >}}
+{{< example >}}
+<div class="form-check form-switch">
+  <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch">
+  <label class="form-check-label" for="checkInvalid">
+    Invalid checkbox
+  </label>
+</div>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
+
 ## Group
 
 When switches belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the switches.
@@ -250,7 +261,7 @@ When switches belong to a group (e.g., in a form), you must provide clear contex
 <div class="row">
   <fieldset class="col-md-6">
     <legend>Switches group example</legend>
-    <div class="checkbox-item control-item-divider">
+    <div class="switch-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchGroup1" aria-describedby="switchGroup1Description">
       </div>
@@ -264,7 +275,7 @@ When switches belong to a group (e.g., in a form), you must provide clear contex
         </svg>
       </div>
     </div>
-    <div class="checkbox-item control-item-divider">
+    <div class="switch-item control-item-divider">
       <div class="control-item-assets-container">
         <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchGroup2" checked aria-describedby="switchGroup2Description">
       </div>
@@ -291,7 +302,7 @@ This is commonly used to build custom component and shouldn't be used alone. Rem
 For the standalone Switch, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
-<label class="checkbox-standalone">
+<label class="switch-standalone">
   <input class="control-item-indicator" type="checkbox" role="switch" value="">
   <span class="visually-hidden">Label</span>
 </label>

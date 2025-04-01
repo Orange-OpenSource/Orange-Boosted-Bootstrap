@@ -18,6 +18,10 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
 
+#### Switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Switch component has been implemented.
+
 ### CSS and Sass variables
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
