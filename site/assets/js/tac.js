@@ -48,7 +48,7 @@
       })
       const allowConsentButton = document.querySelector('#tarteaucitronAllAllowed')
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
-      const checkboxes = document.querySelectorAll('.checkbox-indicator')
+      const checkboxes = document.querySelectorAll('.control-item-indicator')
 
       allowConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
