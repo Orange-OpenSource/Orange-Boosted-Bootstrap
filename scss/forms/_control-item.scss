@@ -271,7 +271,7 @@
 //
 
 .control-item-divider {
-  padding-bottom: subtract($ouds-control-item-space-inset, 1px);
+  padding-bottom: subtract($ouds-control-item-space-inset, $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 }
 
@@ -333,8 +333,8 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding: subtract($ouds-control-item-space-inset, 1px);
-    border: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
+    padding: subtract($ouds-control-item-space-inset, $ouds-divider-border-width);
+    border: $ouds-divider-border-width solid $ouds-color-border-default;
   }
 
   &:has(input:checked) {
