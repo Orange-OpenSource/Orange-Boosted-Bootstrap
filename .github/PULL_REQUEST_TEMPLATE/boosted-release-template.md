@@ -16,7 +16,7 @@
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
 - [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release
 - [ ] Prepare changelog:
-  - install [Conventionnal Changelog](https://github.com/conventional-changelog/conventional-changelog) and `conventional-changelog-cli` globally
+  - install [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog) and `conventional-changelog-cli` globally
   - run `conventional-changelog -p angular -i CHANGELOG.md -s`
   - and probably maintain [a ship list (e.g. for v4.4.0)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/226)
 - [ ] Commit and push `dist` with a `chore(release)` commit message
