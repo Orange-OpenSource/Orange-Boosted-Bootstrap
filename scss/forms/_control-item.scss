@@ -238,7 +238,7 @@
 
 .control-item-divider {
   padding-bottom: subtract($ouds-control-item-space-inset, 1px);
-  border-bottom: 1px solid $ouds-color-border-default; // TODO: Introduce design token once created
+  border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 }
 
 .control-item-reverse {
