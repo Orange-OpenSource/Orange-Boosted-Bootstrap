@@ -1,0 +1,51 @@
+## Release v
+
+- [ ] `npm run release-version $current_version $next_version` to bump version number
+  - then, if bumping a minor or major version:
+    - [ ] Manually search and replace `$current_version` in all files, meaning changes should happen in:
+      - [ ] The style sheet loaded in `.storybook/preview-head.html`
+      - [ ] Some download links in the `README.md`
+      - [ ] `docs_version` in `hugo.yml` and other references to the previous version
+      - [ ] `VERSION` in `js/src/base-component.js`
+      - [ ] `version` in `package.js`
+      - [ ] `version_short` in `package.json`
+      - [ ] `scss/mixins/_banner.scss`
+      - [ ] `scss/docs.scss`
+      - [ ] Several markdown files
+      - [ ] Add docs version to `site/data/docs-versions.yml`
+      - [ ] Update the home news for the next release
+      - [ ] Move `site/content/docs/x.y` to `site/content/docs/x.y+1`
+      - [ ] Move `site/static/docs/x.y` to `site/static/docs/x.y+1`
+      - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
+  - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
+  - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
+- [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
+- [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release
+- [ ] Prepare changelog:
+  - install [Conventionnal Changelog](https://github.com/conventional-changelog/conventional-changelog) and `conventional-changelog-cli` globally
+  - run `conventional-changelog -p angular -i CHANGELOG.md -s`
+- [ ] Commit and push `dist` with a `chore(release): vx.y.z` commit message
+- [ ] Merge on `ouds/main`
+- [ ] Tag your version, and push your tag using `git tag vx.y.z-ouds-web` and `git push vx.y.z-ouds-web`
+- [ ] Pack and publish
+  - `npm pack`
+  - if you are already logged in to NPM (with a personal account, for example), [you'd better use a repository scoped `.npmrc` file](https://stackoverflow.com/questions/30114166/how-to-have-multiple-npm-users-set-up-locally)
+  - Publish:
+    - if you're releasing a pre-release, use `--tag`, e.g. for v1-alpha1 `npm publish ouds-web-1.0.0-alpha1.tgz --tag next`
+    - `npm publish`
+    <!-- When there is several branches to maintain
+    - (v4 only) `npm publish --tag v4.x.y` (if you forgot and v4 becomes the latest version on NPM, you can run `npm dist-tag add boosted@5.x.y latest` to fix it) -->
+- [ ] check release on [NPM](https://www.npmjs.com/package/@ouds/web), [Nuget](https://www.nuget.org/packages/@ouds/web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
+- [ ] publish documentation on `main` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
+  - [ ] copy `../_site` to the `main` branch (don't forget to update Storybook as well)
+  - [ ] check every `index.html` used as redirections to redirect to the new release
+  - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
+  - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
+<!-- When there is a v1 released
+- [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) (+ pin the new GH Discussion) -->
+- [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
+  - attach the 2 zip files
+  - paste the CHANGELOG / Ship list in the release's description
+<!-- When there is a v1 released
+- [ ] make an announcement on internal communication channels :tada: -->
+- [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
