@@ -324,13 +324,13 @@ $ouds-switch-color-track-selected-interaction: var(--#{$prefix}switch-color-trac
 $ouds-switch-color-track-selected: var(--#{$prefix}switch-color-track-selected) !default;
 $ouds-switch-color-track-unselected-interaction: var(--#{$prefix}switch-color-track-unselected-interaction) !default;
 $ouds-switch-color-track-unselected: var(--#{$prefix}switch-color-track-unselected) !default;
-$ouds-switch-opacity-check: $ouds-opacity-opaque !default; // Not used right now
+$ouds-switch-opacity-check: $ouds-opacity-opaque !default;
 $ouds-switch-size-height-cursor-selected: $ouds-dimension-3xs !default;
 $ouds-switch-size-height-cursor-unselected: $ouds-dimension-5xs !default;
 $ouds-switch-size-height-track: $ouds-dimension-xs !default;
 $ouds-switch-size-max-height: $ouds-dimension-xs !default;
-$ouds-switch-size-min-height: $ouds-dimension-xs !default; // No difference with $ouds-switch-size-max-height, $ouds-switch-size-height-track
-$ouds-switch-size-min-width: $ouds-dimension-3xl !default; // No difference with $ouds-switch-size-width-track
+$ouds-switch-size-min-height: $ouds-dimension-xs !default;
+$ouds-switch-size-min-width: $ouds-dimension-3xl !default;
 $ouds-switch-size-width-cursor-selected-pressed: $ouds-dimension-xs !default;
 $ouds-switch-size-width-cursor-selected: $ouds-dimension-3xs !default;
 $ouds-switch-size-width-cursor-unselected-pressed: $ouds-dimension-3xs !default;

@@ -9,7 +9,6 @@ $enable-important-utilities: false;
 @import "../../tokens/semantic";
 @import "../../tokens/semantic-colors-custom-props";
 @import "../../tokens/composite";
-@import "../../tokens/component-colors-custom-props";
 @import "../../tokens/component";
 @import "../../variables"; // Added to avoid undefined variable error like `$white`
 // End mod

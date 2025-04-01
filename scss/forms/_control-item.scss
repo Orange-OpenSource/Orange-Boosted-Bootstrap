@@ -344,6 +344,7 @@
       height: $ouds-switch-size-height-cursor-selected;
       content: "";
       background-color: $ouds-switch-color-check;
+      opacity: $ouds-switch-opacity-check;
       mask: escape-svg($form-switch-input-checked-bg-image);
       transform: translateY(-50%);
       animation: .15s linear 0s switch-check-in;
