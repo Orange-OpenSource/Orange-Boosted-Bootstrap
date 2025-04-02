@@ -172,7 +172,6 @@
     - title: Colored links
     - title: Focus ring
       draft: true
-    - title: Icon
     - title: Position
     - title: Ratio
     - title: Stacks
@@ -212,7 +211,6 @@
   pages:
     - title: Approach
     - title: Icons
-      draft: true
 
 - title: About
   icon: globe2

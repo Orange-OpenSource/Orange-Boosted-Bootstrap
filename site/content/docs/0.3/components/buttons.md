@@ -82,6 +82,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 
 ## With icon
 
+{{< callout info >}}
+The recommended way of using an icon in a button is through an [SVG sprite file]({{< docsref "/extend/icons/#svg-sprite" >}}). You need to fill it using `currentColor` to respect the button color scheme (can be set directly inside the SVG sprite).
+
+When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]({{< docsref "/extend/icons/#icons-accessibility" >}}) for more info.
+{{< /callout >}}
+
 ### Text and icon
 
 The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
