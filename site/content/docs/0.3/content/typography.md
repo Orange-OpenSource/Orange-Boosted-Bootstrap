@@ -76,7 +76,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 <p class="h6">h6. OUDS Web heading</p>
 {{< /example >}}
 
-You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
+You can easily add an icon with your font reference using [our icon size utilities]({{< docsref "/extend/icons#icons-size" >}}).
 
 <!-- OUDS mod: No customizing heading -->
 
@@ -182,7 +182,7 @@ Body medium is set by default on `:root` children but we don't set the `max-widt
 
 </details>
 
-You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
+You can easily add an icon with your font reference using [our icon size utilities]({{< docsref "/extend/icons#icons-size" >}}).
 
 ### Lead
 
