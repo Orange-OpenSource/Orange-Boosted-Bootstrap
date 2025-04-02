@@ -36,9 +36,9 @@ Icons are designed within a square layout to preserve consistency. Within this s
 
 To color icons, you can:
 - use [color utilities classes]({{< docsref "utilities/colors#colors" >}}) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
-- specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled"` or `--bs-color-content-status-positive"`.
+- specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
 
-For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. It is set on the icons downloaded from Solaris icons finder. For CSS mask image SVGs, the `background-color="currentColor"` CSS property should be set.
+For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. It is set on the icons downloaded from Solaris icons finder. For CSS mask image SVGs, the `background-color: currentColor` CSS property should be set.
 
 ### Functional icons
 
@@ -144,7 +144,7 @@ Here are some examples of other [color utilities]({{< docsref "utilities/colors#
 
 ## Icons size
 
-Icons' size depend on where they are placed in the page content, so please make sure to either use our utilities provided in this page or follow the design. Icons size utility classes are done to be used upon `<img>`, `<svg>` or even icon font wherever the icon is.
+Icons' size depends on where they are placed in the page content, so please make sure to either use our utilities provided in this page or follow the design. Icons size utility classes are designed to be used upon `<img>`, `<svg>` or even icon font, wherever the icon is.
 
 Every icon size utility class presented in here has the common following code:
 
@@ -732,7 +732,7 @@ You can use SVG through an `<img>` tag when:
 
 CSS mask image icons should be used when you can't or don't want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-element.
 
-You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can alse be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
+You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
 {{< example class="mt-0" >}}
 <span class="icon-home"></span>
