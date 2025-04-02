@@ -1,6 +1,6 @@
 // Raw primitive values
 // Insertion of brand foundations
-// Token version 0.7.0
+// Token version 0.8.0
 
 // Border
 
@@ -259,7 +259,7 @@ $ouds-dimension-1200: $ouds-dimension-base * 24 !default; // 96
 $ouds-dimension-1400: $ouds-dimension-base * 28 !default; // 112
 $ouds-dimension-1600: $ouds-dimension-base * 32 !default; // 128
 $ouds-dimension-1800: $ouds-dimension-base * 36 !default; // 144
-// $ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
+$ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
 // $ouds-dimension-3000: $ouds-dimension-base * 80 !default; // 320
 $ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
 // $ouds-dimension-5000: $ouds-dimension-base * 140 !default; // 560
@@ -302,7 +302,7 @@ $ouds-elevation-y-500: 12px !default;
 $ouds-font-family-brand-default: "Helvetica Neue" !default;
 // $ouds-font-family-brand-tv: "Helvetica Neue LT" !default;
 // $ouds-font-family-monospace-courier-new: "Courier New" !default;
-// $ouds-font-family-monospace-menlo: "Menlo" !default;
+$ouds-font-family-monospace-menlo: "Menlo" !default;
 // $ouds-font-family-monospace-monaco: "Monaco" !default;
 // $ouds-font-family-monospace-sf-mono: "SF Mono" !default;
 // $ouds-font-family-system-arial: "Arial" !default;

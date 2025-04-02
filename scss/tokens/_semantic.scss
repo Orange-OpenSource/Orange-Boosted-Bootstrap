@@ -1,6 +1,6 @@
 // Semantic applications
 // Depends on raw primitive values
-// Token version 0.7.0
+// Token version 0.8.0
 
 // Border
 
@@ -151,7 +151,7 @@ $ouds-color-overlay-modal-dark: $ouds-color-functional-dark-gray-640 !default;
 $ouds-color-surface-brand-primary-light: $ouds-color-orange-500 !default;
 $ouds-color-surface-brand-primary-dark: $ouds-color-orange-500 !default;
 $ouds-color-surface-status-accent-emphasized-light: $ouds-color-functional-sun-500 !default;
-$ouds-color-surface-status-accent-muted-light: $ouds-color-opacity-sun !default;
+$ouds-color-surface-status-accent-muted-light: $ouds-color-warm-gray-100 !default;
 $ouds-color-surface-status-accent-emphasized-dark: $ouds-color-functional-sun-300 !default;
 $ouds-color-surface-status-accent-muted-dark: $ouds-color-warm-gray-900 !default;
 $ouds-color-surface-status-info-emphasized-light: $ouds-color-functional-dodger-blue-500 !default;
@@ -338,7 +338,8 @@ $ouds-elevation-color-sticky-navigation-scrolled-dark: $ouds-color-opacity-black
 // Font
 
 // scss-docs-start ouds-semantic-font
-$ouds-font-family: $ouds-font-family-brand-default !default;
+$ouds-font-family-system-web: $ouds-font-family-brand-default !default;
+$ouds-font-family-code: $ouds-font-family-monospace-menlo !default;
 $ouds-font-letter-spacing-body-large-desktop: $ouds-font-letter-spacing-300 !default;
 $ouds-font-letter-spacing-body-large-mobile: $ouds-font-letter-spacing-250 !default;
 $ouds-font-letter-spacing-body-large-tablet: $ouds-font-letter-spacing-250 !default;
@@ -444,15 +445,19 @@ $ouds-font-size-label-large: $ouds-font-size-250 !default;
 $ouds-font-size-label-medium: $ouds-font-size-200 !default;
 $ouds-font-size-label-small: $ouds-font-size-150 !default;
 $ouds-font-size-label-xlarge: $ouds-font-size-300 !default;
+$ouds-font-weight-system-default: $ouds-font-weight-400 !default;
+$ouds-font-weight-system-strong: $ouds-font-weight-700 !default;
 $ouds-font-weight-code: $ouds-font-weight-400 !default;
-$ouds-font-weight-default: $ouds-font-weight-400 !default;
-$ouds-font-weight-strong: $ouds-font-weight-700 !default;
-$ouds-font-weight-body-default: $ouds-font-weight-default !default;
-$ouds-font-weight-body-strong: $ouds-font-weight-strong !default;
-$ouds-font-weight-display: $ouds-font-weight-strong !default;
-$ouds-font-weight-heading: $ouds-font-weight-strong !default;
-$ouds-font-weight-label-default: $ouds-font-weight-default !default;
-$ouds-font-weight-label-strong: $ouds-font-weight-strong !default;
+$ouds-font-family-body: $ouds-font-family-system-web !default;
+$ouds-font-family-display: $ouds-font-family-system-web !default;
+$ouds-font-family-heading: $ouds-font-family-system-web !default;
+$ouds-font-family-label: $ouds-font-family-system-web !default;
+$ouds-font-weight-body-default: $ouds-font-weight-system-default !default;
+$ouds-font-weight-body-strong: $ouds-font-weight-system-strong !default;
+$ouds-font-weight-display: $ouds-font-weight-system-strong !default;
+$ouds-font-weight-heading: $ouds-font-weight-system-strong !default;
+$ouds-font-weight-label-default: $ouds-font-weight-system-default !default;
+$ouds-font-weight-label-strong: $ouds-font-weight-system-strong !default;
 // scss-docs-end ouds-semantic-font
 
 // Grid
@@ -529,13 +534,13 @@ $ouds-size-icon-decorative-md: $ouds-dimension-500 !default;
 $ouds-size-icon-decorative-sm: $ouds-dimension-400 !default;
 $ouds-size-icon-decorative-xl: $ouds-dimension-700 !default;
 $ouds-size-icon-decorative-xs: $ouds-dimension-300 !default;
-$ouds-size-icon-with-body-large-size-lg-desktop: $ouds-dimension-550 !default;
+$ouds-size-icon-with-body-large-size-lg-desktop: $ouds-dimension-400 !default;
 $ouds-size-icon-with-body-large-size-lg-mobile: $ouds-dimension-350 !default;
 $ouds-size-icon-with-body-large-size-lg-tablet: $ouds-dimension-350 !default;
-$ouds-size-icon-with-body-large-size-md-desktop: $ouds-dimension-500 !default;
+$ouds-size-icon-with-body-large-size-md-desktop: $ouds-dimension-350 !default;
 $ouds-size-icon-with-body-large-size-md-mobile: $ouds-dimension-300 !default;
 $ouds-size-icon-with-body-large-size-md-tablet: $ouds-dimension-300 !default;
-$ouds-size-icon-with-body-large-size-sm-desktop: $ouds-dimension-400 !default;
+$ouds-size-icon-with-body-large-size-sm-desktop: $ouds-dimension-300 !default;
 $ouds-size-icon-with-body-large-size-sm-mobile: $ouds-dimension-250 !default;
 $ouds-size-icon-with-body-large-size-sm-tablet: $ouds-dimension-250 !default;
 $ouds-size-icon-with-body-medium-size-lg-desktop: $ouds-dimension-350 !default;
