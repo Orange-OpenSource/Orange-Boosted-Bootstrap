@@ -143,7 +143,7 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
 
 Customize your available `font-size`s by modifying the `$ouds-font-sizes` Sass map.
 
-You can easily add an icon with your font reference using [our icon helper]({{< docsref "/helpers/icon" >}}).
+You can easily add an icon with your font reference using [our icon size utilities]({{< docsref "/extend/icons#icons-size" >}}).
 
 {{< bootstrap-compatibility >}}
 
