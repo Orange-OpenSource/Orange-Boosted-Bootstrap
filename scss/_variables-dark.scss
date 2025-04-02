@@ -98,8 +98,6 @@ $svg-as-custom-props-dark: (
 // Forms
 //
 
-$form-check-filter-dark:                none !default; // OUDS mod
-$form-check-input-disabled-color-dark:  $gray-700 !default; // OUDS mod
 $form-color-disabled-filter-dark:       brightness(0) invert(1) brightness(.4) !default; // OUDS mod
 $form-switch-square-bg-dark:            $ouds-color-functional-dark-gray-880 !default; // OUDS mod
 
@@ -111,10 +109,10 @@ $form-select-disabled-indicator-dark:   escape-svg(url("data:image/svg+xml,<svg 
 // OUDS mod: no $form-switch-bg-image-dark
 
 // scss-docs-start form-validation-colors-dark
-$form-valid-color-dark:                           var(--#{$prefix}success-text-emphasis) !default; // OUDS mod: instead of `$green-300`
-$form-valid-border-color-dark:                    var(--#{$prefix}success) !default; // OUDS mod: instead of `$green-300`
-$form-invalid-color-dark:                         var(--#{$prefix}danger-text-emphasis) !default; // OUDS mod: instead of `$red-300`
-$form-invalid-border-color-dark:                  var(--#{$prefix}danger) !default; // OUDS mod: instead of `$red-300`
+$form-valid-color-dark:                           $ouds-color-content-default-dark !default; // OUDS mod: instead of `$green-300`
+$form-valid-border-color-dark:                    $ouds-color-border-emphasized-dark !default; // OUDS mod: instead of `$green-300`
+$form-invalid-color-dark:                         $ouds-color-action-negative-enabled-dark !default; // OUDS mod: instead of `$red-300`
+$form-invalid-border-color-dark:                  $ouds-color-action-negative-enabled-dark !default; // OUDS mod: instead of `$red-300`
 $form-switch-unchecked-invalid-border-color-dark: $form-invalid-border-color-dark !default; // OUDS mod
 // scss-docs-end form-validation-colors-dark
 

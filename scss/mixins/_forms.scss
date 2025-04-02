@@ -139,36 +139,31 @@
       }
     }
 
-    .form-check-input {
+    .control-item-indicator {
       @include form-validation-state-selector($state) {
-        filter: none; // OUDS mod: remove filter to avoid having a blue border (invert of red border)
-        border-color: $border-color;
+        --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-enabled}; // OUDS mod
+        // OUDS mod: no `border-color`
 
-        &:checked,
-        &:active {
-          background-color: $color;
+        // OUDS mod: no `:checked`
+        // OUDS mod: no `:focus`
+
+        // OUDS mod
+        &:hover {
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-hover};
         }
 
-        // OUDS mod: no box-shadow
+        &:focus-visible {
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-focus};
+        }
 
-        // OUDS mod: label's color doesn't change
+        &:active {
+          --#{$prefix}control-item-indicator-color: #{$ouds-color-action-negative-pressed};
+        }
+        // // End mod
       }
     }
 
-    // OUDS mod
-    .form-switch .form-check-input:not(:checked) {
-      @include form-validation-state-selector($state) {
-        filter: $form-switch-filter;
-        border-color: var(--#{$prefix}form-switch-unchecked-invalid-border-color);
-      }
-    }
-    // End mod
-
-    .form-check-inline .form-check-input {
-      ~ .#{$state}-feedback {
-        margin-left: .5em;
-      }
-    }
+    // OUDS mod no form-check-inline
   }
   // End mod
   .input-group {

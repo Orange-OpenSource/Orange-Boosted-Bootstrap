@@ -48,7 +48,7 @@
       })
       const allowConsentButton = document.querySelector('#tarteaucitronAllAllowed')
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
-      const checkboxes = document.querySelectorAll('.form-check-input')
+      const checkboxes = document.querySelectorAll('.control-item-indicator')
 
       allowConsentButton.addEventListener('click', () => {
         for (let i = 0; i < checkboxes.length; i++) {
@@ -72,15 +72,26 @@
   document.addEventListener(
     'googletagmanager_added',
     () => {
+      const askContainer = document.getElementById('googletagmanagerLine')
+      askContainer.className = `${askContainer.className} d-flex`
+      const askName = document.querySelector(
+        '#googletagmanagerLine .tarteaucitronName'
+      )
+      askName.className = `${askName.className} flex-grow-1`
       const ask = document.querySelector(
         '#googletagmanagerLine .tarteaucitronAsk'
       )
+      ask.className = `${ask.className} flex-shrink-0`
       const choiceEvent =
         'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
       const toggle = document
         .createRange()
-        .createContextualFragment(
-          `<div class="form-check form-switch ps-none"><input class="form-check-input ms-none" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
+        .createContextualFragment( // TODO replace with a form-switch
+          `<label class="checkbox-standalone ">
+            <input class="control-item-indicator" type="checkbox" value="" id="googletagmanagerAllowed" aria-labelledby="googletagmanagerLine" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}>
+            <span class="visually-hidden">Google Tag Manager</span>
+            <input id="googletagmanagerDenied" class="d-none">
+          </label>`
         )
       ask.innerHTML = ''
       ask.append(toggle)
