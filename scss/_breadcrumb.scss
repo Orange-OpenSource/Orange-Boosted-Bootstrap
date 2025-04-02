@@ -1,10 +1,8 @@
 .breadcrumb {
   // scss-docs-start breadcrumb-css-vars
-  --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
-  --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
-  // OUDS mod: no breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
-  --#{$prefix}breadcrumb-color: #{$breadcrumb-color}; // OUDS mod
-  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color}; // OUDS mod
+  // OUDS mod: no breadcrumb-padding-x, breadcrumb-padding-y, breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
+  --#{$prefix}breadcrumb-color: #{$breadcrumb-color};
+  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
 
   // Additional OUDS variables
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
@@ -13,38 +11,109 @@
   // scss-docs-end breadcrumb-css-vars
 
   display: flex;
-  flex-wrap: wrap;
-  padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
-  @include get-font-size("label-medium");
+  padding: 0;
   color: var(--#{$prefix}breadcrumb-color); // OUDS mod
   list-style: none;
+  @include get-font-size("label-medium");
+}
+
+// The separator between breadcrumbs
+@mixin has-separator() {
+  padding-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+
+  &::before {
+    width: $ouds-breadcrumb-size-icon;
+    height: $ouds-breadcrumb-size-icon;
+    margin-right: var(--#{$prefix}breadcrumb-item-padding-links) #{"/* rtl:ignore */"}; // OUDS mod
+    color: var(--#{$prefix}breadcrumb-divider-color);
+    content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+    // OUDS mod
+
+    /* rtl:raw:
+    transform: scaleX(-1);
+    */
+    // End mod
+  }
 }
 
 .breadcrumb-item {
-  .breadcrumb-link {
-    @extend %link-properties;
-    @include get-font-size("label-medium");
-    text-decoration: none;
+  display: none;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  a {
+    @extend .link;
+    @extend .link-sm;
+    display: inline-block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
-    padding-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+  // &:only-child {
+  //   max-width: 100%;
+  // }
 
-    &::before {
-      padding-right: var(--#{$prefix}breadcrumb-item-padding-links) #{"/* rtl:ignore */"}; // OUDS mod
-      color: var(--#{$prefix}breadcrumb-divider-color);
-      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
-      // OUDS mod
+  // /* two items */
+  // &:first-child:nth-last-child(2),
+  // &:first-child:nth-last-child(2) ~ .breadcrumb-item {
+  //   max-width: 50%;
+  // }
 
-      /* rtl:raw:
-      transform: scaleX(-1);
-      */
-      // End mod
+  // /* three items */
+  // &:first-child:nth-last-child(3),
+  // &:first-child:nth-last-child(3) ~ .breadcrumb-item {
+  //   max-width: 33.3333%;
+  // }
+
+  &.active {
+    @include has-separator();
+    display: inline-block;
+    flex-shrink: 0;
+    padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+    color: var(--#{$prefix}breadcrumb-item-active-color);
+  }
+
+  &:nth-last-child(-n + 2) {
+    display: inline-flex;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:nth-last-child(-n + 3) {
+      display: inline-flex;
+    }
+
+    &:nth-last-child(-n + 2) {
+      @include has-separator();
     }
   }
 
-  &.active {
-    color: var(--#{$prefix}breadcrumb-item-active-color);
+  @include media-breakpoint-up(lg) {
+    &:nth-last-child(-n + 4) {
+      display: inline-flex;
+    }
+
+    &:nth-last-child(-n + 3) {
+      @include has-separator();
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: inline-flex;
+
+    + .breadcrumb-item {
+      @include has-separator();
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+    &::before {
+      content: none;
+    }
   }
 }
