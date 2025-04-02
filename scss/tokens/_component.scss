@@ -1,6 +1,6 @@
 // Component application
 // Depends on semantic applications
-// Token version 0.8.0
+// Token version 0.9.0
 
 // Badge
 
@@ -34,6 +34,18 @@ $ouds-breadcrumb-size-icon: $ouds-size-icon-with-label-medium-size-sm !default;
 $ouds-breadcrumb-space-column-gap-icon: $ouds-space-column-gap-shortest !default;
 $ouds-breadcrumb-space-column-gap-links: $ouds-space-column-gap-short !default;
 // scss-docs-end ouds-component-breadcrumb
+
+// Bullet
+
+// scss-docs-start ouds-component-bullet
+$ouds-bullet-list-space-column-gap-body-large: $ouds-space-column-gap-short !default;
+$ouds-bullet-list-space-column-gap-body-medium: $ouds-space-column-gap-short !default;
+$ouds-bullet-list-space-padding-block-body-large: $ouds-space-padding-block-shorter !default;
+$ouds-bullet-list-space-padding-block-body-medium: $ouds-space-padding-block-shorter !default;
+$ouds-bullet-list-space-padding-inline-level-0: $ouds-dimension-50 !default;
+$ouds-bullet-list-space-padding-inline-level-1: $ouds-dimension-450 !default;
+$ouds-bullet-list-space-padding-inline-level-2: $ouds-dimension-850 !default;
+// scss-docs-end ouds-component-bullet
 
 // Button
 
@@ -176,7 +188,10 @@ $ouds-checkbox-size-min-width: $ouds-dimension-600 !default;
 $ouds-chip-border-radius-pill: $ouds-border-radius-pill !default;
 $ouds-chip-border-width-default-interaction: $ouds-border-width-medium !default;
 $ouds-chip-border-width-default: $ouds-border-width-default !default;
+$ouds-chip-border-width-selected-interaction: $ouds-border-width-medium !default;
 $ouds-chip-border-width-selected: $ouds-border-width-medium !default;
+$ouds-chip-border-width-unselected-interaction: $ouds-border-width-medium !default;
+$ouds-chip-border-width-unselected: $ouds-border-width-default !default;
 $ouds-chip-color-bg-disabled: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-enabled: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-focus: $ouds-color-opacity-transparent !default;
