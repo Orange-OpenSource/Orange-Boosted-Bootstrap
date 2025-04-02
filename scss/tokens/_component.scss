@@ -1,6 +1,6 @@
 // Component application
 // Depends on semantic applications
-// Token version 0.10.0
+// Token version 0.11.0
 
 // Badge
 
@@ -198,11 +198,11 @@ $ouds-chip-color-bg-focus: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-hover: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-pressed: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-border-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-border-enabled: $ouds-color-border-default !default;
 $ouds-chip-color-border-focus: $ouds-color-action-focus !default;
 $ouds-chip-color-border-hover: $ouds-color-action-hover !default;
 $ouds-chip-color-border-pressed: $ouds-color-action-pressed !default;
 $ouds-chip-color-border-selected: $ouds-color-action-selected !default;
+$ouds-chip-color-border-unselected: $ouds-color-border-default !default;
 $ouds-chip-color-content-disabled: $ouds-color-action-disabled !default;
 $ouds-chip-color-content-enabled: $ouds-color-action-enabled !default;
 $ouds-chip-color-content-focus: $ouds-color-action-focus !default;
@@ -359,7 +359,41 @@ $ouds-switch-space-padding-inline-unselected: $ouds-space-padding-inline-short !
 // Tag
 
 // scss-docs-start ouds-component-tag
-$ouds-tag-color-bg-reminder: $ouds-color-opacity-lower !default;
+$ouds-tag-border-radius-pill: $ouds-border-radius-pill !default;
+$ouds-tag-border-width-default-interaction: $ouds-border-width-medium !default;
+$ouds-tag-border-width-default: $ouds-border-width-default !default;
+$ouds-tag-color-bg-enabled: $ouds-color-action-support-enabled !default;
+$ouds-tag-color-bg-focus: $ouds-color-action-support-focus !default;
+$ouds-tag-color-bg-hover: $ouds-color-action-support-hover !default;
+$ouds-tag-color-bg-pressed: $ouds-color-action-support-pressed !default;
+$ouds-tag-color-border-disabled: $ouds-color-action-disabled !default;
+$ouds-tag-color-border-enabled: $ouds-color-border-default !default;
+$ouds-tag-color-border-focus: $ouds-color-action-focus !default;
+$ouds-tag-color-border-hover: $ouds-color-action-hover !default;
+$ouds-tag-color-border-pressed: $ouds-color-action-pressed !default;
+$ouds-tag-color-content-disabled: $ouds-color-action-disabled !default;
+$ouds-tag-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-tag-color-content-focus: $ouds-color-action-focus !default;
+$ouds-tag-color-content-hover: $ouds-color-action-hover !default;
+$ouds-tag-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-tag-size-icon-medium: $ouds-size-icon-with-label-medium-size-sm !default;
+$ouds-tag-size-icon-small: $ouds-size-icon-with-label-small-size-sm !default;
+$ouds-tag-size-min-height-medium: $ouds-dimension-400 !default;
+$ouds-tag-size-min-height-small: $ouds-dimension-300 !default;
+$ouds-tag-size-min-width-medium: $ouds-dimension-600 !default;
+$ouds-tag-size-min-width-small: $ouds-dimension-550 !default;
+$ouds-tag-space-column-gap-column-gap-medium: $ouds-space-column-gap-shorter !default;
+$ouds-tag-space-column-gap-column-gap-small: $ouds-space-column-gap-shortest !default;
+$ouds-tag-space-padding-block-medium: $ouds-space-padding-block-shorter !default;
+$ouds-tag-space-padding-block-small: $ouds-space-padding-block-shortest !default;
+$ouds-tag-space-padding-inline-icon-end-medium: $ouds-space-padding-inline-medium !default;
+$ouds-tag-space-padding-inline-icon-end-small: $ouds-space-padding-inline-short !default;
+$ouds-tag-space-padding-inline-icon-start-medium: $ouds-space-padding-inline-medium !default;
+$ouds-tag-space-padding-inline-icon-start-small: $ouds-space-padding-inline-short !default;
+$ouds-tag-space-padding-inline-label-end-medium: $ouds-space-padding-inline-tall !default;
+$ouds-tag-space-padding-inline-label-end-small: $ouds-space-padding-inline-medium !default;
+$ouds-tag-space-padding-inline-label-start-medium: $ouds-space-padding-inline-tall !default;
+$ouds-tag-space-padding-inline-label-start-small: $ouds-space-padding-inline-medium !default;
 // scss-docs-end ouds-component-tag
 
 // Typography
