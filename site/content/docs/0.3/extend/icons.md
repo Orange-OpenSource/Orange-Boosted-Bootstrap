@@ -624,7 +624,7 @@ The best way to do this is to keep the icon hidden to assistive technologies (se
 Remember that you cannot use external images inside interactive elements because the color won't change with the element's status (hover, active, focus...), see [SVG external image]({{< docsref "extend/icons#svg-external-image" >}}).
 
 <!-- todo add tooltip on buttons and explanation when available -->
-{{< example class="mt-0" >}}
+{{< example class="mt-0 bd-btn-example">}}
 <button type="button" class="btn btn-icon btn-default">
   <svg width="1rem" height="1rem" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
