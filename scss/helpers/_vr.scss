@@ -1,12 +1,12 @@
 .vr {
   display: inline-block;
   align-self: stretch;
-  // width: $vr-border-width; // OUDS mod: no width
+  // OUDS mod: no width
   min-height: 1em;
-  margin: 0 $ouds-space-fixed-medium;
-  color: $ouds-color-border-default;
-  // background-color: currentcolor; // OUDS mod: no background color
-  border: 0;
-  border-left: $vr-border-width solid $ouds-color-border-default;
-  // opacity: $hr-opacity; // OUDS mod: no opacity
+  margin: 0 $ouds-space-fixed-medium; // OUDS mod
+  color: $hr-color; // OUDS mod
+  // OUDS mod: no background color
+  border: 0; // OUDS mod
+  border-left: $vr-border-width solid currentcolor; // OUDS mod
+  // OUDS mod: no opacity
 }
