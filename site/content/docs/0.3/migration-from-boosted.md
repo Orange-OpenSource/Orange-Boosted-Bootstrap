@@ -261,15 +261,15 @@ See [our new Radio button page]({{< docsref "/forms/radio-button" >}}) for more 
   - Responsive icons' sizes in regular texts: `.b{size}-short-icon`, `.b{size}-medium-icon`, `.b{size}-tall-icon`, where `b` stands for body and size is one of `s` for small, `m` for medium, or `l` for large
   - Fixed icons' sizes for decorative standalone icons: `.decorative-{size}-icon` where size is one of `shortest|shorter|short|medium|tall|taller|tallest`
 
-### Vertical rule
-
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into is the new [Dividers helper]({{< docsref "/helpers/dividers" >}}) documentation.
-
 ### Position
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
+
+### Vertical rule
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Dividers helper]({{< docsref "/helpers/dividers" >}}) documentation.
 
 ## Utilities
 

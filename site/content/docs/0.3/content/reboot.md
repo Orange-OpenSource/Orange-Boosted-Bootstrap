@@ -174,34 +174,13 @@ On colored backgrounds, links should have a different style. Visited links don't
 
 ## Horizontal rules
 
-The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top` and automatically inherit their `border-color` via `color`. They can be modified with border utilities.
+The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top` and automatically inherit their `border-color` via `color`.
 
-<!-- TODO: Check once the dividers have been designed -->
-
-{{< example class="p-none">}}
-<div class="px-tall">
-  <hr>
-  <hr class="border-emphasized border-medium">
-  <hr class="text-brand-primary border-thick">
-</div>
+{{< example >}}
+<hr>
 {{< /example >}}
 
-The `<hr>` color is automically adjusted according to the color modes or on colored backgrounds.
-
-{{< example class="p-none">}}
-<div class="colored-bg">
-  <div class="bg-brand-primary p-tall">
-    <div data-bs-theme="light">
-      <hr class="border-thick">
-    </div>
-  </div>
-  <div class="bg-status-negative-emphasized p-tall">
-    <div data-bs-theme="root-inverted">
-      <hr class="border-thicker">
-    </div>
-  </div>
-</div>
-{{< /example >}}
+The `<hr>` style can be modified with border utilities. See some customization examples in the [dividers helpers]({{< docsref "/helpers/dividers" >}}) documentation.
 
 <!-- ## Lists
 
