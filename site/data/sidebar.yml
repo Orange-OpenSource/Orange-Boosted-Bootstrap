@@ -81,6 +81,7 @@
     - title: Select
       draft: true
     - title: Checkbox
+    - title: Radio button
     - title: Range
       draft: true
     - title: Input group

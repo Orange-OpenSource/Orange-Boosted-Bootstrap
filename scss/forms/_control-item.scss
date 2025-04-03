@@ -161,6 +161,10 @@
     @include border-radius($form-check-input-border-radius);
   }
 
+  &[type="radio"] {
+    @include border-radius($form-check-radio-border-radius);
+  }
+
   &:indeterminate[type="checkbox"] {
     --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
 
@@ -182,9 +186,20 @@
       }
     }
 
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+      &::before {
+        mask-image: escape-svg($form-check-radio-checked-bg-image);
+      }
+    }
+
     &:hover {
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-hover)};
+      }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-hover)};
       }
     }
 
@@ -192,11 +207,19 @@
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
+      }
     }
 
     &:active {
       &[type="checkbox"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-pressed)};
+      }
+
+      &[type="radio"] {
+        --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-pressed)};
       }
     }
   }
@@ -207,6 +230,10 @@
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-hover)};
     }
+
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-unselected-hover)};
+    }
   }
 
   &:focus-visible {
@@ -215,6 +242,10 @@
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-focus)};
     }
+
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-unselected-focus)};
+    }
   }
 
   &:active {
@@ -222,6 +253,9 @@
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected-pressed)};
+    }
+    &[type="radio"] {
+      --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-unselected-pressed)};
     }
   }
 
@@ -237,7 +271,7 @@
 //
 
 .control-item-divider {
-  padding-bottom: subtract($ouds-control-item-space-inset, 1px);
+  padding-bottom: subtract($ouds-control-item-space-inset, $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 }
 
@@ -272,6 +306,102 @@
 
 .checkbox-standalone {
   @extend %control-item-standalone;
+}
+
+
+//
+// Radio button
+//
+
+.radio-button-item {
+  @extend %control-item;
+}
+
+.radio-button-standalone {
+  @extend %control-item-standalone;
+}
+
+.radio-button-additional-label {
+  margin: 0;
+  font-weight: $ouds-font-weight-system-strong;
+  color: $ouds-color-content-default;
+  @include get-font-size("label-medium");
+}
+
+.radio-button-item-outlined {
+  &:hover,
+  &:active,
+  &:has(input:checked) {
+    padding: subtract($ouds-control-item-space-inset, $ouds-divider-border-width);
+    border: $ouds-divider-border-width solid $ouds-color-border-default;
+  }
+
+  &:has(input:checked) {
+    border-color: $ouds-color-action-selected;
+
+    &:hover {
+      border-color: $ouds-color-action-hover;
+    }
+
+    &:active {
+      border-color: $ouds-color-action-pressed;
+    }
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    .was-validated &:has(input:invalid),
+    &:has(input.is-invalid) {
+      border-color: $ouds-color-action-negative-enabled;
+    }
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    .was-validated &:has(input:invalid:hover),
+    &:has(input.is-invalid:hover) {
+      border-color: $ouds-color-action-negative-hover;
+    }
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    .was-validated &:has(input:invalid:focus-visible),
+    &:has(input.is-invalid:focus-visible) {
+      border-color: $ouds-color-action-negative-focus;
+    }
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    .was-validated &:has(input:invalid:active),
+    &:has(input.is-invalid:active) {
+      border-color: $ouds-color-action-negative-pressed;
+    }
+  }
+
+  &:hover {
+    border-color: $ouds-color-action-hover;
+  }
+
+  &:active {
+    border-color: $ouds-color-action-pressed;
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  .was-validated &:has(input:invalid:hover),
+  &:has(input.is-invalid:hover) {
+    border-color: $ouds-color-action-negative-hover;
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  .was-validated &:has(input:invalid:focus-visible),
+  &:has(input.is-invalid:focus-visible) {
+    border-color: $ouds-color-action-negative-focus;
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  .was-validated &:has(input:invalid:active),
+  &:has(input.is-invalid:active) {
+    border-color: $ouds-color-action-negative-pressed;
+  }
+
+  &:has(input:focus-visible) {
+    padding: $ouds-control-item-space-inset;
+    border-width: 0;
+  }
 }
 
 

@@ -139,14 +139,15 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Checks & radios
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch and radio buttons and the corresponding class `.form-switch` have been removed.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch and the corresponding class `.form-switch` have been removed.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
-
 #### Checkbox
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-inverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different. 
 <div class="ps-taller">
@@ -178,6 +179,40 @@ See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more informat
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` have been removed.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in checkboxes' labels are now forbidden (they won't be interactive anyway).
+
+#### Radio button
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Radio button is a new component compared to Boosted's radio, the DOM is therefore very different. 
+<div class="ps-taller">
+For example, if you used to write:
+
+```html
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="" id="radioDefault">
+  <label class="form-check-label" for="radioDefault">
+    Default radio
+  </label>
+</div>
+```
+Now you should write:
+
+```html
+<div class="radio-button-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioButtonDefault">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioButtonDefault">Default radio button</label>
+  </div>
+</div>
+```
+See [our new Radio button page]({{< docsref "/forms/radio-button" >}}) for more information.
+</div>
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in radio buttons' labels are now forbidden (they won't be interactive anyway).
+
 
 ## Helpers
 
