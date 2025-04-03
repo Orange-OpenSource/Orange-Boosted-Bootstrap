@@ -18,6 +18,11 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
 
+### Helpers
+
+#### Dividers
+- <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
+
 ### CSS and Sass variables
 
 - <details class="mb-short">

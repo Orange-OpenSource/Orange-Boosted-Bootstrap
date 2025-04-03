@@ -170,6 +170,7 @@
     - title: Clearfix
     - title: Color & background
     - title: Colored links
+    - title: Dividers
     - title: Focus ring
       draft: true
     - title: Position
@@ -177,8 +178,7 @@
     - title: Stacks
     - title: Stretched link
     - title: Text truncation
-    - title: Vertical rule
-      draft: true
+
     - title: Visually hidden
 
 - title: Utilities
