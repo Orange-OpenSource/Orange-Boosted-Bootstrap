@@ -213,7 +213,7 @@ See [our new Radio button page]({{< docsref "/forms/radio-button" >}}) for more 
 
 #### Switch
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.switch-item`, `.switch-standalone`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-reverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.switch-item` and `.switch-standalone` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch is a new component compared to Boosted's Check, the DOM is therefore very different.
 <div class="ps-taller">
