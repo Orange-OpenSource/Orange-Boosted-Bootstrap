@@ -956,7 +956,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
 
-- <span class="badge text-bg-warning">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-bg-warning">Deprecated</span> The `.text-muted` utility and `$text-muted` Sass variable have been deprecated and replaced with `.text-body-secondary` and `$body-secondary-color`.
 
 - <span class="badge text-bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
 
