@@ -13,7 +13,7 @@
   {{ if eq $entry.category "Starters" -}}
     <div class="bd-callout bd-callout-warning mb-tallest">
       <p>
-        <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>ouds-web</code> in some files.
+        <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
       </p>
       <p>
         You may need to tweak a bit Sass files.
@@ -40,12 +40,12 @@
                 {{ $example.name }}
               </a>
             </h3>
-            <p class="text-muted">{{ $example.description }}</p>
-            <p>
+            <p class="text-muted mb-none">{{ $example.description }}</p>
+            <p class="mb-none">
               {{- $indexPath := default "index.html" $example.indexPath -}}
               {{- $stackBlitzUrl := printf "%s%s%s" (urls.JoinPath "https://stackblitz.com/github/twbs" $example.url) "?file=" ($indexPath | urlquery) }}
-              <a class="icon-link link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+              <a class="link icon-link link-sm link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener">
+                <svg><use xlink:href="#lightning-charge-fill"></use></svg>
                 Edit in StackBlitz
               </a>
             </p>

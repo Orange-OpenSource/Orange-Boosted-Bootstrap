@@ -60,18 +60,16 @@ Add `.link-chevron` to enhance your link with a chevron on the right side. Use t
 
 ## Icon link
 
-The `.icon-link` class modifies the default link styles to enhance their appearance and quickly align any pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We style the underline with a custom offset and color. Icons are automatically sized to `1em` to best match their associated text's `font-size`.
-
 {{< callout info >}}
-Inside links, you should use Solaris icons, either in an SVG sprite (`<symbol>` element in an SVG file), which is the recommended method, or in an icon font. You can generate both with [Solaris Icons Finder](https://oran.ge/icons).
-
-We strongly advise against using an `<img>` or other techniques, especially because the icon will not benefit from dynamic color changes across states (hover, focus, active) and the color mode system will not work.
+The recommended way of using an icon in a link is through an [SVG sprite file]({{< docsref "/extend/icons/#svg-sprite" >}}). You need to fill it using `currentColor` to respect the link color scheme (can be set directly inside the SVG sprite).
 {{< /callout >}}
+
+The `.icon-link` class modifies the default link styles to enhance their appearance and quickly align any pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We style the underline with a custom offset and color. Icons are automatically sized to `1em` to best match their associated text's `font-size`.
 
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
 {{< callout >}}
-When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our examples. For icons that convey meaning, provide an appropriate text alternative by adding `role="img"` and an appropriate `aria-label="..."` to the SVGs, or a `.visually-hidden` text for a font icon.
+When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our links examples. See [icons accessibility]({{< docsref "/extend/icons/#icons-accessibility" >}}) for more info.
 {{< /callout >}}
 
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
