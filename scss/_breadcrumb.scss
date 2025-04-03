@@ -52,32 +52,16 @@
     white-space: nowrap;
   }
 
-  // &:only-child {
-  //   max-width: 100%;
-  // }
-
-  // /* two items */
-  // &:first-child:nth-last-child(2),
-  // &:first-child:nth-last-child(2) ~ .breadcrumb-item {
-  //   max-width: 50%;
-  // }
-
-  // /* three items */
-  // &:first-child:nth-last-child(3),
-  // &:first-child:nth-last-child(3) ~ .breadcrumb-item {
-  //   max-width: 33.3333%;
-  // }
-
   &.active {
     @include has-separator();
     display: inline-flex;
     flex-shrink: 0;
-    padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
     span {
       display: inline-block;
       min-width: 0;
+      padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
