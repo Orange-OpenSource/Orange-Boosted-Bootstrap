@@ -59,19 +59,9 @@ Browser default switches are replaced with the help of `.control-item-indicator[
 
 Switches are implemented using `.control-item-*` classes, see below.
 
-### Control item
-
-Control item is an abstraction for several non-text input components that have similar behavior and layout. It contains an `<input>` indicator, a text container for the label and an optional icon.
-
-We use the future friendly child check selector (`:has`) for all our `<input>` states, like `:invalid` or `:disabled`. When combined with the `.control-item-label` class, we can easily style the text for each item based on the `<input>`'s state.
-
-`.control-item-assets-container` controls the position of the `.control-item-indicator` and the optional icon.
-
-`.control-item-text-container` contains the label and optional helper text and controls their positioning.
-
-`.control-item-label` extend their clickable area until a `.control-item`, `.switch-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
-
-`.control-item-indicator` uses customized Solaris icons to indicate checked states.
+{{< markdown >}}
+{{< partial "control-item.md" >}}
+{{< /markdown >}}
 
 ## Variants
 
@@ -296,7 +286,7 @@ When switches belong to a group (e.g., in a form), you must provide clear contex
 ## Standalone
 
 {{< callout warning >}}
-This is commonly used to build custom component and shouldn't be used alone. Remember to provide some sort of accessible name for assistive technologies (for instance, using `aria-labelledby`, a `.visually-hidden`, `aria-label` or a second label). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+{{< partial "callouts/standalone-form-indicator.md" >}}
 {{< /callout >}}
 
 For the standalone Switch, we provide a completely different architecture to ease the integration inside your projects.
