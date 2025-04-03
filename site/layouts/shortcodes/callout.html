@@ -3,7 +3,8 @@
 */ -}}
 
 {{- $css_class := .Get 0 | default "info" -}}
+{{ $opts := dict "display" "block" }}
 
 <div class="bd-callout bd-callout-{{ $css_class }}">
-{{ .Inner | markdownify }}
+{{ .Inner | .Page.RenderString $opts }}
 </div>

@@ -1,0 +1,1 @@
+This is commonly used to build custom component and shouldn't be used alone. Remember to provide some sort of accessible name for assistive technologies (for instance, using `aria-labelledby`, a `.visually-hidden`, `aria-label` or a second label). See the [forms overview accessibility](/docs/{{ .Site.Params.docs_version }}/forms/overview#accessibility) section for details.
