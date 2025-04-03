@@ -60,7 +60,7 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.control-item`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
+Browser default radio buttons are replaced with the help of `.radio-button-item`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
 
 Radio buttons are implemented using `.control-item-*` classes, see below.
 
@@ -72,7 +72,7 @@ Radio buttons are implemented using `.control-item-*` classes, see below.
 
 ### Outlined
 
-You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.control-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
+You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
 
 {{< example >}}
 <div class="radio-button-item radio-button-item-outlined control-item-divider">
@@ -103,7 +103,7 @@ You can display an outlined radio buttons by adding a `.radio-button-item-outlin
 
 ### Divider
 
-You can display a divider by adding `.control-item-divider` to a `.control-item`.
+You can display a divider by adding `.control-item-divider` to a `.radio-button-item`.
 
 {{< example >}}
 <div class="radio-button-item control-item-divider">
@@ -126,7 +126,7 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
 
 ### Icon
 
-You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.control-item`.
+You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.radio-button-item`.
 
 {{< example >}}
 <div class="radio-button-item">
@@ -189,7 +189,7 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 
 ### Reverse
 
-You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
+You can reverse the component by adding `.control-item-reverse` to a `.radio-button-item`.
 
 {{< example >}}
 <div class="radio-button-item control-item-reverse">
@@ -269,7 +269,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ### Invalid
 
- You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
+ You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
 
 {{< example >}}
 <div class="radio-button-item">

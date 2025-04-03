@@ -139,14 +139,15 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Checks & radios
 
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
+
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Switch and the corresponding class `.form-switch` have been removed.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
-
 #### Checkbox
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item`, `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider`, `.control-item-inverse` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted's Check, the DOM is therefore very different. 
 <div class="ps-taller">
@@ -181,7 +182,7 @@ See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more informat
 
 #### Radio button
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label`, `.radio-button-item-outlined` have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Radio button is a new component compared to Boosted's radio, the DOM is therefore very different. 
 <div class="ps-taller">
