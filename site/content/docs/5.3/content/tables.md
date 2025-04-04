@@ -209,7 +209,7 @@ Highlight a table row or cell by adding a `.table-active` class.
       <tr>
         <th scope="row">3</th>
         <td colspan="2" class="table-active">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>@x</td>
       </tr>
     </tbody>
   </table>
@@ -231,7 +231,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     <tr>
       <th scope="row">3</th>
       <td colspan="2" class="table-active">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>@x</td>
     </tr>
   </tbody>
 </table>
@@ -273,7 +273,7 @@ If you want dark tables, please consider using [contextual dark mode]({{< docsre
       <tr>
         <th scope="row">3</th>
         <td colspan="2" class="table-active">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>@x</td>
       </tr>
     </tbody>
   </table>
@@ -295,7 +295,7 @@ If you want dark tables, please consider using [contextual dark mode]({{< docsre
     <tr>
       <th scope="row">3</th>
       <td colspan="2" class="table-active">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>@x</td>
     </tr>
   </tbody>
 </table>
@@ -371,7 +371,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
     <tr>
       <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>@x</td>
     </tr>
   </tbody>
 </table>
@@ -508,7 +508,7 @@ This variant should not be used because it does not respect the Orange Design Sy
         <th scope="row">3</th>
         <td>Larry</td>
         <td>the Bird</td>
-        <td>@twitter</td>
+        <td>@x</td>
       </tr>
     </tbody>
   </table>
