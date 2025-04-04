@@ -62,31 +62,6 @@
   }
 }
 
-// Interactive list items
-//
-// Use anchor or button elements instead of `li`s or `div`s to create interactive
-// list items. Includes an extra `.active` modifier class for selected items.
-
-.list-group-item-action {
-  width: 100%; // For `<button>`s (anchors become 100% by default though)
-  color: var(--#{$prefix}list-group-action-color);
-  text-align: inherit; // For `<button>`s (anchors inherit)
-
-  // Boosted mod: default focus
-  // Hover state
-  &:hover{
-    z-index: 1; // Place hover/focus items above their siblings for proper border styling
-    color: var(--#{$prefix}list-group-action-hover-color);
-    text-decoration: none;
-    background-color: var(--#{$prefix}list-group-action-hover-bg);
-  }
-
-  &:active {
-    color: var(--#{$prefix}list-group-action-active-color);
-    background: var(--#{$prefix}list-group-action-active-bg); // Boosted mod: instead of `background-color`
-  }
-}
-
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
@@ -150,6 +125,33 @@
     }
   }
   // End mod
+}
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: var(--#{$prefix}list-group-action-color);
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  &:not(.active) {
+    // Boosted mod: default focus
+    // Hover state
+    &:hover{
+      z-index: 1; // Place hover/focus items above their siblings for proper border styling
+      color: var(--#{$prefix}list-group-action-hover-color);
+      text-decoration: none;
+      background-color: var(--#{$prefix}list-group-action-hover-bg);
+    }
+
+    &:active {
+      color: var(--#{$prefix}list-group-action-active-color);
+      background: var(--#{$prefix}list-group-action-active-bg); // Boosted mod: instead of `background-color`
+    }
+  }
 }
 
 // Horizontal
