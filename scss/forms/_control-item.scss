@@ -22,6 +22,10 @@
     box-shadow: none;
   }
 
+  &:has([aria-readonly][role="checkbox"]) {
+    pointer-events: none;
+  }
+
   // Handle disabled
   &:has(input:disabled) {
     pointer-events: none;
@@ -157,7 +161,8 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
   }
 
-  &[type="checkbox"] {
+  &[type="checkbox"],
+  &[role="checkbox"][aria-readonly] {
     @include border-radius($form-check-input-border-radius);
   }
 
@@ -165,12 +170,21 @@
     @include border-radius($form-check-radio-border-radius);
   }
 
-  &:indeterminate[type="checkbox"] {
+  &:indeterminate[type="checkbox"],
+  &[role="checkbox"][aria-readonly].control-item-readonly-indeterminate {
     --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
 
     &::before {
       background-color: currentcolor;
       mask-image: escape-svg($form-check-input-indeterminate-bg-image);
+    }
+  }
+
+  &[role="checkbox"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-input-checked-bg-image);
     }
   }
 
@@ -204,7 +218,8 @@
     }
 
     &:focus-visible {
-      &[type="checkbox"] {
+      &[type="checkbox"],
+      &[role="checkbox"][aria-readonly] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
 
@@ -259,7 +274,8 @@
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-readonly][role="checkbox"] {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
   }
