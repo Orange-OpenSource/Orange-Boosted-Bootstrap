@@ -1104,43 +1104,21 @@ $form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg 
 // End mod
 // scss-docs-end form-check-variables
 
-// fusv-disable
 // scss-docs-start form-switch-variables
 // OUDS mod: no $form-switch-color
-$form-switch-width:               $spacer * 3 !default; // OUDS mod
-$form-switch-padding-start:       $form-switch-width + .625rem !default; // OUDS mod
-$form-switch-bg-image:            var(--#{$prefix}close-icon) !default;  // OUDS mod
-$form-switch-bg-position:         right .5rem top 50% !default;  // OUDS mod
-$form-switch-bg-size:             .75rem !default;  // OUDS mod
-$form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // OUDS mod
-$form-switch-border-radius:       null !default; // OUDS mod
-$form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // OUDS mod
-
-$form-switch-square-bg:             $black !default; // OUDS mod
-$form-switch-bg:                    $white !default; // OUDS mod
-$form-switch-border-color:          $white !default; // OUDS mod
-$form-switch-filter:                var(--#{$prefix}form-check-filter) !default; // OUDS mod
-$form-switch-focus-visible-inner:   $black !default; // OUDS mod
-$form-switch-focus-visible-outer:   $white !default; // OUDS mod
+// OUDS mod: no $form-switch-width
+// OUDS mod: no $form-switch-padding-start
+// OUDS mod: no $form-switch-bg-image
+$form-switch-border-radius:       $ouds-switch-border-radius !default; // OUDS mod: instead of `$form-switch-width`
+$form-switch-transition:          width .15s cubic-bezier(.2, 0, 0, 1), height .15s cubic-bezier(.2, 0, 0, 1), left .15s cubic-bezier(.2, 0, 0, 1) !default; // OUDS mod: instead of `background-position .15s ease-in-out`
 
 // OUDS mod: no $form-switch-focus-color
 // OUDS mod: no $form-switch-focus-bg-image
 
 // OUDS mod: no $form-switch-checked-color
-$form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default; // OUDS mod
-$form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
-$form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; // OUDS mod
-
-$form-switch-checked-square-bg:                 var(--#{$prefix}body-bg) !default; // OUDS mod
-$form-switch-checked-bg:                        $ouds-color-orange-500 !default; // OUDS mod
-$form-switch-checked-border-color:              $ouds-color-orange-500 !default; // OUDS mod
-$form-switch-checked-filter:                    none !default; // OUDS mod
-$form-switch-checked-focus-inner:               var(--#{$prefix}color-border-focus-inset) !default; // OUDS mod
-$form-switch-checked-focus-outer:               var(--#{$prefix}color-border-focus) !default; // OUDS mod
-$form-switch-unchecked-invalid-border-color:    #31c3eb !default; // OUDS mod: will be rendered red when mixed with the filter
+$form-switch-checked-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/></svg>") !default; // OUDS mod: instead of Bootstrap icon
+// OUDS mod: no $form-switch-checked-bg-position
 // scss-docs-end form-switch-variables
-// fusv-enable
 
 // scss-docs-start input-group-variables
 $input-group-addon-padding-y:           $input-padding-y !default;

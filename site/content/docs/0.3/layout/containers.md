@@ -135,6 +135,7 @@ $ouds-grid-2xl-max-width-alt: 3500px; // Custom container max width
 @import "../node_modules/@ouds/web/scss/tokens/semantic";
 @import "../node_modules/@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "../node_modules/@ouds/web/scss/tokens/composite";
+@import "../node_modules/@ouds/web/scss/tokens/component-colors-custom-props";
 @import "../node_modules/@ouds/web/scss/tokens/component";
 @import "../node_modules/@ouds/web/scss/variables";
 @import "../node_modules/@ouds/web/scss/variables-dark";
