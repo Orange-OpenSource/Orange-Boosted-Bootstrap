@@ -5,7 +5,7 @@ description: Create consistent cross-browser and cross-device radio buttons.
 group: forms
 aliases:
   - "/docs/forms/radio/"
-  - "/docs/0.2/forms/radio/"
+  - "/docs/forms/radio-button/"
 toc: true
 ---
 
