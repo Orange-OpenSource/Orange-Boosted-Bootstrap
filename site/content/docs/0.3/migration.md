@@ -1976,7 +1976,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 ## v0.0.1
 
-<hr class="mb-tall">
+<hr>
 
 OUDS Web v0.0.1 has landed, and is based and compatible with Bootstrap v5.3.3.
 
@@ -1984,6 +1984,6 @@ If you need more details about the changes, please refer to the [v0.0.1 release]
 
 ## v0.0.0
 
-<hr class="mb-tall">
+<hr>
 
 OUDS Web v0.0.0 has landed, and is based and compatible with Bootstrap v5.3.3.
