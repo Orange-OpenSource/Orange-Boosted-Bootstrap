@@ -18,6 +18,10 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Checkbox component has been implemented.
 
+#### Radio buttons
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Radio button component has been implemented.
+
 #### Switches
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Switch component has been implemented.
