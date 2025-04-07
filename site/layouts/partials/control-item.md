@@ -4,8 +4,10 @@ Control item is an abstraction for several non-text input components that have s
 
 We use the future friendly child check selector (`:has`) for all our `<input>` states, like `:invalid` or `:disabled`. When combined with the `.control-item-label` class, we can easily style the text for each item based on the `<input>`'s state.
 
-`.control-item-assets-container` are containers controlling the position of the `.control-item-indicator` and the optional icon.
+`.control-item-assets-container` controls the position of the `.control-item-indicator` and the optional icon.
 
-`.control-item-label` extend their clickable area until a `.checkbox-standalone`, `.radio-button-standalone` or a `position: relative;` is found in the page hierarchy. It permits to have a more consistent approach, whatever the DOM is. Nonetheless, it means that none of the elements next to the label should be interactive.
+`.control-item-text-container` contains the label and optional helper text and controls their positioning.
 
-`.control-item-indicator` are based on SVGs that are controlled by design tokens directly. These SVGs, that indicate unchecked, checked or indeterminate states, are not Solaris icons but custom OUDS icons that are provided in CSS.
+`.control-item-label` extend their clickable area until a `.checkbox-standalone`, `.radio-button-standalone`, `.switch-standalone` or a `position: relative;` is found in the page hierarchy. This ensure a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
+
+`.control-item-indicator` uses customized Solaris icons to indicate checked states.

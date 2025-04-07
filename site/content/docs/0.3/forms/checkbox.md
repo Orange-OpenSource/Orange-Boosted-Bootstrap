@@ -61,7 +61,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 ## Approach
 
-Browser default checkboxes are replaced with the help of `.checkbox-item`. Checkboxes are for selecting one or several options in a list.
+Browser default checkboxes are replaced with the help of `.control-item-indicator[type="checkbox"]`. Checkboxes are for selecting one or several options in a list.
 
 Checkboxes are implemented using `.control-item-*` classes, see below.
 

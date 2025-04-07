@@ -281,6 +281,107 @@
 
 
 //
+// Control item switch indicator
+//
+
+@keyframes switch-check-in {
+  0%,
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: $ouds-switch-color-check;
+  }
+}
+
+.control-item-indicator[role="switch"] {
+  min-width: $ouds-switch-size-min-width;
+  min-height: $ouds-switch-size-min-height;
+  background-color: $ouds-switch-color-track-unselected;
+  border: 0;
+  @include border-radius($ouds-switch-border-radius, $ouds-switch-border-radius);
+
+  &[type="checkbox"]::before {
+    position: absolute;
+    top: 50%;
+    left: $ouds-switch-space-padding-inline-unselected;
+    display: block;
+    width: $ouds-switch-size-width-cursor-unselected;
+    height: $ouds-switch-size-height-cursor-unselected;
+    content: "";
+    background-color: $ouds-switch-color-cursor;
+    box-shadow: $ouds-elevation-raised;
+    mask: none;
+    transform: translateY(-50%);
+    @include border-radius($form-switch-border-radius, $form-switch-border-radius);
+    @include transition($form-switch-transition);
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background-color: $ouds-switch-color-track-unselected-interaction;
+  }
+
+  &:active::before {
+    width: $ouds-switch-size-width-cursor-unselected-pressed;
+  }
+
+  &:disabled {
+    background-color: $ouds-color-action-disabled;
+  }
+
+  &:checked {
+    background-color: $ouds-switch-color-track-selected;
+
+    &::before {
+      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected); // stylelint-disable-line function-disallowed-list
+      width: $ouds-switch-size-width-cursor-selected;
+      height: $ouds-switch-size-height-cursor-selected;
+    }
+
+    &:not(:active)::after {
+      position: absolute;
+      top: 50%;
+      right: $ouds-switch-space-padding-inline-selected;
+      display: block;
+      width: $ouds-switch-size-width-cursor-selected;
+      height: $ouds-switch-size-height-cursor-selected;
+      content: "";
+      background-color: $ouds-switch-color-check;
+      opacity: $ouds-switch-opacity-check;
+      mask: escape-svg($form-switch-checked-bg-image);
+      transform: translateY(-50%);
+      animation: .15s linear 0s switch-check-in;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background-color: $ouds-switch-color-track-selected-interaction;
+    }
+
+    &:active::before {
+      left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected-pressed); // stylelint-disable-line function-disallowed-list
+      width: $ouds-switch-size-width-cursor-selected-pressed;
+    }
+
+    &:disabled {
+      background-color: $ouds-color-action-disabled;
+
+      &::after {
+        background-color: $ouds-color-action-disabled;
+      }
+    }
+  }
+}
+
+
+//
 // Control item standalone
 //
 
@@ -402,6 +503,19 @@
     padding: $ouds-control-item-space-inset;
     border-width: 0;
   }
+}
+
+
+//
+// Switch
+//
+
+.switch-item {
+  @extend %control-item;
+}
+
+.switch-standalone {
+  @extend %control-item-standalone;
 }
 
 

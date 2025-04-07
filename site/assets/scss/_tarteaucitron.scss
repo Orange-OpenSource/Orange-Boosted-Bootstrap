@@ -162,18 +162,18 @@
 }
 
 @include tac("Allow", true) {
-  @include button-icon($form-switch-checked-bg-image, 1em);
+  @include button-icon(escape-svg($form-check-input-checked-bg-image), 1.625em);
 
   &::before {
-    margin-right: $spacer / 2;
+    margin-right: $spacer * .625;
   }
 }
 
 @include tac("Deny", true) {
-  @include button-icon($form-switch-bg-image, 1em);
+  @include button-icon(escape-svg($cross-icon-stroke), 1em);
 
   &::before {
-    margin-right: $spacer / 2;
+    margin-right: $spacer * .875;
   }
 }
 

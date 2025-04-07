@@ -420,6 +420,7 @@ New utilities can be added to the default `$utilities` map with a `map-merge`. M
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -453,6 +454,7 @@ Modify existing utilities in the default `$utilities` map with `map-get` and `ma
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -489,6 +491,7 @@ You can enable responsive classes for an existing set of utilities that are not 
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -561,6 +564,7 @@ Used to another naming convention? The utilities API can be used to override the
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -591,6 +595,7 @@ Remove any of the default utilities with the [`map-remove()` Sass function](http
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -613,6 +618,7 @@ You can also use the [`map-merge()` Sass function](https://sass-lang.com/documen
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";
@@ -641,6 +647,7 @@ You can add, remove, and modify many utilities all at once with the [`map-merge(
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";

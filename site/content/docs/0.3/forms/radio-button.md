@@ -60,7 +60,7 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.radio-button-item`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
+Browser default radio buttons are replaced with the help of `.control-item-indicator[type="radio"]`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
 
 Radio buttons are implemented using `.control-item-*` classes, see below.
 

@@ -86,9 +86,9 @@
         'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
       const toggle = document
         .createRange()
-        .createContextualFragment( // TODO replace with a form-switch
-          `<label class="checkbox-standalone ">
-            <input class="control-item-indicator" type="checkbox" value="" id="googletagmanagerAllowed" aria-labelledby="googletagmanagerLine" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}>
+        .createContextualFragment(
+          `<label class="switch-standalone">
+            <input class="control-item-indicator" type="checkbox" role="switch" value="" id="googletagmanagerAllowed" aria-labelledby="googletagmanagerLine" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}>
             <span class="visually-hidden">Google Tag Manager</span>
             <input id="googletagmanagerDenied" class="d-none">
           </label>`
