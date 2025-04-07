@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Switch
-description: Create consistent cross-browser and cross-device switches.
+description: Create consistent cross-browser and cross-device toggle switches.
 group: forms
 aliases:
   - "/docs/forms/switch"
