@@ -91,14 +91,6 @@ You can display an outlined radio buttons by adding a `.radio-button-item-outlin
     <label class="control-item-label" for="radioOutlined2">Label</label>
   </div>
 </div>
-<div class="radio-button-item radio-button-item-outlined control-item-divider">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator is-invalid" type="radio" value="" id="radioOutlined3" name="radioOutlined">
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="radioOutlined3">Label</label>
-  </div>
-</div>
 {{< /example >}}
 
 ### Divider
@@ -300,6 +292,29 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
+
+#### Outlined invalid
+
+ This also works for outlined variant of the component.
+
+{{< example >}}
+<div class="radio-button-item radio-button-item-outlined">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="outlinedInvalid1">Label</label>
+  </div>
+</div>
+<div class="radio-button-item radio-button-item-outlined">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="outlinedInvalid2">Label</label>
+  </div>
+</div>
+{{< /example >}}
 
 ## Group
 
