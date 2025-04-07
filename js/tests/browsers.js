@@ -6,21 +6,21 @@ const browsers = {
   safariMac: {
     base: 'BrowserStack',
     os: 'OS X',
-    os_version: 'Catalina',
+    os_version: 'Monterey',
     browser: 'Safari',
     browser_version: 'latest'
   },
   chromeMac: {
     base: 'BrowserStack',
     os: 'OS X',
-    os_version: 'Catalina',
+    os_version: 'Monterey',
     browser: 'Chrome',
     browser_version: 'latest'
   },
   firefoxMac: {
     base: 'BrowserStack',
     os: 'OS X',
-    os_version: 'Catalina',
+    os_version: 'Monterey',
     browser: 'Firefox',
     browser_version: 'latest'
   },
@@ -29,14 +29,14 @@ const browsers = {
     os: 'Windows',
     os_version: '10',
     browser: 'Chrome',
-    browser_version: '60'
+    browser_version: '120'
   },
   firefoxWin10: {
     base: 'BrowserStack',
     os: 'Windows',
     os_version: '10',
     browser: 'Firefox',
-    browser_version: '60'
+    browser_version: '121'
   },
   // OUDS mod: ESR Firefox used inside Orange
   EsrWin10: {
@@ -44,7 +44,7 @@ const browsers = {
     os: 'Windows',
     os_version: '10',
     browser: 'Firefox',
-    browser_version: '68'
+    browser_version: '128'
   },
   // End mod
   chromeWin10Latest: {
@@ -61,13 +61,6 @@ const browsers = {
     browser: 'Firefox',
     browser_version: 'latest'
   },
-  iphone7: {
-    base: 'BrowserStack',
-    os: 'ios',
-    os_version: '12.0',
-    device: 'iPhone 7',
-    real_mobile: true
-  },
   iphone12: {
     base: 'BrowserStack',
     os: 'ios',
@@ -75,11 +68,11 @@ const browsers = {
     device: 'iPhone 12',
     real_mobile: true
   },
-  pixel2: {
+  pixel6: {
     base: 'BrowserStack',
     os: 'android',
-    os_version: '8.0',
-    device: 'Google Pixel 2',
+    os_version: '12.0',
+    device: 'Google Pixel 6',
     real_mobile: true
   }
 }
