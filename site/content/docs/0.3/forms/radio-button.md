@@ -274,10 +274,18 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator is-invalid" type="radio" value="" id="radioInvalid">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioInvalid">Label</label>
+  </div>
+</div>
+<div class="radio-button-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioInvalid2">Label</label>
   </div>
 </div>
 {{< /example >}}
