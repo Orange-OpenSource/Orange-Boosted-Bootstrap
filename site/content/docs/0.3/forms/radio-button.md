@@ -295,7 +295,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 #### Outlined invalid
 
- You can display an outlined invalid radio button by adding `.radio-button-item-outlined` to an invalid Radio button.
+ This also works for outlined variant of the component.
 
 {{< example >}}
 <div class="radio-button-item radio-button-item-outlined">
