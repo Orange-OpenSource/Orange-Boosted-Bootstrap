@@ -7,6 +7,7 @@
   // Additional OUDS variables
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
   --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
+  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
   // End mod
   // scss-docs-end breadcrumb-css-vars
 
@@ -26,7 +27,7 @@
     height: $ouds-breadcrumb-size-icon;
     margin-right: var(--#{$prefix}breadcrumb-item-padding-links) #{"/* rtl:ignore */"}; // OUDS mod
     color: var(--#{$prefix}breadcrumb-divider-color);
-    content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+    content: var(--#{$prefix}breadcrumb-divider);
     // OUDS mod
 
     /* rtl:raw:
@@ -55,7 +56,6 @@
   &.active {
     @include has-separator();
     display: inline-flex;
-    flex-shrink: 0;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
     span {
@@ -70,6 +70,10 @@
 
   &:nth-last-child(-n + 2) {
     display: inline-flex;
+  }
+
+  &:nth-last-child(2) {
+    flex-shrink: 0;
   }
 
   @include media-breakpoint-up(md) {
