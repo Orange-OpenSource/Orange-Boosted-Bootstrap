@@ -1,3 +1,18 @@
+# [0.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.3.0-ouds-web...v0.4.0) (2025-04-08)
+
+
+### Features
+
+* **#2946:** add a second Radio option in the invalid group ([798edc6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/798edc646c96007027835b9e6a8dc1627705b8dc)), closes [#2946](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2946)
+* **component:** Add Checkbox component ([#2874](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2874)) ([fd2f797](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fd2f7977f17effb8a7bff7bcc0008da43f64bec4))
+* **component:** add Divider component ([#2932](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2932)) ([78594d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/78594d0877ad7475184c3f58f07d583dd289d425))
+* **component:** add Radio component ([#2933](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2933)) ([adb1c1c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/adb1c1c865ce18b02b8d55284926a1251dda80d6))
+* **component:** Add Switch component ([#2924](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2924)) ([df27446](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/df274465801902651e3f393fff8d3625ef359931))
+* **docs:** Add Icons page ([eccc477](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eccc4772e195df8fd32eb5ff59a9ac32c66674db))
+* **docs:** Add Download page ([bdcg930](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eccc4772e195df8fd32eb5ff59a9ac32c66674db))
+
+
+
 # [0.3.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.2.0-ouds-web...v0.3.0) (2025-03-21)
 
 
