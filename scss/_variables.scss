@@ -787,8 +787,8 @@ $blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: in
 $blockquote-footer-color:     var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `$gray-600`
 // OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $ouds-space-fixed-medium !default;
-$hr-color:                    inherit !default;
+$hr-margin-y:                 $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer !default;`
+$hr-color:                    $ouds-color-border-default !default; // OUDS mod: instead of `inherit !default;`
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in Bootstrap v5.2.0
@@ -796,11 +796,11 @@ $hr-height:                   null !default; // Deprecated in Bootstrap v5.2.0
 // fusv-enable
 
 $hr-border-color:             null !default; // Allows for inherited colors
-$hr-border-width:             var(--#{$prefix}border-width) !default;
+$hr-border-width:             $ouds-divider-border-width !default; // OUDS mod: instead of `var(--#{$prefix}border-width) !default;`
 $hr-opacity:                  null !default;
 
 // scss-docs-start vr-variables
-$vr-border-width:             2px !default; // OUDS mod: instead of `var(--#{$prefix}border-width)`
+$vr-border-width:             $ouds-divider-border-width !default; // OUDS mod: instead of `var(--#{$prefix}border-width)`
 // scss-docs-end vr-variables
 
 $legend-margin-bottom:        $spacer * .25 !default;

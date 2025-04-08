@@ -40,7 +40,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
         </button>
         <figcaption class="py-shortest">
           <code class="user-select-all">{{ $color.hex }}</code>
-          <hr class="my-shortest border-top" style="border-color:{{ $color.hex }} !important">
+          <hr class="my-shortest" style="border-color:{{ $color.hex }} !important">
           <var class="user-select-all">{{- $color.variable -}}</var>
         </figcaption>
       </figure>

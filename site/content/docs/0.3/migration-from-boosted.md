@@ -274,6 +274,10 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
 
+### Dividers
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal or vertical rule helpers to create dividers.
+
 ### Icon link
 
 - <span class="badge text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]({{< docsref "/components/links/#icon-link" >}}) and [link chevron]({{< docsref "/components/links/#link-chevron" >}}).
@@ -292,6 +296,10 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
+
+### Vertical rule
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Dividers helper]({{< docsref "/helpers/dividers" >}}) documentation.
 
 ## Utilities
 

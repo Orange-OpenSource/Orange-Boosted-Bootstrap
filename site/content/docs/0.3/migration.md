@@ -12,6 +12,8 @@ toc: true
 
 ## v0.4.0
 
+<hr>
+
 ### Forms
 
 #### Checkboxes
@@ -25,6 +27,11 @@ toc: true
 #### Switches
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Switch component has been implemented.
+
+### Helpers
+
+#### Dividers
+- <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
 
 ### CSS and Sass variables
 
@@ -65,6 +72,8 @@ toc: true
   </details>
 
 ## v0.3.0
+
+<hr>
 
 ### Content styles
 
@@ -146,6 +155,8 @@ toc: true
   </details>
 
 ## v0.2.0
+
+<hr>
 
 ### Components
 
@@ -302,6 +313,8 @@ toc: true
   </details>
 
 ## v0.1.0
+
+<hr>
 
 ### Foundations
 
@@ -1922,6 +1935,8 @@ toc: true
 
 ## v0.0.3
 
+<hr>
+
 ### Pre-compiled versions
 
 From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, utilities, variables, components variants, etc.) that do not comply with Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`. [Learn more about Bootstrap compatibility]({{< docsref "/extend/approach/#bootstrap-compatibility" >}}).
@@ -1988,7 +2003,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 ## v0.0.1
 
-<hr class="mb-tall">
+<hr>
 
 OUDS Web v0.0.1 has landed, and is based and compatible with Bootstrap v5.3.3.
 
@@ -1996,6 +2011,6 @@ If you need more details about the changes, please refer to the [v0.0.1 release]
 
 ## v0.0.0
 
-<hr class="mb-tall">
+<hr>
 
 OUDS Web v0.0.0 has landed, and is based and compatible with Bootstrap v5.3.3.
