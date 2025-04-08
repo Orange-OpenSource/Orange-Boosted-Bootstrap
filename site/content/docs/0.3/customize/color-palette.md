@@ -205,6 +205,7 @@ Here's an example that generates text color utilities (e.g., `.text-purple-500`)
 @import "@ouds/web/scss/tokens/semantic";
 @import "@ouds/web/scss/tokens/semantic-colors-custom-props";
 @import "@ouds/web/scss/tokens/composite";
+@import "@ouds/web/scss/tokens/component-colors-custom-props";
 @import "@ouds/web/scss/tokens/component";
 @import "@ouds/web/scss/variables";
 @import "@ouds/web/scss/variables-dark";

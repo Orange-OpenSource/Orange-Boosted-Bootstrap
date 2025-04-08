@@ -24,12 +24,29 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Radio button component has been implemented.
 
+#### Switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Switch component has been implemented.
+
 ### Helpers
 
 #### Dividers
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
 
 ### CSS and Sass variables
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
+
+  <details class="mb-tall">
+    <summary>See the new import stack</summary>
+
+    ```diff
+      @import "tokens/semantic-colors-custom-props";
+      @import "tokens/composite";
+    + @import "tokens/component-colors-custom-props";
+      @import "tokens/component";
+    ```
+  </details>
 
 - <details class="mb-short">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>

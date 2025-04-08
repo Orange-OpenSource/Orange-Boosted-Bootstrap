@@ -5,7 +5,7 @@ description: Create consistent cross-browser and cross-device radio buttons.
 group: forms
 aliases:
   - "/docs/forms/radio/"
-  - "/docs/0.2/forms/radio/"
+  - "/docs/forms/radio-button/"
 toc: true
 ---
 
@@ -24,19 +24,12 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
     <label class="control-item-label" for="radioDefault">Label</label>
   </div>
 </div>
-<div class="radio-button-item control-item-divider">
+<div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioFullOption" checked name="radioBasic" aria-describedby="radioFullOptionAdditionalText radioFullOptionHelper">
+    <input class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="radioFullOption">Label</label>
-    <p class="radio-button-additional-label" id="radioFullOptionAdditionalText">Additional label</p>
-    <p class="control-item-helper" id="radioFullOptionHelper">Helper text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
+    <label class="control-item-label" for="radioDefault2">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -60,7 +53,7 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.radio-button-item`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
+Browser default radio buttons are replaced with the help of `.control-item-indicator[type="radio"]`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
 
 Radio buttons are implemented using `.control-item-*` classes, see below.
 
@@ -89,14 +82,6 @@ You can display an outlined radio buttons by adding a `.radio-button-item-outlin
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioOutlined2">Label</label>
-  </div>
-</div>
-<div class="radio-button-item radio-button-item-outlined control-item-divider">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator is-invalid" type="radio" value="" id="radioOutlined3" name="radioOutlined">
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="radioOutlined3">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -144,7 +129,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 </div>
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioWithIconFont"  name="radioIcon">
+    <input class="control-item-indicator" type="radio" value="" id="radioWithIconFont" name="radioIcon">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioWithIconFont">Label</label>
@@ -157,32 +142,50 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 
 ### Additional label
 
-You can display an additional label for critical information for the option by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`.
+You can display an additional label for critical information for the option by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
 
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel">
+    <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel" aria-describedby="radioAdditionalTextDescription" name="radioAdditionalLabel" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioAdditionalLabel">Label</label>
-    <p class="radio-button-additional-label">Additional label</p>
+    <p class="radio-button-additional-label" id="radioAdditionalTextDescription">Additional label</p>
+  </div>
+</div>
+<div class="radio-button-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel2" aria-describedby="radioAdditionalTextDescription2" name="radioAdditionalLabel">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioAdditionalLabel2">Label</label>
+    <p class="radio-button-additional-label" id="radioAdditionalTextDescription2">Additional label</p>
   </div>
 </div>
 {{< /example >}}
 
 ### Helper text
 
-You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`.
+You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
 
 {{< example >}}
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioHelperText">
+    <input class="control-item-indicator" type="radio" value="" id="radioHelperText" aria-describedby="radioAdditionalTextHelper" name="radioTextHelper" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioHelperText">Label</label>
-    <p class="control-item-helper">Helper Text</p>
+    <p class="control-item-helper" id="radioAdditionalTextHelper">Helper Text</p>
+  </div>
+</div>
+<div class="radio-button-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioHelperText2" aria-describedby="radioAdditionalTextHelper2" name="radioTextHelper">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioHelperText2">Label</label>
+    <p class="control-item-helper" id="radioAdditionalTextHelper2">Helper Text</p>
   </div>
 </div>
 {{< /example >}}
@@ -194,10 +197,18 @@ You can reverse the component by adding `.control-item-reverse` to a `.radio-but
 {{< example >}}
 <div class="radio-button-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioReverse">
+    <input class="control-item-indicator" type="radio" value="" id="radioReverse" name="radioReverse" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="radioReverse">Label</label>
+  </div>
+</div>
+<div class="radio-button-item control-item-reverse">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="radio" value="" id="radioReverse2" name="radioReverse">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="radioReverse2">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -300,6 +311,29 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
+
+#### Outlined invalid
+
+ This also works for outlined variant of the component.
+
+{{< example >}}
+<div class="radio-button-item radio-button-item-outlined">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid1">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="outlinedInvalid1">Label</label>
+  </div>
+</div>
+<div class="radio-button-item radio-button-item-outlined">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="radio" value="" name="outlinedInvalid" id="outlinedInvalid2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="outlinedInvalid2">Label</label>
+  </div>
+</div>
+{{< /example >}}
 
 ## Group
 
