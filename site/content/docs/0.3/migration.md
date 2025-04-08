@@ -12,6 +12,8 @@ toc: true
 
 ## v0.4.0
 
+<hr>
+
 ### Forms
 
 #### Checkboxes
@@ -53,6 +55,8 @@ toc: true
   </details>
 
 ## v0.3.0
+
+<hr>
 
 ### Content styles
 
@@ -134,6 +138,8 @@ toc: true
   </details>
 
 ## v0.2.0
+
+<hr>
 
 ### Components
 
@@ -290,6 +296,8 @@ toc: true
   </details>
 
 ## v0.1.0
+
+<hr>
 
 ### Foundations
 
@@ -1909,6 +1917,8 @@ toc: true
 - <span class="badge text-bg-status-positive-emphasized">New</span> `color-mode({mode}, {root}, {inverted-mode})` mixin.
 
 ## v0.0.3
+
+<hr>
 
 ### Pre-compiled versions
 
