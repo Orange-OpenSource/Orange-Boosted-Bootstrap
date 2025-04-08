@@ -125,11 +125,20 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxHelperText">Label</label>
     <p class="control-item-helper" id="checkboxHelperTextDescription">Helper Text</p>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription2" id="checkboxHelperText2" value="">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxHelperText2">Label</label>
+    <p class="control-item-helper" id="checkboxHelperTextDescription2">Helper Text</p>
   </div>
 </div>
 {{< /example >}}
