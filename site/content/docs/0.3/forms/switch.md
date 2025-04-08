@@ -4,7 +4,7 @@ title: Switch
 description: Create consistent cross-browser and cross-device toggle switches.
 group: forms
 aliases:
-  - "/docs/forms/switch"
+  - "/docs/forms/switch/"
 toc: true
 ---
 
@@ -18,24 +18,18 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
 {{< example >}}
 <div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="switchDefault">Label</label>
   </div>
 </div>
-<div class="switch-item control-item-divider">
+<div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchFullOption" checked aria-describedby="switchFullOptionHelper">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault2">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchFullOption">Label</label>
-    <p class="control-item-helper" id="switchFullOptionHelper">Helper text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
+    <label class="control-item-label" for="switchDefault2">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -133,6 +127,15 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
     <p class="control-item-helper" id="switchHelperTextDescription">Helper Text</p>
   </div>
 </div>
+<div class="switch-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" role="switch" aria-describedby="switchHelperTextDescription2" id="switchHelperText2" value="">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="switchHelperText2">Label</label>
+    <p class="control-item-helper" id="switchHelperTextDescription2">Helper Text</p>
+  </div>
+</div>
 {{< /example >}}
 
 ### Reverse
@@ -142,7 +145,7 @@ You can reverse the component by adding `.control-item-reverse` to a `.control-i
 {{< example >}}
 <div class="switch-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" name="switchReverse">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" name="switchReverse" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="switchReverse">Label</label>
@@ -150,16 +153,10 @@ You can reverse the component by adding `.control-item-reverse` to a `.control-i
 </div>
 <div class="switch-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse2" name="switchReverse" aria-describedby="switchReverse2Description">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse2" name="switchReverse">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="switchReverse2">Label</label>
-    <p class="control-item-helper" id="switchReverse2Description">Helper Text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
   </div>
 </div>
 {{< /example >}}
@@ -219,7 +216,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ### Invalid
 
-You can display an invalid switch by adding `.is-invalid` to a `.control-item-indicator`. <!-- Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this. -->
+You can display an invalid switch by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
 
 {{< example >}}
 <div class="switch-item">
@@ -228,6 +225,14 @@ You can display an invalid switch by adding `.is-invalid` to a `.control-item-in
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="switchInvalid">Label</label>
+  </div>
+</div>
+<div class="switch-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="switchInvalid2">Label</label>
   </div>
 </div>
 {{< /example >}}

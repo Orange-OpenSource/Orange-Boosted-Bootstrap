@@ -5,9 +5,8 @@ description: Create consistent cross-browser and cross-device checkboxes.
 group: forms
 aliases:
   - "/docs/forms/checks/"
-  - "/docs/0.3/forms/checks/"
   - "/docs/forms/checks-radios/"
-  - "/docs/forms/checkbox"
+  - "/docs/forms/checkbox/"
 toc: true
 ---
 
@@ -20,24 +19,18 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxDefault">Label</label>
   </div>
 </div>
-<div class="checkbox-item control-item-divider">
+<div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxFullOption" checked aria-describedby="checkboxFullOptionHelper">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxFullOption">Label</label>
-    <p class="control-item-helper" id="checkboxFullOptionHelper">Helper text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
+    <label class="control-item-label" for="checkboxDefault2">Label</label>
   </div>
 </div>
 {{< /example >}}
@@ -132,11 +125,20 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxHelperText">Label</label>
     <p class="control-item-helper" id="checkboxHelperTextDescription">Helper Text</p>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription2" id="checkboxHelperText2" value="">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxHelperText2">Label</label>
+    <p class="control-item-helper" id="checkboxHelperTextDescription2">Helper Text</p>
   </div>
 </div>
 {{< /example >}}
@@ -148,7 +150,7 @@ You can reverse the component by adding `.control-item-reverse` to a `.checkbox-
 {{< example >}}
 <div class="checkbox-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" name="checkboxReverse">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" checked>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxReverse">Label</label>
@@ -156,16 +158,10 @@ You can reverse the component by adding `.control-item-reverse` to a `.checkbox-
 </div>
 <div class="checkbox-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse2" name="checkboxReverse" aria-describedby="checkboxReverse2Description">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse2">
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxReverse2">Label</label>
-    <p class="control-item-helper" id="checkboxReverse2Description">Helper Text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
   </div>
 </div>
 {{< /example >}}
@@ -300,6 +296,14 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" for="checkboxInvalid">Label</label>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxInvalid2">Label</label>
   </div>
 </div>
 {{< /example >}}
