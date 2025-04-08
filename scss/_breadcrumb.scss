@@ -23,11 +23,15 @@
   padding-left: var(--#{$prefix}breadcrumb-item-padding-icon);
 
   &::before {
+    display: inline-flex;
+    flex-shrink: 0;
     width: $ouds-breadcrumb-size-icon;
     height: $ouds-breadcrumb-size-icon;
     margin-right: var(--#{$prefix}breadcrumb-item-padding-links) #{"/* rtl:ignore */"}; // OUDS mod
     color: var(--#{$prefix}breadcrumb-divider-color);
-    content: var(--#{$prefix}breadcrumb-divider);
+    content: "";
+    background-color: currentcolor;
+    mask-image: var(--#{$prefix}breadcrumb-divider);
     // OUDS mod
 
     /* rtl:raw:
@@ -44,10 +48,10 @@
   max-width: 90%;
 
   a {
-    @extend .link;
-    @extend .link-sm;
+    @extend %link-properties;
     display: inline-block;
     min-width: 0;
+    padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -55,16 +59,13 @@
 
   &.active {
     @include has-separator();
-    display: inline-flex;
+    display: inline-block;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
-    span {
-      display: inline-block;
-      min-width: 0;
-      padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    a {
+      font-weight: $ouds-font-weight-body-default;
+      text-decoration: none;
+      pointer-events: none;
     }
   }
 
@@ -97,34 +98,6 @@
   }
 
   @include media-breakpoint-up(xl) {
-    display: inline-flex;
-
-    + .breadcrumb-item {
-      @include has-separator();
-    }
-  }
-
-  @container (width > $ouds-grid-lg-min-width) {
-    &:nth-last-child(-n + 3) {
-      display: inline-flex;
-    }
-
-    &:nth-last-child(-n + 2) {
-      @include has-separator();
-    }
-  }
-
-  @container (width > $ouds-grid-xl-min-width) {
-    &:nth-last-child(-n + 4) {
-      display: inline-flex;
-    }
-
-    &:nth-last-child(-n + 3) {
-      @include has-separator();
-    }
-  }
-
-  @container (width > $ouds-grid-2xl-min-width) {
     display: inline-flex;
 
     + .breadcrumb-item {

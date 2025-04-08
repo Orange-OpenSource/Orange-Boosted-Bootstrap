@@ -526,9 +526,6 @@
     --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
     --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
     --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
-
-    // Breadcrumb-specific styles
-    --#{$prefix}breadcrumb-divider-filter: #{$breadcrumb-divider-filter-dark};
     // End mod
     // scss-docs-end root-dark-mode-vars
   }

@@ -390,10 +390,6 @@ $svg-as-custom-props: (
   "success": $success-icon,
   "error":   $danger-icon
 ) !default;
-
-//// Filters
-// see https://codepen.io/sosuke/pen/Pjoqqp
-$invert-filter:         invert(1) !default;
 // End mod
 
 // Options
@@ -1955,7 +1951,7 @@ $breadcrumb-color:                  $ouds-color-content-default !default; // OUD
 // OUDS mod: no `$breadcrumb-bg`
 $breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 // OUDS mod: no `$breadcrumb-active-color`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M6.65104 12.75L11.5 8L6.65104 3.25L5.26562 4.60646L8.72986 8L5.26562 11.3922L6.65104 12.75Z' fill='black'/></svg>") !default; // OUDS mod
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.65104 12.75L11.5 8L6.65104 3.25L5.26562 4.60646L8.72986 8L5.26562 11.3922L6.65104 12.75Z' /></svg>") !default; // OUDS mod
 // OUDS mod: no `$breadcrumb-divider-filter`
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 // OUDS mod: no `$breadcrumb-border-radius`
