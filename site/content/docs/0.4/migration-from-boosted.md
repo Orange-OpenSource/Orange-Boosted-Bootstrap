@@ -182,7 +182,7 @@ See [our new Checkbox page]({{< docsref "/forms/checkbox" >}}) for more informat
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Radio button is a new component compared to Boosted's radio, the DOM is therefore very different. 
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Radio button is a new component compared to Boosted's radio, the DOM is therefore very different.
 <div class="ps-taller">
 For example, if you used to write:
 
@@ -334,9 +334,9 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   14. `.bg-warning` → `.bg-status-warning-emphasized`, `.bg-status-accent-emphasized` or in some rare cases `.bg-status-warning-muted`, `.bg-status-accent-muted`
   15. `.bg-warning-subtle` (that shouldn't have been used) → `.bg-status-warning-muted` or `.bg-status-accent-muted` depending on your context
   16. `.bg-body` → `.bg-primary`
-  17. `.bg-body-secondary` → `.bg-secondary`
+  17. `.bg-body-secondary` → `.bg-secondary` or in some rare cases `.bg-opacity-lower` or `.bg-opacity-lowest`
   18. `.bg-body-tertiary` (that shouldn't have been used) → `.bg-secondary`
-  19. `.bg-light` → `.bg-secondary`
+  19. `.bg-light` → `.bg-secondary` or in some rare cases `.bg-opacity-lower` or `.bg-opacity-lowest`
   20. `.bg-light-subtle` (that shouldn't have been used) → `.bg-secondary`
   21. `.bg-dark` → `.bg-emphasized` or `.bg-always-black` depending on your context
   22. `.bg-dark-subtle` (that shouldn't have been used) → `.bg-secondary`

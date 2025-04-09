@@ -30,8 +30,18 @@ toc: true
 
 ### Helpers
 
+#### Color background
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.text-bg-opacity-lower` and `.text-bg-opacity-lowest` color-background color helpers are now available. Visit our [color-bg page]({{< docsref "/helpers/color-background" >}}) to see more.
+
 #### Dividers
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
+
+### Utilities
+
+#### Background
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.bg-opacity-lower` and `.bg-opacity-lowest` background color utilities have been added. Visit our [background page]({{< docsref "/utilities/background" >}}) to see more.
 
 ### CSS and Sass variables
 
