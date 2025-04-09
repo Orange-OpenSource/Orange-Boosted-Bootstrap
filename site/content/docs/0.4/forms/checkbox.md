@@ -290,37 +290,26 @@ To create a read only Checkbox the input should be replaced by a `span` element 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <span class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonly" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false"></span>
+    <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="checkboxReadonly">Label</label>
+    <label class="control-item-label" id="checkboxReadonlyLabel">Label</label>
   </div>
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <span class="control-item-indicator" role="checkbox" aria-labelledby="checkboxReadonlyCheckedLabel checkboxReadonlyCheckedHelper" aria-readonly="true" tabindex="0" aria-checked="true"></span>
+    <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</label>
-    <p class="control-item-helper" id="checkboxReadonlyCheckedHelper">Helper text</p>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
   </div>
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <span class="control-item-indicator control-item-readonly-indeterminate" role="checkbox" aria-labelledby="checkboxReadonlyIndeterminate" aria-readonly="true" tabindex="0" aria-checked="true"></span>
+    <span class="control-item-indicator control-item-readonly-indeterminate" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyIndeterminate"></span>
   </div>
   <div class="control-item-text-container">
     <label class="control-item-label" id="checkboxReadonlyIndeterminate">Label</label>
-  </div>
-  <div class="control-item-assets-container">
-    <svg aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-    </svg>
   </div>
 </div>
 {{< /example >}}
