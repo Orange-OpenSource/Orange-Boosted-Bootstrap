@@ -9,6 +9,16 @@ aliases:
 toc: true
 ---
 
+## v0.5.0
+
+<hr>
+
+### Components
+
+#### Breadcrumb
+
+- <span class="badge text-bg-success">New</span> Breadcrumb component has been implemented.
+
 
 ## v0.4.0
 
