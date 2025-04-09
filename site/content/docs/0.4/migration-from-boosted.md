@@ -82,6 +82,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Components
 
+### Breadcrumb
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> the last element of a Breadcrumb must now be a link to offer better accessibility.
+
 ### Close button
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
