@@ -36,6 +36,8 @@ Please consider using our [color modes]({{< docsref "/customize/color-modes" >}}
 <p class="text-bg-status-info-muted p-tall fw-bold">.text-bg-status-info-muted</p>
 <p class="text-bg-always-black p-tall fw-bold">.text-bg-always-black</p>
 <p class="text-bg-always-white p-tall fw-bold">.text-bg-always-white</p>
+<p class="text-bg-opacity-lower p-tall fw-bold">.text-bg-opacity-lower</p>
+<p class="text-bg-opacity-lowest p-tall fw-bold">.text-bg-opacity-lowest</p>
 {{< /example >}}
 
 {{< callout info >}}

@@ -70,6 +70,8 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
 <p class="bg-status-info-muted p-tall fw-bold">.bg-status-info-muted</p>
 <p class="bg-always-black p-tall fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
 <p class="bg-always-white p-tall fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+<p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
+<p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
 <p class="bg-transparent p-tall fw-bold">.bg-transparent</p>
 {{< /example >}}
 
@@ -102,6 +104,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       <p class="bg-status-info-muted p-tall fw-bold">.bg-status-info-muted</p>
       <p class="bg-always-black p-tall fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
       <p class="bg-always-white p-tall fw-bold">.bg-always-white</p>
+      <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
       <p class="bg-transparent p-tall fw-bold">.bg-transparent</p>
     </div>
   </div>
@@ -134,6 +138,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       <p class="bg-status-info-muted p-tall fw-bold">.bg-status-info-muted</p>
       <p class="bg-always-black p-tall fw-bold">.bg-always-black</p>
       <p class="bg-always-white p-tall fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
       <p class="bg-transparent p-tall fw-bold">.bg-transparent</p>
     </div>
   </div>
@@ -170,6 +176,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       <p class="bg-status-info-muted p-tall fw-bold">.bg-status-info-muted</p>
       <p class="bg-always-black p-tall fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
       <p class="bg-always-white p-tall fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
       <p class="bg-transparent p-tall fw-bold">.bg-transparent</p>
     </div>
   </div>
