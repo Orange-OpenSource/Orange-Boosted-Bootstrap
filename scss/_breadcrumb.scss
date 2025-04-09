@@ -7,7 +7,7 @@
   // Additional OUDS variables
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
   --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
-  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // OUDS mod, instead of: escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
   // End mod
   // scss-docs-end breadcrumb-css-vars
 
