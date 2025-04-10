@@ -87,6 +87,29 @@ You can display a divider by adding `.control-item-divider` to a `.checkbox-item
 </div>
 {{< /example >}}
 
+#### Divider colors
+
+You can change the divider color to anyone acceptable, see [Divider helper]({{< docsref "/helpers/dividers" >}}) for more information.
+
+{{< example >}}
+<div class="checkbox-item control-item-divider border-emphasized">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDividerColor">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxDividerColor">Label</label>
+  </div>
+</div>
+<div class="checkbox-item control-item-divider border-emphasized">
+  <div class="control-item-assets-container">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDividerColor2">
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" for="checkboxDividerColor2">Label</label>
+  </div>
+</div>
+{{< /example >}}
+
 ### Icon
 
 You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.checkbox-item`.
