@@ -1,1 +1,1 @@
-This correspond to the Error state in OUDS, as html inputs use the term invalid when in error.
+The invalid state is the equivalent of the 'Error' state that you can find in the design specification.
