@@ -287,6 +287,10 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ### Invalid
 
+{{< callout info >}}
+{{< partial "callouts/input-invalid.md" >}}
+{{< /callout >}}
+
  You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
 
 {{< example >}}
