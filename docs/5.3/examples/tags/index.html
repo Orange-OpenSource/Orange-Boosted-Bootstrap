@@ -1,25 +1,21 @@
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
-
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Orange and Boosted contributors">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.145.0">
     <title>Tags · Boosted v5.3</title>
 
     <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/tags/">
 
-    
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC">
 
-<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
@@ -88,10 +84,12 @@
         z-index: 1500;
       }
 
+       
       .bd-mode-toggle svg {
         width: 1.25rem;
         height: 1.25rem;
       }
+       
 
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
@@ -102,54 +100,57 @@
   </head>
   <body class="d-flex flex-column h-100">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="check2" viewBox="0 0 1000 1000">
-        <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
-      </symbol>
-      <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
-        <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
-      </symbol>
-      <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
-        <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
-      </symbol>
-      <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
-        <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
-      </symbol>
-    </svg>
+  <symbol id="check2" viewBox="0 0 1000 1000">
+    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+  </symbol>
+  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
+    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
+  </symbol>
+  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
+    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
+  </symbol>
+  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
+    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
+  </symbol>
+</svg>
+
 
     
     <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-dropdown dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle mode (auto)">
-        <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
+      <button class="btn btn-dropdown d-flex align-items-center dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="visually-hidden" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode" aria-hidden="true"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
     </div>
 <main>
   <h1 class="visually-hidden">Present some ways the tags could be used</h1>
@@ -170,7 +171,7 @@
           <td class="p-2">
             <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
               <li><span class="tag tag-sm">Bird</span></li>
-              <li><span class="tag tag-sm">Twitter</span></li>
+              <li><span class="tag tag-sm">X</span></li>
               <li><span class="tag tag-sm">NBA</span></li>
             </ul>
           </td>
@@ -181,7 +182,7 @@
           <td class="p-2">
             <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
               <li><span class="tag tag-sm">Framework</span></li>
-              <li><span class="tag tag-sm">Twitter</span></li>
+              <li><span class="tag tag-sm">X</span></li>
             </ul>
           </td>
         </tr>
@@ -220,7 +221,7 @@
       <li>
         <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
         <label class="tag" for="btncheck3">
-          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
             <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
           </svg>
           TV
@@ -245,7 +246,7 @@
       <li>
         <input type="radio" name="tagRadio" class="btn-check" id="btncheck6" autocomplete="off">
         <label class="tag" for="btncheck6">
-          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
             <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
           </svg>
           TV
@@ -256,7 +257,7 @@
 
   <div class="b-example-divider"></div>
 </main>
-<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+<script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
 
     </body>
 </html>

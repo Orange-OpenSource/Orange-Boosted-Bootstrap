@@ -15,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Suasmeninkite",
     "acceptAll": "Gerai, priimu visus",
     "close": "Uždaryti",
+    "closeBanner": "Slėpti slapukų reklamjuostę",
 
     "privacyUrl": "Privatumo politika",
 
@@ -80,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Kita",
         "details": "Paslaugos, rodančios svetainės turinį."
     },
+
+    "google": {
+        "title": "Specifinis sutikimas „Google“ paslaugoms",
+        "details": "„Google“ gali naudoti jūsų duomenis auditorijos matavimui, reklamos veiklos vertinimui arba jums siūlomiems asmeniškai pritaikytiems skelbimams."
+    },
     
     "mandatoryTitle": "Privalomi slapukai",
-    "mandatoryText": "Ši svetainė naudoja slapukus, reikalingus tinkamam jos veikimui, kurių negalima išjungti."
+    "mandatoryText": "Ši svetainė naudoja slapukus, reikalingus tinkamam jos veikimui, kurių negalima išjungti.",
+
+    "save": "Išsaugoti",
+    "ourpartners": "Mūsų partneriai"
 };

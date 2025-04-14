@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Dark mode page helping to debug dark mode">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.145.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Dark mode helper · Boosted v5.3</title>
-
 <link rel="canonical" href="https://boosted.orange.com/docs/5.3/dark-mode/">
 
-<link rel="preconnect" href="https://F4PKENW3TB-dsn.algolia.net" crossorigin>
+<link rel="preconnect" href="https://f4pkenw3tb-dsn.algolia.net" crossorigin>
+
+<title>Dark mode helper · Boosted v5.3</title>
 
 <meta name="robots" content="noindex,follow">
 
@@ -25,14 +25,10 @@
 <link rel="preload" href="/docs/5.3/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
-<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
-
-<link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
-
-<!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -197,9 +193,7 @@
             <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="5.3"></div>
           </li>
 
-          
-
-<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
   <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted&nbsp;</span><span class="visually-hidden">Boosted&nbsp;</span>v5.3 <span class="visually-hidden">(switch to other versions)</span>
   </button>
@@ -208,7 +202,7 @@
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/">
         Latest (5.3.x)
-        <svg class="bi"><use xlink:href="#check2"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
       </a>
     </li>
     <li>
@@ -232,33 +226,40 @@
         </ul>
         <ul class="navbar-nav flex-row ms-lg-3">
           <li class="nav-item dropdown">
-            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
+            <button class="nav-link nav-icon dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode" aria-hidden="true"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
           </li>
         </ul>
       </div>
@@ -271,7 +272,7 @@
 <nav class="bd-subnavbar py-2 d-lg-none" aria-label="Secondary navigation">
   <div class="container-xxl d-flex justify-content-end">
     <button class="btn btn-outline-secondary btn-icon p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
       </svg>
     </button>
@@ -284,7 +285,8 @@
 
     
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
-    <aside class="bd-sidebar">
+    <nav class="bd-sidebar" aria-labelledby="docs-nav">
+      <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
@@ -292,12 +294,12 @@
         </div>
 
         <div class="offcanvas-body">
-          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+          <div class="bd-links w-100" id="bd-docs-nav"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Getting started
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block">Introduction</a></li>
@@ -315,10 +317,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
           Customize
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -333,10 +335,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
           Layout
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block">Breakpoints</a></li>
@@ -350,10 +352,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
           Content
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block">Reboot</a></li>
@@ -364,10 +366,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
           Forms
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -382,10 +384,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
           Components
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block">Accordion</a></li>
@@ -423,10 +425,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
           Helpers
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block">Clearfix</a></li>
@@ -444,10 +446,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
           Utilities
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block">API</a></li>
@@ -473,10 +475,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
           Extend
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block">Approach</a></li>
@@ -484,10 +486,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
           About
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -500,21 +502,21 @@
       </li>
       <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
       <li class="bd-links-span-all">
-        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small ">
+        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small">
           Migration
         </a>
       </li>
   </ul>
-</nav>
+</div>
 
         </div>
       </div>
-    </aside>
+    </nav>
 
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/site/content/docs/5.3/dark-mode.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/dark-mode.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -526,11 +528,13 @@
 
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-          <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
-            <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
-          </button>
-          <strong class="d-none d-md-block h6 my-2 ms-3">On this page</strong>
+          <h2 class="mb-0">
+            <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+              On this page
+              <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+            </button>
+            <span class="d-none d-md-block h6 my-2 ms-3">On this page</span>
+          </h2>
           <hr class="d-none d-md-block my-2 ms-3">
           <div class="collapse bd-toc-collapse ms-md-1" id="tocContents">
             <nav id="TableOfContents">
@@ -1165,12 +1169,12 @@
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -1214,12 +1218,12 @@
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -1263,12 +1267,12 @@
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -1312,12 +1316,12 @@
   <button type="button" class="btn btn-outline-light" disabled data-bs-theme="dark">Outline light</button>
   <button type="button" class="btn btn-outline-dark" data-bs-theme="dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="dark">Outline dark</button>
-  <button type="button" class="btn btn-primary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
@@ -1361,12 +1365,12 @@
   <button type="button" class="btn btn-outline-light" disabled data-bs-theme="light">Outline light</button>
   <button type="button" class="btn btn-outline-dark" data-bs-theme="light">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="light">Outline dark</button>
-  <button type="button" class="btn btn-primary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
@@ -1379,8 +1383,8 @@
 <div class="row row-cols-1 row-cols-xl-3 border p-3">
   <div class="col">
     <div class="card">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1395,8 +1399,8 @@
     <div class="card">
       <div class="row g-0">
         <div class="col-md-4">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1440,8 +1444,8 @@
 <div class="row row-cols-1 row-cols-xl-3 border p-3" data-bs-theme="dark">
   <div class="col">
     <div class="card">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1456,8 +1460,8 @@
     <div class="card">
       <div class="row g-0">
         <div class="col-md-4">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1501,8 +1505,8 @@
 <div class="row row-cols-1 row-cols-xl-3 border p-3" data-bs-theme="light">
   <div class="col">
     <div class="card">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1517,8 +1521,8 @@
     <div class="card">
       <div class="row g-0">
         <div class="col-md-4">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1562,8 +1566,8 @@
 <div class="row row-cols-1 row-cols-xl-3 border p-3" style="background-color: #282d55;">
   <div class="col">
     <div class="card" data-bs-theme="dark">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1578,8 +1582,8 @@
     <div class="card" data-bs-theme="dark">
       <div class="row g-0">
         <div class="col-md-4">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1623,8 +1627,8 @@
 <div class="row row-cols-1 row-cols-xl-3 border p-3" style="background-color: #b5e8f7">
   <div class="col">
     <div class="card" data-bs-theme="light">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+        <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>
       </svg>
@@ -1639,8 +1643,8 @@
     <div class="card" data-bs-theme="light">
       <div class="row g-0">
         <div class="col-md-4">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+            <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
               <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
             </svg>
           </svg>
@@ -1696,21 +1700,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">First slide label</h5>
           <p class="mb-0">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Second slide label</h5>
           <p class="mb-0">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Third slide label</h5>
           <p class="mb-0">Some representative placeholder content for the third slide.</p>
@@ -1742,21 +1746,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">First slide label</h5>
           <p class="mb-0">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Second slide label</h5>
           <p class="mb-0">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Third slide label</h5>
           <p class="mb-0">Some representative placeholder content for the third slide.</p>
@@ -1788,21 +1792,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">First slide label</h5>
           <p class="mb-0">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Second slide label</h5>
           <p class="mb-0">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Third slide label</h5>
           <p class="mb-0">Some representative placeholder content for the third slide.</p>
@@ -1834,21 +1838,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">First slide label</h5>
           <p class="mb-0">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Second slide label</h5>
           <p class="mb-0">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Third slide label</h5>
           <p class="mb-0">Some representative placeholder content for the third slide.</p>
@@ -1880,21 +1884,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-bg)"></rect><text x="50%" y="50%" fill="var(--bs-body-color)" dy=".3em">First slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">First slide label</h5>
           <p class="mb-0">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-body-color)"></rect><text x="50%" y="50%" fill="var(--bs-body-bg)" dy=".3em">Second slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Second slide label</h5>
           <p class="mb-0">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="#4bb4e6"></rect><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="mb-0">Third slide label</h5>
           <p class="mb-0">Some representative placeholder content for the third slide.</p>
@@ -1917,19 +1921,19 @@
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1938,19 +1942,19 @@
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1959,19 +1963,19 @@
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1980,19 +1984,19 @@
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -2001,19 +2005,19 @@
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -2630,6 +2634,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2722,10 +2727,10 @@
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2768,6 +2773,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2860,10 +2866,10 @@
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2906,6 +2912,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2998,10 +3005,10 @@
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3044,6 +3051,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3136,10 +3144,10 @@
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3182,6 +3190,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3274,10 +3283,10 @@
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3558,8 +3567,8 @@
   <div class="modal fade" id="modalExample1" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3586,8 +3595,8 @@
   <div class="modal fade" id="modalExample2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3614,8 +3623,8 @@
   <div class="modal fade" id="modalExample3" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3642,8 +3651,8 @@
   <div class="modal fade" id="modalExample4" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -3670,8 +3679,8 @@
   <div class="modal fade" id="modalExample5" tabindex="-1" aria-hidden="true" data-bs-theme="light">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)">
+        <svg class="modal-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" ><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="var(--bs-border-color-subtle)" aria-hidden="true">
             <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
           </svg>
         </svg>
@@ -4433,7 +4442,7 @@
           <ul class="navbar-nav flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
@@ -4441,7 +4450,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
@@ -4455,7 +4464,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4519,7 +4528,7 @@
           <ul class="navbar-nav flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
@@ -4527,7 +4536,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
@@ -4541,7 +4550,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4605,7 +4614,7 @@
           <ul class="navbar-nav flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
@@ -4613,7 +4622,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
@@ -4627,7 +4636,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4691,7 +4700,7 @@
           <ul class="navbar-nav flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
@@ -4699,7 +4708,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
@@ -4713,7 +4722,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4777,7 +4786,7 @@
           <ul class="navbar-nav flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
@@ -4785,7 +4794,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                   <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
@@ -4799,7 +4808,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25">
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -5730,7 +5739,7 @@
     </p>
   </div>
   <div class="sticker sticker-sm">
-    <svg width="35" height="35" aria-hidden="true" focusable="false">
+    <svg width="35" height="35" aria-hidden="true">
       <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
@@ -5749,7 +5758,7 @@
     </p>
   </div>
   <div class="sticker sticker-sm">
-    <svg width="35" height="35" aria-hidden="true" focusable="false">
+    <svg width="35" height="35" aria-hidden="true">
       <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
@@ -5768,7 +5777,7 @@
     </p>
   </div>
   <div class="sticker sticker-sm">
-    <svg width="35" height="35" aria-hidden="true" focusable="false">
+    <svg width="35" height="35" aria-hidden="true">
       <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
@@ -5787,7 +5796,7 @@
     </p>
   </div>
   <div class="sticker sticker-sm" data-bs-theme="dark">
-    <svg width="35" height="35" aria-hidden="true" focusable="false">
+    <svg width="35" height="35" aria-hidden="true">
       <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
@@ -5806,7 +5815,7 @@
     </p>
   </div>
   <div class="sticker sticker-sm" data-bs-theme="light">
-    <svg width="35" height="35" aria-hidden="true" focusable="false">
+    <svg width="35" height="35" aria-hidden="true">
       <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
@@ -5825,7 +5834,7 @@
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-tv1" autocomplete="off" checked>
       <label class="tag" for="btncheck-tv1">
-        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
           <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
         </svg>
         <span class="visually-hidden">Filter by</span>TV
@@ -5839,7 +5848,7 @@
       </span>
     </li>
     <li><span class="tag tag-sm" id="labelTag21">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>
       Dismissible tag
@@ -5847,7 +5856,7 @@
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag51" aria-disabled="true">
-        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
           <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>
         Input
@@ -5870,7 +5879,7 @@
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-tv2" autocomplete="off" checked>
       <label class="tag" for="btncheck-tv2">
-        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
           <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
         </svg>
         <span class="visually-hidden">Filter by</span>TV
@@ -5884,7 +5893,7 @@
       </span>
     </li>
     <li><span class="tag tag-sm" id="labelTag22">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>
       Dismissible tag
@@ -5892,7 +5901,7 @@
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag52" aria-disabled="true">
-        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
           <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>
         Input
@@ -5915,7 +5924,7 @@
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-tv3" autocomplete="off" checked>
       <label class="tag" for="btncheck-tv3">
-        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
           <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
         </svg>
         <span class="visually-hidden">Filter by</span>TV
@@ -5929,7 +5938,7 @@
       </span>
     </li>
     <li><span class="tag tag-sm" id="labelTag23">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>
       Dismissible tag
@@ -5937,7 +5946,7 @@
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag53" aria-disabled="true">
-        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
           <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>
         Input
@@ -5960,7 +5969,7 @@
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-tv4" autocomplete="off" checked>
       <label class="tag" for="btncheck-tv4" data-bs-theme="dark">
-        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
           <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
         </svg>
         <span class="visually-hidden">Filter by</span>TV
@@ -5974,7 +5983,7 @@
       </span>
     </li>
     <li><span class="tag tag-sm" id="labelTag24" data-bs-theme="dark">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>
       Dismissible tag
@@ -5982,7 +5991,7 @@
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag54" aria-disabled="true" data-bs-theme="dark">
-        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
           <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>
         Input
@@ -6005,7 +6014,7 @@
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-tv5" autocomplete="off" checked>
       <label class="tag" for="btncheck-tv5" data-bs-theme="light">
-        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true">
           <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
         </svg>
         <span class="visually-hidden">Filter by</span>TV
@@ -6019,7 +6028,7 @@
       </span>
     </li>
     <li><span class="tag tag-sm" id="labelTag25" data-bs-theme="light">
-      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>
       Dismissible tag
@@ -6027,7 +6036,7 @@
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag55" aria-disabled="true" data-bs-theme="light">
-        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
           <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>
         Input
@@ -6086,8 +6095,8 @@
 <div class="bd-example border p-3">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ff7900"/>
-        </svg>
+      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"/>
+      </svg>
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
@@ -6101,8 +6110,8 @@
 <div class="bd-example border p-3 bg-body" data-bs-theme="dark">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ff7900"/>
-        </svg>
+      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"/>
+      </svg>
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
@@ -6116,8 +6125,8 @@
 <div class="bd-example border p-3 bg-body" data-bs-theme="light">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ff7900"/>
-        </svg>
+      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"/>
+      </svg>
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
@@ -6131,8 +6140,8 @@
 <div class="bd-example border p-3" style="background-color: #282d55;">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
     <div class="toast-header">
-      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ff7900"/>
-        </svg>
+      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"/>
+      </svg>
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
@@ -6146,8 +6155,8 @@
 <div class="bd-example border p-3" style="background-color: #b5e8f7">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="light">
     <div class="toast-header">
-      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ff7900"/>
-        </svg>
+      <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"/>
+      </svg>
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
@@ -6272,7 +6281,7 @@
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
   <p><em>This line rendered as bold text too.</em></p>
-  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" ><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 <h4 class="mt-3">Dark theme on container</h4>
 <div class="d-flex flex-column align-items-start border p-3" data-bs-theme="dark">
@@ -6346,7 +6355,7 @@
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
   <p><em>This line rendered as bold text too.</em></p>
-  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" ><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 <h4 class="mt-3">Light theme on container</h4>
 <div class="d-flex flex-column align-items-start border p-3" data-bs-theme="light">
@@ -6420,7 +6429,7 @@
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
   <p><em>This line rendered as bold text too.</em></p>
-  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" ><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 <h4 class="mt-3">Dark theme on component</h4>
 <div class="d-flex flex-column align-items-start border p-3" style="background-color: #282d55;">
@@ -6494,7 +6503,7 @@
   <p><small data-bs-theme="dark">This line of text is meant to be treated as fine print.</small></p>
   <p><strong data-bs-theme="dark">This line rendered as bold text.</strong></p>
   <p><em data-bs-theme="dark">This line rendered as bold text too.</em></p>
-  <svg data-bs-theme="dark" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+  <svg data-bs-theme="dark" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" ><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 <h4 class="mt-3">Light theme on component</h4>
 <div class="d-flex flex-column align-items-start border p-3" style="background-color: #b5e8f7">
@@ -6568,7 +6577,7 @@
   <p><small data-bs-theme="light">This line of text is meant to be treated as fine print.</small></p>
   <p><strong data-bs-theme="light">This line rendered as bold text.</strong></p>
   <p><em data-bs-theme="light">This line rendered as bold text too.</em></p>
-  <svg data-bs-theme="light" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+  <svg data-bs-theme="light" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" ><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 <h3 id="basic-form-elements">Basic form elements <a class="anchor-link" href="#basic-form-elements" aria-label="Link to this section: Basic form elements"></a></h3>
 <h4 class="mt-3">No theme</h4>
@@ -8437,21 +8446,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option5">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option6">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option7">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8460,21 +8469,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option8">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option9">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option10">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8542,21 +8551,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons1" id="option51" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option51">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option61" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option61">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option71" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option71">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8565,21 +8574,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option81" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option81">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option91" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option91">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option01" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option01">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8647,21 +8656,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons2" id="option52" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option52">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option62" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option62">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option72" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option72">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8670,21 +8679,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option82" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option82">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option92" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option92">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option02" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option02">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8752,21 +8761,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons3" id="option53" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option53" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option63" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option63" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option73" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option73" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8775,21 +8784,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option83" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option83" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option93" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option93" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option03" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option03" data-bs-theme="dark">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8857,21 +8866,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="icons4" id="option54" autocomplete="off" checked>
     <label class="btn btn-icon btn-toggle" for="option54" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option64" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option64" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option74" autocomplete="off">
     <label class="btn btn-icon btn-toggle" for="option74" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -8880,21 +8889,21 @@
   <div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option84" autocomplete="off" checked>
     <label class="btn btn-icon btn-no-outline" for="option84" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option94" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option94" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option04" autocomplete="off">
     <label class="btn btn-icon btn-no-outline" for="option04" data-bs-theme="light">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
         <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
@@ -9548,9 +9557,9 @@
               This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
             </p>
             <p class="mb-lg-1">
-              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.3.</p>
+            <p class="mb-lg-1">Currently v5.3.4.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -9574,73 +9583,18 @@
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+
+<script defer src="/docs/5.3/assets/js/application.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script defer src="/docs/5.3/assets/js/tarteaucitron.min.js"></script><script defer src="/docs/5.3/assets/js/docs.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script><script src="/docs/5.3/assets/js/docs.min.js"></script>
+<script defer src="/docs/5.3/assets/js/search.js"></script>
+<script defer src="/docs/5.3/assets/js/stackblitz.js"></script>
 
-<script>
-  
-  document.querySelectorAll('.btn-edit').forEach(btn => {
-    btn.addEventListener('click', event => {
-      const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
-      
-      
-      const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
 
-      const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
-      StackBlitzSDK.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
-    })
-  })
-
-  StackBlitzSDK.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
-    const markup = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    \x3C!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orange-helvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/boosted.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/js\/boosted.bundle.min.js"></${'script'}>
-  </head>
-  <body class="p-3 m-0 border-0 ${classes}">
-    \x3C!-- Example Code -->
-${htmlSnippet.replace(/^/gm, '    ')}
-    \x3C!-- End Example Code -->
-  </body>
-</html>`
-
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global boosted: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ Boosted mod: Try not using \u0060const\u0060 at the first layer in this file, otherwise Storybook will fail to render some examples.\n\n  \/\/ storybook-start overview\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  \/\/ storybook-start tooltips\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new boosted.Tooltip(tooltip)\n    })\n  \/\/ storybook-end tooltips\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  \/\/ storybook-start popovers\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new boosted.Popover(popover)\n    })\n  \/\/ storybook-end popovers\n  \/\/ storybook-end overview\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  \/\/ storybook-start toasts\n  if (document.getElementById(\u0027toastPlacement\u0027)) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass) {\n        document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass = document.getElementById(\u0027toastPlacement\u0027).className\n      }\n\n      document.getElementById(\u0027toastPlacement\u0027).className = \u0060${document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new boosted.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  if (document.getElementById(\u0027liveToastBtn\u0027)) {\n    document.getElementById(\u0027liveToastBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      boosted.Toast.getOrCreateInstance(document.getElementById(\u0027liveToast\u0027)).show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n  \/\/ storybook-end toasts\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ Boosted mod: adapted innerHTML to have the icon and so added a parameter within \u0060appendAlert()\u0060 and a tooltip on \u0060.btn-close\u0060\n  \/\/ storybook-start alerts\n  \/\/ js-docs-start live-alert\n  function appendAlert(message, type, typeVisuallyHidden) {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0027  \u003cspan class=\u0022alert-icon\u0022\u003e\u0027,\n      \u0060    \u003cspan class=\u0022visually-hidden\u0022\u003e${typeVisuallyHidden}\u003c\/span\u003e\u0060,\n      \u0027  \u003c\/span\u003e\u0027,\n      \u0060  \u003cp\u003e${message}\u003c\/p\u003e\u0060,\n      \u0027  \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 data-bs-toggle=\u0022tooltip\u0022 data-bs-placement=\u0022bottom\u0022 data-bs-title=\u0022Close\u0022\u003e\u0027,\n      \u0027    \u003cspan class=\u0022visually-hidden\u0022\u003eClose\u003c\/span\u003e\u0027,\n      \u0027  \u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    document.getElementById(\u0027liveAlertPlaceholder\u0027).append(wrapper)\n\n    \/\/ Create \u0060.btn-close\u0060 tooltip after \u0060innerHTML\u0060 has been modified\n    const btnClose = wrapper.querySelector(\u0027.btn-close\u0027)\n    const tooltip = new boosted.Tooltip(btnClose)\n    btnClose.addEventListener(\u0027click\u0027, () =\u003e {\n      tooltip.hide()\n    })\n  }\n\n  if (document.getElementById(\u0027liveAlertBtn\u0027)) {\n    document.getElementById(\u0027liveAlertBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027, \u0027Success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n  \/\/ storybook-end alerts\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  \/\/ storybook-start carousel\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      boosted.Carousel.getOrCreateInstance(carousel)\n    })\n  \/\/ storybook-end carousel\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  \/\/ storybook-start checksradios\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n  \/\/ storybook-end checksradios\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ storybook-start modal\n  \/\/ js-docs-start varying-modal-content\n  if (document.getElementById(\u0027exampleModal\u0027)) {\n    document.getElementById(\u0027exampleModal\u0027).addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n  \/\/ storybook-end modal\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  \/\/ storybook-start offcanvas\n  document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n    .forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  \/\/ storybook-end offcanvas\n})()\n' : null
-    const project = {
-      files: {
-        'index.html': markup,
-        'index.js': jsSnippetContent
-      },
-      title: 'Boosted Example',
-      description: `Official example from ${window.location.href}`,
-      template: jsSnippet ? 'javascript' : 'html',
-      tags: ['boosted']
-    }
-
-    StackBlitzSDK.openProject(project, { openFile: 'index.html' })
-  }
-</script>
+<script defer src="/docs/5.3/assets/js/color.js"></script>
 
 
     
