@@ -41,7 +41,9 @@ This helper should be used carefully because the rendering provided in the follo
 
 {{< example >}}
 <a class="icon-link" href="#">
-  <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 1000 1000" aria-hidden="true">
+    <path fill-rule="evenodd" d="M824.958,125h-650a50,50,0,0,0-50,50V825a50,50,0,0,0,50,50h650a50.027,50.027,0,0,0,50.031-50l0.031-650A50.053,50.053,0,0,0,824.958,125ZM800.006,800H200.057l0.033-600H399.958V350l100-75,100.049,75V275l-0.014-75.033,200,0.033ZM599.958,575h50V675H725.02V575h49.938l-87.5-100Zm-150,100h75.031V575h49.969l-87.5-100-87.5,100h50V675Zm0,75h275V700h-275v50Z"/>
+  </svg>
   Icon link
 </a>
 {{< /example >}}
@@ -49,7 +51,9 @@ This helper should be used carefully because the rendering provided in the follo
 {{< example >}}
 <a class="icon-link" href="#">
   Icon link
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 16 16" aria-hidden="true">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </svg>
 </a>
 {{< /example >}}
 </details>
@@ -68,7 +72,9 @@ This helper should be used carefully because the rendering provided in the follo
 {{< example >}}
 <a class="icon-link icon-link-hover" href="#">
   Icon link
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 16 16" aria-hidden="true">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </svg>
 </a>
 {{< /example >}}
 </details>
@@ -92,7 +98,9 @@ Customize the hover `transform` by overriding the `--bs-icon-link-transform` CSS
 
 {{< example >}}
 <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-  <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 1000 1000" aria-hidden="true">
+    <path fill-rule="evenodd" d="M650,225H525a25,25,0,0,1-25-25V75ZM325,600H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V500H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V400H250a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25h75V250H469.113A74.709,74.709,0,0,1,450,200V75H150V650a75,75,0,0,0,75,75H325V600ZM850,425H725a25,25,0,0,1-25-25V275ZM725,475a75,75,0,0,1-75-75V275H350V850a75,75,0,0,0,75,75H850V475H725Zm50,300a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Zm0-100a25,25,0,0,1-25,25H450a25,25,0,0,1-25-25h0a25,25,0,0,1,25-25H750a25,25,0,0,1,25,25h0Z"/>
+  </svg>
   Icon link
 </a>
 {{< /example >}}
@@ -102,7 +110,9 @@ Customize the color by overriding the `--bs-link-*` CSS variable:
 {{< example >}}
 <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
   Icon link
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 16 16" aria-hidden="true">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </svg>
 </a>
 {{< /example >}}
 </details>
@@ -127,7 +137,9 @@ This helper should be used carefully because the rendering provided in the follo
 {{< example >}}
 <a class="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25" href="#">
   Icon link
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewbox="0 0 16 16" aria-hidden="true">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+  </svg>
 </a>
 {{< /example >}}
 </details>
