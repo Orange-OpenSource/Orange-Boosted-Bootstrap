@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.145.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Examples · Boosted v5.3</title>
-
 <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/">
 
-<link rel="preconnect" href="https://F4PKENW3TB-dsn.algolia.net" crossorigin>
+<link rel="preconnect" href="https://f4pkenw3tb-dsn.algolia.net" crossorigin>
+
+<title>Examples · Boosted v5.3</title>
 
 
 
@@ -25,14 +25,10 @@
 <link rel="preload" href="/docs/5.3/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
-<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
-
-<link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
-
-<!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -197,9 +193,7 @@
             <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="5.3"></div>
           </li>
 
-          
-
-<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
   <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted&nbsp;</span><span class="visually-hidden">Boosted&nbsp;</span>v5.3 <span class="visually-hidden">(switch to other versions)</span>
   </button>
@@ -208,7 +202,7 @@
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/examples/">
         Latest (5.3.x)
-        <svg class="bi"><use xlink:href="#check2"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
       </a>
     </li>
     <li>
@@ -232,33 +226,40 @@
         </ul>
         <ul class="navbar-nav flex-row ms-lg-3">
           <li class="nav-item dropdown">
-            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
+            <button class="nav-link nav-icon dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode" aria-hidden="true"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
           </li>
         </ul>
       </div>
@@ -285,13 +286,12 @@
         <div class="row">
           <div class="col-12">
             <p class="ll-sm h3 mb-4">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
-            
             <div class="d-flex flex-column flex-sm-row">
-              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.3.3/boosted-5.3.3-examples.zip" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.3.4/boosted-5.3.4-examples.zip" class="btn btn-primary">
                 <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                 Download examples
               </a>
-              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.3.zip" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.4.zip" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3">
                 Download source code
               </a>
             </div>
@@ -304,15 +304,9 @@
     
     <div class="container-xxl bd-gutter">
     
-      <div class="bd-callout bd-callout-info">
-<p><strong>Some examples are missing here.</strong></p>
-<p>They are tracked in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410">#410</a> and will be shipped as soon as possible.</p>
-<p>One of the missing examples has priority? Feel free to contact a member of the <a href="/docs/5.3/about/team/">Core team</a> or add a comment directly <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410">in the corresponding issue</a> to let us know.</p>
+      
 
-</div>
-
-
-<div class="bd-content mt-5">
+      <div class="bd-content mt-5">
   <h2 id="starters">Starters</h2>
   <p>Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz.</p>
   <div class="bd-callout bd-callout-warning mb-4">
@@ -325,437 +319,395 @@
       </p>
     </div>
   <div class="row">
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/starter/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/starter" target="_blank" rel="noopener" id="starter-0">
                 CDN starter
               </a>
             </h3>
-            <p class="text-body-secondary">Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN.</p>
+            <p class="text-body-secondary">Instantly include Bootstrap&#39;s compiled CSS and JavaScript via the jsDelivr CDN.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/starter?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/starter?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-0 starter-0">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-0">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js/" target="_blank" rel="noopener">
-                Sass & JS
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js" target="_blank" rel="noopener" id="starter-1">
+                Sass &amp; JS
               </a>
             </h3>
-            <p class="text-body-secondary">Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript.</p>
+            <p class="text-body-secondary">Use npm to import and compile Bootstrap&#39;s Sass with Autoprefixer and Stylelint, plus our bundled JavaScript.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-1 starter-1">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-1">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js-esm/" target="_blank" rel="noopener">
-                Sass & ESM JS
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js-esm" target="_blank" rel="noopener" id="starter-2">
+                Sass &amp; ESM JS
               </a>
             </h3>
-            <p class="text-body-secondary">Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim.</p>
+            <p class="text-body-secondary">Import and compile Bootstrap&#39;s Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-2 starter-2">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-2">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/color-modes/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/color-modes" target="_blank" rel="noopener" id="starter-3">
                 Bootstrap color modes
               </a>
             </h3>
-            <p class="text-body-secondary">Import and compile Bootstrap's Sass with Stylelint, and the Bootstrap color modes.</p>
+            <p class="text-body-secondary">Import and compile Bootstrap&#39;s Sass with Stylelint, and the Bootstrap color modes.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-3 starter-3">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-3">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/icons-font/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/icons-font" target="_blank" rel="noopener" id="starter-4">
                 Bootstrap Icons
               </a>
             </h3>
-            <p class="text-body-secondary">Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font.</p>
+            <p class="text-body-secondary">Import and compile Bootstrap&#39;s Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/icons-font?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/icons-font?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-4 starter-4">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-4">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/parcel/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/parcel" target="_blank" rel="noopener" id="starter-5">
                 Parcel
               </a>
             </h3>
-            <p class="text-body-secondary">Import and bundle Bootstrap's source Sass and JavaScript via Parcel.</p>
+            <p class="text-body-secondary">Import and bundle Bootstrap&#39;s source Sass and JavaScript via Parcel.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=src%2Findex.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=src%2Findex.html" target="_blank" rel="noopener" aria-labelledby="edit-5 starter-5">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-5">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/react-nextjs/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/react-nextjs" target="_blank" rel="noopener" id="starter-6">
                 React
               </a>
             </h3>
-            <p class="text-body-secondary">Import and bundle Bootstrap's source Sass and JavaScript with React, Next.js, and React Bootstrap.</p>
+            <p class="text-body-secondary">Import and bundle Bootstrap&#39;s source Sass and JavaScript with React, Next.js, and React Bootstrap.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx" target="_blank" rel="noopener" aria-labelledby="edit-6 starter-6">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-6">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vite/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vite" target="_blank" rel="noopener" id="starter-7">
                 Vite
               </a>
             </h3>
-            <p class="text-body-secondary">Import and bundle Bootstrap's source Sass and JavaScript with Vite.</p>
+            <p class="text-body-secondary">Import and bundle Bootstrap&#39;s source Sass and JavaScript with Vite.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-7 starter-7">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-7">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vue/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vue" target="_blank" rel="noopener" id="starter-8">
                 Vue
               </a>
             </h3>
-            <p class="text-body-secondary">Import and bundle Bootstrap's source Sass and JavaScript with Vue and Vite.</p>
+            <p class="text-body-secondary">Import and bundle Bootstrap&#39;s source Sass and JavaScript with Vue and Vite.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vue?file=index.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vue?file=index.html" target="_blank" rel="noopener" aria-labelledby="edit-8 starter-8">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-8">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
     
-  
-      
-        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
-          <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
+      <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/webpack" target="_blank" rel="noopener" id="starter-9">
                 Webpack
               </a>
             </h3>
-            <p class="text-body-secondary">Import and bundle Bootstrap's source Sass and JavaScript with Webpack.</p>
+            <p class="text-body-secondary">Import and bundle Bootstrap&#39;s source Sass and JavaScript with Webpack.</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=src%2Findex.html" target="_blank" rel="noopener">
-                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=src%2Findex.html" target="_blank" rel="noopener" aria-labelledby="edit-9 starter-9">
+                <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-9">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       
-    </div>
-  </div>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="snippets">Snippets</h2>
   <p>Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/footers/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/footers.png,
-                                                    /docs/5.3/assets/img/examples/footers@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/footers.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/footers.png, /docs/5.3/assets/img/examples/footers@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/footers.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Footers
             </h3>
           </a>
           <p class="text-body-secondary">Finish every page strong with an awesome footer, big or small.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="custom-components">Custom Components</h2>
   <p>Brand-new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/cards/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/cards.png,
-                                                    /docs/5.3/assets/img/examples/cards@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/cards.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/cards.png, /docs/5.3/assets/img/examples/cards@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/cards.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Cards
             </h3>
           </a>
           <p class="text-body-secondary">List of all card variants (content and design).</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/stickers/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/stickers.png,
-                                                    /docs/5.3/assets/img/examples/stickers@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/stickers.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/stickers.png, /docs/5.3/assets/img/examples/stickers@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/stickers.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Stickers
             </h3>
           </a>
           <p class="text-body-secondary">List of all sticker variants.</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/tags/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/tags.png,
-                                                    /docs/5.3/assets/img/examples/tags@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/tags.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/tags.png, /docs/5.3/assets/img/examples/tags@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/tags.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Tags
             </h3>
           </a>
           <p class="text-body-secondary">Some tags use cases from links to filter.</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/title-bars/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/title-bars.png,
-                                                    /docs/5.3/assets/img/examples/title-bars@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/title-bars.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/title-bars.png, /docs/5.3/assets/img/examples/title-bars@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/title-bars.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Title bars
             </h3>
           </a>
           <p class="text-body-secondary">Orange branded title bars to introduce titles.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="framework">Framework</h2>
   <p>Examples that focus on implementing uses of built-in components provided by Boosted.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/grid/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/grid.png,
-                                                    /docs/5.3/assets/img/examples/grid@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/grid.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/grid.png, /docs/5.3/assets/img/examples/grid@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/grid.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Grid
             </h3>
           </a>
           <p class="text-body-secondary">Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="navbars">Navbars</h2>
   <p>Taking the default navbar component and showing how it can be moved, placed, and extended.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/navbars/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbars.png,
-                                                    /docs/5.3/assets/img/examples/navbars@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/navbars.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/navbars.png, /docs/5.3/assets/img/examples/navbars@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/navbars.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Navbars
             </h3>
           </a>
           <p class="text-body-secondary">Demonstration of all responsive and container options for the navbar.</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/navbar-sticky/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbar-sticky.png,
-                                                    /docs/5.3/assets/img/examples/navbar-sticky@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/navbar-sticky.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/navbar-sticky.png, /docs/5.3/assets/img/examples/navbar-sticky@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/navbar-sticky.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Navbar sticky
             </h3>
           </a>
           <p class="text-body-secondary">Single navbar example of a sticky-top navbar along with some additional content.</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/navbar-mode-selector/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbar-mode-selector.png,
-                                                    /docs/5.3/assets/img/examples/navbar-mode-selector@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/navbar-mode-selector.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/navbar-mode-selector.png, /docs/5.3/assets/img/examples/navbar-mode-selector@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/navbar-mode-selector.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Navbar mode selector
             </h3>
           </a>
           <p class="text-body-secondary">Single navbar example with a mode selector to switch between light and dark mode.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="pages">Pages</h2>
   <p>Complete reusable pages that can be found in the Design Guidelines.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/download-app/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/download-app.png,
-                                                    /docs/5.3/assets/img/examples/download-app@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/download-app.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/download-app.png, /docs/5.3/assets/img/examples/download-app@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/download-app.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Download app
             </h3>
           </a>
           <p class="text-body-secondary">How to build a download app page (redirect on iOS and Android).</p>
-        </div>
-      
+        </article>
     
-  
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/form/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/form.png,
-                                                    /docs/5.3/assets/img/examples/form@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/form.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/form.png, /docs/5.3/assets/img/examples/form@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/form.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Form
             </h3>
           </a>
           <p class="text-body-secondary">How to build a form with Boosted.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="rtl">RTL</h2>
-  <p>See Boosted's RTL version in action with these modified Custom Components examples.</p>
+  <p>See Boosted&#39;s RTL version in action with these modified Custom Components examples.</p>
   <div class="bd-callout bd-callout-warning small">
       <p>
         <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?
@@ -763,48 +715,44 @@
       <p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose">Please open an issue.</a></p>
     </div>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/cards-rtl/" hreflang="ar">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/cards-rtl.png,
-                                                    /docs/5.3/assets/img/examples/cards-rtl@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/cards-rtl.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/cards-rtl.png, /docs/5.3/assets/img/examples/cards-rtl@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/cards-rtl.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Cards RTL
             </h3>
           </a>
           <p class="text-body-secondary">List of all card variants (content and design).</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 <div class="bd-content mt-5">
   <h2 id="integrations">Integrations</h2>
   <p>Integrations with external libraries.</p>
   <div class="row">
-      
-        <div class="col-sm-6 col-md-3 mb-3">
+      <article class="col-sm-6 col-md-3 mb-3">
           <a class="d-block link-offset-1" href="/docs/5.3/examples/masonry/">
-            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/masonry.png,
-                                                    /docs/5.3/assets/img/examples/masonry@2x.png 2x"
-                                            src="/docs/5.3/assets/img/examples/masonry.png"
-                                            alt=""
-                                            width="480" height="300"
-                                            loading="lazy">
+            <img class="img-thumbnail mb-3"
+                 srcset="/docs/5.3/assets/img/examples/masonry.png, /docs/5.3/assets/img/examples/masonry@2x.png 2x"
+                 src="/docs/5.3/assets/img/examples/masonry.png"
+                 alt=""
+                 width="480"
+                 height="300"
+                 loading="lazy">
             <h3 class="h5 mb-1">
               Masonry
             </h3>
           </a>
           <p class="text-body-secondary">Combine the powers of the Boosted grid and the Masonry layout.</p>
-        </div>
-      
-    </div>
-  </div>
+        </article>
+    </div></div>
 
-
+        
     </div>
   </main>
   
@@ -886,9 +834,9 @@
               This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
             </p>
             <p class="mb-lg-1">
-              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.3.</p>
+            <p class="mb-lg-1">Currently v5.3.4.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -912,15 +860,14 @@
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+
+<script defer src="/docs/5.3/assets/js/application.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script defer src="/docs/5.3/assets/js/tarteaucitron.min.js"></script><script defer src="/docs/5.3/assets/js/docs.min.js"></script>
 
-<script src="/docs/5.3/assets/js/docs.min.js"></script>
-
-
-
+<script defer src="/docs/5.3/assets/js/search.js"></script>
 
     
     

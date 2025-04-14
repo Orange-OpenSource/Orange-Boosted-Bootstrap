@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.145.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Migrating to v5 · Boosted v5.3</title>
-
 <link rel="canonical" href="https://boosted.orange.com/docs/5.3/migration/">
 
-<link rel="preconnect" href="https://F4PKENW3TB-dsn.algolia.net" crossorigin>
+<link rel="preconnect" href="https://f4pkenw3tb-dsn.algolia.net" crossorigin>
+
+<title>Migrating to v5 · Boosted v5.3</title>
 
 
 
@@ -25,14 +25,10 @@
 <link rel="preload" href="/docs/5.3/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
-<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
-
-<link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
-
-<!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -197,9 +193,7 @@
             <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="5.3"></div>
           </li>
 
-          
-
-<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
   <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted&nbsp;</span><span class="visually-hidden">Boosted&nbsp;</span>v5.3 <span class="visually-hidden">(switch to other versions)</span>
   </button>
@@ -208,7 +202,7 @@
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/">
         Latest (5.3.x)
-        <svg class="bi"><use xlink:href="#check2"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
       </a>
     </li>
     <li>
@@ -232,33 +226,40 @@
         </ul>
         <ul class="navbar-nav flex-row ms-lg-3">
           <li class="nav-item dropdown">
-            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
+            <button class="nav-link nav-icon dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode" aria-hidden="true"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
           </li>
         </ul>
       </div>
@@ -271,7 +272,7 @@
 <nav class="bd-subnavbar py-2 d-lg-none" aria-label="Secondary navigation">
   <div class="container-xxl d-flex justify-content-end">
     <button class="btn btn-outline-secondary btn-icon p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
       </svg>
     </button>
@@ -284,7 +285,8 @@
 
     
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
-    <aside class="bd-sidebar">
+    <nav class="bd-sidebar" aria-labelledby="docs-nav">
+      <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
@@ -292,12 +294,12 @@
         </div>
 
         <div class="offcanvas-body">
-          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+          <div class="bd-links w-100" id="bd-docs-nav"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Getting started
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block">Introduction</a></li>
@@ -315,10 +317,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
           Customize
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -333,10 +335,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
           Layout
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block">Breakpoints</a></li>
@@ -350,10 +352,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
           Content
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block">Reboot</a></li>
@@ -364,10 +366,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
           Forms
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -382,10 +384,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
           Components
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block">Accordion</a></li>
@@ -423,10 +425,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
           Helpers
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block">Clearfix</a></li>
@@ -444,10 +446,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
           Utilities
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block">API</a></li>
@@ -473,10 +475,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
           Extend
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block">Approach</a></li>
@@ -484,10 +486,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
           About
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -500,21 +502,21 @@
       </li>
       <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
       <li class="bd-links-span-all">
-        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small  active" aria-current="page">
+        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small active" aria-current="page">
           Migration
         </a>
       </li>
   </ul>
-</nav>
+</div>
 
         </div>
       </div>
-    </aside>
+    </nav>
 
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -526,81 +528,92 @@
 
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-          <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
-            <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
-          </button>
-          <strong class="d-none d-md-block h6 my-2 ms-3">On this page</strong>
+          <h2 class="mb-0">
+            <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+              On this page
+              <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+            </button>
+            <span class="d-none d-md-block h6 my-2 ms-3">On this page</span>
+          </h2>
           <hr class="d-none d-md-block my-2 ms-3">
           <div class="collapse bd-toc-collapse ms-md-1" id="tocContents">
             <nav id="TableOfContents">
   <ul>
+    <li><a href="#v534">v5.3.4</a>
+      <ul>
+        <li><a href="#core">Core</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#css-and-sass-variables">CSS and Sass variables</a></li>
+      </ul>
+    </li>
     <li><a href="#v533">v5.3.3</a>
       <ul>
         <li><a href="#dark-mode">Dark mode!</a></li>
-        <li><a href="#components">Components</a></li>
+        <li><a href="#components-1">Components</a></li>
         <li><a href="#contents">Contents</a></li>
         <li><a href="#forms">Forms</a></li>
         <li><a href="#utilities">Utilities</a></li>
-        <li><a href="#examples">Examples</a></li>
-        <li><a href="#css-and-sass-variables">CSS and Sass variables</a></li>
-        <li><a href="#docs">Docs</a></li>
+        <li><a href="#examples-1">Examples</a></li>
+        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
+        <li><a href="#docs-1">Docs</a></li>
       </ul>
     </li>
     <li><a href="#v532">v5.3.2</a>
       <ul>
         <li><a href="#color-modes">Color modes!</a></li>
-        <li><a href="#components-1">Components</a></li>
+        <li><a href="#components-2">Components</a></li>
         <li><a href="#forms-1">Forms</a></li>
-        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v531">v5.3.1</a>
       <ul>
-        <li><a href="#components-2">Components</a></li>
+        <li><a href="#components-3">Components</a></li>
         <li><a href="#forms-2">Forms</a></li>
-        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
-        <li><a href="#docs-1">Docs</a></li>
+        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
+        <li><a href="#docs-2">Docs</a></li>
       </ul>
     </li>
     <li><a href="#v530">v5.3.0</a>
       <ul>
         <li><a href="#color-modes-1">Color modes!</a></li>
-        <li><a href="#components-3">Components</a></li>
+        <li><a href="#components-4">Components</a></li>
         <li><a href="#contents-1">Contents</a></li>
         <li><a href="#forms-3">Forms</a></li>
         <li><a href="#helpers-and-utilities">Helpers and utilities</a></li>
-        <li><a href="#examples-1">Examples</a></li>
-        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
-        <li><a href="#docs-2">Docs</a></li>
+        <li><a href="#examples-2">Examples</a></li>
+        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
+        <li><a href="#docs-3">Docs</a></li>
         <li><a href="#tooling">Tooling</a></li>
       </ul>
     </li>
     <li><a href="#v523">v5.2.3</a>
       <ul>
         <li><a href="#accessibility">Accessibility</a></li>
-        <li><a href="#components-4">Components</a></li>
+        <li><a href="#components-5">Components</a></li>
         <li><a href="#contents-2">Contents</a></li>
         <li><a href="#forms-4">Forms</a></li>
-        <li><a href="#examples-2">Examples</a></li>
-        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
-      </ul>
-    </li>
-    <li><a href="#v522">v5.2.2</a>
-      <ul>
-        <li><a href="#components-5">Components</a></li>
-        <li><a href="#forms-5">Forms</a></li>
-        <li><a href="#contents-3">Contents</a></li>
         <li><a href="#examples-3">Examples</a></li>
         <li><a href="#css-and-sass-variables-5">CSS and Sass variables</a></li>
       </ul>
     </li>
-    <li><a href="#v521">v5.2.1</a>
+    <li><a href="#v522">v5.2.2</a>
       <ul>
         <li><a href="#components-6">Components</a></li>
+        <li><a href="#forms-5">Forms</a></li>
+        <li><a href="#contents-3">Contents</a></li>
+        <li><a href="#examples-4">Examples</a></li>
+        <li><a href="#css-and-sass-variables-6">CSS and Sass variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#v521">v5.2.1</a>
+      <ul>
+        <li><a href="#components-7">Components</a></li>
         <li><a href="#contents-4">Contents</a></li>
         <li><a href="#helpers-and-utilities-1">Helpers and utilities</a></li>
-        <li><a href="#css-and-sass-variables-6">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-7">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v520">v5.2.0</a>
@@ -624,7 +637,7 @@
         <li><a href="#content-reboot-etc">Content, Reboot, etc</a></li>
         <li><a href="#rtl">RTL</a></li>
         <li><a href="#forms-6">Forms</a></li>
-        <li><a href="#components-7">Components</a>
+        <li><a href="#components-8">Components</a>
           <ul>
             <li><a href="#accordion">Accordion</a></li>
             <li><a href="#alerts">Alerts</a></li>
@@ -666,7 +679,82 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="v533">v5.3.3 <a class="anchor-link" href="#v533" aria-label="Link to this section: v5.3.3"></a></h2>
+        <h2 id="v534">v5.3.4 <a class="anchor-link" href="#v534" aria-label="Link to this section: v5.3.4"></a></h2>
+<h3 id="core">Core <a class="anchor-link" href="#core" aria-label="Link to this section: Core"></a></h3>
+<ul>
+<li><strong>Colors</strong>
+<ul>
+<li><span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from <code>#f66</code> to <code>#ff4d4d</code> after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.</li>
+</ul>
+</li>
+<li><strong>Accessibility</strong>
+<ul>
+<li><span class="badge text-bg-warning">Warning</span> SVGs have been updated to remove the <code>focusable=&quot;false&quot;</code> attribute that was useful before only for Internet Explorer support. You may want to update your websites, even if you can keep them as is as it won&rsquo;t break anything.</li>
+</ul>
+</li>
+</ul>
+<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
+<ul>
+<li>
+<p><strong>Badge</strong></p>
+<ul>
+<li><span class="badge text-bg-warning">Warning</span> The unused <code>.overflow-visible</code> class has been removed from the positioned variant. Please reflect this modification into your websites.</li>
+</ul>
+</li>
+<li>
+<p><strong>Buttons</strong></p>
+<ul>
+<li><span class="badge text-bg-success">New</span> X social button.</li>
+<li><span class="badge text-bg-warning">Warning</span> The unused <code>.overflow-visible</code> class has been removed from the variants containing icons. Please reflect this modification into your websites.</li>
+</ul>
+</li>
+<li>
+<p><strong>Orange navbar</strong></p>
+<ul>
+<li><span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty <code>alt</code> attribute and eliminate the <code>role=&quot;img&quot;</code>, as a placeholder image is displayed in the navbar in our documentation. You should customize the <code>alt</code> attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use &ldquo;Access to your account&rdquo; in certain situations.</li>
+<li><span class="badge text-bg-warning">Warning</span> The unused <code>.overflow-visible</code> class has been removed from the search and shopping basket SVGs. Please reflect this modification into your websites.</li>
+</ul>
+</li>
+</ul>
+<h3 id="examples">Examples <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h3>
+<ul>
+<li><strong>Form example</strong>
+<ul>
+<li><span class="badge text-bg-warning">Warning</span> The unused <code>.overflow-visible</code> class has been removed from the search and shopping basket SVGs in the Orange navbar. Please reflect this modification into your websites.</li>
+</ul>
+</li>
+</ul>
+<h3 id="docs">Docs <a class="anchor-link" href="#docs" aria-label="Link to this section: Docs"></a></h3>
+<ul>
+<li>
+<p>Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between <a href="https://oran.ge/dsweb">Orange Design System</a> and the Boosted documentation.</p>
+<p>Although these variants can still be found under the &ldquo;See Bootstrap examples that are incompatible with Orange Design System&rdquo; section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.</p>
+</li>
+<li>
+<p>We have checked all SVGs in the documentation to ensure that they are accessible and correctly interpreted by support technologies. Please also check your projects&rsquo; SVGs, which should have either <code>aria-hidden=&quot;true&quot;</code>, or <code>role=&quot;img&quot;</code> with an accessible name (defined by <code>aria-label</code>, <code>aria-labelledby</code>, a <code>&lt;title&gt;</code>, or some visually hidden alternative text).</p>
+</li>
+</ul>
+<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<ul>
+<li>
+<details class="mb-2">
+  <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+  <ul>
+    <li><code>--bs-form-switch-unchecked-invalid-border-color</code></li>
+  </ul>
+</details>
+</li>
+<li>
+<details class="mb-2">
+  <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+  <ul>
+    <li><code>$form-switch-unchecked-invalid-border-color</code></li>
+    <li><code>$form-switch-unchecked-invalid-border-color-dark</code></li>
+  </ul>
+</details>
+</li>
+</ul>
+<h2 id="v533">v5.3.3 <a class="anchor-link" href="#v533" aria-label="Link to this section: v5.3.3"></a></h2>
 <hr class="mb-4">
 <p>Boosted v5.3.3 has landed also including specific Boosted content as usual.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.3">v5.3.3 release</a>.</p>
@@ -676,12 +764,12 @@
 <p>This change has an impact on how you should use Boosted. Please read carefully the following notes.</p>
 <p>From a general point of view, the dark mode is optional on Orange websites. However, a new concept has been introduced and replaces our dark variants for components. It is referred to as &ldquo;contextual dark mode&rdquo; and is based on the <code>data-bs-theme=&quot;dark&quot;</code> attribute. It is used to switch a component or a container to dark mode, independently of the global color mode. It implies that all the <code>.{component}-dark</code> classes have been removed from Boosted and that <code>${component}-*-inverted</code> Sass variables have been deprecated.</p>
 <p>Please note that <code>data-bs-theme</code> (default, light or dark) automatically sets the <code>color</code> and <code>background-color</code> CSS properties to <code>inherit</code> on the element it is applied to. This means that some of our components have been adapted to this new behavior by setting their default colors and background colors differently (some of them are not transparent). Please double-check that it doesn&rsquo;t break your design. And more generally, please check carefully that this new version doesn&rsquo;t break your design even if you didn&rsquo;t use the dark variants before.</p>
-<p>The use of colors have been revamped to be more consistent and easier to use. During the process, some colors have been modified in light mode to be darker and ensure a better contrast: primary, success and info.</p>
+<p>The use of colors has been revamped to be more consistent and easier to use. During the process, some colors have been modified in light mode to be darker and ensure a better contrast: primary, success and info.</p>
 <p>All our helpers and utilities have also been adapted to the new color modes mechanism and automatically switch their colors and background colors depending on the current color mode.
 As a result, you should for instance now rather use <code>.text-bg-{color}</code> classes instead of <code>.bg-{color}</code> classes when possible for automatic contrast.</p>
 <p>Retrieve our color palette in the <a href="/docs/5.3/customize/color-palette/">new color palette documentation</a>.</p>
 <p>Retrieve our color theme in the <a href="/docs/5.3/customize/color-theme/">new color theme documentation</a> that gathers the useful CSS variables switching between light and dark mode.</p>
-<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-1">Components <a class="anchor-link" href="#components-1" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Accordion</strong></p>
@@ -735,7 +823,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <li>
 <p><strong>Close button</strong></p>
 <ul>
-<li><span class="badge text-bg-danger">Breaking</span> The dark variant of the breadcrumb (<code>.btn-close-white</code>) has been replaced by using the contextual dark mode with <code>data-bs-theme=&quot;dark&quot;</code>.</li>
+<li><span class="badge text-bg-danger">Breaking</span> The dark variant of the close button (<code>.btn-close-white</code>) has been replaced by using the contextual dark mode with <code>data-bs-theme=&quot;dark&quot;</code>.</li>
 </ul>
 </li>
 <li>
@@ -905,7 +993,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <ul>
 <li><span class="badge text-bg-success">New</span> Orange supporting background (<code>.bg-supporting-orange</code>) has been added.</li>
 </ul>
-<h3 id="examples">Examples <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h3>
+<h3 id="examples-1">Examples <a class="anchor-link" href="#examples-1" aria-label="Link to this section: Examples"></a></h3>
 <p>All the examples have a mode selector on the bottom right corner to switch between light and dark mode to help you check the rendering. These mode selectors are not part of the examples themselves and shouldn&rsquo;t be included in your websites. Please note that these mode selectors are not rendered in the examples that already contain a mode selector in their navbars.</p>
 <ul>
 <li>
@@ -927,7 +1015,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <p><span class="badge text-bg-warning">Warning</span> Title bars example has been slightly modified to drop a <code>.bg-body</code> and use <code>data-bs-theme=&quot;light&quot;</code> in combination with <code>.bg-supporting-blue</code> and <code>.bg-supporting-pink</code>. Make sure to incorporate these changes into your websites.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-success">New</span> A new <code>scss/_color-palette.scss</code> file has been added to provide Sass variables representing the color palette. It is automatically imported in <code>scss/_variables.scss</code> which uses these variables instead of hex values.</p>
@@ -1285,7 +1373,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 </details>
 </li>
 </ul>
-<h3 id="docs">Docs <a class="anchor-link" href="#docs" aria-label="Link to this section: Docs"></a></h3>
+<h3 id="docs-1">Docs <a class="anchor-link" href="#docs-1" aria-label="Link to this section: Docs"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-danger">Removed</span> Customize &gt; Color page has been removed.</p>
@@ -1315,7 +1403,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 </ul>
 </li>
 </ul>
-<h3 id="components-1">Components <a class="anchor-link" href="#components-1" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-2">Components <a class="anchor-link" href="#components-2" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Accordion</strong></p>
@@ -1356,7 +1444,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <p><span class="badge text-bg-warning">Deprecated</span> The <code>form-star-rating()</code> mixin is now deprecated. We now use a <code>mask-image</code> CSS property to display the stars in this form element.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1421,7 +1509,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <hr class="mb-4">
 <p>Boosted v5.3.1 has landed also including specific Boosted content as usual.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1">v5.3.1 release</a>.</p>
-<h3 id="components-2">Components <a class="anchor-link" href="#components-2" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-3">Components <a class="anchor-link" href="#components-3" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Nav and tabs</strong></p>
@@ -1446,7 +1534,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <ul>
 <li><span class="badge text-bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.</li>
 </ul>
-<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1457,7 +1545,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 </details>
 </li>
 </ul>
-<h3 id="docs-1">Docs <a class="anchor-link" href="#docs-1" aria-label="Link to this section: Docs"></a></h3>
+<h3 id="docs-2">Docs <a class="anchor-link" href="#docs-2" aria-label="Link to this section: Docs"></a></h3>
 <ul>
 <li>Added missing <code>aria-disabled=&quot;true&quot;</code> for links having only a <code>.disabled</code> class in cards, dropdowns, list groups, navbars, nav and tabs, and placeholders. Please apply this modification in your websites.</li>
 </ul>
@@ -1497,7 +1585,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </span></span><span class="line"><span class="cl"> @import &#34;utilities&#34;;
 </span></span></code></pre></div></li>
 </ul>
-<h3 id="components-3">Components <a class="anchor-link" href="#components-3" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-4">Components <a class="anchor-link" href="#components-4" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Accordion</strong></p>
@@ -1766,7 +1854,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p>CSS variable based <code>border-width</code> utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.</p>
 </li>
 <li>
-<p><span class="badge text-bg-warning">Deprecated</span> Deprecated the <code>.text-muted</code> utility and <code>$text-muted</code> Sass variable. It&rsquo;s been replaced by <code>.text-body-secondary</code> and <code>$body-secondary-color</code>.</p>
+<p><span class="badge text-bg-warning">Deprecated</span> The <code>.text-muted</code> utility and <code>$text-muted</code> Sass variable have been deprecated and replaced with <code>.text-body-secondary</code> and <code>$body-secondary-color</code>.</p>
 </li>
 <li>
 <p><span class="badge text-bg-success">New</span> Added new <code>.d-inline-grid</code> <a href="/docs/5.3/utilities/display/">display utility</a>.</p>
@@ -1775,10 +1863,10 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p><span class="badge text-bg-warning">Warning</span> We slightly changed the values for <code>.lh-sm</code>, <code>.lh-base</code> and <code>.lh-lg</code> to provide some more usable values. Please check that it doesn&rsquo;t break your design. Otherwise, it could still be reverted by setting the value directly in <code>_utilities.scss</code>.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap <a href="/docs/5.3/utilities/colors/">text color utilities</a> and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in <a href="/docs/5.3/utilities/colors/#oranges-colors">Orange&rsquo;s color utilities</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap <a href="/docs/5.3/utilities/colors/">text color utilities</a> and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in <a href="/docs/5.3/utilities/colors/#colors">Orange&rsquo;s color utilities</a>.</p>
 </li>
 </ul>
-<h3 id="examples-1">Examples <a class="anchor-link" href="#examples-1" aria-label="Link to this section: Examples"></a></h3>
+<h3 id="examples-2">Examples <a class="anchor-link" href="#examples-2" aria-label="Link to this section: Examples"></a></h3>
 <ul>
 <li>
 <p><strong>Cards/Cards RTL</strong></p>
@@ -1796,7 +1884,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p><span class="badge text-bg-success">New</span> A download app page is now available.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p>Adds additional variables for alerts, <code>.btn-close</code>, and <code>.offcanvas</code>.</p>
@@ -1839,7 +1927,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
     <li><code>$kbd-bg-dark</code> → <code>$kbd-bg-inverted</code></li>
     <li><code>$kbd-color-dark</code> → <code>$kbd-color-inverted</code></li>
     <li><code>$link-color-dark</code> → <code>$link-color-inverted</code></li>
-    <li><code>$link-hover-color-dark</code> -> <code>$link-hover-color-inverted</code></li>
+    <li><code>$link-hover-color-dark</code> → <code>$link-hover-color-inverted</code></li>
     <li><code>$mark-bg-dark</code> → <code>$mark-bg-inverted</code></li>
     <li><code>$mark-color-dark</code> → <code>$mark-color-inverted</code></li>
     <li><code>$pre-color-dark</code> → <code>$pre-color-inverted</code></li>
@@ -2162,7 +2250,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </details>
 </li>
 </ul>
-<h3 id="docs-2">Docs <a class="anchor-link" href="#docs-2" aria-label="Link to this section: Docs"></a></h3>
+<h3 id="docs-3">Docs <a class="anchor-link" href="#docs-3" aria-label="Link to this section: Docs"></a></h3>
 <ul>
 <li>
 <p>Improved included JavaScript for live Toast demo.</p>
@@ -2191,7 +2279,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p>Even if the generic case will be transparent for your project, please check this new behavior in your websites.</p>
 </li>
 </ul>
-<h3 id="components-4">Components <a class="anchor-link" href="#components-4" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-5">Components <a class="anchor-link" href="#components-5" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Card</strong></p>
@@ -2285,7 +2373,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p><span class="badge text-bg-success">New</span> Small size form controls are now available. Small inputs are defined by their <code>.form-control-sm</code>, small selects by their <code>.form-select-sm</code>. They can be associated with <code>.col-form-label-sm</code> to correctly follow their size if needed. <code>.input-group-sm</code> can also be used depending on the context.</p>
 </li>
 </ul>
-<h3 id="examples-2">Examples <a class="anchor-link" href="#examples-2" aria-label="Link to this section: Examples"></a></h3>
+<h3 id="examples-3">Examples <a class="anchor-link" href="#examples-3" aria-label="Link to this section: Examples"></a></h3>
 <ul>
 <li>
 <p><strong>Cards and Cards RTL</strong></p>
@@ -2319,7 +2407,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-5">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-5" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -2425,7 +2513,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <hr class="mb-4">
 <p>Boosted v5.2.2 has landed with new bug fixes and documentation updates including a new RTL section in our examples.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2">v5.2.2 release</a>.</p>
-<h3 id="components-5">Components <a class="anchor-link" href="#components-5" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-6">Components <a class="anchor-link" href="#components-6" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Modals</strong></p>
@@ -2454,7 +2542,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </ul>
 </li>
 </ul>
-<h3 id="examples-3">Examples <a class="anchor-link" href="#examples-3" aria-label="Link to this section: Examples"></a></h3>
+<h3 id="examples-4">Examples <a class="anchor-link" href="#examples-4" aria-label="Link to this section: Examples"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-success">New</span> There is a new RTL section in the examples.</p>
@@ -2466,7 +2554,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-5">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-5" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-6">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-6" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><code>@mixin button-size()</code> has a new interface including a new optional parameter for button letter spacing.</p>
@@ -2496,7 +2584,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <hr class="mb-4">
 <p>Boosted v5.2.1 is here with fixes from our latest minor release, v5.2. These changes include bug fixes, documentation updates, and some dependency updates, but also a new Tags component and a lot of new dark variants for our components.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.1">v5.2.1 release</a>.</p>
-<h3 id="components-6">Components <a class="anchor-link" href="#components-6" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-7">Components <a class="anchor-link" href="#components-7" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Back to top</strong></p>
@@ -2579,7 +2667,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
   <summary>More info</summary>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">&lt;a href=&#34;#&#34; class=&#34;d-inline-block&#34; data-bs-toggle=&#34;tooltip&#34; data-bs-title=&#34;Default tooltip&#34; aria-label=&#34;Default tooltip&#34;&gt;
 </span></span><span class="line"><span class="cl"><span class="gd">- &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;50&#34; height=&#34;50&#34; viewBox=&#34;0 0 100 100&#34;&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+ &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;50&#34; height=&#34;50&#34; viewBox=&#34;0 0 100 100&#34; focusable=&#34;false&#34; aria-hidden=&#34;true&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+ &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;50&#34; height=&#34;50&#34; viewBox=&#34;0 0 100 100&#34; aria-hidden=&#34;true&#34;&gt;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>    &lt;rect width=&#34;100%&#34; height=&#34;100%&#34; fill=&#34;#563d7c&#34;/&gt;
 </span></span><span class="line"><span class="cl">    &lt;circle cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;30&#34; fill=&#34;#007bff&#34;/&gt;
 </span></span><span class="line"><span class="cl">  &lt;/svg&gt;
@@ -2595,7 +2683,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <ul>
 <li><span class="badge text-bg-success">New</span> <code>.img-thumbnail</code> is now officially supported.</li>
 </ul>
-<h3 id="css-and-sass-variables-6">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-6" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-7">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-7" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-danger">Breaking</span> <code>--bs-pagination-margin-start</code> and <code>--bs-pagination-focus-outline</code> are now deprecated.</p>
@@ -2945,7 +3033,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p>Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.</p>
 </li>
 <li>
-<p>Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.1 AA contrast. Also changed our color contrast color from <code>$gray-900</code> to <code>$black</code>.</p>
+<p>Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.2 AA contrast. Also changed our color contrast color from <code>$gray-900</code> to <code>$black</code>.</p>
 </li>
 <li>
 <p>To support our color system, we&rsquo;ve added new custom <code>tint-color()</code> and <code>shade-color()</code> functions to mix our colors appropriately.</p>
@@ -2967,7 +3055,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p>Columns no longer have <code>position: relative</code> applied, so you may have to add <code>.position-relative</code> to some elements to restore that behavior.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> Dropped several <code>.order-*</code> classes that often went unused. We now only provide <code>.order-1</code> to <code>.order-5</code> out of the box.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Dropped several <code>.order-*</code> classes that often went unused. We now only provide <code>.order-0</code> to <code>.order-5</code> out of the box.</p>
 </li>
 <li>
 <p><span class="badge text-bg-danger">Breaking</span> Dropped the <code>.media</code> component as it can be easily replicated with utilities. <a href="https://github.com/twbs/bootstrap/pull/28265">See #28265</a> and the <a href="/docs/5.3/utilities/flex/#media-object">flex utilities page for an example</a>.</p>
@@ -3081,7 +3169,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </li>
 </ul>
 <hr class="my-5">
-<h3 id="components-7">Components <a class="anchor-link" href="#components-7" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-8">Components <a class="anchor-link" href="#components-8" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>Unified <code>padding</code> values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our <code>$spacer</code> variable. <a href="https://github.com/twbs/bootstrap/pull/30564">See #30564</a>.</li>
 </ul>
@@ -3287,7 +3375,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p><span class="badge text-bg-danger">Breaking</span> Dropped <code>.o-stepbar</code>, use <code>.stepped-process</code> instead. All other classes using <code>.stepbar-*</code> should be replaced by <code>.stepped-process-*</code>.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> Renamed respectively <code>$o-stepbar-margin-r</code>and <code>$o-stepbar-arrow-width</code> to <code>$step-item-margin-end</code> and <code>$step-item-arrow-width</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Renamed respectively <code>$o-stepbar-margin-r</code> and <code>$o-stepbar-arrow-width</code> to <code>$step-item-margin-end</code> and <code>$step-item-arrow-width</code>.</p>
 </li>
 <li>
 <p><span class="badge text-bg-danger">Breaking</span> Dropped <code>$o-stepbar-height</code> and lots of new variables were added.</p>
@@ -3424,6 +3512,9 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <li>
 <p>Removed underscore from public static methods like <code>_getInstance()</code> → <code>getInstance()</code>.</p>
 </li>
+<li>
+<p>Removed <code>util.js</code>, with its functionality now integrated into individual plugins. If you previously included <code>util.js</code> manually, you can safely remove it, as it is no longer needed. Each plugin now contains only the utilities it requires, enhancing modularity and reducing dependencies.</p>
+</li>
 </ul>
 
       </div>
@@ -3507,9 +3598,9 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
               This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
             </p>
             <p class="mb-lg-1">
-              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.3.</p>
+            <p class="mb-lg-1">Currently v5.3.4.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -3533,73 +3624,18 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+
+<script defer src="/docs/5.3/assets/js/application.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script defer src="/docs/5.3/assets/js/tarteaucitron.min.js"></script><script defer src="/docs/5.3/assets/js/docs.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script><script src="/docs/5.3/assets/js/docs.min.js"></script>
+<script defer src="/docs/5.3/assets/js/search.js"></script>
+<script defer src="/docs/5.3/assets/js/stackblitz.js"></script>
 
-<script>
-  
-  document.querySelectorAll('.btn-edit').forEach(btn => {
-    btn.addEventListener('click', event => {
-      const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
-      
-      
-      const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
 
-      const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
-      StackBlitzSDK.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
-    })
-  })
-
-  StackBlitzSDK.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
-    const markup = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    \x3C!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orange-helvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/boosted.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/js\/boosted.bundle.min.js"></${'script'}>
-  </head>
-  <body class="p-3 m-0 border-0 ${classes}">
-    \x3C!-- Example Code -->
-${htmlSnippet.replace(/^/gm, '    ')}
-    \x3C!-- End Example Code -->
-  </body>
-</html>`
-
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global boosted: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ Boosted mod: Try not using \u0060const\u0060 at the first layer in this file, otherwise Storybook will fail to render some examples.\n\n  \/\/ storybook-start overview\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  \/\/ storybook-start tooltips\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new boosted.Tooltip(tooltip)\n    })\n  \/\/ storybook-end tooltips\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  \/\/ storybook-start popovers\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new boosted.Popover(popover)\n    })\n  \/\/ storybook-end popovers\n  \/\/ storybook-end overview\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  \/\/ storybook-start toasts\n  if (document.getElementById(\u0027toastPlacement\u0027)) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass) {\n        document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass = document.getElementById(\u0027toastPlacement\u0027).className\n      }\n\n      document.getElementById(\u0027toastPlacement\u0027).className = \u0060${document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new boosted.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  if (document.getElementById(\u0027liveToastBtn\u0027)) {\n    document.getElementById(\u0027liveToastBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      boosted.Toast.getOrCreateInstance(document.getElementById(\u0027liveToast\u0027)).show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n  \/\/ storybook-end toasts\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ Boosted mod: adapted innerHTML to have the icon and so added a parameter within \u0060appendAlert()\u0060 and a tooltip on \u0060.btn-close\u0060\n  \/\/ storybook-start alerts\n  \/\/ js-docs-start live-alert\n  function appendAlert(message, type, typeVisuallyHidden) {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0027  \u003cspan class=\u0022alert-icon\u0022\u003e\u0027,\n      \u0060    \u003cspan class=\u0022visually-hidden\u0022\u003e${typeVisuallyHidden}\u003c\/span\u003e\u0060,\n      \u0027  \u003c\/span\u003e\u0027,\n      \u0060  \u003cp\u003e${message}\u003c\/p\u003e\u0060,\n      \u0027  \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 data-bs-toggle=\u0022tooltip\u0022 data-bs-placement=\u0022bottom\u0022 data-bs-title=\u0022Close\u0022\u003e\u0027,\n      \u0027    \u003cspan class=\u0022visually-hidden\u0022\u003eClose\u003c\/span\u003e\u0027,\n      \u0027  \u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    document.getElementById(\u0027liveAlertPlaceholder\u0027).append(wrapper)\n\n    \/\/ Create \u0060.btn-close\u0060 tooltip after \u0060innerHTML\u0060 has been modified\n    const btnClose = wrapper.querySelector(\u0027.btn-close\u0027)\n    const tooltip = new boosted.Tooltip(btnClose)\n    btnClose.addEventListener(\u0027click\u0027, () =\u003e {\n      tooltip.hide()\n    })\n  }\n\n  if (document.getElementById(\u0027liveAlertBtn\u0027)) {\n    document.getElementById(\u0027liveAlertBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027, \u0027Success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n  \/\/ storybook-end alerts\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  \/\/ storybook-start carousel\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      boosted.Carousel.getOrCreateInstance(carousel)\n    })\n  \/\/ storybook-end carousel\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  \/\/ storybook-start checksradios\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n  \/\/ storybook-end checksradios\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ storybook-start modal\n  \/\/ js-docs-start varying-modal-content\n  if (document.getElementById(\u0027exampleModal\u0027)) {\n    document.getElementById(\u0027exampleModal\u0027).addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n  \/\/ storybook-end modal\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  \/\/ storybook-start offcanvas\n  document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n    .forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  \/\/ storybook-end offcanvas\n})()\n' : null
-    const project = {
-      files: {
-        'index.html': markup,
-        'index.js': jsSnippetContent
-      },
-      title: 'Boosted Example',
-      description: `Official example from ${window.location.href}`,
-      template: jsSnippet ? 'javascript' : 'html',
-      tags: ['boosted']
-    }
-
-    StackBlitzSDK.openProject(project, { openFile: 'index.html' })
-  }
-</script>
+<script defer src="/docs/5.3/assets/js/color.js"></script>
 
 
     

@@ -15,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Přizpůsobit",
     "acceptAll": "OK, přijmout vše",
     "close": "Zavřít",
+    "closeBanner": "Skrýt banner souborů cookie",
 
     "privacyUrl": "Zásady ochrany osobních údajů",
     
@@ -80,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Jiný",
         "details": "Služby pro zobrazení webového obsahu."
     },
-    
-    "mandatoryTitle": "Mandatory cookies",
-    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
+
+    "google": {
+        "title": "Specifický souhlas se službami Google",
+        "details": "Google může využívat vaše údaje k měření publika, reklamnímu účinku nebo k zobrazení personalizovaných reklam."
+    },
+
+    "mandatoryTitle": "Povinné soubory cookie",
+    "mandatoryText": "Tato stránka používá soubory cookie nezbytné pro její správné fungování, které nelze deaktivovat.",
+
+    "save": "Uložit",
+    "ourpartners": "Naši partneři"
 };

@@ -15,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Персонализировать",
     "acceptAll": "Ок, все активировать",
     "close": "Закрыть",
+    "closeBanner": "Скрыть баннер cookie",
 
     "privacyUrl": "Политика конфиденциальности",
     
@@ -81,7 +82,15 @@ tarteaucitron.lang = {
         "title": "Другие",
         "details": "Службы для отображения веб-контента."
     },
-    
-    "mandatoryTitle": "Mandatory cookies",
-    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
+
+    "google": {
+        "title": "Специфическое согласие на услуги Google",
+        "details": "Google может использовать ваши данные для измерения аудитории, оценки рекламной эффективности или предоставления вам персонализированных рекламных объявлений."
+    },
+
+    "mandatoryTitle": "Обязательные файлы cookie",
+    "mandatoryText": "Этот сайт использует файлы cookie, необходимые для его правильной работы, которые нельзя отключить.",
+
+    "save": "Сохранить",
+    "ourpartners": "Наши партнеры"
 };

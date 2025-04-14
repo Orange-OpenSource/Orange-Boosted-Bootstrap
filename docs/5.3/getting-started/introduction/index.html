@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Boosted is based on Bootstrap: a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.145.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Get started with Boosted · Boosted v5.3</title>
-
 <link rel="canonical" href="https://boosted.orange.com/docs/5.3/getting-started/introduction/">
 
-<link rel="preconnect" href="https://F4PKENW3TB-dsn.algolia.net" crossorigin>
+<link rel="preconnect" href="https://f4pkenw3tb-dsn.algolia.net" crossorigin>
+
+<title>Get started with Boosted · Boosted v5.3</title>
 
 
 
@@ -25,14 +25,10 @@
 <link rel="preload" href="/docs/5.3/assets/img/boosted-sprite.svg" as="image" type="image/svg+xml">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
-<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
-
-<link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
-
-<!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -197,9 +193,7 @@
             <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version="5.3"></div>
           </li>
 
-          
-
-<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
   <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted&nbsp;</span><span class="visually-hidden">Boosted&nbsp;</span>v5.3 <span class="visually-hidden">(switch to other versions)</span>
   </button>
@@ -208,7 +202,7 @@
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/getting-started/introduction/">
         Latest (5.3.x)
-        <svg class="bi"><use xlink:href="#check2"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
       </a>
     </li>
     <li>
@@ -232,33 +226,40 @@
         </ul>
         <ul class="navbar-nav flex-row ms-lg-3">
           <li class="nav-item dropdown">
-            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="bi theme-icon-active"><use href="#ui-auto-mode"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-light-mode"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2"><use href="#ui-dark-mode"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2"><use href="#ui-auto-mode"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
+            <button class="nav-link nav-icon dropdown-toggle"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle mode (auto)">
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2"><use href="#ui-dark-mode" aria-hidden="true"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
           </li>
         </ul>
       </div>
@@ -271,7 +272,7 @@
 <nav class="bd-subnavbar py-2 d-lg-none" aria-label="Secondary navigation">
   <div class="container-xxl d-flex justify-content-end">
     <button class="btn btn-outline-secondary btn-icon p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
       </svg>
     </button>
@@ -284,7 +285,8 @@
 
     
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
-    <aside class="bd-sidebar">
+    <nav class="bd-sidebar" aria-labelledby="docs-nav">
+      <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
@@ -292,12 +294,12 @@
         </div>
 
         <div class="offcanvas-body">
-          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+          <div class="bd-links w-100" id="bd-docs-nav"><ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Getting started
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block active" aria-current="page">Introduction</a></li>
@@ -315,10 +317,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
           Customize
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -333,10 +335,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
           Layout
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block">Breakpoints</a></li>
@@ -350,10 +352,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
           Content
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block">Reboot</a></li>
@@ -364,10 +366,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
           Forms
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -382,10 +384,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
           Components
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block">Accordion</a></li>
@@ -423,10 +425,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
           Helpers
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block">Clearfix</a></li>
@@ -444,10 +446,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
           Utilities
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block">API</a></li>
@@ -473,10 +475,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
           Extend
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block">Approach</a></li>
@@ -484,10 +486,10 @@
         </ul>
       </li>
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
             <svg class="bi me-1" style="color: var(--bs-body-color);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
           About
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
             <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block">Overview</a></li>
@@ -500,21 +502,21 @@
       </li>
       <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
       <li class="bd-links-span-all">
-        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small ">
+        <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block small">
           Migration
         </a>
       </li>
   </ul>
-</nav>
+</div>
 
         </div>
       </div>
-    </aside>
+    </nav>
 
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/site/content/docs/5.3/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -526,11 +528,13 @@
 
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-          <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
-            <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
-          </button>
-          <strong class="d-none d-md-block h6 my-2 ms-3">On this page</strong>
+          <h2 class="mb-0">
+            <button class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+              On this page
+              <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+            </button>
+            <span class="d-none d-md-block h6 my-2 ms-3">On this page</span>
+          </h2>
           <hr class="d-none d-md-block my-2 ms-3">
           <div class="collapse bd-toc-collapse ms-md-1" id="tocContents">
             <nav id="TableOfContents">
@@ -567,17 +571,17 @@
 
         <h2 id="about-orange-brand">About Orange Brand <a class="anchor-link" href="#about-orange-brand" aria-label="Link to this section: About Orange Brand"></a></h2>
 <p>As Boosted is based on Bootstrap, you&rsquo;ll find in Boosted <strong>all</strong> the Bootstrap&rsquo;s components and their variants, but with an Orange branded look.</p>
-<p>Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don&rsquo;t. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.</p>
-<p>As for maintainability reasons we have to keep them in this documentation, we tagged them with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+<p>Among those inherited components and variants, some exist in Orange Design System and fully respect its design specifications and some don&rsquo;t. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.</p>
+<p>As for maintainability reasons we have to keep them in this documentation, we tagged them under a <code>&lt;details&gt;&lt;summary&gt;</code> with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities. We tried to hide them as much as possible while keeping the variants in our documentation.
 Thanks for taking this information into account.</p>
 <p>Design incompatibility callouts message example:</p>
 <div class="alert alert-danger">
   <span class="alert-icon"><span class="visually-hidden">danger</span></span>
   <div>
-    <div class="alert-heading mb-1">Incompatibility with Orange Design System.
-        <a href="/docs/5.3/getting-started/introduction/">More information</a></div>
+    <p class="alert-heading mb-1">Incompatibility with Orange Design System.
+        <a href="/docs/5.3/getting-started/introduction/">More information</a></p>
     <div><p>This checkbox variant should not be used because it does not respect the Orange Design System specifications.</p>
-<p>From the Orange Design System point of view, checkboxes should be represented like in our Boosted <a href="/docs/5.3/forms/checks-radios/">Checks</a> component. You can also refer to the <a href="https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789">Checkbox</a> guidelines on on the Orange Design System website.</p>
+<p>From the Orange Design System point of view, checkboxes should be represented like in our <a href="/docs/5.3/forms/checks-radios/">Checks component</a>. You can also refer to the <a href="https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789">Checkbox guidelines</a> on on the Orange Design System website.</p>
 </div>
   </div>
 </div>
@@ -587,13 +591,13 @@ Thanks for taking this information into account.</p>
 <div class="alert alert-info">
   <span class="alert-icon"><span class="visually-hidden">info</span></span>
   <div>
-    <div class="alert-heading mb-1">Orange Design System recommendation.</div>
+    <p class="alert-heading mb-1">Orange Design System recommendation.</p>
     <div>To display basic tables, Orange Design System recommends using these compact tables.</div>
   </div>
 </div>
 
 <h2 id="quick-start">Quick start <a class="anchor-link" href="#quick-start" aria-label="Link to this section: Quick start"></a></h2>
-<p>Get started by including Boosted&rsquo;s production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this <a href="https://codepen.io/julien-deramond/pen/WNMxywB">Boosted CodePen demo</a>.</p>
+<p>Get started by including Boosted&rsquo;s production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this <a href="https://codepen.io/louismaximepiton/pen/eYqwzag">Boosted CodePen demo</a>.</p>
 <br>
 <ol>
 <li>
@@ -611,8 +615,8 @@ Thanks for taking this information into account.</p>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div></li>
 <li>
-<p><strong>Include Boosted&rsquo;s CSS and JS.</strong> Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing <code>&lt;/body&gt;</code>. Learn more about our <a href="#cdn-links">CDN links</a>.</p>
-<p>Boosted also provides Helvetica Neue fonts, <strong>limited to Orange brand usage</strong>: <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.3/NOTICE.txt">see <code>NOTICE.txt</code> for more information about Helvetica Neue license</a>.</p>
+<p><strong>Include Boosted&rsquo;s CSS and JS.</strong> Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing <code>&lt;/body&gt;</code>. Learn more about our <a href="#cdn-links">CDN links</a>.</p>
+<p>Boosted also provides Helvetica Neue fonts, <strong>limited to Orange brand usage</strong>: <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/NOTICE.txt">see <code>NOTICE.txt</code> for more information about Helvetica Neue license</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -620,17 +624,17 @@ Thanks for taking this information into account.</p>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Boosted demo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/css/orange-helvetica.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-kMBDZjuFaKy32BqZeZCmmTFud4CR0qE4zTutkxUKzIHvKFiuPmqelvvi+3H9+aYC&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>You can also include <a href="https://popper.js.org/">Popper</a> and our JS separately. If you don&rsquo;t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.</p>
+</span></span></code></pre></div><p>You can also include <a href="https://popper.js.org/docs/v2/">Popper</a> and our JS separately. If you don&rsquo;t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-TfjOlWccrKKSEc/hJqxs6Tofoh4+tlm//VJYb92Ow7aPNtgfaKuuLsnFqObi3xmp&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-06shrjM5mwD7A4cPWsSGiVPHJ29wb/qtjIXuWxSmiUOMQmWh4MwKdh8DDg6hhpUT&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Hello, world!</strong> Open the page in your browser of choice to see your Boosted page. Now you can start building with Boosted by creating your own <a href="/docs/5.3/layout/grid/">layout</a>, adding dozens of <a href="/docs/5.3/components/buttons/">components</a>, and utilizing <a href="/docs/5.3/examples/">our official examples</a>.</p>
@@ -639,26 +643,26 @@ Thanks for taking this information into account.</p>
 <h2 id="cdn-links">CDN links <a class="anchor-link" href="#cdn-links" aria-label="Link to this section: CDN links"></a></h2>
 <p>As reference, here are our primary CDN links.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Description</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CSS</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css</code></td>
-</tr>
-<tr>
-<td>CSS for Helvetica Neue</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css</code></td>
-</tr>
-<tr>
-<td>JS</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Description</th>
+          <th>URL</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CSS</td>
+          <td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/css/boosted.min.css</code></td>
+      </tr>
+      <tr>
+          <td>CSS for Helvetica Neue</td>
+          <td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/css/orange-helvetica.min.css</code></td>
+      </tr>
+      <tr>
+          <td>JS</td>
+          <td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.4/dist/js/boosted.bundle.min.js</code></td>
+      </tr>
+  </tbody>
 </table></div>
 
 <p>You can also use the CDN to fetch any of our <a href="/docs/5.3/getting-started/contents/">additional builds listed in the Contents page</a>.</p>
@@ -672,12 +676,13 @@ Thanks for taking this information into account.</p>
 <h2 id="js-components">JS components <a class="anchor-link" href="#js-components" aria-label="Link to this section: JS components"></a></h2>
 <p>Curious which components explicitly require our JavaScript and Popper? If you&rsquo;re at all unsure about the general page structure, keep reading for an example page template.</p>
 <ul>
+<li>Accordions for extending our Collapse plugin</li>
 <li>Alerts for dismissing and Close button tooltip</li>
 <li>Buttons for toggling states and checkbox/radio functionality</li>
 <li>Carousel for all slide behaviors, controls, and indicators</li>
 <li>Close button for displaying and positioning tooltip</li>
 <li>Collapse for toggling visibility of content</li>
-<li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper</a>)</li>
+<li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/docs/v2/">Popper</a>)</li>
 <li>Footer for extending our Collapse plugin to implement responsive behavior</li>
 <li>Modals for displaying, positioning, scroll behavior, and Close button tooltip</li>
 <li>Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors, and Close button tooltip (Offcanvas only)</li>
@@ -687,13 +692,13 @@ Thanks for taking this information into account.</p>
 <li>Quantity selector for incrementing/decrementing number value</li>
 <li>Scrollspy for scroll behavior and navigation updates</li>
 <li>Toasts for displaying, dismissing, and Close button tooltip</li>
-<li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper</a>)</li>
+<li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/docs/v2/">Popper</a>)</li>
 </ul>
 <div class="bd-callout bd-callout-warning">
-<h4 id="required-script">Required script <a class="anchor-link" href="#required-script" aria-label="Link to this section: Required script"></a></h4>
+<h3 id="required-script">Required script <a class="anchor-link" href="#required-script" aria-label="Link to this section: Required script"></a></h3>
 <p>Boosted includes <a href="https://github.com/WICG/focus-visible">WICG&rsquo;s <code>:focus-visible</code> polyfill</a> to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 However, if you don&rsquo;t need or want to use Boosted&rsquo;s JavaScript files, you&rsquo;ll still need to use the polyfill.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/focus-visible@5.2.1/dist/focus-visible.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
 </div>
 
@@ -739,12 +744,12 @@ It should be used for critical resources only.</p>
 <li>Read and subscribe to <a href="https://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
 <li>Ask and explore <a href="https://github.com/twbs/bootstrap/discussions">our GitHub Discussions</a>.</li>
 <li>Ask questions and explore <a href="https://github.com/twbs/bootstrap/discussions">Bootstrap GitHub Discussions</a>.</li>
-<li>Discuss, ask questions, and more on <a href="https://discord.gg/bZUvakRU3M">the community Discord</a> or <a href="https://reddit.com/r/bootstrap">Bootstrap subreddit</a>.</li>
+<li>Discuss, ask questions, and more on <a href="https://discord.gg/bZUvakRU3M">the community Discord</a> or <a href="https://www.reddit.com/r/bootstrap/">Bootstrap subreddit</a>.</li>
 <li>Chat with fellow Bootstrappers in IRC. On the <code>irc.libera.chat</code> server, in the <code>#bootstrap</code> channel.</li>
 <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-5"><code>bootstrap-5</code></a>).</li>
 <li>Developers should use the keyword <code>bootstrap</code> on packages that modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
 </ul>
-<p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+<p>You can also follow <a href="https://x.com/getbootstrap">@getbootstrap on X</a> for the latest gossip and awesome music videos.</p>
 
       </div>
     </main>
@@ -827,9 +832,9 @@ It should be used for critical resources only.</p>
               This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
             </p>
             <p class="mb-lg-1">
-              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+              Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.3.</p>
+            <p class="mb-lg-1">Currently v5.3.4.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -853,73 +858,18 @@ It should be used for critical resources only.</p>
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+
+<script defer src="/docs/5.3/assets/js/application.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script defer src="/docs/5.3/assets/js/tarteaucitron.min.js"></script><script defer src="/docs/5.3/assets/js/docs.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script><script src="/docs/5.3/assets/js/docs.min.js"></script>
+<script defer src="/docs/5.3/assets/js/search.js"></script>
+<script defer src="/docs/5.3/assets/js/stackblitz.js"></script>
 
-<script>
-  
-  document.querySelectorAll('.btn-edit').forEach(btn => {
-    btn.addEventListener('click', event => {
-      const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
-      
-      
-      const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
 
-      const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
-      StackBlitzSDK.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
-    })
-  })
-
-  StackBlitzSDK.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
-    const markup = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    \x3C!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orange-helvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/css\/boosted.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.3\/dist\/js\/boosted.bundle.min.js"></${'script'}>
-  </head>
-  <body class="p-3 m-0 border-0 ${classes}">
-    \x3C!-- Example Code -->
-${htmlSnippet.replace(/^/gm, '    ')}
-    \x3C!-- End Example Code -->
-  </body>
-</html>`
-
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global boosted: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ Boosted mod: Try not using \u0060const\u0060 at the first layer in this file, otherwise Storybook will fail to render some examples.\n\n  \/\/ storybook-start overview\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  \/\/ storybook-start tooltips\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new boosted.Tooltip(tooltip)\n    })\n  \/\/ storybook-end tooltips\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  \/\/ storybook-start popovers\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new boosted.Popover(popover)\n    })\n  \/\/ storybook-end popovers\n  \/\/ storybook-end overview\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  \/\/ storybook-start toasts\n  if (document.getElementById(\u0027toastPlacement\u0027)) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass) {\n        document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass = document.getElementById(\u0027toastPlacement\u0027).className\n      }\n\n      document.getElementById(\u0027toastPlacement\u0027).className = \u0060${document.getElementById(\u0027toastPlacement\u0027).dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new boosted.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  if (document.getElementById(\u0027liveToastBtn\u0027)) {\n    document.getElementById(\u0027liveToastBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      boosted.Toast.getOrCreateInstance(document.getElementById(\u0027liveToast\u0027)).show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n  \/\/ storybook-end toasts\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ Boosted mod: adapted innerHTML to have the icon and so added a parameter within \u0060appendAlert()\u0060 and a tooltip on \u0060.btn-close\u0060\n  \/\/ storybook-start alerts\n  \/\/ js-docs-start live-alert\n  function appendAlert(message, type, typeVisuallyHidden) {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0027  \u003cspan class=\u0022alert-icon\u0022\u003e\u0027,\n      \u0060    \u003cspan class=\u0022visually-hidden\u0022\u003e${typeVisuallyHidden}\u003c\/span\u003e\u0060,\n      \u0027  \u003c\/span\u003e\u0027,\n      \u0060  \u003cp\u003e${message}\u003c\/p\u003e\u0060,\n      \u0027  \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 data-bs-toggle=\u0022tooltip\u0022 data-bs-placement=\u0022bottom\u0022 data-bs-title=\u0022Close\u0022\u003e\u0027,\n      \u0027    \u003cspan class=\u0022visually-hidden\u0022\u003eClose\u003c\/span\u003e\u0027,\n      \u0027  \u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    document.getElementById(\u0027liveAlertPlaceholder\u0027).append(wrapper)\n\n    \/\/ Create \u0060.btn-close\u0060 tooltip after \u0060innerHTML\u0060 has been modified\n    const btnClose = wrapper.querySelector(\u0027.btn-close\u0027)\n    const tooltip = new boosted.Tooltip(btnClose)\n    btnClose.addEventListener(\u0027click\u0027, () =\u003e {\n      tooltip.hide()\n    })\n  }\n\n  if (document.getElementById(\u0027liveAlertBtn\u0027)) {\n    document.getElementById(\u0027liveAlertBtn\u0027).addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027, \u0027Success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n  \/\/ storybook-end alerts\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  \/\/ storybook-start carousel\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      boosted.Carousel.getOrCreateInstance(carousel)\n    })\n  \/\/ storybook-end carousel\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  \/\/ storybook-start checksradios\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n  \/\/ storybook-end checksradios\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ storybook-start modal\n  \/\/ js-docs-start varying-modal-content\n  if (document.getElementById(\u0027exampleModal\u0027)) {\n    document.getElementById(\u0027exampleModal\u0027).addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = document.getElementById(\u0027exampleModal\u0027).querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n  \/\/ storybook-end modal\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  \/\/ storybook-start offcanvas\n  document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n    .forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  \/\/ storybook-end offcanvas\n})()\n' : null
-    const project = {
-      files: {
-        'index.html': markup,
-        'index.js': jsSnippetContent
-      },
-      title: 'Boosted Example',
-      description: `Official example from ${window.location.href}`,
-      template: jsSnippet ? 'javascript' : 'html',
-      tags: ['boosted']
-    }
-
-    StackBlitzSDK.openProject(project, { openFile: 'index.html' })
-  }
-</script>
+<script defer src="/docs/5.3/assets/js/color.js"></script>
 
 
     
