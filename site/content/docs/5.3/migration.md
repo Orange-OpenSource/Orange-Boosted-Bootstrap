@@ -956,7 +956,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
 
-- <span class="badge text-bg-warning">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-bg-warning">Deprecated</span> The `.text-muted` utility and `$text-muted` Sass variable have been deprecated and replaced with `.text-body-secondary` and `$body-secondary-color`.
 
 - <span class="badge text-bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
 
@@ -2355,3 +2355,5 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
 
 - Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
+
+- Removed `util.js`, with its functionality now integrated into individual plugins. If you previously included `util.js` manually, you can safely remove it, as it is no longer needed. Each plugin now contains only the utilities it requires, enhancing modularity and reducing dependencies.
