@@ -5,9 +5,9 @@
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
 
   // Additional OUDS variables
+  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // OUDS mod, instead of: escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
   --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
-  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // OUDS mod, instead of: escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
   // End mod
   // scss-docs-end breadcrumb-css-vars
 
@@ -45,12 +45,10 @@
   display: none;
   align-items: center;
   min-width: 0;
-  max-width: 90%;
 
   a {
     @extend %link-properties;
     display: inline-block;
-    min-width: 0;
     padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -107,6 +105,7 @@
 
   &:first-child {
     padding-left: 0;
+
     &::before {
       content: none;
     }
