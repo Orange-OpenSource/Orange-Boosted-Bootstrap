@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2015-2024 The Boosted Authors
-  * Copyright 2015-2024 Orange
+  * Boosted v5.3.4 (https://boosted.orange.com/)
+  * Copyright 2015-2025 The Boosted Authors
+  * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2011-2024 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap carousel.js v5.3.4 (https://boosted.orange.com/)
+  * Copyright 2011-2025 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -55,6 +55,8 @@
   const CLASS_NAME_PREV = 'carousel-item-prev';
   const CLASS_NAME_PAUSED = 'is-paused'; // Boosted mod: used for progress indicators
   const CLASS_NAME_DONE = 'is-done'; // Boosted mod: used for progress indicators
+  const CLASS_NAME_PAUSE = 'pause'; // Boosted mod: used for pause button
+  const CLASS_NAME_PLAY = 'play'; // Boosted mod: used for play button
 
   const SELECTOR_ACTIVE = '.active';
   const SELECTOR_ITEM = '.carousel-item';
@@ -155,9 +157,9 @@
       // End mod
 
       // Boosted mod: if a play-pause button is present, set the button to play
-      if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
-        this._playPauseButton.classList.remove('pause');
-        this._playPauseButton.classList.add('play');
+      if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PAUSE)) {
+        this._playPauseButton.classList.remove(CLASS_NAME_PAUSE);
+        this._playPauseButton.classList.add(CLASS_NAME_PLAY);
         if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT)) {
           this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT));
           this._playPauseButton.querySelector('span.visually-hidden').innerHTML = this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT);
@@ -182,9 +184,9 @@
       // End mod
 
       // Boosted mod: if a play-pause button is present, reset the button to pause
-      if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
-        this._playPauseButton.classList.remove('play');
-        this._playPauseButton.classList.add('pause');
+      if (this._playPauseButton !== null && this._playPauseButton.classList.contains(CLASS_NAME_PLAY)) {
+        this._playPauseButton.classList.remove(CLASS_NAME_PLAY);
+        this._playPauseButton.classList.add(CLASS_NAME_PAUSE);
         if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT)) {
           this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT));
           this._playPauseButton.querySelector('span.visually-hidden').innerHTML = this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT);
@@ -470,7 +472,7 @@
       const pauseButton = event.target;
       const pauseButtonAttribute = pauseButton.getAttribute(SELECTOR_CAROUSEL_TO_PAUSE);
       const carouselToPause = Carousel.getOrCreateInstance(document.querySelector(pauseButtonAttribute));
-      if (pauseButton.classList.contains('pause')) {
+      if (pauseButton.classList.contains(CLASS_NAME_PAUSE)) {
         carouselToPause.pause();
       } else {
         carouselToPause.cycle();
