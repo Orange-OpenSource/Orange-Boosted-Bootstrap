@@ -2351,7 +2351,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `popperConfig` can be passed as a function that accepts the Boosted's default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
 
-
 - The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
 
 - Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
