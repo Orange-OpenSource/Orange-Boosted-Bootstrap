@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.4 (https://boosted.orange.com/)
+  * Boosted v5.3.5 (https://boosted.orange.com/)
   * Copyright 2015-2025 The Boosted Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap base-component.js v5.3.4 (https://boosted.orange.com/)
+  * Bootstrap base-component.js v5.3.5 (https://boosted.orange.com/)
   * Copyright 2011-2025 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -26,7 +26,7 @@
    * Constants
    */
 
-  const VERSION = '5.3.4';
+  const VERSION = '5.3.5';
 
   /**
    * Class definition

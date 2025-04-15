@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
- * Boosted  v5.3.4 (https://boosted.orange.com/)
+ * Boosted  v5.3.5 (https://boosted.orange.com/)
  * Copyright 2014-2025 The Boosted Authors
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap  v5.3.4 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -289,7 +289,6 @@ body {
 }
 
 :focus {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
@@ -2480,10 +2479,6 @@ h2, .h2,
   display: block;
   padding: 0;
 }
-.form-control::-moz-placeholder {
-  color: var(--bs-secondary-color);
-  opacity: 1;
-}
 .form-control::placeholder {
   color: var(--bs-secondary-color);
   opacity: 1;
@@ -2751,6 +2746,9 @@ textarea.form-control-lg {
   background-color: #ff7900;
   border-color: #ff7900;
 }
+.form-check-input:focus {
+  z-index: 5;
+}
 .form-check-input:checked {
   background-color: #ff7900;
   border-color: #ff7900;
@@ -2821,7 +2819,6 @@ textarea.form-control-lg {
   }
 }
 .form-switch .form-check-input:focus[data-focus-visible-added] {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid #fff;
   outline-offset: 2px;
@@ -2836,7 +2833,6 @@ textarea.form-control-lg {
   background-size: 0.9375rem, 1.625rem 100%;
 }
 .form-switch .form-check-input:checked:focus[data-focus-visible-added] {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
@@ -2900,14 +2896,12 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 .form-range:focus[data-focus-visible-added]::-webkit-slider-thumb {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
   box-shadow: 0 0 0 2px var(--bs-focus-visible-inner-color);
 }
 .form-range:focus[data-focus-visible-added]::-moz-range-thumb {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
@@ -3081,6 +3075,7 @@ textarea.form-control-lg {
   --bs-star-rating-hover-color: var(--bs-highlight-bg);
   --bs-star-rating-checked-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3cpath fill='%23000' stroke='%23000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/%3e%3c/svg%3e");
   --bs-star-rating-unchecked-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3cpath fill='transparent' stroke='%23000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/%3e%3c/svg%3e");
+  display: inline-flex;
   font-size: 1.5625rem;
   background-color: transparent;
 }
@@ -3094,7 +3089,6 @@ textarea.form-control-lg {
 }
 .star-rating > label,
 .star-rating span {
-  float: left;
   width: 1em;
   height: 1em;
 }
@@ -3111,6 +3105,9 @@ textarea.form-control-lg {
 .star-rating > label:not(:first-of-type),
 .star-rating span:not(:first-of-type) {
   margin-left: -0.125rem;
+}
+.star-rating span {
+  float: left;
 }
 .star-rating > input:checked ~ label::before,
 .star-rating .checked ~ span::before {
@@ -3215,7 +3212,6 @@ textarea.form-control-lg {
   border-color: var(--bs-form-invalid-border-color);
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
@@ -3231,7 +3227,6 @@ textarea.form-control-lg {
   border-color: var(--bs-form-invalid-border-color);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;
@@ -3428,6 +3423,9 @@ textarea.form-control-lg {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
+}
+.btn:focus[data-focus-visible-added] {
+  z-index: 5;
 }
 .btn-check:checked + .btn:active, .btn-check:checked + .btn, .btn:active, .btn.active, .btn.show {
   color: var(--bs-btn-active-color);
@@ -4400,6 +4398,9 @@ textarea.form-control-lg {
 }
 .nav-link:hover {
   color: var(--bs-nav-link-hover-color);
+}
+.nav-link:focus[data-focus-visible-added] {
+  z-index: 5;
 }
 .nav-link.disabled, .nav-link:disabled {
   color: var(--bs-nav-link-disabled-color);
@@ -5696,6 +5697,7 @@ textarea.form-control-lg {
   background-color: var(--bs-accordion-btn-hover-bg);
 }
 .accordion-button:focus[data-focus-visible-added] {
+  z-index: 5;
   outline-offset: calc(2px + var(--bs-accordion-border-width));
   box-shadow: 0 0 0 calc(var(--bs-accordion-border-width) + 2px) var(--bs-focus-visible-inner-color);
 }
@@ -5838,6 +5840,9 @@ textarea.form-control-lg {
   color: var(--bs-pagination-hover-color);
   background-color: var(--bs-pagination-hover-bg);
   border-color: var(--bs-pagination-hover-border-color);
+}
+.page-link:focus[data-focus-visible-added] {
+  z-index: 5;
 }
 .page-link:active, .page-link:active > .page-link {
   color: var(--bs-pagination-active-item-color);
@@ -6382,10 +6387,6 @@ label.tag:active.disabled {
 .list-group-item:focus[data-focus-visible-added] {
   outline-offset: calc(-3px - (var(--bs-list-group-border-width)));
   box-shadow: inset 0 0 0 5px var(--bs-focus-visible-inner-color);
-}
-.list-group-item:focus[data-focus-visible-added].active {
-  outline-color: var(--bs-focus-visible-inner-color);
-  box-shadow: inset 0 0 0 5px var(--bs-focus-visible-outer-color);
 }
 
 .list-group-item-action {
@@ -7433,7 +7434,6 @@ label.tag:active.disabled {
 }
 .carousel-control-prev:focus[data-focus-visible-added] > span,
 .carousel-control-next:focus[data-focus-visible-added] > span {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;

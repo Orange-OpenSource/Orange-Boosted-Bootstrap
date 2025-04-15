@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.4 (https://boosted.orange.com/)
+  * Boosted v5.3.5 (https://boosted.orange.com/)
   * Copyright 2015-2025 The Boosted Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.3.4 (https://boosted.orange.com/)
+  * Bootstrap v5.3.5 (https://boosted.orange.com/)
   * Copyright 2011-2025 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -652,7 +652,7 @@
    * Constants
    */
 
-  const VERSION = '5.3.4';
+  const VERSION = '5.3.5';
 
   /**
    * Class definition
@@ -2825,6 +2825,7 @@
     var popperOffsets = computeOffsets({
       reference: referenceClientRect,
       element: popperRect,
+      strategy: 'absolute',
       placement: placement
     });
     var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets));
@@ -3152,6 +3153,7 @@
     state.modifiersData[name] = computeOffsets({
       reference: state.rects.reference,
       element: state.rects.popper,
+      strategy: 'absolute',
       placement: state.placement
     });
   } // eslint-disable-next-line import/no-unused-modules
