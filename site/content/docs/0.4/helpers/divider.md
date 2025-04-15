@@ -58,7 +58,7 @@ Change the divider color using the [border color utilities]({{< docsref "/utilit
 {{< bootstrap-compatibility >}}
 The `<hr>` and `vr` color can be set using [colors utilities]({{< docsref "/utilities/colors" >}})
 {{< example >}}
-<hr class="text-brand-emphazied">
+<hr class="text-brand-emphasized">
 <div class="vr text-brand-primary"></div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
