@@ -54,6 +54,7 @@
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a></li>
       {{- end }}
     </ul>
   </div>
@@ -155,10 +156,10 @@
 {{- if $service }}
   <div class="container-xxl footer-service">
     <ul class="navbar-nav gap-3 gap-md-4">
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
-      <li>{{- if $show_active_link }}<a class="nav-link gap-1 active" href="#" aria-current="page">{{- else }}<a class="nav-link gap-1" href="#">{{- end }}<svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
+      <li>{{- if $show_active_link }}<a class="nav-link gap-1 active" href="#" aria-current="page">{{- else }}<a class="nav-link gap-1" href="#">{{- end }}<svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
     </ul>
   </div>
 {{- if $mandatory }}

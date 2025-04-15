@@ -124,10 +124,11 @@ $form-select-disabled-indicator-dark:   escape-svg(url("data:image/svg+xml,<svg 
 // Boosted mod: no $form-switch-bg-image-dark
 
 // scss-docs-start form-validation-colors-dark
-$form-valid-color-dark:                 var(--#{$prefix}success-text-emphasis) !default; // Boosted mod: instead of `$green-300`
-$form-valid-border-color-dark:          var(--#{$prefix}success) !default; // Boosted mod: instead of `$green-300`
-$form-invalid-color-dark:               var(--#{$prefix}danger-text-emphasis) !default; // Boosted mod: instead of `$red-300`
-$form-invalid-border-color-dark:        var(--#{$prefix}danger) !default; // Boosted mod: instead of `$red-300`
+$form-valid-color-dark:                           var(--#{$prefix}success-text-emphasis) !default; // Boosted mod: instead of `$green-300`
+$form-valid-border-color-dark:                    var(--#{$prefix}success) !default; // Boosted mod: instead of `$green-300`
+$form-invalid-color-dark:                         var(--#{$prefix}danger-text-emphasis) !default; // Boosted mod: instead of `$red-300`
+$form-invalid-border-color-dark:                  var(--#{$prefix}danger) !default; // Boosted mod: instead of `$red-300`
+$form-switch-unchecked-invalid-border-color-dark: $form-invalid-border-color-dark !default; // Boosted mod
 // scss-docs-end form-validation-colors-dark
 
 //
@@ -139,6 +140,20 @@ $form-invalid-border-color-dark:        var(--#{$prefix}danger) !default; // Boo
 
 // Boosted mod: no $accordion-button-icon-dark
 // Boosted mod: no $accordion-button-active-icon-dark
+
+//
+// Carousel
+//
+
+// Boosted mod: no $carousel-indicator-active-bg-dark
+// Boosted mod: no $carousel-caption-color-dark
+// Boosted mod: no $carousel-control-icon-filter-dark
+
+//
+// Close button
+//
+
+// Boosted mod: no $btn-close-filter-dark
 
 //
 // Breadcrumb

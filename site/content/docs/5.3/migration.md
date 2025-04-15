@@ -16,7 +16,52 @@ toc: true
 ### Core
 
 - **Colors**
-  - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4f` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
+  - <span class="badge text-bg-warning">Warning</span> The dark mode red color hexadecimal value has been updated from `#f66` to `#ff4d4d` after a change in the design specifications to enhance the contrast for a better accessibility. This modification should be transparent for you except if you were using an hardcoded hexadecimal value directly in your websites.
+- **Accessibility**
+  - <span class="badge text-bg-warning">Warning</span> SVGs have been updated to remove the `focusable="false"` attribute that was useful before only for Internet Explorer support. You may want to update your websites, even if you can keep them as is as it won't break anything.
+
+### Components
+
+- **Badge**
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the positioned variant. Please reflect this modification into your websites.
+
+- **Buttons**
+  - <span class="badge text-bg-success">New</span> X social button.
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the variants containing icons. Please reflect this modification into your websites.
+
+- **Orange navbar**
+  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use "Access to your account" in certain situations.
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the search and shopping basket SVGs. Please reflect this modification into your websites.
+
+### Examples
+
+- **Form example**
+  - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the search and shopping basket SVGs in the Orange navbar. Please reflect this modification into your websites.
+
+### Docs
+
+- Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]({{< param ods.web >}}) and the Boosted documentation.
+
+  Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
+
+- We have checked all SVGs in the documentation to ensure that they are accessible and correctly interpreted by support technologies. Please also check your projects' SVGs, which should have either `aria-hidden="true"`, or `role="img"` with an accessible name (defined by `aria-label`, `aria-labelledby`, a `<title>`, or some visually hidden alternative text).
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variable:</summary>
+    <ul>
+      <li><code>--bs-form-switch-unchecked-invalid-border-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$form-switch-unchecked-invalid-border-color</code></li>
+      <li><code>$form-switch-unchecked-invalid-border-color-dark</code></li>
+    </ul>
+  </details>
 
 ### CSS and Sass variables
 
@@ -917,13 +962,13 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
 
-- <span class="badge text-bg-warning">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-bg-warning">Deprecated</span> The `.text-muted` utility and `$text-muted` Sass variable have been deprecated and replaced with `.text-body-secondary` and `$body-secondary-color`.
 
 - <span class="badge text-bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
 
 - <span class="badge text-bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
 
-- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
+- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#colors" >}}).
 
 ### Examples
 
@@ -1639,7 +1684,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 ```diff
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
 - <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-+ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
++ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
     <rect width="100%" height="100%" fill="#563d7c"/>
     <circle cx="50" cy="50" r="30" fill="#007bff"/>
   </svg>
@@ -1974,7 +2019,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.
 
-- Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.1 AA contrast. Also changed our color contrast color from `$gray-900` to `$black`.
+- Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.2 AA contrast. Also changed our color contrast color from `$gray-900` to `$black`.
 
 - To support our color system, we've added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
 
@@ -1988,7 +2033,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
+- <span class="badge text-bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-0` to `.order-5` out of the box.
 
 - <span class="badge text-bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
 
@@ -2312,7 +2357,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `popperConfig` can be passed as a function that accepts the Boosted's default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
 
-
 - The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
 
 - Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
+
+- Removed `util.js`, with its functionality now integrated into individual plugins. If you previously included `util.js` manually, you can safely remove it, as it is no longer needed. Each plugin now contains only the utilities it requires, enhancing modularity and reducing dependencies.

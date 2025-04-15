@@ -1,4 +1,4 @@
-<nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
+<div class="bd-links w-100" id="bd-docs-nav">
   {{- $url := split .Permalink "/" -}}
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
@@ -17,12 +17,12 @@
 
     {{- if $group.pages }}
       <li class="bd-links-group py-2">
-        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <h2 class="display-5 mb-0 bd-links-heading d-flex w-100 align-items-center fw-semibold">
           {{- if $group.icon }}
             <svg class="bi me-1"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
           {{- end }}
           {{ $group.title }}
-        </strong>
+        </h2>
 
         <ul class="list-unstyled fw-normal mt-1 pb-2 small">
           {{- range $doc := $group.pages -}}
@@ -44,4 +44,4 @@
     {{- end }}
   {{- end }}
   </ul>
-</nav>
+</div>

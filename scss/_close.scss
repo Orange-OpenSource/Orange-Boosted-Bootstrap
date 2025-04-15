@@ -26,6 +26,7 @@
   padding: var(--#{$prefix}btn-close-padding); // Boosted mod
   color: var(--#{$prefix}btn-close-color);
   background-color: var(--#{$prefix}btn-close-bg); // Boosted mod: instead of background
+  // Boosted mod: no filter
   border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // Boosted mod
   @include border-radius();
   // Boosted mod: no opacity

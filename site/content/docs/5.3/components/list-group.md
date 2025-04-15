@@ -144,11 +144,14 @@ These work great with custom content as well.
 
 Add `.list-group-horizontal` to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant `.list-group-horizontal-{sm|md|lg|xl|xxl}` to make a list group horizontal starting at that breakpoint's `min-width`. Currently **horizontal list groups cannot be combined with flush list groups.**
 
-**ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
-
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant is just an **example illustrating the use of the layout utility**. It should not be used because it does not respect the Orange Design System specifications.
+These variants are just **examples illustrating the use of the layout utility**. They should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
+
+**ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -161,6 +164,7 @@ This variant is just an **example illustrating the use of the layout utility**. 
 {{- end -}}
 {{< /list-group.inline >}}
 {{< /example >}}
+</details>
 
 ## Variants
 
@@ -238,6 +242,9 @@ Add badges to any list group item to show unread counts, activity, and more with
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
@@ -270,13 +277,17 @@ This variant should not be used because it does not respect the Orange Design Sy
   </a>
 </div>
 {{< /example >}}
+</details>
 
 ## Checkboxes and radios
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -331,6 +342,7 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
   </li>
 </ul>
 {{< /example >}}
+</details>
 
 <!-- Boosted mod -->
 ## Dark variant
@@ -520,8 +532,8 @@ If no tab was already active, then `hide.bs.tab` and `hidden.bs.tab` events will
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
 | `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
+| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
 | `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
 | `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
 {{< /bs-table >}}

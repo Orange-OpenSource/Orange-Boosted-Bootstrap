@@ -34,12 +34,12 @@ Boosted includes several button variants, each serving its own semantic purpose,
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Warning, info, light and dark variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -65,23 +65,24 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 - set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `1rem`,
 - apply `.me-1` on it to get consistent spacing,
 - fill it using `currentColor` to respect button color scheme,
-- finally add `.overflow-visible` utility to prevent SVG content from being cropped.
+
+Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   Primary
 </button>
 <button type="button" class="btn btn-primary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   Primary
 </button>
 <button type="button" class="btn btn-primary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   Primary
@@ -94,19 +95,19 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-outline-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-outline-secondary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
@@ -119,19 +120,19 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick-confirmation"/>
   </svg>
   <span class="visually-hidden">No outline</span>
@@ -153,6 +154,7 @@ Use `.btn-social` to get a rounded button meant to display contact points links 
 <a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
 <a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
 <a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
+<a href="#" class="btn btn-icon btn-social btn-x"><span class="visually-hidden">X</span></a>
 {{< /example >}}
 
 Supported social networks are declared in a dedicated Sass map—meaning you're able to [add or remove a network from the following map]({{< docsref "/customize/sass#maps-and-loops" >}}).
@@ -193,13 +195,12 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
-
 {{< design-callout-alert >}}
 The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -231,10 +232,13 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 
 You can even roll your own custom sizing with CSS variables:
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -243,6 +247,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
   Custom button
 </button>
 {{< /example >}}
+</details>
 
 ## Disabled state
 
@@ -280,10 +285,13 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
+<details class="mb-3">
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
-Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+Please refer to the [Buttons guidelines](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -292,6 +300,7 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
   <button class="btn btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
+</details>
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
 
@@ -324,12 +333,6 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 The button plugin allows you to create simple on/off toggle buttons.
 
-{{< design-callout-alert >}}
-These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
-
-Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
-{{< /design-callout-alert >}}
-
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
@@ -337,6 +340,15 @@ Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{
 ### Toggle states
 
 Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
+
+Instead, consider using our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
@@ -349,6 +361,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
 <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
 {{< /example >}}
+</details>
 
 ### Methods
 

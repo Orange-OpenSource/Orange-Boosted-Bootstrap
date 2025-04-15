@@ -190,8 +190,8 @@ Boosted's collapse class exposes a few events for hooking into collapse function
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
-| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
 | `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
+| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
 | `show.bs.collapse` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
 {{< /bs-table >}}

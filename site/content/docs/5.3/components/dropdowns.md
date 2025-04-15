@@ -10,7 +10,7 @@ toc: true
 
 ## Overview
 
-Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Boosted dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Boosted dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/blog/bootstrap-explained-dropdowns/).
 
 Dropdowns are built on a third party library, [Popper](https://popper.js.org/docs/v2/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before Boosted's JavaScript or use `boosted.bundle.min.js` / `boosted.bundle.js` which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
 
@@ -60,12 +60,12 @@ While `<button>` is the recommended control for a dropdown toggle, there might b
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Only the `.btn-dropdown` variant should be used because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 The best part is you can do this with any button variant, too:
@@ -137,7 +137,7 @@ The best part is you can do this with any button variant, too:
 <!-- Example single danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Action
+    Danger
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -173,12 +173,12 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 {{< /example >}}
 
 <details>
-<summary>Other variants from Bootstrap</summary>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
 <br>
 {{< design-callout-alert >}}
 Only the `.btn-outline-secondary` variant should be used as a split dropdown because the other variants do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
-Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">
@@ -265,7 +265,7 @@ Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910
 ```html
 <!-- Example split danger button -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger">Danger</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
@@ -335,10 +335,13 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <div class="bd-example">
@@ -390,6 +393,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 ```
+</details>
 
 ## Dark dropdowns
 
@@ -407,10 +411,13 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -425,6 +432,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropup
 
@@ -489,10 +497,13 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -507,6 +518,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ### Dropend
 
@@ -852,10 +864,13 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -868,15 +883,19 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </p>
 </div>
 {{< /example >}}
+</details>
 
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -932,10 +951,20 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
   </form>
 </div>
 {{< /example >}}
+</details>
 
 ## Dropdown options
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These variants with a `data-bs-offset` attribute having values different than `"0,0"`, or a specific `data-bs-reference`, should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="d-flex">
@@ -964,11 +993,28 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ### Auto close behavior
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
+{{< example >}}
+<div class="btn-group">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+    Default dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+  </ul>
+</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
 {{< /design-callout-alert >}}
@@ -1018,6 +1064,7 @@ The 3 last auto close behavior variants should not be used because featuring a s
   </ul>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 
@@ -1137,8 +1184,8 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
-| `hidden.bs.dropdown` | Fired when the dropdown has finished being hidden from the user and CSS transitions have completed. |
 | `hide.bs.dropdown` | Fires immediately when the `hide` instance method has been called. |
+| `hidden.bs.dropdown` | Fired when the dropdown has finished being hidden from the user and CSS transitions have completed. |
 | `show.bs.dropdown` | Fires immediately when the `show` instance method is called. |
 | `shown.bs.dropdown` | Fired when the dropdown has been made visible to the user and CSS transitions have completed. |
 {{< /bs-table >}}

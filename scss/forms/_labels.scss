@@ -17,6 +17,7 @@
 }
 
 .is-required::after {
+  position: absolute;
   margin-left: $form-label-required-margin-left;
   color: $form-label-required-color;
   content: "*";
@@ -55,6 +56,10 @@
     margin-bottom: $form-helper-label-margin-bottom;
     vertical-align: bottom;
   }
+}
+
+.is-required ~ .form-helper {
+  margin-left: .5625rem; // 9px
 }
 // End mod
 

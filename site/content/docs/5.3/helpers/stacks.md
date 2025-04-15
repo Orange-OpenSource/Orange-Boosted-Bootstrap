@@ -13,7 +13,7 @@ added:
 Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Boosted. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
 
 {{< callout warning >}}
-**Heads up!** Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
+**Heads up!** Support for gap utilities with flexbox isn't available in Safari prior to 14.5, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
 {{< /callout >}}
 
 ## Vertical
@@ -75,6 +75,13 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
+
 <!-- Boosted mod: primary and outline secondary button -->
 {{< example >}}
 <div class="hstack gap-3">
@@ -84,6 +91,7 @@ Create an inline form with `.hstack`:
   <button type="button" class="btn btn-outline-secondary">Reset</button>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

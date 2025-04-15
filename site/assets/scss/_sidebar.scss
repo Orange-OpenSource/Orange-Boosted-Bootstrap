@@ -23,6 +23,10 @@
 .bd-links-heading {
   color: var(--bs-emphasis-color);
 
+  @include media-breakpoint-down(lg) {
+    font-size: .875rem;
+  }
+
   // Boosted mod
   svg {
     font-size: 1.5625rem;

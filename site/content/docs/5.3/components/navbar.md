@@ -11,7 +11,7 @@ toc: true
 {{< design-callout-alert >}}
 This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure. Moreover, Orange navbars have the same rendering in light and dark mode.
 
-In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
+In order to build an Orange navbar please refer to the [Orange navbar component]({{< docsref "/components/orange-navbar" >}}).
 {{< /design-callout-alert >}}
 
 ## How it works
@@ -40,7 +40,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 - Flex and spacing utilities for any form controls and actions.
 - `.navbar-text` for adding vertically centered strings of text.
 - `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
-- Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
+- Add an optional `.navbar-nav-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
 
 Here's an example of all the sub-components included in a responsive dark-themed navbar that automatically collapses at the `lg` (large) breakpoint.
 

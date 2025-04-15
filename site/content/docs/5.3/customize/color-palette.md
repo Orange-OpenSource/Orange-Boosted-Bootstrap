@@ -23,7 +23,7 @@ Please make sure that none of the [color theme variables]({{< docsref "/customiz
     {{- range $color := .colors }}
       <figure class="mb-0" aria-label="{{ $color.name }}">
         <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
-          <svg viewBox="0 0 100 100" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (eq $color.name "White 100") (eq $color.name "Black 900")) (eq $color.name "Gray 900") }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
+          <svg viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (or (eq $color.name "White 100") (eq $color.name "Black 900")) (eq $color.name "Gray 900") }} style="border: 1px solid var(--bs-border-color-subtle)" {{ end }}>
             <rect fill="{{ $color.hex }}" width="100" height="100"/>
           </svg>
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
@@ -45,14 +45,14 @@ Please make sure that none of the [color theme variables]({{< docsref "/customiz
 Bootstrap defines a color palette on its own. We worked on a mapping between Orange Design System's colors and Bootstrap's ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with Boosted CSS, provides an acceptable automatic rendering.
 
 <details>
-<summary>See Bootstrap's palette</summary>
+<summary>See Bootstrap palette incompatible with Orange Design System</summary>
 <br>
 <h2>All colors</h2>
 
 {{< design-callout-alert >}}
 Some of the colors below do not belong to the Orange Design System specifications.
 
-Please refer to our Boosted [color palette](#palette) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our [color palette section](#palette) and to the [Color guidelines](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< callout warning >}}

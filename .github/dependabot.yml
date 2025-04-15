@@ -4,13 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-      day: tuesday
-      time: "12:00"
+      day: friday
+      time: "06:00"
       timezone: Europe/Paris
   - package-ecosystem: npm
     directory: "/"
     reviewers:
-      - julien-deramond
+      - louismaximepiton
     labels:
       - dependencies
       - v5
@@ -21,8 +21,8 @@ updates:
           - "@storybook/*"
     schedule:
       interval: weekly
-      day: tuesday
-      time: "12:00"
+      day: friday
+      time: "06:00"
       timezone: Europe/Paris
     versioning-strategy: increase
     rebase-strategy: disabled
@@ -32,6 +32,7 @@ updates:
       - dependency-name: "@babel/cli"
       - dependency-name: "@babel/core"
       - dependency-name: "@babel/preset-env"
+      - dependency-name: "@docsearch/js"
       - dependency-name: "@popperjs/core"
       - dependency-name: "@rollup/plugin-babel"
       - dependency-name: "@rollup/plugin-commonjs"

@@ -89,8 +89,8 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.2 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG/#contrast-minimum
 $min-contrast-ratio:   4.5 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -704,7 +704,7 @@ $aspect-ratios: (
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
-  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portait videos
+  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portrait videos
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -1078,6 +1078,10 @@ $btn-social-networks: (
   "tiktok": (
     "color": #ff2c55,
     "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M7.024 30.054C4.584 28.212 3 25.235 3 21.876c0-5.59 4.39-10.123 9.805-10.123.45 0 .899.031 1.345.094v5.6a4.363 4.363 0 0 0-1.361-.218c-2.477 0-4.485 2.074-4.485 4.631 0 1.809 1.003 3.374 2.467 4.137l.31.146a4.348 4.348 0 0 0 1.708.348c2.471 0 4.476-2.065 4.484-4.615V0h5.335v.704c.02.211.046.42.082.63l.08.404a7.668 7.668 0 0 0 3.306 4.769A7.22 7.22 0 0 0 30 7.665V8.83l-.199-.047-.182-.047.381.094v4.312a12.4 12.4 0 0 1-7.392-2.443v11.177c0 5.591-4.39 10.124-9.804 10.124-2.02 0-3.898-.63-5.458-1.712l-.322-.234Z'/></svg>"
+  ),
+  "x": (
+    "color": #1da1f2,
+    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 19'><path d='m15.751 0-5.053 5.776L6.328 0H0l7.561 9.888-7.166 8.19h3.068l5.531-6.32 4.834 6.32H20l-7.883-10.42L18.817 0h-3.066ZM3.581 1.74h1.824l10.97 14.502h-1.7L3.58 1.74Z'/></svg>"
   )
 ) !default;
 // scss-docs-end social-buttons
@@ -1266,12 +1270,13 @@ $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)
 // stylelint-disable-next-line function-disallowed-list
 $form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; // Boosted mod
 
-$form-switch-checked-square-bg:     var(--#{$prefix}body-bg) !default; // Boosted mod
-$form-switch-checked-bg:            $supporting-orange !default; // Boosted mod
-$form-switch-checked-border-color:  $supporting-orange !default; // Boosted mod
-$form-switch-checked-filter:        none !default; // Boosted mod
-$form-switch-checked-focus-inner:   var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
-$form-switch-checked-focus-outer:   var(--#{$prefix}focus-visible-outer-color) !default; // Boosted mod
+$form-switch-checked-square-bg:                 var(--#{$prefix}body-bg) !default; // Boosted mod
+$form-switch-checked-bg:                        $supporting-orange !default; // Boosted mod
+$form-switch-checked-border-color:              $supporting-orange !default; // Boosted mod
+$form-switch-checked-filter:                    none !default; // Boosted mod
+$form-switch-checked-focus-inner:               var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
+$form-switch-checked-focus-outer:               var(--#{$prefix}focus-visible-outer-color) !default; // Boosted mod
+$form-switch-unchecked-invalid-border-color:    #31c3eb !default; // Boosted mod: will be rendered red when mixed with the filter
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
@@ -1653,7 +1658,7 @@ $pagination-bg:                     transparent !default; // Boosted mod: instea
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc($pagination-border-width * -1)`
+$pagination-margin-start:           0 !default; // Boosted mod: instead of `calc(-1 * $pagination-border-width)`
 $pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
@@ -1905,7 +1910,7 @@ $modal-title-line-height:           $line-height-base !default;
 $modal-content-padding-y:           $spacer !default; // Boosted mod
 $modal-content-padding-x:           0 !default; // Boosted mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // Boosted mod
-$modal-content-color:               null !default;
+$modal-content-color:               var(--#{$prefix}body-color) !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-subtle) !default; // Boosted mod: instead of `var(--#{$prefix}border-color-translucent)`
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
@@ -2068,7 +2073,7 @@ $thumbnail-box-shadow:              var(--#{$prefix}box-shadow-sm) !default;
 
 // scss-docs-start figure-variables
 $figure-caption-font-size:          $small-font-size !default;
-$figure-caption-color:              $gray-900 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 // scss-docs-end figure-variables
 
 // Boosted mod
@@ -2127,6 +2132,7 @@ $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
 $carousel-control-transition:        $transition-focus !default;
+// Boosted mod: no $carousel-control-icon-filter
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;
@@ -2171,7 +2177,7 @@ $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration $transition-timing !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 // scss-docs-end carousel-variables
 
-// Boosted mod: no dark carousel
+// Boosted mod: no dark carousel variables
 
 
 // Spinners

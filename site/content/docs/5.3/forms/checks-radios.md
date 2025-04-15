@@ -22,14 +22,14 @@ Our checks use custom Boosted icons to indicate checked or indeterminate states.
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+  <label class="form-check-label" for="checkDefault">
     Default checkbox
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-  <label class="form-check-label" for="flexCheckChecked">
+  <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
+  <label class="form-check-label" for="checkChecked">
     Checked checkbox
   </label>
 </div>
@@ -41,8 +41,8 @@ Checkboxes can utilize the `:indeterminate` pseudo class when manually set via J
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-  <label class="form-check-label" for="flexCheckIndeterminate">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
+  <label class="form-check-label" for="checkIndeterminate">
     Indeterminate checkbox
   </label>
 </div>
@@ -54,20 +54,20 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
-  <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
+  <label class="form-check-label" for="checkIndeterminateDisabled">
     Disabled indeterminate checkbox
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-  <label class="form-check-label" for="flexCheckDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
+  <label class="form-check-label" for="checkDisabled">
     Disabled checkbox
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexCheckCheckedDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="checkCheckedDisabled">
     Disabled checked checkbox
   </label>
 </div>
@@ -77,14 +77,14 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+  <label class="form-check-label" for="radioDefault1">
     Default radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="form-check-label" for="flexRadioDefault2">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+  <label class="form-check-label" for="radioDefault2">
     Default checked radio
   </label>
 </div>
@@ -96,14 +96,14 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
-  <label class="form-check-label" for="flexRadioDisabled">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="radioDisabled" disabled>
+  <label class="form-check-label" for="radioDisabled">
     Disabled radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexRadioCheckedDisabled">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="radioCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="radioCheckedDisabled">
     Disabled checked radio
   </label>
 </div>
@@ -115,20 +115,20 @@ A switch has the markup of a custom checkbox but uses the `.form-switch` class t
 
 {{< example >}}
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label" for="switchCheckDefault">Default switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+  <label class="form-check-label" for="switchCheckChecked">Checked switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
-  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDisabled" disabled>
+  <label class="form-check-label" for="switchCheckDisabled">Disabled switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="switchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
 </div>
 {{< /example >}}
 
@@ -225,8 +225,8 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 </div>
 
 <div class="form-check form-switch form-check-reverse">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-  <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+  <label class="form-check-label" for="switchCheckReverse">Reverse switch checkbox input</label>
 </div>
 {{< /example >}}
 
@@ -250,6 +250,15 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 ### Checkbox toggle buttons
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
+
+Instead, consider using our [Checks component]({{< docsref "/forms/checks-radios#checks" >}}), [Radios component]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons component]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}).
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 <label class="btn btn-toggle" for="btn-check">Single toggle</label>
@@ -268,6 +277,7 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 {{< callout info >}}
 Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
+</details>
 
 ### Radio toggle buttons
 
@@ -302,21 +312,21 @@ Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embe
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
   <label class="btn btn-icon btn-toggle" for="option5">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
   <label class="btn btn-icon btn-toggle" for="option6">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
   <label class="btn btn-icon btn-toggle" for="option7">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
     </svg>
     <span class="visually-hidden">Month</span>
@@ -330,21 +340,21 @@ Drop borders using `.btn-no-outline`, too.
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
   <label class="btn btn-icon btn-no-outline" for="option8">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option9">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option10">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#calendar-month"/>
     </svg>
     <span class="visually-hidden">Month</span>

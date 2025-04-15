@@ -251,7 +251,7 @@ When modals become too long for the user's viewport or device, they scroll indep
         <h1 class="modal-title h5" id="exampleModalLongTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
-      <div class="modal-body" style="min-height: 1500px">
+      <div class="modal-body" style="min-height: 100vh">
         <p>This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling will move the modal as needed.</p>
       </div>
       <div class="modal-footer">
@@ -537,10 +537,13 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+Please refer to the [Modals guidelines](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
@@ -579,6 +582,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
 </div>
 <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
 {{< /example >}}
+</details>
 
 ### Change animation
 
@@ -681,6 +685,15 @@ Our default modal without modifier class constitutes the "medium" size modal.
 
 Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a `.modal-dialog`.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
+
+Please refer to the [Modals guidelines](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< bs-table >}}
 | Class | Availability |
 | --- | --- |
@@ -691,12 +704,6 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-xl-down` | `1280px` |
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
-
-{{< design-callout-alert >}}
-These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
-
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
-{{< /design-callout-alert >}}
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
@@ -815,6 +822,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     </div>
   </div>
 </div>
+</details>
 
 ## CSS
 
@@ -923,8 +931,8 @@ Boosted's modal class exposes a few events for hooking into modal functionality.
 {{< bs-table >}}
 | Event | Description |
 | --- | --- |
+| `hide.bs.modal` | This event is fired immediately when the `hide` instance method has been called. Can be prevented by calling `event.preventDefault()`. See [JavaScript events documentation]({{< docsref "/getting-started/javascript#events" >}}) for more details on event prevention. |
 | `hidden.bs.modal` | This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `hide.bs.modal` | This event is fired immediately when the `hide` instance method has been called. |
 | `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
 | `show.bs.modal` | This event fires immediately when the `show` instance method is called. If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |
 | `shown.bs.modal` | This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |

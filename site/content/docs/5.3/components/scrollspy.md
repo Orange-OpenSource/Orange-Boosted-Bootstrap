@@ -10,7 +10,7 @@ toc: true
 
 ## How it works
 
-Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Boosted [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
+Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a [Nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
 
 - To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
 
@@ -25,9 +25,9 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 ### Navbar
 
 {{< design-callout-alert >}}
-This navbar version of the Scrollspy component is not compatible with the Orange Design System.
+This navbar version of the Scrollspy component is incompatible with Orange Design System.
 
-Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+Refer to the [Orange navbar component]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs component]({{< docsref "/components/navs-tabs" >}}).
 {{< /design-callout-alert >}}
 
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
@@ -35,7 +35,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3 mb-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -72,7 +72,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 ```html
 <nav id="navbar-example2" class="navbar px-3 mb-3">
   <a class="navbar-brand" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
   </a>
   <ul class="nav nav-pills">
     <li class="nav-item">

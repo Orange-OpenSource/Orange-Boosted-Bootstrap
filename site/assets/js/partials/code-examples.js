@@ -4,7 +4,7 @@
 
 /*
  * JavaScript for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2024 The Bootstrap Authors
+ * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -19,10 +19,11 @@ export default () => {
   const btnEdit = 'Edit on StackBlitz'
 
   // Boosted mod: removed unused svg height, width and fill="currentColor"
+  // Boosted mod: changed the positioning to improve the focus order
   const btnHtml = [
-    '<div class="bd-code-snippet">',
-    '  <div class="bd-clipboard">',
-    '    <button type="button" class="btn-clipboard">',
+    '<div class="bd-code-snippet position-relative">',
+    '  <div class="bd-clipboard position-absolute top-0 end-0">',
+    '    <button type="button" class="btn-clipboard position-absolute end-0">',
     '      <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>',
     '    </button>',
     '  </div>',
@@ -35,7 +36,7 @@ export default () => {
       // Ignore examples made by shortcode
       if (!element.closest('.bd-example-snippet')) {
         element.insertAdjacentHTML('beforebegin', btnHtml)
-        element.previousElementSibling.append(element)
+        element.previousElementSibling.prepend(element)
       }
     })
 
@@ -64,6 +65,11 @@ export default () => {
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
     const originalTitle = event.trigger.title
+    const isCheckIconVisible = originalXhref === '#check2'
+
+    if (isCheckIconVisible) {
+      return
+    }
 
     tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })
     event.trigger.addEventListener('hidden.bs.tooltip', () => {

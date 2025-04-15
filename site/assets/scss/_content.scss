@@ -51,6 +51,11 @@
       line-height: $line-height-base;
     }
   }
+
+  > details {
+    padding: 5px 10px; // static even when zoomed
+    border: var(--bs-border-color) dashed calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
+  }
   // End mod
 }
 

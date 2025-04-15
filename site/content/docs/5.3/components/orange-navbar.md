@@ -57,7 +57,7 @@ This component should be:
 - visible only for the **larger screens** (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 - displayed inside the burger menu for **smaller screens**. There it has to be split in 2 parts.
 
-Refer to [Responsive behavior](#responsive-behavior) to have more details.
+Refer to the [Responsive behavior](#responsive-behavior) to have more details.
 
 ### Standard
 
@@ -180,7 +180,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
               </svg>
               <span class="visually-hidden">Search</span>
@@ -188,7 +188,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
               </svg>
               <span class="visually-hidden">Basket</span>
@@ -202,7 +202,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
-              <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+              <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" alt="" loading="lazy">
               <span class="visually-hidden">My account</span>
             </a>
           </li>
@@ -364,7 +364,7 @@ You can add a search input into your Global header.
         <ul class="navbar-nav flex-row">
           <li class="nav-item d-lg-none">
             <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
               </svg>
               <span class="visually-hidden">Search</span>
@@ -432,29 +432,29 @@ To easily integrate it in your project, you can start from our [Navbar mode sele
         <ul class="navbar-nav flex-row">
           <li class="nav-item dropdown">
             <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="theme-icon-active"><use href="#ui-auto-mode"></use></svg>
+              <svg class="theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
               <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="me-2"><use href="#ui-light-mode"></use></svg>
+                  <svg class="me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
                   Light
-                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="me-2"><use href="#ui-dark-mode"></use></svg>
+                  <svg class="me-2" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
                   Dark
-                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="me-2"><use href="#ui-auto-mode"></use></svg>
+                  <svg class="me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
                   Auto
-                  <svg class="ms-auto d-none"><use href="#check2"></use></svg>
+                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
                 </button>
               </li>
             </ul>

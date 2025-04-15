@@ -34,7 +34,7 @@ Got all that? Great, let's see how they work with some examples.
 
 ## Accessibility
 
-For accessibility purpose, [content on hover or focus should be dismissible, hoverable and persistent](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html).
+For accessibility purpose, [content on hover or focus should be dismissible, hoverable and persistent](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html).
 With Boosted tooltips, no mechanism is available to dismiss the tooltip without moving pointer hover or keyboard focus (due to Popper library's limitations).
 Please pay attention that the tooltip never hides an important content.
 
@@ -65,13 +65,16 @@ Hover over the links below to see tooltips:
 
 {{< added-in "5.2.0" >}}
 
+You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 
-Please refer to the [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) guidelines  on the Orange Design System website.
+Please refer to the [Tooltip guidelines](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
@@ -83,6 +86,7 @@ You can customize the appearance of tooltips using [CSS variables](#variables). 
   Custom tooltip
 </button>
 {{< /example >}}
+</details>
 
 ### Directions
 
@@ -123,18 +127,16 @@ And with custom HTML added:
 
 With an SVG:
 
-<!--Boosted mod: added an aria-label="Default tooltip" because the title is automatically removed by JS-->
-
 <div class="bd-example tooltip-demo">
-  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Hover or focus to see default tooltip">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
     </svg>
   </a>
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true" focusable="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
@@ -143,14 +145,14 @@ With an SVG:
 
 ```html
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
     <rect width="100%" height="100%" fill="#563d7c"/>
     <circle cx="50" cy="50" r="30" fill="#007bff"/>
   </svg>
 </a>
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
@@ -242,7 +244,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 | `delay` | number, object | `0` | Delay showing and hiding the tooltip (ms)—doesn't apply to manual trigger type. If a number is supplied, delay is applied to both hide/show. Object structure is: `delay: { "show": 500, "hide": 100 }`. |
 | `fallbackPlacements` | array | `['top', 'right', 'bottom', 'left']` | Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to Popper's [behavior docs](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements). |
 | `html` | boolean | `false` | Allow HTML in the tooltip. If true, HTML tags in the tooltip's `title` will be rendered in the tooltip. If false, `innerText` property will be used to insert content into the DOM. Use text if you're worried about XSS attacks. |
-| `offset` | array, string, function | `[0, 0]` | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
+| `offset` | array, string, function | `[0, 10]` | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
 | `placement` | string, function | `'top'` | How to position the tooltip: auto, top, bottom, left, right. When `auto` is specified, it will dynamically reorient the tooltip. When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The `this` context is set to the tooltip instance. |
 | `popperConfig` | null, object, function | `null` | To change Boosted's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
 | `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
@@ -310,8 +312,8 @@ The `setContent` method accepts an `object` argument, where each property-key is
 {{< bs-table >}}
 | Event | Description |
 | --- | --- |
-| `hidden.bs.tooltip` | This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete). |
 | `hide.bs.tooltip` | This event is fired immediately when the `hide` instance method has been called. |
+| `hidden.bs.tooltip` | This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete). |
 | `inserted.bs.tooltip` | This event is fired after the `show.bs.tooltip` event when the tooltip template has been added to the DOM. |
 | `show.bs.tooltip` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.tooltip` | This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete). |

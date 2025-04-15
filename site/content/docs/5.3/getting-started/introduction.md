@@ -15,9 +15,9 @@ toc: true
 
 As Boosted is based on Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
 
-Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
+Among those inherited components and variants, some exist in Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
 
-As for maintainability reasons we have to keep them in this documentation, we tagged them with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+As for maintainability reasons we have to keep them in this documentation, we tagged them under a `<details><summary>` with red incompatibility design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities. We tried to hide them as much as possible while keeping the variants in our documentation.
 Thanks for taking this information into account.
 
 Design incompatibility callouts message example:
@@ -25,7 +25,7 @@ Design incompatibility callouts message example:
 {{< design-callout-alert >}}
 This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our [Checks component]({{< docsref "/forms/checks-radios" >}}). You can also refer to the [Checkbox guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) on on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 In the same spirit, some blue recommendation design callouts will inform you of specific Orange Design System recommendations.
@@ -38,7 +38,7 @@ To display basic tables, Orange Design System recommends using these compact tab
 
 ## Quick start
 
-Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
+Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/louismaximepiton/pen/eYqwzag).
 
 <br>
 
@@ -133,7 +133,7 @@ Curious which components explicitly require our JavaScript and Popper? If you're
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/docs/v2/))
 
 {{< callout warning >}}
-#### Required script
+### Required script
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use the polyfill.
@@ -225,4 +225,4 @@ Stay up-to-date on the development of Bootstrap and reach out to the community w
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Developers should use the keyword `bootstrap` on packages that modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.
+You can also follow [@getbootstrap on X](https://x.com/{{< param x >}}) for the latest gossip and awesome music videos.

@@ -58,10 +58,19 @@ Boosted provides a handful of [utilities for setting width]({{< docsref "/utilit
 
 You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
 
+{{< example >}}
+<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -72,6 +81,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar" style="width: 25%"></div>
 </div>
 {{< /example >}}
+</details>
 
 ## Labels
 
@@ -83,13 +93,16 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 {{< /example >}}
 
-Note that by default, the content inside the `.progress-bar` is controlled with `overflow: hidden`, so it doesn't bleed out of the bar. If your progress bar is shorter than its label, the content will be capped and may become unreadable. To change this behavior, you can use `.overflow-visible` from the [overflow utilities]({{< docsref "/utilities/overflow" >}}), but make sure to also define an explicit [text color]({{< docsref "/utilities/colors#colors" >}}) so the text remains readable. Be aware though that currently this approach does not take into account [color modes]({{< docsref "/customize/color-modes" >}}).
+### Long labels
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
-</div>
-{{< /example >}}
+
+Note that by default, the content inside the `.progress-bar` is controlled with `overflow: hidden`, so it doesn't bleed out of the bar. If your progress bar is shorter than its label, the content will be capped and may become unreadable. To change this behavior, you can use `.overflow-visible` from the [overflow utilities]({{< docsref "/utilities/overflow" >}}).
+
+{{< callout warning >}}
+Labels longer than the progress bar within may not be fully accessible using this method because it relies on the text color having the correct contrast ratio with both the `.progress` and `.progress-bar` background colors. Use caution when implementing this example.
+
+If the text can overlap the progress bar, we often recommend displaying the label outside of the progress bar for better accessibility.
+{{< /callout >}}
 
 <!-- Boosted mod -->
 ### Sizes
@@ -110,10 +123,13 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 
 Use background utility classes to change the appearance of individual progress bars.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -135,34 +151,34 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-If you're adding labels to progress bars with a custom background color, make sure to also set an appropriate [text color]({{< docsref "/utilities/colors#colors" >}}), so the labels remain readable and have sufficient contrast.
+If you're adding labels to progress bars with a custom background color, make sure to also set an appropriate [text color]({{< docsref "/utilities/colors#colors" >}}), so the labels remain readable and have sufficient contrast. We recommend using the [color and background]({{< docsref "/helpers/color-background" >}}) helper classes.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
 </div>
 <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
 </div>
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%">100%</div>
-</div>
-{{< /example >}}
-
-Alternatively, you can use the new combined [color and background]({{< docsref "/helpers/color-background" >}}) helper classes.
-
-{{< example >}}
 <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
 </div>
+<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+</div>
 {{< /example >}}
+</details>
 
 ## Multiple bars
 
 You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These variants should not be used because they do not respect the Orange Design System specifications.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress-stacked">
@@ -177,15 +193,19 @@ You can include multiple progress components inside a container with `.progress-
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Striped
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -205,15 +225,19 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
 </div>
 {{< /example >}}
+</details>
 
 ## Animated stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
+Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -221,6 +245,7 @@ Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/
   <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
 </div>
 {{< /example >}}
+</details>
 
 ## CSS
 

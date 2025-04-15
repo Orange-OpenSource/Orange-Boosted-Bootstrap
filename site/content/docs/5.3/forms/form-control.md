@@ -30,8 +30,23 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+The last small variant with a `.form-control-sm` class should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
+</details>
 
 ## Form text
 
@@ -53,6 +68,15 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This variant with an **horizontal layout** (i.e. labels not above the input fields) should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="row g-3 align-items-center">
   <div class="col-auto">
@@ -68,6 +92,7 @@ Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`
   </div>
 </div>
 {{< /example >}}
+</details>
 
 ## Disabled
 
@@ -92,15 +117,39 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 {{< example >}}
   <div class="mb-3 row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
+    <label for="staticEmail" class="col-form-label">Email</label>
+    <div class="col-12">
       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
     </div>
   </div>
   <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
+    <label for="inputPassword" class="col-form-label">Password</label>
+    <div class="col-12">
       <input type="password" class="form-control" id="inputPassword">
+    </div>
+  </div>
+{{< /example >}}
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+These variants with an **horizontal layout** (i.e. labels not above the input fields) should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+  <div class="mb-3 row">
+    <label for="staticEmail2" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword2" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword2">
     </div>
   </div>
 {{< /example >}}
@@ -108,18 +157,19 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {{< example >}}
 <form class="row g-3">
   <div class="col-auto">
-    <label for="staticEmail2" class="visually-hidden">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+    <label for="staticEmail3" class="visually-hidden">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail3" value="email@example.com">
   </div>
   <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    <label for="inputPassword3" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
   </div>
   <div class="col-auto">
     <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
   </div>
 </form>
 {{< /example >}}
+</details>
 
 ## File input
 
@@ -136,15 +186,28 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
   <label for="formFileDisabled" class="form-label is-disabled">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
 </div>
-<div class="mb-3">
-  <label for="formFileSm" class="form-label">Small file input example</label>
-  <input class="form-control form-control-sm" id="formFileSm" type="file">
-</div>
 <div>
   <label for="formFileLg" class="form-label">Large file input example</label>
   <input class="form-control form-control-lg" id="formFileLg" type="file">
 </div>
 {{< /example >}}
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br>
+{{< design-callout-alert >}}
+This small variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms guidelines](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and to the [Pages form examples](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+<div>
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
+{{< /example >}}
+</details>
 
 ## Color
 
