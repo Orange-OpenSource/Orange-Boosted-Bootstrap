@@ -94,13 +94,13 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:                            "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/boosted.min.css"
-    css_hash:                       "sha384-Rj6Ipem3Own7YVkUD2MZ8xMGc49R3MNARxv9X8VKMjsCNRk1aiw+1WIed6KpoHWY"
+    css_hash:                       "sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI"
     css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:                   "sha384-j/zQbeJqVf2tELccgsyy/Lt/pFqImbn/wFQpzwbl2AcdVdJFGeUxmvIeFfeNu8Uj"
+    css_rtl_hash:                   "sha384-CJUlNPuIe38B/gcKZRF5QzlWLGgy/jRW20D+YnVgp/DXHCMwcCZGznpd/Q8z3gpj"
     helvetica:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/orange-helvetica.min.css"
-    helvetica_hash:                 "sha384-wZmRQSuAInWYXAs3zc5uufj7Ns4kc8240ZOAq8ZRBz9QeOPq7c58O9ayfZYn+NN1"
+    helvetica_hash:                 "sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ"
     helvetica_rtl:                  "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/orange-helvetica.rtl.min.css"
-    helvetica_rtl_hash:             "sha384-mlF6w4kM6uy1AI76gcUT3fOlApVpe/vuWLO8j7vgKoAIAmAYH3KrNiHO5bbCAzJn"
+    helvetica_rtl_hash:             "sha384-4MlBAYgNr+UGO/cACkdFashk4EWyneAX3fp0OWoM7k8/smSl1irUexFx6u83N9Em"
     HelveticaNeueW20-55Roman:       "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-55Roman.woff2"
     HelveticaNeueW20-55Roman_hash:  "sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl"
     HelveticaNeueW20-75Bold:        "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-75Bold.woff2"
