@@ -1,3 +1,12 @@
+## [5.3.5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.4...v5.3.5) (2025-04-15)
+
+
+### Bug Fixes
+
+* **focus:** Remove default `z-index` ([#2501](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/2501)) ([1d011ed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1d011ed10ff29e8cafd7bffae90f24d7f59222bf))
+
+
+
 ## [5.3.4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.3...v5.3.4) (2025-04-14)
 
 

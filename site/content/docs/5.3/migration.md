@@ -9,6 +9,14 @@ aliases:
 toc: true
 ---
 
+## v5.3.5
+
+<hr class="mb-4">
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
+
 ## v5.3.4
 
 <hr class="mb-4">
@@ -62,10 +70,6 @@ toc: true
       <li><code>$form-switch-unchecked-invalid-border-color-dark</code></li>
     </ul>
   </details>
-
-### CSS and Sass variables
-
-- <span class="badge text-bg-danger">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
 
 ## v5.3.3
 
