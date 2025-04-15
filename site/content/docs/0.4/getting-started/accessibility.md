@@ -12,7 +12,7 @@ OUDS Web provides an easy-to-use framework of ready-made styles, layout tools, a
 
 ## Overview and limitations
 
-The overall accessibility of any project built with OUDS Web depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with OUDS Web that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+The overall accessibility of any project built with OUDS Web depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with OUDS Web that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
 
 ### Structural markup
 
@@ -28,7 +28,7 @@ Because OUDS Web's components are purposely designed to be fairly generic, autho
 
 Some combinations of colors that currently make up OUDS Web's default palette—used throughout the framework<!-- for things such as button variations, alert variations, form validation indicators—-->may lead to *insufficient* color contrast (below the recommended [WCAG 2.2 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.2 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-OUDS Web **contrasts aren't locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color`. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.
+OUDS Web **contrasts aren't locked, please make sure they meet [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color`. Please refer to [our theme colors]({{< docsref "/customize/color-palette" >}}) to have a full preview of OUDS Web color palette’s reached WCAG level.
 
 ### Visually hidden content
 
@@ -85,17 +85,17 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 ### Minimum target size
 
-OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
+OUDS Web provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.2 "Target Size" Success Criterion (2.5.8)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
 
 ### Maximum line length
 
-When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20). We apply it by default on all our elements.
+When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/WAI/WCAG22/Techniques/css/C20). We apply it by default on all our elements.
 
 ## Additional resources
 
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/)
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG/)
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
