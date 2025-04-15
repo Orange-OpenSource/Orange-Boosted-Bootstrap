@@ -26,7 +26,7 @@
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-RSSxVVibmCR6Aiga+QP5Udje7HcmGij6q/7O1QbjxdoPfuxaNORLxqBVmhj7u9TP"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -516,7 +516,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/getting-started/contribute.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/site/content/docs/5.3/getting-started/contribute.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -556,16 +556,16 @@
         
 
         <h2 id="tooling-setup">Tooling setup <a class="anchor-link" href="#tooling-setup" aria-label="Link to this section: Tooling setup"></a></h2>
-<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> to build the documentation and compile source files. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/package.json">package.json</a> houses these scripts for compiling code, running tests, and more. These aren&rsquo;t intended for use outside our repository and documentation.</p>
+<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> to build the documentation and compile source files. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/package.json">package.json</a> houses these scripts for compiling code, running tests, and more. These aren&rsquo;t intended for use outside our repository and documentation.</p>
 <p>To use our build system and run our documentation locally, you&rsquo;ll need a copy of Boosted&rsquo;s source files and Node. Follow these steps and you should be ready to rock:</p>
 <ol>
 <li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.4.zip">download Boosted&rsquo;s sources</a> or fork and clone <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
-<li>Navigate to the root <code>/Orange-Boosted-Bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/package.json">package.json</a>.</li>
+<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.5.zip">download Boosted&rsquo;s sources</a> or fork and clone <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
+<li>Navigate to the root <code>/Orange-Boosted-Bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/package.json">package.json</a>.</li>
 </ol>
 <p>When completed, you&rsquo;ll be able to run the various commands provided from the command line.</p>
 <h2 id="using-npm-scripts">Using npm scripts <a class="anchor-link" href="#using-npm-scripts" aria-label="Link to this section: Using npm scripts"></a></h2>
-<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/package.json">package.json</a> includes numerous tasks for developing the project. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
+<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/package.json">package.json</a> includes numerous tasks for developing the project. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
 <div class="table-responsive"><table class="table">
   <thead>
       <tr>
@@ -603,7 +603,7 @@ Head to the <a href="https://github.com/twbs/examples/tree/main/sass-js">Sass &a
 <p>Dart Sass uses a rounding precision of 10 and for efficiency reasons does not allow adjustment of this value. We don&rsquo;t lower this precision during further processing of our generated CSS, such as during minification, but if you chose to do so we recommend maintaining a precision of at least 6 to prevent issues with browser rounding.</p>
 <h2 id="autoprefixer">Autoprefixer <a class="anchor-link" href="#autoprefixer" aria-label="Link to this section: Autoprefixer"></a></h2>
 <p>Boosted uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/.browserslistrc">.browserslistrc</a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/.browserslistrc">.browserslistrc</a> for details.</p>
 <h2 id="rtlcss">RTLCSS <a class="anchor-link" href="#rtlcss" aria-label="Link to this section: RTLCSS"></a></h2>
 <p>Boosted uses <a href="https://rtlcss.com/">RTLCSS</a> to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (e.g. <code>padding-left</code>) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS <a href="https://rtlcss.com/learn/usage-guide/control-directives/">control</a> and <a href="https://rtlcss.com/learn/usage-guide/value-directives/">value</a> directives.</p>
 <h2 id="local-documentation">Local documentation <a class="anchor-link" href="#local-documentation" aria-label="Link to this section: Local documentation"></a></h2>
@@ -700,7 +700,7 @@ Head to the <a href="https://github.com/twbs/examples/tree/main/sass-js">Sass &a
             <p class="mb-lg-1">
               Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.4.</p>
+            <p class="mb-lg-1">Currently v5.3.5.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -724,7 +724,7 @@ Head to the <a href="https://github.com/twbs/examples/tree/main/sass-js">Sass &a
 </nav>
 
 
-    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-TUqINjQ+FmWdy6HD+WLRt3KeaowBhH0dZr0TdLdc6J5dc0T+qQQ29Bhp8C5uvyEO"></script>
 
 <script defer src="/docs/5.3/assets/js/application.js"></script>
 

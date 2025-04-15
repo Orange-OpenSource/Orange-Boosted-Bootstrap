@@ -41,7 +41,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div>
   <a class="link icon-link" href="#">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+      <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
     </svg>
     This is an example of a link with an SVG icon
   </a>
@@ -60,7 +60,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <\/script>`,a=()=>`<div class="bd-example order-first m-none border-none m-none border-none">
 <a class="icon-link" href="#">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg>
   This is an example of link with icon
 </a>
@@ -84,7 +84,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div>
   <button class="link link-sm icon-link" type="button">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg> Small button link icon
   </button>
 </div>
@@ -99,7 +99,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
 <div><a class="link icon-link" aria-disabled="true">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg>
   This is an example of a link with an icon
 </a>
@@ -160,7 +160,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div>
   <a class="link icon-link" href="#">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+      <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
     </svg>
     This is an example of a link with an SVG icon
   </a>
@@ -179,7 +179,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <\/script>\``,...(g=(x=s.parameters)==null?void 0:x.docs)==null?void 0:g.source}}};var y,L,E;a.parameters={...a.parameters,docs:{...(y=a.parameters)==null?void 0:y.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-none border-none m-none border-none">
 <a class="icon-link" href="#">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg>
   This is an example of link with icon
 </a>
@@ -203,7 +203,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div>
   <button class="link link-sm icon-link" type="button">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg> Small button link icon
   </button>
 </div>
@@ -218,7 +218,7 @@ const V={title:"Components/Links",parameters:{docs:{toc:!0}}},e=()=>`<div class=
 <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
 <div><a class="link icon-link" aria-disabled="true">
   <svg class="bi" aria-hidden="true">
-    <use xlink:href="/docs/0.2/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
+    <use xlink:href="/docs/0.4/assets/img/ouds-web-sprite.svg#heart-recommend"></use>
   </svg>
   This is an example of a link with an icon
 </a>

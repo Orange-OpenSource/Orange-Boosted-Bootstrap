@@ -26,7 +26,7 @@
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-RSSxVVibmCR6Aiga+QP5Udje7HcmGij6q/7O1QbjxdoPfuxaNORLxqBVmhj7u9TP"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -516,7 +516,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -539,13 +539,18 @@
           <div class="collapse bd-toc-collapse ms-md-1" id="tocContents">
             <nav id="TableOfContents">
   <ul>
+    <li><a href="#v535">v5.3.5</a>
+      <ul>
+        <li><a href="#css-and-sass-variables">CSS and Sass variables</a></li>
+      </ul>
+    </li>
     <li><a href="#v534">v5.3.4</a>
       <ul>
         <li><a href="#core">Core</a></li>
         <li><a href="#components">Components</a></li>
         <li><a href="#examples">Examples</a></li>
         <li><a href="#docs">Docs</a></li>
-        <li><a href="#css-and-sass-variables">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v533">v5.3.3</a>
@@ -556,7 +561,7 @@
         <li><a href="#forms">Forms</a></li>
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#examples-1">Examples</a></li>
-        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
         <li><a href="#docs-1">Docs</a></li>
       </ul>
     </li>
@@ -565,14 +570,14 @@
         <li><a href="#color-modes">Color modes!</a></li>
         <li><a href="#components-2">Components</a></li>
         <li><a href="#forms-1">Forms</a></li>
-        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v531">v5.3.1</a>
       <ul>
         <li><a href="#components-3">Components</a></li>
         <li><a href="#forms-2">Forms</a></li>
-        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
         <li><a href="#docs-2">Docs</a></li>
       </ul>
     </li>
@@ -584,7 +589,7 @@
         <li><a href="#forms-3">Forms</a></li>
         <li><a href="#helpers-and-utilities">Helpers and utilities</a></li>
         <li><a href="#examples-2">Examples</a></li>
-        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-5">CSS and Sass variables</a></li>
         <li><a href="#docs-3">Docs</a></li>
         <li><a href="#tooling">Tooling</a></li>
       </ul>
@@ -596,7 +601,7 @@
         <li><a href="#contents-2">Contents</a></li>
         <li><a href="#forms-4">Forms</a></li>
         <li><a href="#examples-3">Examples</a></li>
-        <li><a href="#css-and-sass-variables-5">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-6">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v522">v5.2.2</a>
@@ -605,7 +610,7 @@
         <li><a href="#forms-5">Forms</a></li>
         <li><a href="#contents-3">Contents</a></li>
         <li><a href="#examples-4">Examples</a></li>
-        <li><a href="#css-and-sass-variables-6">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-7">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v521">v5.2.1</a>
@@ -613,7 +618,7 @@
         <li><a href="#components-7">Components</a></li>
         <li><a href="#contents-4">Contents</a></li>
         <li><a href="#helpers-and-utilities-1">Helpers and utilities</a></li>
-        <li><a href="#css-and-sass-variables-7">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-8">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v520">v5.2.0</a>
@@ -679,7 +684,14 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="v534">v5.3.4 <a class="anchor-link" href="#v534" aria-label="Link to this section: v5.3.4"></a></h2>
+        <h2 id="v535">v5.3.5 <a class="anchor-link" href="#v535" aria-label="Link to this section: v5.3.5"></a></h2>
+<hr class="mb-4">
+<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<ul>
+<li><span class="badge text-bg-danger">Breaking</span> A parameter from the <code>focus-visible()</code> mixin has been removed. If you use the <code>focus-visible()</code> mixin in your scss files with a <code>z-index</code> as a parameter, please adapt your code.</li>
+</ul>
+<h2 id="v534">v5.3.4 <a class="anchor-link" href="#v534" aria-label="Link to this section: v5.3.4"></a></h2>
+<hr class="mb-4">
 <h3 id="core">Core <a class="anchor-link" href="#core" aria-label="Link to this section: Core"></a></h3>
 <ul>
 <li><strong>Colors</strong>
@@ -734,7 +746,7 @@
 <p>We have checked all SVGs in the documentation to ensure that they are accessible and correctly interpreted by support technologies. Please also check your projects&rsquo; SVGs, which should have either <code>aria-hidden=&quot;true&quot;</code>, or <code>role=&quot;img&quot;</code> with an accessible name (defined by <code>aria-label</code>, <code>aria-labelledby</code>, a <code>&lt;title&gt;</code>, or some visually hidden alternative text).</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1015,7 +1027,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <p><span class="badge text-bg-warning">Warning</span> Title bars example has been slightly modified to drop a <code>.bg-body</code> and use <code>data-bs-theme=&quot;light&quot;</code> in combination with <code>.bg-supporting-blue</code> and <code>.bg-supporting-pink</code>. Make sure to incorporate these changes into your websites.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-success">New</span> A new <code>scss/_color-palette.scss</code> file has been added to provide Sass variables representing the color palette. It is automatically imported in <code>scss/_variables.scss</code> which uses these variables instead of hex values.</p>
@@ -1444,7 +1456,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <p><span class="badge text-bg-warning">Deprecated</span> The <code>form-star-rating()</code> mixin is now deprecated. We now use a <code>mask-image</code> CSS property to display the stars in this form element.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1534,7 +1546,7 @@ As a result, you should for instance now rather use <code>.text-bg-{color}</code
 <ul>
 <li><span class="badge text-bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.</li>
 </ul>
-<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1884,7 +1896,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <p><span class="badge text-bg-success">New</span> A download app page is now available.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-5">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-5" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p>Adds additional variables for alerts, <code>.btn-close</code>, and <code>.offcanvas</code>.</p>
@@ -2407,7 +2419,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-5">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-5" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-6">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-6" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -2554,7 +2566,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-6">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-6" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-7">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-7" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><code>@mixin button-size()</code> has a new interface including a new optional parameter for button letter spacing.</p>
@@ -2683,7 +2695,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 <ul>
 <li><span class="badge text-bg-success">New</span> <code>.img-thumbnail</code> is now officially supported.</li>
 </ul>
-<h3 id="css-and-sass-variables-7">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-7" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-8">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-8" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><span class="badge text-bg-danger">Breaking</span> <code>--bs-pagination-margin-start</code> and <code>--bs-pagination-focus-outline</code> are now deprecated.</p>
@@ -3600,7 +3612,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
             <p class="mb-lg-1">
               Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.4.</p>
+            <p class="mb-lg-1">Currently v5.3.5.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -3624,7 +3636,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 </nav>
 
 
-    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-TUqINjQ+FmWdy6HD+WLRt3KeaowBhH0dZr0TdLdc6J5dc0T+qQQ29Bhp8C5uvyEO"></script>
 
 <script defer src="/docs/5.3/assets/js/application.js"></script>
 
