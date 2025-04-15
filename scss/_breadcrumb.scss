@@ -1,11 +1,10 @@
 .breadcrumb {
   // scss-docs-start breadcrumb-css-vars
-  // OUDS mod: no breadcrumb-padding-x, breadcrumb-padding-y, breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
-  --#{$prefix}breadcrumb-color: #{$breadcrumb-color};
+  // OUDS mod: no breadcrumb-color, breadcrumb-padding-x, breadcrumb-padding-y, breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
 
   // Additional OUDS variables
-  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider}; // OUDS mod, instead of: escape-svg($breadcrumb-divider) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider "/* rtl:"$breadcrumb-divider-flipped"*/"};
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
   --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
   // End mod
@@ -13,7 +12,6 @@
 
   display: flex;
   padding: 0;
-  color: var(--#{$prefix}breadcrumb-color); // OUDS mod
   list-style: none;
   @include get-font-size("label-medium");
 }

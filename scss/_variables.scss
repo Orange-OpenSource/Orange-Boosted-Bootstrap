@@ -1946,11 +1946,11 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 // OUDS mod: no `$breadcrumb-padding-x`
 // OUDS mod: no `$breadcrumb-item-padding-x`
 // OUDS mod: no `$breadcrumb-margin-bottom`
-$breadcrumb-color:                  $ouds-color-content-default !default; // OUDS mod
+// OUDS mod: no `$breadcrumb-color`
 // OUDS mod: no `$breadcrumb-bg`
 $breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 // OUDS mod: no `$breadcrumb-active-color`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.65104 12.75L11.5 8L6.65104 3.25L5.26562 4.60646L8.72986 8L5.26562 11.3922L6.65104 12.75Z' /></svg>") !default; // OUDS mod
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.651 12.75 11.5 8 6.651 3.25 5.266 4.606 8.73 8l-3.464 3.392z'/></svg>") !default; // OUDS mod
 // OUDS mod: no `$breadcrumb-divider-filter`
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 // OUDS mod: no `$breadcrumb-border-radius`
