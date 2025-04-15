@@ -120,7 +120,7 @@ The `.link` classes are designed to be used with the `<a>` element. However, you
 <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
 <div>
   <button class="link link-sm icon-link" type="button">
-  <svg class="bi" aria-hidden="true">
+  <svg aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg> Small button link icon
   </button>
@@ -137,7 +137,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 <div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
 <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
 <div><a class="link icon-link" aria-disabled="true">
-  <svg class="bi" aria-hidden="true">
+  <svg aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg>
   This is an example of a link with an icon
