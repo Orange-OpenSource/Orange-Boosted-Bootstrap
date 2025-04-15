@@ -63,8 +63,8 @@
 
   // When fading in the modal, animate it to slide down
   .modal.fade & {
-    @include transition($modal-transition);
     transform: $modal-fade-transform;
+    @include transition($modal-transition);
   }
   .modal.show & {
     transform: $modal-show-transform;
@@ -165,7 +165,12 @@
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // OUDS mod: using custom properties for padding
+    // OUDS mod: using custom properties for padding
+    // Split properties to avoid invalid calc() function if value is 0
+    margin-top: calc(-1 * #{$btn-close-padding});
+    margin-right: calc(-1 * #{$btn-close-padding});
+    margin-bottom: calc(-1 * #{$btn-close-padding});
+    margin-left: auto;
   }
 }
 
