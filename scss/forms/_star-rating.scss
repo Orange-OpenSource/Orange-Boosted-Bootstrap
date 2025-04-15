@@ -42,6 +42,10 @@
     }
   }
 
+  span {
+    float: left;
+  }
+
   > input:checked ~ label::before,
   .checked ~ span::before {
     background-color: var(--#{$prefix}star-rating-unchecked-color);
