@@ -42,7 +42,7 @@
 .breadcrumb-item {
   display: none;
   align-items: center;
-  min-width: 0;
+  min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
 
   a {
     @extend %link-properties;
