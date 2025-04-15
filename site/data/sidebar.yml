@@ -109,6 +109,7 @@
       draft: true
     - title: Breadcrumb
       draft: true
+    - title: Bullet list
     - title: Buttons
     - title: Button group
       draft: true
