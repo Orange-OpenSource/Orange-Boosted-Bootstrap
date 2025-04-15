@@ -26,7 +26,7 @@
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-RSSxVVibmCR6Aiga+QP5Udje7HcmGij6q/7O1QbjxdoPfuxaNORLxqBVmhj7u9TP"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI"><link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link href="/docs/5.3/assets/css/search.css" rel="stylesheet">
 
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -516,7 +516,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/site/content/docs/5.3/getting-started/browsers-devices.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-outline-secondary" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/site/content/docs/5.3/getting-started/browsers-devices.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -567,7 +567,7 @@
         <h2 id="supported-browsers">Supported browsers <a class="anchor-link" href="#supported-browsers" aria-label="Link to this section: Supported browsers"></a></h2>
 <p>Boosted supports the <strong>latest, stable releases</strong> of all major browsers and platforms.</p>
 <p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform&rsquo;s web view API, are not explicitly supported. However, Boosted should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
-<p>You can find our supported range of browsers and their versions <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.4/.browserslistrc">in our <code>.browserslistrc file</code></a>:</p>
+<p>You can find our supported range of browsers and their versions <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.5/.browserslistrc">in our <code>.browserslistrc file</code></a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># https://github.com/browserslist/browserslist#readme
 
 &gt;= 0.5%
@@ -579,6 +579,7 @@ Firefox ESR
 iOS &gt;= 12
 Safari &gt;= 12
 not Explorer &lt;= 11
+not kaios &lt;= 2.5 # fix floating label issues in Firefox (see https://github.com/postcss/autoprefixer/issues/1533)
 </span></span></code></pre></div><p>We use <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to handle intended browser support via CSS prefixes, which uses <a href="https://github.com/browserslist/browserslist">Browserslist</a> to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.</p>
 <h3 id="mobile-devices">Mobile devices <a class="anchor-link" href="#mobile-devices" aria-label="Link to this section: Mobile devices"></a></h3>
 <p>Generally speaking, Boosted supports the latest versions of each major platform&rsquo;s default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile&rsquo;s Turbo mode, UC Browser Mini, Amazon Silk) are not supported.</p>
@@ -744,7 +745,7 @@ not Explorer &lt;= 11
             <p class="mb-lg-1">
               Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" title="Bootstrap's license" aria-label="Bootstrap's license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
             </p>
-            <p class="mb-lg-1">Currently v5.3.4.</p>
+            <p class="mb-lg-1">Currently v5.3.5.</p>
             <p class="mb-lg-1">
               <a href="https://www.netlify.com" target="_blank" rel="noopener">
                 <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -768,7 +769,7 @@ not Explorer &lt;= 11
 </nav>
 
 
-    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-U1ruxZDJPG0OgMdt28ECG1XBCDBZp4nr5U7UFonUnYFlqO2EdZGBgj0O14YGkbT8"></script>
+    <script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-TUqINjQ+FmWdy6HD+WLRt3KeaowBhH0dZr0TdLdc6J5dc0T+qQQ29Bhp8C5uvyEO"></script>
 
 <script defer src="/docs/5.3/assets/js/application.js"></script>
 
