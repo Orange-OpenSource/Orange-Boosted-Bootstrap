@@ -16,6 +16,7 @@
       - [ ] Update the home news for the next release
       - [ ] Move `site/content/docs/x.y` to `site/content/docs/x.y+1`
       - [ ] Move `site/static/docs/x.y` to `site/static/docs/x.y+1`
+      - [ ] Make sure the migration guide is updated only for the next version
       - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
@@ -24,6 +25,7 @@
 - [ ] Prepare changelog:
   - install [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog) and `conventional-changelog-cli` globally
   - run `conventional-changelog -p angular -i CHANGELOG.md -s`
+  - [ ] Make sure to import all the bad named commits
 - [ ] Commit and push `dist` with a `chore(release): vx.y.z` commit message
 - [ ] Merge on `ouds/main`
 - [ ] Tag your version, and push your tag using `git tag vx.y.z-ouds-web` and `git push vx.y.z-ouds-web`
