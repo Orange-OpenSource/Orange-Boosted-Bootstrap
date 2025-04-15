@@ -7,6 +7,9 @@ const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneo
 const version = '5.3'
 
 function createDirectoryIfNeeded(path) {
+  if (fs.existsSync(path)) {
+    fs.rmSync(path, { recursive: true, force: true })
+  }
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path, 0o766, error => {
       if (error) {
