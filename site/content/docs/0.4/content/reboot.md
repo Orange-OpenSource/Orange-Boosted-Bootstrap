@@ -180,7 +180,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 <hr>
 {{< /example >}}
 
-The `<hr>` style can be modified with border utilities. See some customization examples in the [dividers helpers]({{< docsref "/helpers/dividers" >}}) documentation.
+The `<hr>` style can be modified with border utilities. See some customization examples in the [divider helpers]({{< docsref "/helpers/divider" >}}) documentation.
 
 <!-- ## Lists
 
