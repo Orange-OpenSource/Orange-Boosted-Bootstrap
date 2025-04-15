@@ -100,6 +100,7 @@
   color: $carousel-control-color;
   text-align: center;
   background: none;
+  // OUDS mod: no filter
   border: 0;
   outline: 0; // OUDS mod
   box-shadow: none; // OUDS mod
@@ -152,8 +153,8 @@
 .carousel-control-next-icon {
   display: inline-block;
   background-color: var(--#{$prefix}control-bg); // OUDS mod
-  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // OUDS mod
   @include border-radius(50%, 50%);
+  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // OUDS mod
 }
 
 // OUDS mod
@@ -202,7 +203,7 @@
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
-    background-color: $carousel-control-color; // OUDS mod
+    background-color: $carousel-control-color; // OUDS mod: instead of var(--#{$prefix}carousel-indicator-active-bg)
     border: 0;
     // OUDS mod: use our own target-size() mixin instead of transparent borders
     opacity: $carousel-indicator-opacity;
@@ -354,7 +355,7 @@
   bottom: $carousel-caption-spacer;
   left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // OUDS mod
-  color: $carousel-caption-color;
+  color: $carousel-caption-color; // OUDS mod: instead of var(--#{$prefix}carousel-caption-color)
   background-color: $carousel-caption-bg; // OUDS mod
 }
 

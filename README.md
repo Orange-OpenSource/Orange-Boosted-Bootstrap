@@ -173,12 +173,12 @@ Our default branch is for development of our OUDS Web release.
 
 **Mark Otto**
 
-- <https://twitter.com/mdo>
+- <https://x.com/mdo>
 - <https://github.com/mdo>
 
 **Jacob Thornton**
 
-- <https://twitter.com/fat>
+- <https://x.com/fat>
 - <https://github.com/fat>
 
 ## Thanks

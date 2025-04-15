@@ -500,7 +500,8 @@ You can enable responsive classes for an existing set of utilities that are not 
 @import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "border-ouds": map-merge(
       map-get($utilities, "border-ouds"),
       ( responsive: true ),
@@ -573,7 +574,8 @@ Used to another naming convention? The utilities API can be used to override the
 @import "@ouds/web/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "margin-start-ouds": map-merge(
       map-get($utilities, "margin-start-ouds"),
       ( class: ml ),
@@ -660,13 +662,11 @@ $utilities: map-merge(
   (
     // Remove the `width` utility
     "width": null,
-
     // Make an existing utility responsive
     "border-ouds": map-merge(
       map-get($utilities, "border-ouds"),
       ( responsive: true ),
     ),
-
     // Add new utilities
     "cursor": (
       property: cursor,
