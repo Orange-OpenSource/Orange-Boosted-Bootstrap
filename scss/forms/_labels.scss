@@ -57,6 +57,10 @@
     vertical-align: bottom;
   }
 }
+
+.is-required ~ .form-helper {
+  margin-left: .5625rem; // 9px
+}
 // End mod
 
 // For use with horizontal and inline forms, when you need the label (or legend)
