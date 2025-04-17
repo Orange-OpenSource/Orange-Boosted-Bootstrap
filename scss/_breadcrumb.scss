@@ -25,12 +25,11 @@
     flex-shrink: 0;
     width: $ouds-breadcrumb-size-icon;
     height: $ouds-breadcrumb-size-icon;
-    margin-right: var(--#{$prefix}breadcrumb-item-padding-links) #{"/* rtl:ignore */"}; // OUDS mod
+    margin-right: var(--#{$prefix}breadcrumb-item-padding-links);
     color: var(--#{$prefix}breadcrumb-divider-color);
     content: "";
     background-color: currentcolor;
     mask-image: var(--#{$prefix}breadcrumb-divider);
-    // OUDS mod
 
     /* rtl:raw:
     transform: scaleX(-1);
