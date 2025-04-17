@@ -62,7 +62,7 @@ Change the divider color using the [border color utilities]({{< docsref "/utilit
 <div data-bs-theme="light" class="d-flex bg-brand-primary"><div class="vr border-on-brand-primary"></div></div>
 <div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-black"></div></div>
 <div data-bs-theme="dark" class="d-flex bg-always-black px-shortest"><div class="vr border-always-white"></div></div>
-<div data-bs-theme="dark" class="d-flexbg-always-black px-shortest"><div class="vr border-always-on-black"></div></div>
+<div data-bs-theme="dark" class="d-flex bg-always-black px-shortest"><div class="vr border-always-on-black"></div></div>
 <div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-on-white"></div></div>
 {{< /example >}}
 
