@@ -217,7 +217,7 @@ address {
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 0; // OUDS mod: instead of 2rem
 }
 
 ol,
@@ -237,41 +237,50 @@ ul ol {
 // OUDS mod
 // Orange square list-style
 ul {
-  list-style-type: square;
+  list-style-type: none;
+  @include get-font-size("body-medium");
 }
 
+li {
+  padding: $ouds-bullet-list-space-padding-block-body-medium $ouds-bullet-list-space-padding-inline-level-0;
+}
 // Future-proof markers' color
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
-li::marker {
+li::before {
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--#{$prefix}icon-md-with-body-medium);
+  height: var(--#{$prefix}font-line-height-body-medium);
+  padding: calc(var(--#{$prefix}font-line-height-body-medium) - var(--#{$prefix}icon-md-with-body-medium)) 0; // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$prefix}icon-md-with-body-medium) - var(--#{$prefix}icon-md-with-body-small)); // stylelint-disable-line function-disallowed-list
   color: var(--#{$prefix}color-content-brand-primary);
   vertical-align: middle;
+  content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='currentColor'><rect x='5' y='5' width='6' height='6'/></svg>");
 
   ol & {
     color: inherit;
   }
 }
 
-li li::marker { color: var(--#{$prefix}color-content-muted); }
+// li li::marker { color: var(--#{$prefix}color-content-muted); }
 
-li li li::marker { color: var(--#{$prefix}color-content-disabled); } // TODO: Check the colors once the design is done
+// li li li::marker { color: var(--#{$prefix}color-content-disabled); } // TODO: Check the colors once the design is done
 
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
-li::before {
-  color: var(--#{$prefix}color-content-brand-primary);
-  vertical-align: text-top;
+// li::before {
+//   color: var(--#{$prefix}color-content-brand-primary);
+//   vertical-align: text-top;
 
-  ol & {
-    color: inherit;
-  }
-}
+//   ol & {
+//     color: inherit;
+//   }
+// }
 
-li li::before { color: var(--#{$prefix}color-content-muted); }
+// li li::before { color: var(--#{$prefix}color-content-muted); }
 
-li li li::before { color: var(--#{$prefix}color-content-disabled); }
-// stylelint-enable selector-max-type
+// li li li::before { color: var(--#{$prefix}color-content-disabled); }
 // End mod
 
 dt {
