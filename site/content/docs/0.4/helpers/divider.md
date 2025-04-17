@@ -55,10 +55,21 @@ Change the divider color using the [border color utilities]({{< docsref "/utilit
 <div data-bs-theme="light" class="bg-always-white py-shortest"><hr class="border-always-on-white"></div>
 {{< /example >}}
 
+{{< example class="d-flex gap-1" >}}
+<div class="vr border-muted"></div>
+<div class="vr border-emphasized"></div>
+<div class="vr border-brand-primary"></div>
+<div data-bs-theme="light" class="d-flex bg-brand-primary"><div class="vr border-on-brand-primary"></div></div>
+<div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-black"></div></div>
+<div data-bs-theme="dark" class="d-flex bg-always-black px-shortest"><div class="vr border-always-white"></div></div>
+<div data-bs-theme="dark" class="d-flexbg-always-black px-shortest"><div class="vr border-always-on-black"></div></div>
+<div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-on-white"></div></div>
+{{< /example >}}
+
 {{< bootstrap-compatibility >}}
 The `<hr>` and `vr` color can be set using [colors utilities]({{< docsref "/utilities/colors" >}})
 {{< example >}}
-<hr class="text-brand-emphasized">
+<hr class="text-muted">
 <div class="vr text-brand-primary"></div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
@@ -66,6 +77,15 @@ The `<hr>` and `vr` color can be set using [colors utilities]({{< docsref "/util
 ## Size
 
 Change the divider thickness using the [border width utilities]({{< docsref "/utilities/borders/#width" >}}).
+
+{{< example>}}
+<div>
+  <hr class="border-thin">
+  <hr class="border-medium">
+  <hr class="border-thick">
+  <hr class="border-thicker">
+</div>
+{{< /example >}}
 
 {{< example>}}
 <div class="d-flex" style="height: 50px;">
