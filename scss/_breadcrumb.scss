@@ -54,13 +54,13 @@
 
   &.active {
     @include has-separator();
-    display: inline-block;
+    font-weight: $ouds-font-weight-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
-    a {
-      font-weight: $ouds-font-weight-body-default;
-      text-decoration: none;
-      pointer-events: none;
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
