@@ -212,7 +212,28 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-<!-- TODO: Introduce Readonly ? -->
+### Read only
+
+To create a read only switches the input should be replaced by a `span` element with `role="switch"`, `aria-readonly` and `aria-disabled` attributes. The switch will be accessible to keyboard navigation and assistive technologies thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
+
+{{< example stackblitz_add_js="true" >}}
+<div class="switch-item">
+  <div class="control-item-assets-container">
+    <span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="switchReadonlyLabel"></span>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" id="switchReadonlyLabel">Label</label>
+  </div>
+</div>
+<div class="switch-item">
+  <div class="control-item-assets-container">
+    <span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="switchReadonlyCheckedLabel"></span>
+  </div>
+  <div class="control-item-text-container">
+    <label class="control-item-label" id="switchReadonlyCheckedLabel">Label</label>
+  </div>
+</div>
+{{< /example >}}
 
 ### Invalid
 

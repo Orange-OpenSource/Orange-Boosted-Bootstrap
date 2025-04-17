@@ -285,7 +285,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 ### Read only
 
-To create a read only Checkbox the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly` and `aria-disabled` attributes. The Checkbox will be accessible to assistive technology thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
+To create a read only checkbox the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly` and `aria-disabled` attributes. The Checkbox will be accessible to keyboard navigation and assistive technologies thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="checkbox-item">

@@ -22,7 +22,7 @@
     box-shadow: none;
   }
 
-  &:has([aria-readonly][role="checkbox"]) {
+  &:has([aria-readonly]) {
     pointer-events: none;
   }
 
@@ -166,7 +166,8 @@
     @include border-radius($form-check-input-border-radius);
   }
 
-  &[type="radio"] {
+  &[type="radio"],
+  &[role="radio"][aria-readonly]  {
     @include border-radius($form-check-radio-border-radius);
   }
 
@@ -185,6 +186,14 @@
     &::before {
       background-color: currentcolor;
       mask-image: escape-svg($form-check-input-checked-bg-image);
+    }
+  }
+
+  &[role="radio"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected};
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-radio-checked-bg-image);
     }
   }
 
@@ -223,7 +232,8 @@
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
 
-      &[type="radio"] {
+      &[type="radio"],
+      &[role="radio"][aria-readonly] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
       }
     }
@@ -275,7 +285,8 @@
   }
 
   &:disabled,
-  &[aria-readonly][role="checkbox"] {
+  &[aria-readonly][role="checkbox"],
+  &[aria-readonly][role="radio"] {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
   }
@@ -317,7 +328,8 @@
   border: 0;
   @include border-radius($ouds-switch-border-radius, $ouds-switch-border-radius);
 
-  &[type="checkbox"]::before {
+  &[type="checkbox"]::before,
+  &[aria-readonly="true"]::before {
     position: absolute;
     top: 50%;
     left: $ouds-switch-space-padding-inline-unselected;
@@ -343,11 +355,14 @@
     width: $ouds-switch-size-width-cursor-unselected-pressed;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-readonly="true"] {
     background-color: $ouds-color-action-disabled;
   }
 
-  &:checked {
+  // stylelint-disable selector-max-attribute
+  &:checked,
+  &[aria-readonly="true"][aria-checked="true"] {
     background-color: $ouds-switch-color-track-selected;
 
     &::before {
@@ -386,13 +401,15 @@
       width: $ouds-switch-size-width-cursor-selected-pressed;
     }
 
-    &:disabled {
+    &:disabled,
+    &[aria-readonly="true"] {
       background-color: $ouds-color-action-disabled;
 
       &::after {
         background-color: $ouds-color-action-disabled;
       }
     }
+    // stylelint-enable selector-max-attribute
   }
 }
 
