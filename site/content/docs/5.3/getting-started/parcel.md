@@ -150,6 +150,14 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
+   **Optional:** You may see Sass deprecation warnings with the latest versions of Dart Sass. These can silenced by adding the following configuration in a `.sassrc.js` file in the root folder with the following:
+
+   ```js
+   module.exports = {
+     silenceDeprecations: ['import', 'mixed-decls', 'color-functions', 'global-builtin']
+   }
+   ```
+
 3. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
    <!-- eslint-skip -->
