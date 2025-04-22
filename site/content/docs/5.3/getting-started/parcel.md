@@ -150,7 +150,7 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-   **Optional:** You may see Sass deprecation warnings with the latest versions of Dart Sass. These can silenced by adding the following configuration in a `.sassrc.js` file in the root folder with the following:
+   **Optional:** You may see Sass deprecation warnings with the latest versions of Dart Sass. These can be silenced by adding the following configuration in a `.sassrc.js` file in the root folder with the following:
 
    ```js
    module.exports = {
