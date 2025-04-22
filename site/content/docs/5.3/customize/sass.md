@@ -76,7 +76,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
 
-// 6. Optionally include any other parts as needed
+// 6. Include any other optional stylesheet partials as desired; list below is not inclusive of all available stylesheets
 @import "../node_modules/boosted/scss/utilities";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
@@ -84,6 +84,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/containers";
 @import "../node_modules/boosted/scss/grid";
 @import "../node_modules/boosted/scss/helpers";
+// ...
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/boosted/scss/utilities/api";
