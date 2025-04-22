@@ -114,6 +114,14 @@ yarn start # Start the project
 ```
 {{< /callout >}}
 
+### Bun
+
+Install Boosted in your Bun or Node.js powered apps with [the Bun CLI](https://bun.sh/):
+
+```sh
+bun add boosted@{{< param "current_version" >}}
+```
+
 ### Composer
 
 You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):

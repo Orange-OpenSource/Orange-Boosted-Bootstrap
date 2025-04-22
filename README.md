@@ -34,6 +34,7 @@ Several quick start options are available:
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.5`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.5`
+- Install with [Bun](https://bun.sh/): `bun add boosted@v5.3.5`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:5.3.5`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
