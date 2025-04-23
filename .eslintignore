@@ -2,7 +2,10 @@
 **/dist/
 **/vendor/
 /_site/
+/site/public/
+/site-old/
 /js/coverage/
 /site/static/sw.js
+/site/static/docs/**/assets/sw.js
 /site/layouts/partials/
 /stories/

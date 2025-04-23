@@ -31,8 +31,12 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // NOT RECOMMENDED, but it's still valid - we explain in the docs that it's not ideal,
     // and offer more robust alternatives, but also need to show a less-than-ideal example
     'An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.',
-    '.*Consider using the “h1” element as a top-level heading only.*'
-    // End mod
+    '.*Consider using the “h1” element as a top-level heading only.*', // Boosted mod
+    // A `code` element with the `is:raw` attribute coming from remark-prismjs (Astro upstream possible bug, see https://github.com/twbs/bootstrap/pull/41251/files#r1987880948)
+    'Attribute “is:raw” is not serializable as XML 1.0.',
+    'Attribute “is:raw” not allowed on element “code” at this point.',
+    // Astro's expecting trailing slashes on HTML tags such as <br />
+    'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.'
   ].join('|')
 
   const args = [

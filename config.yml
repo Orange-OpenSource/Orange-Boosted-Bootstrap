@@ -1,0 +1,81 @@
+title:                  "Boosted"
+baseURL:                "https://boosted.orange.com"
+
+docsDir:                "site"
+
+subtitle:               "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
+description:            "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
+authors:                "Orange and Boosted contributors"
+
+current_version:        "5.3.5"
+current_ruby_version:   "5.3.5"
+docs_version:           "5.3"
+rfs_version:            "v10.0.0"
+bootstrap_github_org:   "https://github.com/twbs" # TODO: replace github_org with bootstrap_github_org
+repo:                   "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
+x:                      "getbootstrap"
+opencollective:         "https://opencollective.com/bootstrap"
+blog:                   "https://blog.getbootstrap.com/"
+themes:                 "https://themes.getbootstrap.com/"
+swag:                   "https://cottonbureau.com/people/bootstrap"
+icons:                  "https://oran.ge/icons"
+icons_develop:          "https://design.orange.com/0c1af118d/p/12bc75-develop"
+icons_license:          "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63532c"
+icons_usage:            "https://design.orange.com/0c1af118d/p/92bb17-usage"
+bootstrap:              "https://getbootstrap.com"
+ods:
+  web:                  "https://oran.ge/dsweb" # TODO: Need to determine the behavior and the syntax
+
+# analytics: # TODO: What to do with it ? Check config.ts
+#   fathom_site:          "ITUSEYJG"
+
+algolia:
+  app_id:                "F4PKENW3TB"
+  api_key:               "d04e794979727856a09d53f12ead9069"
+  index_name:            "boosted-orange"
+
+download:
+  source:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.5.zip"
+  dist:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.3.5/boosted-5.3.5-dist.zip"
+  dist_examples:        "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.3.5/boosted-5.3.5-examples.zip"
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:                            "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/boosted.min.css"
+  css_hash:                       "sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI"
+  css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/boosted.rtl.min.css"
+  css_rtl_hash:                   "sha384-CJUlNPuIe38B/gcKZRF5QzlWLGgy/jRW20D+YnVgp/DXHCMwcCZGznpd/Q8z3gpj"
+  helvetica:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/orange-helvetica.min.css"
+  helvetica_hash:                 "sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ"
+  helvetica_rtl:                  "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/css/orange-helvetica.rtl.min.css"
+  helvetica_rtl_hash:             "sha384-4MlBAYgNr+UGO/cACkdFashk4EWyneAX3fp0OWoM7k8/smSl1irUexFx6u83N9Em"
+  HelveticaNeueW20-55Roman:       "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-55Roman.woff2"
+  HelveticaNeueW20-55Roman_hash:  "sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl"
+  HelveticaNeueW20-75Bold:        "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-75Bold.woff2"
+  HelveticaNeueW20-75Bold_hash:   "sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr" # TODO: rename and replace - by _
+  HelvNeue55_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelvNeue55_W1G.woff2"
+  HelvNeue55_W1G_hash:            "sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16"
+  HelvNeue75_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelvNeue75_W1G.woff2"
+  HelvNeue75_W1G_hash:            "sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4/Goeqz"
+  js:                             "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/js/boosted.min.js"
+  js_hash:                        "sha384-+f1HBfjIwckwiFxkXanz8nkcyySYgk6smQYRWH650tpI1/rBkNb52TG5ne3RF6IY"
+  js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/js/boosted.bundle.min.js"
+  js_bundle_hash:                 "sha384-TUqINjQ+FmWdy6HD+WLRt3KeaowBhH0dZr0TdLdc6J5dc0T+qQQ29Bhp8C5uvyEO"
+  popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
+  focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.1/dist/focus-visible.min.js"
+  focus_visible_hash:             "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
+
+anchors:
+  min:                  2
+  max:                  5
+
+toc:
+  min:                  2
+  max:                  6
+
+# TODO: Need to see how it behaves for Storybook, tarteaucitron
+# TODO: Need to see how it behaves for releases processes
+# TODO: Search for Hugo references
+# TODO: Check for docs-pa11y

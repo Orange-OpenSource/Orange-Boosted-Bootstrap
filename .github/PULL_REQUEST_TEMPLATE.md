@@ -31,7 +31,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 ### Checklist
 
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!-- If you’re unsure about any of these, don’t hesitate to ask. We’re here to help! -->
 
 #### Contribution
 
@@ -117,21 +117,21 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 - [ ] Tag your version, and push your tag
 - [ ] Pack and publish
   - `npm pack`
-  - if you are already logged in to NPM (with a personal account, for example), [you'd better use a repository scoped `.npmrc` file](https://stackoverflow.com/questions/30114166/how-to-have-multiple-npm-users-set-up-locally)
+  - if you are already logged in to NPM (with a personal account, for example), [you’d better use a repository scoped `.npmrc` file](https://stackoverflow.com/questions/30114166/how-to-have-multiple-npm-users-set-up-locally)
   - Publish:
-    - if you're releasing a pre-release, use `--tag`, e.g. for v5-alpha1 `npm publish boosted-5.0.0-alpha1.tgz --tag next`
+    - if you’re releasing a pre-release, use `--tag`, e.g. for v5-alpha1 `npm publish boosted-5.0.0-alpha1.tgz --tag next`
     - (v4 only) `npm publish --tag v4.x.y` (if you forgot and v4 becomes the latest version on NPM, you can run `npm dist-tag add boosted@5.x.y latest to fix it)
     - (v5 only) `npm publish`
 - [ ] check release on [NPM](https://www.npmjs.com/package/boosted), [Nuget](https://www.nuget.org/packages/boosted/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `gh-pages`:
-  - [ ] copy `../_site` to the `gh-pages` branch (don't forget to update Storybook as well)
+  - [ ] copy `../_site` to the `gh-pages` branch (don’t forget to update Storybook as well)
   - [ ] check every `index.html` used as redirections to redirect to the new release
-  - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
+  - [ ] when bumping minor version: ensure `dist` URLs in examples’ HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
 - [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) (+ pin the new GH Discussion)
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the zip file
-  - paste the CHANGELOG / Ship list in the release's description
+  - paste the CHANGELOG / Ship list in the release’s description
 - [ ] make an announcement on internal communication channels :tada:
 - [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
 -->

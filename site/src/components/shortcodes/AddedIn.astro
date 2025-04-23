@@ -1,0 +1,12 @@
+---
+/*
+ * Outputs badge to identify the first version something was added
+ */
+interface Props {
+  version: string
+}
+const { version } = Astro.props
+---
+
+<!-- Boosted mod: use tag component -->
+<p><span class="tag tag-sm">Added in v{version}</span></p>
