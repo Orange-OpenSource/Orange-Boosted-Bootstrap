@@ -7,4 +7,7 @@
  */
 export declare global {
   export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
+  export const BsTable: typeof import('@shortcodes/BsTable.astro').default
+  export const CalloutDeprecatedDarkVariables: typeof import('@shortcodes/CalloutDeprecatedDarkVariables.astro').default
+  export const Code: typeof import('@shortcodes/Code.astro').default
 }

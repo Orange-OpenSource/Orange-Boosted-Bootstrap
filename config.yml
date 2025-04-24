@@ -14,10 +14,6 @@ rfs_version:            "v10.0.0"
 bootstrap_github_org:   "https://github.com/twbs" # TODO: replace github_org with bootstrap_github_org
 repo:                   "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 x:                      "getbootstrap"
-opencollective:         "https://opencollective.com/bootstrap"
-blog:                   "https://blog.getbootstrap.com/"
-themes:                 "https://themes.getbootstrap.com/"
-swag:                   "https://cottonbureau.com/people/bootstrap"
 icons:                  "https://oran.ge/icons"
 icons_develop:          "https://design.orange.com/0c1af118d/p/12bc75-develop"
 icons_license:          "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63532c"
@@ -25,9 +21,6 @@ icons_usage:            "https://design.orange.com/0c1af118d/p/92bb17-usage"
 bootstrap:              "https://getbootstrap.com"
 ods:
   web:                  "https://oran.ge/dsweb" # TODO: Need to determine the behavior and the syntax
-
-# analytics: # TODO: What to do with it ? Check config.ts
-#   fathom_site:          "ITUSEYJG"
 
 algolia:
   app_id:                "F4PKENW3TB"

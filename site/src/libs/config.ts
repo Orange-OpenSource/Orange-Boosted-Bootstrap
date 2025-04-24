@@ -10,16 +10,12 @@ const configSchema = z.object({
     app_id: z.string(),
     index_name: z.string()
   }),
-  // analytics: z.object({
-  //   fathom_site: z.string()
-  // }),
   anchors: z.object({
     min: z.number(),
     max: z.number()
   }),
   authors: z.string(),
   baseURL: z.string().url(),
-  blog: z.string().url(),
   bootstrap: z.string().url(),
   bootstrap_github_org: z.string().url(),
   cdn: z.object({
@@ -66,12 +62,9 @@ const configSchema = z.object({
   ods: z.object({
     web: z.string().url()
   }),
-  opencollective: z.string().url(),
   repo: z.string().url(),
   rfs_version: zPrefixedVersionSemver,
   subtitle: z.string(),
-  swag: z.string().url(),
-  themes: z.string().url(),
   title: z.string(),
   toc: z.object({
     min: z.number(),

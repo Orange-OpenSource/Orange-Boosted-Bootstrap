@@ -1,9 +1,12 @@
 ---
-import { getVersionedBsJsProps } from '@libs/bootstrap'
+import { getVersionedBsJsProps } from '@libs/boosted'
+import { getVersionedDocsPath } from '@libs/path'
 import type { Layout } from '@libs/layout'
+
 interface Props {
   layout: Layout
 }
+
 const { layout } = Astro.props
 ---
 
@@ -12,4 +15,12 @@ const { layout } = Astro.props
 <script src="../assets/application.js"></script>
 <script src="../assets/search.js"></script>
 
+<!-- Boosted mod -->
+<script is:inline src={getVersionedDocsPath('assets/js/tarteaucitron.min.js')}></script>
+<script is:inline src={getVersionedDocsPath('assets/js/lang/tarteaucitron.en.js')}></script>
+<script src="../assets/tac.js"></script>
+<!-- End mod -->
+
 {layout === 'docs' && <script src="../assets/stackblitz.js" />}
+
+{layout === 'docs' && <script src="../assets/color.js" />} <!-- Boosted mod -->

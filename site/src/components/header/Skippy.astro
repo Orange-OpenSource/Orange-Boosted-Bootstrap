@@ -1,0 +1,23 @@
+---
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  layout: Layout
+}
+
+const { layout } = Astro.props
+---
+
+<a id="top"></a><!-- Boosted mod: anchor for back-to-top link -->
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
+    <a class="d-inline-flex p-2 ms-3 bg-black" href="#content">Skip to main content</a>
+    {
+      layout === 'docs' && (
+        <a class="d-none d-md-inline-flex p-2 bg-black" href="#bd-docs-nav">
+          Skip to docs navigation
+        </a>
+      )
+    }
+  </nav>
+</div>

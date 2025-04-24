@@ -1,0 +1,60 @@
+---
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  layout: Layout
+}
+
+const { layout } = Astro.props
+---
+
+<button
+  class=`${layout === 'examples' ? 'btn btn-dropdown d-flex align-items-center' : 'nav-link nav-icon'} dropdown-toggle`
+  id="bd-theme"
+  type="button"
+  aria-expanded="false"
+  data-bs-toggle="dropdown"
+  {...layout !== 'examples' ? { 'data-bs-display': 'static' } : {}}
+  aria-label="Toggle theme (auto)"
+>
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-2'}` id="bd-theme-text">Toggle mode</span>
+</button>
+<ul class=`dropdown-menu dropdown-menu-end${layout === 'examples' ? ' shadow' : ' mb-2'}` aria-labelledby="bd-theme-text">
+  <li>
+    <button
+      type="button"
+      class="dropdown-item d-flex align-items-center"
+      data-bs-theme-value="light"
+      aria-pressed="false"
+    >
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      class="dropdown-item d-flex align-items-center"
+      data-bs-theme-value="dark"
+      aria-pressed="false"
+    >
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      class="dropdown-item d-flex align-items-center active"
+      data-bs-theme-value="auto"
+      aria-pressed="true"
+    >
+      <svg class="bi me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>

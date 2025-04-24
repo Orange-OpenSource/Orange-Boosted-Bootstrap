@@ -71,6 +71,7 @@ export function boosted(): AstroIntegration[] {
         },
         'astro:config:done': () => {
           cleanPublicDirectory()
+          copyTarteauCitron()
           copyBoosted()
           copyStatic()
           aliasStatic()
@@ -135,6 +136,17 @@ export declare global {
 
 function cleanPublicDirectory() {
   fs.rmSync(getDocsPublicFsPath(), { force: true, recursive: true })
+}
+
+// Copy the `tarteaucitron` folder from the node_modules the latest version of TarteauCitron to make it available from
+// the `/docs/${docs_version}/dist` URL.
+function copyTarteauCitron() {
+  const source = path.join(process.cwd(), 'node_modules/tarteaucitronjs')
+  const destination = path.join(getDocsPublicFsPath(), 'docs', getConfig().docs_version, 'assets/js')
+
+  fs.mkdirSync(destination, { recursive: true })
+  fs.copyFileSync(path.join(source, 'tarteaucitron.min.js'), path.join(destination, 'tarteaucitron.min.js'))
+  fs.cpSync(path.join(source, 'lang'), path.join(destination, 'lang'), { recursive: true })
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of Boosted to make it available from

@@ -1,0 +1,12 @@
+// Tarteaucitron shorthand
+@mixin tac($selector: "", $class: false) {
+  @if $class == true {
+    .#{$tac-prefix}#{$selector} {
+      @content;
+    }
+  } @else {
+    [id="#{$tac-prefix}#{$selector}"] {
+      @content;
+    }
+  }
+}

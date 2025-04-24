@@ -1,0 +1,162 @@
+//
+// Bootstrap docs content theming
+//
+
+.bd-content {
+  > h2,
+  > h3,
+  > h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
+  }
+
+  // Offset content from fixed navbar when jumping to headings
+  > h2:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  > h3 {
+    margin-top: 2rem;
+  }
+
+  > ul li,
+  > ol li {
+    margin-bottom: .25rem;
+
+    // stylelint-disable selector-max-type, selector-max-compound-selectors
+    > p ~ ul {
+      margin-top: -.5rem;
+      margin-bottom: 1rem;
+    }
+    // stylelint-enable selector-max-type, selector-max-compound-selectors
+  }
+
+  // Override Bootstrap defaults
+  > .table,
+  > .table-responsive .table {
+    // Boosted mod: remove a lot of rules to keep our basic rendering
+
+    // Prevent breaking of code
+    th,
+    td:first-child > code { // stylelint-disable-line selector-max-compound-selectors
+      white-space: nowrap;
+    }
+  }
+
+  // Boosted mod
+  > .table-typography {
+    white-space: nowrap;
+
+    .bs-text-standard {
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+    }
+  }
+
+  > details {
+    padding: 5px 10px; // static even when zoomed
+    border: var(--bs-border-color) dashed calc(var(--bs-border-width) * .5); // stylelint-disable-line function-disallowed-list
+  }
+  // End mod
+}
+
+.table-options {
+  td:nth-child(2) {
+    min-width: 160px;
+  }
+}
+
+.table-options td:last-child,
+.table-utilities td:last-child {
+  min-width: 280px;
+}
+
+.table-swatches {
+  // Boosted mod: no `th`
+
+  td code {
+    white-space: nowrap;
+  }
+
+  .border-top-1 {
+    border-top: 1px solid var(--bs-border-color-subtle);
+  }
+
+  .border-color {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--bs-border-color-subtle);
+  }
+
+  td:last-child:not(:first-child) {
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      min-height: 60px;
+    }
+
+    button {
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.bd-title {
+  --bs-heading-color: var(--bs-emphasis-color);
+  @include font-size(3rem);
+}
+
+.bd-lead {
+  @include font-size(1.5rem);
+  font-weight: 400;
+}
+
+.bi {
+  width: 1em;
+  height: 1em;
+  // Boosted mod: no `vertical-align`
+  fill: currentcolor;
+}
+
+.border-lg-start {
+  @include media-breakpoint-up(lg) {
+    border-left: var(--bs-border-width) solid var(--bs-border-color);
+  }
+}
+
+// Boosted mod: no `.bd-summary-link`
+
+// Boosted mod: some values have been changed in the following `custom-color-mode` and `.btn-dropdown` is used instead of `.btn-secondary`
+// scss-docs-start custom-color-mode
+[data-bs-theme="blue"] {
+  --bs-body-color: var(--bs-white);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--bs-blue);
+  --bs-body-bg-rgb: #{to-rgb($blue)};
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: #{$blue-700};
+    --bs-dropdown-link-hover-bg: #{$blue-600};
+  }
+
+  .btn-dropdown {
+    --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+    --bs-btn-border-color: #{rgba($white, .25)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+    --bs-btn-hover-border-color: #{rgba($white, .25)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+    --bs-btn-active-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+  }
+}
+// scss-docs-end custom-color-mode
