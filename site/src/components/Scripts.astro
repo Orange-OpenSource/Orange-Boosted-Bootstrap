@@ -2,6 +2,7 @@
 import { getVersionedBsJsProps } from '@libs/boosted'
 import { getVersionedDocsPath } from '@libs/path'
 import type { Layout } from '@libs/layout'
+import DocsScripts from './DocsScripts.astro'
 
 interface Props {
   layout: Layout
@@ -21,6 +22,4 @@ const { layout } = Astro.props
 <script src="../assets/tac.js"></script>
 <!-- End mod -->
 
-{layout === 'docs' && <script src="../assets/stackblitz.js" />}
-
-{layout === 'docs' && <script src="../assets/color.js" />} <!-- Boosted mod -->
+{layout === 'docs' && <DocsScripts />}
