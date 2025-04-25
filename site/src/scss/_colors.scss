@@ -152,8 +152,25 @@
 .bd-gray-900 { color: color-contrast($gray-900); background-color: $gray-900; }
 .bd-gray-950 { color: color-contrast($gray-950); background-color: $gray-950; }
 
-.bd-white { color: color-contrast($white); background-color: $white; }
-.bd-black { color: color-contrast($black); background-color: $black; }
+.bd-white {
+  color: color-contrast($white);
+  background-color: $white;
+
+  // Astro HTML parser adds extra <p> tags to the content
+  p {
+    margin: 0;
+  }
+}
+
+.bd-black {
+  color: color-contrast($black);
+  background-color: $black;
+
+  // Astro HTML parser adds extra <p> tags to the content
+  p {
+    margin: 0;
+  }
+}
 
 // Boosted mod
 @function wcag-level($contrast-ratio) {

@@ -131,6 +131,15 @@ if (filePath && fileMatch && codeToDisplay) {
 </script>
 
 <div class:list={['bd-code-snippet', containerClass]}>
+  <div class="highlight">
+    {
+      codeToDisplay && lang ? (
+        <Prism code={codeToDisplay} lang={lang} />
+      ) : (
+        /* prettier-ignore */ <pre class={className}><slot /></pre>
+      )
+    }
+  </div>
   {
     Astro.slots.has('pre') ? (
       <slot name="pre" />
@@ -144,13 +153,4 @@ if (filePath && fileMatch && codeToDisplay) {
       </div>
     )
   }
-  <div class="highlight">
-    {
-      codeToDisplay && lang ? (
-        <Prism code={codeToDisplay} lang={lang} />
-      ) : (
-        /* prettier-ignore */ <pre class={className}><slot /></pre>
-      )
-    }
-  </div>
 </div>

@@ -146,7 +146,8 @@ function copyTarteauCitron() {
 
   fs.mkdirSync(destination, { recursive: true })
   fs.copyFileSync(path.join(source, 'tarteaucitron.min.js'), path.join(destination, 'tarteaucitron.min.js'))
-  fs.cpSync(path.join(source, 'lang'), path.join(destination, 'lang'), { recursive: true })
+  fs.mkdirSync(path.join(destination, 'lang'), { recursive: true })
+  fs.copyFileSync(path.join(source, 'lang/tarteaucitron.en.min.js'), path.join(destination, 'lang/tarteaucitron.en.min.js'))
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of Boosted to make it available from
