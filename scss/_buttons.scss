@@ -102,6 +102,7 @@
 
   &:focus-visible,
   &:focus[data-focus-visible-added] { // OUDS mod
+    z-index: $focus-visible-zindex; // OUDS mod
     color: var(--#{$prefix}btn-focus-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-color)`
     @include gradient-bg(var(--#{$prefix}btn-focus-bg)); // OUDS mod: instead of `var(--#{$prefix}btn-hover-bg)`
     border-color: var(--#{$prefix}btn-focus-border-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-border-color)`
