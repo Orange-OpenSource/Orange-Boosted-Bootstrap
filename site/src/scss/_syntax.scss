@@ -110,6 +110,7 @@
 
   &.entity {
     color: var(--base06);
+    cursor: help;
   }
 
   &.deleted {
@@ -156,10 +157,6 @@
 
   &.italic {
     font-style: none;
-  }
-
-  &.entity {
-    cursor: help;
   }
 }
 
