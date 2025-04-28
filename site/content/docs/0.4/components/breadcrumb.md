@@ -32,7 +32,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 {{< /example >}}
 
 
-## Responsive behavior
+## Behavior on smaller viewports
 
 Breadcrumb will not wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
