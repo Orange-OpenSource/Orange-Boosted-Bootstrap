@@ -237,6 +237,10 @@ To create a read only switches the input should be replaced by a `span` element 
 
 ### Invalid
 
+{{< callout info >}}
+{{< partial "callouts/input-invalid.md" >}}
+{{< /callout >}}
+
 You can display an invalid switch by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
 
 {{< example >}}
