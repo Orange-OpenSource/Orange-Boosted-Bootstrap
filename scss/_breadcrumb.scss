@@ -4,7 +4,7 @@
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
 
   // Additional OUDS variables
-  --#{$prefix}breadcrumb-divider: #{$breadcrumb-divider "/* rtl:"$breadcrumb-divider-flipped"*/"};
+  --#{$prefix}breadcrumb-divider: #{escape-svg($breadcrumb-divider) "/* rtl:"escape-svg($breadcrumb-divider-flipped) "*/"};
   --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
   --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
   // End mod
