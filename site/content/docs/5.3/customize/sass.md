@@ -10,6 +10,10 @@ toc: true
 
 Utilize our source Sass files to take advantage of variables, maps, mixins, and more.
 
+{{< callout warning >}}
+Sass deprecation warnings are shown when compiling source Sass files with the latest versions of Dart Sass. This does not prevent compilation or usage of Boosted. We're [working on a long-term fix](https://github.com/twbs/bootstrap/issues/40962), but in the meantime these deprecation notices can be ignored.
+{{< /callout >}}
+
 ## File structure
 
 Whenever possible, avoid modifying Boosted's core files. For Sass, that means creating your own stylesheet that imports Boosted so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
@@ -72,7 +76,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
 
-// 6. Optionally include any other parts as needed
+// 6. Include any other optional stylesheet partials as desired; list below is not inclusive of all available stylesheets
 @import "../node_modules/boosted/scss/utilities";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
@@ -80,6 +84,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/containers";
 @import "../node_modules/boosted/scss/grid";
 @import "../node_modules/boosted/scss/helpers";
+// ...
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/boosted/scss/utilities/api";
