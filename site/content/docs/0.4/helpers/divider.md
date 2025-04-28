@@ -5,13 +5,14 @@ description: Use the horizontal or vertical rule helpers to create dividers. A d
 group: helpers
 aliases:
   - "/docs/helpers/divider/"
+  - "/docs/helpers/dividers/"
   - "/docs/helpers/vertical-rule/"
 toc: true
 ---
 
 ## Horizontal rules
 
-Horizontal rules should use the `<hr>` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on a `<div>` or our [border utilities]({{< docsref "/utilities/borders" >}}), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
+Horizontal rules should use the `<hr>` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]({{< docsref "/utilities/borders" >}}), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
 
 {{< example >}}
 <hr>
@@ -45,9 +46,9 @@ Vertical rules scale their height in flex layouts:
 Change the divider color using the [border color utilities]({{< docsref "/utilities/borders/#color" >}}).
 
 {{< example class="d-flex flex-column gap-1" >}}
-<div><hr class="border-muted"></div>
-<div><hr class="border-emphasized"></div>
-<div><hr class="border-brand-primary"></div>
+<hr class="border-muted">
+<hr class="border-emphasized">
+<hr class="border-brand-primary">
 <div data-bs-theme="light" class="bg-brand-primary py-shortest"><hr class="border-on-brand-primary"></div>
 <div data-bs-theme="light" class="bg-always-white py-shortest"><hr class="border-always-black"></div>
 <div data-bs-theme="dark" class="bg-always-black py-shortest"><hr class="border-always-white"></div>
