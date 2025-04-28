@@ -106,6 +106,7 @@
 
 // Label
 .control-item-label {
+  margin: 0;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");

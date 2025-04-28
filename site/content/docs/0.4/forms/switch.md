@@ -222,7 +222,7 @@ To create a read only switches the input should be replaced by a `span` element 
     <span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="switchReadonlyLabel"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="switchReadonlyLabel">Label</label>
+    <p class="control-item-label" id="switchReadonlyLabel">Label</p>
   </div>
 </div>
 <div class="switch-item">
@@ -230,7 +230,7 @@ To create a read only switches the input should be replaced by a `span` element 
     <span class="control-item-indicator" role="switch" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="switchReadonlyCheckedLabel"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="switchReadonlyCheckedLabel">Label</label>
+    <p class="control-item-label" id="switchReadonlyCheckedLabel">Label</p>
   </div>
 </div>
 {{< /example >}}

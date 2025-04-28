@@ -293,7 +293,7 @@ To create a read only checkbox the input should be replaced by a `span` element 
     <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="checkboxReadonlyLabel">Label</label>
+    <p class="control-item-label" id="checkboxReadonlyLabel">Label</p>
   </div>
 </div>
 <div class="checkbox-item">
@@ -301,7 +301,7 @@ To create a read only checkbox the input should be replaced by a `span` element 
     <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</label>
+    <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</p>
   </div>
 </div>
 <div class="checkbox-item">
@@ -309,7 +309,7 @@ To create a read only checkbox the input should be replaced by a `span` element 
     <span class="control-item-indicator control-item-readonly-indeterminate" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyIndeterminate"></span>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" id="checkboxReadonlyIndeterminate">Label</label>
+    <p class="control-item-label" id="checkboxReadonlyIndeterminate">Label</p>
   </div>
 </div>
 {{< /example >}}
