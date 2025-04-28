@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { getConfig } from '@libs/config'
+
+interface Props {
+  description: string
+  title: string
+}
+
+const { description, title } = Astro.props
+---
+
+<BaseLayout {...Astro.props} layout="single">
+  <Fragment slot="main">
+    <main class="bd-content order-1" id="content">
+      <div class="title-bar mb-2 mb-md-0">
+        <div class="container-xxl">
+          <h1 class="display-1">{title}</h1>
+        </div>
+      </div>
+      <div class="pb-4 pb-md-2">
+        <div class="container-xxl bd-gutter pt-md-2 pb-md-4">
+          <div class="row">
+            <div class="col-12">
+              <p class="ll-sm h3 mb-4">{description}</p>
+              <slot />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class:list={[{'container-xxl bd-gutter': title !== 'Orange Design System for web'}]}>
+        <slot name="main-content" />
+      </div>
+    </main>
+  </Fragment>
+</BaseLayout>

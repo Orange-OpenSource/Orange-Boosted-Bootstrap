@@ -16,6 +16,7 @@ const configSchema = z.object({
   }),
   authors: z.string(),
   baseURL: z.string().url(),
+  blog: z.string().url(),
   bootstrap: z.string().url(),
   bootstrap_github_org: z.string().url(),
   cdn: z.object({

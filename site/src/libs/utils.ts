@@ -1,4 +1,6 @@
 import { slug } from 'github-slugger'
+import fromMarkdown from 'mdast-util-from-markdown'
+import toString from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
@@ -15,6 +17,14 @@ export function capitalizeFirstLetter(str: string) {
 // collection. Same goes for the docs frontmatter sections.
 export function getSlug(str: string) {
   return slug(str).replace(/--+/g, '-')
+}
+
+export function trimLeadingAndTrailingSlashes(str: string) {
+  return str.replace(/^\/+|\/+$/g, '')
+}
+
+export function stripMarkdown(str: string) {
+  return toString(fromMarkdown(str))
 }
 
 export function processMarkdownToHtml(markdown: string): string {

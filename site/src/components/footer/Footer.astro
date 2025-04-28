@@ -1,6 +1,15 @@
 ---
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  layout: Layout,
+  title: string
+}
+
+const { layout } = Astro.props
+const { title } = Astro.props
 ---
 
 <footer class="footer navbar bd-footer" data-bs-theme="dark">
@@ -18,8 +27,8 @@ import { getVersionedDocsPath } from '@libs/path'
           <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class:list={['nav-link', {active: Astro.url.pathname === '/'}]} {...(Astro.url.pathname === '/' && {'aria-current': 'page'})} href="/" aria-describedby="headingLinks">Home</a></li>
-              <li><a class:list={['nav-link', {active: !Astro.url.pathname.includes('getting-started') && Astro.url.pathname.startsWith(getVersionedDocsPath(''))}]} {...(!Astro.url.pathname.includes('getting-started') && Astro.url.pathname.startsWith(getVersionedDocsPath('')) && {'aria-current': 'true'})} href={getVersionedDocsPath('')} aria-describedby="headingLinks">Docs</a></li>
-              <li><a class:list={['nav-link', {active: Astro.props.title === 'Examples'}]} {...(Astro.props.title === 'Examples' && {'aria-current': 'page'})} href={getVersionedDocsPath('examples')} aria-describedby="headingLinks">Examples</a></li>
+              <li><a class:list={['nav-link', {active: !Astro.url.pathname.includes('getting-started') && layout === 'docs'}]} {...(!Astro.url.pathname.includes('getting-started') && layout === 'docs') && {'aria-current': 'true'}} href={getVersionedDocsPath('')} aria-describedby="headingLinks">Docs</a></li>
+              <li><a class:list={['nav-link', {active: title === 'Examples'}]} {...(title === 'Examples' && {'aria-current': 'page'})} href={getVersionedDocsPath('examples')} aria-describedby="headingLinks">Examples</a></li>
               <li><a class:list={['nav-link', {active: Astro.props.title === 'Orange Design System for web'}]} {...(Astro.props.title === 'Orange Design System for web' && {'aria-current': 'page'})} href={getVersionedDocsPath('guidelines')} aria-describedby="headingLinks">Design guidelines</a></li>
               <li><a class="nav-link" href={getConfig().icons} aria-describedby="headingLinks" target="_blank" rel="noopener">Solaris icons</a></li>
             </ul>

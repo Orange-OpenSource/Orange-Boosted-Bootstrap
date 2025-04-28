@@ -30,29 +30,37 @@ const dataDefinitions = {
   //     user: z.string()
   //   })
   //   .array(),
-  // 'docs-versions': z
-  //   .object({
-  //     group: z.string(),
-  //     baseurl: z.string().url(),
-  //     description: z.string(),
-  //     versions: z.union([zVersionSemver, zVersionMajorMinor]).array()
-  //   })
-  //   .array(),
-  // examples: z
-  //   .object({
-  //     category: z.string(),
-  //     external: z.boolean().optional(),
-  //     description: z.string(),
-  //     examples: z
-  //       .object({
-  //         description: z.string(),
-  //         indexPath: z.string().optional(),
-  //         name: z.string(),
-  //         url: z.string().optional()
-  //       })
-  //       .array()
-  //   })
-  //   .array(),
+  'design-guidelines': z
+    .object({
+      description: z.string(),
+      image: z.string(),
+      link: z.string().url(),
+      name: z.string(),
+    })
+    .array(),
+  'docs-versions': z
+    .object({
+      group: z.string(),
+      baseurl: z.string().url(),
+      description: z.string(),
+      versions: z.union([zVersionSemver, zVersionMajorMinor]).array()
+    })
+    .array(),
+  examples: z
+    .object({
+      category: z.string(),
+      external: z.boolean().optional(),
+      description: z.string(),
+      examples: z
+        .object({
+          description: z.string(),
+          indexPath: z.string().optional(),
+          name: z.string(),
+          url: z.string().optional()
+        })
+        .array()
+    })
+    .array(),
   // grays: zNamedHexColors(9),
   // icons: z.object({
   //   preferred: z
@@ -75,19 +83,19 @@ const dataDefinitions = {
       name: z.string()
     })
     .array(),
-  // sidebar: z
-  //   .object({
-  //     title: z.string(),
-  //     icon: z.string().optional(),
-  //     icon_color: z.string().optional(),
-  //     pages: z
-  //       .object({
-  //         title: z.string()
-  //       })
-  //       .array()
-  //       .optional()
-  //   })
-  //   .array(),
+  sidebar: z
+    .object({
+      title: z.string(),
+      icon: z.string().optional(),
+      icon_color: z.string().optional(),
+      pages: z
+        .object({
+          title: z.string()
+        })
+        .array()
+        .optional()
+    })
+    .array(),
   // 'theme-colors': z
   //   .object({
   //     name: z.string(),

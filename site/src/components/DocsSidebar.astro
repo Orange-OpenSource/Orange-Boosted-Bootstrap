@@ -20,7 +20,7 @@ const sidebar = getData('sidebar')
                 {group.icon && (
                   <svg
                     class="bi me-1"
-                    style={group.icon_color && j`color: var(--bs-${group.icon_color});"`}
+                    style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
                     <use xlink:href={`#${group.icon}`}></use>
@@ -36,7 +36,7 @@ const sidebar = getData('sidebar')
                   const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`
                   const active = Astro.params.slug === unversionedPageSlug
 
-                  const generatedPage = docsPages.find((page) => page.slug === unversionedPageSlug)
+                  const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
 
                   // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
                   if (!generatedPage) {

@@ -78,7 +78,7 @@ if (frontmatter.toc) {
           </div>
           <h1 class="bd-title mb-0" id="content">{frontmatter.title}</h1>
         </div>
-        <div class="bd-lead mt-2">
+        <div class="bd-subtitle mt-2">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
       </div>

@@ -40,16 +40,16 @@
   background: $black;
   border-top: var(--bs-border-width) solid var(--bs-border-color-subtle);
 
-  &[style*="display: block"] {
-    display: flex !important; // stylelint-disable-line declaration-no-important
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
       --max-width: #{map-get($container-max-widths, $breakpoint)};
     }
+  }
+
+  &[style*="display: block"] {
+    display: flex !important; // stylelint-disable-line declaration-no-important
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

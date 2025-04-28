@@ -1,0 +1,349 @@
+---
+import SingleLayout from '@layouts/SingleLayout.astro'
+import { getConfig } from '@libs/config'
+import ExamplesMain from '@layouts/partials/ExamplesMain.astro'
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { version: getConfig().docs_version }
+    }
+  ]
+}
+---
+
+<SingleLayout title="Accessibility statement: Boosted documentation" description="">
+  <h2 id="context">Context <a class="anchor-link" href="#context" aria-label="Link to this section: Context"></a></h2>
+  <p>
+    Orange undertakes to make its websites internet, intranet, extranet and its mobile applications accessible in
+    accordance with article 47 of Law No. 2005-102 of February 11, 2005.
+  </p>
+  <p>
+    To this end, it implements the following strategy and actions: <a
+      href="https://gallery.orange.com/rse/?od=d4d15fea-9e7a-4497-8b04-c5e7f9290dca&om=b4e153e8-7460-4196-8890-a18eca5a51a9&v=sharedSelection#l=row&ss=3ba60f1d-f9fc-4b21-aca6-056dbdae6b94"
+      >the pluri-annual accessibility framework</a
+    >.
+  </p>
+  <p>This accessibility statement applies to the Boosted documentation.</p>
+  <h2 id="conformity-level">
+    Conformity level <a class="anchor-link" href="#conformity-level" aria-label="Link to this section: Conformity level"
+    ></a>
+  </h2>
+  <p>
+    &ldquo;Boosted Documentation&rdquo; is partially compliant to the criteria with <a
+      href="https://www.w3.org/TR/WCAG22/">WCAG version 2.2, level AA</a
+    >.
+  </p>
+  <p>
+    ORANGE SA refers to the WCAG international recommendations. <a
+      href="https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/"
+      >Here is the correspondence link between the RGAA and the WCAG (French)</a
+    >.
+  </p>
+  <p>The audit was carried out via <a href="https://la-va11ydette.orange.com/?lang=en">the Orange va11ydette</a>.</p>
+  <h3 id="tests-result">
+    Tests result <a class="anchor-link" href="#tests-result" aria-label="Link to this section: Tests result"></a>
+  </h3>
+  <div class="row summary">
+    <div class="col-lg-3">
+      <h4 class="pie" data-value="64">
+        <span class="visually-hidden">Global compliance</span>
+        <span class="pie-val">64%</span>
+      </h4>
+      <p class="lead">Global compliance</p>
+    </div>
+    <div class="col-lg-3">
+      <h4 class="pie" data-value="87">
+        <span class="visually-hidden">Average compliance</span>
+        <span class="pie-val">87%</span>
+      </h4>
+      <p class="lead">Average compliance</p>
+    </div>
+  </div>
+  <p>The compliance audit carried out by ORANGE SA reveals that:</p>
+  <ul>
+    <li>64% of WCAG level A and AA criteria are met.</li>
+    <li>The average compliance rate of the online service is 87%.</li>
+  </ul>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <caption class="bd-caption">Summary by levels</caption>
+      <thead
+        ><tr>
+          <th scope="row">Level</th>
+          <th scope="col" class="text-center">A</th>
+          <th scope="col" class="text-center">AA</th>
+          <th scope="col" class="text-center">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Number of criteria</th>
+          <td class="text-center">32</td>
+          <td class="text-center">24</td>
+          <td class="text-center">56</td>
+        </tr>
+        <tr>
+          <th scope="row">Compliant</th>
+          <td class="text-center">9</td>
+          <td class="text-center">12</td>
+          <td class="text-center">21</td>
+        </tr>
+        <tr>
+          <th scope="row">Non-compliant</th>
+          <td class="text-center">7</td>
+          <td class="text-center">5</td>
+          <td class="text-center">12</td>
+        </tr>
+        <tr>
+          <th scope="row">Not applicable</th>
+          <td class="text-center">16</td>
+          <td class="text-center">7</td>
+          <td class="text-center">23</td>
+        </tr>
+        <tr>
+          <th scope="row" class="table-active">Compliance</th>
+          <td class="text-center table-active">56%</td>
+          <td class="text-center table-active">71%</td>
+          <td class="text-center table-active">64%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <caption class="bd-caption">Compliance rate by pages according to the two levels of criteria A and AA</caption>
+      <tbody>
+        <tr>
+          <th scope="row">Criteria / Level</th>
+          <th scope="col" class="text-center">Compliant / A</th>
+          <th scope="col" class="text-center">Compliant / AA</th>
+          <th scope="col" class="text-center">Non-compliant / A</th>
+          <th scope="col" class="text-center">Non-compliant / AA</th>
+          <th scope="col" class="text-center">Not applicable / A</th>
+          <th scope="col" class="text-center">Not applicable / AA</th>
+          <th scope="col" class="text-center table-active">Compliance rate</th>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Home</th>
+          <td>12</td>
+          <td>13</td>
+          <td>4</td>
+          <td>2</td>
+          <td>16</td>
+          <td>9</td>
+          <td class="table-active">81%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Docs</th>
+          <td>14</td>
+          <td>13</td>
+          <td>2</td>
+          <td>3</td>
+          <td>16</td>
+          <td>8</td>
+          <td class="table-active">84%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Examples</th>
+          <td>14</td>
+          <td>14</td>
+          <td>2</td>
+          <td>2</td>
+          <td>16</td>
+          <td>8</td>
+          <td class="table-active">88%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Design guidelines</th>
+          <td>14</td>
+          <td>15</td>
+          <td>2</td>
+          <td>1</td>
+          <td>16</td>
+          <td>8</td>
+          <td class="table-active">91%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Overview</th>
+          <td>15</td>
+          <td>13</td>
+          <td>1</td>
+          <td>3</td>
+          <td>16</td>
+          <td>8</td>
+          <td class="table-active">88%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Brand</th>
+          <td>14</td>
+          <td>14</td>
+          <td>2</td>
+          <td>2</td>
+          <td>16</td>
+          <td>8</td>
+          <td class="table-active">88%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Translations</th>
+          <td>15</td>
+          <td>14</td>
+          <td>1</td>
+          <td>3</td>
+          <td>16</td>
+          <td>7</td>
+          <td class="table-active">88%</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="visually-hidden">Page:</span>Cookies</th>
+          <td>14</td>
+          <td>13</td>
+          <td>2</td>
+          <td>2</td>
+          <td>16</td>
+          <td>9</td>
+          <td class="table-active">87%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="content-not-accessible">
+    Content not accessible <a
+      class="anchor-link"
+      href="#content-not-accessible"
+      aria-label="Link to this section: Content not accessible"></a>
+  </h2>
+  <p>The contents listed below are not accessible for the following reasons.</p>
+  <h3 id="non-compliances">
+    Non-compliances <a class="anchor-link" href="#non-compliances" aria-label="Link to this section: Non-compliances"
+    ></a>
+  </h3>
+  <p>List of non-compliant WCAG criteria:</p>
+  <ul>
+    <li>1.1.1 Non-text Content, Level A</li>
+    <li>1.3.1 Info and Relationships, Level A</li>
+    <li>1.4.3 Contrast (Minimum), Level AA</li>
+    <li>2.4.2 Page Titled, Level A</li>
+    <li>2.4.3 Focus Order, Level A</li>
+    <li>2.4.4 Link Purpose (In Context), Level A</li>
+    <li>2.4.6 Headings and Labels, Level AA</li>
+    <li>2.5.3 Label in Name, Level A</li>
+    <li>2.5.8 Target size, Level AA</li>
+    <li>3.1.2 Language of Parts, Level AA</li>
+    <li>3.3.2 Labels or Instructions, Level A</li>
+    <li>4.1.3 Status Messages, Level AA</li>
+  </ul>
+  <h2 id="establishment-of-this-accessibility-statement">
+    Establishment of this accessibility statement <a
+      class="anchor-link"
+      href="#establishment-of-this-accessibility-statement"
+      aria-label="Link to this section: Establishment of this accessibility statement"></a>
+  </h2>
+  <p>This declaration was established on 7/30/2024.</p>
+  <h3 id="technical-specifications-of-the-site">
+    Technical specifications of the site <a
+      class="anchor-link"
+      href="#technical-specifications-of-the-site"
+      aria-label="Link to this section: Technical specifications of the site"></a>
+  </h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <h3 id="testing-environment">
+    Testing environment <a
+      class="anchor-link"
+      href="#testing-environment"
+      aria-label="Link to this section: Testing environment"></a>
+  </h3>
+  <p>The verifications were performed with the following software combinations:</p>
+  <ul>
+    <li>Edge 126.0</li>
+    <li>Firefox 115.13</li>
+  </ul>
+  <h3 id="methods-and-tools-to-evaluate-accessibility">
+    Methods and tools to evaluate accessibility <a
+      class="anchor-link"
+      href="#methods-and-tools-to-evaluate-accessibility"
+      aria-label="Link to this section: Methods and tools to evaluate accessibility"></a>
+  </h3>
+  <ul>
+    <li><strong>Automatic testing:</strong> axe DevTools 4.83.0 (axe-Core 4.9.1), Wave 3.2.5.3</li>
+    <li><strong>Functional testing:</strong> NVDA 2023.3.1, Keyboard navigation</li>
+  </ul>
+  <h3 id="pages-which-have-been-the-subject-of-compliance-verification">
+    Pages which have been the subject of compliance verification <a
+      class="anchor-link"
+      href="#pages-which-have-been-the-subject-of-compliance-verification"
+      aria-label="Link to this section: Pages which have been the subject of compliance verification"></a>
+  </h3>
+  <p>The verification audit was performed on the following pages using the Orange va11ydette:</p>
+  <ul>
+    <li>Home: <a href="https://boosted.orange.com/">https://boosted.orange.com/</a></li>
+    <li>Docs: <a href="https://boosted.orange.com/docs">https://boosted.orange.com/docs</a></li>
+    <li>
+      Examples: <a href="https://boosted.orange.com/docs/5.3/examples/">https://boosted.orange.com/docs/5.3/examples/</a
+      >
+    </li>
+    <li>
+      Design guidelines: <a href="https://boosted.orange.com/docs/5.3/guidelines/"
+        >https://boosted.orange.com/docs/5.3/guidelines/</a
+      >
+    </li>
+    <li>
+      Overview: <a href="https://boosted.orange.com/docs/5.3/about/overview/"
+        >https://boosted.orange.com/docs/5.3/about/overview/</a
+      >
+    </li>
+    <li>
+      Brand: <a href="https://boosted.orange.com/docs/5.3/about/brand/"
+        >https://boosted.orange.com/docs/5.3/about/brand/</a
+      >
+    </li>
+    <li>
+      Translations: <a href="https://boosted.orange.com/docs/5.3/about/translations/"
+        >https://boosted.orange.com/docs/5.3/about/translations/</a
+      >
+    </li>
+    <li>
+      Cookies: <a href="https://boosted.orange.com/docs/5.3/about/cookies/"
+        >https://boosted.orange.com/docs/5.3/about/cookies/</a
+      >
+    </li>
+  </ul>
+  <h2 id="feedback-and-contact-information">
+    Feedback and contact information <a
+      class="anchor-link"
+      href="#feedback-and-contact-information"
+      aria-label="Link to this section: Feedback and contact information"></a>
+  </h2>
+  <p>
+    If you are unable to access content or a service, you can contact the site manager to be directed to an accessible
+    alternative or obtain the content in another form.
+  </p>
+  <p>
+    We welcome your feedback on the accessibility of this site. Please let us know if you encounter accessibility
+    problems by sending an email to <a href="mailto:accessibilite.france@orange.com">accessibilite.france@orange.com</a
+    >.
+  </p>
+  <h2 id="legal-remedies">
+    Legal remedies <a class="anchor-link" href="#legal-remedies" aria-label="Link to this section: Legal remedies"></a>
+  </h2>
+  <p>
+    You have reported to the website manager an accessibility problem that prevents you from accessing content or one of
+    the portal&rsquo;s services and you have not received a satisfactory response, in this case:
+  </p>
+  <ul>
+    <li>Write a message to the <a href="https://formulaire.defenseurdesdroits.fr/">Défenseurs des Droits</a>.</li>
+    <li>
+      Or contact the <a href="https://www.defenseurdesdroits.fr/saisir/delegues"
+        >Défenseurs des Droits delegate in your department</a
+      >.
+    </li>
+    <li>
+      Or send a letter by post (free of charge, do not put a stamp):
+      <address>Défenseur des droits<br />Libre réponse 71120<br />75342 Paris CEDEX 07</address>
+    </li>
+  </ul>
+</SingleLayout>

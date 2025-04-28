@@ -47,3 +47,18 @@
   margin-top: var(--bs-border-width); // Boosted mod: instead of `1.25rem`
   margin-right: var(--bs-border-width); // Boosted mod: instead of `.75rem`
 }
+
+.bd-code-snippet {
+  position: relative;
+
+  .bd-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    right: 0;
+  }
+}
