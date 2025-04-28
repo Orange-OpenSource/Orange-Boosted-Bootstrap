@@ -200,7 +200,8 @@ included in the project:
    git pull [--rebase] upstream main
    ```
 
-8. Push your topic branch up to your fork:
+8. Commit your changes, but **do not push compiled CSS and JS files in `dist` and `js/dist`**.
+   Push your topic branch up to your fork:
 
    ```bash
    git push origin <topic-branch-name>
