@@ -10,15 +10,12 @@ function createDirectoryIfNeeded(path) {
   if (fs.existsSync(path)) {
     fs.rmSync(path, { recursive: true, force: true })
   }
-  if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, 0o766, error => {
-      if (error) {
-        throw new Error(error)
-      }
-    })
-  }
+  fs.mkdirSync(path, 0o766, error => {
+    if (error) {
+      throw new Error(error)
+    }
+  })
 }
-
 function createTemplate(component) {
   return `export default {\n\
     title: 'Components/${component}',\n\
