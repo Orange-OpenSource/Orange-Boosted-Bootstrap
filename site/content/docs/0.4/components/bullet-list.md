@@ -22,6 +22,17 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
     <li>It has styling</li>
     <li>To look nice</li>
 </ul>
+
+
+<ul>
+    <li>This is a list</li>
+    <li>
+      <ul>
+        <li>It has styling</li>
+        <li>To look nice</li>
+      </ul>
+    </li>
+</ul>
 {{< /example >}}
 
 ## Ordered list
