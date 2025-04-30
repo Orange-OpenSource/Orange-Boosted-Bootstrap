@@ -47,7 +47,7 @@ toc: true
 
 ### Helpers
 
-#### Dividers
+#### Divider
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
 
 ### CSS and Sass variables
