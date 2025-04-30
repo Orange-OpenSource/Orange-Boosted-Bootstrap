@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { getDocsFsPath } from './path'
 
 export const exampleFrontmatterSchema = z.object({
+  aliases: z.string().array().optional(),
   body_class: z.string().optional(),
   direction: z.literal('rtl').optional(),
   extra_css: z.string().array().optional(),
@@ -18,6 +19,7 @@ export const exampleFrontmatterSchema = z.object({
     .optional(),
   html_class: z.string().optional(),
   include_js: z.boolean().optional(),
+  theme_selector: z.boolean().optional(),
   title: z.string()
 })
 

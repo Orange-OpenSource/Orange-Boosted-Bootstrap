@@ -10,7 +10,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
 import { rehypeBsTable } from './rehype'
 import { remarkBsConfig, remarkBsDocsref } from './remark'
-import { configurePrism } from './prism' // TODO
+import { configurePrism } from './prism'
 import {
   docsDirectory,
   getDocsFsPath,

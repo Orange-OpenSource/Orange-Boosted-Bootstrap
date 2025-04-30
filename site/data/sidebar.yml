@@ -1,5 +1,5 @@
 # This file holds all sidebar menu's entries.
-# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+# The logic for the sidebar generation is in 'site/layouts/partials/docs-sidebar.html'.
 
 - title: Getting started
   icon: book-half
@@ -155,13 +155,13 @@
 #     - title: Approach
 #     - title: Icons
 
-# - title: About
-#   icon: globe2
-#   icon_color: body-color
-#   pages:
+- title: About
+  icon: globe2
+  icon_color: body-color
+  pages:
 #     - title: Overview
 #     - title: Team
-#     - title: Brand
+    - title: Brand
 #     - title: License
 #     - title: Translations
 #     - title: Cookies

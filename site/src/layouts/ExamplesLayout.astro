@@ -11,7 +11,7 @@ import Icons from '@layouts/partials/Icons.astro'
 
 type Props = ExampleFrontmatter
 
-const { body_class, direction, extra_css, extra_js, html_class, include_js, title = 'Example' } = Astro.props
+const { body_class, direction, extra_css, extra_js, html_class, include_js, title = 'Example', theme_selector = true } = Astro.props
 
 const pageTitle = `${title} · ${getConfig().title} v${getConfig().docs_version}`
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
@@ -112,9 +112,11 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
   <body class:list={body_class}>
     <Icons />
 
-    <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <ThemeToggler layout="examples" />
-    </div>
+    {theme_selector && (
+      <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <ThemeToggler layout="examples" />
+      </div>
+    )}
 
     <slot />
 

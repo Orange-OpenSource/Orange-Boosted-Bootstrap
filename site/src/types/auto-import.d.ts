@@ -10,6 +10,19 @@ export declare global {
   export const BsTable: typeof import('@shortcodes/BsTable.astro').default
   export const Callout: typeof import('@shortcodes/Callout.astro').default
   export const CalloutDeprecatedDarkVariables: typeof import('@shortcodes/CalloutDeprecatedDarkVariables.astro').default
+  export const Card: typeof import('@shortcodes/Card.astro').default
   export const Code: typeof import('@shortcodes/Code.astro').default
+  export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
   export const DesignCalloutAlert: typeof import('@shortcodes/DesignCalloutAlert.astro').default
+  export const EnableBtnCloseTooltip: typeof import('@shortcodes/EnableBtnCloseTooltip.astro').default
+  export const Example: typeof import('@shortcodes/Example.astro').default
+  export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default
+  export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default
+  export const OrangeFooter: typeof import('@shortcodes/OrangeFooter.astro').default
+  export const OrangeGlobalHeaders: typeof import('@shortcodes/OrangeGlobalHeaders.astro').default
+  export const OrangeSupra: typeof import('@shortcodes/OrangeSupra.astro').default
+  export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
+  export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default
+  export const SvgDocs: typeof import('@shortcodes/SvgDocs.astro').default
+  export const Table: typeof import('@shortcodes/Table.astro').default
 }
