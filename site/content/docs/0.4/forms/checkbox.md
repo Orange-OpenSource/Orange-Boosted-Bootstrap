@@ -306,7 +306,7 @@ To create a read only checkbox the input should be replaced by a `span` element 
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <span class="control-item-indicator control-item-readonly-indeterminate" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyIndeterminate"></span>
+    <span class="control-item-indicator" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
   </div>
   <div class="control-item-text-container">
     <p class="control-item-label" id="checkboxReadonlyIndeterminate">Label</p>

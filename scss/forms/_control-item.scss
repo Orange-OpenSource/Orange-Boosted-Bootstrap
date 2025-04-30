@@ -133,6 +133,7 @@
 .control-item-indicator {
   --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected)};
   --#{$prefix}control-item-indicator-color: #{$ouds-color-border-emphasized};
+  --#{$prefix}checkbox-check-icon: #{escape-svg($form-check-input-checked-bg-image)};
 
   position: relative;
   flex-shrink: 0;
@@ -164,18 +165,18 @@
   }
 
   &[type="checkbox"],
-  &[role="checkbox"][aria-readonly="true"] {
+  &[role="checkbox"] {
     @include border-radius($form-check-input-border-radius);
   }
 
   // stylelint-disable selector-max-attribute
   &[type="radio"],
-  [role="radiogroup"][aria-readonly="true"] &[role="radio"]  {
+  [role="radiogroup"] &[role="radio"]  {
     @include border-radius($form-check-radio-border-radius);
   }
 
   &:indeterminate[type="checkbox"],
-  &[role="checkbox"][aria-readonly].control-item-readonly-indeterminate {
+  &[role="checkbox"][aria-checked="mixed"] {
     --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
 
     &::before {
@@ -185,15 +186,17 @@
   }
 
   &[role="checkbox"][aria-checked="true"] {
-    --#{$prefix}control-item-indicator-border: #{$ouds-checkbox-border-width-selected};
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
+
     &::before {
       background-color: currentcolor;
-      mask-image: escape-svg($form-check-input-checked-bg-image);
+      mask-image: var(--#{$prefix}checkbox-check-icon);
     }
   }
 
-  [role="radiogroup"][aria-readonly="true"] &[role="radio"][aria-checked="true"] {
-    --#{$prefix}control-item-indicator-border: #{$ouds-radio-button-border-width-selected};
+  [role="radiogroup"] &[role="radio"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+
     &::before {
       background-color: currentcolor;
       mask-image: escape-svg($form-check-radio-checked-bg-image);
@@ -207,13 +210,15 @@
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
+
       &::before {
-        mask-image: escape-svg($form-check-input-checked-bg-image);
+        mask-image: var(--#{$prefix}checkbox-check-icon);
       }
     }
 
     &[type="radio"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+
       &::before {
         mask-image: escape-svg($form-check-radio-checked-bg-image);
       }
@@ -231,12 +236,12 @@
 
     &:focus-visible {
       &[type="checkbox"],
-      &[role="checkbox"][aria-readonly] {
+      &[role="checkbox"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
 
       &[type="radio"],
-      [role="radiogroup"][aria-readonly="true"] &[role="radio"]{
+      [role="radiogroup"] &[role="radio"]{
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
       }
     }
@@ -288,7 +293,7 @@
   }
 
   &:disabled,
-  &[aria-readonly][role="checkbox"],
+  &[role="checkbox"][aria-readonly="true"],
   [role="radiogroup"][aria-readonly="true"] &[role="radio"] {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
