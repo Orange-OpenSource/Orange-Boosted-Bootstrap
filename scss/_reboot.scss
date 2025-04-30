@@ -242,27 +242,34 @@ ul {
 }
 
 li {
-  display: flex;
-  gap: $ouds-bullet-list-space-column-gap-body-medium;
+  box-sizing: content-box;
   padding: $ouds-bullet-list-space-padding-block-body-medium $ouds-bullet-list-space-padding-inline-level-0;
 
-  &:not(:has(ul))::before {
+  &:not(:has(ul)) {
+    height: var(--#{$prefix}icon-md-with-body-medium);
+  }
+
+  &::before {
     box-sizing: content-box;
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    align-self: stretch;
-    justify-content: flex-end;
+    display: inline-block;
     width: var(--#{$prefix}icon-md-with-body-medium);
+    height: var(--#{$prefix}icon-md-with-body-medium);
+    margin-right: $ouds-bullet-list-space-column-gap-body-medium;
+    vertical-align: middle;
     content: "";
     background-color: var(--#{$prefix}color-content-brand-primary);
     mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='5' width='6' height='6'/></svg>");
     mask-repeat: no-repeat;
-    mask-position: right;
+    mask-position: center right;
     mask-size: var(--#{$prefix}icon-sm-with-body-medium);
+  }
 
-    ol & {
-      color: inherit;
+  li {
+    padding-left: $ouds-bullet-list-space-padding-inline-level-1;
+
+    /* stylelint-disable-next-line selector-max-type */
+    li {
+      padding-left: $ouds-bullet-list-space-padding-inline-level-2;
     }
   }
 }

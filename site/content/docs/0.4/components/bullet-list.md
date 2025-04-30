@@ -26,10 +26,14 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
 
 <ul>
     <li>This is a list</li>
-    <li>
+    <li>Test damn
       <ul>
-        <li>It has styling</li>
         <li>To look nice</li>
+        <li>Oh yeah
+          <ul>
+            <li>It has styling</li>
+          </ul>
+        </li>
       </ul>
     </li>
 </ul>
