@@ -241,21 +241,19 @@ ul {
   @include get-font-size("body-medium");
 }
 
+/* stylelint-disable selector-max-type */
 li {
+  position: relative;
   box-sizing: content-box;
-  padding: $ouds-bullet-list-space-padding-block-body-medium $ouds-bullet-list-space-padding-inline-level-0;
-
-  &:not(:has(ul)) {
-    height: var(--#{$prefix}icon-md-with-body-medium);
-  }
+  padding: $ouds-bullet-list-space-padding-block-body-medium 0;
+  padding-left: calc(var(--#{$prefix}icon-md-with-body-medium) + $ouds-bullet-list-space-padding-inline-level-0 + $ouds-bullet-list-space-column-gap-body-medium); // stylelint-disable-line function-disallowed-list
 
   &::before {
-    box-sizing: content-box;
-    display: inline-block;
+    position: absolute;
+    top: $ouds-bullet-list-space-padding-block-body-medium;
+    left: 0;
     width: var(--#{$prefix}icon-md-with-body-medium);
     height: var(--#{$prefix}icon-md-with-body-medium);
-    margin-right: $ouds-bullet-list-space-column-gap-body-medium;
-    vertical-align: middle;
     content: "";
     background-color: var(--#{$prefix}color-content-brand-primary);
     mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='5' width='6' height='6'/></svg>");
@@ -264,15 +262,27 @@ li {
     mask-size: var(--#{$prefix}icon-sm-with-body-medium);
   }
 
-  li {
-    padding-left: $ouds-bullet-list-space-padding-inline-level-1;
+  ul {
+    margin-top: $ouds-bullet-list-space-padding-block-body-medium;
+  }
 
-    /* stylelint-disable-next-line selector-max-type */
+  li {
+    padding-left: calc($ouds-bullet-list-space-padding-inline-level-1 - $ouds-bullet-list-space-padding-inline-level-0); // stylelint-disable-line function-disallowed-list
+
+    &::before {
+      mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='7' width='6' height='2'/></svg>");
+    }
+
     li {
-      padding-left: $ouds-bullet-list-space-padding-inline-level-2;
+      padding-left: calc($ouds-bullet-list-space-padding-inline-level-2 - $ouds-bullet-list-space-padding-inline-level-1); // stylelint-disable-line function-disallowed-list
+
+      &::before {
+        mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='6.25' y='6.25' width='3.5' height='3.5'/></svg>");
+      }
     }
   }
 }
+/* stylelint-enable selector-max-type */
 // End mod
 
 dt {
