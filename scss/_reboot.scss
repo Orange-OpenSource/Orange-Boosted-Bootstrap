@@ -244,7 +244,7 @@ ul {
   list-style-type: none;
   @include get-font-size("body-medium");
 
-  /* stylelint-disable selector-max-type */
+  // stylelint-disable selector-max-type
   li {
     position: relative;
     box-sizing: content-box;
@@ -285,7 +285,7 @@ ul {
       }
     }
   }
-  /* stylelint-enable selector-max-type */
+  // stylelint-enable selector-max-type
 }
 // End mod
 
