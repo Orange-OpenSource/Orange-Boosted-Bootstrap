@@ -9,6 +9,16 @@ aliases:
 toc: true
 ---
 
+## v0.5.0
+
+<hr>
+
+### Forms
+
+#### Checkboxes, radio buttons, switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Read only state has been implemented.
+
 ## v0.4.1
 
 <hr>
