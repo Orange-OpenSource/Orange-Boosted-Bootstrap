@@ -48,7 +48,7 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 </div>
 {{< /example >}}
 
-And with [vertical rules]({{< docsref "/helpers/dividers" >}}):
+And with [vertical rules]({{< docsref "/helpers/divider" >}}):
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-tall">
