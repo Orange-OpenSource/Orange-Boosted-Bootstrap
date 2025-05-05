@@ -12,9 +12,45 @@ toc: true
 You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
 {{< /callout >}}
 
+
+
+## Ordered list
+
+
+{{< example >}}
+
+<ol>
+    <li>This is a list</li>
+    <li>It has styling</li>
+    <li>To look nice</li>
+    <li>This is a list</li>
+    <li>It has styling</li>
+    <li>To look nice</li>
+    <li>This is a list</li>
+    <li>It has styling</li>
+    <li>To look nice</li>
+    <li>This is a list</li>
+    <li>It has styling</li>
+    <li>To look nice</li>
+</ol>
+
+<ol>
+    <li>This is a list</li>
+    <li>Test damn
+      <ol>
+        <li>To look nice</li>
+        <li>Oh yeah
+          <ol>
+            <li>It has styling</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+</ol>
+
+{{< /example >}}
+
 ## Bullet list
-
-
 
 {{< example >}}
 <ul>
@@ -57,10 +93,6 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
       </ul>
     </li>
 </ul>
-
-
 {{< /example >}}
-
-## Ordered list
 
 ## Unstyled list

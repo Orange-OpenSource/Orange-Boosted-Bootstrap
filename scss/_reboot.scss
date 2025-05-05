@@ -242,7 +242,7 @@ ul {
   $bullet-list-marker-level-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='6.25' y='6.25' width='3.5' height='3.5'/></svg>");
   $tick-list-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>");
 
-  list-style-type: none;
+  list-style-type: "";
   @include get-font-size("body-medium");
 
   &.list-tick {
@@ -286,6 +286,66 @@ ul {
 
         &::before {
           mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-2);
+        }
+      }
+    }
+  }
+  // stylelint-enable selector-max-type
+}
+
+
+ol {
+  list-style: "";
+  counter-reset: list;
+  @include get-font-size("body-medium");
+
+  // stylelint-disable selector-max-type
+  li {
+    position: relative;
+    box-sizing: content-box;
+    padding: $ouds-bullet-list-space-padding-block-body-medium 0;
+    padding-left: #{$ouds-bullet-list-space-padding-inline-level-0};
+    padding-left: calc(var(--#{$prefix}icon-md-with-body-medium) + $ouds-bullet-list-space-padding-inline-level-0 + $ouds-bullet-list-space-column-gap-body-medium); // stylelint-disable-line function-disallowed-list
+    counter-increment: list;
+
+    &::marker {
+      display: inline-block;
+      margin-right: #{$ouds-bullet-list-space-column-gap-body-medium};
+    }
+
+    &::before {
+      position: absolute;
+      top: $ouds-bullet-list-space-padding-block-body-medium;
+      left: 0;
+      width: var(--#{$prefix}icon-md-with-body-medium);
+      height: var(--#{$prefix}icon-md-with-body-medium);
+      text-align: right;
+      content: counter(list) ".";
+    }
+
+    ol {
+      margin-top: $ouds-bullet-list-space-padding-block-body-medium;
+      counter-reset: upper-alpha-list;
+    }
+
+    li {
+      padding-left: calc($ouds-bullet-list-space-padding-inline-level-1 - $ouds-bullet-list-space-padding-inline-level-0); // stylelint-disable-line function-disallowed-list
+      counter-increment: upper-alpha-list;
+
+      &::before {
+        content: counter(upper-alpha-list, upper-alpha) ".";
+      }
+
+      ol {
+        counter-reset: lower-alpha-list;
+      }
+
+      li {
+        padding-left: calc($ouds-bullet-list-space-padding-inline-level-2 - $ouds-bullet-list-space-padding-inline-level-1); // stylelint-disable-line function-disallowed-list
+        counter-increment: lower-alpha-list;
+
+        &::before {
+          content: counter(lower-alpha-list, lower-alpha) ".";
         }
       }
     }
