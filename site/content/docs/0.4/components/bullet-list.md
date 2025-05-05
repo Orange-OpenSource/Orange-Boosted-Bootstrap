@@ -96,3 +96,17 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
 {{< /example >}}
 
 ## Unstyled list
+
+
+{{< example >}}
+<ul class="unstyled-list">
+    <li>This is a list</li>
+    <li>With a tick
+      <ul>
+        <li>Instead</li>
+        <li>Of a bullet</li>
+      </ul>
+    </li>
+</ul>
+
+{{< /example >}}
