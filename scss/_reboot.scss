@@ -244,11 +244,16 @@ ol {
   list-style-type: "";
   @include get-font-size("body-large");
 
-  &.fs-bm {
+  &.fs-bm ul {
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
     --#{$prefix}icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
-    --#{$prefix}icon-size: var(--#{$prefix}icon-md-with-body-medium);
+    --#{$prefix}icon-size: var(--#{$prefix}icon-sm-with-body-medium);
     --#{$prefix}bullet-list-padding-left: calc(var(--#{$prefix}icon-container-width) + #{$ouds-bullet-list-space-padding-inline-level-0} + #{$ouds-bullet-list-space-column-gap-body-medium}); // stylelint-disable-line function-disallowed-list
+    @include get-font-size("body-medium");
+  }
+
+  &.fw-normal li {
+    font-weight: $ouds-font-weight-system-default;
   }
 
   li {

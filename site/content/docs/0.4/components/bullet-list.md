@@ -108,6 +108,24 @@ Do not confuse this style with Bootstrap `.list-unstyled` utility that remove al
 
 {{< example >}}
 <ul class="list-bare">
+    <li>This is a list <a href="#">test</a> </li>
+    <li>With a tick
+      <ul>
+        <li>Instead</li>
+        <li>Of a bullet</li>
+      </ul>
+    </li>
+</ul>
+{{< /example >}}
+
+## Text style
+
+### Body medium
+
+Add `.fs-bm` to the top `ul` to use body medium font size.
+
+{{< example >}}
+<ul class="fs-bm">
     <li>This is a list</li>
     <li>With a tick
       <ul>
@@ -116,5 +134,20 @@ Do not confuse this style with Bootstrap `.list-unstyled` utility that remove al
       </ul>
     </li>
 </ul>
+{{< /example >}}
 
+### Font weight normal
+
+Add `.fw-normal` to the top `ul` to use a normal font weight.
+
+{{< example >}}
+<ul class="fw-normal">
+    <li>This is a list</li>
+    <li>With a tick
+      <ul>
+        <li>Instead</li>
+        <li>Of a bullet</li>
+      </ul>
+    </li>
+</ul>
 {{< /example >}}
