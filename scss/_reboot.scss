@@ -236,7 +236,6 @@ ul,
 ol {
   --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
   --#{$prefix}icon-container-width: var(--#{$prefix}icon-md-with-body-large);
-  --#{$prefix}icon-container-height: calc(var(--#{$prefix}font-line-height-body-large) * 1rem); // stylelint-disable-line function-disallowed-list
   --#{$prefix}icon-size: var(--#{$prefix}icon-sm-with-body-large);
   --#{$prefix}bullet-list-padding-left: calc(var(--#{$prefix}icon-container-width) + #{$ouds-bullet-list-space-padding-inline-level-0} + #{$ouds-bullet-list-space-column-gap-body-large}); // stylelint-disable-line function-disallowed-list
 
@@ -248,7 +247,6 @@ ol {
   &.fs-bm {
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
     --#{$prefix}icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
-    --#{$prefix}icon-container-height: calc(var(--#{$prefix}font-line-height-body-medium) * 1rem); // stylelint-disable-line function-disallowed-list
     --#{$prefix}icon-size: var(--#{$prefix}icon-md-with-body-medium);
     --#{$prefix}bullet-list-padding-left: calc(var(--#{$prefix}icon-container-width) + #{$ouds-bullet-list-space-padding-inline-level-0} + #{$ouds-bullet-list-space-column-gap-body-medium}); // stylelint-disable-line function-disallowed-list
   }
@@ -265,6 +263,9 @@ ol {
       left: 0;
       width: var(--#{$prefix}icon-container-width);
       height: 1lh;
+      @supports not (height: 1lh) {
+        height: var(--#{$prefix}icon-container-width);
+      }
       content: "";
     }
 
