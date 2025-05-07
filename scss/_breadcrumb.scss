@@ -50,7 +50,6 @@
   }
 
   &.active {
-    @include separator();
     font-weight: $ouds-font-weight-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
