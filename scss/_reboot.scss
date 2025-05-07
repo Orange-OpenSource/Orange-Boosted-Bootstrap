@@ -289,6 +289,9 @@ ol {
   }
 }
 
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable selector-max-combinators
+// we need to use child combinator instead of descendant to handle mixed lists
 ul {
   $bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='5' width='6' height='6'/></svg>");
   $bullet-list-marker-level-1: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='7' width='6' height='2'/></svg>");
@@ -304,7 +307,11 @@ ul {
     --#{$prefix}custom-bullet-list-marker: #{$empty-marker};
   }
 
-  li {
+  &.list-default-color {
+    --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
+  }
+
+  > li {
     &::before {
       background-color: var(--#{$prefix}bullet-color, var(--#{$prefix}color-content-brand-primary));
       mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-0);
@@ -313,12 +320,12 @@ ul {
       mask-size: var(--#{$prefix}icon-size);
     }
 
-    li {
+    > ul > li {
       &::before {
         mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-1);
       }
 
-      li {
+      > ul > li {
         &::before {
           mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-2);
         }
@@ -330,7 +337,7 @@ ul {
 ol {
   counter-reset: list;
 
-  li {
+  > li {
     counter-increment: list;
 
     &::before {
@@ -338,22 +345,22 @@ ol {
       content: counter(list) ".";
     }
 
-    ol {
+    > ol {
       counter-reset: upper-alpha-list;
     }
 
-    li {
+    > ol > li {
       counter-increment: upper-alpha-list;
 
       &::before {
         content: counter(upper-alpha-list, upper-alpha) ".";
       }
 
-      ol {
+      > ol {
         counter-reset: lower-alpha-list;
       }
 
-      li {
+      > ol > li {
         counter-increment: lower-alpha-list;
 
         &::before {
@@ -363,6 +370,8 @@ ol {
     }
   }
 }
+// stylelint-enable selector-max-compound-selectors
+// stylelint-enable selector-max-combinators
 // stylelint-enable selector-max-type
 // End mod
 
