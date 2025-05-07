@@ -19,6 +19,12 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Read only state has been implemented.
 
+### Components
+
+#### Breadcrumb
+
+- <span class="badge text-bg-success">New</span> Breadcrumb component has been implemented.
+
 ## v0.4.1
 
 <hr>
