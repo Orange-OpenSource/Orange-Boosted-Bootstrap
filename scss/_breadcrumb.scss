@@ -16,16 +16,19 @@
   @include get-font-size("label-medium");
 }
 
-// The separator between breadcrumbs
-@mixin has-separator() {
-  padding-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+.breadcrumb-item {
+  display: none;
+  align-items: center;
+  min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
+  padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
 
-  &::before {
+  // The separator between breadcrumbs
+  &::after {
     display: inline-flex;
     flex-shrink: 0;
     width: $ouds-breadcrumb-size-icon;
     height: $ouds-breadcrumb-size-icon;
-    margin-right: var(--#{$prefix}breadcrumb-item-padding-links);
+    margin-left: var(--#{$prefix}breadcrumb-item-padding-icon);
     color: var(--#{$prefix}breadcrumb-divider-color);
     content: "";
     background-color: currentcolor;
@@ -36,12 +39,6 @@
     */
     // End mod
   }
-}
-
-.breadcrumb-item {
-  display: none;
-  align-items: center;
-  min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
 
   a {
     @extend %link-properties;
@@ -53,7 +50,7 @@
   }
 
   &.active {
-    @include has-separator();
+    @include separator();
     font-weight: $ouds-font-weight-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
@@ -76,34 +73,20 @@
     &:nth-last-child(-n + 3) {
       display: inline-flex;
     }
-
-    &:nth-last-child(-n + 2) {
-      @include has-separator();
-    }
   }
 
   @include media-breakpoint-up(lg) {
     &:nth-last-child(-n + 4) {
       display: inline-flex;
     }
-
-    &:nth-last-child(-n + 3) {
-      @include has-separator();
-    }
   }
 
   @include media-breakpoint-up(xl) {
     display: inline-flex;
-
-    + .breadcrumb-item {
-      @include has-separator();
-    }
   }
 
-  &:first-child {
-    padding-left: 0;
-
-    &::before {
+  &:last-child {
+    &::after {
       content: none;
     }
   }

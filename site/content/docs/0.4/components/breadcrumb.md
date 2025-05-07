@@ -13,14 +13,14 @@ toc: true
 Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb.
 
 {{< example >}}
-<nav aria-label="breadcrumb-basic">
+<nav aria-label="basic breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page"><span>Library</span></li>
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb-full">
+<nav aria-label="full breadcrumb ">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Category 1</a></li>
@@ -37,7 +37,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 Breadcrumb will not wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
 {{< example >}}
-<nav aria-label="breadcrumb-large">
+<nav aria-label="large breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive</a></li>
@@ -45,7 +45,7 @@ Breadcrumb will not wrap, the number of displayed items depends on the available
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb-very-large">
+<nav aria-label="very large breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive</a></li>
