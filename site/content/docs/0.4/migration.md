@@ -13,6 +13,12 @@ toc: true
 
 <hr>
 
+### Forms
+
+#### Checkboxes, radio buttons, switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Read only state has been implemented.
+
 ### Components
 
 #### Breadcrumb
@@ -47,7 +53,7 @@ toc: true
 
 ### Helpers
 
-#### Dividers
+#### Divider
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
 
 ### CSS and Sass variables
