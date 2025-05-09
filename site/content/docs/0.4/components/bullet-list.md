@@ -32,14 +32,14 @@ The marker depends on the level of nesting.
 
 {{< example >}}
 <ul>
-    <li>Item</li>
-    <li>Label
+    <li>Bullet lists</li>
+    <li>Can have:
       <ul>
-        <li>Label</li>
-        <li>Label
+        <li>Nested lists</li>
+        <li>With:
           <ul>
-            <li>Label</li>
-            <li>Sub sub item</li>
+            <li>Another marker</li>
+            <li>Each</li>
           </ul>
       </ul>
     </li>
@@ -141,21 +141,21 @@ It's possible to mix ordered and unordered lists.
 
 {{< example >}}
 <ol>
-    <li>This is a list</li>
-    <li>Test damn
+    <li>This is an ordered list</li>
+    <li>With a nested
       <ul>
-        <li>To look nice</li>
-        <li>Oh yeah</li>
+        <li>Unordered</li>
+        <li>List</li>
       </ul>
     </li>
 </ol>
 
 <ul>
-    <li>This is a list</li>
-    <li>Test damn
+    <li>This is an unordered list</li>
+    <li>With a nested
       <ol>
-        <li>To look nice</li>
-        <li>Oh yeah</li>
+        <li>Ordered</li>
+        <li>List</li>
       </ol>
     </li>
 </ul>
@@ -169,11 +169,11 @@ Do not confuse this style with the `.list-unstyled` utility that remove all styl
 
 {{< example >}}
 <ul class="list-bare">
-    <li>This is a list <a href="#">test</a> </li>
-    <li>With a tick
+    <li>Bare bullet lists</li>
+    <li>Do not have a marker
       <ul>
-        <li>Instead</li>
-        <li>Of a bullet</li>
+        <li>They still</li>
+        <li>Have indentation</li>
       </ul>
     </li>
 </ul>
@@ -188,12 +188,7 @@ Add `.fs-bm` to the top `ul` to use body medium font size.
 {{< example >}}
 <ul class="fs-bm">
     <li>This is a list</li>
-    <li>With a tick
-      <ul>
-        <li>Instead</li>
-        <li>Of a bullet</li>
-      </ul>
-    </li>
+    <li>With a smaller font size</li>
 </ul>
 {{< /example >}}
 
@@ -204,12 +199,7 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
 {{< example >}}
 <ul class="fw-normal">
     <li>This is a list</li>
-    <li>With a tick
-      <ul>
-        <li>Instead</li>
-        <li>Of a bullet</li>
-      </ul>
-    </li>
+    <li>With a normal font weight</li>
 </ul>
 {{< /example >}}
 
