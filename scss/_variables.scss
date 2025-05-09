@@ -390,10 +390,6 @@ $svg-as-custom-props: (
   "success": $success-icon,
   "error":   $danger-icon
 ) !default;
-
-//// Filters
-// see https://codepen.io/sosuke/pen/Pjoqqp
-$invert-filter:         invert(1) !default;
 // End mod
 
 // Options
@@ -1945,21 +1941,19 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size:              $font-size-sm !default;
-$breadcrumb-font-weight:            $font-weight-bold !default; // OUDS mod
-
-$breadcrumb-padding-y:              .5rem !default;
-$breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding-x:         $spacer * .5 !default;
-$breadcrumb-margin-bottom:          1rem !default;
-$breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // OUDS mod
-$breadcrumb-bg:                     null !default;
-$breadcrumb-divider-color:          $black !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-active-color:           null !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
-$breadcrumb-divider-filter:         none !default; // OUDS mod
+// OUDS mod: no `$breadcrumb-font-size`
+// OUDS mod: no `$breadcrumb-padding-y`
+// OUDS mod: no `$breadcrumb-padding-x`
+// OUDS mod: no `$breadcrumb-item-padding-x`
+// OUDS mod: no `$breadcrumb-margin-bottom`
+// OUDS mod: no `$breadcrumb-color`
+// OUDS mod: no `$breadcrumb-bg`
+$breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+// OUDS mod: no `$breadcrumb-active-color`
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.651 12.75 11.5 8 6.651 3.25 5.266 4.606 8.73 8l-3.464 3.392z'/></svg>") !default; // OUDS mod
+// OUDS mod: no `$breadcrumb-divider-filter`
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
-$breadcrumb-border-radius:          null !default;
+// OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
 
 

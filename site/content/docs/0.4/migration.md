@@ -9,6 +9,29 @@ aliases:
 toc: true
 ---
 
+## v0.5.0
+
+<hr>
+
+### Forms
+
+#### Checkboxes, radio buttons, switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Read only state has been implemented.
+
+### Components
+
+#### Breadcrumb
+
+- <span class="badge text-bg-success">New</span> Breadcrumb component has been implemented.
+
+## v0.4.1
+
+<hr>
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> A parameter from the `focus-visible()` mixin has been removed. If you use the `focus-visible()` mixin in your scss files with a `z-index` as a parameter, please adapt your code.
 
 ## v0.4.0
 
@@ -30,7 +53,7 @@ toc: true
 
 ### Helpers
 
-#### Dividers
+#### Divider
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal and vertical rule helpers to create dividers.
 
 ### CSS and Sass variables

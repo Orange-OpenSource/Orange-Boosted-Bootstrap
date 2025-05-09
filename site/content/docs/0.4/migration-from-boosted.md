@@ -82,6 +82,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ## Components
 
+### Breadcrumb
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> the last element of a Breadcrumb must now be a link to offer better accessibility.
+
 ### Close button
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
@@ -274,7 +278,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
 
-### Dividers
+### Divider
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Horizontal or vertical rule helpers to create dividers.
 
@@ -299,7 +303,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 
 ### Vertical rule
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Dividers helper]({{< docsref "/helpers/dividers" >}}) documentation.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]({{< docsref "/helpers/divider" >}}) documentation.
 
 ## Utilities
 

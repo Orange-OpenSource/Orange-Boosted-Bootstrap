@@ -283,9 +283,42 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-<!-- TODO: Introduce Readonly ? -->
+### Read only
+
+To create a read only checkbox the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly` and `aria-disabled` attributes. The Checkbox will be accessible to keyboard navigation and assistive technologies thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
+
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
+  </div>
+  <div class="control-item-text-container">
+    <p class="control-item-label" id="checkboxReadonlyLabel">Label</p>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
+  </div>
+  <div class="control-item-text-container">
+    <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</p>
+  </div>
+</div>
+<div class="checkbox-item">
+  <div class="control-item-assets-container">
+    <span class="control-item-indicator" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
+  </div>
+  <div class="control-item-text-container">
+    <p class="control-item-label" id="checkboxReadonlyIndeterminate">Label</p>
+  </div>
+</div>
+{{< /example >}}
 
 ### Invalid
+
+{{< callout info >}}
+{{< partial "callouts/input-invalid.md" >}}
+{{< /callout >}}
 
  You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]({{< docsref "/forms/validation" >}}) page to know more about this.
 

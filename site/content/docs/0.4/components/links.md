@@ -120,7 +120,7 @@ The `.link` classes are designed to be used with the `<a>` element. However, you
 <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
 <div>
   <button class="link link-sm icon-link" type="button">
-  <svg class="bi" aria-hidden="true">
+  <svg aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg> Small button link icon
   </button>
@@ -137,7 +137,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 <div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
 <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
 <div><a class="link icon-link" aria-disabled="true">
-  <svg class="bi" aria-hidden="true">
+  <svg aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg>
   This is an example of a link with an icon
@@ -147,9 +147,12 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 
 ### Disabled link accessibility warning
 
-To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. 
+
+If the disabled link does not convey any useful information, you can include a `tabindex="-1"` attribute in addition to `aria-disabled="true"` on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+However, if the disabled link conveys useful information for users, it must remain focusable and you should not add the `tabindex="-1"` attribute to keep it accessible to keyboard navigation.
 
 {{< example >}}
-<a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link</a>
+<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
+<div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>
 {{< /example >}}
-

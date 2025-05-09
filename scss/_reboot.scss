@@ -470,8 +470,8 @@ sup { top: -.5em; }
     color: var(--#{$prefix}link-visited-color);
   }
 
-  &:focus-visible,
-  &:focus[data-focus-visible-added] {
+  &:focus-visible:not([aria-disabled="true"]),
+  &:focus[data-focus-visible-added]:not([aria-disabled="true"]) {
     color: var(--#{$prefix}link-focus-color);
     text-decoration: $link-hover-decoration;
   }
