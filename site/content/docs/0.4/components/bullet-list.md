@@ -33,12 +33,12 @@ The marker depends on the level of nesting.
 {{< example >}}
 <ul>
     <li>Item</li>
-    <li>Item
+    <li>Label
       <ul>
-        <li>Sub item</li>
-        <li>Sub item
+        <li>Label</li>
+        <li>Label
           <ul>
-            <li>Sub sub item</li>
+            <li>Label</li>
             <li>Sub sub item</li>
           </ul>
       </ul>
@@ -164,7 +164,7 @@ It's possible to mix ordered and unordered lists.
 ## Bare lists
 
 {{< callout >}}
-Do not confuse this style with Bootstrap `.list-unstyled` utility that remove all styles from the list
+Do not confuse this style with the `.list-unstyled` utility that remove all styles from the list, see [below](#unstyled)
 {{< /callout >}}
 
 {{< example >}}
@@ -213,7 +213,7 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
 </ul>
 {{< /example >}}
 
-## Misc
+## Native list utilities
 
 ### Unstyled
 
