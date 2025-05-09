@@ -317,7 +317,7 @@ ul:where(:not(.list-unstyled)) {
   > li {
     &::before {
       background-color: var(--#{$prefix}bullet-color, var(--#{$prefix}color-content-brand-primary));
-      mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-0);
+      mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-0);
       mask-repeat: no-repeat;
       mask-position: center right;
       mask-size: var(--#{$prefix}bullet-list-icon-size);
@@ -325,12 +325,12 @@ ul:where(:not(.list-unstyled)) {
 
     > ul > li {
       &::before {
-        mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-1);
+        mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-1);
       }
 
       > ul > li {
         &::before {
-          mask-image: var(--#{$prefix}custom-bullet-list-marker, $bullet-list-marker-level-2);
+          mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-2);
         }
       }
     }
