@@ -3,10 +3,12 @@
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 @mixin list-unstyled {
   padding-left: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   list-style: none;
 
-  li {
-    display: list-item;
+  > li {
     padding: 0;
 
     &::before {

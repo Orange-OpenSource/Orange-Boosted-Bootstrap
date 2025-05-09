@@ -17,6 +17,7 @@
       padding-left: 0;
       margin-bottom: 0;
       list-style: none;
+      @include list-unstyled();
 
       ul {
         padding-left: 1rem;
