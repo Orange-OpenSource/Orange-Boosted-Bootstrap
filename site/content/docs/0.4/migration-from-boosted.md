@@ -86,6 +86,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> the last element of a Breadcrumb must now be a link to offer better accessibility.
 
+### Bullet list
+
+- <span class="badge text-bg-status-negative-emphasized">New</span> `.list-default-color`, `.list-tick` and `.list-bare` classes have been added.
+
 ### Close button
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.

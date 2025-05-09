@@ -10,6 +10,7 @@
   // End mod
   // scss-docs-end breadcrumb-css-vars
 
+  @include list-unstyled();
   display: flex;
   padding: 0;
   list-style: none;
