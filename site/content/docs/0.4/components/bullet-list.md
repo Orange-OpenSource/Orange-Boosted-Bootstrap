@@ -199,7 +199,7 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
 {{< example >}}
 <ul class="fw-normal">
     <li>This is a list</li>
-    <li>With a normal font weight</li>
+    <li>With a normal font weight, you can put <a href="#">links</a> and long texts in here, adding some words just to show how this will wrap</li>
 </ul>
 {{< /example >}}
 
