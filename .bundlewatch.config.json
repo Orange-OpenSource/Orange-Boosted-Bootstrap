@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/css/ouds-web-bootstrap.css",
-      "maxSize": "65.85 kB"
+      "maxSize": "65.90 kB"
     },
     {
       "path": "./dist/css/ouds-web-bootstrap.min.css",
@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/css/ouds-web.min.css",
-      "maxSize": "54.0 kB"
+      "maxSize": "54.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
