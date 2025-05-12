@@ -245,7 +245,8 @@ ol:where(:not(.list-unstyled)) {
   list-style-type: "";
   @include get-font-size("body-large");
 
-  &.fs-bm ul {
+  &.fs-bm ul,
+  &.fs-bm ol {
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
     --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
     --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-medium);
