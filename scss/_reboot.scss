@@ -304,11 +304,11 @@ ul:where(:not(.list-unstyled)) {
   $bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'></svg>");
 
   &.list-tick {
-    --#{$prefix}custom-bullet-list-marker: #{$bullet-list-tick-marker};
+    --#{$prefix}bullet-list-custom-marker: #{$bullet-list-tick-marker};
   }
 
   &.list-bare {
-    --#{$prefix}custom-bullet-list-marker: #{$bullet-list-empty-marker};
+    --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
   }
 
   &.list-default-color {
