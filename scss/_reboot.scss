@@ -230,152 +230,42 @@ ul ol {
 }
 
 // OUDS mod
-// Bullet list
+// Orange square list-style
+ul {
+  list-style-type: square;
+}
+
+// Future-proof markers' color
+// See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
-ul:where(:not(.list-unstyled)),
-ol:where(:not(.list-unstyled)) {
-  --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
-  --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-large);
-  --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-large);
-  --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{px-to-rem($ouds-bullet-list-space-column-gap-body-large)}); // stylelint-disable-line function-disallowed-list
-  --#{$prefix}bullet-list-marker-left: #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)};
+li::marker {
+  color: var(--#{$prefix}primary);
+  vertical-align: middle;
 
-  padding-left: 0; // OUDS mod: instead of 2rem
-  font-weight: $ouds-font-weight-system-strong;
-  list-style-type: "";
-  @include get-font-size("body-large");
-
-  &.fs-bm ul,
-  &.fs-bm ol {
-    --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
-    --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
-    --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-medium);
-    --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{px-to-rem($ouds-bullet-list-space-column-gap-body-medium)}); // stylelint-disable-line function-disallowed-list
-    @include get-font-size("body-medium");
-  }
-
-  &.fw-normal li {
-    font-weight: $ouds-font-weight-system-default;
-  }
-
-  li {
-    position: relative;
-    box-sizing: content-box;
-    padding: var(--#{$prefix}bullet-list-padding-block) 0;
-    padding-left: calc(var(--#{$prefix}bullet-list-fixed-left-padding) + #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)}); // stylelint-disable-line function-disallowed-list
-
-    &::before {
-      position: absolute;
-      top: var(--#{$prefix}bullet-list-padding-block);
-      left: var(--#{$prefix}bullet-list-marker-left);
-      width: var(--#{$prefix}bullet-list-icon-container-width);
-      height: 1lh;
-      @supports not (height: 1lh) {
-        height: var(--#{$prefix}bullet-list-icon-container-width);
-      }
-      content: "";
-    }
-
-    ol,
-    ul {
-      margin-top: var(--#{$prefix}bullet-list-padding-block);
-    }
-
-    li {
-      --#{$prefix}bullet-list-marker-left: calc(#{px-to-rem($ouds-bullet-list-space-padding-inline-level-1)} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)})); // stylelint-disable-line function-disallowed-list
-      padding-left: calc(px-to-rem($ouds-bullet-list-space-padding-inline-level-1) - px-to-rem($ouds-bullet-list-space-padding-inline-level-0)); // stylelint-disable-line function-disallowed-list
-
-      li {
-        --#{$prefix}bullet-list-marker-left: calc(#{px-to-rem($ouds-bullet-list-space-padding-inline-level-2)} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{px-to-rem($ouds-bullet-list-space-padding-inline-level-1)})); // stylelint-disable-line function-disallowed-list
-        padding-left: calc(px-to-rem($ouds-bullet-list-space-padding-inline-level-2) - px-to-rem($ouds-bullet-list-space-padding-inline-level-1)); // stylelint-disable-line function-disallowed-list
-      }
-    }
+  ol & {
+    color: inherit;
   }
 }
 
-// stylelint-disable selector-max-compound-selectors
-// stylelint-disable selector-max-combinators
-// we need to use child combinator instead of descendant to handle mixed lists
-ul:where(:not(.list-unstyled)) {
-  $bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='5' width='6' height='6'/></svg>");
-  $bullet-list-marker-level-1: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='7' width='6' height='2'/></svg>");
-  $bullet-list-marker-level-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='6.25' y='6.25' width='3.5' height='3.5'/></svg>");
-  $bullet-list-tick-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>");
-  $bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'></svg>");
+li li::marker { color: var(--#{$prefix}secondary-color); }
 
-  &.list-tick {
-    --#{$prefix}bullet-list-custom-marker: #{$bullet-list-tick-marker};
-  }
+li li li::marker { color: var(--#{$prefix}tertiary-color); }
 
-  &.list-bare {
-    --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
-  }
+// Bullet-proof markers' color
+// @todo To remove when ::marker support is OK
+// See https://caniuse.com/#search=%3A%3Amarker
+li::before {
+  color: var(--#{$prefix}primary);
+  vertical-align: text-top;
 
-  &.list-default-color {
-    --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
-  }
-
-  > li {
-    &::before {
-      background-color: var(--#{$prefix}bullet-color, var(--#{$prefix}color-content-brand-primary));
-      mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-0);
-      mask-repeat: no-repeat;
-      mask-position: center right;
-      mask-size: var(--#{$prefix}bullet-list-icon-size);
-    }
-
-    > ul > li {
-      &::before {
-        mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-1);
-      }
-
-      > ul > li {
-        &::before {
-          mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-2);
-        }
-      }
-    }
+  ol & {
+    color: inherit;
   }
 }
 
-ol:where(:not(.list-unstyled)) {
-  counter-reset: list;
+li li::before { color: var(--#{$prefix}secondary-color); }
 
-  > li {
-    counter-increment: list;
-
-    &::before {
-      text-align: right;
-      content: counter(list) ".";
-    }
-
-    > ol {
-      counter-reset: upper-alpha-list;
-    }
-
-    > ol > li {
-      counter-increment: upper-alpha-list;
-
-      &::before {
-        content: counter(upper-alpha-list, upper-alpha) ".";
-      }
-
-      > ol {
-        counter-reset: lower-alpha-list;
-      }
-
-      > ol > li {
-        counter-increment: lower-alpha-list;
-
-        &::before {
-          content: counter(lower-alpha-list, lower-alpha) ".";
-        }
-      }
-    }
-  }
-}
-// stylelint-enable selector-max-compound-selectors
-// stylelint-enable selector-max-combinators
+li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
 // End mod
 
