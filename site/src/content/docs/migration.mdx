@@ -81,7 +81,7 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 
 Bootstrap introduced the inner color modes mechanism in v5.3.0. **The dark mode was not yet available in the Orange Design System specifications at this time, but is now available since v5.3.3!**
 
-Learn more by reading the new [color modes documentation]([[docsref:"/customize/color-modes"]]).
+Learn more by reading the new [color modes documentation]([[docsref:/customize/color-modes]]).
 
 This change has an impact on how you should use Boosted. Please read carefully the following notes.
 
@@ -94,9 +94,9 @@ The use of colors has been revamped to be more consistent and easier to use. Dur
 All our helpers and utilities have also been adapted to the new color modes mechanism and automatically switch their colors and background colors depending on the current color mode.
 As a result, you should for instance now rather use `.text-bg-{color}` classes instead of `.bg-{color}` classes when possible for automatic contrast.
 
-Retrieve our color palette in the [new color palette documentation]([[docsref:"/customize/color-palette"]]).
+Retrieve our color palette in the [new color palette documentation]([[docsref:/customize/color-palette]]).
 
-Retrieve our color theme in the [new color theme documentation]([[docsref:"/customize/color-theme"]]) that gathers the useful CSS variables switching between light and dark mode.
+Retrieve our color theme in the [new color theme documentation]([[docsref:/customize/color-theme]]) that gathers the useful CSS variables switching between light and dark mode.
 
 ### Components
 
@@ -247,7 +247,7 @@ All the examples have a mode selector on the bottom right corner to switch betwe
 
 - <span class="badge text-bg-danger">Breaking</span> The `button-variant()` mixin has removed its last argument.
 
-- <span class="badge text-bg-danger">Breaking</span> `$accessible-orange` and `$brand-orange` Sass variables have been removed. Please refer to the [new color theme documentation]([[docsref:"/customize/color-theme"]]) and the [new color palette documentation]([[docsref:"/customize/color-palette"]]) for more details about the new color modes mechanism.
+- <span class="badge text-bg-danger">Breaking</span> `$accessible-orange` and `$brand-orange` Sass variables have been removed. Please refer to the [new color theme documentation]([[docsref:/customize/color-theme]]) and the [new color palette documentation]([[docsref:/customize/color-palette]]) for more details about the new color modes mechanism.
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
@@ -591,11 +591,11 @@ All the examples have a mode selector on the bottom right corner to switch betwe
 
 - <span class="badge text-bg-danger">Removed</span> Customize > Color page has been removed.
 
-- <span class="badge text-bg-success">New</span> [Customize > Color palette]([[docsref:"/customize/color-palette"]]) page has been added.
+- <span class="badge text-bg-success">New</span> [Customize > Color palette]([[docsref:/customize/color-palette]]) page has been added.
 
-- <span class="badge text-bg-success">New</span> [Customize > Color theme]([[docsref:"/customize/color-theme"]]) page has been added.
+- <span class="badge text-bg-success">New</span> [Customize > Color theme]([[docsref:/customize/color-theme]]) page has been added.
 
-- <span class="badge text-bg-warning">Warning</span> [Extend > Icons]([[docsref:"/extend/icons"]]) page has been refactored to reflect our recommendation to use Solaris icons in Orange projects.
+- <span class="badge text-bg-warning">Warning</span> [Extend > Icons]([[docsref:/extend/icons]]) page has been refactored to reflect our recommendation to use Solaris icons in Orange projects.
 
 - <span class="badge text-bg-warning">Warning</span> If you were using our `#check2` icon, please note that its content has been changed.
 
@@ -710,7 +710,7 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
   - <span class="badge text-bg-success">New</span> Added support for JavaScript Tabs’ <kbd>Home</kbd> and <kbd>End</kbd> keys.
 
 - **Spinner**
-  - <span class="badge text-bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]([[docsref:"/components/spinners#flex"]]) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
+  - <span class="badge text-bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]([[docsref:/components/spinners#flex]]) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
 
   ```diff
   <button class="btn btn-primary" type="button">
@@ -748,7 +748,7 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 ### Color modes!
 
-Learn more by reading the new [color modes documentation]([[docsref:"/customize/color-modes"]]).
+Learn more by reading the new [color modes documentation]([[docsref:/customize/color-modes]]).
 
 <Callout type="danger">
 Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. However, the dark mode was not yet available in the Orange Design System specifications at this time. **Please use at least Boosted v5.3.3 to have the dark mode available.**
@@ -794,7 +794,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
-  - <span class="badge text-bg-warning">Deprecated</span> The `alert-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:"/components/alerts#sass-loops"]]) directly to modify the component’s default CSS variables for each variant.
+  - <span class="badge text-bg-warning">Deprecated</span> The `alert-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:/components/alerts#sass-loops]]) directly to modify the component’s default CSS variables for each variant.
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of alerts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Buttons**
@@ -815,12 +815,12 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 - **Footer**
   - <span class="badge text-bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
   - <span class="badge text-bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
-  - <span class="badge text-bg-warning">Warning</span> Coverage checker icon has been changed from `ic_Signal` to `ic_Mobile_Network_Coverage`. Please download the right [Solaris icon]([[docsref:"/extend/icons"]]) and update your websites.
+  - <span class="badge text-bg-warning">Warning</span> Coverage checker icon has been changed from `ic_Signal` to `ic_Mobile_Network_Coverage`. Please download the right [Solaris icon]([[docsref:/extend/icons]]) and update your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
 
-  - <span class="badge text-bg-warning">Deprecated</span> The `list-group-item-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:"/components/list-group#sass-loops"]]) directly to modify the component’s default CSS variables for each variant.
+  - <span class="badge text-bg-warning">Deprecated</span> The `list-group-item-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:/components/list-group#sass-loops]]) directly to modify the component’s default CSS variables for each variant.
 
 - **Modal**
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of modals. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
@@ -842,7 +842,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of offcanvases. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Progress bars**
-  - The markup for [progress bars]([[docsref:"/components/progress"]]) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
+  - The markup for [progress bars]([[docsref:/components/progress]]) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
 
     While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
 
@@ -858,7 +858,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
     </div>
     ```
 
-    We’ve also introduced a new `.progress-stacked` class to more logically wrap [multiple progress bars]([[docsref:"/components/progress#multiple-bars"]]) into a single stacked progress bar.
+    We’ve also introduced a new `.progress-stacked` class to more logically wrap [multiple progress bars]([[docsref:/components/progress#multiple-bars]]) into a single stacked progress bar.
 
     ```html
     <p>Previous markup</p>
@@ -881,13 +881,13 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
       </div>
     </div>
     ```
-  - <span class="badge text-bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]([[docsref:"/utilities/colors"]]), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
+  - <span class="badge text-bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]([[docsref:/utilities/colors]]), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
 
 - **Popovers**
   - <span class="badge text-bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
 
 - **Spinners**
-  - <span class="badge text-bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]([[docsref:"/utilities/colors"]]), you now have to use `.text-white` to have a white spinner on a dark background.
+  - <span class="badge text-bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]([[docsref:/utilities/colors]]), you now have to use `.text-white` to have a white spinner on a dark background.
 
 - **Stickers**
   - <span class="badge text-bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
@@ -922,7 +922,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - <span class="badge text-bg-success">New</span> `.text-black`, `.text-body-secondary`, and `.text-body-tertiary`.
 
-- <span class="badge text-bg-success">New</span> Added new `.link-body-emphasis` helper alongside our [colored links]([[docsref:"/helpers/colored-links"]]). This creates a colored link using our color mode responsive emphasis color.
+- <span class="badge text-bg-success">New</span> Added new `.link-body-emphasis` helper alongside our [colored links]([[docsref:/helpers/colored-links]]). This creates a colored link using our color mode responsive emphasis color.
 
 - <span class="badge text-bg-success">New</span> `.text-{color}-emphasis`.
 
@@ -942,7 +942,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - <span class="badge text-bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
 
-- <span class="badge text-bg-success">New</span> Added new [`.z-*` utilities]([[docsref:"/utilities/z-index"]]) for `z-index`.
+- <span class="badge text-bg-success">New</span> Added new [`.z-*` utilities]([[docsref:/utilities/z-index]]) for `z-index`.
 
 - <span class="badge text-bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
 
@@ -950,11 +950,11 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
   With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
-- [Box shadow utilities]([[docsref:"/utilities/shadows"]]) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+- [Box shadow utilities]([[docsref:/utilities/shadows]]) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
 - <span class="badge text-bg-success">New</span> Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring associated to `.focus-ring` and `.focus-ring-{color}` classes.
 
-- <span class="badge text-bg-success">New</span> Added new link utilities for link color opacity, underline offset, underline color, and underline opacity associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`. [Explore the new links utilities.]([[docsref:"/utilities/link"]])
+- <span class="badge text-bg-success">New</span> Added new link utilities for link color opacity, underline offset, underline color, and underline opacity associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`. [Explore the new links utilities.]([[docsref:/utilities/link]])
 
 - <span class="badge text-bg-success">New</span> Added new `.icon-link` helper associated to `.icon-link` and `.link-hover` to quickly place and align icons alongside a textual link. Icon links support our new link utilities, too.
 
@@ -966,11 +966,11 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
 
 - <span class="badge text-bg-warning">Deprecated</span> The `.text-muted` utility and `$text-muted` Sass variable have been deprecated and replaced with `.text-body-secondary` and `$body-secondary-color`.
 
-- <span class="badge text-bg-success">New</span> Added new `.d-inline-grid` [display utility]([[docsref:"/utilities/display"]]).
+- <span class="badge text-bg-success">New</span> Added new `.d-inline-grid` [display utility]([[docsref:/utilities/display]]).
 
 - <span class="badge text-bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn’t break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
 
-- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]([[docsref:"/utilities/colors"]]) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange’s color utilities]([[docsref:"/utilities/colors#colors"]]).
+- <span class="badge text-bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]([[docsref:/utilities/colors]]) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange’s color utilities]([[docsref:/utilities/colors#colors]]).
 
 ### Examples
 
@@ -1876,26 +1876,26 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 ### New utilities
 
-- Expanded [`font-weight` utilities]([[docsref:"/utilities/text#font-weight-and-italics"]]) to include `.fw-semibold` for semibold fonts.
-- Expanded [`border-radius` utilities]([[docsref:"/utilities/borders#sizes"]]) to include two new sizes, `.rounded-4` and `.rounded-5`, for more options.
+- Expanded [`font-weight` utilities]([[docsref:/utilities/text#font-weight-and-italics]]) to include `.fw-semibold` for semibold fonts.
+- Expanded [`border-radius` utilities]([[docsref:/utilities/borders#sizes]]) to include two new sizes, `.rounded-4` and `.rounded-5`, for more options.
 
 ### Additional changes
 
 - **Introduced new `$enable-container-classes` option. —** Now when opting into the experimental CSS Grid layout, `.container-*` classes will still be compiled, unless this option is set to `false`. Containers also now keep their gutter values.
 
-- **Offcanvas component now has [responsive variations]([[docsref:"/components/offcanvas#responsive"]]).** The original `.offcanvas` class remains unchanged—it hides content across all viewports. To make it responsive, change that `.offcanvas` class to any `.offcanvas-{sm|md|lg|xl|xxl}` class.
+- **Offcanvas component now has [responsive variations]([[docsref:/components/offcanvas#responsive]]).** The original `.offcanvas` class remains unchanged—it hides content across all viewports. To make it responsive, change that `.offcanvas` class to any `.offcanvas-{sm|md|lg|xl|xxl}` class.
 
-- **Thicker table dividers are now opt-in. —** We’ve removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, `.table-group-divider`. [See the table docs for an example.]([[docsref:"/content/tables#table-group-dividers"]])
+- **Thicker table dividers are now opt-in. —** We’ve removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, `.table-group-divider`. [See the table docs for an example.]([[docsref:/content/tables#table-group-dividers]])
 
 - **[Scrollspy has been rewritten](https://github.com/twbs/bootstrap/pull/33421) to use the Intersection Observer API**, which means you no longer need relative parent wrappers, deprecates `offset` config, and more. Look for your Scrollspy implementations to be more accurate and consistent in their nav highlighting.
 
 - **Popovers and tooltips now use CSS variables.** Some CSS variables have been updated from their Sass counterparts to reduce the number of variables. As a result, three variables have been deprecated in this release: `$popover-arrow-color`, `$popover-arrow-outer-color`, and `$tooltip-arrow-color`.
 
-- **Added new `.text-bg-{color}` helpers.** Instead of setting individual `.text-*` and `.bg-*` utilities, you can now use [the `.text-bg-*` helpers]([[docsref:"helpers/color-background"]]) to set a `background-color` with contrasting foreground `color`.
+- **Added new `.text-bg-{color}` helpers.** Instead of setting individual `.text-*` and `.bg-*` utilities, you can now use [the `.text-bg-*` helpers]([[docsref:helpers/color-background]]) to set a `background-color` with contrasting foreground `color`.
 
 - Added `.form-check-reverse` modifier to flip the order of labels and associated checkboxes/radios.
 
-- Added [striped columns]([[docsref:"/content/tables#striped-columns"]]) support to tables via the new `.table-striped-columns` class.
+- Added [striped columns]([[docsref:/content/tables#striped-columns]]) support to tables via the new `.table-striped-columns` class.
 
 - <span class="badge text-bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
@@ -1909,21 +1909,21 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 - <span class="badge text-bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges). `$supporting-colors` is replaced by `$background-colors`.
 
-- **Added experimental support for [CSS Grid layout]([[docsref:"/layout/css-grid"]]). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
+- **Added experimental support for [CSS Grid layout]([[docsref:/layout/css-grid]]). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
 
-- **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]([[docsref:"/components/navbar#offcanvas"]]) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
+- **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]([[docsref:/components/navbar#offcanvas]]) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
 
-- **Added new [placeholder component]([[docsref:"/components/placeholders/"]]). —** Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.
+- **Added new [placeholder component]([[docsref:/components/placeholders/]]). —** Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.
 
-- **Collapse plugin now supports [horizontal collapsing]([[docsref:"/components/collapse#horizontal"]]). —** Add `.collapse-horizontal` to your `.collapse` to collapse the `width` instead of the `height`. Avoid browser repainting by setting a `min-height` or `height`.
+- **Collapse plugin now supports [horizontal collapsing]([[docsref:/components/collapse#horizontal]]). —** Add `.collapse-horizontal` to your `.collapse` to collapse the `width` instead of the `height`. Avoid browser repainting by setting a `min-height` or `height`.
 
-- **Added new stack and vertical rule helpers. —** Quickly apply multiple flexbox properties to quickly create custom layouts with [stacks]([[docsref:"/helpers/stacks/"]]). Choose from horizontal (`.hstack`) and vertical (`.vstack`) stacks. Add vertical dividers similar to `<hr />` elements with the [new `.vr` helpers]([[docsref:"/helpers/vertical-rule/"]]).
+- **Added new stack and vertical rule helpers. —** Quickly apply multiple flexbox properties to quickly create custom layouts with [stacks]([[docsref:/helpers/stacks/]]). Choose from horizontal (`.hstack`) and vertical (`.vstack`) stacks. Add vertical dividers similar to `<hr />` elements with the [new `.vr` helpers]([[docsref:/helpers/vertical-rule/]]).
 
-- **Added new global `:root` CSS variables. —** Added several new CSS variables to the `:root` level for controlling `<body>` styles. More are in the works, including across our utilities and components, but for now read up [CSS variables in the Customize section]([[docsref:"/customize/css-variables/"]]).
+- **Added new global `:root` CSS variables. —** Added several new CSS variables to the `:root` level for controlling `<body>` styles. More are in the works, including across our utilities and components, but for now read up [CSS variables in the Customize section]([[docsref:/customize/css-variables/]]).
 
-- **Overhauled color and background utilities to use CSS variables, and added new [text opacity]([[docsref:"/utilities/text#opacity"]]) and [background opacity]([[docsref:"/utilities/background#opacity"]]) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
+- **Overhauled color and background utilities to use CSS variables, and added new [text opacity]([[docsref:/utilities/text#opacity]]) and [background opacity]([[docsref:/utilities/background#opacity]]) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
 
-- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]([[docsref:"/examples#snippets"]]).
+- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]([[docsref:/examples#snippets]]).
 
 - **Removed unused positioning styles from popovers and tooltips** as these are handled solely by Popper. `$tooltip-margin` has been deprecated and set to `null` in the process.
 
@@ -1969,7 +1969,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Sass
 
-- We’ve ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]([[docsref:"/customize/sass#maps-and-loops"]]).
+- We’ve ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]([[docsref:/customize/sass#maps-and-loops]]).
 
 - <span class="badge text-bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange`.
 
@@ -2033,7 +2033,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge text-bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-0` to `.order-5` out of the box.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]([[docsref:"/utilities/flex#media-object"]]).
+- <span class="badge text-bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]([[docsref:/utilities/flex#media-object]]).
 
 - <span class="badge text-bg-danger">Breaking</span> `boosted-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
 
@@ -2045,7 +2045,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge text-bg-danger">Breaking</span> Orange Helvetica CSS file names changed from `orangeHelvetica.*.css` to `orange-helvetica.*.css`.
 
-- **[RFS]([[docsref:"/getting-started/rfs"]]) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
+- **[RFS]([[docsref:/getting-started/rfs]]) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
 
 - <span class="badge text-bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
 
@@ -2116,17 +2116,17 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 #### Accordion
 
-- Added [new accordion component]([[docsref:"/components/accordion"]]).
+- Added [new accordion component]([[docsref:/components/accordion]]).
 
 #### Alerts
 
-- Alerts now have [examples with icons]([[docsref:"/components/alerts#icons"]]).
+- Alerts now have [examples with icons]([[docsref:/components/alerts#icons]]).
 
 - Removed custom styles for `<hr />`s in each alert since they already use `currentColor`.
 
 #### Back to top
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]([[docsref:"/components/back-to-top"]]) to use it properly. Back to top component doesn’t use JavaScript anymore.
+- <span class="badge text-bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]([[docsref:/components/back-to-top]]) to use it properly. Back to top component doesn’t use JavaScript anymore.
 
 #### Badges
 
@@ -2164,13 +2164,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - [#31035](https://github.com/twbs/bootstrap/pull/31035): Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
 
-- <span class="badge text-bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]([[docsref:"/components/accordion"]]).
+- <span class="badge text-bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]([[docsref:/components/accordion]]).
 
 #### Carousel
 
-- Added new [`.carousel-dark` variant]([[docsref:"/components/carousel#dark-variant"]]) for dark text, controls, and indicators (great for lighter backgrounds).
+- Added new [`.carousel-dark` variant]([[docsref:/components/carousel#dark-variant]]) for dark text, controls, and indicators (great for lighter backgrounds).
 
-- Replaced chevron icons for carousel controls with new SVGs from [Solaris]([[docsref:"/extend/icons"]]).
+- Replaced chevron icons for carousel controls with new SVGs from [Solaris]([[docsref:/extend/icons]]).
 
 #### Close button
 
@@ -2198,13 +2198,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge text-bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
 
-- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]([[docsref:"/components/dropdowns#auto-close-behavior"]]). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]([[docsref:/components/dropdowns#auto-close-behavior]]). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
 
 - Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
 
 #### Footer
 
-- <span class="badge text-bg-danger">Breaking</span> Footers’ HTML structure changed a lot as it works now with sub-components. They don’t require `.o-footer-*` classes anymore, they need [`.footer-*` classes]([[docsref:"/components/footer"]]).
+- <span class="badge text-bg-danger">Breaking</span> Footers’ HTML structure changed a lot as it works now with sub-components. They don’t require `.o-footer-*` classes anymore, they need [`.footer-*` classes]([[docsref:/components/footer]]).
 
 #### Jumbotron
 
@@ -2212,7 +2212,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 #### List group
 
-- Added new [`.list-group-numbered` modifier]([[docsref:"/components/list-group#numbered"]]) to list groups.
+- Added new [`.list-group-numbered` modifier]([[docsref:/components/list-group#numbered]]) to list groups.
 
 #### Navs and tabs
 
@@ -2225,7 +2225,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 #### Offcanvas
 
-- Added the new [offcanvas component]([[docsref:"/components/offcanvas"]]).
+- Added the new [offcanvas component]([[docsref:/components/offcanvas]]).
 
 #### Orange navbar
 
@@ -2267,7 +2267,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 #### Toasts
 
-- Toasts can now be [positioned]([[docsref:"/components/toasts#placement"]]) in a `.toast-container` with the help of [positioning utilities]([[docsref:"/utilities/position"]]).
+- Toasts can now be [positioned]([[docsref:/components/toasts#placement]]) in a `.toast-container` with the help of [positioning utilities]([[docsref:/utilities/position]]).
 
 - Changed default toast duration to 5 seconds.
 
@@ -2295,11 +2295,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
 
-- Added new [position utilities]([[docsref:"/utilities/position#arrange-elements"]]) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+- Added new [position utilities]([[docsref:/utilities/position#arrange-elements]]) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
 
 - Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
 
-- Added new [`border-width` utilities]([[docsref:"/utilities/borders#border-width"]]).
+- Added new [`border-width` utilities]([[docsref:/utilities/borders#border-width]]).
 
 - <span class="badge text-bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
 
@@ -2317,7 +2317,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge text-bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
 
-- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]([[docsref:"/utilities/text#line-height"]]).
+- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]([[docsref:/utilities/text#line-height]]).
 
 - Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
 
@@ -2325,13 +2325,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Helpers
 
-- <span class="badge text-bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]([[docsref:"/helpers/ratio"]])** with new class names and improved behaviors, as well as a helpful CSS variable.
+- <span class="badge text-bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]([[docsref:/helpers/ratio]])** with new class names and improved behaviors, as well as a helpful CSS variable.
   - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
   - We’ve dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
   - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]([[docsref:"/helpers/ratio#custom-ratios"]]).
+  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]([[docsref:/helpers/ratio#custom-ratios]]).
 
-- <span class="badge text-bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]([[docsref:"/helpers/visually-hidden"]]).**
+- <span class="badge text-bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]([[docsref:/helpers/visually-hidden]]).**
   - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
   - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
   - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.

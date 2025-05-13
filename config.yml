@@ -11,7 +11,7 @@ current_version:        "5.3.5"
 current_ruby_version:   "5.3.5"
 docs_version:           "5.3"
 rfs_version:            "v10.0.0"
-bootstrap_github_org:   "https://github.com/twbs" # TODO: replace github_org with bootstrap_github_org
+bootstrap_github_org:   "https://github.com/twbs"
 repo:                   "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 x:                      "getbootstrap"
 blog:                   "https://blog.getbootstrap.com/"
@@ -21,7 +21,7 @@ icons_license:          "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63
 icons_usage:            "https://design.orange.com/0c1af118d/p/92bb17-usage"
 bootstrap:              "https://getbootstrap.com"
 ods:
-  web:                  "https://oran.ge/dsweb" # TODO: Need to determine the behavior and the syntax
+  web:                  "https://oran.ge/dsweb"
 
 algolia:
   app_id:                "F4PKENW3TB"
@@ -46,7 +46,7 @@ cdn:
   HelveticaNeueW20-55Roman:       "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-55Roman.woff2"
   HelveticaNeueW20-55Roman_hash:  "sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl"
   HelveticaNeueW20-75Bold:        "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelveticaNeueW20-75Bold.woff2"
-  HelveticaNeueW20-75Bold_hash:   "sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr" # TODO: rename and replace - by _
+  HelveticaNeueW20-75Bold_hash:   "sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr"
   HelvNeue55_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelvNeue55_W1G.woff2"
   HelvNeue55_W1G_hash:            "sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16"
   HelvNeue75_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.3.5/dist/fonts/HelvNeue75_W1G.woff2"
@@ -68,8 +68,3 @@ anchors:
 toc:
   min:                  2
   max:                  6
-
-# TODO: Need to see how it behaves for Storybook, tarteaucitron
-# TODO: Need to see how it behaves for releases processes
-# TODO: Search for Hugo references
-# TODO: Check for docs-pa11y
