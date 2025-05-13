@@ -32,18 +32,18 @@
     - title: CSS variables
     - title: Optimize
 
-# - title: Layout
-#   icon: grid-fill
-#   icon_color: body-color
-#   pages:
-#     - title: Breakpoints
-#     - title: Containers
-#     - title: Grid
-#     - title: Columns
-#     - title: Gutters
-#     - title: Utilities
-#     - title: Z-index
-#     - title: CSS Grid
+- title: Layout
+  icon: grid-fill
+  icon_color: body-color
+  pages:
+    - title: Breakpoints
+    - title: Containers
+    - title: Grid
+    - title: Columns
+    - title: Gutters
+    - title: Utilities
+    - title: Z-index
+    - title: CSS Grid
 
 # - title: Content
 #   icon: file-earmark-richtext
