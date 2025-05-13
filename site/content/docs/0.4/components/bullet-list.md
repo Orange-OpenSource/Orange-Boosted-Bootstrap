@@ -203,7 +203,33 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
 </ul>
 {{< /example >}}
 
-## Native list utilities
+## Native list
+
+{{< callout warning >}}
+Only use this where you can not add a class to `<ul>` and `<ol>`.
+{{< /callout >}}
+
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+
+<div class="bd-example">
+{{< markdown >}}
+* All lists have their top margin removed
+* And their bottom margin normalized
+* Nested lists have no bottom margin
+  * This way they have a more even appearance
+  * Particularly when followed by more list items
+    * This way they have a more even appearance
+    * Particularly when followed by more list items
+* The left padding has also been reset
+
+1. Here's an ordered list
+2. With a few list items
+3. It has the same overall look
+4. As the previous unordered list
+{{< /markdown >}}
+</div>
+
+## Utilities
 
 ### Unstyled
 

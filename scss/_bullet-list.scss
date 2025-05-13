@@ -1,5 +1,4 @@
-/* stylelint-disable selector-no-qualifying-type, selector-max-type, selector-max-compound-selectors, selector-max-combinators */
-// Bullet list
+// stylelint-disable selector-no-qualifying-type, selector-max-type, selector-max-compound-selectors, selector-max-combinators
 .bullet-list {
   --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
   --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-large);

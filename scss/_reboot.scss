@@ -231,41 +231,31 @@ ul ol {
 
 // OUDS mod
 // Orange square list-style
+// stylelint-disable selector-max-type
 ul {
   list-style-type: square;
-}
 
-// Future-proof markers' color
-// See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
-li::marker {
-  color: var(--#{$prefix}primary);
-  vertical-align: middle;
+  ul {
+    margin-top: #{$ouds-bullet-list-space-padding-block-body-medium};
+    list-style-type: "-  ";
 
-  ol & {
-    color: inherit;
+    ul {
+      list-style-type: circle;
+    }
   }
 }
 
-li li::marker { color: var(--#{$prefix}secondary-color); }
+li {
+  padding: #{$ouds-bullet-list-space-padding-block-body-medium} #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)};
 
-li li li::marker { color: var(--#{$prefix}tertiary-color); }
+  &::marker {
+    color: var(--#{$prefix}primary);
 
-// Bullet-proof markers' color
-// @todo To remove when ::marker support is OK
-// See https://caniuse.com/#search=%3A%3Amarker
-// li::before {
-//   color: var(--#{$prefix}primary);
-//   vertical-align: text-top;
-
-//   ol & {
-//     color: inherit;
-//   }
-// }
-
-// li li::before { color: var(--#{$prefix}secondary-color); }
-
-// li li li::before { color: var(--#{$prefix}tertiary-color); }
+    ol & {
+      color: inherit;
+    }
+  }
+}
 // stylelint-enable selector-max-type
 // End mod
 
