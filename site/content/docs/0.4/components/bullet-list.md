@@ -139,7 +139,7 @@ It's also possible to use an **embedded SVG icon** to change the marker, you can
 
 ## Mixed lists
 
-It's possible to mix ordered and unordered lists.
+It's possible to mix ordered and unordered lists, in this case adding the `.bullet-list` to the nested `<ul>` or `<ol>` is necessary.
 
 {{< example >}}
 <ol class="bullet-list">
