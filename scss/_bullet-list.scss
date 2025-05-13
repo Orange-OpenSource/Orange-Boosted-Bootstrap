@@ -1,6 +1,5 @@
-/* stylelint-disable selector-no-qualifying-type */
+/* stylelint-disable selector-no-qualifying-type, selector-max-type, selector-max-compound-selectors, selector-max-combinators */
 // Bullet list
-// stylelint-disable selector-max-type
 .bullet-list {
   --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
   --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-large);
@@ -63,8 +62,6 @@
   }
 }
 
-// stylelint-disable selector-max-compound-selectors
-// stylelint-disable selector-max-combinators
 // we need to use child combinator instead of descendant to handle mixed lists
 ul.bullet-list {
   $bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='5' y='5' width='6' height='6'/></svg>");
@@ -85,7 +82,9 @@ ul.bullet-list {
     --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
   }
 
-  li {
+  // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists
+  &:not(:has(ol)) li,
+  > li {
     &::before {
       background-color: var(--#{$prefix}bullet-color, var(--#{$prefix}color-content-brand-primary));
       mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-0);
@@ -106,11 +105,14 @@ ul.bullet-list {
       }
     }
   }
+
 }
 
 ol.bullet-list {
   counter-reset: list;
 
+  // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists
+  &:not(:has(ul)) li,
   > li {
     counter-increment: list;
 
@@ -144,6 +146,3 @@ ol.bullet-list {
     }
   }
 }
-// stylelint-enable selector-max-compound-selectors
-// stylelint-enable selector-max-combinators
-// stylelint-enable selector-max-type

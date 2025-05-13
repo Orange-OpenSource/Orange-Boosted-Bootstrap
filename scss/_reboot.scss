@@ -254,18 +254,18 @@ li li li::marker { color: var(--#{$prefix}tertiary-color); }
 // Bullet-proof markers' color
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
-li::before {
-  color: var(--#{$prefix}primary);
-  vertical-align: text-top;
+// li::before {
+//   color: var(--#{$prefix}primary);
+//   vertical-align: text-top;
 
-  ol & {
-    color: inherit;
-  }
-}
+//   ol & {
+//     color: inherit;
+//   }
+// }
 
-li li::before { color: var(--#{$prefix}secondary-color); }
+// li li::before { color: var(--#{$prefix}secondary-color); }
 
-li li li::before { color: var(--#{$prefix}tertiary-color); }
+// li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
 // End mod
 

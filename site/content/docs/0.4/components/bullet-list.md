@@ -143,7 +143,7 @@ It's possible to mix ordered and unordered lists.
 <ol class="bullet-list">
     <li>This is an ordered list</li>
     <li>With a nested
-      <ul>
+      <ul class="bullet-list">
         <li>Unordered</li>
         <li>List</li>
       </ul>
@@ -153,7 +153,7 @@ It's possible to mix ordered and unordered lists.
 <ul class="bullet-list">
     <li>This is an unordered list</li>
     <li>With a nested
-      <ol>
+      <ol class="bullet-list">
         <li>Ordered</li>
         <li>List</li>
       </ol>
