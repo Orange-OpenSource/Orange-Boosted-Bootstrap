@@ -148,12 +148,12 @@
 #     - title: Visibility
 #     - title: Z-index
 
-# - title: Extend
-#   icon: tools
-#   icon_color: body-color
-#   pages:
-#     - title: Approach
-#     - title: Icons
+- title: Extend
+  icon: tools
+  icon_color: body-color
+  pages:
+    - title: Approach
+    - title: Icons
 
 - title: About
   icon: globe2
