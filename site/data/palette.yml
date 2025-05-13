@@ -7,7 +7,7 @@
     - name: Secondary
       hex: '#000'
       darkHex: '#fff'
-    - name: Body Bg
+    - name: 'Body Bg'
       hex: '#fff'
       darkHex: '#141414'
 - category: Supporting colors
@@ -163,7 +163,7 @@
       - name: Blue 600
         variable: $ods-blue-600
         hex: '#085ebd'
-  - category: Green
+  - subcategory: Green
     name: 'green'
     colors:
       - name: Green 100
@@ -205,7 +205,7 @@
       - name: Pink 600
         variable: $ods-pink-600
         hex: '#bc4d9a'
-  - category: Purple
+  - subcategory: Purple
     name: 'purple'
     colors:
       - name: Purple 100
@@ -226,7 +226,7 @@
       - name: Purple 600
         variable: $ods-purple-600
         hex: '#492191'
-  - category: Yellow
+  - subcategory: Yellow
     name: 'yellow'
     colors:
       - name: Yellow 100

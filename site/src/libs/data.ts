@@ -23,7 +23,7 @@ const dataDefinitions = {
   //     container: zPxSizeOrEmpty
   //   })
   //   .array(),
-  // colors: zNamedHexColors(13),
+  colors: zNamedHexColors(13),
   // 'core-team': z
   //   .object({
   //     name: z.string(),
@@ -96,17 +96,46 @@ const dataDefinitions = {
         .optional()
     })
     .array(),
-  // 'theme-colors': z
-  //   .object({
-  //     name: z.string(),
-  //     hex: zHexColor,
-  //     contrast_color: z.union([z.literal('dark'), z.literal('white')]).optional()
-  //   })
-  //   .array()
-  //   .transform((val) => {
-  //     // Add a `title` property to each theme color object being the capitalized version of the `name` property.
-  //     return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }))
-  //   }),
+  'theme-colors': z
+    .object({
+      name: z.string(),
+      hex: zHexColor,
+      dark_hex: zHexColor,
+      contrast_color: z.union([z.literal('dark'), z.literal('white')]).optional(),
+      description: z.string(),
+    })
+    .array()
+    .transform((val) => {
+      // Add a `title` property to each theme color object being the capitalized version of the `name` property.
+      return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }))
+    }),
+  palette: z
+    .object({
+      category: z.string(),
+      name: z.string(),
+      colors: z
+        .object({
+          name: z.string(),
+          hex: zHexColor,
+          darkHex: zHexColor.optional(),
+        })
+        .array()
+        .optional(),
+      subcategories: z
+       .object({
+         subcategory: z.string(),
+         name: z.string(),
+         colors: z
+           .object({
+             name: z.string(),
+             variable: z.string(),
+             hex: zHexColor,
+           })
+          .array()
+      })
+      .array()
+      .optional()
+    }).array()
   // translations: z
   //   .object({
   //     name: z.string(),

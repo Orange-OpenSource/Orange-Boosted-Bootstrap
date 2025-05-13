@@ -12,25 +12,25 @@
     - title: JavaScript
     - title: Webpack
     - title: Parcel
-    # - title: Vite
-    # - title: Accessibility
-    # - title: RFS
-    # - title: RTL
-    # - title: Contribute
+    - title: Vite
+    - title: Accessibility
+    - title: RFS
+    - title: RTL
+    - title: Contribute
 
-# - title: Customize
-#   icon: palette2
-#   icon_color: body-color
-#   pages:
-#     - title: Overview
-#     - title: Sass
-#     - title: Options
-#     - title: Color palette
-#     - title: Color theme
-#     - title: Color modes
-#     - title: Components
-#     - title: CSS variables
-#     - title: Optimize
+- title: Customize
+  icon: palette2
+  icon_color: body-color
+  pages:
+    - title: Overview
+    - title: Sass
+    - title: Options
+    - title: Color palette
+    - title: Color theme
+    - title: Color modes
+    - title: Components
+    - title: CSS variables
+    - title: Optimize
 
 # - title: Layout
 #   icon: grid-fill
