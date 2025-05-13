@@ -43,6 +43,7 @@ The marker depends on the level of nesting.
           </ul>
       </ul>
     </li>
+    <li>That's all</li>
 </ul>
 {{< /example >}}
 
@@ -132,6 +133,7 @@ It's also possible to use an **embedded SVG icon** to change the marker, you can
         </li>
       </ol>
     </li>
+    <li>Other category</li>
 </ol>
 {{< /example >}}
 

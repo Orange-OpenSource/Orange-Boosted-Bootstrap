@@ -30,6 +30,10 @@
     padding: var(--#{$prefix}bullet-list-padding-block) 0;
     padding-left: calc(var(--#{$prefix}bullet-list-fixed-left-padding) + #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)}); // stylelint-disable-line function-disallowed-list
 
+    &:has(ul, ol) {
+      padding-bottom: 0; // remove duplicate padding when we have nested lists
+    }
+
     &::before {
       position: absolute;
       top: var(--#{$prefix}bullet-list-padding-block);
