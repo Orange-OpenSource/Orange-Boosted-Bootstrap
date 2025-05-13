@@ -131,6 +131,11 @@ if (filePath && fileMatch && codeToDisplay) {
 </script>
 
 <div class:list={['bd-code-snippet', containerClass]}>
+  {
+    Astro.slots.has('bar') ? (
+      <slot name="bar" />
+    ): (<></>)
+  }
   <div class="highlight">
     {
       codeToDisplay && lang ? (
@@ -145,7 +150,7 @@ if (filePath && fileMatch && codeToDisplay) {
       <slot name="pre" />
     ) : (
       <div class="bd-clipboard">
-        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+        <button type="button" class="btn-clipboard" title="Copy to clipboard">
           <svg class="bi" role="img" aria-label="Copy">
             <use xlink:href="#clipboard" />
           </svg>

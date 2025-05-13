@@ -74,7 +74,7 @@ const simplifiedMarkup = markup
   {
     showMarkup && (
       <>
-        <div class="highlight">
+        <div class="highlight" tabindex="0">
           <Prism code={simplifiedMarkup} lang={lang} />
         </div>
         {showPreview && (
@@ -91,7 +91,7 @@ const simplifiedMarkup = markup
                   <use xlink:href="#lightning-charge-fill" />
                 </svg>
               </button>
-              <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+              <button type="button" class="btn-clipboard position-relative mt-0 me-0" title="Copy to clipboard">
                 <svg class="bi" aria-hidden="true">
                   <use xlink:href="#clipboard" />
                 </svg>
