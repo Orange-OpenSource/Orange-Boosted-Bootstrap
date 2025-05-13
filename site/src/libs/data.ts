@@ -24,12 +24,12 @@ const dataDefinitions = {
   //   })
   //   .array(),
   colors: zNamedHexColors(13),
-  // 'core-team': z
-  //   .object({
-  //     name: z.string(),
-  //     user: z.string()
-  //   })
-  //   .array(),
+  'core-team': z
+    .object({
+      name: z.string(),
+      user: z.string()
+    })
+    .array(),
   'design-guidelines': z
     .object({
       description: z.string(),
@@ -135,15 +135,15 @@ const dataDefinitions = {
       })
       .array()
       .optional()
-    }).array()
-  // translations: z
-  //   .object({
-  //     name: z.string(),
-  //     code: zLanguageCode,
-  //     description: z.string(),
-  //     url: z.string().url()
-  //   })
-  //   .array()
+    }).array(),
+  translations: z
+    .object({
+      name: z.string(),
+      code: zLanguageCode,
+      description: z.string(),
+      url: z.string().url()
+    })
+    .array()
 } satisfies Record<string, DataSchema>
 
 let data = new Map<DataType, z.infer<DataSchema>>()

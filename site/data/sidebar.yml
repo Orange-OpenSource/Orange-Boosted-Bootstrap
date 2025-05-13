@@ -159,11 +159,11 @@
   icon: globe2
   icon_color: body-color
   pages:
-#     - title: Overview
-#     - title: Team
+    - title: Overview
+    - title: Team
     - title: Brand
-#     - title: License
-#     - title: Translations
-#     - title: Cookies
+    - title: License
+    - title: Translations
+    - title: Cookies
 
 - title: Migration
