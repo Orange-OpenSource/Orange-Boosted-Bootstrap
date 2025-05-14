@@ -45,15 +45,15 @@
     - title: Z-index
     - title: CSS Grid
 
-# - title: Content
-#   icon: file-earmark-richtext
-#   icon_color: body-color
-#   pages:
-#     - title: Reboot
-#     - title: Typography
-#     - title: Images
-#     - title: Tables
-#     - title: Figures
+- title: Content
+  icon: file-earmark-richtext
+  icon_color: body-color
+  pages:
+    - title: Reboot
+    - title: Typography
+    - title: Images
+    - title: Tables
+    - title: Figures
 
 # - title: Forms
 #   icon: ui-radios

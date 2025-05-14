@@ -14,15 +14,15 @@ import { capitalizeFirstLetter } from './utils'
 // An object containing all the data types and their associated schema. The key should match the name of the data file
 // in the `./site/data/` directory.
 const dataDefinitions = {
-  // breakpoints: z
-  //   .object({
-  //     breakpoint: z.string(),
-  //     abbr: z.string(),
-  //     name: z.string(),
-  //     'min-width': zPxSizeOrEmpty,
-  //     container: zPxSizeOrEmpty
-  //   })
-  //   .array(),
+  breakpoints: z
+    .object({
+      breakpoint: z.string(),
+      abbr: z.string(),
+      name: z.string(),
+      'min-width': zPxSizeOrEmpty,
+      container: zPxSizeOrEmpty
+    })
+    .array(),
   colors: zNamedHexColors(13),
   'core-team': z
     .object({
