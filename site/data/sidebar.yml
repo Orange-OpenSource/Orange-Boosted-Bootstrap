@@ -55,19 +55,19 @@
     - title: Tables
     - title: Figures
 
-# - title: Forms
-#   icon: ui-radios
-#   icon_color: body-color
-#   pages:
-#     - title: Overview
-#     - title: Form control
-#     - title: Select
-#     - title: Checks & radios
-#     - title: Range
-#     - title: Input group
-#     - title: Quantity selector
-#     - title: Layout
-#     - title: Validation
+- title: Forms
+  icon: ui-radios
+  icon_color: body-color
+  pages:
+    - title: Overview
+    - title: Form control
+    - title: Select
+    - title: Checks & radios
+    - title: Range
+    - title: Input group
+    - title: Quantity selector
+    - title: Layout
+    - title: Validation
 
 # - title: Components
 #   icon: menu-button-wide-fill

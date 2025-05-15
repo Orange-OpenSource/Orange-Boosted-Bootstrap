@@ -1,0 +1,451 @@
+---
+title: Checks and radios
+description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
+aliases:
+  - "/docs/forms/checks/"
+  - "/docs/[[config:docs_version]]/forms/checks/"
+  - "/docs/forms/checks-radios/"
+toc: true
+---
+
+import { getConfig } from '@libs/config'
+
+## Approach
+
+Browser default checkboxes and radios are replaced with the help of `.form-check`, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+
+Structurally, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. We use the sibling selector (`~`) for all our `<input>` states, like `:checked` or `:disabled`. When combined with the `.form-check-label` class, we can easily style the text for each item based on the `<input>`’s state.
+
+Our checks use custom Boosted icons to indicate checked or indeterminate states.
+
+## Checks
+
+<Example code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+    <label class="form-check-label" for="checkDefault">
+      Default checkbox
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
+    <label class="form-check-label" for="checkChecked">
+      Checked checkbox
+    </label>
+  </div>`} />
+
+### Indeterminate
+
+Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+
+<Example addStackblitzJs class="bd-example-indeterminate" code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
+    <label class="form-check-label" for="checkIndeterminate">
+      Indeterminate checkbox
+    </label>
+  </div>`} />
+
+### Disabled
+
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input’s state.
+
+<Example addStackblitzJs class="bd-example-indeterminate" code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
+    <label class="form-check-label" for="checkIndeterminateDisabled">
+      Disabled indeterminate checkbox
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
+    <label class="form-check-label" for="checkDisabled">
+      Disabled checkbox
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
+    <label class="form-check-label" for="checkCheckedDisabled">
+      Disabled checked checkbox
+    </label>
+  </div>`} />
+
+## Radios
+
+<Example code={`<div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+    <label class="form-check-label" for="radioDefault1">
+      Default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+    <label class="form-check-label" for="radioDefault2">
+      Default checked radio
+    </label>
+  </div>`} />
+
+### Disabled
+
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input’s state.
+
+<Example code={`<div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDisabled" id="radioDisabled" disabled>
+    <label class="form-check-label" for="radioDisabled">
+      Disabled radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDisabled" id="radioCheckedDisabled" checked disabled>
+    <label class="form-check-label" for="radioCheckedDisabled">
+      Disabled checked radio
+    </label>
+  </div>`} />
+
+## Switches
+
+A switch has the markup of a custom checkbox but uses the `.form-switch` class to render a toggle switch. Consider using `role="switch"` to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the `disabled` attribute.
+
+<Example code={`<div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+    <label class="form-check-label" for="switchCheckDefault">Default switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+    <label class="form-check-label" for="switchCheckChecked">Checked switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDisabled" disabled>
+    <label class="form-check-label" for="switchCheckDisabled">Disabled switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckCheckedDisabled" checked disabled>
+    <label class="form-check-label" for="switchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+  </div>`} />
+
+## Default (stacked)
+
+By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+
+<Example code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Default checkbox
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+    <label class="form-check-label" for="defaultCheck2">
+      Disabled checkbox
+    </label>
+  </div>`} />
+
+<Example code={`<div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <label class="form-check-label" for="exampleRadios1">
+      Default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+      Second default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+    <label class="form-check-label" for="exampleRadios3">
+      Disabled radio
+    </label>
+  </div>`} />
+
+## Inline
+
+Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+
+<Example code={`<div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  </div>`} />
+
+<Example code={`<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    <label class="form-check-label" for="inlineRadio1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <label class="form-check-label" for="inlineRadio2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+    <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  </div>`} />
+
+## Reverse
+
+Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+
+<Example code={`<div class="form-check form-check-reverse">
+    <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+    <label class="form-check-label" for="reverseCheck1">
+      Reverse checkbox
+    </label>
+  </div>
+  <div class="form-check form-check-reverse">
+    <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+    <label class="form-check-label" for="reverseCheck2">
+      Disabled reverse checkbox
+    </label>
+  </div>
+  
+  <div class="form-check form-switch form-check-reverse">
+    <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+    <label class="form-check-label" for="switchCheckReverse">Reverse switch checkbox input</label>
+  </div>`} />
+
+## Without labels
+
+Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]([[docsref:/forms/overview#accessibility]]) section for details.
+
+<Example code={`<div>
+    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+  </div>
+  
+  <div>
+    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+  </div>`} />
+
+## Toggle buttons
+
+Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]([[docsref:/components/button-group]]) if needed.
+
+### Checkbox toggle buttons
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br/>
+<DesignCalloutAlert>
+These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
+
+Instead, consider using our [Checks component]([[docsref:/forms/checks-radios#checks]]), [Radios component]([[docsref:/forms/checks-radios#radios]]) or [Radio toggle buttons component]([[docsref:/forms/checks-radios#radio-toggle-buttons]]).
+</DesignCalloutAlert>
+
+<Example code={`<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+  <label class="btn btn-toggle" for="btn-check">Single toggle</label>`} />
+
+<Example code={`<input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+  <label class="btn btn-toggle" for="btn-check-2">Checked</label>`} />
+
+<Example code={`<input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+  <label class="btn btn-toggle" for="btn-check-3">Disabled</label>`} />
+
+<Callout>
+Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]([[docsref:/components/buttons#button-plugin]]). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+</Callout>
+</details>
+
+### Radio toggle buttons
+
+{/* Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. */}
+
+Boosted requires to group its radio toggle buttons in a [button group]([[docsref:/components/button-group]]) to display properly.
+
+<Example code={`<div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option1">Checked</label>
+  
+    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+    <label class="btn btn-toggle" for="option2">Radio</label>
+  
+    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option3">Disabled</label>
+  
+    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+    <label class="btn btn-toggle" for="option4">Radio</label>
+  </div>`} />
+
+{/* Boosted mod: no .btn-outline-* */}
+
+{/* Boosted mod: toggle buttons with icon, no-outline */}
+#### With icon
+
+Add [`.btn-icon`]([[docsref:/components/buttons#icon-only]]) with an [embedded icon]([[docsref:/extend/icons]]) to get consistent squared icon buttons working as toggle.
+
+<Example code={`<div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option5">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option6">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option7">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>`} />
+
+Drop borders using `.btn-no-outline`, too.
+
+<Example code={`<div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option8">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option9">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option10">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#calendar-month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>`} />
+
+{/* End mod */}
+
+{/* Boosted mod: star rating */}
+
+## Star rating
+
+<AddedIn version="5.2.0"/>
+
+Star rating system is built on top of radios. Simply add `.star-rating` to a `<fieldset>` element to use predefined glyphs and compose your star rating system with as much stars as needed.
+
+<Example code={`<form>
+    <fieldset class="star-rating">
+      <legend class="visually-hidden">Results relevance</legend>
+  
+      <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden">
+      <label for="terrible" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+  
+      <input type="radio" id="bad" name="rating" value="2" class="visually-hidden">
+      <label for="bad" title="Bad"><span class="visually-hidden">Bad</span></label>
+  
+      <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden">
+      <label for="mixed" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+  
+      <input type="radio" id="good" name="rating" value="4" class="visually-hidden" checked>
+      <label for="good" title="Good"><span class="visually-hidden">Good</span></label>
+  
+      <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden">
+      <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+    </fieldset>
+  </form>`} />
+
+### Sizes
+
+Star ratings come with a smaller variant: `.star-rating-sm`.
+
+<Example code={`<form>
+    <fieldset class="star-rating star-rating-sm">
+      <legend class="visually-hidden">Results relevance</legend>
+  
+      <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
+      <label for="terrible2" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+  
+      <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden">
+      <label for="bad2" title="Bad"><span class="visually-hidden">Bad</span></label>
+  
+      <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden">
+      <label for="mixed2" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+  
+      <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" checked>
+      <label for="good2" title="Good"><span class="visually-hidden">Good</span></label>
+  
+      <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
+      <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+    </fieldset>
+  </form>`} />
+
+### Dark variant
+
+<DeprecatedIn version="5.3.3"/>
+
+<CalloutDeprecatedDarkVariables component="star-rating"/>
+
+### Readonly
+
+Make star ratings readable but non-editable by using `<span>`s instead of `<input>` elements.
+
+<Example code={`<div class="star-rating">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+  
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>`} />
+
+### Disabled
+
+Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
+
+<Example code={`<form>
+    <fieldset class="star-rating" disabled aria-hidden="true">
+      <legend class="visually-hidden">Disabled star rating</legend>
+  
+      <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
+      <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+  
+      <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
+      <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
+  
+      <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
+      <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+  
+      <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
+      <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
+  
+      <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
+      <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+    </fieldset>
+    <p class="visually-hidden">Disabled star rating: rated 3 out of 5</p>
+  </form>`} />
+
+{/* End mod */}
+
+## CSS
+
+### Sass variables
+
+Variables for checks:
+
+<ScssDocs name="form-check-variables" file="scss/_variables.scss" />
+
+Variables for switches:
+
+<ScssDocs name="form-switch-variables" file="scss/_variables.scss" />
+
+### Sass mixins
+
+<DeprecatedIn version="5.3.2"/>
+
+<ScssDocs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" />
