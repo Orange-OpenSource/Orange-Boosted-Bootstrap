@@ -123,30 +123,30 @@
 #     - title: Vertical rule
 #     - title: Visually hidden
 
-# - title: Utilities
-#   icon: braces-asterisk
-#   icon_color: body-color
-#   pages:
-#     - title: API
-#     - title: Background
-#     - title: Borders
-#     - title: Colors
-#     - title: Display
-#     - title: Flex
-#     - title: Float
-#     - title: Interactions
-#     - title: Link
-#     - title: Object fit
-#     - title: Opacity
-#     - title: Overflow
-#     - title: Position
-#     - title: Shadows
-#     - title: Sizing
-#     - title: Spacing
-#     - title: Text
-#     - title: Vertical align
-#     - title: Visibility
-#     - title: Z-index
+- title: Utilities
+  icon: braces-asterisk
+  icon_color: body-color
+  pages:
+    - title: API
+    - title: Background
+    - title: Borders
+    - title: Colors
+    - title: Display
+    - title: Flex
+    - title: Float
+    - title: Interactions
+    - title: Link
+    - title: Object fit
+    - title: Opacity
+    - title: Overflow
+    - title: Position
+    - title: Shadows
+    - title: Sizing
+    - title: Spacing
+    - title: Text
+    - title: Vertical align
+    - title: Visibility
+    - title: Z-index
 
 - title: Extend
   icon: tools
