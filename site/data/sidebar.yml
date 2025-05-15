@@ -69,13 +69,13 @@
     - title: Layout
     - title: Validation
 
-# - title: Components
-#   icon: menu-button-wide-fill
-#   icon_color: body-color
-#   pages:
-#     - title: Accordion
-#     - title: Alerts
-#     - title: Back to top
+- title: Components
+  icon: menu-button-wide-fill
+  icon_color: body-color
+  pages:
+    - title: Accordion
+    - title: Alerts
+    - title: Back to top
 #     - title: Badge
 #     - title: Breadcrumb
 #     - title: Buttons
