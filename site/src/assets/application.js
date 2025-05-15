@@ -13,8 +13,6 @@ import sidebarScroll from './partials/sidebar.js'
 import removeBackToTopWhenNotNeeded from './partials/back-to-top.js' // Boosted mod
 import snippets from './partials/snippets.js'
 
-// <!-- TODO: Where are code examples -->
-
 sidebarScroll()
 removeBackToTopWhenNotNeeded() // Boosted mod
 snippets()
