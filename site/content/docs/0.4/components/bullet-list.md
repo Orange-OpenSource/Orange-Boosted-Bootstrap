@@ -14,7 +14,7 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
 
 ## Unordered lists
 
-OUDS Web removes the default styling on `ul` elements and replaces it with a Solaris icon for each level of nesting.
+Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a Solaris icon as the list marker.
 
 ### Default display
 
@@ -101,6 +101,8 @@ It's also possible to use an **embedded SVG icon** to change the marker, you can
 
 
 ## Ordered lists
+
+Add a `.bullet-list` class to an `ol` element to display an ordered list.
 
 ### Default display
 
