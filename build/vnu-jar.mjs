@@ -35,7 +35,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Poor aria-readonly handling see https://github.com/validator/validator/issues/1199
     'Attribute “aria-readonly” not allowed on element “span” at this point.',
     'Attribute “aria-readonly” not allowed on element “div” at this point.',
-    '.*Element “style“ not allowed as child of element “div“ in this context.*'
+    '.*Element “style” not allowed as child of element “div” in this context.*'
     // End mod
   ].join('|')
 
