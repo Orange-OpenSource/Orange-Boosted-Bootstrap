@@ -1,0 +1,323 @@
+---
+title: Footer
+description: Documentation and examples for a powerful and responsive Boosted’s footer. It includes support for branding, navigation and more.
+aliases:
+  - "/docs/components/footer/"
+toc: true
+added:
+  version: "5.2"
+---
+
+## How it works
+
+Our footer is basically a `<footer>` tag with `.footer` and `.navbar` classes. It comes with 5 ready-to-use fully responsive bars which should be arranged vertically in the following order:
+- Title with content bar
+- Follow us bar
+- Navigation bar
+- Service bar
+- Terms and conditions **mandatory** bar
+
+You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
+
+If these available parts don’t meet your specific needs, feel free to develop your own custom part accordingly to Orange Design System.
+
+<Callout type="warning">
+This footer component is based on the [navbar component]([[docsref:/components/navbar]]). Don’t forget to import the corresponding SCSS file if you’re using [Lean Sass imports]([[docsref:/customize/optimize#lean-sass-imports]]).
+</Callout>
+
+## Example
+
+<OrangeFooter title_content="true" follow="true" nav="true" service="true" mandatory="true" id="1" />
+
+## Footer bars
+
+<Callout type="info">
+The `<h2></h2>` and `<h3></h3>` tags used in the following sections are informative, you **need** to adapt those to your website’s title hierarchy.
+</Callout>
+
+The footer bars are independent from each other. Just add a separator between each bar of the final footer.
+
+```html
+<div class="border-bottom border-1 border-dark"></div>
+```
+
+### Title with content bar
+
+This footer bar is a container with a `.footer-title-content` class. This container includes a title and a `.row` container in which to add your content. See below an example with a mail form content.
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+  </footer>`} />
+
+### Follow us bar
+
+This footer bar is a container with `.footer-social` class into which a list of social media icons can be added.
+
+<Callout type="info">
+Other social media are available. See the full list of our [Social buttons]([[docsref:/components/buttons#social-buttons]]).
+</Callout>
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+      </ul>
+    </div>
+  </footer>`} />
+
+### Navigation bar
+
+This footer bar is a container with a `.footer-nav` class meant to contain navigation links organized in columns. You can add several categories in one footer-column by adding either accordion items or their content directly inside the columns. You can also adjust every column size depending on the breakpoint. Try to have equal sized columns height and it will wrap nicely.
+
+<Callout type="warning">
+This container needs our Collapse JavaScript plugin to work properly.
+</Callout>
+
+<Callout type="warning">
+Depending on the screen size and for accessibility concerns, you need to write each category title in 2 different ways:
+
+```html
+<h3 class="accordion-header footer-heading" id="headingOne2">
+
+  <!-- For small screens -->
+  <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+    Category
+  </button>
+
+   <!-- For large screens -->
+  <span class="d-none d-md-flex">Category</span>
+</h3>
+```
+</Callout>
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion2" aria-label="Sitemap footer 2">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="true" aria-controls="collapseThree2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour2" aria-expanded="true" aria-controls="collapseFour2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </footer>`} />
+
+### Service bar
+
+The footer is a container with a `.footer-service` class. Its purpose is to display customer services links.
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+  </footer>`} />
+
+### Mandatory terms and conditions bar
+
+The footer is a container with a `.footer-terms` class. This footer bar is **mandatory** in every footer and should come as the last bar of the footer.
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange 2025</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>`} />
+
+### Accessibility
+
+Add the `.active` class on `.nav-link` to indicate the current page.
+
+Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1 active" href="#" aria-current="page"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+  </footer>`} />
+
+<Example class="p-0" code={`<footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap & information</h2>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange 2025</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link active" href="#" aria-current="page">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>`} />
+
+## CSS
+
+### Variables
+
+As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+<ScssDocs name="footer-css-vars" file="scss/_footer.scss" />
+
+Each bar redefines its own CSS variables.
+
+Some additional CSS variables are also present on `.footer-title-content`:
+
+<ScssDocs name="footer-title-css-vars" file="scss/_footer.scss" />
+
+and from the medium breakpoint:
+
+<ScssDocs name="footer-title-md-css-vars" file="scss/_footer.scss" />
+
+Some additional CSS variables are also present on `.footer-social`:
+
+<ScssDocs name="footer-social-css-vars" file="scss/_footer.scss" />
+
+and from the medium breakpoint:
+
+<ScssDocs name="footer-social-md-css-vars" file="scss/_footer.scss" />
+
+Some additional CSS variables are also present on `.footer-nav`:
+
+<ScssDocs name="footer-nav-css-vars" file="scss/_footer.scss" />
+
+from the medium breakpoint:
+
+<ScssDocs name="footer-nav-md-css-vars" file="scss/_footer.scss" />
+
+and from the large breakpoint:
+
+<ScssDocs name="footer-nav-lg-css-vars" file="scss/_footer.scss" />
+
+Some additional CSS variables are also present on `.footer-service`:
+
+<ScssDocs name="footer-service-css-vars" file="scss/_footer.scss" />
+
+and from the medium breakpoint:
+
+<ScssDocs name="footer-service-md-css-vars" file="scss/_footer.scss" />
+
+Some additional CSS variables are also present on `.footer-terms`:
+
+<ScssDocs name="footer-terms-css-vars" file="scss/_footer.scss" />
+
+and from the medium breakpoint:
+
+<ScssDocs name="footer-terms-md-css-vars" file="scss/_footer.scss" />
+
+
+### Sass Variables
+
+For more details, please have a look at the exhaustive list of available variables:
+
+<ScssDocs name="footer" file="scss/_variables.scss" />
