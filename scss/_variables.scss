@@ -414,6 +414,7 @@ $enable-deprecation-messages:     false !default;
 $enable-important-utilities:      true !default;
 $enable-fixed-header:             true !default; // OUDS mod: used to apply scroll-padding-top
 $enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce Bootstrap compatibility
+$enable-bullet-list-tick:         false !default; // OUDS mod: used to optin in the tick marker
 
 $enable-dark-mode:            true !default;
 // OUDS mod: $color-mode-type is declared in our `_config.scss` file

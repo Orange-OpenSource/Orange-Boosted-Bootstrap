@@ -52,7 +52,7 @@ The marker depends on the level of nesting.
 Add the class `.list-default-color` to switch to the default body color for the marker.
 
 {{< example >}}
-<ul class="bullet-list list-default-color">
+<ul class="bullet-list bullet-list-default-color">
     <li>Item</li>
     <li>Item
       <ul>
@@ -63,12 +63,22 @@ Add the class `.list-default-color` to switch to the default body color for the 
 </ul>
 {{< /example >}}
 
-### Tick marker
+### Custom marker
 
-Add the class `.list-tick` to switch to a tick marker, in this case the marker will always be a tick no matter the level.
+The list marker can be customized either by creating a CSS class defining the `--bs-bullet-list-custom-marker` custom property or by passing an inline SVG in the `ul` style attribute with this property. When customizing the marker this way, it will be the same for every levels of the list.
+
+#### CSS class
+
+Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This is will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
 
 {{< example >}}
-<ul class="bullet-list list-tick">
+<style>
+  .bullet-list-heart {
+    --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'><path d='M525 700H175a75.22 75.22 0 0 1-75-75V375a75.22 75.22 0 0 1 75-75h350V75l347.862 357.138A98.06 98.06 0 0 1 900 500a98.061 98.061 0 0 1-27.142 67.857L525 925V700Z'/></svg>")
+  }
+</style>
+
+<ul class="bullet-list bullet-list-heart">
     <li>Task</li>
     <li>Task
       <ul>
@@ -79,9 +89,7 @@ Add the class `.list-tick` to switch to a tick marker, in this case the marker w
 </ul>
 {{< /example >}}
 
-### Custom marker
-
-It's also possible to use an **embedded SVG icon** to change the marker, you can apply it via our CSS custom property. The marker will then be the same for every levels.
+#### Inline SVG in `ul`
 
 {{< callout info >}}
 **Inlined SVG requires properly escaped characters.** Some reserved characters, such as `<`, `>` and `#`, must be URL-encoded or escaped. When customizing the CSS variable, you must handle this yourself.
@@ -91,9 +99,50 @@ It's also possible to use an **embedded SVG icon** to change the marker, you can
 <ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.4736 9.51371L9.99987 15.5765L4.52643 9.51371L4.52363 9.51066C3.46358 8.33406 3.55828 6.52092 4.73488 5.46086C5.86857 4.4399 7.60326 4.48484 8.6821 5.56369C8.6849 5.56674 8.68769 5.56953 8.69048 5.57232L9.52761 6.36807L9.99987 6.82256L10.4721 6.36832L11.3095 5.57232C11.3121 5.56953 11.3151 5.56674 11.3179 5.56369C11.8547 5.02414 12.5846 4.72199 13.3456 4.72402C14.9292 4.72402 16.2132 6.00752 16.2135 7.59138C16.2135 8.30029 15.9509 8.98406 15.4764 9.51066L15.4736 9.51371ZM16.7254 4.21217C14.8698 2.35688 11.8692 2.34622 9.99992 4.17891C8.13091 2.34622 5.13025 2.35688 3.27471 4.21217C1.43897 6.04817 1.40876 9.00617 3.18508 10.8787L9.99992 18.3926L16.815 10.8787C18.5911 9.00617 18.5611 6.04817 16.7254 4.21217Z'/%3E%3C/svg%3E&#34;);">
     <li>Favorite</li>
     <li>Favorite</li>
-    <li>Favorite
+    <li>Favorite</li>
+</ul>
+{{< /example >}}
+
+### Tick marker
+
+#### Using SCSS
+
+The tick marker is not shipped by default in the OUDS Web css, you set the `$enable-bullet-list-tick` [variable]({{< docsref "/customize/options" >}}) to add it if you are using OUDS Web Sass source files.
+
+{{< example >}}
+<!-- 
+  // in your style.scss file before importing OUDS Web source code
+  $enable-bullet-list-tick: true;
+-->
+
+<ul class="bullet-list bullet-list-tick">
+    <li>Task</li>
+    <li>Task
       <ul>
-        <li>Sub favorite</li>
+        <li>Sub task</li>
+        <li>Sub task</li>
+      </ul>
+    </li>
+</ul>
+{{< /example >}}
+
+#### Using a custom marker
+
+Create a CSS class to define the `--bs-bullet-list-custom-marker` custom property with the tick SVG. This way, compiling the Sass source is not necessary.
+
+{{< example >}}
+<style>
+  .bullet-with-tick {
+    --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>")
+  }
+</style>
+
+<ul class="bullet-list bullet-with-tick">
+    <li>Task</li>
+    <li>Task
+      <ul>
+        <li>Sub task</li>
+        <li>Sub task</li>
       </ul>
     </li>
 </ul>
@@ -172,7 +221,7 @@ Do not confuse this style with the `.list-unstyled` utility that remove all styl
 {{< /callout >}}
 
 {{< example >}}
-<ul class="bullet-list list-bare">
+<ul class="bullet-list bullet-list-bare">
     <li>Bare bullet lists</li>
     <li>Do not have a marker
       <ul>
