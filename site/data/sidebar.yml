@@ -106,22 +106,22 @@
 #     - title: Toasts
 #     - title: Tooltips
 
-# - title: Helpers
-#   icon: magic
-#   icon_color: body-color
-#   pages:
-#     - title: Clearfix
-#     - title: Color & background
-#     - title: Colored links
-#     - title: Focus ring
-#     - title: Icon link
-#     - title: Position
-#     - title: Ratio
-#     - title: Stacks
-#     - title: Stretched link
-#     - title: Text truncation
-#     - title: Vertical rule
-#     - title: Visually hidden
+- title: Helpers
+  icon: magic
+  icon_color: body-color
+  pages:
+    - title: Clearfix
+    - title: Color & background
+    - title: Colored links
+    - title: Focus ring
+    - title: Icon link
+    - title: Position
+    - title: Ratio
+    - title: Stacks
+    - title: Stretched link
+    - title: Text truncation
+    - title: Vertical rule
+    - title: Visually hidden
 
 - title: Utilities
   icon: braces-asterisk
