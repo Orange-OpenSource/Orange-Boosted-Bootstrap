@@ -8,11 +8,11 @@
         <h1 class="display-large">{{ .Title | markdownify }}</h1>
       </div>
     </div>
-    <div class="pb-tallest pb-md-sm">
-      <div class="container-fluid container-max-width bd-gutter pt-md-sm pb-md-tallest">
+    <div class="pb-2xl pb-md-sm">
+      <div class="container-fluid container-max-width bd-gutter pt-md-sm pb-md-2xl">
         <div class="row">
           <div class="col-12">
-            <p class="ll-sm h3 mb-tallest">{{ .Page.Params.Description | markdownify }}</p>
+            <p class="ll-sm h3 mb-2xl">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" -}}
             <div class="d-flex flex-column flex-sm-row">
               <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-strong">

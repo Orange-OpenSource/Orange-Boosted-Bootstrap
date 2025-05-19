@@ -18,10 +18,10 @@ toc: true
 
 ## Horizontal gutters
 
-`.gx-*` classes can be used to control the horizontal gutter widths. The container element may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-tallest`.
+`.gx-*` classes can be used to control the horizontal gutter widths. The container element may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-2xl`.
 
 {{< example class="bd-example-cols" >}}
-<div class="container-fluid px-tallest text-center">
+<div class="container-fluid px-2xl text-center">
   <div class="row gx-jumbo">
     <div class="col">
      <div class="p-tall">Custom column padding</div>

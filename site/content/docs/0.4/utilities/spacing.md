@@ -148,7 +148,7 @@ Here are some representative examples of these classes:
   padding-left: var(--bs-space-scaled-2xs) !important;
 }
 
-.p-tallest {
+.p-2xl {
   padding: $ouds-space-fixed-tall !important;
 }
 ```
@@ -183,7 +183,7 @@ Please note that if you mix the scaled and fixed classes, the fixed classes will
 {{< example class="bd-example-spacings" >}}
 <div class="mx-scaled-lg">Tall scaled x margin</div>
 <div class="mx-tall">Tall x margin (fixed)</div>
-<div class="mx-tall mx-md-xl mx-xl-tallest">Tall scaled x margin (manually)</div>
+<div class="mx-tall mx-md-xl mx-xl-2xl">Tall scaled x margin (manually)</div>
 {{< /example >}}
 
 ### Horizontal centering
