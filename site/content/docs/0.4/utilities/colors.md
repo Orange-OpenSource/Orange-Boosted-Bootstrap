@@ -29,18 +29,18 @@ Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most o
 Here are some compliant combinations examples for texts:
 
 {{< example >}}
-<p class="text-brand-primary p-short">Text brand-primary</p>
-<p class="text-default p-short">Text default</p>
-<p class="text-muted p-short">Text muted</p>
-<p class="text-disabled p-short">Text disabled</p>
-<p class="text-always-black p-short">Text always-black</p>
-<p class="text-always-white p-short">Text always-white</p>
-<p class="text-on-brand-primary bg-brand-primary p-short">Text on-brand-primary</p>
-<p class="text-on-status-emphasized bg-status-info-emphasized p-short">Text on-status-emphasized</p>
-<p class="text-on-status-emphasized-alt bg-status-neutral-emphasized p-short">Text on-status-emphasized-alt</p>
-<p class="text-on-status-muted bg-status-info-muted p-short">Text on-status-muted</p>
-<p class="text-always-on-black bg-always-black p-short">Text always-on-black</p>
-<p class="text-always-on-white bg-always-white p-short">Text always-on-white</p>
+<p class="text-brand-primary p-sm">Text brand-primary</p>
+<p class="text-default p-sm">Text default</p>
+<p class="text-muted p-sm">Text muted</p>
+<p class="text-disabled p-sm">Text disabled</p>
+<p class="text-always-black p-sm">Text always-black</p>
+<p class="text-always-white p-sm">Text always-white</p>
+<p class="text-on-brand-primary bg-brand-primary p-sm">Text on-brand-primary</p>
+<p class="text-on-status-emphasized bg-status-info-emphasized p-sm">Text on-status-emphasized</p>
+<p class="text-on-status-emphasized-alt bg-status-neutral-emphasized p-sm">Text on-status-emphasized-alt</p>
+<p class="text-on-status-muted bg-status-info-muted p-sm">Text on-status-muted</p>
+<p class="text-always-on-black bg-always-black p-sm">Text always-on-black</p>
+<p class="text-always-on-white bg-always-white p-sm">Text always-on-white</p>
 {{< /example >}}
 
 {{< callout info >}}

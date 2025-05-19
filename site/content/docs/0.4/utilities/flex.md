@@ -13,11 +13,11 @@ toc: true
 Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
 
 {{< example class="bd-example-flex" >}}
-<div class="d-flex p-short">I'm a flexbox container!</div>
+<div class="d-flex p-sm">I'm a flexbox container!</div>
 {{< /example >}}
 
 {{< example class="bd-example-flex" >}}
-<div class="d-inline-flex p-short">I'm an inline flexbox container!</div>
+<div class="d-inline-flex p-sm">I'm an inline flexbox container!</div>
 {{< /example >}}
 
 Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
@@ -39,14 +39,14 @@ Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-r
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-row mb-tall">
-  <div class="p-short">Flex item 1</div>
-  <div class="p-short">Flex item 2</div>
-  <div class="p-short">Flex item 3</div>
+  <div class="p-sm">Flex item 1</div>
+  <div class="p-sm">Flex item 2</div>
+  <div class="p-sm">Flex item 3</div>
 </div>
 <div class="d-flex flex-row-reverse">
-  <div class="p-short">Flex item 1</div>
-  <div class="p-short">Flex item 2</div>
-  <div class="p-short">Flex item 3</div>
+  <div class="p-sm">Flex item 1</div>
+  <div class="p-sm">Flex item 2</div>
+  <div class="p-sm">Flex item 3</div>
 </div>
 {{< /example >}}
 
@@ -54,14 +54,14 @@ Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to st
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-column mb-tall">
-  <div class="p-short">Flex item 1</div>
-  <div class="p-short">Flex item 2</div>
-  <div class="p-short">Flex item 3</div>
+  <div class="p-sm">Flex item 1</div>
+  <div class="p-sm">Flex item 2</div>
+  <div class="p-sm">Flex item 3</div>
 </div>
 <div class="d-flex flex-column-reverse">
-  <div class="p-short">Flex item 1</div>
-  <div class="p-short">Flex item 2</div>
-  <div class="p-short">Flex item 3</div>
+  <div class="p-sm">Flex item 1</div>
+  <div class="p-sm">Flex item 2</div>
+  <div class="p-sm">Flex item 3</div>
 </div>
 {{< /example >}}
 
@@ -84,34 +84,34 @@ Use `justify-content` utilities on flexbox containers to change the alignment of
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex justify-content-start mb-tall">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">Start</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">Start</div>
   </div>
   <div class="d-flex justify-content-end mb-tall">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">End</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">End</div>
   </div>
   <div class="d-flex justify-content-center mb-tall">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">Center</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">Center</div>
   </div>
   <div class="d-flex justify-content-between mb-tall">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">Between</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">Between</div>
   </div>
   <div class="d-flex justify-content-around mb-tall">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">Around</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">Around</div>
   </div>
   <div class="d-flex justify-content-evenly">
-    <div class="p-short bd-highlight">Justify</div>
-    <div class="p-short bd-highlight">Content</div>
-    <div class="p-short bd-highlight">Evenly</div>
+    <div class="p-sm bd-highlight">Justify</div>
+    <div class="p-sm bd-highlight">Content</div>
+    <div class="p-sm bd-highlight">Evenly</div>
   </div>
 </div>
 
@@ -145,29 +145,29 @@ Use `align-items` utilities on flexbox containers to change the alignment of fle
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-items-start mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex align-items-end mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex align-items-center mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex align-items-baseline mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex align-items-stretch" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -199,29 +199,29 @@ Use `align-self` utilities on flexbox items to individually change their alignme
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="align-self-start p-short">Aligned flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="align-self-start p-sm">Aligned flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="align-self-end p-short">Aligned flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="align-self-end p-sm">Aligned flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="align-self-center p-short">Aligned flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="align-self-center p-sm">Aligned flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex mb-tall" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="align-self-baseline p-short">Aligned flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="align-self-baseline p-sm">Aligned flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
   <div class="d-flex" style="height: 100px">
-    <div class="p-short">Flex item</div>
-    <div class="align-self-stretch p-short">Aligned flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="align-self-stretch p-sm">Aligned flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -253,9 +253,9 @@ Use the `.flex-fill` class on a series of sibling elements to force them into wi
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
-  <div class="p-short flex-fill">Flex item with a lot of content</div>
-  <div class="p-short flex-fill">Flex item</div>
-  <div class="p-short flex-fill">Flex item</div>
+  <div class="p-sm flex-fill">Flex item with a lot of content</div>
+  <div class="p-sm flex-fill">Flex item</div>
+  <div class="p-sm flex-fill">Flex item</div>
 </div>
 {{< /example >}}
 
@@ -275,9 +275,9 @@ Use `.flex-grow-*` utilities to toggle a flex item's ability to grow to fill ava
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
-  <div class="p-short flex-grow-1">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Third flex item</div>
+  <div class="p-sm flex-grow-1">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Third flex item</div>
 </div>
 {{< /example >}}
 
@@ -285,8 +285,8 @@ Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if nece
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
-  <div class="p-short w-100">Flex item</div>
-  <div class="p-short flex-shrink-1">Flex item</div>
+  <div class="p-sm w-100">Flex item</div>
+  <div class="p-sm flex-shrink-1">Flex item</div>
 </div>
 {{< /example >}}
 
@@ -307,21 +307,21 @@ Flexbox can do some pretty awesome things when you mix flex alignments with auto
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex mb-tall">
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
 </div>
 
 <div class="d-flex mb-tall">
-  <div class="me-auto p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
+  <div class="me-auto p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
 </div>
 
 <div class="d-flex mb-tall">
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="ms-auto p-short">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="ms-auto p-sm">Flex item</div>
 </div>
 {{< /example >}}
 
@@ -331,15 +331,15 @@ Vertically move one flex item to the top or bottom of a container by mixing `ali
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex align-items-start flex-column mb-tall" style="height: 200px;">
-  <div class="mb-auto p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
+  <div class="mb-auto p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
 </div>
 
 <div class="d-flex align-items-end flex-column mb-tall" style="height: 200px;">
-  <div class="p-short">Flex item</div>
-  <div class="p-short">Flex item</div>
-  <div class="mt-auto p-short">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="p-sm">Flex item</div>
+  <div class="mt-auto p-sm">Flex item</div>
 </div>
 {{< /example >}}
 
@@ -349,11 +349,11 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-nowrap" style="width: 8rem;">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -365,20 +365,20 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-wrap">
-    <div class="p-short">Flex item 1</div>
-    <div class="p-short">Flex item 2</div>
-    <div class="p-short">Flex item 3</div>
-    <div class="p-short">Flex item 4</div>
-    <div class="p-short">Flex item 5</div>
-    <div class="p-short">Flex item 6</div>
-    <div class="p-short">Flex item 7</div>
-    <div class="p-short">Flex item 8</div>
-    <div class="p-short">Flex item 9</div>
-    <div class="p-short">Flex item 10</div>
-    <div class="p-short">Flex item 11</div>
-    <div class="p-short">Flex item 12</div>
-    <div class="p-short">Flex item 13</div>
-    <div class="p-short">Flex item 14</div>
+    <div class="p-sm">Flex item 1</div>
+    <div class="p-sm">Flex item 2</div>
+    <div class="p-sm">Flex item 3</div>
+    <div class="p-sm">Flex item 4</div>
+    <div class="p-sm">Flex item 5</div>
+    <div class="p-sm">Flex item 6</div>
+    <div class="p-sm">Flex item 7</div>
+    <div class="p-sm">Flex item 8</div>
+    <div class="p-sm">Flex item 9</div>
+    <div class="p-sm">Flex item 10</div>
+    <div class="p-sm">Flex item 11</div>
+    <div class="p-sm">Flex item 12</div>
+    <div class="p-sm">Flex item 13</div>
+    <div class="p-sm">Flex item 14</div>
   </div>
 </div>
 
@@ -390,20 +390,20 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-wrap-reverse">
-    <div class="p-short">Flex item 1</div>
-    <div class="p-short">Flex item 2</div>
-    <div class="p-short">Flex item 3</div>
-    <div class="p-short">Flex item 4</div>
-    <div class="p-short">Flex item 5</div>
-    <div class="p-short">Flex item 6</div>
-    <div class="p-short">Flex item 7</div>
-    <div class="p-short">Flex item 8</div>
-    <div class="p-short">Flex item 9</div>
-    <div class="p-short">Flex item 10</div>
-    <div class="p-short">Flex item 11</div>
-    <div class="p-short">Flex item 12</div>
-    <div class="p-short">Flex item 13</div>
-    <div class="p-short">Flex item 14</div>
+    <div class="p-sm">Flex item 1</div>
+    <div class="p-sm">Flex item 2</div>
+    <div class="p-sm">Flex item 3</div>
+    <div class="p-sm">Flex item 4</div>
+    <div class="p-sm">Flex item 5</div>
+    <div class="p-sm">Flex item 6</div>
+    <div class="p-sm">Flex item 7</div>
+    <div class="p-sm">Flex item 8</div>
+    <div class="p-sm">Flex item 9</div>
+    <div class="p-sm">Flex item 10</div>
+    <div class="p-sm">Flex item 11</div>
+    <div class="p-sm">Flex item 12</div>
+    <div class="p-sm">Flex item 13</div>
+    <div class="p-sm">Flex item 14</div>
   </div>
 </div>
 
@@ -432,9 +432,9 @@ Change the _visual_ order of specific flex items with a handful of `order` utili
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-nowrap">
-  <div class="order-3 p-short">First flex item</div>
-  <div class="order-2 p-short">Second flex item</div>
-  <div class="order-1 p-short">Third flex item</div>
+  <div class="order-3 p-sm">First flex item</div>
+  <div class="order-2 p-sm">Second flex item</div>
+  <div class="order-1 p-sm">Third flex item</div>
 </div>
 {{< /example >}}
 
@@ -470,21 +470,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-start flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -496,21 +496,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-end flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -520,21 +520,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-center flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -544,21 +544,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-between flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -568,21 +568,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-around flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 
@@ -592,21 +592,21 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-stretch flex-wrap mb-tall" style="height: 200px">
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
-    <div class="p-short">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
+    <div class="p-sm">Flex item</div>
   </div>
 </div>
 

@@ -13,12 +13,12 @@ The `opacity` property sets the opacity level for an element. The opacity level 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
 <div class="bd-example d-sm-flex">
-  <div class="opacity-opaque p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-strong p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-medium p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-weak p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-weaker p-tall m-short bg-brand-primary fw-bold"></div>
-  <div class="opacity-invisible p-tall m-short bg-brand-primary fw-bold"></div>
+  <div class="opacity-opaque p-tall m-sm bg-brand-primary fw-bold"></div>
+  <div class="opacity-strong p-tall m-sm bg-brand-primary fw-bold"></div>
+  <div class="opacity-medium p-tall m-sm bg-brand-primary fw-bold"></div>
+  <div class="opacity-weak p-tall m-sm bg-brand-primary fw-bold"></div>
+  <div class="opacity-weaker p-tall m-sm bg-brand-primary fw-bold"></div>
+  <div class="opacity-invisible p-tall m-sm bg-brand-primary fw-bold"></div>
 </div>
 
 ```html

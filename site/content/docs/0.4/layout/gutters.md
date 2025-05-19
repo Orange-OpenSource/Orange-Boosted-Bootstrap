@@ -77,7 +77,7 @@ Use `.g-*` classes (`*` being among `none`, `smash`, `shortest`, `shorter`, `sho
 
 {{< example class="bd-example-cols" >}}
 <div class="container-fluid text-center">
-  <div class="row g-short">
+  <div class="row g-sm">
     <div class="col-6">
       <div class="p-tall">Custom column padding</div>
     </div>
@@ -100,7 +100,7 @@ Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-
 
 {{< example class="bd-example-cols" >}}
 <div class="container-fluid text-center">
-  <div class="row row-cols-2 row-cols-lg-5 g-short g-lg-tallest">
+  <div class="row row-cols-2 row-cols-lg-5 g-sm g-lg-tallest">
     <div class="col">
       <div class="p-tall">Row column</div>
     </div>

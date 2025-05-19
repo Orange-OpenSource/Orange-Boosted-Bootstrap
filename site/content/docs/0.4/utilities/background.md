@@ -77,8 +77,8 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific static contexts. In here you should only use the inverse static theme by replacing all `data-bs-theme="root-inverted"` by `data-bs-theme="light"`. So if you're in a dark theme context, use only `data-bs-theme="light"` when and if needed and respectively.
 
-<details class="mb-tall px-short">
-  <summary class="py-short">You're in a static <code>light</code> context</summary>
+<details class="mb-tall px-sm">
+  <summary class="py-sm">You're in a static <code>light</code> context</summary>
 
   {{< example class="p-none" >}}
   <div class="bg-brand-primary p-tall">
@@ -109,8 +109,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 </details>
 
-<details class="mb-tall px-short">
-  <summary class="py-short">You're in a static <code>dark</code> context</summary>
+<details class="mb-tall px-sm">
+  <summary class="py-sm">You're in a static <code>dark</code> context</summary>
 
   {{< example class="p-none" >}}
   <div class="bg-emphasized p-tall">
@@ -145,8 +145,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific dynamic contexts. In here you should only replace `data-bs-theme="root-inverted"` by `data-bs-theme="root"` and respectively.
 
-<details class="mb-tall px-short">
-  <summary class="py-short">You're in a dynamic <code>root-inverted</code> context</summary>
+<details class="mb-tall px-sm">
+  <summary class="py-sm">You're in a dynamic <code>root-inverted</code> context</summary>
 
   {{< example class="p-none" >}}
   <div class="bg-status-neutral-emphasized p-tall">

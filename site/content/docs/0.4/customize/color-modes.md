@@ -25,11 +25,11 @@ Be careful when using the `data-bs-theme` attribute on an element carrying one o
 By default, we provide two static themes/modes that are `"light"` and `"dark"`. These themes are named static because once you've set the theme on an element it won't ever change whatever the main theme is. The `"light"` theme will set the text color to black and set the light variant for every components inside, while the `"dark"` theme will set the text color to white and set the dark variant for every components inside.
 
 {{< example >}}
-<div class="bg-emphasized p-short">
+<div class="bg-emphasized p-sm">
   <div data-bs-theme="dark">
     <p>Text and components in here will always be in dark mode</p>
-    <button class="btn btn-strong mb-short">Dark mode button</button>
-    <div class="bg-status-accent-emphasized p-short">
+    <button class="btn btn-strong mb-sm">Dark mode button</button>
+    <div class="bg-status-accent-emphasized p-sm">
       <div data-bs-theme="light">
         <p>Text and components in here will always be in light mode</p>
         <button class="btn btn-strong">Light mode button</button>
@@ -56,11 +56,11 @@ Note that these themes **aren't meant to be used on the root element**.
 {{< /callout >}}
 
 {{< example >}}
-<div class="bg-status-neutral-emphasized p-short">
+<div class="bg-status-neutral-emphasized p-sm">
   <div data-bs-theme="root-inverted">
     <p>Text and components in here will always be inverted compared to the main mode</p>
-    <button class="btn btn-strong mb-short">Inverted mode button</button>
-    <div class="bg-status-neutral-emphasized p-short">
+    <button class="btn btn-strong mb-sm">Inverted mode button</button>
+    <div class="bg-status-neutral-emphasized p-sm">
       <div data-bs-theme="root">
         <p>Text and components in here will always be reset to the main mode</p>
         <button class="btn btn-strong">Main mode button</button>

@@ -520,16 +520,16 @@ Create responsive stacks of full-width, "block buttons" with a mix of our displa
 Please note that these **full-width** buttons should not be used on desktop screens. <!-- OUDS mod -->
 
 {{< example class="bd-btn-example">}}
-<div class="d-grid gap-short">
+<div class="d-grid gap-sm">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
 </div>
 {{< /example >}}
 
-Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-short` utility. Resize your browser to see them change.
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-sm` utility. Resize your browser to see them change.
 
 {{< example class="bd-btn-example">}}
-<div class="d-grid gap-short d-md-block">
+<div class="d-grid gap-sm d-md-block">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
 </div>
@@ -538,7 +538,7 @@ Here we create a responsive variation, starting with vertically stacked buttons 
 You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example class="bd-btn-example">}}
-<div class="d-grid gap-short col-6 mx-auto">
+<div class="d-grid gap-sm col-6 mx-auto">
   <button class="btn btn-default" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
 </div>
@@ -547,7 +547,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
 {{< example class="bd-btn-example">}}
-<div class="d-grid gap-short d-md-flex justify-content-md-end">
+<div class="d-grid gap-sm d-md-flex justify-content-md-end">
   <button class="btn btn-default me-md-xs" type="button">Button</button>
   <button class="btn btn-default" type="button">Button</button>
 </div>

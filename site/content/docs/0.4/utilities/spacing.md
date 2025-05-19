@@ -191,13 +191,13 @@ Please note that if you mix the scaled and fixed classes, the fixed classes will
 Additionally, OUDS Web also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
-  <div class="mx-auto p-short" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bd-primary-light-rgb),.3) solid 1px;">
+  <div class="mx-auto p-sm" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bd-primary-light-rgb),.3) solid 1px;">
     Centered element
   </div>
 </div>
 
 ```html
-<div class="mx-auto p-short" style="width: 200px;">
+<div class="mx-auto p-sm" style="width: 200px;">
   Centered element
 </div>
 ```
@@ -206,11 +206,11 @@ Additionally, OUDS Web also includes an `.mx-auto` class for horizontally center
 
 In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-short` and `.ms-scaled-tall`:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-tall`:
 
 ```scss
 .mt-nshort {
-  margin-top: -$ouds-space-fixed-short !important;
+  margin-top: -$ouds-space-fixed-sm !important;
 }
 
 .ms-scaled-ntall {
@@ -236,10 +236,10 @@ When using `display: grid` or `display: flex`, you can make use of `gap` utiliti
 
 {{< example class="bd-example-cssgrid" >}}
 <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -268,10 +268,10 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 
 {{< example class="bd-example-cssgrid" >}}
 <div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -294,10 +294,10 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 
 {{< example class="bd-example-cssgrid" >}}
 <div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -320,10 +320,10 @@ We also provide scaled versions of the gap (including `row-gap` and `column-gap`
 
 {{< example class="bd-example-cssgrid" >}}
 <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-scaled-medium">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 

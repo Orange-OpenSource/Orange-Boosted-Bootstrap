@@ -331,7 +331,7 @@ With flexbox grids, you can use margin utilities like `.me-auto` to force siblin
 The `.col-*` classes can also be used outside a `.row` to give an element a specific width. Whenever column classes are used as non-direct children of a row, the paddings are omitted.
 
 {{< example class="bd-example-row" >}}
-<div class="col-3 p-tall mb-short">
+<div class="col-3 p-tall mb-sm">
   .col-3: width of 25%
 </div>
 

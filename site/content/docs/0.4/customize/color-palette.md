@@ -81,7 +81,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{- range $color := $.Site.Data.colors }}
     {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
     <div class="col-md-4 mb-tall">
-      <div class="p-tall mb-short position-relative swatch-{{ $color.name }}">
+      <div class="p-tall mb-sm position-relative swatch-{{ $color.name }}">
         <strong class="d-block">${{ $color.name }}</strong>
         {{ $color.hex }}
       </div>
@@ -93,7 +93,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{ end -}}
 
   <div class="col-md-4 mb-tall">
-    <div class="p-tall mb-short position-relative swatch-gray-500">
+    <div class="p-tall mb-sm position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
       #555
     </div>
@@ -104,11 +104,11 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-tall">
-    <div class="p-tall mb-short bd-black text-always-on-black">
+    <div class="p-tall mb-sm bd-black text-always-on-black">
       <strong class="d-block">$black</strong>
       #000
     </div>
-    <div class="p-tall mb-short bd-white border">
+    <div class="p-tall mb-sm bd-white border">
       <strong class="d-block">$white</strong>
       #fff
     </div>

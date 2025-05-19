@@ -71,7 +71,7 @@ toc: true
     ```
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-font-family-body</code></li>
@@ -85,7 +85,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Removed Sass variables:</summary>
     <ul>
       <li><code>$ouds-font-family</code></li>
@@ -130,7 +130,7 @@ toc: true
 
 ### CSS and Sass variables
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-color-border-muted-dark</code></li>
@@ -163,14 +163,14 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
     <ul>
       <li><code>$ouds-color-border-muted</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-color-border-muted</code></li>
@@ -199,7 +199,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-rounded` (default <code>true</code>) has been introduced. It allows you to set rounded or flat corners on components.
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$btn-border-radius</code></li>
@@ -327,7 +327,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
     <ul>
       <li><code>button-variant</code></li>
@@ -470,7 +470,7 @@ toc: true
   - **3xs**: `.m-3xs`, `.mx-3xs`, `.my-3xs`, `.mt-3xs`, `.mb-3xs`, `.ms-3xs`, `.me-3xs`, `.m-xs-3xs`, etc...
   - **2xs**: `.m-2xs`, `.mx-2xs`, `.my-2xs`, `.mt-2xs`, `.mb-2xs`, `.ms-2xs`, `.me-2xs`, `.m-xs-2xs`, etc...
   - **Xs**: `.m-xs`, `.mx-xs`, `.my-xs`, `.mt-xs`, `.mb-xs`, `.ms-xs`, `.me-xs`, `.m-xs-xs`, etc...
-  - **Short**: `.m-short`, `.mx-short`, `.my-short`, `.mt-short`, `.mb-short`, `.ms-short`, `.me-short`, `.m-xs-short`, etc...
+  - **Sm**: `.m-sm`, `.mx-sm`, `.my-sm`, `.mt-sm`, `.mb-sm`, `.ms-sm`, `.me-sm`, `.m-xs-sm`, etc...
   - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
   - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
   - **Taller**: `.m-taller`, `.mx-taller`, `.my-taller`, `.mt-taller`, `.mb-taller`, `.ms-taller`, `.me-taller`, `.m-xs-taller`, etc...
@@ -485,7 +485,7 @@ toc: true
   - **3xs**: `.m-scaled-3xs`, `.mx-scaled-3xs`, `.my-scaled-3xs`, `.mt-scaled-3xs`, `.mb-scaled-3xs`, `.ms-scaled-3xs`, `.me-scaled-3xs`,
   - **2xs**: `.m-scaled-2xs`, `.mx-scaled-2xs`, `.my-scaled-2xs`, `.mt-scaled-2xs`, `.mb-scaled-2xs`, `.ms-scaled-2xs`, `.me-scaled-2xs`,
   - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
-  - **Short**: `.m-scaled-short`, `.mx-scaled-short`, `.my-scaled-short`, `.mt-scaled-short`, `.mb-scaled-short`, `.ms-scaled-short`, `.me-scaled-short`,
+  - **Sm**: `.m-scaled-sm`, `.mx-scaled-sm`, `.my-scaled-sm`, `.mt-scaled-sm`, `.mb-scaled-sm`, `.ms-scaled-sm`, `.me-scaled-sm`,
   - **Medium**: `.m-scaled-medium`, `.mx-scaled-medium`, `.my-scaled-medium`, `.mt-scaled-medium`, `.mb-scaled-medium`, `.ms-scaled-medium`, `.me-scaled-medium`,
   - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
   - **Taller**: `.m-scaled-taller`, `.mx-scaled-taller`, `.my-scaled-taller`, `.mt-scaled-taller`, `.mb-scaled-taller`, `.ms-scaled-taller`, `.me-scaled-taller`,
@@ -497,7 +497,7 @@ toc: true
   - **3xs**: `.p-3xs`, `.px-3xs`, `.py-3xs`, `.pt-3xs`, `.pb-3xs`, `.ps-3xs`, `.pe-3xs`, `.p-xs-3xs`, etc...
   - **2xs**: `.p-2xs`, `.px-2xs`, `.py-2xs`, `.pt-2xs`, `.pb-2xs`, `.ps-2xs`, `.pe-2xs`, `.p-xs-2xs`, etc...
   - **Xs**: `.p-xs`, `.px-xs`, `.py-xs`, `.pt-xs`, `.pb-xs`, `.ps-xs`, `.pe-xs`, `.p-xs-xs`, etc...
-  - **Short**: `.p-short`, `.px-short`, `.py-short`, `.pt-short`, `.pb-short`, `.ps-short`, `.pe-short`, `.p-xs-short`, etc...
+  - **Sm**: `.p-sm`, `.px-sm`, `.py-sm`, `.pt-sm`, `.pb-sm`, `.ps-sm`, `.pe-sm`, `.p-xs-sm`, etc...
   - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
   - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
   - **Taller**: `.p-taller`, `.px-taller`, `.py-taller`, `.pt-taller`, `.pb-taller`, `.ps-taller`, `.pe-taller`, `.p-xs-taller`, etc...
@@ -511,7 +511,7 @@ toc: true
   - **3xs**: `.p-scaled-3xs`, `.px-scaled-3xs`, `.py-scaled-3xs`, `.pt-scaled-3xs`, `.pb-scaled-3xs`, `.ps-scaled-3xs`, `.pe-scaled-3xs`,
   - **2xs**: `.p-scaled-2xs`, `.px-scaled-2xs`, `.py-scaled-2xs`, `.pt-scaled-2xs`, `.pb-scaled-2xs`, `.ps-scaled-2xs`, `.pe-scaled-2xs`,
   - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
-  - **Short**: `.p-scaled-short`, `.px-scaled-short`, `.py-scaled-short`, `.pt-scaled-short`, `.pb-scaled-short`, `.ps-scaled-short`, `.pe-scaled-short`,
+  - **Sm**: `.p-scaled-sm`, `.px-scaled-sm`, `.py-scaled-sm`, `.pt-scaled-sm`, `.pb-scaled-sm`, `.ps-scaled-sm`, `.pe-scaled-sm`,
   - **Medium**: `.p-scaled-medium`, `.px-scaled-medium`, `.py-scaled-medium`, `.pt-scaled-medium`, `.pb-scaled-medium`, `.ps-scaled-medium`, `.pe-scaled-medium`,
   - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
   - **Taller**: `.p-scaled-taller`, `.px-scaled-taller`, `.py-scaled-taller`, `.pt-scaled-taller`, `.pb-scaled-taller`, `.ps-scaled-taller`, `.pe-scaled-taller`,
@@ -523,7 +523,7 @@ toc: true
   - **3xs**: `.gap-3xs`, `.row-gap-3xs`, `.column-gap-3xs`, `.gap-xs-3xs`, etc...
   - **2xs**: `.gap-2xs`, `.row-gap-2xs`, `.column-gap-2xs`, `.gap-xs-2xs`, etc...
   - **Xs**: `.gap-xs`, `.row-gap-xs`, `.column-gap-xs`, `.gap-xs-xs`, etc...
-  - **Short**: `.gap-short`, `.row-gap-short`, `.column-gap-short`, `.gap-xs-short`, etc...
+  - **Sm**: `.gap-sm`, `.row-gap-sm`, `.column-gap-sm`, `.gap-xs-sm`, etc...
   - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
   - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
   - **Taller**: `.gap-taller`, `.row-gap-taller`, `.column-gap-taller`, `.gap-xs-taller`, etc...
@@ -537,7 +537,7 @@ toc: true
   - **3xs**: `.gap-scaled-3xs`, `.row-gap-scaled-3xs`, `.column-gap-scaled-3xs`
   - **2xs**: `.gap-scaled-2xs`, `.row-gap-scaled-2xs`, `.column-gap-scaled-2xs`
   - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
-  - **Short**: `.gap-scaled-short`, `.row-gap-scaled-short`, `.column-gap-scaled-short`
+  - **Sm**: `.gap-scaled-sm`, `.row-gap-scaled-sm`, `.column-gap-scaled-sm`
   - **Medium**: `.gap-scaled-medium`, `.row-gap-scaled-medium`, `.column-gap-scaled-medium`
   - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
   - **Taller**: `.gap-scaled-taller`, `.row-gap-scaled-taller`, `.column-gap-scaled-taller`
@@ -592,7 +592,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$enable-container-classes</code></li>
@@ -1459,7 +1459,7 @@ toc: true
       <li><code>$ouds-space-fixed-jumbo</code></li>
       <li><code>$ouds-space-fixed-medium</code></li>
       <li><code>$ouds-space-fixed-none</code></li>
-      <li><code>$ouds-space-fixed-short</code></li>
+      <li><code>$ouds-space-fixed-sm</code></li>
       <li><code>$ouds-space-fixed-xs</code></li>
       <li><code>$ouds-space-fixed-2xs</code></li>
       <li><code>$ouds-space-fixed-3xs</code></li>
@@ -1473,9 +1473,9 @@ toc: true
       <li><code>$ouds-space-scaled-none-desktop</code></li>
       <li><code>$ouds-space-scaled-none-mobile</code></li>
       <li><code>$ouds-space-scaled-none-tablet</code></li>
-      <li><code>$ouds-space-scaled-short-desktop</code></li>
-      <li><code>$ouds-space-scaled-short-mobile</code></li>
-      <li><code>$ouds-space-scaled-short-tablet</code></li>
+      <li><code>$ouds-space-scaled-sm-desktop</code></li>
+      <li><code>$ouds-space-scaled-sm-mobile</code></li>
+      <li><code>$ouds-space-scaled-sm-tablet</code></li>
       <li><code>$ouds-space-scaled-xs-desktop</code></li>
       <li><code>$ouds-space-scaled-xs-mobile</code></li>
       <li><code>$ouds-space-scaled-xs-tablet</code></li>
@@ -1500,7 +1500,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
     <ul>
       <li><code>$ouds-color-action-disabled</code></li>
@@ -1617,7 +1617,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$container-fluid-margin</code></li>
@@ -1642,7 +1642,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
     <ul>
       <li><code>breakpoint-infix()</code></li>
@@ -1663,7 +1663,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
@@ -1734,7 +1734,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-letter-spacing</code></li>
@@ -1928,7 +1928,7 @@ toc: true
       <li><code>--bs-icon-sm-with-heading-xlarge</code></li>
       <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
-      <li><code>--bs-space-scaled-short</code></li>
+      <li><code>--bs-space-scaled-sm</code></li>
       <li><code>--bs-space-scaled-xs</code></li>
       <li><code>--bs-space-scaled-2xs</code></li>
       <li><code>--bs-space-scaled-3xs</code></li>
@@ -1939,7 +1939,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-100</code></li>
@@ -1991,7 +1991,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   ```
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-0</code></li>
@@ -2003,21 +2003,21 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>
