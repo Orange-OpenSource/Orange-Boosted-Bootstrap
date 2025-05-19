@@ -139,8 +139,8 @@ Here are some representative examples of these classes:
   margin-top: $ouds-space-fixed-none !important;
 }
 
-.ms-scaled-tall {
-  margin-left: var(--bs-space-scaled-tall) !important;
+.ms-scaled-lg {
+  margin-left: var(--bs-space-scaled-lg) !important;
 }
 
 .px-scaled-2xs {
@@ -176,14 +176,14 @@ Here are some representative examples of these classes:
 
 {{< /bootstrap-compatibility >}}
 
-The first two examples show the scaled and fixed margin classes in action. The last one shows how to recreate an equivalent of `.mx-scaled-tall` by combining other responsive margin classes.
+The first two examples show the scaled and fixed margin classes in action. The last one shows how to recreate an equivalent of `.mx-scaled-lg` by combining other responsive margin classes.
 
 Please note that if you mix the scaled and fixed classes, the fixed classes will override the scaled ones.
 
 {{< example class="bd-example-spacings" >}}
-<div class="mx-scaled-tall">Tall scaled x margin</div>
+<div class="mx-scaled-lg">Tall scaled x margin</div>
 <div class="mx-tall">Tall x margin (fixed)</div>
-<div class="mx-tall mx-md-taller mx-xl-tallest">Tall scaled x margin (manually)</div>
+<div class="mx-tall mx-md-xl mx-xl-tallest">Tall scaled x margin (manually)</div>
 {{< /example >}}
 
 ### Horizontal centering
@@ -206,7 +206,7 @@ Additionally, OUDS Web also includes an `.mx-auto` class for horizontally center
 
 In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-tall`:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-lg`:
 
 ```scss
 .mt-nshort {
@@ -214,7 +214,7 @@ The syntax is nearly the same as the default, positive margin utilities, but wit
 }
 
 .ms-scaled-ntall {
-  margin-top: calc(-1 * var(--bs-space-scaled-tall)) !important;
+  margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important;
 }
 ```
 

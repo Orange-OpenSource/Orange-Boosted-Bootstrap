@@ -473,7 +473,7 @@ toc: true
   - **Sm**: `.m-sm`, `.mx-sm`, `.my-sm`, `.mt-sm`, `.mb-sm`, `.ms-sm`, `.me-sm`, `.m-xs-sm`, etc...
   - **Md**: `.m-md`, `.mx-md`, `.my-md`, `.mt-md`, `.mb-md`, `.ms-md`, `.me-md`, `.m-xs-md`, etc...
   - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
-  - **Taller**: `.m-taller`, `.mx-taller`, `.my-taller`, `.mt-taller`, `.mb-taller`, `.ms-taller`, `.me-taller`, `.m-xs-taller`, etc...
+  - **Xl**: `.m-xl`, `.mx-xl`, `.my-xl`, `.mt-xl`, `.mb-xl`, `.ms-xl`, `.me-xl`, `.m-xs-xl`, etc...
   - **Tallest**: `.m-tallest`, `.mx-tallest`, `.my-tallest`, `.mt-tallest`, `.mb-tallest`, `.ms-tallest`, `.me-tallest`, `.m-xs-tallest`, etc...
   - **Spacious**: `.m-spacious`, `.mx-spacious`, `.my-spacious`, `.mt-spacious`, `.mb-spacious`, `.ms-spacious`, `.me-spacious`, `.m-xs-spacious`, etc...
   - **Huge**: `.m-huge`, `.mx-huge`, `.my-huge`, `.mt-huge`, `.mb-huge`, `.ms-huge`, `.me-huge`, `.m-xs-huge`, etc...
@@ -487,9 +487,9 @@ toc: true
   - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
   - **Sm**: `.m-scaled-sm`, `.mx-scaled-sm`, `.my-scaled-sm`, `.mt-scaled-sm`, `.mb-scaled-sm`, `.ms-scaled-sm`, `.me-scaled-sm`,
   - **Md**: `.m-scaled-md`, `.mx-scaled-md`, `.my-scaled-md`, `.mt-scaled-md`, `.mb-scaled-md`, `.ms-scaled-md`, `.me-scaled-md`,
-  - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
-  - **Taller**: `.m-scaled-taller`, `.mx-scaled-taller`, `.my-scaled-taller`, `.mt-scaled-taller`, `.mb-scaled-taller`, `.ms-scaled-taller`, `.me-scaled-taller`,
-  - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
+  - **Tall**: `.m-scaled-lg`, `.mx-scaled-lg`, `.my-scaled-lg`, `.mt-scaled-lg`, `.mb-scaled-lg`, `.ms-scaled-lg`, `.me-scaled-lg`,
+  - **Xl**: `.m-scaled-xl`, `.mx-scaled-xl`, `.my-scaled-xl`, `.mt-scaled-xl`, `.mb-scaled-xl`, `.ms-scaled-xl`, `.me-scaled-xl`,
+  - **Tallest**: `.m-scaled-2xl`, `.mx-scaled-2xl`, `.my-scaled-2xl`, `.mt-scaled-2xl`, `.mb-scaled-2xl`, `.ms-scaled-2xl`, `.me-scaled-2xl`,
   - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed padding spacing utilities:
@@ -500,7 +500,7 @@ toc: true
   - **Sm**: `.p-sm`, `.px-sm`, `.py-sm`, `.pt-sm`, `.pb-sm`, `.ps-sm`, `.pe-sm`, `.p-xs-sm`, etc...
   - **Md**: `.p-md`, `.px-md`, `.py-md`, `.pt-md`, `.pb-md`, `.ps-md`, `.pe-md`, `.p-xs-md`, etc...
   - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
-  - **Taller**: `.p-taller`, `.px-taller`, `.py-taller`, `.pt-taller`, `.pb-taller`, `.ps-taller`, `.pe-taller`, `.p-xs-taller`, etc...
+  - **Xl**: `.p-xl`, `.px-xl`, `.py-xl`, `.pt-xl`, `.pb-xl`, `.ps-xl`, `.pe-xl`, `.p-xs-xl`, etc...
   - **Tallest**: `.p-tallest`, `.px-tallest`, `.py-tallest`, `.pt-tallest`, `.pb-tallest`, `.ps-tallest`, `.pe-tallest`, `.p-xs-tallest`, etc...
   - **Spacious**: `.p-spacious`, `.px-spacious`, `.py-spacious`, `.pt-spacious`, `.pb-spacious`, `.ps-spacious`, `.pe-spacious`, `.p-xs-spacious`, etc...
   - **Huge**: `.p-huge`, `.px-huge`, `.py-huge`, `.pt-huge`, `.pb-huge`, `.ps-huge`, `.pe-huge`, `.p-xs-huge`, etc...
@@ -513,9 +513,9 @@ toc: true
   - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
   - **Sm**: `.p-scaled-sm`, `.px-scaled-sm`, `.py-scaled-sm`, `.pt-scaled-sm`, `.pb-scaled-sm`, `.ps-scaled-sm`, `.pe-scaled-sm`,
   - **Md**: `.p-scaled-md`, `.px-scaled-md`, `.py-scaled-md`, `.pt-scaled-md`, `.pb-scaled-md`, `.ps-scaled-md`, `.pe-scaled-md`,
-  - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
-  - **Taller**: `.p-scaled-taller`, `.px-scaled-taller`, `.py-scaled-taller`, `.pt-scaled-taller`, `.pb-scaled-taller`, `.ps-scaled-taller`, `.pe-scaled-taller`,
-  - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
+  - **Tall**: `.p-scaled-lg`, `.px-scaled-lg`, `.py-scaled-lg`, `.pt-scaled-lg`, `.pb-scaled-lg`, `.ps-scaled-lg`, `.pe-scaled-lg`,
+  - **Xl**: `.p-scaled-xl`, `.px-scaled-xl`, `.py-scaled-xl`, `.pt-scaled-xl`, `.pb-scaled-xl`, `.ps-scaled-xl`, `.pe-scaled-xl`,
+  - **Tallest**: `.p-scaled-2xl`, `.px-scaled-2xl`, `.py-scaled-2xl`, `.pt-scaled-2xl`, `.pb-scaled-2xl`, `.ps-scaled-2xl`, `.pe-scaled-2xl`,
   - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed gap spacing utilities:
@@ -526,7 +526,7 @@ toc: true
   - **Sm**: `.gap-sm`, `.row-gap-sm`, `.column-gap-sm`, `.gap-xs-sm`, etc...
   - **Md**: `.gap-md`, `.row-gap-md`, `.column-gap-md`, `.gap-xs-md`, etc...
   - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
-  - **Taller**: `.gap-taller`, `.row-gap-taller`, `.column-gap-taller`, `.gap-xs-taller`, etc...
+  - **Xl**: `.gap-xl`, `.row-gap-xl`, `.column-gap-xl`, `.gap-xs-xl`, etc...
   - **Tallest**: `.gap-tallest`, `.row-gap-tallest`, `.column-gap-tallest`, `.gap-xs-tallest`, etc...
   - **Spacious**: `.gap-spacious`, `.row-gap-spacious`, `.column-gap-spacious`, `.gap-xs-spacious`, etc...
   - **Huge**: `.gap-huge`, `.row-gap-huge`, `.column-gap-huge`, `.gap-xs-huge`, etc...
@@ -539,9 +539,9 @@ toc: true
   - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
   - **Sm**: `.gap-scaled-sm`, `.row-gap-scaled-sm`, `.column-gap-scaled-sm`
   - **Md**: `.gap-scaled-md`, `.row-gap-scaled-md`, `.column-gap-scaled-md`
-  - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
-  - **Taller**: `.gap-scaled-taller`, `.row-gap-scaled-taller`, `.column-gap-scaled-taller`
-  - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
+  - **Tall**: `.gap-scaled-lg`, `.row-gap-scaled-lg`, `.column-gap-scaled-lg`
+  - **Xl**: `.gap-scaled-xl`, `.row-gap-scaled-xl`, `.column-gap-scaled-xl`
+  - **Tallest**: `.gap-scaled-2xl`, `.row-gap-scaled-2xl`, `.column-gap-scaled-2xl`
   - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
 #### Text
@@ -1488,15 +1488,15 @@ toc: true
       <li><code>$ouds-space-scaled-spacious-desktop</code></li>
       <li><code>$ouds-space-scaled-spacious-mobile</code></li>
       <li><code>$ouds-space-scaled-spacious-tablet</code></li>
-      <li><code>$ouds-space-scaled-tall-desktop</code></li>
-      <li><code>$ouds-space-scaled-tall-mobile</code></li>
-      <li><code>$ouds-space-scaled-tall-tablet</code></li>
-      <li><code>$ouds-space-scaled-taller-desktop</code></li>
-      <li><code>$ouds-space-scaled-taller-mobile</code></li>
-      <li><code>$ouds-space-scaled-taller-tablet</code></li>
-      <li><code>$ouds-space-scaled-tallest-desktop</code></li>
-      <li><code>$ouds-space-scaled-tallest-mobile</code></li>
-      <li><code>$ouds-space-scaled-tallest-tablet</code></li>
+      <li><code>$ouds-space-scaled-lg-desktop</code></li>
+      <li><code>$ouds-space-scaled-lg-mobile</code></li>
+      <li><code>$ouds-space-scaled-lg-tablet</code></li>
+      <li><code>$ouds-space-scaled-xl-desktop</code></li>
+      <li><code>$ouds-space-scaled-xl-mobile</code></li>
+      <li><code>$ouds-space-scaled-xl-tablet</code></li>
+      <li><code>$ouds-space-scaled-2xl-desktop</code></li>
+      <li><code>$ouds-space-scaled-2xl-mobile</code></li>
+      <li><code>$ouds-space-scaled-2xl-tablet</code></li>
     </ul>
   </details>
 
@@ -1933,9 +1933,9 @@ toc: true
       <li><code>--bs-space-scaled-2xs</code></li>
       <li><code>--bs-space-scaled-3xs</code></li>
       <li><code>--bs-space-scaled-spacious</code></li>
-      <li><code>--bs-space-scaled-tall</code></li>
-      <li><code>--bs-space-scaled-taller</code></li>
-      <li><code>--bs-space-scaled-tallest</code></li>
+      <li><code>--bs-space-scaled-lg</code></li>
+      <li><code>--bs-space-scaled-xl</code></li>
+      <li><code>--bs-space-scaled-2xl</code></li>
     </ul>
   </details>
 
