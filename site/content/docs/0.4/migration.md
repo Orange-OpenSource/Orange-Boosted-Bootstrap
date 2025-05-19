@@ -467,7 +467,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed margin spacing utilities:
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
-  - **Smash**: `.m-smash`, `.mx-smash`, `.my-smash`, `.mt-smash`, `.mb-smash`, `.ms-smash`, `.me-smash`, `.m-xs-smash`, etc...
+  - **3xs**: `.m-3xs`, `.mx-3xs`, `.my-3xs`, `.mt-3xs`, `.mb-3xs`, `.ms-3xs`, `.me-3xs`, `.m-xs-3xs`, etc...
   - **Shortest**: `.m-shortest`, `.mx-shortest`, `.my-shortest`, `.mt-shortest`, `.mb-shortest`, `.ms-shortest`, `.me-shortest`, `.m-xs-shortest`, etc...
   - **Shorter**: `.m-shorter`, `.mx-shorter`, `.my-shorter`, `.mt-shorter`, `.mb-shorter`, `.ms-shorter`, `.me-shorter`, `.m-xs-shorter`, etc...
   - **Short**: `.m-short`, `.mx-short`, `.my-short`, `.mt-short`, `.mb-short`, `.ms-short`, `.me-short`, `.m-xs-short`, etc...
@@ -482,7 +482,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
-  - **Smash**: `.m-scaled-smash`, `.mx-scaled-smash`, `.my-scaled-smash`, `.mt-scaled-smash`, `.mb-scaled-smash`, `.ms-scaled-smash`, `.me-scaled-smash`,
+  - **3xs**: `.m-scaled-3xs`, `.mx-scaled-3xs`, `.my-scaled-3xs`, `.mt-scaled-3xs`, `.mb-scaled-3xs`, `.ms-scaled-3xs`, `.me-scaled-3xs`,
   - **Shortest**: `.m-scaled-shortest`, `.mx-scaled-shortest`, `.my-scaled-shortest`, `.mt-scaled-shortest`, `.mb-scaled-shortest`, `.ms-scaled-shortest`, `.me-scaled-shortest`,
   - **Shorter**: `.m-scaled-shorter`, `.mx-scaled-shorter`, `.my-scaled-shorter`, `.mt-scaled-shorter`, `.mb-scaled-shorter`, `.ms-scaled-shorter`, `.me-scaled-shorter`,
   - **Short**: `.m-scaled-short`, `.mx-scaled-short`, `.my-scaled-short`, `.mt-scaled-short`, `.mb-scaled-short`, `.ms-scaled-short`, `.me-scaled-short`,
@@ -494,7 +494,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
-  - **Smash**: `.p-smash`, `.px-smash`, `.py-smash`, `.pt-smash`, `.pb-smash`, `.ps-smash`, `.pe-smash`, `.p-xs-smash`, etc...
+  - **3xs**: `.p-3xs`, `.px-3xs`, `.py-3xs`, `.pt-3xs`, `.pb-3xs`, `.ps-3xs`, `.pe-3xs`, `.p-xs-3xs`, etc...
   - **Shortest**: `.p-shortest`, `.px-shortest`, `.py-shortest`, `.pt-shortest`, `.pb-shortest`, `.ps-shortest`, `.pe-shortest`, `.p-xs-shortest`, etc...
   - **Shorter**: `.p-shorter`, `.px-shorter`, `.py-shorter`, `.pt-shorter`, `.pb-shorter`, `.ps-shorter`, `.pe-shorter`, `.p-xs-shorter`, etc...
   - **Short**: `.p-short`, `.px-short`, `.py-short`, `.pt-short`, `.pb-short`, `.ps-short`, `.pe-short`, `.p-xs-short`, etc...
@@ -508,7 +508,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
-  - **Smash**: `.p-scaled-smash`, `.px-scaled-smash`, `.py-scaled-smash`, `.pt-scaled-smash`, `.pb-scaled-smash`, `.ps-scaled-smash`, `.pe-scaled-smash`,
+  - **3xs**: `.p-scaled-3xs`, `.px-scaled-3xs`, `.py-scaled-3xs`, `.pt-scaled-3xs`, `.pb-scaled-3xs`, `.ps-scaled-3xs`, `.pe-scaled-3xs`,
   - **Shortest**: `.p-scaled-shortest`, `.px-scaled-shortest`, `.py-scaled-shortest`, `.pt-scaled-shortest`, `.pb-scaled-shortest`, `.ps-scaled-shortest`, `.pe-scaled-shortest`,
   - **Shorter**: `.p-scaled-shorter`, `.px-scaled-shorter`, `.py-scaled-shorter`, `.pt-scaled-shorter`, `.pb-scaled-shorter`, `.ps-scaled-shorter`, `.pe-scaled-shorter`,
   - **Short**: `.p-scaled-short`, `.px-scaled-short`, `.py-scaled-short`, `.pt-scaled-short`, `.pb-scaled-short`, `.ps-scaled-short`, `.pe-scaled-short`,
@@ -520,7 +520,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
-  - **Smash**: `.gap-smash`, `.row-gap-smash`, `.column-gap-smash`, `.gap-xs-smash`, etc...
+  - **3xs**: `.gap-3xs`, `.row-gap-3xs`, `.column-gap-3xs`, `.gap-xs-3xs`, etc...
   - **Shortest**: `.gap-shortest`, `.row-gap-shortest`, `.column-gap-shortest`, `.gap-xs-shortest`, etc...
   - **Shorter**: `.gap-shorter`, `.row-gap-shorter`, `.column-gap-shorter`, `.gap-xs-shorter`, etc...
   - **Short**: `.gap-short`, `.row-gap-short`, `.column-gap-short`, `.gap-xs-short`, etc...
@@ -534,7 +534,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
-  - **Smash**: `.gap-scaled-smash`, `.row-gap-scaled-smash`, `.column-gap-scaled-smash`
+  - **3xs**: `.gap-scaled-3xs`, `.row-gap-scaled-3xs`, `.column-gap-scaled-3xs`
   - **Shortest**: `.gap-scaled-shortest`, `.row-gap-scaled-shortest`, `.column-gap-scaled-shortest`
   - **Shorter**: `.gap-scaled-shorter`, `.row-gap-scaled-shorter`, `.column-gap-scaled-shorter`
   - **Short**: `.gap-scaled-short`, `.row-gap-scaled-short`, `.column-gap-scaled-short`
@@ -1462,7 +1462,7 @@ toc: true
       <li><code>$ouds-space-fixed-short</code></li>
       <li><code>$ouds-space-fixed-shorter</code></li>
       <li><code>$ouds-space-fixed-shortest</code></li>
-      <li><code>$ouds-space-fixed-smash</code></li>
+      <li><code>$ouds-space-fixed-3xs</code></li>
       <li><code>$ouds-space-fixed-spacious</code></li>
       <li><code>$ouds-space-fixed-tall</code></li>
       <li><code>$ouds-space-fixed-taller</code></li>
@@ -1482,9 +1482,9 @@ toc: true
       <li><code>$ouds-space-scaled-shortest-desktop</code></li>
       <li><code>$ouds-space-scaled-shortest-mobile</code></li>
       <li><code>$ouds-space-scaled-shortest-tablet</code></li>
-      <li><code>$ouds-space-scaled-smash-desktop</code></li>
-      <li><code>$ouds-space-scaled-smash-mobile</code></li>
-      <li><code>$ouds-space-scaled-smash-tablet</code></li>
+      <li><code>$ouds-space-scaled-3xs-desktop</code></li>
+      <li><code>$ouds-space-scaled-3xs-mobile</code></li>
+      <li><code>$ouds-space-scaled-3xs-tablet</code></li>
       <li><code>$ouds-space-scaled-spacious-desktop</code></li>
       <li><code>$ouds-space-scaled-spacious-mobile</code></li>
       <li><code>$ouds-space-scaled-spacious-tablet</code></li>
@@ -1931,7 +1931,7 @@ toc: true
       <li><code>--bs-space-scaled-short</code></li>
       <li><code>--bs-space-scaled-shorter</code></li>
       <li><code>--bs-space-scaled-shortest</code></li>
-      <li><code>--bs-space-scaled-smash</code></li>
+      <li><code>--bs-space-scaled-3xs</code></li>
       <li><code>--bs-space-scaled-spacious</code></li>
       <li><code>--bs-space-scaled-tall</code></li>
       <li><code>--bs-space-scaled-taller</code></li>

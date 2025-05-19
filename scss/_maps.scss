@@ -37,28 +37,28 @@ $ouds-border-colors: (
 // scss-docs-start ouds-maps-dimension
 $ouds-dimension-space-scaled: (
   "none": var(--#{$prefix}space-scaled-none),
-  "smash": var(--#{$prefix}space-scaled-smash),
-  "shortest": var(--#{$prefix}space-scaled-shortest),
-  "shorter": var(--#{$prefix}space-scaled-shorter),
-  "short": var(--#{$prefix}space-scaled-short),
-  "medium": var(--#{$prefix}space-scaled-medium),
-  "tall": var(--#{$prefix}space-scaled-tall),
-  "taller": var(--#{$prefix}space-scaled-taller),
-  "tallest": var(--#{$prefix}space-scaled-tallest),
-  "spacious": var(--#{$prefix}space-scaled-spacious)
+  "3xs": var(--#{$prefix}space-scaled-3xs),
+  "2xs": var(--#{$prefix}space-scaled-2xs),
+  "xs": var(--#{$prefix}space-scaled-xs),
+  "sm": var(--#{$prefix}space-scaled-sm),
+  "md": var(--#{$prefix}space-scaled-md),
+  "lg": var(--#{$prefix}space-scaled-lg),
+  "xl": var(--#{$prefix}space-scaled-xl),
+  "2xl": var(--#{$prefix}space-scaled-2xl),
+  "3xl": var(--#{$prefix}space-scaled-3xl)
 ) !default;
 
 // stylelint-disable function-disallowed-list
 $ouds-dimension-negative-space-scaled: (
-  "nsmash": calc(-1 * var(--#{$prefix}space-scaled-smash)),
-  "nshortest": calc(-1 * var(--#{$prefix}space-scaled-shortest)),
-  "nshorter": calc(-1 * var(--#{$prefix}space-scaled-shorter)),
-  "nshort": calc(-1 * var(--#{$prefix}space-scaled-short)),
-  "nmedium": calc(-1 * var(--#{$prefix}space-scaled-medium)),
-  "ntall": calc(-1 * var(--#{$prefix}space-scaled-tall)),
-  "ntaller": calc(-1 * var(--#{$prefix}space-scaled-taller)),
-  "ntallest": calc(-1 * var(--#{$prefix}space-scaled-tallest)),
-  "nspacious": calc(-1 * var(--#{$prefix}space-scaled-spacious))
+  "n3xs": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
+  "n2xs": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
+  "nxs": calc(-1 * var(--#{$prefix}space-scaled-xs)),
+  "nsm": calc(-1 * var(--#{$prefix}space-scaled-sm)),
+  "nmd": calc(-1 * var(--#{$prefix}space-scaled-md)),
+  "nlg": calc(-1 * var(--#{$prefix}space-scaled-lg)),
+  "nxl": calc(-1 * var(--#{$prefix}space-scaled-xl)),
+  "n2xl": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
+  "n3xl": calc(-1 * var(--#{$prefix}space-scaled-3xl))
 ) !default;
 // stylelint-enable function-disallowed-list
 

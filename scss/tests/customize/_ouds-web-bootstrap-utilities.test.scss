@@ -1362,7 +1362,7 @@ $utilities: ();
           margin: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .m-smash {
+        .m-3xs {
           margin: 2px !important;
         }
 
@@ -1414,8 +1414,8 @@ $utilities: ();
           margin: var(--bs-space-scaled-none) !important;
         }
 
-        .m-scaled-smash {
-          margin: var(--bs-space-scaled-smash) !important;
+        .m-scaled-3xs {
+          margin: var(--bs-space-scaled-3xs) !important;
         }
 
         .m-scaled-shortest {
@@ -1455,7 +1455,7 @@ $utilities: ();
           margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mx-smash {
+        .mx-3xs {
           margin-right: 2px !important;
           margin-left: 2px !important;
         }
@@ -1520,9 +1520,9 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-none) !important;
         }
 
-        .mx-scaled-smash {
-          margin-right: var(--bs-space-scaled-smash) !important;
-          margin-left: var(--bs-space-scaled-smash) !important;
+        .mx-scaled-3xs {
+          margin-right: var(--bs-space-scaled-3xs) !important;
+          margin-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .mx-scaled-shortest {
@@ -1570,7 +1570,7 @@ $utilities: ();
           margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .my-smash {
+        .my-3xs {
           margin-top: 2px !important;
           margin-bottom: 2px !important;
         }
@@ -1635,9 +1635,9 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .my-scaled-smash {
-          margin-top: var(--bs-space-scaled-smash) !important;
-          margin-bottom: var(--bs-space-scaled-smash) !important;
+        .my-scaled-3xs {
+          margin-top: var(--bs-space-scaled-3xs) !important;
+          margin-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .my-scaled-shortest {
@@ -1684,7 +1684,7 @@ $utilities: ();
           margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mt-smash {
+        .mt-3xs {
           margin-top: 2px !important;
         }
 
@@ -1736,8 +1736,8 @@ $utilities: ();
           margin-top: var(--bs-space-scaled-none) !important;
         }
 
-        .mt-scaled-smash {
-          margin-top: var(--bs-space-scaled-smash) !important;
+        .mt-scaled-3xs {
+          margin-top: var(--bs-space-scaled-3xs) !important;
         }
 
         .mt-scaled-shortest {
@@ -1776,7 +1776,7 @@ $utilities: ();
           margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .me-smash {
+        .me-3xs {
           margin-right: 2px !important;
         }
 
@@ -1828,8 +1828,8 @@ $utilities: ();
           margin-right: var(--bs-space-scaled-none) !important;
         }
 
-        .me-scaled-smash {
-          margin-right: var(--bs-space-scaled-smash) !important;
+        .me-scaled-3xs {
+          margin-right: var(--bs-space-scaled-3xs) !important;
         }
 
         .me-scaled-shortest {
@@ -1868,7 +1868,7 @@ $utilities: ();
           margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mb-smash {
+        .mb-3xs {
           margin-bottom: 2px !important;
         }
 
@@ -1920,8 +1920,8 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .mb-scaled-smash {
-          margin-bottom: var(--bs-space-scaled-smash) !important;
+        .mb-scaled-3xs {
+          margin-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .mb-scaled-shortest {
@@ -1960,7 +1960,7 @@ $utilities: ();
           margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .ms-smash {
+        .ms-3xs {
           margin-left: 2px !important;
         }
 
@@ -2012,8 +2012,8 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-none) !important;
         }
 
-        .ms-scaled-smash {
-          margin-left: var(--bs-space-scaled-smash) !important;
+        .ms-scaled-3xs {
+          margin-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .ms-scaled-shortest {
@@ -2049,7 +2049,7 @@ $utilities: ();
         }
 
         .m-scaled-nsmash {
-          margin: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .m-scaled-nshortest {
@@ -2085,8 +2085,8 @@ $utilities: ();
         }
 
         .mx-scaled-nsmash {
-          margin-right: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
-          margin-left: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mx-scaled-nshortest {
@@ -2130,8 +2130,8 @@ $utilities: ();
         }
 
         .my-scaled-nsmash {
-          margin-top: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
-          margin-bottom: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .my-scaled-nshortest {
@@ -2175,7 +2175,7 @@ $utilities: ();
         }
 
         .mt-scaled-nsmash {
-          margin-top: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mt-scaled-nshortest {
@@ -2211,7 +2211,7 @@ $utilities: ();
         }
 
         .me-scaled-nsmash {
-          margin-right: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .me-scaled-nshortest {
@@ -2247,7 +2247,7 @@ $utilities: ();
         }
 
         .mb-scaled-nsmash {
-          margin-bottom: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mb-scaled-nshortest {
@@ -2283,7 +2283,7 @@ $utilities: ();
         }
 
         .ms-scaled-nsmash {
-          margin-left: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .ms-scaled-nshortest {
@@ -2322,7 +2322,7 @@ $utilities: ();
           padding: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .p-smash {
+        .p-3xs {
           padding: 2px !important;
         }
 
@@ -2370,8 +2370,8 @@ $utilities: ();
           padding: var(--bs-space-scaled-none) !important;
         }
 
-        .p-scaled-smash {
-          padding: var(--bs-space-scaled-smash) !important;
+        .p-scaled-3xs {
+          padding: var(--bs-space-scaled-3xs) !important;
         }
 
         .p-scaled-shortest {
@@ -2411,7 +2411,7 @@ $utilities: ();
           padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .px-smash {
+        .px-3xs {
           padding-right: 2px !important;
           padding-left: 2px !important;
         }
@@ -2471,9 +2471,9 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-none) !important;
         }
 
-        .px-scaled-smash {
-          padding-right: var(--bs-space-scaled-smash) !important;
-          padding-left: var(--bs-space-scaled-smash) !important;
+        .px-scaled-3xs {
+          padding-right: var(--bs-space-scaled-3xs) !important;
+          padding-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .px-scaled-shortest {
@@ -2521,7 +2521,7 @@ $utilities: ();
           padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .py-smash {
+        .py-3xs {
           padding-top: 2px !important;
           padding-bottom: 2px !important;
         }
@@ -2581,9 +2581,9 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .py-scaled-smash {
-          padding-top: var(--bs-space-scaled-smash) !important;
-          padding-bottom: var(--bs-space-scaled-smash) !important;
+        .py-scaled-3xs {
+          padding-top: var(--bs-space-scaled-3xs) !important;
+          padding-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .py-scaled-shortest {
@@ -2630,7 +2630,7 @@ $utilities: ();
           padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pt-smash {
+        .pt-3xs {
           padding-top: 2px !important;
         }
 
@@ -2678,8 +2678,8 @@ $utilities: ();
           padding-top: var(--bs-space-scaled-none) !important;
         }
 
-        .pt-scaled-smash {
-          padding-top: var(--bs-space-scaled-smash) !important;
+        .pt-scaled-3xs {
+          padding-top: var(--bs-space-scaled-3xs) !important;
         }
 
         .pt-scaled-shortest {
@@ -2718,7 +2718,7 @@ $utilities: ();
           padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pe-smash {
+        .pe-3xs {
           padding-right: 2px !important;
         }
 
@@ -2766,8 +2766,8 @@ $utilities: ();
           padding-right: var(--bs-space-scaled-none) !important;
         }
 
-        .pe-scaled-smash {
-          padding-right: var(--bs-space-scaled-smash) !important;
+        .pe-scaled-3xs {
+          padding-right: var(--bs-space-scaled-3xs) !important;
         }
 
         .pe-scaled-shortest {
@@ -2806,7 +2806,7 @@ $utilities: ();
           padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pb-smash {
+        .pb-3xs {
           padding-bottom: 2px !important;
         }
 
@@ -2854,8 +2854,8 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .pb-scaled-smash {
-          padding-bottom: var(--bs-space-scaled-smash) !important;
+        .pb-scaled-3xs {
+          padding-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .pb-scaled-shortest {
@@ -2894,7 +2894,7 @@ $utilities: ();
           padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .ps-smash {
+        .ps-3xs {
           padding-left: 2px !important;
         }
 
@@ -2942,8 +2942,8 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-none) !important;
         }
 
-        .ps-scaled-smash {
-          padding-left: var(--bs-space-scaled-smash) !important;
+        .ps-scaled-3xs {
+          padding-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .ps-scaled-shortest {
@@ -2982,7 +2982,7 @@ $utilities: ();
           gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .gap-smash {
+        .gap-3xs {
           gap: 2px !important;
         }
 
@@ -3030,8 +3030,8 @@ $utilities: ();
           gap: var(--bs-space-scaled-none) !important;
         }
 
-        .gap-scaled-smash {
-          gap: var(--bs-space-scaled-smash) !important;
+        .gap-scaled-3xs {
+          gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .gap-scaled-shortest {
@@ -3070,7 +3070,7 @@ $utilities: ();
           row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .row-gap-smash {
+        .row-gap-3xs {
           row-gap: 2px !important;
         }
 
@@ -3118,8 +3118,8 @@ $utilities: ();
           row-gap: var(--bs-space-scaled-none) !important;
         }
 
-        .row-gap-scaled-smash {
-          row-gap: var(--bs-space-scaled-smash) !important;
+        .row-gap-scaled-3xs {
+          row-gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .row-gap-scaled-shortest {
@@ -3158,7 +3158,7 @@ $utilities: ();
           column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .column-gap-smash {
+        .column-gap-3xs {
           column-gap: 2px !important;
         }
 
@@ -3206,8 +3206,8 @@ $utilities: ();
           column-gap: var(--bs-space-scaled-none) !important;
         }
 
-        .column-gap-scaled-smash {
-          column-gap: var(--bs-space-scaled-smash) !important;
+        .column-gap-scaled-3xs {
+          column-gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .column-gap-scaled-shortest {
@@ -3589,7 +3589,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-xs-smash {
+          .m-xs-3xs {
             margin: 2px !important;
           }
 
@@ -3642,7 +3642,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-xs-smash {
+          .mx-xs-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -3707,7 +3707,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-xs-smash {
+          .my-xs-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -3771,7 +3771,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-xs-smash {
+          .mt-xs-3xs {
             margin-top: 2px !important;
           }
 
@@ -3823,7 +3823,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-xs-smash {
+          .me-xs-3xs {
             margin-right: 2px !important;
           }
 
@@ -3875,7 +3875,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-xs-smash {
+          .mb-xs-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -3927,7 +3927,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-xs-smash {
+          .ms-xs-3xs {
             margin-left: 2px !important;
           }
 
@@ -3979,7 +3979,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-xs-smash {
+          .p-xs-3xs {
             padding: 2px !important;
           }
 
@@ -4028,7 +4028,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-xs-smash {
+          .px-xs-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -4088,7 +4088,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-xs-smash {
+          .py-xs-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -4147,7 +4147,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-xs-smash {
+          .pt-xs-3xs {
             padding-top: 2px !important;
           }
 
@@ -4195,7 +4195,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-xs-smash {
+          .pe-xs-3xs {
             padding-right: 2px !important;
           }
 
@@ -4243,7 +4243,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-xs-smash {
+          .pb-xs-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -4291,7 +4291,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-xs-smash {
+          .ps-xs-3xs {
             padding-left: 2px !important;
           }
 
@@ -4339,7 +4339,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-xs-smash {
+          .gap-xs-3xs {
             gap: 2px !important;
           }
 
@@ -4387,7 +4387,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-xs-smash {
+          .row-gap-xs-3xs {
             row-gap: 2px !important;
           }
 
@@ -4435,7 +4435,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-xs-smash {
+          .column-gap-xs-3xs {
             column-gap: 2px !important;
           }
 
@@ -4497,7 +4497,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-sm-smash {
+          .m-sm-3xs {
             margin: 2px !important;
           }
 
@@ -4550,7 +4550,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-sm-smash {
+          .mx-sm-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -4615,7 +4615,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-sm-smash {
+          .my-sm-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -4679,7 +4679,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-sm-smash {
+          .mt-sm-3xs {
             margin-top: 2px !important;
           }
 
@@ -4731,7 +4731,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-sm-smash {
+          .me-sm-3xs {
             margin-right: 2px !important;
           }
 
@@ -4783,7 +4783,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-sm-smash {
+          .mb-sm-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -4835,7 +4835,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-sm-smash {
+          .ms-sm-3xs {
             margin-left: 2px !important;
           }
 
@@ -4887,7 +4887,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-sm-smash {
+          .p-sm-3xs {
             padding: 2px !important;
           }
 
@@ -4936,7 +4936,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-sm-smash {
+          .px-sm-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -4996,7 +4996,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-sm-smash {
+          .py-sm-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -5055,7 +5055,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-sm-smash {
+          .pt-sm-3xs {
             padding-top: 2px !important;
           }
 
@@ -5103,7 +5103,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-sm-smash {
+          .pe-sm-3xs {
             padding-right: 2px !important;
           }
 
@@ -5151,7 +5151,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-sm-smash {
+          .pb-sm-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -5199,7 +5199,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-sm-smash {
+          .ps-sm-3xs {
             padding-left: 2px !important;
           }
 
@@ -5247,7 +5247,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-sm-smash {
+          .gap-sm-3xs {
             gap: 2px !important;
           }
 
@@ -5295,7 +5295,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-sm-smash {
+          .row-gap-sm-3xs {
             row-gap: 2px !important;
           }
 
@@ -5343,7 +5343,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-sm-smash {
+          .column-gap-sm-3xs {
             column-gap: 2px !important;
           }
 
@@ -5405,7 +5405,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-md-smash {
+          .m-md-3xs {
             margin: 2px !important;
           }
 
@@ -5458,7 +5458,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-md-smash {
+          .mx-md-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -5523,7 +5523,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-md-smash {
+          .my-md-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -5587,7 +5587,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-md-smash {
+          .mt-md-3xs {
             margin-top: 2px !important;
           }
 
@@ -5639,7 +5639,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-md-smash {
+          .me-md-3xs {
             margin-right: 2px !important;
           }
 
@@ -5691,7 +5691,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-md-smash {
+          .mb-md-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -5743,7 +5743,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-md-smash {
+          .ms-md-3xs {
             margin-left: 2px !important;
           }
 
@@ -5795,7 +5795,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-md-smash {
+          .p-md-3xs {
             padding: 2px !important;
           }
 
@@ -5844,7 +5844,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-md-smash {
+          .px-md-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -5904,7 +5904,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-md-smash {
+          .py-md-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -5963,7 +5963,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-md-smash {
+          .pt-md-3xs {
             padding-top: 2px !important;
           }
 
@@ -6011,7 +6011,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-md-smash {
+          .pe-md-3xs {
             padding-right: 2px !important;
           }
 
@@ -6059,7 +6059,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-md-smash {
+          .pb-md-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -6107,7 +6107,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-md-smash {
+          .ps-md-3xs {
             padding-left: 2px !important;
           }
 
@@ -6155,7 +6155,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-md-smash {
+          .gap-md-3xs {
             gap: 2px !important;
           }
 
@@ -6203,7 +6203,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-md-smash {
+          .row-gap-md-3xs {
             row-gap: 2px !important;
           }
 
@@ -6251,7 +6251,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-md-smash {
+          .column-gap-md-3xs {
             column-gap: 2px !important;
           }
 
@@ -6313,7 +6313,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-lg-smash {
+          .m-lg-3xs {
             margin: 2px !important;
           }
 
@@ -6366,7 +6366,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-lg-smash {
+          .mx-lg-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -6431,7 +6431,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-lg-smash {
+          .my-lg-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -6495,7 +6495,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-lg-smash {
+          .mt-lg-3xs {
             margin-top: 2px !important;
           }
 
@@ -6547,7 +6547,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-lg-smash {
+          .me-lg-3xs {
             margin-right: 2px !important;
           }
 
@@ -6599,7 +6599,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-lg-smash {
+          .mb-lg-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -6651,7 +6651,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-lg-smash {
+          .ms-lg-3xs {
             margin-left: 2px !important;
           }
 
@@ -6703,7 +6703,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-lg-smash {
+          .p-lg-3xs {
             padding: 2px !important;
           }
 
@@ -6752,7 +6752,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-lg-smash {
+          .px-lg-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -6812,7 +6812,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-lg-smash {
+          .py-lg-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -6871,7 +6871,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-lg-smash {
+          .pt-lg-3xs {
             padding-top: 2px !important;
           }
 
@@ -6919,7 +6919,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-lg-smash {
+          .pe-lg-3xs {
             padding-right: 2px !important;
           }
 
@@ -6967,7 +6967,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-lg-smash {
+          .pb-lg-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -7015,7 +7015,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-lg-smash {
+          .ps-lg-3xs {
             padding-left: 2px !important;
           }
 
@@ -7063,7 +7063,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-lg-smash {
+          .gap-lg-3xs {
             gap: 2px !important;
           }
 
@@ -7111,7 +7111,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-lg-smash {
+          .row-gap-lg-3xs {
             row-gap: 2px !important;
           }
 
@@ -7159,7 +7159,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-lg-smash {
+          .column-gap-lg-3xs {
             column-gap: 2px !important;
           }
 
@@ -7221,7 +7221,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-xl-smash {
+          .m-xl-3xs {
             margin: 2px !important;
           }
 
@@ -7274,7 +7274,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-xl-smash {
+          .mx-xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -7339,7 +7339,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-xl-smash {
+          .my-xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -7403,7 +7403,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-xl-smash {
+          .mt-xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -7455,7 +7455,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-xl-smash {
+          .me-xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -7507,7 +7507,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-xl-smash {
+          .mb-xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -7559,7 +7559,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-xl-smash {
+          .ms-xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -7611,7 +7611,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-xl-smash {
+          .p-xl-3xs {
             padding: 2px !important;
           }
 
@@ -7660,7 +7660,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-xl-smash {
+          .px-xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -7720,7 +7720,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-xl-smash {
+          .py-xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -7779,7 +7779,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-xl-smash {
+          .pt-xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -7827,7 +7827,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-xl-smash {
+          .pe-xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -7875,7 +7875,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-xl-smash {
+          .pb-xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -7923,7 +7923,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-xl-smash {
+          .ps-xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -7971,7 +7971,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-xl-smash {
+          .gap-xl-3xs {
             gap: 2px !important;
           }
 
@@ -8019,7 +8019,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-xl-smash {
+          .row-gap-xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -8067,7 +8067,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-xl-smash {
+          .column-gap-xl-3xs {
             column-gap: 2px !important;
           }
 
@@ -8129,7 +8129,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-2xl-smash {
+          .m-2xl-3xs {
             margin: 2px !important;
           }
 
@@ -8182,7 +8182,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-2xl-smash {
+          .mx-2xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -8247,7 +8247,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-2xl-smash {
+          .my-2xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -8311,7 +8311,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-2xl-smash {
+          .mt-2xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -8363,7 +8363,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-2xl-smash {
+          .me-2xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -8415,7 +8415,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-2xl-smash {
+          .mb-2xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -8467,7 +8467,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-2xl-smash {
+          .ms-2xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -8519,7 +8519,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-2xl-smash {
+          .p-2xl-3xs {
             padding: 2px !important;
           }
 
@@ -8568,7 +8568,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-2xl-smash {
+          .px-2xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -8628,7 +8628,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-2xl-smash {
+          .py-2xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -8687,7 +8687,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-2xl-smash {
+          .pt-2xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -8735,7 +8735,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-2xl-smash {
+          .pe-2xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -8783,7 +8783,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-2xl-smash {
+          .pb-2xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -8831,7 +8831,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-2xl-smash {
+          .ps-2xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -8879,7 +8879,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-2xl-smash {
+          .gap-2xl-3xs {
             gap: 2px !important;
           }
 
@@ -8927,7 +8927,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-2xl-smash {
+          .row-gap-2xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -8975,7 +8975,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-2xl-smash {
+          .column-gap-2xl-3xs {
             column-gap: 2px !important;
           }
 
@@ -9037,7 +9037,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-3xl-smash {
+          .m-3xl-3xs {
             margin: 2px !important;
           }
 
@@ -9090,7 +9090,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-3xl-smash {
+          .mx-3xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -9155,7 +9155,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-3xl-smash {
+          .my-3xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -9219,7 +9219,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-3xl-smash {
+          .mt-3xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -9271,7 +9271,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-3xl-smash {
+          .me-3xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -9323,7 +9323,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-3xl-smash {
+          .mb-3xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -9375,7 +9375,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-3xl-smash {
+          .ms-3xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -9427,7 +9427,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-3xl-smash {
+          .p-3xl-3xs {
             padding: 2px !important;
           }
 
@@ -9476,7 +9476,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-3xl-smash {
+          .px-3xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -9536,7 +9536,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-3xl-smash {
+          .py-3xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -9595,7 +9595,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-3xl-smash {
+          .pt-3xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -9643,7 +9643,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-3xl-smash {
+          .pe-3xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -9691,7 +9691,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-3xl-smash {
+          .pb-3xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -9739,7 +9739,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-3xl-smash {
+          .ps-3xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -9787,7 +9787,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-3xl-smash {
+          .gap-3xl-3xs {
             gap: 2px !important;
           }
 
@@ -9835,7 +9835,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-3xl-smash {
+          .row-gap-3xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -9883,7 +9883,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-3xl-smash {
+          .column-gap-3xl-3xs {
             column-gap: 2px !important;
           }
 
@@ -12009,7 +12009,7 @@ $utilities: ();
           margin: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .m-smash {
+        .m-3xs {
           margin: 2px !important;
         }
 
@@ -12061,8 +12061,8 @@ $utilities: ();
           margin: var(--bs-space-scaled-none) !important;
         }
 
-        .m-scaled-smash {
-          margin: var(--bs-space-scaled-smash) !important;
+        .m-scaled-3xs {
+          margin: var(--bs-space-scaled-3xs) !important;
         }
 
         .m-scaled-shortest {
@@ -12102,7 +12102,7 @@ $utilities: ();
           margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mx-smash {
+        .mx-3xs {
           margin-right: 2px !important;
           margin-left: 2px !important;
         }
@@ -12167,9 +12167,9 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-none) !important;
         }
 
-        .mx-scaled-smash {
-          margin-right: var(--bs-space-scaled-smash) !important;
-          margin-left: var(--bs-space-scaled-smash) !important;
+        .mx-scaled-3xs {
+          margin-right: var(--bs-space-scaled-3xs) !important;
+          margin-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .mx-scaled-shortest {
@@ -12217,7 +12217,7 @@ $utilities: ();
           margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .my-smash {
+        .my-3xs {
           margin-top: 2px !important;
           margin-bottom: 2px !important;
         }
@@ -12282,9 +12282,9 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .my-scaled-smash {
-          margin-top: var(--bs-space-scaled-smash) !important;
-          margin-bottom: var(--bs-space-scaled-smash) !important;
+        .my-scaled-3xs {
+          margin-top: var(--bs-space-scaled-3xs) !important;
+          margin-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .my-scaled-shortest {
@@ -12331,7 +12331,7 @@ $utilities: ();
           margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mt-smash {
+        .mt-3xs {
           margin-top: 2px !important;
         }
 
@@ -12383,8 +12383,8 @@ $utilities: ();
           margin-top: var(--bs-space-scaled-none) !important;
         }
 
-        .mt-scaled-smash {
-          margin-top: var(--bs-space-scaled-smash) !important;
+        .mt-scaled-3xs {
+          margin-top: var(--bs-space-scaled-3xs) !important;
         }
 
         .mt-scaled-shortest {
@@ -12423,7 +12423,7 @@ $utilities: ();
           margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .me-smash {
+        .me-3xs {
           margin-right: 2px !important;
         }
 
@@ -12475,8 +12475,8 @@ $utilities: ();
           margin-right: var(--bs-space-scaled-none) !important;
         }
 
-        .me-scaled-smash {
-          margin-right: var(--bs-space-scaled-smash) !important;
+        .me-scaled-3xs {
+          margin-right: var(--bs-space-scaled-3xs) !important;
         }
 
         .me-scaled-shortest {
@@ -12515,7 +12515,7 @@ $utilities: ();
           margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .mb-smash {
+        .mb-3xs {
           margin-bottom: 2px !important;
         }
 
@@ -12567,8 +12567,8 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .mb-scaled-smash {
-          margin-bottom: var(--bs-space-scaled-smash) !important;
+        .mb-scaled-3xs {
+          margin-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .mb-scaled-shortest {
@@ -12607,7 +12607,7 @@ $utilities: ();
           margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .ms-smash {
+        .ms-3xs {
           margin-left: 2px !important;
         }
 
@@ -12659,8 +12659,8 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-none) !important;
         }
 
-        .ms-scaled-smash {
-          margin-left: var(--bs-space-scaled-smash) !important;
+        .ms-scaled-3xs {
+          margin-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .ms-scaled-shortest {
@@ -12696,7 +12696,7 @@ $utilities: ();
         }
 
         .m-scaled-nsmash {
-          margin: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .m-scaled-nshortest {
@@ -12732,8 +12732,8 @@ $utilities: ();
         }
 
         .mx-scaled-nsmash {
-          margin-right: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
-          margin-left: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mx-scaled-nshortest {
@@ -12777,8 +12777,8 @@ $utilities: ();
         }
 
         .my-scaled-nsmash {
-          margin-top: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
-          margin-bottom: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .my-scaled-nshortest {
@@ -12822,7 +12822,7 @@ $utilities: ();
         }
 
         .mt-scaled-nsmash {
-          margin-top: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mt-scaled-nshortest {
@@ -12858,7 +12858,7 @@ $utilities: ();
         }
 
         .me-scaled-nsmash {
-          margin-right: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .me-scaled-nshortest {
@@ -12894,7 +12894,7 @@ $utilities: ();
         }
 
         .mb-scaled-nsmash {
-          margin-bottom: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .mb-scaled-nshortest {
@@ -12930,7 +12930,7 @@ $utilities: ();
         }
 
         .ms-scaled-nsmash {
-          margin-left: calc(-1 * var(--bs-space-scaled-smash)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .ms-scaled-nshortest {
@@ -12969,7 +12969,7 @@ $utilities: ();
           padding: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .p-smash {
+        .p-3xs {
           padding: 2px !important;
         }
 
@@ -13017,8 +13017,8 @@ $utilities: ();
           padding: var(--bs-space-scaled-none) !important;
         }
 
-        .p-scaled-smash {
-          padding: var(--bs-space-scaled-smash) !important;
+        .p-scaled-3xs {
+          padding: var(--bs-space-scaled-3xs) !important;
         }
 
         .p-scaled-shortest {
@@ -13058,7 +13058,7 @@ $utilities: ();
           padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .px-smash {
+        .px-3xs {
           padding-right: 2px !important;
           padding-left: 2px !important;
         }
@@ -13118,9 +13118,9 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-none) !important;
         }
 
-        .px-scaled-smash {
-          padding-right: var(--bs-space-scaled-smash) !important;
-          padding-left: var(--bs-space-scaled-smash) !important;
+        .px-scaled-3xs {
+          padding-right: var(--bs-space-scaled-3xs) !important;
+          padding-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .px-scaled-shortest {
@@ -13168,7 +13168,7 @@ $utilities: ();
           padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .py-smash {
+        .py-3xs {
           padding-top: 2px !important;
           padding-bottom: 2px !important;
         }
@@ -13228,9 +13228,9 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .py-scaled-smash {
-          padding-top: var(--bs-space-scaled-smash) !important;
-          padding-bottom: var(--bs-space-scaled-smash) !important;
+        .py-scaled-3xs {
+          padding-top: var(--bs-space-scaled-3xs) !important;
+          padding-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .py-scaled-shortest {
@@ -13277,7 +13277,7 @@ $utilities: ();
           padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pt-smash {
+        .pt-3xs {
           padding-top: 2px !important;
         }
 
@@ -13325,8 +13325,8 @@ $utilities: ();
           padding-top: var(--bs-space-scaled-none) !important;
         }
 
-        .pt-scaled-smash {
-          padding-top: var(--bs-space-scaled-smash) !important;
+        .pt-scaled-3xs {
+          padding-top: var(--bs-space-scaled-3xs) !important;
         }
 
         .pt-scaled-shortest {
@@ -13365,7 +13365,7 @@ $utilities: ();
           padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pe-smash {
+        .pe-3xs {
           padding-right: 2px !important;
         }
 
@@ -13413,8 +13413,8 @@ $utilities: ();
           padding-right: var(--bs-space-scaled-none) !important;
         }
 
-        .pe-scaled-smash {
-          padding-right: var(--bs-space-scaled-smash) !important;
+        .pe-scaled-3xs {
+          padding-right: var(--bs-space-scaled-3xs) !important;
         }
 
         .pe-scaled-shortest {
@@ -13453,7 +13453,7 @@ $utilities: ();
           padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .pb-smash {
+        .pb-3xs {
           padding-bottom: 2px !important;
         }
 
@@ -13501,8 +13501,8 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-none) !important;
         }
 
-        .pb-scaled-smash {
-          padding-bottom: var(--bs-space-scaled-smash) !important;
+        .pb-scaled-3xs {
+          padding-bottom: var(--bs-space-scaled-3xs) !important;
         }
 
         .pb-scaled-shortest {
@@ -13541,7 +13541,7 @@ $utilities: ();
           padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .ps-smash {
+        .ps-3xs {
           padding-left: 2px !important;
         }
 
@@ -13589,8 +13589,8 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-none) !important;
         }
 
-        .ps-scaled-smash {
-          padding-left: var(--bs-space-scaled-smash) !important;
+        .ps-scaled-3xs {
+          padding-left: var(--bs-space-scaled-3xs) !important;
         }
 
         .ps-scaled-shortest {
@@ -13629,7 +13629,7 @@ $utilities: ();
           gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .gap-smash {
+        .gap-3xs {
           gap: 2px !important;
         }
 
@@ -13677,8 +13677,8 @@ $utilities: ();
           gap: var(--bs-space-scaled-none) !important;
         }
 
-        .gap-scaled-smash {
-          gap: var(--bs-space-scaled-smash) !important;
+        .gap-scaled-3xs {
+          gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .gap-scaled-shortest {
@@ -13717,7 +13717,7 @@ $utilities: ();
           row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .row-gap-smash {
+        .row-gap-3xs {
           row-gap: 2px !important;
         }
 
@@ -13765,8 +13765,8 @@ $utilities: ();
           row-gap: var(--bs-space-scaled-none) !important;
         }
 
-        .row-gap-scaled-smash {
-          row-gap: var(--bs-space-scaled-smash) !important;
+        .row-gap-scaled-3xs {
+          row-gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .row-gap-scaled-shortest {
@@ -13805,7 +13805,7 @@ $utilities: ();
           column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
         }
 
-        .column-gap-smash {
+        .column-gap-3xs {
           column-gap: 2px !important;
         }
 
@@ -13853,8 +13853,8 @@ $utilities: ();
           column-gap: var(--bs-space-scaled-none) !important;
         }
 
-        .column-gap-scaled-smash {
-          column-gap: var(--bs-space-scaled-smash) !important;
+        .column-gap-scaled-3xs {
+          column-gap: var(--bs-space-scaled-3xs) !important;
         }
 
         .column-gap-scaled-shortest {
@@ -14908,7 +14908,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-xs-smash {
+          .m-xs-3xs {
             margin: 2px !important;
           }
 
@@ -14961,7 +14961,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-xs-smash {
+          .mx-xs-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -15026,7 +15026,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-xs-smash {
+          .my-xs-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -15090,7 +15090,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-xs-smash {
+          .mt-xs-3xs {
             margin-top: 2px !important;
           }
 
@@ -15142,7 +15142,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-xs-smash {
+          .me-xs-3xs {
             margin-right: 2px !important;
           }
 
@@ -15194,7 +15194,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-xs-smash {
+          .mb-xs-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -15246,7 +15246,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-xs-smash {
+          .ms-xs-3xs {
             margin-left: 2px !important;
           }
 
@@ -15298,7 +15298,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-xs-smash {
+          .p-xs-3xs {
             padding: 2px !important;
           }
 
@@ -15347,7 +15347,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-xs-smash {
+          .px-xs-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -15407,7 +15407,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-xs-smash {
+          .py-xs-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -15466,7 +15466,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-xs-smash {
+          .pt-xs-3xs {
             padding-top: 2px !important;
           }
 
@@ -15514,7 +15514,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-xs-smash {
+          .pe-xs-3xs {
             padding-right: 2px !important;
           }
 
@@ -15562,7 +15562,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-xs-smash {
+          .pb-xs-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -15610,7 +15610,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-xs-smash {
+          .ps-xs-3xs {
             padding-left: 2px !important;
           }
 
@@ -15658,7 +15658,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-xs-smash {
+          .gap-xs-3xs {
             gap: 2px !important;
           }
 
@@ -15706,7 +15706,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-xs-smash {
+          .row-gap-xs-3xs {
             row-gap: 2px !important;
           }
 
@@ -15754,7 +15754,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-xs-smash {
+          .column-gap-xs-3xs {
             column-gap: 2px !important;
           }
 
@@ -16248,7 +16248,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-sm-smash {
+          .m-sm-3xs {
             margin: 2px !important;
           }
 
@@ -16301,7 +16301,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-sm-smash {
+          .mx-sm-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -16366,7 +16366,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-sm-smash {
+          .my-sm-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -16430,7 +16430,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-sm-smash {
+          .mt-sm-3xs {
             margin-top: 2px !important;
           }
 
@@ -16482,7 +16482,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-sm-smash {
+          .me-sm-3xs {
             margin-right: 2px !important;
           }
 
@@ -16534,7 +16534,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-sm-smash {
+          .mb-sm-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -16586,7 +16586,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-sm-smash {
+          .ms-sm-3xs {
             margin-left: 2px !important;
           }
 
@@ -16638,7 +16638,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-sm-smash {
+          .p-sm-3xs {
             padding: 2px !important;
           }
 
@@ -16687,7 +16687,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-sm-smash {
+          .px-sm-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -16747,7 +16747,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-sm-smash {
+          .py-sm-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -16806,7 +16806,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-sm-smash {
+          .pt-sm-3xs {
             padding-top: 2px !important;
           }
 
@@ -16854,7 +16854,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-sm-smash {
+          .pe-sm-3xs {
             padding-right: 2px !important;
           }
 
@@ -16902,7 +16902,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-sm-smash {
+          .pb-sm-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -16950,7 +16950,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-sm-smash {
+          .ps-sm-3xs {
             padding-left: 2px !important;
           }
 
@@ -16998,7 +16998,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-sm-smash {
+          .gap-sm-3xs {
             gap: 2px !important;
           }
 
@@ -17046,7 +17046,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-sm-smash {
+          .row-gap-sm-3xs {
             row-gap: 2px !important;
           }
 
@@ -17094,7 +17094,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-sm-smash {
+          .column-gap-sm-3xs {
             column-gap: 2px !important;
           }
 
@@ -17588,7 +17588,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-md-smash {
+          .m-md-3xs {
             margin: 2px !important;
           }
 
@@ -17641,7 +17641,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-md-smash {
+          .mx-md-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -17706,7 +17706,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-md-smash {
+          .my-md-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -17770,7 +17770,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-md-smash {
+          .mt-md-3xs {
             margin-top: 2px !important;
           }
 
@@ -17822,7 +17822,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-md-smash {
+          .me-md-3xs {
             margin-right: 2px !important;
           }
 
@@ -17874,7 +17874,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-md-smash {
+          .mb-md-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -17926,7 +17926,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-md-smash {
+          .ms-md-3xs {
             margin-left: 2px !important;
           }
 
@@ -17978,7 +17978,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-md-smash {
+          .p-md-3xs {
             padding: 2px !important;
           }
 
@@ -18027,7 +18027,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-md-smash {
+          .px-md-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -18087,7 +18087,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-md-smash {
+          .py-md-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -18146,7 +18146,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-md-smash {
+          .pt-md-3xs {
             padding-top: 2px !important;
           }
 
@@ -18194,7 +18194,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-md-smash {
+          .pe-md-3xs {
             padding-right: 2px !important;
           }
 
@@ -18242,7 +18242,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-md-smash {
+          .pb-md-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -18290,7 +18290,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-md-smash {
+          .ps-md-3xs {
             padding-left: 2px !important;
           }
 
@@ -18338,7 +18338,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-md-smash {
+          .gap-md-3xs {
             gap: 2px !important;
           }
 
@@ -18386,7 +18386,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-md-smash {
+          .row-gap-md-3xs {
             row-gap: 2px !important;
           }
 
@@ -18434,7 +18434,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-md-smash {
+          .column-gap-md-3xs {
             column-gap: 2px !important;
           }
 
@@ -18928,7 +18928,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-lg-smash {
+          .m-lg-3xs {
             margin: 2px !important;
           }
 
@@ -18981,7 +18981,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-lg-smash {
+          .mx-lg-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -19046,7 +19046,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-lg-smash {
+          .my-lg-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -19110,7 +19110,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-lg-smash {
+          .mt-lg-3xs {
             margin-top: 2px !important;
           }
 
@@ -19162,7 +19162,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-lg-smash {
+          .me-lg-3xs {
             margin-right: 2px !important;
           }
 
@@ -19214,7 +19214,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-lg-smash {
+          .mb-lg-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -19266,7 +19266,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-lg-smash {
+          .ms-lg-3xs {
             margin-left: 2px !important;
           }
 
@@ -19318,7 +19318,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-lg-smash {
+          .p-lg-3xs {
             padding: 2px !important;
           }
 
@@ -19367,7 +19367,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-lg-smash {
+          .px-lg-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -19427,7 +19427,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-lg-smash {
+          .py-lg-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -19486,7 +19486,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-lg-smash {
+          .pt-lg-3xs {
             padding-top: 2px !important;
           }
 
@@ -19534,7 +19534,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-lg-smash {
+          .pe-lg-3xs {
             padding-right: 2px !important;
           }
 
@@ -19582,7 +19582,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-lg-smash {
+          .pb-lg-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -19630,7 +19630,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-lg-smash {
+          .ps-lg-3xs {
             padding-left: 2px !important;
           }
 
@@ -19678,7 +19678,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-lg-smash {
+          .gap-lg-3xs {
             gap: 2px !important;
           }
 
@@ -19726,7 +19726,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-lg-smash {
+          .row-gap-lg-3xs {
             row-gap: 2px !important;
           }
 
@@ -19774,7 +19774,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-lg-smash {
+          .column-gap-lg-3xs {
             column-gap: 2px !important;
           }
 
@@ -20268,7 +20268,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-xl-smash {
+          .m-xl-3xs {
             margin: 2px !important;
           }
 
@@ -20321,7 +20321,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-xl-smash {
+          .mx-xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -20386,7 +20386,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-xl-smash {
+          .my-xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -20450,7 +20450,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-xl-smash {
+          .mt-xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -20502,7 +20502,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-xl-smash {
+          .me-xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -20554,7 +20554,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-xl-smash {
+          .mb-xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -20606,7 +20606,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-xl-smash {
+          .ms-xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -20658,7 +20658,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-xl-smash {
+          .p-xl-3xs {
             padding: 2px !important;
           }
 
@@ -20707,7 +20707,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-xl-smash {
+          .px-xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -20767,7 +20767,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-xl-smash {
+          .py-xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -20826,7 +20826,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-xl-smash {
+          .pt-xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -20874,7 +20874,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-xl-smash {
+          .pe-xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -20922,7 +20922,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-xl-smash {
+          .pb-xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -20970,7 +20970,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-xl-smash {
+          .ps-xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -21018,7 +21018,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-xl-smash {
+          .gap-xl-3xs {
             gap: 2px !important;
           }
 
@@ -21066,7 +21066,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-xl-smash {
+          .row-gap-xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -21114,7 +21114,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-xl-smash {
+          .column-gap-xl-3xs {
             column-gap: 2px !important;
           }
 
@@ -21608,7 +21608,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-xxl-smash {
+          .m-xxl-3xs {
             margin: 2px !important;
           }
 
@@ -21661,7 +21661,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-xxl-smash {
+          .mx-xxl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -21726,7 +21726,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-xxl-smash {
+          .my-xxl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -21790,7 +21790,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-xxl-smash {
+          .mt-xxl-3xs {
             margin-top: 2px !important;
           }
 
@@ -21842,7 +21842,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-xxl-smash {
+          .me-xxl-3xs {
             margin-right: 2px !important;
           }
 
@@ -21894,7 +21894,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-xxl-smash {
+          .mb-xxl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -21946,7 +21946,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-xxl-smash {
+          .ms-xxl-3xs {
             margin-left: 2px !important;
           }
 
@@ -21998,7 +21998,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-xxl-smash {
+          .p-xxl-3xs {
             padding: 2px !important;
           }
 
@@ -22047,7 +22047,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-xxl-smash {
+          .px-xxl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -22107,7 +22107,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-xxl-smash {
+          .py-xxl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -22166,7 +22166,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-xxl-smash {
+          .pt-xxl-3xs {
             padding-top: 2px !important;
           }
 
@@ -22214,7 +22214,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-xxl-smash {
+          .pe-xxl-3xs {
             padding-right: 2px !important;
           }
 
@@ -22262,7 +22262,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-xxl-smash {
+          .pb-xxl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -22310,7 +22310,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-xxl-smash {
+          .ps-xxl-3xs {
             padding-left: 2px !important;
           }
 
@@ -22358,7 +22358,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-xxl-smash {
+          .gap-xxl-3xs {
             gap: 2px !important;
           }
 
@@ -22406,7 +22406,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-xxl-smash {
+          .row-gap-xxl-3xs {
             row-gap: 2px !important;
           }
 
@@ -22454,7 +22454,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-xxl-smash {
+          .column-gap-xxl-3xs {
             column-gap: 2px !important;
           }
 
@@ -22948,7 +22948,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-2xl-smash {
+          .m-2xl-3xs {
             margin: 2px !important;
           }
 
@@ -23001,7 +23001,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-2xl-smash {
+          .mx-2xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -23066,7 +23066,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-2xl-smash {
+          .my-2xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -23130,7 +23130,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-2xl-smash {
+          .mt-2xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -23182,7 +23182,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-2xl-smash {
+          .me-2xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -23234,7 +23234,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-2xl-smash {
+          .mb-2xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -23286,7 +23286,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-2xl-smash {
+          .ms-2xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -23338,7 +23338,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-2xl-smash {
+          .p-2xl-3xs {
             padding: 2px !important;
           }
 
@@ -23387,7 +23387,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-2xl-smash {
+          .px-2xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -23447,7 +23447,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-2xl-smash {
+          .py-2xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -23506,7 +23506,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-2xl-smash {
+          .pt-2xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -23554,7 +23554,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-2xl-smash {
+          .pe-2xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -23602,7 +23602,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-2xl-smash {
+          .pb-2xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -23650,7 +23650,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-2xl-smash {
+          .ps-2xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -23698,7 +23698,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-2xl-smash {
+          .gap-2xl-3xs {
             gap: 2px !important;
           }
 
@@ -23746,7 +23746,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-2xl-smash {
+          .row-gap-2xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -23794,7 +23794,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-2xl-smash {
+          .column-gap-2xl-3xs {
             column-gap: 2px !important;
           }
 
@@ -24288,7 +24288,7 @@ $utilities: ();
             margin: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .m-3xl-smash {
+          .m-3xl-3xs {
             margin: 2px !important;
           }
 
@@ -24341,7 +24341,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mx-3xl-smash {
+          .mx-3xl-3xs {
             margin-right: 2px !important;
             margin-left: 2px !important;
           }
@@ -24406,7 +24406,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .my-3xl-smash {
+          .my-3xl-3xs {
             margin-top: 2px !important;
             margin-bottom: 2px !important;
           }
@@ -24470,7 +24470,7 @@ $utilities: ();
             margin-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mt-3xl-smash {
+          .mt-3xl-3xs {
             margin-top: 2px !important;
           }
 
@@ -24522,7 +24522,7 @@ $utilities: ();
             margin-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .me-3xl-smash {
+          .me-3xl-3xs {
             margin-right: 2px !important;
           }
 
@@ -24574,7 +24574,7 @@ $utilities: ();
             margin-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .mb-3xl-smash {
+          .mb-3xl-3xs {
             margin-bottom: 2px !important;
           }
 
@@ -24626,7 +24626,7 @@ $utilities: ();
             margin-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ms-3xl-smash {
+          .ms-3xl-3xs {
             margin-left: 2px !important;
           }
 
@@ -24678,7 +24678,7 @@ $utilities: ();
             padding: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .p-3xl-smash {
+          .p-3xl-3xs {
             padding: 2px !important;
           }
 
@@ -24727,7 +24727,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .px-3xl-smash {
+          .px-3xl-3xs {
             padding-right: 2px !important;
             padding-left: 2px !important;
           }
@@ -24787,7 +24787,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .py-3xl-smash {
+          .py-3xl-3xs {
             padding-top: 2px !important;
             padding-bottom: 2px !important;
           }
@@ -24846,7 +24846,7 @@ $utilities: ();
             padding-top: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pt-3xl-smash {
+          .pt-3xl-3xs {
             padding-top: 2px !important;
           }
 
@@ -24894,7 +24894,7 @@ $utilities: ();
             padding-right: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pe-3xl-smash {
+          .pe-3xl-3xs {
             padding-right: 2px !important;
           }
 
@@ -24942,7 +24942,7 @@ $utilities: ();
             padding-bottom: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .pb-3xl-smash {
+          .pb-3xl-3xs {
             padding-bottom: 2px !important;
           }
 
@@ -24990,7 +24990,7 @@ $utilities: ();
             padding-left: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .ps-3xl-smash {
+          .ps-3xl-3xs {
             padding-left: 2px !important;
           }
 
@@ -25038,7 +25038,7 @@ $utilities: ();
             gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .gap-3xl-smash {
+          .gap-3xl-3xs {
             gap: 2px !important;
           }
 
@@ -25086,7 +25086,7 @@ $utilities: ();
             row-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .row-gap-3xl-smash {
+          .row-gap-3xl-3xs {
             row-gap: 2px !important;
           }
 
@@ -25134,7 +25134,7 @@ $utilities: ();
             column-gap: 0px !important; // stylelint-disable-line length-zero-no-unit
           }
 
-          .column-gap-3xl-smash {
+          .column-gap-3xl-3xs {
             column-gap: 2px !important;
           }
 
