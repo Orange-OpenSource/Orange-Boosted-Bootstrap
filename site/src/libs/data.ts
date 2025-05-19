@@ -14,6 +14,12 @@ import { capitalizeFirstLetter } from './utils'
 // An object containing all the data types and their associated schema. The key should match the name of the data file
 // in the `./site/data/` directory.
 const dataDefinitions = {
+  'background-colors': z
+    .object({
+      name: z.string(),
+      hex: z.string()
+    })
+    .array(),
   breakpoints: z
     .object({
       breakpoint: z.string(),
@@ -76,6 +82,33 @@ const dataDefinitions = {
       })
       .array()
   }),
+  palette: z
+    .object({
+      category: z.string(),
+      name: z.string(),
+      colors: z
+        .object({
+          name: z.string(),
+          hex: zHexColor,
+          darkHex: zHexColor.optional(),
+        })
+        .array()
+        .optional(),
+      subcategories: z
+       .object({
+         subcategory: z.string(),
+         name: z.string(),
+         colors: z
+           .object({
+             name: z.string(),
+             variable: z.string(),
+             hex: zHexColor,
+           })
+          .array()
+      })
+      .array()
+      .optional()
+    }).array(),
   plugins: z
     .object({
       description: z.string(),
@@ -109,33 +142,6 @@ const dataDefinitions = {
       // Add a `title` property to each theme color object being the capitalized version of the `name` property.
       return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }))
     }),
-  palette: z
-    .object({
-      category: z.string(),
-      name: z.string(),
-      colors: z
-        .object({
-          name: z.string(),
-          hex: zHexColor,
-          darkHex: zHexColor.optional(),
-        })
-        .array()
-        .optional(),
-      subcategories: z
-       .object({
-         subcategory: z.string(),
-         name: z.string(),
-         colors: z
-           .object({
-             name: z.string(),
-             variable: z.string(),
-             hex: zHexColor,
-           })
-          .array()
-      })
-      .array()
-      .optional()
-    }).array(),
   translations: z
     .object({
       name: z.string(),
