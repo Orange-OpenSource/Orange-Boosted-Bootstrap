@@ -96,14 +96,14 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
     - [ ] Manually change `version_short` in `package.json`
     - [ ] Add docs version to `site/data/docs-versions.yml`
     - [ ] Manually change `docs_version` in `hugo.yml` and other references to the previous version
-    - [ ] Update redirects in docs frontmatter (`site/content/docs/_index.html`?)
-    - [ ] Move `site/content/docs/5.x` to `site/content/docs/5.x+1`
+    - [ ] Update redirects in docs frontmatter (`site/src/content/docs/_index.html`?)
+    - [ ] Move `site/src/content/docs/5.x` to `site/src/content/docs/5.x+1`
     - [ ] Increment `site/static/docs/{version}` version
     - [ ] Increment version in `nuget/boosted.nuspec`
     - [ ] (Major version) Manually update the version in `nuget/boosted.nuspec` and `nuget/boosted.sass.nuspec`
-  - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
+  - check wrong matches in `CHANGELOG.md`, and maybe `site/src/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "boosted" should have its version changed!
-  - :warning: `site/content/docs/5.1/**/*.md` should not always be modified
+  - :warning: `site/src/content/docs/5.1/**/*.md` should not always be modified
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
 - [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release
 - [ ] Prepare changelog:
