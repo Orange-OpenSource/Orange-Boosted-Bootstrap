@@ -117,7 +117,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
         See? Just like this.
       </div>
     </div>
-  
+
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <Placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" />
@@ -158,7 +158,7 @@ Alternatively, you can also add additional controls and components to toasts.
 
 ### Color schemes
 
-<CalloutDeprecatedDarkVariables component="toast" />
+<CalloutDeprecatedDarkVariants component="toast" />
 
 <details>
 <summary>See a dark color scheme example</summary>
@@ -221,7 +221,7 @@ For systems that generate more notifications, consider using a wrapping element 
     <!-- - \`top-0\` & \`end-0\` to position the toasts in the upper right corner -->
     <!-- - \`.p-3\` to prevent the toasts from sticking to the edge of the container  -->
     <div class="toast-container top-0 end-0 p-3" id="toastStacked">
-  
+
       <!-- Then put toasts within -->
       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
@@ -234,7 +234,7 @@ For systems that generate more notifications, consider using a wrapping element 
           See? Just like this.
         </div>
       </div>
-  
+
       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
           <Placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" />
@@ -254,7 +254,7 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
 <Example class="bd-example-toasts d-flex" code={`
   <!-- Flexbox container for aligning the toasts -->
   <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
-  
+
     <!-- Then put toasts within -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">

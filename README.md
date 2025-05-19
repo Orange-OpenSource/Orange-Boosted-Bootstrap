@@ -2,10 +2,10 @@
 
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
-  <br>
+  <br />
   <a href="https://boosted.orange.com/docs/"><strong>Visit Boosted</strong></a>
-  <br>
-  <br>
+  <br />
+  <br />
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>

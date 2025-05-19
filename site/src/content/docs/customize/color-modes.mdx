@@ -62,7 +62,7 @@ For example, to change the color mode of a dropdown, add `data-bs-theme="light"`
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
+    <li><hr class="dropdown-divider" /></li>
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
@@ -76,7 +76,7 @@ For example, to change the color mode of a dropdown, add `data-bs-theme="light"`
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
+    <li><hr class="dropdown-divider" /></li>
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>`} />
@@ -190,7 +190,7 @@ For example, you can create a "blue theme" with the selector `data-bs-theme="blu
   <div class="h4">Example blue theme</div>
   <p>Some paragraph text to show how the blue theme might look with written copy.</p>
 
-  <hr class="my-4">
+  <hr class="my-4" />
 
   <div class="dropdown">
     <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
@@ -226,8 +226,7 @@ Here’s a look at the JavaScript that powers it. Feel free to inspect our own d
 {/* {{< example lang="js" show_preview="false" >}}
 {{< js.inline >}}
 {{- readFile (path.Join "site/static/docs" .Site.Params.docs_version "assets/js/color-modes.js") -}}
-{{< /js.inline >}}
-{{< /example >}} */}
+{{< /js.inline >}}`} /> */}
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/docs/[version]/assets/js/color-modes.js')} />
 
 ## Adding theme colors

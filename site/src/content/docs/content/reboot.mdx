@@ -117,25 +117,25 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 ## Horizontal rules
 
-The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
+The `<hr />` element has been simplified. Similar to browser defaults, `<hr />`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
 
-<Example code={`<hr>`} />
+<Example code={`<hr />`} />
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br/>
+<br />
 <DesignCalloutAlert>
-These `<hr>` 2nd, 3rd and 4th variants should not be used because they do not respect the Orange Design System specifications. For the 2nd variant, it is because of its color. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
+These `<hr />` 2nd, 3rd and 4th variants should not be used because they do not respect the Orange Design System specifications. For the 2nd variant, it is because of its color. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
 </DesignCalloutAlert>
 
-<Example code={`<hr>
+<Example code={`<hr />
   <div class="text-success">
-    <hr>
+    <hr />
   </div>
-  
-  <hr class="border border-danger border-2 opacity-50">
-  <hr class="border border-primary border-3 opacity-75">`} />
-</details> 
+
+  <hr class="border border-danger border-2 opacity-50" />
+  <hr class="border border-primary border-3 opacity-75" />`} />
+</details>
 
 ## Lists
 
@@ -194,7 +194,7 @@ For indicating variables use the `<var>` tag.
 
 Use the `<kbd>` to indicate input that is typically entered via keyboard.
 
-<Example code={`To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+<Example code={`To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br />
 To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>`} />
 
 ## Sample output
@@ -388,17 +388,17 @@ Reboot includes an enhancement for `role="button"` to change the default cursor 
 
 ### Address
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
+The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br />`.
 
 <Example showMarkup={false} code={`<address>
-    <strong>ACME Corporation</strong><br>
-    1123 Fictional St,<br>
-    San Francisco, CA 94103<br>
+    <strong>ACME Corporation</strong><br />
+    1123 Fictional St,<br />
+    San Francisco, CA 94103<br />
     <abbr title="Phone">P:</abbr> (123) 456-7890
   </address>
 
   <address>
-    <strong>Full Name</strong><br>
+    <strong>Full Name</strong><br />
     <a href="mailto:first.last@example.com">first.last@example.com</a>
   </address>`} />
 

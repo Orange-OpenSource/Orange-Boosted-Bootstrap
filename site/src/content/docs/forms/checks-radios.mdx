@@ -202,7 +202,7 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
       Disabled reverse checkbox
     </label>
   </div>
-  
+
   <div class="form-check form-switch form-check-reverse">
     <input class="form-check-input" type="checkbox" id="switchCheckReverse">
     <label class="form-check-label" for="switchCheckReverse">Reverse switch checkbox input</label>
@@ -215,7 +215,7 @@ Omit the wrapping `.form-check` for checkboxes and radios that have no label tex
 <Example code={`<div>
     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
   </div>
-  
+
   <div>
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
   </div>`} />
@@ -228,7 +228,7 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br/>
+<br />
 <DesignCalloutAlert>
 These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
 
@@ -258,13 +258,13 @@ Boosted requires to group its radio toggle buttons in a [button group]([[docsref
 <Example code={`<div class="btn-group" role="group">
     <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
     <label class="btn btn-toggle" for="option1">Checked</label>
-  
+
     <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
     <label class="btn btn-toggle" for="option2">Radio</label>
-  
+
     <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
     <label class="btn btn-toggle" for="option3">Disabled</label>
-  
+
     <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
     <label class="btn btn-toggle" for="option4">Radio</label>
   </div>`} />
@@ -339,19 +339,19 @@ Star rating system is built on top of radios. Simply add `.star-rating` to a `<f
 <Example code={`<form>
     <fieldset class="star-rating">
       <legend class="visually-hidden">Results relevance</legend>
-  
+
       <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden">
       <label for="terrible" title="Terrible"><span class="visually-hidden">Terrible</span></label>
-  
+
       <input type="radio" id="bad" name="rating" value="2" class="visually-hidden">
       <label for="bad" title="Bad"><span class="visually-hidden">Bad</span></label>
-  
+
       <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden">
       <label for="mixed" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-  
+
       <input type="radio" id="good" name="rating" value="4" class="visually-hidden" checked>
       <label for="good" title="Good"><span class="visually-hidden">Good</span></label>
-  
+
       <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden">
       <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
     </fieldset>
@@ -364,19 +364,19 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 <Example code={`<form>
     <fieldset class="star-rating star-rating-sm">
       <legend class="visually-hidden">Results relevance</legend>
-  
+
       <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
       <label for="terrible2" title="Terrible"><span class="visually-hidden">Terrible</span></label>
-  
+
       <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden">
       <label for="bad2" title="Bad"><span class="visually-hidden">Bad</span></label>
-  
+
       <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden">
       <label for="mixed2" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-  
+
       <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" checked>
       <label for="good2" title="Good"><span class="visually-hidden">Good</span></label>
-  
+
       <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
       <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
     </fieldset>
@@ -384,9 +384,9 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 
 ### Dark variant
 
-<DeprecatedIn version="5.3.3"/>
+<DeprecatedIn version="5.3.3" />
 
-<CalloutDeprecatedDarkVariables component="star-rating"/>
+<CalloutDeprecatedDarkVariants component="star-rating"/>
 
 ### Readonly
 
@@ -394,7 +394,7 @@ Make star ratings readable but non-editable by using `<span>`s instead of `<inpu
 
 <Example code={`<div class="star-rating">
     <p class="visually-hidden">Star rating: rated 3 out of 5</p>
-  
+
     <div aria-hidden="true">
       <span></span>
       <span></span>
@@ -411,19 +411,19 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 <Example code={`<form>
     <fieldset class="star-rating" disabled aria-hidden="true">
       <legend class="visually-hidden">Disabled star rating</legend>
-  
+
       <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
       <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
-  
+
       <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
       <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
-  
+
       <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
       <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-  
+
       <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
       <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
-  
+
       <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
       <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
     </fieldset>
@@ -446,6 +446,6 @@ Variables for switches:
 
 ### Sass mixins
 
-<DeprecatedIn version="5.3.2"/>
+<DeprecatedIn version="5.3.2" />
 
 <ScssDocs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" />
