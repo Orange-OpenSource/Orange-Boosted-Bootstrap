@@ -1,5 +1,5 @@
 {{ range $entry := $.Site.Data.examples -}}
-<div class="bd-content mt-huge">
+<div class="bd-content mt-4xl">
   <h2 id="{{ $entry.category | urlize }}">{{ $entry.category }}</h2>
   <p>{{ $entry.description }}</p>
   {{ if eq $entry.category "RTL" -}}
