@@ -11,9 +11,9 @@ export function getPlaceholder(userOptions: Partial<PlaceholderOptions>): Placeh
   const options = getOptionsWithDefaults(userOptions)
   const { class: className, height, markup, text, title, width } = options
 
-  const showText = text !== false && text !== 'icon'
+  const showText = text !== false && text !== 'icon' && text !== 'false'
   const showIcon = text === 'icon'
-  const showTitle = title !== false
+  const showTitle = title !== false && title !== 'false'
 
   const placeholderClassList = ['bd-placeholder-img', className].join(' ')
   const placeholderRole = showTitle || showText ? 'img' : undefined
