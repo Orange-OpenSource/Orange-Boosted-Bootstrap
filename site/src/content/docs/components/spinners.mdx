@@ -1,12 +1,12 @@
 ---
-layout: docs
 title: Spinners
 description: Indicate the loading state of a component or page with Boosted spinners, built entirely with HTML, CSS, and no JavaScript.
-group: components
 aliases:
   - "/docs/components/spinners/"
 toc: true
 ---
+
+import { getData } from '@libs/data'
 
 ## About
 
@@ -14,31 +14,26 @@ Boosted "spinners" can be used to show the loading state in your projects. Theyâ
 
 For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
 
-<Callout type="info">
-{{< partial "callouts/info-prefersreducedmotion.md" >}}
-</Callout>
+<Callout name="info-prefersreducedmotion" />
 
 ## Border spinner
 
 Use the border spinners for a lightweight loading indicator.
 
-{{< example >}}
-<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 
 ### Colors
 
 The border spinner uses `currentColor` for its `border-color`, meaning you can customize the color with [text color utilities][color]. You can use any of our text color utilities on the standard spinner.
 
-<!-- Boosted mod -->
-{{< example >}}
-<div class="spinner-border text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-secondary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
@@ -49,16 +44,12 @@ These variants contain some spinners that should not be used on Orange sites.
 **Colored spinners** are incompatible with Orange Design System.
 </DesignCalloutAlert>
 
-{{< example >}}
-{{< spinner.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="spinner-border text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{- end -}}
-{{< /spinner.inline >}}`} />
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="spinner-border text-${themeColor.name}" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`)
+]} />
 </details>
-<!-- End mod -->
 
 <Callout type="info">
 **Why not use `border-color` utilities?** Each border spinner specifies a `transparent` border for at least one side, so `.border-{color}` utilities would override that.
@@ -79,23 +70,17 @@ These variants contain some spinners that should not be used on Orange sites.
 **Growing spinner** and its examples are incompatible with Orange Design System.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="spinner-grow" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 
 Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color].
 
-<!-- Boosted mod -->
-{{< example >}}
-{{< spinner.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="spinner-grow text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{- end -}}
-{{< /spinner.inline >}}`} />
-<!-- End mod -->
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="spinner-grow text-${themeColor.name}" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`)
+]} />
 </details>
 
 ## Alignment
@@ -106,10 +91,9 @@ Spinners in Boosted are built with `rem`s, `currentColor`, and `display: inline-
 
 Use [margin utilities][margin] like `.m-5` for easy spacing.
 
-{{< example >}}
-<div class="spinner-border m-5" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-border m-5" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 
 ### Placement
 
@@ -117,49 +101,43 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 
 #### Flex
 
-{{< example >}}
-<div class="d-flex justify-content-center">
-  <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-</div>`} />
+<Example code={`<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>`} />
 
-{{< example >}}
-<div class="d-flex align-items-center">
-  <strong role="status">Loading...</strong>
-  <div class="spinner-border ms-auto" aria-hidden="true"></div>
-</div>`} />
+<Example code={`<div class="d-flex align-items-center">
+    <strong role="status">Loading...</strong>
+    <div class="spinner-border ms-auto" aria-hidden="true"></div>
+  </div>`} />
 
 #### Floats
 
-{{< example >}}
-<div class="clearfix">
-  <div class="spinner-border float-end" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-</div>`} />
+<Example code={`<div class="clearfix">
+    <div class="spinner-border float-end" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>`} />
 
 #### Text align
 
-{{< example >}}
-<div class="text-center">
-  <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-</div>`} />
+<Example code={`<div class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>`} />
 
 ## Size
 
-<!-- Boosted mod: -sm & -lg -->
 Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that can quickly be used within other components.
 
-{{< example >}}
-<div class="spinner-border spinner-border-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-border spinner-border-lg" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-border spinner-border-sm" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border spinner-border-lg" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
@@ -170,35 +148,32 @@ These variants contain some spinners that should not be used on Orange sites.
 **Growing spinner** and its examples are incompatible with Orange Design System.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="spinner-border spinner-border-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow spinner-grow-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-border spinner-border-lg" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow spinner-grow-lg" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`} />
+<Example code={`<div class="spinner-border spinner-border-sm" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow spinner-grow-sm" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border spinner-border-lg" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow spinner-grow-lg" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`} />
 </details>
-<!-- End mod -->
 
 ## Buttons
 
 Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
 
-{{< example >}}
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-  <span class="visually-hidden" role="status">Loading...</span>
-</button>
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
-  <span role="status">Loading...</span>
-</button>`} />
+<Example code={`<button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+    <span class="visually-hidden" role="status">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
+    <span role="status">Loading...</span>
+  </button>`} />
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
@@ -209,15 +184,14 @@ These variants contain some spinners that should not be used on Orange sites.
 **Growing spinner** and its examples are incompatible with Orange Design System.
 </DesignCalloutAlert>
 
-{{< example >}}
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
-  <span class="visually-hidden" role="status">Loading...</span>
-</button>
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>
-  <span role="status">Loading...</span>
-</button>`} />
+<Example code={`<button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+    <span class="visually-hidden" role="status">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>
+    <span role="status">Loading...</span>
+  </button>`} />
 </details>
 
 ## CSS

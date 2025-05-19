@@ -1,8 +1,6 @@
 ---
-layout: docs
 title: Popovers
 description: Documentation and examples for adding Boosted popovers, like those found in iOS, to any element on your site.
-group: components
 aliases:
   - "/docs/components/popovers/"
 toc: true
@@ -23,13 +21,9 @@ Things to know when using the popover plugin:
 - Popovers must be hidden before their corresponding elements have been removed from the DOM.
 - Popovers can be triggered thanks to an element inside a shadow DOM.
 
-<Callout type="info">
-{{< partial "callouts/info-sanitizer.md" >}}
-</Callout>
+<Callout name="info-sanitizer" />
 
-<Callout type="info">
-{{< partial "callouts/info-prefersreducedmotion.md" >}}
-</Callout>
+<Callout name="info-prefersreducedmotion" />
 
 Keep reading to see how popovers work with some examples.
 
@@ -48,33 +42,29 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new boosted.
 
 We use JavaScript similar to the snippet above to render the following live popover. Titles are set via `data-bs-title` and body content is set via `data-bs-content`.
 
-<Callout type="warning">
-{{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
-</Callout>
+<Callout type="warning" name="warning-data-bs-title-vs-title" />
 
-{{< example stackblitz_add_js="true" >}}
-<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Click to toggle popover</button>`} />
+<Example addStackblitzJs={true} code={`<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Click to toggle popover</button>`} />
 
 ### Four directions
 
 Four options are available: top, right, bottom, and left. Directions are mirrored when using Boosted in RTL. Set `data-bs-placement` to change the direction.
 
-{{< example stackblitz_add_js="true" >}}
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
-  Popover on top
-</button>
+<Example addStackblitzJs={true} code={`<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+    Popover on top
+  </button>
 
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
-  Popover on right
-</button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+    Popover on right
+  </button>
 
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-  Popover on bottom
-</button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+    Popover on bottom
+  </button>
 
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
-  Popover on left
-</button>`} />
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+    Popover on left
+  </button>`} />
 
 ### Custom `container`
 
@@ -109,16 +99,15 @@ This **customized** variant should not be used because it does not respect the O
 Please refer to the [Popover guidelines](https://system.design.orange.com/0c1af118d/p/644ffa-popovers) on the Orange Design System website.
 </DesignCalloutAlert>
 
-<ScssDocs name="custom-popovers" file="site/assets/scss/_component-examples.scss" />
+<ScssDocs name="custom-popovers" file="site/src/scss/_component-examples.scss" />
 
-{{< example class="custom-popover-demo" stackblitz_add_js="true" >}}
-<button type="button" class="btn btn-secondary"
-        data-bs-toggle="popover" data-bs-placement="right"
-        data-bs-custom-class="custom-popover"
-        data-bs-title="Custom popover"
-        data-bs-content="This popover is themed via CSS variables.">
-  Custom popover
-</button>`} />
+<Example addStackblitzJs={true} class="custom-popover-demo" code={`<button type="button" class="btn btn-secondary"
+          data-bs-toggle="popover" data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          data-bs-title="Custom popover"
+          data-bs-content="This popover is themed via CSS variables.">
+    Custom popover
+  </button>`} />
 </details>
 
 ### Dismiss on next click
@@ -129,8 +118,7 @@ Use the `focus` trigger to dismiss popovers on the user’s next click of an ele
 **Dismissing on next click requires specific HTML for proper cross-browser and cross-platform behavior.** You can only use `<a>` elements, not `<button>`s, and you must include a [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 </Callout>
 
-{{< example stackblitz_add_js="true" >}}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Dismissible popover</a>`} />
+<Example addStackblitzJs={true} code={`<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Dismissible popover</a>`} />
 
 ```js
 const popover = new boosted.Popover('.popover-dismiss', {
@@ -144,10 +132,9 @@ Elements with the `disabled` attribute aren’t interactive, meaning users canno
 
 For disabled popover triggers, you may also prefer `data-bs-trigger="hover focus"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
 
-{{< example stackblitz_add_js="true" >}}
-<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
-  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
-</span>`} />
+<Example addStackblitzJs={true} code={`<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+    <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+  </span>`} />
 
 ## CSS
 
@@ -233,9 +220,7 @@ const popover = new boosted.Popover(element, {
 
 ### Methods
 
-<Callout type="danger">
-{{< partial "callouts/danger-async-methods.md" >}}
-</Callout>
+<Callout type="danger" name="danger-async-methods" />
 
 <BsTable>
 | Method | Description |

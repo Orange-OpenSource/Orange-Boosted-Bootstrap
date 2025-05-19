@@ -1,8 +1,6 @@
 ---
-layout: docs
 title: Progress
 description: Documentation and examples for using Boosted custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
-group: components
 aliases:
   - "/docs/components/progress/"
 toc: true
@@ -24,22 +22,21 @@ Progress components are built with two HTML elements, some CSS to set the width,
 
 Put that all together, and you have the following examples.
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 0%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 50%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 75%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 100%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 0%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 50%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 75%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 100%"></div>
+  </div>`} />
 
 ## Bar sizing
 
@@ -47,19 +44,17 @@ Put that all together, and you have the following examples.
 
 Boosted provides a handful of [utilities for setting width]([[docsref:/utilities/sizing]]). Depending on your needs, these may help with quickly configuring progress.
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar w-75"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar w-75"></div>
+  </div>`} />
 
 ### Height
 
 You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>`} />
 
 <details>
 <summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
@@ -70,23 +65,21 @@ The **1px height** variant should not be used because it does not respect the Or
 Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>`} />
 </details>
 
 ## Labels
 
 Add labels to your progress bars by placing text within the `.progress-bar`.
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar text-dark" style="width: 25%">25%</div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-dark" style="width: 25%">25%</div>
+  </div>`} />
 
 ### Long labels
 
@@ -99,19 +92,16 @@ Labels longer than the progress bar within may not be fully accessible using thi
 If the text can overlap the progress bar, we often recommend displaying the label outside of the progress bar for better accessibility.
 </Callout>
 
-<!-- Boosted mod -->
 ### Sizes
 
 Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
 
-{{< example >}}
-<div class="progress progress-xs" role="progressbar" aria-label="Extra small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress progress-sm" role="progressbar" aria-label="Small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>`} />
-<!-- End mod -->
+<Example code={`<div class="progress progress-xs" role="progressbar" aria-label="Extra small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Small example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>`} />
 
 ## Backgrounds
 
@@ -126,39 +116,35 @@ These backgrounds color variants should not be used because they do not respect 
 Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-success" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-info" style="width: 50%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-warning" style="width: 75%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning" style="width: 75%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger" style="width: 100%"></div>
+  </div>`} />
 
-<Callout type="info">
-{{< partial "callouts/warning-color-assistive-technologies.md" >}}
-</Callout>
+<Callout name="warning-color-assistive-technologies" />
 
 If you’re adding labels to progress bars with a custom background color, make sure to also set an appropriate [text color]([[docsref:/utilities/colors#colors]]), so the labels remain readable and have sufficient contrast. We recommend using the [color and background]([[docsref:/helpers/color-background]]) helper classes.
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
-</div>
-<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
-</div>
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>`} />
 </details>
 
 ## Multiple bars
@@ -172,18 +158,17 @@ You can include multiple progress components inside a container with `.progress-
 These variants should not be used because they do not respect the Orange Design System specifications.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="progress-stacked">
-  <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-    <div class="progress-bar"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-    <div class="progress-bar bg-success"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <div class="progress-bar bg-info"></div>
-  </div>
-</div>`} />
+<Example code={`<div class="progress-stacked">
+    <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+      <div class="progress-bar bg-success"></div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+      <div class="progress-bar bg-info"></div>
+    </div>
+  </div>`} />
 </details>
 
 ## Striped
@@ -199,22 +184,21 @@ These variants should not be used because they do not respect the Orange Design 
 Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
+  </div>`} />
 </details>
 
 ## Animated stripes
@@ -230,10 +214,9 @@ These variants should not be used because they do not respect the Orange Design 
 Please refer to the [Progress bar guidelines](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) on the Orange Design System website.
 </DesignCalloutAlert>
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
-</div>`} />
+<Example code={`<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+  </div>`} />
 </details>
 
 ## CSS

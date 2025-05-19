@@ -1,12 +1,12 @@
 ---
-layout: docs
 title: Scrollspy
 description: Automatically update Boosted navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
-group: components
 aliases:
   - "/docs/components/scrollspy/"
 toc: true
 ---
+
+import { getConfig } from '@libs/config'
 
 ## How it works
 
@@ -32,10 +32,9 @@ Refer to the [Orange navbar component]([[docsref:/components/orange-navbar]]) an
 
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
-<div class="bd-example">
-  <nav id="navbar-example2" class="navbar px-3 mb-3">
+<Example showMarkup={false} code={`<nav id="navbar-example2" class="navbar px-3 mb-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      <img src="/docs/${getConfig().docs_version}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -66,8 +65,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It’s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
     <h4 id="scrollspyHeading5">Fifth heading</h4>
     <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It’s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <nav id="navbar-example2" class="navbar px-3 mb-3">
@@ -110,8 +108,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 
 Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its parents will also be `.active`. Scroll the area next to the navbar and watch the active class change.
 
-<div class="bd-example">
-  <div class="row">
+<Example showMarkup={false} code={`<div class="row">
     <div class="col-4 col-lg-3">
       <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
         <nav class="nav nav-pills flex-column">
@@ -168,8 +165,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="row">
@@ -229,8 +225,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 
 Scrollspy also works with `.list-group`s. Scroll the area next to the list group and watch the active class change.
 
-<div class="bd-example">
-  <div class="row">
+<Example showMarkup={false} code={`<div class="row">
     <div class="col-4">
       <div id="list-example" class="list-group">
         <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
@@ -251,8 +246,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It’s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="row">
@@ -283,8 +277,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 Scrollspy is not limited to nav components and list groups, so it will work on any `<a>` anchor elements in the current document. Scroll the area and watch the `.active` class change.
 
-<div class="bd-example">
-  <div class="row">
+<Example showMarkup={false} code={`<div class="row">
     <div class="col-4">
       <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
         <a class="p-1" href="#simple-list-item-1">Item 1</a>
@@ -308,8 +301,7 @@ Scrollspy is not limited to nav components and list groups, so it will work on a
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It’s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="row">

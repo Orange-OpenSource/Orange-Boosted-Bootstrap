@@ -1,8 +1,6 @@
 ---
-layout: docs
 title: Sticker
 description: Use Boosted’s custom stickers to inform people about new offers.
-group: components
 aliases:
   - "/docs/components/sticker/"
 toc: true
@@ -12,15 +10,14 @@ added:
 
 ## Example
 
-{{< example >}}
-<div class="sticker">
-  <p class="mb-0">
-    <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
-    <span>Per month</span>
-  </p>
-</div>`} />
+<Example code={`<div class="sticker">
+    <p class="mb-0">
+      <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
+      <span>Per month</span>
+    </p>
+  </div>`} />
 
-<ScssDocs name="sticker-fs-3xl" file="site/assets/scss/_component-examples.scss" />
+<ScssDocs name="sticker-fs-3xl" file="site/src/scss/_component-examples.scss" />
 
 ## How it works
 
@@ -52,23 +49,21 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 
 **Don’t forget to adjust the size of the content.**
 
-{{< example >}}
-<div class="sticker sticker-lg">
-  <p class="mb-0">
-    <span class="sticker-fs-4xl">New</span>
-  </p>
-</div>`} />
+<Example code={`<div class="sticker sticker-lg">
+    <p class="mb-0">
+      <span class="sticker-fs-4xl">New</span>
+    </p>
+  </div>`} />
 
-<ScssDocs name="sticker-fs-4xl" file="site/assets/scss/_component-examples.scss" />
+<ScssDocs name="sticker-fs-4xl" file="site/src/scss/_component-examples.scss" />
 
-{{< example >}}
-<div class="sticker sticker-sm">
-  <p class="mb-0">
-    <span class="sticker-fs-xl">New</span>
-  </p>
-</div>`} />
+<Example code={`<div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-xl">New</span>
+    </p>
+  </div>`} />
 
-<ScssDocs name="sticker-fs-xl" file="site/assets/scss/_component-examples.scss" />
+<ScssDocs name="sticker-fs-xl" file="site/src/scss/_component-examples.scss" />
 
 ## Accessibility
 
@@ -79,17 +74,16 @@ Since stickers only provide a container, accessibility becomes specific to the s
 
 ### Focus on one use case
 
-{{< example >}}
-<div class="sticker">
-  <p class="mb-1">
-    <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-    <span class="sticker-fs-3xl mb-0 d-block" aria-hidden="true">39.99 €</span>
-    <span aria-hidden="true">Per month</span>
-    <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
-  </p>
-</div>`} />
+<Example code={`<div class="sticker">
+    <p class="mb-1">
+      <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-3xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>`} />
 
-<ScssDocs name="sticker-fs-l-3xl" file="site/assets/scss/_component-examples.scss" />
+<ScssDocs name="sticker-fs-l-3xl" file="site/src/scss/_component-examples.scss" />
 
 ## CSS
 
