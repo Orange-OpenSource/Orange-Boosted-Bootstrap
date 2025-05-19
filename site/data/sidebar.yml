@@ -102,9 +102,9 @@
 #     - title: Stepped process
 #     - title: Sticker
 #     - title: Tags
-#     - title: Title bars
-#     - title: Toasts
-#     - title: Tooltips
+    - title: Title bars
+    - title: Toasts
+    - title: Tooltips
 
 - title: Helpers
   icon: magic
