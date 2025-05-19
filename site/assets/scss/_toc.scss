@@ -26,7 +26,7 @@
 
     a {
       display: block;
-      padding: $ouds-space-fixed-shortest 0 $ouds-space-fixed-shortest $ouds-space-fixed-medium; // OUDS mod
+      padding: $ouds-space-fixed-2xs 0 $ouds-space-fixed-2xs $ouds-space-fixed-medium; // OUDS mod
       @include get-font-size("body-small"); // OUDS mod: instead of `1rem`
       font-weight: 400; // OUDS mod: no 'bold' for the sidebar links
       color: inherit;

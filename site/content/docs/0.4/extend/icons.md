@@ -454,7 +454,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">2x-small decorative icon</p>
+      <p class="lead mb-2xs fw-bold">2x-small decorative icon</p>
       <p class="mb-none">coreGlobalDimension200 (<code>1rem</code> or <code>16px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -465,7 +465,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">X-small decorative icon</p>
+      <p class="lead mb-2xs fw-bold">X-small decorative icon</p>
       <p class="mb-none">coreGlobalDimension300 (<code>1.5rem</code> or <code>24px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -476,7 +476,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">Small decorative icon</p>
+      <p class="lead mb-2xs fw-bold">Small decorative icon</p>
       <p class="mb-none">coreGlobalDimension400 (<code>2rem</code> or <code>32px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -487,7 +487,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">Medium decorative icon</p>
+      <p class="lead mb-2xs fw-bold">Medium decorative icon</p>
       <p class="mb-none">coreGlobalDimension500 (<code>2.5rem</code> or <code>40px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -498,7 +498,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">Large decorative icon</p>
+      <p class="lead mb-2xs fw-bold">Large decorative icon</p>
       <p class="mb-none">coreGlobalDimension600 (<code>3rem</code> or <code>48px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -509,7 +509,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">X-large decorative icon</p>
+      <p class="lead mb-2xs fw-bold">X-large decorative icon</p>
       <p class="mb-none">coreGlobalDimension700 (<code>3.5rem</code> or <code>56px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -520,7 +520,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
       </svg>
     </div>
     <div>
-      <p class="lead mb-shortest fw-bold">2x-large decorative icon</p>
+      <p class="lead mb-2xs fw-bold">2x-large decorative icon</p>
       <p class="mb-none">coreGlobalDimension900 (<code>4.5rem</code> or <code>72px</code> at zoom 100%)</p>
     </div>
   </div>
@@ -579,7 +579,7 @@ You can also have the icon above the text block.
 
 {{< example >}}
 <div>
-  <svg class="bm-lg-icon mb-scaled-shortest text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="bm-lg-icon mb-scaled-2xs text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <p class="mb-none">

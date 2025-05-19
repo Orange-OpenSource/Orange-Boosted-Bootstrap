@@ -38,9 +38,9 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
           </svg>
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
         </button>
-        <figcaption class="py-shortest">
+        <figcaption class="py-2xs">
           <code class="user-select-all">{{ $color.hex }}</code>
-          <hr class="my-shortest" style="border-color:{{ $color.hex }} !important">
+          <hr class="my-2xs" style="border-color:{{ $color.hex }} !important">
           <var class="user-select-all">{{- $color.variable -}}</var>
         </figcaption>
       </figure>

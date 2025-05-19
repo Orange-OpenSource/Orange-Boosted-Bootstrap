@@ -109,7 +109,7 @@ We use **2 different layers to set the `background-color` and the theme**. Somet
 
 Here are some examples of how to use the different `data-bs-theme` attribute on different use cases.
 
-{{< example class="d-flex justify-content-between flex-wrap gap-shortest" >}}
+{{< example class="d-flex justify-content-between flex-wrap gap-2xs" >}}
 <div class="dropdown" data-bs-theme="light">
   <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
     Always light dropdown

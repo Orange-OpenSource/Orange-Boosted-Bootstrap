@@ -143,9 +143,9 @@ Here are some representative examples of these classes:
   margin-left: var(--bs-space-scaled-tall) !important;
 }
 
-.px-scaled-shortest {
-  padding-right: var(--bs-space-scaled-shortest) !important;
-  padding-left: var(--bs-space-scaled-shortest) !important;
+.px-scaled-2xs {
+  padding-right: var(--bs-space-scaled-2xs) !important;
+  padding-left: var(--bs-space-scaled-2xs) !important;
 }
 
 .p-tallest {
