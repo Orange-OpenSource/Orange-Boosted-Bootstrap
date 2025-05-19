@@ -16,7 +16,7 @@ Horizontal rules should use the `<hr>` tag, when the separator has semantic mean
 
 {{< example >}}
 <hr>
-<div class="border-top border-default my-medium"></div>
+<div class="border-top border-default my-md"></div>
 {{< /example >}}
 
 ## Vertical rules

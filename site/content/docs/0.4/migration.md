@@ -420,7 +420,7 @@ toc: true
   - **Default**: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
   - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
-  - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - **Md**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
   - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
   - **Circle**: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
   - **Pill**: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
@@ -471,7 +471,7 @@ toc: true
   - **2xs**: `.m-2xs`, `.mx-2xs`, `.my-2xs`, `.mt-2xs`, `.mb-2xs`, `.ms-2xs`, `.me-2xs`, `.m-xs-2xs`, etc...
   - **Xs**: `.m-xs`, `.mx-xs`, `.my-xs`, `.mt-xs`, `.mb-xs`, `.ms-xs`, `.me-xs`, `.m-xs-xs`, etc...
   - **Sm**: `.m-sm`, `.mx-sm`, `.my-sm`, `.mt-sm`, `.mb-sm`, `.ms-sm`, `.me-sm`, `.m-xs-sm`, etc...
-  - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
+  - **Md**: `.m-md`, `.mx-md`, `.my-md`, `.mt-md`, `.mb-md`, `.ms-md`, `.me-md`, `.m-xs-md`, etc...
   - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
   - **Taller**: `.m-taller`, `.mx-taller`, `.my-taller`, `.mt-taller`, `.mb-taller`, `.ms-taller`, `.me-taller`, `.m-xs-taller`, etc...
   - **Tallest**: `.m-tallest`, `.mx-tallest`, `.my-tallest`, `.mt-tallest`, `.mb-tallest`, `.ms-tallest`, `.me-tallest`, `.m-xs-tallest`, etc...
@@ -486,7 +486,7 @@ toc: true
   - **2xs**: `.m-scaled-2xs`, `.mx-scaled-2xs`, `.my-scaled-2xs`, `.mt-scaled-2xs`, `.mb-scaled-2xs`, `.ms-scaled-2xs`, `.me-scaled-2xs`,
   - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
   - **Sm**: `.m-scaled-sm`, `.mx-scaled-sm`, `.my-scaled-sm`, `.mt-scaled-sm`, `.mb-scaled-sm`, `.ms-scaled-sm`, `.me-scaled-sm`,
-  - **Medium**: `.m-scaled-medium`, `.mx-scaled-medium`, `.my-scaled-medium`, `.mt-scaled-medium`, `.mb-scaled-medium`, `.ms-scaled-medium`, `.me-scaled-medium`,
+  - **Md**: `.m-scaled-md`, `.mx-scaled-md`, `.my-scaled-md`, `.mt-scaled-md`, `.mb-scaled-md`, `.ms-scaled-md`, `.me-scaled-md`,
   - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
   - **Taller**: `.m-scaled-taller`, `.mx-scaled-taller`, `.my-scaled-taller`, `.mt-scaled-taller`, `.mb-scaled-taller`, `.ms-scaled-taller`, `.me-scaled-taller`,
   - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
@@ -498,7 +498,7 @@ toc: true
   - **2xs**: `.p-2xs`, `.px-2xs`, `.py-2xs`, `.pt-2xs`, `.pb-2xs`, `.ps-2xs`, `.pe-2xs`, `.p-xs-2xs`, etc...
   - **Xs**: `.p-xs`, `.px-xs`, `.py-xs`, `.pt-xs`, `.pb-xs`, `.ps-xs`, `.pe-xs`, `.p-xs-xs`, etc...
   - **Sm**: `.p-sm`, `.px-sm`, `.py-sm`, `.pt-sm`, `.pb-sm`, `.ps-sm`, `.pe-sm`, `.p-xs-sm`, etc...
-  - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
+  - **Md**: `.p-md`, `.px-md`, `.py-md`, `.pt-md`, `.pb-md`, `.ps-md`, `.pe-md`, `.p-xs-md`, etc...
   - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
   - **Taller**: `.p-taller`, `.px-taller`, `.py-taller`, `.pt-taller`, `.pb-taller`, `.ps-taller`, `.pe-taller`, `.p-xs-taller`, etc...
   - **Tallest**: `.p-tallest`, `.px-tallest`, `.py-tallest`, `.pt-tallest`, `.pb-tallest`, `.ps-tallest`, `.pe-tallest`, `.p-xs-tallest`, etc...
@@ -512,7 +512,7 @@ toc: true
   - **2xs**: `.p-scaled-2xs`, `.px-scaled-2xs`, `.py-scaled-2xs`, `.pt-scaled-2xs`, `.pb-scaled-2xs`, `.ps-scaled-2xs`, `.pe-scaled-2xs`,
   - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
   - **Sm**: `.p-scaled-sm`, `.px-scaled-sm`, `.py-scaled-sm`, `.pt-scaled-sm`, `.pb-scaled-sm`, `.ps-scaled-sm`, `.pe-scaled-sm`,
-  - **Medium**: `.p-scaled-medium`, `.px-scaled-medium`, `.py-scaled-medium`, `.pt-scaled-medium`, `.pb-scaled-medium`, `.ps-scaled-medium`, `.pe-scaled-medium`,
+  - **Md**: `.p-scaled-md`, `.px-scaled-md`, `.py-scaled-md`, `.pt-scaled-md`, `.pb-scaled-md`, `.ps-scaled-md`, `.pe-scaled-md`,
   - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
   - **Taller**: `.p-scaled-taller`, `.px-scaled-taller`, `.py-scaled-taller`, `.pt-scaled-taller`, `.pb-scaled-taller`, `.ps-scaled-taller`, `.pe-scaled-taller`,
   - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
@@ -524,7 +524,7 @@ toc: true
   - **2xs**: `.gap-2xs`, `.row-gap-2xs`, `.column-gap-2xs`, `.gap-xs-2xs`, etc...
   - **Xs**: `.gap-xs`, `.row-gap-xs`, `.column-gap-xs`, `.gap-xs-xs`, etc...
   - **Sm**: `.gap-sm`, `.row-gap-sm`, `.column-gap-sm`, `.gap-xs-sm`, etc...
-  - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
+  - **Md**: `.gap-md`, `.row-gap-md`, `.column-gap-md`, `.gap-xs-md`, etc...
   - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
   - **Taller**: `.gap-taller`, `.row-gap-taller`, `.column-gap-taller`, `.gap-xs-taller`, etc...
   - **Tallest**: `.gap-tallest`, `.row-gap-tallest`, `.column-gap-tallest`, `.gap-xs-tallest`, etc...
@@ -538,7 +538,7 @@ toc: true
   - **2xs**: `.gap-scaled-2xs`, `.row-gap-scaled-2xs`, `.column-gap-scaled-2xs`
   - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
   - **Sm**: `.gap-scaled-sm`, `.row-gap-scaled-sm`, `.column-gap-scaled-sm`
-  - **Medium**: `.gap-scaled-medium`, `.row-gap-scaled-medium`, `.column-gap-scaled-medium`
+  - **Md**: `.gap-scaled-md`, `.row-gap-scaled-md`, `.column-gap-scaled-md`
   - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
   - **Taller**: `.gap-scaled-taller`, `.row-gap-scaled-taller`, `.column-gap-scaled-taller`
   - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
@@ -1467,9 +1467,9 @@ toc: true
       <li><code>$ouds-space-fixed-tall</code></li>
       <li><code>$ouds-space-fixed-taller</code></li>
       <li><code>$ouds-space-fixed-tallest</code></li>
-      <li><code>$ouds-space-scaled-medium-desktop</code></li>
-      <li><code>$ouds-space-scaled-medium-mobile</code></li>
-      <li><code>$ouds-space-scaled-medium-tablet</code></li>
+      <li><code>$ouds-space-scaled-md-desktop</code></li>
+      <li><code>$ouds-space-scaled-md-mobile</code></li>
+      <li><code>$ouds-space-scaled-md-tablet</code></li>
       <li><code>$ouds-space-scaled-none-desktop</code></li>
       <li><code>$ouds-space-scaled-none-mobile</code></li>
       <li><code>$ouds-space-scaled-none-tablet</code></li>
@@ -1926,7 +1926,7 @@ toc: true
       <li><code>--bs-icon-sm-with-heading-medium</code></li>
       <li><code>--bs-icon-sm-with-heading-small</code></li>
       <li><code>--bs-icon-sm-with-heading-xlarge</code></li>
-      <li><code>--bs-space-scaled-medium</code></li>
+      <li><code>--bs-space-scaled-md</code></li>
       <li><code>--bs-space-scaled-none</code></li>
       <li><code>--bs-space-scaled-sm</code></li>
       <li><code>--bs-space-scaled-xs</code></li>
