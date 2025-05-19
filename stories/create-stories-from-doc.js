@@ -5,15 +5,15 @@ const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
 function createDirectoryIfNeeded(path) {
-  if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, 0o766, error => {
-      if (error) {
-        throw new Error(error)
-      }
-    })
+  if (fs.existsSync(path)) {
+    fs.rmSync(path, { recursive: true, force: true })
   }
+  fs.mkdirSync(path, 0o766, error => {
+    if (error) {
+      throw new Error(error)
+    }
+  })
 }
-
 function createTemplate(component) {
   return `export default {\n\
     title: 'Components/${component}',\n\
