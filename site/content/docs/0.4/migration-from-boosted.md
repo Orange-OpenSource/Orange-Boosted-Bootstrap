@@ -73,7 +73,7 @@ Technically, it means that you can get rid of the following things:
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
   - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|smash|shortest|shorter|short|medium|tall|taller|tallest|spacious|huge|jumbo`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xs|2xs|xs|sm|md|lg|xl|2xl|3xl|4xl|5xl`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
@@ -492,7 +492,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
   - **3xs**: `.m-3xs`, `.mx-3xs`, `.my-3xs`, `.mt-3xs`, `.mb-3xs`, `.ms-3xs`, `.me-3xs`, `.m-xs-3xs`, etc...
   - **2xs**: `.m-2xs`, `.mx-2xs`, `.my-2xs`, `.mt-2xs`, `.mb-2xs`, `.ms-2xs`, `.me-2xs`, `.m-xs-2xs`, etc...
-  - **Shorter**: `.m-shorter`, `.mx-shorter`, `.my-shorter`, `.mt-shorter`, `.mb-shorter`, `.ms-shorter`, `.me-shorter`, `.m-xs-shorter`, etc...
+  - **Xs**: `.m-xs`, `.mx-xs`, `.my-xs`, `.mt-xs`, `.mb-xs`, `.ms-xs`, `.me-xs`, `.m-xs-xs`, etc...
   - **Short**: `.m-short`, `.mx-short`, `.my-short`, `.mt-short`, `.mb-short`, `.ms-short`, `.me-short`, `.m-xs-short`, etc...
   - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
   - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
@@ -508,7 +508,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
   - **3xs**: `.m-scaled-3xs`, `.mx-scaled-3xs`, `.my-scaled-3xs`, `.mt-scaled-3xs`, `.mb-scaled-3xs`, `.ms-scaled-3xs`, `.me-scaled-3xs`,
   - **2xs**: `.m-scaled-2xs`, `.mx-scaled-2xs`, `.my-scaled-2xs`, `.mt-scaled-2xs`, `.mb-scaled-2xs`, `.ms-scaled-2xs`, `.me-scaled-2xs`,
-  - **Shorter**: `.m-scaled-shorter`, `.mx-scaled-shorter`, `.my-scaled-shorter`, `.mt-scaled-shorter`, `.mb-scaled-shorter`, `.ms-scaled-shorter`, `.me-scaled-shorter`,
+  - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
   - **Short**: `.m-scaled-short`, `.mx-scaled-short`, `.my-scaled-short`, `.mt-scaled-short`, `.mb-scaled-short`, `.ms-scaled-short`, `.me-scaled-short`,
   - **Medium**: `.m-scaled-medium`, `.mx-scaled-medium`, `.my-scaled-medium`, `.mt-scaled-medium`, `.mb-scaled-medium`, `.ms-scaled-medium`, `.me-scaled-medium`,
   - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
@@ -520,7 +520,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
   - **3xs**: `.p-3xs`, `.px-3xs`, `.py-3xs`, `.pt-3xs`, `.pb-3xs`, `.ps-3xs`, `.pe-3xs`, `.p-xs-3xs`, etc...
   - **2xs**: `.p-2xs`, `.px-2xs`, `.py-2xs`, `.pt-2xs`, `.pb-2xs`, `.ps-2xs`, `.pe-2xs`, `.p-xs-2xs`, etc...
-  - **Shorter**: `.p-shorter`, `.px-shorter`, `.py-shorter`, `.pt-shorter`, `.pb-shorter`, `.ps-shorter`, `.pe-shorter`, `.p-xs-shorter`, etc...
+  - **Xs**: `.p-xs`, `.px-xs`, `.py-xs`, `.pt-xs`, `.pb-xs`, `.ps-xs`, `.pe-xs`, `.p-xs-xs`, etc...
   - **Short**: `.p-short`, `.px-short`, `.py-short`, `.pt-short`, `.pb-short`, `.ps-short`, `.pe-short`, `.p-xs-short`, etc...
   - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
   - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
@@ -534,7 +534,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
   - **3xs**: `.p-scaled-3xs`, `.px-scaled-3xs`, `.py-scaled-3xs`, `.pt-scaled-3xs`, `.pb-scaled-3xs`, `.ps-scaled-3xs`, `.pe-scaled-3xs`,
   - **2xs**: `.p-scaled-2xs`, `.px-scaled-2xs`, `.py-scaled-2xs`, `.pt-scaled-2xs`, `.pb-scaled-2xs`, `.ps-scaled-2xs`, `.pe-scaled-2xs`,
-  - **Shorter**: `.p-scaled-shorter`, `.px-scaled-shorter`, `.py-scaled-shorter`, `.pt-scaled-shorter`, `.pb-scaled-shorter`, `.ps-scaled-shorter`, `.pe-scaled-shorter`,
+  - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
   - **Short**: `.p-scaled-short`, `.px-scaled-short`, `.py-scaled-short`, `.pt-scaled-short`, `.pb-scaled-short`, `.ps-scaled-short`, `.pe-scaled-short`,
   - **Medium**: `.p-scaled-medium`, `.px-scaled-medium`, `.py-scaled-medium`, `.pt-scaled-medium`, `.pb-scaled-medium`, `.ps-scaled-medium`, `.pe-scaled-medium`,
   - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
@@ -546,7 +546,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
   - **3xs**: `.gap-3xs`, `.row-gap-3xs`, `.column-gap-3xs`, `.gap-xs-3xs`, etc...
   - **2xs**: `.gap-2xs`, `.row-gap-2xs`, `.column-gap-2xs`, `.gap-xs-2xs`, etc...
-  - **Shorter**: `.gap-shorter`, `.row-gap-shorter`, `.column-gap-shorter`, `.gap-xs-shorter`, etc...
+  - **Xs**: `.gap-xs`, `.row-gap-xs`, `.column-gap-xs`, `.gap-xs-xs`, etc...
   - **Short**: `.gap-short`, `.row-gap-short`, `.column-gap-short`, `.gap-xs-short`, etc...
   - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
   - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
@@ -560,7 +560,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
   - **3xs**: `.gap-scaled-3xs`, `.row-gap-scaled-3xs`, `.column-gap-scaled-3xs`
   - **2xs**: `.gap-scaled-2xs`, `.row-gap-scaled-2xs`, `.column-gap-scaled-2xs`
-  - **Shorter**: `.gap-scaled-shorter`, `.row-gap-scaled-shorter`, `.column-gap-scaled-shorter`
+  - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
   - **Short**: `.gap-scaled-short`, `.row-gap-scaled-short`, `.column-gap-scaled-short`
   - **Medium**: `.gap-scaled-medium`, `.row-gap-scaled-medium`, `.column-gap-scaled-medium`
   - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
@@ -1620,7 +1620,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-space-fixed-medium</code></li>
       <li><code>$ouds-space-fixed-none</code></li>
       <li><code>$ouds-space-fixed-short</code></li>
-      <li><code>$ouds-space-fixed-shorter</code></li>
+      <li><code>$ouds-space-fixed-xs</code></li>
       <li><code>$ouds-space-fixed-2xs</code></li>
       <li><code>$ouds-space-fixed-3xs</code></li>
       <li><code>$ouds-space-fixed-spacious</code></li>
@@ -1636,9 +1636,9 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-space-scaled-short-desktop</code></li>
       <li><code>$ouds-space-scaled-short-mobile</code></li>
       <li><code>$ouds-space-scaled-short-tablet</code></li>
-      <li><code>$ouds-space-scaled-shorter-desktop</code></li>
-      <li><code>$ouds-space-scaled-shorter-mobile</code></li>
-      <li><code>$ouds-space-scaled-shorter-tablet</code></li>
+      <li><code>$ouds-space-scaled-xs-desktop</code></li>
+      <li><code>$ouds-space-scaled-xs-mobile</code></li>
+      <li><code>$ouds-space-scaled-xs-tablet</code></li>
       <li><code>$ouds-space-scaled-2xs-desktop</code></li>
       <li><code>$ouds-space-scaled-2xs-mobile</code></li>
       <li><code>$ouds-space-scaled-2xs-tablet</code></li>
@@ -2075,7 +2075,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
       <li><code>--bs-space-scaled-short</code></li>
-      <li><code>--bs-space-scaled-shorter</code></li>
+      <li><code>--bs-space-scaled-xs</code></li>
       <li><code>--bs-space-scaled-2xs</code></li>
       <li><code>--bs-space-scaled-3xs</code></li>
       <li><code>--bs-space-scaled-spacious</code></li>

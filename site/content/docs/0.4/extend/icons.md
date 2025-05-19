@@ -110,7 +110,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 Here are some examples of other [color utilities]({{< docsref "utilities/colors#colors" >}}) and CSS variables used with icons.
 
 {{< example class="d-inline-flex flex-column">}}
-<p class="p-2 bg-primary d-inline-flex align-items-center gap-shorter" data-bs-theme="light">
+<p class="p-2 bg-primary d-inline-flex align-items-center gap-xs" data-bs-theme="light">
   <svg class="decorative-sm-icon" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg>
@@ -125,7 +125,7 @@ Here are some examples of other [color utilities]({{< docsref "utilities/colors#
   </svg>
   <span class="icon si si-settings text-muted decorative-sm-icon" aria-hidden="true"></span>
 </p>
-<p class="p-2 bg-emphasized d-inline-flex align-items-center gap-shorter" data-bs-theme="dark">
+<p class="p-2 bg-emphasized d-inline-flex align-items-center gap-xs" data-bs-theme="dark">
   <svg class="decorative-sm-icon" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
   </svg>
@@ -570,7 +570,7 @@ You can also have the icon above the text block.
 
 {{< example >}}
 <div>
-  <svg class="hxl-lg-icon mb-scaled-shorter text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
+  <svg class="hxl-lg-icon mb-scaled-xs text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
   </svg>
   <h1 class="mb-none">H1 with large icon and a very long title to see how it behaves while being wrapped</h1>

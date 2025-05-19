@@ -57,11 +57,11 @@ Change the border color using utilities. The color utilities are generated from 
 <span class="border border-default"></span>
 <span class="border border-emphasized"></span>
 <span class="border border-muted"></span>
-<div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-2xs p-shorter"><span class="border border-on-brand-primary m-none bg-brand-primary" data-bs-theme="light"></span></div>
-<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-shorter"><span class="border border-always-black m-none bg-always-white" data-bs-theme="light"></span></div>
-<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-shorter"><span class="border border-always-white m-none bg-always-black" data-bs-theme="dark"></span></div>
-<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-shorter"><span class="border border-always-on-black m-none bg-always-black" data-bs-theme="dark"></span></div>
-<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-shorter"><span class="border border-always-on-white m-none bg-always-white" data-bs-theme="light"></span></div>
+<div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-2xs p-xs"><span class="border border-on-brand-primary m-none bg-brand-primary" data-bs-theme="light"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-black m-none bg-always-white" data-bs-theme="light"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-white m-none bg-always-black" data-bs-theme="dark"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-on-black m-none bg-always-black" data-bs-theme="dark"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-on-white m-none bg-always-white" data-bs-theme="light"></span></div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
