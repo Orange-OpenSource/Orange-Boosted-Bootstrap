@@ -16,7 +16,7 @@
   </div>
   <div class="col-xl-8">
     <h3 class="h2 mb-scaled-xs">Install via package manager</h3>
-    <p class="mb-scaled-medium">
+    <p class="mb-scaled-md">
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don't include documentation or our full build scripts.
     </p>
     {{ highlight (printf ("npm install @ouds/web@%s") .Site.Params.current_version) "sh" "" }}
@@ -26,7 +26,7 @@
     </p>
     <div class="border-top border-thin border-default pt-scaled-sm">
       <h3 class="h2">Include via CDN</h3>
-      <p class="mb-scaled-medium">
+      <p class="mb-scaled-md">
         When you only need to include OUDS Web's compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/@ouds/web">jsDelivr</a>. See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
       </p>
       {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}

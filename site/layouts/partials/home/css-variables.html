@@ -17,10 +17,10 @@
 
   <div class="col-xl-8">
     <h3 class="h2 mb-scaled-xs">Using CSS variables</h3>
-    <p class="mb-scaled-medium">
+    <p class="mb-scaled-md">
       Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.
     </p>
-    <div class="mb-scaled-medium">
+    <div class="mb-scaled-md">
       {{ highlight (printf `.component {
   color: var(--bs-color-content-default);
   background-color: var(--bs-color-bg-secondary);
@@ -34,7 +34,7 @@
     </div>
     <div class="border-top border-thin border-default pt-scaled-sm">
       <h3 class="h2">Customizing via CSS variables</h3>
-      <p  class="mb-scaled-medium">
+      <p  class="mb-scaled-md">
         Override global, component, or utility class variables to customize OUDS Web just how you like. No need to redeclare each rule, just a new variable value.
       </p>
       {{ highlight (printf `body {

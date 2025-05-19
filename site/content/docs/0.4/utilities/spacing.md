@@ -319,7 +319,7 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 We also provide scaled versions of the gap (including `row-gap` and `column-gap`). These are generated via our Utilities API, based on the `$ouds-dimension-space-scaled` Sass map.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-scaled-medium">
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-scaled-md">
   <div class="p-sm">Grid item 1</div>
   <div class="p-sm">Grid item 2</div>
   <div class="p-sm">Grid item 3</div>
