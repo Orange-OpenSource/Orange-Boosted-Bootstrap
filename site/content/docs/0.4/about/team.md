@@ -10,7 +10,7 @@ aliases:
 OUDS Web is maintained by the core team and a small group of invaluable core contributors, with the massive support and involvement of our community.
 
 {{< team.inline >}}
-<div class="list-group mb-tall">
+<div class="list-group mb-lg">
   {{- range (index $.Site.Data "core-team") }}
     <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/{{ .user }}">
       <img src="https://github.com/{{ .user }}.png" alt="@{{ .user }}" width="32" height="32" class="me-sm" loading="lazy">

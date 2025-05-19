@@ -60,7 +60,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 {{< /callout >}}
 
 {{< example class="p-none bd-btn-example">}}
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -68,7 +68,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
     <!-- BEWARE: `.btn-negative` should never be used on colored backgrounds! -->
   </div>
 </div>
-<div class="bg-status-negative-emphasized p-tall">
+<div class="bg-status-negative-emphasized p-lg">
   <div data-bs-theme="root-inverted" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -101,7 +101,7 @@ If really needed, you can use a font icon associated to the `.icon` class to set
 We strongly advise not using an `<img>`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won't work.
 
 {{< example class="p-none bd-btn-example">}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-default">
     <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -133,7 +133,7 @@ We strongly advise not using an `<img>`, in particular because the icon will not
   </button>
 </div>
 
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg">
       <svg aria-hidden="true">
@@ -169,7 +169,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 <!-- TODO: Add a paragraph about tooltip and/or title -->
 
 {{< example class="p-none bd-btn-example">}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-icon btn-default">
     <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -201,7 +201,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
   </button>
 </div>
 
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
       <svg aria-hidden="true">
@@ -276,14 +276,14 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 
 <!-- OUDS mod: no outline buttons-->
 {{< example class="p-none bd-btn-example" >}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-default" disabled>Default</button>
   <button type="button" class="btn btn-strong" disabled>Strong</button>
   <button type="button" class="btn btn-minimal" disabled>Minimal</button>
   <button type="button" class="btn btn-negative" disabled>Negative</button>
 </div>
 
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
     <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
@@ -299,11 +299,11 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 {{< example class="p-none bd-btn-example" >}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
   <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
 </div>
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <a class="btn btn-default btn-on-colored-bg" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong btn-on-colored-bg" role="button" aria-disabled="true">Strong link</a>
@@ -350,7 +350,7 @@ At the end of the loading, you should:
 You can see it live and find a JavaScript example on our [loading buttons live example]({{< docsref "/examples/loading-buttons" >}}).
 
 {{< example class="p-none bd-btn-example" >}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
     Download file 1
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -381,7 +381,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
   </button>
 </div>
 
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-default loading-determinate" id="loading-btn-5" disabled style="--bs-btn-loading-time: 5s;">
     Download file 5
     <svg viewbox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -412,7 +412,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
   </button>
 </div>
 
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
       Download file 9
@@ -438,7 +438,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
   </div>
 </div>
 
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled style="--bs-btn-loading-time: 5s;">
       Download file 12
@@ -468,7 +468,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
 Loading state can also be combined with all kind of buttons, including icons.
 
 {{< example class="bd-btn-example">}}
-<div class="p-tall d-flex gap-xs flex-wrap">
+<div class="p-lg d-flex gap-xs flex-wrap">
   <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
     <svg aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#download"/>

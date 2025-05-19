@@ -56,7 +56,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 {{< /bs-table >}}
 
 {{< example >}}
-<div class="d-flex justify-content-center gap-md-tall">
+<div class="d-flex justify-content-center gap-md-lg">
   <div class="p-md bg-primary border border-default" data-bs-theme="light">
     <p>
       <svg class="text-status-info decorative-sm-icon" aria-hidden="true">

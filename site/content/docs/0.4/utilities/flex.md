@@ -38,7 +38,7 @@ Set the direction of flex items in a flex container with direction utilities. In
 Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
 
 {{< example class="bd-example-flex" >}}
-<div class="d-flex flex-row mb-tall">
+<div class="d-flex flex-row mb-lg">
   <div class="p-sm">Flex item 1</div>
   <div class="p-sm">Flex item 2</div>
   <div class="p-sm">Flex item 3</div>
@@ -53,7 +53,7 @@ Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-r
 Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
 
 {{< example class="bd-example-flex" >}}
-<div class="d-flex flex-column mb-tall">
+<div class="d-flex flex-column mb-lg">
   <div class="p-sm">Flex item 1</div>
   <div class="p-sm">Flex item 2</div>
   <div class="p-sm">Flex item 3</div>
@@ -83,27 +83,27 @@ Responsive variations also exist for `flex-direction`.
 Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `evenly`.
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex justify-content-start mb-tall">
+  <div class="d-flex justify-content-start mb-lg">
     <div class="p-sm bd-highlight">Justify</div>
     <div class="p-sm bd-highlight">Content</div>
     <div class="p-sm bd-highlight">Start</div>
   </div>
-  <div class="d-flex justify-content-end mb-tall">
+  <div class="d-flex justify-content-end mb-lg">
     <div class="p-sm bd-highlight">Justify</div>
     <div class="p-sm bd-highlight">Content</div>
     <div class="p-sm bd-highlight">End</div>
   </div>
-  <div class="d-flex justify-content-center mb-tall">
+  <div class="d-flex justify-content-center mb-lg">
     <div class="p-sm bd-highlight">Justify</div>
     <div class="p-sm bd-highlight">Content</div>
     <div class="p-sm bd-highlight">Center</div>
   </div>
-  <div class="d-flex justify-content-between mb-tall">
+  <div class="d-flex justify-content-between mb-lg">
     <div class="p-sm bd-highlight">Justify</div>
     <div class="p-sm bd-highlight">Content</div>
     <div class="p-sm bd-highlight">Between</div>
   </div>
-  <div class="d-flex justify-content-around mb-tall">
+  <div class="d-flex justify-content-around mb-lg">
     <div class="p-sm bd-highlight">Justify</div>
     <div class="p-sm bd-highlight">Content</div>
     <div class="p-sm bd-highlight">Around</div>
@@ -144,22 +144,22 @@ Responsive variations also exist for `justify-content`.
 Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-items-start mb-tall" style="height: 100px">
+  <div class="d-flex align-items-start mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex align-items-end mb-tall" style="height: 100px">
+  <div class="d-flex align-items-end mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex align-items-center mb-tall" style="height: 100px">
+  <div class="d-flex align-items-center mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex align-items-baseline mb-tall" style="height: 100px">
+  <div class="d-flex align-items-baseline mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -198,22 +198,22 @@ Responsive variations also exist for `align-items`.
 Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex mb-tall" style="height: 100px">
+  <div class="d-flex mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="align-self-start p-sm">Aligned flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex mb-tall" style="height: 100px">
+  <div class="d-flex mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="align-self-end p-sm">Aligned flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex mb-tall" style="height: 100px">
+  <div class="d-flex mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="align-self-center p-sm">Aligned flex item</div>
     <div class="p-sm">Flex item</div>
   </div>
-  <div class="d-flex mb-tall" style="height: 100px">
+  <div class="d-flex mb-lg" style="height: 100px">
     <div class="p-sm">Flex item</div>
     <div class="align-self-baseline p-sm">Aligned flex item</div>
     <div class="p-sm">Flex item</div>
@@ -306,19 +306,19 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (`.me-auto`), and pushing two items to the left (`.ms-auto`).
 
 {{< example class="bd-example-flex" >}}
-<div class="d-flex mb-tall">
+<div class="d-flex mb-lg">
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
 </div>
 
-<div class="d-flex mb-tall">
+<div class="d-flex mb-lg">
   <div class="me-auto p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
 </div>
 
-<div class="d-flex mb-tall">
+<div class="d-flex mb-lg">
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="ms-auto p-sm">Flex item</div>
@@ -330,13 +330,13 @@ Flexbox can do some pretty awesome things when you mix flex alignments with auto
 Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
 
 {{< example class="bd-example-flex" >}}
-<div class="d-flex align-items-start flex-column mb-tall" style="height: 200px;">
+<div class="d-flex align-items-start flex-column mb-lg" style="height: 200px;">
   <div class="mb-auto p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
 </div>
 
-<div class="d-flex align-items-end flex-column mb-tall" style="height: 200px;">
+<div class="d-flex align-items-end flex-column mb-lg" style="height: 200px;">
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="mt-auto p-sm">Flex item</div>
@@ -469,7 +469,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 **Heads up!** This property has no effect on single rows of flex items.
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-start flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-start flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -495,7 +495,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 ```
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-end flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-end flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -519,7 +519,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 ```
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-center flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-center flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -543,7 +543,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 ```
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-between flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-between flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -567,7 +567,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 ```
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-around flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-around flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -591,7 +591,7 @@ Use `align-content` utilities on flexbox containers to align flex items _togethe
 ```
 
 <div class="bd-example bd-example-flex">
-  <div class="d-flex align-content-stretch flex-wrap mb-tall" style="height: 200px">
+  <div class="d-flex align-content-stretch flex-wrap mb-lg" style="height: 200px">
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
     <div class="p-sm">Flex item</div>
@@ -638,7 +638,7 @@ Looking to replicate the [media object component](https://getbootstrap.com/docs/
   <div class="flex-shrink-0">
     {{< placeholder width="100" height="100" color="#999" background="#e5e5e5" text="icon" >}}
   </div>
-  <div class="flex-grow-1 ms-tall">
+  <div class="flex-grow-1 ms-lg">
     This is some content from a media component. You can replace this with any content and adjust it as needed.
   </div>
 </div>
@@ -651,7 +651,7 @@ And say you want to vertically center the content next to the image:
   <div class="flex-shrink-0">
     {{< placeholder width="100" height="100" color="#999" background="#e5e5e5" text="icon" >}}
   </div>
-  <div class="flex-grow-1 ms-tall">
+  <div class="flex-grow-1 ms-lg">
     This is some content from a media component. You can replace this with any content and adjust it as needed.
   </div>
 </div>

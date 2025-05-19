@@ -182,8 +182,8 @@ Please note that if you mix the scaled and fixed classes, the fixed classes will
 
 {{< example class="bd-example-spacings" >}}
 <div class="mx-scaled-lg">Tall scaled x margin</div>
-<div class="mx-tall">Tall x margin (fixed)</div>
-<div class="mx-tall mx-md-xl mx-xl-2xl">Tall scaled x margin (manually)</div>
+<div class="mx-lg">Tall x margin (fixed)</div>
+<div class="mx-lg mx-md-xl mx-xl-2xl">Tall scaled x margin (manually)</div>
 {{< /example >}}
 
 ### Horizontal centering
@@ -235,7 +235,7 @@ Here's an example class that's the opposite of `.mt-1`:
 When using `display: grid` or `display: flex`, you can make use of `gap` utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the `$ouds-dimension-space-fixed` Sass map.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-tall">
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-lg">
   <div class="p-sm">Grid item 1</div>
   <div class="p-sm">Grid item 2</div>
   <div class="p-sm">Grid item 3</div>
@@ -267,7 +267,7 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 `row-gap` sets the vertical space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-tall">
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-lg">
   <div class="p-sm">Grid item 1</div>
   <div class="p-sm">Grid item 2</div>
   <div class="p-sm">Grid item 3</div>
@@ -293,7 +293,7 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 `column-gap` sets the horizontal space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-tall">
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-lg">
   <div class="p-sm">Grid item 1</div>
   <div class="p-sm">Grid item 2</div>
   <div class="p-sm">Grid item 3</div>

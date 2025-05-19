@@ -60,7 +60,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
     <summary>See the new import stack</summary>
 
     ```diff
@@ -421,7 +421,7 @@ toc: true
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
   - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
   - **Md**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
-  - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+  - **Lg**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
   - **Circle**: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
   - **Pill**: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
 
@@ -472,7 +472,7 @@ toc: true
   - **Xs**: `.m-xs`, `.mx-xs`, `.my-xs`, `.mt-xs`, `.mb-xs`, `.ms-xs`, `.me-xs`, `.m-xs-xs`, etc...
   - **Sm**: `.m-sm`, `.mx-sm`, `.my-sm`, `.mt-sm`, `.mb-sm`, `.ms-sm`, `.me-sm`, `.m-xs-sm`, etc...
   - **Md**: `.m-md`, `.mx-md`, `.my-md`, `.mt-md`, `.mb-md`, `.ms-md`, `.me-md`, `.m-xs-md`, etc...
-  - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
+  - **Lg**: `.m-lg`, `.mx-lg`, `.my-lg`, `.mt-lg`, `.mb-lg`, `.ms-lg`, `.me-lg`, `.m-xs-lg`, etc...
   - **Xl**: `.m-xl`, `.mx-xl`, `.my-xl`, `.mt-xl`, `.mb-xl`, `.ms-xl`, `.me-xl`, `.m-xs-xl`, etc...
   - **2xl**: `.m-2xl`, `.mx-2xl`, `.my-2xl`, `.mt-2xl`, `.mb-2xl`, `.ms-2xl`, `.me-2xl`, `.m-xs-2xl`, etc...
   - **Spacious**: `.m-spacious`, `.mx-spacious`, `.my-spacious`, `.mt-spacious`, `.mb-spacious`, `.ms-spacious`, `.me-spacious`, `.m-xs-spacious`, etc...
@@ -487,7 +487,7 @@ toc: true
   - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
   - **Sm**: `.m-scaled-sm`, `.mx-scaled-sm`, `.my-scaled-sm`, `.mt-scaled-sm`, `.mb-scaled-sm`, `.ms-scaled-sm`, `.me-scaled-sm`,
   - **Md**: `.m-scaled-md`, `.mx-scaled-md`, `.my-scaled-md`, `.mt-scaled-md`, `.mb-scaled-md`, `.ms-scaled-md`, `.me-scaled-md`,
-  - **Tall**: `.m-scaled-lg`, `.mx-scaled-lg`, `.my-scaled-lg`, `.mt-scaled-lg`, `.mb-scaled-lg`, `.ms-scaled-lg`, `.me-scaled-lg`,
+  - **Lg**: `.m-scaled-lg`, `.mx-scaled-lg`, `.my-scaled-lg`, `.mt-scaled-lg`, `.mb-scaled-lg`, `.ms-scaled-lg`, `.me-scaled-lg`,
   - **Xl**: `.m-scaled-xl`, `.mx-scaled-xl`, `.my-scaled-xl`, `.mt-scaled-xl`, `.mb-scaled-xl`, `.ms-scaled-xl`, `.me-scaled-xl`,
   - **2xl**: `.m-scaled-2xl`, `.mx-scaled-2xl`, `.my-scaled-2xl`, `.mt-scaled-2xl`, `.mb-scaled-2xl`, `.ms-scaled-2xl`, `.me-scaled-2xl`,
   - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
@@ -499,7 +499,7 @@ toc: true
   - **Xs**: `.p-xs`, `.px-xs`, `.py-xs`, `.pt-xs`, `.pb-xs`, `.ps-xs`, `.pe-xs`, `.p-xs-xs`, etc...
   - **Sm**: `.p-sm`, `.px-sm`, `.py-sm`, `.pt-sm`, `.pb-sm`, `.ps-sm`, `.pe-sm`, `.p-xs-sm`, etc...
   - **Md**: `.p-md`, `.px-md`, `.py-md`, `.pt-md`, `.pb-md`, `.ps-md`, `.pe-md`, `.p-xs-md`, etc...
-  - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
+  - **Lg**: `.p-lg`, `.px-lg`, `.py-lg`, `.pt-lg`, `.pb-lg`, `.ps-lg`, `.pe-lg`, `.p-xs-lg`, etc...
   - **Xl**: `.p-xl`, `.px-xl`, `.py-xl`, `.pt-xl`, `.pb-xl`, `.ps-xl`, `.pe-xl`, `.p-xs-xl`, etc...
   - **2xl**: `.p-2xl`, `.px-2xl`, `.py-2xl`, `.pt-2xl`, `.pb-2xl`, `.ps-2xl`, `.pe-2xl`, `.p-xs-2xl`, etc...
   - **Spacious**: `.p-spacious`, `.px-spacious`, `.py-spacious`, `.pt-spacious`, `.pb-spacious`, `.ps-spacious`, `.pe-spacious`, `.p-xs-spacious`, etc...
@@ -513,7 +513,7 @@ toc: true
   - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
   - **Sm**: `.p-scaled-sm`, `.px-scaled-sm`, `.py-scaled-sm`, `.pt-scaled-sm`, `.pb-scaled-sm`, `.ps-scaled-sm`, `.pe-scaled-sm`,
   - **Md**: `.p-scaled-md`, `.px-scaled-md`, `.py-scaled-md`, `.pt-scaled-md`, `.pb-scaled-md`, `.ps-scaled-md`, `.pe-scaled-md`,
-  - **Tall**: `.p-scaled-lg`, `.px-scaled-lg`, `.py-scaled-lg`, `.pt-scaled-lg`, `.pb-scaled-lg`, `.ps-scaled-lg`, `.pe-scaled-lg`,
+  - **Lg**: `.p-scaled-lg`, `.px-scaled-lg`, `.py-scaled-lg`, `.pt-scaled-lg`, `.pb-scaled-lg`, `.ps-scaled-lg`, `.pe-scaled-lg`,
   - **Xl**: `.p-scaled-xl`, `.px-scaled-xl`, `.py-scaled-xl`, `.pt-scaled-xl`, `.pb-scaled-xl`, `.ps-scaled-xl`, `.pe-scaled-xl`,
   - **2xl**: `.p-scaled-2xl`, `.px-scaled-2xl`, `.py-scaled-2xl`, `.pt-scaled-2xl`, `.pb-scaled-2xl`, `.ps-scaled-2xl`, `.pe-scaled-2xl`,
   - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
@@ -525,7 +525,7 @@ toc: true
   - **Xs**: `.gap-xs`, `.row-gap-xs`, `.column-gap-xs`, `.gap-xs-xs`, etc...
   - **Sm**: `.gap-sm`, `.row-gap-sm`, `.column-gap-sm`, `.gap-xs-sm`, etc...
   - **Md**: `.gap-md`, `.row-gap-md`, `.column-gap-md`, `.gap-xs-md`, etc...
-  - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
+  - **Lg**: `.gap-lg`, `.row-gap-lg`, `.column-gap-lg`, `.gap-xs-lg`, etc...
   - **Xl**: `.gap-xl`, `.row-gap-xl`, `.column-gap-xl`, `.gap-xs-xl`, etc...
   - **2xl**: `.gap-2xl`, `.row-gap-2xl`, `.column-gap-2xl`, `.gap-xs-2xl`, etc...
   - **Spacious**: `.gap-spacious`, `.row-gap-spacious`, `.column-gap-spacious`, `.gap-xs-spacious`, etc...
@@ -539,7 +539,7 @@ toc: true
   - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
   - **Sm**: `.gap-scaled-sm`, `.row-gap-scaled-sm`, `.column-gap-scaled-sm`
   - **Md**: `.gap-scaled-md`, `.row-gap-scaled-md`, `.column-gap-scaled-md`
-  - **Tall**: `.gap-scaled-lg`, `.row-gap-scaled-lg`, `.column-gap-scaled-lg`
+  - **Lg**: `.gap-scaled-lg`, `.row-gap-scaled-lg`, `.column-gap-scaled-lg`
   - **Xl**: `.gap-scaled-xl`, `.row-gap-scaled-xl`, `.column-gap-scaled-xl`
   - **2xl**: `.gap-scaled-2xl`, `.row-gap-scaled-2xl`, `.column-gap-scaled-2xl`
   - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
@@ -576,7 +576,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
     <summary>See the new import stack</summary>
 
     ```diff
@@ -1977,7 +1977,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
   <summary>See the new import stack</summary>
 
   ```diff

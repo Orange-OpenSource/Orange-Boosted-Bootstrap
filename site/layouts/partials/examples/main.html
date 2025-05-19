@@ -30,7 +30,7 @@
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       {{ if $entry.external -}}
-        <div class="col-md-6 col-lg-4 mb-tall d-flex gap-tall">
+        <div class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
           <div class="bi fs-hm flex-shrink-0" style="margin-top: -5px;">
             {{ partial "icons/github.svg" }}
           </div>
@@ -52,7 +52,7 @@
           </div>
         </div>
       {{ else -}}
-        <div class="col-sm-6 col-md-3 mb-tall">
+        <div class="col-sm-6 col-md-3 mb-lg">
           {{- $exampleNameUrlized := $example.name | urlize -}}
           {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
           <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
@@ -60,7 +60,7 @@
             {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
             {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
             {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}
-            <img class="img-thumbnail mb-tall"
+            <img class="img-thumbnail mb-lg"
                 srcset="{{ $imgPath }}, {{ $imgPath2x }} 2x"
                 src="{{ $imgPath }}"
                 alt=""
