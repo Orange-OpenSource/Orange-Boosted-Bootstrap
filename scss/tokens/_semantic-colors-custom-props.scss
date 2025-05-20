@@ -126,6 +126,14 @@
   --#{$prefix}color-surface-status-positive-muted: #{$ouds-color-surface-status-positive-muted-light};
   --#{$prefix}color-surface-status-warning-emphasized: #{$ouds-color-surface-status-warning-emphasized-light};
   --#{$prefix}color-surface-status-warning-muted: #{$ouds-color-surface-status-warning-muted-light};
+  --#{$prefix}elevation-color-default: #{$ouds-elevation-color-default};
+  --#{$prefix}elevation-color-drag: #{$ouds-elevation-color-drag};
+  --#{$prefix}elevation-color-emphasized: #{$ouds-elevation-color-emphasized};
+  --#{$prefix}elevation-color-none: #{$ouds-elevation-color-none};
+  --#{$prefix}elevation-color-raised: #{$ouds-elevation-color-raised};
+  --#{$prefix}elevation-color-sticky-default: #{$ouds-elevation-color-sticky-default};
+  --#{$prefix}elevation-color-sticky-emphasized: #{$ouds-elevation-color-sticky-emphasized};
+  --#{$prefix}elevation-color-sticky-navigation-scrolled: #{$ouds-elevation-color-sticky-navigation-scrolled};
 }
 // scss-docs-end ouds-semantic-css-color
 
@@ -335,3 +343,11 @@ $ouds-color-surface-status-positive-emphasized: var(--#{$prefix}color-surface-st
 $ouds-color-surface-status-positive-muted: var(--#{$prefix}color-surface-status-positive-muted) !default;
 $ouds-color-surface-status-warning-emphasized: var(--#{$prefix}color-surface-status-warning-emphasized) !default;
 $ouds-color-surface-status-warning-muted: var(--#{$prefix}color-surface-status-warning-muted) !default;
+$ouds-elevation-color-default: var(--#{$prefix}elevation-color-default) !default;
+$ouds-elevation-color-drag: var(--#{$prefix}elevation-color-drag) !default;
+$ouds-elevation-color-emphasized: var(--#{$prefix}elevation-color-emphasized) !default;
+$ouds-elevation-color-none: var(--#{$prefix}elevation-color-none) !default;
+$ouds-elevation-color-raised: var(--#{$prefix}elevation-color-raised) !default;
+$ouds-elevation-color-sticky-default: var(--#{$prefix}elevation-color-sticky-default) !default;
+$ouds-elevation-color-sticky-emphasized: var(--#{$prefix}elevation-color-sticky-emphasized) !default;
+$ouds-elevation-color-sticky-navigation-scrolled: var(--#{$prefix}elevation-color-sticky-navigation-scrolled) !default;

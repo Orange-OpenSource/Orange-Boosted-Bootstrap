@@ -945,6 +945,14 @@ $utilities: ();
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-none: rgba(0, 0, 0, 0);
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -10846,6 +10854,14 @@ $utilities: ();
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-none: rgba(0, 0, 0, 0);
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
