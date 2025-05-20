@@ -41,7 +41,7 @@ const size = fs.statSync(svgPath).size
 {
   downloadable && (
     <p class="text-end">
-      <a class="btn btn-primary" href={`data:image/svg+xml,${svg.replaceAll('#', '%23').replaceAll('<', '%3c').replaceAll('>', '%3e').replaceAll('(', '%28').replaceAll(')', '%29').replaceAll(' ', '%20').replaceAll('"', '\'')}`} download={`${file}.svg`}>
+      <a class="btn btn-primary" href={`data:image/svg+xml,${svg.replaceAll('#', '%23').replaceAll('<', '%3c').replaceAll('>', '%3e').replaceAll('(', '%28').replaceAll(')', '%29').replaceAll(' ', '%20').replaceAll('"', '\'').replaceAll('{', '%7B').replaceAll('}', '%7D')}`} download={`${file}.svg`}>
         Download<span class="small ms-1">(SVG, {size / 1000}ko)</span>
       </a>
     </p>
