@@ -26,7 +26,7 @@
 
     a {
       display: block;
-      padding: $ouds-space-fixed-2xs 0 $ouds-space-fixed-2xs $ouds-space-fixed-medium; // OUDS mod
+      padding: $ouds-space-fixed-2xs 0 $ouds-space-fixed-2xs $ouds-space-fixed-md; // OUDS mod
       @include get-font-size("body-small"); // OUDS mod: instead of `1rem`
       font-weight: 400; // OUDS mod: no 'bold' for the sidebar links
       color: inherit;
@@ -66,7 +66,7 @@
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
-      padding: $ouds-space-fixed-medium; // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
+      padding: $ouds-space-fixed-md; // OUDS mod: instead of `1.25rem 1.25rem 1.25rem 1rem`
       background-color: var(--#{$prefix}color-bg-secondary);
       border: 1px solid var(--bs-color-border-emphasized);
       @include border-radius(var(--bs-border-radius));

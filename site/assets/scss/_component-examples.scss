@@ -492,13 +492,13 @@
 .double-figure-svg {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white 50%, $ouds-color-functional-dark-gray-880 50%, $ouds-color-functional-dark-gray-880 100%);
+  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white 50%, $core-ouds-color-functional-gray-dark-880 50%, $core-ouds-color-functional-gray-dark-880 100%);
 }
 
 .double-figure {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
 
   figcaption {
     height: 1.875rem;
