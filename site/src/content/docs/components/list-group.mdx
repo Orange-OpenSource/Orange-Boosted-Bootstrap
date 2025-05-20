@@ -173,7 +173,7 @@ Contextual classes also work with `.list-group-item-action` for `<a>` and `<butt
     <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>`,
   ...getData('palette').map((category) => {
     if (category.category === "Functional colors") {
-      return category.colors.map((color) => `  <a href="#" class="list-group-item list-group-item-action list-group-item-${color.name.toLowerCase()}">A simple ${color.name} list group item</li>`).join('\n')
+      return category.colors.map((color) => `  <a href="#" class="list-group-item list-group-item-action list-group-item-${color.name.toLowerCase()}">A simple ${color.name} list group item</a>`).join('\n')
     }
   }),
   `  <a href="#" class="list-group-item list-group-item-action list-group-item-success active">A simple active success list group item</a>

@@ -8,6 +8,8 @@ added:
   version: "5.2"
 ---
 
+import { getConfig } from '@libs/config'
+
 ## How it works
 
 A title bar is designed to display the title of a page and shall be placed right below an [Orange navbar]([[docsref//components/orange-navbar]]).
@@ -38,13 +40,13 @@ The image should not overlap on title and the title shouldn’t wrap. If this ha
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
       <picture>
-        <source media="(min-width:1440px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1440.png">
-        <source media="(min-width:1280px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1280.png">
-        <source media="(min-width:1024px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1024.png">
-        <source media="(min-width:768px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-768.png">
-        <source media="(min-width:480px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-480.png">
-        <source media="(min-width:320px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-320.png">
-        <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-320.png" alt="">
+        <source media="(min-width:1440px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1440.png">
+        <source media="(min-width:1280px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1280.png">
+        <source media="(min-width:1024px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1024.png">
+        <source media="(min-width:768px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-768.png">
+        <source media="(min-width:480px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-480.png">
+        <source media="(min-width:320px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-320.png">
+        <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-320.png" alt="">
       </picture>
     </div>
   </div>`} />
@@ -61,13 +63,13 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
       <picture>
-        <source media="(min-width:1440px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1440.png">
-        <source media="(min-width:1280px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1280.png">
-        <source media="(min-width:1024px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1024.png">
-        <source media="(min-width:768px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-768.png">
-        <source media="(min-width:480px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-480.png">
-        <source media="(min-width:320px)" srcset="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-320.png">
-        <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-320.png" alt="">
+        <source media="(min-width:1440px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1440.png">
+        <source media="(min-width:1280px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1280.png">
+        <source media="(min-width:1024px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1024.png">
+        <source media="(min-width:768px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-768.png">
+        <source media="(min-width:480px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-480.png">
+        <source media="(min-width:320px)" srcset="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-320.png">
+        <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-320.png" alt="">
       </picture>
     </div>
   </div>`} />
@@ -77,7 +79,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 <Example class="p-0" code={`<div class="bg-supporting-purple title-bar" data-bs-theme="light">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
-      <svg aria-hidden="true" width="1.8em"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"/></svg>
+      <svg aria-hidden="true" width="1.8em"><use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"/></svg>
     </div>
   </div>`} />
 
@@ -86,12 +88,12 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 <Example class="p-0" code={`<div class="bg-supporting-green title-bar" data-bs-theme="light">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-320.png" alt="" class="d-sm-none">
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-480.png" alt="" class="d-none d-sm-block d-md-none">
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-768.png" alt="" class="d-none d-md-block d-lg-none">
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1024.png" alt="" class="d-none d-lg-block d-xl-none">
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1280.png" alt="" class="d-none d-xl-block d-xxl-none">
-      <img src="/docs/[[config:docs_version]]/assets/img/title-bars-illustrations/illustration-1440.png" alt="" class="d-none d-xxl-block">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-320.png" alt="" class="d-sm-none">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-480.png" alt="" class="d-none d-sm-block d-md-none">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-768.png" alt="" class="d-none d-md-block d-lg-none">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1024.png" alt="" class="d-none d-lg-block d-xl-none">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1280.png" alt="" class="d-none d-xl-block d-xxl-none">
+      <img src="/docs/${getConfig().docs_version}/assets/img/title-bars-illustrations/illustration-1440.png" alt="" class="d-none d-xxl-block">
     </div>
   </div>`} />
 

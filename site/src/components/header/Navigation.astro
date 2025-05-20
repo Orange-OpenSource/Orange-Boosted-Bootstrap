@@ -82,6 +82,6 @@ const { addedIn, layout, title } = Astro.props
     </div>
   </nav>
 
-  <SubNav />
+  {layout === 'docs' && <SubNav />}
 </header>
 
