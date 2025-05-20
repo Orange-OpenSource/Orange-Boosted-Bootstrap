@@ -6,8 +6,6 @@ toc: true
 robots: noindex,follow
 ---
 
-{/* TODO: Fait planter le serveur local pour l'instant */}
-
 ## Components
 
 ### Accordions
