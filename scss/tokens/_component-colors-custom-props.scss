@@ -1,5 +1,5 @@
 // Components custom properties applications
-// Token version 1.0.0
+// Token version 1.1.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
@@ -48,7 +48,10 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-600};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
-  --#{$prefix}tabs-color-gradient-end: #{$core-ouds-color-opacity-white-40};
+  --#{$prefix}tabs-color-bg-default: #{$core-ouds-color-opacity-white-0};
+  --#{$prefix}tabs-color-bg-sticky: #{$core-ouds-color-opacity-white-0};
+  --#{$prefix}tabs-color-gradient-drag-overlay-end: #{$core-ouds-color-opacity-white-40};
+  --#{$prefix}button-social-color-content-focus: #{$ouds-color-content-on-action-focus-light};
 }
 // scss-docs-end ouds-component-css-color
 
@@ -97,6 +100,9 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-300};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
-  --#{$prefix}tabs-color-gradient-end: #{$core-ouds-color-opacity-black-40};
+  --#{$prefix}tabs-color-bg-default: #{$core-ouds-color-opacity-black-0};
+  --#{$prefix}tabs-color-bg-sticky: #{$core-ouds-color-opacity-black-0};
+  --#{$prefix}tabs-color-gradient-drag-overlay-end: #{$core-ouds-color-opacity-black-40};
+  --#{$prefix}button-social-color-content-focus: #{$ouds-color-content-on-action-enabled-dark};
 }
 // scss-docs-end ouds-all-component-css-color

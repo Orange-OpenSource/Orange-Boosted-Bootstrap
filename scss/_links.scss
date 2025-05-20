@@ -4,16 +4,16 @@
 
 .link {
   // scss-docs-start link-css-vars
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-medium};
-  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-medium};
+  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-default};
+  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-default};
   // scss-docs-end link-css-vars
 
   @extend %link-properties;
   @include get-font-size("label-large");
   display: inline-flex;
   align-items: center;
-  min-width: $ouds-link-size-min-width-medium;
-  min-height: $ouds-link-size-min-height-medium;
+  min-width: $ouds-link-size-min-width-default;
+  min-height: $ouds-link-size-min-height-default;
   padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
   text-align: start;
   text-wrap: pretty;
@@ -39,7 +39,7 @@
 }
 
 .link-chevron {
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-medium};
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-default};
   --#{$prefix}link-arrow-color: #{$ouds-link-color-arrow-enabled};
   --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-arrow-hover};
   --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-arrow-focus};

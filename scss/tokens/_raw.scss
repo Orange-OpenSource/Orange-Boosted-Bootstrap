@@ -1,6 +1,6 @@
 // Raw primitive values
 // Insertion of brand foundations
-// Token version 1.0.0
+// Token version 1.1.0
 
 // Border
 
@@ -234,11 +234,8 @@ $core-ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
 // scss-docs-start ouds-raw-dimension
 $core-ouds-dimension-base: 4px !default;
 $core-ouds-dimension-0: $core-ouds-dimension-base * 0 !default; // 0px
-$core-ouds-dimension-25: $core-ouds-dimension-base * .5 !default; // 2px
 $core-ouds-dimension-50: $core-ouds-dimension-base * 1 !default; // 4px
-$core-ouds-dimension-75: $core-ouds-dimension-base * 1.5 !default; // 6px
 $core-ouds-dimension-100: $core-ouds-dimension-base * 2 !default; // 8px
-$core-ouds-dimension-125: $core-ouds-dimension-base * 2.5 !default; // 10px
 $core-ouds-dimension-150: $core-ouds-dimension-base * 3 !default; // 12px
 $core-ouds-dimension-200: $core-ouds-dimension-base * 4 !default; // 16px
 $core-ouds-dimension-250: $core-ouds-dimension-base * 5 !default; // 20px
@@ -262,15 +259,18 @@ $core-ouds-dimension-1400: $core-ouds-dimension-base * 28 !default; // 112px
 $core-ouds-dimension-1600: $core-ouds-dimension-base * 32 !default; // 128px
 $core-ouds-dimension-1800: $core-ouds-dimension-base * 36 !default; // 144px
 $core-ouds-dimension-2000: $core-ouds-dimension-base * 40 !default; // 160px
-// $core-ouds-dimension-3000: $core-ouds-dimension-base * 80 !default; // 320px
+$core-ouds-dimension-3000: $core-ouds-dimension-base * 80 !default; // 320px
 $core-ouds-dimension-4000: $core-ouds-dimension-base * 120 !default; // 480px
 // $core-ouds-dimension-5000: $core-ouds-dimension-base * 140 !default; // 560px
 $core-ouds-dimension-6000: $core-ouds-dimension-base * 160 !default; // 640px
 $core-ouds-dimension-7000: $core-ouds-dimension-base * 180 !default; // 720px
 $core-ouds-dimension-9000: $core-ouds-dimension-base * 220 !default; // 880px
 $core-ouds-dimension-11000: $core-ouds-dimension-base * 260 !default; // 1040px
-// $core-ouds-dimension-out-of-system-25: $core-ouds-dimension-base * .25 !default; // 1px
-$core-ouds-dimension-out-of-system-50: $core-ouds-dimension-base * .75 !default; // 3px
+$core-ouds-dimension-out-of-system-25: $core-ouds-dimension-base * .25 !default; // 1px
+$core-ouds-dimension-out-of-system-50: $core-ouds-dimension-base * .5 !default; // 2px
+$core-ouds-dimension-out-of-system-75: $core-ouds-dimension-base * .75 !default; // 3px
+$core-ouds-dimension-out-of-system-150: $core-ouds-dimension-base * 1.5 !default; // 6px
+$core-ouds-dimension-out-of-system-250: $core-ouds-dimension-base * 2.5 !default; // 10px
 // scss-docs-end ouds-raw-dimension
 
 // Elevation
