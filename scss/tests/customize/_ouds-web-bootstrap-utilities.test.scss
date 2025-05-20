@@ -853,8 +853,8 @@ $utilities: ();
           --bs-color-border-brand-primary: #f15e00;
           --bs-color-border-default: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: #000;
-          --bs-color-border-focus: #000;
           --bs-color-border-focus-inset: #fff;
+          --bs-color-border-focus: #000;
           --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #f15e00;
@@ -870,9 +870,19 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #fff;
-          --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-alt: #fff;
-          --bs-color-content-on-status-muted: #000;
+          --bs-color-content-on-status-accent-emphasized: #000;
+          --bs-color-content-on-status-accent-muted: #000;
+          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-muted: #000;
+          --bs-color-content-on-status-negative-emphasized: #fff;
+          --bs-color-content-on-status-negative-muted: #000;
+          --bs-color-content-on-status-neutral-emphasized: #fff;
+          --bs-color-content-on-status-neutral-muted: #000;
+          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-muted: #000;
+          --bs-color-content-on-status-warning-emphasized: #000;
+          --bs-color-content-on-status-warning-muted: #000;
+          --bs-color-content-status-accent: #ffd000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
@@ -935,14 +945,6 @@ $utilities: ();
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -967,14 +969,10 @@ $utilities: ();
           --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
-          --bs-color-always-black: #000;
-          --bs-color-always-on-black: #eee;
-          --bs-color-always-on-white: #000;
-          --bs-color-always-white: #fff;
           --bs-color-bg-emphasized: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #353228;
+          --bs-color-bg-tertiary: #23211a;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
@@ -995,51 +993,23 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #000;
-          --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-alt: #000;
-          --bs-color-content-on-status-muted: #eee;
+          --bs-color-content-on-status-accent-emphasized: #000;
+          --bs-color-content-on-status-accent-muted: #eee;
+          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-muted: #eee;
+          --bs-color-content-on-status-negative-emphasized: #000;
+          --bs-color-content-on-status-negative-muted: #eee;
+          --bs-color-content-on-status-neutral-emphasized: #000;
+          --bs-color-content-on-status-neutral-muted: #eee;
+          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-muted: #eee;
+          --bs-color-content-on-status-warning-emphasized: #000;
+          --bs-color-content-on-status-warning-muted: #eee;
+          --bs-color-content-status-accent: #ffd000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-decorative-accent-1-default: #50be87;
-          --bs-color-decorative-accent-1-emphasized: #2e7b54;
-          --bs-color-decorative-accent-1-muted: #c0e8d4;
-          --bs-color-decorative-accent-2-default: #4ab4e6;
-          --bs-color-decorative-accent-2-emphasized: #136186;
-          --bs-color-decorative-accent-2-muted: #a5daf3;
-          --bs-color-decorative-accent-3-default: #ffd000;
-          --bs-color-decorative-accent-3-emphasized: #ffb400;
-          --bs-color-decorative-accent-3-muted: #ffed99;
-          --bs-color-decorative-accent-4-default: #a885d8;
-          --bs-color-decorative-accent-4-emphasized: #2c174a;
-          --bs-color-decorative-accent-4-muted: #e0d4f2;
-          --bs-color-decorative-accent-5-default: #ffb4e6;
-          --bs-color-decorative-accent-5-emphasized: #ff80d4;
-          --bs-color-decorative-accent-5-muted: #ffe5f6;
-          --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #000;
-          --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-emphasized-higher: #333;
-          --bs-color-decorative-neutral-emphasized-low: #555;
-          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
-          --bs-color-decorative-neutral-emphasized-lowest: #666;
-          --bs-color-decorative-neutral-muted-high: #ccc;
-          --bs-color-decorative-neutral-muted-higher: #999;
-          --bs-color-decorative-neutral-muted-highest: #858585;
-          --bs-color-decorative-neutral-muted-low: #e0e0e0;
-          --bs-color-decorative-neutral-muted-lower: #eee;
-          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
-          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
-          --bs-color-decorative-skin-tint-100: #fbebdf;
-          --bs-color-decorative-skin-tint-200: #f4cfb2;
-          --bs-color-decorative-skin-tint-300: #e3b591;
-          --bs-color-decorative-skin-tint-400: #c19372;
-          --bs-color-decorative-skin-tint-500: #cf7e3f;
-          --bs-color-decorative-skin-tint-600: #aa6631;
-          --bs-color-decorative-skin-tint-700: #7e4f2a;
-          --bs-color-decorative-skin-tint-800: #553720;
-          --bs-color-decorative-skin-tint-900: #2e2014;
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
@@ -1049,25 +1019,17 @@ $utilities: ();
           --bs-color-overlay-modal: #333;
           --bs-color-surface-brand-primary: #ff7900;
           --bs-color-surface-status-accent-emphasized: #ffe270;
-          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-accent-muted: #23211a;
           --bs-color-surface-status-info-emphasized: #8ad5ff;
           --bs-color-surface-status-info-muted: #003857;
           --bs-color-surface-status-negative-emphasized: #ff8081;
           --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-positive-emphasized: #94f0a4;
           --bs-color-surface-status-positive-muted: #0a4715;
           --bs-color-surface-status-warning-emphasized: #ffe270;
           --bs-color-surface-status-warning-muted: #3d3100;
-          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .opacity-invisible {
@@ -1198,7 +1160,7 @@ $utilities: ();
           border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-short {
+        .rounded-small {
           border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
 
@@ -1206,7 +1168,7 @@ $utilities: ();
           border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-tall {
+        .rounded-large {
           border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
 
@@ -1228,7 +1190,7 @@ $utilities: ();
           border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-top-short {
+        .rounded-top-small {
           border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1238,7 +1200,7 @@ $utilities: ();
           border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-top-tall {
+        .rounded-top-large {
           border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1263,7 +1225,7 @@ $utilities: ();
           border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-end-short {
+        .rounded-end-small {
           border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1273,7 +1235,7 @@ $utilities: ();
           border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-end-tall {
+        .rounded-end-large {
           border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1298,7 +1260,7 @@ $utilities: ();
           border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-bottom-short {
+        .rounded-bottom-small {
           border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1308,7 +1270,7 @@ $utilities: ();
           border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-bottom-tall {
+        .rounded-bottom-large {
           border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -1333,7 +1295,7 @@ $utilities: ();
           border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
-        .rounded-start-short {
+        .rounded-start-small {
           border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
@@ -1343,7 +1305,7 @@ $utilities: ();
           border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
 
-        .rounded-start-tall {
+        .rounded-start-large {
           border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
@@ -1446,8 +1408,8 @@ $utilities: ();
           margin: var(--bs-space-scaled-2xl) !important;
         }
 
-        .m-scaled-spacious {
-          margin: var(--bs-space-scaled-spacious) !important;
+        .m-scaled-3xl {
+          margin: var(--bs-space-scaled-3xl) !important;
         }
 
         .mx-none {
@@ -1560,9 +1522,9 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mx-scaled-spacious {
-          margin-right: var(--bs-space-scaled-spacious) !important;
-          margin-left: var(--bs-space-scaled-spacious) !important;
+        .mx-scaled-3xl {
+          margin-right: var(--bs-space-scaled-3xl) !important;
+          margin-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .my-none {
@@ -1675,9 +1637,9 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .my-scaled-spacious {
-          margin-top: var(--bs-space-scaled-spacious) !important;
-          margin-bottom: var(--bs-space-scaled-spacious) !important;
+        .my-scaled-3xl {
+          margin-top: var(--bs-space-scaled-3xl) !important;
+          margin-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .mt-none {
@@ -1768,8 +1730,8 @@ $utilities: ();
           margin-top: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mt-scaled-spacious {
-          margin-top: var(--bs-space-scaled-spacious) !important;
+        .mt-scaled-3xl {
+          margin-top: var(--bs-space-scaled-3xl) !important;
         }
 
         .me-none {
@@ -1860,8 +1822,8 @@ $utilities: ();
           margin-right: var(--bs-space-scaled-2xl) !important;
         }
 
-        .me-scaled-spacious {
-          margin-right: var(--bs-space-scaled-spacious) !important;
+        .me-scaled-3xl {
+          margin-right: var(--bs-space-scaled-3xl) !important;
         }
 
         .mb-none {
@@ -1952,8 +1914,8 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mb-scaled-spacious {
-          margin-bottom: var(--bs-space-scaled-spacious) !important;
+        .mb-scaled-3xl {
+          margin-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .ms-none {
@@ -2044,278 +2006,278 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .ms-scaled-spacious {
-          margin-left: var(--bs-space-scaled-spacious) !important;
+        .ms-scaled-3xl {
+          margin-left: var(--bs-space-scaled-3xl) !important;
         }
 
-        .m-scaled-nsmash {
+        .m-scaled-n3xs {
           margin: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshortest {
+        .m-scaled-n2xs {
           margin: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshorter {
+        .m-scaled-nxs {
           margin: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshort {
+        .m-scaled-nsm {
           margin: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nmedium {
+        .m-scaled-nmd {
           margin: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntall {
+        .m-scaled-nlg {
           margin: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntaller {
+        .m-scaled-nxl {
           margin: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntallest {
+        .m-scaled-n2xl {
           margin: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nspacious {
-          margin: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .m-scaled-n3xl {
+          margin: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nsmash {
+        .mx-scaled-n3xs {
           margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshortest {
+        .mx-scaled-n2xs {
           margin-right: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshorter {
+        .mx-scaled-nxs {
           margin-right: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshort {
+        .mx-scaled-nsm {
           margin-right: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nmedium {
+        .mx-scaled-nmd {
           margin-right: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntall {
+        .mx-scaled-nlg {
           margin-right: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntaller {
+        .mx-scaled-nxl {
           margin-right: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntallest {
+        .mx-scaled-n2xl {
           margin-right: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nspacious {
-          margin-right: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
-          margin-left: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mx-scaled-n3xl {
+          margin-right: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nsmash {
+        .my-scaled-n3xs {
           margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshortest {
+        .my-scaled-n2xs {
           margin-top: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshorter {
+        .my-scaled-nxs {
           margin-top: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshort {
+        .my-scaled-nsm {
           margin-top: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nmedium {
+        .my-scaled-nmd {
           margin-top: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntall {
+        .my-scaled-nlg {
           margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntaller {
+        .my-scaled-nxl {
           margin-top: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntallest {
+        .my-scaled-n2xl {
           margin-top: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nspacious {
-          margin-top: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
-          margin-bottom: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .my-scaled-n3xl {
+          margin-top: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nsmash {
+        .mt-scaled-n3xs {
           margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshortest {
+        .mt-scaled-n2xs {
           margin-top: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshorter {
+        .mt-scaled-nxs {
           margin-top: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshort {
+        .mt-scaled-nsm {
           margin-top: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nmedium {
+        .mt-scaled-nmd {
           margin-top: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntall {
+        .mt-scaled-nlg {
           margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntaller {
+        .mt-scaled-nxl {
           margin-top: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntallest {
+        .mt-scaled-n2xl {
           margin-top: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nspacious {
-          margin-top: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mt-scaled-n3xl {
+          margin-top: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nsmash {
+        .me-scaled-n3xs {
           margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshortest {
+        .me-scaled-n2xs {
           margin-right: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshorter {
+        .me-scaled-nxs {
           margin-right: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshort {
+        .me-scaled-nsm {
           margin-right: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nmedium {
+        .me-scaled-nmd {
           margin-right: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntall {
+        .me-scaled-nlg {
           margin-right: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntaller {
+        .me-scaled-nxl {
           margin-right: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntallest {
+        .me-scaled-n2xl {
           margin-right: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nspacious {
-          margin-right: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .me-scaled-n3xl {
+          margin-right: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nsmash {
+        .mb-scaled-n3xs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshortest {
+        .mb-scaled-n2xs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshorter {
+        .mb-scaled-nxs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshort {
+        .mb-scaled-nsm {
           margin-bottom: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nmedium {
+        .mb-scaled-nmd {
           margin-bottom: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntall {
+        .mb-scaled-nlg {
           margin-bottom: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntaller {
+        .mb-scaled-nxl {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntallest {
+        .mb-scaled-n2xl {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nspacious {
-          margin-bottom: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mb-scaled-n3xl {
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nsmash {
+        .ms-scaled-n3xs {
           margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshortest {
+        .ms-scaled-n2xs {
           margin-left: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshorter {
+        .ms-scaled-nxs {
           margin-left: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshort {
+        .ms-scaled-nsm {
           margin-left: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nmedium {
+        .ms-scaled-nmd {
           margin-left: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntall {
+        .ms-scaled-nlg {
           margin-left: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntaller {
+        .ms-scaled-nxl {
           margin-left: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntallest {
+        .ms-scaled-n2xl {
           margin-left: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nspacious {
-          margin-left: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .ms-scaled-n3xl {
+          margin-left: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .p-none {
@@ -2402,8 +2364,8 @@ $utilities: ();
           padding: var(--bs-space-scaled-2xl) !important;
         }
 
-        .p-scaled-spacious {
-          padding: var(--bs-space-scaled-spacious) !important;
+        .p-scaled-3xl {
+          padding: var(--bs-space-scaled-3xl) !important;
         }
 
         .px-none {
@@ -2511,9 +2473,9 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .px-scaled-spacious {
-          padding-right: var(--bs-space-scaled-spacious) !important;
-          padding-left: var(--bs-space-scaled-spacious) !important;
+        .px-scaled-3xl {
+          padding-right: var(--bs-space-scaled-3xl) !important;
+          padding-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .py-none {
@@ -2621,9 +2583,9 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .py-scaled-spacious {
-          padding-top: var(--bs-space-scaled-spacious) !important;
-          padding-bottom: var(--bs-space-scaled-spacious) !important;
+        .py-scaled-3xl {
+          padding-top: var(--bs-space-scaled-3xl) !important;
+          padding-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .pt-none {
@@ -2710,8 +2672,8 @@ $utilities: ();
           padding-top: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pt-scaled-spacious {
-          padding-top: var(--bs-space-scaled-spacious) !important;
+        .pt-scaled-3xl {
+          padding-top: var(--bs-space-scaled-3xl) !important;
         }
 
         .pe-none {
@@ -2798,8 +2760,8 @@ $utilities: ();
           padding-right: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pe-scaled-spacious {
-          padding-right: var(--bs-space-scaled-spacious) !important;
+        .pe-scaled-3xl {
+          padding-right: var(--bs-space-scaled-3xl) !important;
         }
 
         .pb-none {
@@ -2886,8 +2848,8 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pb-scaled-spacious {
-          padding-bottom: var(--bs-space-scaled-spacious) !important;
+        .pb-scaled-3xl {
+          padding-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .ps-none {
@@ -2974,8 +2936,8 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .ps-scaled-spacious {
-          padding-left: var(--bs-space-scaled-spacious) !important;
+        .ps-scaled-3xl {
+          padding-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .gap-none {
@@ -3062,8 +3024,8 @@ $utilities: ();
           gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .gap-scaled-spacious {
-          gap: var(--bs-space-scaled-spacious) !important;
+        .gap-scaled-3xl {
+          gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .row-gap-none {
@@ -3150,8 +3112,8 @@ $utilities: ();
           row-gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .row-gap-scaled-spacious {
-          row-gap: var(--bs-space-scaled-spacious) !important;
+        .row-gap-scaled-3xl {
+          row-gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .column-gap-none {
@@ -3238,8 +3200,8 @@ $utilities: ();
           column-gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .column-gap-scaled-spacious {
-          column-gap: var(--bs-space-scaled-spacious) !important;
+        .column-gap-scaled-3xl {
+          column-gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .font-monospace {
@@ -10792,8 +10754,8 @@ $utilities: ();
           --bs-color-border-brand-primary: #f15e00;
           --bs-color-border-default: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: #000;
-          --bs-color-border-focus: #000;
           --bs-color-border-focus-inset: #fff;
+          --bs-color-border-focus: #000;
           --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
           --bs-color-content-brand-primary: #f15e00;
@@ -10809,9 +10771,19 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #fff;
-          --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-alt: #fff;
-          --bs-color-content-on-status-muted: #000;
+          --bs-color-content-on-status-accent-emphasized: #000;
+          --bs-color-content-on-status-accent-muted: #000;
+          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-muted: #000;
+          --bs-color-content-on-status-negative-emphasized: #fff;
+          --bs-color-content-on-status-negative-muted: #000;
+          --bs-color-content-on-status-neutral-emphasized: #fff;
+          --bs-color-content-on-status-neutral-muted: #000;
+          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-muted: #000;
+          --bs-color-content-on-status-warning-emphasized: #000;
+          --bs-color-content-on-status-warning-muted: #000;
+          --bs-color-content-status-accent: #ffd000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
@@ -10874,14 +10846,6 @@ $utilities: ();
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -10906,14 +10870,10 @@ $utilities: ();
           --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
-          --bs-color-always-black: #000;
-          --bs-color-always-on-black: #eee;
-          --bs-color-always-on-white: #000;
-          --bs-color-always-white: #fff;
           --bs-color-bg-emphasized: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #353228;
+          --bs-color-bg-tertiary: #23211a;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
@@ -10934,51 +10894,23 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-brand-primary: #000;
           --bs-color-content-on-overlay-emphasized: #000;
-          --bs-color-content-on-status-emphasized: #000;
-          --bs-color-content-on-status-emphasized-alt: #000;
-          --bs-color-content-on-status-muted: #eee;
+          --bs-color-content-on-status-accent-emphasized: #000;
+          --bs-color-content-on-status-accent-muted: #eee;
+          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-muted: #eee;
+          --bs-color-content-on-status-negative-emphasized: #000;
+          --bs-color-content-on-status-negative-muted: #eee;
+          --bs-color-content-on-status-neutral-emphasized: #000;
+          --bs-color-content-on-status-neutral-muted: #eee;
+          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-muted: #eee;
+          --bs-color-content-on-status-warning-emphasized: #000;
+          --bs-color-content-on-status-warning-muted: #eee;
+          --bs-color-content-status-accent: #ffd000;
           --bs-color-content-status-info: #26b2ff;
           --bs-color-content-status-negative: #db0002;
           --bs-color-content-status-positive: #3de35a;
           --bs-color-content-status-warning: #ffd000;
-          --bs-color-decorative-accent-1-default: #50be87;
-          --bs-color-decorative-accent-1-emphasized: #2e7b54;
-          --bs-color-decorative-accent-1-muted: #c0e8d4;
-          --bs-color-decorative-accent-2-default: #4ab4e6;
-          --bs-color-decorative-accent-2-emphasized: #136186;
-          --bs-color-decorative-accent-2-muted: #a5daf3;
-          --bs-color-decorative-accent-3-default: #ffd000;
-          --bs-color-decorative-accent-3-emphasized: #ffb400;
-          --bs-color-decorative-accent-3-muted: #ffed99;
-          --bs-color-decorative-accent-4-default: #a885d8;
-          --bs-color-decorative-accent-4-emphasized: #2c174a;
-          --bs-color-decorative-accent-4-muted: #e0d4f2;
-          --bs-color-decorative-accent-5-default: #ffb4e6;
-          --bs-color-decorative-accent-5-emphasized: #ff80d4;
-          --bs-color-decorative-accent-5-muted: #ffe5f6;
-          --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #000;
-          --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-emphasized-higher: #333;
-          --bs-color-decorative-neutral-emphasized-low: #555;
-          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
-          --bs-color-decorative-neutral-emphasized-lowest: #666;
-          --bs-color-decorative-neutral-muted-high: #ccc;
-          --bs-color-decorative-neutral-muted-higher: #999;
-          --bs-color-decorative-neutral-muted-highest: #858585;
-          --bs-color-decorative-neutral-muted-low: #e0e0e0;
-          --bs-color-decorative-neutral-muted-lower: #eee;
-          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
-          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
-          --bs-color-decorative-skin-tint-100: #fbebdf;
-          --bs-color-decorative-skin-tint-200: #f4cfb2;
-          --bs-color-decorative-skin-tint-300: #e3b591;
-          --bs-color-decorative-skin-tint-400: #c19372;
-          --bs-color-decorative-skin-tint-500: #cf7e3f;
-          --bs-color-decorative-skin-tint-600: #aa6631;
-          --bs-color-decorative-skin-tint-700: #7e4f2a;
-          --bs-color-decorative-skin-tint-800: #553720;
-          --bs-color-decorative-skin-tint-900: #2e2014;
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
@@ -10988,25 +10920,17 @@ $utilities: ();
           --bs-color-overlay-modal: #333;
           --bs-color-surface-brand-primary: #ff7900;
           --bs-color-surface-status-accent-emphasized: #ffe270;
-          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-accent-muted: #23211a;
           --bs-color-surface-status-info-emphasized: #8ad5ff;
           --bs-color-surface-status-info-muted: #003857;
           --bs-color-surface-status-negative-emphasized: #ff8081;
           --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-positive-emphasized: #94f0a4;
           --bs-color-surface-status-positive-muted: #0a4715;
           --bs-color-surface-status-warning-emphasized: #ffe270;
           --bs-color-surface-status-warning-muted: #3d3100;
-          --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         .opacity-0 {
@@ -11413,7 +11337,7 @@ $utilities: ();
           border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-sm {
+        .rounded-small {
           border-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
 
@@ -11421,7 +11345,7 @@ $utilities: ();
           border-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-tall {
+        .rounded-large {
           border-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
 
@@ -11443,7 +11367,7 @@ $utilities: ();
           border-top-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-top-sm {
+        .rounded-top-small {
           border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11453,7 +11377,7 @@ $utilities: ();
           border-top-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-top-tall {
+        .rounded-top-large {
           border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11478,7 +11402,7 @@ $utilities: ();
           border-bottom-right-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-end-sm {
+        .rounded-end-small {
           border-top-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11488,7 +11412,7 @@ $utilities: ();
           border-bottom-right-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-end-tall {
+        .rounded-end-large {
           border-top-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11513,7 +11437,7 @@ $utilities: ();
           border-bottom-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
 
-        .rounded-bottom-sm {
+        .rounded-bottom-small {
           border-bottom-right-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11523,7 +11447,7 @@ $utilities: ();
           border-bottom-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list
         }
 
-        .rounded-bottom-tall {
+        .rounded-bottom-large {
           border-bottom-right-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
         }
@@ -11548,7 +11472,7 @@ $utilities: ();
           border-top-left-radius: 0px !important; // stylelint-disable-line property-disallowed-list, order/properties-order, length-zero-no-unit
         }
 
-        .rounded-start-sm {
+        .rounded-start-small {
           border-bottom-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 3px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
@@ -11558,7 +11482,7 @@ $utilities: ();
           border-top-left-radius: 6px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
 
-        .rounded-start-tall {
+        .rounded-start-large {
           border-bottom-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list
           border-top-left-radius: 12px !important; // stylelint-disable-line property-disallowed-list, order/properties-order
         }
@@ -12093,8 +12017,8 @@ $utilities: ();
           margin: var(--bs-space-scaled-2xl) !important;
         }
 
-        .m-scaled-spacious {
-          margin: var(--bs-space-scaled-spacious) !important;
+        .m-scaled-3xl {
+          margin: var(--bs-space-scaled-3xl) !important;
         }
 
         .mx-none {
@@ -12207,9 +12131,9 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mx-scaled-spacious {
-          margin-right: var(--bs-space-scaled-spacious) !important;
-          margin-left: var(--bs-space-scaled-spacious) !important;
+        .mx-scaled-3xl {
+          margin-right: var(--bs-space-scaled-3xl) !important;
+          margin-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .my-none {
@@ -12322,9 +12246,9 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .my-scaled-spacious {
-          margin-top: var(--bs-space-scaled-spacious) !important;
-          margin-bottom: var(--bs-space-scaled-spacious) !important;
+        .my-scaled-3xl {
+          margin-top: var(--bs-space-scaled-3xl) !important;
+          margin-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .mt-none {
@@ -12415,8 +12339,8 @@ $utilities: ();
           margin-top: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mt-scaled-spacious {
-          margin-top: var(--bs-space-scaled-spacious) !important;
+        .mt-scaled-3xl {
+          margin-top: var(--bs-space-scaled-3xl) !important;
         }
 
         .me-none {
@@ -12507,8 +12431,8 @@ $utilities: ();
           margin-right: var(--bs-space-scaled-2xl) !important;
         }
 
-        .me-scaled-spacious {
-          margin-right: var(--bs-space-scaled-spacious) !important;
+        .me-scaled-3xl {
+          margin-right: var(--bs-space-scaled-3xl) !important;
         }
 
         .mb-none {
@@ -12599,8 +12523,8 @@ $utilities: ();
           margin-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .mb-scaled-spacious {
-          margin-bottom: var(--bs-space-scaled-spacious) !important;
+        .mb-scaled-3xl {
+          margin-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .ms-none {
@@ -12691,278 +12615,278 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .ms-scaled-spacious {
-          margin-left: var(--bs-space-scaled-spacious) !important;
+        .ms-scaled-3xl {
+          margin-left: var(--bs-space-scaled-3xl) !important;
         }
 
-        .m-scaled-nsmash {
+        .m-scaled-n3xs {
           margin: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshortest {
+        .m-scaled-n2xs {
           margin: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshorter {
+        .m-scaled-nxs {
           margin: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nshort {
+        .m-scaled-nsm {
           margin: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nmedium {
+        .m-scaled-nmd {
           margin: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntall {
+        .m-scaled-nlg {
           margin: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntaller {
+        .m-scaled-nxl {
           margin: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-ntallest {
+        .m-scaled-n2xl {
           margin: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nspacious {
-          margin: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .m-scaled-n3xl {
+          margin: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nsmash {
+        .mx-scaled-n3xs {
           margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshortest {
+        .mx-scaled-n2xs {
           margin-right: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshorter {
+        .mx-scaled-nxs {
           margin-right: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nshort {
+        .mx-scaled-nsm {
           margin-right: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nmedium {
+        .mx-scaled-nmd {
           margin-right: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntall {
+        .mx-scaled-nlg {
           margin-right: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntaller {
+        .mx-scaled-nxl {
           margin-right: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-ntallest {
+        .mx-scaled-n2xl {
           margin-right: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nspacious {
-          margin-right: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
-          margin-left: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mx-scaled-n3xl {
+          margin-right: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
+          margin-left: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nsmash {
+        .my-scaled-n3xs {
           margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshortest {
+        .my-scaled-n2xs {
           margin-top: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshorter {
+        .my-scaled-nxs {
           margin-top: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nshort {
+        .my-scaled-nsm {
           margin-top: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nmedium {
+        .my-scaled-nmd {
           margin-top: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntall {
+        .my-scaled-nlg {
           margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntaller {
+        .my-scaled-nxl {
           margin-top: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-ntallest {
+        .my-scaled-n2xl {
           margin-top: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nspacious {
-          margin-top: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
-          margin-bottom: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .my-scaled-n3xl {
+          margin-top: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nsmash {
+        .mt-scaled-n3xs {
           margin-top: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshortest {
+        .mt-scaled-n2xs {
           margin-top: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshorter {
+        .mt-scaled-nxs {
           margin-top: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nshort {
+        .mt-scaled-nsm {
           margin-top: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nmedium {
+        .mt-scaled-nmd {
           margin-top: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntall {
+        .mt-scaled-nlg {
           margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntaller {
+        .mt-scaled-nxl {
           margin-top: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-ntallest {
+        .mt-scaled-n2xl {
           margin-top: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nspacious {
-          margin-top: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mt-scaled-n3xl {
+          margin-top: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nsmash {
+        .me-scaled-n3xs {
           margin-right: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshortest {
+        .me-scaled-n2xs {
           margin-right: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshorter {
+        .me-scaled-nxs {
           margin-right: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nshort {
+        .me-scaled-nsm {
           margin-right: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nmedium {
+        .me-scaled-nmd {
           margin-right: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntall {
+        .me-scaled-nlg {
           margin-right: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntaller {
+        .me-scaled-nxl {
           margin-right: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-ntallest {
+        .me-scaled-n2xl {
           margin-right: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nspacious {
-          margin-right: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .me-scaled-n3xl {
+          margin-right: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nsmash {
+        .mb-scaled-n3xs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshortest {
+        .mb-scaled-n2xs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshorter {
+        .mb-scaled-nxs {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nshort {
+        .mb-scaled-nsm {
           margin-bottom: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nmedium {
+        .mb-scaled-nmd {
           margin-bottom: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntall {
+        .mb-scaled-nlg {
           margin-bottom: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntaller {
+        .mb-scaled-nxl {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-ntallest {
+        .mb-scaled-n2xl {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nspacious {
-          margin-bottom: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .mb-scaled-n3xl {
+          margin-bottom: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nsmash {
+        .ms-scaled-n3xs {
           margin-left: calc(-1 * var(--bs-space-scaled-3xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshortest {
+        .ms-scaled-n2xs {
           margin-left: calc(-1 * var(--bs-space-scaled-2xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshorter {
+        .ms-scaled-nxs {
           margin-left: calc(-1 * var(--bs-space-scaled-xs)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nshort {
+        .ms-scaled-nsm {
           margin-left: calc(-1 * var(--bs-space-scaled-sm)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nmedium {
+        .ms-scaled-nmd {
           margin-left: calc(-1 * var(--bs-space-scaled-md)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntall {
+        .ms-scaled-nlg {
           margin-left: calc(-1 * var(--bs-space-scaled-lg)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntaller {
+        .ms-scaled-nxl {
           margin-left: calc(-1 * var(--bs-space-scaled-xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-ntallest {
+        .ms-scaled-n2xl {
           margin-left: calc(-1 * var(--bs-space-scaled-2xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nspacious {
-          margin-left: calc(-1 * var(--bs-space-scaled-spacious)) !important; // stylelint-disable-line function-disallowed-list
+        .ms-scaled-n3xl {
+          margin-left: calc(-1 * var(--bs-space-scaled-3xl)) !important; // stylelint-disable-line function-disallowed-list
         }
 
         .p-none {
@@ -13049,8 +12973,8 @@ $utilities: ();
           padding: var(--bs-space-scaled-2xl) !important;
         }
 
-        .p-scaled-spacious {
-          padding: var(--bs-space-scaled-spacious) !important;
+        .p-scaled-3xl {
+          padding: var(--bs-space-scaled-3xl) !important;
         }
 
         .px-none {
@@ -13158,9 +13082,9 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .px-scaled-spacious {
-          padding-right: var(--bs-space-scaled-spacious) !important;
-          padding-left: var(--bs-space-scaled-spacious) !important;
+        .px-scaled-3xl {
+          padding-right: var(--bs-space-scaled-3xl) !important;
+          padding-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .py-none {
@@ -13268,9 +13192,9 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .py-scaled-spacious {
-          padding-top: var(--bs-space-scaled-spacious) !important;
-          padding-bottom: var(--bs-space-scaled-spacious) !important;
+        .py-scaled-3xl {
+          padding-top: var(--bs-space-scaled-3xl) !important;
+          padding-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .pt-none {
@@ -13357,8 +13281,8 @@ $utilities: ();
           padding-top: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pt-scaled-spacious {
-          padding-top: var(--bs-space-scaled-spacious) !important;
+        .pt-scaled-3xl {
+          padding-top: var(--bs-space-scaled-3xl) !important;
         }
 
         .pe-none {
@@ -13445,8 +13369,8 @@ $utilities: ();
           padding-right: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pe-scaled-spacious {
-          padding-right: var(--bs-space-scaled-spacious) !important;
+        .pe-scaled-3xl {
+          padding-right: var(--bs-space-scaled-3xl) !important;
         }
 
         .pb-none {
@@ -13533,8 +13457,8 @@ $utilities: ();
           padding-bottom: var(--bs-space-scaled-2xl) !important;
         }
 
-        .pb-scaled-spacious {
-          padding-bottom: var(--bs-space-scaled-spacious) !important;
+        .pb-scaled-3xl {
+          padding-bottom: var(--bs-space-scaled-3xl) !important;
         }
 
         .ps-none {
@@ -13621,8 +13545,8 @@ $utilities: ();
           padding-left: var(--bs-space-scaled-2xl) !important;
         }
 
-        .ps-scaled-spacious {
-          padding-left: var(--bs-space-scaled-spacious) !important;
+        .ps-scaled-3xl {
+          padding-left: var(--bs-space-scaled-3xl) !important;
         }
 
         .gap-none {
@@ -13709,8 +13633,8 @@ $utilities: ();
           gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .gap-scaled-spacious {
-          gap: var(--bs-space-scaled-spacious) !important;
+        .gap-scaled-3xl {
+          gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .row-gap-none {
@@ -13797,8 +13721,8 @@ $utilities: ();
           row-gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .row-gap-scaled-spacious {
-          row-gap: var(--bs-space-scaled-spacious) !important;
+        .row-gap-scaled-3xl {
+          row-gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .column-gap-none {
@@ -13885,8 +13809,8 @@ $utilities: ();
           column-gap: var(--bs-space-scaled-2xl) !important;
         }
 
-        .column-gap-scaled-spacious {
-          column-gap: var(--bs-space-scaled-spacious) !important;
+        .column-gap-scaled-3xl {
+          column-gap: var(--bs-space-scaled-3xl) !important;
         }
 
         .font-monospace {

@@ -3,9 +3,9 @@
 $ouds-border-radiuses: (
   null:       $ouds-border-radius-default,
   "none":     $ouds-border-radius-none,
-  "short":    $ouds-border-radius-small,
+  "small":    $ouds-border-radius-small,
   "medium":   $ouds-border-radius-medium,
-  "tall":     $ouds-border-radius-large,
+  "large":     $ouds-border-radius-large,
   "pill":     px-to-rem($ouds-border-radius-pill),
   "circle":   50%
 ) !default;
