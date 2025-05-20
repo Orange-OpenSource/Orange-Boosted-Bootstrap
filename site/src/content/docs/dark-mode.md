@@ -562,12 +562,12 @@ robots: noindex,follow
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -613,12 +613,12 @@ robots: noindex,follow
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -664,12 +664,12 @@ robots: noindex,follow
   <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
   <button type="button" class="btn btn-outline-dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
-  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button">Large button</button></div>
@@ -715,12 +715,12 @@ robots: noindex,follow
   <button type="button" class="btn btn-outline-light" disabled data-bs-theme="dark">Outline light</button>
   <button type="button" class="btn btn-outline-dark" data-bs-theme="dark">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="dark">Outline dark</button>
-  <button type="button" class="btn btn-primary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
@@ -766,12 +766,12 @@ robots: noindex,follow
   <button type="button" class="btn btn-outline-light" disabled data-bs-theme="light">Outline light</button>
   <button type="button" class="btn btn-outline-dark" data-bs-theme="light">Outline dark</button>
   <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="light">Outline dark</button>
-  <button type="button" class="btn btn-primary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-primary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
-  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-primary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" class="me-1"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg>Primary</button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
+  <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <div class="btn-group"><button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
@@ -1347,19 +1347,19 @@ robots: noindex,follow
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1370,19 +1370,19 @@ robots: noindex,follow
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1393,19 +1393,19 @@ robots: noindex,follow
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1416,19 +1416,19 @@ robots: noindex,follow
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1439,19 +1439,19 @@ robots: noindex,follow
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -2174,10 +2174,10 @@ robots: noindex,follow
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2307,10 +2307,10 @@ robots: noindex,follow
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2440,10 +2440,10 @@ robots: noindex,follow
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2573,10 +2573,10 @@ robots: noindex,follow
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -2706,10 +2706,10 @@ robots: noindex,follow
     <div class="border-bottom border-1 border-dark"></div>
     <div class="container-xxl footer-service">
       <ul class="navbar-nav gap-3 gap-md-4">
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
-        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" aria-hidden="true"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
       </ul>
     </div>
     <div class="border-bottom border-1 border-dark"></div>
@@ -3170,7 +3170,7 @@ robots: noindex,follow
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
         <h1 class="title">Ii</h1>
       </div>
@@ -3211,7 +3211,7 @@ robots: noindex,follow
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
         <h1 class="title">Ii</h1>
       </div>
@@ -3252,7 +3252,7 @@ robots: noindex,follow
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
         <h1 class="title">Ii</h1>
       </div>
@@ -3293,7 +3293,7 @@ robots: noindex,follow
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
         <h1 class="title">Ii</h1>
       </div>
@@ -3334,7 +3334,7 @@ robots: noindex,follow
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
         <h1 class="title">Ii</h1>
       </div>
@@ -3914,7 +3914,7 @@ robots: noindex,follow
       <div class="container-xxl">
         <div class="navbar-brand me-auto">
           <a class="stretched-link" href="#">
-            <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
+            <img src="/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
           </a>
           <h1 class="title">Test</h1>
         </div>
@@ -3926,7 +3926,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#search"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
               </a>
@@ -3934,7 +3934,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
@@ -3947,7 +3947,7 @@ robots: noindex,follow
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/[[config:docs_version]]/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4002,7 +4002,7 @@ robots: noindex,follow
       <div class="container-xxl">
         <div class="navbar-brand me-auto">
           <a class="stretched-link" href="#">
-            <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
+            <img src="/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
           </a>
           <h1 class="title">Test</h1>
         </div>
@@ -4014,7 +4014,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#search"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
               </a>
@@ -4022,7 +4022,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
@@ -4035,7 +4035,7 @@ robots: noindex,follow
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/[[config:docs_version]]/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4090,7 +4090,7 @@ robots: noindex,follow
       <div class="container-xxl">
         <div class="navbar-brand me-auto">
           <a class="stretched-link" href="#">
-            <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
+            <img src="/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
           </a>
           <h1 class="title">Test</h1>
         </div>
@@ -4102,7 +4102,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#search"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
               </a>
@@ -4110,7 +4110,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
@@ -4123,7 +4123,7 @@ robots: noindex,follow
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/[[config:docs_version]]/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4178,7 +4178,7 @@ robots: noindex,follow
       <div class="container-xxl">
         <div class="navbar-brand me-auto">
           <a class="stretched-link" href="#">
-            <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
+            <img src="/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
           </a>
           <h1 class="title">Test</h1>
         </div>
@@ -4190,7 +4190,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#search"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
               </a>
@@ -4198,7 +4198,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
@@ -4211,7 +4211,7 @@ robots: noindex,follow
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/[[config:docs_version]]/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -4266,7 +4266,7 @@ robots: noindex,follow
       <div class="container-xxl">
         <div class="navbar-brand me-auto">
           <a class="stretched-link" href="#">
-            <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
+            <img src="/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50" />
           </a>
           <h1 class="title">Test</h1>
         </div>
@@ -4278,7 +4278,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#search"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Search</span>
               </a>
@@ -4286,7 +4286,7 @@ robots: noindex,follow
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                  <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"></use>
+                  <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
@@ -4299,7 +4299,7 @@ robots: noindex,follow
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
-                <img src="/docs/[[config:docs_version]]/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
+                <img src="/docs/5.3/assets/img/navbar-contact.png" alt="" loading="lazy" width="25" height="25" />
                 <span class="visually-hidden">My account</span>
               </a>
             </li>
@@ -5300,7 +5300,7 @@ robots: noindex,follow
   </div>
   <div class="sticker sticker-sm">
     <svg width="35" height="35" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
       <span class="sticker-fs-m">Free delivery</span>
@@ -5321,7 +5321,7 @@ robots: noindex,follow
   </div>
   <div class="sticker sticker-sm">
     <svg width="35" height="35" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
       <span class="sticker-fs-m">Free delivery</span>
@@ -5342,7 +5342,7 @@ robots: noindex,follow
   </div>
   <div class="sticker sticker-sm">
     <svg width="35" height="35" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
       <span class="sticker-fs-m">Free delivery</span>
@@ -5363,7 +5363,7 @@ robots: noindex,follow
   </div>
   <div class="sticker sticker-sm" data-bs-theme="dark">
     <svg width="35" height="35" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
       <span class="sticker-fs-m">Free delivery</span>
@@ -5384,7 +5384,7 @@ robots: noindex,follow
   </div>
   <div class="sticker sticker-sm" data-bs-theme="light">
     <svg width="35" height="35" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick-confirmation"/>
+      <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#tick-confirmation"/>
     </svg>
     <p class="mb-2">
       <span class="sticker-fs-m">Free delivery</span>
@@ -5420,14 +5420,14 @@ robots: noindex,follow
     </li>
     <li><span class="tag tag-sm" id="labelTag21">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>Dismissible tag
       <button class="close" aria-labelledby="labelTag21"><span class="visually-hidden">Close</span></button>
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag51" aria-disabled="true">
         <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
-          <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+          <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>Input
         <button class="close" aria-labelledby="labelTag51" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
@@ -5465,14 +5465,14 @@ robots: noindex,follow
     </li>
     <li><span class="tag tag-sm" id="labelTag22">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>Dismissible tag
       <button class="close" aria-labelledby="labelTag22"><span class="visually-hidden">Close</span></button>
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag52" aria-disabled="true">
         <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
-          <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+          <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>Input
         <button class="close" aria-labelledby="labelTag52" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
@@ -5510,14 +5510,14 @@ robots: noindex,follow
     </li>
     <li><span class="tag tag-sm" id="labelTag23">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>Dismissible tag
       <button class="close" aria-labelledby="labelTag23"><span class="visually-hidden">Close</span></button>
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag53" aria-disabled="true">
         <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
-          <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+          <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>Input
         <button class="close" aria-labelledby="labelTag53" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
@@ -5555,14 +5555,14 @@ robots: noindex,follow
     </li>
     <li><span class="tag tag-sm" id="labelTag24" data-bs-theme="dark">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>Dismissible tag
       <button class="close" aria-labelledby="labelTag24"><span class="visually-hidden">Close</span></button>
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag54" aria-disabled="true" data-bs-theme="dark">
         <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
-          <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+          <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>Input
         <button class="close" aria-labelledby="labelTag54" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
@@ -5600,14 +5600,14 @@ robots: noindex,follow
     </li>
     <li><span class="tag tag-sm" id="labelTag25" data-bs-theme="light">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
       </svg>Dismissible tag
       <button class="close" aria-labelledby="labelTag25"><span class="visually-hidden">Close</span></button>
     </span></li>
     <li>
       <p><span class="tag disabled" id="labelTag55" aria-disabled="true" data-bs-theme="light">
         <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true">
-          <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#buy"/>
+          <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
         </svg>Input
         <button class="close" aria-labelledby="labelTag55" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
@@ -8239,21 +8239,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked />
     <label class="btn btn-icon btn-toggle" for="option5">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option6">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option7">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8262,21 +8262,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked />
     <label class="btn btn-icon btn-no-outline" for="option8">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option9">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option10">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8346,21 +8346,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="icons1" id="option51" autocomplete="off" checked />
     <label class="btn btn-icon btn-toggle" for="option51">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option61" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option61">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons1" id="option71" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option71">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8369,21 +8369,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option81" autocomplete="off" checked />
     <label class="btn btn-icon btn-no-outline" for="option81">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option91" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option91">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline1" id="option01" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option01">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8453,21 +8453,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="icons2" id="option52" autocomplete="off" checked />
     <label class="btn btn-icon btn-toggle" for="option52">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option62" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option62">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons2" id="option72" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option72">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8476,21 +8476,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option82" autocomplete="off" checked />
     <label class="btn btn-icon btn-no-outline" for="option82">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option92" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option92">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline2" id="option02" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option02">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8560,21 +8560,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="icons3" id="option53" autocomplete="off" checked />
     <label class="btn btn-icon btn-toggle" for="option53" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option63" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option63" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons3" id="option73" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option73" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8583,21 +8583,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option83" autocomplete="off" checked />
     <label class="btn btn-icon btn-no-outline" for="option83" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option93" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option93" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline3" id="option03" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option03" data-bs-theme="dark">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8667,21 +8667,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="icons4" id="option54" autocomplete="off" checked />
     <label class="btn btn-icon btn-toggle" for="option54" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option64" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option64" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="icons4" id="option74" autocomplete="off" />
     <label class="btn btn-icon btn-toggle" for="option74" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
@@ -8690,21 +8690,21 @@ robots: noindex,follow
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option84" autocomplete="off" checked />
     <label class="btn btn-icon btn-no-outline" for="option84" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-day"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-day"/>
       </svg>
       <span class="visually-hidden">Day</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option94" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option94" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-week"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-week"/>
       </svg>
       <span class="visually-hidden">Week</span>
     </label>
     <input type="radio" class="btn-check" name="iconsNoOutline4" id="option04" autocomplete="off" />
     <label class="btn btn-icon btn-no-outline" for="option04" data-bs-theme="light">
       <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#calendar-month"/>
+        <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#calendar-month"/>
       </svg>
       <span class="visually-hidden">Month</span>
     </label>
