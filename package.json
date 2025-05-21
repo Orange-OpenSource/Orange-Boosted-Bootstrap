@@ -74,7 +74,7 @@
     "docs-compile": "npm run docs-build",
     "docs-vnu": "node build/vnu-jar.mjs",
     "docs-lint": "npm-run-all docs-prettier-check docs-vnu",
-    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap-0.xml --sitemap-find https://boosted.orange.com --sitemap-replace http://localhost:9001",
+    "docs-pa11y": "pa11y-ci --config build/.pa11yci.json --sitemap http://localhost:9001/sitemap-0.xml -f https://boosted.orange.com -r http://localhost:9001",
     "docs-accessibility": "npm-run-all --parallel --race docs-serve-only docs-pa11y",
     "docs-prettier-check": "prettier --config site/.prettierrc.json -c --cache site",
     "docs-prettier-format": "prettier --config site/.prettierrc.json --write --cache site",
