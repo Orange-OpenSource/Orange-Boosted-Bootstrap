@@ -33,7 +33,7 @@ export function validateVersionedDocsPaths(distUrl: URL) {
 
   for (const docsPath of generatedVersionedDocsPaths) {
     const sanitizedDocsPath = sanitizeVersionedDocsPathForValidation(docsPath)
-    const absoluteDocsPath = fileURLToPath(new URL(path.join( './docs', docs_version, sanitizedDocsPath), distUrl)); // TODO: Backport it to Bootstrap
+    const absoluteDocsPath = fileURLToPath(new URL(path.join( './docs', docs_version, sanitizedDocsPath), distUrl));
 
     const docsPathExists = fs.existsSync(absoluteDocsPath)
 

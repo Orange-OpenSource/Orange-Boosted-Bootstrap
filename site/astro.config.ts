@@ -19,7 +19,7 @@ const site = isDev
 // https://astro.build/config
 export default defineConfig({
   build: {
-    assets: `docs/${getConfig().docs_version}/assets` // TODO: Understand why we have this and what it refers to
+    assets: `docs/${getConfig().docs_version}/assets`
   },
   integrations: [boosted()],
   markdown: {
