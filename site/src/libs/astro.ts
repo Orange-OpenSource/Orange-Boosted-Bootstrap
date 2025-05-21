@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import type { AstroIntegration } from 'astro'
 import autoImport from 'astro-auto-import'
-import type { Element } from 'hast'
+import type { Element, Text } from 'hast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { getConfig } from './config'
 import { rehypeBsTable } from './rehype'
@@ -58,7 +58,14 @@ export function boosted(): AstroIntegration[] {
                   rehypeAutolinkHeadings,
                   {
                     behavior: 'append',
-                    content: [{ type: 'text', value: ' ' }],
+                    content: (element: Element) => ([{ 
+                      type: 'element',
+                      tagName: 'span',
+                      children: [{
+                        type: 'text', value: `Link to this section: ${(element.children[0] as Text).value}`
+                      }],
+                      properties: { class: 'visually-hidden' } 
+                    }]),
                     properties: { class: 'anchor-link' },
                     test: (element: Element) => element.tagName.match(headingsRangeRegex)
                   }
