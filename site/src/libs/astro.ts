@@ -31,12 +31,12 @@ const staticFileAliases = {
 }
 
 // A list of pages that will be excluded from the sitemap.
-const sitemapExcludes = ['/404/', '/docs/', `/docs/${getConfig().docs_version}/`, `/docs/${getConfig().docs_version}/dark-mode`]
+const sitemapExcludes = ['/404', '/docs', `/docs/${getConfig().docs_version}`, `/docs/${getConfig().docs_version}/dark-mode`, `/dark-mode`]
 
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
 
 export function boosted(): AstroIntegration[] {
-  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}`)
+  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`)
 
   configurePrism()
 
