@@ -18,8 +18,10 @@ const { level = 'danger' } = Astro.props
     <p class="alert-heading mb-1">
       {
         level === 'danger' ? (
-          <span>Incompatibility with Orange Design System.</span>
-          <a href={getVersionedDocsPath('getting-started/introduction')}>More information</a>
+          <>
+            <span>Incompatibility with Orange Design System.</span>
+            <a href={getVersionedDocsPath('getting-started/introduction')}>More information</a>
+          </>
         ) : (
           <span>Orange Design System recommendation.</span>
         )

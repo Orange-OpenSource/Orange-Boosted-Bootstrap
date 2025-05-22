@@ -32,10 +32,10 @@ const staticFileAliases = {
 
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
-  '/404', 
-  '/docs', 
-  `/docs/${getConfig().docs_version}`,  
-  `/docs/dark-mode`, 
+  '/404',
+  '/docs',
+  `/docs/${getConfig().docs_version}`,
+  `/docs/dark-mode`,
   `/docs/${getConfig().docs_version}/dark-mode`,
   `/docs/${getConfig().docs_version}/getting-started`,
   `/docs/${getConfig().docs_version}/customize`,
@@ -45,7 +45,7 @@ const sitemapExcludes = [
   `/docs/${getConfig().docs_version}/helpers`,
   `/docs/${getConfig().docs_version}/utilities`,
   `/docs/${getConfig().docs_version}/extend`,
-  `/docs/${getConfig().docs_version}/about`,
+  `/docs/${getConfig().docs_version}/about`
 ]
 
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
@@ -73,14 +73,19 @@ export function boosted(): AstroIntegration[] {
                   rehypeAutolinkHeadings,
                   {
                     behavior: 'append',
-                    content: (element: Element) => ([{ 
-                      type: 'element',
-                      tagName: 'span',
-                      children: [{
-                        type: 'text', value: `Link to this section: ${(element.children[0] as Text).value}`
-                      }],
-                      properties: { class: 'visually-hidden' } 
-                    }]),
+                    content: (element: Element) => [
+                      {
+                        type: 'element',
+                        tagName: 'span',
+                        children: [
+                          {
+                            type: 'text',
+                            value: `Link to this section: ${(element.children[0] as Text).value}`
+                          }
+                        ],
+                        properties: { class: 'visually-hidden' }
+                      }
+                    ],
                     properties: { class: 'anchor-link' },
                     test: (element: Element) => element.tagName.match(headingsRangeRegex)
                   }
@@ -169,7 +174,10 @@ function copyTarteauCitron() {
   fs.mkdirSync(destination, { recursive: true })
   fs.copyFileSync(path.join(source, 'tarteaucitron.min.js'), path.join(destination, 'tarteaucitron.min.js'))
   fs.mkdirSync(path.join(destination, 'lang'), { recursive: true })
-  fs.copyFileSync(path.join(source, 'lang/tarteaucitron.en.min.js'), path.join(destination, 'lang/tarteaucitron.en.min.js'))
+  fs.copyFileSync(
+    path.join(source, 'lang/tarteaucitron.en.min.js'),
+    path.join(destination, 'lang/tarteaucitron.en.min.js')
+  )
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of Boosted to make it available from
@@ -222,7 +230,7 @@ function replacePathVersionPlaceholder(name: string) {
 }
 
 function sitemapFilter(page: string, excludedUrls: string[]) {
-  if(page === `${getConfig().baseURL}/`) {
+  if (page === `${getConfig().baseURL}/`) {
     return true
   }
 

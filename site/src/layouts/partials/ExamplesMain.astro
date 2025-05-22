@@ -14,19 +14,26 @@ import { getSlug } from '@libs/utils'
         {category === 'RTL' && (
           <div class="bd-callout bd-callout-warning small">
             <p>
-              <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?
+              <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an
+              improvement to suggest?
             </p>
-            <p><a href={`${getConfig().repo}/issues/new/choose`}>Please open an issue.</a></p>
+            <p>
+              <a href={`${getConfig().repo}/issues/new/choose`}>Please open an issue.</a>
+            </p>
           </div>
         )}
         {category === 'Starters' && (
           <div class="bd-callout bd-callout-warning mb-4">
             <p>
-              <strong>To get working Boosted examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>boosted</code> in some files.
+              <strong>To get working Boosted examples based on the Bootstrap ones</strong>, you need to replace all{' '}
+              <code>bootstrap</code> occurrences with <code>boosted</code> in some files.
             </p>
             <p>
-              You may need to tweak a bit Sass files and add a <code>src/fonts</code> directory to import font family properly in your project.
-              "Import Boosted" sections in our <a href={getVersionedDocsPath('getting-started/parcel')}>Parcel</a>, <a href={getVersionedDocsPath('getting-started/vite')}>Vite</a> or <a href={getVersionedDocsPath('getting-started/webpack')}>Webpack</a> guides could help you.
+              You may need to tweak a bit Sass files and add a <code>src/fonts</code> directory to import font family
+              properly in your project. "Import Boosted" sections in our{' '}
+              <a href={getVersionedDocsPath('getting-started/parcel')}>Parcel</a>,{' '}
+              <a href={getVersionedDocsPath('getting-started/vite')}>Vite</a> or{' '}
+              <a href={getVersionedDocsPath('getting-started/webpack')}>Webpack</a> guides could help you.
             </p>
           </div>
         )}

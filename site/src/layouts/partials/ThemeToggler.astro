@@ -20,7 +20,10 @@ const { layout } = Astro.props
   <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
   <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-2'}` id="bd-theme-text">Toggle mode</span>
 </button>
-<ul class=`dropdown-menu dropdown-menu-end${layout === 'examples' ? ' shadow' : ' mb-2'}` aria-labelledby="bd-theme-text">
+<ul
+  class=`dropdown-menu dropdown-menu-end${layout === 'examples' ? ' shadow' : ' mb-2'}`
+  aria-labelledby="bd-theme-text"
+>
   <li>
     <button
       type="button"

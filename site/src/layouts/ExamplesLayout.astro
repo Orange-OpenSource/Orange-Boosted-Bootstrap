@@ -11,7 +11,16 @@ import Icons from '@layouts/partials/Icons.astro'
 
 type Props = ExampleFrontmatter
 
-const { body_class, direction, extra_css, extra_js, html_class, include_js, title = 'Example', theme_selector = true } = Astro.props
+const {
+  body_class,
+  direction,
+  extra_css,
+  extra_js,
+  html_class,
+  include_js,
+  title = 'Example',
+  theme_selector = true
+} = Astro.props
 
 const pageTitle = `${title} · ${getConfig().title} v${getConfig().docs_version}`
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
@@ -54,10 +63,10 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
       .b-example-divider {
         width: 100%;
         height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
         border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
       }
 
       .b-example-vr {
@@ -67,7 +76,7 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
       }
 
       .bi {
-        vertical-align: -.125em;
+        vertical-align: -0.125em;
         fill: currentColor;
       }
 
@@ -112,11 +121,13 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
   <body class:list={body_class}>
     <Icons />
 
-    {theme_selector && (
-      <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <ThemeToggler layout="examples" />
-      </div>
-    )}
+    {
+      theme_selector && (
+        <div class="dropdown dropup position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+          <ThemeToggler layout="examples" />
+        </div>
+      )
+    }
 
     <slot />
 

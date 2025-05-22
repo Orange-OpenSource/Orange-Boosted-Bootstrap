@@ -131,11 +131,7 @@ if (filePath && fileMatch && codeToDisplay) {
 </script>
 
 <div class:list={['bd-code-snippet', containerClass]}>
-  {
-    Astro.slots.has('bar') ? (
-      <slot name="bar" />
-    ): (<></>)
-  }
+  {Astro.slots.has('bar') ? <slot name="bar" /> : null}
   <div class="highlight">
     {
       codeToDisplay && lang ? (

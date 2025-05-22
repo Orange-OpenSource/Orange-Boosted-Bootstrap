@@ -41,7 +41,7 @@ const dataDefinitions = {
       description: z.string(),
       image: z.string(),
       link: z.string().url(),
-      name: z.string(),
+      name: z.string()
     })
     .array(),
   'docs-versions': z
@@ -90,25 +90,26 @@ const dataDefinitions = {
         .object({
           name: z.string(),
           hex: zHexColor,
-          darkHex: zHexColor.optional(),
+          darkHex: zHexColor.optional()
         })
         .array()
         .optional(),
       subcategories: z
-       .object({
-         subcategory: z.string(),
-         name: z.string(),
-         colors: z
-           .object({
-             name: z.string(),
-             variable: z.string(),
-             hex: zHexColor,
-           })
-          .array()
-      })
-      .array()
-      .optional()
-    }).array(),
+        .object({
+          subcategory: z.string(),
+          name: z.string(),
+          colors: z
+            .object({
+              name: z.string(),
+              variable: z.string(),
+              hex: zHexColor
+            })
+            .array()
+        })
+        .array()
+        .optional()
+    })
+    .array(),
   plugins: z
     .object({
       description: z.string(),
@@ -135,7 +136,7 @@ const dataDefinitions = {
       hex: zHexColor,
       dark_hex: zHexColor,
       contrast_color: z.union([z.literal('dark'), z.literal('white')]).optional(),
-      description: z.string(),
+      description: z.string()
     })
     .array()
     .transform((val) => {

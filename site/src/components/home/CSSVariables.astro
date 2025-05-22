@@ -10,7 +10,11 @@ import Code from '@components/shortcodes/Code.astro'
     </div>
     <h2 class="mb-3 fw-semibold lh-sm">Build and extend in real-time with CSS&nbsp;variables</h2>
     <p class="lead fw-normal">
-      Boosted 5 is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
+      Boosted 5 is evolving with each release to better utilize CSS variables for global theme styles, individual
+      components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code
+        >:root</code
+      > level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily
+      be modified.
     </p>
     <p class="d-flex flex-column lead fw-normal mb-0">
       <a href={getVersionedDocsPath('customize/css-variables')} class="icon-link icon-link-hover fw-semibold mb-3">
@@ -22,7 +26,12 @@ import Code from '@components/shortcodes/Code.astro'
   <div class="row gx-lg-5">
     <div class="col-lg-6 mb-3">
       <h3 class="fw-semibold">Using CSS variables</h3>
-      <p>Use any of our <a href={getVersionedDocsPath('customize/css-variables/#root-variables')}>global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
+      <p>
+        Use any of our <a href={getVersionedDocsPath('customize/css-variables/#root-variables')}
+          >global <code>:root</code> variables</a
+        > to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children
+        elements.
+      </p>
       <Code
         code={`.component {
   color: var(--bs-gray-800);
@@ -39,7 +48,10 @@ import Code from '@components/shortcodes/Code.astro'
     </div>
     <div class="col-lg-6 mb-3">
       <h3 class="fw-semibold">Customizing via CSS variables</h3>
-      <p>Override global, component, or utility class variables to customize Boosted just how you like. No need to redeclare each rule, just a new variable value.</p>
+      <p>
+        Override global, component, or utility class variables to customize Boosted just how you like. No need to
+        redeclare each rule, just a new variable value.
+      </p>
       <Code
         code={`body {
   --bs-body-font-family: var(--bs-font-monospace);

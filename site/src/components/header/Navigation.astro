@@ -19,7 +19,11 @@ const { addedIn, layout, title } = Astro.props
 ---
 
 <header class="sticky-top bd-header">
-  <nav class="navbar navbar-expand supra d-none" data-bs-theme="dark" aria-label="Supra-navigation - New release banner">
+  <nav
+    class="navbar navbar-expand supra d-none"
+    data-bs-theme="dark"
+    aria-label="Supra-navigation - New release banner"
+  >
     <div class="container-xxl d-flex justify-content-center">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -32,31 +36,66 @@ const { addedIn, layout, title } = Astro.props
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="/">
-          <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img
+            src={getVersionedDocsPath('assets/brand/orange-logo.svg')}
+            width="50"
+            height="50"
+            alt="Boosted - Back to Home"
+            loading="lazy"
+          />
         </a>
       </div>
 
       <!--Boosted mod: no sidebar toggle which is in the subnav in Boosted-->
 
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".bd-navbar" aria-controls="bd-navbar1 bd-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target=".bd-navbar"
+        aria-controls="bd-navbar1 bd-navbar2"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-0 border-0">
         <ul class="navbar-nav">
-          <LinkItem active={Astro.url.pathname === '/'} href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">
+          <LinkItem
+            active={Astro.url.pathname === '/'}
+            href="/"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
+          >
             Home
           </LinkItem>
-          <LinkItem active={layout === 'docs'} href={getVersionedDocsPath('getting-started/introduction')} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">
+          <LinkItem
+            active={layout === 'docs'}
+            href={getVersionedDocsPath('getting-started/introduction')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
+          >
             Docs
           </LinkItem>
-          <LinkItem active={title === 'Examples'} href={getVersionedDocsPath('examples')} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">
+          <LinkItem
+            active={title === 'Examples'}
+            href={getVersionedDocsPath('examples')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
+          >
             Examples
           </LinkItem>
-          <LinkItem active={title === 'Orange Design System for web'} href={getVersionedDocsPath('guidelines')} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">
+          <LinkItem
+            active={title === 'Orange Design System for web'}
+            href={getVersionedDocsPath('guidelines')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});"
+          >
             Design guidelines
           </LinkItem>
-          <LinkItem href={getConfig().icons} target="_blank" rel="noopener" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'icons'});">
+          <LinkItem
+            href={getConfig().icons}
+            target="_blank"
+            rel="noopener"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'icons'});"
+          >
             Solaris icons
           </LinkItem>
         </ul>
@@ -68,7 +107,8 @@ const { addedIn, layout, title } = Astro.props
             <span class="visually-hidden">GitHub</span>
           </LinkItem>
           <li class="nav-item">
-            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version={getConfig().docs_version}></div>
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version={getConfig().docs_version}>
+            </div>
           </li>
 
           <Versions layout={layout} addedIn={addedIn} />
@@ -84,4 +124,3 @@ const { addedIn, layout, title } = Astro.props
 
   {layout === 'docs' && <SubNav />}
 </header>
-

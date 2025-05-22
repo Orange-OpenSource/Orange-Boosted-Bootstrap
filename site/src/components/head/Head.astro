@@ -45,10 +45,22 @@ const pageTitle = isHome
 {robots && <meta name="robots" content={robots} />}
 
 <!-- Boosted mod -->
-<link rel="preload" href={getVersionedDocsPath('dist/fonts/HelvNeue55_W1G.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href={getVersionedDocsPath('dist/fonts/HelvNeue75_W1G.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-<link rel="preload" href={getVersionedDocsPath('assets/img/boosted-sprite.svg')} as="image" type="image/svg+xml">
+<link
+  rel="preload"
+  href={getVersionedDocsPath('dist/fonts/HelvNeue55_W1G.woff2')}
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href={getVersionedDocsPath('dist/fonts/HelvNeue75_W1G.woff2')}
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+<link rel="preload" href={getVersionedDocsPath('assets/img/boosted-sprite.svg')} as="image" type="image/svg+xml" />
 <!-- end mod -->
 
 <script is:inline src={getVersionedDocsPath('assets/js/color-modes.js')}></script>

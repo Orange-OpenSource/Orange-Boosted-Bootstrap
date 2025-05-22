@@ -1,7 +1,7 @@
 ---
 title: Dark mode helper
 description: Dark mode page helping to debug dark mode
-aliases: "/dark-mode/"
+aliases: '/dark-mode/'
 toc: true
 robots: noindex,follow
 ---
@@ -3500,7 +3500,6 @@ robots: noindex,follow
     </li>
   </ul>
 
-
   <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-2">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" aria-current="page" id="nav-tab1-2" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-2" role="tab" aria-controls="tab1-content-2" aria-selected="true">Tab 1</a>
@@ -3572,7 +3571,6 @@ robots: noindex,follow
       </ul>
     </li>
   </ul>
-
 
   <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-3">
     <li class="nav-item" role="presentation">
@@ -3646,7 +3644,6 @@ robots: noindex,follow
     </li>
   </ul>
 
-
   <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-4" data-bs-theme="dark" style="--bs-nav-tabs-link-active-bg: #282d55;">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" aria-current="page" id="nav-tab1-4" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-4" role="tab" aria-controls="tab1-content-4" aria-selected="true">Tab 1</a>
@@ -3718,7 +3715,6 @@ robots: noindex,follow
       </ul>
     </li>
   </ul>
-
 
   <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-5" data-bs-theme="light" style="--bs-nav-tabs-link-active-bg: #b5e8f7;">
     <li class="nav-item" role="presentation">

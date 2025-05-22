@@ -6,7 +6,7 @@ interface Props {
    * The level of the title, from 2 to 5.
    * @default 2
    */
-  title_level?: number,
+  title_level?: number
 
   /**
    * The component name to display.
@@ -19,7 +19,7 @@ const { title_level = 2, component_name } = Astro.props
 const title = `<h${title_level}>Enable tooltip on close button</h${title_level}>`
 ---
 
-<Fragment set:html={title}/>
+<Fragment set:html={title} />
 
 <p>
   Tooltips on close buttons&#x20;of&#x20;{component_name}&#x20;have to be initialized.

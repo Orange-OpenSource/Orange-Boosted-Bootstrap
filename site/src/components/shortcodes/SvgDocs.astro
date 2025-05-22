@@ -10,7 +10,7 @@ interface Props {
    * File path to the SVG file without file extension.
    * @default "orange-logo"
    */
-  file?: string,
+  file?: string
 
   /**
    * Specify whether the SVG file is downloadable.
@@ -19,7 +19,7 @@ interface Props {
   downloadable?: boolean
 }
 
-const { file = "orange-logo", downloadable = true } = Astro.props
+const { file = 'orange-logo', downloadable = true } = Astro.props
 
 const filePath = `site/static/docs/[version]/assets/brand/${file}`
 const svgFormattedPath = `${filePath}-formatted.svg`
@@ -41,7 +41,20 @@ const size = fs.statSync(svgPath).size
 {
   downloadable && (
     <p class="text-end">
-      <a class="btn btn-primary" href={`data:image/svg+xml,${svg.replaceAll('#', '%23').replaceAll('<', '%3c').replaceAll('>', '%3e').replaceAll('(', '%28').replaceAll(')', '%29').replaceAll(' ', '%20').replaceAll('"', '\'').replaceAll('{', '%7B').replaceAll('}', '%7D')}`} download={`${file}.svg`}>
+      <a
+        class="btn btn-primary"
+        href={`data:image/svg+xml,${svg
+          .replaceAll('#', '%23')
+          .replaceAll('<', '%3c')
+          .replaceAll('>', '%3e')
+          .replaceAll('(', '%28')
+          .replaceAll(')', '%29')
+          .replaceAll(' ', '%20')
+          .replaceAll('"', "'")
+          .replaceAll('{', '%7B')
+          .replaceAll('}', '%7D')}`}
+        download={`${file}.svg`}
+      >
         Download<span class="small ms-1">(SVG, {size / 1000}ko)</span>
       </a>
     </p>

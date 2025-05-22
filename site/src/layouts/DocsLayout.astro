@@ -61,9 +61,9 @@ if (frontmatter.toc) {
               frontmatter.added &&
                 ((frontmatter.added.show_badge !== undefined && frontmatter.added.show_badge === true) ||
                   frontmatter.added.show_badge === undefined) && (
-                  <p class="mb-0 me-2"><span class="tag tag-sm">
-                    Added in v{frontmatter.added.version}
-                  </span></p>
+                  <p class="mb-0 me-2">
+                    <span class="tag tag-sm">Added in v{frontmatter.added.version}</span>
+                  </p>
                 )
             }
             <a

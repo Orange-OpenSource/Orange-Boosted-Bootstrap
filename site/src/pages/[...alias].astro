@@ -43,7 +43,6 @@ export async function getStaticPaths() {
     for (const alias of aliases) {
       staticPaths.push(getAliasStaticPath(alias, aliasedDocsPage.slug))
     }
-
   }
   return staticPaths.flat()
 }

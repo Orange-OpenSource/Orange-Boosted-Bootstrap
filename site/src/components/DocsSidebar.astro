@@ -23,7 +23,7 @@ const sidebar = getData('sidebar')
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
-                    <use xlink:href={`#${group.icon}`}></use>
+                    <use xlink:href={`#${group.icon}`} />
                   </svg>
                 )}
                 {group.title}
@@ -49,10 +49,10 @@ const sidebar = getData('sidebar')
                     <li>
                       <a
                         href={url}
-                        class:list={['bd-links-link', 'd-inline-block', {active}]}
+                        class:list={['bd-links-link', 'd-inline-block', { active }]}
                         aria-current={active ? 'page' : undefined}
                       >
-                        {page.title }
+                        {page.title}
                       </a>
                     </li>
                   )
@@ -64,16 +64,18 @@ const sidebar = getData('sidebar')
           const active = Astro.params.slug === groupSlug
 
           return (
-            <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
-            <li class="bd-links-span-all">
-              <a
-                href={`/docs/${getConfig().docs_version}/${groupSlug}/`}
-                class:list={['bd-links-link', 'd-inline-block', 'small', {active}]}
-                aria-current={active ? 'page' : undefined}
-              >
-                {group.title}
-              </a>
-            </li>
+            <>
+              <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top" />
+              <li class="bd-links-span-all">
+                <a
+                  href={`/docs/${getConfig().docs_version}/${groupSlug}/`}
+                  class:list={['bd-links-link', 'd-inline-block', 'small', { active }]}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  {group.title}
+                </a>
+              </li>
+            </>
           )
         }
       })
