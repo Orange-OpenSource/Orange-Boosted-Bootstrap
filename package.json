@@ -89,7 +89,7 @@
     "release-zip-examples": "node build/zip-examples.mjs",
     "dist": "npm-run-all --aggregate-output --parallel css js fonts",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
-    "netlify": "npm-run-all dist release-sri storybook-build-netlify astro-build",
+    "netlify": "npm-run-all dist release-sri storybook-build astro-build",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
