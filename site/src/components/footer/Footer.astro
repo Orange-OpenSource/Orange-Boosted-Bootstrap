@@ -38,7 +38,10 @@ const { title } = Astro.props
                   class:list={['nav-link', { active: Astro.url.pathname === '/' }]}
                   {...Astro.url.pathname === '/' && { 'aria-current': 'page' }}
                   href="/"
-                  aria-describedby="headingLinks">Home</a>
+                  aria-describedby="headingLinks"
+                >
+                  Home
+                </a>
               </li>
               <li>
                 <a
@@ -49,21 +52,30 @@ const { title } = Astro.props
                   {...!Astro.url.pathname.includes('getting-started') &&
                     layout === 'docs' && { 'aria-current': 'true' }}
                   href={getVersionedDocsPath('')}
-                  aria-describedby="headingLinks">Docs</a>
+                  aria-describedby="headingLinks"
+                >
+                  Docs
+                </a>
               </li>
               <li>
                 <a
                   class:list={['nav-link', { active: title === 'Examples' }]}
                   {...title === 'Examples' && { 'aria-current': 'page' }}
                   href={getVersionedDocsPath('examples')}
-                  aria-describedby="headingLinks">Examples</a>
+                  aria-describedby="headingLinks"
+                >
+                  Examples
+                </a>
               </li>
               <li>
                 <a
                   class:list={['nav-link', { active: Astro.props.title === 'Orange Design System for web' }]}
                   {...Astro.props.title === 'Orange Design System for web' && { 'aria-current': 'page' }}
                   href={getVersionedDocsPath('guidelines')}
-                  aria-describedby="headingLinks">Design guidelines</a>
+                  aria-describedby="headingLinks"
+                >
+                  Design guidelines
+                </a>
               </li>
               <li>
                 <a
@@ -71,7 +83,10 @@ const { title } = Astro.props
                   href={getConfig().icons}
                   aria-describedby="headingLinks"
                   target="_blank"
-                  rel="noopener">Solaris icons</a>
+                  rel="noopener"
+                >
+                  Solaris icons
+                </a>
               </li>
             </ul>
           </div>
@@ -109,7 +124,10 @@ const { title } = Astro.props
                     !Astro.url.pathname.includes('parcel') &&
                     !Astro.url.pathname.includes('vite') && { 'aria-current': 'true' }}
                   href={getVersionedDocsPath('getting-started')}
-                  aria-describedby="headingLinks">Getting started</a>
+                  aria-describedby="headingLinks"
+                >
+                  Getting started
+                </a>
               </li>
               <li>
                 <a
@@ -121,7 +139,10 @@ const { title } = Astro.props
                     'aria-current': 'page'
                   }}
                   href={getVersionedDocsPath('getting-started/webpack')}
-                  aria-describedby="headingLinks">Webpack</a>
+                  aria-describedby="headingLinks"
+                >
+                  Webpack
+                </a>
               </li>
               <li>
                 <a
@@ -133,7 +154,10 @@ const { title } = Astro.props
                     'aria-current': 'page'
                   }}
                   href={getVersionedDocsPath('getting-started/parcel')}
-                  aria-describedby="headingLinks">Parcel</a>
+                  aria-describedby="headingLinks"
+                >
+                  Parcel
+                </a>
               </li>
               <li>
                 <a
@@ -143,7 +167,10 @@ const { title } = Astro.props
                   ]}
                   {...Astro.url.pathname === getVersionedDocsPath('getting-started/vite') && { 'aria-current': 'page' }}
                   href={getVersionedDocsPath('getting-started/vite')}
-                  aria-describedby="headingLinks">Vite</a>
+                  aria-describedby="headingLinks"
+                >
+                  Vite
+                </a>
               </li>
             </ul>
           </div>
@@ -174,7 +201,10 @@ const { title } = Astro.props
                   href={getConfig().repo}
                   aria-describedby="headingProjects"
                   target="_blank"
-                  rel="noopener">Boosted 5</a>
+                  rel="noopener"
+                >
+                  Boosted 5
+                </a>
               </li>
               <li>
                 <a
@@ -182,7 +212,10 @@ const { title } = Astro.props
                   href={`${getConfig().repo}/tree/v4-dev`}
                   aria-describedby="headingProjects"
                   target="_blank"
-                  rel="noopener">Boosted 4</a>
+                  rel="noopener"
+                >
+                  Boosted 4
+                </a>
               </li>
               <li>
                 <a
@@ -190,7 +223,10 @@ const { title } = Astro.props
                   href={getConfig().bootstrap}
                   aria-describedby="headingProjects"
                   target="_blank"
-                  rel="noopener">Bootstrap</a>
+                  rel="noopener"
+                >
+                  Bootstrap
+                </a>
               </li>
               <li>
                 <a
@@ -198,7 +234,10 @@ const { title } = Astro.props
                   href="https://boosted.netlify.app"
                   aria-describedby="headingProjects"
                   target="_blank"
-                  rel="noopener">Pre-release on Netlify</a>
+                  rel="noopener"
+                >
+                  Pre-release on Netlify
+                </a>
               </li>
             </ul>
           </div>
@@ -229,7 +268,10 @@ const { title } = Astro.props
                   href={`${getConfig().repo}/issues`}
                   aria-describedby="headingCommunity"
                   target="_blank"
-                  rel="noopener">Issues</a>
+                  rel="noopener"
+                >
+                  Issues
+                </a>
               </li>
               <li>
                 <a
@@ -237,7 +279,10 @@ const { title } = Astro.props
                   href={`${getConfig().repo}/discussions`}
                   aria-describedby="headingCommunity"
                   target="_blank"
-                  rel="noopener">Discussions</a>
+                  rel="noopener"
+                >
+                  Discussions
+                </a>
               </li>
             </ul>
           </div>
@@ -293,7 +338,10 @@ const { title } = Astro.props
                   'aria-current': 'page'
                 }}
                 href={getVersionedDocsPath('accessibility-statement')}
-                aria-describedby="headingLinks">Accessibility: partially compliant</a>
+                aria-describedby="headingLinks"
+              >
+                Accessibility: partially compliant
+              </a>
             </li>
           </ul>
         </div>
