@@ -3,7 +3,7 @@
 $enable-bootstrap-compatibility: null !default;
 $utilities: ();
 
-@include describe("customize/ouds-web-bootstrap") {
+@include describe("customize/ouds-web-bootstrap-utilities") {
   @include it("generates only OUDS utilities") {
     @include assert() {
       @include output() {

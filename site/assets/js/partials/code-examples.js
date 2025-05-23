@@ -23,7 +23,7 @@ export default () => {
   const btnHtml = [
     '<div class="bd-code-snippet position-relative">',
     '  <div class="position-absolute top-0 end-0">',
-    '    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy code to clipboard">',
+    '    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" aria-label="Copy code to clipboard">',
     '      <svg aria-hidden="true"><use xlink:href="#copy"/></svg>',
     '    </button>',
     '  </div>',

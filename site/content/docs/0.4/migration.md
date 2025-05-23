@@ -490,7 +490,7 @@ toc: true
   - **Lg**: `.m-scaled-lg`, `.mx-scaled-lg`, `.my-scaled-lg`, `.mt-scaled-lg`, `.mb-scaled-lg`, `.ms-scaled-lg`, `.me-scaled-lg`,
   - **Xl**: `.m-scaled-xl`, `.mx-scaled-xl`, `.my-scaled-xl`, `.mt-scaled-xl`, `.mb-scaled-xl`, `.ms-scaled-xl`, `.me-scaled-xl`,
   - **2xl**: `.m-scaled-2xl`, `.mx-scaled-2xl`, `.my-scaled-2xl`, `.mt-scaled-2xl`, `.mb-scaled-2xl`, `.ms-scaled-2xl`, `.me-scaled-2xl`,
-  - **3xl**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
+  - **3xl**: `.m-scaled-3xl`, `.mx-scaled-3xl`, `.my-scaled-3xl`, `.mt-scaled-3xl`, `.mb-scaled-3xl`, `.ms-scaled-3xl`, `.me-scaled-3xl`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
@@ -516,7 +516,7 @@ toc: true
   - **Lg**: `.p-scaled-lg`, `.px-scaled-lg`, `.py-scaled-lg`, `.pt-scaled-lg`, `.pb-scaled-lg`, `.ps-scaled-lg`, `.pe-scaled-lg`,
   - **Xl**: `.p-scaled-xl`, `.px-scaled-xl`, `.py-scaled-xl`, `.pt-scaled-xl`, `.pb-scaled-xl`, `.ps-scaled-xl`, `.pe-scaled-xl`,
   - **2xl**: `.p-scaled-2xl`, `.px-scaled-2xl`, `.py-scaled-2xl`, `.pt-scaled-2xl`, `.pb-scaled-2xl`, `.ps-scaled-2xl`, `.pe-scaled-2xl`,
-  - **3xl**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
+  - **3xl**: `.p-scaled-3xl`, `.px-scaled-3xl`, `.py-scaled-3xl`, `.pt-scaled-3xl`, `.pb-scaled-3xl`, `.ps-scaled-3xl`, `.pe-scaled-3xl`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
@@ -542,7 +542,7 @@ toc: true
   - **Lg**: `.gap-scaled-lg`, `.row-gap-scaled-lg`, `.column-gap-scaled-lg`
   - **Xl**: `.gap-scaled-xl`, `.row-gap-scaled-xl`, `.column-gap-scaled-xl`
   - **2xl**: `.gap-scaled-2xl`, `.row-gap-scaled-2xl`, `.column-gap-scaled-2xl`
-  - **3xl**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
+  - **3xl**: `.gap-scaled-3xl`, `.row-gap-scaled-3xl`, `.column-gap-scaled-3xl`
 
 #### Text
 
@@ -1485,9 +1485,9 @@ toc: true
       <li><code>$ouds-space-scaled-3xs-desktop</code></li>
       <li><code>$ouds-space-scaled-3xs-mobile</code></li>
       <li><code>$ouds-space-scaled-3xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-spacious-desktop</code></li>
-      <li><code>$ouds-space-scaled-spacious-mobile</code></li>
-      <li><code>$ouds-space-scaled-spacious-tablet</code></li>
+      <li><code>$ouds-space-scaled-3xl-desktop</code></li>
+      <li><code>$ouds-space-scaled-3xl-mobile</code></li>
+      <li><code>$ouds-space-scaled-3xl-tablet</code></li>
       <li><code>$ouds-space-scaled-lg-desktop</code></li>
       <li><code>$ouds-space-scaled-lg-mobile</code></li>
       <li><code>$ouds-space-scaled-lg-tablet</code></li>
@@ -1932,7 +1932,7 @@ toc: true
       <li><code>--bs-space-scaled-xs</code></li>
       <li><code>--bs-space-scaled-2xs</code></li>
       <li><code>--bs-space-scaled-3xs</code></li>
-      <li><code>--bs-space-scaled-spacious</code></li>
+      <li><code>--bs-space-scaled-3xl</code></li>
       <li><code>--bs-space-scaled-lg</code></li>
       <li><code>--bs-space-scaled-xl</code></li>
       <li><code>--bs-space-scaled-2xl</code></li>
