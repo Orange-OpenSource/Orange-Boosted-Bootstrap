@@ -123,7 +123,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted’s documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
+Boosted’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
 Documentation search is powered by [Algolia’s DocSearch](https://docsearch.algolia.com/).
 
@@ -134,7 +134,7 @@ Documentation search is powered by [Algolia’s DocSearch](https://docsearch.alg
 3. From the root `/boosted` directory, run `npm run docs-serve` in the command line.
 4. Open `http://localhost:9001/` in your browser, and voilà.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Learn more about using Hugo by reading its [documentation](https://docs.astro.build/en/getting-started/).
 
 ### Documentation for previous releases
 
