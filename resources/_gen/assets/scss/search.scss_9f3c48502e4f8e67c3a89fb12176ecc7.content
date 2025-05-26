@@ -1,0 +1,1294 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap Docs (https://getbootstrap.com/)
+ * Copyright 2025 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ * For details, see https://creativecommons.org/licenses/by/3.0/.
+ */
+:root,
+[data-bs-theme="light"],
+:root[data-bs-theme="light"] [data-bs-theme="root"],
+:root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
+  --bs-color-action-disabled: rgba(0, 0, 0, 0.2);
+  --bs-color-action-enabled: #000;
+  --bs-color-action-focus: rgba(0, 0, 0, 0.68);
+  --bs-color-action-highlighted: #000;
+  --bs-color-action-hover: rgba(0, 0, 0, 0.68);
+  --bs-color-action-loading: #f15e00;
+  --bs-color-action-negative-enabled: #db0002;
+  --bs-color-action-negative-focus: #b20002;
+  --bs-color-action-negative-hover: #b20002;
+  --bs-color-action-negative-loading: #800001;
+  --bs-color-action-negative-pressed: #800001;
+  --bs-color-action-pressed: #f15e00;
+  --bs-color-action-selected: #f15e00;
+  --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04);
+  --bs-color-action-support-focus: rgba(0, 0, 0, 0.08);
+  --bs-color-action-support-hover: rgba(0, 0, 0, 0.08);
+  --bs-color-action-support-loading: rgba(0, 0, 0, 0.12);
+  --bs-color-action-support-pressed: rgba(0, 0, 0, 0.12);
+  --bs-color-action-visited: #5b2f98;
+  --bs-color-always-black: #000;
+  --bs-color-always-on-black: #eee;
+  --bs-color-always-on-white: #000;
+  --bs-color-always-white: #fff;
+  --bs-color-bg-emphasized: #141414;
+  --bs-color-bg-primary: #fff;
+  --bs-color-bg-secondary: #f4f4f4;
+  --bs-color-bg-tertiary: #f9f5f0;
+  --bs-color-border-brand-primary: #f15e00;
+  --bs-color-border-default: rgba(0, 0, 0, 0.2);
+  --bs-color-border-emphasized: #000;
+  --bs-color-border-focus-inset: #fff;
+  --bs-color-border-focus: #000;
+  --bs-color-border-muted: rgba(0, 0, 0, 0.08);
+  --bs-color-border-on-brand-primary: #000;
+  --bs-color-content-brand-primary: #f15e00;
+  --bs-color-content-default: #000;
+  --bs-color-content-disabled: rgba(0, 0, 0, 0.2);
+  --bs-color-content-muted: rgba(0, 0, 0, 0.68);
+  --bs-color-content-on-action-disabled: #fff;
+  --bs-color-content-on-action-enabled: #fff;
+  --bs-color-content-on-action-focus: #fff;
+  --bs-color-content-on-action-highlighted: #fff;
+  --bs-color-content-on-action-hover: #fff;
+  --bs-color-content-on-action-loading: #fff;
+  --bs-color-content-on-action-pressed: #fff;
+  --bs-color-content-on-brand-primary: #000;
+  --bs-color-content-on-overlay-emphasized: #fff;
+  --bs-color-content-on-status-accent-emphasized: #000;
+  --bs-color-content-on-status-accent-muted: #000;
+  --bs-color-content-on-status-info-emphasized: #000;
+  --bs-color-content-on-status-info-muted: #000;
+  --bs-color-content-on-status-negative-emphasized: #fff;
+  --bs-color-content-on-status-negative-muted: #000;
+  --bs-color-content-on-status-neutral-emphasized: #fff;
+  --bs-color-content-on-status-neutral-muted: #000;
+  --bs-color-content-on-status-positive-emphasized: #000;
+  --bs-color-content-on-status-positive-muted: #000;
+  --bs-color-content-on-status-warning-emphasized: #000;
+  --bs-color-content-on-status-warning-muted: #000;
+  --bs-color-content-status-accent: #ffd000;
+  --bs-color-content-status-info: #26b2ff;
+  --bs-color-content-status-negative: #db0002;
+  --bs-color-content-status-positive: #3de35a;
+  --bs-color-content-status-warning: #ffd000;
+  --bs-color-decorative-accent-1-default: #50be87;
+  --bs-color-decorative-accent-1-emphasized: #2e7b54;
+  --bs-color-decorative-accent-1-muted: #c0e8d4;
+  --bs-color-decorative-accent-2-default: #4ab4e6;
+  --bs-color-decorative-accent-2-emphasized: #136186;
+  --bs-color-decorative-accent-2-muted: #a5daf3;
+  --bs-color-decorative-accent-3-default: #ffd000;
+  --bs-color-decorative-accent-3-emphasized: #ffb400;
+  --bs-color-decorative-accent-3-muted: #ffed99;
+  --bs-color-decorative-accent-4-default: #a885d8;
+  --bs-color-decorative-accent-4-emphasized: #2c174a;
+  --bs-color-decorative-accent-4-muted: #e0d4f2;
+  --bs-color-decorative-accent-5-default: #ffb4e6;
+  --bs-color-decorative-accent-5-emphasized: #ff80d4;
+  --bs-color-decorative-accent-5-muted: #ffe5f6;
+  --bs-color-decorative-brand-primary: #ff7900;
+  --bs-color-decorative-brand-secondary: #000;
+  --bs-color-decorative-brand-tertiary: #fff;
+  --bs-color-decorative-neutral-emphasized-higher: #333;
+  --bs-color-decorative-neutral-emphasized-low: #555;
+  --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
+  --bs-color-decorative-neutral-emphasized-lowest: #666;
+  --bs-color-decorative-neutral-muted-high: #ccc;
+  --bs-color-decorative-neutral-muted-higher: #999;
+  --bs-color-decorative-neutral-muted-highest: #858585;
+  --bs-color-decorative-neutral-muted-low: #e0e0e0;
+  --bs-color-decorative-neutral-muted-lower: #eee;
+  --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
+  --bs-color-decorative-neutral-muted-medium: #d6d6d6;
+  --bs-color-decorative-skin-tint-100: #fbebdf;
+  --bs-color-decorative-skin-tint-200: #f4cfb2;
+  --bs-color-decorative-skin-tint-300: #e3b591;
+  --bs-color-decorative-skin-tint-400: #c19372;
+  --bs-color-decorative-skin-tint-500: #cf7e3f;
+  --bs-color-decorative-skin-tint-600: #aa6631;
+  --bs-color-decorative-skin-tint-700: #7e4f2a;
+  --bs-color-decorative-skin-tint-800: #553720;
+  --bs-color-decorative-skin-tint-900: #2e2014;
+  --bs-color-opacity-lower: rgba(0, 0, 0, 0.08);
+  --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04);
+  --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
+  --bs-color-overlay-default: #fff;
+  --bs-color-overlay-drag: rgba(0, 0, 0, 0.04);
+  --bs-color-overlay-emphasized: #272727;
+  --bs-color-overlay-modal: #fff;
+  --bs-color-surface-brand-primary: #ff7900;
+  --bs-color-surface-status-accent-emphasized: #ffd000;
+  --bs-color-surface-status-accent-muted: #f9f5f0;
+  --bs-color-surface-status-info-emphasized: #26b2ff;
+  --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08);
+  --bs-color-surface-status-negative-emphasized: #db0002;
+  --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08);
+  --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84);
+  --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04);
+  --bs-color-surface-status-positive-emphasized: #3de35a;
+  --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12);
+  --bs-color-surface-status-warning-emphasized: #ffd000;
+  --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16);
+  --bs-elevation-color-default: rgba(0, 0, 0, 0.24);
+  --bs-elevation-color-drag: rgba(0, 0, 0, 0.32);
+  --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16);
+  --bs-elevation-color-none: rgba(0, 0, 0, 0);
+  --bs-elevation-color-raised: rgba(0, 0, 0, 0.32);
+  --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16);
+  --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16);
+  --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16);
+}
+
+[data-bs-theme="dark"],
+:root[data-bs-theme="dark"] [data-bs-theme="root"],
+:root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
+  --bs-color-action-disabled: rgba(255, 255, 255, 0.2);
+  --bs-color-action-enabled: #eee;
+  --bs-color-action-focus: rgba(255, 255, 255, 0.64);
+  --bs-color-action-highlighted: #eee;
+  --bs-color-action-hover: rgba(255, 255, 255, 0.64);
+  --bs-color-action-loading: #ff7900;
+  --bs-color-action-negative-enabled: #ff8081;
+  --bs-color-action-negative-focus: #ffb2b3;
+  --bs-color-action-negative-hover: #ffb2b3;
+  --bs-color-action-negative-loading: #ffe5e6;
+  --bs-color-action-negative-pressed: #ffe5e6;
+  --bs-color-action-pressed: #ff7900;
+  --bs-color-action-selected: #ff7900;
+  --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04);
+  --bs-color-action-support-focus: rgba(255, 255, 255, 0.08);
+  --bs-color-action-support-hover: rgba(255, 255, 255, 0.08);
+  --bs-color-action-support-loading: rgba(255, 255, 255, 0.12);
+  --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12);
+  --bs-color-action-visited: #a885d8;
+  --bs-color-bg-emphasized: #333;
+  --bs-color-bg-primary: #141414;
+  --bs-color-bg-secondary: #1f1f1f;
+  --bs-color-bg-tertiary: #23211a;
+  --bs-color-border-brand-primary: #ff7900;
+  --bs-color-border-default: rgba(255, 255, 255, 0.2);
+  --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
+  --bs-color-border-focus: #eee;
+  --bs-color-border-focus-inset: #141414;
+  --bs-color-border-muted: rgba(255, 255, 255, 0.08);
+  --bs-color-border-on-brand-primary: #000;
+  --bs-color-content-brand-primary: #ff7900;
+  --bs-color-content-default: #eee;
+  --bs-color-content-disabled: rgba(255, 255, 255, 0.2);
+  --bs-color-content-muted: rgba(255, 255, 255, 0.64);
+  --bs-color-content-on-action-disabled: #000;
+  --bs-color-content-on-action-enabled: #000;
+  --bs-color-content-on-action-focus: #000;
+  --bs-color-content-on-action-highlighted: #000;
+  --bs-color-content-on-action-hover: #000;
+  --bs-color-content-on-action-loading: #000;
+  --bs-color-content-on-action-pressed: #000;
+  --bs-color-content-on-brand-primary: #000;
+  --bs-color-content-on-overlay-emphasized: #000;
+  --bs-color-content-on-status-accent-emphasized: #000;
+  --bs-color-content-on-status-accent-muted: #eee;
+  --bs-color-content-on-status-info-emphasized: #000;
+  --bs-color-content-on-status-info-muted: #eee;
+  --bs-color-content-on-status-negative-emphasized: #000;
+  --bs-color-content-on-status-negative-muted: #eee;
+  --bs-color-content-on-status-neutral-emphasized: #000;
+  --bs-color-content-on-status-neutral-muted: #eee;
+  --bs-color-content-on-status-positive-emphasized: #000;
+  --bs-color-content-on-status-positive-muted: #eee;
+  --bs-color-content-on-status-warning-emphasized: #000;
+  --bs-color-content-on-status-warning-muted: #eee;
+  --bs-color-content-status-accent: #ffd000;
+  --bs-color-content-status-info: #26b2ff;
+  --bs-color-content-status-negative: #db0002;
+  --bs-color-content-status-positive: #3de35a;
+  --bs-color-content-status-warning: #ffd000;
+  --bs-color-opacity-lower: rgba(255, 255, 255, 0.08);
+  --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04);
+  --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
+  --bs-color-overlay-default: rgba(255, 255, 255, 0.08);
+  --bs-color-overlay-drag: rgba(255, 255, 255, 0.2);
+  --bs-color-overlay-emphasized: #eee;
+  --bs-color-overlay-modal: #333;
+  --bs-color-surface-brand-primary: #ff7900;
+  --bs-color-surface-status-accent-emphasized: #ffe270;
+  --bs-color-surface-status-accent-muted: #23211a;
+  --bs-color-surface-status-info-emphasized: #8ad5ff;
+  --bs-color-surface-status-info-muted: #003857;
+  --bs-color-surface-status-negative-emphasized: #ff8081;
+  --bs-color-surface-status-negative-muted: #4d0001;
+  --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92);
+  --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08);
+  --bs-color-surface-status-positive-emphasized: #94f0a4;
+  --bs-color-surface-status-positive-muted: #0a4715;
+  --bs-color-surface-status-warning-emphasized: #ffe270;
+  --bs-color-surface-status-warning-muted: #3d3100;
+}
+
+:root,
+[data-bs-theme="light"],
+:root[data-bs-theme="light"] [data-bs-theme="root"],
+:root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
+  --bs-button-mono-color-bg-default-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-enabled: #000;
+  --bs-button-mono-color-bg-strong-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-bg-strong-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-content-default-enabled: #000;
+  --bs-button-mono-color-content-default-hover: #fff;
+  --bs-button-mono-color-content-default-pressed: #000;
+  --bs-button-mono-color-content-default-loading: #000;
+  --bs-button-mono-color-content-default-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-content-default-focus: #fff;
+  --bs-button-mono-color-content-minimal-enabled: #000;
+  --bs-button-mono-color-content-minimal-hover: #fff;
+  --bs-button-mono-color-content-minimal-pressed: #000;
+  --bs-button-mono-color-content-minimal-loading: #000;
+  --bs-button-mono-color-content-minimal-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-content-minimal-focus: #fff;
+  --bs-button-mono-color-content-strong-enabled: #fff;
+  --bs-button-mono-color-content-strong-hover: #fff;
+  --bs-button-mono-color-content-strong-pressed: #000;
+  --bs-button-mono-color-content-strong-loading: #000;
+  --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64);
+  --bs-button-mono-color-content-strong-focus: #fff;
+  --bs-button-mono-color-border-default-enabled: #000;
+  --bs-button-mono-color-border-default-disabled: rgba(0, 0, 0, 0.28);
+  --bs-link-mono-color-content-enabled: #000;
+  --bs-link-mono-color-content-hover: #000;
+  --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
+  --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28);
+  --bs-link-mono-color-content-focus: #000;
+  --bs-switch-color-cursor: #fff;
+  --bs-switch-color-track-selected: #3de35a;
+  --bs-switch-color-track-selected-interaction: #1ecd3c;
+  --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
+  --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
+  --bs-tabs-color-bg-default: rgba(255, 255, 255, 0);
+  --bs-tabs-color-bg-sticky: rgba(255, 255, 255, 0);
+  --bs-tabs-color-gradient-drag-overlay-end: rgba(255, 255, 255, 0.04);
+  --bs-button-social-color-content-focus: #fff;
+}
+
+[data-bs-theme="dark"],
+:root[data-bs-theme="dark"] [data-bs-theme="root"],
+:root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
+  --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-enabled: #fff;
+  --bs-button-mono-color-bg-strong-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-bg-strong-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-content-default-enabled: #fff;
+  --bs-button-mono-color-content-default-hover: #000;
+  --bs-button-mono-color-content-default-pressed: #fff;
+  --bs-button-mono-color-content-default-loading: #fff;
+  --bs-button-mono-color-content-default-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-content-default-focus: #000;
+  --bs-button-mono-color-content-minimal-enabled: #fff;
+  --bs-button-mono-color-content-minimal-hover: #000;
+  --bs-button-mono-color-content-minimal-pressed: #fff;
+  --bs-button-mono-color-content-minimal-loading: #fff;
+  --bs-button-mono-color-content-minimal-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-content-minimal-focus: #000;
+  --bs-button-mono-color-content-strong-enabled: #000;
+  --bs-button-mono-color-content-strong-hover: #000;
+  --bs-button-mono-color-content-strong-pressed: #fff;
+  --bs-button-mono-color-content-strong-loading: #fff;
+  --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44);
+  --bs-button-mono-color-content-strong-focus: #000;
+  --bs-button-mono-color-border-default-enabled: #fff;
+  --bs-button-mono-color-border-default-disabled: rgba(255, 255, 255, 0.44);
+  --bs-link-mono-color-content-enabled: #fff;
+  --bs-link-mono-color-content-hover: #fff;
+  --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
+  --bs-link-mono-color-content-disabled: rgba(255, 255, 255, 0.44);
+  --bs-link-mono-color-content-focus: #fff;
+  --bs-switch-color-cursor: #141414;
+  --bs-switch-color-track-selected: #1ecd3c;
+  --bs-switch-color-track-selected-interaction: #94f0a4;
+  --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
+  --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
+  --bs-tabs-color-bg-default: rgba(0, 0, 0, 0);
+  --bs-tabs-color-bg-sticky: rgba(0, 0, 0, 0);
+  --bs-tabs-color-gradient-drag-overlay-end: rgba(0, 0, 0, 0.04);
+  --bs-button-social-color-content-focus: #000;
+}
+
+:root,
+[data-bs-theme="light"],
+:root[data-bs-theme="light"] [data-bs-theme="root"],
+:root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
+  --bd-primary-light: #ff8a3f;
+  --bd-violet: #712cf9;
+  --bd-primary-light-rgb: 255, 137.582988, 62.5;
+  --bd-pink-rgb: 255, 26, 178;
+  --bd-teal-rgb: 80, 190, 135;
+  --bd-violet-bg: var(--bd-violet);
+  --bd-toc-color: var(--bs-emphasis-color);
+  --bd-pre-bg: var(--bs-color-bg-secondary);
+}
+
+[data-bs-theme="dark"],
+:root[data-bs-theme="dark"] [data-bs-theme="root"],
+:root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
+  --bd-primary-light: #b35500;
+  --bd-primary-light-rgb: 178.5, 84.7, 0;
+  --bd-violet: #9461fb;
+  --bd-violet-bg: #712cf9;
+  --bd-pre-bg: var(--bs-color-bg-secondary);
+}
+
+/*! @docsearch/css 3.9.0 | MIT License | © Algolia, Inc. and contributors | https://docsearch.algolia.com */
+:root {
+  --docsearch-primary-color:#5468ff;
+  --docsearch-text-color:#1c1e21;
+  --docsearch-spacing:12px;
+  --docsearch-icon-stroke-width:1.4;
+  --docsearch-highlight-color:var(--docsearch-primary-color);
+  --docsearch-muted-color:#969faf;
+  --docsearch-container-background:rgba(101,108,133,.8);
+  --docsearch-logo-color:#5468ff;
+  --docsearch-modal-width:560px;
+  --docsearch-modal-height:600px;
+  --docsearch-modal-background:#f5f6f7;
+  --docsearch-modal-shadow:inset 1px 1px 0 0 hsla(0,0%,100%,.5),0 3px 8px 0 #555a64;
+  --docsearch-searchbox-height:56px;
+  --docsearch-searchbox-background:#ebedf0;
+  --docsearch-searchbox-focus-background:#fff;
+  --docsearch-searchbox-shadow:inset 0 0 0 2px var(--docsearch-primary-color);
+  --docsearch-hit-height:56px;
+  --docsearch-hit-color:#444950;
+  --docsearch-hit-active-color:#fff;
+  --docsearch-hit-background:#fff;
+  --docsearch-hit-shadow:0 1px 3px 0 #d4d9e1;
+  --docsearch-key-gradient:linear-gradient(-225deg,#d5dbe4,#f8f8f8);
+  --docsearch-key-shadow:inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 2px 1px rgba(30,35,90,.4);
+  --docsearch-key-pressed-shadow:inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 1px 0 rgba(30,35,90,.4);
+  --docsearch-footer-height:44px;
+  --docsearch-footer-background:#fff;
+  --docsearch-footer-shadow:0 -1px 0 0 #e0e3e8,0 -3px 6px 0 rgba(69,98,155,.12);
+}
+
+html[data-theme=dark] {
+  --docsearch-text-color:#f5f6f7;
+  --docsearch-container-background:rgba(9,10,17,.8);
+  --docsearch-modal-background:#15172a;
+  --docsearch-modal-shadow:inset 1px 1px 0 0 #2c2e40,0 3px 8px 0 #000309;
+  --docsearch-searchbox-background:#090a11;
+  --docsearch-searchbox-focus-background:#000;
+  --docsearch-hit-color:#bec3c9;
+  --docsearch-hit-shadow:none;
+  --docsearch-hit-background:#090a11;
+  --docsearch-key-gradient:linear-gradient(-26.5deg,#565872,#31355b);
+  --docsearch-key-shadow:inset 0 -2px 0 0 #282d55,inset 0 0 1px 1px #51577d,0 2px 2px 0 rgba(3,4,9,.3);
+  --docsearch-key-pressed-shadow:inset 0 -2px 0 0 #282d55,inset 0 0 1px 1px #51577d,0 1px 1px 0 #0304094d;
+  --docsearch-footer-background:#1e2136;
+  --docsearch-footer-shadow:inset 0 1px 0 0 rgba(73,76,106,.5),0 -4px 8px 0 rgba(0,0,0,.2);
+  --docsearch-logo-color:#fff;
+  --docsearch-muted-color:#7f8497;
+}
+
+.DocSearch-Button {
+  align-items: center;
+  background: var(--docsearch-searchbox-background);
+  border: 0;
+  border-radius: 40px;
+  color: var(--docsearch-muted-color);
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  height: 36px;
+  justify-content: space-between;
+  margin: 0 0 0 16px;
+  padding: 0 8px;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+  background: var(--docsearch-searchbox-focus-background);
+  box-shadow: var(--docsearch-searchbox-shadow);
+  color: var(--docsearch-text-color);
+  outline: none;
+}
+
+.DocSearch-Button-Container {
+  align-items: center;
+  display: flex;
+}
+
+.DocSearch-Search-Icon {
+  stroke-width: 1.6;
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 1rem;
+  padding: 0 12px 0 6px;
+}
+
+.DocSearch-Button-Keys {
+  display: flex;
+  min-width: calc(40px + .8em);
+}
+
+.DocSearch-Button-Key {
+  align-items: center;
+  background: var(--docsearch-key-gradient);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: var(--docsearch-key-shadow);
+  color: var(--docsearch-muted-color);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: .4em;
+  padding: 0 0 2px;
+  position: relative;
+  top: -1px;
+  transition-duration: .1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 20px;
+}
+
+@media (prefers-reduced-motion) {
+  .DocSearch-Button-Key {
+    transition: none;
+  }
+}
+
+.DocSearch-Button-Key--pressed {
+  box-shadow: var(--docsearch-key-pressed-shadow);
+  transform: translate3d(0, 1px, 0);
+}
+
+@media (max-width: 768px) {
+  .DocSearch-Button-Keys, .DocSearch-Button-Placeholder {
+    display: none;
+  }
+}
+
+.DocSearch--active {
+  overflow: hidden !important;
+}
+
+.DocSearch-Container, .DocSearch-Container * {
+  box-sizing: border-box;
+}
+
+.DocSearch-Container {
+  background-color: var(--docsearch-container-background);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+}
+
+.DocSearch-Container a {
+  text-decoration: none;
+}
+
+.DocSearch-Link {
+  -webkit-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  color: var(--docsearch-highlight-color);
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.DocSearch-Modal {
+  background: var(--docsearch-modal-background);
+  border-radius: 6px;
+  box-shadow: var(--docsearch-modal-shadow);
+  flex-direction: column;
+  margin: 60px auto auto;
+  max-width: var(--docsearch-modal-width);
+  position: relative;
+}
+
+.DocSearch-SearchBar {
+  display: flex;
+  padding: var(--docsearch-spacing) var(--docsearch-spacing) 0;
+}
+
+.DocSearch-Form {
+  align-items: center;
+  background: var(--docsearch-searchbox-focus-background);
+  border-radius: 4px;
+  box-shadow: var(--docsearch-searchbox-shadow);
+  display: flex;
+  height: var(--docsearch-searchbox-height);
+  margin: 0;
+  padding: 0 var(--docsearch-spacing);
+  position: relative;
+  width: 100%;
+}
+
+.DocSearch-Input {
+  -webkit-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--docsearch-text-color);
+  flex: 1;
+  font: inherit;
+  font-size: 1.2em;
+  height: 100%;
+  outline: none;
+  padding: 0 0 0 8px;
+  width: 80%;
+}
+
+.DocSearch-Input::placeholder {
+  color: var(--docsearch-muted-color);
+  opacity: 1;
+}
+
+.DocSearch-Input::-webkit-search-cancel-button, .DocSearch-Input::-webkit-search-decoration, .DocSearch-Input::-webkit-search-results-button, .DocSearch-Input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.DocSearch-LoadingIndicator, .DocSearch-MagnifierLabel, .DocSearch-Reset {
+  margin: 0;
+  padding: 0;
+}
+
+.DocSearch-MagnifierLabel, .DocSearch-Reset {
+  align-items: center;
+  color: var(--docsearch-highlight-color);
+  display: flex;
+  justify-content: center;
+}
+
+.DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-LoadingIndicator {
+  display: none;
+}
+
+.DocSearch-Container--Stalled .DocSearch-LoadingIndicator {
+  align-items: center;
+  color: var(--docsearch-highlight-color);
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .DocSearch-Reset {
+    animation: none;
+    -webkit-appearance: none;
+            appearance: none;
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    color: var(--docsearch-icon-color);
+    cursor: pointer;
+    right: 0;
+    stroke-width: var(--docsearch-icon-stroke-width);
+  }
+}
+
+.DocSearch-Reset {
+  animation: fade-in .1s ease-in forwards;
+  -webkit-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: var(--docsearch-icon-color);
+  cursor: pointer;
+  padding: 2px;
+  right: 0;
+  stroke-width: var(--docsearch-icon-stroke-width);
+}
+
+.DocSearch-Reset[hidden] {
+  display: none;
+}
+
+.DocSearch-Reset:hover {
+  color: var(--docsearch-highlight-color);
+}
+
+.DocSearch-LoadingIndicator svg, .DocSearch-MagnifierLabel svg {
+  height: 24px;
+  width: 24px;
+}
+
+.DocSearch-Cancel {
+  display: none;
+}
+
+.DocSearch-Dropdown {
+  max-height: calc(var(--docsearch-modal-height) - var(--docsearch-searchbox-height) - var(--docsearch-spacing) - var(--docsearch-footer-height));
+  min-height: var(--docsearch-spacing);
+  overflow-y: auto;
+  overflow-y: overlay;
+  padding: 0 var(--docsearch-spacing);
+  scrollbar-color: var(--docsearch-muted-color) var(--docsearch-modal-background);
+  scrollbar-width: thin;
+}
+
+.DocSearch-Dropdown::-webkit-scrollbar {
+  width: 12px;
+}
+
+.DocSearch-Dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.DocSearch-Dropdown::-webkit-scrollbar-thumb {
+  background-color: var(--docsearch-muted-color);
+  border: 3px solid var(--docsearch-modal-background);
+  border-radius: 20px;
+}
+
+.DocSearch-Dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.DocSearch-Label {
+  font-size: .75em;
+  line-height: 1.6em;
+}
+
+.DocSearch-Help, .DocSearch-Label {
+  color: var(--docsearch-muted-color);
+}
+
+.DocSearch-Help {
+  font-size: .9em;
+  margin: 0;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.DocSearch-Title {
+  font-size: 1.2em;
+}
+
+.DocSearch-Logo a {
+  display: flex;
+}
+
+.DocSearch-Logo svg {
+  color: var(--docsearch-logo-color);
+  margin-left: 8px;
+}
+
+.DocSearch-Hits:last-of-type {
+  margin-bottom: 24px;
+}
+
+.DocSearch-Hits mark {
+  background: none;
+  color: var(--docsearch-highlight-color);
+}
+
+.DocSearch-HitsFooter {
+  color: var(--docsearch-muted-color);
+  display: flex;
+  font-size: .85em;
+  justify-content: center;
+  margin-bottom: var(--docsearch-spacing);
+  padding: var(--docsearch-spacing);
+}
+
+.DocSearch-HitsFooter a {
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+.DocSearch-Hit {
+  border-radius: 4px;
+  display: flex;
+  padding-bottom: 4px;
+  position: relative;
+  scroll-margin-top: 40px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .DocSearch-Hit--deleting {
+    transition: none;
+  }
+}
+
+.DocSearch-Hit--deleting {
+  opacity: 0;
+  transition: all .25s linear;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .DocSearch-Hit--favoriting {
+    transition: none;
+  }
+}
+
+.DocSearch-Hit--favoriting {
+  transform: scale(0);
+  transform-origin: top center;
+  transition: all .25s linear;
+  transition-delay: .25s;
+}
+
+.DocSearch-Hit a {
+  background: var(--docsearch-hit-background);
+  border-radius: 4px;
+  box-shadow: var(--docsearch-hit-shadow);
+  display: block;
+  padding-left: var(--docsearch-spacing);
+  width: 100%;
+}
+
+.DocSearch-Hit-source {
+  background: var(--docsearch-modal-background);
+  color: var(--docsearch-highlight-color);
+  font-size: .85em;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0 -4px;
+  padding: 8px 4px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.DocSearch-Hit-Tree {
+  color: var(--docsearch-muted-color);
+  height: var(--docsearch-hit-height);
+  opacity: .5;
+  stroke-width: var(--docsearch-icon-stroke-width);
+  width: 24px;
+}
+
+.DocSearch-Hit[aria-selected=true] a {
+  background-color: var(--docsearch-highlight-color);
+}
+
+.DocSearch-Hit[aria-selected=true] mark {
+  text-decoration: underline;
+}
+
+.DocSearch-Hit-Container {
+  align-items: center;
+  color: var(--docsearch-hit-color);
+  display: flex;
+  flex-direction: row;
+  height: var(--docsearch-hit-height);
+  padding: 0 var(--docsearch-spacing) 0 0;
+}
+
+.DocSearch-Hit-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.DocSearch-Hit-action, .DocSearch-Hit-icon {
+  color: var(--docsearch-muted-color);
+  stroke-width: var(--docsearch-icon-stroke-width);
+}
+
+.DocSearch-Hit-action {
+  align-items: center;
+  display: flex;
+  height: 22px;
+  width: 22px;
+}
+
+.DocSearch-Hit-action svg {
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+
+.DocSearch-Hit-action + .DocSearch-Hit-action {
+  margin-left: 6px;
+}
+
+.DocSearch-Hit-action-button {
+  -webkit-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  cursor: pointer;
+  padding: 2px;
+}
+
+svg.DocSearch-Hit-Select-Icon {
+  display: none;
+}
+
+.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon {
+  display: block;
+}
+
+.DocSearch-Hit-action-button:focus, .DocSearch-Hit-action-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transition: background-color .1s ease-in;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .DocSearch-Hit-action-button:focus, .DocSearch-Hit-action-button:hover {
+    transition: none;
+  }
+}
+
+.DocSearch-Hit-action-button:focus path, .DocSearch-Hit-action-button:hover path {
+  fill: #fff;
+}
+
+.DocSearch-Hit-content-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1.2em;
+  margin: 0 8px;
+  overflow-x: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
+
+.DocSearch-Hit-title {
+  font-size: .9em;
+}
+
+.DocSearch-Hit-path {
+  color: var(--docsearch-muted-color);
+  font-size: .75em;
+}
+
+.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Tree, .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-action, .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-icon, .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-path, .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-text, .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-title, .DocSearch-Hit[aria-selected=true] mark {
+  color: var(--docsearch-hit-active-color) !important;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .DocSearch-Hit-action-button:focus, .DocSearch-Hit-action-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transition: none;
+  }
+}
+
+.DocSearch-ErrorScreen, .DocSearch-NoResults, .DocSearch-StartScreen {
+  font-size: .9em;
+  margin: 0 auto;
+  padding: 36px 0;
+  text-align: center;
+  width: 80%;
+}
+
+.DocSearch-Screen-Icon {
+  color: var(--docsearch-muted-color);
+  padding-bottom: 12px;
+}
+
+.DocSearch-NoResults-Prefill-List {
+  display: inline-block;
+  padding-bottom: 24px;
+  text-align: left;
+}
+
+.DocSearch-NoResults-Prefill-List ul {
+  display: inline-block;
+  padding: 8px 0 0;
+}
+
+.DocSearch-NoResults-Prefill-List li {
+  list-style-position: inside;
+  list-style-type: "» ";
+}
+
+.DocSearch-Prefill {
+  -webkit-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 1em;
+  color: var(--docsearch-highlight-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0;
+}
+
+.DocSearch-Prefill:focus, .DocSearch-Prefill:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+.DocSearch-Footer {
+  align-items: center;
+  background: var(--docsearch-footer-background);
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--docsearch-footer-shadow);
+  display: flex;
+  flex-direction: row-reverse;
+  flex-shrink: 0;
+  height: var(--docsearch-footer-height);
+  justify-content: space-between;
+  padding: 0 var(--docsearch-spacing);
+  position: relative;
+  -webkit-user-select: none;
+          user-select: none;
+  width: 100%;
+  z-index: 300;
+}
+
+.DocSearch-Commands {
+  color: var(--docsearch-muted-color);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.DocSearch-Commands li {
+  align-items: center;
+  display: flex;
+}
+
+.DocSearch-Commands li:not(:last-of-type) {
+  margin-right: .8em;
+}
+
+.DocSearch-Commands-Key {
+  align-items: center;
+  background: var(--docsearch-key-gradient);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: var(--docsearch-key-shadow);
+  color: var(--docsearch-muted-color);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: .4em;
+  padding: 0 0 1px;
+  width: 20px;
+}
+
+.DocSearch-VisuallyHiddenForAccessibility {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --docsearch-spacing:10px;
+    --docsearch-footer-height:40px;
+  }
+  .DocSearch-Dropdown {
+    height: 100%;
+  }
+  .DocSearch-Container {
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: calc(var(--docsearch-vh, 1vh)*100);
+    position: absolute;
+  }
+  .DocSearch-Footer {
+    border-radius: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .DocSearch-Hit-content-wrapper {
+    display: flex;
+    position: relative;
+    width: 80%;
+  }
+  .DocSearch-Modal {
+    border-radius: 0;
+    box-shadow: none;
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: calc(var(--docsearch-vh, 1vh)*100);
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .DocSearch-Dropdown {
+    max-height: calc(var(--docsearch-vh, 1vh)*100 - var(--docsearch-searchbox-height) - var(--docsearch-spacing) - var(--docsearch-footer-height));
+  }
+  .DocSearch-Cancel {
+    -webkit-appearance: none;
+            appearance: none;
+    background: none;
+    border: 0;
+    color: var(--docsearch-highlight-color);
+    cursor: pointer;
+    display: inline-block;
+    flex: none;
+    font: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: var(--docsearch-spacing);
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    -webkit-user-select: none;
+            user-select: none;
+    white-space: nowrap;
+  }
+  .DocSearch-Commands, .DocSearch-Hit-Tree {
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  --docsearch-primary-color: var(--bs-color-content-brand-primary);
+  --docsearch-text-color: var(--bs-color-content-default);
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-muted-color: var(--bs-color-content-muted);
+  --docsearch-container-background: rgba(0, 0, 0, 0.5);
+  --docsearch-logo-color: var(--bs-color-content-default);
+  --docsearch-modal-background: var(--bs-body-bg);
+  --docsearch-modal-shadow: none;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
+  --docsearch-hit-color: var(--bs-color-content-muted);
+  --docsearch-hit-active-color: var(--bs-color-content-on-action-highlighted);
+  --docsearch-hit-background: transparent;
+  --docsearch-key-gradient: null;
+  --docsearch-key-shadow: null;
+  --docsearch-footer-background: transparent;
+  --docsearch-footer-shadow: 0 -1px var(--bs-color-border-emphasized);
+}
+
+.bd-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.DocSearch-Container {
+  --docsearch-spacing: 20px;
+  --docsearch-hit-shadow: none;
+  --docsearch-muted-color: var(--docsearch-text-color);
+  --docsearch-hit-color: var(--docsearch-text-color);
+  position: fixed;
+  z-index: 2000;
+  cursor: auto;
+}
+
+.DocSearch-Modal {
+  border: var(--bs-border-width) solid var(--bs-color-border-default);
+  border-radius: 0;
+}
+
+.DocSearch-Button {
+  --docsearch-searchbox-background: transparent;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.DocSearch-Button:hover {
+  outline: unset;
+  box-shadow: unset;
+}
+
+.DocSearch-Button:hover .DocSearch-Search-Icon {
+  color: var(--bs-link-hover-color);
+}
+
+.DocSearch-Button:focus {
+  border-radius: 0;
+}
+
+.DocSearch-Button:focus[data-focus-visible-added] {
+  isolation: isolate;
+  outline: 3px solid var(--bs-color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+  color: var(--bs-color-content-default);
+}
+
+.DocSearch-Button-Placeholder {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.DocSearch-Button-Placeholder:not(caption) {
+  position: absolute !important;
+}
+
+.DocSearch-Button-Placeholder:focus {
+  outline: unset;
+}
+
+.DocSearch-Search-Icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  stroke-width: 2;
+}
+
+.DocSearch-Form {
+  box-shadow: var(--bs-color-border-default) 0 0 0 0.125rem inset;
+  border-radius: 0;
+}
+
+.DocSearch-Form:focus-within {
+  box-shadow: var(--bs-color-content-default) 0 0 0 0.125rem inset;
+}
+
+.DocSearch-Input:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.DocSearch-Reset {
+  border-radius: 0;
+}
+
+.DocSearch-Reset:focus[data-focus-visible-added] {
+  isolation: isolate;
+  outline: 3px solid var(--bs-color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+}
+
+.DocSearch-Cancel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Button-Keys {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.DocSearch-Button-Keys:not(caption) {
+  position: absolute !important;
+}
+
+.DocSearch-Commands-Key {
+  background-color: var(--bs-color-action-highlighted);
+}
+
+.DocSearch-Hits .DocSearch-Hit-source {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-MagnifierLabel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Hit {
+  padding-top: .625rem;
+}
+
+.DocSearch-Hit a {
+  border-radius: 0;
+}
+
+.DocSearch-Hit mark {
+  color: var(--bs-color-content-on-action-highlighted);
+  background: var(--bs-color-action-highlighted);
+}
+
+.DocSearch-Hit[aria-selected="true"] a {
+  background-color: var(--bs-color-action-highlighted);
+}
+
+.DocSearch-Hit[aria-selected="true"] mark {
+  --docsearch-hit-active-color: var(--bs-color-content-default);
+  text-decoration: none;
+  background: var(--bs-color-action-highlighted);
+}
+
+.DocSearch-Hit-action-button {
+  border-radius: 0;
+}
+
+.DocSearch-Hit-action-button:hover, .DocSearch-Hit-action-button:focus {
+  background: transparent;
+}
+
+.DocSearch-Hit-action-button:hover path, .DocSearch-Hit-action-button:focus path {
+  fill: var(--bs-color-content-on-action-highlighted);
+}
+
+.DocSearch-Prefill {
+  color: var(--bs-color-content-default);
+  text-decoration: underline;
+  border-radius: 0;
+}
+
+.DocSearch-Prefill:hover {
+  color: var(--docsearch-highlight-color);
+}
+
+.DocSearch-Prefill:focus[data-focus-visible-added] {
+  isolation: isolate;
+  outline: 3px solid var(--bs-color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+}
+
+.DocSearch-Logo svg .cls-1,
+.DocSearch-Logo svg .cls-2 {
+  fill: var(--docsearch-logo-color);
+}

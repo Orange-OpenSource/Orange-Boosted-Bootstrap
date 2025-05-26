@@ -1,9 +1,119 @@
 ---
 title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+description: The Badge is a small UI element used to highlight status, notifications, or categorization within an interface. It is often displayed as a label or indicator with a distinct background color and text.
+group: components
 aliases:
   - "/docs/components/badge/"
 toc: true
 ---
 
-<CalloutSoon />
+{{< callout info >}}
+<!-- TODO: set the right url for design documentation -->
+You can find here the [OUDS Badge design guidelines](https://unified-design-system.orange.com/).
+{{< /callout >}}
+
+## Base class
+
+OUDS Web has a base `.badge` class that sets up basic styles.
+
+{{< example >}}
+<span class="badge" /></span>
+{{< /example >}}
+
+## Standard variants 
+
+<!-- TODO: set the right url for design documentation -->
+OUDS Web includes several badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
+
+{{< example >}}
+<div class="d-flex gap-3">
+  <span class="badge"></span>
+  <span class="badge badge-negative"></span>
+  <span class="badge badge-positive"></span>
+  <span class="badge badge-info"></span>
+  <span class="badge badge-warning"></span>
+  <span class="badge badge-disabled"></span>
+</div>
+{{< /example >}}
+
+
+## Sizes
+
+Badges are available in four sizes.
+
+{{< example >}}
+<div class="d-flex align-items-center gap-3">
+  <span class="badge badge-lg"></span>
+  <span class="badge"></span>
+  <span class="badge badge-sm"></span>
+  <span class="badge badge-xs"></span>
+</div>
+{{< /example >}}
+
+## With count
+
+Badges can be used to display numerical value using the `.bagde-count` class.
+
+{{< example >}}
+<div class="d-flex align-items-center gap-3">
+  <span class="badge badge-count">1</span>
+  <span class="badge badge-lg badge-count">1</span>
+  <span class="badge badge-count badge-info">128</span>
+  <span class="badge badge-count badge-info badge-lg">128</span>
+</div>
+{{< /example >}}
+
+## With icons
+
+Badges can be used with icons to visually reinforce meaning.
+
+{{< example >}}
+<div class="d-flex align-items-center gap-3">
+  <span class="badge"><svg aria-hidden="true">
+    <svg>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </span>
+  <span class="badge badge-lg">
+  <svg>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </span>
+   <span class="badge badge-negative"><svg aria-hidden="true">
+    <svg>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </span>
+  <span class="badge badge-negative badge-lg">
+  <svg>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+  </span>
+</div>
+{{< /example >}}
+
+### Positioned
+
+Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
+
+
+{{< example >}}
+
+<button type="button" class="btn btn-icon btn-default position-relative">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#trash"/>
+    </svg>
+    <span class="visually-hidden">Trash</span>
+    <span class="position-absolute top-0 start-100 translate-middle badge badge-info">
+    <span class="visually-hidden">Trash contains items</span>
+  </span>
+</button>
+
+<button type="button" class="btn btn-default position-relative ms-medium">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge badge-count badge-negative">
+    99+
+    <span class="visually-hidden">New mails</span>
+  </span>
+</button>
+{{< /example >}}

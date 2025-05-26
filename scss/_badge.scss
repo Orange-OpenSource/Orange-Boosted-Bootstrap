@@ -1,42 +1,106 @@
-// Base class
 //
-// Requires one of the contextual, color modifier classes for `color` and
-// `background-color`.
+// Base styles
+//
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-padding: #{subtract(var(--#{$prefix}badge-padding-y), 1px) var(--#{$prefix}badge-padding-x) add(var(--#{$prefix}badge-padding-y), 1px)}; // OUDS mod
-  --#{$prefix}badge-padding-x: #{$badge-padding-x};
-  --#{$prefix}badge-padding-y: #{$badge-padding-y};
-  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
-  --#{$prefix}badge-font-weight: #{$badge-font-weight};
-  --#{$prefix}badge-color: #{$badge-color};
-  --#{$prefix}badge-border-radius: #{$badge-border-radius};
+  --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-medium};
+  --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-medium};
+  --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-medium-dot};
+  --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-medium};
+  --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-medium};
+  --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-medium};
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-emphasized-alt};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  --#{$prefix}badge-border-radius: #{$ouds-badge-border-radius-pill};
+  --#{$prefix}badge-icon-size-width: 10px;
+  --#{$prefix}badge-icon-size-height: 10px;
+  --#{$prefix}badge-count-padding-x: 0;
   // scss-docs-end badge-css-vars
 
-  display: inline-block;
-  padding: var(--#{$prefix}badge-padding);
-  @include font-size(var(--#{$prefix}badge-font-size));
-  font-weight: var(--#{$prefix}badge-font-weight);
-  line-height: 1;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}badge-size-width);
+  min-width: var(--#{$prefix}badge-size-min-width);
+  max-width: var(--#{$prefix}badge-size-max-width);
+  height: var(--#{$prefix}badge-size-height);
+  min-height: var(--#{$prefix}badge-size-min-height);
+  max-height: var(--#{$prefix}badge-size-max-height);
+  padding: 0 var(--#{$prefix}badge-count-padding-x);
+  font-style: normal;
+  font-weight: 400;
   color: var(--#{$prefix}badge-color);
   text-align: center;
-
-  /* rtl:remove */
-  letter-spacing: initial; // OUDS mod
-  white-space: nowrap;
-  vertical-align: baseline;
+  background-color: var(--#{$prefix}badge-background-color);
+  @include get-font-size("label-small");
   @include border-radius(var(--#{$prefix}badge-border-radius));
-  @include gradient-bg();
 
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
+  svg {
+    width: var(--#{$prefix}badge-icon-size-width);
+    height: var(--#{$prefix}badge-icon-size-height);
   }
-}
 
-// Quick fix for badges in buttons
-.btn .badge {
-  padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x); // OUDS mod
-  margin-left: map-get($spacers, 1); // OUDS mod
+  &.badge-negative {
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
+  }
+
+  &.badge-positive {
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
+  }
+
+  &.badge-info {
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+  }
+
+  &.badge-warning {
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+  }
+
+  &.badge-disabled {
+    --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+  }
+
+  &.badge-xs {
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-extra-small};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-extra-small};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-extra-small};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-extra-small};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-extra-small};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-extra-small};
+  }
+
+  &.badge-sm {
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-small};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-small};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-small};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-small};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-small};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-small};
+  }
+
+  &.badge-lg {
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-large};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-large};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-large-dot};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-large};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-large};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-large};
+    --#{$prefix}badge-icon-size-width: 14px;
+    --#{$prefix}badge-icon-size-height: 14px;
+
+    @include get-font-size("label-medium");
+  }
+
+  &.badge-count {
+    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
+
+    width: auto;
+    max-width: none;
+
+    &.badge-lg {
+      --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
+    }
+  }
 }
