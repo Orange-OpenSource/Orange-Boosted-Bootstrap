@@ -1,0 +1,359 @@
+---
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  layout: Layout
+  title: string
+}
+
+const { layout } = Astro.props
+const { title } = Astro.props
+---
+
+<footer class="footer navbar bd-footer" data-bs-theme="dark">
+  <h2 class="visually-hidden">Boosted sitemap & information</h2>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion" id="sitemapAccordion" aria-label="Boosted sitemap footer">
+      <div class="row">
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingLinks">
+            <button
+              class="accordion-button collapsed container-xxl px-1 d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLinks"
+              aria-expanded="true"
+              aria-controls="collapseLinks"
+            >
+              Links
+            </button>
+            <span class="d-none d-md-flex">Links</span>
+          </h3>
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname === '/' }]}
+                  {...Astro.url.pathname === '/' && { 'aria-current': 'page' }}
+                  href="/"
+                  aria-describedby="headingLinks"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    { active: !Astro.url.pathname.includes('getting-started') && layout === 'docs' }
+                  ]}
+                  {...!Astro.url.pathname.includes('getting-started') &&
+                    layout === 'docs' && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('')}
+                  aria-describedby="headingLinks"
+                >
+                  Docs
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: title === 'Examples' }]}
+                  {...title === 'Examples' && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('examples')}
+                  aria-describedby="headingLinks"
+                >
+                  Examples
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.props.title === 'Orange Design System for web' }]}
+                  {...Astro.props.title === 'Orange Design System for web' && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('guidelines')}
+                  aria-describedby="headingLinks"
+                >
+                  Design guidelines
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={getConfig().icons}
+                  aria-describedby="headingLinks"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Solaris icons
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingGuides">
+            <button
+              class="accordion-button collapsed container-xxl px-1 d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseGuides"
+              aria-expanded="true"
+              aria-controls="collapseGuides"
+            >
+              Guides
+            </button>
+            <span class="d-none d-md-flex">Guides</span>
+          </h3>
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    {
+                      active:
+                        Astro.url.pathname.includes('getting-started') &&
+                        !Astro.url.pathname.includes('webpack') &&
+                        !Astro.url.pathname.includes('parcel') &&
+                        !Astro.url.pathname.includes('vite')
+                    }
+                  ]}
+                  {...Astro.url.pathname.includes('getting-started') &&
+                    !Astro.url.pathname.includes('webpack') &&
+                    !Astro.url.pathname.includes('parcel') &&
+                    !Astro.url.pathname.includes('vite') && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('getting-started')}
+                  aria-describedby="headingLinks"
+                >
+                  Getting started
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    { active: Astro.url.pathname === getVersionedDocsPath('getting-started/webpack') }
+                  ]}
+                  {...Astro.url.pathname === getVersionedDocsPath('getting-started/webpack') && {
+                    'aria-current': 'page'
+                  }}
+                  href={getVersionedDocsPath('getting-started/webpack')}
+                  aria-describedby="headingLinks"
+                >
+                  Webpack
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    { active: Astro.url.pathname === getVersionedDocsPath('getting-started/parcel') }
+                  ]}
+                  {...Astro.url.pathname === getVersionedDocsPath('getting-started/parcel') && {
+                    'aria-current': 'page'
+                  }}
+                  href={getVersionedDocsPath('getting-started/parcel')}
+                  aria-describedby="headingLinks"
+                >
+                  Parcel
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    { active: Astro.url.pathname === getVersionedDocsPath('getting-started/vite') }
+                  ]}
+                  {...Astro.url.pathname === getVersionedDocsPath('getting-started/vite') && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('getting-started/vite')}
+                  aria-describedby="headingLinks"
+                >
+                  Vite
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingProjects">
+            <button
+              class="accordion-button collapsed container-xxl px-1 d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseProjects"
+              aria-expanded="true"
+              aria-controls="collapseProjects"
+            >
+              Projects
+            </button>
+            <span class="d-none d-md-flex">Projects</span>
+          </h3>
+          <div
+            id="collapseProjects"
+            class="container-xxl accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class="nav-link"
+                  href={getConfig().repo}
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Boosted 5
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={`${getConfig().repo}/tree/v4-dev`}
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Boosted 4
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={getConfig().bootstrap}
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Bootstrap
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href="https://boosted.netlify.app"
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Pre-release on Netlify
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingCommunity">
+            <button
+              class="accordion-button collapsed container-xxl px-1 d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCommunity"
+              aria-expanded="true"
+              aria-controls="collapseCommunity"
+            >
+              Community
+            </button>
+            <span class="d-none d-md-flex">Community</span>
+          </h3>
+          <div
+            id="collapseCommunity"
+            class="container-xxl accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class="nav-link"
+                  href={`${getConfig().repo}/issues`}
+                  aria-describedby="headingCommunity"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Issues
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={`${getConfig().repo}/discussions`}
+                  aria-describedby="headingCommunity"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Discussions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Boosted mod: footer specific adaptations -->
+        <div class="footer-column accordion-header col-md-12 col-lg-4 mb-3 pt-3 pt-lg-0 px-1 px-lg-0 ms-1 ms-lg-0">
+          <div class="small fw-bold">
+            <p class="mb-lg-1">
+              This documentation is an adaptation made by Orange. Original version designed and built with all the love
+              in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener"
+                >Bootstrap core team</a
+              > with the help of <a
+                href="https://github.com/twbs/bootstrap/graphs/contributors"
+                target="_blank"
+                rel="noopener">their contributors</a
+              >.
+            </p>
+            <p class="mb-lg-1">
+              Orange modified code licensed <a
+                href={`${getConfig().repo}/blob/main/LICENSE`}
+                target="_blank"
+                rel="license noopener">MIT</a
+              >-&nbsp;just like <a
+                href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+                target="_blank"
+                rel="license noopener"
+                title="Bootstrap’s license"
+                aria-label="Bootstrap’s license">Bootstrap</a
+              >, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"
+                >CC BY 3.0</a
+              >.
+            </p>
+            <p class="mb-lg-1">Currently v{getConfig().current_version}.</p>
+            <p class="mb-lg-1">
+              <a href="https://www.netlify.com" target="_blank" rel="noopener">
+                <img
+                  src="https://www.netlify.com/img/global/badges/netlify-dark.svg"
+                  alt="Deployed by Netlify"
+                  width="89"
+                  height="40"
+                />
+              </a>
+            </p>
+          </div>
+          <ul class="navbar-nav mt-lg-4">
+            <li>
+              <a
+                class:list={[
+                  'nav-link',
+                  { active: Astro.props.title === 'Accessibility statement: Boosted documentation' }
+                ]}
+                {...Astro.props.title === 'Accessibility statement: Boosted documentation' && {
+                  'aria-current': 'page'
+                }}
+                href={getVersionedDocsPath('accessibility-statement')}
+                aria-describedby="headingLinks"
+              >
+                Accessibility: partially compliant
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End mod -->
+      </div>
+    </nav>
+  </div>
+</footer>
+<!-- Boosted mod: back-to-top component -->
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" data-bs-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+<!-- End mod -->

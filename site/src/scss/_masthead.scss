@@ -1,0 +1,127 @@
+.bd-masthead {
+  // Boosted mod: no --bd-pink-rgb
+  padding: 3rem 0;
+  // Boosted mod: no gradient background image
+
+  h1 {
+    --bs-heading-color: var(--bs-emphasis-color);
+    // Boosted mod: no `@include font-size`
+  }
+
+  .lead {
+    @include font-size(1rem);
+    font-weight: 400;
+    color: var(--bs-secondary-color);
+  }
+
+  .bd-code-snippet {
+    margin: 0;
+    border-color: var(--bs-border-color-subtle);
+    border-width: 1px;
+    @include border-radius(calc(.5rem - 1px));
+  }
+
+  .highlight {
+    width: 100%;
+    padding: .625rem 1rem; // Boosted mod
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: rgba(var(--bs-body-color-rgb), .075);
+    @include border-radius(.5rem);
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 4rem;
+    }
+
+    pre {
+      padding: 0;
+      margin: .625rem 0;
+      overflow: hidden;
+    }
+  }
+  .btn-clipboard {
+    position: absolute;
+    top: .3125rem; // Boosted mod: instead of `-.625rem`
+    right: 0;
+    background-color: transparent;
+  }
+
+  // Boosted mod: no `#carbonads`
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.5rem);
+    }
+  }
+}
+
+.masthead-followup {
+  h2,
+  h3,
+  h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
+  }
+
+  .lead {
+    @include font-size(1rem);
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.25rem);
+    }
+  }
+
+  .bd-code-snippet {
+    position: relative;
+  }
+
+  .bd-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.masthead-followup-icon {
+  padding: 1rem;
+  color: rgba(var(--bg-rgb), 1);
+  background-color: rgba(var(--bg-rgb), .1);
+  background-blend-mode: multiply;
+  @include border-radius(1rem);
+  mix-blend-mode: darken;
+
+  svg {
+    filter: drop-shadow(0 1px 1px var(--bs-body-bg));
+  }
+}
+
+// Boosted mod: no .masthead-notice
+
+.animate-img {
+  > img {
+    @include transition(transform .2s ease-in-out);
+  }
+
+  &:hover > img {
+    transform: scale(1.1);
+  }
+
+  &:active > img {
+    transform: scale(1);
+  }
+}
+
+@if $enable-dark-mode {
+  [data-bs-theme="dark"] {
+    .masthead-followup-icon {
+      mix-blend-mode: lighten;
+    }
+  }
+}

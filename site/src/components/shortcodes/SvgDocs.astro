@@ -1,0 +1,62 @@
+---
+import fs from 'node:fs'
+import Code from '@shortcodes/Code.astro'
+
+/**
+ * Prints SVG content.
+ **/
+interface Props {
+  /**
+   * File path to the SVG file without file extension.
+   * @default "orange-logo"
+   */
+  file?: string
+
+  /**
+   * Specify whether the SVG file is downloadable.
+   * @default true
+   */
+  downloadable?: boolean
+}
+
+const { file = 'orange-logo', downloadable = true } = Astro.props
+
+const filePath = `site/static/docs/[version]/assets/brand/${file}`
+const svgFormattedPath = `${filePath}-formatted.svg`
+const svgPath = `${filePath}.svg`
+
+const svg = fs.readFileSync(svgPath, 'utf8')
+const size = fs.statSync(svgPath).size
+---
+
+<Code filePath={svgFormattedPath} lang="html">
+  <div slot="pre" class="bd-clipboard">
+    <div class="d-flex ms-auto">
+      <button type="button" class="btn-clipboard" title="Copy to clipboard">
+        <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
+      </button>
+    </div>
+  </div>
+</Code>
+{
+  downloadable && (
+    <p class="text-end">
+      <a
+        class="btn btn-primary"
+        href={`data:image/svg+xml,${svg
+          .replaceAll('#', '%23')
+          .replaceAll('<', '%3c')
+          .replaceAll('>', '%3e')
+          .replaceAll('(', '%28')
+          .replaceAll(')', '%29')
+          .replaceAll(' ', '%20')
+          .replaceAll('"', "'")
+          .replaceAll('{', '%7B')
+          .replaceAll('}', '%7D')}`}
+        download={`${file}.svg`}
+      >
+        Download<span class="small ms-1">(SVG, {size / 1000}ko)</span>
+      </a>
+    </p>
+  )
+}

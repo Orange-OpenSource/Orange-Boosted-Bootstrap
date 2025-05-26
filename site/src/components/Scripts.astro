@@ -1,0 +1,24 @@
+---
+import { getVersionedBsJsProps } from '@libs/boosted'
+import { getVersionedDocsPath } from '@libs/path'
+import type { Layout } from '@libs/layout'
+import DocsScripts from './DocsScripts.astro'
+
+interface Props {
+  layout: Layout
+}
+
+const { layout } = Astro.props
+---
+
+<script is:inline {...getVersionedBsJsProps()}></script>
+
+<script src="../assets/application.js"></script>
+<script src="../assets/search.js"></script>
+
+<!-- Boosted mod -->
+<script is:inline src={getVersionedDocsPath('assets/js/tarteaucitron.min.js')}></script>
+<script src="../assets/tac.js"></script>
+
+{layout === 'docs' && <DocsScripts />}
+<!-- End mod -->

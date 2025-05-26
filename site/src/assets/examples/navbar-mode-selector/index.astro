@@ -1,0 +1,25 @@
+---
+import OrangeSupra from "@components/shortcodes/OrangeSupra.astro"
+import OrangeGlobalHeaders from "@components/shortcodes/OrangeGlobalHeaders.astro"
+
+export const title = 'Navbar with mode selector'
+export const theme_selector = false
+export const aliases = [
+  '/examples/navbar-mode-selector',
+  '/docs/examples/navbar-mode-selector',
+]
+---
+
+<main>
+  <header class="sticky-top" data-bs-theme="dark">
+    <OrangeSupra mode="languages" aria_label="Supra navigation - Mode selector example" />
+
+    <OrangeGlobalHeaders id="global-header-1" mode="theme" supra=true aria_label="Global navigation - Mode selector example" />
+  </header>
+  <div class="container-xxl pt-4">
+    <h1>Title</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia provident fuga animi voluptatem consequatur perspiciatis cum quos maiores, nesciunt dicta et dolor repellat eum odio id nihil, eos nostrum?</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+</main>

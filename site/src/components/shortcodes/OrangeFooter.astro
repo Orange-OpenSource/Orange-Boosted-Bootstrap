@@ -1,0 +1,516 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  /**
+   * Display if there is content in the title section.
+   * @default 'false'
+   */
+  title_content?: 'true' | 'false'
+
+  /**
+   * Display follow content.
+   * @default 'false'
+   */
+  follow?: 'true' | 'false'
+
+  /**
+   * Display nav content section.
+   * @default 'false'
+   */
+  nav?: 'true' | 'false'
+
+  /**
+   * Display service content section.
+   * @default 'false'
+   */
+  service?: 'true' | 'false'
+
+  /**
+   * Display the mandatory section.
+   * @default 'false'
+   */
+  mandatory?: 'true' | 'false'
+
+  /**
+   * Display the additional social links section.
+   * @default 'false'
+   */
+  extra_social?: 'true' | 'false'
+
+  /**
+   * Display an active link.
+   * @default 'false'
+   */
+  show_active_link?: 'true' | 'false'
+
+  /**
+   * Id for footer and accordions inside.
+   */
+  id: string
+}
+
+const {
+  title_content = 'false',
+  follow = 'false',
+  nav = 'false',
+  service = 'false',
+  mandatory = 'false',
+  extra_social = 'false',
+  show_active_link = 'false',
+  id
+} = Astro.props
+---
+
+<footer class="footer navbar" data-bs-theme="dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  {
+    title_content === 'true' && (
+      <>
+        <div class="container-xxl footer-title-content">
+          <h3 class="footer-heading">Sign up to our mailing list</h3>
+          <div class="row">
+            <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+              <label for={`inputEmail${id}`} class="visually-hidden">
+                Email
+              </label>
+              <input type="email" class="form-control" id={`inputEmail${id}`} placeholder="Enter your email" />
+              <button type="submit" class="btn btn-outline-secondary text-nowrap">
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+        {(follow === 'true' || nav === 'true' || service === 'true' || mandatory === 'true') && (
+          <div class="border-bottom border-1 border-dark" />
+        )}
+      </>
+    )
+  }
+  {
+    follow === 'true' && (
+      <>
+        <div class="container-xxl footer-social">
+          <h3 class="footer-heading me-md-3">Follow us</h3>
+          <ul class="navbar-nav gap-2 flex-row align-self-start">
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-twitter">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-whatsapp">
+                <span class="visually-hidden">WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-linkedin">
+                <span class="visually-hidden">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-icon btn-social btn-youtube">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+            {extra_social === 'true' && (
+              <>
+                <li>
+                  <a href="#" class="btn btn-icon btn-social btn-snapchat">
+                    <span class="visually-hidden">Snapchat</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-icon btn-social btn-pinterest">
+                    <span class="visually-hidden">Pinterest</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-icon btn-social btn-mail">
+                    <span class="visually-hidden">Mail</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-icon btn-social btn-tiktok">
+                    <span class="visually-hidden">TikTok</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-icon btn-social btn-x">
+                    <span class="visually-hidden">X</span>
+                  </a>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
+        {(nav === 'true' || service === 'true' || mandatory === 'true') && (
+          <div class="border-bottom border-1 border-dark" />
+        )}
+      </>
+    )
+  }
+  {
+    nav === 'true' && (
+      <>
+        <div class="container-xxl footer-nav">
+          <nav class="accordion" id={`accordion${id}`} aria-label={`Sitemap footer ${id}`}>
+            <div class="row">
+              <div class="footer-column col-md-3">
+                <h3 class="accordion-header footer-heading" id={`headingOne${id}`}>
+                  <button
+                    class="accordion-button collapsed container-xxl px-1 d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseOne${id}`}
+                    aria-expanded="true"
+                    aria-controls={`collapseOne${id}`}
+                  >
+                    Category
+                  </button>
+                  <span class="d-none d-md-flex">Category</span>
+                </h3>
+                <div
+                  id={`collapseOne${id}`}
+                  class="container-xxl accordion-collapse collapse"
+                  data-bs-parent={`#accordion${id}`}
+                >
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingOne${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-column col-md-3">
+                <h3 class="accordion-header footer-heading" id={`headingTwo${id}`}>
+                  <button
+                    class="accordion-button collapsed container-xxl px-1 d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseTwo${id}`}
+                    aria-expanded="true"
+                    aria-controls={`collapseTwo${id}`}
+                  >
+                    Category
+                  </button>
+                  <span class="d-none d-md-flex">Category</span>
+                </h3>
+                <div
+                  id={`collapseTwo${id}`}
+                  class="container-xxl accordion-collapse collapse"
+                  data-bs-parent={`#accordion${id}`}
+                >
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingTwo${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-column col-md-3">
+                <h3 class="accordion-header footer-heading" id={`headingThree${id}`}>
+                  <button
+                    class="accordion-button collapsed container-xxl px-1 d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseThree${id}`}
+                    aria-expanded="true"
+                    aria-controls={`collapseThree${id}`}
+                  >
+                    Category
+                  </button>
+                  <span class="d-none d-md-flex">Category</span>
+                </h3>
+                <div
+                  id={`collapseThree${id}`}
+                  class="container-xxl accordion-collapse collapse"
+                  data-bs-parent={`#accordion${id}`}
+                >
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingThree${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-column col-md-3">
+                <h3 class="accordion-header footer-heading" id={`headingFour${id}`}>
+                  <button
+                    class="accordion-button collapsed container-xxl px-1 d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseFour${id}`}
+                    aria-expanded="true"
+                    aria-controls={`collapseFour${id}`}
+                  >
+                    Category
+                  </button>
+                  <span class="d-none d-md-flex">Category</span>
+                </h3>
+                <div
+                  id={`collapseFour${id}`}
+                  class="container-xxl accordion-collapse collapse"
+                  data-bs-parent={`#accordion${id}`}
+                >
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#" aria-describedby={`headingFour${id}`}>
+                        Subcategory
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        {(service === 'true' || mandatory === 'true') && <div class="border-bottom border-1 border-dark" />}
+      </>
+    )
+  }
+  {
+    service === 'true' && (
+      <>
+        <div class="container-xxl footer-service">
+          <ul class="navbar-nav gap-3 gap-md-4">
+            <li>
+              <a class="nav-link gap-1" href="#">
+                <>
+                  <svg width="1.875rem" height="1.875rem" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#location-pin-compass')} />
+                  </svg>
+                  <span>Store locator</span>
+                </>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link gap-1" href="#">
+                <>
+                  <svg width="1.875rem" height="1.875rem" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#mobile-network-coverage')} />
+                  </svg>
+                  <span>Coverage checker</span>
+                </>
+              </a>
+            </li>
+            <li>
+              <a
+                class:list={['nav-link gap-1', { active: show_active_link === 'true' }]}
+                href="#"
+                aria-current={show_active_link === 'true' ? 'page' : false}
+              >
+                <>
+                  <svg width="1.875rem" height="1.875rem" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#live-chat')} />
+                  </svg>
+                  <span>Contact us</span>
+                </>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link gap-1" href="#">
+                <>
+                  <svg width="1.875rem" height="1.875rem" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#child-protection')} />
+                  </svg>
+                  <span>Child protection</span>
+                </>
+              </a>
+            </li>
+          </ul>
+        </div>
+        {mandatory === 'true' && <div class="border-bottom border-1 border-dark" />}
+      </>
+    )
+  }
+  {
+    mandatory === 'true' && (
+      <div class="container-xxl footer-terms">
+        <ul class="navbar-nav gap-md-3">
+          <li class="fw-bold">© Orange {new Date().getFullYear()}</li>
+          <li>
+            <a class="nav-link" href="#">
+              Terms and conditions
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a
+              class:list={['nav-link', { active: show_active_link === 'true' }]}
+              href="#"
+              aria-current={show_active_link === 'true' ? 'page' : false}
+            >
+              Accessibility statement
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              Cookie policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+</footer>

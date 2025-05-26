@@ -1,8 +1,5 @@
 # Ignore docs files
 /_site/
-# Hugo files
-/resources/
-/.hugo_build.lock
 
 # Numerous always-ignore extensions
 *.diff
@@ -49,3 +46,9 @@ Thumbs.db
 # Storybook
 /stories/auto
 *storybook.log
+
+# Site
+/site/dist
+/site/node_modules
+/site/.astro
+/site/public

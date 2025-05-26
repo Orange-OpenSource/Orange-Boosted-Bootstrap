@@ -6,8 +6,8 @@ on:
     paths:
       - 'js/**'
       - 'scss/**'
-      - 'site/content/docs/**/components/**'
-      - 'site/content/docs/**/forms/**'
+      - 'site/src/content/docs/components/**'
+      - 'site/src/content/docs/forms/**'
   workflow_dispatch:
 
 env:

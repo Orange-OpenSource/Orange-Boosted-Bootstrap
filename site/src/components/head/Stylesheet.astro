@@ -1,0 +1,14 @@
+---
+import { getVersionedBsCssProps, getVersionedBsFontProps } from '@libs/boosted'
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  direction?: 'rtl'
+  layout: Layout
+}
+
+const { direction } = Astro.props
+---
+
+<link {...getVersionedBsCssProps(direction)} />
+<link {...getVersionedBsFontProps(direction)} />
