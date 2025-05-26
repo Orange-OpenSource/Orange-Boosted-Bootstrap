@@ -2090,7 +2090,7 @@ $code-color:                        $ouds-color-content-muted-light !default; //
 $kbd-padding-y:                     px-to-rem($ouds-space-fixed-3xs) !default; // instead of `.1875rem`
 $kbd-padding-x:                     px-to-rem($ouds-space-fixed-2xs) !default; // instead of `.375rem`
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--#{$prefix}color-content-on-status-emphasized-alt) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
+$kbd-color:                         var(--#{$prefix}color-content-on-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
 $kbd-bg:                            var(--#{$prefix}color-surface-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
 

@@ -410,10 +410,10 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   6. `.text-info(-emphasis)` (that shouldn't have been used on texts) → `.text-status-info`
   7. `.text-light(-emphasis)` → `.text-disabled`
   8. `.text-dark(-emphasis)` → `.text-default` or see `.text-black` below
-  9. `.text-body(-emphasis)` → `.text-default` or `.text-on-status-muted`
+  9. `.text-body(-emphasis)` → `.text-default` or `.text-on-status-*-muted`
   10. `.text-body-secondary` → `.text-muted`
   11. `.text-body-tertiary` → `.text-disabled` or `.text-muted` in some cases
-  12. `.text-black` → `.text-always-black` or `.text-on-brand-primary` or `.text-on-status-emphasized` or `.text-on-status-emphasized-alt` or `.text-always-on-white`
+  12. `.text-black` → `.text-always-black` or `.text-on-brand-primary` or `.text-on-status-*-emphasized` or `.text-always-on-white`
   13. `.text-white` → `.text-always-white` or `.text-always-on-black`
   14. `.text-black-50` → `.text-muted`
   15. `.text-white-50` → `.text-muted`
@@ -502,7 +502,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
   - **4xl**: `.m-4xl`, `.mx-4xl`, `.my-4xl`, `.mt-4xl`, `.mb-4xl`, `.ms-4xl`, `.me-4xl`, `.m-xs-4xl`, etc...
   - **5xl**: `.m-5xl`, `.mx-5xl`, `.my-5xl`, `.mt-5xl`, `.mb-5xl`, `.ms-5xl`, `.me-5xl`, `.m-xs-5xl`, etc...
   - **Auto**: `.m-xs-auto`, `.mx-xs-auto`, `.my-xs-auto`, `.mt-xs-auto`, `.mb-xs-auto`, `.ms-xs-auto`, `.me-xs-auto`, `.m-2xl-auto`, etc...
-  - **Negative**: `.m-nsmash`, `.m-n2xs`, `.m-nshorter`, `.m-nshort`, `.m-nmd`, `.m-nlg`, `.m-nxl`, `.m-n2xl`, `.m-n3xl`, `.m-n4xl`, `.m-n5xl`, `.mx-nsmash`, etc...
+  - **Negative**: `.m-n3xs`, `.m-n2xs`, `.m-nxs`, `.m-nsm`, `.m-nmd`, `.m-nlg`, `.m-nxl`, `.m-n2xl`, `.m-n3xl`, `.m-n4xl`, `.m-n5xl`, `.mx-n3xs`, etc...
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,

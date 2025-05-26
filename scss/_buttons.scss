@@ -301,22 +301,22 @@
   @include button-variant(
     var(--#{$prefix}color-action-negative-enabled),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-hover),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-pressed),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-disabled),
     var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-disabled),
     var(--#{$prefix}color-action-negative-focus),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-loading),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt)
+    var(--#{$prefix}color-content-on-status-negative-emphasized)
   );
 }
 
