@@ -38,11 +38,11 @@
 }
 
 div.row .col {
-  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
+  box-shadow: inset calc(-.5 * var(--bs-gutter-x)) 0 0 0 #fff, inset calc(var(--bs-gutter-x) * .5) 0 0 0 #fff;
 }
 
 div.row .col:first-child {
-  box-shadow: inset calc(var(--bs-gutter-x) * -.5) 0 0 0 #fff;
+  box-shadow: inset calc(-.5 * var(--bs-gutter-x)) 0 0 0 #fff;
 }
 
 div.row .col:last-child {
