@@ -158,9 +158,6 @@
     "مرحبًا"
   ],
   "language": "en-US",
-  "files": [
-    "**/*.md"
-  ],
   "ignorePaths": [
     ".cspell.json",
     "dist/",
