@@ -15,79 +15,79 @@
   padding: 0;
   list-style: none;
   @include get-font-size("label-medium");
-}
 
-.breadcrumb-item {
-  display: none;
-  align-items: center;
-  min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
-  padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
+  .breadcrumb-item {
+    display: none;
+    align-items: center;
+    min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
+    padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
 
-  // The separator between breadcrumbs
-  &::after {
-    display: inline-flex;
-    flex-shrink: 0;
-    width: $ouds-breadcrumb-size-icon;
-    height: $ouds-breadcrumb-size-icon;
-    margin-left: var(--#{$prefix}breadcrumb-item-padding-icon);
-    color: var(--#{$prefix}breadcrumb-divider-color);
-    content: "";
-    background-color: currentcolor;
-    mask-image: var(--#{$prefix}breadcrumb-divider);
+    // The separator between breadcrumbs
+    &::after {
+      display: inline-flex;
+      flex-shrink: 0;
+      width: $ouds-breadcrumb-size-icon;
+      height: $ouds-breadcrumb-size-icon;
+      margin-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+      color: var(--#{$prefix}breadcrumb-divider-color);
+      content: "";
+      background-color: currentcolor;
+      mask-image: var(--#{$prefix}breadcrumb-divider);
 
-    /* rtl:raw:
-    transform: scaleX(-1);
-    */
-    // End mod
-  }
+      /* rtl:raw:
+      transform: scaleX(-1);
+      */
+      // End mod
+    }
 
-  a {
-    @extend %link-properties;
-    display: inline-block;
-    padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &.active {
-    font-weight: $ouds-font-weight-body-default;
-    color: var(--#{$prefix}breadcrumb-item-active-color);
-
-    span {
+    a {
+      @extend %link-properties;
+      display: inline-block;
+      padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-  }
 
-  &:nth-last-child(-n + 2) {
-    display: inline-flex;
-  }
+    &.active {
+      font-weight: $ouds-font-weight-body-default;
+      color: var(--#{$prefix}breadcrumb-item-active-color);
 
-  &:nth-last-child(2) {
-    flex-shrink: 0;
-  }
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
 
-  @include media-breakpoint-up(md) {
-    &:nth-last-child(-n + 3) {
+    &:nth-last-child(-n + 2) {
       display: inline-flex;
     }
-  }
 
-  @include media-breakpoint-up(lg) {
-    &:nth-last-child(-n + 4) {
+    &:nth-last-child(2) {
+      flex-shrink: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      &:nth-last-child(-n + 3) {
+        display: inline-flex;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:nth-last-child(-n + 4) {
+        display: inline-flex;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
       display: inline-flex;
     }
-  }
 
-  @include media-breakpoint-up(xl) {
-    display: inline-flex;
-  }
-
-  &:last-child {
-    &::after {
-      content: none;
+    &:last-child {
+      &::after {
+        content: none;
+      }
     }
   }
 }

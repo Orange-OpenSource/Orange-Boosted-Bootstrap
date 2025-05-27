@@ -14,7 +14,7 @@ You can find here the [OUDS Bullet list design guidelines](https://unified-desig
 
 ## Unordered lists
 
-Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a Solaris icon as the list marker.
+Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a custom icon as the list marker.
 
 ### Default display
 
@@ -26,7 +26,7 @@ Add a `.bullet-list` class to an `ul` element to display an unordered list, this
 </ul>
 {{< /example >}}
 
-### Nested lists
+### Nested unordered lists
 
 The marker depends on the level of nesting.
 
@@ -69,16 +69,16 @@ The list marker can be customized either by creating a CSS class defining the `-
 
 #### CSS class
 
-Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This is will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
+Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
 
 {{< example >}}
 <style>
-  .bullet-list-heart {
+  .bullet-list-arrow {
     --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'><path d='M525 700H175a75.22 75.22 0 0 1-75-75V375a75.22 75.22 0 0 1 75-75h350V75l347.862 357.138A98.06 98.06 0 0 1 900 500a98.061 98.061 0 0 1-27.142 67.857L525 925V700Z'/></svg>")
   }
 </style>
 
-<ul class="bullet-list bullet-list-heart">
+<ul class="bullet-list bullet-list-arrow">
     <li>Task</li>
     <li>Task
       <ul>
@@ -96,7 +96,7 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 {{< /callout >}}
 
 {{< example >}}
-<ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.4736 9.51371L9.99987 15.5765L4.52643 9.51371L4.52363 9.51066C3.46358 8.33406 3.55828 6.52092 4.73488 5.46086C5.86857 4.4399 7.60326 4.48484 8.6821 5.56369C8.6849 5.56674 8.68769 5.56953 8.69048 5.57232L9.52761 6.36807L9.99987 6.82256L10.4721 6.36832L11.3095 5.57232C11.3121 5.56953 11.3151 5.56674 11.3179 5.56369C11.8547 5.02414 12.5846 4.72199 13.3456 4.72402C14.9292 4.72402 16.2132 6.00752 16.2135 7.59138C16.2135 8.30029 15.9509 8.98406 15.4764 9.51066L15.4736 9.51371ZM16.7254 4.21217C14.8698 2.35688 11.8692 2.34622 9.99992 4.17891C8.13091 2.34622 5.13025 2.35688 3.27471 4.21217C1.43897 6.04817 1.40876 9.00617 3.18508 10.8787L9.99992 18.3926L16.815 10.8787C18.5911 9.00617 18.5611 6.04817 16.7254 4.21217Z'/%3E%3C/svg%3E&#34;);">
+<ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667'/%3E%3C/svg%3E&#34;);">
     <li>Favorite</li>
     <li>Favorite</li>
     <li>Favorite</li>
@@ -107,7 +107,7 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 
 #### Using SCSS
 
-The tick marker is not shipped by default in the OUDS Web css, you set the `$enable-bullet-list-tick` [variable]({{< docsref "/customize/options" >}}) to add it if you are using OUDS Web Sass source files.
+The tick marker is not shipped by default in the OUDS Web CSS, you can set the [`$enable-bullet-list-tick` variable]({{< docsref "/customize/options" >}}) to `true` if you are plan using it with OUDS Web Sass source files.
 
 {{< example >}}
 <!-- 
@@ -216,8 +216,8 @@ It's possible to mix ordered and unordered lists, in this case adding the `.bull
 
 ## Bare lists
 
-{{< callout >}}
-Do not confuse this style with the `.list-unstyled` utility that remove all styles from the list, see [below](#unstyled)
+{{< callout warning >}}
+Do not confuse this style with the `.list-unstyled` utility that removes all styles from the list, see [below](#unstyled)
 {{< /callout >}}
 
 {{< example >}}
@@ -269,7 +269,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 * All lists have their top margin removed
 * And their bottom margin normalized
 * Nested lists have no bottom margin
-  * This way they have a more even appearance
+  * This way they have a [more](http://google.com) even appearance
   * Particularly when followed by more list items
     * This way they have a more even appearance
     * Particularly when followed by more list items

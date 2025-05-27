@@ -215,6 +215,8 @@ address {
 
 // Lists
 
+// OUDS mod: no padding-left on ol and ul
+
 ol,
 ul,
 dl {
@@ -236,6 +238,7 @@ ul {
   list-style-type: square;
 
   ul {
+    // margin-top: #{$ouds-bullet-list-space-padding-block-body-medium};
     list-style-type: "-  ";
 
     ul {
@@ -243,13 +246,14 @@ ul {
     }
   }
 }
+// stylelint-enable selector-max-type
 
 li {
-  padding: #{$ouds-bullet-list-space-padding-block-body-medium} #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)};
+  // padding: #{$ouds-bullet-list-space-padding-block-body-medium} #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)};
 
-  &:has(ul, ol) {
-    padding-bottom: 0; // remove duplicate padding when we have nested lists
-  }
+  // &:has(ul, ol) {
+  //   padding-bottom: 0; // remove duplicate padding when we have nested lists
+  // }
 
   &::marker {
     color: var(--#{$prefix}primary);
@@ -259,7 +263,6 @@ li {
     }
   }
 }
-// stylelint-enable selector-max-type
 // End mod
 
 dt {
