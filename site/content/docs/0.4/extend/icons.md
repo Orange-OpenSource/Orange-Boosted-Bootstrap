@@ -435,18 +435,42 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
 {{< bs-table >}}
 | Icon class | Value |
 | --- | --- |
-| `.decorative-2xs-icon` | `1rem` (16px) |
-| `.decorative-xs-icon` | `1.5rem` (24px) |
-| `.decorative-sm-icon` | `2rem` (32px) |
-| `.decorative-md-icon` | `2.5rem` (40px) |
-| `.decorative-lg-icon` | `3rem` (48px) |
-| `.decorative-xl-icon` | `3.5rem` (56px) |
-| `.decorative-2xl-icon` | `4.5rem` (72px) |
+| `.decorative-4xs-icon` | `10px` |
+| `.decorative-3xs-icon` | `12px` |
+| `.decorative-2xs-icon` | `16px` |
+| `.decorative-xs-icon` | `24px` |
+| `.decorative-sm-icon` | `32px` |
+| `.decorative-md-icon` | `40px` |
+| `.decorative-lg-icon` | `48px` |
+| `.decorative-xl-icon` | `56px` |
+| `.decorative-2xl-icon` | `72px` |
 {{< /bs-table >}}
 
 </details>
 
 <div class="bd-example">
+  <div class="d-flex mb-md">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-md flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-4xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+      </svg>
+    </div>
+    <div>
+      <p class="lead mb-2xs fw-bold">4x-small decorative icon</p>
+      <p class="mb-none">coreGlobalDimensionOutOfSystem250 (<code>10px</code>)</p>
+    </div>
+  </div>
+  <div class="d-flex mb-md">
+    <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-md flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
+      <svg class="decorative-3xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#vector"/>
+      </svg>
+    </div>
+    <div>
+      <p class="lead mb-2xs fw-bold">3x-small decorative icon</p>
+      <p class="mb-none">coreGlobalDimension150 (<code>12px</code>)</p>
+    </div>
+  </div>
   <div class="d-flex mb-md">
     <div class="bg-emphasized d-inline-flex align-items-center justify-content-center me-md flex-shrink-0" style="width: 6.25rem; height: 6.25rem;">
       <svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true" data-bs-theme="dark">
@@ -455,7 +479,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">2x-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension200 (<code>1rem</code> or <code>16px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension200 (<code>16px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -466,7 +490,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">X-small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension300 (<code>1.5rem</code> or <code>24px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension300 (<code>24px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -477,7 +501,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">Small decorative icon</p>
-      <p class="mb-none">coreGlobalDimension400 (<code>2rem</code> or <code>32px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension400 (<code>32px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -488,7 +512,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">Medium decorative icon</p>
-      <p class="mb-none">coreGlobalDimension500 (<code>2.5rem</code> or <code>40px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension500 (<code>40px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -499,7 +523,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">Large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension600 (<code>3rem</code> or <code>48px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension600 (<code>48px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -510,7 +534,7 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">X-large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension700 (<code>3.5rem</code> or <code>56px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension700 (<code>56px</code>)</p>
     </div>
   </div>
   <div class="d-flex mb-md">
@@ -521,12 +545,14 @@ Here are the rules to follow for decorative icons. Be careful using these icons'
     </div>
     <div>
       <p class="lead mb-2xs fw-bold">2x-large decorative icon</p>
-      <p class="mb-none">coreGlobalDimension900 (<code>4.5rem</code> or <code>72px</code> at zoom 100%)</p>
+      <p class="mb-none">coreGlobalDimension900 (<code>72px</code>)</p>
     </div>
   </div>
 </div>
 
 ```html
+<svg class="decorative-4xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
+<svg class="decorative-3xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 <svg class="decorative-2xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 <svg class="decorative-xs-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
 <svg class="decorative-sm-icon text-status-info" width="1rem" height="1rem" fill="currentColor" aria-hidden="true"></svg>
