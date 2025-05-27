@@ -123,8 +123,8 @@ function renderPlaceholderToString(placeholder: Placeholder) {
       placeholder.options.background.startsWith('var(--')
         ? placeholder.options.color
         : placeholder.options.background === '#000'
-        ? '#ffffff30'
-        : '#00000014'
+          ? '#ffffff30'
+          : '#00000014'
     } aria-hidden="true">
           <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
         </svg>`
