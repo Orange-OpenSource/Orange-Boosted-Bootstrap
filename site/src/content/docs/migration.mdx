@@ -36,7 +36,7 @@ toc: true
   - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the variants containing icons. Please reflect this modification into your websites.
 
 - **Orange navbar**
-  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use "Access to your account" in certain situations.
+  - <span class="badge text-bg-warning">Warning</span> The markup has been revised to utilize an empty `alt` attribute and eliminate the `role="img"`, as a placeholder image is displayed in the navbar in our documentation. You should customize the `alt` attribute for the avatar to align with the context of your website. For instance, it might be appropriate to use “Access to your account” in certain situations.
   - <span class="badge text-bg-warning">Warning</span> The unused `.overflow-visible` class has been removed from the search and shopping basket SVGs. Please reflect this modification into your websites.
 
 ### Examples
@@ -48,7 +48,7 @@ toc: true
 
 - Certain variants of the components and renderings have been omitted from the documentation to help you clearly understand what is available for use, thereby simplifying the connection between [Orange Design System]([[config:ods.web]]) and the Boosted documentation.
 
-  Although these variants can still be found under the "See Bootstrap examples that are incompatible with Orange Design System" section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
+  Although these variants can still be found under the “See Bootstrap examples that are incompatible with Orange Design System” section, be aware that using them may violate the Orange Design System guidelines. It is advisable to avoid these variants whenever possible.
 
 - We have checked all SVGs in the documentation to ensure that they are accessible and correctly interpreted by support technologies. Please also check your projects’ SVGs, which should have either `aria-hidden="true"`, or `role="img"` with an accessible name (defined by `aria-label`, `aria-labelledby`, a `<title>`, or some visually hidden alternative text).
 
@@ -85,7 +85,7 @@ Learn more by reading the new [color modes documentation]([[docsref:/customize/c
 
 This change has an impact on how you should use Boosted. Please read carefully the following notes.
 
-From a general point of view, the dark mode is optional on Orange websites. However, a new concept has been introduced and replaces our dark variants for components. It is referred to as "contextual dark mode" and is based on the `data-bs-theme="dark"` attribute. It is used to switch a component or a container to dark mode, independently of the global color mode. It implies that all the `.{component}-dark` classes have been removed from Boosted and that `${component}-*-inverted` Sass variables have been deprecated.
+From a general point of view, the dark mode is optional on Orange websites. However, a new concept has been introduced and replaces our dark variants for components. It is referred to as “contextual dark mode” and is based on the `data-bs-theme="dark"` attribute. It is used to switch a component or a container to dark mode, independently of the global color mode. It implies that all the `.{component}-dark` classes have been removed from Boosted and that `${component}-*-inverted` Sass variables have been deprecated.
 
 Please note that `data-bs-theme` (default, light or dark) automatically sets the `color` and `background-color` CSS properties to `inherit` on the element it is applied to. This means that some of our components have been adapted to this new behavior by setting their default colors and background colors differently (some of them are not transparent). Please double-check that it doesn’t break your design. And more generally, please check carefully that this new version doesn’t break your design even if you didn’t use the dark variants before.
 
@@ -829,14 +829,14 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0. How
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of offcanvas navbars. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Navs and tabs**
-  - <span class="badge text-bg-danger">Breaking</span> Based on Bootstrap, we’ve replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn’t exist anymore and so that the following modification must be done in your websites:
+  - <span class="badge text-bg-danger">Breaking</span> Based on Bootstrap, we’ve replaced “Tabs light” variant by “Underline” variant. It means that `.nav-tabs-light` is deprecated and doesn’t exist anymore and so that the following modification must be done in your websites:
 
     ```diff
     - <ul class="nav nav-tabs nav-tabs-light">
     + <ul class="nav nav-underline">
     ```
 
-    It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
+    It also means that the “Nested tabs” variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
 - **Offcanvas**
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of offcanvases. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
@@ -1638,7 +1638,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
   - <span class="badge text-bg-success">New</span> Breadcrumb now has a dark variant.
 
 - **Footer**
-  - <span class="badge text-bg-warning">Warning</span> All footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+  - <span class="badge text-bg-warning">Warning</span> All footers examples have been modified to use the “Terms and conditions” wording instead of “Terms & Conditions”. Please reflect this modification into your websites.
 
 - **List group**
   - <span class="badge text-bg-success">New</span> List group now has a dark variant.
@@ -1962,8 +1962,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Added [new Customize section](/docs/[[config:docs_version]]/customize/overview/), replacing [v4’s Theming page](https://boosted.orange.com/docs/4.6/getting-started/theming/), with new details on Sass, global configuration options, color schemes, CSS variables, and more.
 - Reorganized all form documentation into [new Forms section](/docs/[[config:docs_version]]/forms/overview/), breaking apart the content into more focused pages.
 - Similarly, updated [the Layout section](/docs/[[config:docs_version]]/layout/breakpoints/), to flesh out grid content more clearly.
-- Renamed "Navs" component page to "Navs & Tabs".
-- Renamed "Checks" page to "Checks & radios".
+- Renamed “Navs” component page to “Navs & Tabs”.
+- Renamed “Checks” page to “Checks & radios”.
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
 - Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
