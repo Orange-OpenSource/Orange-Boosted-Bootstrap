@@ -39,10 +39,8 @@
       top: var(--#{$prefix}bullet-list-padding-block);
       left: var(--#{$prefix}bullet-list-marker-left);
       width: var(--#{$prefix}bullet-list-icon-container-width);
+      height: var(--#{$prefix}bullet-list-icon-container-width);
       height: 1lh;
-      @supports not (height: 1lh) {
-        height: var(--#{$prefix}bullet-list-icon-container-width);
-      }
       content: "";
     }
 
