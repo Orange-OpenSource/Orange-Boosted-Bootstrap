@@ -209,11 +209,11 @@ In CSS, `margin` properties can utilize negative values (`padding` cannot). Thes
 The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-lg`:
 
 ```scss
-.mt-nshort {
+.mt-nsm {
   margin-top: -$ouds-space-fixed-sm !important;
 }
 
-.ms-scaled-ntall {
+.ms-scaled-nlg {
   margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important;
 }
 ```
