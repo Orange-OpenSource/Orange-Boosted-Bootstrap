@@ -34,11 +34,17 @@
   border: 0;
   @include transition($nav-link-transition);
 
-  // OUDS mod: no focus
+  // OUDS mod: handle focus differently
   &:hover {
     color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
+
+  // OUDS mod: make sure the focused nav link is displayed over its next sibling
+  &:focus[data-focus-visible-added] {
+    z-index: $focus-visible-zindex;
+  }
+  // End mod
 
   // OUDS mod: no `&:focus-visible`
 
@@ -213,8 +219,8 @@
 .nav-justified {
   > .nav-link,
   .nav-item {
-    flex-basis: 0;
     flex-grow: 1;
+    flex-basis: 0;
     text-align: center;
   }
 }

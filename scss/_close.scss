@@ -27,6 +27,7 @@
   color: var(--#{$prefix}btn-close-color);
   background-color: var(--#{$prefix}btn-close-bg); // OUDS mod: instead of background
   border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // OUDS mod
+  // OUDS mod: no filter
   @include border-radius();
   // OUDS mod: no opacity
   @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // OUDS mod: using mask instead of background

@@ -67,8 +67,8 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.2 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG/#contrast-minimum
 $min-contrast-ratio:   4.5 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -368,7 +368,6 @@ $escaped-characters: (
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767' fill='#{$black}'><path d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/></svg>") !default;
-$check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
 $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
 $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
@@ -388,14 +387,9 @@ $helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
   "close":   $cross-icon-stroke,
-  "check":   $check-icon,
   "success": $success-icon,
   "error":   $danger-icon
 ) !default;
-
-//// Filters
-// see https://codepen.io/sosuke/pen/Pjoqqp
-$invert-filter:         invert(1) !default;
 // End mod
 
 // Options
@@ -490,7 +484,7 @@ $body-emphasis-color:       $ouds-color-content-default-light !default; // OUDS 
 // scss-docs-start link-variables
 $link-color:                              $black !default; // OUDS mod
 $link-decoration:                         underline !default;
-$link-font-weight:                        $ouds-font-weight-strong !default; // OUDS mod
+$link-font-weight:                        $ouds-font-weight-system-strong !default; // OUDS mod
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $primary !default; // OUDS mod
 $link-hover-decoration:                   null !default;
@@ -701,10 +695,10 @@ $font-size-lg:                var(--#{$prefix}font-size-body-large) !default; //
 
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
-$font-weight-normal:          $ouds-font-weight-default !default;
+$font-weight-normal:          $ouds-font-weight-system-default !default;
 $font-weight-medium:          null !default;
 $font-weight-semibold:        null !default;
-$font-weight-bold:            $ouds-font-weight-strong !default;
+$font-weight-bold:            $ouds-font-weight-system-strong !default;
 $font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;
@@ -789,8 +783,8 @@ $blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: in
 $blockquote-footer-color:     var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `$gray-600`
 // OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $ouds-space-fixed-medium !default;
-$hr-color:                    inherit !default;
+$hr-margin-y:                 $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer !default;`
+$hr-color:                    $ouds-color-border-default !default; // OUDS mod: instead of `inherit !default;`
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in Bootstrap v5.2.0
@@ -798,11 +792,11 @@ $hr-height:                   null !default; // Deprecated in Bootstrap v5.2.0
 // fusv-enable
 
 $hr-border-color:             null !default; // Allows for inherited colors
-$hr-border-width:             var(--#{$prefix}border-width) !default;
+$hr-border-width:             $ouds-divider-border-width !default; // OUDS mod: instead of `var(--#{$prefix}border-width) !default;`
 $hr-opacity:                  null !default;
 
 // scss-docs-start vr-variables
-$vr-border-width:             2px !default; // OUDS mod: instead of `var(--#{$prefix}border-width)`
+$vr-border-width:             $ouds-divider-border-width !default; // OUDS mod: instead of `var(--#{$prefix}border-width)`
 // scss-docs-end vr-variables
 
 $legend-margin-bottom:        $spacer * .25 !default;
@@ -1054,44 +1048,40 @@ $form-color-disabled-filter:            brightness(0) invert(1) brightness(.8) !
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width:                  1em !default;
-$form-check-min-height:                   calc(#{$font-size-base} * #{$input-btn-line-height}) !default; // stylelint-disable-line function-disallowed-list
-$form-check-padding-start:                $form-check-input-width + .5em !default;
-$form-check-margin-bottom:                .125rem !default;
-$form-check-label-padding-top:            .4375rem !default; // OUDS mod
-$form-check-label-color:                  null !default;
-$form-check-label-cursor:                 null !default;
-$form-check-transition:                   null !default;
-$form-check-filter:                       $invert-filter !default; // OUDS mod
+$form-check-input-width:                  px-to-rem($ouds-checkbox-size-indicator) !default; // OUDS mod: instead of `1em`
+$form-check-min-height:                   px-to-rem($ouds-control-item-size-min-height) !default; // OUDS mod: instead of `$font-size-base * $line-height-base`
+// OUDS mod: no `$form-check-padding-start`
+// OUDS mod: no `$form-check-margin-bottom`
+// OUDS mod: no `$form-check-label-color`
+$form-check-label-cursor:                 pointer !default; // OUDS mod: instead of `null`
+// OUDS mod: no `$form-check-transition`
+// OUDS mod: no `$form-check-filter`
 
-$form-check-input-active-filter:          null !default;
-$form-check-input-active-bg-color:        $component-active-bg !default; // OUDS mod
+// OUDS mod: no `$form-check-input-active-filter`
 
-$form-check-input-bg:                     $input-bg !default;
-$form-check-input-border:                 var(--#{$prefix}border-width) solid $input-border-color !default; // OUDS mod: instead of `var(--#{$prefix}border-width) solid var(--#{$prefix}border-color)`
-$form-check-input-border-radius:          0 !default;
-$form-check-radio-border-radius:          50% !default;
-$form-check-input-focus-border:           null !default;
-$form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
+// ouds mod: no `$form-check-input-color`
+// OUDS mod: no `$form-check-input-border`
+$form-check-input-border-radius:          $ouds-checkbox-border-radius !default; // OUDS mod: instead of `0`
+$form-check-radio-border-radius:          $ouds-radio-button-border-radius !default; // OUDS mod: instead of `0`
+// OUDS mod: no `$form-check-input-focus-border`
+// OUDS mod: no `$form-check-input-focus-box-shadow`
 
-$form-check-input-checked-color:          $component-active-color !default;
-$form-check-input-checked-bg-color:       $component-active-bg !default;
-$form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image:       var(--#{$prefix}check-icon) !default;
-$form-check-input-disabled-color:         $gray-900 !default; // OUDS mod
-$form-check-input-disabled-filter:        var(--#{$prefix}form-check-filter) !default; // OUDS mod
-$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+// OUDS mod: no `$form-check-input-checked-color`
+// OUDS mod: no `$form-check-input-checked-bg-color`
+// OUDS mod: no `$form-check-input-checked-border-color`
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/></svg>") !default; // OUDS mod: custom SVG
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/></svg>") !default; // OUDS mod: custom SVG
 
-$form-check-input-indeterminate-color:          $form-check-input-checked-color !default;
-$form-check-input-indeterminate-bg-color:       $form-check-input-checked-bg-color !default;
-$form-check-input-indeterminate-border-color:   $form-check-input-indeterminate-bg-color !default;
-$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'><path fill='#{$form-check-input-indeterminate-color}' d='M0 0h10v3H0z'/></svg>") !default;
+// OUDS mod: no `$form-check-input-indeterminate-color`
+// OUDS mod: no `$form-check-input-indeterminate-bg-color`
+// OUDS mod: no `$form-check-input-indeterminate-border-color`
+$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M4.5 9.375c0-.345.28-.625.625-.625h9.75c.345 0 .625.28.625.625v1.25c0 .345-.28.625-.625.625h-9.75a.625.625 0 0 1-.625-.625v-1.25Z'/></svg>") !default; // OUDS mod: custom SVG
 
-$form-check-input-disabled-opacity:        null !default;
-$form-check-label-disabled-opacity:        null !default;
-$form-check-btn-check-disabled-opacity:    null !default;
+// OUDS mod: no `$form-check-input-disabled-opacity`
+// OUDS mod: no `$form-check-label-disabled-opacity`
+// OUDS mod: no `$form-check-btn-check-disabled-opacity`
 
-$form-check-inline-margin-end:    1rem !default;
+// OUDS mod: no `$form-check-inline-margin-end`
 
 // OUDS mod: Star rating
 $form-star-size:                        1.5625rem !default;
@@ -1107,44 +1097,23 @@ $form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg 
 $form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#{$black}' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
 $form-star-rating-sm-checked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#{$black}' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
 $form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='transparent' stroke='#{$black}' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
-
 // End mod
 // scss-docs-end form-check-variables
 
 // scss-docs-start form-switch-variables
 // OUDS mod: no $form-switch-color
-$form-switch-width:               $spacer * 3 !default; // OUDS mod
-$form-switch-padding-start:       $form-switch-width + .625rem !default; // OUDS mod
-$form-switch-bg-image:            var(--#{$prefix}close-icon) !default;  // OUDS mod
-$form-switch-bg-position:         right .5rem top 50% !default;  // OUDS mod
-$form-switch-bg-size:             .75rem !default;  // OUDS mod
-$form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // OUDS mod
-$form-switch-border-radius:       null !default; // OUDS mod
-$form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // OUDS mod
-
-$form-switch-square-bg:             $black !default; // OUDS mod
-$form-switch-bg:                    $white !default; // OUDS mod
-$form-switch-border-color:          $white !default; // OUDS mod
-$form-switch-filter:                var(--#{$prefix}form-check-filter) !default; // OUDS mod
-$form-switch-focus-visible-inner:   $black !default; // OUDS mod
-$form-switch-focus-visible-outer:   $white !default; // OUDS mod
+// OUDS mod: no $form-switch-width
+// OUDS mod: no $form-switch-padding-start
+// OUDS mod: no $form-switch-bg-image
+$form-switch-border-radius:       $ouds-switch-border-radius !default; // OUDS mod: instead of `$form-switch-width`
+$form-switch-transition:          width .15s cubic-bezier(.2, 0, 0, 1), height .15s cubic-bezier(.2, 0, 0, 1), left .15s cubic-bezier(.2, 0, 0, 1) !default; // OUDS mod: instead of `background-position .15s ease-in-out`
 
 // OUDS mod: no $form-switch-focus-color
 // OUDS mod: no $form-switch-focus-bg-image
 
 // OUDS mod: no $form-switch-checked-color
-$form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default; // OUDS mod
-$form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default; // OUDS mod
-// stylelint-disable-next-line function-disallowed-list
-$form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; // OUDS mod
-
-$form-switch-checked-square-bg:                 var(--#{$prefix}body-bg) !default; // OUDS mod
-$form-switch-checked-bg:                        $ouds-color-orange-500 !default; // OUDS mod
-$form-switch-checked-border-color:              $ouds-color-orange-500 !default; // OUDS mod
-$form-switch-checked-filter:                    none !default; // OUDS mod
-$form-switch-checked-focus-inner:               var(--#{$prefix}color-border-focus-inset) !default; // OUDS mod
-$form-switch-checked-focus-outer:               var(--#{$prefix}color-border-focus) !default; // OUDS mod
-$form-switch-unchecked-invalid-border-color:    #31c3eb !default; // OUDS mod: will be rendered red when mixed with the filter
+$form-switch-checked-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/></svg>") !default; // OUDS mod: instead of Bootstrap icon
+// OUDS mod: no $form-switch-checked-bg-position
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
@@ -1253,10 +1222,10 @@ $form-feedback-color:               null !default; // OUDS mod
 // scss-docs-end form-feedback-variables
 
 // scss-docs-start form-validation-colors
-$form-valid-color:                  var(--#{$prefix}success-text-emphasis) !default; // OUDS mod: instead of `$form-feedback-valid-color`
-$form-valid-border-color:           var(--#{$prefix}success) !default; // OUDS mod: instead of `$form-feedback-valid-color`
-$form-invalid-color:                var(--#{$prefix}danger-text-emphasis) !default; // OUDS mod: instead of `$form-feedback-invalid-color`
-$form-invalid-border-color:         var(--#{$prefix}danger) !default; // OUDS mod: instead of `$form-feedback-invalid-color`
+$form-valid-color:                  $ouds-color-content-default-light !default; // OUDS mod: instead of `$form-feedback-valid-color`
+$form-valid-border-color:           $ouds-color-border-emphasized-light !default; // OUDS mod: instead of `$form-feedback-valid-color`
+$form-invalid-color:                $ouds-color-action-negative-enabled-light !default; // OUDS mod: instead of `$form-feedback-invalid-color`
+$form-invalid-border-color:         $ouds-color-action-negative-enabled-light !default; // OUDS mod: instead of `$form-feedback-invalid-color`
 // scss-docs-end form-validation-colors
 
 // scss-docs-start form-validation-states
@@ -1529,7 +1498,7 @@ $pagination-bg:                     transparent !default; // OUDS mod: instead o
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // OUDS mod
-$pagination-margin-start:           0 !default; // OUDS mod: instead of `calc($pagination-border-width * -1)`
+$pagination-margin-start:           0 !default; // OUDS mod: instead of `calc(-1 * $pagination-border-width)`
 $pagination-margin-x-first-last:    $spacer * .5 !default; // OUDS mod
 $pagination-border-color:           transparent !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
@@ -1786,7 +1755,7 @@ $modal-title-line-height:           $line-height-base !default;
 $modal-content-padding-y:           $spacer !default; // OUDS mod
 $modal-content-padding-x:           0 !default; // OUDS mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // OUDS mod
-$modal-content-color:               null !default;
+$modal-content-color:               var(--#{$prefix}body-color) !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
@@ -1972,21 +1941,19 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size:              $font-size-sm !default;
-$breadcrumb-font-weight:            $font-weight-bold !default; // OUDS mod
-
-$breadcrumb-padding-y:              .5rem !default;
-$breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding-x:         $spacer * .5 !default;
-$breadcrumb-margin-bottom:          1rem !default;
-$breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // OUDS mod
-$breadcrumb-bg:                     null !default;
-$breadcrumb-divider-color:          $black !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-active-color:           null !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
-$breadcrumb-divider-filter:         none !default; // OUDS mod
+// OUDS mod: no `$breadcrumb-font-size`
+// OUDS mod: no `$breadcrumb-padding-y`
+// OUDS mod: no `$breadcrumb-padding-x`
+// OUDS mod: no `$breadcrumb-item-padding-x`
+// OUDS mod: no `$breadcrumb-margin-bottom`
+// OUDS mod: no `$breadcrumb-color`
+// OUDS mod: no `$breadcrumb-bg`
+$breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+// OUDS mod: no `$breadcrumb-active-color`
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.651 12.75 11.5 8 6.651 3.25 5.266 4.606 8.73 8l-3.464 3.392z'/></svg>") !default; // OUDS mod
+// OUDS mod: no `$breadcrumb-divider-filter`
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
-$breadcrumb-border-radius:          null !default;
+// OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
 
 
@@ -1998,6 +1965,7 @@ $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
 $carousel-control-transition:        $transition-focus !default;
+// OUDS mod: no $carousel-control-icon-filter
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;

@@ -33,6 +33,7 @@ $enable-rounded: true;
 @import "../../../scss/tokens/semantic";
 @import "../../../scss/tokens/semantic-colors-custom-props";
 @import "../../../scss/tokens/composite";
+@import "../../../scss/tokens/component-colors-custom-props";
 @import "../../../scss/tokens/component";
 @import "../../../scss/variables";
 @import "../../../scss/maps";
@@ -71,4 +72,4 @@ $enable-cssgrid: true;
 @import "ouds-web";
 @import "tarteaucitron";
 
-@import "../../static/docs/0.3/assets/fonts/solaris-icons";
+@import "../../static/docs/0.4/assets/fonts/solaris-icons";

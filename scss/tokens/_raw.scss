@@ -1,6 +1,6 @@
 // Raw primitive values
 // Insertion of brand foundations
-// Token version 0.7.0
+// Token version 0.11.0
 
 // Border
 
@@ -155,7 +155,7 @@ $ouds-color-functional-white: #fff !default;
 $ouds-color-opacity-black-0: rgba(0, 0, 0, 0) !default;
 $ouds-color-opacity-black-40: rgba(0, 0, 0, .04) !default;
 $ouds-color-opacity-black-80: rgba(0, 0, 0, .08) !default;
-// $ouds-color-opacity-black-120: rgba(0, 0, 0, .12) !default;
+$ouds-color-opacity-black-120: rgba(0, 0, 0, .12) !default;
 $ouds-color-opacity-black-160: rgba(0, 0, 0, .16) !default;
 $ouds-color-opacity-black-200: rgba(0, 0, 0, .2) !default;
 $ouds-color-opacity-black-240: rgba(0, 0, 0, .24) !default;
@@ -184,7 +184,7 @@ $ouds-color-opacity-sun: rgba(255, 208, 0, .16) !default;
 $ouds-color-opacity-white-0: rgba(255, 255, 255, 0) !default;
 $ouds-color-opacity-white-40: rgba(255, 255, 255, .04) !default;
 $ouds-color-opacity-white-80: rgba(255, 255, 255, .08) !default;
-// $ouds-color-opacity-white-120: rgba(255, 255, 255, .12) !default;
+$ouds-color-opacity-white-120: rgba(255, 255, 255, .12) !default;
 // $ouds-color-opacity-white-160: rgba(255, 255, 255, .16) !default;
 $ouds-color-opacity-white-200: rgba(255, 255, 255, .2) !default;
 // $ouds-color-opacity-white-240: rgba(255, 255, 255, .24) !default;
@@ -252,14 +252,15 @@ $ouds-dimension-650: $ouds-dimension-base * 13 !default; // 52
 $ouds-dimension-700: $ouds-dimension-base * 14 !default; // 56
 $ouds-dimension-750: $ouds-dimension-base * 15 !default; // 60
 $ouds-dimension-800: $ouds-dimension-base * 16 !default; // 64
-// $ouds-dimension-850: $ouds-dimension-base * 17 !default; // 68
+$ouds-dimension-850: $ouds-dimension-base * 17 !default; // 68
 $ouds-dimension-900: $ouds-dimension-base * 18 !default; // 72
 $ouds-dimension-1000: $ouds-dimension-base * 20 !default; // 80
 $ouds-dimension-1200: $ouds-dimension-base * 24 !default; // 96
+// $ouds-dimension-1250: $ouds-dimension-base * 25 !default; // 100
 $ouds-dimension-1400: $ouds-dimension-base * 28 !default; // 112
 $ouds-dimension-1600: $ouds-dimension-base * 32 !default; // 128
 $ouds-dimension-1800: $ouds-dimension-base * 36 !default; // 144
-// $ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
+$ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
 // $ouds-dimension-3000: $ouds-dimension-base * 80 !default; // 320
 $ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
 // $ouds-dimension-5000: $ouds-dimension-base * 140 !default; // 560
@@ -302,7 +303,7 @@ $ouds-elevation-y-500: 12px !default;
 $ouds-font-family-brand-default: "Helvetica Neue" !default;
 // $ouds-font-family-brand-tv: "Helvetica Neue LT" !default;
 // $ouds-font-family-monospace-courier-new: "Courier New" !default;
-// $ouds-font-family-monospace-menlo: "Menlo" !default;
+$ouds-font-family-monospace-menlo: "Menlo" !default;
 // $ouds-font-family-monospace-monaco: "Monaco" !default;
 // $ouds-font-family-monospace-sf-mono: "SF Mono" !default;
 // $ouds-font-family-system-arial: "Arial" !default;

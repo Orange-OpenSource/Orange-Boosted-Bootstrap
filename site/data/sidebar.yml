@@ -7,7 +7,6 @@
   pages:
     - title: Introduction
     - title: Download
-      draft: true
     - title: Contents
     - title: Browsers & devices
     - title: JavaScript
@@ -77,13 +76,13 @@
   icon_color: body-color
   pages:
     - title: Overview
-      draft: true
     - title: Form control
       draft: true
     - title: Select
       draft: true
-    - title: Checks & radios
-      draft: true
+    - title: Checkbox
+    - title: Radio button
+    - title: Switch
     - title: Range
       draft: true
     - title: Input group
@@ -95,7 +94,6 @@
     - title: Layout
       draft: true
     - title: Validation
-      draft: true
 
 - title: Components
   icon: menu-button-wide-fill
@@ -110,7 +108,6 @@
     - title: Badge
       draft: true
     - title: Breadcrumb
-      draft: true
     - title: Buttons
     - title: Button group
       draft: true
@@ -173,16 +170,14 @@
     - title: Clearfix
     - title: Color & background
     - title: Colored links
+    - title: Divider
     - title: Focus ring
       draft: true
-    - title: Icon
     - title: Position
     - title: Ratio
     - title: Stacks
     - title: Stretched link
     - title: Text truncation
-    - title: Vertical rule
-      draft: true
     - title: Visually hidden
 
 - title: Utilities
@@ -215,7 +210,6 @@
   pages:
     - title: Approach
     - title: Icons
-      draft: true
 
 - title: About
   icon: globe2

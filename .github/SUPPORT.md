@@ -11,7 +11,7 @@ For general OUDS Web troubleshooting or help getting started:
 
 For general Bootstrap troubleshooting or help getting started:
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+- Follow [@getbootstrap on X](https://x.com/getbootstrap).
 - Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
 - Ask questions and explore [Bootstrap GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
 - Discuss, ask questions, and more on [the community Discord](https://discord.gg/bZUvakRU3M) or [Bootstrap subreddit](https://www.reddit.com/r/bootstrap/).

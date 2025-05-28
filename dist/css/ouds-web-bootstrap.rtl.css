@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * OUDS Web  v0.3.0 (https://web.unified-design-system.orange.com/)
+ * OUDS Web  v0.4.0 (https://web.unified-design-system.orange.com/)
  * Copyright 2014-2025 The OUDS Web Authors
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
@@ -29,8 +29,8 @@
   --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04);
   --bs-color-action-support-focus: rgba(0, 0, 0, 0.08);
   --bs-color-action-support-hover: rgba(0, 0, 0, 0.08);
-  --bs-color-action-support-loading: rgba(0, 0, 0, 0.08);
-  --bs-color-action-support-pressed: rgba(0, 0, 0, 0.08);
+  --bs-color-action-support-loading: rgba(0, 0, 0, 0.12);
+  --bs-color-action-support-pressed: rgba(0, 0, 0, 0.12);
   --bs-color-action-visited: #5b2f98;
   --bs-color-always-black: #000;
   --bs-color-always-on-black: #eee;
@@ -114,7 +114,7 @@
   --bs-color-overlay-modal: #fff;
   --bs-color-surface-brand-primary: #ff7900;
   --bs-color-surface-status-accent-emphasized: #ffd000;
-  --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16);
+  --bs-color-surface-status-accent-muted: #f9f5f0;
   --bs-color-surface-status-info-emphasized: #26b2ff;
   --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08);
   --bs-color-surface-status-negative-emphasized: #db0002;
@@ -154,8 +154,8 @@
   --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04);
   --bs-color-action-support-focus: rgba(255, 255, 255, 0.08);
   --bs-color-action-support-hover: rgba(255, 255, 255, 0.08);
-  --bs-color-action-support-loading: rgba(255, 255, 255, 0.08);
-  --bs-color-action-support-pressed: rgba(255, 255, 255, 0.08);
+  --bs-color-action-support-loading: rgba(255, 255, 255, 0.12);
+  --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12);
   --bs-color-action-visited: #a885d8;
   --bs-color-always-black: #000;
   --bs-color-always-on-black: #eee;
@@ -261,6 +261,27 @@
 }
 
 :root,
+[data-bs-theme=light],
+:root[data-bs-theme=light] [data-bs-theme=root],
+:root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+  --bs-switch-color-cursor: #fff;
+  --bs-switch-color-track-selected: #3de35a;
+  --bs-switch-color-track-selected-interaction: #1ecd3c;
+  --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
+  --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
+}
+
+[data-bs-theme=dark],
+:root[data-bs-theme=dark] [data-bs-theme=root],
+:root[data-bs-theme=light] [data-bs-theme=root-inverted] {
+  --bs-switch-color-cursor: #141414;
+  --bs-switch-color-track-selected: #1ecd3c;
+  --bs-switch-color-track-selected-interaction: #94f0a4;
+  --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
+  --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
+}
+
+:root,
 [data-bs-theme] {
   color: var(--bs-color-content-default);
   --bs-link-color: var(--bs-color-action-enabled);
@@ -343,7 +364,6 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3e%3cpath d='M597.22 225 402.78 421.43 325 500l77.78 78.57L597.22 775 675 696.43 480.56 500 675 303.57z'/%3e%3c/svg%3e");
   --bs-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767' fill='%23000'%3e%3cpath d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/%3e%3c/svg%3e");
-  --bs-check-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'%3e%3cpath fill='%23000' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/%3e%3c/svg%3e");
   --bs-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'%3e%3cpath fill='%233de35a' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/%3e%3c/svg%3e");
   --bs-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'%3e%3cpath fill='%23db0002' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/%3e%3c/svg%3e");
   --bs-font-sans-serif: "Helvetica Neue", Helvetica, "SF Pro", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -444,18 +464,18 @@
   --bs-space-scaled-taller: 32px;
   --bs-space-scaled-tallest: 40px;
   --bs-space-scaled-spacious: 48px;
-  --bs-icon-sm-with-heading-xlarge: 2.75rem;
-  --bs-icon-md-with-heading-xlarge: 3rem;
-  --bs-icon-lg-with-heading-xlarge: 3.25rem;
-  --bs-icon-sm-with-heading-large: 2.5rem;
-  --bs-icon-md-with-heading-large: 2.75rem;
-  --bs-icon-lg-with-heading-large: 3rem;
-  --bs-icon-sm-with-heading-medium: 2rem;
-  --bs-icon-md-with-heading-medium: 2.5rem;
-  --bs-icon-lg-with-heading-medium: 2.75rem;
-  --bs-icon-sm-with-heading-small: 2rem;
-  --bs-icon-md-with-heading-small: 2.5rem;
-  --bs-icon-lg-with-heading-small: 2.75rem;
+  --bs-icon-sm-with-heading-xlarge: 2.25rem;
+  --bs-icon-md-with-heading-xlarge: 2.5rem;
+  --bs-icon-lg-with-heading-xlarge: 2.75rem;
+  --bs-icon-sm-with-heading-large: 2rem;
+  --bs-icon-md-with-heading-large: 2.25rem;
+  --bs-icon-lg-with-heading-large: 2.5rem;
+  --bs-icon-sm-with-heading-medium: 1.5rem;
+  --bs-icon-md-with-heading-medium: 1.75rem;
+  --bs-icon-lg-with-heading-medium: 2rem;
+  --bs-icon-sm-with-heading-small: 1.5rem;
+  --bs-icon-md-with-heading-small: 1.75rem;
+  --bs-icon-lg-with-heading-small: 2rem;
   --bs-icon-sm-with-body-large: 1.25rem;
   --bs-icon-md-with-body-large: 1.5rem;
   --bs-icon-lg-with-body-large: 1.75rem;
@@ -479,17 +499,13 @@
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
   --bs-focus-ring-color: rgba(241, 94, 0, 0.25);
-  --bs-form-valid-color: var(--bs-success-text-emphasis);
-  --bs-form-valid-border-color: var(--bs-success);
-  --bs-form-invalid-color: var(--bs-danger-text-emphasis);
-  --bs-form-invalid-border-color: var(--bs-danger);
-  --bs-form-check-filter: invert(1);
-  --bs-form-check-input-disabled-color: #141414;
+  --bs-form-valid-color: #000;
+  --bs-form-valid-border-color: #000;
+  --bs-form-invalid-color: #db0002;
+  --bs-form-invalid-border-color: #db0002;
   --bs-form-color-disabled-filter: brightness(0) invert(1) brightness(0.8);
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23333' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
-  --bs-form-switch-square-bg: #000;
-  --bs-form-switch-unchecked-invalid-border-color: #31c3eb;
   --bs-table-active-bg-factor: 0.135;
   --bs-table-hover-bg-factor: 0.065;
   --bs-table-striped-bg-factor: 0.035;
@@ -628,18 +644,18 @@
   [data-bs-theme=light],
   :root[data-bs-theme=light] [data-bs-theme=root],
   :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
-    --bs-icon-sm-with-heading-xlarge: 3.25rem;
-    --bs-icon-md-with-heading-xlarge: 3.5rem;
-    --bs-icon-lg-with-heading-xlarge: 4rem;
-    --bs-icon-sm-with-heading-large: 2.75rem;
-    --bs-icon-md-with-heading-large: 3rem;
-    --bs-icon-lg-with-heading-large: 3.25rem;
-    --bs-icon-sm-with-heading-medium: 2.5rem;
-    --bs-icon-md-with-heading-medium: 2.75rem;
-    --bs-icon-lg-with-heading-medium: 3rem;
-    --bs-icon-sm-with-heading-small: 2rem;
-    --bs-icon-md-with-heading-small: 2.5rem;
-    --bs-icon-lg-with-heading-small: 2.75rem;
+    --bs-icon-sm-with-heading-xlarge: 2.75rem;
+    --bs-icon-md-with-heading-xlarge: 3rem;
+    --bs-icon-lg-with-heading-xlarge: 3.25rem;
+    --bs-icon-sm-with-heading-large: 2.25rem;
+    --bs-icon-md-with-heading-large: 2.5rem;
+    --bs-icon-lg-with-heading-large: 2.75rem;
+    --bs-icon-sm-with-heading-medium: 2rem;
+    --bs-icon-md-with-heading-medium: 2.25rem;
+    --bs-icon-lg-with-heading-medium: 2.5rem;
+    --bs-icon-sm-with-heading-small: 1.5rem;
+    --bs-icon-md-with-heading-small: 1.75rem;
+    --bs-icon-lg-with-heading-small: 2rem;
     --bs-icon-sm-with-body-large: 1.25rem;
     --bs-icon-md-with-body-large: 1.5rem;
     --bs-icon-lg-with-body-large: 1.75rem;
@@ -656,21 +672,21 @@
   [data-bs-theme=light],
   :root[data-bs-theme=light] [data-bs-theme=root],
   :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
-    --bs-icon-sm-with-heading-xlarge: 3.5rem;
-    --bs-icon-md-with-heading-xlarge: 3.75rem;
-    --bs-icon-lg-with-heading-xlarge: 4rem;
-    --bs-icon-sm-with-heading-large: 3rem;
-    --bs-icon-md-with-heading-large: 3.25rem;
-    --bs-icon-lg-with-heading-large: 3.5rem;
-    --bs-icon-sm-with-heading-medium: 2.75rem;
-    --bs-icon-md-with-heading-medium: 3rem;
-    --bs-icon-lg-with-heading-medium: 3.25rem;
-    --bs-icon-sm-with-heading-small: 2.5rem;
-    --bs-icon-md-with-heading-small: 2.75rem;
-    --bs-icon-lg-with-heading-small: 3rem;
-    --bs-icon-sm-with-body-large: 2rem;
-    --bs-icon-md-with-body-large: 2.5rem;
-    --bs-icon-lg-with-body-large: 2.75rem;
+    --bs-icon-sm-with-heading-xlarge: 3.25rem;
+    --bs-icon-md-with-heading-xlarge: 3.5rem;
+    --bs-icon-lg-with-heading-xlarge: 3.75rem;
+    --bs-icon-sm-with-heading-large: 2.75rem;
+    --bs-icon-md-with-heading-large: 3rem;
+    --bs-icon-lg-with-heading-large: 3.25rem;
+    --bs-icon-sm-with-heading-medium: 2.25rem;
+    --bs-icon-md-with-heading-medium: 2.5rem;
+    --bs-icon-lg-with-heading-medium: 2.75rem;
+    --bs-icon-sm-with-heading-small: 2rem;
+    --bs-icon-md-with-heading-small: 2.25rem;
+    --bs-icon-lg-with-heading-small: 2.5rem;
+    --bs-icon-sm-with-body-large: 1.5rem;
+    --bs-icon-md-with-body-large: 1.75rem;
+    --bs-icon-lg-with-body-large: 2rem;
     --bs-icon-sm-with-body-medium: 1.25rem;
     --bs-icon-md-with-body-medium: 1.5rem;
     --bs-icon-lg-with-body-medium: 1.75rem;
@@ -749,17 +765,13 @@
   --bs-border-color: rgba(255, 255, 255, 0.92);
   --bs-border-color-translucent: rgba(255, 255, 255, 0.2);
   --bs-focus-ring-color: rgba(255, 121, 0, 0.25);
-  --bs-form-valid-color: var(--bs-success-text-emphasis);
-  --bs-form-valid-border-color: var(--bs-success);
-  --bs-form-invalid-color: var(--bs-danger-text-emphasis);
-  --bs-form-invalid-border-color: var(--bs-danger);
-  --bs-form-check-filter: none;
-  --bs-form-check-input-disabled-color: #333;
+  --bs-form-valid-color: #eee;
+  --bs-form-valid-border-color: rgba(255, 255, 255, 0.92);
+  --bs-form-invalid-color: #ff8081;
+  --bs-form-invalid-border-color: #ff8081;
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23fff' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23666' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-color-disabled-filter: brightness(0) invert(1) brightness(0.4);
-  --bs-form-switch-square-bg: #141414;
-  --bs-form-switch-unchecked-invalid-border-color: var(--bs-danger);
   --bs-table-active-bg-factor: 0.35;
   --bs-table-hover-bg-factor: 0.135;
   --bs-table-striped-bg-factor: 1;
@@ -824,9 +836,9 @@
 
 hr {
   margin: 16px 0;
-  color: inherit;
+  color: var(--bs-color-border-default);
   border: 0;
-  border-top: var(--bs-border-width) solid;
+  border-top: 1px solid;
 }
 
 .display-6, .display-5, .display-4, .display-3, .display-2, .display-1, .display-small, .display-medium, .display-large, h6, .h6, .card-subtitle, h5, .h5, h4, .h4, .card-title, h3, .h3, h2, .h2, h1, .h1 {
@@ -4671,185 +4683,370 @@ textarea.form-control-lg {
   line-height: 1.5;
 }
 
-.form-check {
-  display: block;
-  min-height: calc(var(--bs-font-size-body-medium) * 1.25);
-  padding-right: 1.5em;
-  margin-bottom: 0.125rem;
+.form-check, .switch-item, .radio-button-item, .checkbox-item, .switch-standalone, .radio-button-standalone, .checkbox-standalone {
+  --bs-control-item-label-color: var(--bs-color-content-default);
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  min-width: 10rem;
+  min-height: 3.25rem;
+  padding: 12px;
 }
-.form-check .form-check-input {
-  float: right;
-  margin-right: -1.5em;
+.form-check:has(:focus-visible), .switch-item:has(:focus-visible), .radio-button-item:has(:focus-visible), .checkbox-item:has(:focus-visible), .switch-standalone:has(:focus-visible), .radio-button-standalone:has(:focus-visible), .checkbox-standalone:has(:focus-visible) {
+  z-index: 5;
+  isolation: isolate;
+  outline: 3px solid var(--bs-color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+}
+.form-check .control-item-indicator, .form-check .form-check-input, .switch-item .control-item-indicator, .switch-item .form-check-input, .radio-button-item .control-item-indicator, .radio-button-item .form-check-input, .checkbox-item .control-item-indicator, .checkbox-item .form-check-input, .switch-standalone .control-item-indicator, .switch-standalone .form-check-input, .radio-button-standalone .control-item-indicator, .radio-button-standalone .form-check-input, .checkbox-standalone .control-item-indicator, .checkbox-standalone .form-check-input {
+  outline: 0;
+  box-shadow: none;
+}
+.form-check:has(input:disabled), .switch-item:has(input:disabled), .radio-button-item:has(input:disabled), .checkbox-item:has(input:disabled), .switch-standalone:has(input:disabled), .radio-button-standalone:has(input:disabled), .checkbox-standalone:has(input:disabled) {
+  pointer-events: none;
+}
+.form-check:has(input:disabled) *, .switch-item:has(input:disabled) *, .radio-button-item:has(input:disabled) *, .checkbox-item:has(input:disabled) *, .switch-standalone:has(input:disabled) *, .radio-button-standalone:has(input:disabled) *, .checkbox-standalone:has(input:disabled) * {
+  color: var(--bs-color-action-disabled);
+}
+.form-check:has(input:hover), .switch-item:has(input:hover), .radio-button-item:has(input:hover), .checkbox-item:has(input:hover), .switch-standalone:has(input:hover), .radio-button-standalone:has(input:hover), .checkbox-standalone:has(input:hover), .form-check:has(input:focus-visible), .switch-item:has(input:focus-visible), .radio-button-item:has(input:focus-visible), .checkbox-item:has(input:focus-visible), .switch-standalone:has(input:focus-visible), .radio-button-standalone:has(input:focus-visible), .checkbox-standalone:has(input:focus-visible), .form-check:has(input:active), .switch-item:has(input:active), .radio-button-item:has(input:active), .checkbox-item:has(input:active), .switch-standalone:has(input:active), .radio-button-standalone:has(input:active), .checkbox-standalone:has(input:active) {
+  background-color: var(--bs-color-action-support-hover);
+}
+.was-validated .form-check:has(input:invalid), .was-validated .switch-item:has(input:invalid), .was-validated .radio-button-item:has(input:invalid), .was-validated .checkbox-item:has(input:invalid), .was-validated .switch-standalone:has(input:invalid), .was-validated .radio-button-standalone:has(input:invalid), .was-validated .checkbox-standalone:has(input:invalid), .form-check:has(input.is-invalid), .switch-item:has(input.is-invalid), .radio-button-item:has(input.is-invalid), .checkbox-item:has(input.is-invalid), .switch-standalone:has(input.is-invalid), .radio-button-standalone:has(input.is-invalid), .checkbox-standalone:has(input.is-invalid) {
+  --bs-control-item-label-color: var(--bs-color-action-negative-enabled);
+}
+.was-validated .form-check:has(input:invalid:hover), .was-validated .switch-item:has(input:invalid:hover), .was-validated .radio-button-item:has(input:invalid:hover), .was-validated .checkbox-item:has(input:invalid:hover), .was-validated .switch-standalone:has(input:invalid:hover), .was-validated .radio-button-standalone:has(input:invalid:hover), .was-validated .checkbox-standalone:has(input:invalid:hover), .form-check:has(input.is-invalid:hover), .switch-item:has(input.is-invalid:hover), .radio-button-item:has(input.is-invalid:hover), .checkbox-item:has(input.is-invalid:hover), .switch-standalone:has(input.is-invalid:hover), .radio-button-standalone:has(input.is-invalid:hover), .checkbox-standalone:has(input.is-invalid:hover) {
+  --bs-control-item-label-color: var(--bs-color-action-negative-hover);
+}
+.was-validated .form-check:has(input:invalid:focus-visible), .was-validated .switch-item:has(input:invalid:focus-visible), .was-validated .radio-button-item:has(input:invalid:focus-visible), .was-validated .checkbox-item:has(input:invalid:focus-visible), .was-validated .switch-standalone:has(input:invalid:focus-visible), .was-validated .radio-button-standalone:has(input:invalid:focus-visible), .was-validated .checkbox-standalone:has(input:invalid:focus-visible), .form-check:has(input.is-invalid:focus-visible), .switch-item:has(input.is-invalid:focus-visible), .radio-button-item:has(input.is-invalid:focus-visible), .checkbox-item:has(input.is-invalid:focus-visible), .switch-standalone:has(input.is-invalid:focus-visible), .radio-button-standalone:has(input.is-invalid:focus-visible), .checkbox-standalone:has(input.is-invalid:focus-visible) {
+  --bs-control-item-label-color: var(--bs-color-action-negative-focus);
+}
+.was-validated .form-check:has(input:invalid:active), .was-validated .switch-item:has(input:invalid:active), .was-validated .radio-button-item:has(input:invalid:active), .was-validated .checkbox-item:has(input:invalid:active), .was-validated .switch-standalone:has(input:invalid:active), .was-validated .radio-button-standalone:has(input:invalid:active), .was-validated .checkbox-standalone:has(input:invalid:active), .form-check:has(input.is-invalid:active), .switch-item:has(input.is-invalid:active), .radio-button-item:has(input.is-invalid:active), .checkbox-item:has(input.is-invalid:active), .switch-standalone:has(input.is-invalid:active), .radio-button-standalone:has(input.is-invalid:active), .checkbox-standalone:has(input.is-invalid:active) {
+  --bs-control-item-label-color: var(--bs-color-action-negative-pressed);
 }
 
-.form-check-reverse {
-  padding-left: 1.5em;
-  padding-right: 0;
-  text-align: left;
-}
-.form-check-reverse .form-check-input {
-  float: left;
-  margin-left: -1.5em;
-  margin-right: 0;
-}
-
-.form-check-input {
-  --bs-form-check-bg: var(--bs-body-bg);
+.control-item-assets-container {
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  max-height: 6rem;
+}
+.control-item-assets-container svg,
+.control-item-assets-container img,
+.control-item-assets-container .icon {
   width: 1em;
   height: 1em;
-  margin-top: 0.125em;
-  vertical-align: top;
+  overflow: hidden;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.control-item-text-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 0px;
+  justify-content: center;
+}
+
+.control-item-label, .form-check-label, .switch-standalone, .radio-button-standalone, .checkbox-standalone {
+  color: var(--bs-control-item-label-color, var(--bs-color-content-default));
+  cursor: pointer;
+  font-size: var(--bs-font-size-label-large);
+  line-height: var(--bs-font-line-height-label-large);
+}
+.control-item-label::before, .form-check-label::before, .switch-standalone::before, .radio-button-standalone::before, .checkbox-standalone::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: transparent;
+}
+
+.control-item-helper {
+  margin: 0;
+  color: var(--bs-color-content-muted);
+  font-size: var(--bs-font-size-label-medium);
+  line-height: var(--bs-font-line-height-label-medium);
+}
+
+.control-item-indicator, .form-check-input {
+  --bs-control-item-indicator-border-width: 0.0625rem;
+  --bs-control-item-indicator-color: var(--bs-color-border-emphasized);
+  position: relative;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--bs-control-item-indicator-color);
+  vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-form-check-bg);
-  background-image: var(--bs-form-check-bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: var(--bs-border-width) solid var(--bs-color-border-default);
+  cursor: pointer;
+  background-color: transparent;
+  border: var(--bs-control-item-indicator-border-width) solid var(--bs-control-item-indicator-color);
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
   print-color-adjust: exact;
 }
-.form-check-input[type=checkbox] {
-  border-radius: 0;
+.control-item-indicator::before, .form-check-input::before {
+  position: absolute;
+  top: calc(-1 * var(--bs-control-item-indicator-border-width));
+  right: calc(-1 * var(--bs-control-item-indicator-border-width));
+  display: block;
+  width: calc(100% + 2 * var(--bs-control-item-indicator-border-width));
+  height: calc(100% + 2 * var(--bs-control-item-indicator-border-width));
+  content: "";
+  background-color: transparent;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
-.form-check-input[type=radio] {
-  border-radius: 50%;
+.control-item-indicator:indeterminate, .form-check-input:indeterminate, .control-item-indicator:checked, .form-check-input:checked {
+  --bs-control-item-indicator-color: var(--bs-color-action-selected);
 }
-.form-check-input:active {
-  background-color: var(--bs-color-action-primary-pressed);
-  border-color: var(--bs-color-action-primary-pressed);
+.control-item-indicator[type=checkbox], [type=checkbox].form-check-input {
+  border-radius: 0px;
 }
-.form-check-input:checked {
-  background-color: var(--bs-color-action-primary-pressed);
-  border-color: var(--bs-color-action-primary-pressed);
+.control-item-indicator[type=radio], [type=radio].form-check-input {
+  border-radius: 2000px;
 }
-.form-check-input:checked[type=checkbox] {
-  --bs-form-check-bg-image: var(--bs-check-icon);
+.control-item-indicator:indeterminate[type=checkbox], .form-check-input:indeterminate[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
 }
-.form-check-input:checked[type=radio] {
-  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='var%28--bs-color-content-on-action-primary-pressed%29'/%3e%3c/svg%3e");
+.control-item-indicator:indeterminate[type=checkbox]::before, .form-check-input:indeterminate[type=checkbox]::before {
+  background-color: currentcolor;
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='M4.5 9.375c0-.345.28-.625.625-.625h9.75c.345 0 .625.28.625.625v1.25c0 .345-.28.625-.625.625h-9.75a.625.625 0 0 1-.625-.625v-1.25Z'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='M4.5 9.375c0-.345.28-.625.625-.625h9.75c.345 0 .625.28.625.625v1.25c0 .345-.28.625-.625.625h-9.75a.625.625 0 0 1-.625-.625v-1.25Z'/%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate {
-  background-color: var(--bs-color-action-primary-pressed);
-  border-color: var(--bs-color-action-primary-pressed);
-  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'%3e%3cpath fill='var%28--bs-color-content-on-action-primary-pressed%29' d='M0 0h10v3H0z'/%3e%3c/svg%3e");
-  background-position: 50% calc(50% + calc(var(--bs-border-width) * 0.25));
-  background-size: 0.75rem calc(var(--bs-border-width) * 1.5);
+.control-item-indicator:checked::before, .form-check-input:checked::before {
+  background-color: currentcolor;
 }
-.form-check-input:disabled {
+.control-item-indicator:checked[type=checkbox], .form-check-input:checked[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked[type=checkbox]::before, .form-check-input:checked[type=checkbox]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/%3e%3c/svg%3e");
+}
+.control-item-indicator:checked[type=radio], .form-check-input:checked[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked[type=radio]::before, .form-check-input:checked[type=radio]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/%3e%3c/svg%3e");
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/%3e%3c/svg%3e");
+}
+.control-item-indicator:checked:hover[type=checkbox], .form-check-input:checked:hover[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked:hover[type=radio], .form-check-input:checked:hover[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked:focus-visible[type=checkbox], .form-check-input:checked:focus-visible[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked:focus-visible[type=radio], .form-check-input:checked:focus-visible[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked:active[type=checkbox], .form-check-input:checked:active[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:checked:active[type=radio], .form-check-input:checked:active[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:hover, .form-check-input:hover {
+  --bs-control-item-indicator-color: var(--bs-color-action-hover);
+}
+.control-item-indicator:hover[type=checkbox], .form-check-input:hover[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:hover[type=radio], .form-check-input:hover[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:focus-visible, .form-check-input:focus-visible {
+  --bs-control-item-indicator-color: var(--bs-color-action-focus);
+}
+.control-item-indicator:focus-visible[type=checkbox], .form-check-input:focus-visible[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:focus-visible[type=radio], .form-check-input:focus-visible[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:active, .form-check-input:active {
+  --bs-control-item-indicator-color: var(--bs-color-action-pressed);
+}
+.control-item-indicator:active[type=checkbox], .form-check-input:active[type=checkbox] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:active[type=radio], .form-check-input:active[type=radio] {
+  --bs-control-item-indicator-border-width: 0.125rem;
+}
+.control-item-indicator:disabled, .form-check-input:disabled {
+  --bs-control-item-indicator-color: var(--bs-color-action-disabled);
   pointer-events: none;
-  background-color: var(--bs-secondary-bg);
-  filter: none;
-}
-.form-check-input:disabled:checked, .form-check-input:disabled[type=checkbox]:indeterminate {
-  background-color: var(--bs-form-check-input-disabled-color);
-  filter: var(--bs-form-check-filter);
-  border-color: var(--bs-form-check-input-disabled-color);
-}
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  color: var(--bs-color-content-disabled);
-  pointer-events: none;
-  cursor: default;
-}
-.form-check-input:required ~ .form-check-label::after {
-  margin-right: 0.1875rem;
-  color: var(--bs-primary);
-  content: "*";
 }
 
-.form-switch {
-  --bs-switch-gradient: linear-gradient(to right, var(--bs-form-switch-square-bg) 1.5rem, transparent);
-  min-height: 1.5rem;
-  padding-right: 3.625rem;
-  background-color: transparent;
+.control-item-divider {
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--bs-color-border-default);
 }
-.form-switch .form-check-input {
-  --bs-form-switch-bg: var(--bs-close-icon);
-  position: relative;
-  width: 3rem;
-  height: 1.5rem;
-  margin-right: -3.625rem;
-  background-color: #fff;
-  background-image: var(--bs-form-switch-bg), var(--bs-switch-gradient);
-  filter: var(--bs-form-check-filter);
-  background-position: left 0.5rem top 50%, 100% 0;
-  background-size: 0.75rem, 1.5rem 100%;
-  border-color: #fff;
-  transition: background-position 0.15s ease-in-out;
+
+.control-item-reverse, .form-check-reverse {
+  flex-direction: row-reverse;
+}
+
+@keyframes switch-check-in {
+  0%, 99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--bs-color-content-default);
+  }
+}
+.control-item-indicator[role=switch], [role=switch].form-check-input {
+  min-width: 56px;
+  min-height: 32px;
+  background-color: var(--bs-switch-color-track-unselected);
+  border: 0;
+  border-radius: 2000px;
+}
+.control-item-indicator[role=switch][type=checkbox]::before, [role=switch][type=checkbox].form-check-input::before {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background-color: var(--bs-switch-color-cursor);
+  box-shadow: 0 1px 2px 0 var(--bs-elevation-color-raised);
+  -webkit-mask: none;
+  mask: none;
+  transform: translateY(-50%);
+  border-radius: 2000px;
+  transition: width 0.15s cubic-bezier(0.2, 0, 0, 1), height 0.15s cubic-bezier(0.2, 0, 0, 1), right 0.15s cubic-bezier(0.2, 0, 0, 1);
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input {
+  .control-item-indicator[role=switch][type=checkbox]::before, [role=switch][type=checkbox].form-check-input::before {
     transition: none;
   }
 }
-.form-switch .form-check-input:focus[data-focus-visible-added] {
-  z-index: 5;
-  isolation: isolate;
-  outline: 3px solid #fff;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px #000;
+.control-item-indicator[role=switch]:hover, [role=switch].form-check-input:hover, .control-item-indicator[role=switch]:focus-visible, [role=switch].form-check-input:focus-visible, .control-item-indicator[role=switch]:active, [role=switch].form-check-input:active {
+  background-color: var(--bs-switch-color-track-unselected-interaction);
 }
-.form-switch .form-check-input:checked {
-  background-color: #ff7900;
-  filter: none;
-  border-color: #ff7900;
-  --bs-form-switch-bg: var(--bs-check-icon);
-  background-position: calc(100% - (var(--bs-border-width) * 3)) 50%, 0% 0;
-  background-size: 1rem, 1.5rem 100%;
+.control-item-indicator[role=switch]:active::before, [role=switch].form-check-input:active::before {
+  width: 24px;
 }
-.form-switch .form-check-input:checked:focus[data-focus-visible-added] {
-  z-index: 5;
-  isolation: isolate;
-  outline: 3px solid var(--bs-color-border-focus);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+.control-item-indicator[role=switch]:disabled, [role=switch].form-check-input:disabled {
+  background-color: var(--bs-color-action-disabled);
 }
-.form-switch .form-check-input:checked:not(:disabled) {
-  --bs-switch-gradient: linear-gradient(to right, var(--bs-body-bg) 1.5rem, transparent);
+.control-item-indicator[role=switch]:checked, [role=switch].form-check-input:checked {
+  background-color: var(--bs-switch-color-track-selected);
 }
-.form-switch .form-check-input:active {
-  background-color: var(--bs-color-action-primary-pressed);
-  filter: none;
-  border-color: var(--bs-color-action-primary-pressed);
+.control-item-indicator[role=switch]:checked::before, [role=switch].form-check-input:checked::before {
+  right: 28px;
+  width: 24px;
+  height: 24px;
 }
-.form-switch .form-check-input:disabled {
-  background-color: var(--bs-form-check-input-disabled-color);
-  filter: var(--bs-form-check-filter);
-  border-color: var(--bs-form-check-input-disabled-color);
-}
-.form-switch .form-check-label {
-  padding-top: 0.4375rem;
-}
-.form-switch.form-check-reverse {
-  padding-left: 3.625rem;
-  padding-right: 0;
-}
-.form-switch.form-check-reverse .form-check-input {
-  margin-left: -3.625rem;
-  margin-right: 0;
-}
-
-.form-check-inline {
-  display: inline-block;
-  margin-left: 1rem;
-}
-
-.btn-check {
+.control-item-indicator[role=switch]:checked:not(:active)::after, [role=switch].form-check-input:checked:not(:active)::after {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
+  top: 50%;
+  left: 4px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-color: var(--bs-color-content-default);
+  opacity: 1;
+  -webkit-mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/%3e%3c/svg%3e");
+  mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/%3e%3c/svg%3e");
+  transform: translateY(-50%);
+  animation: 0.15s linear 0s switch-check-in;
 }
-.btn-check[data-focus-visible-added]:focus + .btn,
-.btn-check[data-focus-visible-added]:focus + .tag {
-  z-index: 5;
-  isolation: isolate;
-  outline: 3px solid var(--bs-color-border-focus);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px var(--bs-color-border-focus-inset);
+@media (prefers-reduced-motion: reduce) {
+  .control-item-indicator[role=switch]:checked:not(:active)::after, [role=switch].form-check-input:checked:not(:active)::after {
+    animation: none;
+  }
+}
+.control-item-indicator[role=switch]:checked:hover, [role=switch].form-check-input:checked:hover, .control-item-indicator[role=switch]:checked:focus-visible, [role=switch].form-check-input:checked:focus-visible, .control-item-indicator[role=switch]:checked:active, [role=switch].form-check-input:checked:active {
+  background-color: var(--bs-switch-color-track-selected-interaction);
+}
+.control-item-indicator[role=switch]:checked:active::before, [role=switch].form-check-input:checked:active::before {
+  right: 20px;
+  width: 32px;
+}
+.control-item-indicator[role=switch]:checked:disabled, [role=switch].form-check-input:checked:disabled {
+  background-color: var(--bs-color-action-disabled);
+}
+.control-item-indicator[role=switch]:checked:disabled::after, [role=switch].form-check-input:checked:disabled::after {
+  background-color: var(--bs-color-action-disabled);
+}
+
+.switch-standalone, .radio-button-standalone, .checkbox-standalone {
+  display: inline-flex;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.radio-button-additional-label {
+  margin: 0;
+  font-weight: 700;
+  color: var(--bs-color-content-default);
+  font-size: var(--bs-font-size-label-medium);
+  line-height: var(--bs-font-line-height-label-medium);
+}
+
+.radio-button-item-outlined:hover, .radio-button-item-outlined:active, .radio-button-item-outlined:has(input:checked) {
+  padding: 11px;
+  border: 1px solid var(--bs-color-border-default);
+}
+.radio-button-item-outlined:has(input:checked) {
+  border-color: var(--bs-color-action-selected);
+}
+.radio-button-item-outlined:has(input:checked):hover {
+  border-color: var(--bs-color-action-hover);
+}
+.radio-button-item-outlined:has(input:checked):active {
+  border-color: var(--bs-color-action-pressed);
+}
+.was-validated .radio-button-item-outlined:has(input:checked):has(input:invalid), .radio-button-item-outlined:has(input:checked):has(input.is-invalid) {
+  border-color: var(--bs-color-action-negative-enabled);
+}
+.was-validated .radio-button-item-outlined:has(input:checked):has(input:invalid:hover), .radio-button-item-outlined:has(input:checked):has(input.is-invalid:hover) {
+  border-color: var(--bs-color-action-negative-hover);
+}
+.was-validated .radio-button-item-outlined:has(input:checked):has(input:invalid:focus-visible), .radio-button-item-outlined:has(input:checked):has(input.is-invalid:focus-visible) {
+  border-color: var(--bs-color-action-negative-focus);
+}
+.was-validated .radio-button-item-outlined:has(input:checked):has(input:invalid:active), .radio-button-item-outlined:has(input:checked):has(input.is-invalid:active) {
+  border-color: var(--bs-color-action-negative-pressed);
+}
+.radio-button-item-outlined:hover {
+  border-color: var(--bs-color-action-hover);
+}
+.radio-button-item-outlined:active {
+  border-color: var(--bs-color-action-pressed);
+}
+.was-validated .radio-button-item-outlined:has(input:invalid:hover), .radio-button-item-outlined:has(input.is-invalid:hover) {
+  border-color: var(--bs-color-action-negative-hover);
+}
+.was-validated .radio-button-item-outlined:has(input:invalid:focus-visible), .radio-button-item-outlined:has(input.is-invalid:focus-visible) {
+  border-color: var(--bs-color-action-negative-focus);
+}
+.was-validated .radio-button-item-outlined:has(input:invalid:active), .radio-button-item-outlined:has(input.is-invalid:active) {
+  border-color: var(--bs-color-action-negative-pressed);
+}
+.radio-button-item-outlined:has(input:focus-visible) {
+  padding: 12px;
+  border-width: 0;
+}
+
+.form-check {
+  align-items: center;
 }
 
 .form-range {
@@ -5229,21 +5426,17 @@ textarea.form-control-lg {
   border-color: var(--bs-form-invalid-border-color) !important;
 }
 
-.was-validated .form-check-input:invalid, .form-check-input.is-invalid {
-  filter: none;
-  border-color: var(--bs-form-invalid-border-color);
+.was-validated .control-item-indicator:invalid, .was-validated .form-check-input:invalid, .control-item-indicator.is-invalid, .is-invalid.form-check-input {
+  --bs-control-item-indicator-color: var(--bs-color-action-negative-enabled);
 }
-.was-validated .form-check-input:invalid:checked, .was-validated .form-check-input:invalid:active, .form-check-input.is-invalid:checked, .form-check-input.is-invalid:active {
-  background-color: var(--bs-form-invalid-color);
+.was-validated .control-item-indicator:invalid:hover, .was-validated .form-check-input:invalid:hover, .control-item-indicator.is-invalid:hover, .is-invalid.form-check-input:hover {
+  --bs-control-item-indicator-color: var(--bs-color-action-negative-hover);
 }
-
-.was-validated .form-switch .form-check-input:not(:checked):invalid, .form-switch .form-check-input:not(:checked).is-invalid {
-  filter: var(--bs-form-check-filter);
-  border-color: var(--bs-form-switch-unchecked-invalid-border-color);
+.was-validated .control-item-indicator:invalid:focus-visible, .was-validated .form-check-input:invalid:focus-visible, .control-item-indicator.is-invalid:focus-visible, .is-invalid.form-check-input:focus-visible {
+  --bs-control-item-indicator-color: var(--bs-color-action-negative-focus);
 }
-
-.form-check-inline .form-check-input ~ .invalid-feedback {
-  margin-right: 0.5em;
+.was-validated .control-item-indicator:invalid:active, .was-validated .form-check-input:invalid:active, .control-item-indicator.is-invalid:active, .is-invalid.form-check-input:active {
+  --bs-control-item-indicator-color: var(--bs-color-action-negative-pressed);
 }
 
 .was-validated .input-group > .form-control:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid,
@@ -12138,9 +12331,11 @@ label.tag:active.disabled {
 .vr {
   display: inline-block;
   align-self: stretch;
-  width: 2px;
   min-height: 1em;
-  background-color: currentcolor;
+  margin: 0 16px;
+  color: var(--bs-color-border-default);
+  border: 0;
+  border-right: 1px solid currentcolor;
 }
 
 .align-baseline {

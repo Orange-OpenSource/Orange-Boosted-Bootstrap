@@ -111,8 +111,8 @@ $ouds-font-sizes: (
 ) !default;
 
 $ouds-font-weights: (
-  normal: $ouds-font-weight-default,
-  bold: $ouds-font-weight-strong
+  normal: $ouds-font-weight-system-default,
+  bold: $ouds-font-weight-system-strong
 ) !default;
 
 $ouds-icon-sizes: ("sm", "md", "lg") !default;

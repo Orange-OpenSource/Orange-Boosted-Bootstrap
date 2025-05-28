@@ -839,8 +839,8 @@ $utilities: ();
           --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-focus: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-hover: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-loading: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-pressed: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-loading: rgba(0, 0, 0, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-pressed: rgba(0, 0, 0, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #5b2f98;
           --bs-color-always-black: #000;
           --bs-color-always-on-black: #eee;
@@ -924,7 +924,7 @@ $utilities: ();
           --bs-color-overlay-modal: #fff;
           --bs-color-surface-brand-primary: #ff7900;
           --bs-color-surface-status-accent-emphasized: #ffd000;
-          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-accent-muted: #f9f5f0;
           --bs-color-surface-status-info-emphasized: #26b2ff;
           --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #db0002;
@@ -964,8 +964,8 @@ $utilities: ();
           --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-focus: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-hover: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-loading: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-pressed: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
           --bs-color-always-black: #000;
           --bs-color-always-on-black: #eee;
@@ -10778,8 +10778,8 @@ $utilities: ();
           --bs-color-action-support-enabled: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-focus: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-hover: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-loading: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-pressed: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-loading: rgba(0, 0, 0, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-pressed: rgba(0, 0, 0, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #5b2f98;
           --bs-color-always-black: #000;
           --bs-color-always-on-black: #eee;
@@ -10863,7 +10863,7 @@ $utilities: ();
           --bs-color-overlay-modal: #fff;
           --bs-color-surface-brand-primary: #ff7900;
           --bs-color-surface-status-accent-emphasized: #ffd000;
-          --bs-color-surface-status-accent-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-accent-muted: #f9f5f0;
           --bs-color-surface-status-info-emphasized: #26b2ff;
           --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #db0002;
@@ -10903,8 +10903,8 @@ $utilities: ();
           --bs-color-action-support-enabled: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-focus: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-hover: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-loading: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-action-support-pressed: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
           --bs-color-always-black: #000;
           --bs-color-always-on-black: #eee;
