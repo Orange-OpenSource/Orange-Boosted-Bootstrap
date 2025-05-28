@@ -13,6 +13,54 @@ toc: true
 
 <hr>
 
+
+### Utilities
+
+#### Border
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities sizes `short` and `tall` have been renamed to `small` and `large` respectively.
+  - **Small**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
+  - **Large**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
+
+#### Colors
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Color utilities for text on status colors have been added:
+  - **Accent**: `text-on-status-accent-emphasized`, `text-on-status-accent-muted`
+  - **Info**: `text-on-status-info-emphasized`, `text-on-status-info-muted`
+  - **Negative**: `text-on-status-negative-emphasized`, `text-on-status-negative-muted`
+  - **Neutral**: `text-on-status-neutral-emphasized`, `text-on-status-neutral-muted`
+  - **Positive**: `text-on-status-positive-emphasized`, `text-on-status-positive-muted`
+  - **Warning**: `text-on-status-warning-emphasized`, `text-on-status-warning-muted`
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `text-on-status-emphasized`, `text-on-status-emphasized-alt`, `text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]({{< docsref "/helpers/color-background" >}})
+
+#### Icon
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Icons' sizes for decorative standalone icons have been added: `decorative-4xs-icon`, `decorative-3xs-icon`.
+
+#### Spacings
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Spacing utilities (padding, margin, gap, ...) sizes have been renamed as following :
+  - **Smash** is renamed to `3xs` : for example `m-smash` becomes `m-3xs`
+  - **Shortest** is renamed to `2xs` : for example `m-shortest` becomes `m-2xs`
+  - **Shorter** is renamed to `xs` : for example `m-shorter` becomes `m-xs`
+  - **Short** is renamed to `sm` : for example `m-short` becomes `m-sm`
+  - **Medium** is renamed to `md` : for example `m-medium` becomes `m-md`
+  - **Tall** is renamed to `lg` : for example `m-tall` becomes `m-lg`
+  - **Taller** is renamed to `xl` : for example `m-taller` becomes `m-xl`
+  - **Tallest** is renamed to `2xl` : for example `m-tallest` becomes `m-2xl`
+  - **Spacious** is renamed to `3xl` : for example `m-spacious` becomes `m-3xl`
+  - **Huge** is renamed to `4xl` : for example `m-huge` becomes `m-4xl`
+  - **Jumbo** is renamed to `5xl` : for example `m-jumbo` becomes `m-5xl`
+  - **Negative** these changes apply to negative spacings as well, for example `m-nsmash` becomes `m-n3xs`
+
+
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Some Design Tokens prefix have been changed to follow the new naming convention.
+  - Core Raw Tokens (in file raw.scss) are now prefixed with `core-ouds` instead of `ouds`.
+  - Orange Raw Tokens (in file raw.scss) are now prefixed with `core-orange` instead of `ouds`.
+
 ### Forms
 
 #### Checkboxes, radio buttons, switches
@@ -420,8 +468,8 @@ toc: true
   - **Default**: `.rounded`, `.rounded-top`, `.rounded-bottom`, `.rounded-start` and `.rounded-end`.
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
   - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
-  - **Md**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
-  - **Lg**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+  - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - **Tall**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
   - **Circle**: `.rounded-circle`, `.rounded-top-circle`, `.rounded-bottom-circle`, `.rounded-start-circle` and `.rounded-end-circle`.
   - **Pill**: `.rounded-pill`, `.rounded-top-pill`, `.rounded-bottom-pill`, `.rounded-start-pill` and `.rounded-end-pill`.
 
@@ -467,82 +515,82 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed margin spacing utilities:
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
-  - **3xs**: `.m-3xs`, `.mx-3xs`, `.my-3xs`, `.mt-3xs`, `.mb-3xs`, `.ms-3xs`, `.me-3xs`, `.m-xs-3xs`, etc...
-  - **2xs**: `.m-2xs`, `.mx-2xs`, `.my-2xs`, `.mt-2xs`, `.mb-2xs`, `.ms-2xs`, `.me-2xs`, `.m-xs-2xs`, etc...
-  - **Xs**: `.m-xs`, `.mx-xs`, `.my-xs`, `.mt-xs`, `.mb-xs`, `.ms-xs`, `.me-xs`, `.m-xs-xs`, etc...
-  - **Sm**: `.m-sm`, `.mx-sm`, `.my-sm`, `.mt-sm`, `.mb-sm`, `.ms-sm`, `.me-sm`, `.m-xs-sm`, etc...
-  - **Md**: `.m-md`, `.mx-md`, `.my-md`, `.mt-md`, `.mb-md`, `.ms-md`, `.me-md`, `.m-xs-md`, etc...
-  - **Lg**: `.m-lg`, `.mx-lg`, `.my-lg`, `.mt-lg`, `.mb-lg`, `.ms-lg`, `.me-lg`, `.m-xs-lg`, etc...
-  - **Xl**: `.m-xl`, `.mx-xl`, `.my-xl`, `.mt-xl`, `.mb-xl`, `.ms-xl`, `.me-xl`, `.m-xs-xl`, etc...
-  - **2xl**: `.m-2xl`, `.mx-2xl`, `.my-2xl`, `.mt-2xl`, `.mb-2xl`, `.ms-2xl`, `.me-2xl`, `.m-xs-2xl`, etc...
-  - **3xl**: `.m-3xl`, `.mx-3xl`, `.my-3xl`, `.mt-3xl`, `.mb-3xl`, `.ms-3xl`, `.me-3xl`, `.m-xs-3xl`, etc...
-  - **4xl**: `.m-4xl`, `.mx-4xl`, `.my-4xl`, `.mt-4xl`, `.mb-4xl`, `.ms-4xl`, `.me-4xl`, `.m-xs-4xl`, etc...
-  - **5xl**: `.m-5xl`, `.mx-5xl`, `.my-5xl`, `.mt-5xl`, `.mb-5xl`, `.ms-5xl`, `.me-5xl`, `.m-xs-5xl`, etc...
+  - **Smash**: `.m-smash`, `.mx-smash`, `.my-smash`, `.mt-smash`, `.mb-smash`, `.ms-smash`, `.me-smash`, `.m-xs-smash`, etc...
+  - **Shortest**: `.m-shortest`, `.mx-shortest`, `.my-shortest`, `.mt-shortest`, `.mb-shortest`, `.ms-shortest`, `.me-shortest`, `.m-xs-shortest`, etc...
+  - **Shorter**: `.m-shorter`, `.mx-shorter`, `.my-shorter`, `.mt-shorter`, `.mb-shorter`, `.ms-shorter`, `.me-shorter`, `.m-xs-shorter`, etc...
+  - **Short**: `.m-short`, `.mx-short`, `.my-short`, `.mt-short`, `.mb-short`, `.ms-short`, `.me-short`, `.m-xs-short`, etc...
+  - **Medium**: `.m-medium`, `.mx-medium`, `.my-medium`, `.mt-medium`, `.mb-medium`, `.ms-medium`, `.me-medium`, `.m-xs-medium`, etc...
+  - **Tall**: `.m-tall`, `.mx-tall`, `.my-tall`, `.mt-tall`, `.mb-tall`, `.ms-tall`, `.me-tall`, `.m-xs-tall`, etc...
+  - **Taller**: `.m-taller`, `.mx-taller`, `.my-taller`, `.mt-taller`, `.mb-taller`, `.ms-taller`, `.me-taller`, `.m-xs-taller`, etc...
+  - **Tallest**: `.m-tallest`, `.mx-tallest`, `.my-tallest`, `.mt-tallest`, `.mb-tallest`, `.ms-tallest`, `.me-tallest`, `.m-xs-tallest`, etc...
+  - **Spacious**: `.m-spacious`, `.mx-spacious`, `.my-spacious`, `.mt-spacious`, `.mb-spacious`, `.ms-spacious`, `.me-spacious`, `.m-xs-spacious`, etc...
+  - **Huge**: `.m-huge`, `.mx-huge`, `.my-huge`, `.mt-huge`, `.mb-huge`, `.ms-huge`, `.me-huge`, `.m-xs-huge`, etc...
+  - **Jumbo**: `.m-jumbo`, `.mx-jumbo`, `.my-jumbo`, `.mt-jumbo`, `.mb-jumbo`, `.ms-jumbo`, `.me-jumbo`, `.m-xs-jumbo`, etc...
   - **Auto**: `.m-auto`, `.mx-auto`, `.my-auto`, `.mt-auto`, `.mb-auto`, `.ms-auto`, `.me-auto`, `.m-xs-auto`, etc...
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
-  - **3xs**: `.m-scaled-3xs`, `.mx-scaled-3xs`, `.my-scaled-3xs`, `.mt-scaled-3xs`, `.mb-scaled-3xs`, `.ms-scaled-3xs`, `.me-scaled-3xs`,
-  - **2xs**: `.m-scaled-2xs`, `.mx-scaled-2xs`, `.my-scaled-2xs`, `.mt-scaled-2xs`, `.mb-scaled-2xs`, `.ms-scaled-2xs`, `.me-scaled-2xs`,
-  - **Xs**: `.m-scaled-xs`, `.mx-scaled-xs`, `.my-scaled-xs`, `.mt-scaled-xs`, `.mb-scaled-xs`, `.ms-scaled-xs`, `.me-scaled-xs`,
-  - **Sm**: `.m-scaled-sm`, `.mx-scaled-sm`, `.my-scaled-sm`, `.mt-scaled-sm`, `.mb-scaled-sm`, `.ms-scaled-sm`, `.me-scaled-sm`,
-  - **Md**: `.m-scaled-md`, `.mx-scaled-md`, `.my-scaled-md`, `.mt-scaled-md`, `.mb-scaled-md`, `.ms-scaled-md`, `.me-scaled-md`,
-  - **Lg**: `.m-scaled-lg`, `.mx-scaled-lg`, `.my-scaled-lg`, `.mt-scaled-lg`, `.mb-scaled-lg`, `.ms-scaled-lg`, `.me-scaled-lg`,
-  - **Xl**: `.m-scaled-xl`, `.mx-scaled-xl`, `.my-scaled-xl`, `.mt-scaled-xl`, `.mb-scaled-xl`, `.ms-scaled-xl`, `.me-scaled-xl`,
-  - **2xl**: `.m-scaled-2xl`, `.mx-scaled-2xl`, `.my-scaled-2xl`, `.mt-scaled-2xl`, `.mb-scaled-2xl`, `.ms-scaled-2xl`, `.me-scaled-2xl`,
-  - **3xl**: `.m-scaled-3xl`, `.mx-scaled-3xl`, `.my-scaled-3xl`, `.mt-scaled-3xl`, `.mb-scaled-3xl`, `.ms-scaled-3xl`, `.me-scaled-3xl`
+  - **Smash**: `.m-scaled-smash`, `.mx-scaled-smash`, `.my-scaled-smash`, `.mt-scaled-smash`, `.mb-scaled-smash`, `.ms-scaled-smash`, `.me-scaled-smash`,
+  - **Shortest**: `.m-scaled-shortest`, `.mx-scaled-shortest`, `.my-scaled-shortest`, `.mt-scaled-shortest`, `.mb-scaled-shortest`, `.ms-scaled-shortest`, `.me-scaled-shortest`,
+  - **Shorter**: `.m-scaled-shorter`, `.mx-scaled-shorter`, `.my-scaled-shorter`, `.mt-scaled-shorter`, `.mb-scaled-shorter`, `.ms-scaled-shorter`, `.me-scaled-shorter`,
+  - **Short**: `.m-scaled-short`, `.mx-scaled-short`, `.my-scaled-short`, `.mt-scaled-short`, `.mb-scaled-short`, `.ms-scaled-short`, `.me-scaled-short`,
+  - **Medium**: `.m-scaled-medium`, `.mx-scaled-medium`, `.my-scaled-medium`, `.mt-scaled-medium`, `.mb-scaled-medium`, `.ms-scaled-medium`, `.me-scaled-medium`,
+  - **Tall**: `.m-scaled-tall`, `.mx-scaled-tall`, `.my-scaled-tall`, `.mt-scaled-tall`, `.mb-scaled-tall`, `.ms-scaled-tall`, `.me-scaled-tall`,
+  - **Taller**: `.m-scaled-taller`, `.mx-scaled-taller`, `.my-scaled-taller`, `.mt-scaled-taller`, `.mb-scaled-taller`, `.ms-scaled-taller`, `.me-scaled-taller`,
+  - **Tallest**: `.m-scaled-tallest`, `.mx-scaled-tallest`, `.my-scaled-tallest`, `.mt-scaled-tallest`, `.mb-scaled-tallest`, `.ms-scaled-tallest`, `.me-scaled-tallest`,
+  - **Spacious**: `.m-scaled-spacious`, `.mx-scaled-spacious`, `.my-scaled-spacious`, `.mt-scaled-spacious`, `.mb-scaled-spacious`, `.ms-scaled-spacious`, `.me-scaled-spacious`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
-  - **3xs**: `.p-3xs`, `.px-3xs`, `.py-3xs`, `.pt-3xs`, `.pb-3xs`, `.ps-3xs`, `.pe-3xs`, `.p-xs-3xs`, etc...
-  - **2xs**: `.p-2xs`, `.px-2xs`, `.py-2xs`, `.pt-2xs`, `.pb-2xs`, `.ps-2xs`, `.pe-2xs`, `.p-xs-2xs`, etc...
-  - **Xs**: `.p-xs`, `.px-xs`, `.py-xs`, `.pt-xs`, `.pb-xs`, `.ps-xs`, `.pe-xs`, `.p-xs-xs`, etc...
-  - **Sm**: `.p-sm`, `.px-sm`, `.py-sm`, `.pt-sm`, `.pb-sm`, `.ps-sm`, `.pe-sm`, `.p-xs-sm`, etc...
-  - **Md**: `.p-md`, `.px-md`, `.py-md`, `.pt-md`, `.pb-md`, `.ps-md`, `.pe-md`, `.p-xs-md`, etc...
-  - **Lg**: `.p-lg`, `.px-lg`, `.py-lg`, `.pt-lg`, `.pb-lg`, `.ps-lg`, `.pe-lg`, `.p-xs-lg`, etc...
-  - **Xl**: `.p-xl`, `.px-xl`, `.py-xl`, `.pt-xl`, `.pb-xl`, `.ps-xl`, `.pe-xl`, `.p-xs-xl`, etc...
-  - **2xl**: `.p-2xl`, `.px-2xl`, `.py-2xl`, `.pt-2xl`, `.pb-2xl`, `.ps-2xl`, `.pe-2xl`, `.p-xs-2xl`, etc...
-  - **3xl**: `.p-3xl`, `.px-3xl`, `.py-3xl`, `.pt-3xl`, `.pb-3xl`, `.ps-3xl`, `.pe-3xl`, `.p-xs-3xl`, etc...
-  - **4xl**: `.p-4xl`, `.px-4xl`, `.py-4xl`, `.pt-4xl`, `.pb-4xl`, `.ps-4xl`, `.pe-4xl`, `.p-xs-4xl`, etc...
-  - **5xl**: `.p-5xl`, `.px-5xl`, `.py-5xl`, `.pt-5xl`, `.pb-5xl`, `.ps-5xl`, `.pe-5xl`, `.p-xs-5xl`, etc...
+  - **Smash**: `.p-smash`, `.px-smash`, `.py-smash`, `.pt-smash`, `.pb-smash`, `.ps-smash`, `.pe-smash`, `.p-xs-smash`, etc...
+  - **Shortest**: `.p-shortest`, `.px-shortest`, `.py-shortest`, `.pt-shortest`, `.pb-shortest`, `.ps-shortest`, `.pe-shortest`, `.p-xs-shortest`, etc...
+  - **Shorter**: `.p-shorter`, `.px-shorter`, `.py-shorter`, `.pt-shorter`, `.pb-shorter`, `.ps-shorter`, `.pe-shorter`, `.p-xs-shorter`, etc...
+  - **Short**: `.p-short`, `.px-short`, `.py-short`, `.pt-short`, `.pb-short`, `.ps-short`, `.pe-short`, `.p-xs-short`, etc...
+  - **Medium**: `.p-medium`, `.px-medium`, `.py-medium`, `.pt-medium`, `.pb-medium`, `.ps-medium`, `.pe-medium`, `.p-xs-medium`, etc...
+  - **Tall**: `.p-tall`, `.px-tall`, `.py-tall`, `.pt-tall`, `.pb-tall`, `.ps-tall`, `.pe-tall`, `.p-xs-tall`, etc...
+  - **Taller**: `.p-taller`, `.px-taller`, `.py-taller`, `.pt-taller`, `.pb-taller`, `.ps-taller`, `.pe-taller`, `.p-xs-taller`, etc...
+  - **Tallest**: `.p-tallest`, `.px-tallest`, `.py-tallest`, `.pt-tallest`, `.pb-tallest`, `.ps-tallest`, `.pe-tallest`, `.p-xs-tallest`, etc...
+  - **Spacious**: `.p-spacious`, `.px-spacious`, `.py-spacious`, `.pt-spacious`, `.pb-spacious`, `.ps-spacious`, `.pe-spacious`, `.p-xs-spacious`, etc...
+  - **Huge**: `.p-huge`, `.px-huge`, `.py-huge`, `.pt-huge`, `.pb-huge`, `.ps-huge`, `.pe-huge`, `.p-xs-huge`, etc...
+  - **Jumbo**: `.p-jumbo`, `.px-jumbo`, `.py-jumbo`, `.pt-jumbo`, `.pb-jumbo`, `.ps-jumbo`, `.pe-jumbo`, `.p-xs-jumbo`, etc...
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
-  - **3xs**: `.p-scaled-3xs`, `.px-scaled-3xs`, `.py-scaled-3xs`, `.pt-scaled-3xs`, `.pb-scaled-3xs`, `.ps-scaled-3xs`, `.pe-scaled-3xs`,
-  - **2xs**: `.p-scaled-2xs`, `.px-scaled-2xs`, `.py-scaled-2xs`, `.pt-scaled-2xs`, `.pb-scaled-2xs`, `.ps-scaled-2xs`, `.pe-scaled-2xs`,
-  - **Xs**: `.p-scaled-xs`, `.px-scaled-xs`, `.py-scaled-xs`, `.pt-scaled-xs`, `.pb-scaled-xs`, `.ps-scaled-xs`, `.pe-scaled-xs`,
-  - **Sm**: `.p-scaled-sm`, `.px-scaled-sm`, `.py-scaled-sm`, `.pt-scaled-sm`, `.pb-scaled-sm`, `.ps-scaled-sm`, `.pe-scaled-sm`,
-  - **Md**: `.p-scaled-md`, `.px-scaled-md`, `.py-scaled-md`, `.pt-scaled-md`, `.pb-scaled-md`, `.ps-scaled-md`, `.pe-scaled-md`,
-  - **Lg**: `.p-scaled-lg`, `.px-scaled-lg`, `.py-scaled-lg`, `.pt-scaled-lg`, `.pb-scaled-lg`, `.ps-scaled-lg`, `.pe-scaled-lg`,
-  - **Xl**: `.p-scaled-xl`, `.px-scaled-xl`, `.py-scaled-xl`, `.pt-scaled-xl`, `.pb-scaled-xl`, `.ps-scaled-xl`, `.pe-scaled-xl`,
-  - **2xl**: `.p-scaled-2xl`, `.px-scaled-2xl`, `.py-scaled-2xl`, `.pt-scaled-2xl`, `.pb-scaled-2xl`, `.ps-scaled-2xl`, `.pe-scaled-2xl`,
-  - **3xl**: `.p-scaled-3xl`, `.px-scaled-3xl`, `.py-scaled-3xl`, `.pt-scaled-3xl`, `.pb-scaled-3xl`, `.ps-scaled-3xl`, `.pe-scaled-3xl`
+  - **Smash**: `.p-scaled-smash`, `.px-scaled-smash`, `.py-scaled-smash`, `.pt-scaled-smash`, `.pb-scaled-smash`, `.ps-scaled-smash`, `.pe-scaled-smash`,
+  - **Shortest**: `.p-scaled-shortest`, `.px-scaled-shortest`, `.py-scaled-shortest`, `.pt-scaled-shortest`, `.pb-scaled-shortest`, `.ps-scaled-shortest`, `.pe-scaled-shortest`,
+  - **Shorter**: `.p-scaled-shorter`, `.px-scaled-shorter`, `.py-scaled-shorter`, `.pt-scaled-shorter`, `.pb-scaled-shorter`, `.ps-scaled-shorter`, `.pe-scaled-shorter`,
+  - **Short**: `.p-scaled-short`, `.px-scaled-short`, `.py-scaled-short`, `.pt-scaled-short`, `.pb-scaled-short`, `.ps-scaled-short`, `.pe-scaled-short`,
+  - **Medium**: `.p-scaled-medium`, `.px-scaled-medium`, `.py-scaled-medium`, `.pt-scaled-medium`, `.pb-scaled-medium`, `.ps-scaled-medium`, `.pe-scaled-medium`,
+  - **Tall**: `.p-scaled-tall`, `.px-scaled-tall`, `.py-scaled-tall`, `.pt-scaled-tall`, `.pb-scaled-tall`, `.ps-scaled-tall`, `.pe-scaled-tall`,
+  - **Taller**: `.p-scaled-taller`, `.px-scaled-taller`, `.py-scaled-taller`, `.pt-scaled-taller`, `.pb-scaled-taller`, `.ps-scaled-taller`, `.pe-scaled-taller`,
+  - **Tallest**: `.p-scaled-tallest`, `.px-scaled-tallest`, `.py-scaled-tallest`, `.pt-scaled-tallest`, `.pb-scaled-tallest`, `.ps-scaled-tallest`, `.pe-scaled-tallest`,
+  - **Spacious**: `.p-scaled-spacious`, `.px-scaled-spacious`, `.py-scaled-spacious`, `.pt-scaled-spacious`, `.pb-scaled-spacious`, `.ps-scaled-spacious`, `.pe-scaled-spacious`
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
-  - **3xs**: `.gap-3xs`, `.row-gap-3xs`, `.column-gap-3xs`, `.gap-xs-3xs`, etc...
-  - **2xs**: `.gap-2xs`, `.row-gap-2xs`, `.column-gap-2xs`, `.gap-xs-2xs`, etc...
-  - **Xs**: `.gap-xs`, `.row-gap-xs`, `.column-gap-xs`, `.gap-xs-xs`, etc...
-  - **Sm**: `.gap-sm`, `.row-gap-sm`, `.column-gap-sm`, `.gap-xs-sm`, etc...
-  - **Md**: `.gap-md`, `.row-gap-md`, `.column-gap-md`, `.gap-xs-md`, etc...
-  - **Lg**: `.gap-lg`, `.row-gap-lg`, `.column-gap-lg`, `.gap-xs-lg`, etc...
-  - **Xl**: `.gap-xl`, `.row-gap-xl`, `.column-gap-xl`, `.gap-xs-xl`, etc...
-  - **2xl**: `.gap-2xl`, `.row-gap-2xl`, `.column-gap-2xl`, `.gap-xs-2xl`, etc...
-  - **3xl**: `.gap-3xl`, `.row-gap-3xl`, `.column-gap-3xl`, `.gap-xs-3xl`, etc...
-  - **4xl**: `.gap-4xl`, `.row-gap-4xl`, `.column-gap-4xl`, `.gap-xs-4xl`, etc...
-  - **5xl**: `.gap-5xl`, `.row-gap-5xl`, `.column-gap-5xl`, `.gap-xs-5xl`, etc...
+  - **Smash**: `.gap-smash`, `.row-gap-smash`, `.column-gap-smash`, `.gap-xs-smash`, etc...
+  - **Shortest**: `.gap-shortest`, `.row-gap-shortest`, `.column-gap-shortest`, `.gap-xs-shortest`, etc...
+  - **Shorter**: `.gap-shorter`, `.row-gap-shorter`, `.column-gap-shorter`, `.gap-xs-shorter`, etc...
+  - **Short**: `.gap-short`, `.row-gap-short`, `.column-gap-short`, `.gap-xs-short`, etc...
+  - **Medium**: `.gap-medium`, `.row-gap-medium`, `.column-gap-medium`, `.gap-xs-medium`, etc...
+  - **Tall**: `.gap-tall`, `.row-gap-tall`, `.column-gap-tall`, `.gap-xs-tall`, etc...
+  - **Taller**: `.gap-taller`, `.row-gap-taller`, `.column-gap-taller`, `.gap-xs-taller`, etc...
+  - **Tallest**: `.gap-tallest`, `.row-gap-tallest`, `.column-gap-tallest`, `.gap-xs-tallest`, etc...
+  - **Spacious**: `.gap-spacious`, `.row-gap-spacious`, `.column-gap-spacious`, `.gap-xs-spacious`, etc...
+  - **Huge**: `.gap-huge`, `.row-gap-huge`, `.column-gap-huge`, `.gap-xs-huge`, etc...
+  - **Jumbo**: `.gap-jumbo`, `.row-gap-jumbo`, `.column-gap-jumbo`, `.gap-xs-jumbo`, etc...
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
-  - **3xs**: `.gap-scaled-3xs`, `.row-gap-scaled-3xs`, `.column-gap-scaled-3xs`
-  - **2xs**: `.gap-scaled-2xs`, `.row-gap-scaled-2xs`, `.column-gap-scaled-2xs`
-  - **Xs**: `.gap-scaled-xs`, `.row-gap-scaled-xs`, `.column-gap-scaled-xs`
-  - **Sm**: `.gap-scaled-sm`, `.row-gap-scaled-sm`, `.column-gap-scaled-sm`
-  - **Md**: `.gap-scaled-md`, `.row-gap-scaled-md`, `.column-gap-scaled-md`
-  - **Lg**: `.gap-scaled-lg`, `.row-gap-scaled-lg`, `.column-gap-scaled-lg`
-  - **Xl**: `.gap-scaled-xl`, `.row-gap-scaled-xl`, `.column-gap-scaled-xl`
-  - **2xl**: `.gap-scaled-2xl`, `.row-gap-scaled-2xl`, `.column-gap-scaled-2xl`
-  - **3xl**: `.gap-scaled-3xl`, `.row-gap-scaled-3xl`, `.column-gap-scaled-3xl`
+  - **Smash**: `.gap-scaled-smash`, `.row-gap-scaled-smash`, `.column-gap-scaled-smash`
+  - **Shortest**: `.gap-scaled-shortest`, `.row-gap-scaled-shortest`, `.column-gap-scaled-shortest`
+  - **Shorter**: `.gap-scaled-shorter`, `.row-gap-scaled-shorter`, `.column-gap-scaled-shorter`
+  - **Short**: `.gap-scaled-short`, `.row-gap-scaled-short`, `.column-gap-scaled-short`
+  - **Medium**: `.gap-scaled-medium`, `.row-gap-scaled-medium`, `.column-gap-scaled-medium`
+  - **Tall**: `.gap-scaled-tall`, `.row-gap-scaled-tall`, `.column-gap-scaled-tall`
+  - **Taller**: `.gap-scaled-taller`, `.row-gap-scaled-taller`, `.column-gap-scaled-taller`
+  - **Tallest**: `.gap-scaled-tallest`, `.row-gap-scaled-tallest`, `.column-gap-scaled-tallest`
+  - **Spacious**: `.gap-scaled-spacious`, `.row-gap-scaled-spacious`, `.column-gap-scaled-spacious`
 
 #### Text
 
@@ -1459,44 +1507,44 @@ toc: true
       <li><code>$ouds-space-fixed-jumbo</code></li>
       <li><code>$ouds-space-fixed-medium</code></li>
       <li><code>$ouds-space-fixed-none</code></li>
-      <li><code>$ouds-space-fixed-sm</code></li>
-      <li><code>$ouds-space-fixed-xs</code></li>
-      <li><code>$ouds-space-fixed-2xs</code></li>
-      <li><code>$ouds-space-fixed-3xs</code></li>
+      <li><code>$ouds-space-fixed-short</code></li>
+      <li><code>$ouds-space-fixed-shorter</code></li>
+      <li><code>$ouds-space-fixed-shortest</code></li>
+      <li><code>$ouds-space-fixed-smash</code></li>
       <li><code>$ouds-space-fixed-spacious</code></li>
       <li><code>$ouds-space-fixed-tall</code></li>
       <li><code>$ouds-space-fixed-taller</code></li>
       <li><code>$ouds-space-fixed-tallest</code></li>
-      <li><code>$ouds-space-scaled-md-desktop</code></li>
-      <li><code>$ouds-space-scaled-md-mobile</code></li>
-      <li><code>$ouds-space-scaled-md-tablet</code></li>
+      <li><code>$ouds-space-scaled-medium-desktop</code></li>
+      <li><code>$ouds-space-scaled-medium-mobile</code></li>
+      <li><code>$ouds-space-scaled-medium-tablet</code></li>
       <li><code>$ouds-space-scaled-none-desktop</code></li>
       <li><code>$ouds-space-scaled-none-mobile</code></li>
       <li><code>$ouds-space-scaled-none-tablet</code></li>
-      <li><code>$ouds-space-scaled-sm-desktop</code></li>
-      <li><code>$ouds-space-scaled-sm-mobile</code></li>
-      <li><code>$ouds-space-scaled-sm-tablet</code></li>
-      <li><code>$ouds-space-scaled-xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-2xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-2xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-2xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-3xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-3xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-3xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-3xl-desktop</code></li>
-      <li><code>$ouds-space-scaled-3xl-mobile</code></li>
-      <li><code>$ouds-space-scaled-3xl-tablet</code></li>
-      <li><code>$ouds-space-scaled-lg-desktop</code></li>
-      <li><code>$ouds-space-scaled-lg-mobile</code></li>
-      <li><code>$ouds-space-scaled-lg-tablet</code></li>
-      <li><code>$ouds-space-scaled-xl-desktop</code></li>
-      <li><code>$ouds-space-scaled-xl-mobile</code></li>
-      <li><code>$ouds-space-scaled-xl-tablet</code></li>
-      <li><code>$ouds-space-scaled-2xl-desktop</code></li>
-      <li><code>$ouds-space-scaled-2xl-mobile</code></li>
-      <li><code>$ouds-space-scaled-2xl-tablet</code></li>
+      <li><code>$ouds-space-scaled-short-desktop</code></li>
+      <li><code>$ouds-space-scaled-short-mobile</code></li>
+      <li><code>$ouds-space-scaled-short-tablet</code></li>
+      <li><code>$ouds-space-scaled-shorter-desktop</code></li>
+      <li><code>$ouds-space-scaled-shorter-mobile</code></li>
+      <li><code>$ouds-space-scaled-shorter-tablet</code></li>
+      <li><code>$ouds-space-scaled-shortest-desktop</code></li>
+      <li><code>$ouds-space-scaled-shortest-mobile</code></li>
+      <li><code>$ouds-space-scaled-shortest-tablet</code></li>
+      <li><code>$ouds-space-scaled-smash-desktop</code></li>
+      <li><code>$ouds-space-scaled-smash-mobile</code></li>
+      <li><code>$ouds-space-scaled-smash-tablet</code></li>
+      <li><code>$ouds-space-scaled-spacious-desktop</code></li>
+      <li><code>$ouds-space-scaled-spacious-mobile</code></li>
+      <li><code>$ouds-space-scaled-spacious-tablet</code></li>
+      <li><code>$ouds-space-scaled-tall-desktop</code></li>
+      <li><code>$ouds-space-scaled-tall-mobile</code></li>
+      <li><code>$ouds-space-scaled-tall-tablet</code></li>
+      <li><code>$ouds-space-scaled-taller-desktop</code></li>
+      <li><code>$ouds-space-scaled-taller-mobile</code></li>
+      <li><code>$ouds-space-scaled-taller-tablet</code></li>
+      <li><code>$ouds-space-scaled-tallest-desktop</code></li>
+      <li><code>$ouds-space-scaled-tallest-mobile</code></li>
+      <li><code>$ouds-space-scaled-tallest-tablet</code></li>
     </ul>
   </details>
 
@@ -1926,16 +1974,16 @@ toc: true
       <li><code>--bs-icon-sm-with-heading-medium</code></li>
       <li><code>--bs-icon-sm-with-heading-small</code></li>
       <li><code>--bs-icon-sm-with-heading-xlarge</code></li>
-      <li><code>--bs-space-scaled-md</code></li>
+      <li><code>--bs-space-scaled-medium</code></li>
       <li><code>--bs-space-scaled-none</code></li>
-      <li><code>--bs-space-scaled-sm</code></li>
-      <li><code>--bs-space-scaled-xs</code></li>
-      <li><code>--bs-space-scaled-2xs</code></li>
-      <li><code>--bs-space-scaled-3xs</code></li>
-      <li><code>--bs-space-scaled-3xl</code></li>
-      <li><code>--bs-space-scaled-lg</code></li>
-      <li><code>--bs-space-scaled-xl</code></li>
-      <li><code>--bs-space-scaled-2xl</code></li>
+      <li><code>--bs-space-scaled-short</code></li>
+      <li><code>--bs-space-scaled-shorter</code></li>
+      <li><code>--bs-space-scaled-shortest</code></li>
+      <li><code>--bs-space-scaled-smash</code></li>
+      <li><code>--bs-space-scaled-spacious</code></li>
+      <li><code>--bs-space-scaled-tall</code></li>
+      <li><code>--bs-space-scaled-taller</code></li>
+      <li><code>--bs-space-scaled-tallest</code></li>
     </ul>
   </details>
 

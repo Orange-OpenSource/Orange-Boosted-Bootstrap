@@ -130,11 +130,11 @@ Or modify the default `border-color` of a component:
 Add classes to an element to easily round its corners.
 
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded-tall" title="Example rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-top-tall" title="Example top rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-end-tall" title="Example right rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom-tall" title="Example bottom rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-start-tall" title="Example left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large" title="Example rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-top-large" title="Example top rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end-large" title="Example right rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-large" title="Example bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-large" title="Example left rounded image" color="#999" >}}
 {{< /example >}}
 
 ### Sizes
@@ -148,19 +148,19 @@ The `.rounded` class is mapped to the "default" border radius design token. In O
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example default rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-none" title="Example non-rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-short" title="Example short rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-small" title="Example short rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-medium" title="Example medium rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-tall" title="Example tall rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large" title="Example tall rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
 {{< /example >}}
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom-short" title="Example small rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-small" title="Example small rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-start-medium" title="Example default left rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-tall rounded-top-none" title="Example extra large bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large rounded-top-none" title="Example extra large bottom rounded image" color="#999" >}}
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

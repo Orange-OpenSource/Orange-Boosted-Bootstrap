@@ -368,9 +368,9 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border radius utilities with all sizes:
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
-  - **Short**: `.rounded-short`, `.rounded-top-short`, `.rounded-bottom-short`, `.rounded-start-short` and `.rounded-end-short`.
+  - **Sm**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
   - **Md**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
-  - **Lg**: `.rounded-tall`, `.rounded-top-tall`, `.rounded-bottom-tall`, `.rounded-start-tall` and `.rounded-end-tall`.
+  - **Lg**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
 
@@ -650,8 +650,8 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-border-radius-medium</code></li>
       <li><code>$ouds-border-radius-none</code></li>
       <li><code>$ouds-border-radius-pill</code></li>
-      <li><code>$ouds-border-radius-short</code></li>
-      <li><code>$ouds-border-radius-tall</code></li>
+      <li><code>$ouds-border-radius-small</code></li>
+      <li><code>$ouds-border-radius-large</code></li>
       <li><code>$ouds-border-style-dashed</code></li>
       <li><code>$ouds-border-style-default</code></li>
       <li><code>$ouds-border-style-drag</code></li>
