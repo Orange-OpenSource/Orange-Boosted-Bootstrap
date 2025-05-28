@@ -76,7 +76,7 @@
 @include tac("ClosePanel") {
   position: absolute;
   right: $modal-content-padding;
-  margin: ($spacer / -2) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // stylelint-disable-line function-disallowed-list
+  margin: ($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // stylelint-disable-line function-disallowed-list
   overflow: hidden;
   text-indent: 2ch;
   white-space: nowrap;

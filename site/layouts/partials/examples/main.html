@@ -30,13 +30,13 @@
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       {{ if $entry.external -}}
-        <div class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
+        <article class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
           <div class="bi fs-hm flex-shrink-0" style="margin-top: -5px;">
             {{ partial "icons/github.svg" }}
           </div>
           <div>
             <h3 class="h5 mb-2xs">
-              <a class="d-block link-offset-1" href="{{ urls.JoinPath $.Site.Params.bootstrap_github_org $example.url }}" target="_blank" rel="noopener">
+              <a class="d-block link-offset-1" href="{{ urls.JoinPath $.Site.Params.bootstrap_github_org $example.url }}" target="_blank" rel="noopener" id="starter-{{ $i }}">
                 {{ $example.name }}
               </a>
             </h3>
@@ -44,15 +44,15 @@
             <p class="mb-none">
               {{- $indexPath := default "index.html" $example.indexPath -}}
               {{- $stackBlitzUrl := printf "%s%s%s" (urls.JoinPath "https://stackblitz.com/github/twbs" $example.url) "?file=" ($indexPath | urlquery) }}
-              <a class="link icon-link link-sm link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener">
-                <svg><use xlink:href="#lightning-charge-fill"></use></svg>
-                Edit in StackBlitz
+              <a class="link icon-link link-sm link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener" aria-labelledby="edit-{{ $i }} starter-{{ $i }}">
+                <svg aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
+                <span id="edit-{{ $i }}">Edit in StackBlitz</span>
               </a>
             </p>
           </div>
-        </div>
+        </article>
       {{ else -}}
-        <div class="col-sm-6 col-md-3 mb-lg">
+        <article class="col-sm-6 col-md-3 mb-lg">
           {{- $exampleNameUrlized := $example.name | urlize -}}
           {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
           <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
@@ -73,7 +73,7 @@
             </h3>
           </a>
           <p class="text-muted">{{ $example.description }}</p>
-        </div>
+        </article>
       {{- end }}
     {{ if (eq (add $i 1) $len) }}</div>{{ end -}}
   {{ end -}}

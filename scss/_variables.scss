@@ -67,8 +67,8 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.2 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG/#contrast-minimum
 $min-contrast-ratio:   4.5 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -1498,7 +1498,7 @@ $pagination-bg:                     transparent !default; // OUDS mod: instead o
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // OUDS mod
-$pagination-margin-start:           0 !default; // OUDS mod: instead of `calc($pagination-border-width * -1)`
+$pagination-margin-start:           0 !default; // OUDS mod: instead of `calc(-1 * $pagination-border-width)`
 $pagination-margin-x-first-last:    $spacer * .5 !default; // OUDS mod
 $pagination-border-color:           transparent !default; // OUDS mod: instead of `var(--#{$prefix}border-color)`
 
@@ -1755,7 +1755,7 @@ $modal-title-line-height:           $line-height-base !default;
 $modal-content-padding-y:           $spacer !default; // OUDS mod
 $modal-content-padding-x:           0 !default; // OUDS mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // OUDS mod
-$modal-content-color:               null !default;
+$modal-content-color:               var(--#{$prefix}body-color) !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of `var(--#{$prefix}border-color-translucent)`
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
@@ -1965,6 +1965,7 @@ $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
 $carousel-control-transition:        $transition-focus !default;
+// OUDS mod: no $carousel-control-icon-filter
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;
