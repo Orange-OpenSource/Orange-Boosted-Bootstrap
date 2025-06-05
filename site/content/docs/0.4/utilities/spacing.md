@@ -40,17 +40,17 @@ Where *sides* is one of:
 Where *size* is one of:
 
 - `none` - for classes that eliminate the `margin` or `padding` by setting it to `$ouds-dimension-0`, which is `0`
-- `smash` - for classes that set the `margin` or `padding` to `$ouds-dimension-25`, which is `2px`
-- `shortest` - for classes that set the `margin` or `padding` to `$ouds-dimension-50`, which is `4px`
-- `shorter` - for classes that set the `margin` or `padding` to `$ouds-dimension-100`, which is `8px`
-- `short` - for classes that set the `margin` or `padding` to `$ouds-dimension-150`, which is `12px`
-- `medium` - for classes that set the `margin` or `padding` to `$ouds-dimension-200`, which is `16px`
-- `tall` - for classes that set the `margin` or `padding` to `$ouds-dimension-300`, which is `24px`
-- `taller` - for classes that set the `margin` or `padding` to `$ouds-dimension-400`, which is `32px`
-- `tallest` - for classes that set the `margin` or `padding` to `$ouds-dimension-500`, which is `40px`
-- `spacious` - for classes that set the `margin` or `padding` to `$ouds-dimension-600`, which is `48px`
-- `huge` - for classes that set the `margin` or `padding` to `$ouds-dimension-700`, which is `56px`
-- `jumbo` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
+- `3xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-25`, which is `2px`
+- `2xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-50`, which is `4px`
+- `xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-100`, which is `8px`
+- `sm` - for classes that set the `margin` or `padding` to `$ouds-dimension-150`, which is `12px`
+- `md` - for classes that set the `margin` or `padding` to `$ouds-dimension-200`, which is `16px`
+- `lg` - for classes that set the `margin` or `padding` to `$ouds-dimension-300`, which is `24px`
+- `xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-400`, which is `32px`
+- `2xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-500`, which is `40px`
+- `3xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-600`, which is `48px`
+- `4xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-700`, which is `56px`
+- `5xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
 - `auto` - for classes that set the `margin` to auto
 
 (You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
@@ -117,15 +117,15 @@ Where *size* is one of:
 | Size name | Size for mobile (`2xs` to `md`) | Size for tablet (`md` to `xl`) | Size for desktop (`xl` to `3xl` and above) |
 | --- | --- | --- | --- |
 | `none` | `0` | `0` | `0` |
-| `smash` | `2px` | `4px` | `4px` |
-| `shortest` | `4px` | `8px` | `8px` |
-| `shorter` | `8px` | `12px` | `16px` |
-| `short` | `12px` | `16px` | `24px` |
-| `medium` | `16px` | `24px` | `32px` |
-| `tall` | `24px` | `32px` | `40px` |
-| `taller` | `32px` | `40px` | `48px` |
-| `tallest` | `40px` | `48px` | `56px` |
-| `spacious` | `48px` | `56px` | `64px` |
+| `3xs` | `2px` | `4px` | `4px` |
+| `2xs` | `4px` | `8px` | `8px` |
+| `xs` | `8px` | `12px` | `16px` |
+| `sm` | `12px` | `16px` | `24px` |
+| `md` | `16px` | `24px` | `32px` |
+| `lg` | `24px` | `32px` | `40px` |
+| `xl` | `32px` | `40px` | `48px` |
+| `2xl` | `40px` | `48px` | `56px` |
+| `3xl` | `48px` | `56px` | `64px` |
 {{< /bs-table >}}
 
 (You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-scaled` Sass map variable.)
