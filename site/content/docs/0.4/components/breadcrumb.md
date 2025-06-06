@@ -10,13 +10,13 @@ toc: true
 
 ## Basic example
 
-Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. It is strongly advised to add `title` attributes on each items if there are long page titles or several levels in the breadcrumb.
+Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. It is strongly advised to add `title` attributes on each items.
 
 {{< example >}}
 <nav aria-label="basic breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><span>Library</span></li>
+    <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
   </ol>
 </nav>
 
@@ -37,7 +37,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 Breadcrumb will not wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
 {{< callout danger >}}
-  *We should not have titles this long* in a breadcrumb, this is only for demonstrating small viewport behavior
+  *We should not have titles this long* in a breadcrumb, this is for small viewport demonstration purpose only
 {{< /callout >}}
 
 {{< example >}}
