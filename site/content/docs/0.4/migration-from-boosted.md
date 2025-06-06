@@ -84,7 +84,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Breadcrumb
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> the last element of a Breadcrumb must now be a link to offer better accessibility.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> the last element of a Breadcrumb must now contain a `span` element to handle behavior on smaller viewport.
 
 ### Bullet list
 
