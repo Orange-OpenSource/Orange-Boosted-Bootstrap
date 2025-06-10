@@ -37,7 +37,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 Breadcrumb will not wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
 {{< callout danger >}}
-  *We should not have titles this long* in a breadcrumb, the following examples are for small viewport demonstration purpose only
+**We should not have titles this long** in a breadcrumb, the following examples are for small viewport demonstration purpose only
 {{< /callout >}}
 
 {{< example >}}
