@@ -27,7 +27,7 @@ toc: true
 
 #### Bullet list
 
-- <span class="badge text-bg-success">New</span> Bullet list component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Bullet list component has been implemented.
 
 ## v0.4.1
 
