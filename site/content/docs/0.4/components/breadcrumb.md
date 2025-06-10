@@ -29,7 +29,10 @@ Use an ordered or unordered list with linked list items to create a minimally st
     <li class="breadcrumb-item active" aria-current="page"><span title="Products">Products</span></li>
   </ol>
 </nav>
+{{< /example >}}
+
 {{< bootstrap-compatibility false >}}
+{{< example >}}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -50,6 +53,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
     <li class="breadcrumb-item active" aria-current="page">Data</li>
   </ol>
 </nav>
+{{< /example >}}
 {{< /bootstrap-compatibility >}}
 
 
