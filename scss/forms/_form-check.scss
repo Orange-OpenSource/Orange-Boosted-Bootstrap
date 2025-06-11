@@ -60,6 +60,7 @@
   }
 
   &:focus {
+    z-index: $focus-visible-zindex; // Boosted mod: make sure the focused input is displayed over its next sibling
     border-color: $form-check-input-focus-border;
     // Boosted mod: default outline
     box-shadow: $form-check-input-focus-box-shadow;
@@ -133,12 +134,18 @@
     }
   }
 
-  // Boosted mod: required symbol
-  &:required {
-    ~ .form-check-label::after {
+  // Boosted mod: required symbol & form helper
+  &:required ~ .form-check-label {
+    &::after {
+      position: absolute;
       margin-left: $form-label-required-margin-left;
       color: $form-label-required-color;
       content: "*";
+    }
+
+    ~ .form-helper {
+      margin-left: .5625rem; // 9px
+      vertical-align: text-bottom;
     }
   }
 }
@@ -260,6 +267,7 @@
   &[data-focus-visible-added]:focus {
     + .btn,
     + .tag {
+      z-index: $focus-visible-zindex; // Make sure the focused button check is displayed over its next sibling
       @include focus-visible();
     }
   }

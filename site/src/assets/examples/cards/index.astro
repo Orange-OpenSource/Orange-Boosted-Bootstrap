@@ -1,0 +1,76 @@
+---
+import Card from '@components/shortcodes/Card.astro'
+
+export const title = 'Cards'
+export const aliases = [
+  "/examples/cards",
+  "/docs/examples/cards",
+]
+---
+
+<main>
+  <h1 class="visually-hidden">Card examples</h1>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol fill="currentColor" viewBox="0 0 1000 1000" id="heart">
+      <path d="M851.8,172.224C754.746,75.18,597.77,74.613,500,170.492l0,0v0C402.23,74.613,245.254,75.18,148.205,172.224c-96.042,96.038-97.605,250.77-4.7,348.724l0,0L500,914l0-.006V914L856.5,520.95l0,0C949.4,422.994,947.838,268.262,851.8,172.224ZM786.324,449.556L500,766.694,213.677,449.557l-0.145-.162A150.005,150.005,0,0,1,431.058,242.931q0.222,0.222.45,0.438l43.788,41.64L500,308.784v0l0,0,24.7-23.77,43.794-41.645q0.226-.216.449-0.438A149.05,149.05,0,0,1,675.018,199h0A150,150,0,0,1,786.469,449.4Z"/>
+    </symbol>
+    <symbol fill="currentColor" viewBox="0 0 1000 1000" id="share">
+      <path d="M875,775a150,150,0,1,1-296.77-31.1L369.6,616.4a150,150,0,1,1,0-232.8L578.23,256.1a150.087,150.087,0,1,1,52.17,85.3L421.77,468.9a151.338,151.338,0,0,1,0,62.2L630.4,658.6A149.993,149.993,0,0,1,875,775Z"/>
+    </symbol>
+  </svg>
+
+  <div class="container-xxl pt-5">
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col">
+        <Card borders=true />
+      </div>
+
+      <div class="col">
+        <Card borders=true metadata=true />
+      </div>
+
+      <div class="col">
+        <Card borders=true caption=true />
+      </div>
+
+      <div class="col">
+        <Card borders=true caption=true metadata=true />
+      </div>
+
+      <div class="col">
+        <Card borders=true caption=true buttons=true />
+      </div>
+
+      <div class="col">
+        <Card borders=true caption=true action=true />
+      </div>
+    </div>
+
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col">
+        <Card open=true />
+      </div>
+
+      <div class="col">
+        <Card open=true metadata=true />
+      </div>
+
+      <div class="col">
+        <Card open=true caption=true />
+      </div>
+
+      <div class="col">
+        <Card open=true caption=true metadata=true />
+      </div>
+
+      <div class="col">
+        <Card open=true caption=true buttons=true />
+      </div>
+
+      <div class="col">
+        <Card open=true caption=true action=true />
+      </div>
+    </div>
+  </div>
+</main>

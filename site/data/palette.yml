@@ -1,249 +1,249 @@
 - category: Core colors
-  name: "Core colors"
+  name: 'Core colors'
   colors:
     - name: Primary
-      hex: "#f16e00"
-      darkHex: "#ff7900"
+      hex: '#f16e00'
+      darkHex: '#ff7900'
     - name: Secondary
-      hex: "#000"
-      darkHex: "#fff"
-    - name: Body Bg
-      hex: "#fff"
-      darkHex: "#141414"
+      hex: '#000'
+      darkHex: '#fff'
+    - name: 'Body Bg'
+      hex: '#fff'
+      darkHex: '#141414'
 - category: Supporting colors
-  name: "Supporting colors"
+  name: 'Supporting colors'
   colors:
     - name: Blue
-      hex: "#4bb4e6"
+      hex: '#4bb4e6'
     - name: Yellow
-      hex: "#ffd200"
+      hex: '#ffd200'
     - name: Green
-      hex: "#50be87"
+      hex: '#50be87'
     - name: Purple
-      hex: "#a885d8"
+      hex: '#a885d8'
     - name: Pink
-      hex: "#ffb4e6"
+      hex: '#ffb4e6'
     - name: Orange
-      hex: "#ff7900"
+      hex: '#ff7900'
 - category: Functional colors
-  name: "Functional colors"
+  name: 'Functional colors'
   colors:
     - name: Success
-      hex: "#228722"
-      darkHex: "#6c6"
+      hex: '#228722'
+      darkHex: '#6c6'
     - name: Info
-      hex: "#4170d8"
-      darkHex: "#69f"
+      hex: '#4170d8'
+      darkHex: '#69f'
     - name: Warning
-      hex: "#fc0"
-      darkHex: "#fc0"
+      hex: '#fc0'
+      darkHex: '#fc0'
     - name: Danger
-      hex: "#cd3c14"
-      darkHex: "#ff4d4d"
+      hex: '#cd3c14'
+      darkHex: '#ff4d4d'
 - category: Grays
-  name: "Grays"
+  name: 'Grays'
   colors:
     - name: Secondary Bg
-      hex: "#eee"
-      darkHex: "#333"
+      hex: '#eee'
+      darkHex: '#333'
     - name: Tertiary Active Bg
-      hex: "#ddd"
-      darkHex: "#666"
+      hex: '#ddd'
+      darkHex: '#666'
     - name: Tertiary Color
-      hex: "#ccc"
-      darkHex: "#666"
+      hex: '#ccc'
+      darkHex: '#666'
     - name: Secondary Color
-      hex: "#666"
-      darkHex: "#999"
+      hex: '#666'
+      darkHex: '#999'
 - category: ODS colors
-  name: "ODS colors"
+  name: 'ODS colors'
   subcategories:
-  - subcategory: Orange
-    name: "orange"
-    colors:
-      - name: Orange 100
-        variable: $ods-orange-100
-        hex: "#ff7900"
-      - name: Orange 200
-        variable: $ods-orange-200
-        hex: "#f16e00"
-  - subcategory: White
-    name: "white"
-    colors:
-      - name: White 100
-        variable: $ods-white-100
-        hex: "#fff"
-  - subcategory: Gray
-    name: "gray"
-    colors:
-      - name: Gray 200
-        variable: $ods-gray-200
-        hex: "#eee"
-      - name: Gray 300
-        variable: $ods-gray-300
-        hex: "#ddd"
-      - name: Gray 400
-        variable: $ods-gray-400
-        hex: "#ccc"
-      - name: Gray 500
-        variable: $ods-gray-500
-        hex: "#999"
-      - name: Gray 600
-        variable: $ods-gray-600
-        hex: "#666"
-      - name: Gray 700
-        variable: $ods-gray-700
-        hex: "#595959"
-      - name: Gray 800
-        variable: $ods-gray-800
-        hex: "#333"
-      - name: Gray 900
-        variable: $ods-gray-900
-        hex: "#141414"
-  - subcategory: Black
-    name: "black"
-    colors:
-      - name: Black 900
-        variable: $ods-black-900
-        hex: "#000"
-  - subcategory: Forest
-    name: "forest"
-    colors:
-      - name: Forest 100
-        variable: $ods-forest-100
-        hex: "#6c6"
-      - name: Forest 200
-        variable: $ods-forest-200
-        hex: "#228722"
-  - subcategory: Fire
-    name: "fire"
-    colors:
-      - name: Fire 100
-        variable: $ods-fire-100
-        hex: "#ff4d4d"
-      - name: Fire 200
-        variable: $ods-fire-200
-        hex: "#cd3c14"
-  - subcategory: Water
-    name: "water"
-    colors:
-      - name: Water 100
-        variable: $ods-water-100
-        hex: "#69f"
-      - name: Water 200
-        variable: $ods-water-200
-        hex: "#4170d8"
-  - subcategory: Sun
-    name: "sun"
-    colors:
-      - name: Sun 100
-        variable: $ods-sun-100
-        hex: "#fc0"
-      - name: Sun 200
-        variable: $ods-sun-200
-        hex: "#8f7200"
-  - subcategory: Blue
-    name: "blue"
-    colors:
-      - name: Blue 100
-        variable: $ods-blue-100
-        hex: "#b5e8f7"
-      - name: Blue 200
-        variable: $ods-blue-200
-        hex: "#80ceef"
-      - name: Blue 300
-        variable: $ods-blue-300
-        hex: "#4bb4e6"
-      - name: Blue 400
-        variable: $ods-blue-400
-        hex: "#3e9dd6"
-      - name: Blue 500
-        variable: $ods-blue-500
-        hex: "#237eca"
-      - name: Blue 600
-        variable: $ods-blue-600
-        hex: "#085ebd"
-  - category: Green
-    name: "green"
-    colors:
-      - name: Green 100
-        variable: $ods-green-100
-        hex: "#b8ebd6"
-      - name: Green 200
-        variable: $ods-green-200
-        hex: "#84d5af"
-      - name: Green 300
-        variable: $ods-green-300
-        hex: "#50be87"
-      - name: Green 400
-        variable: $ods-green-400
-        hex: "#27a971"
-      - name: Green 500
-        variable: $ods-green-500
-        hex: "#198c51"
-      - name: Green 600
-        variable: $ods-green-600
-        hex: "#0a6e31"
-  - subcategory: Pink
-    name: "pink"
-    colors:
-      - name: Pink 100
-        variable: $ods-pink-100
-        hex: "#ffe8f7"
-      - name: Pink 200
-        variable: $ods-pink-200
-        hex: "#ffceef"
-      - name: Pink 300
-        variable: $ods-pink-300
-        hex: "#ffb4e6"
-      - name: Pink 400
-        variable: $ods-pink-400
-        hex: "#ff8ad4"
-      - name: Pink 500
-        variable: $ods-pink-500
-        hex: "#d573bb"
-      - name: Pink 600
-        variable: $ods-pink-600
-        hex: "#bc4d9a"
-  - category: Purple
-    name: "purple"
-    colors:
-      - name: Purple 100
-        variable: $ods-purple-100
-        hex: "#d9c2f0"
-      - name: Purple 200
-        variable: $ods-purple-200
-        hex: "#c1a4e4"
-      - name: Purple 300
-        variable: $ods-purple-300
-        hex: "#a885d8"
-      - name: Purple 400
-        variable: $ods-purple-400
-        hex: "#9373bd"
-      - name: Purple 500
-        variable: $ods-purple-500
-        hex: "#6e4aa7"
-      - name: Purple 600
-        variable: $ods-purple-600
-        hex: "#492191"
-  - category: Yellow
-    name: "yellow"
-    colors:
-      - name: Yellow 100
-        variable: $ods-yellow-100
-        hex: "#fff6b6"
-      - name: Yellow 200
-        variable: $ods-yellow-200
-        hex: "#ffe45b"
-      - name: Yellow 300
-        variable: $ods-yellow-300
-        hex: "#ffd200"
-      - name: Yellow 400
-        variable: $ods-yellow-400
-        hex: "#ffb400"
-      - name: Yellow 500
-        variable: $ods-yellow-500
-        hex: "#b98f11"
-      - name: Yellow 600
-        variable: $ods-yellow-600
-        hex: "#9d6e06"
+    - subcategory: Orange
+      name: 'orange'
+      colors:
+        - name: Orange 100
+          variable: $ods-orange-100
+          hex: '#ff7900'
+        - name: Orange 200
+          variable: $ods-orange-200
+          hex: '#f16e00'
+    - subcategory: White
+      name: 'white'
+      colors:
+        - name: White 100
+          variable: $ods-white-100
+          hex: '#fff'
+    - subcategory: Gray
+      name: 'gray'
+      colors:
+        - name: Gray 200
+          variable: $ods-gray-200
+          hex: '#eee'
+        - name: Gray 300
+          variable: $ods-gray-300
+          hex: '#ddd'
+        - name: Gray 400
+          variable: $ods-gray-400
+          hex: '#ccc'
+        - name: Gray 500
+          variable: $ods-gray-500
+          hex: '#999'
+        - name: Gray 600
+          variable: $ods-gray-600
+          hex: '#666'
+        - name: Gray 700
+          variable: $ods-gray-700
+          hex: '#595959'
+        - name: Gray 800
+          variable: $ods-gray-800
+          hex: '#333'
+        - name: Gray 900
+          variable: $ods-gray-900
+          hex: '#141414'
+    - subcategory: Black
+      name: 'black'
+      colors:
+        - name: Black 900
+          variable: $ods-black-900
+          hex: '#000'
+    - subcategory: Forest
+      name: 'forest'
+      colors:
+        - name: Forest 100
+          variable: $ods-forest-100
+          hex: '#6c6'
+        - name: Forest 200
+          variable: $ods-forest-200
+          hex: '#228722'
+    - subcategory: Fire
+      name: 'fire'
+      colors:
+        - name: Fire 100
+          variable: $ods-fire-100
+          hex: '#ff4d4d'
+        - name: Fire 200
+          variable: $ods-fire-200
+          hex: '#cd3c14'
+    - subcategory: Water
+      name: 'water'
+      colors:
+        - name: Water 100
+          variable: $ods-water-100
+          hex: '#69f'
+        - name: Water 200
+          variable: $ods-water-200
+          hex: '#4170d8'
+    - subcategory: Sun
+      name: 'sun'
+      colors:
+        - name: Sun 100
+          variable: $ods-sun-100
+          hex: '#fc0'
+        - name: Sun 200
+          variable: $ods-sun-200
+          hex: '#8f7200'
+    - subcategory: Blue
+      name: 'blue'
+      colors:
+        - name: Blue 100
+          variable: $ods-blue-100
+          hex: '#b5e8f7'
+        - name: Blue 200
+          variable: $ods-blue-200
+          hex: '#80ceef'
+        - name: Blue 300
+          variable: $ods-blue-300
+          hex: '#4bb4e6'
+        - name: Blue 400
+          variable: $ods-blue-400
+          hex: '#3e9dd6'
+        - name: Blue 500
+          variable: $ods-blue-500
+          hex: '#237eca'
+        - name: Blue 600
+          variable: $ods-blue-600
+          hex: '#085ebd'
+    - subcategory: Green
+      name: 'green'
+      colors:
+        - name: Green 100
+          variable: $ods-green-100
+          hex: '#b8ebd6'
+        - name: Green 200
+          variable: $ods-green-200
+          hex: '#84d5af'
+        - name: Green 300
+          variable: $ods-green-300
+          hex: '#50be87'
+        - name: Green 400
+          variable: $ods-green-400
+          hex: '#27a971'
+        - name: Green 500
+          variable: $ods-green-500
+          hex: '#198c51'
+        - name: Green 600
+          variable: $ods-green-600
+          hex: '#0a6e31'
+    - subcategory: Pink
+      name: 'pink'
+      colors:
+        - name: Pink 100
+          variable: $ods-pink-100
+          hex: '#ffe8f7'
+        - name: Pink 200
+          variable: $ods-pink-200
+          hex: '#ffceef'
+        - name: Pink 300
+          variable: $ods-pink-300
+          hex: '#ffb4e6'
+        - name: Pink 400
+          variable: $ods-pink-400
+          hex: '#ff8ad4'
+        - name: Pink 500
+          variable: $ods-pink-500
+          hex: '#d573bb'
+        - name: Pink 600
+          variable: $ods-pink-600
+          hex: '#bc4d9a'
+    - subcategory: Purple
+      name: 'purple'
+      colors:
+        - name: Purple 100
+          variable: $ods-purple-100
+          hex: '#d9c2f0'
+        - name: Purple 200
+          variable: $ods-purple-200
+          hex: '#c1a4e4'
+        - name: Purple 300
+          variable: $ods-purple-300
+          hex: '#a885d8'
+        - name: Purple 400
+          variable: $ods-purple-400
+          hex: '#9373bd'
+        - name: Purple 500
+          variable: $ods-purple-500
+          hex: '#6e4aa7'
+        - name: Purple 600
+          variable: $ods-purple-600
+          hex: '#492191'
+    - subcategory: Yellow
+      name: 'yellow'
+      colors:
+        - name: Yellow 100
+          variable: $ods-yellow-100
+          hex: '#fff6b6'
+        - name: Yellow 200
+          variable: $ods-yellow-200
+          hex: '#ffe45b'
+        - name: Yellow 300
+          variable: $ods-yellow-300
+          hex: '#ffd200'
+        - name: Yellow 400
+          variable: $ods-yellow-400
+          hex: '#ffb400'
+        - name: Yellow 500
+          variable: $ods-yellow-500
+          hex: '#b98f11'
+        - name: Yellow 600
+          variable: $ods-yellow-600
+          hex: '#9d6e06'

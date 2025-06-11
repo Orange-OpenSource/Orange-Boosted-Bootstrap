@@ -1,0 +1,176 @@
+@include tac() {
+  position: fixed;
+  left: 50%;
+  z-index: $zindex-modal;
+  display: none;
+  width: 100%;
+  max-width: $modal-md;
+  padding: $modal-content-padding;
+  background-color: $modal-content-bg;
+  background-clip: padding-box;
+  border: $modal-content-border-width solid $modal-content-border-color;
+  transform: translateX(-50%);
+
+  [role="heading"] {
+    display: block;
+    font-weight: $font-weight-bold;
+    color: $modal-content-color;
+  }
+}
+
+@include tac("Root") {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  width: 100%;
+}
+
+@include tac("AlertBig") {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
+  font-weight: $font-weight-bold;
+  color: $white;
+  background: $black;
+  border-top: var(--bs-border-width) solid var(--bs-border-color-subtle);
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      --max-width: #{map-get($container-max-widths, $breakpoint)};
+    }
+  }
+
+  &[style*="display: block"] {
+    display: flex !important; // stylelint-disable-line declaration-no-important
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@include tac("DisclaimerAlert") {
+  font-size: $font-size-sm;
+}
+
+@include tac("ClosePanel") {
+  position: absolute;
+  right: $modal-content-padding;
+  margin: calc($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // stylelint-disable-line function-disallowed-list
+  overflow: hidden;
+  text-indent: 2ch;
+  white-space: nowrap;
+}
+
+@include tac("Back") {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal-backdrop;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important; // stylelint-disable-line declaration-no-important
+  background: $modal-backdrop-bg;
+  border: 0;
+  opacity: $modal-backdrop-opacity;
+}
+
+@include tac("H1", true) {
+  margin-bottom: $spacer;
+  font-size: $h2-font-size;
+  letter-spacing: $h2-spacing;
+}
+
+@include tac("H2", true) {
+  padding-top: $spacer * .1;
+  font-size: $h4-font-size;
+  letter-spacing: $h4-spacing;
+}
+
+@include tac("H3", true) {
+  font-size: $h6-font-size;
+  letter-spacing: $h6-spacing;
+}
+
+@include tac("Info") {
+  padding: $spacer * .5 0;
+  margin-bottom: $spacer;
+  font-weight: $font-weight-bold;
+}
+
+@include tac("Name", true) {
+  font-size: $font-size-sm;
+  color: var(--bs-secondary-color);
+}
+
+@include tac("Ask", true) {
+  display: flex;
+  flex-direction: column;
+  margin-top: $spacer * .5;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+@include tac("Line", true) {
+  margin-bottom: $spacer;
+  overflow: visible;
+  @include clearfix();
+}
+
+@include tac("MainLine", true) {
+  padding-bottom: $spacer;
+  border-bottom: $modal-content-border-width solid $modal-content-border-color;
+}
+
+@include tac("Services") {
+  overflow: visible !important; // stylelint-disable-line declaration-no-important
+
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+@include tac("SelfLink", true) {
+  position: absolute;
+  right: $modal-content-padding;
+  bottom: add($spacer * -1.5, var(--bs-border-width));
+  padding: $spacer * .25 $spacer * .5;
+  color: $white;
+  background-color: $black;
+}
+
+@include tac("Allow", true) {
+  @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
+
+  &::before {
+    margin-right: $spacer * .25;
+  }
+}
+
+@include tac("Deny", true) {
+  @include button-icon($form-switch-bg-image, $btn-font-size-sm);
+
+  &::before {
+    margin-right: $spacer * .25;
+  }
+}
+
+.catToggleBtn,
+.#{$tac-prefix}Hidden,
+.#{$tac-prefix}InfoBox,
+.#{$tac-prefix}ListCookies + br {
+  display: none;
+}
+
+.tac_visually-hidden { // stylelint-disable-line selector-class-pattern
+  @include visually-hidden();
+}

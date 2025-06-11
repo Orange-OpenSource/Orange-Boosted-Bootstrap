@@ -1,0 +1,483 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  /**
+   * Set an id to a global header.
+   * @default 'global-header'
+   */
+  id?: string
+
+  /**
+   * Display the responsive logo.
+   * @default 'false'
+   */
+  responsive_logo?: 'true' | 'false'
+
+  /**
+   * Add a title to a global header.
+   * @default 'false'
+   */
+  title?: 'true' | 'false'
+
+  /**
+   * Add a second title to a global header.
+   * @default 'false'
+   */
+  title_2?: 'true' | 'false'
+
+  /**
+   * Choose whether the global header is using search or actions.
+   */
+  mode: 'actions' | 'search' | 'theme'
+
+  /**
+   * If the global header is used inside our documentation or not.
+   * @default 'false'
+   */
+  demo?: 'true' | 'false'
+
+  /**
+   * Display generic labels or more real-life labels.
+   * @default 'false'
+   */
+  labels?: 'true' | 'false'
+
+  /**
+   * Display labels at the end of the global header.
+   * @default 'false'
+   */
+  labels_end?: 'true' | 'false'
+
+  /**
+   * Add a navigation under the global header.
+   * @default 'false'
+   */
+  navigation?: 'true' | 'false'
+
+  /**
+   * Display the global header is used with a supra bar.
+   * @default 'false'
+   */
+  supra?: 'true' | 'false'
+
+  /**
+   * Set the aria-label for the global header.
+   */
+  aria_label: string
+}
+
+const {
+  id = 'global-header',
+  responsive_logo = 'false',
+  title = 'false',
+  title_2 = 'false',
+  mode,
+  demo = 'false',
+  labels = 'false',
+  labels_end = 'false',
+  navigation = 'false',
+  supra = 'false',
+  aria_label
+} = Astro.props as Props
+---
+
+<nav class="navbar navbar-expand-lg" aria-label={aria_label}>
+  <div class="container-xxl">
+    <div class:list={['navbar-brand me-auto', { 'me-lg-4': !(navigation === 'true' || responsive_logo === 'true') }]}>
+      <a class="stretched-link" href="#">
+        <img
+          src={responsive_logo === 'true'
+            ? getVersionedDocsPath('assets/brand/OBS-logo.svg')
+            : getVersionedDocsPath('assets/brand/orange-logo.svg')}
+          width="50"
+          height="50"
+          alt="Boosted - Back to Home"
+          loading="lazy"
+        />
+      </a>
+      {
+        title === 'true' && (
+          <h1 class:list={[{ 'two-lined': title === 'true' && title_2 === 'true' }, { title: title === 'true' }]}>
+            {title_2 === 'true' ? (
+              <>
+                Title Line 1<br />
+                Title Line 2
+              </>
+            ) : (
+              <>Title</>
+            )}
+          </h1>
+        )
+      }
+    </div>
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target={id}
+      aria-controls={`${id}.1 ${id}.2`}
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {
+      !(navigation === 'true') && (
+        <div
+          id={`${id}.1`}
+          class:list={[
+            'navbar-collapse collapse',
+            { 'me-lg-3': responsive_logo === 'true' },
+            { 'me-lg-auto': !(responsive_logo === 'true') },
+            id
+          ]}
+        >
+          {supra === 'true' && (
+            <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                  Personal
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Business
+                </a>
+              </li>
+            </ul>
+          )}
+          <ul class="navbar-nav">
+            {labels === 'true' && (
+              <>
+                <li class="nav-item">
+                  <a
+                    class:list={['nav-link', { active: !(supra === 'true') }]}
+                    href="#"
+                    aria-current={!(supra === 'true') ? 'page' : false}
+                  >
+                    Label
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Label
+                  </a>
+                </li>
+                {!(demo === 'true') && (
+                  <>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Label
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Label
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Label
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Label
+                      </a>
+                    </li>
+                  </>
+                )}
+              </>
+            )}
+            {!(labels === 'true') && (
+              <>
+                <li class="nav-item">
+                  <a
+                    class:list={['nav-link', { active: !(supra === 'true') }]}
+                    href="#"
+                    aria-current={!(supra === 'true') ? 'page' : false}
+                  >
+                    Discover
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Shop
+                  </a>
+                </li>
+                {!(demo === 'true') && (
+                  <>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Services
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Entertainment
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        News
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Support
+                      </a>
+                    </li>
+                  </>
+                )}
+              </>
+            )}
+          </ul>
+          {supra === 'true' && (
+            <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">
+                  EN
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">
+                  FR
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">
+                  ES
+                </a>
+              </li>
+            </ul>
+          )}
+        </div>
+      )
+    }
+    {
+      mode === 'search' && (
+        <form class="d-none d-lg-flex col-3 navbar-item" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+      )
+    }
+    <div
+      id={`${id}.2`}
+      class:list={[
+        'navbar-collapse collapse',
+        { 'd-sm-flex': !(mode === 'theme') },
+        { 'd-lg-flex': mode === 'theme' },
+        { 'ms-lg-3': responsive_logo === 'true' },
+        id
+      ]}
+    >
+      <ul class="navbar-nav flex-row">
+        {
+          mode === 'actions' && (
+            <>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-icon">
+                  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#search')} />
+                  </svg>
+                  <span class="visually-hidden">Search</span>
+                </a>
+              </li>
+              <li class:list={['nav-item', { 'd-none': responsive_logo === 'true' }]}>
+                <a href="#" class="nav-link nav-icon">
+                  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                    <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#buy')} />
+                  </svg>
+                  <span class="visually-hidden">Basket</span>
+                  <span class="position-relative align-self-start">
+                    <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
+                      1<span class="visually-hidden">shopping basket items</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-icon">
+                  <img
+                    src={getVersionedDocsPath('assets/img/navbar-contact.png')}
+                    width="25"
+                    height="25"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="visually-hidden">My account</span>
+                </a>
+              </li>
+            </>
+          )
+        }
+        {
+          mode === 'search' && (
+            <li class="nav-item d-lg-none">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
+                  <use xlink:href={getVersionedDocsPath('assets/img/boosted-sprite.svg#search')} />
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+          )
+        }
+        {
+          mode === 'theme' && (
+            <li class="nav-item dropdown">
+              <button
+                class="nav-link nav-icon dropdown-toggle"
+                id={`bd-theme${demo === 'true' ? '2' : ''}`}
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                aria-label="Toggle mode (auto)"
+              >
+                <svg class="theme-icon-active" aria-hidden="true">
+                  <use href="#ui-auto-mode" />
+                </svg>
+                <span class="d-lg-none ms-2" id={`bd-theme-text${demo === 'true' ? '2' : ''}`}>
+                  Toggle mode
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end mb-2"
+                aria-labelledby={`bd-theme-text${demo === 'true' ? '2' : ''}`}
+              >
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="light"
+                    aria-pressed="false"
+                  >
+                    <svg class="me-2" aria-hidden="true">
+                      <use href="#ui-light-mode" />
+                    </svg>
+                    Light
+                    <svg class="ms-auto d-none" aria-hidden="true">
+                      <use href="#check2" />
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="dark"
+                    aria-pressed="false"
+                  >
+                    <svg class="me-2" aria-hidden="true">
+                      <use href="#ui-dark-mode" />
+                    </svg>
+                    Dark
+                    <svg class="ms-auto d-none" aria-hidden="true">
+                      <use href="#check2" />
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="auto"
+                    aria-pressed="true"
+                  >
+                    <svg class="me-2" aria-hidden="true">
+                      <use href="#ui-auto-mode" />
+                    </svg>
+                    Auto
+                    <svg class="ms-auto d-none" aria-hidden="true">
+                      <use href="#check2" />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          )
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+{
+  navigation === 'true' && (
+    <nav class="navbar navbar-expand-lg" aria-label={`${aria_label}.2`}>
+      <div class="container-xxl">
+        <div id={`${id}.1`} class:list={['navbar-collapse collapse m-0', id]}>
+          {supra === 'true' && (
+            <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                  Personal
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Business
+                </a>
+              </li>
+            </ul>
+          )}
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class:list={['nav-link', { active: !(supra === 'true') }]}
+                href="#"
+                aria-current={!(supra === 'true') ? 'page' : false}
+              >
+                Label
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Label
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Label
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Label
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Label
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Label
+              </a>
+            </li>
+          </ul>
+          {supra === 'true' && (
+            <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">
+                  EN
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">
+                  FR
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">
+                  ES
+                </a>
+              </li>
+            </ul>
+          )}
+        </div>
+      </div>
+    </nav>
+  )
+}

@@ -1,0 +1,29 @@
+---
+import Code from '@shortcodes/Code.astro'
+
+interface Props {
+  name: string
+}
+
+const { name } = Astro.props
+---
+
+<p>
+  Dismissal can be achieved with the <code>data-bs-dismiss</code> attribute on a button <strong
+    >within the {name}</strong
+  > as demonstrated below:
+</p>
+
+<Code
+  code={`<button type="button" class="btn-close" data-bs-dismiss="${name}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">\n  <span class="visually-hidden">Close</span>\n</button>`}
+  lang="html"
+/>
+
+<p>
+  or on a button <strong>outside the {name}</strong> using the additional <code>data-bs-target</code> as demonstrated below:
+</p>
+
+<Code
+  code={`<button type="button" class="btn-close" data-bs-dismiss="${name}" data-bs-target="#my-${name}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">\n  <span class="visually-hidden">Close</span>\n</button>`}
+  lang="html"
+/>

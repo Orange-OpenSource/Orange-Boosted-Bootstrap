@@ -1,3 +1,61 @@
+## [5.3.5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.4...v5.3.5) (2025-04-15)
+
+
+### Bug Fixes
+
+* **focus:** Remove default `z-index` ([#2501](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/2501)) ([1d011ed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1d011ed10ff29e8cafd7bffae90f24d7f59222bf))
+
+
+
+## [5.3.4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.3...v5.3.4) (2025-04-14)
+
+
+### Bug Fixes
+
+* **a11y:** Missing aria-hidden on some decorative SVGs ([#2691](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2691)) ([a89e727](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a89e727d2f2c0ee2899266782cad17ea4d4623e4))
+* **a11y:** use empty `alt` attribute for decorative images in Orange navbar and documentation ([#2690](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2690)) ([204e2a8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/204e2a84fb35a0e7d4b88c2fc26dc2e15d12a5cf))
+* **a11y:** use English links in docs and Download app example to prevent language switching ([#2708](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2708)) ([871a05e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/871a05e0c2c2db23d041f53ffaef54f2e78145be))
+* bad license URL in `build/zip-examples.mjs ([7dd2adb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dd2adb881da30188fc7db469f14abf19f4e887c))
+* **css:** more contrasted `.figure-caption` color in dark mode ([#2697](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2697)) ([f43e4c6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f43e4c6996edd27c91a2fe7afd753ca1ebdb6d9e))
+* **css:** typo in `scss/_variables.scss` comment ([#2718](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2718)) ([b966895](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b9668950ddedc1d6f1e5839273e2e72a81c5bcc6))
+* **docs:** add `title` and `aria-label` to Bootstrap's licence link in the footer ([#2706](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2706)) ([94417a8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/94417a83fac2d13b45ef878f66a9c02c292377b9))
+* **docs:** add a `<h2>` to the toc side nav for a11y ([#2705](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2705)) ([33d1d48](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/33d1d485b9654a21610ded851ef364b11321fba8))
+* **docs:** add missing whitespaces to the migration guide ([374ad9e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/374ad9e5d258e0bfc76054986d1b9f6a232ac2c6))
+* **docs:** add semantics to the design callouts ([#2722](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2722)) ([0ae070a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0ae070a889414d75c0f5a7a3bc09ae3b15df8515))
+* **docs:** change `.bg-white` to `.bg-body` in Utilities > Overflow ([#2671](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2671)) ([6b3e079](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6b3e0794a4f0d63de4585fcffd9fa0c4cf5a4ce3))
+* **docs:** change `alt`s of Brand logos for better a11y ([#2709](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2709)) ([424a255](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/424a25587fac741b1f8d58970dd8a247b17eb27d))
+* **docs:** change focus order for code examples and their copy button ([#2699](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2699)) ([5b0b7d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5b0b7d07e8872519ab5d37ef9d59a854e206923a))
+* **docs:** change heading level of 'Required script' section in 'Getting started > Introduction' ([#2680](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2680)) ([800bbb4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/800bbb4bcdcea52c8edc8a280c3850023e732a12))
+* **docs:** change side menu's markup from `<aside>` to `<nav>` ([#2727](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2727)) ([4eb4598](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4eb4598cb60d9111937bef4941119cfefaecf2b3))
+* **docs:** change tarteaucitron design and rendering for a better accessibility ([#2695](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2695)) ([a71458a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a71458a5e80e391f1e88576ababcbd08cf17a375))
+* **docs:** fix minor typos in the migration guide ([529991b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/529991b5ce33edacb28ebb6d2e6293242f6d2f25))
+* **docs:** headings on left menu and link to design doc for a11y ([#2859](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2859)) ([d2516f4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d2516f4776438d308ede29c74be64862936d3ae2))
+* **docs:** improve Bootstrap and Boosted license links in the 'License' page ([#2723](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2723)) ([65b4109](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/65b410974dac639d8829690128d4b622ebd06d8d))
+* **docs:** missing dark red color updates ([#2567](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2567)) ([a5b723c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a5b723cd3b0ce7b5cab6c056d11dfde9392ae8e9))
+* **docs:** more explicit homepage webpage's title for a11y ([#2698](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2698)) ([e6bbfa1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e6bbfa174ac64de9866b90dbfd4be4d5509a2c31))
+* **docs:** remove unnecessary `role="img"` ([#2704](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2704)) ([f771c04](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f771c04a44c3ead45dd68dd3caddae9ffc520048))
+* **docs:** typo in the migration guide ([cde9c47](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cde9c47c097da87006d350bf8ffacecda2a457b2))
+* **docs:** update `aria-label` and `title` attributes for the button on the Guidelines page ([#2703](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2703)) ([767a1c3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/767a1c3aaa9b83ecdcc81bc59000496a6b252603))
+* **docs:** update alt text in Vite, Webpack, and Parcel guides for clarity ([#2696](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2696)) ([f7feeca](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7feeca18949fd280e1bd710abc4cd21cad45334))
+* **docs:** use HTML list elements for thumbnails in 'Design guidelines' for a11y ([#2702](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2702)) ([88c4681](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/88c4681b0325013c7601893c62b13a52aa3922a8))
+* drop unused `.overflow-visible` when used with SVGs in some components ([#2701](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2701)) ([4ac023b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4ac023b8e6cdd6146cf02f7a8b33263773fa0f06))
+* **examples:** Add accessible name on images ([#2835](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2835)) ([9c06ea4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9c06ea4881ee229f741632d9751e90d7cb819b1f))
+* **examples:** add missing `role="img"` to `<svg>` with `<title>` in Download example for a11y ([#2707](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2707)) ([3e20e77](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3e20e772df0fd20e941e83305ffff28bd5437849))
+* **form-helper:** fix required + form-helper overlapping ([#2958](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2958)) ([409c740](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/409c740d15df4336d4d8cbe3c3976c52d724bb27))
+* **forms:** avoid `.is-required` element to be alone on a new line ([#2760](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2760)) ([c13d6f0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c13d6f02fa6de22e307f4c6028aea51ecf14e79a))
+* **README:** composer command line installation ([86e9c0c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86e9c0c2cb9ecba5ecac857456600d4163bd7ab9))
+* **switch:** unchecked invalid switch colors ([#2621](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2621)) ([fdbb7d3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fdbb7d3c44c586e9a809f95cf8ee5db0683ae107))
+* **tests:** change 'Bootstrap' to 'Boosted' in media query Sass test name ([9dbb07c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9dbb07c8a5243b90fdd08a57fe774d80e5426ea7))
+
+
+### Features
+
+* **buttons:** add X social button ([#2644](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2644)) ([e667c29](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e667c29da0748ae762dac2baefaec21f3b4c7573))
+* **carousel:** use JS constants to define play/pause CSS class names ([#2502](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2502)) ([db0277c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/db0277cb1696c547587c7abf500e1fc784faafd5))
+* **css:** change the dark mode red color hexadecimal value ([#2549](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2549)) ([cfedfa0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cfedfa03e8ebbe270238ecc45f6cc339d9d647d8))
+
+
+
 ## [5.3.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.2...v5.3.3) (2024-02-23)
 
 

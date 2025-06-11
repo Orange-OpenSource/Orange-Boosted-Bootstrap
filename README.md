@@ -2,10 +2,10 @@
 
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
-  <br>
+  <br />
   <a href="https://boosted.orange.com/docs/"><strong>Visit Boosted</strong></a>
-  <br>
-  <br>
+  <br />
+  <br />
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
@@ -16,7 +16,7 @@
 
 - [Quick start](#quick-start)
 - [Status](#status)
-- [What's included](#whats-included)
+- [What’s included](#whats-included)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -30,11 +30,12 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.5.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.3`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.3`
-- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:5.3.3`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.5`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.5`
+- Install with [Bun](https://bun.sh/): `bun add boosted@v5.3.5`
+- Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:5.3.5`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
@@ -54,9 +55,9 @@ Read the [Getting started page](https://boosted.orange.com/docs/getting-started/
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
-## What's included
+## What’s included
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
+Within the download you’ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
 <details>
   <summary>Download contents</summary>
@@ -112,7 +113,7 @@ Within the download you'll find the following directories and files, logically g
   ```
 </details>
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://web.dev/articles/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://web.dev/articles/source-maps) (`boosted.*.map`) are available for use with certain browsers’ developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
 
 ## Bugs and feature requests
@@ -122,9 +123,9 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
+Boosted’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
+Documentation search is powered by [Algolia’s DocSearch](https://docsearch.algolia.com/).
 
 ### Running documentation locally
 
@@ -133,7 +134,7 @@ Documentation search is powered by [Algolia's DocSearch](https://docsearch.algol
 3. From the root `/boosted` directory, run `npm run docs-serve` in the command line.
 4. Open `http://localhost:9001/` in your browser, and voilà.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Learn more about using Hugo by reading its [documentation](https://docs.astro.build/en/getting-started/).
 
 ### Documentation for previous releases
 
@@ -166,12 +167,12 @@ Our default branch is for development of our Boosted 5 release. Head to the [`v4
 
 **Mark Otto**
 
-- <https://twitter.com/mdo>
+- <https://x.com/mdo>
 - <https://github.com/mdo>
 
 **Jacob Thornton**
 
-- <https://twitter.com/fat>
+- <https://x.com/fat>
 - <https://github.com/fat>
 
 ## Thanks

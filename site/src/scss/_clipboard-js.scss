@@ -1,0 +1,64 @@
+// clipboard.js
+//
+// JS-based `Copy` buttons for code snippets.
+
+.bd-clipboard,
+.bd-edit {
+  position: relative;
+  display: none;
+  float: right;
+
+  + .highlight {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.btn-clipboard,
+.btn-edit {
+  display: block;
+  padding: .5em;
+  line-height: 1;
+  color: var(--bs-body-color);
+  background-color: transparent; // Boosted mod: instead of `var(--bd-pre-bg)` so that the focus-visible outline in the source code area is rendered behind this surface
+  border: 0;
+  @include border-radius(.25rem);
+
+  &:hover {
+    color: var(--bs-link-hover-color);
+  }
+
+  // Boosted mod: no focus rule
+
+  // Boosted mod
+  .bi {
+    width: 1.4em;
+    height: 1.4em;
+  }
+  // End mod
+}
+
+.btn-clipboard {
+  position: relative;
+  z-index: 2;
+  margin-top: var(--bs-border-width); // Boosted mod: instead of `1.25rem`
+  margin-right: var(--bs-border-width); // Boosted mod: instead of `.75rem`
+}
+
+.bd-code-snippet {
+  position: relative;
+
+  .bd-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    right: 0;
+  }
+}

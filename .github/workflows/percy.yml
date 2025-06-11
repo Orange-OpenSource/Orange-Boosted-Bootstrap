@@ -6,8 +6,8 @@ on:
     paths:
       - 'js/**'
       - 'scss/**'
-      - 'site/content/docs/**/components/**'
-      - 'site/content/docs/**/forms/**'
+      - 'site/src/content/docs/components/**'
+      - 'site/src/content/docs/forms/**'
   workflow_dispatch:
 
 env:
@@ -30,7 +30,7 @@ jobs:
           node-version: "${{ env.NODE }}"
 
       - name: Set up npm cache
-        uses: actions/cache@v4.2.2
+        uses: actions/cache@v4.2.3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}

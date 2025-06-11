@@ -1,11 +1,11 @@
 /*!
- * Boosted Reboot v5.3.3 (https://boosted.orange.com/)
- * Copyright 2014-2024 The Boosted Authors
- * Copyright 2014-2024 Orange SA
+ * Boosted Reboot v5.3.5 (https://boosted.orange.com/)
+ * Copyright 2014-2025 The Boosted Authors
+ * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.3.3 (https://getbootstrap.com/)
- * Copyright 2011-2024 The Bootstrap Authors
+ * Bootstrap Reboot v5.3.5 (https://getbootstrap.com/)
+ * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root,
@@ -151,6 +151,7 @@
   --bs-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23666' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-switch-square-bg: #000;
+  --bs-form-switch-unchecked-invalid-border-color: #31c3eb;
   --bs-table-active-bg-factor: 0.135;
   --bs-table-hover-bg-factor: 0.065;
   --bs-table-striped-bg-factor: 0.035;
@@ -178,7 +179,7 @@
   --bs-success: #6c6;
   --bs-info: #69f;
   --bs-warning: #fc0;
-  --bs-danger: #f66;
+  --bs-danger: #ff4d4d;
   --bs-light: #ccc;
   --bs-dark: #000;
   --bs-primary-rgb: 255, 121, 0;
@@ -186,7 +187,7 @@
   --bs-success-rgb: 102, 204, 102;
   --bs-info-rgb: 102, 153, 255;
   --bs-warning-rgb: 255, 204, 0;
-  --bs-danger-rgb: 255, 102, 102;
+  --bs-danger-rgb: 255, 77, 77;
   --bs-light-rgb: 204, 204, 204;
   --bs-dark-rgb: 0, 0, 0;
   --bs-primary-text-emphasis: #ff7900;
@@ -194,7 +195,7 @@
   --bs-success-text-emphasis: #6c6;
   --bs-info-text-emphasis: #69f;
   --bs-warning-text-emphasis: #fc0;
-  --bs-danger-text-emphasis: #f66;
+  --bs-danger-text-emphasis: #ff4d4d;
   --bs-light-text-emphasis: #ccc;
   --bs-dark-text-emphasis: #000;
   --bs-primary-bg-subtle: #ff7900;
@@ -202,7 +203,7 @@
   --bs-success-bg-subtle: #6c6;
   --bs-info-bg-subtle: #69f;
   --bs-warning-bg-subtle: #fc0;
-  --bs-danger-bg-subtle: #f66;
+  --bs-danger-bg-subtle: #ff4d4d;
   --bs-light-bg-subtle: #ccc;
   --bs-dark-bg-subtle: #000;
   --bs-primary-border-subtle: #ff7900;
@@ -210,11 +211,11 @@
   --bs-success-border-subtle: #6c6;
   --bs-info-border-subtle: #69f;
   --bs-warning-border-subtle: #fc0;
-  --bs-danger-border-subtle: #f66;
+  --bs-danger-border-subtle: #ff4d4d;
   --bs-light-border-subtle: #ccc;
   --bs-dark-border-subtle: #000;
   --bs-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'%3e%3cpath fill='%236c6' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/%3e%3c/svg%3e");
-  --bs-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'%3e%3cpath fill='%23f66' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/%3e%3c/svg%3e");
+  --bs-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'%3e%3cpath fill='%23ff4d4d' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/%3e%3c/svg%3e");
   --bs-heading-color: inherit;
   --bs-link-color: #fff;
   --bs-link-hover-color: #ff7900;
@@ -241,6 +242,7 @@
   --bs-form-select-disabled-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath fill='%23999' d='M7 7 0 0h14L7 7z'/%3e%3c/svg%3e");
   --bs-form-color-disabled-filter: brightness(0) invert(1) brightness(0.4);
   --bs-form-switch-square-bg: #141414;
+  --bs-form-switch-unchecked-invalid-border-color: var(--bs-danger);
   --bs-table-active-bg-factor: 0.35;
   --bs-table-hover-bg-factor: 0.135;
   --bs-table-striped-bg-factor: 1;
@@ -256,14 +258,14 @@
 :root {
   scroll-padding-top: 3.75rem;
 }
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
 @media (min-width: 1024px) {
   :root {
     scroll-padding-top: 7.5rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
@@ -284,7 +286,6 @@ body {
 }
 
 :focus {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-focus-visible-outer-color);
   outline-offset: 2px;

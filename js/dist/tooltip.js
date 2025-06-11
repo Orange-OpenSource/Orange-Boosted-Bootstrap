@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2015-2024 The Boosted Authors
-  * Copyright 2015-2024 Orange
+  * Boosted v5.3.5 (https://boosted.orange.com/)
+  * Copyright 2015-2025 The Boosted Authors
+  * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v5.3.3 (https://boosted.orange.com/)
-  * Copyright 2011-2024 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap tooltip.js v5.3.5 (https://boosted.orange.com/)
+  * Copyright 2011-2025 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -121,7 +121,7 @@
   class Tooltip extends BaseComponent {
     constructor(element, config) {
       if (typeof Popper__namespace === 'undefined') {
-        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
+        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org/docs/v2/)');
       }
       super(element, config);
 
@@ -167,7 +167,6 @@
       if (!this._isEnabled) {
         return;
       }
-      this._activeTrigger.click = !this._activeTrigger.click;
       if (this._isShown()) {
         this._leave();
         return;
@@ -355,7 +354,7 @@
       return offset;
     }
     _resolvePossibleFunction(arg) {
-      return index_js.execute(arg, [this._element]);
+      return index_js.execute(arg, [this._element, this._element]);
     }
     _getPopperConfig(attachment) {
       const defaultBsPopperConfig = {
@@ -393,7 +392,7 @@
       };
       return {
         ...defaultBsPopperConfig,
-        ...index_js.execute(this._config.popperConfig, [defaultBsPopperConfig])
+        ...index_js.execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
       };
     }
     _setListeners() {
