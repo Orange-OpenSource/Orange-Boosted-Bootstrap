@@ -26,6 +26,7 @@ You can find and customize these variables for key global options in OUDS Web's 
 | `$enable-negative-margins`        | `true` or `false` (default)           | Enables the generation of [negative margin utilities]({{< docsref "/utilities/spacing#negative-margin" >}}). |
 | `$enable-deprecation-messages`    | `true` (default) or `false`           | Set to `false` to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in Bootstrap `v6`. |
 | `$enable-important-utilities`     | `true` (default) or `false`           | Enables the `!important` suffix in utility classes. |
+| `$enable-bullet-list-tick`        | `true` or `false` (default)           | Enables the `.bullet-list-tick` CSS class, see [Bullet list documentation]({{< docsref "/components/bullet-list#tick-marker" >}}). |
 <!--| `$enable-shadows`              | `true` or `false` (default)           | Enables predefined decorative `box-shadow` styles on various components. Does not affect `box-shadow`s used for focus states. |
 | `$enable-transitions`          | `true` (default) or `false`           | Enables predefined `transition`s on various components. |
 | `$enable-reduced-motion`       | `true` (default) or `false`           | Enables the [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
