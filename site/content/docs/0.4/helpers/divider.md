@@ -10,6 +10,10 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Divider design guidelines](https://unified-design-system.orange.com/472794e18/p/629e1b-divider).
+{{< /callout >}}
+
 ## Horizontal rules
 
 Horizontal rules should use the `<hr>` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]({{< docsref "/utilities/borders" >}}), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
