@@ -50,6 +50,14 @@ yarn start # Start the project
 ```
 {{< /callout >}}
 
+### Bun
+
+Install OUDS Web in your Bun or Node.js powered apps with [the Bun CLI](https://bun.sh/):
+
+```sh
+bun add @ouds/web@{{< param "current_version" >}}
+```
+
 ### NuGet
 
 If you develop in .NET Framework, you can also install and manage OUDS Web's [CSS](https://www.nuget.org/packages/ouds-web) or [Sass](https://www.nuget.org/packages/ouds-web.sass) and JavaScript using [NuGet](https://www.nuget.org/). Newer projects should use [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
