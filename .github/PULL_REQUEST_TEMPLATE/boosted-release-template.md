@@ -4,15 +4,12 @@
 - [ ] `npm run release-version $current_version $next_version` to bump version number
   - then, if bumping a minor or major version:
     - [ ] Manually change `version_short` in `package.json`
-    - [ ] Add docs version to `site/data/docs-versions.yml`
-    - [ ] Manually change `docs_version` in `hugo.yml` and other references to the previous version
-    - [ ] Update redirects in docs frontmatter (`site/content/docs/_index.html`?)
-    - [ ] Move `site/content/docs/5.x` to `site/content/docs/5.x+1`
-    - [ ] Increment `site/static/docs/{version}` version
+    - [ ] Manually change `docs_version` in `config.yml` and other references to the previous version
+    - [ ] Manually change the version in `title-bars.css` and `dark-mode.md`
+    - [ ] Manually add the version in `Versions.astro` and `docs-versions.yml`
     - [ ] (Major version) Manually update the version in `nuget/boosted.nuspec` and `nuget/boosted.sass.nuspec`
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "boosted" should have its version changed!
-  - :warning: `site/content/docs/5.1/**/*.md` should not always be modified
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
 - [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc, and package the release
 - [ ] Prepare changelog:

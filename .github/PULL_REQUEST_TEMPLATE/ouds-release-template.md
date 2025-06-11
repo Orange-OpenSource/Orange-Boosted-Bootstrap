@@ -5,13 +5,13 @@
     - [ ] Manually search and replace `$current_version` in all files, meaning changes should happen in:
       - [ ] The style sheet loaded in `.storybook/preview-head.html`
       - [ ] Some download links in the `README.md`
-      - [ ] `docs_version` in `hugo.yml` and other references to the previous version
+      - [ ] `docs_version` in `config.yml` and other references to the previous version
       - [ ] `VERSION` in `js/src/base-component.js`
       - [ ] `version` in `package.js`
       - [ ] `version_short` in `package.json`
       - [ ] `scss/mixins/_banner.scss`
       - [ ] `scss/docs.scss`
-      - [ ] Several markdown files
+      - [ ] Several markdown files and markdown extended files
       - [ ] Add docs version to `site/data/docs-versions.yml`
       - [ ] Update the home news for the next release
       - [ ] Move `site/content/docs/x.y` to `site/content/docs/x.y+1`
