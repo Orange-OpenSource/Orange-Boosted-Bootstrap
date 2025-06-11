@@ -10,48 +10,77 @@ toc: true
 
 ## Basic example
 
-Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb.
+Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. It is strongly advised to add `title` attributes on each items.
 
 {{< example >}}
 <nav aria-label="basic breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><span>Library</span></li>
+    <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span title="Library">Library</span></li>
   </ol>
 </nav>
 
 <nav aria-label="full breadcrumb ">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Category 1</a></li>
-    <li class="breadcrumb-item"><a href="#">Sub category B</a></li>
-    <li class="breadcrumb-item"><a href="#">Sub sub category IV</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><span>Products</span></li>
+    <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Category 1">Category 1</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Sub category B">Sub category B</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Sub sub category IV">Sub sub category IV</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span title="Products">Products</span></li>
   </ol>
 </nav>
 {{< /example >}}
+
+{{< bootstrap-compatibility false >}}
+{{< example >}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+{{< /example >}}
+{{< /bootstrap-compatibility >}}
 
 
 ## Behavior on smaller viewports
 
 Breadcrumb will not wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
+{{< callout danger >}}
+**Breadcrumb items should not be this long**, the following examples are for small viewport demonstration purpose only
+{{< /callout >}}
+
 {{< example >}}
 <nav aria-label="large breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><span>Long current page to test responsive</span></li>
+    <li class="breadcrumb-item"><a href="/" title="Home">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Very long subcategory to test responsive">Very long subcategory to test responsive</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span title="Long current page to test responsive">Long current page to test responsive</span></li>
   </ol>
 </nav>
 
 <nav aria-label="very large breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive</a></li>
-    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive 1</a></li>
-    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive A</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><span>Very long page to show off responsiveness behavior</span></li>
+    <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Very long subcategory to test responsive">Very long subcategory to test responsive</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Very long subcategory to test responsive 1">Very long subcategory to test responsive 1</a></li>
+    <li class="breadcrumb-item"><a href="#" title="Very long subcategory to test responsive A">Very long subcategory to test responsive A</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span title="Very long page to show off responsiveness behavior">Very long page to show off responsiveness behavior</span></li>
   </ol>
 </nav>
 {{< /example >}}
