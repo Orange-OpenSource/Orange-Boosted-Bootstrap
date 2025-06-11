@@ -107,7 +107,7 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 
 #### Using SCSS
 
-The tick marker is not shipped by default in the OUDS Web CSS, you can set the [`$enable-bullet-list-tick` variable]({{< docsref "/customize/options" >}}) to `true` if you are plan using it with OUDS Web Sass source files.
+The tick marker is not shipped by default in the OUDS Web CSS, you can set the [`$enable-bullet-list-tick` variable]({{< docsref "/customize/options" >}}) to `true` if you are using OUDS Web Sass source files.
 
 {{< example >}}
 <!-- 
@@ -277,7 +277,11 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 
 1. Here's an ordered list
 2. With a few list items
-3. It has the same overall look
+3. It can also have
+    1. Several nested list
+    2. As you can see
+        1. Lorem ipsum
+        2. Deep nested
 4. As the previous unordered list
 {{< /markdown >}}
 </div>

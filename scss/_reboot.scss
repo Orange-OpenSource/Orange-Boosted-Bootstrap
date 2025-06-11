@@ -238,7 +238,6 @@ ul {
   list-style-type: square;
 
   ul {
-    // margin-top: #{$ouds-bullet-list-space-padding-block-body-medium};
     list-style-type: "-  ";
 
     ul {
@@ -246,15 +245,16 @@ ul {
     }
   }
 }
+ol ol {
+  list-style-type: upper-alpha;
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
 // stylelint-enable selector-max-type
 
 li {
-  // padding: #{$ouds-bullet-list-space-padding-block-body-medium} #{px-to-rem($ouds-bullet-list-space-padding-inline-level-0)};
-
-  // &:has(ul, ol) {
-  //   padding-bottom: 0; // remove duplicate padding when we have nested lists
-  // }
-
   &::marker {
     color: var(--#{$prefix}primary);
 
