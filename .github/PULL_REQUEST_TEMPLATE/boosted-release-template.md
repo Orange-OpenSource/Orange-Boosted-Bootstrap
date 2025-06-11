@@ -34,6 +34,7 @@
   - [ ] check every `index.html` used as redirections to redirect to the new release
   - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
+  - [ ] Make the new release banner appears in the previous version of the doc (e.g. in v5.3 when releasing the v5.4.0 doc)
 - [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) (+ pin the new GH Discussion)
 - [ ] [create a GitHub release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/new):
   - attach the zip file
