@@ -16,7 +16,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]({{< 
 Please consider using our [color modes]({{< docsref "/customize/color-modes" >}}) directly as explained in our [background utilities]({{< docsref "/utilities/background" >}}) to set nested components in the right mode directly as well.
 {{< /callout >}}
 
-{{< example >}}
+{{< example button_label="text and background color" >}}
 <p class="text-bg-primary p-tall fw-bold">.text-bg-primary</p>
 <p class="text-bg-secondary p-tall fw-bold">.text-bg-secondary</p>
 <p class="text-bg-tertiary p-tall fw-bold">.text-bg-tertiary</p>
@@ -49,7 +49,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]({{< 
 **Heads up!** There's currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
 {{< /callout >}}
 
-{{< example >}}
+{{< example button_label="text and background color for Bootstrap compatibility" >}}
 {{< text-bg.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="text-bg-{{ .name }} p-3">{{ .name | title }} with contrasting color</div>
