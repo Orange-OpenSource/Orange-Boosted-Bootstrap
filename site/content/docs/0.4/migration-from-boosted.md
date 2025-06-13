@@ -640,146 +640,314 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 - <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$ouds-border-base</code></li>
-      <li><code>$ouds-border-radius-0</code></li>
-      <li><code>$ouds-border-radius-75</code></li>
-      <li><code>$ouds-border-radius-150</code></li>
-      <li><code>$ouds-border-radius-300</code></li>
-      <li><code>$ouds-border-radius-9999</code></li>
+      <li><code>$core-orange-color-decorative-amber-500</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-100</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-200</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-300</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-400</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-500</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-600</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-700</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-800</code></li>
+      <li><code>$core-orange-color-decorative-amethyst-900</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-100</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-200</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-300</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-400</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-500</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-600</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-700</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-800</code></li>
+      <li><code>$core-orange-color-decorative-deep-peach-900</code></li>
+      <li><code>$core-orange-color-decorative-emerald-100</code></li>
+      <li><code>$core-orange-color-decorative-emerald-200</code></li>
+      <li><code>$core-orange-color-decorative-emerald-300</code></li>
+      <li><code>$core-orange-color-decorative-emerald-400</code></li>
+      <li><code>$core-orange-color-decorative-emerald-500</code></li>
+      <li><code>$core-orange-color-decorative-emerald-600</code></li>
+      <li><code>$core-orange-color-decorative-emerald-700</code></li>
+      <li><code>$core-orange-color-decorative-emerald-800</code></li>
+      <li><code>$core-orange-color-decorative-emerald-900</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-100</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-200</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-300</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-400</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-500</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-600</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-700</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-800</code></li>
+      <li><code>$core-orange-color-decorative-shocking-pink-900</code></li>
+      <li><code>$core-orange-color-decorative-sky-100</code></li>
+      <li><code>$core-orange-color-decorative-sky-200</code></li>
+      <li><code>$core-orange-color-decorative-sky-300</code></li>
+      <li><code>$core-orange-color-decorative-sky-400</code></li>
+      <li><code>$core-orange-color-decorative-sky-500</code></li>
+      <li><code>$core-orange-color-decorative-sky-600</code></li>
+      <li><code>$core-orange-color-decorative-sky-700</code></li>
+      <li><code>$core-orange-color-decorative-sky-800</code></li>
+      <li><code>$core-orange-color-decorative-sky-900</code></li>
+      <li><code>$core-orange-color-orange-100</code></li>
+      <li><code>$core-orange-color-orange-200</code></li>
+      <li><code>$core-orange-color-orange-300</code></li>
+      <li><code>$core-orange-color-orange-400</code></li>
+      <li><code>$core-orange-color-orange-500</code></li>
+      <li><code>$core-orange-color-orange-550</code></li>
+      <li><code>$core-orange-color-orange-600</code></li>
+      <li><code>$core-orange-color-orange-700</code></li>
+      <li><code>$core-orange-color-orange-800</code></li>
+      <li><code>$core-orange-color-orange-900</code></li>
+      <li><code>$core-orange-color-warm-gray-100</code></li>
+      <li><code>$core-orange-color-warm-gray-1000</code></li>
+      <li><code>$core-orange-font-family-brand-default</code></li>
+      <li><code>$core-ouds-border-base</code></li>
+      <li><code>$core-ouds-border-radius-0</code></li>
+      <li><code>$core-ouds-border-radius-75</code></li>
+      <li><code>$core-ouds-border-radius-150</code></li>
+      <li><code>$core-ouds-border-radius-300</code></li>
+      <li><code>$core-ouds-border-radius-9999</code></li>
+      <li><code>$core-ouds-border-style-dashed</code></li>
+      <li><code>$core-ouds-border-style-solid</code></li>
+      <li><code>$core-ouds-border-width-0</code></li>
+      <li><code>$core-ouds-border-width-25</code></li>
+      <li><code>$core-ouds-border-width-50</code></li>
+      <li><code>$core-ouds-border-width-75</code></li>
+      <li><code>$core-ouds-border-width-100</code></li>
+      <li><code>$core-ouds-border-width-125</code></li>
+      <li><code>$core-ouds-color-functional-black</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-100</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-200</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-300</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-400</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-500</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-600</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-700</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-800</code></li>
+      <li><code>$core-ouds-color-functional-dodger-blue-900</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-240</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-320</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-400</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-640</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-720</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-800</code></li>
+      <li><code>$core-ouds-color-functional-gray-dark-880</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-80</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-160</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-240</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-320</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-400</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-800</code></li>
+      <li><code>$core-ouds-color-functional-gray-light-960</code></li>
+      <li><code>$core-ouds-color-functional-malachite-100</code></li>
+      <li><code>$core-ouds-color-functional-malachite-200</code></li>
+      <li><code>$core-ouds-color-functional-malachite-300</code></li>
+      <li><code>$core-ouds-color-functional-malachite-400</code></li>
+      <li><code>$core-ouds-color-functional-malachite-500</code></li>
+      <li><code>$core-ouds-color-functional-malachite-600</code></li>
+      <li><code>$core-ouds-color-functional-malachite-700</code></li>
+      <li><code>$core-ouds-color-functional-malachite-800</code></li>
+      <li><code>$core-ouds-color-functional-malachite-900</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-100</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-200</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-300</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-400</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-500</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-600</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-700</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-800</code></li>
+      <li><code>$core-ouds-color-functional-scarlet-900</code></li>
+      <li><code>$core-ouds-color-functional-sun-100</code></li>
+      <li><code>$core-ouds-color-functional-sun-200</code></li>
+      <li><code>$core-ouds-color-functional-sun-300</code></li>
+      <li><code>$core-ouds-color-functional-sun-400</code></li>
+      <li><code>$core-ouds-color-functional-sun-500</code></li>
+      <li><code>$core-ouds-color-functional-sun-600</code></li>
+      <li><code>$core-ouds-color-functional-sun-700</code></li>
+      <li><code>$core-ouds-color-functional-sun-800</code></li>
+      <li><code>$core-ouds-color-functional-sun-900</code></li>
+      <li><code>$core-ouds-color-functional-white</code></li>
+      <li><code>$core-ouds-color-opacity-black-0</code></li>
+      <li><code>$core-ouds-color-opacity-black-40</code></li>
+      <li><code>$core-ouds-color-opacity-black-80</code></li>
+      <li><code>$core-ouds-color-opacity-black-120</code></li>
+      <li><code>$core-ouds-color-opacity-black-160</code></li>
+      <li><code>$core-ouds-color-opacity-black-200</code></li>
+      <li><code>$core-ouds-color-opacity-black-240</code></li>
+      <li><code>$core-ouds-color-opacity-black-280</code></li>
+      <li><code>$core-ouds-color-opacity-black-320</code></li>
+      <li><code>$core-ouds-color-opacity-black-440</code></li>
+      <li><code>$core-ouds-color-opacity-black-520</code></li>
+      <li><code>$core-ouds-color-opacity-black-680</code></li>
+      <li><code>$core-ouds-color-opacity-black-840</code></li>
+      <li><code>$core-ouds-color-opacity-dodger-blue</code></li>
+      <li><code>$core-ouds-color-opacity-malachite</code></li>
+      <li><code>$core-ouds-color-opacity-scarlet</code></li>
+      <li><code>$core-ouds-color-opacity-sun</code></li>
+      <li><code>$core-ouds-color-opacity-white-0</code></li>
+      <li><code>$core-ouds-color-opacity-white-40</code></li>
+      <li><code>$core-ouds-color-opacity-white-80</code></li>
+      <li><code>$core-ouds-color-opacity-white-120</code></li>
+      <li><code>$core-ouds-color-opacity-white-200</code></li>
+      <li><code>$core-ouds-color-opacity-white-440</code></li>
+      <li><code>$core-ouds-color-opacity-white-640</code></li>
+      <li><code>$core-ouds-color-opacity-white-800</code></li>
+      <li><code>$core-ouds-color-opacity-white-920</code></li>
+      <li><code>$core-ouds-dimension-0</code></li>
+      <li><code>$core-ouds-dimension-50</code></li>
+      <li><code>$core-ouds-dimension-100</code></li>
+      <li><code>$core-ouds-dimension-150</code></li>
+      <li><code>$core-ouds-dimension-200</code></li>
+      <li><code>$core-ouds-dimension-250</code></li>
+      <li><code>$core-ouds-dimension-300</code></li>
+      <li><code>$core-ouds-dimension-350</code></li>
+      <li><code>$core-ouds-dimension-400</code></li>
+      <li><code>$core-ouds-dimension-450</code></li>
+      <li><code>$core-ouds-dimension-500</code></li>
+      <li><code>$core-ouds-dimension-550</code></li>
+      <li><code>$core-ouds-dimension-600</code></li>
+      <li><code>$core-ouds-dimension-650</code></li>
+      <li><code>$core-ouds-dimension-700</code></li>
+      <li><code>$core-ouds-dimension-750</code></li>
+      <li><code>$core-ouds-dimension-800</code></li>
+      <li><code>$core-ouds-dimension-850</code></li>
+      <li><code>$core-ouds-dimension-900</code></li>
+      <li><code>$core-ouds-dimension-1000</code></li>
+      <li><code>$core-ouds-dimension-1200</code></li>
+      <li><code>$core-ouds-dimension-1400</code></li>
+      <li><code>$core-ouds-dimension-1600</code></li>
+      <li><code>$core-ouds-dimension-1800</code></li>
+      <li><code>$core-ouds-dimension-2000</code></li>
+      <li><code>$core-ouds-dimension-3000</code></li>
+      <li><code>$core-ouds-dimension-4000</code></li>
+      <li><code>$core-ouds-dimension-6000</code></li>
+      <li><code>$core-ouds-dimension-7000</code></li>
+      <li><code>$core-ouds-dimension-9000</code></li>
+      <li><code>$core-ouds-dimension-11000</code></li>
+      <li><code>$core-ouds-dimension-base</code></li>
+      <li><code>$core-ouds-dimension-out-of-system-25</code></li>
+      <li><code>$core-ouds-dimension-out-of-system-50</code></li>
+      <li><code>$core-ouds-dimension-out-of-system-75</code></li>
+      <li><code>$core-ouds-dimension-out-of-system-150</code></li>
+      <li><code>$core-ouds-dimension-out-of-system-250</code></li>
+      <li><code>$core-ouds-elevation-blur-0</code></li>
+      <li><code>$core-ouds-elevation-blur-200</code></li>
+      <li><code>$core-ouds-elevation-blur-300</code></li>
+      <li><code>$core-ouds-elevation-blur-400</code></li>
+      <li><code>$core-ouds-elevation-blur-600</code></li>
+      <li><code>$core-ouds-elevation-spread-0</code></li>
+      <li><code>$core-ouds-elevation-spread-n100</code></li>
+      <li><code>$core-ouds-elevation-spread-n300</code></li>
+      <li><code>$core-ouds-elevation-x-0</code></li>
+      <li><code>$core-ouds-elevation-y-0</code></li>
+      <li><code>$core-ouds-elevation-y-100</code></li>
+      <li><code>$core-ouds-elevation-y-200</code></li>
+      <li><code>$core-ouds-elevation-y-300</code></li>
+      <li><code>$core-ouds-elevation-y-500</code></li>
+      <li><code>$core-ouds-font-family-monospace-menlo</code></li>
+      <li><code>$core-ouds-font-letter-spacing-150</code></li>
+      <li><code>$core-ouds-font-letter-spacing-200</code></li>
+      <li><code>$core-ouds-font-letter-spacing-250</code></li>
+      <li><code>$core-ouds-font-letter-spacing-300</code></li>
+      <li><code>$core-ouds-font-letter-spacing-350</code></li>
+      <li><code>$core-ouds-font-letter-spacing-450</code></li>
+      <li><code>$core-ouds-font-letter-spacing-550</code></li>
+      <li><code>$core-ouds-font-letter-spacing-650</code></li>
+      <li><code>$core-ouds-font-letter-spacing-750</code></li>
+      <li><code>$core-ouds-font-letter-spacing-850</code></li>
+      <li><code>$core-ouds-font-letter-spacing-1050</code></li>
+      <li><code>$core-ouds-font-letter-spacing-1250</code></li>
+      <li><code>$core-ouds-font-letter-spacing-1450</code></li>
+      <li><code>$core-ouds-font-letter-spacing-1850</code></li>
+      <li><code>$core-ouds-font-line-height-250</code></li>
+      <li><code>$core-ouds-font-line-height-350</code></li>
+      <li><code>$core-ouds-font-line-height-450</code></li>
+      <li><code>$core-ouds-font-line-height-550</code></li>
+      <li><code>$core-ouds-font-line-height-650</code></li>
+      <li><code>$core-ouds-font-line-height-750</code></li>
+      <li><code>$core-ouds-font-line-height-850</code></li>
+      <li><code>$core-ouds-font-line-height-950</code></li>
+      <li><code>$core-ouds-font-line-height-1050</code></li>
+      <li><code>$core-ouds-font-line-height-1250</code></li>
+      <li><code>$core-ouds-font-line-height-1450</code></li>
+      <li><code>$core-ouds-font-line-height-1850</code></li>
+      <li><code>$core-ouds-font-line-height-2050</code></li>
+      <li><code>$core-ouds-font-size-150</code></li>
+      <li><code>$core-ouds-font-size-200</code></li>
+      <li><code>$core-ouds-font-size-250</code></li>
+      <li><code>$core-ouds-font-size-300</code></li>
+      <li><code>$core-ouds-font-size-350</code></li>
+      <li><code>$core-ouds-font-size-450</code></li>
+      <li><code>$core-ouds-font-size-550</code></li>
+      <li><code>$core-ouds-font-size-650</code></li>
+      <li><code>$core-ouds-font-size-750</code></li>
+      <li><code>$core-ouds-font-size-850</code></li>
+      <li><code>$core-ouds-font-size-1050</code></li>
+      <li><code>$core-ouds-font-size-1250</code></li>
+      <li><code>$core-ouds-font-size-1450</code></li>
+      <li><code>$core-ouds-font-size-1850</code></li>
+      <li><code>$core-ouds-font-weight-400</code></li>
+      <li><code>$core-ouds-font-weight-700</code></li>
+      <li><code>$core-ouds-grid-column-count-400</code></li>
+      <li><code>$core-ouds-grid-column-count-600</code></li>
+      <li><code>$core-ouds-grid-column-count-1200</code></li>
+      <li><code>$core-ouds-grid-column-gap-100</code></li>
+      <li><code>$core-ouds-grid-column-gap-200</code></li>
+      <li><code>$core-ouds-grid-column-gap-400</code></li>
+      <li><code>$core-ouds-grid-column-gap-600</code></li>
+      <li><code>$core-ouds-grid-column-gap-800</code></li>
+      <li><code>$core-ouds-grid-margin-100</code></li>
+      <li><code>$core-ouds-grid-margin-300</code></li>
+      <li><code>$core-ouds-grid-margin-400</code></li>
+      <li><code>$core-ouds-grid-margin-500</code></li>
+      <li><code>$core-ouds-grid-margin-700</code></li>
+      <li><code>$core-ouds-grid-margin-1100</code></li>
+      <li><code>$core-ouds-grid-margin-1700</code></li>
+      <li><code>$core-ouds-grid-margin-2500</code></li>
+      <li><code>$core-ouds-grid-max-width-100</code></li>
+      <li><code>$core-ouds-grid-max-width-200</code></li>
+      <li><code>$core-ouds-grid-max-width-300</code></li>
+      <li><code>$core-ouds-grid-max-width-400</code></li>
+      <li><code>$core-ouds-grid-max-width-500</code></li>
+      <li><code>$core-ouds-grid-max-width-600</code></li>
+      <li><code>$core-ouds-grid-max-width-650</code></li>
+      <li><code>$core-ouds-grid-max-width-700</code></li>
+      <li><code>$core-ouds-grid-min-width-100</code></li>
+      <li><code>$core-ouds-grid-min-width-200</code></li>
+      <li><code>$core-ouds-grid-min-width-300</code></li>
+      <li><code>$core-ouds-grid-min-width-400</code></li>
+      <li><code>$core-ouds-grid-min-width-500</code></li>
+      <li><code>$core-ouds-grid-min-width-600</code></li>
+      <li><code>$core-ouds-grid-min-width-700</code></li>
+      <li><code>$core-ouds-grid-min-width-800</code></li>
+      <li><code>$core-ouds-grid-width-100</code></li>
+      <li><code>$core-ouds-grid-width-200</code></li>
+      <li><code>$core-ouds-grid-width-300</code></li>
+      <li><code>$core-ouds-grid-width-400</code></li>
+      <li><code>$core-ouds-grid-width-500</code></li>
+      <li><code>$core-ouds-grid-width-600</code></li>
+      <li><code>$core-ouds-grid-width-700</code></li>
+      <li><code>$core-ouds-grid-width-800</code></li>
+      <li><code>$core-ouds-opacity-0</code></li>
+      <li><code>$core-ouds-opacity-40</code></li>
+      <li><code>$core-ouds-opacity-160</code></li>
+      <li><code>$core-ouds-opacity-320</code></li>
+      <li><code>$core-ouds-opacity-640</code></li>
+      <li><code>$core-ouds-opacity-1000</code></li>
       <li><code>$ouds-border-radius-default</code></li>
+      <li><code>$ouds-border-radius-large</code></li>
       <li><code>$ouds-border-radius-medium</code></li>
       <li><code>$ouds-border-radius-none</code></li>
       <li><code>$ouds-border-radius-pill</code></li>
       <li><code>$ouds-border-radius-small</code></li>
-      <li><code>$ouds-border-radius-large</code></li>
-      <li><code>$ouds-border-style-dashed</code></li>
       <li><code>$ouds-border-style-default</code></li>
       <li><code>$ouds-border-style-drag</code></li>
-      <li><code>$ouds-border-style-solid</code></li>
-      <li><code>$ouds-border-width-0</code></li>
-      <li><code>$ouds-border-width-25</code></li>
-      <li><code>$ouds-border-width-50</code></li>
-      <li><code>$ouds-border-width-75</code></li>
-      <li><code>$ouds-border-width-100</code></li>
-      <li><code>$ouds-border-width-125</code></li>
       <li><code>$ouds-border-width-default</code></li>
+      <li><code>$ouds-border-width-focus</code></li>
+      <li><code>$ouds-border-width-focus-inset</code></li>
       <li><code>$ouds-border-width-medium</code></li>
       <li><code>$ouds-border-width-none</code></li>
       <li><code>$ouds-border-width-thick</code></li>
       <li><code>$ouds-border-width-thicker</code></li>
       <li><code>$ouds-border-width-thin</code></li>
-      <li><code>$ouds-button-border-radius</code></li>
-      <li><code>$ouds-button-border-width-default-interaction-mono</code></li>
-      <li><code>$ouds-button-border-width-default-interaction</code></li>
-      <li><code>$ouds-button-border-width-default</code></li>
-      <li><code>$ouds-button-border-width-minimal-interaction</code></li>
-      <li><code>$ouds-button-border-width-minimal</code></li>
-      <li><code>$ouds-button-color-bg-default-disabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-disabled</code></li>
-      <li><code>$ouds-button-color-bg-default-enabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-enabled</code></li>
-      <li><code>$ouds-button-color-bg-default-focus-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-focus</code></li>
-      <li><code>$ouds-button-color-bg-default-hover-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-hover</code></li>
-      <li><code>$ouds-button-color-bg-default-loading-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-loading</code></li>
-      <li><code>$ouds-button-color-bg-default-pressed-mono</code></li>
-      <li><code>$ouds-button-color-bg-default-pressed</code></li>
-      <li><code>$ouds-button-color-bg-minimal-disabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-disabled</code></li>
-      <li><code>$ouds-button-color-bg-minimal-enabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-enabled</code></li>
-      <li><code>$ouds-button-color-bg-minimal-focus-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-focus</code></li>
-      <li><code>$ouds-button-color-bg-minimal-hover-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-hover</code></li>
-      <li><code>$ouds-button-color-bg-minimal-loading-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-loading</code></li>
-      <li><code>$ouds-button-color-bg-minimal-pressed-mono</code></li>
-      <li><code>$ouds-button-color-bg-minimal-pressed</code></li>
-      <li><code>$ouds-button-color-bg-strong-disabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-strong-enabled-mono</code></li>
-      <li><code>$ouds-button-color-bg-strong-focus-mono</code></li>
-      <li><code>$ouds-button-color-bg-strong-hover-mono</code></li>
-      <li><code>$ouds-button-color-bg-strong-loading-mono</code></li>
-      <li><code>$ouds-button-color-bg-strong-pressed-mono</code></li>
-      <li><code>$ouds-button-color-border-default-disabled-mono</code></li>
-      <li><code>$ouds-button-color-border-default-disabled</code></li>
-      <li><code>$ouds-button-color-border-default-enabled-mono</code></li>
-      <li><code>$ouds-button-color-border-default-enabled</code></li>
-      <li><code>$ouds-button-color-border-default-focus-mono</code></li>
-      <li><code>$ouds-button-color-border-default-focus</code></li>
-      <li><code>$ouds-button-color-border-default-hover-mono</code></li>
-      <li><code>$ouds-button-color-border-default-hover</code></li>
-      <li><code>$ouds-button-color-border-default-loading-mono</code></li>
-      <li><code>$ouds-button-color-border-default-loading</code></li>
-      <li><code>$ouds-button-color-border-default-pressed-mono</code></li>
-      <li><code>$ouds-button-color-border-default-pressed</code></li>
-      <li><code>$ouds-button-color-border-minimal-disabled-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-disabled</code></li>
-      <li><code>$ouds-button-color-border-minimal-enabled-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-enabled</code></li>
-      <li><code>$ouds-button-color-border-minimal-focus-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-focus</code></li>
-      <li><code>$ouds-button-color-border-minimal-hover-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-hover</code></li>
-      <li><code>$ouds-button-color-border-minimal-loading-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-loading</code></li>
-      <li><code>$ouds-button-color-border-minimal-pressed-mono</code></li>
-      <li><code>$ouds-button-color-border-minimal-pressed</code></li>
-      <li><code>$ouds-button-color-border-strong-disabled-mono</code></li>
-      <li><code>$ouds-button-color-border-strong-enabled-mono</code></li>
-      <li><code>$ouds-button-color-border-strong-focus-mono</code></li>
-      <li><code>$ouds-button-color-border-strong-hover-mono</code></li>
-      <li><code>$ouds-button-color-border-strong-loading-mono</code></li>
-      <li><code>$ouds-button-color-border-strong-pressed-mono</code></li>
-      <li><code>$ouds-button-color-content-default-disabled-mono</code></li>
-      <li><code>$ouds-button-color-content-default-disabled</code></li>
-      <li><code>$ouds-button-color-content-default-enabled-mono</code></li>
-      <li><code>$ouds-button-color-content-default-enabled</code></li>
-      <li><code>$ouds-button-color-content-default-focus-mono</code></li>
-      <li><code>$ouds-button-color-content-default-focus</code></li>
-      <li><code>$ouds-button-color-content-default-hover-mono</code></li>
-      <li><code>$ouds-button-color-content-default-hover</code></li>
-      <li><code>$ouds-button-color-content-default-loading-mono</code></li>
-      <li><code>$ouds-button-color-content-default-loading</code></li>
-      <li><code>$ouds-button-color-content-default-pressed-mono</code></li>
-      <li><code>$ouds-button-color-content-default-pressed</code></li>
-      <li><code>$ouds-button-color-content-minimal-disabled-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-disabled</code></li>
-      <li><code>$ouds-button-color-content-minimal-enabled-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-enabled</code></li>
-      <li><code>$ouds-button-color-content-minimal-focus-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-focus</code></li>
-      <li><code>$ouds-button-color-content-minimal-hover-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-hover</code></li>
-      <li><code>$ouds-button-color-content-minimal-loading-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-loading</code></li>
-      <li><code>$ouds-button-color-content-minimal-pressed-mono</code></li>
-      <li><code>$ouds-button-color-content-minimal-pressed</code></li>
-      <li><code>$ouds-button-color-content-strong-disabled-mono</code></li>
-      <li><code>$ouds-button-color-content-strong-enabled-mono</code></li>
-      <li><code>$ouds-button-color-content-strong-focus-mono</code></li>
-      <li><code>$ouds-button-color-content-strong-hover-mono</code></li>
-      <li><code>$ouds-button-color-content-strong-loading-mono</code></li>
-      <li><code>$ouds-button-color-content-strong-pressed-mono</code></li>
-      <li><code>$ouds-button-size-icon-only</code></li>
-      <li><code>$ouds-button-size-icon</code></li>
-      <li><code>$ouds-button-size-loader</code></li>
-      <li><code>$ouds-button-size-max-height-icon-only</code></li>
-      <li><code>$ouds-button-size-min-height</code></li>
-      <li><code>$ouds-button-size-min-width</code></li>
-      <li><code>$ouds-button-space-column-gap-arrow</code></li>
-      <li><code>$ouds-button-space-column-gap-icon</code></li>
-      <li><code>$ouds-button-space-inset-icon-only</code></li>
-      <li><code>$ouds-button-space-padding-block</code></li>
-      <li><code>$ouds-button-space-padding-inline-arrow-end</code></li>
-      <li><code>$ouds-button-space-padding-inline-arrow-start</code></li>
-      <li><code>$ouds-button-space-padding-inline-end-icon-start</code></li>
-      <li><code>$ouds-button-space-padding-inline-icon-none</code></li>
-      <li><code>$ouds-button-space-padding-inline-icon-start</code></li>
-      <li><code>$ouds-button-space-padding-inline-start-icon-end</code></li>
       <li><code>$ouds-color-action-disabled-dark</code></li>
       <li><code>$ouds-color-action-disabled-light</code></li>
       <li><code>$ouds-color-action-enabled-dark</code></li>
@@ -818,14 +986,10 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-action-support-pressed-light</code></li>
       <li><code>$ouds-color-action-visited-dark</code></li>
       <li><code>$ouds-color-action-visited-light</code></li>
-      <li><code>$ouds-color-always-black-dark</code></li>
-      <li><code>$ouds-color-always-black-light</code></li>
-      <li><code>$ouds-color-always-on-black-dark</code></li>
-      <li><code>$ouds-color-always-on-black-light</code></li>
-      <li><code>$ouds-color-always-on-white-dark</code></li>
-      <li><code>$ouds-color-always-on-white-light</code></li>
-      <li><code>$ouds-color-always-white-dark</code></li>
-      <li><code>$ouds-color-always-white-light</code></li>
+      <li><code>$ouds-color-always-black</code></li>
+      <li><code>$ouds-color-always-on-black</code></li>
+      <li><code>$ouds-color-always-on-white</code></li>
+      <li><code>$ouds-color-always-white</code></li>
       <li><code>$ouds-color-bg-emphasized-dark</code></li>
       <li><code>$ouds-color-bg-emphasized-light</code></li>
       <li><code>$ouds-color-bg-primary-dark</code></li>
@@ -874,12 +1038,32 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-content-on-brand-primary-light</code></li>
       <li><code>$ouds-color-content-on-overlay-emphasized-dark</code></li>
       <li><code>$ouds-color-content-on-overlay-emphasized-light</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized-alt-dark</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized-alt-light</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized-dark</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized-light</code></li>
-      <li><code>$ouds-color-content-on-status-muted-dark</code></li>
-      <li><code>$ouds-color-content-on-status-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-accent-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-accent-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-accent-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-accent-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-info-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-info-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-info-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-info-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-negative-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-negative-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-negative-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-negative-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-positive-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-positive-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-positive-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-positive-muted-light</code></li>
+      <li><code>$ouds-color-content-on-status-warning-emphasized-dark</code></li>
+      <li><code>$ouds-color-content-on-status-warning-emphasized-light</code></li>
+      <li><code>$ouds-color-content-on-status-warning-muted-dark</code></li>
+      <li><code>$ouds-color-content-on-status-warning-muted-light</code></li>
+      <li><code>$ouds-color-content-status-accent-dark</code></li>
+      <li><code>$ouds-color-content-status-accent-light</code></li>
       <li><code>$ouds-color-content-status-info-dark</code></li>
       <li><code>$ouds-color-content-status-info-light</code></li>
       <li><code>$ouds-color-content-status-negative-dark</code></li>
@@ -888,253 +1072,50 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-content-status-positive-light</code></li>
       <li><code>$ouds-color-content-status-warning-dark</code></li>
       <li><code>$ouds-color-content-status-warning-light</code></li>
-      <li><code>$ouds-color-decorative-accent-1-default-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-1-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-1-emphasized-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-1-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-accent-1-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-1-muted-light</code></li>
-      <li><code>$ouds-color-decorative-accent-2-default-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-2-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-2-emphasized-dark</code>0</li>
-      <li><code>$ouds-color-decorative-accent-2-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-accent-2-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-2-muted-light</code></li>
-      <li><code>$ouds-color-decorative-accent-3-default-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-3-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-3-emphasized-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-3-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-accent-3-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-3-muted-light</code></li>
-      <li><code>$ouds-color-decorative-accent-4-default-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-4-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-4-emphasized-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-4-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-accent-4-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-4-muted-light</code></li>
-      <li><code>$ouds-color-decorative-accent-5-default-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-5-default-light</code></li>
-      <li><code>$ouds-color-decorative-accent-5-emphasized-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-5-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-accent-5-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-accent-5-muted-light</code></li>
-      <li><code>$ouds-color-decorative-amber-100</code></li>
-      <li><code>$ouds-color-decorative-amber-200</code></li>
-      <li><code>$ouds-color-decorative-amber-300</code></li>
-      <li><code>$ouds-color-decorative-amber-400</code></li>
-      <li><code>$ouds-color-decorative-amber-500</code></li>
-      <li><code>$ouds-color-decorative-amber-600</code></li>
-      <li><code>$ouds-color-decorative-amber-700</code></li>
-      <li><code>$ouds-color-decorative-amber-800</code></li>
-      <li><code>$ouds-color-decorative-amber-900</code></li>
-      <li><code>$ouds-color-decorative-amethyst-100</code></li>
-      <li><code>$ouds-color-decorative-amethyst-200</code></li>
-      <li><code>$ouds-color-decorative-amethyst-300</code></li>
-      <li><code>$ouds-color-decorative-amethyst-400</code></li>
-      <li><code>$ouds-color-decorative-amethyst-500</code></li>
-      <li><code>$ouds-color-decorative-amethyst-600</code></li>
-      <li><code>$ouds-color-decorative-amethyst-700</code></li>
-      <li><code>$ouds-color-decorative-amethyst-800</code></li>
-      <li><code>$ouds-color-decorative-amethyst-900</code></li>
-      <li><code>$ouds-color-decorative-brand-primary-dark</code></li>
-      <li><code>$ouds-color-decorative-brand-primary-light</code></li>
-      <li><code>$ouds-color-decorative-brand-secondary-dark</code></li>
-      <li><code>$ouds-color-decorative-brand-secondary-light</code></li>
-      <li><code>$ouds-color-decorative-brand-tertiary-dark</code></li>
-      <li><code>$ouds-color-decorative-brand-tertiary-light</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-100</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-200</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-300</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-400</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-500</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-600</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-700</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-800</code></li>
-      <li><code>$ouds-color-decorative-deep-peach-900</code></li>
-      <li><code>$ouds-color-decorative-emerald-100</code></li>
-      <li><code>$ouds-color-decorative-emerald-200</code></li>
-      <li><code>$ouds-color-decorative-emerald-300</code></li>
-      <li><code>$ouds-color-decorative-emerald-400</code></li>
-      <li><code>$ouds-color-decorative-emerald-500</code></li>
-      <li><code>$ouds-color-decorative-emerald-600</code></li>
-      <li><code>$ouds-color-decorative-emerald-700</code></li>
-      <li><code>$ouds-color-decorative-emerald-800</code></li>
-      <li><code>$ouds-color-decorative-emerald-900</code></li>
-      <li><code>$ouds-color-decorative-neutral-default-dark</code></li>
-      <li><code>$ouds-color-decorative-neutral-default-light</code></li>
-      <li><code>$ouds-color-decorative-neutral-emphasized-dark</code></li>
-      <li><code>$ouds-color-decorative-neutral-emphasized-light</code></li>
-      <li><code>$ouds-color-decorative-neutral-muted-dark</code></li>
-      <li><code>$ouds-color-decorative-neutral-muted-light</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-100</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-200</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-300</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-400</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-500</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-600</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-700</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-800</code></li>
-      <li><code>$ouds-color-decorative-shocking-pink-900</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-100-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-100-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-200-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-200-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-300-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-300-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-400-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-400-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-500-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-500-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-600-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-600-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-700-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-700-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-800-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-800-light</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-900-dark</code></li>
-      <li><code>$ouds-color-decorative-skin-tint-900-light</code></li>
-      <li><code>$ouds-color-decorative-sky-100</code></li>
-      <li><code>$ouds-color-decorative-sky-200</code></li>
-      <li><code>$ouds-color-decorative-sky-300</code></li>
-      <li><code>$ouds-color-decorative-sky-400</code></li>
-      <li><code>$ouds-color-decorative-sky-500</code></li>
-      <li><code>$ouds-color-decorative-sky-600</code></li>
-      <li><code>$ouds-color-decorative-sky-700</code></li>
-      <li><code>$ouds-color-decorative-sky-800</code></li>
-      <li><code>$ouds-color-decorative-sky-900</code></li>
-      <li><code>$ouds-color-functional-black</code></li>
-      <li><code>$ouds-color-functional-dark-gray-80</code></li>
-      <li><code>$ouds-color-functional-dark-gray-160</code></li>
-      <li><code>$ouds-color-functional-dark-gray-240</code></li>
-      <li><code>$ouds-color-functional-dark-gray-320</code></li>
-      <li><code>$ouds-color-functional-dark-gray-400</code></li>
-      <li><code>$ouds-color-functional-dark-gray-480</code></li>
-      <li><code>$ouds-color-functional-dark-gray-560</code></li>
-      <li><code>$ouds-color-functional-dark-gray-640</code></li>
-      <li><code>$ouds-color-functional-dark-gray-720</code></li>
-      <li><code>$ouds-color-functional-dark-gray-800</code></li>
-      <li><code>$ouds-color-functional-dark-gray-880</code></li>
-      <li><code>$ouds-color-functional-dark-gray-960</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-100</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-200</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-300</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-400</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-500</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-600</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-700</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-800</code></li>
-      <li><code>$ouds-color-functional-dodger-blue-900</code></li>
-      <li><code>$ouds-color-functional-light-gray-80</code></li>
-      <li><code>$ouds-color-functional-light-gray-160</code></li>
-      <li><code>$ouds-color-functional-light-gray-240</code></li>
-      <li><code>$ouds-color-functional-light-gray-320</code></li>
-      <li><code>$ouds-color-functional-light-gray-400</code></li>
-      <li><code>$ouds-color-functional-light-gray-480</code></li>
-      <li><code>$ouds-color-functional-light-gray-560</code></li>
-      <li><code>$ouds-color-functional-light-gray-640</code></li>
-      <li><code>$ouds-color-functional-light-gray-720</code></li>
-      <li><code>$ouds-color-functional-light-gray-800</code></li>
-      <li><code>$ouds-color-functional-light-gray-880</code></li>
-      <li><code>$ouds-color-functional-light-gray-960</code></li>
-      <li><code>$ouds-color-functional-malachite-100</code></li>
-      <li><code>$ouds-color-functional-malachite-200</code></li>
-      <li><code>$ouds-color-functional-malachite-300</code></li>
-      <li><code>$ouds-color-functional-malachite-400</code></li>
-      <li><code>$ouds-color-functional-malachite-500</code></li>
-      <li><code>$ouds-color-functional-malachite-600</code></li>
-      <li><code>$ouds-color-functional-malachite-700</code></li>
-      <li><code>$ouds-color-functional-malachite-800</code></li>
-      <li><code>$ouds-color-functional-malachite-900</code></li>
-      <li><code>$ouds-color-functional-scarlet-100</code></li>
-      <li><code>$ouds-color-functional-scarlet-200</code></li>
-      <li><code>$ouds-color-functional-scarlet-300</code></li>
-      <li><code>$ouds-color-functional-scarlet-400</code></li>
-      <li><code>$ouds-color-functional-scarlet-500</code></li>
-      <li><code>$ouds-color-functional-scarlet-600</code></li>
-      <li><code>$ouds-color-functional-scarlet-700</code></li>
-      <li><code>$ouds-color-functional-scarlet-800</code></li>
-      <li><code>$ouds-color-functional-scarlet-900</code></li>
-      <li><code>$ouds-color-functional-sun-100</code></li>
-      <li><code>$ouds-color-functional-sun-200</code></li>
-      <li><code>$ouds-color-functional-sun-300</code></li>
-      <li><code>$ouds-color-functional-sun-400</code></li>
-      <li><code>$ouds-color-functional-sun-500</code></li>
-      <li><code>$ouds-color-functional-sun-600</code></li>
-      <li><code>$ouds-color-functional-sun-700</code></li>
-      <li><code>$ouds-color-functional-sun-800</code></li>
-      <li><code>$ouds-color-functional-sun-900</code></li>
-      <li><code>$ouds-color-functional-white</code></li>
-      <li><code>$ouds-color-opacity-black-0</code></li>
-      <li><code>$ouds-color-opacity-black-40</code></li>
-      <li><code>$ouds-color-opacity-black-80</code></li>
-      <li><code>$ouds-color-opacity-black-120</code></li>
-      <li><code>$ouds-color-opacity-black-160</code></li>
-      <li><code>$ouds-color-opacity-black-200</code></li>
-      <li><code>$ouds-color-opacity-black-240</code></li>
-      <li><code>$ouds-color-opacity-black-280</code></li>
-      <li><code>$ouds-color-opacity-black-320</code></li>
-      <li><code>$ouds-color-opacity-black-360</code></li>
-      <li><code>$ouds-color-opacity-black-400</code></li>
-      <li><code>$ouds-color-opacity-black-440</code></li>
-      <li><code>$ouds-color-opacity-black-480</code></li>
-      <li><code>$ouds-color-opacity-black-520</code></li>
-      <li><code>$ouds-color-opacity-black-560</code></li>
-      <li><code>$ouds-color-opacity-black-600</code></li>
-      <li><code>$ouds-color-opacity-black-640</code></li>
-      <li><code>$ouds-color-opacity-black-680</code></li>
-      <li><code>$ouds-color-opacity-black-720</code></li>
-      <li><code>$ouds-color-opacity-black-760</code></li>
-      <li><code>$ouds-color-opacity-black-800</code></li>
-      <li><code>$ouds-color-opacity-black-840</code></li>
-      <li><code>$ouds-color-opacity-black-880</code></li>
-      <li><code>$ouds-color-opacity-black-920</code></li>
-      <li><code>$ouds-color-opacity-black-960</code></li>
-      <li><code>$ouds-color-opacity-dodger-blue</code></li>
+      <li><code>$ouds-color-decorative-accent-1-default</code></li>
+      <li><code>$ouds-color-decorative-accent-1-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-1-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-2-default</code></li>
+      <li><code>$ouds-color-decorative-accent-2-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-2-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-3-default</code></li>
+      <li><code>$ouds-color-decorative-accent-3-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-3-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-4-default</code></li>
+      <li><code>$ouds-color-decorative-accent-4-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-4-muted</code></li>
+      <li><code>$ouds-color-decorative-accent-5-default</code></li>
+      <li><code>$ouds-color-decorative-accent-5-emphasized</code></li>
+      <li><code>$ouds-color-decorative-accent-5-muted</code></li>
+      <li><code>$ouds-color-decorative-brand-primary</code></li>
+      <li><code>$ouds-color-decorative-brand-secondary</code></li>
+      <li><code>$ouds-color-decorative-brand-tertiary</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-higher</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-low</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-lower</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-lowest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-high</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-higher</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-highest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-low</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-lower</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-lowest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-medium</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-100</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-200</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-300</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-400</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-500</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-600</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-700</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-800</code></li>
+      <li><code>$ouds-color-decorative-skin-tint-900</code></li>
       <li><code>$ouds-color-opacity-lower-dark</code></li>
       <li><code>$ouds-color-opacity-lower-light</code></li>
       <li><code>$ouds-color-opacity-lowest-dark</code></li>
       <li><code>$ouds-color-opacity-lowest-light</code></li>
-      <li><code>$ouds-color-opacity-malachite</code></li>
-      <li><code>$ouds-color-opacity-scarlet</code></li>
-      <li><code>$ouds-color-opacity-sun</code></li>
       <li><code>$ouds-color-opacity-transparent-dark</code></li>
       <li><code>$ouds-color-opacity-transparent-light</code></li>
-      <li><code>$ouds-color-opacity-white-0</code></li>
-      <li><code>$ouds-color-opacity-white-40</code></li>
-      <li><code>$ouds-color-opacity-white-80</code></li>
-      <li><code>$ouds-color-opacity-white-120</code></li>
-      <li><code>$ouds-color-opacity-white-160</code></li>
-      <li><code>$ouds-color-opacity-white-200</code></li>
-      <li><code>$ouds-color-opacity-white-240</code></li>
-      <li><code>$ouds-color-opacity-white-280</code></li>
-      <li><code>$ouds-color-opacity-white-320</code></li>
-      <li><code>$ouds-color-opacity-white-360</code></li>
-      <li><code>$ouds-color-opacity-white-400</code></li>
-      <li><code>$ouds-color-opacity-white-440</code></li>
-      <li><code>$ouds-color-opacity-white-480</code></li>
-      <li><code>$ouds-color-opacity-white-520</code></li>
-      <li><code>$ouds-color-opacity-white-560</code></li>
-      <li><code>$ouds-color-opacity-white-600</code></li>
-      <li><code>$ouds-color-opacity-white-640</code></li>
-      <li><code>$ouds-color-opacity-white-680</code></li>
-      <li><code>$ouds-color-opacity-white-720</code></li>
-      <li><code>$ouds-color-opacity-white-760</code></li>
-      <li><code>$ouds-color-opacity-white-800</code></li>
-      <li><code>$ouds-color-opacity-white-840</code></li>
-      <li><code>$ouds-color-opacity-white-880</code></li>
-      <li><code>$ouds-color-opacity-white-920</code></li>
-      <li><code>$ouds-color-opacity-white-960</code></li>
-      <li><code>$ouds-color-orange-50</code></li>
-      <li><code>$ouds-color-orange-100</code></li>
-      <li><code>$ouds-color-orange-200</code></li>
-      <li><code>$ouds-color-orange-300</code></li>
-      <li><code>$ouds-color-orange-400</code></li>
-      <li><code>$ouds-color-orange-500</code></li>
-      <li><code>$ouds-color-orange-550</code></li>
-      <li><code>$ouds-color-orange-600</code></li>
-      <li><code>$ouds-color-orange-700</code></li>
-      <li><code>$ouds-color-orange-800</code></li>
-      <li><code>$ouds-color-orange-900</code></li>
       <li><code>$ouds-color-overlay-default-dark</code></li>
       <li><code>$ouds-color-overlay-default-light</code></li>
       <li><code>$ouds-color-overlay-drag-dark</code></li>
@@ -1169,47 +1150,33 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-surface-status-warning-emphasized-light</code></li>
       <li><code>$ouds-color-surface-status-warning-muted-dark</code></li>
       <li><code>$ouds-color-surface-status-warning-muted-light</code></li>
-      <li><code>$ouds-color-warm-gray-100</code></li>
-      <li><code>$ouds-color-warm-gray-200</code></li>
-      <li><code>$ouds-color-warm-gray-300</code></li>
-      <li><code>$ouds-color-warm-gray-400</code></li>
-      <li><code>$ouds-color-warm-gray-500</code></li>
-      <li><code>$ouds-color-warm-gray-600</code></li>
-      <li><code>$ouds-color-warm-gray-700</code></li>
-      <li><code>$ouds-color-warm-gray-800</code></li>
-      <li><code>$ouds-color-warm-gray-900</code></li>
-      <li><code>$ouds-dimension-0</code></li>
-      <li><code>$ouds-dimension-25</code></li>
-      <li><code>$ouds-dimension-50</code></li>
-      <li><code>$ouds-dimension-75</code></li>
-      <li><code>$ouds-dimension-100</code></li>
-      <li><code>$ouds-dimension-150</code></li>
-      <li><code>$ouds-dimension-200</code></li>
-      <li><code>$ouds-dimension-250</code></li>
-      <li><code>$ouds-dimension-300</code></li>
-      <li><code>$ouds-dimension-350</code></li>
-      <li><code>$ouds-dimension-400</code></li>
-      <li><code>$ouds-dimension-450</code></li>
-      <li><code>$ouds-dimension-500</code></li>
-      <li><code>$ouds-dimension-550</code></li>
-      <li><code>$ouds-dimension-600</code></li>
-      <li><code>$ouds-dimension-650</code></li>
-      <li><code>$ouds-dimension-700</code></li>
-      <li><code>$ouds-dimension-750</code></li>
-      <li><code>$ouds-dimension-800</code></li>
-      <li><code>$ouds-dimension-900</code></li>
-      <li><code>$ouds-dimension-1000</code></li>
-      <li><code>$ouds-dimension-1200</code></li>
-      <li><code>$ouds-dimension-1400</code></li>
-      <li><code>$ouds-dimension-1600</code></li>
-      <li><code>$ouds-dimension-1800</code></li>
-      <li><code>$ouds-dimension-4000</code></li>
-      <li><code>$ouds-dimension-base</code></li>
-      <li><code>$ouds-elevation-blur-0</code></li>
-      <li><code>$ouds-elevation-blur-200</code></li>
-      <li><code>$ouds-elevation-blur-300</code></li>
-      <li><code>$ouds-elevation-blur-400</code></li>
-      <li><code>$ouds-elevation-blur-600</code></li>
+      <li><code>$ouds-dimension-2xl</code></li>
+      <li><code>$ouds-dimension-2xs</code></li>
+      <li><code>$ouds-dimension-3xl</code></li>
+      <li><code>$ouds-dimension-3xs</code></li>
+      <li><code>$ouds-dimension-4xl</code></li>
+      <li><code>$ouds-dimension-4xs</code></li>
+      <li><code>$ouds-dimension-5xl</code></li>
+      <li><code>$ouds-dimension-5xs</code></li>
+      <li><code>$ouds-dimension-6xl</code></li>
+      <li><code>$ouds-dimension-6xs</code></li>
+      <li><code>$ouds-dimension-7xl</code></li>
+      <li><code>$ouds-dimension-7xs</code></li>
+      <li><code>$ouds-dimension-8xl</code></li>
+      <li><code>$ouds-dimension-8xs</code></li>
+      <li><code>$ouds-dimension-9xl</code></li>
+      <li><code>$ouds-dimension-9xs</code></li>
+      <li><code>$ouds-dimension-10xl</code></li>
+      <li><code>$ouds-dimension-10xs</code></li>
+      <li><code>$ouds-dimension-11xl</code></li>
+      <li><code>$ouds-dimension-11xs</code></li>
+      <li><code>$ouds-dimension-12xs</code></li>
+      <li><code>$ouds-dimension-lg</code></li>
+      <li><code>$ouds-dimension-md</code></li>
+      <li><code>$ouds-dimension-none</code></li>
+      <li><code>$ouds-dimension-sm</code></li>
+      <li><code>$ouds-dimension-xl</code></li>
+      <li><code>$ouds-dimension-xs</code></li>
       <li><code>$ouds-elevation-blur-default</code></li>
       <li><code>$ouds-elevation-blur-drag</code></li>
       <li><code>$ouds-elevation-blur-emphasized</code></li>
@@ -1218,44 +1185,22 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-elevation-blur-sticky-default</code></li>
       <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-color-default-dark</code></li>
-      <li><code>$ouds-elevation-color-default-light</code></li>
-      <li><code>$ouds-elevation-color-drag-dark</code></li>
-      <li><code>$ouds-elevation-color-drag-light</code></li>
-      <li><code>$ouds-elevation-color-emphasized-dark</code></li>
-      <li><code>$ouds-elevation-color-emphasized-light</code></li>
-      <li><code>$ouds-elevation-color-none-dark</code></li>
-      <li><code>$ouds-elevation-color-none-light</code></li>
-      <li><code>$ouds-elevation-color-raised-dark</code></li>
-      <li><code>$ouds-elevation-color-raised-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-default-dark</code></li>
-      <li><code>$ouds-elevation-color-sticky-default-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized-dark</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-dark</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
-      <li><code>$ouds-elevation-default</code></li>
-      <li><code>$ouds-elevation-drag</code></li>
-      <li><code>$ouds-elevation-emphasized</code></li>
-      <li><code>$ouds-elevation-focus</code></li>
-      <li><code>$ouds-elevation-none</code></li>
-      <li><code>$ouds-elevation-raised</code></li>
-      <li><code>$ouds-elevation-spread-0</code></li>
-      <li><code>$ouds-elevation-spread-300</code></li>
+      <li><code>$ouds-elevation-color-default</code></li>
+      <li><code>$ouds-elevation-color-drag</code></li>
+      <li><code>$ouds-elevation-color-emphasized</code></li>
+      <li><code>$ouds-elevation-color-none</code></li>
+      <li><code>$ouds-elevation-color-raised</code></li>
+      <li><code>$ouds-elevation-color-sticky-default</code></li>
+      <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
+      <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
       <li><code>$ouds-elevation-spread-default</code></li>
       <li><code>$ouds-elevation-spread-drag</code></li>
       <li><code>$ouds-elevation-spread-emphasized</code></li>
-      <li><code>$ouds-elevation-spread-n100</code></li>
-      <li><code>$ouds-elevation-spread-n300</code></li>
       <li><code>$ouds-elevation-spread-none</code></li>
       <li><code>$ouds-elevation-spread-raised</code></li>
       <li><code>$ouds-elevation-spread-sticky-default</code></li>
       <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-spread-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-sticky-default</code></li>
-      <li><code>$ouds-elevation-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-x-0</code></li>
       <li><code>$ouds-elevation-x-default</code></li>
       <li><code>$ouds-elevation-x-drag</code></li>
       <li><code>$ouds-elevation-x-emphasized</code></li>
@@ -1264,11 +1209,6 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-elevation-x-sticky-default</code></li>
       <li><code>$ouds-elevation-x-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-x-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-y-0</code></li>
-      <li><code>$ouds-elevation-y-100</code></li>
-      <li><code>$ouds-elevation-y-200</code></li>
-      <li><code>$ouds-elevation-y-300</code></li>
-      <li><code>$ouds-elevation-y-500</code></li>
       <li><code>$ouds-elevation-y-default</code></li>
       <li><code>$ouds-elevation-y-drag</code></li>
       <li><code>$ouds-elevation-y-emphasized</code></li>
@@ -1277,29 +1217,12 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-elevation-y-sticky-default</code></li>
       <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
       <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-font-family-body</code></li>
-      <li><code>$ouds-font-family-brand-default</code></li>
-      <li><code>$ouds-font-family-code</code></li>
-      <li><code>$ouds-font-family-display</code></li>
-      <li><code>$ouds-font-family-heading</code></li>
-      <li><code>$ouds-font-family-label</code></li>
-      <li><code>$ouds-font-family-monospace-stack</code></li>
-      <li><code>$ouds-font-family-sans-serif-stack</code></li>
       <li><code>$ouds-font-family-system-web</code></li>
-      <li><code>$ouds-font-letter-spacing-150</code></li>
-      <li><code>$ouds-font-letter-spacing-200</code></li>
-      <li><code>$ouds-font-letter-spacing-250</code></li>
-      <li><code>$ouds-font-letter-spacing-300</code></li>
-      <li><code>$ouds-font-letter-spacing-350</code></li>
-      <li><code>$ouds-font-letter-spacing-450</code></li>
-      <li><code>$ouds-font-letter-spacing-550</code></li>
-      <li><code>$ouds-font-letter-spacing-650</code></li>
-      <li><code>$ouds-font-letter-spacing-750</code></li>
-      <li><code>$ouds-font-letter-spacing-850</code></li>
-      <li><code>$ouds-font-letter-spacing-1050</code></li>
-      <li><code>$ouds-font-letter-spacing-1250</code></li>
-      <li><code>$ouds-font-letter-spacing-1450</code></li>
-      <li><code>$ouds-font-letter-spacing-1850</code></li>
+      <li><code>$ouds-font-family-web-body</code></li>
+      <li><code>$ouds-font-family-web-code</code></li>
+      <li><code>$ouds-font-family-web-display</code></li>
+      <li><code>$ouds-font-family-web-heading</code></li>
+      <li><code>$ouds-font-family-web-label</code></li>
       <li><code>$ouds-font-letter-spacing-body-large-desktop</code></li>
       <li><code>$ouds-font-letter-spacing-body-large-mobile</code></li>
       <li><code>$ouds-font-letter-spacing-body-large-tablet</code></li>
@@ -1309,7 +1232,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-font-letter-spacing-body-small-desktop</code></li>
       <li><code>$ouds-font-letter-spacing-body-small-mobile</code></li>
       <li><code>$ouds-font-letter-spacing-body-small-tablet</code></li>
-      <li><code>$ouds-font-letter-spacing-code-medium:</code></li>
+      <li><code>$ouds-font-letter-spacing-code-medium</code></li>
       <li><code>$ouds-font-letter-spacing-display-large-desktop</code></li>
       <li><code>$ouds-font-letter-spacing-display-large-mobile</code></li>
       <li><code>$ouds-font-letter-spacing-display-large-tablet</code></li>
@@ -1335,19 +1258,6 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-font-letter-spacing-label-medium</code></li>
       <li><code>$ouds-font-letter-spacing-label-small</code></li>
       <li><code>$ouds-font-letter-spacing-label-xlarge</code></li>
-      <li><code>$ouds-font-line-height-250</code></li>
-      <li><code>$ouds-font-line-height-350</code></li>
-      <li><code>$ouds-font-line-height-450</code></li>
-      <li><code>$ouds-font-line-height-550</code></li>
-      <li><code>$ouds-font-line-height-650</code></li>
-      <li><code>$ouds-font-line-height-750</code></li>
-      <li><code>$ouds-font-line-height-850</code></li>
-      <li><code>$ouds-font-line-height-950</code></li>
-      <li><code>$ouds-font-line-height-1050</code></li>
-      <li><code>$ouds-font-line-height-1250</code></li>
-      <li><code>$ouds-font-line-height-1450</code></li>
-      <li><code>$ouds-font-line-height-1850</code></li>
-      <li><code>$ouds-font-line-height-2050</code></li>
       <li><code>$ouds-font-line-height-body-large-desktop</code></li>
       <li><code>$ouds-font-line-height-body-large-mobile</code></li>
       <li><code>$ouds-font-line-height-body-large-tablet</code></li>
@@ -1383,20 +1293,6 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-font-line-height-label-medium</code></li>
       <li><code>$ouds-font-line-height-label-small</code></li>
       <li><code>$ouds-font-line-height-label-xlarge</code></li>
-      <li><code>$ouds-font-size-150</code></li>
-      <li><code>$ouds-font-size-200</code></li>
-      <li><code>$ouds-font-size-250</code></li>
-      <li><code>$ouds-font-size-300</code></li>
-      <li><code>$ouds-font-size-350</code></li>
-      <li><code>$ouds-font-size-450</code></li>
-      <li><code>$ouds-font-size-550</code></li>
-      <li><code>$ouds-font-size-650</code></li>
-      <li><code>$ouds-font-size-750</code></li>
-      <li><code>$ouds-font-size-850</code></li>
-      <li><code>$ouds-font-size-1050</code></li>
-      <li><code>$ouds-font-size-1250</code></li>
-      <li><code>$ouds-font-size-1450</code></li>
-      <li><code>$ouds-font-size-1850</code></li>
       <li><code>$ouds-font-size-body-large-desktop</code></li>
       <li><code>$ouds-font-size-body-large-mobile</code></li>
       <li><code>$ouds-font-size-body-large-tablet</code></li>
@@ -1432,67 +1328,63 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-font-size-label-medium</code></li>
       <li><code>$ouds-font-size-label-small</code></li>
       <li><code>$ouds-font-size-label-xlarge</code></li>
-      <li><code>$ouds-font-weight-400</code></li>
-      <li><code>$ouds-font-weight-700</code></li>
-      <li><code>$ouds-font-weight-body-default</code></li>
-      <li><code>$ouds-font-weight-body-strong</code></li>
-      <li><code>$ouds-font-weight-code</code></li>
-      <li><code>$ouds-font-weight-system-default</code></li>
-      <li><code>$ouds-font-weight-display</code></li>
-      <li><code>$ouds-font-weight-heading</code></li>
-      <li><code>$ouds-font-weight-label-default</code></li>
-      <li><code>$ouds-font-weight-label-strong</code></li>
-      <li><code>$ouds-font-weight-system-strong</code></li>
+      <li><code>$ouds-font-weight-system-web-default</code></li>
+      <li><code>$ouds-font-weight-system-web-strong</code></li>
+      <li><code>$ouds-font-weight-web-body-default</code></li>
+      <li><code>$ouds-font-weight-web-body-strong</code></li>
+      <li><code>$ouds-font-weight-web-code</code></li>
+      <li><code>$ouds-font-weight-web-display</code></li>
+      <li><code>$ouds-font-weight-web-heading</code></li>
+      <li><code>$ouds-font-weight-web-label-default</code></li>
+      <li><code>$ouds-font-weight-web-label-strong</code></li>
+      <li><code>$ouds-grid-2xl-column-count</code></li>
       <li><code>$ouds-grid-2xl-column-gap</code></li>
       <li><code>$ouds-grid-2xl-margin</code></li>
+      <li><code>$ouds-grid-2xl-max-width</code></li>
       <li><code>$ouds-grid-2xl-max-width-alt</code></li>
       <li><code>$ouds-grid-2xl-min-width</code></li>
+      <li><code>$ouds-grid-2xl-width</code></li>
+      <li><code>$ouds-grid-2xs-column-count</code></li>
       <li><code>$ouds-grid-2xs-column-gap</code></li>
       <li><code>$ouds-grid-2xs-margin</code></li>
+      <li><code>$ouds-grid-2xs-max-width</code></li>
+      <li><code>$ouds-grid-2xs-min-width</code></li>
+      <li><code>$ouds-grid-2xs-width</code></li>
+      <li><code>$ouds-grid-3xl-column-count</code></li>
       <li><code>$ouds-grid-3xl-column-gap</code></li>
       <li><code>$ouds-grid-3xl-margin</code></li>
       <li><code>$ouds-grid-3xl-min-width</code></li>
-      <li><code>$ouds-grid-column-gap-100</code></li>
-      <li><code>$ouds-grid-column-gap-200</code></li>
-      <li><code>$ouds-grid-column-gap-400</code></li>
-      <li><code>$ouds-grid-column-gap-600</code></li>
-      <li><code>$ouds-grid-column-gap-800</code></li>
+      <li><code>$ouds-grid-3xl-width</code></li>
+      <li><code>$ouds-grid-lg-column-count</code></li>
       <li><code>$ouds-grid-lg-column-gap</code></li>
       <li><code>$ouds-grid-lg-margin</code></li>
+      <li><code>$ouds-grid-lg-max-width</code></li>
       <li><code>$ouds-grid-lg-min-width</code></li>
-      <li><code>$ouds-grid-margin-100</code></li>
-      <li><code>$ouds-grid-margin-300</code></li>
-      <li><code>$ouds-grid-margin-400</code></li>
-      <li><code>$ouds-grid-margin-500</code></li>
-      <li><code>$ouds-grid-margin-700</code></li>
-      <li><code>$ouds-grid-margin-1100</code></li>
-      <li><code>$ouds-grid-margin-1700</code></li>
-      <li><code>$ouds-grid-margin-2500</code></li>
+      <li><code>$ouds-grid-lg-width</code></li>
+      <li><code>$ouds-grid-md-column-count</code></li>
       <li><code>$ouds-grid-md-column-gap</code></li>
       <li><code>$ouds-grid-md-margin</code></li>
+      <li><code>$ouds-grid-md-max-width</code></li>
       <li><code>$ouds-grid-md-min-width</code></li>
-      <li><code>$ouds-grid-min-width-200</code></li>
-      <li><code>$ouds-grid-min-width-300</code></li>
-      <li><code>$ouds-grid-min-width-400</code></li>
-      <li><code>$ouds-grid-min-width-500</code></li>
-      <li><code>$ouds-grid-min-width-600</code></li>
-      <li><code>$ouds-grid-min-width-700</code></li>
-      <li><code>$ouds-grid-min-width-800</code></li>
+      <li><code>$ouds-grid-md-width</code></li>
+      <li><code>$ouds-grid-sm-column-count</code></li>
       <li><code>$ouds-grid-sm-column-gap</code></li>
       <li><code>$ouds-grid-sm-margin</code></li>
+      <li><code>$ouds-grid-sm-max-width</code></li>
       <li><code>$ouds-grid-sm-min-width</code></li>
+      <li><code>$ouds-grid-sm-width</code></li>
+      <li><code>$ouds-grid-xl-column-count</code></li>
       <li><code>$ouds-grid-xl-column-gap</code></li>
       <li><code>$ouds-grid-xl-margin</code></li>
+      <li><code>$ouds-grid-xl-max-width</code></li>
       <li><code>$ouds-grid-xl-min-width</code></li>
+      <li><code>$ouds-grid-xl-width</code></li>
+      <li><code>$ouds-grid-xs-column-count</code></li>
       <li><code>$ouds-grid-xs-column-gap</code></li>
       <li><code>$ouds-grid-xs-margin</code></li>
+      <li><code>$ouds-grid-xs-max-width</code></li>
       <li><code>$ouds-grid-xs-min-width</code></li>
-      <li><code>$ouds-opacity-0</code></li>
-      <li><code>$ouds-opacity-40</code></li>
-      <li><code>$ouds-opacity-160</code></li>
-      <li><code>$ouds-opacity-320</code></li>
-      <li><code>$ouds-opacity-640</code></li>
-      <li><code>$ouds-opacity-1000</code></li>
+      <li><code>$ouds-grid-xs-width</code></li>
       <li><code>$ouds-opacity-invisible</code></li>
       <li><code>$ouds-opacity-medium</code></li>
       <li><code>$ouds-opacity-opaque</code></li>
@@ -1501,6 +1393,8 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-opacity-weaker</code></li>
       <li><code>$ouds-size-icon-decorative-2xl</code></li>
       <li><code>$ouds-size-icon-decorative-2xs</code></li>
+      <li><code>$ouds-size-icon-decorative-3xs</code></li>
+      <li><code>$ouds-size-icon-decorative-4xs</code></li>
       <li><code>$ouds-size-icon-decorative-lg</code></li>
       <li><code>$ouds-size-icon-decorative-md</code></li>
       <li><code>$ouds-size-icon-decorative-sm</code></li>
@@ -1615,18 +1509,84 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-size-max-width-type-heading-xlarge-desktop</code></li>
       <li><code>$ouds-size-max-width-type-heading-xlarge-mobile</code></li>
       <li><code>$ouds-size-max-width-type-heading-xlarge-tablet</code></li>
-      <li><code>$ouds-space-fixed-huge</code></li>
-      <li><code>$ouds-space-fixed-jumbo</code></li>
-      <li><code>$ouds-space-fixed-medium</code></li>
+      <li><code>$ouds-size-min-interactive-area</code></li>
+      <li><code>$ouds-space-column-gap-2xl</code></li>
+      <li><code>$ouds-space-column-gap-2xs</code></li>
+      <li><code>$ouds-space-column-gap-3xs</code></li>
+      <li><code>$ouds-space-column-gap-lg</code></li>
+      <li><code>$ouds-space-column-gap-md</code></li>
+      <li><code>$ouds-space-column-gap-none</code></li>
+      <li><code>$ouds-space-column-gap-sm</code></li>
+      <li><code>$ouds-space-column-gap-xl</code></li>
+      <li><code>$ouds-space-column-gap-xs</code></li>
+      <li><code>$ouds-space-fixed-2xl</code></li>
+      <li><code>$ouds-space-fixed-2xs</code></li>
+      <li><code>$ouds-space-fixed-3xl</code></li>
+      <li><code>$ouds-space-fixed-3xs</code></li>
+      <li><code>$ouds-space-fixed-4xl</code></li>
+      <li><code>$ouds-space-fixed-5xl</code></li>
+      <li><code>$ouds-space-fixed-lg</code></li>
+      <li><code>$ouds-space-fixed-md</code></li>
       <li><code>$ouds-space-fixed-none</code></li>
       <li><code>$ouds-space-fixed-sm</code></li>
+      <li><code>$ouds-space-fixed-xl</code></li>
       <li><code>$ouds-space-fixed-xs</code></li>
-      <li><code>$ouds-space-fixed-2xs</code></li>
-      <li><code>$ouds-space-fixed-3xs</code></li>
-      <li><code>$ouds-space-fixed-spacious</code></li>
-      <li><code>$ouds-space-fixed-tall</code></li>
-      <li><code>$ouds-space-fixed-taller</code></li>
-      <li><code>$ouds-space-fixed-tallest</code></li>
+      <li><code>$ouds-space-inset-2xl</code></li>
+      <li><code>$ouds-space-inset-2xs</code></li>
+      <li><code>$ouds-space-inset-3xl</code></li>
+      <li><code>$ouds-space-inset-3xs</code></li>
+      <li><code>$ouds-space-inset-4xs</code></li>
+      <li><code>$ouds-space-inset-lg</code></li>
+      <li><code>$ouds-space-inset-md</code></li>
+      <li><code>$ouds-space-inset-none</code></li>
+      <li><code>$ouds-space-inset-sm</code></li>
+      <li><code>$ouds-space-inset-xl</code></li>
+      <li><code>$ouds-space-inset-xs</code></li>
+      <li><code>$ouds-space-padding-block-2xl</code></li>
+      <li><code>$ouds-space-padding-block-2xs</code></li>
+      <li><code>$ouds-space-padding-block-3xl</code></li>
+      <li><code>$ouds-space-padding-block-3xs</code></li>
+      <li><code>$ouds-space-padding-block-4xl</code></li>
+      <li><code>$ouds-space-padding-block-lg</code></li>
+      <li><code>$ouds-space-padding-block-md</code></li>
+      <li><code>$ouds-space-padding-block-none</code></li>
+      <li><code>$ouds-space-padding-block-sm</code></li>
+      <li><code>$ouds-space-padding-block-xl</code></li>
+      <li><code>$ouds-space-padding-block-xs</code></li>
+      <li><code>$ouds-space-padding-inline-2xl</code></li>
+      <li><code>$ouds-space-padding-inline-2xs</code></li>
+      <li><code>$ouds-space-padding-inline-3xl</code></li>
+      <li><code>$ouds-space-padding-inline-3xs</code></li>
+      <li><code>$ouds-space-padding-inline-4xl</code></li>
+      <li><code>$ouds-space-padding-inline-4xs</code></li>
+      <li><code>$ouds-space-padding-inline-lg</code></li>
+      <li><code>$ouds-space-padding-inline-md</code></li>
+      <li><code>$ouds-space-padding-inline-none</code></li>
+      <li><code>$ouds-space-padding-inline-sm</code></li>
+      <li><code>$ouds-space-padding-inline-xl</code></li>
+      <li><code>$ouds-space-padding-inline-xs</code></li>
+      <li><code>$ouds-space-row-gap-2xs</code></li>
+      <li><code>$ouds-space-row-gap-3xs</code></li>
+      <li><code>$ouds-space-row-gap-lg</code></li>
+      <li><code>$ouds-space-row-gap-md</code></li>
+      <li><code>$ouds-space-row-gap-none</code></li>
+      <li><code>$ouds-space-row-gap-sm</code></li>
+      <li><code>$ouds-space-row-gap-xs</code></li>
+      <li><code>$ouds-space-scaled-2xl-desktop</code></li>
+      <li><code>$ouds-space-scaled-2xl-mobile</code></li>
+      <li><code>$ouds-space-scaled-2xl-tablet</code></li>
+      <li><code>$ouds-space-scaled-2xs-desktop</code></li>
+      <li><code>$ouds-space-scaled-2xs-mobile</code></li>
+      <li><code>$ouds-space-scaled-2xs-tablet</code></li>
+      <li><code>$ouds-space-scaled-3xl-desktop</code></li>
+      <li><code>$ouds-space-scaled-3xl-mobile</code></li>
+      <li><code>$ouds-space-scaled-3xl-tablet</code></li>
+      <li><code>$ouds-space-scaled-3xs-desktop</code></li>
+      <li><code>$ouds-space-scaled-3xs-mobile</code></li>
+      <li><code>$ouds-space-scaled-3xs-tablet</code></li>
+      <li><code>$ouds-space-scaled-lg-desktop</code></li>
+      <li><code>$ouds-space-scaled-lg-mobile</code></li>
+      <li><code>$ouds-space-scaled-lg-tablet</code></li>
       <li><code>$ouds-space-scaled-md-desktop</code></li>
       <li><code>$ouds-space-scaled-md-mobile</code></li>
       <li><code>$ouds-space-scaled-md-tablet</code></li>
@@ -1636,27 +1596,12 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-space-scaled-sm-desktop</code></li>
       <li><code>$ouds-space-scaled-sm-mobile</code></li>
       <li><code>$ouds-space-scaled-sm-tablet</code></li>
-      <li><code>$ouds-space-scaled-xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-2xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-2xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-2xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-3xs-desktop</code></li>
-      <li><code>$ouds-space-scaled-3xs-mobile</code></li>
-      <li><code>$ouds-space-scaled-3xs-tablet</code></li>
-      <li><code>$ouds-space-scaled-3xl-desktop</code></li>
-      <li><code>$ouds-space-scaled-3xl-mobile</code></li>
-      <li><code>$ouds-space-scaled-3xl-tablet</code></li>
-      <li><code>$ouds-space-scaled-lg-desktop</code></li>
-      <li><code>$ouds-space-scaled-lg-mobile</code></li>
-      <li><code>$ouds-space-scaled-lg-tablet</code></li>
       <li><code>$ouds-space-scaled-xl-desktop</code></li>
       <li><code>$ouds-space-scaled-xl-mobile</code></li>
       <li><code>$ouds-space-scaled-xl-tablet</code></li>
-      <li><code>$ouds-space-scaled-2xl-desktop</code></li>
-      <li><code>$ouds-space-scaled-2xl-mobile</code></li>
-      <li><code>$ouds-space-scaled-2xl-tablet</code></li>
+      <li><code>$ouds-space-scaled-xs-desktop</code></li>
+      <li><code>$ouds-space-scaled-xs-mobile</code></li>
+      <li><code>$ouds-space-scaled-xs-tablet</code></li>
     </ul>
   </details>
 
@@ -1693,8 +1638,8 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-border-brand-primary</code></li>
       <li><code>$ouds-color-border-default</code></li>
       <li><code>$ouds-color-border-emphasized</code></li>
-      <li><code>$ouds-color-border-focus</code></li>
       <li><code>$ouds-color-border-focus-inset</code></li>
+      <li><code>$ouds-color-border-focus</code></li>
       <li><code>$ouds-color-border-muted</code></li>
       <li><code>$ouds-color-border-on-brand-primary</code></li>
       <li><code>$ouds-color-content-brand-primary</code></li>
@@ -1710,9 +1655,19 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-content-on-action-pressed</code></li>
       <li><code>$ouds-color-content-on-brand-primary</code></li>
       <li><code>$ouds-color-content-on-overlay-emphasized</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized</code></li>
-      <li><code>$ouds-color-content-on-status-emphasized-alt</code></li>
-      <li><code>$ouds-color-content-on-status-muted</code></li>
+      <li><code>$ouds-color-content-on-status-accent-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-accent-muted</code></li>
+      <li><code>$ouds-color-content-on-status-info-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-info-muted</code></li>
+      <li><code>$ouds-color-content-on-status-negative-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-negative-muted</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-neutral-muted</code></li>
+      <li><code>$ouds-color-content-on-status-positive-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-positive-muted</code></li>
+      <li><code>$ouds-color-content-on-status-warning-emphasized</code></li>
+      <li><code>$ouds-color-content-on-status-warning-muted</code></li>
+      <li><code>$ouds-color-content-status-accent</code></li>
       <li><code>$ouds-color-content-status-info</code></li>
       <li><code>$ouds-color-content-status-negative</code></li>
       <li><code>$ouds-color-content-status-positive</code></li>
@@ -1735,9 +1690,17 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
       <li><code>$ouds-color-decorative-brand-primary</code></li>
       <li><code>$ouds-color-decorative-brand-secondary</code></li>
       <li><code>$ouds-color-decorative-brand-tertiary</code></li>
-      <li><code>$ouds-color-decorative-neutral-default</code></li>
-      <li><code>$ouds-color-decorative-neutral-emphasized</code></li>
-      <li><code>$ouds-color-decorative-neutral-muted</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-higher</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-low</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-lower</code></li>
+      <li><code>$ouds-color-decorative-neutral-emphasized-lowest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-high</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-higher</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-highest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-low</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-lower</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-lowest</code></li>
+      <li><code>$ouds-color-decorative-neutral-muted-medium</code></li>
       <li><code>$ouds-color-decorative-skin-tint-100</code></li>
       <li><code>$ouds-color-decorative-skin-tint-200</code></li>
       <li><code>$ouds-color-decorative-skin-tint-300</code></li>
