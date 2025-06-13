@@ -19,45 +19,39 @@ toc: true
 #### Border
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities sizes `short` and `tall` have been renamed to `small` and `large` respectively.
-  - **Small**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
-  - **Large**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
+  - **Short**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`, for example `.rounded-short` → `.rounded-small`.
+  - **Tall**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`, for example `.rounded-tall` → `.rounded-large`.
 
 #### Colors
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Color utilities for text on status colors have been added:
-  - **Accent**: `text-on-status-accent-emphasized`, `text-on-status-accent-muted`
-  - **Info**: `text-on-status-info-emphasized`, `text-on-status-info-muted`
-  - **Negative**: `text-on-status-negative-emphasized`, `text-on-status-negative-muted`
-  - **Neutral**: `text-on-status-neutral-emphasized`, `text-on-status-neutral-muted`
-  - **Positive**: `text-on-status-positive-emphasized`, `text-on-status-positive-muted`
-  - **Warning**: `text-on-status-warning-emphasized`, `text-on-status-warning-muted`
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `text-on-status-emphasized`, `text-on-status-emphasized-alt`, `text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]({{< docsref "/helpers/color-background" >}})
-
-#### Icon
-
-- <span class="badge text-bg-status-positive-emphasized">New</span> Icons' sizes for decorative standalone icons have been added: `decorative-4xs-icon`, `decorative-3xs-icon`.
+  - **Accent**: `.text-on-status-accent-emphasized`, `.text-on-status-accent-muted`
+  - **Info**: `.text-on-status-info-emphasized`, `.text-on-status-info-muted`
+  - **Negative**: `.text-on-status-negative-emphasized`, `.text-on-status-negative-muted`
+  - **Neutral**: `.text-on-status-neutral-emphasized`, `.text-on-status-neutral-muted`
+  - **Positive**: `.text-on-status-positive-emphasized`, `.text-on-status-positive-muted`
+  - **Warning**: `.text-on-status-warning-emphasized`, `.text-on-status-warning-muted`
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `.text-on-status-emphasized`, `.text-on-status-emphasized-alt`, `.text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]({{< docsref "/helpers/color-background" >}})
 
 #### Spacings
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Spacing utilities (padding, margin, gap, ...) sizes have been renamed as following :
-  - **Smash** is renamed to `3xs` : for example `m-smash` becomes `m-3xs`
-  - **Shortest** is renamed to `2xs` : for example `m-shortest` becomes `m-2xs`
-  - **Shorter** is renamed to `xs` : for example `m-shorter` becomes `m-xs`
-  - **Short** is renamed to `sm` : for example `m-short` becomes `m-sm`
-  - **Medium** is renamed to `md` : for example `m-medium` becomes `m-md`
-  - **Tall** is renamed to `lg` : for example `m-tall` becomes `m-lg`
-  - **Taller** is renamed to `xl` : for example `m-taller` becomes `m-xl`
-  - **Tallest** is renamed to `2xl` : for example `m-tallest` becomes `m-2xl`
-  - **Spacious** is renamed to `3xl` : for example `m-spacious` becomes `m-3xl`
-  - **Huge** is renamed to `4xl` : for example `m-huge` becomes `m-4xl`
-  - **Jumbo** is renamed to `5xl` : for example `m-jumbo` becomes `m-5xl`
-  - **Negative** these changes apply to negative spacings as well, for example `m-nsmash` becomes `m-n3xs`
-
-
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Spacing utilities (padding, margin, gap, ...) sizes have been renamed as follows:
+  - **Smash** is renamed to `3xs` : for example `.m-smash` → `.m-3xs`
+  - **Shortest** is renamed to `2xs` : for example `.m-shortest` → `.m-2xs`
+  - **Shorter** is renamed to `xs` : for example `.m-shorter` → `.m-xs`
+  - **Short** is renamed to `sm` : for example `.m-short` → `.m-sm`
+  - **Medium** is renamed to `md` : for example `.m-medium` → `.m-md`
+  - **Tall** is renamed to `lg` : for example `.m-tall` → `.m-lg`
+  - **Taller** is renamed to `xl` : for example `.m-taller` → `.m-xl`
+  - **Tallest** is renamed to `2xl` : for example `.m-tallest` → `.m-2xl`
+  - **Spacious** is renamed to `3xl` : for example `.m-spacious` → `.m-3xl`
+  - **Huge** is renamed to `4xl` : for example `.m-huge` → `.m-4xl`
+  - **Jumbo** is renamed to `5xl` : for example `.m-jumbo` → `.m-5xl`
+  - **Negative** these changes apply to negative spacings as well, for example `.m-nsmash` → `.m-n3xs`
 
 ### CSS and Sass variables
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Some Design Tokens prefix have been changed to follow the new naming convention.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Some design tokens prefix have been changed to follow the new naming convention.
   - Core Raw Tokens (in file raw.scss) are now prefixed with `core-ouds` instead of `ouds`.
   - Orange Raw Tokens (in file raw.scss) are now prefixed with `core-orange` instead of `ouds`.
 
@@ -72,6 +66,12 @@ toc: true
 #### Breadcrumb
 
 - <span class="badge text-bg-success">New</span> Breadcrumb component has been implemented.
+
+### Extend
+
+#### Icons
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Icons' sizes for decorative standalone icons have been added: `.decorative-4xs-icon`, `decorative-3xs-icon`.
 
 ## v0.4.1
 

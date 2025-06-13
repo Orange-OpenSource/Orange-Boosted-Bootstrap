@@ -11,6 +11,7 @@
   min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-inset;
+  @include border-radius($ouds-control-item-border-radius);
 
   // Handle focus
   &:has(:focus-visible) {
@@ -401,6 +402,10 @@
     &:focus-visible,
     &:active {
       background-color: $ouds-switch-color-track-selected-interaction;
+
+      &::after {
+        background-color: $ouds-switch-color-check-interaction;
+      }
     }
 
     &:active::before {
@@ -434,6 +439,7 @@
   justify-content: center;
   min-width: $ouds-checkbox-size-min-width;
   min-height: $ouds-checkbox-size-min-height;
+  @include border-radius($ouds-control-item-border-radius-item-only);
 }
 
 

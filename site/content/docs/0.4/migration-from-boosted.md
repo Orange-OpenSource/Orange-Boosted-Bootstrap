@@ -73,7 +73,7 @@ Technically, it means that you can get rid of the following things:
   - The breakpoints values have changed. Please refer to the [breakpoints' documentation]({{< docsref "/layout/breakpoints/" >}}).
   - The default container to use is now `.container-fluid` associated to `.container-max-width` instead of `.container-xxl`. Please refer to the [fluid containers' documentation]({{< docsref "/layout/containers/#fluid-containers" >}}).
   - Default gutter inside grid has been changed to have a fully responsive behavior. It should be a transparent change for you.
-  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xs|2xs|xs|sm|md|lg|xl|2xl|3xl|4xl|5xl`. Proportional equivalence between `0` → `none`, `1` → `shortest`, `2` → `shorter`, `3` → `medium`, `4` → `tall`, `5` → `spacious`.
+  - All gutter utilities have been changed. `.g{-breakpoint}-{value}`, `.gx{-breakpoint}-{value}` and `.gy{-breakpoint}-{value}` which value is inside `0|1|2|3|4|5`. Gutter utilities values now use `none|3xs|2xs|xs|sm|md|lg|xl|2xl|3xl|4xl|5xl`. Proportional equivalence between `0` → `none`, `1` → `2xs`, `2` → `sm`, `3` → `ld`, `4` → `2xl`, `5` → `4xl`.
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
@@ -368,9 +368,9 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border radius utilities with all sizes:
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
-  - **Sm**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
-  - **Md**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
-  - **Lg**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
+  - **Small**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
+  - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
+  - **Large**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
 
@@ -575,7 +575,7 @@ See [our new Switch page]({{< docsref "/forms/switch" >}}) for more information.
     3. **2**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)2` → `$1sm`
     4. **3**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)3` → `$1lg`
     5. **4**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)4` → `$12xl`
-    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$1huge`
+    6. **5**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)5` → `$14xl`
     7. **All numbers**: Search for `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)\d` and you shouldn't have Bootstrap spacing utilities anymore
     <!-- Next technique is almost unusable in practice -->
   - Change all the utilities using more precise utilities
