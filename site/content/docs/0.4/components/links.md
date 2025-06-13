@@ -33,12 +33,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]({{< docsref "/u
 {{< /callout >}}
 
 {{< example class="p-none">}}
-<div class="bg-brand-primary p-tall">
+<div class="bg-brand-primary p-lg">
   <div data-bs-theme="light">
     <a class="link link-on-colored-bg" href="#">This is an example of link</a>
   </div>
 </div>
-<div class="bg-status-negative-emphasized p-tall">
+<div class="bg-status-negative-emphasized p-lg">
   <div data-bs-theme="root-inverted">
     <a class="link link-on-colored-bg" href="#">This is an example of link</a>
   </div>
@@ -147,7 +147,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 
 ### Disabled link accessibility warning
 
-To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. 
+To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links.
 
 If the disabled link does not convey any useful information, you can include a `tabindex="-1"` attribute in addition to `aria-disabled="true"` on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 However, if the disabled link conveys useful information for users, it must remain focusable and you should not add the `tabindex="-1"` attribute to keep it accessible to keyboard navigation.

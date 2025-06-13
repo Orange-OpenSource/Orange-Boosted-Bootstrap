@@ -301,22 +301,22 @@
   @include button-variant(
     var(--#{$prefix}color-action-negative-enabled),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-hover),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-pressed),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-disabled),
     var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-disabled),
     var(--#{$prefix}color-action-negative-focus),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
     var(--#{$prefix}color-action-negative-loading),
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-status-emphasized-alt)
+    var(--#{$prefix}color-content-on-status-negative-emphasized)
   );
 }
 
@@ -325,24 +325,24 @@
   --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
 
   @include button-variant(
-    $ouds-button-color-bg-default-enabled-mono,
-    $ouds-button-color-border-default-enabled-mono,
-    $ouds-button-color-content-default-enabled-mono,
-    $ouds-button-color-bg-default-hover-mono,
-    $ouds-button-color-border-default-hover-mono,
-    $ouds-button-color-content-default-hover-mono,
-    $ouds-button-color-bg-default-pressed-mono,
-    $ouds-button-color-border-default-pressed-mono,
-    $ouds-button-color-content-default-pressed-mono,
-    $ouds-button-color-bg-default-disabled-mono,
-    $ouds-button-color-border-default-disabled-mono,
-    $ouds-button-color-content-default-disabled-mono,
-    $ouds-button-color-bg-default-focus-mono,
-    $ouds-button-color-border-default-focus-mono,
-    $ouds-button-color-content-default-focus-mono,
-    $ouds-button-color-bg-default-loading-mono,
-    $ouds-button-color-border-default-loading-mono,
-    $ouds-button-color-content-default-loading-mono
+    $ouds-button-mono-color-bg-default-enabled,
+    $ouds-button-mono-color-border-default-enabled,
+    $ouds-button-mono-color-content-default-enabled,
+    $ouds-button-mono-color-bg-default-hover,
+    $ouds-button-mono-color-border-default-hover,
+    $ouds-button-mono-color-content-default-hover,
+    $ouds-button-mono-color-bg-default-pressed,
+    $ouds-button-mono-color-border-default-pressed,
+    $ouds-button-mono-color-content-default-pressed,
+    $ouds-button-mono-color-bg-default-disabled,
+    $ouds-button-mono-color-border-default-disabled,
+    $ouds-button-mono-color-content-default-disabled,
+    $ouds-button-mono-color-bg-default-focus,
+    $ouds-button-mono-color-border-default-focus,
+    $ouds-button-mono-color-content-default-focus,
+    $ouds-button-mono-color-bg-default-loading,
+    $ouds-button-mono-color-border-default-loading,
+    $ouds-button-mono-color-content-default-loading
   );
 }
 
@@ -351,24 +351,24 @@
   --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
 
   @include button-variant(
-    $ouds-button-color-bg-strong-enabled-mono,
-    $ouds-button-color-border-strong-enabled-mono,
-    $ouds-button-color-content-strong-enabled-mono,
-    $ouds-button-color-bg-strong-hover-mono,
-    $ouds-button-color-border-strong-hover-mono,
-    $ouds-button-color-content-strong-hover-mono,
-    $ouds-button-color-bg-strong-pressed-mono,
-    $ouds-button-color-border-strong-pressed-mono,
-    $ouds-button-color-content-strong-pressed-mono,
-    $ouds-button-color-bg-strong-disabled-mono,
-    $ouds-button-color-border-strong-disabled-mono,
-    $ouds-button-color-content-strong-disabled-mono,
-    $ouds-button-color-bg-strong-focus-mono,
-    $ouds-button-color-border-strong-focus-mono,
-    $ouds-button-color-content-strong-focus-mono,
-    $ouds-button-color-bg-strong-loading-mono,
-    $ouds-button-color-border-strong-loading-mono,
-    $ouds-button-color-content-strong-loading-mono
+    $ouds-button-mono-color-bg-strong-enabled,
+    $ouds-button-mono-color-border-strong-enabled,
+    $ouds-button-mono-color-content-strong-enabled,
+    $ouds-button-mono-color-bg-strong-hover,
+    $ouds-button-mono-color-border-strong-hover,
+    $ouds-button-mono-color-content-strong-hover,
+    $ouds-button-mono-color-bg-strong-pressed,
+    $ouds-button-mono-color-border-strong-pressed,
+    $ouds-button-mono-color-content-strong-pressed,
+    $ouds-button-mono-color-bg-strong-disabled,
+    $ouds-button-mono-color-border-strong-disabled,
+    $ouds-button-mono-color-content-strong-disabled,
+    $ouds-button-mono-color-bg-strong-focus,
+    $ouds-button-mono-color-border-strong-focus,
+    $ouds-button-mono-color-content-strong-focus,
+    $ouds-button-mono-color-bg-strong-loading,
+    $ouds-button-mono-color-border-strong-loading,
+    $ouds-button-mono-color-content-strong-loading
   );
 }
 
@@ -377,24 +377,24 @@
   --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-minimal-interaction};
 
   @include button-variant(
-    $ouds-button-color-bg-minimal-enabled-mono,
-    $ouds-button-color-border-minimal-enabled-mono,
-    $ouds-button-color-content-minimal-enabled-mono,
-    $ouds-button-color-bg-minimal-hover-mono,
-    $ouds-button-color-border-minimal-hover-mono,
-    $ouds-button-color-content-minimal-hover-mono,
-    $ouds-button-color-bg-minimal-pressed-mono,
-    $ouds-button-color-border-minimal-pressed-mono,
-    $ouds-button-color-content-minimal-pressed-mono,
-    $ouds-button-color-bg-minimal-disabled-mono,
-    $ouds-button-color-border-minimal-disabled-mono,
-    $ouds-button-color-content-minimal-disabled-mono,
-    $ouds-button-color-bg-minimal-focus-mono,
-    $ouds-button-color-border-minimal-focus-mono,
-    $ouds-button-color-content-minimal-focus-mono,
-    $ouds-button-color-bg-minimal-loading-mono,
-    $ouds-button-color-border-minimal-loading-mono,
-    $ouds-button-color-content-minimal-loading-mono
+    $ouds-button-mono-color-bg-minimal-enabled,
+    $ouds-button-mono-color-border-minimal-enabled,
+    $ouds-button-mono-color-content-minimal-enabled,
+    $ouds-button-mono-color-bg-minimal-hover,
+    $ouds-button-mono-color-border-minimal-hover,
+    $ouds-button-mono-color-content-minimal-hover,
+    $ouds-button-mono-color-bg-minimal-pressed,
+    $ouds-button-mono-color-border-minimal-pressed,
+    $ouds-button-mono-color-content-minimal-pressed,
+    $ouds-button-mono-color-bg-minimal-disabled,
+    $ouds-button-mono-color-border-minimal-disabled,
+    $ouds-button-mono-color-content-minimal-disabled,
+    $ouds-button-mono-color-bg-minimal-focus,
+    $ouds-button-mono-color-border-minimal-focus,
+    $ouds-button-mono-color-content-minimal-focus,
+    $ouds-button-mono-color-bg-minimal-loading,
+    $ouds-button-mono-color-border-minimal-loading,
+    $ouds-button-mono-color-content-minimal-loading
   );
 }
 

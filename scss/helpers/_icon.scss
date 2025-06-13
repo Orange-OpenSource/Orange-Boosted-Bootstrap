@@ -20,6 +20,16 @@
   }
 }
 
+.decorative-4xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-4xs if($enable-important-utilities, !important, null);
+}
+
+.decorative-3xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-3xs if($enable-important-utilities, !important, null);
+}
+
 .decorative-2xs-icon {
   @extend %icon-size;
   font-size: $ouds-size-icon-decorative-2xs if($enable-important-utilities, !important, null);

@@ -13,11 +13,11 @@ toc: true
 Width and height utilities are generated from the utility API in `_utilities.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
 
 {{< example class="bd-example-flex" >}}
-<div class="w-25 p-tall">Width 25%</div>
-<div class="w-50 p-tall">Width 50%</div>
-<div class="w-75 p-tall">Width 75%</div>
-<div class="w-100 p-tall">Width 100%</div>
-<div class="w-auto p-tall">Width auto</div>
+<div class="w-25 p-lg">Width 25%</div>
+<div class="w-50 p-lg">Width 50%</div>
+<div class="w-75 p-lg">Width 75%</div>
+<div class="w-100 p-lg">Width 100%</div>
+<div class="w-auto p-lg">Width auto</div>
 {{< /example >}}
 
 {{< example class="bd-example-flex" >}}

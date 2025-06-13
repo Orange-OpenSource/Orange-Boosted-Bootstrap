@@ -18,14 +18,14 @@ Box-shadow styles are referred to as 'elevation' within the design system.
 You can <!--also -->quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
 
 {{< example class="overflow-hidden" >}}
-<div class="shadow-none p-tall mb-huge bg-secondary">No shadow</div>
-<div class="shadow-default p-tall mb-huge bg-secondary">Default shadow</div>
-<div class="shadow-drag p-tall mb-huge bg-secondary">Drag shadow</div>
-<div class="shadow-emphasized p-tall mb-huge bg-secondary">Emphasized shadow</div>
-<div class="shadow-raised p-tall mb-huge bg-secondary">Raised shadow</div>
-<div class="shadow-sticky-default p-tall mb-huge bg-secondary">Sticky default shadow</div>
-<div class="shadow-sticky-emphasized p-tall mb-huge bg-secondary">Sticky emphasized shadow</div>
-<div class="shadow-sticky-navigation-scrolled p-tall mb-huge bg-secondary">Sticky navigation shadow</div>
+<div class="shadow-none p-lg mb-4xl bg-secondary">No shadow</div>
+<div class="shadow-default p-lg mb-4xl bg-secondary">Default shadow</div>
+<div class="shadow-drag p-lg mb-4xl bg-secondary">Drag shadow</div>
+<div class="shadow-emphasized p-lg mb-4xl bg-secondary">Emphasized shadow</div>
+<div class="shadow-raised p-lg mb-4xl bg-secondary">Raised shadow</div>
+<div class="shadow-sticky-default p-lg mb-4xl bg-secondary">Sticky default shadow</div>
+<div class="shadow-sticky-emphasized p-lg mb-4xl bg-secondary">Sticky emphasized shadow</div>
+<div class="shadow-sticky-navigation-scrolled p-lg mb-4xl bg-secondary">Sticky navigation shadow</div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

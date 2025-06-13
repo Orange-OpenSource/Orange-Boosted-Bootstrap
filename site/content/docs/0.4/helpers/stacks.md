@@ -19,10 +19,10 @@ Stacks offer a shortcut for applying a number of flexbox properties to quickly a
 Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
-<div class="vstack gap-tall">
-  <div class="p-short">First item</div>
-  <div class="p-short">Second item</div>
-  <div class="p-short">Third item</div>
+<div class="vstack gap-lg">
+  <div class="p-sm">First item</div>
+  <div class="p-sm">Second item</div>
+  <div class="p-sm">Third item</div>
 </div>
 {{< /example >}}
 
@@ -31,31 +31,31 @@ Use `.vstack` to create vertical layouts. Stacked items are full-width by defaul
 Use `.hstack` for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-tall">
-  <div class="p-short">First item</div>
-  <div class="p-short">Second item</div>
-  <div class="p-short">Third item</div>
+<div class="hstack gap-lg">
+  <div class="p-sm">First item</div>
+  <div class="p-sm">Second item</div>
+  <div class="p-sm">Third item</div>
 </div>
 {{< /example >}}
 
 Using horizontal margin utilities like `.ms-auto` as spacers:
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-tall">
-  <div class="p-short">First item</div>
-  <div class="p-short ms-auto">Second item</div>
-  <div class="p-short">Third item</div>
+<div class="hstack gap-lg">
+  <div class="p-sm">First item</div>
+  <div class="p-sm ms-auto">Second item</div>
+  <div class="p-sm">Third item</div>
 </div>
 {{< /example >}}
 
 And with [vertical rules]({{< docsref "/helpers/divider" >}}):
 
 {{< example class="bd-example-flex" >}}
-<div class="hstack gap-tall">
-  <div class="p-short">First item</div>
-  <div class="p-short ms-auto">Second item</div>
+<div class="hstack gap-lg">
+  <div class="p-sm">First item</div>
+  <div class="p-sm ms-auto">Second item</div>
   <div class="vr"></div>
-  <div class="p-short">Third item</div>
+  <div class="p-sm">Third item</div>
 </div>
 {{< /example >}}
 
@@ -64,7 +64,7 @@ And with [vertical rules]({{< docsref "/helpers/divider" >}}):
 Use `.vstack` to stack buttons and other elements:
 
 {{< example >}}
-<div class="vstack gap-short col-md-5 mx-auto">
+<div class="vstack gap-sm col-md-5 mx-auto">
   <button type="button" class="btn btn-strong">Save changes</button>
   <button type="button" class="btn btn-default">Cancel</button>
 </div>
@@ -73,7 +73,7 @@ Use `.vstack` to stack buttons and other elements:
 Create an inline form with `.hstack`:
 
 {{< example >}}
-<div class="hstack gap-tall">
+<div class="hstack gap-lg">
   <button type="button" class="btn btn-strong">Submit</button>
   <div class="vr"></div>
   <button type="button" class="btn btn-negative">Reset</button>

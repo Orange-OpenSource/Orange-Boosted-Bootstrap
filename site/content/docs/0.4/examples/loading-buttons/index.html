@@ -13,13 +13,13 @@ aliases:
 ---
 
 <main class="container-fluid container-max-width">
-  <h1 class="py-medium">Button loading states</h1>
+  <h1 class="py-md">Button loading states</h1>
 
   <p>Find here some examples of how to implement a live loading button, for an indeterminate or determinate time. These examples are not part of the OUDS Web library and must be adapted to your project. You can find the code below.</p>
 
-  <h2 class="py-short">Indeterminate loading</h2>
+  <h2 class="py-sm">Indeterminate loading</h2>
   <p>For this example, the time is set to 5 seconds by JavaScript, but in a real project, you just need a callback when the action is finished. An update to the status is done every second to let the user know the download is still ongoing. This interval should be adapted to your context. Each time, a dot is added to the message to make sure it will change and then be vocalized by the screen readers.</p>
-  <div class="row py-taller">
+  <div class="row py-xl">
     <div class="col-8">
       <button type="button" class="btn btn-default" id="loading-btn-1">
         Download file 1
@@ -61,9 +61,9 @@ aliases:
     </div>
   </div>
 
-  <h2 class="py-short">Determinate loading</h2>
+  <h2 class="py-sm">Determinate loading</h2>
   <p>If known, the loading time must be set directly on the button, through the CSS variable <code>--btn-loading-time</code>. In this example, it is set to 4s for the 1st button, 6s for the 2nd button, 8s for the 3rd button, and 10s for the 4th button. This value will be used for the icon's animation. An update to the status is done every second, giving the percentage of time that has elapsed. This interval should be adapted to your context.</p>
-  <div class="row py-taller">
+  <div class="row py-xl">
     <div class="col-8">
       <button type="button" class="btn btn-default" id="loading-btn-5" style="--bs-btn-loading-time: 4s;">
         Download file 5

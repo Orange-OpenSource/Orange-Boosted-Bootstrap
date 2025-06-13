@@ -283,40 +283,40 @@
   // OUDS mod
   // scss-docs-start root-space-scaled-var-ouds
   --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-mobile};
-  --#{$prefix}space-scaled-smash: #{$ouds-space-scaled-smash-mobile};
-  --#{$prefix}space-scaled-shortest: #{$ouds-space-scaled-shortest-mobile};
-  --#{$prefix}space-scaled-shorter: #{$ouds-space-scaled-shorter-mobile};
-  --#{$prefix}space-scaled-short: #{$ouds-space-scaled-short-mobile};
-  --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-mobile};
-  --#{$prefix}space-scaled-tall: #{$ouds-space-scaled-tall-mobile};
-  --#{$prefix}space-scaled-taller: #{$ouds-space-scaled-taller-mobile};
-  --#{$prefix}space-scaled-tallest: #{$ouds-space-scaled-tallest-mobile};
-  --#{$prefix}space-scaled-spacious: #{$ouds-space-scaled-spacious-mobile};
+  --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-mobile};
+  --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-mobile};
+  --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-mobile};
+  --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-mobile};
+  --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-mobile};
+  --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-mobile};
+  --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-mobile};
+  --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-mobile};
+  --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-mobile};
 
   @include media-breakpoint-up(md) {
     --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-tablet};
-    --#{$prefix}space-scaled-smash: #{$ouds-space-scaled-smash-tablet};
-    --#{$prefix}space-scaled-shortest: #{$ouds-space-scaled-shortest-tablet};
-    --#{$prefix}space-scaled-shorter: #{$ouds-space-scaled-shorter-tablet};
-    --#{$prefix}space-scaled-short: #{$ouds-space-scaled-short-tablet};
-    --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-tablet};
-    --#{$prefix}space-scaled-tall: #{$ouds-space-scaled-tall-tablet};
-    --#{$prefix}space-scaled-taller: #{$ouds-space-scaled-taller-tablet};
-    --#{$prefix}space-scaled-tallest: #{$ouds-space-scaled-tallest-tablet};
-    --#{$prefix}space-scaled-spacious: #{$ouds-space-scaled-spacious-tablet};
+    --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-tablet};
+    --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-tablet};
+    --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-tablet};
+    --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-tablet};
+    --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-tablet};
+    --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-tablet};
+    --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-tablet};
+    --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-tablet};
+    --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-tablet};
   }
 
   @include media-breakpoint-up(xl) {
     --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-desktop};
-    --#{$prefix}space-scaled-smash: #{$ouds-space-scaled-smash-desktop};
-    --#{$prefix}space-scaled-shortest: #{$ouds-space-scaled-shortest-desktop};
-    --#{$prefix}space-scaled-shorter: #{$ouds-space-scaled-shorter-desktop};
-    --#{$prefix}space-scaled-short: #{$ouds-space-scaled-short-desktop};
-    --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-desktop};
-    --#{$prefix}space-scaled-tall: #{$ouds-space-scaled-tall-desktop};
-    --#{$prefix}space-scaled-taller: #{$ouds-space-scaled-taller-desktop};
-    --#{$prefix}space-scaled-tallest: #{$ouds-space-scaled-tallest-desktop};
-    --#{$prefix}space-scaled-spacious: #{$ouds-space-scaled-spacious-desktop};
+    --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-desktop};
+    --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-desktop};
+    --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-desktop};
+    --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-desktop};
+    --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-desktop};
+    --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-desktop};
+    --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-desktop};
+    --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-desktop};
+    --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-desktop};
   }
   // scss-docs-end root-space-scaled-var-ouds
 

@@ -29,7 +29,7 @@ Most custom components do not have `position: relative` by default, so we need t
 
 {{< example >}}
 <div class="d-flex position-relative">
-  {{< placeholder width="144" height="144" class="flex-shrink-0 me-tall" text="false" title="Generic placeholder image" >}}
+  {{< placeholder width="144" height="144" class="flex-shrink-0 me-lg" text="false" title="Generic placeholder image" >}}
   <div>
     <h5 class="mt-none">Custom component with stretched link</h5>
     <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
@@ -40,10 +40,10 @@ Most custom components do not have `position: relative` by default, so we need t
 
 {{< example >}}
 <div class="row g-none bg-secondary position-relative">
-  <div class="col-md-6 mb-md-none p-md-tallest">
+  <div class="col-md-6 mb-md-none p-md-2xl">
     {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
   </div>
-  <div class="col-md-6 p-tallest ps-md-none">
+  <div class="col-md-6 p-2xl ps-md-none">
     <h5 class="mt-none">Columns with stretched link</h5>
     <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
     <a href="#" class="stretched-link">Go somewhere</a>

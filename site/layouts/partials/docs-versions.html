@@ -18,7 +18,7 @@
   <button class="nav-link nav-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">OUDS Web&nbsp;</span><span class="visually-hidden">OUDS Web&nbsp;</span>v{{ .Site.Params.docs_version }} <span class="visually-hidden">(switch to other versions)</span>
   </button>
-  <ul class="dropdown-menu dropdown-menu-end mb-short mb-lg-none">
+  <ul class="dropdown-menu dropdown-menu-end mb-sm mb-lg-none">
     <li><h6 class="dropdown-header">v0 releases</h6></li>
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="{{ if .IsHome }}/{{ else }}/docs/{{ .Site.Params.docs_version }}/{{ $versions_link }}{{ end }}">

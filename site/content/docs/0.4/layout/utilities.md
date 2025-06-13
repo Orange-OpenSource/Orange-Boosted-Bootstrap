@@ -20,7 +20,7 @@ Should you need to add `display: flex` to an element, do so with `.d-flex` or on
 
 ## Margin and padding
 
-Use the `margin` and `padding` [spacing utilities]({{< docsref "/utilities/spacing" >}}) to control how elements and components are spaced and sized. OUDS Web includes an eleven-level scale for spacing utilities, based on a `4px` value default `$ouds-dimension-base` variable. Choose values for all viewports (e.g., `.me-tall` for `margin-right: 16px` in LTR), or pick responsive variants to target specific viewports (e.g., `.me-md-tall` for `margin-right: 16px` —in LTR— starting at the `md` breakpoint).
+Use the `margin` and `padding` [spacing utilities]({{< docsref "/utilities/spacing" >}}) to control how elements and components are spaced and sized. OUDS Web includes an eleven-level scale for spacing utilities, based on a `4px` value default `$ouds-dimension-base` variable. Choose values for all viewports (e.g., `.me-lg` for `margin-right: 16px` in LTR), or pick responsive variants to target specific viewports (e.g., `.me-md-lg` for `margin-right: 16px` —in LTR— starting at the `md` breakpoint).
 
 ## Toggle `visibility`
 

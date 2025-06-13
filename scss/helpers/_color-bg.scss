@@ -3,10 +3,14 @@
   @each $color, $value in map-remove($utilities-bg-colors, "black", "white", "body") {
     // OUDS mod: Force colors to have a good rendering
     $text-bg-color: var(--#{$prefix}color-content-default);
-    @if index(("danger", "dark"), #{$color}) {
-      $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
-    } @else if index(("success", "info", "warning"), #{$color}) {
-      $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized);
+    @if index(("danger"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-negative-emphasized);
+    } @else if index(("dark"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-neutral-emphasized);
+    } @else if index(("success"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-positive-emphasized);
+    } @else if index(("info", "warning"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-#{$color}-emphasized);
     }
     // End mod
 
@@ -28,12 +32,8 @@
     $text-bg-color: var(--#{$prefix}color-always-on-black);
   } @else if index(("always-white"), #{$color}) {
     $text-bg-color: var(--#{$prefix}color-always-on-white);
-  } @else if index(("status-neutral-emphasized", "status-negative-emphasized"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized-alt);
-  } @else if index(("status-accent-emphasized", "status-positive-emphasized", "status-warning-emphasized", "status-info-emphasized"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-status-emphasized);
-  } @else if index(("status-neutral-muted", "status-accent-muted", "status-positive-muted", "status-negative-muted", "status-warning-muted", "status-info-muted"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-status-muted);
+  } @else if str-index($color, "status-") == 1 {
+    $text-bg-color: var(--#{$prefix}color-content-on-#{$color});
   }
 
   .text-bg-#{$color} {

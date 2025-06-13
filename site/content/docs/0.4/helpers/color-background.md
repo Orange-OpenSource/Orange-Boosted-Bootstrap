@@ -17,25 +17,25 @@ Please consider using our [color modes]({{< docsref "/customize/color-modes" >}}
 {{< /callout >}}
 
 {{< example >}}
-<p class="text-bg-primary p-tall fw-bold">.text-bg-primary</p>
-<p class="text-bg-secondary p-tall fw-bold">.text-bg-secondary</p>
-<p class="text-bg-tertiary p-tall fw-bold">.text-bg-tertiary</p>
-<p class="text-bg-emphasized p-tall fw-bold">.text-bg-emphasized</p>
-<p class="text-bg-brand-primary p-tall fw-bold">.text-bg-brand-primary</p>
-<p class="text-bg-status-neutral-emphasized p-tall fw-bold">.text-bg-status-neutral-emphasized</p>
-<p class="text-bg-status-neutral-muted p-tall fw-bold">.text-bg-status-neutral-muted</p>
-<p class="text-bg-status-accent-emphasized p-tall fw-bold">.text-bg-status-accent-emphasized</p>
-<p class="text-bg-status-accent-muted p-tall fw-bold">.text-bg-status-accent-muted</p>
-<p class="text-bg-status-positive-emphasized p-tall fw-bold">.text-bg-status-positive-emphasized</p>
-<p class="text-bg-status-positive-muted p-tall fw-bold">.text-bg-status-positive-muted</p>
-<p class="text-bg-status-negative-emphasized p-tall fw-bold">.text-bg-status-negative-emphasized</p>
-<p class="text-bg-status-negative-muted p-tall fw-bold">.text-bg-status-negative-muted</p>
-<p class="text-bg-status-warning-emphasized p-tall fw-bold">.text-bg-status-warning-emphasized</p>
-<p class="text-bg-status-warning-muted p-tall fw-bold">.text-bg-status-warning-muted</p>
-<p class="text-bg-status-info-emphasized p-tall fw-bold">.text-bg-status-info-emphasized</p>
-<p class="text-bg-status-info-muted p-tall fw-bold">.text-bg-status-info-muted</p>
-<p class="text-bg-always-black p-tall fw-bold">.text-bg-always-black</p>
-<p class="text-bg-always-white p-tall fw-bold">.text-bg-always-white</p>
+<p class="text-bg-primary p-lg fw-bold">.text-bg-primary</p>
+<p class="text-bg-secondary p-lg fw-bold">.text-bg-secondary</p>
+<p class="text-bg-tertiary p-lg fw-bold">.text-bg-tertiary</p>
+<p class="text-bg-emphasized p-lg fw-bold">.text-bg-emphasized</p>
+<p class="text-bg-brand-primary p-lg fw-bold">.text-bg-brand-primary</p>
+<p class="text-bg-status-neutral-emphasized p-lg fw-bold">.text-bg-status-neutral-emphasized</p>
+<p class="text-bg-status-neutral-muted p-lg fw-bold">.text-bg-status-neutral-muted</p>
+<p class="text-bg-status-accent-emphasized p-lg fw-bold">.text-bg-status-accent-emphasized</p>
+<p class="text-bg-status-accent-muted p-lg fw-bold">.text-bg-status-accent-muted</p>
+<p class="text-bg-status-positive-emphasized p-lg fw-bold">.text-bg-status-positive-emphasized</p>
+<p class="text-bg-status-positive-muted p-lg fw-bold">.text-bg-status-positive-muted</p>
+<p class="text-bg-status-negative-emphasized p-lg fw-bold">.text-bg-status-negative-emphasized</p>
+<p class="text-bg-status-negative-muted p-lg fw-bold">.text-bg-status-negative-muted</p>
+<p class="text-bg-status-warning-emphasized p-lg fw-bold">.text-bg-status-warning-emphasized</p>
+<p class="text-bg-status-warning-muted p-lg fw-bold">.text-bg-status-warning-muted</p>
+<p class="text-bg-status-info-emphasized p-lg fw-bold">.text-bg-status-info-emphasized</p>
+<p class="text-bg-status-info-muted p-lg fw-bold">.text-bg-status-info-muted</p>
+<p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
+<p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>
 {{< /example >}}
 
 {{< callout info >}}
