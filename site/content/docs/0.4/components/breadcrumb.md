@@ -8,6 +8,10 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Breadcrumb design guidelines](https://unified-design-system.orange.com/472794e18/p/775908-breadcrumb).
+{{< /callout >}}
+
 ## Basic example
 
 Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. It is strongly advised to add `title` attributes on each items.
