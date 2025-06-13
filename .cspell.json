@@ -151,16 +151,13 @@
     "walkthroughs",
     "WCAG",
     "whatsapp",
-    "WICG's",
+    "WICG’s",
     "ydette",
     "zindex",
     "بالعالم",
     "مرحبًا"
   ],
   "language": "en-US",
-  "files": [
-    "**/*.md"
-  ],
   "ignorePaths": [
     ".cspell.json",
     "dist/",
