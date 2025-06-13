@@ -337,12 +337,6 @@ CSS variables that are used to build our scaled utilities.
 
 ### Sass tokens
 
-#### Raw tokens
-
-Dimension raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-dimension" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Spacing semantic tokens are defined as Sass variables.

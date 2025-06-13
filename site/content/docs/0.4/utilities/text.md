@@ -236,12 +236,6 @@ Decorate text in components with text decoration classes.
 
 ### Sass tokens
 
-#### Raw tokens
-
-Font raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-font" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Font semantic tokens are defined as Sass variables.
