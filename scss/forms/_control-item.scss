@@ -22,6 +22,11 @@
     box-shadow: none;
   }
 
+  &:has([aria-readonly="true"]),
+  [role="radiogroup"][aria-readonly="true"] & {
+    pointer-events: none;
+  }
+
   // Handle disabled
   &:has(input:disabled) {
     pointer-events: none;
@@ -39,29 +44,27 @@
   }
 
   // Handle invalid state
-  // stylelint-disable-next-line selector-no-qualifying-type
+  // stylelint-disable selector-no-qualifying-type
   .was-validated &:has(input:invalid),
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:hover),
   &:has(input.is-invalid:hover) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:focus-visible),
   &:has(input.is-invalid:focus-visible) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:active),
   &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
+  // stylelint-enable selector-no-qualifying-type
 }
 
 
@@ -88,8 +91,8 @@
 
 .control-item-text-container {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   row-gap: $ouds-control-item-space-row-gap;
   justify-content: center;
 }
@@ -101,6 +104,7 @@
 
 // Label
 .control-item-label {
+  margin: 0;
   color: var(--#{$prefix}control-item-label-color, $ouds-color-content-default);
   cursor: $form-check-label-cursor;
   @include get-font-size("label-large");
@@ -127,6 +131,7 @@
 .control-item-indicator {
   --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-unselected)};
   --#{$prefix}control-item-indicator-color: #{$ouds-color-border-emphasized};
+  --#{$prefix}checkbox-check-icon: #{escape-svg($form-check-input-checked-bg-image)};
 
   position: relative;
   flex-shrink: 0;
@@ -157,20 +162,42 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-selected};
   }
 
-  &[type="checkbox"] {
+  &[type="checkbox"],
+  &[role="checkbox"] {
     @include border-radius($form-check-input-border-radius);
   }
 
-  &[type="radio"] {
+  // stylelint-disable selector-max-attribute
+  &[type="radio"],
+  [role="radiogroup"] &[role="radio"]  {
     @include border-radius($form-check-radio-border-radius);
   }
 
-  &:indeterminate[type="checkbox"] {
+  &:indeterminate[type="checkbox"],
+  &[role="checkbox"][aria-checked="mixed"] {
     --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
 
     &::before {
       background-color: currentcolor;
       mask-image: escape-svg($form-check-input-indeterminate-bg-image);
+    }
+  }
+
+  &[role="checkbox"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
+
+    &::before {
+      background-color: currentcolor;
+      mask-image: var(--#{$prefix}checkbox-check-icon);
+    }
+  }
+
+  [role="radiogroup"] &[role="radio"][aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-radio-checked-bg-image);
     }
   }
 
@@ -181,13 +208,15 @@
 
     &[type="checkbox"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected)};
+
       &::before {
-        mask-image: escape-svg($form-check-input-checked-bg-image);
+        mask-image: var(--#{$prefix}checkbox-check-icon);
       }
     }
 
     &[type="radio"] {
       --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+
       &::before {
         mask-image: escape-svg($form-check-radio-checked-bg-image);
       }
@@ -204,11 +233,13 @@
     }
 
     &:focus-visible {
-      &[type="checkbox"] {
+      &[type="checkbox"],
+      &[role="checkbox"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
 
-      &[type="radio"] {
+      &[type="radio"],
+      [role="radiogroup"] &[role="radio"]{
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
       }
     }
@@ -259,10 +290,13 @@
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &[role="checkbox"][aria-readonly="true"],
+  [role="radiogroup"][aria-readonly="true"] &[role="radio"] {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
   }
+  // stylelint-enable selector-max-attribute
 }
 
 
@@ -301,7 +335,8 @@
   border: 0;
   @include border-radius($ouds-switch-border-radius, $ouds-switch-border-radius);
 
-  &[type="checkbox"]::before {
+  &[type="checkbox"]::before,
+  &[aria-readonly="true"]::before {
     position: absolute;
     top: 50%;
     left: $ouds-switch-space-padding-inline-unselected;
@@ -327,11 +362,14 @@
     width: $ouds-switch-size-width-cursor-unselected-pressed;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-readonly="true"] {
     background-color: $ouds-color-action-disabled;
   }
 
-  &:checked {
+  // stylelint-disable selector-max-attribute
+  &:checked,
+  &[aria-readonly="true"][aria-checked="true"] {
     background-color: $ouds-switch-color-track-selected;
 
     &::before {
@@ -370,13 +408,15 @@
       width: $ouds-switch-size-width-cursor-selected-pressed;
     }
 
-    &:disabled {
+    &:disabled,
+    &[aria-readonly="true"] {
       background-color: $ouds-color-action-disabled;
 
       &::after {
         background-color: $ouds-color-action-disabled;
       }
     }
+    // stylelint-enable selector-max-attribute
   }
 }
 
@@ -448,29 +488,27 @@
       border-color: $ouds-color-action-pressed;
     }
 
-    // stylelint-disable-next-line selector-no-qualifying-type
+    // stylelint-disable selector-no-qualifying-type
     .was-validated &:has(input:invalid),
     &:has(input.is-invalid) {
       border-color: $ouds-color-action-negative-enabled;
     }
 
-    // stylelint-disable-next-line selector-no-qualifying-type
     .was-validated &:has(input:invalid:hover),
     &:has(input.is-invalid:hover) {
       border-color: $ouds-color-action-negative-hover;
     }
 
-    // stylelint-disable-next-line selector-no-qualifying-type
     .was-validated &:has(input:invalid:focus-visible),
     &:has(input.is-invalid:focus-visible) {
       border-color: $ouds-color-action-negative-focus;
     }
 
-    // stylelint-disable-next-line selector-no-qualifying-type
     .was-validated &:has(input:invalid:active),
     &:has(input.is-invalid:active) {
       border-color: $ouds-color-action-negative-pressed;
     }
+    // stylelint-enable selector-no-qualifying-type
   }
 
   &:hover {
@@ -481,23 +519,22 @@
     border-color: $ouds-color-action-pressed;
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
+  // stylelint-disable selector-no-qualifying-type
   .was-validated &:has(input:invalid:hover),
   &:has(input.is-invalid:hover) {
     border-color: $ouds-color-action-negative-hover;
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:focus-visible),
   &:has(input.is-invalid:focus-visible) {
     border-color: $ouds-color-action-negative-focus;
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   .was-validated &:has(input:invalid:active),
   &:has(input.is-invalid:active) {
     border-color: $ouds-color-action-negative-pressed;
   }
+  // stylelint-enable selector-no-qualifying-type
 
   &:has(input:focus-visible) {
     padding: $ouds-control-item-space-inset;

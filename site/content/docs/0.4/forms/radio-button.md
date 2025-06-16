@@ -276,7 +276,30 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
-<!-- TODO: Introduce Readonly ? -->
+### Read only
+
+To create a read only radio button the input should be replaced by a `span` element with `role="radio"` and `aria-disabled` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes, this is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
+
+{{< example stackblitz_add_js="true" >}}
+<div role="radiogroup" aria-readonly="true">
+  <div class="radio-button-item">
+    <div class="control-item-assets-container">
+      <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel"></span>
+    </div>
+    <div class="control-item-text-container">
+      <p class="control-item-label" id="radioReadonlyLabel">Label</p>
+    </div>
+  </div>
+  <div class="radio-button-item">
+    <div class="control-item-assets-container">
+      <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
+    </div>
+    <div class="control-item-text-container">
+      <p class="control-item-label" id="radioReadonlyCheckedLabel">Label</p>
+    </div>
+  </div>
+</div>
+{{< /example >}}
 
 ### Invalid
 
@@ -306,7 +329,7 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 {{< /example >}}
 
 {{< bootstrap-compatibility false >}}
-{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="form-check">
   <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap">
   <label class="form-check-label" for="radioInvalidBootstrap">

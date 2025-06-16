@@ -46,7 +46,7 @@
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn:not(.btn-toggle),
   > .btn-group:not(:first-child) {
-    margin-left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 
@@ -119,9 +119,9 @@
 
       &::before {
         position: absolute;
-        top: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
-        bottom: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
-        left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
+        top: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
+        bottom: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
+        left: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
         width: $btn-border-width;
         color: inherit;
         content: "";
@@ -192,7 +192,7 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(-1 * #{$btn-border-width}); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners

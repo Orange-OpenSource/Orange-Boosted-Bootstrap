@@ -1,51 +1,92 @@
 .breadcrumb {
   // scss-docs-start breadcrumb-css-vars
-  --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
-  --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
-  --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
-  @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
-  --#{$prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight}; // OUDS mod
-  --#{$prefix}breadcrumb-color: #{$breadcrumb-color}; // OUDS mod
-  --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
-  --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
+  // OUDS mod: no breadcrumb-color, breadcrumb-padding-x, breadcrumb-padding-y, breadcrumb-margin-bottom, breadcrumb-font-size, breadcrumb-font-weight, breadcrumb-bg, breadcrumb-border-radius, breadcrumb-divider-color, breadcrumb-item-padding-x, breadcrumb-item-active-color
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
-  --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
-  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
+
+  // Additional OUDS variables
+  --#{$prefix}breadcrumb-divider: #{escape-svg($breadcrumb-divider) "/* rtl:"escape-svg($breadcrumb-divider-flipped) "*/"};
+  --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
+  --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
+  // End mod
   // scss-docs-end breadcrumb-css-vars
 
   display: flex;
-  flex-wrap: wrap;
-  padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
-  margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
-  @include font-size(var(--#{$prefix}breadcrumb-font-size));
-  font-weight: var(--#{$prefix}breadcrumb-font-weight); // OUDS mod
-  color: var(--#{$prefix}breadcrumb-color); // OUDS mod
+  padding: 0;
   list-style: none;
-  background-color: var(--#{$prefix}breadcrumb-bg);
-  @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
+  @include get-font-size("label-medium");
 }
 
 .breadcrumb-item {
-  // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
-    padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
+  display: none;
+  align-items: center;
+  min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
+  padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
+  overflow: hidden;
+  white-space: nowrap;
 
-    &::before {
-      float: left; // Suppress inline spacings and underlining of the separator
-      padding-right: var(--#{$prefix}breadcrumb-item-padding-x) #{"/* rtl:ignore */"}; // OUDS mod
-      color: var(--#{$prefix}breadcrumb-divider-color);
-      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
-      // OUDS mod
+  // The separator between breadcrumbs
+  &::after {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: $ouds-breadcrumb-size-icon;
+    height: $ouds-breadcrumb-size-icon;
+    margin-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+    color: var(--#{$prefix}breadcrumb-divider-color);
+    content: "";
+    background-color: currentcolor;
+    mask-image: var(--#{$prefix}breadcrumb-divider);
 
-      /* rtl:raw:
-      transform: scaleX(-1);
-      */
-      filter: var(--#{$prefix}breadcrumb-divider-filter);
-      // End mod
-    }
+    /* rtl:raw:
+    transform: scaleX(-1);
+    */
+    // End mod
+  }
+
+  a {
+    @extend %link-properties;
+    display: inline-block;
+    padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &.active {
+    font-weight: $ouds-font-weight-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    display: inline-flex;
+  }
+
+  &:nth-last-child(2) {
+    flex-shrink: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:nth-last-child(-n + 3) {
+      display: inline-flex;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &:nth-last-child(-n + 4) {
+      display: inline-flex;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: inline-flex;
+  }
+
+  &:last-child {
+    &::after {
+      content: none;
+    }
   }
 }

@@ -9,6 +9,22 @@ aliases:
 toc: true
 ---
 
+## v0.5.0
+
+<hr>
+
+### Forms
+
+#### Checkboxes, radio buttons, switches
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Read only state has been implemented.
+
+### Components
+
+#### Breadcrumb
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Breadcrumb component has been implemented.
+
 ## v0.4.1
 
 <hr>
@@ -86,13 +102,13 @@ toc: true
 
 #### Reboot
 
-- <span class="badge text-bg-success">New</span> Default link styles has been updated.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Default link styles has been updated.
 
 ### Components
 
 #### Links
 
-- <span class="badge text-bg-success">New</span> Link component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Link component has been implemented.
 
 ### Helpers
 
