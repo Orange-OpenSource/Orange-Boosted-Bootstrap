@@ -24,7 +24,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
   </ol>
 </nav>
 
-<nav aria-label="full breadcrumb ">
+<nav aria-label="full breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
     <li class="breadcrumb-item"><a href="#" title="Category 1">Category 1</a></li>
@@ -44,7 +44,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb bs l2">
+<nav aria-label="breadcrumb bs l3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
