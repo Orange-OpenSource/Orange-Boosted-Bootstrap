@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.5 (https://boosted.orange.com/)
+  * Boosted v5.3.6 (https://boosted.orange.com/)
   * Copyright 2015-2025 The Boosted Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap collapse.js v5.3.5 (https://boosted.orange.com/)
+  * Bootstrap collapse.js v5.3.6 (https://boosted.orange.com/)
   * Copyright 2011-2025 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -172,11 +172,11 @@
       this._element.style[dimension] = '';
       this._queueCallback(complete, this._element, true);
     }
+
+    // Private
     _isShown(element = this._element) {
       return element.classList.contains(CLASS_NAME_SHOW);
     }
-
-    // Private
     _configAfterMerge(config) {
       config.toggle = Boolean(config.toggle); // Coerce string values
       config.parent = index_js.getElement(config.parent);
