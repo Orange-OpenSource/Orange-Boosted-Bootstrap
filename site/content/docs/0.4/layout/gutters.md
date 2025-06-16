@@ -182,5 +182,3 @@ Classes are built from the `$gutters` Sass map which is inherited from the `$oud
 {{< scss-docs name="ouds-maps-dimension-fixed" file="scss/_maps.scss" >}}
 
 {{< scss-docs name="ouds-semantic-space" file="scss/tokens/_semantic.scss" >}}
-
-{{< scss-docs name="ouds-raw-dimension" file="scss/tokens/_raw.scss" >}}
