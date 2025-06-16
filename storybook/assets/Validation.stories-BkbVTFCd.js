@@ -236,7 +236,7 @@ const f={title:"Components/Validation",parameters:{docs:{toc:!0}}},e=()=>`<div c
       <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
         <span class="visually-hidden">Step down</span>
       </button>
-      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up" disabled="">
         <span class="visually-hidden">Step up</span>
       </button>
       <div class="invalid-feedback">Please enter a valid number.</div>
@@ -490,7 +490,7 @@ const f={title:"Components/Validation",parameters:{docs:{toc:!0}}},e=()=>`<div c
       <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
         <span class="visually-hidden">Step down</span>
       </button>
-      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up" disabled="">
         <span class="visually-hidden">Step up</span>
       </button>
       <div class="invalid-feedback">Please enter a valid number.</div>

@@ -2,7 +2,7 @@ const b={title:"Components/QuantitySelector",parameters:{docs:{toc:!0}}},t=()=>`
     
 <div class="quantity-selector">
   <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+  <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down" disabled="">
     <span class="visually-hidden">Step down</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
@@ -18,7 +18,7 @@ const b={title:"Components/QuantitySelector",parameters:{docs:{toc:!0}}},t=()=>`
     
 <div class="quantity-selector quantity-selector-sm">
   <input type="number" id="inputQuantitySelectorSm" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down">
+  <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down" disabled="">
     <span class="visually-hidden">Step down</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="up">
@@ -50,7 +50,7 @@ const b={title:"Components/QuantitySelector",parameters:{docs:{toc:!0}}},t=()=>`
     
 <div class="quantity-selector">
   <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+  <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down" disabled="">
     <span class="visually-hidden">Step down</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
@@ -62,11 +62,11 @@ const b={title:"Components/QuantitySelector",parameters:{docs:{toc:!0}}},t=()=>`
 <script type="text/javascript">
   /* global boosted: false */
   document.querySelectorAll('[href]').forEach(link => {link.addEventListener('click', event => {event.preventDefault()})})
-<\/script>\``,...(i=(s=t.parameters)==null?void 0:s.docs)==null?void 0:i.source}}};var r,o,l;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
+<\/script>\``,...(i=(s=t.parameters)==null?void 0:s.docs)==null?void 0:i.source}}};var r,l,o;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
 <div class="quantity-selector quantity-selector-sm">
   <input type="number" id="inputQuantitySelectorSm" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down">
+  <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down" disabled="">
     <span class="visually-hidden">Step down</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="up">
@@ -78,7 +78,7 @@ const b={title:"Components/QuantitySelector",parameters:{docs:{toc:!0}}},t=()=>`
 <script type="text/javascript">
   /* global boosted: false */
   document.querySelectorAll('[href]').forEach(link => {link.addEventListener('click', event => {event.preventDefault()})})
-<\/script>\``,...(l=(o=e.parameters)==null?void 0:o.docs)==null?void 0:l.source}}};var d,c,u;n.parameters={...n.parameters,docs:{...(d=n.parameters)==null?void 0:d.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
+<\/script>\``,...(o=(l=e.parameters)==null?void 0:l.docs)==null?void 0:o.source}}};var d,c,u;n.parameters={...n.parameters,docs:{...(d=n.parameters)==null?void 0:d.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
 <div class="quantity-selector">
   <input type="number" id="inputQuantitySelectorDisabled" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled="">
