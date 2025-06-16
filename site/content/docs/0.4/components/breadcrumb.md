@@ -24,7 +24,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
   </ol>
 </nav>
 
-<nav aria-label="full breadcrumb ">
+<nav aria-label="full breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#" title="Home">Home</a></li>
     <li class="breadcrumb-item"><a href="#" title="Category 1">Category 1</a></li>
@@ -37,29 +37,32 @@ Use an ordered or unordered list with linked list items to create a minimally st
 
 {{< bootstrap-compatibility false >}}
 {{< example >}}
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb bs l2">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
-  </ol>
-</nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Library</li>
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb bs l3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Item</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb bs l4">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive</a></li>
+    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive 1</a></li>
+    <li class="breadcrumb-item"><a href="#">Very long subcategory to test responsive A</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Very long page to show off responsiveness behavior</li>
   </ol>
 </nav>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
-
 
 ## Behavior on smaller viewports
 
