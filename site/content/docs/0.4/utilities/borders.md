@@ -214,16 +214,6 @@ This utility must not be used in any other context than drag and drop.
 
 ### Sass tokens
 
-#### Raw tokens
-
-Border raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-border" file="scss/tokens/_raw.scss" >}}
-
-Colors raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Border semantic tokens are defined as Sass variables.

@@ -375,12 +375,6 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 
 ### Sass tokens
 
-#### Raw tokens
-
-Font raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-font" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Font semantic tokens are defined as Sass variables.

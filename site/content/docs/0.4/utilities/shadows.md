@@ -45,12 +45,6 @@ Includes support for three default sizes (which have associated variables to mat
 
 ### Sass tokens
 
-#### Raw tokens
-
-Shadow raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-elevation" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Shadow semantic tokens as Sass variables.

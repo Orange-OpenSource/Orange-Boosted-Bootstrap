@@ -202,12 +202,6 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
 
 ### Sass tokens
 
-#### Raw tokens
-
-Colors raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
-
 #### Semantic tokens
 
 Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
