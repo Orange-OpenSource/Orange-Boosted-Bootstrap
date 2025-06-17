@@ -31,8 +31,14 @@
 // Variations
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
-    --bd-callout-color: var(--#{$prefix}color-content-on-status-muted); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
-    --bd-callout-bg: var(--#{$prefix}color-surface-status-#{if($variant == "danger", negative, $variant)}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
+    $name: $variant;
+    @if ($variant == "danger") {
+      $name: "negative";
+    } @else if ($variant == "success") {
+      $name: "positive";
+    }
+    --bd-callout-color: var(--#{$prefix}color-content-on-status-#{$name}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-text-emphasis)`
+    --bd-callout-bg: var(--#{$prefix}color-surface-status-#{$name}-muted); // OUDS mod: instead of `var(--bs-#{$variant}-bg-subtle)`
     // OUDS mod: no --bd-callout-border
   }
 }

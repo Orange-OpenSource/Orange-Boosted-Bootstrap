@@ -3,16 +3,16 @@
 
   <!-- OUDS mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1" id="content">
-    <div class="title-bar mb-short mb-md-none">
+    <div class="title-bar mb-sm mb-md-none">
       <div class="container-fluid container-max-width">
         <h1 class="display-large">{{ .Title | markdownify }}</h1>
       </div>
     </div>
-    <div class="pb-tallest pb-md-short">
-      <div class="container-fluid container-max-width bd-gutter pt-md-short pb-md-tallest">
+    <div class="pb-2xl pb-md-sm">
+      <div class="container-fluid container-max-width bd-gutter pt-md-sm pb-md-2xl">
         <div class="row">
           <div class="col-12">
-            <p class="ll-sm h3 mb-tallest">{{ .Page.Params.Description | markdownify }}</p>
+            <p class="ll-sm h3 mb-2xl">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" -}}
             <div class="d-flex flex-column flex-sm-row">
               <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-strong">
@@ -21,7 +21,7 @@
                 </svg>
                 Download examples
               </a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-default mt-tall mt-sm-none ms-sm-tall">
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-default mt-lg mt-sm-none ms-sm-lg">
                 Download source code
               </a>
             </div>

@@ -35,9 +35,9 @@
 
   <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <!-- OUDS mod: added `.border-thin.border-default` -->
-    <div class="d-flex align-items-center highlight-toolbar ps-tall border-bottom border-thin border-default">
+    <div class="d-flex align-items-center highlight-toolbar ps-lg border-bottom border-thin border-default">
       <!-- OUDS mod: added `me-huge` -->
-      <a class="me-huge font-monospace small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
+      <a class="me-4xl font-monospace small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
         {{- $file -}}
       </a>
     </div>
@@ -68,7 +68,7 @@
     <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order and add a condition -->
     {{- if not $example -}}
     <div class="position-absolute top-0 end-0">
-      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy code to clipboard">
+      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" aria-label="Copy code to clipboard">
         <svg aria-hidden="true"><use xlink:href="#copy"/></svg>
       </button>
     </div>

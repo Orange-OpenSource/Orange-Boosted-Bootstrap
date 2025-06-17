@@ -5,7 +5,7 @@
 .bd-code-snippet {
   display: flex; // OUDS mod
   flex-direction: column; // OUDS mod
-  margin-bottom: var(--bs-space-scaled-shorter); // OUDS mod: instead of `margin: 0 ($bd-gutter-x * -.5) 1rem`
+  margin-bottom: var(--bs-space-scaled-xs); // OUDS mod: instead of `margin: 0 ($bd-gutter-x * -.5) 1rem`
   border: solid var(--bs-color-border-default); // OUDS mod: instead of `var(--bs-border-color)`
   border-width: 1px; // OUDs mod: instead of `border-width: 1px 0`
 
@@ -171,7 +171,7 @@
 }
 
 .bd-example-spacings div {
-  padding: $ouds-space-fixed-short;
+  padding: $ouds-space-fixed-sm;
   background-color: rgba(var(--bd-primary-light-rgb), .15);
   border: 1px solid rgba(var(--bd-primary-light-rgb), .3);
 }
@@ -492,13 +492,13 @@
 .double-figure-svg {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white 50%, $ouds-color-functional-dark-gray-880 50%, $ouds-color-functional-dark-gray-880 100%);
+  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white 50%, $core-ouds-color-functional-gray-dark-880 50%, $core-ouds-color-functional-gray-dark-880 100%);
 }
 
 .double-figure {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient(to bottom, $ouds-color-functional-white, $ouds-color-functional-white calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc((100% - 1.875rem) * .5), $ouds-color-functional-dark-gray-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
+  background: linear-gradient(to bottom, $core-ouds-color-functional-white, $core-ouds-color-functional-white calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc((100% - 1.875rem) * .5), $core-ouds-color-functional-gray-dark-880 calc(100% - 1.875rem), transparent calc(100% - 1.875rem)); // stylelint-disable-line function-disallowed-list
 
   figcaption {
     height: 1.875rem;

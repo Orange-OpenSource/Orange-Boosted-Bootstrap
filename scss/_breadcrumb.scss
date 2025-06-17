@@ -50,7 +50,7 @@
   }
 
   &.active {
-    font-weight: $ouds-font-weight-body-default;
+    font-weight: $ouds-font-weight-web-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
     span {
