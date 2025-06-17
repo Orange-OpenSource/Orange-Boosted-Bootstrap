@@ -49,6 +49,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 {{< bs-table >}}
 | Color utility | Color CSS variable | Context of use |
 | --- | --- | --- |
+| `.text-status-accent` | `--bs-color-content-status-accent` | Used to highlight or draw attention to a specific element. |
 | `.text-status-info` | `--bs-color-content-status-info` | Use to communicate a feedback. It's more important than a neutral color. |
 | `.text-status-positive` | `--bs-color-content-status-positive` | Use to communicate a positive action, a confirmation or a positive feedback. |
 | `.text-status-warning` | `--bs-color-content-status-warning` | Use to display an information that requires more attention, or an action from the user. |
@@ -58,6 +59,11 @@ Here are [the normal contexts of use of these functional colors](https://unified
 {{< example >}}
 <div class="d-flex justify-content-center gap-md-lg">
   <div class="p-md bg-primary border border-default" data-bs-theme="light">
+    <p>
+      <svg class="text-status-accent decorative-sm-icon" aria-hidden="true">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg> Accent
+    </p>
     <p>
       <svg class="text-status-info decorative-sm-icon" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
@@ -80,6 +86,11 @@ Here are [the normal contexts of use of these functional colors](https://unified
     </p>
   </div>
   <div class="p-md bg-emphasized border border-default" data-bs-theme="dark">
+    <p>
+      <svg class="text-status-accent decorative-sm-icon" aria-hidden="true">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg> Accent
+    </p>
     <p>
       <svg class="decorative-sm-icon" style="color: var(--bs-color-content-status-info)" aria-hidden="true">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/ouds-web-sprite.svg#info"/>
