@@ -29,18 +29,27 @@ Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most o
 Here are some compliant combinations examples for texts:
 
 {{< example >}}
-<p class="text-brand-primary p-short">Text brand-primary</p>
-<p class="text-default p-short">Text default</p>
-<p class="text-muted p-short">Text muted</p>
-<p class="text-disabled p-short">Text disabled</p>
-<p class="text-always-black p-short">Text always-black</p>
-<p class="text-always-white p-short">Text always-white</p>
-<p class="text-on-brand-primary bg-brand-primary p-short">Text on-brand-primary</p>
-<p class="text-on-status-emphasized bg-status-info-emphasized p-short">Text on-status-emphasized</p>
-<p class="text-on-status-emphasized-alt bg-status-neutral-emphasized p-short">Text on-status-emphasized-alt</p>
-<p class="text-on-status-muted bg-status-info-muted p-short">Text on-status-muted</p>
-<p class="text-always-on-black bg-always-black p-short">Text always-on-black</p>
-<p class="text-always-on-white bg-always-white p-short">Text always-on-white</p>
+<p class="text-brand-primary p-sm">Text brand-primary</p>
+<p class="text-default p-sm">Text default</p>
+<p class="text-muted p-sm">Text muted</p>
+<p class="text-disabled p-sm">Text disabled</p>
+<p class="text-always-black p-sm">Text always-black</p>
+<p class="text-always-white p-sm">Text always-white</p>
+<p class="text-on-brand-primary bg-brand-primary p-sm">Text on-brand-primary</p>
+<p class="text-on-status-accent-emphasized bg-status-accent-emphasized p-sm">Text on-status-accent-emphasized</p>
+<p class="text-on-status-accent-muted bg-status-accent-muted p-sm">Text on-status-accent-muted</p>
+<p class="text-on-status-info-emphasized bg-status-info-emphasized p-sm">Text on-status-info-emphasized</p>
+<p class="text-on-status-info-muted bg-status-info-muted p-sm">Text on-status-info-muted</p>
+<p class="text-on-status-negative-emphasized bg-status-negative-emphasized p-sm">Text on-status-negative-emphasized</p>
+<p class="text-on-status-negative-muted bg-status-negative-muted p-sm">Text on-status-negative-muted</p>
+<p class="text-on-status-neutral-emphasized bg-status-neutral-emphasized p-sm">Text on-status-neutral-emphasized</p>
+<p class="text-on-status-neutral-muted bg-status-neutral-muted p-sm">Text on-status-neutral-muted</p>
+<p class="text-on-status-positive-emphasized bg-status-positive-emphasized p-sm">Text on-status-positive-emphasized</p>
+<p class="text-on-status-positive-muted bg-status-positive-muted p-sm">Text on-status-positive-muted</p>
+<p class="text-on-status-warning-emphasized bg-status-warning-emphasized p-sm">Text on-status-warning-emphasized</p>
+<p class="text-on-status-warning-muted bg-status-warning-muted p-sm">Text on-status-warning-muted</p>
+<p class="text-always-on-black bg-always-black p-sm">Text always-on-black</p>
+<p class="text-always-on-white bg-always-white p-sm">Text always-on-white</p>
 {{< /example >}}
 
 {{< callout info >}}
@@ -63,9 +72,18 @@ In the following table we assume that the context is switching between light and
 | `.text-always-black` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
 | `.text-always-white` | `.bg-emphasized`, `.bg-always-black` | — |
 | `.text-on-brand-primary` | `.bg-brand-primary` | — |
-| `.text-on-status-emphasized` | `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized` | — |
-| `.text-on-status-emphasized-alt` | `.bg-status-neutral-emphasized`, `.bg-status-negative-emphasized` | — |
-| `.text-on-status-muted` | `.bg-status-neutral-muted`, `.bg-status-accent-muted`, `.bg-status-positive-muted`, `.bg-status-negative-muted`, `.bg-status-warning-muted`, `.bg-status-info-muted` | — |
+| `.text-on-status-accent-emphasized` | `.bg-status-accent-emphasized` | — |
+| `.text-on-status-accent-muted` | `.bg-status-accent-muted` | — |
+| `.text-on-status-info-emphasized` | `.bg-status-info-emphasized` | — |
+| `.text-on-status-info-muted` | `.bg-status-info-muted` | — |
+| `.text-on-status-negative-emphasized` | `.bg-status-negative-emphasized` | — |
+| `.text-on-status-negative-muted` | `.bg-status-negative-muted` | — |
+| `.text-on-status-neutral-emphasized` | `.bg-status-neutral-emphasized` | — |
+| `.text-on-status-neutral-muted` | `.bg-status-neutral-muted` | — |
+| `.text-on-status-positive-emphasized` | `.bg-status-positive-emphasized` | — |
+| `.text-on-status-positive-muted` | `.bg-status-positive-muted` | — |
+| `.text-on-status-warning-emphasized` | `.bg-status-warning-emphasized` | — |
+| `.text-on-status-warning-muted` | `.bg-status-warning-muted` | — |
 | `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | — |
 | `.text-always-on-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
 {{< /bs-table >}}
@@ -108,12 +126,6 @@ Sometimes contextual classes cannot be applied due to the specificity of another
 ## CSS
 
 ### Sass tokens
-
-#### Raw tokens
-
-Colors raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
 
 #### Semantic tokens
 

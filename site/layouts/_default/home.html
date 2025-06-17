@@ -1,10 +1,10 @@
 {{ define "main" }}
   <main>
     {{ partial "home/masthead" . }}
-    <div class="container-fluid container-max-width pt-scaled-medium pb-scaled-spacious bd-masthead-followup">
-      <p class="mb-scaled-medium d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
-        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-medium bd-tag">New in v0.4</a>
-        <span class="lead mt-scaled-short m-md-none">Control item, Divider, icons page, and many more</span>
+    <div class="container-fluid container-max-width pt-scaled-md pb-scaled-3xl bd-masthead-followup">
+      <p class="mb-scaled-md d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
+        <a href="/docs/{{ .Site.Params.docs_version }}/migration" class="tag me-md bd-tag">New in v0.4</a>
+        <span class="lead mt-scaled-sm m-md-none">Control item, Divider, icons page, and many more</span>
       </p>
       {{ partial "home/get-started" . }}
       {{ partial "home/customize" . }}

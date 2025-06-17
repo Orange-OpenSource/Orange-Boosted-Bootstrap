@@ -10,13 +10,17 @@ aliases:
 toc: true
 ---
 
+{{< callout info >}}
+You can find here the [OUDS Divider design guidelines](https://unified-design-system.orange.com/472794e18/p/629e1b-divider).
+{{< /callout >}}
+
 ## Horizontal rules
 
 Horizontal rules should use the `<hr>` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]({{< docsref "/utilities/borders" >}}), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
 
 {{< example >}}
 <hr>
-<div class="border-top border-default my-medium"></div>
+<div class="border-top border-default my-md"></div>
 {{< /example >}}
 
 ## Vertical rules
@@ -49,11 +53,11 @@ Change the divider color using the [border color utilities]({{< docsref "/utilit
 <hr class="border-muted">
 <hr class="border-emphasized">
 <hr class="border-brand-primary">
-<div data-bs-theme="light" class="bg-brand-primary py-shortest"><hr class="border-on-brand-primary"></div>
-<div data-bs-theme="light" class="bg-always-white py-shortest"><hr class="border-always-black"></div>
-<div data-bs-theme="dark" class="bg-always-black py-shortest"><hr class="border-always-white"></div>
-<div data-bs-theme="dark" class="bg-always-black py-shortest"><hr class="border-always-on-black"></div>
-<div data-bs-theme="light" class="bg-always-white py-shortest"><hr class="border-always-on-white"></div>
+<div data-bs-theme="light" class="bg-brand-primary py-2xs"><hr class="border-on-brand-primary"></div>
+<div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-black"></div>
+<div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-white"></div>
+<div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-on-black"></div>
+<div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-on-white"></div>
 {{< /example >}}
 
 {{< example class="d-flex gap-1" >}}
@@ -61,10 +65,10 @@ Change the divider color using the [border color utilities]({{< docsref "/utilit
 <div class="vr border-emphasized"></div>
 <div class="vr border-brand-primary"></div>
 <div data-bs-theme="light" class="d-flex bg-brand-primary"><div class="vr border-on-brand-primary"></div></div>
-<div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-black"></div></div>
-<div data-bs-theme="dark" class="d-flex bg-always-black px-shortest"><div class="vr border-always-white"></div></div>
-<div data-bs-theme="dark" class="d-flex bg-always-black px-shortest"><div class="vr border-always-on-black"></div></div>
-<div data-bs-theme="light" class="d-flex bg-always-white px-shortest"><div class="vr border-always-on-white"></div></div>
+<div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-black"></div></div>
+<div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-white"></div></div>
+<div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-on-black"></div></div>
+<div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-on-white"></div></div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}

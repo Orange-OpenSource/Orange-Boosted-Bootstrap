@@ -21,6 +21,7 @@
   align-items: center;
   min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
   padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
+  white-space: nowrap;
 
   // The separator between breadcrumbs
   &::after {
@@ -46,17 +47,15 @@
     padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   &.active {
-    font-weight: $ouds-font-weight-body-default;
+    font-weight: $ouds-font-weight-web-body-default;
     color: var(--#{$prefix}breadcrumb-item-active-color);
 
     span {
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
@@ -85,6 +84,8 @@
   }
 
   &:last-child {
+    overflow: hidden;
+
     &::after {
       content: none;
     }

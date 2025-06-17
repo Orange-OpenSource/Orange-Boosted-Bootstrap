@@ -1,457 +1,459 @@
 // Raw primitive values
 // Insertion of brand foundations
-// Token version 0.11.0
+// Token version 1.1.0
 
 // Border
 
 // scss-docs-start ouds-raw-border
-$ouds-border-base: 4px !default;
-$ouds-border-radius-9999: 2000px !default;
-$ouds-border-style-dashed: dashed !default;
-// $ouds-border-style-dotted: dotted !default;
-// $ouds-border-style-none: none !default;
-$ouds-border-style-solid: solid !default;
-$ouds-border-radius-0: $ouds-border-base * 0 !default; // 0
-// $ouds-border-radius-25: $ouds-border-base * .25 !default; // 1
-// $ouds-border-radius-50: $ouds-border-base * .5 !default; // 2
-$ouds-border-radius-75: $ouds-border-base * .75 !default; // 3
-// $ouds-border-radius-100: $ouds-border-base * 1 !default; // 4
-$ouds-border-radius-150: $ouds-border-base * 1.5 !default; // 6
-// $ouds-border-radius-200: $ouds-border-base * 2 !default; // 8
-$ouds-border-radius-300: $ouds-border-base * 3 !default; // 12
-// $ouds-border-radius-400: $ouds-border-base * 4 !default; // 16
-// $ouds-border-radius-500: $ouds-border-base * 5 !default; // 20
-// $ouds-border-radius-600: $ouds-border-base * 6 !default; // 24
-// $ouds-border-radius-800: $ouds-border-base * 8 !default; // 32
-$ouds-border-width-0: $ouds-border-base * 0 !default; // 0
-$ouds-border-width-25: $ouds-border-base * .25 !default; // 1
-$ouds-border-width-50: $ouds-border-base * .5 !default; // 2
-$ouds-border-width-75: $ouds-border-base * .75 !default; // 3
-$ouds-border-width-100: $ouds-border-base * 1 !default; // 4
-$ouds-border-width-125: $ouds-border-base * 1.25 !default; // 5
-// $ouds-border-width-150: $ouds-border-base * 1.5 !default; // 6
-// $ouds-border-width-200: $ouds-border-base * 2 !default; // 8
+$core-ouds-border-base: 4px !default;
+$core-ouds-border-radius-9999: 2000px !default;
+$core-ouds-border-style-dashed: dashed !default;
+// $core-ouds-border-style-dotted: dotted !default;
+// $core-ouds-border-style-none: none !default;
+$core-ouds-border-style-solid: solid !default;
+$core-ouds-border-radius-0: $core-ouds-border-base * 0 !default; // 0px
+// $core-ouds-border-radius-25: $core-ouds-border-base * .25 !default; // 1px
+// $core-ouds-border-radius-50: $core-ouds-border-base * .5 !default; // 2px
+$core-ouds-border-radius-75: $core-ouds-border-base * .75 !default; // 3px
+// $core-ouds-border-radius-100: $core-ouds-border-base * 1 !default; // 4px
+$core-ouds-border-radius-150: $core-ouds-border-base * 1.5 !default; // 6px
+// $core-ouds-border-radius-200: $core-ouds-border-base * 2 !default; // 8px
+$core-ouds-border-radius-300: $core-ouds-border-base * 3 !default; // 12px
+// $core-ouds-border-radius-400: $core-ouds-border-base * 4 !default; // 16px
+// $core-ouds-border-radius-500: $core-ouds-border-base * 5 !default; // 20px
+// $core-ouds-border-radius-600: $core-ouds-border-base * 6 !default; // 24px
+// $core-ouds-border-radius-800: $core-ouds-border-base * 8 !default; // 32px
+$core-ouds-border-width-0: $core-ouds-border-base * 0 !default; // 0px
+$core-ouds-border-width-25: $core-ouds-border-base * .25 !default; // 1px
+$core-ouds-border-width-50: $core-ouds-border-base * .5 !default; // 2px
+$core-ouds-border-width-75: $core-ouds-border-base * .75 !default; // 3px
+$core-ouds-border-width-100: $core-ouds-border-base * 1 !default; // 4px
+$core-ouds-border-width-125: $core-ouds-border-base * 1.25 !default; // 5px
+// $core-ouds-border-width-150: $core-ouds-border-base * 1.5 !default; // 6px
+// $core-ouds-border-width-200: $core-ouds-border-base * 2 !default; // 8px
 // scss-docs-end ouds-raw-border
 
 // Color
 
 // scss-docs-start ouds-raw-color
-// $ouds-color-decorative-amber-100: #fff0cc !default;
-// $ouds-color-decorative-amber-200: #ffe199 !default;
-// $ouds-color-decorative-amber-300: #ffd266 !default;
-// $ouds-color-decorative-amber-400: #ffc333 !default;
-$ouds-color-decorative-amber-500: #ffb400 !default;
-// $ouds-color-decorative-amber-600: #cc9000 !default;
-// $ouds-color-decorative-amber-700: #996c00 !default;
-// $ouds-color-decorative-amber-800: #664800 !default;
-// $ouds-color-decorative-amber-900: #332400 !default;
-$ouds-color-decorative-amethyst-100: #f1ecf9 !default;
-$ouds-color-decorative-amethyst-200: #e0d4f2 !default;
-$ouds-color-decorative-amethyst-300: #c5ade6 !default;
-$ouds-color-decorative-amethyst-400: #a885d8 !default;
-$ouds-color-decorative-amethyst-500: #8d60cd !default;
-$ouds-color-decorative-amethyst-600: #5b2f98 !default;
-$ouds-color-decorative-amethyst-700: #432371 !default;
-$ouds-color-decorative-amethyst-800: #2c174a !default;
-$ouds-color-decorative-amethyst-900: #150b23 !default;
-$ouds-color-decorative-deep-peach-100: #fbebdf !default;
-$ouds-color-decorative-deep-peach-200: #f4cfb2 !default;
-$ouds-color-decorative-deep-peach-300: #e3b591 !default;
-$ouds-color-decorative-deep-peach-400: #c19372 !default;
-$ouds-color-decorative-deep-peach-500: #cf7e3f !default;
-$ouds-color-decorative-deep-peach-600: #aa6631 !default;
-$ouds-color-decorative-deep-peach-700: #7e4f2a !default;
-$ouds-color-decorative-deep-peach-800: #553720 !default;
-$ouds-color-decorative-deep-peach-900: #2e2014 !default;
-$ouds-color-decorative-emerald-100: #e5f5ed !default;
-$ouds-color-decorative-emerald-200: #c0e8d4 !default;
-$ouds-color-decorative-emerald-300: #9bdaba !default;
-$ouds-color-decorative-emerald-400: #75cca1 !default;
-$ouds-color-decorative-emerald-500: #50be87 !default;
-$ouds-color-decorative-emerald-600: #3ba06e !default;
-$ouds-color-decorative-emerald-700: #2e7b54 !default;
-$ouds-color-decorative-emerald-800: #20563b !default;
-$ouds-color-decorative-emerald-900: #123021 !default;
-$ouds-color-decorative-shocking-pink-100: #ffe5f6 !default;
-$ouds-color-decorative-shocking-pink-200: #ffb4e6 !default;
-$ouds-color-decorative-shocking-pink-300: #ff80d4 !default;
-$ouds-color-decorative-shocking-pink-400: #ff4dc3 !default;
-$ouds-color-decorative-shocking-pink-500: #ff1ab2 !default;
-$ouds-color-decorative-shocking-pink-600: #e50099 !default;
-$ouds-color-decorative-shocking-pink-700: #b20077 !default;
-$ouds-color-decorative-shocking-pink-800: #800055 !default;
-$ouds-color-decorative-shocking-pink-900: #4d0033 !default;
-$ouds-color-decorative-sky-100: #d2ecf9 !default;
-$ouds-color-decorative-sky-200: #a5daf3 !default;
-$ouds-color-decorative-sky-300: #79c7ec !default;
-$ouds-color-decorative-sky-400: #4ab4e6 !default;
-$ouds-color-decorative-sky-500: #1fa2e0 !default;
-$ouds-color-decorative-sky-600: #1982b3 !default;
-$ouds-color-decorative-sky-700: #136186 !default;
-$ouds-color-decorative-sky-800: #0c415a !default;
-$ouds-color-decorative-sky-900: #06202d !default;
-$ouds-color-functional-black: #000 !default;
-// $ouds-color-functional-dark-gray-80: #7a7a7a !default;
-// $ouds-color-functional-dark-gray-160: #707070 !default;
-$ouds-color-functional-dark-gray-240: #666 !default;
-$ouds-color-functional-dark-gray-320: #5c5c5c !default;
-$ouds-color-functional-dark-gray-400: #555 !default;
-// $ouds-color-functional-dark-gray-480: #444 !default;
-// $ouds-color-functional-dark-gray-560: #3d3d3d !default;
-$ouds-color-functional-dark-gray-640: #333 !default;
-$ouds-color-functional-dark-gray-720: #272727 !default;
-$ouds-color-functional-dark-gray-800: #1f1f1f !default;
-$ouds-color-functional-dark-gray-880: #141414 !default;
-// $ouds-color-functional-dark-gray-960: #0a0a0a !default;
-$ouds-color-functional-dodger-blue-100: #f0faff !default;
-$ouds-color-functional-dodger-blue-200: #bde7ff !default;
-$ouds-color-functional-dodger-blue-300: #8ad5ff !default;
-$ouds-color-functional-dodger-blue-400: #57c3ff !default;
-$ouds-color-functional-dodger-blue-500: #26b2ff !default;
-$ouds-color-functional-dodger-blue-600: #009bf0 !default;
-$ouds-color-functional-dodger-blue-700: #007abd !default;
-$ouds-color-functional-dodger-blue-800: #00598a !default;
-$ouds-color-functional-dodger-blue-900: #003857 !default;
-$ouds-color-functional-light-gray-80: #f4f4f4 !default;
-$ouds-color-functional-light-gray-160: #eee !default;
-$ouds-color-functional-light-gray-240: #e0e0e0 !default;
-$ouds-color-functional-light-gray-320: #d6d6d6 !default;
-$ouds-color-functional-light-gray-400: #ccc !default;
-// $ouds-color-functional-light-gray-480: #c2c2c2 !default;
-// $ouds-color-functional-light-gray-560: #bbb !default;
-// $ouds-color-functional-light-gray-640: #adadad !default;
-// $ouds-color-functional-light-gray-720: #a3a3a3 !default;
-$ouds-color-functional-light-gray-800: #999 !default;
-// $ouds-color-functional-light-gray-880: #8f8f8f !default;
-$ouds-color-functional-light-gray-960: #858585 !default;
-$ouds-color-functional-malachite-100: #edfcf0 !default;
-$ouds-color-functional-malachite-200: #c1f6ca !default;
-$ouds-color-functional-malachite-300: #94f0a4 !default;
-$ouds-color-functional-malachite-400: #67e97e !default;
-$ouds-color-functional-malachite-500: #3de35a !default;
-$ouds-color-functional-malachite-600: #1ecd3c !default;
-$ouds-color-functional-malachite-700: #17a02f !default;
-$ouds-color-functional-malachite-800: #0e621d !default;
-$ouds-color-functional-malachite-900: #0a4715 !default;
-$ouds-color-functional-scarlet-100: #ffe5e6 !default;
-$ouds-color-functional-scarlet-200: #ffb2b3 !default;
-$ouds-color-functional-scarlet-300: #ff8081 !default;
-$ouds-color-functional-scarlet-400: #ff4d4e !default;
-$ouds-color-functional-scarlet-500: #ff1a1b !default;
-$ouds-color-functional-scarlet-600: #db0002 !default;
-$ouds-color-functional-scarlet-700: #b20002 !default;
-$ouds-color-functional-scarlet-800: #800001 !default;
-$ouds-color-functional-scarlet-900: #4d0001 !default;
-$ouds-color-functional-sun-100: #fff7d6 !default;
-$ouds-color-functional-sun-200: #ffed99 !default;
-$ouds-color-functional-sun-300: #ffe270 !default;
-$ouds-color-functional-sun-400: #ffd73d !default;
-$ouds-color-functional-sun-500: #ffd000 !default;
-$ouds-color-functional-sun-600: #d6aa00 !default;
-$ouds-color-functional-sun-700: #a38200 !default;
-$ouds-color-functional-sun-800: #665100 !default;
-$ouds-color-functional-sun-900: #3d3100 !default;
-$ouds-color-functional-white: #fff !default;
-$ouds-color-opacity-black-0: rgba(0, 0, 0, 0) !default;
-$ouds-color-opacity-black-40: rgba(0, 0, 0, .04) !default;
-$ouds-color-opacity-black-80: rgba(0, 0, 0, .08) !default;
-$ouds-color-opacity-black-120: rgba(0, 0, 0, .12) !default;
-$ouds-color-opacity-black-160: rgba(0, 0, 0, .16) !default;
-$ouds-color-opacity-black-200: rgba(0, 0, 0, .2) !default;
-$ouds-color-opacity-black-240: rgba(0, 0, 0, .24) !default;
-$ouds-color-opacity-black-280: rgba(0, 0, 0, .28) !default;
-$ouds-color-opacity-black-320: rgba(0, 0, 0, .32) !default;
-// $ouds-color-opacity-black-360: rgba(0, 0, 0, .36) !default;
-// $ouds-color-opacity-black-400: rgba(0, 0, 0, .4) !default;
-$ouds-color-opacity-black-440: rgba(0, 0, 0, .44) !default;
-// $ouds-color-opacity-black-480: rgba(0, 0, 0, .48) !default;
-$ouds-color-opacity-black-520: rgba(0, 0, 0, .52) !default;
-// $ouds-color-opacity-black-560: rgba(0, 0, 0, .56) !default;
-// $ouds-color-opacity-black-600: rgba(0, 0, 0, .6) !default;
-// $ouds-color-opacity-black-640: rgba(0, 0, 0, .64) !default;
-$ouds-color-opacity-black-680: rgba(0, 0, 0, .68) !default;
-// $ouds-color-opacity-black-720: rgba(0, 0, 0, .72) !default;
-// $ouds-color-opacity-black-760: rgba(0, 0, 0, .76) !default;
-// $ouds-color-opacity-black-800: rgba(0, 0, 0, .8) !default;
-$ouds-color-opacity-black-840: rgba(0, 0, 0, .84) !default;
-// $ouds-color-opacity-black-880: rgba(0, 0, 0, .88) !default;
-// $ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
-// $ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
-$ouds-color-opacity-dodger-blue: rgba(38, 178, 255, .08) !default;
-$ouds-color-opacity-malachite: rgba(61, 227, 90, .12) !default;
-$ouds-color-opacity-scarlet: rgba(234, 3, 5, .08) !default;
-$ouds-color-opacity-sun: rgba(255, 208, 0, .16) !default;
-$ouds-color-opacity-white-0: rgba(255, 255, 255, 0) !default;
-$ouds-color-opacity-white-40: rgba(255, 255, 255, .04) !default;
-$ouds-color-opacity-white-80: rgba(255, 255, 255, .08) !default;
-$ouds-color-opacity-white-120: rgba(255, 255, 255, .12) !default;
-// $ouds-color-opacity-white-160: rgba(255, 255, 255, .16) !default;
-$ouds-color-opacity-white-200: rgba(255, 255, 255, .2) !default;
-// $ouds-color-opacity-white-240: rgba(255, 255, 255, .24) !default;
-// $ouds-color-opacity-white-280: rgba(255, 255, 255, .28) !default;
-// $ouds-color-opacity-white-320: rgba(255, 255, 255, .32) !default;
-// $ouds-color-opacity-white-360: rgba(255, 255, 255, .36) !default;
-// $ouds-color-opacity-white-400: rgba(255, 255, 255, .4) !default;
-// $ouds-color-opacity-white-440: rgba(255, 255, 255, .44) !default;
-// $ouds-color-opacity-white-480: rgba(255, 255, 255, .48) !default;
-// $ouds-color-opacity-white-520: rgba(255, 255, 255, .52) !default;
-// $ouds-color-opacity-white-560: rgba(255, 255, 255, .56) !default;
-// $ouds-color-opacity-white-600: rgba(255, 255, 255, .6) !default;
-$ouds-color-opacity-white-640: rgba(255, 255, 255, .64) !default;
-// $ouds-color-opacity-white-680: rgba(255, 255, 255, .68) !default;
-// $ouds-color-opacity-white-720: rgba(255, 255, 255, .72) !default;
-// $ouds-color-opacity-white-760: rgba(255, 255, 255, .76) !default;
-$ouds-color-opacity-white-800: rgba(255, 255, 255, .8) !default;
-// $ouds-color-opacity-white-840: rgba(255, 255, 255, .84) !default;
-// $ouds-color-opacity-white-880: rgba(255, 255, 255, .88) !default;
-$ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
-// $ouds-color-opacity-white-960: rgba(255, 255, 255, .96) !default;
-// $ouds-color-orange-50: #fff2e6 !default;
-$ouds-color-orange-100: #ffd5b0 !default;
-$ouds-color-orange-200: #ffc18a !default;
-$ouds-color-orange-300: #ffa554 !default;
-$ouds-color-orange-400: #ff9433 !default;
-$ouds-color-orange-500: #ff7900 !default;
-$ouds-color-orange-550: #f15e00 !default;
-$ouds-color-orange-600: #e86e00 !default;
-$ouds-color-orange-700: #b55600 !default;
-$ouds-color-orange-800: #8c4300 !default;
-$ouds-color-orange-900: #6b3300 !default;
-$ouds-color-warm-gray-100: #f9f5f0 !default;
-// $ouds-color-warm-gray-200: #e9ddce !default;
-// $ouds-color-warm-gray-300: #d6c4ae !default;
-// $ouds-color-warm-gray-400: #c1ab90 !default;
-// $ouds-color-warm-gray-500: #a99275 !default;
-// $ouds-color-warm-gray-600: #8a7860 !default;
-// $ouds-color-warm-gray-700: #685d50 !default;
-// $ouds-color-warm-gray-800: #48433d !default;
-$ouds-color-warm-gray-900: #353228 !default;
+// $core-orange-color-decorative-amber-100: #fff0cc !default;
+// $core-orange-color-decorative-amber-200: #ffe199 !default;
+// $core-orange-color-decorative-amber-300: #ffd266 !default;
+// $core-orange-color-decorative-amber-400: #ffc333 !default;
+$core-orange-color-decorative-amber-500: #ffb400 !default;
+// $core-orange-color-decorative-amber-600: #cc9000 !default;
+// $core-orange-color-decorative-amber-700: #996c00 !default;
+// $core-orange-color-decorative-amber-800: #664800 !default;
+// $core-orange-color-decorative-amber-900: #332400 !default;
+$core-orange-color-decorative-amethyst-100: #f1ecf9 !default;
+$core-orange-color-decorative-amethyst-200: #e0d4f2 !default;
+$core-orange-color-decorative-amethyst-300: #c5ade6 !default;
+$core-orange-color-decorative-amethyst-400: #a885d8 !default;
+$core-orange-color-decorative-amethyst-500: #8d60cd !default;
+$core-orange-color-decorative-amethyst-600: #5b2f98 !default;
+$core-orange-color-decorative-amethyst-700: #432371 !default;
+$core-orange-color-decorative-amethyst-800: #2c174a !default;
+$core-orange-color-decorative-amethyst-900: #150b23 !default;
+$core-orange-color-decorative-deep-peach-100: #fbebdf !default;
+$core-orange-color-decorative-deep-peach-200: #f4cfb2 !default;
+$core-orange-color-decorative-deep-peach-300: #e3b591 !default;
+$core-orange-color-decorative-deep-peach-400: #c19372 !default;
+$core-orange-color-decorative-deep-peach-500: #cf7e3f !default;
+$core-orange-color-decorative-deep-peach-600: #aa6631 !default;
+$core-orange-color-decorative-deep-peach-700: #7e4f2a !default;
+$core-orange-color-decorative-deep-peach-800: #553720 !default;
+$core-orange-color-decorative-deep-peach-900: #2e2014 !default;
+$core-orange-color-decorative-emerald-100: #e5f5ed !default;
+$core-orange-color-decorative-emerald-200: #c0e8d4 !default;
+$core-orange-color-decorative-emerald-300: #9bdaba !default;
+$core-orange-color-decorative-emerald-400: #75cca1 !default;
+$core-orange-color-decorative-emerald-500: #50be87 !default;
+$core-orange-color-decorative-emerald-600: #3ba06e !default;
+$core-orange-color-decorative-emerald-700: #2e7b54 !default;
+$core-orange-color-decorative-emerald-800: #20563b !default;
+$core-orange-color-decorative-emerald-900: #123021 !default;
+$core-orange-color-decorative-shocking-pink-100: #ffe5f6 !default;
+$core-orange-color-decorative-shocking-pink-200: #ffb4e6 !default;
+$core-orange-color-decorative-shocking-pink-300: #ff80d4 !default;
+$core-orange-color-decorative-shocking-pink-400: #ff4dc3 !default;
+$core-orange-color-decorative-shocking-pink-500: #ff1ab2 !default;
+$core-orange-color-decorative-shocking-pink-600: #e50099 !default;
+$core-orange-color-decorative-shocking-pink-700: #b20077 !default;
+$core-orange-color-decorative-shocking-pink-800: #800055 !default;
+$core-orange-color-decorative-shocking-pink-900: #4d0033 !default;
+$core-orange-color-decorative-sky-100: #d2ecf9 !default;
+$core-orange-color-decorative-sky-200: #a5daf3 !default;
+$core-orange-color-decorative-sky-300: #79c7ec !default;
+$core-orange-color-decorative-sky-400: #4ab4e6 !default;
+$core-orange-color-decorative-sky-500: #1fa2e0 !default;
+$core-orange-color-decorative-sky-600: #1982b3 !default;
+$core-orange-color-decorative-sky-700: #136186 !default;
+$core-orange-color-decorative-sky-800: #0c415a !default;
+$core-orange-color-decorative-sky-900: #06202d !default;
+// $core-orange-color-orange-50: #fff2e6 !default;
+$core-orange-color-orange-100: #ffd5b0 !default;
+$core-orange-color-orange-200: #ffc18a !default;
+$core-orange-color-orange-300: #ffa554 !default;
+$core-orange-color-orange-400: #ff9433 !default;
+$core-orange-color-orange-500: #ff7900 !default;
+$core-orange-color-orange-550: #f15e00 !default;
+$core-orange-color-orange-600: #e86e00 !default;
+$core-orange-color-orange-700: #b55600 !default;
+$core-orange-color-orange-800: #8c4300 !default;
+$core-orange-color-orange-900: #6b3300 !default;
+$core-orange-color-warm-gray-100: #f9f5f0 !default;
+// $core-orange-color-warm-gray-200: #e9ddce !default;
+// $core-orange-color-warm-gray-300: #d6c4ae !default;
+// $core-orange-color-warm-gray-400: #c1ab90 !default;
+// $core-orange-color-warm-gray-500: #a99275 !default;
+// $core-orange-color-warm-gray-600: #8a7860 !default;
+// $core-orange-color-warm-gray-700: #685d50 !default;
+// $core-orange-color-warm-gray-800: #48433d !default;
+// $core-orange-color-warm-gray-900: #353228 !default;
+$core-orange-color-warm-gray-1000: #23211a !default;
+$core-ouds-color-functional-black: #000 !default;
+$core-ouds-color-functional-dodger-blue-100: #f0faff !default;
+$core-ouds-color-functional-dodger-blue-200: #bde7ff !default;
+$core-ouds-color-functional-dodger-blue-300: #8ad5ff !default;
+$core-ouds-color-functional-dodger-blue-400: #57c3ff !default;
+$core-ouds-color-functional-dodger-blue-500: #26b2ff !default;
+$core-ouds-color-functional-dodger-blue-600: #009bf0 !default;
+$core-ouds-color-functional-dodger-blue-700: #007abd !default;
+$core-ouds-color-functional-dodger-blue-800: #00598a !default;
+$core-ouds-color-functional-dodger-blue-900: #003857 !default;
+// $core-ouds-color-functional-gray-dark-80: #7a7a7a !default;
+// $core-ouds-color-functional-gray-dark-160: #707070 !default;
+$core-ouds-color-functional-gray-dark-240: #666 !default;
+$core-ouds-color-functional-gray-dark-320: #5c5c5c !default;
+$core-ouds-color-functional-gray-dark-400: #555 !default;
+// $core-ouds-color-functional-gray-dark-480: #444 !default;
+// $core-ouds-color-functional-gray-dark-560: #3d3d3d !default;
+$core-ouds-color-functional-gray-dark-640: #333 !default;
+$core-ouds-color-functional-gray-dark-720: #272727 !default;
+$core-ouds-color-functional-gray-dark-800: #1f1f1f !default;
+$core-ouds-color-functional-gray-dark-880: #141414 !default;
+// $core-ouds-color-functional-gray-dark-960: #0a0a0a !default;
+$core-ouds-color-functional-gray-light-80: #f4f4f4 !default;
+$core-ouds-color-functional-gray-light-160: #eee !default;
+$core-ouds-color-functional-gray-light-240: #e0e0e0 !default;
+$core-ouds-color-functional-gray-light-320: #d6d6d6 !default;
+$core-ouds-color-functional-gray-light-400: #ccc !default;
+// $core-ouds-color-functional-gray-light-480: #c2c2c2 !default;
+// $core-ouds-color-functional-gray-light-560: #bbb !default;
+// $core-ouds-color-functional-gray-light-640: #adadad !default;
+// $core-ouds-color-functional-gray-light-720: #a3a3a3 !default;
+$core-ouds-color-functional-gray-light-800: #999 !default;
+// $core-ouds-color-functional-gray-light-880: #8f8f8f !default;
+$core-ouds-color-functional-gray-light-960: #858585 !default;
+$core-ouds-color-functional-malachite-100: #edfcf0 !default;
+$core-ouds-color-functional-malachite-200: #c1f6ca !default;
+$core-ouds-color-functional-malachite-300: #94f0a4 !default;
+$core-ouds-color-functional-malachite-400: #67e97e !default;
+$core-ouds-color-functional-malachite-500: #3de35a !default;
+$core-ouds-color-functional-malachite-600: #1ecd3c !default;
+$core-ouds-color-functional-malachite-700: #17a02f !default;
+$core-ouds-color-functional-malachite-800: #0e621d !default;
+$core-ouds-color-functional-malachite-900: #0a4715 !default;
+$core-ouds-color-functional-scarlet-100: #ffe5e6 !default;
+$core-ouds-color-functional-scarlet-200: #ffb2b3 !default;
+$core-ouds-color-functional-scarlet-300: #ff8081 !default;
+$core-ouds-color-functional-scarlet-400: #ff4d4e !default;
+$core-ouds-color-functional-scarlet-500: #ff1a1b !default;
+$core-ouds-color-functional-scarlet-600: #db0002 !default;
+$core-ouds-color-functional-scarlet-700: #b20002 !default;
+$core-ouds-color-functional-scarlet-800: #800001 !default;
+$core-ouds-color-functional-scarlet-900: #4d0001 !default;
+$core-ouds-color-functional-sun-100: #fff7d6 !default;
+$core-ouds-color-functional-sun-200: #ffed99 !default;
+$core-ouds-color-functional-sun-300: #ffe270 !default;
+$core-ouds-color-functional-sun-400: #ffd73d !default;
+$core-ouds-color-functional-sun-500: #ffd000 !default;
+$core-ouds-color-functional-sun-600: #d6aa00 !default;
+$core-ouds-color-functional-sun-700: #a38200 !default;
+$core-ouds-color-functional-sun-800: #665100 !default;
+$core-ouds-color-functional-sun-900: #3d3100 !default;
+$core-ouds-color-functional-white: #fff !default;
+$core-ouds-color-opacity-black-0: rgba(0, 0, 0, 0) !default;
+$core-ouds-color-opacity-black-40: rgba(0, 0, 0, .04) !default;
+$core-ouds-color-opacity-black-80: rgba(0, 0, 0, .08) !default;
+$core-ouds-color-opacity-black-120: rgba(0, 0, 0, .12) !default;
+$core-ouds-color-opacity-black-160: rgba(0, 0, 0, .16) !default;
+$core-ouds-color-opacity-black-200: rgba(0, 0, 0, .2) !default;
+$core-ouds-color-opacity-black-240: rgba(0, 0, 0, .24) !default;
+$core-ouds-color-opacity-black-280: rgba(0, 0, 0, .28) !default;
+$core-ouds-color-opacity-black-320: rgba(0, 0, 0, .32) !default;
+// $core-ouds-color-opacity-black-360: rgba(0, 0, 0, .36) !default;
+// $core-ouds-color-opacity-black-400: rgba(0, 0, 0, .4) !default;
+$core-ouds-color-opacity-black-440: rgba(0, 0, 0, .44) !default;
+// $core-ouds-color-opacity-black-480: rgba(0, 0, 0, .48) !default;
+$core-ouds-color-opacity-black-520: rgba(0, 0, 0, .52) !default;
+// $core-ouds-color-opacity-black-560: rgba(0, 0, 0, .56) !default;
+// $core-ouds-color-opacity-black-600: rgba(0, 0, 0, .6) !default;
+// $core-ouds-color-opacity-black-640: rgba(0, 0, 0, .64) !default;
+$core-ouds-color-opacity-black-680: rgba(0, 0, 0, .68) !default;
+// $core-ouds-color-opacity-black-720: rgba(0, 0, 0, .72) !default;
+// $core-ouds-color-opacity-black-760: rgba(0, 0, 0, .76) !default;
+// $core-ouds-color-opacity-black-800: rgba(0, 0, 0, .8) !default;
+$core-ouds-color-opacity-black-840: rgba(0, 0, 0, .84) !default;
+// $core-ouds-color-opacity-black-880: rgba(0, 0, 0, .88) !default;
+// $core-ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
+// $core-ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
+$core-ouds-color-opacity-dodger-blue: rgba(38, 178, 255, .08) !default;
+$core-ouds-color-opacity-malachite: rgba(61, 227, 90, .12) !default;
+$core-ouds-color-opacity-scarlet: rgba(234, 3, 5, .08) !default;
+$core-ouds-color-opacity-sun: rgba(255, 208, 0, .16) !default;
+$core-ouds-color-opacity-white-0: rgba(255, 255, 255, 0) !default;
+$core-ouds-color-opacity-white-40: rgba(255, 255, 255, .04) !default;
+$core-ouds-color-opacity-white-80: rgba(255, 255, 255, .08) !default;
+$core-ouds-color-opacity-white-120: rgba(255, 255, 255, .12) !default;
+// $core-ouds-color-opacity-white-160: rgba(255, 255, 255, .16) !default;
+$core-ouds-color-opacity-white-200: rgba(255, 255, 255, .2) !default;
+// $core-ouds-color-opacity-white-240: rgba(255, 255, 255, .24) !default;
+// $core-ouds-color-opacity-white-280: rgba(255, 255, 255, .28) !default;
+// $core-ouds-color-opacity-white-320: rgba(255, 255, 255, .32) !default;
+// $core-ouds-color-opacity-white-360: rgba(255, 255, 255, .36) !default;
+// $core-ouds-color-opacity-white-400: rgba(255, 255, 255, .4) !default;
+$core-ouds-color-opacity-white-440: rgba(255, 255, 255, .44) !default;
+// $core-ouds-color-opacity-white-480: rgba(255, 255, 255, .48) !default;
+// $core-ouds-color-opacity-white-520: rgba(255, 255, 255, .52) !default;
+// $core-ouds-color-opacity-white-560: rgba(255, 255, 255, .56) !default;
+// $core-ouds-color-opacity-white-600: rgba(255, 255, 255, .6) !default;
+$core-ouds-color-opacity-white-640: rgba(255, 255, 255, .64) !default;
+// $core-ouds-color-opacity-white-680: rgba(255, 255, 255, .68) !default;
+// $core-ouds-color-opacity-white-720: rgba(255, 255, 255, .72) !default;
+// $core-ouds-color-opacity-white-760: rgba(255, 255, 255, .76) !default;
+$core-ouds-color-opacity-white-800: rgba(255, 255, 255, .8) !default;
+// $core-ouds-color-opacity-white-840: rgba(255, 255, 255, .84) !default;
+// $core-ouds-color-opacity-white-880: rgba(255, 255, 255, .88) !default;
+$core-ouds-color-opacity-white-920: rgba(255, 255, 255, .92) !default;
+// $core-ouds-color-opacity-white-960: rgba(255, 255, 255, .96) !default;
 // scss-docs-end ouds-raw-color
 
 // Dimension
 
 // scss-docs-start ouds-raw-dimension
-$ouds-dimension-base: 4px !default;
-$ouds-dimension-0: $ouds-dimension-base * 0 !default; // 0
-$ouds-dimension-25: $ouds-dimension-base * .5 !default; // 2
-$ouds-dimension-50: $ouds-dimension-base * 1 !default; // 4
-$ouds-dimension-75: $ouds-dimension-base * 1.5 !default; // 6
-$ouds-dimension-100: $ouds-dimension-base * 2 !default; // 8
-// $ouds-dimension-125: $ouds-dimension-base * 2.5 !default; // 10
-$ouds-dimension-150: $ouds-dimension-base * 3 !default; // 12
-$ouds-dimension-200: $ouds-dimension-base * 4 !default; // 16
-$ouds-dimension-250: $ouds-dimension-base * 5 !default; // 20
-$ouds-dimension-300: $ouds-dimension-base * 6 !default; // 24
-$ouds-dimension-350: $ouds-dimension-base * 7 !default; // 28
-$ouds-dimension-400: $ouds-dimension-base * 8 !default; // 32
-$ouds-dimension-450: $ouds-dimension-base * 9 !default; // 36
-$ouds-dimension-500: $ouds-dimension-base * 10 !default; // 40
-$ouds-dimension-550: $ouds-dimension-base * 11 !default; // 44
-$ouds-dimension-600: $ouds-dimension-base * 12 !default; // 48
-$ouds-dimension-650: $ouds-dimension-base * 13 !default; // 52
-$ouds-dimension-700: $ouds-dimension-base * 14 !default; // 56
-$ouds-dimension-750: $ouds-dimension-base * 15 !default; // 60
-$ouds-dimension-800: $ouds-dimension-base * 16 !default; // 64
-$ouds-dimension-850: $ouds-dimension-base * 17 !default; // 68
-$ouds-dimension-900: $ouds-dimension-base * 18 !default; // 72
-$ouds-dimension-1000: $ouds-dimension-base * 20 !default; // 80
-$ouds-dimension-1200: $ouds-dimension-base * 24 !default; // 96
-// $ouds-dimension-1250: $ouds-dimension-base * 25 !default; // 100
-$ouds-dimension-1400: $ouds-dimension-base * 28 !default; // 112
-$ouds-dimension-1600: $ouds-dimension-base * 32 !default; // 128
-$ouds-dimension-1800: $ouds-dimension-base * 36 !default; // 144
-$ouds-dimension-2000: $ouds-dimension-base * 40 !default; // 160
-// $ouds-dimension-3000: $ouds-dimension-base * 80 !default; // 320
-$ouds-dimension-4000: $ouds-dimension-base * 120 !default; // 480
-// $ouds-dimension-5000: $ouds-dimension-base * 140 !default; // 560
-$ouds-dimension-6000: $ouds-dimension-base * 160 !default; // 640
-$ouds-dimension-7000: $ouds-dimension-base * 180 !default; // 720
-$ouds-dimension-9000: $ouds-dimension-base * 220 !default; // 880
-$ouds-dimension-11000: $ouds-dimension-base * 260 !default; // 1040
+$core-ouds-dimension-base: 4px !default;
+$core-ouds-dimension-0: $core-ouds-dimension-base * 0 !default; // 0px
+$core-ouds-dimension-50: $core-ouds-dimension-base * 1 !default; // 4px
+$core-ouds-dimension-100: $core-ouds-dimension-base * 2 !default; // 8px
+$core-ouds-dimension-150: $core-ouds-dimension-base * 3 !default; // 12px
+$core-ouds-dimension-200: $core-ouds-dimension-base * 4 !default; // 16px
+$core-ouds-dimension-250: $core-ouds-dimension-base * 5 !default; // 20px
+$core-ouds-dimension-300: $core-ouds-dimension-base * 6 !default; // 24px
+$core-ouds-dimension-350: $core-ouds-dimension-base * 7 !default; // 28px
+$core-ouds-dimension-400: $core-ouds-dimension-base * 8 !default; // 32px
+$core-ouds-dimension-450: $core-ouds-dimension-base * 9 !default; // 36px
+$core-ouds-dimension-500: $core-ouds-dimension-base * 10 !default; // 40px
+$core-ouds-dimension-550: $core-ouds-dimension-base * 11 !default; // 44px
+$core-ouds-dimension-600: $core-ouds-dimension-base * 12 !default; // 48px
+$core-ouds-dimension-650: $core-ouds-dimension-base * 13 !default; // 52px
+$core-ouds-dimension-700: $core-ouds-dimension-base * 14 !default; // 56px
+$core-ouds-dimension-750: $core-ouds-dimension-base * 15 !default; // 60px
+$core-ouds-dimension-800: $core-ouds-dimension-base * 16 !default; // 64px
+$core-ouds-dimension-850: $core-ouds-dimension-base * 17 !default; // 68px
+$core-ouds-dimension-900: $core-ouds-dimension-base * 18 !default; // 72px
+$core-ouds-dimension-1000: $core-ouds-dimension-base * 20 !default; // 80px
+$core-ouds-dimension-1200: $core-ouds-dimension-base * 24 !default; // 96px
+// $core-ouds-dimension-1250: $core-ouds-dimension-base * 25 !default; // 100px
+$core-ouds-dimension-1400: $core-ouds-dimension-base * 28 !default; // 112px
+$core-ouds-dimension-1600: $core-ouds-dimension-base * 32 !default; // 128px
+$core-ouds-dimension-1800: $core-ouds-dimension-base * 36 !default; // 144px
+$core-ouds-dimension-2000: $core-ouds-dimension-base * 40 !default; // 160px
+$core-ouds-dimension-3000: $core-ouds-dimension-base * 80 !default; // 320px
+$core-ouds-dimension-4000: $core-ouds-dimension-base * 120 !default; // 480px
+// $core-ouds-dimension-5000: $core-ouds-dimension-base * 140 !default; // 560px
+$core-ouds-dimension-6000: $core-ouds-dimension-base * 160 !default; // 640px
+$core-ouds-dimension-7000: $core-ouds-dimension-base * 180 !default; // 720px
+$core-ouds-dimension-9000: $core-ouds-dimension-base * 220 !default; // 880px
+$core-ouds-dimension-11000: $core-ouds-dimension-base * 260 !default; // 1040px
+$core-ouds-dimension-out-of-system-25: $core-ouds-dimension-base * .25 !default; // 1px
+$core-ouds-dimension-out-of-system-50: $core-ouds-dimension-base * .5 !default; // 2px
+$core-ouds-dimension-out-of-system-75: $core-ouds-dimension-base * .75 !default; // 3px
+$core-ouds-dimension-out-of-system-150: $core-ouds-dimension-base * 1.5 !default; // 6px
+$core-ouds-dimension-out-of-system-250: $core-ouds-dimension-base * 2.5 !default; // 10px
 // scss-docs-end ouds-raw-dimension
 
 // Elevation
 
 // scss-docs-start ouds-raw-elevation
-$ouds-elevation-blur-0: 0 !default;
-// $ouds-elevation-blur-100: 1px !default;
-$ouds-elevation-blur-200: 2px !default;
-$ouds-elevation-blur-300: 3px !default;
-$ouds-elevation-blur-400: 4px !default;
-// $ouds-elevation-blur-500: 8px !default;
-$ouds-elevation-blur-600: 12px !default;
-// $ouds-elevation-blur-700: 20px !default;
-$ouds-elevation-spread-0: 0 !default;
-// $ouds-elevation-spread-300: 3px !default;
-$ouds-elevation-spread-n100: -1px !default;
-// $ouds-elevation-spread-n200: -2px !default;
-$ouds-elevation-spread-n300: -4px !default;
-// $ouds-elevation-spread-n400: -8px !default;
-$ouds-elevation-x-0: 0 !default;
-$ouds-elevation-y-0: 0 !default;
-$ouds-elevation-y-100: 1px !default;
-$ouds-elevation-y-200: 2px !default;
-$ouds-elevation-y-300: 4px !default;
-// $ouds-elevation-y-400: 8px !default;
-$ouds-elevation-y-500: 12px !default;
-// $ouds-elevation-y-600: 20px !default;
+$core-ouds-elevation-blur-0: 0 !default;
+// $core-ouds-elevation-blur-100: 1px !default;
+$core-ouds-elevation-blur-200: 2px !default;
+$core-ouds-elevation-blur-300: 3px !default;
+$core-ouds-elevation-blur-400: 4px !default;
+// $core-ouds-elevation-blur-500: 8px !default;
+$core-ouds-elevation-blur-600: 12px !default;
+// $core-ouds-elevation-blur-700: 20px !default;
+$core-ouds-elevation-spread-0: 0 !default;
+// $core-ouds-elevation-spread-300: 3px !default;
+$core-ouds-elevation-spread-n100: -1px !default;
+// $core-ouds-elevation-spread-n200: -2px !default;
+$core-ouds-elevation-spread-n300: -4px !default;
+// $core-ouds-elevation-spread-n400: -8px !default;
+$core-ouds-elevation-x-0: 0 !default;
+$core-ouds-elevation-y-0: 0 !default;
+$core-ouds-elevation-y-100: 1px !default;
+$core-ouds-elevation-y-200: 2px !default;
+$core-ouds-elevation-y-300: 4px !default;
+// $core-ouds-elevation-y-400: 8px !default;
+$core-ouds-elevation-y-500: 12px !default;
+// $core-ouds-elevation-y-600: 20px !default;
 // scss-docs-end ouds-raw-elevation
 
 // Font
 
 // scss-docs-start ouds-raw-font
-$ouds-font-family-brand-default: "Helvetica Neue" !default;
-// $ouds-font-family-brand-tv: "Helvetica Neue LT" !default;
-// $ouds-font-family-monospace-courier-new: "Courier New" !default;
-$ouds-font-family-monospace-menlo: "Menlo" !default;
-// $ouds-font-family-monospace-monaco: "Monaco" !default;
-// $ouds-font-family-monospace-sf-mono: "SF Mono" !default;
-// $ouds-font-family-system-arial: "Arial" !default;
-// $ouds-font-family-system-helvetica: "Helvetica" !default;
-// $ouds-font-family-system-noto-sans: "Noto Sans" !default;
-// $ouds-font-family-system-roboto: "Roboto" !default;
-// $ouds-font-family-system-sf-pro: "SF Pro" !default;
-$ouds-font-letter-spacing-150: .18px !default;
-// $ouds-font-letter-spacing-175: .19px !default;
-$ouds-font-letter-spacing-200: .17px !default;
-$ouds-font-letter-spacing-250: .2px !default;
-$ouds-font-letter-spacing-300: .18px !default;
-$ouds-font-letter-spacing-350: 0 !default;
-$ouds-font-letter-spacing-450: -.12px !default;
-$ouds-font-letter-spacing-550: -.28px !default;
-$ouds-font-letter-spacing-650: -.32px !default;
-$ouds-font-letter-spacing-750: -.36px !default;
-$ouds-font-letter-spacing-850: -.4px !default;
-// $ouds-font-letter-spacing-950: -.55px !default;
-$ouds-font-letter-spacing-1050: -.6px !default;
-// $ouds-font-letter-spacing-1150: -.65px !default;
-$ouds-font-letter-spacing-1250: -.7px !default;
-$ouds-font-letter-spacing-1450: -.96px !default;
-$ouds-font-letter-spacing-1850: -1.08px !default;
-$ouds-font-line-height-250: 16px !default;
-$ouds-font-line-height-350: 20px !default;
-$ouds-font-line-height-450: 24px !default;
-$ouds-font-line-height-550: 28px !default;
-$ouds-font-line-height-650: 32px !default;
-$ouds-font-line-height-750: 36px !default;
-$ouds-font-line-height-850: 40px !default;
-$ouds-font-line-height-950: 44px !default;
-$ouds-font-line-height-1050: 48px !default;
-// $ouds-font-line-height-1150: 52px !default;
-$ouds-font-line-height-1250: 56px !default;
-// $ouds-font-line-height-1350: 60px !default;
-$ouds-font-line-height-1450: 64px !default;
-$ouds-font-line-height-1850: 72px !default;
-$ouds-font-line-height-2050: 80px !default;
-$ouds-font-size-150: 12px !default;
-// $ouds-font-size-175: 13px !default;
-$ouds-font-size-200: 14px !default;
-$ouds-font-size-250: 16px !default;
-$ouds-font-size-300: 18px !default;
-$ouds-font-size-350: 20px !default;
-$ouds-font-size-450: 24px !default;
-$ouds-font-size-550: 28px !default;
-$ouds-font-size-650: 32px !default;
-$ouds-font-size-750: 36px !default;
-$ouds-font-size-850: 40px !default;
-// $ouds-font-size-950: 44px !default;
-$ouds-font-size-1050: 48px !default;
-// $ouds-font-size-1150: 52px !default;
-$ouds-font-size-1250: 56px !default;
-$ouds-font-size-1450: 64px !default;
-$ouds-font-size-1850: 72px !default;
-// $ouds-font-weight-100: 100 !default;
-// $ouds-font-weight-200: 200 !default;
-// $ouds-font-weight-300: 300 !default;
-$ouds-font-weight-400: 400 !default;
-// $ouds-font-weight-500: 500 !default;
-// $ouds-font-weight-600: 600 !default;
-$ouds-font-weight-700: 700 !default;
-// $ouds-font-weight-800: 800 !default;
-// $ouds-font-weight-900: 900 !default;
-// $ouds-font-weight-950: 950 !default;
+$core-orange-font-family-brand-default: "Helvetica Neue" !default;
+// $core-ouds-font-family-monospace-courier-new: "Courier New" !default;
+$core-ouds-font-family-monospace-menlo: "Menlo" !default;
+// $core-ouds-font-family-monospace-monaco: "Monaco" !default;
+// $core-ouds-font-family-monospace-sf-mono: "SF Mono" !default;
+// $core-ouds-font-family-system-arial: "Arial" !default;
+// $core-ouds-font-family-system-helvetica: "Helvetica" !default;
+// $core-ouds-font-family-system-noto-sans: "Noto Sans" !default;
+// $core-ouds-font-family-system-roboto: "Roboto" !default;
+// $core-ouds-font-family-system-sf-pro: "SF Pro" !default;
+$core-ouds-font-letter-spacing-150: .18px !default;
+// $core-ouds-font-letter-spacing-175: .19px !default;
+$core-ouds-font-letter-spacing-200: .17px !default;
+$core-ouds-font-letter-spacing-250: .2px !default;
+$core-ouds-font-letter-spacing-300: .18px !default;
+$core-ouds-font-letter-spacing-350: 0 !default;
+$core-ouds-font-letter-spacing-450: -.12px !default;
+$core-ouds-font-letter-spacing-550: -.28px !default;
+$core-ouds-font-letter-spacing-650: -.32px !default;
+$core-ouds-font-letter-spacing-750: -.36px !default;
+$core-ouds-font-letter-spacing-850: -.4px !default;
+// $core-ouds-font-letter-spacing-950: -.55px !default;
+$core-ouds-font-letter-spacing-1050: -.6px !default;
+// $core-ouds-font-letter-spacing-1150: -.65px !default;
+$core-ouds-font-letter-spacing-1250: -.7px !default;
+$core-ouds-font-letter-spacing-1450: -.96px !default;
+$core-ouds-font-letter-spacing-1850: -1.08px !default;
+$core-ouds-font-line-height-250: 16px !default;
+$core-ouds-font-line-height-350: 20px !default;
+$core-ouds-font-line-height-450: 24px !default;
+$core-ouds-font-line-height-550: 28px !default;
+$core-ouds-font-line-height-650: 32px !default;
+$core-ouds-font-line-height-750: 36px !default;
+$core-ouds-font-line-height-850: 40px !default;
+$core-ouds-font-line-height-950: 44px !default;
+$core-ouds-font-line-height-1050: 48px !default;
+// $core-ouds-font-line-height-1150: 52px !default;
+$core-ouds-font-line-height-1250: 56px !default;
+// $core-ouds-font-line-height-1350: 60px !default;
+$core-ouds-font-line-height-1450: 64px !default;
+$core-ouds-font-line-height-1850: 72px !default;
+$core-ouds-font-line-height-2050: 80px !default;
+$core-ouds-font-size-150: 12px !default;
+// $core-ouds-font-size-175: 13px !default;
+$core-ouds-font-size-200: 14px !default;
+$core-ouds-font-size-250: 16px !default;
+$core-ouds-font-size-300: 18px !default;
+$core-ouds-font-size-350: 20px !default;
+$core-ouds-font-size-450: 24px !default;
+$core-ouds-font-size-550: 28px !default;
+$core-ouds-font-size-650: 32px !default;
+$core-ouds-font-size-750: 36px !default;
+$core-ouds-font-size-850: 40px !default;
+// $core-ouds-font-size-950: 44px !default;
+$core-ouds-font-size-1050: 48px !default;
+// $core-ouds-font-size-1150: 52px !default;
+$core-ouds-font-size-1250: 56px !default;
+$core-ouds-font-size-1450: 64px !default;
+$core-ouds-font-size-1850: 72px !default;
+// $core-ouds-font-weight-100: 100 !default;
+// $core-ouds-font-weight-200: 200 !default;
+// $core-ouds-font-weight-300: 300 !default;
+$core-ouds-font-weight-400: 400 !default;
+// $core-ouds-font-weight-500: 500 !default;
+// $core-ouds-font-weight-600: 600 !default;
+$core-ouds-font-weight-700: 700 !default;
+// $core-ouds-font-weight-800: 800 !default;
+// $core-ouds-font-weight-900: 900 !default;
+// $core-ouds-font-weight-950: 950 !default;
 // scss-docs-end ouds-raw-font
 
 // Grid
 
 // scss-docs-start ouds-raw-grid
-// $ouds-grid-column-count-100: 1px !default;
-// $ouds-grid-column-count-200: 2px !default;
-$ouds-grid-column-count-400: 4px !default;
-$ouds-grid-column-count-600: 6px !default;
-// $ouds-grid-column-count-800: 8px !default;
-// $ouds-grid-column-count-1000: 10px !default;
-$ouds-grid-column-count-1200: 12px !default;
-$ouds-grid-max-width-100: 389px !default;
-$ouds-grid-max-width-200: 479px !default;
-$ouds-grid-max-width-300: 735px !default;
-$ouds-grid-max-width-400: 1023px !default;
-$ouds-grid-max-width-500: 1319px !default;
-$ouds-grid-max-width-600: 1639px !default;
-$ouds-grid-max-width-650: 1680px !default;
-$ouds-grid-max-width-700: 1879px !default;
-// $ouds-grid-max-width-800: 1920px !default;
-$ouds-grid-min-width-100: 1px !default;
-$ouds-grid-min-width-200: 390px !default;
-$ouds-grid-min-width-300: 480px !default;
-$ouds-grid-min-width-400: 736px !default;
-$ouds-grid-min-width-500: 1024px !default;
-$ouds-grid-min-width-600: 1320px !default;
-$ouds-grid-min-width-700: 1640px !default;
-$ouds-grid-min-width-800: 1880px !default;
-$ouds-grid-width-100: 360px !default;
-$ouds-grid-width-200: 390px !default;
-$ouds-grid-width-300: 480px !default;
-$ouds-grid-width-400: 768px !default;
-$ouds-grid-width-500: 1024px !default;
-$ouds-grid-width-600: 1440px !default;
-$ouds-grid-width-700: 1680px !default;
-$ouds-grid-width-800: 1920px !default;
-// $ouds-grid-column-gap-10: $ouds-dimension-base * .25 !default; // 1
-$ouds-grid-column-gap-100: $ouds-dimension-base * 2 !default; // 8
-$ouds-grid-column-gap-200: $ouds-dimension-base * 4 !default; // 16
-// $ouds-grid-column-gap-300: $ouds-dimension-base * 5 !default; // 20
-$ouds-grid-column-gap-400: $ouds-dimension-base * 6 !default; // 24
-$ouds-grid-column-gap-600: $ouds-dimension-base * 8 !default; // 32
-$ouds-grid-column-gap-800: $ouds-dimension-base * 10 !default; // 40
-$ouds-grid-margin-100: $ouds-dimension-base * 4 !default; // 16
-$ouds-grid-margin-300: $ouds-dimension-base * 6 !default; // 24
-$ouds-grid-margin-400: $ouds-dimension-base * 7 !default; // 28
-$ouds-grid-margin-500: $ouds-dimension-base * 8 !default; // 32
-// $ouds-grid-margin-600: $ouds-dimension-base * 9 !default; // 36
-$ouds-grid-margin-700: $ouds-dimension-base * 10 !default; // 40
-// $ouds-grid-margin-1000: $ouds-dimension-base * 13 !default; // 52
-$ouds-grid-margin-1100: $ouds-dimension-base * 14 !default; // 56
-$ouds-grid-margin-1700: $ouds-dimension-base * 20 !default; // 80
-$ouds-grid-margin-2500: $ouds-dimension-base * 28 !default; // 112
+// $core-ouds-grid-column-count-100: 1px !default;
+// $core-ouds-grid-column-count-200: 2px !default;
+$core-ouds-grid-column-count-400: 4px !default;
+$core-ouds-grid-column-count-600: 6px !default;
+// $core-ouds-grid-column-count-800: 8px !default;
+// $core-ouds-grid-column-count-1000: 10px !default;
+$core-ouds-grid-column-count-1200: 12px !default;
+$core-ouds-grid-max-width-100: 389px !default;
+$core-ouds-grid-max-width-200: 479px !default;
+$core-ouds-grid-max-width-300: 735px !default;
+$core-ouds-grid-max-width-400: 1023px !default;
+$core-ouds-grid-max-width-500: 1319px !default;
+$core-ouds-grid-max-width-600: 1639px !default;
+$core-ouds-grid-max-width-650: 1680px !default;
+$core-ouds-grid-max-width-700: 1879px !default;
+// $core-ouds-grid-max-width-800: 1920px !default;
+$core-ouds-grid-min-width-100: 1px !default;
+$core-ouds-grid-min-width-200: 390px !default;
+$core-ouds-grid-min-width-300: 480px !default;
+$core-ouds-grid-min-width-400: 736px !default;
+$core-ouds-grid-min-width-500: 1024px !default;
+$core-ouds-grid-min-width-600: 1320px !default;
+$core-ouds-grid-min-width-700: 1640px !default;
+$core-ouds-grid-min-width-800: 1880px !default;
+$core-ouds-grid-width-100: 360px !default;
+$core-ouds-grid-width-200: 390px !default;
+$core-ouds-grid-width-300: 480px !default;
+$core-ouds-grid-width-400: 768px !default;
+$core-ouds-grid-width-500: 1024px !default;
+$core-ouds-grid-width-600: 1440px !default;
+$core-ouds-grid-width-700: 1680px !default;
+$core-ouds-grid-width-800: 1920px !default;
+// $core-ouds-grid-column-gap-10: $core-ouds-dimension-base * .25 !default; // 1px
+$core-ouds-grid-column-gap-100: $core-ouds-dimension-base * 2 !default; // 8px
+$core-ouds-grid-column-gap-200: $core-ouds-dimension-base * 4 !default; // 16px
+// $core-ouds-grid-column-gap-300: $core-ouds-dimension-base * 5 !default; // 20px
+$core-ouds-grid-column-gap-400: $core-ouds-dimension-base * 6 !default; // 24px
+$core-ouds-grid-column-gap-600: $core-ouds-dimension-base * 8 !default; // 32px
+$core-ouds-grid-column-gap-800: $core-ouds-dimension-base * 10 !default; // 40px
+$core-ouds-grid-margin-100: $core-ouds-dimension-base * 4 !default; // 16px
+$core-ouds-grid-margin-300: $core-ouds-dimension-base * 6 !default; // 24px
+$core-ouds-grid-margin-400: $core-ouds-dimension-base * 7 !default; // 28px
+$core-ouds-grid-margin-500: $core-ouds-dimension-base * 8 !default; // 32px
+// $core-ouds-grid-margin-600: $core-ouds-dimension-base * 9 !default; // 36px
+$core-ouds-grid-margin-700: $core-ouds-dimension-base * 10 !default; // 40px
+// $core-ouds-grid-margin-1000: $core-ouds-dimension-base * 13 !default; // 52px
+$core-ouds-grid-margin-1100: $core-ouds-dimension-base * 14 !default; // 56px
+$core-ouds-grid-margin-1700: $core-ouds-dimension-base * 20 !default; // 80px
+$core-ouds-grid-margin-2500: $core-ouds-dimension-base * 28 !default; // 112px
 // scss-docs-end ouds-raw-grid
 
 // Opacity
 
 // scss-docs-start ouds-raw-opacity
-$ouds-opacity-0: 0 !default;
-$ouds-opacity-40: .04 !default;
-// $ouds-opacity-80: .08 !default;
-// $ouds-opacity-120: .12 !default;
-$ouds-opacity-160: .16 !default;
-// $ouds-opacity-200: .2 !default;
-// $ouds-opacity-240: .24 !default;
-// $ouds-opacity-280: .28 !default;
-$ouds-opacity-320: .32 !default;
-// $ouds-opacity-360: .36 !default;
-// $ouds-opacity-400: .4 !default;
-// $ouds-opacity-440: .44 !default;
-// $ouds-opacity-480: .48 !default;
-// $ouds-opacity-520: .52 !default;
-// $ouds-opacity-560: .56 !default;
-// $ouds-opacity-600: .6 !default;
-$ouds-opacity-640: .64 !default;
-// $ouds-opacity-680: .68 !default;
-// $ouds-opacity-720: .72 !default;
-// $ouds-opacity-760: .76 !default;
-// $ouds-opacity-800: .8 !default;
-// $ouds-opacity-880: .88 !default;
-// $ouds-opacity-920: .92 !default;
-// $ouds-opacity-960: .96 !default;
-$ouds-opacity-1000: 1 !default;
+$core-ouds-opacity-0: 0 !default;
+$core-ouds-opacity-40: .04 !default;
+// $core-ouds-opacity-80: .08 !default;
+// $core-ouds-opacity-120: .12 !default;
+$core-ouds-opacity-160: .16 !default;
+// $core-ouds-opacity-200: .2 !default;
+// $core-ouds-opacity-240: .24 !default;
+// $core-ouds-opacity-280: .28 !default;
+$core-ouds-opacity-320: .32 !default;
+// $core-ouds-opacity-360: .36 !default;
+// $core-ouds-opacity-400: .4 !default;
+// $core-ouds-opacity-440: .44 !default;
+// $core-ouds-opacity-480: .48 !default;
+// $core-ouds-opacity-520: .52 !default;
+// $core-ouds-opacity-560: .56 !default;
+// $core-ouds-opacity-600: .6 !default;
+$core-ouds-opacity-640: .64 !default;
+// $core-ouds-opacity-680: .68 !default;
+// $core-ouds-opacity-720: .72 !default;
+// $core-ouds-opacity-760: .76 !default;
+// $core-ouds-opacity-800: .8 !default;
+// $core-ouds-opacity-880: .88 !default;
+// $core-ouds-opacity-920: .92 !default;
+// $core-ouds-opacity-960: .96 !default;
+$core-ouds-opacity-1000: 1 !default;
 // scss-docs-end ouds-raw-opacity

@@ -57,11 +57,11 @@ Change the border color using utilities. The color utilities are generated from 
 <span class="border border-default"></span>
 <span class="border border-emphasized"></span>
 <span class="border border-muted"></span>
-<div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-shortest p-shorter"><span class="border border-on-brand-primary m-none bg-brand-primary" data-bs-theme="light"></span></div>
-<div data-bs-theme="light" class="bg-always-white d-inline-flex m-shortest p-shorter"><span class="border border-always-black m-none bg-always-white" data-bs-theme="light"></span></div>
-<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-shortest p-shorter"><span class="border border-always-white m-none bg-always-black" data-bs-theme="dark"></span></div>
-<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-shortest p-shorter"><span class="border border-always-on-black m-none bg-always-black" data-bs-theme="dark"></span></div>
-<div data-bs-theme="light" class="bg-always-white d-inline-flex m-shortest p-shorter"><span class="border border-always-on-white m-none bg-always-white" data-bs-theme="light"></span></div>
+<div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-2xs p-xs"><span class="border border-on-brand-primary m-none bg-brand-primary" data-bs-theme="light"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-black m-none bg-always-white" data-bs-theme="light"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-white m-none bg-always-black" data-bs-theme="dark"></span></div>
+<div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-on-black m-none bg-always-black" data-bs-theme="dark"></span></div>
+<div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-on-white m-none bg-always-white" data-bs-theme="light"></span></div>
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
@@ -130,11 +130,11 @@ Or modify the default `border-color` of a component:
 Add classes to an element to easily round its corners.
 
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded-tall" title="Example rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-top-tall" title="Example top rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-end-tall" title="Example right rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom-tall" title="Example bottom rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-start-tall" title="Example left rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large" title="Example rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-top-large" title="Example top rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-end-large" title="Example right rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-large" title="Example bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-start-large" title="Example left rounded image" color="#999" >}}
 {{< /example >}}
 
 ### Sizes
@@ -148,19 +148,19 @@ The `.rounded` class is mapped to the "default" border radius design token. In O
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example default rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-none" title="Example non-rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-short" title="Example short rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-small" title="Example short rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-medium" title="Example medium rounded image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-tall" title="Example tall rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large" title="Example tall rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" color="#999" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" color="#999" >}}
 {{< /example >}}
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom-short" title="Example small rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-small" title="Example small rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-start-medium" title="Example default left rounded image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" color="#999" >}}
 {{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" color="#999" >}}
-{{< placeholder width="75" height="75" class="rounded-tall rounded-top-none" title="Example extra large bottom rounded image" color="#999" >}}
+{{< placeholder width="75" height="75" class="rounded-large rounded-top-none" title="Example extra large bottom rounded image" color="#999" >}}
 {{< /example >}}
 
 {{< bootstrap-compatibility >}}
@@ -213,16 +213,6 @@ This utility must not be used in any other context than drag and drop.
 {{< /bootstrap-compatibility >}}
 
 ### Sass tokens
-
-#### Raw tokens
-
-Border raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-border" file="scss/tokens/_raw.scss" >}}
-
-Colors raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-color" file="scss/tokens/_raw.scss" >}}
 
 #### Semantic tokens
 
