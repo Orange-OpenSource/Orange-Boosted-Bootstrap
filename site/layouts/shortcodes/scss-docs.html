@@ -6,11 +6,13 @@
 
   Optional parameters:
     * strip-default: Remove the ` !default` flag from variable assignments - default: `true`
+    * button_label: label to apply to complete 'Edit on Stackblitz' and 'Copy to clipboard' buttons - default: ""
 */ -}}
 
 {{- $name := .Get "name" -}}
 {{- $file := .Get "file" -}}
 {{- $strip_default := .Get "strip-default" | default "true" -}}
+{{- $button_label := .Get "button_label" | default "" -}}
 
 {{- /* If any parameters are missing, print an error and exit */ -}}
 {{- if or (not $name) (not $file) -}}
@@ -79,7 +81,7 @@
 
     <!-- OUDS mod: moved this section and changed the positioning to handle a different focus order -->
     <div class="position-absolute top-0 end-0">
-      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy code to clipboard">
+      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-shortest" aria-label="Copy{{- if not (eq $button_label "") }} {{ printf "%s example" $button_label }} {{- end }} to clipboard">
         <svg aria-hidden="true"><use xlink:href="#copy"/></svg>
       </button>
     </div>
