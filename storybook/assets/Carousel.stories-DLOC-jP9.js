@@ -39,7 +39,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>`,t=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleIndicators" class="carousel slide">
+<div id="carouselExampleIndicators" class="carousel slide is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -132,7 +132,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>`,a=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -308,7 +308,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="--bs-carousel-interval:10000ms;"></button>
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
@@ -434,7 +434,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>`,n=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleNoRide" class="carousel slide is-static">
+<div id="carouselExampleNoRide" class="carousel slide is-static is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleNoRide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleNoRide" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -517,7 +517,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>\``,...(b=(u=e.parameters)==null?void 0:u.docs)==null?void 0:b.source}}};var h,v,g;t.parameters={...t.parameters,docs:{...(h=t.parameters)==null?void 0:h.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleIndicators" class="carousel slide">
+<div id="carouselExampleIndicators" class="carousel slide is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -610,7 +610,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>\``,...(w=(x=l.parameters)==null?void 0:x.docs)==null?void 0:w.source}}};var y,f,k;a.parameters={...a.parameters,docs:{...(y=a.parameters)==null?void 0:y.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -786,7 +786,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="--bs-carousel-interval:10000ms;"></button>
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
@@ -912,7 +912,7 @@ const G={title:"Components/Carousel",parameters:{docs:{toc:!0}}},e=()=>`<div cla
   // storybook-end carousel
 <\/script>\``,...(L=(D=c.parameters)==null?void 0:D.docs)==null?void 0:L.source}}};var W,z,B;n.parameters={...n.parameters,docs:{...(W=n.parameters)==null?void 0:W.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div id="carouselExampleNoRide" class="carousel slide is-static">
+<div id="carouselExampleNoRide" class="carousel slide is-static is-paused">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleNoRide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleNoRide" data-bs-slide-to="1" aria-label="Slide 2"></button>

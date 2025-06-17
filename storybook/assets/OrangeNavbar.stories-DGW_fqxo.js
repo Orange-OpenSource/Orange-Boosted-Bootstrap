@@ -527,7 +527,7 @@ const W={title:"Components/OrangeNavbar",parameters:{docs:{toc:!0}}},a=()=>`<div
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
                 <svg class="me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
                 Auto
                 <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
@@ -1143,7 +1143,7 @@ const W={title:"Components/OrangeNavbar",parameters:{docs:{toc:!0}}},a=()=>`<div
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
                 <svg class="me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
                 Auto
                 <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>

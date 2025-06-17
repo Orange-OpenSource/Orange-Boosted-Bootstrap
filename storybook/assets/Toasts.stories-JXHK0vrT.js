@@ -1,6 +1,6 @@
 const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>
@@ -89,7 +89,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`,s=()=>`<div class="bd-example order-first m-0 border-0 bg-secondary m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>
@@ -141,7 +141,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
 <\/script>`,a=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
 <div class="toast-container position-static">
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -154,7 +154,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
     </div>
   </div>
 
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -206,7 +206,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`,o=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body my-auto">
       Hello, world! This is a toast message.
@@ -253,7 +253,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`,n=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
     Hello, world! This is a toast message.
     <div class="mt-2 pt-2 border-top">
@@ -301,7 +301,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`,l=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
+<div class="toast align-items-center text-bg-dark border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
   <div class="d-flex">
     <div class="toast-body my-auto">
       Hello, world! This is a toast message.
@@ -367,7 +367,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
 </form>
 <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts">
   <div class="toast-container p-3" id="toastPlacement">
-    <div class="toast">
+    <div class="toast fade show">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -427,7 +427,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   <div class="toast-container top-0 end-0 p-3" id="toastStacked">
 
     
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -440,7 +440,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
       </div>
     </div>
 
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -497,7 +497,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
   
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -549,7 +549,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`,r=()=>`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast fade show" data-bs-autohide="false">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>
@@ -600,7 +600,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>`;var m,v,g;t.parameters={...t.parameters,docs:{...(m=t.parameters)==null?void 0:m.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>
@@ -687,9 +687,9 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   }
   // js-docs-end live-toast
   // storybook-end toasts
-<\/script>\``,...(b=(p=e.parameters)==null?void 0:p.docs)==null?void 0:b.source}}};var y,h,E;s.parameters={...s.parameters,docs:{...(y=s.parameters)==null?void 0:y.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 bg-secondary m-0 border-0">
+<\/script>\``,...(b=(p=e.parameters)==null?void 0:p.docs)==null?void 0:b.source}}};var y,h,f;s.parameters={...s.parameters,docs:{...(y=s.parameters)==null?void 0:y.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 bg-secondary m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>
@@ -738,10 +738,10 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   }
   // js-docs-end live-toast
   // storybook-end toasts
-<\/script>\``,...(E=(h=s.parameters)==null?void 0:h.docs)==null?void 0:E.source}}};var f,B,I;a.parameters={...a.parameters,docs:{...(f=a.parameters)==null?void 0:f.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
+<\/script>\``,...(f=(h=s.parameters)==null?void 0:h.docs)==null?void 0:f.source}}};var E,B,I;a.parameters={...a.parameters,docs:{...(E=a.parameters)==null?void 0:E.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
 <div class="toast-container position-static">
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -754,7 +754,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
     </div>
   </div>
 
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -806,7 +806,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>\``,...(I=(B=a.parameters)==null?void 0:B.docs)==null?void 0:I.source}}};var w,T,P;o.parameters={...o.parameters,docs:{...(w=o.parameters)==null?void 0:w.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body my-auto">
       Hello, world! This is a toast message.
@@ -853,7 +853,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>\``,...(P=(T=o.parameters)==null?void 0:T.docs)==null?void 0:P.source}}};var k,x,C;n.parameters={...n.parameters,docs:{...(k=n.parameters)==null?void 0:k.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
     Hello, world! This is a toast message.
     <div class="mt-2 pt-2 border-top">
@@ -901,7 +901,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>\``,...(C=(x=n.parameters)==null?void 0:x.docs)==null?void 0:C.source}}};var j,N,S;l.parameters={...l.parameters,docs:{...(j=l.parameters)==null?void 0:j.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
+<div class="toast align-items-center text-bg-dark border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
   <div class="d-flex">
     <div class="toast-body my-auto">
       Hello, world! This is a toast message.
@@ -967,7 +967,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
 </form>
 <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts">
   <div class="toast-container p-3" id="toastPlacement">
-    <div class="toast">
+    <div class="toast fade show">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -1027,7 +1027,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   <div class="toast-container top-0 end-0 p-3" id="toastStacked">
 
     
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -1040,7 +1040,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
       </div>
     </div>
 
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
           </svg>
@@ -1097,7 +1097,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
   
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
         </svg>
@@ -1149,7 +1149,7 @@ const z={title:"Components/Toasts",parameters:{docs:{toc:!0}}},t=()=>`<div class
   // storybook-end toasts
 <\/script>\``,...(H=(D=c.parameters)==null?void 0:D.docs)==null?void 0:H.source}}};var R,Y,J;r.parameters={...r.parameters,docs:{...(R=r.parameters)==null?void 0:R.docs,source:{originalSource:`() => \`<div class="bd-example order-first m-0 border-0 m-0 border-0">
     
-<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast fade show" data-bs-autohide="false">
   <div class="toast-header">
     <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#ff7900"></rect>
       </svg>

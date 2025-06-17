@@ -1,373 +1,47 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Orange and Boosted contributors">
-    <meta name="generator" content="Hugo 0.145.0">
-    <title>Form example · Boosted v5.3</title>
-
-    <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/form/">
-
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
-
-    <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-tvCFaK7SfC4syIdSDbhz8c/PL/GbpSi6EZEuBu4ncfiNyiKZ30jdR7iGg7tdoVFI">
-
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#000">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/5.3/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#000">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-       
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-       
-      .bd-mode-toggle svg {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
-       
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-
-    
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="check2" viewBox="0 0 1000 1000">
-    <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
-  </symbol>
-  <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
-    <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
-  </symbol>
-  <symbol id="ui-dark-mode" viewBox="0 0 1000 1000">
-    <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"/>
-  </symbol>
-  <symbol id="ui-light-mode" viewBox="0 0 1000 1000">
-    <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"/>
-  </symbol>
-</svg>
-
-
-    
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="user">
-    <path fill-rule="evenodd" d="M656.7,422.409a229.959,229.959,0,0,1-315.39.008A224.95,224.95,0,0,0,224.064,615H224V825A100,100,0,0,0,324,925H774V620A224.944,224.944,0,0,0,656.7,422.409ZM679,255A180,180,0,1,1,499,75,180,180,0,0,1,679,255Z"></path>
-  </symbol>
-</svg>
-
-<header class="sticky-top" data-bs-theme="dark">
-  <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation">
-    <div class="container-xxl">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg" aria-label="Global navigation">
-    <div class="container-xxl">
-      <div class="navbar-brand me-auto me-lg-4">
-        <a class="stretched-link" href="#">
-          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Travel</h1>
-      </div>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2 global-header-1.3" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">All inclusive cards</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Data only cards</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Top up</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Assistance</a></li>
-        </ul>
-        <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
-        </ul>
-      </div>
-      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1 me-lg-3">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true">
-                <use xlink:href="#user"></use>
-              </svg>
-              <span class="visually-hidden">My account</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div id="global-header-1.3" class="navbar-collapse d-lg-flex global-header-1 collapse ms-lg-3">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item dropdown">
-            <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)">
-              <svg class="theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
-                  Light
-                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="me-2" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
-                  Dark
-                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
-                  Auto
-                  <svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<main class="order-1">
-  <div class="title-bar">
-    <div class="container-xxl d-block">
-      <div class="row">
-        <div class="col-sm-12 col-lg-5 offset-lg-3">
-          <h1 class="display-1">Become a reseller</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-xxl pt-4">
-    <div class="row">
-      <div class="col-sm-12 col-lg-5 offset-lg-3">
-        <p class="ll-sm h3 mb-4">
-          You are a professional and wish to resell Orange products to your customers? Please fill the form and we will get back to you shortly.
-        </p>
-        <form class="needs-validation mb-5" novalidate>
-          <div class="row">
-            <div class="col-12">
-              <p class="fw-bold mb-4">
-                <span class="text-primary me-1">*</span>indicates required
-              </p>
-            </div>
-            <div class="col-sm-4 col-md-6 mb-3">
-              <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title<span class="visually-hidden"> (required)</span></label>
-              <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback" autocomplete="sex" required>
-                <option selected disabled value="" aria-hidden="true">Select a title</option>
-                <option value="1">Miss</option>
-                <option value="2">Mr.</option>
-                <option value="3">Mrs.</option>
-                <option value="3">Ms.</option>
-                <option value="4">Prefer not to say</option>
-              </select>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-              <div id="selectTitleFeedback" class="invalid-feedback">
-                Please select a valid title.
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="mb-3">
-                <label for="firstName" id="firstNameLabel" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="firstName" aria-labelledby="firstNameLabel firstNameFeedback" autocomplete="given-name" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="firstNameFeedback" class="invalid-feedback">
-                  Please enter a valid first name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="lastName" id="lastNameLabel" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="lastName" aria-labelledby="lastNameLabel lastNameFeedback" autocomplete="family-name" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="lastNameFeedback" class="invalid-feedback">
-                  Please enter a valid last name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="email" id="emailLabel" class="form-label is-required">Email<span class="visually-hidden"> (required)</span></label>
-                <input type="email" class="form-control" id="email" aria-labelledby="emailLabel emailFeedback" autocomplete="email" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="emailFeedback" class="invalid-feedback">
-                  Please provide a valid email.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="country" id="countryLabel" class="form-label is-required">Country<span class="visually-hidden"> (required)</span></label>
-                <select class="form-select" id="country" aria-labelledby="countryLabel countryFeedback" autocomplete="country-name" required>
-                  <option selected disabled value="" aria-hidden="true">Select a country</option>
-                  <option value="1">Australia</option>
-                  <option value="2">Canada</option>
-                  <option value="3">France</option>
-                  <option value="4">USA</option>
-                </select>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="countryFeedback" class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="company" id="companyLabel" class="form-label is-required">Name of company<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="company" aria-labelledby="companyLabel companyFeedback" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="companyFeedback" class="invalid-feedback">
-                  Please enter a valid company name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="business" id="businessLabel" class="form-label is-required">Business type<span class="visually-hidden"> (required)</span></label>
-                <select class="form-select" id="business" aria-labelledby="businessLabel businessFeedback" required>
-                  <option selected disabled value="" aria-hidden="true">Select a type</option>
-                  <option value="1">Corporation</option>
-                  <option value="2">Limited liability company</option>
-                  <option value="3">Partnership</option>
-                  <option value="4">Sole proprietorship</option>
-                </select>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="businessFeedback" class="invalid-feedback">
-                  Please select a valid business type.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="website" id="websiteLabel" class="form-label">Website<span class="visually-hidden"> (required)</span></label>
-                <input type="text" class="form-control" id="website" aria-labelledby="websiteLabel websiteFeedback">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="websiteFeedback" class="invalid-feedback">
-                  Please enter a valid website.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="message" id="messageLabel" class="form-label is-required">Message<span class="visually-hidden"> (required)</span></label>
-                <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for text area">
-                  <span class="visually-hidden">Helper for text area</span>
-                </button>
-                <textarea class="form-control" id="message" rows="5" placeholder="Describe your business and your motivation in becoming an Orange reseller" aria-labelledby="messageLabel messageFeedback" required></textarea>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div id="messageFeedback" class="invalid-feedback">
-                  Please enter a valid message.
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary mt-2">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</main>
-<footer class="footer navbar" data-bs-theme="dark">
-  <h2 class="visually-hidden">Sitemap and information</h2>
-  <div class="container-xxl footer-terms">
-    <ul class="navbar-nav gap-md-3">
-      <li class="fw-bold">© Orange 2025</li>
-      <li><a class="nav-link" href="#">Terms and conditions</a></li>
-      <li><a class="nav-link" href="#">Privacy</a></li>
-      <li><a class="nav-link" href="#">Cookie policy</a></li>
-      <li><a class="nav-link" href="#">Accessibility statement</a></li>
-      <li><a class="nav-link active" id="test" href="#" aria-current="page">Become a reseller</a></li>
-    </ul>
-  </div>
-</footer>
-<script defer src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-TUqINjQ+FmWdy6HD+WLRt3KeaowBhH0dZr0TdLdc6J5dc0T+qQQ29Bhp8C5uvyEO"></script>
-
-    <script defer src="form.js"></script></body>
-</html>
+<!DOCTYPE html><html lang="en" data-bs-theme="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content="Orange and Boosted contributors"><meta name="generator" content="Astro v5.8.0"><title>Form example · Boosted v5.3</title><link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/form/"><script src="/docs/5.3/assets/js/color-modes.js"></script><link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-iZsPUyAwufYqFL0cczewu64TmjhHkv2hFfM2Xf+Cr2VzeGyBRK2HW5NTFs1WWeQ1"><link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ"><link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json"><link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#000"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico"><meta name="msapplication-config" content="/docs/5.3/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#000"><style>.bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width: 768px){.bd-placeholder-img-lg{font-size:3.5rem}}.b-example-divider{width:100%;height:3rem;background-color:#0000001a;border:solid rgba(0,0,0,.15);border-width:1px 0;box-shadow:inset 0 .5em 1.5em #0000001a,inset 0 .125em .5em #00000026}.b-example-vr{flex-shrink:0;width:1.5rem;height:100vh}.bi{vertical-align:-.125em;fill:currentColor}.nav-scroller{position:relative;z-index:2;height:2.75rem;overflow-y:hidden}.nav-scroller .nav{display:flex;flex-wrap:nowrap;padding-bottom:1rem;margin-top:-1px;overflow-x:auto;text-align:center;white-space:nowrap;-webkit-overflow-scrolling:touch}.bd-mode-toggle{z-index:1500}.bd-mode-toggle svg{width:1.25rem;height:1.25rem}.bd-mode-toggle .dropdown-menu .active .bi{display:block!important}
+</style></head> <body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="check2" viewBox="0 0 1000 1000"> <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"></path> </symbol> <symbol id="ui-auto-mode" viewBox="0 0 1000 1000"> <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"></path> </symbol> <symbol id="ui-dark-mode" viewBox="0 0 1000 1000"> <path d="M675 649.88c-179.493 0-325-145.57-325-325.141A324.478 324.478 0 0 1 465.721 76C247.03 93.463 75 276.537 75 499.815 75 734.638 265.279 925 500 925c223.181 0 406.175-172.106 423.63-390.891A324.222 324.222 0 0 1 675 649.88Z"></path> </symbol> <symbol id="ui-light-mode" viewBox="0 0 1000 1000"> <path d="M287.868 712.132a25.073 25.073 0 0 0-35.355 0l-53.033 53.033a25 25 0 0 0 35.355 35.355l53.033-53.033a25.073 25.073 0 0 0 0-35.355Zm424.264-424.264a25.073 25.073 0 0 0 35.355 0l53.033-53.033a25 25 0 0 0-35.355-35.355l-53.033 53.033a25.073 25.073 0 0 0 0 35.355Zm35.355 424.264a25.073 25.073 0 0 0-35.355 0 25.073 25.073 0 0 0 0 35.355l53.033 53.033a25 25 0 0 0 35.355-35.355ZM252.513 287.868a25.073 25.073 0 0 0 35.355 0 25.073 25.073 0 0 0 0-35.355l-53.033-53.033a25 25 0 0 0-35.355 35.355ZM200 500a25.073 25.073 0 0 0-25-25h-75a25 25 0 0 0 0 50h75a25.073 25.073 0 0 0 25-25Zm700-25h-75a25 25 0 0 0 0 50h75a25 25 0 0 0 0-50ZM500 800a25.073 25.073 0 0 0-25 25v75a25 25 0 0 0 50 0v-75a25.073 25.073 0 0 0-25-25Zm0-600a25.073 25.073 0 0 0 25-25v-75a25 25 0 0 0-50 0v75a25.073 25.073 0 0 0 25 25Zm0 50c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250Z"></path> </symbol> </svg>   <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol fill="currentColor" viewBox="0 0 1000 1000" id="user"> <path fill-rule="evenodd" d="M656.7,422.409a229.959,229.959,0,0,1-315.39.008A224.95,224.95,0,0,0,224.064,615H224V825A100,100,0,0,0,324,925H774V620A224.944,224.944,0,0,0,656.7,422.409ZM679,255A180,180,0,1,1,499,75,180,180,0,0,1,679,255Z"></path> </symbol> </svg> <header class="sticky-top" data-bs-theme="dark"> <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation"> <div class="container-xxl"> <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li> <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li> </ul> </div> </nav> <nav class="navbar navbar-expand-lg" aria-label="Global navigation"> <div class="container-xxl"> <div class="navbar-brand me-auto me-lg-4"> <a class="stretched-link" href="#"> <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy"> </a> <h1 class="title">Travel</h1> </div> <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2 global-header-1.3" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1"> <ul class="navbar-nav"> <li class="nav-item"><a class="nav-link" href="#">All inclusive cards</a></li> <li class="nav-item"><a class="nav-link" href="#">Data only cards</a></li> <li class="nav-item"><a class="nav-link" href="#">Top up</a></li> <li class="nav-item"><a class="nav-link" href="#">Assistance</a></li> </ul> <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra"> <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li> <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li> </ul> </div> <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1 me-lg-3"> <ul class="navbar-nav flex-row"> <li class="nav-item"> <a href="#" class="nav-link nav-icon"> <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true"> <use  xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"></use> </svg> <span class="visually-hidden">Basket</span> </a> </li> <li class="nav-item"> <a href="#" class="nav-link nav-icon"> <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true"> <use xlink:href="#user"></use> </svg> <span class="visually-hidden">My account</span> </a> </li> </ul> </div> <div id="global-header-1.3" class="navbar-collapse d-lg-flex global-header-1 collapse ms-lg-3"> <ul class="navbar-nav flex-row"> <li class="nav-item dropdown"> <button class="nav-link nav-icon dropdown-toggle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle mode (auto)"> <svg class="theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg> <span class="d-lg-none ms-2" id="bd-theme-text">Toggle mode</span> </button> <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="bd-theme-text"> <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"> <svg class="me-2" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+Light
+<svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false"> <svg class="me-2" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+Dark
+<svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> <li> <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true"> <svg class="me-2" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+Auto
+<svg class="ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> </ul> </li> </ul> </div> </div> </nav> </header> <main class="order-1"> <div class="title-bar"> <div class="container-xxl d-block"> <div class="row"> <div class="col-sm-12 col-lg-5 offset-lg-3"> <h1 class="display-1">Become a reseller</h1> </div> </div> </div> </div> <div class="container-xxl pt-4"> <div class="row"> <div class="col-sm-12 col-lg-5 offset-lg-3"> <p class="ll-sm h3 mb-4">
+You are a professional and wish to resell Orange products to your customers? Please fill the form and we will get back to you shortly.
+</p> <form class="needs-validation mb-5" novalidate> <div class="row"> <div class="col-12"> <p class="fw-bold mb-4"> <span class="text-primary me-1">*</span>indicates required
+</p> </div> <div class="col-sm-4 col-md-6 mb-3"> <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title<span class="visually-hidden"> (required)</span></label> <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback" autocomplete="sex" required> <option selected disabled value="" aria-hidden="true">Select a title</option> <option value="1">Miss</option> <option value="2">Mr.</option> <option value="3">Mrs.</option> <option value="3">Ms.</option> <option value="4">Prefer not to say</option> </select> <div class="valid-feedback">
+Looks good!
+</div> <div id="selectTitleFeedback" class="invalid-feedback">
+Please select a valid title.
+</div> </div> <div class="col-12"> <div class="mb-3"> <label for="firstName" id="firstNameLabel" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label> <input type="text" class="form-control" id="firstName" aria-labelledby="firstNameLabel firstNameFeedback" autocomplete="given-name" required> <div class="valid-feedback">
+Looks good!
+</div> <div id="firstNameFeedback" class="invalid-feedback">
+Please enter a valid first name.
+</div> </div> <div class="mb-3"> <label for="lastName" id="lastNameLabel" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label> <input type="text" class="form-control" id="lastName" aria-labelledby="lastNameLabel lastNameFeedback" autocomplete="family-name" required> <div class="valid-feedback">
+Looks good!
+</div> <div id="lastNameFeedback" class="invalid-feedback">
+Please enter a valid last name.
+</div> </div> <div class="mb-3"> <label for="email" id="emailLabel" class="form-label is-required">Email<span class="visually-hidden"> (required)</span></label> <input type="email" class="form-control" id="email" aria-labelledby="emailLabel emailFeedback" autocomplete="email" required> <div class="valid-feedback">
+Looks good!
+</div> <div id="emailFeedback" class="invalid-feedback">
+Please provide a valid email.
+</div> </div> <div class="mb-3"> <label for="country" id="countryLabel" class="form-label is-required">Country<span class="visually-hidden"> (required)</span></label> <select class="form-select" id="country" aria-labelledby="countryLabel countryFeedback" autocomplete="country-name" required> <option selected disabled value="" aria-hidden="true">Select a country</option> <option value="1">Australia</option> <option value="2">Canada</option> <option value="3">France</option> <option value="4">USA</option> </select> <div class="valid-feedback">
+Looks good!
+</div> <div id="countryFeedback" class="invalid-feedback">
+Please select a valid country.
+</div> </div> <div class="mb-3"> <label for="company" id="companyLabel" class="form-label is-required">Name of company<span class="visually-hidden"> (required)</span></label> <input type="text" class="form-control" id="company" aria-labelledby="companyLabel companyFeedback" required> <div class="valid-feedback">
+Looks good!
+</div> <div id="companyFeedback" class="invalid-feedback">
+Please enter a valid company name.
+</div> </div> <div class="mb-3"> <label for="business" id="businessLabel" class="form-label is-required">Business type<span class="visually-hidden"> (required)</span></label> <select class="form-select" id="business" aria-labelledby="businessLabel businessFeedback" required> <option selected disabled value="" aria-hidden="true">Select a type</option> <option value="1">Corporation</option> <option value="2">Limited liability company</option> <option value="3">Partnership</option> <option value="4">Sole proprietorship</option> </select> <div class="valid-feedback">
+Looks good!
+</div> <div id="businessFeedback" class="invalid-feedback">
+Please select a valid business type.
+</div> </div> <div class="mb-3"> <label for="website" id="websiteLabel" class="form-label">Website<span class="visually-hidden"> (required)</span></label> <input type="text" class="form-control" id="website" aria-labelledby="websiteLabel websiteFeedback"> <div class="valid-feedback">
+Looks good!
+</div> <div id="websiteFeedback" class="invalid-feedback">
+Please enter a valid website.
+</div> </div> <div class="mb-3"> <label for="message" id="messageLabel" class="form-label is-required">Message<span class="visually-hidden"> (required)</span></label> <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for text area"> <span class="visually-hidden">Helper for text area</span> </button> <textarea class="form-control" id="message" rows="5" placeholder="Describe your business and your motivation in becoming an Orange reseller" aria-labelledby="messageLabel messageFeedback" required></textarea> <div class="valid-feedback">
+Looks good!
+</div> <div id="messageFeedback" class="invalid-feedback">
+Please enter a valid message.
+</div> </div> <button type="submit" class="btn btn-primary mt-2">Submit</button> </div> </div> </form> </div> </div> </div> </main> <footer class="footer navbar" data-bs-theme="dark"> <h2 class="visually-hidden">Sitemap and information</h2> <div class="container-xxl footer-terms"> <ul class="navbar-nav gap-md-3"> <li class="fw-bold">© Orange 2025</li> <li><a class="nav-link" href="#">Terms and conditions</a></li> <li><a class="nav-link" href="#">Privacy</a></li> <li><a class="nav-link" href="#">Cookie policy</a></li> <li><a class="nav-link" href="#">Accessibility statement</a></li> <li><a class="nav-link active" id="test" href="#" aria-current="page">Become a reseller</a></li> </ul> </div> </footer>   <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-/3/NNvbDieX9djjOGXvY8EszzxquMrYE0+zcrJrGSxwMxbqdM370PRtLzI/1SNNy" class="astro-vvvwv3sm"></script> <script src="form.js" class="astro-vvvwv3sm"></script> </body> </html>
