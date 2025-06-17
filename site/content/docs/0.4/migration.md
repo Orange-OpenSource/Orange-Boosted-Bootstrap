@@ -65,7 +65,7 @@ toc: true
 
 #### Breadcrumb
 
-- <span class="badge text-bg-success">New</span> Breadcrumb component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Breadcrumb component has been implemented.
 
 ### Extend
 
@@ -150,13 +150,13 @@ toc: true
 
 #### Reboot
 
-- <span class="badge text-bg-success">New</span> Default link styles has been updated.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Default link styles has been updated.
 
 ### Components
 
 #### Links
 
-- <span class="badge text-bg-success">New</span> Link component has been implemented.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Link component has been implemented.
 
 ### Helpers
 
