@@ -4,16 +4,16 @@
 
 .link {
   // scss-docs-start link-css-vars
-  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-medium};
-  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-medium};
+  --#{$prefix}link-icon-size: #{$ouds-link-size-icon-default};
+  --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-default};
   // scss-docs-end link-css-vars
 
   @extend %link-properties;
   @include get-font-size("label-large");
   display: inline-flex;
   align-items: center;
-  min-width: $ouds-link-size-min-width-medium;
-  min-height: $ouds-link-size-min-height-medium;
+  min-width: $ouds-link-size-min-width-default;
+  min-height: $ouds-link-size-min-height-default;
   padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
   text-align: start;
   text-wrap: pretty;
@@ -39,7 +39,7 @@
 }
 
 .link-chevron {
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-medium};
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-default};
   --#{$prefix}link-arrow-color: #{$ouds-link-color-arrow-enabled};
   --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-arrow-hover};
   --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-arrow-focus};
@@ -106,17 +106,17 @@
 }
 
 .link-on-colored-bg {
-  --#{$prefix}link-color: #{$ouds-link-color-content-enabled-mono};
-  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover-mono};
-  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus-mono};
-  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed-mono};
-  --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
-  --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
-  --#{$prefix}link-arrow-color: #{$ouds-link-color-content-enabled-mono};
-  --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-content-hover-mono};
-  --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-content-focus-mono};
-  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-color-content-pressed-mono};
-  --#{$prefix}link-arrow-disabled-color: #{$ouds-link-color-content-disabled-mono};
+  --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-arrow-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-arrow-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-arrow-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-arrow-disabled-color: #{$ouds-link-mono-color-content-disabled};
 }
 
 .link-sm {

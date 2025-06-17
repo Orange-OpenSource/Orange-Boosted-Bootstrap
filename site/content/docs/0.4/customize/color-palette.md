@@ -17,7 +17,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "OUDS colors" }}
   {{- range $subcategory := .subcategories }}
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-tall">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-lg">
     {{- range $color := .colors }}
       <figure class="mb-none" aria-label="{{ $color.name }}">
         <button class="border-none p-none color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
@@ -38,9 +38,9 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
           </svg>
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
         </button>
-        <figcaption class="py-shortest">
+        <figcaption class="py-2xs">
           <code class="user-select-all">{{ $color.hex }}</code>
-          <hr class="my-shortest" style="border-color:{{ $color.hex }} !important">
+          <hr class="my-2xs" style="border-color:{{ $color.hex }} !important">
           <var class="user-select-all">{{- $color.variable -}}</var>
         </figcaption>
       </figure>
@@ -80,35 +80,35 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< theme-colors.inline >}}
   {{- range $color := $.Site.Data.colors }}
     {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
-    <div class="col-md-4 mb-tall">
-      <div class="p-tall mb-short position-relative swatch-{{ $color.name }}">
+    <div class="col-md-4 mb-lg">
+      <div class="p-lg mb-sm position-relative swatch-{{ $color.name }}">
         <strong class="d-block">${{ $color.name }}</strong>
         {{ $color.hex }}
       </div>
       {{ range (seq 100 100 900) }}
-      <div class="p-tall bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
+      <div class="p-lg bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
       {{ end }}
     </div>
     {{ end -}}
   {{ end -}}
 
-  <div class="col-md-4 mb-tall">
-    <div class="p-tall mb-short position-relative swatch-gray-500">
+  <div class="col-md-4 mb-lg">
+    <div class="p-lg mb-sm position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
       #555
     </div>
   {{- range $.Site.Data.grays }}
-    <div class="p-tall bd-gray-{{ .name }}">$gray-{{ .name }}</div>
+    <div class="p-lg bd-gray-{{ .name }}">$gray-{{ .name }}</div>
   {{ end -}}
   </div>
   {{< /theme-colors.inline >}}
 
-  <div class="col-md-4 mb-tall">
-    <div class="p-tall mb-short bd-black text-always-on-black">
+  <div class="col-md-4 mb-lg">
+    <div class="p-lg mb-sm bd-black text-always-on-black">
       <strong class="d-block">$black</strong>
       #000
     </div>
-    <div class="p-tall mb-short bd-white border">
+    <div class="p-lg mb-sm bd-white border">
       <strong class="d-block">$white</strong>
       #fff
     </div>

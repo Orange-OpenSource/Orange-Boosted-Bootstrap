@@ -1,6 +1,6 @@
 {{ define "body_override" }}<body{{ if (eq .Page.Params.toc true) }} data-bs-spy="scroll" data-bs-target="#TableOfContents"{{ end }}>{{ end }}
 {{ define "main" }}
-  <div class="container-fluid container-max-width bd-gutter mt-tall my-md-tallest bd-layout">
+  <div class="container-fluid container-max-width bd-gutter mt-lg my-md-2xl bd-layout">
     <nav class="bd-sidebar" aria-labelledby="docs-nav">
       <h1 id="docs-nav" class="visually-hidden">Docs navigation</h1>
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
@@ -16,12 +16,12 @@
     </nav>
 
     <main class="bd-main order-1">
-      <div class="bd-intro pt-short ps-lg-short">
+      <div class="bd-intro pt-sm ps-lg-sm">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-tall mb-md-none d-flex text-nowrap">
+          <div class="mb-lg mb-md-none d-flex text-nowrap">
             {{- /* This is needed because we want to show the badge if show_badge isn't present or is set to false */ -}}
             {{- if (or (and (.Page.Params.added) (not (isset .Page.Params.added "show_badge"))) (and (.Page.Params.added) (isset .Page.Params.added "show_badge") (not (eq .Page.Params.added.show_badge false)))) -}}
-              <p class="mb-none me-short"><span class="tag tag-sm">Added in v{{ .Page.Params.added.version }}</span></p>
+              <p class="mb-none me-sm"><span class="tag tag-sm">Added in v{{ .Page.Params.added.version }}</span></p>
             {{- end -}}
             <a class="btn btn-default" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}-ouds-web/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
@@ -29,27 +29,27 @@
           </div>
           <h1 class="bd-title mb-none" id="content">{{ .Title | markdownify }}</h1>
         </div>
-        <p class="bd-lead mt-short">{{ .Page.Params.Description | markdownify }}</p>
+        <p class="bd-lead mt-sm">{{ .Page.Params.Description | markdownify }}</p>
         <!-- OUDS mod: No ads -->
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc mt-tall mb-huge my-lg-none mb-lg-huge px-sm-shortest text-muted">
+        <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
           <h2 class="mb-none">
-            <button class="btn btn-default p-md-none mb-short mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+            <button class="btn btn-default p-md-none mb-sm mb-md-none text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
               On this page
-              <svg class="bi d-md-none ms-short" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+              <svg class="bi d-md-none ms-sm" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
             </button>
-            <span class="d-none d-md-block h6 my-short ms-tall">On this page</span>
+            <span class="d-none d-md-block h6 my-sm ms-lg">On this page</span>
           </h2>
-          <hr class="d-none d-md-block my-short ms-tall">
-          <div class="collapse bd-toc-collapse ms-shorter" id="tocContents">
+          <hr class="d-none d-md-block my-sm ms-lg">
+          <div class="collapse bd-toc-collapse ms-xs" id="tocContents">
             {{ .TableOfContents }}
           </div>
         </div>
       {{ end }}
 
-      <div class="bd-content ps-lg-short">
+      <div class="bd-content ps-lg-sm">
         {{ if .Page.Params.sections }}
           <div class="row g-medium">
             {{ range .Page.Params.sections }}

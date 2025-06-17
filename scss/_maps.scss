@@ -3,9 +3,9 @@
 $ouds-border-radiuses: (
   null:       $ouds-border-radius-default,
   "none":     $ouds-border-radius-none,
-  "short":    $ouds-border-radius-short,
+  "small":    $ouds-border-radius-small,
   "medium":   $ouds-border-radius-medium,
-  "tall":     $ouds-border-radius-tall,
+  "large":     $ouds-border-radius-large,
   "pill":     px-to-rem($ouds-border-radius-pill),
   "circle":   50%
 ) !default;
@@ -37,45 +37,45 @@ $ouds-border-colors: (
 // scss-docs-start ouds-maps-dimension
 $ouds-dimension-space-scaled: (
   "none": var(--#{$prefix}space-scaled-none),
-  "smash": var(--#{$prefix}space-scaled-smash),
-  "shortest": var(--#{$prefix}space-scaled-shortest),
-  "shorter": var(--#{$prefix}space-scaled-shorter),
-  "short": var(--#{$prefix}space-scaled-short),
-  "medium": var(--#{$prefix}space-scaled-medium),
-  "tall": var(--#{$prefix}space-scaled-tall),
-  "taller": var(--#{$prefix}space-scaled-taller),
-  "tallest": var(--#{$prefix}space-scaled-tallest),
-  "spacious": var(--#{$prefix}space-scaled-spacious)
+  "3xs": var(--#{$prefix}space-scaled-3xs),
+  "2xs": var(--#{$prefix}space-scaled-2xs),
+  "xs": var(--#{$prefix}space-scaled-xs),
+  "sm": var(--#{$prefix}space-scaled-sm),
+  "md": var(--#{$prefix}space-scaled-md),
+  "lg": var(--#{$prefix}space-scaled-lg),
+  "xl": var(--#{$prefix}space-scaled-xl),
+  "2xl": var(--#{$prefix}space-scaled-2xl),
+  "3xl": var(--#{$prefix}space-scaled-3xl)
 ) !default;
 
 // stylelint-disable function-disallowed-list
 $ouds-dimension-negative-space-scaled: (
-  "nsmash": calc(-1 * var(--#{$prefix}space-scaled-smash)),
-  "nshortest": calc(-1 * var(--#{$prefix}space-scaled-shortest)),
-  "nshorter": calc(-1 * var(--#{$prefix}space-scaled-shorter)),
-  "nshort": calc(-1 * var(--#{$prefix}space-scaled-short)),
-  "nmedium": calc(-1 * var(--#{$prefix}space-scaled-medium)),
-  "ntall": calc(-1 * var(--#{$prefix}space-scaled-tall)),
-  "ntaller": calc(-1 * var(--#{$prefix}space-scaled-taller)),
-  "ntallest": calc(-1 * var(--#{$prefix}space-scaled-tallest)),
-  "nspacious": calc(-1 * var(--#{$prefix}space-scaled-spacious))
+  "n3xs": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
+  "n2xs": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
+  "nxs": calc(-1 * var(--#{$prefix}space-scaled-xs)),
+  "nsm": calc(-1 * var(--#{$prefix}space-scaled-sm)),
+  "nmd": calc(-1 * var(--#{$prefix}space-scaled-md)),
+  "nlg": calc(-1 * var(--#{$prefix}space-scaled-lg)),
+  "nxl": calc(-1 * var(--#{$prefix}space-scaled-xl)),
+  "n2xl": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
+  "n3xl": calc(-1 * var(--#{$prefix}space-scaled-3xl))
 ) !default;
 // stylelint-enable function-disallowed-list
 
 // scss-docs-start ouds-maps-dimension-fixed
 $ouds-dimension-space-fixed: (
   "none": $ouds-space-fixed-none,
-  "smash": $ouds-space-fixed-smash,
-  "shortest": $ouds-space-fixed-shortest,
-  "shorter": $ouds-space-fixed-shorter,
-  "short": $ouds-space-fixed-short,
-  "medium": $ouds-space-fixed-medium,
-  "tall": $ouds-space-fixed-tall,
-  "taller": $ouds-space-fixed-taller,
-  "tallest": $ouds-space-fixed-tallest,
-  "spacious": $ouds-space-fixed-spacious,
-  "huge": $ouds-space-fixed-huge,
-  "jumbo": $ouds-space-fixed-jumbo
+  "3xs": $ouds-space-fixed-3xs,
+  "2xs": $ouds-space-fixed-2xs,
+  "xs": $ouds-space-fixed-xs,
+  "sm": $ouds-space-fixed-sm,
+  "md": $ouds-space-fixed-md,
+  "lg": $ouds-space-fixed-lg,
+  "xl": $ouds-space-fixed-xl,
+  "2xl": $ouds-space-fixed-2xl,
+  "3xl": $ouds-space-fixed-3xl,
+  "4xl": $ouds-space-fixed-4xl,
+  "5xl": $ouds-space-fixed-5xl
 ) !default;
 // scss-docs-end ouds-maps-dimension-fixed
 
@@ -111,8 +111,8 @@ $ouds-font-sizes: (
 ) !default;
 
 $ouds-font-weights: (
-  normal: $ouds-font-weight-system-default,
-  bold: $ouds-font-weight-system-strong
+  normal: $ouds-font-weight-system-web-default,
+  bold: $ouds-font-weight-system-web-strong
 ) !default;
 
 $ouds-icon-sizes: ("sm", "md", "lg") !default;
@@ -161,9 +161,19 @@ $ouds-text-colors: (
   "disabled": var(--#{$prefix}color-content-disabled),
   "muted": var(--#{$prefix}color-content-muted),
   "on-brand-primary": var(--#{$prefix}color-content-on-brand-primary),
-  "on-status-emphasized": var(--#{$prefix}color-content-on-status-emphasized),
-  "on-status-emphasized-alt": var(--#{$prefix}color-content-on-status-emphasized-alt),
-  "on-status-muted": var(--#{$prefix}color-content-on-status-muted),
+  "on-status-accent-emphasized": var(--#{$prefix}color-content-on-status-accent-emphasized),
+  "on-status-accent-muted": var(--#{$prefix}color-content-on-status-accent-muted),
+  "on-status-info-emphasized": var(--#{$prefix}color-content-on-status-info-emphasized),
+  "on-status-info-muted": var(--#{$prefix}color-content-on-status-info-muted),
+  "on-status-negative-emphasized": var(--#{$prefix}color-content-on-status-negative-emphasized),
+  "on-status-negative-muted": var(--#{$prefix}color-content-on-status-negative-muted),
+  "on-status-neutral-emphasized": var(--#{$prefix}color-content-on-status-neutral-emphasized),
+  "on-status-neutral-muted": var(--#{$prefix}color-content-on-status-neutral-muted),
+  "on-status-positive-emphasized": var(--#{$prefix}color-content-on-status-positive-emphasized),
+  "on-status-positive-muted": var(--#{$prefix}color-content-on-status-positive-muted),
+  "on-status-warning-emphasized": var(--#{$prefix}color-content-on-status-warning-emphasized),
+  "on-status-warning-muted": var(--#{$prefix}color-content-on-status-warning-muted),
+  "status-accent": var(--#{$prefix}color-content-status-accent),
   "status-info": var(--#{$prefix}color-content-status-info),
   "status-negative": var(--#{$prefix}color-content-status-negative),
   "status-positive": var(--#{$prefix}color-content-status-positive),
