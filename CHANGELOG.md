@@ -1,3 +1,12 @@
+## [5.3.6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.5...v5.3.6) (2025-06-16)
+
+
+### Bug Fixes
+
+* **storybook:** remove directory when needed ([#2979](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2979)) ([c06298e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c06298eb9b4e6d026aef26fa49ead2c96ec29a44))
+
+
+
 ## [5.3.5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.4...v5.3.5) (2025-04-15)
 
 
