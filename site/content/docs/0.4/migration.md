@@ -13,6 +13,48 @@ toc: true
 
 <hr>
 
+
+### Utilities
+
+#### Border
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities sizes `short` and `tall` have been renamed to `small` and `large` respectively.
+  - **Short**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`, for example `.rounded-short` → `.rounded-small`.
+  - **Tall**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`, for example `.rounded-tall` → `.rounded-large`.
+
+#### Colors
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Color utilities for text on status colors have been added:
+  - **Accent**: `.text-on-status-accent-emphasized`, `.text-on-status-accent-muted`
+  - **Info**: `.text-on-status-info-emphasized`, `.text-on-status-info-muted`
+  - **Negative**: `.text-on-status-negative-emphasized`, `.text-on-status-negative-muted`
+  - **Neutral**: `.text-on-status-neutral-emphasized`, `.text-on-status-neutral-muted`
+  - **Positive**: `.text-on-status-positive-emphasized`, `.text-on-status-positive-muted`
+  - **Warning**: `.text-on-status-warning-emphasized`, `.text-on-status-warning-muted`
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `.text-on-status-emphasized`, `.text-on-status-emphasized-alt`, `.text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]({{< docsref "/helpers/color-background" >}})
+
+#### Spacings
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Spacing utilities (padding, margin, gap, ...) sizes have been renamed as follows:
+  - **Smash** is renamed to `3xs` : for example `.m-smash` → `.m-3xs`
+  - **Shortest** is renamed to `2xs` : for example `.m-shortest` → `.m-2xs`
+  - **Shorter** is renamed to `xs` : for example `.m-shorter` → `.m-xs`
+  - **Short** is renamed to `sm` : for example `.m-short` → `.m-sm`
+  - **Medium** is renamed to `md` : for example `.m-medium` → `.m-md`
+  - **Tall** is renamed to `lg` : for example `.m-tall` → `.m-lg`
+  - **Taller** is renamed to `xl` : for example `.m-taller` → `.m-xl`
+  - **Tallest** is renamed to `2xl` : for example `.m-tallest` → `.m-2xl`
+  - **Spacious** is renamed to `3xl` : for example `.m-spacious` → `.m-3xl`
+  - **Huge** is renamed to `4xl` : for example `.m-huge` → `.m-4xl`
+  - **Jumbo** is renamed to `5xl` : for example `.m-jumbo` → `.m-5xl`
+  - **Negative** these changes apply to negative spacings as well, for example `.m-nsmash` → `.m-n3xs`
+
+### CSS and Sass variables
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Some design tokens prefix have been changed to follow the new naming convention.
+  - Core Raw Tokens (in file raw.scss) are now prefixed with `core-ouds` instead of `ouds`.
+  - Orange Raw Tokens (in file raw.scss) are now prefixed with `core-orange` instead of `ouds`.
+
 ### Forms
 
 #### Checkboxes, radio buttons, switches
@@ -28,6 +70,12 @@ toc: true
 #### Bullet list
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Bullet list component has been implemented.
+
+### Extend
+
+#### Icons
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Icons' sizes for decorative standalone icons have been added: `.decorative-4xs-icon`, `decorative-3xs-icon`.
 
 ## v0.4.1
 
@@ -64,7 +112,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
     <summary>See the new import stack</summary>
 
     ```diff
@@ -75,7 +123,7 @@ toc: true
     ```
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-font-family-body</code></li>
@@ -89,7 +137,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Removed Sass variables:</summary>
     <ul>
       <li><code>$ouds-font-family</code></li>
@@ -134,7 +182,7 @@ toc: true
 
 ### CSS and Sass variables
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-color-border-muted-dark</code></li>
@@ -167,14 +215,14 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
     <ul>
       <li><code>$ouds-color-border-muted</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-color-border-muted</code></li>
@@ -203,7 +251,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-rounded` (default <code>true</code>) has been introduced. It allows you to set rounded or flat corners on components.
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$btn-border-radius</code></li>
@@ -331,7 +379,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
     <ul>
       <li><code>button-variant</code></li>
@@ -580,7 +628,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A new file containing composite tokens has been added. If you were using the Sass compilation, you must import the new Sass file between the semantic and component files.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
     <summary>See the new import stack</summary>
 
     ```diff
@@ -596,7 +644,7 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-container-classes` to enable or disable the generation of CSS classes for the grid system (e.g. `.row`, `.col-md-1`, etc.).
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$enable-container-classes</code></li>
@@ -1504,7 +1552,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
     <ul>
       <li><code>$ouds-color-action-disabled</code></li>
@@ -1621,7 +1669,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$container-fluid-margin</code></li>
@@ -1646,7 +1694,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
     <ul>
       <li><code>breakpoint-infix()</code></li>
@@ -1667,7 +1715,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
@@ -1738,7 +1786,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-letter-spacing</code></li>
@@ -1943,7 +1991,7 @@ toc: true
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-warning-emphasized">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-100</code></li>
@@ -1981,7 +2029,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
-  <details class="mb-tall">
+  <details class="mb-lg">
   <summary>See the new import stack</summary>
 
   ```diff
@@ -1995,7 +2043,7 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
   ```
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
     <ul>
       <li><code>$ouds-opacity-0</code></li>
@@ -2007,21 +2055,21 @@ From now on, by default, OUDS Web won't embed Bootstrap elements (like helpers, 
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
     <ul>
       <li><code>$ouds-opacities</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>opacity-ouds</code></li>
     </ul>
   </details>
 
-- <details class="mb-short">
+- <details class="mb-sm">
     <summary><span class="badge text-bg-status-negative-emphasized">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>opacity</code></li>

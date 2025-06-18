@@ -39,7 +39,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 {{< example >}}
 <nav aria-label="breadcrumb bs l2">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Library</li>
   </ol>
 </nav>
@@ -47,7 +47,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 <nav aria-label="breadcrumb bs l3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
     <li class="breadcrumb-item active" aria-current="page">Item</li>
   </ol>
 </nav>

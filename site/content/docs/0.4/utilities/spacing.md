@@ -40,17 +40,17 @@ Where *sides* is one of:
 Where *size* is one of:
 
 - `none` - for classes that eliminate the `margin` or `padding` by setting it to `$ouds-dimension-0`, which is `0`
-- `smash` - for classes that set the `margin` or `padding` to `$ouds-dimension-25`, which is `2px`
-- `shortest` - for classes that set the `margin` or `padding` to `$ouds-dimension-50`, which is `4px`
-- `shorter` - for classes that set the `margin` or `padding` to `$ouds-dimension-100`, which is `8px`
-- `short` - for classes that set the `margin` or `padding` to `$ouds-dimension-150`, which is `12px`
-- `medium` - for classes that set the `margin` or `padding` to `$ouds-dimension-200`, which is `16px`
-- `tall` - for classes that set the `margin` or `padding` to `$ouds-dimension-300`, which is `24px`
-- `taller` - for classes that set the `margin` or `padding` to `$ouds-dimension-400`, which is `32px`
-- `tallest` - for classes that set the `margin` or `padding` to `$ouds-dimension-500`, which is `40px`
-- `spacious` - for classes that set the `margin` or `padding` to `$ouds-dimension-600`, which is `48px`
-- `huge` - for classes that set the `margin` or `padding` to `$ouds-dimension-700`, which is `56px`
-- `jumbo` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
+- `3xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-25`, which is `2px`
+- `2xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-50`, which is `4px`
+- `xs` - for classes that set the `margin` or `padding` to `$ouds-dimension-100`, which is `8px`
+- `sm` - for classes that set the `margin` or `padding` to `$ouds-dimension-150`, which is `12px`
+- `md` - for classes that set the `margin` or `padding` to `$ouds-dimension-200`, which is `16px`
+- `lg` - for classes that set the `margin` or `padding` to `$ouds-dimension-300`, which is `24px`
+- `xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-400`, which is `32px`
+- `2xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-500`, which is `40px`
+- `3xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-600`, which is `48px`
+- `4xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-700`, which is `56px`
+- `5xl` - for classes that set the `margin` or `padding` to `$ouds-dimension-800`, which is `64px`
 - `auto` - for classes that set the `margin` to auto
 
 (You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
@@ -117,15 +117,15 @@ Where *size* is one of:
 | Size name | Size for mobile (`2xs` to `md`) | Size for tablet (`md` to `xl`) | Size for desktop (`xl` to `3xl` and above) |
 | --- | --- | --- | --- |
 | `none` | `0` | `0` | `0` |
-| `smash` | `2px` | `4px` | `4px` |
-| `shortest` | `4px` | `8px` | `8px` |
-| `shorter` | `8px` | `12px` | `16px` |
-| `short` | `12px` | `16px` | `24px` |
-| `medium` | `16px` | `24px` | `32px` |
-| `tall` | `24px` | `32px` | `40px` |
-| `taller` | `32px` | `40px` | `48px` |
-| `tallest` | `40px` | `48px` | `56px` |
-| `spacious` | `48px` | `56px` | `64px` |
+| `3xs` | `2px` | `4px` | `4px` |
+| `2xs` | `4px` | `8px` | `8px` |
+| `xs` | `8px` | `12px` | `16px` |
+| `sm` | `12px` | `16px` | `24px` |
+| `md` | `16px` | `24px` | `32px` |
+| `lg` | `24px` | `32px` | `40px` |
+| `xl` | `32px` | `40px` | `48px` |
+| `2xl` | `40px` | `48px` | `56px` |
+| `3xl` | `48px` | `56px` | `64px` |
 {{< /bs-table >}}
 
 (You can but shouldn't add more sizes by adding entries to the `$ouds-dimension-space-scaled` Sass map variable.)
@@ -139,16 +139,16 @@ Here are some representative examples of these classes:
   margin-top: $ouds-space-fixed-none !important;
 }
 
-.ms-scaled-tall {
-  margin-left: var(--bs-space-scaled-tall) !important;
+.ms-scaled-lg {
+  margin-left: var(--bs-space-scaled-lg) !important;
 }
 
-.px-scaled-shortest {
-  padding-right: var(--bs-space-scaled-shortest) !important;
-  padding-left: var(--bs-space-scaled-shortest) !important;
+.px-scaled-2xs {
+  padding-right: var(--bs-space-scaled-2xs) !important;
+  padding-left: var(--bs-space-scaled-2xs) !important;
 }
 
-.p-tallest {
+.p-2xl {
   padding: $ouds-space-fixed-tall !important;
 }
 ```
@@ -176,14 +176,14 @@ Here are some representative examples of these classes:
 
 {{< /bootstrap-compatibility >}}
 
-The first two examples show the scaled and fixed margin classes in action. The last one shows how to recreate an equivalent of `.mx-scaled-tall` by combining other responsive margin classes.
+The first two examples show the scaled and fixed margin classes in action. The last one shows how to recreate an equivalent of `.mx-scaled-lg` by combining other responsive margin classes.
 
 Please note that if you mix the scaled and fixed classes, the fixed classes will override the scaled ones.
 
 {{< example class="bd-example-spacings" >}}
-<div class="mx-scaled-tall">Tall scaled x margin</div>
-<div class="mx-tall">Tall x margin (fixed)</div>
-<div class="mx-tall mx-md-taller mx-xl-tallest">Tall scaled x margin (manually)</div>
+<div class="mx-scaled-lg">Tall scaled x margin</div>
+<div class="mx-lg">Tall x margin (fixed)</div>
+<div class="mx-lg mx-md-xl mx-xl-2xl">Tall scaled x margin (manually)</div>
 {{< /example >}}
 
 ### Horizontal centering
@@ -191,13 +191,13 @@ Please note that if you mix the scaled and fixed classes, the fixed classes will
 Additionally, OUDS Web also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
-  <div class="mx-auto p-short" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bd-primary-light-rgb),.3) solid 1px;">
+  <div class="mx-auto p-sm" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bd-primary-light-rgb),.3) solid 1px;">
     Centered element
   </div>
 </div>
 
 ```html
-<div class="mx-auto p-short" style="width: 200px;">
+<div class="mx-auto p-sm" style="width: 200px;">
   Centered element
 </div>
 ```
@@ -206,15 +206,15 @@ Additionally, OUDS Web also includes an `.mx-auto` class for horizontally center
 
 In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-short` and `.ms-scaled-tall`:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-lg`:
 
 ```scss
-.mt-nshort {
-  margin-top: -$ouds-space-fixed-short !important;
+.mt-nsm {
+  margin-top: -$ouds-space-fixed-sm !important;
 }
 
-.ms-scaled-ntall {
-  margin-top: calc(-1 * var(--bs-space-scaled-tall)) !important;
+.ms-scaled-nlg {
+  margin-top: calc(-1 * var(--bs-space-scaled-lg)) !important;
 }
 ```
 
@@ -235,11 +235,11 @@ Here's an example class that's the opposite of `.mt-1`:
 When using `display: grid` or `display: flex`, you can make use of `gap` utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the `$ouds-dimension-space-fixed` Sass map.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-lg">
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -267,11 +267,11 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 `row-gap` sets the vertical space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-lg">
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -293,11 +293,11 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 `column-gap` sets the horizontal space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-tall">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-lg">
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -319,11 +319,11 @@ Support includes responsive options for all of OUDS Web's grid breakpoints, as w
 We also provide scaled versions of the gap (including `row-gap` and `column-gap`). These are generated via our Utilities API, based on the `$ouds-dimension-space-scaled` Sass map.
 
 {{< example class="bd-example-cssgrid" >}}
-<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-scaled-medium">
-  <div class="p-short">Grid item 1</div>
-  <div class="p-short">Grid item 2</div>
-  <div class="p-short">Grid item 3</div>
-  <div class="p-short">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-scaled-md">
+  <div class="p-sm">Grid item 1</div>
+  <div class="p-sm">Grid item 2</div>
+  <div class="p-sm">Grid item 3</div>
+  <div class="p-sm">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -336,12 +336,6 @@ CSS variables that are used to build our scaled utilities.
 {{< scss-docs name="root-space-scaled-var-ouds" file="scss/_root.scss" >}}
 
 ### Sass tokens
-
-#### Raw tokens
-
-Dimension raw tokens as Sass variables. **Not to be used as-is**.
-
-{{< scss-docs name="ouds-raw-dimension" file="scss/tokens/_raw.scss" >}}
 
 #### Semantic tokens
 

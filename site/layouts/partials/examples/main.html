@@ -1,5 +1,5 @@
 {{ range $entry := $.Site.Data.examples -}}
-<div class="bd-content mt-huge">
+<div class="bd-content mt-4xl">
   <h2 id="{{ $entry.category | urlize }}">{{ $entry.category }}</h2>
   <p>{{ $entry.description }}</p>
   {{ if eq $entry.category "RTL" -}}
@@ -11,7 +11,7 @@
     </div>
   {{ end -}}
   {{ if eq $entry.category "Starters" -}}
-    <div class="bd-callout bd-callout-warning mb-tallest">
+    <div class="bd-callout bd-callout-warning mb-2xl">
       <p>
         <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
       </p>
@@ -22,20 +22,20 @@
   {{ end -}}
   {{ if $entry.bootstrap}}
   <div class="col-12">
-    <details class="mb-tallest px-short border border-drag">
-      <summary class="py-short">Bootstrap <span class="tag tag-sm float-end"><code class="text-default">$enable-bootstrap-compatibility: true</code></span></summary>
+    <details class="mb-2xl px-sm border border-drag">
+      <summary class="py-sm">Bootstrap <span class="tag tag-sm float-end"><code class="text-default">$enable-bootstrap-compatibility: true</code></span></summary>
       <div class="row">
   {{- end }}
   {{ range $i, $example := $entry.examples -}}
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       {{ if $entry.external -}}
-        <article class="col-md-6 col-lg-4 mb-tall d-flex gap-tall">
+        <article class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
           <div class="bi fs-hm flex-shrink-0" style="margin-top: -5px;">
             {{ partial "icons/github.svg" }}
           </div>
           <div>
-            <h3 class="h5 mb-shortest">
+            <h3 class="h5 mb-2xs">
               <a class="d-block link-offset-1" href="{{ urls.JoinPath $.Site.Params.bootstrap_github_org $example.url }}" target="_blank" rel="noopener" id="starter-{{ $i }}">
                 {{ $example.name }}
               </a>
@@ -52,7 +52,7 @@
           </div>
         </article>
       {{ else -}}
-        <article class="col-sm-6 col-md-3 mb-tall">
+        <article class="col-sm-6 col-md-3 mb-lg">
           {{- $exampleNameUrlized := $example.name | urlize -}}
           {{- $exampleUrl := urls.JoinPath "/docs" $.Site.Params.docs_version "/examples" $exampleNameUrlized "/" }}
           <a class="d-block link-offset-1" href="{{ $exampleUrl }}"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
@@ -60,7 +60,7 @@
             {{- $imgPath := urls.JoinPath $imageBasePath (printf "%s.png" $exampleNameUrlized) -}}
             {{- $imgPath2x := urls.JoinPath $imageBasePath (printf "%s@2x.png" $exampleNameUrlized) -}}
             {{- with (imageConfig (path.Join "/site/static" $imgPath)) -}}
-            <img class="img-thumbnail mb-tall"
+            <img class="img-thumbnail mb-lg"
                 srcset="{{ $imgPath }}, {{ $imgPath2x }} 2x"
                 src="{{ $imgPath }}"
                 alt=""
@@ -68,7 +68,7 @@
                 height="{{ .Height }}"
                 loading="lazy">
             {{- end }}
-            <h3 class="h5 mb-shortest">
+            <h3 class="h5 mb-2xs">
               {{ $example.name }}
             </h3>
           </a>

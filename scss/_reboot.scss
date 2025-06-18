@@ -207,7 +207,7 @@ abbr[title] {
 // Address
 
 address {
-  margin-bottom: $ouds-space-fixed-medium; // OUDS mod: instead of `1rem`
+  margin-bottom: $ouds-space-fixed-md; // OUDS mod: instead of `1rem`
   font-style: normal;
   line-height: inherit;
 }
@@ -280,7 +280,7 @@ dd {
 // Blockquote
 
 blockquote {
-  margin: 0 0 $ouds-space-fixed-medium; // OUDS mod: instead of `0 0 1rem`
+  margin: 0 0 $ouds-space-fixed-md; // OUDS mod: instead of `0 0 1rem`
 }
 
 // OUDS mod: No italic
@@ -375,12 +375,12 @@ sup { top: -.5em; }
 
   .colored-bg &,
   &.colored-bg {
-    --#{$prefix}link-color: #{$ouds-link-color-content-enabled-mono};
-    --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover-mono};
-    --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus-mono};
-    --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed-mono};
-    --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
-    --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
+    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
   }
 }
 // End mod
@@ -422,7 +422,7 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
+  margin-bottom: $ouds-space-fixed-md; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
   @include get-font-size("code-medium"); // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;
