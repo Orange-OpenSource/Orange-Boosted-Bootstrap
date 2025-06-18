@@ -34,11 +34,7 @@
     },
     {
       "path": "./dist/css/ouds-web.css",
-<<<<<<< HEAD
       "maxSize": "57.55 kB"
-=======
-      "maxSize": "57.5 kB"
->>>>>>> ouds/main
     },
     {
       "path": "./dist/css/ouds-web.min.css",
