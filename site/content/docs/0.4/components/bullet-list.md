@@ -9,7 +9,7 @@ toc: true
 ---
 
 {{< callout info >}}
-You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
+You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/49e7bf-bullet-list).
 {{< /callout >}}
 
 ## Unordered lists
@@ -49,7 +49,7 @@ The marker depends on the level of nesting.
 
 ### Marker color
 
-Add the class `.list-default-color` to switch to the default body color for the marker.
+Add the class `.bullet-list-default-color` to switch to the default body color for the marker.
 
 {{< example >}}
 <ul class="bullet-list bullet-list-default-color">
@@ -220,6 +220,8 @@ It's possible to mix ordered and unordered lists, in this case adding the `.bull
 Do not confuse this style with the `.list-unstyled` utility that removes all styles from the list, see [below](#unstyled)
 {{< /callout >}}
 
+Bare lists have no markers, but retains indentation for alignment.
+
 {{< example >}}
 <ul class="bullet-list bullet-list-bare">
     <li>Bare bullet lists</li>
@@ -233,6 +235,8 @@ Do not confuse this style with the `.list-unstyled` utility that removes all sty
 {{< /example >}}
 
 ## Text style
+
+By default bullet lists text is displayed as [body large]({{< docsref "/content/typography/#regular-texts" >}}) and in bold, you can use the following classes to change these defaults.
 
 ### Body medium
 

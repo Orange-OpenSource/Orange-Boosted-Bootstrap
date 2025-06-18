@@ -88,7 +88,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Bullet list
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> `.bullet-list`, `.list-default-color`, `.list-tick` and `.list-bare` classes have been added.
+- <span class="badge text-bg-status-positive-emphasized">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
 
 ### Close button
