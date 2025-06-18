@@ -7,7 +7,7 @@
   --#{$prefix}bullet-list-marker-left: #{$ouds-bullet-list-space-padding-inline-level-0};
 
   padding-left: 0;
-  font-weight: $ouds-font-weight-system-strong;
+  font-weight: $ouds-font-weight-web-body-strong;
   list-style-type: "";
   @include get-font-size("body-large");
 
@@ -23,7 +23,7 @@
   &.fw-normal,
   &.fw-normal ul,
   &.fw-normal ol {
-    font-weight: $ouds-font-weight-system-default;
+    font-weight: $ouds-font-weight-web-body-default;
   }
 
   li {
