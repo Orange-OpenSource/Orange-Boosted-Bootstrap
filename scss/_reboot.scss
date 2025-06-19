@@ -215,10 +215,7 @@ address {
 
 // Lists
 
-ol,
-ul {
-  padding-left: 2rem;
-}
+// OUDS mod: no padding-left on ol and ul
 
 ol,
 ul,
@@ -236,42 +233,36 @@ ul ol {
 
 // OUDS mod
 // Orange square list-style
+// stylelint-disable selector-max-type
 ul {
   list-style-type: square;
-}
 
-// Future-proof markers' color
-// See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
-li::marker {
-  color: var(--#{$prefix}color-content-brand-primary);
-  vertical-align: middle;
+  ul {
+    list-style-type: "-  ";
 
-  ol & {
-    color: inherit;
+    ul {
+      list-style-type: circle;
+    }
   }
 }
+ol ol {
+  list-style-type: upper-alpha;
 
-li li::marker { color: var(--#{$prefix}color-content-muted); }
-
-li li li::marker { color: var(--#{$prefix}color-content-disabled); } // TODO: Check the colors once the design is done
-
-// Bullet-proof markers' color
-// @todo To remove when ::marker support is OK
-// See https://caniuse.com/#search=%3A%3Amarker
-li::before {
-  color: var(--#{$prefix}color-content-brand-primary);
-  vertical-align: text-top;
-
-  ol & {
-    color: inherit;
+  ol {
+    list-style-type: lower-alpha;
   }
 }
-
-li li::before { color: var(--#{$prefix}color-content-muted); }
-
-li li li::before { color: var(--#{$prefix}color-content-disabled); }
 // stylelint-enable selector-max-type
+
+li {
+  &::marker {
+    color: var(--#{$prefix}primary);
+
+    ol & {
+      color: inherit;
+    }
+  }
+}
 // End mod
 
 dt {

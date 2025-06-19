@@ -17,9 +17,11 @@
       padding-left: 0;
       margin-bottom: 0;
       list-style: none;
+      @include list-unstyled(); // OUDS mod
 
       ul {
         padding-left: 1rem;
+        margin-top: 0; // OUDS mod
         margin-left: -$ouds-space-fixed-xs; // OUDS mod
       }
     }

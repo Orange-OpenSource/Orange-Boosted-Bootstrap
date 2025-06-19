@@ -67,6 +67,10 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Breadcrumb component has been implemented.
 
+#### Bullet list
+
+- <span class="badge text-bg-status-positive-emphasized">New</span> Bullet list component has been implemented.
+
 ### Extend
 
 #### Icons

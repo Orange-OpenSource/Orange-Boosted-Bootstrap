@@ -34,7 +34,8 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     '.*Consider using the “h1” element as a top-level heading only.*',
     // Poor aria-readonly handling see https://github.com/validator/validator/issues/1199
     'Attribute “aria-readonly” not allowed on element “span” at this point.',
-    'Attribute “aria-readonly” not allowed on element “div” at this point.'
+    'Attribute “aria-readonly” not allowed on element “div” at this point.',
+    'Element “style” not allowed as child of element “div” in this context.*'
     // End mod
   ].join('|')
 

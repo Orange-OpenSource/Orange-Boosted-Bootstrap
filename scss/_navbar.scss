@@ -214,7 +214,7 @@
   @include font-size(var(--#{$prefix}navbar-nav-font-size)); // OUDS mod
   line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
   letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod
-  list-style: none;
+  @include list-unstyled(); // OUDS mod
 
   // OUDS mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
