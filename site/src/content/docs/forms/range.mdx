@@ -47,27 +47,23 @@ For better usability, it is recommended most of the time to display the current 
 This requires extra JavaScript code.
 
 <Example code={`<div class="d-flex w-100 justify-content-between">
-  <label for="customRange4" class="form-label">Example range</label>
-  <output for="customRange4" class="fw-bold" aria-hidden="true"></output>
-</div>
-<input type="range" class="form-range" min="0" max="100" step="1" id="customRange4">
+    <label for="customRange4" class="form-label">Example range</label>
+    <output for="customRange4" class="fw-bold" aria-hidden="true" id="rangeValue"></output>
+  </div>
+  <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="customRange4">
 
-<script>
-  // Please note that this script is only an example, please adapt it to your needs
+  <script>
+    // This is an example script, please modify as needed
+    const rangeInput = document.getElementById('customRange4');
+    const rangeOutput = document.getElementById('rangeValue');
 
-  function updateLabelValue() {
-    document.querySelector(\`output[for="\${this.id}"]\`).innerHTML = this.value;
-  }
+    // Set initial value
+    rangeOutput.textContent = rangeInput.value;
 
-  window.addEventListener('load', function () {
-    Array.from(document.getElementsByClassName('form-range')).forEach(function (el) {
-      if (document.querySelector(\`output[for="\${el.id}"]\`)) {
-        el.addEventListener('input', updateLabelValue)
-        updateLabelValue.call(el)
-      }
-    })
-  })
-</script>`} />
+    rangeInput.addEventListener('input', function() {
+      rangeOutput.textContent = this.value;
+    });
+  </script>`} />
 
 ## CSS
 
