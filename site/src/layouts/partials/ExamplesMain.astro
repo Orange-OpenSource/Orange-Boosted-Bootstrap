@@ -1,0 +1,141 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
+import { getSlug } from '@libs/utils'
+import GitHubIcon from '@components/icons/GitHubIcon.astro'
+---
+
+{
+  getData('examples').map(({ category, description, examples, external, bootstrap }) => {
+    return (
+      <div class="bd-content mt-4xl">
+        <h2 id={getSlug(category)}>{category}</h2>
+        <p>{description}</p>
+        {category === 'RTL' && (
+          <div class="bd-callout bd-callout-warning small">
+            <p>
+              <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an
+              improvement to suggest?
+            </p>
+            <p>
+              <a href={`${getConfig().repo}/issues/new/choose`}>Please open an issue.</a>
+            </p>
+          </div>
+        )}
+        {category === 'Starters' && (
+          <div class="bd-callout bd-callout-warning mb-2xl">
+            <p>
+              <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all{' '}
+              <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
+            </p>
+            <p>
+              You may need to tweak a bit Sass files.
+            </p>
+          </div>
+        )}
+        {!bootstrap && (
+          <div class="row">
+            {examples.map((example, index) => {
+              if (external) {
+                return (
+                  <article class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
+                    <GitHubIcon class="bi fs-hm flex-shrink-0" />
+                    <div>
+                      <h3 class="h5 mb-2xs">
+                        <a
+                          class="d-block link-offset-1"
+                          href={`${getConfig().bootstrap_github_org}${example.url}/`}
+                          target="_blank"
+                          rel="noopener"
+                          id={`starter-${index}`}
+                        >
+                          {example.name}
+                        </a>
+                      </h3>
+                      <p class="text-muted mb-none">{example.description}</p>
+                      <p class="mb-none">
+                        <a
+                          class="link icon-link link-sm link-offset-1"
+                          href={`https://stackblitz.com/github/twbs${example.url}?file=${
+                            example.indexPath ? example.indexPath : 'index.html'
+                          }`}
+                          target="_blank"
+                          rel="noopener"
+                          aria-labelledby={`edit-${index} starter-${index}`}
+                        >
+                          <svg aria-hidden="true">
+                            <use xlink:href="#lightning-charge-fill" />
+                          </svg>
+                          <span id={`edit-${index}`}>Edit in StackBlitz</span>
+                        </a>
+                      </p>
+                    </div>
+                  </article>
+                )
+              }
+
+              return (
+                <article class="col-sm-6 col-md-3 mb-lg">
+                  <a
+                    class="d-block link-offset-1"
+                    href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                    hreflang={example.name.includes('RTL') ? 'ar' : undefined}
+                  >
+                    <img
+                      class="img-thumbnail mb-lg"
+                      srcset={`${getVersionedDocsPath(
+                        `/assets/img/examples/${getSlug(example.name)}.png`
+                      )}, ${getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}@2x.png`)} 2x`}
+                      src={getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}.png`)}
+                      alt=""
+                      width="480"
+                      height="300"
+                      loading="lazy"
+                    />
+                    <h3 class="h5 mb-2xs">{example.name}</h3>
+                  </a>
+                  <p class="text-muted">{example.description}</p>
+                </article>
+              )
+            })}
+          </div>
+        )}
+        {bootstrap && (
+          <div class="col-12">
+            <details class="mb-2xl px-sm border border-drag">
+              <summary class="py-sm">Bootstrap <span class="tag tag-sm float-end"><code class="text-default">$enable-bootstrap-compatibility: true</code></span></summary>
+                <div class="row">
+                  {examples.map((example) => {
+                    return (
+                      <article class="col-sm-6 col-md-3 mb-lg">
+                        <a
+                          class="d-block link-offset-1"
+                          href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                          hreflang={example.name.includes('RTL') ? 'ar' : undefined}
+                        >
+                          <img
+                            class="img-thumbnail mb-lg"
+                            srcset={`${getVersionedDocsPath(
+                              `/assets/img/examples/${getSlug(example.name)}.png`
+                            )}, ${getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}@2x.png`)} 2x`}
+                            src={getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}.png`)}
+                            alt=""
+                            width="480"
+                            height="300"
+                            loading="lazy"
+                          />
+                          <h3 class="h5 mb-2xs">{example.name}</h3>
+                        </a>
+                        <p class="text-muted">{example.description}</p>
+                      </article>
+                    )
+                  })}
+                </div>
+            </details>
+          </div>
+        )}
+      </div>
+    )
+  })
+}

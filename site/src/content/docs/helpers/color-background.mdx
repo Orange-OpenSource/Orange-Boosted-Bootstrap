@@ -1,0 +1,51 @@
+---
+title: Color and background
+description: Set a background color with contrasting foreground color.
+aliases:
+  - "/docs/helpers/color-background/"
+toc: true
+---
+
+import { getData } from '@libs/data'
+
+## Overview
+
+Color and background helpers combine the power of our [`.text-*` utilities]([[docsref:/utilities/colors]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]) in one class. We determine a contrasting `color` for a particular `background-color`. However, it doesn’t change mode at all.
+
+<Callout type="info">
+Please consider using our [color modes]([[docsref:/customize/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
+</Callout>
+
+<Example code={`<p class="text-bg-primary p-lg fw-bold">.text-bg-primary</p>
+  <p class="text-bg-secondary p-lg fw-bold">.text-bg-secondary</p>
+  <p class="text-bg-tertiary p-lg fw-bold">.text-bg-tertiary</p>
+  <p class="text-bg-emphasized p-lg fw-bold">.text-bg-emphasized</p>
+  <p class="text-bg-brand-primary p-lg fw-bold">.text-bg-brand-primary</p>
+  <p class="text-bg-status-neutral-emphasized p-lg fw-bold">.text-bg-status-neutral-emphasized</p>
+  <p class="text-bg-status-neutral-muted p-lg fw-bold">.text-bg-status-neutral-muted</p>
+  <p class="text-bg-status-accent-emphasized p-lg fw-bold">.text-bg-status-accent-emphasized</p>
+  <p class="text-bg-status-accent-muted p-lg fw-bold">.text-bg-status-accent-muted</p>
+  <p class="text-bg-status-positive-emphasized p-lg fw-bold">.text-bg-status-positive-emphasized</p>
+  <p class="text-bg-status-positive-muted p-lg fw-bold">.text-bg-status-positive-muted</p>
+  <p class="text-bg-status-negative-emphasized p-lg fw-bold">.text-bg-status-negative-emphasized</p>
+  <p class="text-bg-status-negative-muted p-lg fw-bold">.text-bg-status-negative-muted</p>
+  <p class="text-bg-status-warning-emphasized p-lg fw-bold">.text-bg-status-warning-emphasized</p>
+  <p class="text-bg-status-warning-muted p-lg fw-bold">.text-bg-status-warning-muted</p>
+  <p class="text-bg-status-info-emphasized p-lg fw-bold">.text-bg-status-info-emphasized</p>
+  <p class="text-bg-status-info-muted p-lg fw-bold">.text-bg-status-info-muted</p>
+  <p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
+  <p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>`} />
+
+<Callout type="info" name="warning-color-assistive-technologies" />
+
+<BootstrapCompatibility>
+Color and background helpers combine the power of our [`.text-*` utilities]([[docsref:/utilities/colors]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
+
+<Callout type="warning">
+**Heads up!** There’s currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
+</Callout>
+
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
+]} />
+</BootstrapCompatibility>

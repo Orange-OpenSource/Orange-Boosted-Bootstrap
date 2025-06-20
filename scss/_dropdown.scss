@@ -158,13 +158,13 @@
 }
 
 
-// Dividers (basically an `<hr>`) within the dropdown
+// Dividers (basically an `<hr />`) within the dropdown
 .dropdown-divider {
   height: 0;
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
   border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // OUDS mod
-  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
+  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr /> element
 }
 
 // Links, buttons, and more within the dropdown menu

@@ -1,0 +1,13 @@
+---
+/*
+ * Outputs badge to identify the first version something was deprecated
+ */
+interface Props {
+  version: string
+}
+
+const { version } = Astro.props
+---
+
+<!-- OUDS mod: use tag component -->
+<p><span class="tag tag-sm">Deprecated in v{version}</span></p>

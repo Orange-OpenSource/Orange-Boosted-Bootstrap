@@ -1,0 +1,60 @@
+title:                            "OUDS Web"
+baseURL:                          "https://web.unified-design-system.orange.com"
+
+docsDir:                          "site"
+
+subtitle:                         "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library…"
+description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
+authors:                          "Orange and OUDS Web contributors"
+
+current_version:                  "0.4.0"
+current_ruby_version:             "0.4.0"
+docs_version:                     "0.4"
+rfs_version:                      "v10.0.0"
+bootstrap_current_version:        "5.3.5"
+bootstrap_docs_version:           "5.3"
+bootstrap_github_org:             "https://github.com/twbs"
+repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
+x:                                "getbootstrap"
+blog:                             "https://blog.getbootstrap.com/"
+icons:                            "https://oran.ge/icons"
+icons_develop:                    "https://design.orange.com/0c1af118d/p/12bc75-develop"
+icons_license:                    "https://design.orange.com/0c1af118d/p/92bb17-usage/t/63532c"
+icons_usage:                      "https://design.orange.com/0c1af118d/p/92bb17-usage"
+bootstrap:                        "https://getbootstrap.com"
+ouds:
+  web:                            "https://unified-design-system.orange.com/" # TODO: replace this URL by the web one or even "https://oran.ge/ds-web" when it will changed
+
+algolia:
+  app_id:                         "F4PKENW3TB"
+  api_key:                        "d04e794979727856a09d53f12ead9069"
+  index_name:                     "boosted-orange"
+
+download:
+  source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.4.0-ouds-web.zip"
+  dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.4.0-ouds-web/ouds-web-0.4.0-dist.zip"
+  dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.4.0-ouds-web/ouds-web-0.4.0-examples.zip"
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.min.css"
+  css_hash:                       "sha384-jrROfQGVaBxbucOInwS9RDKlkBnrSv7yT20bH67d8g5EuYeXvgGjTQl5C3hbMEnW"
+  css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.rtl.min.css"
+  css_rtl_hash:                   "sha384-75dcDWEGzIL4SqO3FcJ6U874As6rNseEtZpvzskcP0RBt00rkuoYDw9xclgkSfLW"
+  js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/js/ouds-web.min.js"
+  js_hash:                        "sha384-/NNcMoX1MxhNOIgFdsk9OlWzrX5a0T/XNWP6CiPI5XOJm0WzyEmiFiYNGcokVQoC"
+  js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/js/ouds-web.bundle.min.js"
+  js_bundle_hash:                 "sha384-+qQ4PG8nWG4N+q+ajZg4dYlDbMRH+jPtGAi7CMObYXUc0IRyVdIsl60JbYVnVbSt"
+  popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
+  focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.1/dist/focus-visible.min.js"
+  focus_visible_hash:             "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
+
+anchors:
+  min:                  2
+  max:                  5
+
+toc:
+  min:                  2
+  max:                  6

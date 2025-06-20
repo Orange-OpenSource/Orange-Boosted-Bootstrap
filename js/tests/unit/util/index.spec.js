@@ -312,8 +312,8 @@ describe('Util', () => {
     it('should return true if the element has disabled attribute', () => {
       fixtureEl.innerHTML = [
         '<div>',
-        '  <input id="input" disabled="disabled">',
-        '  <input id="input1" disabled="disabled">',
+        '  <input id="input" disabled="disabled" />',
+        '  <input id="input1" disabled="disabled" />',
         '  <button id="button" disabled="true"></button>',
         '  <button id="button1" disabled="disabled"></button>',
         '  <button id="button2" disabled></button>',
@@ -347,7 +347,7 @@ describe('Util', () => {
     it('should return true if the element has class "disabled" but disabled attribute is false', () => {
       fixtureEl.innerHTML = [
         '<div>',
-        '  <input id="input" class="disabled" disabled="false">',
+        '  <input id="input" class="disabled" disabled="false" />',
         '</div>'
       ].join('')
 

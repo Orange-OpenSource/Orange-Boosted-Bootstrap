@@ -30,12 +30,6 @@
     @include font-size(var(--#{$prefix}root-font-size));
   }
 
-  @if $enable-smooth-scroll {
-    @media (prefers-reduced-motion: no-preference) {
-      scroll-behavior: smooth;
-    }
-  }
-
   // OUDS mod: Improve focus visibility when fixed/sticky header is used
   // See https://caniuse.com/?search=scroll-padding
   // scss-docs-start scroll-offset
@@ -44,6 +38,12 @@
 
     @include media-breakpoint-up(lg) {
       scroll-padding-top: $scroll-offset-top;
+    }
+  }
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
     }
   }
   // scss-docs-end scroll-offset

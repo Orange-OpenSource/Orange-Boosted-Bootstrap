@@ -151,7 +151,7 @@ describe('Sanitizer', () => {
     })
 
     it('should allow multiple sanitation passes of the same template', () => {
-      const template = '<img src="test.jpg">'
+      const template = '<img src="test.jpg" />'
 
       const firstResult = sanitizeHtml(template, DefaultAllowlist, null)
       const secondResult = sanitizeHtml(template, DefaultAllowlist, null)
