@@ -15,13 +15,14 @@ const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneo
 const version = '0.4'
 
 function createDirectoryIfNeeded(path) {
-  if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, 0o766, error => {
-      if (error) {
-        throw new Error(error)
-      }
-    })
+  if (fs.existsSync(path)) {
+    fs.rmSync(path, { recursive: true, force: true })
   }
+  fs.mkdirSync(path, 0o766, error => {
+    if (error) {
+      throw new Error(error)
+    }
+  })
 }
 
 function createTemplate(component) {
