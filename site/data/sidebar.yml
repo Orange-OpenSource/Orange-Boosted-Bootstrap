@@ -108,6 +108,7 @@
     - title: Badge
       draft: true
     - title: Breadcrumb
+    - title: Bullet list
     - title: Buttons
     - title: Button group
       draft: true

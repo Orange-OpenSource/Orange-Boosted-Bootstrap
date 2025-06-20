@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "./dist/css/ouds-web-bootstrap.css",
-      "maxSize": "65.5 kB"
+      "maxSize": "66.0 kB"
     },
     {
       "path": "./dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "62.5 kB"
+      "maxSize": "62.85 kB"
     },
     {
       "path": "./dist/css/ouds-web-grid.css",
@@ -34,11 +34,11 @@
     },
     {
       "path": "./dist/css/ouds-web.css",
-      "maxSize": "57.5 kB"
+      "maxSize": "57.75 kB"
     },
     {
       "path": "./dist/css/ouds-web.min.css",
-      "maxSize": "54.0 kB"
+      "maxSize": "54.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",

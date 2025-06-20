@@ -39,7 +39,9 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “is:raw” is not serializable as XML 1.0.',
     'Attribute “is:raw” not allowed on element “code” at this point.',
     // Astro’s expecting trailing slashes on HTML tags such as <br />
-    'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.'
+    'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.',
+    'Element “style” not allowed as child of element “div” in this context.*'
+    // End mod
   ].join('|')
 
   const args = [
