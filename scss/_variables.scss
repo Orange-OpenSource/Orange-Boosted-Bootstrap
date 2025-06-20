@@ -1729,16 +1729,7 @@ $toast-header-background-color:     rgba(var(--#{$prefix}body-bg-rgb), .85) !def
 $toast-header-border-color:         rgba($black, .05) !default; // OUDS mod: instead of `$toast-border-color`
 // scss-docs-end toast-variables
 
-// Badges
-
-// scss-docs-start badge-variables
-$badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               var(--#{$prefix}border-radius) !default;
-// scss-docs-end badge-variables
+// OUDS mod: no Badges
 
 // Modals
 
