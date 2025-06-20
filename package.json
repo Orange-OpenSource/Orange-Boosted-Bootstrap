@@ -173,7 +173,7 @@
     "mime": "^4.0.7",
     "nodemon": "^3.1.10",
     "npm-run-all2": "^7.0.2",
-    "ods-storybook-theme": "^1.1.0",
+    "ods-storybook-theme": "^2.0.0",
     "pa11y-ci": "^3.1.0",
     "pa11y-ci-reporter-html": "^7.0.0",
     "postcss": "^8.5.3",
