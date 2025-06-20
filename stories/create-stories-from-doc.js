@@ -12,8 +12,6 @@ const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
-const version = '0.4'
-
 function createDirectoryIfNeeded(path) {
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path, 0o766, error => {
@@ -52,8 +50,8 @@ const toPascalCase = str => {
 }
 
 // Get all stories that might be displayed
-const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
-  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/src/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/src/forms/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'forms']))
   .concat([['Tables', 'content']]) // Manual adding
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/partials/snippets.js'), { encoding: 'utf8' })
 
@@ -74,7 +72,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/docs/src/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 

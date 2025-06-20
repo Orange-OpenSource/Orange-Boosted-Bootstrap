@@ -1,0 +1,89 @@
+---
+import { getData } from '@libs/data'
+import { getConfig } from '@libs/config'
+import { docsPages } from '@libs/content'
+import { getSlug } from '@libs/utils'
+
+const sidebar = getData('sidebar')
+---
+
+<nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
+  <ul class="bd-links-nav list-unstyled mb-none pb-lg pb-md-sm pe-lg-sm">
+    {
+      sidebar.map((group) => {
+        const groupSlug = getSlug(group.title)
+
+        if (group.pages) {
+          return (
+            <li class="bd-links-group py-sm">
+              <h2 class="fs-bm mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                {group.icon && (
+                  <svg
+                    class="bm-md-icon me-2xs"
+                    style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
+                    aria-hidden="true"
+                  >
+                    <use xlink:href={`#${group.icon}`} />
+                  </svg>
+                )}
+                {group.title}
+              </h2>
+              <ul class="list-unstyled fw-normal mt-2xs pb-sm small">
+                {group.pages?.map((page) => {
+                  const docSlug = getSlug(page.title)
+                  const unversionedPageSlug = `${groupSlug}/${docSlug}`
+
+                  const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                  const active = Astro.params.slug === unversionedPageSlug
+
+                  const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
+
+                  // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
+                  if (!generatedPage) {
+                    throw new Error(
+                      `The page '${page.title}' referenced in 'site/data/sidebar.yml' does not exist at '${url}'.`
+                    )
+                  }
+
+                  return (
+                    <li>
+                      <a
+                        href={url}
+                        class:list={[
+                          'bd-links-link',
+                          'd-block',
+                          { active },
+                          { 'text-decoration-line-through': page.draft }
+                        ]}
+                        aria-current={active ? 'page' : undefined}
+                      >
+                        {page.title} {page.draft && <span class="visually-hidden">page is not yet available</span>}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+            </li>
+          )
+        } else {
+          const active = Astro.params.slug === groupSlug
+
+          return (
+            <>
+              <li class="bd-links-span-all mt-2xs mb-lg mx-sm border-top" />
+              <li class="bd-links-span-all">
+                <a
+                  href={`/docs/${getConfig().docs_version}/${groupSlug}/`}
+                  class:list={['bd-links-link', 'd-block', { active }]}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  {group.title}
+                </a>
+              </li>
+            </>
+          )
+        }
+      })
+    }
+  </ul>
+</nav>

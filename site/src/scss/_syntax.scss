@@ -1,0 +1,187 @@
+// Note: Bootstrap stops at --base0F
+
+@include color-mode(light, true) {
+  --base00: #{$white};
+  --base01: #{$gray-700};
+  --base02: #{$red-500};
+  --base03: #{$blue-600};
+  --base04: #{$green-700};
+  --base05: #{$cyan-800};
+  --base06: #{$gray-800};
+  --base07: #{$pink-200};
+  --base08: #{$green-900};
+  --base09: #{$green-200};
+  --base0A: #{$blue-900};
+  --base0B: #{$cyan-700};
+  --base0C: #{$orange-700};
+  --base0D: #{$purple-700};
+  --base0E: #{$teal-700};
+  --base0F: #{$black};
+  --base10: #{$gray-400};
+  --base11: #{$yellow-800};
+  --base12: #{$cyan-900};
+  --base13: #{$pink-800};
+}
+
+// Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from OUDS Web's light mode
+@include color-mode(dark, true) {
+  --base00: #{$core-ouds-color-functional-gray-dark-880};
+  --base01: #{$gray-400};
+  --base02: #{$teal-300};
+  --base03: #{$cyan-300};
+  --base04: #{$yellow-300};
+  --base05: #{$cyan-400};
+  --base06: #{$gray-400};
+  --base07: #{$pink-800};
+  --base08: #{$cyan-300};
+  --base09: #{$green-800};
+  --base0A: #{$blue-200};
+  --base0B: #{$cyan-500};
+  --base0C: #{$orange-300};
+  --base0D: #{$purple-300};
+  --base0E: #{$teal-400};
+  --base0F: #{$white};
+  --base10: #{$gray-700};
+  --base11: #{$green-400};
+  --base12: #{$cyan-500};
+  --base13: #{$pink-500};
+}
+
+// Shell prompts
+.language-bash .line::before,
+.language-sh .line::before {
+  display: inline-block;
+  color: var(--base12);
+  content: "$ ";
+  user-select: none;
+}
+
+.language-powershell .line::before {
+  display: inline-block;
+  color: var(--base12);
+  content: "PM> ";
+  user-select: none;
+}
+
+.token {
+  &.tag {
+    display: initial;
+    padding: initial;
+    font-size: inherit;
+    font-weight: initial;
+    line-height: inherit;
+    background-color: initial;
+    border: initial;
+  }
+
+  &.placeholder {
+    background-color: initial;
+    border: initial;
+    cursor: initial;
+    opacity: 1;
+  }
+
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata,
+  &.punctuation {
+    color: var(--base01);
+  }
+
+  &.string,
+  &.char,
+  &.attr-value {
+    color: var(--base02);
+  }
+
+  &.tag,
+  &.atrule,
+  &.selector,
+  &.class-name {
+    color: var(--base03);
+  }
+
+  &.number,
+  &.boolean,
+  &.attr-name,
+  &.builtin,
+  &.property {
+    color: var(--base04);
+  }
+
+  &.important {
+    color: var(--base05);
+  }
+
+  &.entity {
+    color: var(--base06);
+    cursor: help;
+  }
+
+  &.deleted {
+    background-color: var(--base07);
+  }
+
+  &.inserted {
+    background-color: var(--base09);
+  }
+
+  &.constant,
+  &.keyword {
+    color: var(--base0B);
+  }
+
+  &.url /* tbd */ {
+    color: var(--base0C);
+  }
+
+  &.variable {
+    color: var(--base0D);
+  }
+
+  &.function,
+  &.regex {
+    color: var(--base0E);
+  }
+
+  &.operator {
+    color: var(--base0F);
+  }
+
+  &.symbol {
+    color: var(--base11);
+  }
+
+  &.keyword,
+  &.important,
+  &.bold,
+  &.selector,
+  &.tag > .token.tag {
+    font-weight: $font-weight-bold;
+  }
+
+  &.italic {
+    font-style: none;
+  }
+}
+
+// .language-diff {
+//   .token {
+//     &.deleted {
+//       color: $red-400;
+//       background-color: transparent;
+//     }
+//     &.inserted {
+//       color: $green-400;
+//       background-color: transparent;
+//     }
+//   }
+// }
+
+// .language-bash,
+// .language-sh {
+//   .token.comment {
+//     color: var(--base03);
+//   }
+// }

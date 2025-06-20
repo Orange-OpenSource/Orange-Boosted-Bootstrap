@@ -4,7 +4,7 @@
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.3.3 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -42,8 +42,8 @@
   --bs-color-border-brand-primary: #f15e00;
   --bs-color-border-default: rgba(0, 0, 0, 0.2);
   --bs-color-border-emphasized: #000;
-  --bs-color-border-focus: #000;
   --bs-color-border-focus-inset: #fff;
+  --bs-color-border-focus: #000;
   --bs-color-border-muted: rgba(0, 0, 0, 0.08);
   --bs-color-border-on-brand-primary: #000;
   --bs-color-content-brand-primary: #f15e00;
@@ -59,9 +59,19 @@
   --bs-color-content-on-action-pressed: #fff;
   --bs-color-content-on-brand-primary: #000;
   --bs-color-content-on-overlay-emphasized: #fff;
-  --bs-color-content-on-status-emphasized: #000;
-  --bs-color-content-on-status-emphasized-alt: #fff;
-  --bs-color-content-on-status-muted: #000;
+  --bs-color-content-on-status-accent-emphasized: #000;
+  --bs-color-content-on-status-accent-muted: #000;
+  --bs-color-content-on-status-info-emphasized: #000;
+  --bs-color-content-on-status-info-muted: #000;
+  --bs-color-content-on-status-negative-emphasized: #fff;
+  --bs-color-content-on-status-negative-muted: #000;
+  --bs-color-content-on-status-neutral-emphasized: #fff;
+  --bs-color-content-on-status-neutral-muted: #000;
+  --bs-color-content-on-status-positive-emphasized: #000;
+  --bs-color-content-on-status-positive-muted: #000;
+  --bs-color-content-on-status-warning-emphasized: #000;
+  --bs-color-content-on-status-warning-muted: #000;
+  --bs-color-content-status-accent: #ffd000;
   --bs-color-content-status-info: #26b2ff;
   --bs-color-content-status-negative: #db0002;
   --bs-color-content-status-positive: #3de35a;
@@ -156,14 +166,10 @@
   --bs-color-action-support-loading: rgba(255, 255, 255, 0.12);
   --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12);
   --bs-color-action-visited: #a885d8;
-  --bs-color-always-black: #000;
-  --bs-color-always-on-black: #eee;
-  --bs-color-always-on-white: #000;
-  --bs-color-always-white: #fff;
   --bs-color-bg-emphasized: #333;
   --bs-color-bg-primary: #141414;
   --bs-color-bg-secondary: #1f1f1f;
-  --bs-color-bg-tertiary: #353228;
+  --bs-color-bg-tertiary: #23211a;
   --bs-color-border-brand-primary: #ff7900;
   --bs-color-border-default: rgba(255, 255, 255, 0.2);
   --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
@@ -184,51 +190,23 @@
   --bs-color-content-on-action-pressed: #000;
   --bs-color-content-on-brand-primary: #000;
   --bs-color-content-on-overlay-emphasized: #000;
-  --bs-color-content-on-status-emphasized: #000;
-  --bs-color-content-on-status-emphasized-alt: #000;
-  --bs-color-content-on-status-muted: #eee;
+  --bs-color-content-on-status-accent-emphasized: #000;
+  --bs-color-content-on-status-accent-muted: #eee;
+  --bs-color-content-on-status-info-emphasized: #000;
+  --bs-color-content-on-status-info-muted: #eee;
+  --bs-color-content-on-status-negative-emphasized: #000;
+  --bs-color-content-on-status-negative-muted: #eee;
+  --bs-color-content-on-status-neutral-emphasized: #000;
+  --bs-color-content-on-status-neutral-muted: #eee;
+  --bs-color-content-on-status-positive-emphasized: #000;
+  --bs-color-content-on-status-positive-muted: #eee;
+  --bs-color-content-on-status-warning-emphasized: #000;
+  --bs-color-content-on-status-warning-muted: #eee;
+  --bs-color-content-status-accent: #ffd000;
   --bs-color-content-status-info: #26b2ff;
   --bs-color-content-status-negative: #db0002;
   --bs-color-content-status-positive: #3de35a;
   --bs-color-content-status-warning: #ffd000;
-  --bs-color-decorative-accent-1-default: #50be87;
-  --bs-color-decorative-accent-1-emphasized: #2e7b54;
-  --bs-color-decorative-accent-1-muted: #c0e8d4;
-  --bs-color-decorative-accent-2-default: #4ab4e6;
-  --bs-color-decorative-accent-2-emphasized: #136186;
-  --bs-color-decorative-accent-2-muted: #a5daf3;
-  --bs-color-decorative-accent-3-default: #ffd000;
-  --bs-color-decorative-accent-3-emphasized: #ffb400;
-  --bs-color-decorative-accent-3-muted: #ffed99;
-  --bs-color-decorative-accent-4-default: #a885d8;
-  --bs-color-decorative-accent-4-emphasized: #2c174a;
-  --bs-color-decorative-accent-4-muted: #e0d4f2;
-  --bs-color-decorative-accent-5-default: #ffb4e6;
-  --bs-color-decorative-accent-5-emphasized: #ff80d4;
-  --bs-color-decorative-accent-5-muted: #ffe5f6;
-  --bs-color-decorative-brand-primary: #ff7900;
-  --bs-color-decorative-brand-secondary: #000;
-  --bs-color-decorative-brand-tertiary: #fff;
-  --bs-color-decorative-neutral-emphasized-higher: #333;
-  --bs-color-decorative-neutral-emphasized-low: #555;
-  --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
-  --bs-color-decorative-neutral-emphasized-lowest: #666;
-  --bs-color-decorative-neutral-muted-high: #ccc;
-  --bs-color-decorative-neutral-muted-higher: #999;
-  --bs-color-decorative-neutral-muted-highest: #858585;
-  --bs-color-decorative-neutral-muted-low: #e0e0e0;
-  --bs-color-decorative-neutral-muted-lower: #eee;
-  --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
-  --bs-color-decorative-neutral-muted-medium: #d6d6d6;
-  --bs-color-decorative-skin-tint-100: #fbebdf;
-  --bs-color-decorative-skin-tint-200: #f4cfb2;
-  --bs-color-decorative-skin-tint-300: #e3b591;
-  --bs-color-decorative-skin-tint-400: #c19372;
-  --bs-color-decorative-skin-tint-500: #cf7e3f;
-  --bs-color-decorative-skin-tint-600: #aa6631;
-  --bs-color-decorative-skin-tint-700: #7e4f2a;
-  --bs-color-decorative-skin-tint-800: #553720;
-  --bs-color-decorative-skin-tint-900: #2e2014;
   --bs-color-opacity-lower: rgba(255, 255, 255, 0.08);
   --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04);
   --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
@@ -238,46 +216,124 @@
   --bs-color-overlay-modal: #333;
   --bs-color-surface-brand-primary: #ff7900;
   --bs-color-surface-status-accent-emphasized: #ffe270;
-  --bs-color-surface-status-accent-muted: #353228;
+  --bs-color-surface-status-accent-muted: #23211a;
   --bs-color-surface-status-info-emphasized: #8ad5ff;
   --bs-color-surface-status-info-muted: #003857;
   --bs-color-surface-status-negative-emphasized: #ff8081;
   --bs-color-surface-status-negative-muted: #4d0001;
-  --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.8);
+  --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92);
   --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08);
   --bs-color-surface-status-positive-emphasized: #94f0a4;
   --bs-color-surface-status-positive-muted: #0a4715;
   --bs-color-surface-status-warning-emphasized: #ffe270;
   --bs-color-surface-status-warning-muted: #3d3100;
-  --bs-elevation-color-default: rgba(0, 0, 0, 0.24);
-  --bs-elevation-color-drag: rgba(0, 0, 0, 0.32);
-  --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16);
-  --bs-elevation-color-none: rgba(0, 0, 0, 0);
-  --bs-elevation-color-raised: rgba(0, 0, 0, 0.32);
-  --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16);
-  --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16);
-  --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16);
 }
 
 :root,
 [data-bs-theme=light],
 :root[data-bs-theme=light] [data-bs-theme=root],
 :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
+  --bs-button-mono-color-bg-default-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-enabled: #000;
+  --bs-button-mono-color-bg-strong-hover: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-pressed: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-loading: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-bg-strong-focus: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-content-default-enabled: #000;
+  --bs-button-mono-color-content-default-hover: #fff;
+  --bs-button-mono-color-content-default-pressed: #000;
+  --bs-button-mono-color-content-default-loading: #000;
+  --bs-button-mono-color-content-default-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-content-default-focus: #fff;
+  --bs-button-mono-color-content-minimal-enabled: #000;
+  --bs-button-mono-color-content-minimal-hover: #fff;
+  --bs-button-mono-color-content-minimal-pressed: #000;
+  --bs-button-mono-color-content-minimal-loading: #000;
+  --bs-button-mono-color-content-minimal-disabled: rgba(0, 0, 0, 0.28);
+  --bs-button-mono-color-content-minimal-focus: #fff;
+  --bs-button-mono-color-content-strong-enabled: #fff;
+  --bs-button-mono-color-content-strong-hover: #fff;
+  --bs-button-mono-color-content-strong-pressed: #000;
+  --bs-button-mono-color-content-strong-loading: #000;
+  --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64);
+  --bs-button-mono-color-content-strong-focus: #fff;
+  --bs-button-mono-color-border-default-enabled: #000;
+  --bs-button-mono-color-border-default-disabled: rgba(0, 0, 0, 0.28);
+  --bs-link-mono-color-content-enabled: #000;
+  --bs-link-mono-color-content-hover: #000;
+  --bs-link-mono-color-content-pressed: rgba(0, 0, 0, 0.52);
+  --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28);
+  --bs-link-mono-color-content-focus: #000;
   --bs-switch-color-cursor: #fff;
   --bs-switch-color-track-selected: #3de35a;
   --bs-switch-color-track-selected-interaction: #1ecd3c;
   --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44);
   --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52);
+  --bs-tabs-color-bg-default: rgba(255, 255, 255, 0);
+  --bs-tabs-color-bg-sticky: rgba(255, 255, 255, 0);
+  --bs-tabs-color-gradient-drag-overlay-end: rgba(255, 255, 255, 0.04);
+  --bs-button-social-color-content-focus: #fff;
 }
 
 [data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
+  --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-default-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-default-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-minimal-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-minimal-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-enabled: #fff;
+  --bs-button-mono-color-bg-strong-hover: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-bg-strong-pressed: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-loading: rgba(0, 0, 0, 0.68);
+  --bs-button-mono-color-bg-strong-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-bg-strong-focus: rgba(255, 255, 255, 0.8);
+  --bs-button-mono-color-content-default-enabled: #fff;
+  --bs-button-mono-color-content-default-hover: #000;
+  --bs-button-mono-color-content-default-pressed: #fff;
+  --bs-button-mono-color-content-default-loading: #fff;
+  --bs-button-mono-color-content-default-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-content-default-focus: #000;
+  --bs-button-mono-color-content-minimal-enabled: #fff;
+  --bs-button-mono-color-content-minimal-hover: #000;
+  --bs-button-mono-color-content-minimal-pressed: #fff;
+  --bs-button-mono-color-content-minimal-loading: #fff;
+  --bs-button-mono-color-content-minimal-disabled: rgba(255, 255, 255, 0.44);
+  --bs-button-mono-color-content-minimal-focus: #000;
+  --bs-button-mono-color-content-strong-enabled: #000;
+  --bs-button-mono-color-content-strong-hover: #000;
+  --bs-button-mono-color-content-strong-pressed: #fff;
+  --bs-button-mono-color-content-strong-loading: #fff;
+  --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44);
+  --bs-button-mono-color-content-strong-focus: #000;
+  --bs-button-mono-color-border-default-enabled: #fff;
+  --bs-button-mono-color-border-default-disabled: rgba(255, 255, 255, 0.44);
+  --bs-link-mono-color-content-enabled: #fff;
+  --bs-link-mono-color-content-hover: #fff;
+  --bs-link-mono-color-content-pressed: rgba(255, 255, 255, 0.8);
+  --bs-link-mono-color-content-disabled: rgba(255, 255, 255, 0.44);
+  --bs-link-mono-color-content-focus: #fff;
   --bs-switch-color-cursor: #141414;
   --bs-switch-color-track-selected: #1ecd3c;
   --bs-switch-color-track-selected-interaction: #94f0a4;
   --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64);
   --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8);
+  --bs-tabs-color-bg-default: rgba(0, 0, 0, 0);
+  --bs-tabs-color-bg-sticky: rgba(0, 0, 0, 0);
+  --bs-tabs-color-gradient-drag-overlay-end: rgba(0, 0, 0, 0.04);
+  --bs-button-social-color-content-focus: #000;
 }
 
 :root,
@@ -351,9 +407,9 @@
   --bs-font-max-width-display-large: 55rem;
   --bs-font-max-width-display-medium: 55rem;
   --bs-font-max-width-display-small: 55rem;
-  --bs-font-max-width-heading-xlarge: 55rem;
-  --bs-font-max-width-heading-large: 55rem;
-  --bs-font-max-width-heading-medium: 55rem;
+  --bs-font-max-width-heading-xlarge: 45rem;
+  --bs-font-max-width-heading-large: 45rem;
+  --bs-font-max-width-heading-medium: 45rem;
   --bs-font-max-width-heading-small: 40rem;
   --bs-font-max-width-body-large: 40rem;
   --bs-font-max-width-body-medium: 40rem;
@@ -368,15 +424,15 @@
   --bs-border-style: solid;
   --bs-border-color: #000;
   --bs-space-scaled-none: 0px;
-  --bs-space-scaled-smash: 2px;
-  --bs-space-scaled-shortest: 4px;
-  --bs-space-scaled-shorter: 8px;
-  --bs-space-scaled-short: 12px;
-  --bs-space-scaled-medium: 16px;
-  --bs-space-scaled-tall: 24px;
-  --bs-space-scaled-taller: 32px;
-  --bs-space-scaled-tallest: 40px;
-  --bs-space-scaled-spacious: 48px;
+  --bs-space-scaled-3xs: 2px;
+  --bs-space-scaled-2xs: 4px;
+  --bs-space-scaled-xs: 8px;
+  --bs-space-scaled-sm: 12px;
+  --bs-space-scaled-md: 16px;
+  --bs-space-scaled-lg: 24px;
+  --bs-space-scaled-xl: 32px;
+  --bs-space-scaled-2xl: 40px;
+  --bs-space-scaled-3xl: 48px;
   --bs-icon-sm-with-heading-xlarge: 2.25rem;
   --bs-icon-md-with-heading-xlarge: 2.5rem;
   --bs-icon-lg-with-heading-xlarge: 2.75rem;
@@ -407,7 +463,6 @@
   --bs-table-active-bg-factor: 0.135;
   --bs-table-hover-bg-factor: 0.065;
   --bs-table-striped-bg-factor: 0.035;
-  --bs-breadcrumb-divider-filter: none;
 }
 @media (min-width: 736px) {
   :root,
@@ -449,8 +504,8 @@
     --bs-font-max-width-display-small: 55rem;
     --bs-font-max-width-heading-xlarge: 55rem;
     --bs-font-max-width-heading-large: 55rem;
-    --bs-font-max-width-heading-medium: 55rem;
-    --bs-font-max-width-heading-small: 40rem;
+    --bs-font-max-width-heading-medium: 45rem;
+    --bs-font-max-width-heading-small: 45rem;
     --bs-font-max-width-body-large: 40rem;
     --bs-font-max-width-body-medium: 40rem;
     --bs-font-max-width-body-small: 40rem;
@@ -496,8 +551,8 @@
     --bs-font-max-width-display-small: 65rem;
     --bs-font-max-width-heading-xlarge: 65rem;
     --bs-font-max-width-heading-large: 65rem;
-    --bs-font-max-width-heading-medium: 65rem;
-    --bs-font-max-width-heading-small: 45rem;
+    --bs-font-max-width-heading-medium: 55rem;
+    --bs-font-max-width-heading-small: 55rem;
     --bs-font-max-width-body-large: 45rem;
     --bs-font-max-width-body-medium: 45rem;
     --bs-font-max-width-body-small: 40rem;
@@ -509,15 +564,15 @@
   :root[data-bs-theme=light] [data-bs-theme=root],
   :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
     --bs-space-scaled-none: 0px;
-    --bs-space-scaled-smash: 4px;
-    --bs-space-scaled-shortest: 8px;
-    --bs-space-scaled-shorter: 12px;
-    --bs-space-scaled-short: 16px;
-    --bs-space-scaled-medium: 24px;
-    --bs-space-scaled-tall: 32px;
-    --bs-space-scaled-taller: 40px;
-    --bs-space-scaled-tallest: 48px;
-    --bs-space-scaled-spacious: 56px;
+    --bs-space-scaled-3xs: 4px;
+    --bs-space-scaled-2xs: 8px;
+    --bs-space-scaled-xs: 12px;
+    --bs-space-scaled-sm: 16px;
+    --bs-space-scaled-md: 24px;
+    --bs-space-scaled-lg: 32px;
+    --bs-space-scaled-xl: 40px;
+    --bs-space-scaled-2xl: 48px;
+    --bs-space-scaled-3xl: 56px;
   }
 }
 @media (min-width: 1320px) {
@@ -526,15 +581,15 @@
   :root[data-bs-theme=light] [data-bs-theme=root],
   :root[data-bs-theme=dark] [data-bs-theme=root-inverted] {
     --bs-space-scaled-none: 0px;
-    --bs-space-scaled-smash: 4px;
-    --bs-space-scaled-shortest: 8px;
-    --bs-space-scaled-shorter: 16px;
-    --bs-space-scaled-short: 24px;
-    --bs-space-scaled-medium: 32px;
-    --bs-space-scaled-tall: 40px;
-    --bs-space-scaled-taller: 48px;
-    --bs-space-scaled-tallest: 56px;
-    --bs-space-scaled-spacious: 64px;
+    --bs-space-scaled-3xs: 4px;
+    --bs-space-scaled-2xs: 8px;
+    --bs-space-scaled-xs: 16px;
+    --bs-space-scaled-sm: 24px;
+    --bs-space-scaled-md: 32px;
+    --bs-space-scaled-lg: 40px;
+    --bs-space-scaled-xl: 48px;
+    --bs-space-scaled-2xl: 56px;
+    --bs-space-scaled-3xl: 64px;
   }
 }
 @media (min-width: 736px) {
@@ -609,7 +664,6 @@
   --bs-table-active-bg-factor: 0.35;
   --bs-table-hover-bg-factor: 0.135;
   --bs-table-striped-bg-factor: 1;
-  --bs-breadcrumb-divider-filter: invert(1);
 }
 
 *,
@@ -621,14 +675,14 @@
 :root {
   scroll-padding-top: 3rem;
 }
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
 @media (min-width: 1024px) {
   :root {
     scroll-padding-top: 6rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
@@ -652,7 +706,6 @@
 }
 
 :focus {
-  z-index: 5;
   isolation: isolate;
   outline: 3px solid var(--bs-color-border-focus);
   outline-offset: 2px;
@@ -881,7 +934,7 @@ a:hover {
 .visited-links a:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible, :focus[data-focus-visible]), a:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible, :focus[data-focus-visible]) {
   color: var(--bs-link-visited-color);
 }
-a:focus-visible, a:focus[data-focus-visible-added] {
+a:focus-visible:not([aria-disabled=true]), a:focus[data-focus-visible-added]:not([aria-disabled=true]) {
   color: var(--bs-link-focus-color);
 }
 a:active {
@@ -892,12 +945,12 @@ a[aria-disabled=true] {
   pointer-events: none;
 }
 .colored-bg a, a.colored-bg {
-  --bs-link-color: #000;
-  --bs-link-hover-color: #000;
-  --bs-link-focus-color: #000;
-  --bs-link-active-color: rgba(0, 0, 0, 0.68);
-  --bs-link-disabled-color: rgba(0, 0, 0, 0.28);
-  --bs-link-visited-color: #000;
+  --bs-link-color: var(--bs-link-mono-color-content-enabled);
+  --bs-link-hover-color: var(--bs-link-mono-color-content-hover);
+  --bs-link-focus-color: var(--bs-link-mono-color-content-focus);
+  --bs-link-active-color: var(--bs-link-mono-color-content-pressed);
+  --bs-link-disabled-color: var(--bs-link-mono-color-content-disabled);
+  --bs-link-visited-color: var(--bs-link-mono-color-content-enabled);
 }
 
 a:not([href]):not([class]):not([aria-disabled=true]), a:not([href]):not([class]):not([aria-disabled=true]):hover {
@@ -946,7 +999,7 @@ a > code {
 kbd {
   padding: 0.125rem 0.25rem;
   font-size: 0.875em;
-  color: var(--bs-color-content-on-status-emphasized-alt);
+  color: var(--bs-color-content-on-status-neutral-emphasized);
   background-color: var(--bs-color-surface-status-neutral-emphasized);
   border-radius: 3px;
 }
@@ -1130,11 +1183,6 @@ legend + * {
   padding: 0;
 }
 
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
-
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
@@ -1159,11 +1207,6 @@ progress {
 
 [hidden] {
   display: none !important;
-}
-
-::-moz-selection {
-  color: var(--bs-color-content-on-action-highlighted);
-  background-color: var(--bs-color-action-highlighted);
 }
 
 ::selection {

@@ -1,1 +1,0 @@
-The invalid state is the equivalent of the 'Error' state that you can find in the design specification.
