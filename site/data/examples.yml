@@ -36,7 +36,6 @@
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-
 - category: Framework
   description: 'Examples that focus on implementing uses of built-in components provided by OUDS Web.'
   examples:

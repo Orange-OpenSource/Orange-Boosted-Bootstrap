@@ -29,9 +29,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
               <strong>To get working OUDS Web examples based on the Bootstrap ones</strong>, you need to replace all{' '}
               <code>bootstrap</code> occurrences with <code>oudsWeb</code> in some files.
             </p>
-            <p>
-              You may need to tweak a bit Sass files.
-            </p>
+            <p>You may need to tweak a bit Sass files.</p>
           </div>
         )}
         {!bootstrap && (
@@ -104,34 +102,39 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
         {bootstrap && (
           <div class="col-12">
             <details class="mb-2xl px-sm border border-drag">
-              <summary class="py-sm">Bootstrap <span class="tag tag-sm float-end"><code class="text-default">$enable-bootstrap-compatibility: true</code></span></summary>
-                <div class="row">
-                  {examples.map((example) => {
-                    return (
-                      <article class="col-sm-6 col-md-3 mb-lg">
-                        <a
-                          class="d-block link-offset-1"
-                          href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
-                          hreflang={example.name.includes('RTL') ? 'ar' : undefined}
-                        >
-                          <img
-                            class="img-thumbnail mb-lg"
-                            srcset={`${getVersionedDocsPath(
-                              `/assets/img/examples/${getSlug(example.name)}.png`
-                            )}, ${getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}@2x.png`)} 2x`}
-                            src={getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}.png`)}
-                            alt=""
-                            width="480"
-                            height="300"
-                            loading="lazy"
-                          />
-                          <h3 class="h5 mb-2xs">{example.name}</h3>
-                        </a>
-                        <p class="text-muted">{example.description}</p>
-                      </article>
-                    )
-                  })}
-                </div>
+              <summary class="py-sm">
+                Bootstrap{' '}
+                <span class="tag tag-sm float-end">
+                  <code class="text-default">$enable-bootstrap-compatibility: true</code>
+                </span>
+              </summary>
+              <div class="row">
+                {examples.map((example) => {
+                  return (
+                    <article class="col-sm-6 col-md-3 mb-lg">
+                      <a
+                        class="d-block link-offset-1"
+                        href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                        hreflang={example.name.includes('RTL') ? 'ar' : undefined}
+                      >
+                        <img
+                          class="img-thumbnail mb-lg"
+                          srcset={`${getVersionedDocsPath(
+                            `/assets/img/examples/${getSlug(example.name)}.png`
+                          )}, ${getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}@2x.png`)} 2x`}
+                          src={getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}.png`)}
+                          alt=""
+                          width="480"
+                          height="300"
+                          loading="lazy"
+                        />
+                        <h3 class="h5 mb-2xs">{example.name}</h3>
+                      </a>
+                      <p class="text-muted">{example.description}</p>
+                    </article>
+                  )
+                })}
+              </div>
             </details>
           </div>
         )}
