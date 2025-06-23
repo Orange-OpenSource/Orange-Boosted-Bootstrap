@@ -11,7 +11,7 @@ toc: true
 ---
 
 {{< callout info >}}
-You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox).
+You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/472794e18/p/09d860-checkbox).
 {{< /callout >}}
 
 ## Basic example
@@ -19,18 +19,18 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" checked>
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDefault">Label</label>
+    <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
   </div>
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDefault2">Label</label>
+    <label class="control-item-label" for="checkboxDefault2">Default checked checkbox</label>
   </div>
 </div>
 {{< /example >}}
@@ -54,9 +54,9 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 ## Approach
 
-Browser default checkboxes are replaced with the help of `.control-item-indicator[type="checkbox"]`. Checkboxes are for selecting one or several options in a list.
+Checkboxes are for selecting one or several options in a list. They are implemented using `.control-item-*` classes.
 
-Checkboxes are implemented using `.control-item-*` classes, see below.
+Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
 {{< markdown >}}
 {{< partial "control-item.md" >}}
@@ -74,15 +74,15 @@ You can display a divider by adding `.control-item-divider` to a `.checkbox-item
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDivider">Label</label>
+    <label class="control-item-label" for="checkboxDivider">Checkbox with divider</label>
   </div>
 </div>
 <div class="checkbox-item control-item-divider">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDivider2">Label</label>
+    <label class="control-item-label" for="checkboxDivider2">Checkbox checked with divider</label>
   </div>
 </div>
 {{< /example >}}
@@ -398,23 +398,23 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
 {{< partial "callouts/standalone-form-indicator.md" >}}
 {{< /callout >}}
 
-For the standalone Checkbox, we provide a completely different architecture to ease the integration inside your projects.
+For the standalone checkbox, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
 <label class="checkbox-standalone">
   <input class="control-item-indicator" type="checkbox" value="">
-  <span class="visually-hidden">Label</span>
+  <span class="visually-hidden">Standalone checkbox</span>
 </label>
 {{< /example >}}
 
 {{< bootstrap-compatibility false >}}
 {{< callout warning >}}
-Be careful using this, you must implement the background on hover, focus and active states.
+Be careful when using this, as you must implement the background on hover, focus and active states.
 {{< /callout >}}
 
 {{< example >}}
 <div style="position: relative">
-  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+  <input class="form-check-input" type="checkbox" value="" aria-label="Standalone bootstrap checkbox">
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}

@@ -10,7 +10,7 @@ toc: true
 
 {{< callout info >}}
 <!-- TODO: change link -->
-You can find here the [OUDS Switch design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox).
+You can find here the [OUDS Switch design guidelines](https://unified-design-system.orange.com/472794e18/p/18acc0-switch).
 {{< /callout >}}
 
 ## Basic example
@@ -319,11 +319,11 @@ When switches belong to a group (e.g., in a form), you must provide clear contex
 {{< partial "callouts/standalone-form-indicator.md" >}}
 {{< /callout >}}
 
-For the standalone Switch, we provide a completely different architecture to ease the integration inside your projects.
+For the standalone switch, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
 <label class="switch-standalone">
   <input class="control-item-indicator" type="checkbox" role="switch" value="">
-  <span class="visually-hidden">Label</span>
+  <span class="visually-hidden">Standalone switch</span>
 </label>
 {{< /example >}}

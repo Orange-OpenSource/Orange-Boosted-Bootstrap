@@ -21,15 +21,15 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
     <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="radioDefault">Label</label>
+    <label class="control-item-label" for="radioDefault">Default radio</label>
   </div>
 </div>
 <div class="radio-button-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic">
+    <input class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="radioDefault2">Label</label>
+    <label class="control-item-label" for="radioDefault2">Default checked radio</label>
   </div>
 </div>
 {{< /example >}}
@@ -53,9 +53,9 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.control-item-indicator[type="radio"]`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
+Radio buttons allow user to select a single option from a set of mutually exclusive choices. They are implemented using `.control-item-*` classes.
 
-Radio buttons are implemented using `.control-item-*` classes, see below.
+Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
 {{< markdown >}}
 {{< partial "control-item.md" >}}
@@ -410,7 +410,7 @@ When radio buttons belong to a group (e.g., in a form), you must provide clear c
 {{< partial "callouts/standalone-form-indicator.md" >}}
 {{< /callout >}}
 
-For the standalone Radio button, we provide a completely different architecture to ease the integration inside your projects.
+For the standalone radio button, we provide a completely different architecture to ease the integration inside your projects.
 
 {{< example >}}
 <label class="radio-button-standalone">
@@ -421,12 +421,11 @@ For the standalone Radio button, we provide a completely different architecture 
 
 {{< bootstrap-compatibility false >}}
 {{< callout warning >}}
-Be careful using this, you must implement the background on hover, focus and active states.
-{{< /callout >}}
+Be careful when using this, as you must implement the background on hover, focus and active states.{{< /callout >}}
 
 {{< example >}}
 <div>
-  <input class="form-check-input" type="radio" id="radioNoLabel" value="" aria-label="...">
+  <input class="form-check-input" type="radio" value="" aria-label="Standalone bootstrap radio button">
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
