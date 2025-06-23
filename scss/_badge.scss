@@ -4,97 +4,76 @@
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-medium};
-  --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-medium};
-  --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-medium-dot};
-  --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-medium};
-  --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-medium};
-  --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-medium};
-  --#{$prefix}badge-color: #{$ouds-color-content-on-status-emphasized-alt};
-  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-neutral-emphasized};
-  --#{$prefix}badge-border-radius: #{$ouds-badge-border-radius-pill};
-  --#{$prefix}badge-icon-size-width: 10px;
-  --#{$prefix}badge-icon-size-height: 10px;
-  --#{$prefix}badge-count-padding-x: 0;
+  --#{$prefix}badge-size-width: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size-min-width: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size-max-width: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size-height: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size-min-height: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size-max-height: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
+  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
+  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
   // scss-docs-end badge-css-vars
 
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: var(--#{$prefix}badge-size-width);
   min-width: var(--#{$prefix}badge-size-min-width);
   max-width: var(--#{$prefix}badge-size-max-width);
   height: var(--#{$prefix}badge-size-height);
   min-height: var(--#{$prefix}badge-size-min-height);
   max-height: var(--#{$prefix}badge-size-max-height);
-  padding: 0 var(--#{$prefix}badge-count-padding-x);
+  padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
   font-style: normal;
   font-weight: 400;
-  color: var(--#{$prefix}badge-color);
+  color: #{$ouds-color-content-on-status-neutral-emphasized};
   text-align: center;
-  background-color: var(--#{$prefix}badge-background-color);
+  background-color: #{$ouds-color-surface-status-neutral-emphasized};
   @include get-font-size("label-small");
   @include border-radius(var(--#{$prefix}badge-border-radius));
 
   svg {
-    width: var(--#{$prefix}badge-icon-size-width);
-    height: var(--#{$prefix}badge-icon-size-height);
-  }
-
-  &.badge-negative {
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
-  }
-
-  &.badge-positive {
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
-  }
-
-  &.badge-info {
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
-  }
-
-  &.badge-warning {
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+    display: flex;
+    flex: 1 0 0;
+    aspect-ratio: 1/1;
   }
 
   &.badge-disabled {
-    --#{$prefix}badge-background-color: #{$ouds-color-action-disabled};
+    color: #{$ouds-color-content-on-action-disabled};
+    background-color: #{$ouds-color-action-disabled};
   }
 
   &.badge-xs {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-extra-small};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-extra-small};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-extra-small};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-extra-small};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-extra-small};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-extra-small};
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-xsmall};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-xsmall};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-xsmall};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-xsmall};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-xsmall};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-xsmall};
   }
 
   &.badge-sm {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-small};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-small};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-small};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-small};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-small};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-small};
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-small};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-small};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-small};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-small};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-small};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-small};
   }
 
   &.badge-lg {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-min-width-large};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-min-width-large};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-max-width-large-dot};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-max-height-large};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-max-height-large};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-max-height-large};
-    --#{$prefix}badge-icon-size-width: 14px;
-    --#{$prefix}badge-icon-size-height: 14px;
+    --#{$prefix}badge-size-width: #{$ouds-badge-size-large};
+    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-large};
+    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-large};
+    --#{$prefix}badge-size-height: #{$ouds-badge-size-large};
+    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-large};
+    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-large};
 
     @include get-font-size("label-medium");
   }
 
   &.badge-count {
     --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
+    --#{$prefix}badge-count-padding-y: 0;
 
     width: auto;
     max-width: none;
