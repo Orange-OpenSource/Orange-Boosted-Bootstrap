@@ -291,3 +291,18 @@ For the standalone Switch, we provide a completely different architecture to eas
     <input class="control-item-indicator" type="checkbox" role="switch" value="" />
     <span class="visually-hidden">Label</span>
   </label>`} />
+
+## Native switches
+
+Progressively enhance your switches for mobile Safari (iOS 17.4+) by adding a `switch` attribute to your input to enable haptic feedback when toggling switches, just like native iOS switches. There are no style changes attached to using this attribute in Bootstrap as all our switches use custom styles.
+
+<Example code={`<div class="switch-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchNative" switch />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="switchNative">Label</label>
+    </div>
+  </div>`} />
+
+Be sure to read more about [the switch attribute on the WebKit blog](https://webkit.org/blog/15054/an-html-switch-control/). Safari 17.4+ on macOS and iOS both have native-style switches in HTML while other browsers simply fall back to the standard checkbox appearance. Applying the attribute to a non-Bootstrap checkbox in more recent versions of Safari will render a native switch.
