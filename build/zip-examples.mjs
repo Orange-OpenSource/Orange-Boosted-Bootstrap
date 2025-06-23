@@ -86,7 +86,7 @@ for (const file of sh.find(`${distFolder}/**/*.html`)) {
     .toString()
     .replace(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
     .replace(/"..\/dist\//g, '"../assets/dist/')
-    .replace(/<link href="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+    .replace(/(<link href="\.\.\/.*) integrity=".*>/g, '$1>')
     .replace(/(<script src="\.\.\/.*) integrity=".*>/g, '$1></script>')
     .replace(/( +)<!-- favicons(.|\n)+<style>/i, '    <style>')
   new sh.ShellString(fileContents).to(file)
