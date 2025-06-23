@@ -174,8 +174,7 @@ Please refer to the [Bullet list component]([[docsref:/components/bullet-list]])
 
 For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
 
-<div class="bd-example">
-  <dl>
+<Example showMarkup={false} code={`<dl>
     <dt>Description lists</dt>
     <dd>A description list is perfect for defining terms.</dd>
     <dt>Term</dt>
@@ -183,8 +182,7 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
     <dd>A second definition for the same term.</dd>
     <dt>Another term</dt>
     <dd>Definition for this other term.</dd>
-  </dl>
-</div>
+  </dl>`} />
 
 ## Inline code
 
@@ -272,127 +270,127 @@ These changes, and more, are demonstrated below.
 
 <Callout type="warning"name="warning-input-support" />
 
-<form class="bd-example">
-  <fieldset>
-    <legend>Example legend</legend>
-    <p>
-      <label for="input">Example input</label>
-      <input type="text" id="input" placeholder="Example input" />
-    </p>
-    <p>
-      <label for="email">Example email</label>
-      <input type="email" id="email" placeholder="test@example.com" />
-    </p>
-    <p>
-      <label for="tel">Example telephone</label>
-      <input type="tel" id="tel" />
-    </p>
-    <p>
-      <label for="url">Example url</label>
-      <input type="url" id="url" />
-    </p>
-    <p>
-      <label for="number">Example number</label>
-      <input type="number" id="number" />
-    </p>
-    <p>
-      <label for="search">Example search</label>
-      <input type="search" id="search" />
-    </p>
-    <p>
-      <label for="range">Example range</label>
-      <input type="range" id="range" min="0" max="10" />
-    </p>
-    <p>
-      <label for="file">Example file input</label>
-      <input type="file" id="file" />
-    </p>
-    <p>
-      <label for="select">Example select</label>
-      <select id="select">
-        <option value="">Choose...</option>
-        <optgroup label="Option group 1">
-          <option value="">Option 1</option>
-          <option value="">Option 2</option>
-          <option value="">Option 3</option>
-        </optgroup>
-        <optgroup label="Option group 2">
-          <option value="">Option 4</option>
-          <option value="">Option 5</option>
-          <option value="">Option 6</option>
-        </optgroup>
-      </select>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" value="" />
-        Check this checkbox
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
-        Option one is this and that
-      </label>
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-        Option two is something else that’s also super long to demonstrate the wrapping of these fancy form controls.
-      </label>
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled />
-        Option three is disabled
-      </label>
-    </p>
-    <p>
-      <label for="textarea">Example textarea</label>
-      <textarea id="textarea" rows="3"></textarea>
-    </p>
-    <p>
-      <label for="date">Example date</label>
-      <input type="date" id="date" />
-    </p>
-    <p>
-      <label for="time">Example time</label>
-      <input type="time" id="time" />
-    </p>
-    <p>
-      <label for="password">Example password</label>
-      <input type="password" id="password" />
-    </p>
-    <p>
-      <label for="datetime-local">Example datetime-local</label>
-      <input type="datetime-local" id="datetime-local" />
-    </p>
-    <p>
-      <label for="week">Example week</label>
-      <input type="week" id="week" />
-    </p>
-    <p>
-      <label for="month">Example month</label>
-      <input type="month" id="month" />
-    </p>
-    <p>
-      <label for="color">Example color</label>
-      <input type="color" id="color" />
-    </p>
-    <p>
-      <label for="output">Example output</label>
-      <output name="result" id="output">100</output>
-    </p>
-    <p>
-      <button type="submit">Button submit</button>
-      <input type="submit" value="Input submit button" />
-      <input type="reset" value="Input reset button" />
-      <input type="button" value="Input button" />
-    </p>
-    <p>
-      <button type="submit" disabled>Button submit</button>
-      <input type="submit" value="Input submit button" disabled />
-      <input type="reset" value="Input reset button" disabled />
-      <input type="button" value="Input button" disabled />
-    </p>
-  </fieldset>
-</form>
+<Example showMarkup={false} code={`<form>
+    <fieldset>
+      <legend>Example legend</legend>
+      <p>
+        <label for="input">Example input</label>
+        <input type="text" id="input" placeholder="Example input" />
+      </p>
+      <p>
+        <label for="email">Example email</label>
+        <input type="email" id="email" placeholder="test@example.com" />
+      </p>
+      <p>
+        <label for="tel">Example telephone</label>
+        <input type="tel" id="tel" />
+      </p>
+      <p>
+        <label for="url">Example url</label>
+        <input type="url" id="url" />
+      </p>
+      <p>
+        <label for="number">Example number</label>
+        <input type="number" id="number" />
+      </p>
+      <p>
+        <label for="search">Example search</label>
+        <input type="search" id="search" />
+      </p>
+      <p>
+        <label for="range">Example range</label>
+        <input type="range" id="range" min="0" max="10" />
+      </p>
+      <p>
+        <label for="file">Example file input</label>
+        <input type="file" id="file" />
+      </p>
+      <p>
+        <label for="select">Example select</label>
+        <select id="select">
+          <option value="">Choose...</option>
+          <optgroup label="Option group 1">
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+          </optgroup>
+          <optgroup label="Option group 2">
+            <option value="">Option 4</option>
+            <option value="">Option 5</option>
+            <option value="">Option 6</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" value="" />
+          Check this checkbox
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+          Option one is this and that
+        </label>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+          Option two is something else that’s also super long to demonstrate the wrapping of these fancy form controls.
+        </label>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled />
+          Option three is disabled
+        </label>
+      </p>
+      <p>
+        <label for="textarea">Example textarea</label>
+        <textarea id="textarea" rows="3"></textarea>
+      </p>
+      <p>
+        <label for="date">Example date</label>
+        <input type="date" id="date" />
+      </p>
+      <p>
+        <label for="time">Example time</label>
+        <input type="time" id="time" />
+      </p>
+      <p>
+        <label for="password">Example password</label>
+        <input type="password" id="password" />
+      </p>
+      <p>
+        <label for="datetime-local">Example datetime-local</label>
+        <input type="datetime-local" id="datetime-local" />
+      </p>
+      <p>
+        <label for="week">Example week</label>
+        <input type="week" id="week" />
+      </p>
+      <p>
+        <label for="month">Example month</label>
+        <input type="month" id="month" />
+      </p>
+      <p>
+        <label for="color">Example color</label>
+        <input type="color" id="color" />
+      </p>
+      <p>
+        <label for="output">Example output</label>
+        <output name="result" id="output">100</output>
+      </p>
+      <p>
+        <button type="submit">Button submit</button>
+        <input type="submit" value="Input submit button" />
+        <input type="reset" value="Input reset button" />
+        <input type="button" value="Input button" />
+      </p>
+      <p>
+        <button type="submit" disabled>Button submit</button>
+        <input type="submit" value="Input submit button" disabled />
+        <input type="reset" value="Input reset button" disabled />
+        <input type="button" value="Input button" disabled />
+      </p>
+    </fieldset>
+  </form>`} />
 
 ### Pointers on buttons
 
@@ -406,8 +404,7 @@ Reboot includes an enhancement for `role="button"` to change the default cursor 
 
 The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 16px` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br />`.
 
-<div class="bd-example">
-  <address>
+<Example showMarkup={false} code={`<address>
     <strong>ACME Corporation</strong><br />
     1123 Fictional St,<br />
     San Francisco, CA 94103<br />
@@ -417,38 +414,32 @@ The `<address>` element is updated to reset the browser default `font-style` fro
   <address>
     <strong>Full Name</strong><br />
     <a href="mailto:first.last@example.com">first.last@example.com</a>
-  </address>
-</div>
+  </address>`} />
 
 ### Blockquote
 
 The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 16px` for something more consistent with other elements.
 
-<div class="bd-example">
-  <figure>
+<Example showMarkup={false} code={`<figure>
     <blockquote class="blockquote">
       <p>A well-known quote, contained in a blockquote element.</p>
     </blockquote>
     <figcaption>
       Someone famous in <cite title="Source Title">Source Title</cite>
     </figcaption>
-  </figure>
-</div>
+  </figure>`} />
 
 ### Inline elements
 
 The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
 
-<div class="bd-example">
-  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
-</div>
+<Example showMarkup={false} code={`The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.`} />
 
 ### Summary
 
 The default `cursor` on summary is `text`, so we reset that to `pointer` to convey that the element can be interacted with by clicking on it.
 
-<div class="bd-example">
-  <details>
+<Example showMarkup={false} code={`<details>
     <summary>Some details</summary>
     <p>More info about the details.</p>
   </details>
@@ -456,8 +447,7 @@ The default `cursor` on summary is `text`, so we reset that to `pointer` to conv
   <details open>
     <summary>Even more details</summary>
     <p>Here are even more details about the details.</p>
-  </details>
-</div>
+  </details>`} />
 
 ## HTML5 `[hidden]` attribute
 

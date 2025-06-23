@@ -50,10 +50,10 @@ const toPascalCase = str => {
 }
 
 // Get all stories that might be displayed
-const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/src/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
-  .concat(fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/src/forms/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'forms']))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/forms/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'forms']))
   .concat([['Tables', 'content']]) // Manual adding
-const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/partials/snippets.js'), { encoding: 'utf8' })
+const snippets = fs.readFileSync(path.resolve(__dirname, '../site/src/assets/partials/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
@@ -72,7 +72,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/src/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/docs/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
