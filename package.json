@@ -196,7 +196,7 @@
     "terser": "^5.42.0",
     "unist-util-visit": "^5.0.0",
     "vnu-jar": "24.10.17",
-    "zod": "^3.25.57"
+    "zod": "^3.25.58"
   },
   "files": [
     "dist/{css,js,fonts}/*.{css,js,map,svg,woff2}",
