@@ -38,9 +38,9 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.min.css"
-  css_hash:                       "sha384-jrROfQGVaBxbucOInwS9RDKlkBnrSv7yT20bH67d8g5EuYeXvgGjTQl5C3hbMEnW"
+  css_hash:                       "sha384-LdFSH2Qyzb5fEYh30Sd4/wfpFQGSfxjzZgSqg6cfdj35jEump8mqlg1lj7KAwh8s"
   css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.rtl.min.css"
-  css_rtl_hash:                   "sha384-75dcDWEGzIL4SqO3FcJ6U874As6rNseEtZpvzskcP0RBt00rkuoYDw9xclgkSfLW"
+  css_rtl_hash:                   "sha384-/P1BDYMcTFMR5G+D3PKy4K1s2XKFw9OBsEH+RSi41o/U9yovQBkw/URFnLmOimGO"
   js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/js/ouds-web.min.js"
   js_hash:                        "sha384-/NNcMoX1MxhNOIgFdsk9OlWzrX5a0T/XNWP6CiPI5XOJm0WzyEmiFiYNGcokVQoC"
   js_bundle:                      "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/js/ouds-web.bundle.min.js"
