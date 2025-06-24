@@ -4,24 +4,17 @@
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-size-width: #{$ouds-badge-size-medium};
-  --#{$prefix}badge-size-min-width: #{$ouds-badge-size-medium};
-  --#{$prefix}badge-size-max-width: #{$ouds-badge-size-medium};
-  --#{$prefix}badge-size-height: #{$ouds-badge-size-medium};
-  --#{$prefix}badge-size-min-height: #{$ouds-badge-size-medium};
-  --#{$prefix}badge-size-max-height: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size: #{$ouds-badge-size-medium};
   --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
   --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
-  width: var(--#{$prefix}badge-size-width);
-  min-width: var(--#{$prefix}badge-size-min-width);
-  max-width: var(--#{$prefix}badge-size-max-width);
-  height: var(--#{$prefix}badge-size-height);
-  min-height: var(--#{$prefix}badge-size-min-height);
-  max-height: var(--#{$prefix}badge-size-max-height);
+  width: var(--#{$prefix}badge-size);
+  min-width: var(--#{$prefix}badge-size);
+  height: var(--#{$prefix}badge-size);
+  min-height: var(--#{$prefix}badge-size);
   padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
   font-style: normal;
   font-weight: 400;
@@ -36,50 +29,37 @@
     flex: 1 0 0;
     aspect-ratio: 1/1;
   }
+}
 
-  &.badge-disabled {
-    color: #{$ouds-color-content-on-action-disabled};
-    background-color: #{$ouds-color-action-disabled};
-  }
+.badge-disabled {
+  color: #{$ouds-color-content-on-action-disabled};
+  background-color: #{$ouds-color-action-disabled};
+}
 
-  &.badge-xs {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-xsmall};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-xsmall};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-xsmall};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-xsmall};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-xsmall};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-xsmall};
-  }
+.badge-xs {
+  --#{$prefix}badge-size: #{$ouds-badge-size-xsmall};
+}
 
-  &.badge-sm {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-small};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-small};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-small};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-small};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-small};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-small};
-  }
+.badge-sm {
+  --#{$prefix}badge-size: #{$ouds-badge-size-small};
+}
+
+.badge-lg {
+  --#{$prefix}badge-size: #{$ouds-badge-size-large};
+
+  @include get-font-size("label-medium");
+}
+
+.badge-count {
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
+  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
+  --#{$prefix}badge-count-padding-y: 0;
+
+  width: auto;
+  height: auto;
 
   &.badge-lg {
-    --#{$prefix}badge-size-width: #{$ouds-badge-size-large};
-    --#{$prefix}badge-size-min-width: #{$ouds-badge-size-large};
-    --#{$prefix}badge-size-max-width: #{$ouds-badge-size-large};
-    --#{$prefix}badge-size-height: #{$ouds-badge-size-large};
-    --#{$prefix}badge-size-min-height: #{$ouds-badge-size-large};
-    --#{$prefix}badge-size-max-height: #{$ouds-badge-size-large};
-
-    @include get-font-size("label-medium");
-  }
-
-  &.badge-count {
-    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
-    --#{$prefix}badge-count-padding-y: 0;
-
-    width: auto;
-    max-width: none;
-
-    &.badge-lg {
-      --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
-    }
+    --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
+    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
   }
 }
