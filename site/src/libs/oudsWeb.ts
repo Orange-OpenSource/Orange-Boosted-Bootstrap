@@ -2,8 +2,8 @@ import type { HTMLAttributes } from 'astro/types'
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
-export function getVersionedBsCssProps(direction: 'rtl' | undefined) {
-  let bsCssLinkHref = '/dist/css/ouds-web-bootstrap'
+export function getVersionedBsCssProps(direction: 'rtl' | undefined, bootstrap_compat_css = true): HTMLAttributes<'link'> {
+  let bsCssLinkHref = '/dist/css/ouds-web' + (bootstrap_compat_css ? '-bootstrap' : '')
 
   if (direction === 'rtl') {
     bsCssLinkHref = `${bsCssLinkHref}.rtl`
