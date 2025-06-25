@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exit 1 # OUDS mod: No need of this file for now
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -58,7 +60,7 @@ print_info "Starting documentation deployment process…"
 
 # Step 1: Build documentation
 print_info "Building documentation with npm run docs…"
-npm run docs_build && storybook build -o ./_site/storybook
+npm run storybook-build
 if [ $? -ne 0 ]; then
   print_error "Documentation build failed!"
 fi
