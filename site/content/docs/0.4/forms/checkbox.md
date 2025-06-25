@@ -11,7 +11,7 @@ toc: true
 ---
 
 {{< callout info >}}
-You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/472794e18/p/09d860-checkbox).
+You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox).
 {{< /callout >}}
 
 ## Basic example
@@ -30,7 +30,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDefault2">Default checked checkbox</label>
+    <label class="control-item-label" for="checkboxDefault2">Checked checkbox</label>
   </div>
 </div>
 {{< /example >}}
@@ -40,13 +40,13 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkDefault">
   <label class="form-check-label" for="checkDefault">
-    Default checkbox
+    Default checkbox (Bootstrap compatible)
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
   <label class="form-check-label" for="checkChecked">
-    Checked checkbox
+    Checked checkbox (Bootstrap compatible)
   </label>
 </div>
 {{< /example >}}
@@ -54,9 +54,9 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 ## Approach
 
-Checkboxes are for selecting one or several options in a list. They are implemented using `.control-item-*` classes.
+Checkboxes allow users to select one or more options from a number of choices.
 
-Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
+They are implemented using `.control-item-*` classes. Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
 {{< markdown >}}
 {{< partial "control-item.md" >}}
@@ -74,7 +74,7 @@ You can display a divider by adding `.control-item-divider` to a `.checkbox-item
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDivider">Checkbox with divider</label>
+    <label class="control-item-label" for="checkboxDivider">Default checkbox with divider</label>
   </div>
 </div>
 <div class="checkbox-item control-item-divider">
@@ -82,14 +82,18 @@ You can display a divider by adding `.control-item-divider` to a `.checkbox-item
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxDivider2">Checkbox checked with divider</label>
+    <label class="control-item-label" for="checkboxDivider2">Checked checkbox with divider</label>
   </div>
 </div>
 {{< /example >}}
 
 ### Icon
 
-You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.checkbox-item`.
+{{< callout info >}}
+{{< partial "callouts/info-icons-svg-sprite.md" >}}
+{{< /callout >}}
+
+To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.checkbox-item`.
 
 {{< example >}}
 <div class="checkbox-item">
@@ -97,7 +101,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithSVG">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxWithSVG">Label</label>
+    <label class="control-item-label" for="checkboxWithSVG">Default checkbox with an SVG icon</label>
   </div>
   <div class="control-item-assets-container">
     <svg aria-hidden="true">
@@ -107,10 +111,10 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont">
+    <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxWithIconFont">Label</label>
+    <label class="control-item-label" for="checkboxWithIconFont">Checked checkbox with a font-icon</label>
   </div>
   <div class="control-item-assets-container">
     <span class="icon si si-settings" aria-hidden="true"></span>
@@ -120,25 +124,25 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 
 ### Helper text
 
-You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
+You can display a helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
 
 {{< example >}}
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="" checked>
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxHelperText">Label</label>
-    <p class="control-item-helper" id="checkboxHelperTextDescription">Helper Text</p>
+    <label class="control-item-label" for="checkboxHelperText">Default checkbox</label>
+    <p class="control-item-helper" id="checkboxHelperTextDescription">Helper text</p>
   </div>
 </div>
 <div class="checkbox-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription2" id="checkboxHelperText2" value="">
+    <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription2" id="checkboxHelperText2" value="" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxHelperText2">Label</label>
-    <p class="control-item-helper" id="checkboxHelperTextDescription2">Helper Text</p>
+    <label class="control-item-label" for="checkboxHelperText2">Checked checkbox</label>
+    <p class="control-item-helper" id="checkboxHelperTextDescription2">Helper text</p>
   </div>
 </div>
 {{< /example >}}
@@ -153,35 +157,21 @@ You can reverse the component by adding `.control-item-reverse` to a `.checkbox-
     <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxReverse">Label</label>
-  </div>
-</div>
-<div class="checkbox-item control-item-reverse">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse2">
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="checkboxReverse2">Label</label>
+    <label class="control-item-label" for="checkboxReverse">Reverse checkbox</label>
   </div>
 </div>
 {{< /example >}}
 
 {{< bootstrap-compatibility false >}}
 {{< markdown >}}
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+Put your checkboxes on the opposite side with the `.form-check-reverse` modifier class.
 {{< /markdown >}}
 
 {{< example >}}
 <div class="form-check form-check-reverse">
-  <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
-  <label class="form-check-label" for="reverseCheck1">
-    Reverse checkbox
-  </label>
-</div>
-<div class="form-check form-check-reverse">
-  <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
-  <label class="form-check-label" for="reverseCheck2">
-    Disabled reverse checkbox
+  <input class="form-check-input" type="checkbox" value="" id="reverseCheck" checked>
+  <label class="form-check-label" for="reverseCheck">
+    Checked reverse checkbox (Bootstrap compatible)
   </label>
 </div>
 {{< /example >}}

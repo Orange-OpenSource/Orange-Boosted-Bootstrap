@@ -18,18 +18,18 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
 {{< example >}}
 <div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault" checked>
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDefault">Label</label>
+    <label class="control-item-label" for="switchDefault">Default switch</label>
   </div>
 </div>
 <div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault2">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDefault2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDefault2">Label</label>
+    <label class="control-item-label" for="switchDefault2">Checked switch</label>
   </div>
 </div>
 {{< /example >}}
@@ -38,20 +38,20 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
 {{< example >}}
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-  <label class="form-check-label" for="switchCheckDefault">Default switch checkbox input</label>
+  <label class="form-check-label" for="switchCheckDefault">Default switch (Bootstrap compatible)</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
-  <label class="form-check-label" for="switchCheckChecked">Checked switch checkbox input</label>
+  <label class="form-check-label" for="switchCheckChecked">Checked switch (Bootstrap compatible)</label>
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}
 
 ## Approach
 
-Browser default switches are replaced with the help of `.control-item-indicator[role="switch"]`. Switches are for selecting one or several options in a list.
+Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
 
-Switches are implemented using `.control-item-*` classes, see below.
+They are implemented using `.control-item-*` classes on radio buttons. Browser default radio buttons are replaced with the help of `.control-item-indicator[role="switch"]`.
 
 {{< markdown >}}
 {{< partial "control-item.md" >}}
@@ -61,7 +61,7 @@ Switches are implemented using `.control-item-*` classes, see below.
 
 ### Divider
 
-You can display a divider by adding `.control-item-divider` to a `.control-item`.
+You can display a divider by adding `.control-item-divider` to a `.switch-item`.
 
 {{< example >}}
 <div class="switch-item control-item-divider">
@@ -69,22 +69,26 @@ You can display a divider by adding `.control-item-divider` to a `.control-item`
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDivider">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDivider">Label</label>
+    <label class="control-item-label" for="switchDivider">Default switch with divider</label>
   </div>
 </div>
 <div class="switch-item control-item-divider">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDivider2">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchDivider2" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchDivider2">Label</label>
+    <label class="control-item-label" for="switchDivider2">Checked switch with divider</label>
   </div>
 </div>
 {{< /example >}}
 
 ### Icon
 
-You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.control-item`.
+{{< callout info >}}
+{{< partial "callouts/info-icons-svg-sprite.md" >}}
+{{< /callout >}}
+
+To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.switch-item`.
 
 {{< example >}}
 <div class="switch-item">
@@ -92,7 +96,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
     <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchWithSVG">Label</label>
+    <label class="control-item-label" for="switchWithSVG">Default switch with an SVG icon</label>
   </div>
   <div class="control-item-assets-container">
     <svg aria-hidden="true">
@@ -102,10 +106,10 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 </div>
 <div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithIconFont">
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithIconFont" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchWithIconFont">Label</label>
+    <label class="control-item-label" for="switchWithIconFont">Checked switch with a font-icon</label>
   </div>
   <div class="control-item-assets-container">
     <span class="icon si si-settings" aria-hidden="true"></span>
@@ -115,7 +119,7 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 
 ### Helper text
 
-You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don't forget to make it accessible by adding an `aria-describedby` attribute on the input.
+You can display a helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
 
 {{< example >}}
 <div class="switch-item">
@@ -123,53 +127,45 @@ You can display an helper text by adding a `.control-item-helper` as a sibling o
     <input class="control-item-indicator" type="checkbox" role="switch" aria-describedby="switchHelperTextDescription" id="switchHelperText" value="">
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchHelperText">Label</label>
-    <p class="control-item-helper" id="switchHelperTextDescription">Helper Text</p>
+    <label class="control-item-label" for="switchHelperText">Default switch</label>
+    <p class="control-item-helper" id="switchHelperTextDescription">Helper text</p>
   </div>
 </div>
 <div class="switch-item">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" aria-describedby="switchHelperTextDescription2" id="switchHelperText2" value="">
+    <input class="control-item-indicator" type="checkbox" role="switch" aria-describedby="switchHelperTextDescription2" id="switchHelperText2" value="" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchHelperText2">Label</label>
-    <p class="control-item-helper" id="switchHelperTextDescription2">Helper Text</p>
+    <label class="control-item-label" for="switchHelperText2">Checked switch</label>
+    <p class="control-item-helper" id="switchHelperTextDescription2">Helper text</p>
   </div>
 </div>
 {{< /example >}}
 
 ### Reverse
 
-You can reverse the component by adding `.control-item-reverse` to a `.control-item`.
+You can reverse the component by adding `.control-item-reverse` to a `.switch-item`.
 
 {{< example >}}
 <div class="switch-item control-item-reverse">
   <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" name="switchReverse" checked>
+    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" checked>
   </div>
   <div class="control-item-text-container">
-    <label class="control-item-label" for="switchReverse">Label</label>
-  </div>
-</div>
-<div class="switch-item control-item-reverse">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse2" name="switchReverse">
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="switchReverse2">Label</label>
+    <label class="control-item-label" for="switchReverse">Reverse switch</label>
   </div>
 </div>
 {{< /example >}}
 
 {{< bootstrap-compatibility false >}}
 {{< markdown >}}
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+Put your switches on the opposite side with the `.form-check-reverse` modifier class.
 {{< /markdown >}}
 
 {{< example >}}
 <div class="form-check form-switch form-check-reverse">
-  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckReverse">
-  <label class="form-check-label" for="switchCheckReverse">Reverse switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckReverse" checked>
+  <label class="form-check-label" for="switchCheckReverse">Reverse switch (Bootstrap compatible)</label>
 </div>
 {{< /example >}}
 {{< /bootstrap-compatibility >}}

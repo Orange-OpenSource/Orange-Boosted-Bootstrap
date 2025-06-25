@@ -90,8 +90,6 @@ When icons are purely decorative, they should be hidden from assistive technolog
 
 ### Text and icon
 
-The recommended way of using an icon in a button is an embedded SVG<!-- ({{< docsref "/extend/icons" >}}) -->. You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
-
 You don't need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
 Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
