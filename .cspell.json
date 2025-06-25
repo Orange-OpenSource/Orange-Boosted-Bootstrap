@@ -108,6 +108,7 @@
     "roboto",
     "RTLCSS",
     "ruleset",
+    "sassrc",
     "screenreaders",
     "scrollbars",
     "scrollspy",
@@ -155,9 +156,6 @@
     "مرحبًا"
   ],
   "language": "en-US",
-  "files": [
-    "**/*.md"
-  ],
   "ignorePaths": [
     ".cspell.json",
     "dist/",

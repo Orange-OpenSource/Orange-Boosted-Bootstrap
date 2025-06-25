@@ -1,0 +1,41 @@
+// stylelint-disable selector-max-id
+#{$ouds-root-selector} {
+  scroll-padding-top: $offset-top * .5;
+
+  @include media-breakpoint-up(lg) {
+    scroll-padding-top: $offset-top;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.display-0 {
+  @include get-font-size("display-large"); // OUDS mod: instead of `5.25em`
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+#orange-logo ~ .row .ratio .figure-caption {
+  bottom: -#{$spacer * 1.5};
+
+  @include media-breakpoint-up(lg) {
+    bottom: -#{$spacer};
+  }
+}
+
+// Back to top offset
+[id="#{$back-to-top-target-id}"]:target {
+  @include media-breakpoint-up(md) {
+    scroll-margin-top: $offset-top;
+  }
+}
+
+.bd-links-link.text-decoration-line-through {
+  text-decoration-thickness: .1rem !important; // stylelint-disable-line declaration-no-important
+}
