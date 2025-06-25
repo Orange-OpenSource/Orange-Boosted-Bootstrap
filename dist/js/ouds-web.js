@@ -88,7 +88,7 @@
    * --------------------------------------------------------------------------
    */
 
-  const MAX_UID = 1_000_000;
+  const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend';
 
@@ -274,7 +274,7 @@
     });
   };
   const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
+    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
   };
   const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
     if (!waitForTransition) {
@@ -537,7 +537,7 @@
     for (const [key, value] of Object.entries(meta)) {
       try {
         obj[key] = value;
-      } catch {
+      } catch (_unused) {
         Object.defineProperty(obj, key, {
           configurable: true,
           get() {
@@ -574,7 +574,7 @@
     }
     try {
       return JSON.parse(decodeURIComponent(value));
-    } catch {
+    } catch (_unused) {
       return value;
     }
   }
@@ -596,7 +596,7 @@
       const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs') && !key.startsWith('bsConfig'));
       for (const key of bsKeys) {
         let pureKey = key.replace(/^bs/, '');
-        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1);
+        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
         attributes[pureKey] = normalizeData(element.dataset[key]);
       }
       return attributes;
@@ -2120,7 +2120,7 @@
       }
       return {
         ...defaultBsPopperConfig,
-        ...execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
+        ...execute(this._config.popperConfig, [defaultBsPopperConfig])
       };
     }
     _selectMenuItem({
@@ -3381,7 +3381,7 @@
       return this._config.sanitize ? sanitizeHtml(arg, this._config.allowList, this._config.sanitizeFn) : arg;
     }
     _resolvePossibleFunction(arg) {
-      return execute(arg, [undefined, this]);
+      return execute(arg, [this]);
     }
     _putElementInTemplate(element, templateElement) {
       if (this._config.html) {
@@ -3527,6 +3527,7 @@
       if (!this._isEnabled) {
         return;
       }
+      this._activeTrigger.click = !this._activeTrigger.click;
       if (this._isShown()) {
         this._leave();
         return;
@@ -3714,7 +3715,7 @@
       return offset;
     }
     _resolvePossibleFunction(arg) {
-      return execute(arg, [this._element, this._element]);
+      return execute(arg, [this._element]);
     }
     _getPopperConfig(attachment) {
       const defaultBsPopperConfig = {
@@ -3752,7 +3753,7 @@
       };
       return {
         ...defaultBsPopperConfig,
-        ...execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
+        ...execute(this._config.popperConfig, [defaultBsPopperConfig])
       };
     }
     _setListeners() {

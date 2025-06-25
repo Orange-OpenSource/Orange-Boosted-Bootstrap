@@ -21,7 +21,7 @@
    * --------------------------------------------------------------------------
    */
 
-  const MAX_UID = 1_000_000;
+  const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend';
 
@@ -207,7 +207,7 @@
     });
   };
   const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
+    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
   };
   const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
     if (!waitForTransition) {
