@@ -21,7 +21,11 @@ export function getVersionedBsCssProps(direction: 'rtl' | undefined, bootstrap_c
   }
 
   if (import.meta.env.PROD) {
-    bsCssLinkProps.integrity = direction === 'rtl' ? getConfig().cdn.css_bootstrap_rtl_hash : getConfig().cdn.css_bootstrap_hash
+    if (bootstrap_compat_css) {
+      bsCssLinkProps.integrity = direction === 'rtl' ? getConfig().cdn.css_bootstrap_rtl_hash : getConfig().cdn.css_bootstrap_hash
+    } else {
+      bsCssLinkProps.integrity = direction === 'rtl' ? getConfig().cdn.css_rtl_hash : getConfig().cdn.css_hash
+    }
   }
 
   return bsCssLinkProps
