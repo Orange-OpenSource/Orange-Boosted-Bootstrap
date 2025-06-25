@@ -17,18 +17,18 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic" />
+      <input class="control-item-indicator" type="radio" value="" id="radioDefault" name="radioBasic">
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioDefault">Label</label>
+      <label class="control-item-label" for="radioDefault">Default radio button</label>
     </div>
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic" />
+      <input class="control-item-indicator" type="radio" value="" id="radioDefault2" name="radioBasic" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioDefault2">Label</label>
+      <label class="control-item-label" for="radioDefault2">Checked radio button</label>
     </div>
   </div>`} />
 
@@ -36,47 +36,26 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="radio" value="" id="checkDefault" name="radioBasicBs" />
     <label class="form-check-label" for="checkDefault">
-      Default radio button
+      Default radio button (Bootstrap compatible)
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" value="" id="checkChecked" checked name="radioBasicBs" />
     <label class="form-check-label" for="checkChecked">
-      Checked radio button
+      Checked radio button (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
 
 ## Approach
 
-Browser default radio buttons are replaced with the help of `.control-item-indicator[type="radio"]`. Radio buttons allows user to select a single option from a set of mutually exclusive choices.
+Radio buttons allow user to select a single option from a set of mutually exclusive choices.
 
-Radio buttons are implemented using `.control-item-*` classes, see below.
+They are implemented using `.control-item-*` classes. Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
 <ControlItem />
 
 ## Variants
-
-### Outlined
-
-You can display an outlined radio buttons by adding a `.radio-button-item-outlined` to `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
-
-<Example code={`<div class="radio-button-item radio-button-item-outlined control-item-divider">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="radioOutlined1">Label</label>
-    </div>
-  </div>
-  <div class="radio-button-item radio-button-item-outlined control-item-divider">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="radioOutlined2">Label</label>
-    </div>
-  </div>`} />
 
 ### Divider
 
@@ -84,31 +63,54 @@ You can display a divider by adding `.control-item-divider` to a `.radio-button-
 
 <Example code={`<div class="radio-button-item control-item-divider">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioDivider" name="radioDivider" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioDivider" name="radioDivider" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioDivider">Label</label>
+      <label class="control-item-label" for="radioDivider">Default radio button with divider</label>
     </div>
   </div>
   <div class="radio-button-item control-item-divider">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioDivider2" name="radioDivider" />
+      <input class="control-item-indicator" type="radio" value="" id="radioDivider2" name="radioDivider" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioDivider2">Label</label>
+      <label class="control-item-label" for="radioDivider2">Checked radio button with divider</label>
+    </div>
+  </div>`} />
+
+### Outlined
+
+You can display outlined radio buttons by adding a `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
+
+<Example code={`<div class="radio-button-item radio-button-item-outlined">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioOutlined1">Default outlined radio button</label>
+    </div>
+  </div>
+  <div class="radio-button-item radio-button-item-outlined">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioOutlined2">Checked outlined radio button</label>
     </div>
   </div>`} />
 
 ### Icon
 
-You can display an icon by adding `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside as a child of a `.radio-button-item`.
+<Callout type="info" name="info-icons-svg-sprite" />
+
+To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.radio-button-item`.
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioWithSVG" name="radioIcon" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithSVG" name="radioIcon" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioWithSVG">Label</label>
+      <label class="control-item-label" for="radioWithSVG">Default radio button with an SVG icon</label>
     </div>
     <div class="control-item-assets-container">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -118,10 +120,10 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioWithIconFont" name="radioIcon" />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithIconFont" name="radioIcon" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioWithIconFont">Label</label>
+      <label class="control-item-label" for="radioWithIconFont">Checked radio button with a font-icon</label>
     </div>
     <div class="control-item-assets-container">
       <span class="icon si si-settings" aria-hidden="true"></span>
@@ -130,47 +132,50 @@ You can display an icon by adding `.control-item-assets-container` with an icon 
 
 ### Additional label
 
-You can display an additional label for critical information for the option by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`, don’t forget to make it accessible by adding an `aria-describedby` attribute on the input.
+You can add critical information to some of the options through an additional label, by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`. Make sure the additional label is accessible by adding an `aria-describedby` attribute to the input.
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel" aria-describedby="radioAdditionalTextDescription" name="radioAdditionalLabel" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel" aria-describedby="radioAdditionalTextDescription" name="radioAdditionalLabel" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioAdditionalLabel">Label</label>
+      <label class="control-item-label" for="radioAdditionalLabel">Default radio button</label>
       <p class="radio-button-additional-label" id="radioAdditionalTextDescription">Additional label</p>
     </div>
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel2" aria-describedby="radioAdditionalTextDescription2" name="radioAdditionalLabel" />
+      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel2" aria-describedby="radioAdditionalTextDescription2" name="radioAdditionalLabel" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioAdditionalLabel2">Label</label>
+      <label class="control-item-label" for="radioAdditionalLabel2">Checked radio button</label>
       <p class="radio-button-additional-label" id="radioAdditionalTextDescription2">Additional label</p>
     </div>
   </div>`} />
 
 ### Helper text
 
-You can display an helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`, don’t forget to make it accessible by adding an `aria-describedby` attribute on the input.
+You can display a helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
+
+You can combine additional label and helper text, but the additional label must come first (visually and in the `aria-describedby` attribute).
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioHelperText" aria-describedby="radioAdditionalTextHelper" name="radioTextHelper" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioHelperText" aria-describedby="radioAdditionalTextHelper" name="radioTextHelper" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioHelperText">Label</label>
-      <p class="control-item-helper" id="radioAdditionalTextHelper">Helper Text</p>
+      <label class="control-item-label" for="radioHelperText">Default radio button</label>
+      <p class="control-item-helper" id="radioAdditionalTextHelper">Helper text</p>
     </div>
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioHelperText2" aria-describedby="radioAdditionalTextHelper2" name="radioTextHelper" />
+      <input class="control-item-indicator" type="radio" value="" id="radioHelperText2" aria-describedby="radioAdditionalTextHelper2 radioAdditionalTextDescription3" name="radioTextHelper" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioHelperText2">Label</label>
-      <p class="control-item-helper" id="radioAdditionalTextHelper2">Helper Text</p>
+      <label class="control-item-label" for="radioHelperText2">Checked radio button</label>
+      <p class="radio-button-additional-label" id="radioAdditionalTextDescription3">Additional label</p>
+      <p class="control-item-helper" id="radioAdditionalTextHelper2">Helper text</p>
     </div>
   </div>`} />
 
@@ -180,34 +185,34 @@ You can reverse the component by adding `.control-item-reverse` to a `.radio-but
 
 <Example code={`<div class="radio-button-item control-item-reverse">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioReverse" name="radioReverse" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioReverse" name="radioReverse" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioReverse">Label</label>
+      <label class="control-item-label" for="radioReverse">Default reverse radio button</label>
     </div>
   </div>
   <div class="radio-button-item control-item-reverse">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioReverse2" name="radioReverse" />
+      <input class="control-item-indicator" type="radio" value="" id="radioReverse2" name="radioReverse" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioReverse2">Label</label>
+      <label class="control-item-label" for="radioReverse2">Checked reverse radio button</label>
     </div>
   </div>`} />
 
 <BootstrapCompatibility>
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+Put your radio buttons on the opposite side with the `.form-check-reverse` modifier class.
 
 <Example code={`<div class="form-check form-check-reverse">
-    <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioReverse" />
+    <input class="form-check-input" type="radio" value="" id="reverseCheck1" name="radioReverseBs" />
     <label class="form-check-label" for="reverseCheck1">
-      Reverse radio
+      Default reverse radio button (Bootstrap compatible)
     </label>
   </div>
   <div class="form-check form-check-reverse">
-    <input class="form-check-input" type="radio" value="" id="reverseCheck2" disabled name="radioReverse" />
+    <input class="form-check-input" type="radio" value="" id="reverseCheck2" name="radioReverseBs" checked />
     <label class="form-check-label" for="reverseCheck2">
-      Disabled reverse radio
+      Checked reverse radio button (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
@@ -237,13 +242,13 @@ Add the `disabled` attribute and the associated `<label>` are automatically styl
 
 <BootstrapCompatibility>
 <Example addStackblitzJs code={`<div class="form-check">
-    <input class="form-check-input" type="radio" value="" id="checkDisabled" disabled />
+    <input class="form-check-input" type="radio" value="" id="checkDisabled" disabled name="radioDisabledBs" />
     <label class="form-check-label" for="checkDisabled">
       Disabled radio button
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" value="" id="checkCheckedDisabled" checked disabled />
+    <input class="form-check-input" type="radio" value="" id="checkCheckedDisabled" checked disabled  name="radioDisabledBs" />
     <label class="form-check-label" for="checkCheckedDisabled">
       Disabled checked radio button
     </label>
@@ -277,7 +282,7 @@ To create a read only radio button the input should be replaced by a `span` elem
 
 <Callout type="info" name="input-invalid" />
 
- You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation]([[docsref:/forms/validation]]) page to know more about this.
+ You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
@@ -370,7 +375,7 @@ When radio buttons belong to a group (e.g., in a form), you must provide clear c
 
 <Callout type="warning" name="standalone-form-indicator" />
 
-For the standalone Radio button, we provide a completely different architecture to ease the integration inside your projects.
+For the standalone radio button, we provide a completely different architecture to ease the integration inside your projects.
 
 <Example code={`<label class="radio-button-standalone">
     <input class="control-item-indicator" type="radio" value="" />
@@ -379,10 +384,10 @@ For the standalone Radio button, we provide a completely different architecture 
 
 <BootstrapCompatibility>
 <Callout type="warning">
-Be careful using this, you must implement the background on hover, focus and active states.
+Be careful when using this, as you must implement the background on hover, focus and active states.
 </Callout>
 
 <Example code={`<div>
-    <input class="form-check-input" type="radio" id="radioNoLabel" value="" aria-label="..." />
+    <input class="form-check-input" type="radio" value="" aria-label="..." />
   </div>`} />
 </BootstrapCompatibility>
