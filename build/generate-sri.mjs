@@ -34,6 +34,14 @@ const files = [
     configPropertyName: 'css_rtl_hash'
   },
   {
+    file: 'dist/css/ouds-web-bootstrap.min.css',
+    configPropertyName: 'css_bootstrap_hash'
+  },
+  {
+    file: 'dist/css/ouds-web-bootstrap.rtl.min.css',
+    configPropertyName: 'css_bootstrap_rtl_hash'
+  },
+  {
     file: 'dist/js/ouds-web.min.js',
     configPropertyName: 'js_hash'
   },

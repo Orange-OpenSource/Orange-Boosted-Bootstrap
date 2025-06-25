@@ -24,6 +24,10 @@ const configSchema = z.object({
   cdn: z.object({
     css: z.string().url(),
     css_hash: z.string(),
+    css_bootstrap: z.string().url(),
+    css_bootstrap_hash: z.string(),
+    css_bootstrap_rtl: z.string().url(),
+    css_bootstrap_rtl_hash: z.string(),
     css_rtl: z.string().url(),
     css_rtl_hash: z.string(),
     focus_visible: z.string(),

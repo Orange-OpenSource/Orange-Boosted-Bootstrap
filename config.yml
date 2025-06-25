@@ -39,6 +39,10 @@ cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:                            "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.min.css"
   css_hash:                       "sha384-jrROfQGVaBxbucOInwS9RDKlkBnrSv7yT20bH67d8g5EuYeXvgGjTQl5C3hbMEnW"
+  css_bootstrap:                  "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web-bootstrap.min.css"
+  css_bootstrap_hash:             "sha384-TNZzLMZU/2hJ2jf6fSOqnuQOgtsQ1qletK0minTGRhhT6o3bPJiX/H4CL1F9owaZ"
+  css_bootstrap_rtl:              "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web-bootstrap.rtl.min.css"
+  css_bootstrap_rtl_hash:         "sha384-T2SNja8C6agGaIj8SquXJO0d9fHqnHlnYbxUfUFP0n79I3LSH+2FmKzPQMkd4+KE"
   css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/css/ouds-web.rtl.min.css"
   css_rtl_hash:                   "sha384-75dcDWEGzIL4SqO3FcJ6U874As6rNseEtZpvzskcP0RBt00rkuoYDw9xclgkSfLW"
   js:                             "https://cdn.jsdelivr.net/npm/@ouds/web@0.4.0/dist/js/ouds-web.min.js"
