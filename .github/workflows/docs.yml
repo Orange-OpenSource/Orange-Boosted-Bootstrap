@@ -46,6 +46,9 @@ jobs:
       - name: Validate HTML
         run: npm run docs-vnu
 
+      - name: Prettier Check
+        run: npm run docs-prettier-check
+
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@v1
         with:

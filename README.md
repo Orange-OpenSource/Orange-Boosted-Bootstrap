@@ -2,10 +2,10 @@
 
 <p align="center">
   OUDS Web is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
-  <br>
+  <br />
   <a href="https://web.unified-design-system.orange.com"><strong>Visit OUDS Web</strong></a>
-  <br>
-  <br>
+  <br />
+  <br />
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
@@ -16,7 +16,7 @@
 
 - [Quick start](#quick-start)
 - [Status](#status)
-- [What's included](#whats-included)
+- [What’s included](#whats-included)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -34,6 +34,7 @@ Several quick start options are available:
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.4.0`
 - Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.4.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web@v0.4.0`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web` Sass: `Install-Package ouds-web.sass`
 
@@ -52,9 +53,9 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web/badge)](https://www.jsdelivr.com/package/npm/@ouds/web)
 
-## What's included
+## What’s included
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
+Within the download you’ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
 <details>
   <summary>Download contents</summary>
@@ -118,7 +119,7 @@ Within the download you'll find the following directories and files, logically g
   ```
 </details>
 
-We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
+We provide compiled CSS and JS (`ouds-web.*`), as well as compiled and minified CSS and JS (`ouds-web.min.*`). [Source maps](https://web.dev/articles/source-maps) (`ouds-web.*.map`) are available for use with certain browsers’ developer tools. Bundled JS files (`ouds-web.bundle.js` and minified `ouds-web.bundle.min.js`) include [Popper](https://popper.js.org/docs/v2/).
 
 We also provide a compiled and minified CSS (`ouds-web-bootstrap.*` and `ouds-web-bootstrap.min.*`) enforcing Bootstrap compatibility.
 
@@ -129,9 +130,9 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-OUDS Web's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://web.unified-design-system.orange.com/>. The docs may also be run locally.
+OUDS Web’s documentation, included in this repo in the root directory, is built with [Astro](https://astro.build/) and publicly hosted on GitHub Pages at <https://web.unified-design-system.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
+Documentation search is powered by [Algolia’s DocSearch](https://docsearch.algolia.com/).
 
 ### Running documentation locally
 
@@ -140,7 +141,7 @@ Documentation search is powered by [Algolia's DocSearch](https://docsearch.algol
 3. From the root `/ouds-web` directory, run `npm run docs-serve` in the command line.
 4. Open `http://localhost:9001/` in your browser, and voilà.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Learn more about using Hugo by reading its [documentation](https://docs.astro.build/en/getting-started/).
 
 ### Documentation for previous releases
 
@@ -184,13 +185,13 @@ Our default branch is for development of our OUDS Web release.
 ## Thanks
 
 <a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42" />
 </a>
 
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
 <a href="https://www.netlify.com/">
-  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40" />
 </a>
 
 Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!

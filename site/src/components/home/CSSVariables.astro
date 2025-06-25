@@ -1,0 +1,72 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import Code from '@components/shortcodes/Code.astro'
+---
+
+<section class="row pb-scaled-xl">
+  <div class="col-12 d-none d-xl-block pb-scaled-sm">
+    <hr class="border-medium border-default m-none" />
+  </div>
+  <div class="col-xl-4 pe-xl-5xl">
+    <hr class="d-xl-none border-medium m-none pb-scaled-sm" />
+    <h2 class="text-brand-primary mb-scaled-xs">Build and extend in real-time with CSS&nbsp;variables</h2>
+    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xs">
+      OUDS Web is evolving with each release to better utilize CSS variables for global theme styles, individual
+      components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code
+        >:root</code
+      > level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily
+      be modified.
+    </p>
+    <p class="mb-scaled-lg">
+      <a href={getVersionedDocsPath('customize/css-variables')} class="link link-chevron">
+        Learn more about CSS variables
+      </a>
+    </p>
+  </div>
+
+  <div class="col-xl-8">
+    <h3 class="h2 mb-scaled-xs">Using CSS variables</h3>
+    <p class="mb-scaled-md">
+      Use any of our <a href={getVersionedDocsPath('customize/css-variables/#root-variables')}
+        >global <code>:root</code> variables</a
+      > to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children
+      elements.
+    </p>
+    <div class="mb-scaled-md">
+      <Code
+        code={`.component {
+  color: var(--bs-color-content-default);
+  background-color: var(--bs-color-bg-secondary);
+  border: 1px solid var(--bs-color-border-default);
+  border-radius: .25rem;
+}
+
+.component-header {
+  color: var(--bs-color-content-status-negative);
+}`}
+        lang="scss"
+      />
+    </div>
+    <div class="border-top border-thin border-default pt-scaled-sm">
+      <h3 class="h2">Customizing via CSS variables</h3>
+      <p class="mb-scaled-md">
+        Override global, component, or utility class variables to customize OUDS Web just how you like. No need to
+        redeclare each rule, just a new variable value.
+      </p>
+      <Code
+        code={`body {
+  --bs-body-font-family: var(--bs-font-monospace);
+  --bs-body-line-height: 1.4;
+  --bs-body-bg: var(--bs-color-surface-brand-primary);
+}
+
+.table {
+  --bs-table-color: var(--bs-color-content-muted);
+  --bs-table-bg: var(--bs-color-bg-secondary);
+  --bs-table-border-color: transparent;
+}`}
+        lang="scss"
+      />
+    </div>
+  </div>
+</section>

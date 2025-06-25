@@ -1,33 +1,33 @@
 - name: primary
-  hex: "#f15e00"
-  dark_hex: "#ff7900"
-  description: "<b>Primary —</b> Main theme color, used for high emphasis and active component."
+  hex: '#f15e00'
+  dark_hex: '#ff7900'
+  description: '<b>Primary —</b> Main theme color, used for high emphasis and active component.'
 - name: secondary
-  hex: "#000"
-  dark_hex: "#fff"
-  description: "<b>Secondary —</b> Secondary theme color, used for emphasized buttons, focus states, and more."
+  hex: '#000'
+  dark_hex: '#fff'
+  description: '<b>Secondary —</b> Secondary theme color, used for emphasized buttons, focus states, and more.'
 - name: success
-  hex: "#228722"
-  dark_hex: "#66cc66"
-  description: "<b>Success —</b> Theme color used for positive or successful actions."
+  hex: '#228722'
+  dark_hex: '#66cc66'
+  description: '<b>Success —</b> Theme color used for positive or successful actions.'
 - name: danger
-  hex: "#cd3c14"
-  dark_hex: "#ff4d4d"
-  description: "<b>Danger —</b> Theme color used for errors or dangerous actions."
+  hex: '#cd3c14'
+  dark_hex: '#ff4d4d'
+  description: '<b>Danger —</b> Theme color used for errors or dangerous actions.'
 - name: warning
-  hex: "#ffcc00"
-  dark_hex: "#ffcc00"
-  description: "<b>Warning —</b> Theme color used for non-destructive warning messages."
+  hex: '#ffcc00'
+  dark_hex: '#ffcc00'
+  description: '<b>Warning —</b> Theme color used for non-destructive warning messages.'
   contrast_color: black
 - name: info
-  hex: "#4170d8"
-  dark_hex: "#6699ff"
-  description: "<b>Info —</b> Theme color used for neutral or informative content."
+  hex: '#4170d8'
+  dark_hex: '#6699ff'
+  description: '<b>Info —</b> Theme color used for neutral or informative content.'
 - name: light
-  hex: "#ccc"
-  dark_hex: "#ccc"
-  description: "<b>Light —</b> Additional theme option."
+  hex: '#ccc'
+  dark_hex: '#ccc'
+  description: '<b>Light —</b> Additional theme option.'
 - name: dark
-  hex: "#000"
-  dark_hex: "#000"
-  description: "<b>Dark —</b> Additional theme option."
+  hex: '#000'
+  dark_hex: '#000'
+  description: '<b>Dark —</b> Additional theme option.'

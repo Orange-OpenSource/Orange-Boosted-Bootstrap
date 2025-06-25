@@ -674,7 +674,7 @@ describe('Collapse', () => {
     it('should not prevent event for input', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
-          '<input type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapsediv1">',
+          '<input type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapsediv1" />',
           '<div id="collapsediv1"></div>'
         ].join('')
 
