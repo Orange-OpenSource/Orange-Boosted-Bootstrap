@@ -582,9 +582,9 @@
 
   .form-check-reverse {
     @extend .control-item-reverse;
-  }
 
-  .form-check-reverse > .form-check-label {
-    margin-right: auto;
+    & .form-check-label {
+      margin-right: auto;
+    }
   }
 }
