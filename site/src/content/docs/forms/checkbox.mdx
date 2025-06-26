@@ -26,7 +26,7 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" checked />
+      <input checked class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxDefault2">Checked checkbox</label>
@@ -41,9 +41,41 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked />
+    <input checked class="form-check-input" type="checkbox" value="" id="checkChecked" />
     <label class="form-check-label" for="checkChecked">
     Checked checkbox (Bootstrap compatible)
+    </label>
+  </div>`} />
+</BootstrapCompatibility>
+
+### Indeterminate
+
+This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some, but not all, sub-options are selected. [Lear more about nesting in the design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox/t/15b9a5fddb).
+
+Users cannot set a checkbox as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
+
+  <Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="checkbox-item">
+  <div class="control-item-assets-container">
+  <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
+  </div>
+  <div class="control-item-text-container">
+  <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
+  </div>
+  </div>`} />
+
+Here is the associated JavaScript to set a checkbox as indeterminate.
+
+```javascript
+const checkbox = document.getElementById('checkbox')
+
+checkbox.indeterminate = true
+```
+
+  <BootstrapCompatibility>
+  <Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
+    <label class="form-check-label" for="checkIndeterminate">
+      Indeterminate checkbox (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
@@ -160,102 +192,67 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
 
 ## States
 
-### Indeterminate
-
-Often used when the checkbox represents a partial selection. For example, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some but not all sub-options are checked. This is not a state the user can directly selects, it must be calculated by the system.
-
-Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
-
-<Callout type="info">
-Indeterminate state can be combined with disabled and invalid states.
-</Callout>
-
-<Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxIndeterminate">Label</label>
-    </div>
-  </div>`} />
-
-Here is the associated JavaScript to set the indeterminate state.
-
-```javascript
-const checkbox = document.getElementById('checkbox')
-
-checkbox.indeterminate = true
-```
-
-<BootstrapCompatibility>
-<Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
-    <label class="form-check-label" for="checkIndeterminate">
-      Indeterminate checkbox
-    </label>
-  </div>`} />
-</BootstrapCompatibility>
-
 ### Disabled
 
-Add the `disabled` attribute and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
+Add the `disabled` attribute to the input, then the checkbox and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
 <Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" disabled />
+      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxIndeterminateDisabled">Label</label>
+      <label class="control-item-label" for="checkboxDisabled">Default disabled checkbox</label>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" disabled />
+      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDisabled">Label</label>
+      <label class="control-item-label" for="checkboxCheckedDisabled">Checked disabled checkbox</label>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked disabled />
+      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxCheckedDisabled">Label</label>
+      <label class="control-item-label" for="checkboxIndeterminateDisabled">Indeterminate disabled checkbox</label>
     </div>
   </div>`} />
 
 <BootstrapCompatibility>
-<Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled />
-    <label class="form-check-label" for="checkIndeterminateDisabled">
-      Disabled indeterminate checkbox
-    </label>
-  </div>
+<Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled />
+    <input disabled class="form-check-input" type="checkbox" value="" id="checkDisabled" />
     <label class="form-check-label" for="checkDisabled">
-      Disabled checkbox
+      Default disabled checkbox (Bootstrap compatible)
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled />
+    <input disabled class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked />
     <label class="form-check-label" for="checkCheckedDisabled">
-      Disabled checked checkbox
+      Checked disabled checkbox (Bootstrap compatible)
+    </label>
+  </div>
+  <div class="form-check">
+    <input disabled class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" />
+    <label class="form-check-label" for="checkIndeterminateDisabled">
+      Indeterminate disabled checkbox (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
 
 ### Read only
 
-To create a read only checkbox the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly` and `aria-disabled` attributes. The Checkbox will be accessible to keyboard navigation and assistive technologies thanks to `aria-labelledby` and `tabindex` but other interactions will be prevented.
+To create a read only checkbox, the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly="true"` and `aria-disabled="true"` attributes. The checkbox will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
 <Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
       <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
     </div>
     <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyLabel">Label</p>
+      <p class="control-item-label" id="checkboxReadonlyLabel">Default readonly checkbox</p>
     </div>
   </div>
   <div class="checkbox-item">
@@ -263,15 +260,15 @@ To create a read only checkbox the input should be replaced by a `span` element 
       <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
     </div>
     <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Label</p>
+      <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Checked readonly checkbox</p>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <span class="control-item-indicator" role="checkbox"  aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
+      <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
     </div>
     <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyIndeterminate">Label</p>
+      <p class="control-item-label" id="checkboxReadonlyIndeterminate">Indeterminate readonly checkbox</p>
     </div>
   </div>`} />
 
@@ -279,37 +276,48 @@ To create a read only checkbox the input should be replaced by a `span` element 
 
 <Callout type="info" name="input-invalid" />
 
- You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
-<Example code={`<div class="checkbox-item">
+<Example class="bd-example-indeterminate" code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
       <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxInvalid">Label</label>
+      <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" />
+      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxInvalid2">Label</label>
+      <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
+    </div>
+  </div>
+  <div class="checkbox-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
     </div>
   </div>`} />
 
 <BootstrapCompatibility>
+
+You can display an invalid checkbox by adding `.is-invalid` to a `.form-check-input`.
+
 <Example class="bd-example-indeterminate" stackblitz_add_js="true" code={`<div class="form-check">
     <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" />
     <label class="form-check-label" for="checkInvalid">
-      Invalid checkbox
+      Default invalid checkbox (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
 
 ## Group
 
-When checkboxes belong to a group (e.g., in a form), you must provide clear context by using a `<legend>` element inside a `<fieldset>` for the group title, this way screen readers will read the legend before navigating through the checkboxes.
+If checkboxes belong to a group (e.g., in a form), provide clear context by adding a `<legend>` element inside a `<fieldset>` for the group title. Then, screen readers will read the legend before navigating through the checkboxes.
 
 <Example code={`<div class="row">
     <fieldset class="col-md-6">
@@ -330,7 +338,7 @@ When checkboxes belong to a group (e.g., in a form), you must provide clear cont
       </div>
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" checked aria-describedby="checkboxGroup2Description" />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" aria-describedby="checkboxGroup2Description" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxGroup2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
@@ -362,6 +370,6 @@ Be careful when using this, as you must implement the background on hover, focus
 </Callout>
 
 <Example code={`<div style="position: relative">
-    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone bootstrap checkbox" />
+    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="Standalone checkbox (Bootstrap compatible)" />
   </div>`} />
 </BootstrapCompatibility>
