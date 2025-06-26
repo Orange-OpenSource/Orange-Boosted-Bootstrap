@@ -11,9 +11,7 @@
   // scss-docs-end badge-css-vars
 
   display: inline-block;
-  width: var(--#{$prefix}badge-size);
   min-width: var(--#{$prefix}badge-size);
-  height: var(--#{$prefix}badge-size);
   min-height: var(--#{$prefix}badge-size);
   padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
   font-style: normal;
@@ -54,9 +52,6 @@
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-count-padding-y: 0;
-
-  width: auto;
-  height: auto;
 
   &.badge-lg {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
