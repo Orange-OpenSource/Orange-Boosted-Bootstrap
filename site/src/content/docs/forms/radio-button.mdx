@@ -223,7 +223,7 @@ Put your radio buttons on the opposite side with the `.form-check-reverse` modif
 
 Add the `disabled` attribute to the input, then the radio button and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
-<Example addStackblitzJs code={`<div class="radio-button-item">
+<Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
       <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" />
     </div>
@@ -241,7 +241,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
   </div>`} />
 
 <BootstrapCompatibility>
-<Example addStackblitzJs code={`<div class="form-check">
+<Example code={`<div class="form-check">
     <input disabled class="form-check-input" type="radio" value="" id="checkDisabled" name="radioDisabledBs" />
     <label class="form-check-label" for="checkDisabled">
       Default disabled radio button
@@ -259,7 +259,7 @@ Add the `disabled` attribute to the input, then the radio button and the associa
 
 To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
-<Example addStackblitzJs code={`<div role="radiogroup" aria-readonly="true">
+<Example code={`<div role="radiogroup" aria-readonly="true">
     <div class="radio-button-item">
       <div class="control-item-assets-container">
         <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel"></span>
@@ -305,7 +305,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 You can display an invalid radio button by adding `.is-invalid` to a `.form-check-input`.
 
-<Example addStackblitzJs code={`<div class="form-check">
+<Example code={`<div class="form-check">
     <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
     <label class="form-check-label" for="radioInvalidBootstrap">
       Invalid radio
