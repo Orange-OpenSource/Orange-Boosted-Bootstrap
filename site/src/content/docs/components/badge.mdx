@@ -1,9 +1,131 @@
 ---
-title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+title: Badge
+description: The Badge is a small UI element used to highlight status, notifications, or categorization within an interface. It is often displayed as a label or indicator with a distinct background color and text.
 aliases:
   - "/docs/components/badge/"
 toc: true
 ---
 
-<CalloutSoon />
+import { getData } from '@libs/data'
+import { getConfig } from '@libs/config'
+
+<Callout type="info">
+{/* TODO: set the right url for design documentation */}
+You can find here the [OUDS Badge design guidelines](https://unified-design-system.orange.com/).
+</Callout>
+
+## Base class
+
+OUDS Web has a base `.badge` class that sets up basic styles.
+
+<Example code={`<span class="badge"><span class="visually-hidden">Badge alt text</span></span>`} />
+
+
+## Standard variants 
+
+{/*  TODO: set the right url for design documentation */}
+OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
+
+<Example class="d-flex gap-3" code={`<span class="badge"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge text-bg-status-accent-emphasized"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge text-bg-status-positive-emphasized"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge text-bg-status-info-emphasized"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge text-bg-status-warning-emphasized"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge text-bg-status-negative-emphasized"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge badge-disabled"><span class="visually-hidden">Badge alt text</span></span>`} />
+
+## Sizes
+
+Badges are available in four sizes.
+
+<Example class="d-flex align-items-center gap-3" code={`
+  <span class="badge badge-lg"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge badge-sm"><span class="visually-hidden">Badge alt text</span></span>
+  <span class="badge badge-xs"><span class="visually-hidden">Badge alt text</span></span>`} />
+
+## With count
+
+Badges can be used to display numerical value using the `.badge-count` class.
+
+<Example class="d-flex align-items-center gap-3" code={`<span class="badge badge-count">1</span>
+  <span class="badge badge-lg badge-count">1</span>
+  <span class="badge badge-count text-bg-status-positive-emphasized">23</span>
+  <span class="badge badge-count badge-lg text-bg-status-positive-emphasized">23</span>
+  <span class="badge badge-count badge-disabled">+99</span>
+  <span class="badge badge-count badge-lg badge-disabled">+99</span>`} />
+
+## With icons
+
+Badges can be used with icons to visually reinforce meaning.
+
+<Example class="d-flex align-items-center gap-3" code={`<span class="badge">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </span>
+  <span class="badge badge-lg">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </span>
+  <span class="badge text-bg-status-negative-emphasized">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </span>
+  <span class="badge badge-lg text-bg-status-negative-emphasized">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <span class="visually-hidden">Badge alt text</span>
+  </span>`} />
+
+### Positioned
+
+Use utilities to modify a `.badge` and position it in the corner of a button with an icon.
+
+<Example class="d-flex align-items-center gap-3" code={`<button type="button" class="btn btn-icon btn-default position-relative">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#trash"/>
+    </svg>
+    <span class="visually-hidden">Trash</span>
+    <span class="position-absolute top-0 start-100 translate-middle badge text-bg-status-negative-emphasized">
+      <span class="visually-hidden">Trash contains items</span>
+    </span>
+  </button>
+  
+  <button type="button" class="btn btn-default position-relative ms-md">
+    Inbox
+    <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">
+      99+
+      <span class="visually-hidden">New mails</span>
+    </span>
+  </button>`} />
+
+
+<BootstrapCompatibility>
+
+<Example code={`<button type="button" class="btn btn-primary position-relative">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>`} />
+
+<Example code={`<button type="button" class="btn btn-primary position-relative">
+    Profile
+    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+      <span class="visually-hidden">New alerts</span>
+    </span>
+  </button>`} />
+
+<Example code={getData('theme-colors').map((themeColor) => `<span class="badge text-bg-${themeColor.name}">+99</span>`)} />
+
+<Example code={getData('theme-colors').map((themeColor) => `<span class="badge rounded-pill text-bg-${themeColor.name}">+99</span>`)} />
+
+</BootstrapCompatibility>
