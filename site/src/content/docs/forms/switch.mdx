@@ -127,18 +127,80 @@ You can display a helper text by adding a `.control-item-helper` as a sibling of
     </div>
   </div>`} />
 
+## Layout
+
+### Default
+
+<Example code={`<div class="row">
+    <div class="col-8 col-md-6 col-xl-5">
+      <div class="switch-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchLayout1" aria-describedby="switchLayout1Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchLayout1">Label</label>
+          <p class="control-item-helper" id="switchLayout1Description">Helper text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+      <div class="switch-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchLayout2" checked aria-describedby="switchLayout2Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchLayout2">A longer label for showing behavior in this case, switch indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-helper" id="switchLayout2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
 ### Reverse
 
-You can reverse the component by adding `.control-item-reverse` to a `.switch-item`.
+You can reverse the component simply by adding `.control-item-reverse` to a `.switch-item`.
 
-<Example code={`<div class="switch-item control-item-reverse">
-  <div class="control-item-assets-container">
-    <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchReverse" checked />
-  </div>
-  <div class="control-item-text-container">
-    <label class="control-item-label" for="switchReverse">Reverse switch</label>
-  </div>
-</div>`} />
+<Example code={`<div class="row">
+    <div class="col-8 col-md-6 col-xl-5">
+      <div class="switch-item control-item-divider control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchLayoutRev1" aria-describedby="switchLayoutRev1Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchLayoutRev1">Label with reverse layout</label>
+          <p class="control-item-helper" id="switchLayoutRev1Description">Helper text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+      <div class="switch-item control-item-divider control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchLayoutRev2" checked aria-describedby="switchLayoutRev2Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="switchLayoutRev2">A longer label with reverse layout for showing behavior in this case, switch indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-helper" id="switchLayoutRev2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
 
 <BootstrapCompatibility>
 Put your switches on the opposite side with the `.form-check-reverse` modifier class.
@@ -212,18 +274,20 @@ You can display an invalid switch by adding `.is-invalid` to a `.control-item-in
 
 <Example code={`<div class="switch-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid" />
+      <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid" aria-describedby="switchInvalidDescription" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="switchInvalid">Default invalid switch</label>
+      <p class="control-item-helper" id="switchInvalidDescription">Helper text</p>
     </div>
   </div>
   <div class="switch-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid2" />
+      <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid2" aria-describedby="switchInvalid2Description" checked />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="switchInvalid2">Checked invalid switch</label>
+      <p class="control-item-helper" id="switchInvalid2Description">Helper text</p>
     </div>
   </div>`} />
 
@@ -234,7 +298,7 @@ You can display an invalid switch by adding `.is-invalid` to a `.form-check-inpu
 <Example code={`<div class="form-check form-switch">
     <input class="form-check-input is-invalid" type="checkbox" value="" id="checkInvalid" role="switch" />
     <label class="form-check-label" for="checkInvalid">
-      Invalid checkbox
+      Default invalid switch (Bootstrap compatible)
     </label>
   </div>`} />
 </BootstrapCompatibility>
@@ -251,7 +315,7 @@ If switches belong to a group (e.g., in a form), provide clear context by adding
           <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchGroup1" aria-describedby="switchGroup1Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switchGroup1">Label</label>
+          <label class="control-item-label" for="switchGroup1">Group switch 1</label>
           <p class="control-item-helper" id="switchGroup1Description">Helper text</p>
         </div>
         <div class="control-item-assets-container">
@@ -265,8 +329,8 @@ If switches belong to a group (e.g., in a form), provide clear context by adding
           <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchGroup2" checked aria-describedby="switchGroup2Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="switchGroup2">A longer label for showing behavior in this case, switch indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-helper" id="switchGroup2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <label class="control-item-label" for="switchGroup2">Group switch 2</label>
+          <p class="control-item-helper" id="switchGroup2Description">Helper text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">

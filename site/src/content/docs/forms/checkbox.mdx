@@ -165,21 +165,82 @@ You can display a helper text by adding a `.control-item-helper` as a sibling of
     </div>
   </div>`} />
 
+## Layout
+
+### Default
+
+<Example code={`<div class="row">
+    <div class="col-8 col-md-6 col-xl-5">
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout1" aria-describedby="checboxLayout1Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checboxLayout1">Label</label>
+          <p class="control-item-helper" id="checboxLayout1Description">Helper text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout2" aria-describedby="checboxLayout2Description" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checboxLayout2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-helper" id="checboxLayout2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
 ### Reverse
 
-You can reverse the component by adding `.control-item-reverse` to a `.checkbox-item`.
+You can reverse the component simply by adding `.control-item-reverse` to a `.checkbox-item`.
 
-<Example code={`<div class="checkbox-item control-item-reverse">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxReverse" checked />
+<Example code={`<div class="row">
+    <div class="col-8 col-md-6 col-xl-5">
+      <div class="checkbox-item control-item-divider control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayoutRev1" aria-describedby="checboxLayoutRev1Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checboxLayoutRev1">Label with reverse layout</label>
+          <p class="control-item-helper" id="checboxLayoutRev1Description">Helper text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+      <div class="checkbox-item control-item-divider control-item-reverse">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayoutRev2" aria-describedby="checboxLayoutRev2Description" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-helper" id="checboxLayoutRev2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxReverse">Reverse checkbox</label>
-    </div>
-  </div>
-  `} />
+  </div>`} />
 
 <BootstrapCompatibility>
+
 Put your checkboxes on the opposite side with the `.form-check-reverse` modifier class.
 
 <Example code={`<div class="form-check form-check-reverse">
@@ -280,27 +341,30 @@ You can display an invalid checkbox by adding `.is-invalid` to a `.control-item-
 
 <Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" />
+      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
+      <p class="control-item-helper" id="checkboxInvalidDescription">Helper text</p>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" checked />
+      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description" checked />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
+      <p class="control-item-helper" id="checkboxInvalid2Description">Helper text</p>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" />
+      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
-    </div>
+      <p class="control-item-helper" id="checkboxInvalidIndeterminateDescription">Helper text</p>
+  </div>
   </div>`} />
 
 <BootstrapCompatibility>
@@ -327,7 +391,7 @@ If checkboxes belong to a group (e.g., in a form), provide clear context by addi
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup1" aria-describedby="checkboxGroup1Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxGroup1">Label</label>
+          <label class="control-item-label" for="checkboxGroup1">Group checkbox 1</label>
           <p class="control-item-helper" id="checkboxGroup1Description">Helper text</p>
         </div>
         <div class="control-item-assets-container">
@@ -341,8 +405,8 @@ If checkboxes belong to a group (e.g., in a form), provide clear context by addi
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxGroup2" aria-describedby="checkboxGroup2Description" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxGroup2">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-helper" id="checkboxGroup2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <label class="control-item-label" for="checkboxGroup2">Group checkbox 2</label>
+          <p class="control-item-helper" id="checkboxGroup2Description">Helper text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
