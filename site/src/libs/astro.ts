@@ -73,20 +73,11 @@ export function boosted(): AstroIntegration[] {
                   rehypeAutolinkHeadings,
                   {
                     behavior: 'append',
-                    content: (element: Element) => [
-                      {
-                        type: 'element',
-                        tagName: 'span',
-                        children: [
-                          {
-                            type: 'text',
-                            value: `Link to this section: ${(element.children[0] as Text).value}`
-                          }
-                        ],
-                        properties: { class: 'visually-hidden' }
-                      }
-                    ],
-                    properties: { class: 'anchor-link' },
+                    content: [{ type: 'text', value: ' '}],
+                    properties: (element: Element) => ({
+                      class: 'anchor-link',
+                      ariaLabel: `Link to this section: ${(element.children[0] as Text).value}`
+                    }),
                     test: (element: Element) => element.tagName.match(headingsRangeRegex)
                   }
                 ],
