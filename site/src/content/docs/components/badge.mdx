@@ -18,7 +18,11 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
 
 OUDS Web has a base `.badge` class that sets up basic styles.
 
-<Example code={`<span class="badge"><span class="visually-hidden">Badge alt text</span></span>`} />
+<Callout type="info">
+For accessibility and semantics reasons, badges, like any other informative elements, must be enclosed in an ancestor or parent semantic tag. In the following examples, `<p>` is used as the base semantic element, but you can use any other semantic tag depending on the context.
+</Callout>
+
+<Example code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 
 ## Standard variants 
@@ -26,63 +30,63 @@ OUDS Web has a base `.badge` class that sets up basic styles.
 {/*  TODO: set the right url for design documentation */}
 OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
 
-<Example class="d-flex gap-3" code={`<span class="badge"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge text-bg-status-accent-emphasized"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge text-bg-status-positive-emphasized"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge text-bg-status-info-emphasized"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge text-bg-status-warning-emphasized"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge text-bg-status-negative-emphasized"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge badge-disabled"><span class="visually-hidden">Badge alt text</span></span>`} />
+<Example class="d-flex gap-3" code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge text-bg-status-accent-emphasized"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge text-bg-status-positive-emphasized"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge text-bg-status-info-emphasized"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge text-bg-status-warning-emphasized"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge text-bg-status-negative-emphasized"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge badge-disabled"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 ## Sizes
 
 Badges are available in four sizes.
 
 <Example class="d-flex align-items-center gap-3" code={`
-  <span class="badge badge-lg"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge badge-sm"><span class="visually-hidden">Badge alt text</span></span>
-  <span class="badge badge-xs"><span class="visually-hidden">Badge alt text</span></span>`} />
+  <p class="badge badge-lg"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge badge-sm"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge badge-xs"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 ## With count
 
 Badges can be used to display numerical value using the `.badge-count` class.
 
-<Example class="d-flex align-items-center gap-3" code={`<span class="badge badge-count">1</span>
-  <span class="badge badge-lg badge-count">1</span>
-  <span class="badge badge-count text-bg-status-positive-emphasized">23</span>
-  <span class="badge badge-count badge-lg text-bg-status-positive-emphasized">23</span>
-  <span class="badge badge-count badge-disabled">+99</span>
-  <span class="badge badge-count badge-lg badge-disabled">+99</span>`} />
+<Example class="d-flex align-items-center gap-3" code={`<p class="badge badge-count">1</p>
+  <p class="badge badge-lg badge-count">1</p>
+  <p class="badge badge-count text-bg-status-positive-emphasized">23</p>
+  <p class="badge badge-count badge-lg text-bg-status-positive-emphasized">23</p>
+  <p class="badge badge-count badge-disabled">+99</p>
+  <p class="badge badge-count badge-lg badge-disabled">+99</p>`} />
 
 ## With icons
 
 Badges can be used with icons to visually reinforce meaning.
 
-<Example class="d-flex align-items-center gap-3" code={`<span class="badge">
+<Example class="d-flex align-items-center gap-3" code={`<p class="badge">
     <svg aria-hidden="true">
       <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
-  </span>
-  <span class="badge badge-lg">
+  </p>
+  <p class="badge badge-lg">
     <svg aria-hidden="true">
       <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
-  </span>
-  <span class="badge text-bg-status-negative-emphasized">
+  </p>
+  <p class="badge text-bg-status-negative-emphasized">
     <svg aria-hidden="true">
       <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
-  </span>
-  <span class="badge badge-lg text-bg-status-negative-emphasized">
+  </p>
+  <p class="badge badge-lg text-bg-status-negative-emphasized">
     <svg aria-hidden="true">
       <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
-  </span>`} />
+  </p>`} />
 
 ### Positioned
 
@@ -101,7 +105,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
   <button type="button" class="btn btn-default position-relative ms-md">
     Inbox
     <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">
-      99+
+      +99
       <span class="visually-hidden">New mails</span>
     </span>
   </button>`} />
@@ -112,7 +116,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 <Example code={`<button type="button" class="btn btn-primary position-relative">
   Inbox
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    99+
+    +99
     <span class="visually-hidden">unread messages</span>
   </span>
 </button>`} />
