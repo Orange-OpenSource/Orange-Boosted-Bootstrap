@@ -11,9 +11,12 @@
   // scss-docs-end badge-css-vars
 
   display: inline-block;
+  width: var(--#{$prefix}badge-size);
   min-width: var(--#{$prefix}badge-size);
+  height: var(--#{$prefix}badge-size);
   min-height: var(--#{$prefix}badge-size);
   padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
+  margin: 0;
   font-style: normal;
   font-weight: 400;
   color: #{$ouds-color-content-on-status-neutral-emphasized};
@@ -52,6 +55,8 @@
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-count-padding-y: 0;
+
+  width: auto;
 
   &.badge-lg {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
