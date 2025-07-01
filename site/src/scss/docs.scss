@@ -45,6 +45,7 @@ $enable-cssgrid: true;
 $enable-bullet-list-tick: true;
 // fusv-enable
 @import "../../../scss/grid";
+@import "../../../scss/bullet-list";
 
 // Load docs components
 @import "variables";
