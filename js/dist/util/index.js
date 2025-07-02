@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.4.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap index.js v0.4.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap index.js v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -21,7 +21,7 @@
    * --------------------------------------------------------------------------
    */
 
-  const MAX_UID = 1000000;
+  const MAX_UID = 1_000_000;
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend';
 
@@ -207,7 +207,7 @@
     });
   };
   const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
+    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
   };
   const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
     if (!waitForTransition) {

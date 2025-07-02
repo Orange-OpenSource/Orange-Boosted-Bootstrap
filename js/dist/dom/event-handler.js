@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.4.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap event-handler.js v0.4.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap event-handler.js v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -224,7 +224,7 @@
     for (const [key, value] of Object.entries(meta)) {
       try {
         obj[key] = value;
-      } catch (_unused) {
+      } catch {
         Object.defineProperty(obj, key, {
           configurable: true,
           get() {
