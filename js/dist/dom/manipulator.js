@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.4.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap manipulator.js v0.4.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap manipulator.js v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -39,7 +39,7 @@
     }
     try {
       return JSON.parse(decodeURIComponent(value));
-    } catch (_unused) {
+    } catch {
       return value;
     }
   }
@@ -61,7 +61,7 @@
       const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs') && !key.startsWith('bsConfig'));
       for (const key of bsKeys) {
         let pureKey = key.replace(/^bs/, '');
-        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
+        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1);
         attributes[pureKey] = normalizeData(element.dataset[key]);
       }
       return attributes;
