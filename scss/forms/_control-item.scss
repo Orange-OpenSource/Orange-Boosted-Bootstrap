@@ -559,6 +559,19 @@
 
 .switch-standalone {
   @extend %control-item-standalone;
+  padding: 0;
+
+  &:has(input:hover),
+  &:has(input:active),
+  &:has(input:focus-visible) {
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  input:focus-visible {
+    @include focus-visible();
+  }
 }
 
 
