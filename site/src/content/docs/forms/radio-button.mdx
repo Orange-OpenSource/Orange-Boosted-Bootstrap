@@ -78,27 +78,6 @@ You can display a divider by adding `.control-item-divider` to a `.radio-button-
     </div>
   </div>`} />
 
-### Outlined
-
-You can display outlined radio buttons by adding a `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
-
-<Example code={`<div class="radio-button-item radio-button-item-outlined">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="radioOutlined1">Default outlined radio button</label>
-    </div>
-  </div>
-  <div class="radio-button-item radio-button-item-outlined">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="radioOutlined2">Checked outlined radio button</label>
-    </div>
-  </div>`} />
-
 ### Icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
@@ -179,9 +158,32 @@ You can combine additional label and helper text, but the additional label must 
     </div>
   </div>`} />
 
+### Outlined
+
+You can display outlined radio buttons by adding a `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
+
+<Example code={`<div class="radio-button-item radio-button-item-outlined">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioOutlined1" name="radioOutlined" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioOutlined1">Default outlined radio button</label>
+    </div>
+  </div>
+  <div class="radio-button-item radio-button-item-outlined">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="radio" value="" id="radioOutlined2" name="radioOutlined" checked />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="radioOutlined2">Checked outlined radio button</label>
+    </div>
+  </div>`} />
+
 ## Layout
 
 ### Default
+
+It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, additional label or helper text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
@@ -283,10 +285,12 @@ Add the `disabled` attribute to the input, then the radio button and the associa
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" />
+      <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledAdditionalLabel radioDisabledDescription"/>
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="radioDisabled">Default disabled radio button</label>
+      <p class="radio-button-additional-label" id="radioDisabledAdditionalLabel">Additional label</p>
+      <p class="control-item-helper" id="radioDisabledDescription">Helper text</p>
     </div>
   </div>
   <div class="radio-button-item">
@@ -320,10 +324,12 @@ To create a read only radio button, the input should be replaced by a `span` ele
 <Example code={`<div role="radiogroup" aria-readonly="true">
     <div class="radio-button-item">
       <div class="control-item-assets-container">
-        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel"></span>
+        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyAdditionalLabel radioReadonlyDescription"></span>
       </div>
       <div class="control-item-text-container">
         <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
+        <p class="radio-button-additional-label" id="radioReadonlyAdditionalLabel">Additional label</p>
+        <p class="control-item-helper" id="radioReadonlyDescription">Helper text</p>
       </div>
     </div>
     <div class="radio-button-item">
@@ -340,14 +346,15 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 <Callout type="info" name="input-invalid" />
 
- You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidDescription" />
+      <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidAdditionalLabel radioInvalidDescription" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
+      <p class="radio-button-additional-label" id="radioInvalidAdditionalLabel">Additional label</p>
       <p class="control-item-helper" id="radioInvalidDescription">Helper text</p>
     </div>
   </div>

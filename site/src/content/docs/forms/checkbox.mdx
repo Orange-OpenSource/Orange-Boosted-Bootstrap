@@ -54,13 +54,13 @@ This is often used to indicate a partial selection within a group of choices. Fo
 
 Users cannot set a checkbox as indeterminate directly. This must be calculated by the system and set via JavaScript (there is no available HTML attribute available for specifying it). Then, checkboxes use the `:indeterminate` pseudo class for styling.
 
-  <Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
-  <div class="control-item-assets-container">
-  <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
-  </div>
-  <div class="control-item-text-container">
-  <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
-  </div>
+<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
+    <div class="control-item-assets-container">
+      <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
+    </div>
+    <div class="control-item-text-container">
+      <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
+    </div>
   </div>`} />
 
 Here is the associated JavaScript to set a checkbox as indeterminate.
@@ -169,6 +169,8 @@ You can display a helper text by adding a `.control-item-helper` as a sibling of
 
 ### Default
 
+It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or helper text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
+
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
       <div class="checkbox-item control-item-divider">
@@ -178,6 +180,20 @@ You can display a helper text by adding a `.control-item-helper` as a sibling of
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayout1">Label</label>
           <p class="control-item-helper" id="checboxLayout1Description">Helper text</p>
+        </div>
+        <div class="control-item-assets-container">
+          <svg aria-hidden="true">
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          </svg>
+        </div>
+      </div>
+      <div class="checkbox-item control-item-divider">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout1" aria-describedby="checboxLayout1Description" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checboxLayout1">A short label</label>
+          <p class="control-item-helper" id="checboxLayout1Description">A longer helper text that can wrap to another line to show the behaviour</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -204,7 +220,7 @@ You can display a helper text by adding a `.control-item-helper` as a sibling of
 
 ### Reverse
 
-You can reverse the component simply by adding `.control-item-reverse` to a `.checkbox-item`.
+To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
