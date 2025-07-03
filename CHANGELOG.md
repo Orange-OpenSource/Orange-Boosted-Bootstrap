@@ -1,3 +1,38 @@
+# [0.5.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.2.0-ouds-web...v0.5.0) (2025-07-02)
+
+
+### Bug Fixes
+
+* **bullet list:** bullet list design review ([#3043](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3043)) ([552f68e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/552f68e771ba2d6bd6ef3be0807c7e7745c6a41d))
+* **docs:** add callout for link to DSM in Breadcrumb page ([#3015](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3015)) ([2901679](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2901679578680c770a3a8fa6146410efc0f8b847))
+* **docs:** remove raw tokens list in utilities pages ([#3017](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3017)) ([ff24b58](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ff24b58b8864583b98c9efe518ba2b366c21041e))
+* **docs:** Remove weird `.active` classes on Breadcrumb ([#3025](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3025)) ([84c2a16](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/84c2a16c0722dbcc54856240a2a5992e7dcafa58))
+* **docs:** Update Breadcrumb migration guide ([2bda9e6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2bda9e685cba3a97bdda9a8e02d3304129f51470))
+* **docs:** use the right `text-bg` utility in our migration doc ([#3011](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3011)) ([d73728f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d73728f1f0c04f0289f7a96e8b179ab02824c521))
+* link chevron disabled state ([#2894](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2894)) ([6bbac3e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6bbac3e29545637d3ff644d3bd1c3b7df53f27b4))
+* remove out of date todo ([0d3ddda](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d3dddace56c02df1fd0a4462213614757ce2f68))
+* replace checkbox-item ([4153da3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4153da38a68081cf17315e87bcae58519cb35164))
+
+
+### Features
+
+* **#2946:** add a second Radio option in the invalid group ([798edc6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/798edc646c96007027835b9e6a8dc1627705b8dc)), closes [#2946](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2946)
+* Add readonly state on control item components ([#2951](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2951)) ([4fcc009](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4fcc009e27117aa33ea8b7c8bcfcd32bc0ab6098))
+* **badge:** badge updates following accessibility review ([#3044](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3044)) ([2308c4d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2308c4d173579a212ac22b8e587d6dada9b9e49e))
+* **browserlist:** Browserlist updated ([#2929](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2929)) ([204bb35](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/204bb354ace208e3b1f114d4d9272429448f6047))
+* **component:** [OUDS] add Button component ([f2b89c3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f2b89c3ea9fe0e72b2655a9df99bc25b48fea988))
+* **component:** Add badge component ([#2998](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2998)) ([297fa26](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/297fa268b53cd6afc889924b81bef95a6d429e79))
+* **component:** Add Breadcrumb component ([#2930](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2930)) ([2db9f98](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2db9f983693f063da8980aa93b85d4380a83771c))
+* **component:** Add Checkbox component ([#2874](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2874)) ([fd2f797](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fd2f7977f17effb8a7bff7bcc0008da43f64bec4))
+* **component:** Add component bullet list ([#2982](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2982)) ([7eccb1f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7eccb1f2f0cccdc1b663a88fe03ff85966551c03))
+* **component:** add Divider component ([#2932](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2932)) ([78594d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/78594d0877ad7475184c3f58f07d583dd289d425))
+* **component:** add Radio component ([#2933](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2933)) ([adb1c1c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/adb1c1c865ce18b02b8d55284926a1251dda80d6))
+* **component:** Add Switch component ([#2924](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2924)) ([df27446](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/df274465801902651e3f393fff8d3625ef359931))
+* **docs:** add Divider design guideline link ([#3006](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3006)) ([2eea13d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2eea13dc4724c105c28d74f8d9f8422b7e81af5a))
+* use divider token, fix doc and tac ([a14a662](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a14a662f1b07b8b86d365901a466e54a2fd96ad0))
+
+
+
 # [0.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v0.3.0-ouds-web...v0.4.0) (2025-04-08)
 
 
