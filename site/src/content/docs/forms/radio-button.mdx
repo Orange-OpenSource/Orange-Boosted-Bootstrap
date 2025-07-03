@@ -59,7 +59,7 @@ They are implemented using `.control-item-*` classes. Browser default radio butt
 
 ### Divider
 
-You can display a divider by adding `.control-item-divider` to a `.radio-button-item`.
+To display a divider, add `.control-item-divider` to a `.radio-button-item`.
 
 <Example code={`<div class="radio-button-item control-item-divider">
     <div class="control-item-assets-container">
@@ -111,7 +111,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 
 ### Additional label
 
-You can add critical information to some of the options through an additional label, by adding a `.radio-button-additional-label` as a sibling of a `.control-item-label`. Make sure the additional label is accessible by adding an `aria-describedby` attribute to the input.
+To add critical information to some of the options, add a `.radio-button-additional-label` as a sibling of a `.control-item-label`. Make sure the additional label is accessible by adding an `aria-describedby` attribute to the input.
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
@@ -134,7 +134,7 @@ You can add critical information to some of the options through an additional la
 
 ### Helper text
 
-You can display a helper text by adding a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
+To display a helper text, add a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
 
 You can combine additional label and helper text, but the additional label must come first (visually and in the `aria-describedby` attribute).
 
@@ -160,7 +160,7 @@ You can combine additional label and helper text, but the additional label must 
 
 ### Outlined
 
-You can display outlined radio buttons by adding a `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
+To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radio-button-item`. If there is an outlined radio button item in a group, all its siblings should also be outlined.
 
 <Example code={`<div class="radio-button-item radio-button-item-outlined">
     <div class="control-item-assets-container">
@@ -222,7 +222,7 @@ It's recommended to keep radio button label to no more than three words. When sp
 
 ### Reverse
 
-You can reverse the component simply by adding `.control-item-reverse` to a `.radio-button-item`.
+To reverse the component, simply add `.control-item-reverse` to a `.radio-button-item`.
 
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
@@ -346,7 +346,7 @@ To create a read only radio button, the input should be replaced by a `span` ele
 
 <Callout type="info" name="input-invalid" />
 
-You can display an invalid radio button by adding `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+To display an invalid radio button, add `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
@@ -370,7 +370,7 @@ You can display an invalid radio button by adding `.is-invalid` to a `.control-i
 
 <BootstrapCompatibility>
 
-You can display an invalid radio button by adding `.is-invalid` to a `.form-check-input`.
+To display an invalid radio button, add `.is-invalid` to a `.form-check-input`.
 
 <Example code={`<div class="form-check">
     <input class="form-check-input is-invalid" type="radio" value="" id="radioInvalidBootstrap" />
