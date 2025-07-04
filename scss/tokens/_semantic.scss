@@ -1,6 +1,8 @@
 // Semantic applications
 // Depends on raw primitive values
-// Token version 1.1.0
+// OUDS Core tokens version 1.2.0
+// Orange Core tokens version 1.1.0
+// Orange System tokens version 1.2.0
 
 // Border
 
@@ -140,8 +142,8 @@ $ouds-color-content-on-status-warning-emphasized-dark: $core-ouds-color-function
 $ouds-color-content-on-status-warning-emphasized-light: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-status-warning-muted-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-content-on-status-warning-muted-light: $core-ouds-color-functional-black !default;
-$ouds-color-content-status-accent-dark: $core-ouds-color-functional-sun-500 !default;
-$ouds-color-content-status-accent-light: $core-ouds-color-functional-sun-500 !default;
+$ouds-color-content-status-accent-dark: $core-orange-color-orange-500 !default;
+$ouds-color-content-status-accent-light: $core-orange-color-orange-500 !default;
 $ouds-color-content-status-info-dark: $core-ouds-color-functional-dodger-blue-500 !default;
 $ouds-color-content-status-info-light: $core-ouds-color-functional-dodger-blue-500 !default;
 $ouds-color-content-status-negative-dark: $core-ouds-color-functional-scarlet-600 !default;
@@ -200,12 +202,14 @@ $ouds-color-overlay-drag-dark: $core-ouds-color-opacity-white-200 !default;
 $ouds-color-overlay-drag-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-overlay-emphasized-dark: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-overlay-emphasized-light: $core-ouds-color-functional-gray-dark-720 !default;
+$ouds-color-overlay-modal-dark: $core-ouds-color-functional-gray-dark-640 !default;
+$ouds-color-overlay-modal-light: $core-ouds-color-functional-white !default;
 $ouds-color-surface-brand-primary-dark: $core-orange-color-orange-500 !default;
 $ouds-color-surface-brand-primary-light: $core-orange-color-orange-500 !default;
-$ouds-color-surface-status-accent-emphasized-dark: $core-ouds-color-functional-sun-300 !default;
-$ouds-color-surface-status-accent-emphasized-light: $core-ouds-color-functional-sun-500 !default;
-$ouds-color-surface-status-accent-muted-dark: $core-orange-color-warm-gray-1000 !default;
-$ouds-color-surface-status-accent-muted-light: $core-orange-color-warm-gray-100 !default;
+$ouds-color-surface-status-accent-emphasized-dark: $core-orange-color-orange-500 !default;
+$ouds-color-surface-status-accent-emphasized-light: $core-orange-color-orange-500 !default;
+$ouds-color-surface-status-accent-muted-dark: $core-orange-color-warm-gray-900 !default;
+$ouds-color-surface-status-accent-muted-light: $core-orange-color-opacity-warm-gray !default;
 $ouds-color-surface-status-info-emphasized-dark: $core-ouds-color-functional-dodger-blue-300 !default;
 $ouds-color-surface-status-info-emphasized-light: $core-ouds-color-functional-dodger-blue-500 !default;
 $ouds-color-surface-status-info-muted-dark: $core-ouds-color-functional-dodger-blue-900 !default;
@@ -226,8 +230,6 @@ $ouds-color-surface-status-warning-emphasized-dark: $core-ouds-color-functional-
 $ouds-color-surface-status-warning-emphasized-light: $core-ouds-color-functional-sun-500 !default;
 $ouds-color-surface-status-warning-muted-dark: $core-ouds-color-functional-sun-900 !default;
 $ouds-color-surface-status-warning-muted-light: $core-ouds-color-opacity-sun !default;
-$ouds-color-overlay-modal-dark: $ouds-color-bg-emphasized-dark !default;
-$ouds-color-overlay-modal-light: $ouds-color-bg-primary-light !default;
 // scss-docs-end ouds-semantic-color
 
 // Dimension
