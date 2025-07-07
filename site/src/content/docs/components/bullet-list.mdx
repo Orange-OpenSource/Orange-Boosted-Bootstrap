@@ -57,11 +57,11 @@ Add the class `.bullet-list-default-color` to switch to the default body color f
 
 ### Custom marker
 
-The list marker can be customized either by creating a CSS class defining the `--bs-bullet-list-custom-marker` custom property or by passing an inline SVG in the `ul` style attribute with this property. When customizing the marker this way, it will be the same for every levels of the list.
+The list marker can be customized by setting the `--bs-bullet-list-custom-marker` custom property either in a CSS class or in the style attribute of the targeted `ul` or `li`. Custom marker should only be applied to one level of the list, add `.bullet-list-marker-reset` to prevent the custom property from being applied to nested lists.
 
 #### CSS class
 
-Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
+Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker. Add `.bullet-list-marker-reset` so it will not affect nested lists.
 
 <Example code={`<style>
     .bullet-list-heart {
@@ -70,13 +70,13 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
   </style>
 
   <ul class="bullet-list bullet-list-heart">
-      <li>Task</li>
-      <li>Task
-        <ul>
-          <li>Sub task</li>
-          <li>Sub task</li>
+      <li>Heart item
+        <ul class="bullet-list-marker-reset">
+          <li>Heart item</li>
+          <li>Heart item</li>
         </ul>
       </li>
+      <li>Heart item</li>
   </ul>`} />
 
 #### Inline SVG in `ul`
@@ -86,16 +86,38 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 </Callout>
 
 <Example code={`<ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667'/%3E%3C/svg%3E&#34;);">
-      <li>Favorite</li>
-      <li>Favorite</li>
-      <li>Favorite</li>
+      <li>Heart item</li>
+      <li>Heart item</li>
+  </ul>`} />
+
+#### Different custom markers
+
+To have a different marker icon for each item on the same level, add the class or style attribute to the `li`s instead of the `ul`.
+
+<Example code={`<style>
+    .marker-calendar {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M800 175H700v-38c0-20.71-16.789-37-37.5-37a37.5 37.5 0 0 0-37.5 37.5V175H350.011L350 137.5a37.5 37.5 0 0 0-75 0V175H100v625a75 75 0 0 0 75 75h700V250a75 75 0 0 0-75-75Zm25 650H187.5a37.5 37.5 0 0 1-37.5-37.5V400h637.5a37.5 37.5 0 0 1 37.5 37.5V825ZM250 262.5a62.4 62.4 0 0 1 25-50v50a37.5 37.5 0 0 0 75 0V250h.011v-37.493A62.5 62.5 0 1 1 250 262.5Zm350 0a62.4 62.4 0 0 1 25-50v50a37.5 37.5 0 0 0 75 0l-.011-12.5H700v-37a61.471 61.471 0 0 1 25 49.5 62.5 62.5 0 0 1-125 0Z'/></svg>")
+    }
+    .marker-address-book {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M800 100.017 200 100v125.007h-25a49.975 49.975 0 1 0 0 99.95h25v125.05h-25A50 50 0 1 0 175 550h25v124.985h-25a50.016 50.016 0 0 0 0 100.032h25v50.161a74.724 74.724 0 0 0 75 74.677L875 900l-.121-725.1A74.793 74.793 0 0 0 800 100.017ZM537.5 249.833a87.5 87.5 0 1 1-87.5 87.5 87.5 87.5 0 0 1 87.5-87.5ZM675 749.992H449.9a49.914 49.914 0 0 1-49.9-50V588c0-75.939 61.561-138.058 137.5-138.058S675 512.061 675 588v161.992Z'/></svg>")
+    }
+  </style>
+
+  <ul class="bullet-list">
+      <li class="marker-calendar">Calendar item
+        <ul class="bullet-list-marker-reset">
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </li>
+      <li class="marker-address-book">Address book item</li>
   </ul>`} />
 
 ### Tick marker
 
 #### Using SCSS
 
-The tick marker is not shipped by default in the OUDS Web CSS, you can set the [`$enable-bullet-list-tick` variable]([[docsref:/customize/options]]) to `true` if you are using OUDS Web Sass source files.
+The tick marker is not shipped by default in the OUDS Web CSS, set the [`$enable-bullet-list-tick` variable]([[docsref:/customize/options]]) to `true` to enable the `.bullet-list-tick` class. Do not forget the `.bullet-list-tick` if you have nested lists.
 
 <Example code={`<!--
     // in your style.scss file before importing OUDS Web source code
@@ -104,32 +126,28 @@ The tick marker is not shipped by default in the OUDS Web CSS, you can set the [
 
   <ul class="bullet-list bullet-list-tick">
       <li>Task</li>
-      <li>Task
-        <ul>
-          <li>Sub task</li>
-          <li>Sub task</li>
+      <li>Task 2
+        <ul class="bullet-list-marker-reset">
+          <li>Sub item</li>
+          <li>Sub item</li>
         </ul>
       </li>
   </ul>`} />
 
 #### Using a custom marker
 
-Create a CSS class to define the `--bs-bullet-list-custom-marker` custom property with the tick SVG. This way, compiling the Sass source is not necessary.
+To display a tick list without compiling the Sass source, add a CSS class setting the `--bs-bullet-list-custom-marker` custom property to the tick SVG. [See above](#custom-marker) for more information.
 
 <Example code={`<style>
     .bullet-with-tick {
-      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>")
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267a1.24 1.24 0 0 1 .811-.296c.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>")
     }
   </style>
 
   <ul class="bullet-list bullet-with-tick">
       <li>Task</li>
-      <li>Task
-        <ul>
-          <li>Sub task</li>
-          <li>Sub task</li>
-        </ul>
-      </li>
+      <li>Task</li>
+      <li>Task</li>
   </ul>`} />
 
 ## Ordered lists

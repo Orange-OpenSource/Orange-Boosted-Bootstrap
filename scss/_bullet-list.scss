@@ -73,6 +73,10 @@ ul.bullet-list {
     }
   }
 
+  .bullet-list-marker-reset {
+    --#{$prefix}bullet-list-custom-marker: initial;
+  }
+
   &.bullet-list-bare {
     --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
   }
