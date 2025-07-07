@@ -11,6 +11,7 @@
   min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-inset;
+  @include border-radius($ouds-control-item-border-radius);
 
   // Handle focus
   &:has(:focus-visible) {
@@ -333,7 +334,7 @@
   min-height: $ouds-switch-size-min-height;
   background-color: $ouds-switch-color-track-unselected;
   border: 0;
-  @include border-radius($ouds-switch-border-radius, $ouds-switch-border-radius);
+  @include border-radius($ouds-switch-border-radius-track, $ouds-switch-border-radius-track);
 
   &[type="checkbox"]::before,
   &[aria-readonly="true"]::before {
@@ -401,6 +402,10 @@
     &:focus-visible,
     &:active {
       background-color: $ouds-switch-color-track-selected-interaction;
+
+      &::after {
+        background-color: $ouds-switch-color-check-interaction;
+      }
     }
 
     &:active::before {
@@ -434,6 +439,7 @@
   justify-content: center;
   min-width: $ouds-checkbox-size-min-width;
   min-height: $ouds-checkbox-size-min-height;
+  @include border-radius($ouds-control-item-border-radius-item-only);
 }
 
 
@@ -464,7 +470,7 @@
 
 .radio-button-additional-label {
   margin: 0;
-  font-weight: $ouds-font-weight-system-strong;
+  font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-default;
   @include get-font-size("label-medium");
 }
@@ -553,6 +559,19 @@
 
 .switch-standalone {
   @extend %control-item-standalone;
+  padding: 0;
+
+  &:has(input:hover),
+  &:has(input:active),
+  &:has(input:focus-visible) {
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  input:focus-visible {
+    @include focus-visible();
+  }
 }
 
 

@@ -33,6 +33,6 @@ jobs:
         uses: streetsidesoftware/cspell-action@v7
         with:
           config: ".cspell.json"
-          files: "**/*.md"
+          files: "**/*.{md|mdx}"
           inline: error
           incremental_files_only: false

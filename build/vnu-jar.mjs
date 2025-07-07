@@ -23,18 +23,26 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
   // vnu-jar accepts multiple ignores joined with a `|`.
   // Also note that the ignores are string regular expressions.
   const ignores = [
-    // "autocomplete" is included in <button> and checkboxes and radio <input>s due to
+    // "autocomplete" is included in <button> and checkboxes and radio <input />s due to
     // Firefox's non-standard autocomplete behavior - see https://bugzilla.mozilla.org/show_bug.cgi?id=654072
     'Attribute “autocomplete” is only allowed when the input type is.*',
     'Attribute “autocomplete” not allowed on element “button” at this point.',
     // Per https://www.w3.org/TR/html-aria/#docconformance having "aria-disabled" on a link is
-    // NOT RECOMMENDED, but it's still valid - we explain in the docs that it's not ideal,
+    // NOT RECOMMENDED, but it's still valid - we explain in the docs that it’s not ideal,
     // and offer more robust alternatives, but also need to show a less-than-ideal example
     'An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.',
-    '.*Consider using the “h1” element as a top-level heading only.*',
+    '.*Consider using the “h1” element as a top-level heading only.*', // OUDS mod
     // Poor aria-readonly handling see https://github.com/validator/validator/issues/1199
     'Attribute “aria-readonly” not allowed on element “span” at this point.',
-    'Attribute “aria-readonly” not allowed on element “div” at this point.'
+    'Attribute “aria-readonly” not allowed on element “div” at this point.',
+    // A `code` element with the `is:raw` attribute coming from remark-prismjs (Astro upstream possible bug, see https://github.com/twbs/bootstrap/pull/41251/files#r1987880948)
+    'Attribute “is:raw” is not serializable as XML 1.0.',
+    'Attribute “is:raw” not allowed on element “code” at this point.',
+    // Astro’s expecting trailing slashes on HTML tags such as <br />
+    'Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.',
+    // Allow `switch` attribute.
+    'Attribute “switch” not allowed on element “input” at this point.',
+    'Element “style” not allowed as child of element “div” in this context.*'
     // End mod
   ].join('|')
 

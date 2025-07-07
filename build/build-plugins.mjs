@@ -56,7 +56,7 @@ const build = async plugin => {
       // Pattern to identify local files
       const pattern = /^(\.{1,2})\//
 
-      // It's not a local file, e.g a Node.js package
+      // It’s not a local file, e.g a Node.js package
       if (!pattern.test(source)) {
         globals[source] = source
         return true

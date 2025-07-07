@@ -6,17 +6,17 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    $ouds-color-functional-white !default; // OUDS mod: instead of `#fff`
-$gray-100: $ouds-color-functional-light-gray-80 !default; // OUDS mod: instead of `#f8f9fa`
-$gray-200: $ouds-color-functional-light-gray-160 !default; // OUDS mod: instead of `#e9ecef`
-$gray-300: $ouds-color-functional-light-gray-240 !default; // OUDS mod: instead of `#dee2e6`
-$gray-400: $ouds-color-functional-light-gray-400 !default; // OUDS mod: instead of `#ced4da`
-$gray-500: $ouds-color-functional-light-gray-800 !default; // OUDS mod: instead of `#adb5bd`
-$gray-600: $ouds-color-functional-dark-gray-240 !default; // OUDS mod: instead of `#6c757d`
-$gray-700: $ouds-color-functional-dark-gray-640 !default; // OUDS mod: instead of `#495057`
-$gray-800: $ouds-color-functional-dark-gray-800 !default; // OUDS mod: instead of `#343a40`
-$gray-900: $ouds-color-functional-dark-gray-880 !default; // OUDS mod: instead of `#212529`
-$black:    $ouds-color-functional-black !default; // OUDS mod: instead of `#000`
+$white:    $core-ouds-color-functional-white !default; // OUDS mod: instead of `#fff`
+$gray-100: $core-ouds-color-functional-gray-light-80 !default; // OUDS mod: instead of `#f8f9fa`
+$gray-200: $core-ouds-color-functional-gray-light-160 !default; // OUDS mod: instead of `#e9ecef`
+$gray-300: $core-ouds-color-functional-gray-light-240 !default; // OUDS mod: instead of `#dee2e6`
+$gray-400: $core-ouds-color-functional-gray-light-400 !default; // OUDS mod: instead of `#ced4da`
+$gray-500: $core-ouds-color-functional-gray-light-800 !default; // OUDS mod: instead of `#adb5bd`
+$gray-600: $core-ouds-color-functional-gray-dark-240 !default; // OUDS mod: instead of `#6c757d`
+$gray-700: $core-ouds-color-functional-gray-dark-640 !default; // OUDS mod: instead of `#495057`
+$gray-800: $core-ouds-color-functional-gray-dark-800 !default; // OUDS mod: instead of `#343a40`
+$gray-900: $core-ouds-color-functional-gray-dark-880 !default; // OUDS mod: instead of `#212529`
+$black:    $core-ouds-color-functional-black !default; // OUDS mod: instead of `#000`
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -36,16 +36,16 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    $ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `#0d6efd`
-$indigo:  $ouds-color-decorative-amethyst-400 !default; // OUDS mod: instead of `#6610f2`
-$purple:  $ouds-color-decorative-amethyst-400 !default; // OUDS mod: instead of `#6f42c1`
-$pink:    $ouds-color-decorative-shocking-pink-200 !default; // OUDS mod: instead of `#d63384`
-$red:     $ouds-color-functional-scarlet-600 !default; // OUDS mod: instead of `#dc3545`
-$orange:  $ouds-color-orange-550 !default; // OUDS mod: instead of `#fd7e14`
-$yellow:  $ouds-color-functional-sun-500 !default; // OUDS mod: instead of `#ffc107`
-$green:   $ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `#198754`
-$teal:    $ouds-color-decorative-emerald-500 !default; // OUDS mod: instead of `#20c997`
-$cyan:    $ouds-color-decorative-sky-400 !default; // OUDS mod: instead of `#0dcaf0`
+$blue:    $core-ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `#0d6efd`
+$indigo:  $core-orange-color-decorative-amethyst-400 !default; // OUDS mod: instead of `#6610f2`
+$purple:  $core-orange-color-decorative-amethyst-400 !default; // OUDS mod: instead of `#6f42c1`
+$pink:    $core-orange-color-decorative-shocking-pink-200 !default; // OUDS mod: instead of `#d63384`
+$red:     $core-ouds-color-functional-scarlet-600 !default; // OUDS mod: instead of `#dc3545`
+$orange:  $core-orange-color-orange-550 !default; // OUDS mod: instead of `#fd7e14`
+$yellow:  $core-ouds-color-functional-sun-500 !default; // OUDS mod: instead of `#ffc107`
+$green:   $core-ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `#198754`
+$teal:    $core-orange-color-decorative-emerald-500 !default; // OUDS mod: instead of `#20c997`
+$cyan:    $core-orange-color-decorative-sky-400 !default; // OUDS mod: instead of `#0dcaf0`
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -76,105 +76,105 @@ $color-contrast-dark:  $black !default;
 $color-contrast-light: $white !default;
 
 // fusv-disable
-$blue-100: $ouds-color-functional-dodger-blue-100 !default; // OUDS mod: instead of `tint-color($blue, 80%)`
-$blue-200: $ouds-color-functional-dodger-blue-200 !default; // OUDS mod: instead of `tint-color($blue, 60%)`
-$blue-300: $ouds-color-functional-dodger-blue-300 !default; // OUDS mod: instead of `tint-color($blue, 40%)`
-$blue-400: $ouds-color-functional-dodger-blue-400 !default; // OUDS mod: instead of `tint-color($blue, 20%)`
-$blue-500: $ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `$blue`
-$blue-600: $ouds-color-functional-dodger-blue-600 !default; // OUDS mod: instead of `shade-color($blue, 20%)`
-$blue-700: $ouds-color-functional-dodger-blue-700 !default; // OUDS mod: instead of `shade-color($blue, 40%)`
-$blue-800: $ouds-color-functional-dodger-blue-800 !default; // OUDS mod: instead of `shade-color($blue, 60%)`
-$blue-900: $ouds-color-functional-dodger-blue-900 !default; // OUDS mod: instead of `shade-color($blue, 80%)`
+$blue-100: $core-ouds-color-functional-dodger-blue-100 !default; // OUDS mod: instead of `tint-color($blue, 80%)`
+$blue-200: $core-ouds-color-functional-dodger-blue-200 !default; // OUDS mod: instead of `tint-color($blue, 60%)`
+$blue-300: $core-ouds-color-functional-dodger-blue-300 !default; // OUDS mod: instead of `tint-color($blue, 40%)`
+$blue-400: $core-ouds-color-functional-dodger-blue-400 !default; // OUDS mod: instead of `tint-color($blue, 20%)`
+$blue-500: $core-ouds-color-functional-dodger-blue-500 !default; // OUDS mod: instead of `$blue`
+$blue-600: $core-ouds-color-functional-dodger-blue-600 !default; // OUDS mod: instead of `shade-color($blue, 20%)`
+$blue-700: $core-ouds-color-functional-dodger-blue-700 !default; // OUDS mod: instead of `shade-color($blue, 40%)`
+$blue-800: $core-ouds-color-functional-dodger-blue-800 !default; // OUDS mod: instead of `shade-color($blue, 60%)`
+$blue-900: $core-ouds-color-functional-dodger-blue-900 !default; // OUDS mod: instead of `shade-color($blue, 80%)`
 
-$indigo-100: $ouds-color-decorative-amethyst-100 !default; // OUDS mod: instead of `tint-color($indigo, 80%)`
-$indigo-200: $ouds-color-decorative-amethyst-200 !default; // OUDS mod: instead of `tint-color($indigo, 60%)`
-$indigo-300: $ouds-color-decorative-amethyst-300 !default; // OUDS mod: instead of `tint-color($indigo, 40%)`
-$indigo-400: $ouds-color-decorative-amethyst-400 !default; // OUDS mod: instead of `tint-color($indigo, 20%)`
-$indigo-500: $ouds-color-decorative-amethyst-500 !default; // OUDS mod: instead of `$indigo`
-$indigo-600: $ouds-color-decorative-amethyst-600 !default; // OUDS mod: instead of `shade-color($indigo, 20%)`
-$indigo-700: $ouds-color-decorative-amethyst-700 !default; // OUDS mod: instead of `shade-color($indigo, 40%)`
-$indigo-800: $ouds-color-decorative-amethyst-800 !default; // OUDS mod: instead of `shade-color($indigo, 60%)`
-$indigo-900: $ouds-color-decorative-amethyst-900 !default; // OUDS mod: instead of `shade-color($indigo, 80%)`
+$indigo-100: $core-orange-color-decorative-amethyst-100 !default; // OUDS mod: instead of `tint-color($indigo, 80%)`
+$indigo-200: $core-orange-color-decorative-amethyst-200 !default; // OUDS mod: instead of `tint-color($indigo, 60%)`
+$indigo-300: $core-orange-color-decorative-amethyst-300 !default; // OUDS mod: instead of `tint-color($indigo, 40%)`
+$indigo-400: $core-orange-color-decorative-amethyst-400 !default; // OUDS mod: instead of `tint-color($indigo, 20%)`
+$indigo-500: $core-orange-color-decorative-amethyst-500 !default; // OUDS mod: instead of `$indigo`
+$indigo-600: $core-orange-color-decorative-amethyst-600 !default; // OUDS mod: instead of `shade-color($indigo, 20%)`
+$indigo-700: $core-orange-color-decorative-amethyst-700 !default; // OUDS mod: instead of `shade-color($indigo, 40%)`
+$indigo-800: $core-orange-color-decorative-amethyst-800 !default; // OUDS mod: instead of `shade-color($indigo, 60%)`
+$indigo-900: $core-orange-color-decorative-amethyst-900 !default; // OUDS mod: instead of `shade-color($indigo, 80%)`
 
-$purple-100: $ouds-color-decorative-amethyst-100 !default; // OUDS mod: instead of `tint-color($purple, 80%)`
-$purple-200: $ouds-color-decorative-amethyst-200 !default; // OUDS mod: instead of `tint-color($purple, 60%)`
-$purple-300: $ouds-color-decorative-amethyst-300 !default; // OUDS mod: instead of `tint-color($purple, 40%)`
-$purple-400: $ouds-color-decorative-amethyst-400 !default; // OUDS mod: instead of `tint-color($purple, 20%)`
-$purple-500: $ouds-color-decorative-amethyst-500 !default; // OUDS mod: instead of `$purple`
-$purple-600: $ouds-color-decorative-amethyst-600 !default; // OUDS mod: instead of `shade-color($purple, 20%)`
-$purple-700: $ouds-color-decorative-amethyst-700 !default; // OUDS mod: instead of `shade-color($purple, 40%)`
-$purple-800: $ouds-color-decorative-amethyst-800 !default; // OUDS mod: instead of `shade-color($purple, 60%)`
-$purple-900: $ouds-color-decorative-amethyst-900 !default; // OUDS mod: instead of `shade-color($purple, 80%)`
+$purple-100: $core-orange-color-decorative-amethyst-100 !default; // OUDS mod: instead of `tint-color($purple, 80%)`
+$purple-200: $core-orange-color-decorative-amethyst-200 !default; // OUDS mod: instead of `tint-color($purple, 60%)`
+$purple-300: $core-orange-color-decorative-amethyst-300 !default; // OUDS mod: instead of `tint-color($purple, 40%)`
+$purple-400: $core-orange-color-decorative-amethyst-400 !default; // OUDS mod: instead of `tint-color($purple, 20%)`
+$purple-500: $core-orange-color-decorative-amethyst-500 !default; // OUDS mod: instead of `$purple`
+$purple-600: $core-orange-color-decorative-amethyst-600 !default; // OUDS mod: instead of `shade-color($purple, 20%)`
+$purple-700: $core-orange-color-decorative-amethyst-700 !default; // OUDS mod: instead of `shade-color($purple, 40%)`
+$purple-800: $core-orange-color-decorative-amethyst-800 !default; // OUDS mod: instead of `shade-color($purple, 60%)`
+$purple-900: $core-orange-color-decorative-amethyst-900 !default; // OUDS mod: instead of `shade-color($purple, 80%)`
 
-$pink-100: $ouds-color-decorative-shocking-pink-100 !default; // OUDS mod: instead of `tint-color($pink, 80%)`
-$pink-200: $ouds-color-decorative-shocking-pink-200 !default; // OUDS mod: instead of `tint-color($pink, 60%)`
-$pink-300: $ouds-color-decorative-shocking-pink-300 !default; // OUDS mod: instead of `tint-color($pink, 40%)`
-$pink-400: $ouds-color-decorative-shocking-pink-400 !default; // OUDS mod: instead of `tint-color($pink, 20%)`
-$pink-500: $ouds-color-decorative-shocking-pink-500 !default; // OUDS mod: instead of `$pink`
-$pink-600: $ouds-color-decorative-shocking-pink-600 !default; // OUDS mod: instead of `shade-color($pink, 20%)`
-$pink-700: $ouds-color-decorative-shocking-pink-700 !default; // OUDS mod: instead of `shade-color($pink, 40%)`
-$pink-800: $ouds-color-decorative-shocking-pink-800 !default; // OUDS mod: instead of `shade-color($pink, 60%)`
-$pink-900: $ouds-color-decorative-shocking-pink-900 !default; // OUDS mod: instead of `shade-color($pink, 80%)`
+$pink-100: $core-orange-color-decorative-shocking-pink-100 !default; // OUDS mod: instead of `tint-color($pink, 80%)`
+$pink-200: $core-orange-color-decorative-shocking-pink-200 !default; // OUDS mod: instead of `tint-color($pink, 60%)`
+$pink-300: $core-orange-color-decorative-shocking-pink-300 !default; // OUDS mod: instead of `tint-color($pink, 40%)`
+$pink-400: $core-orange-color-decorative-shocking-pink-400 !default; // OUDS mod: instead of `tint-color($pink, 20%)`
+$pink-500: $core-orange-color-decorative-shocking-pink-500 !default; // OUDS mod: instead of `$pink`
+$pink-600: $core-orange-color-decorative-shocking-pink-600 !default; // OUDS mod: instead of `shade-color($pink, 20%)`
+$pink-700: $core-orange-color-decorative-shocking-pink-700 !default; // OUDS mod: instead of `shade-color($pink, 40%)`
+$pink-800: $core-orange-color-decorative-shocking-pink-800 !default; // OUDS mod: instead of `shade-color($pink, 60%)`
+$pink-900: $core-orange-color-decorative-shocking-pink-900 !default; // OUDS mod: instead of `shade-color($pink, 80%)`
 
-$red-100: $ouds-color-functional-scarlet-100 !default; // OUDS mod: instead of `tint-color($red, 80%)`
-$red-200: $ouds-color-functional-scarlet-200 !default; // OUDS mod: instead of `tint-color($red, 60%)`
-$red-300: $ouds-color-functional-scarlet-300 !default; // OUDS mod: instead of `tint-color($red, 40%)`
-$red-400: $ouds-color-functional-scarlet-400 !default; // OUDS mod: instead of `tint-color($red, 20%)`
-$red-500: $ouds-color-functional-scarlet-500 !default; // OUDS mod: instead of `$red`
-$red-600: $ouds-color-functional-scarlet-600 !default; // OUDS mod: instead of `shade-color($red, 20%)`
-$red-700: $ouds-color-functional-scarlet-700 !default; // OUDS mod: instead of `shade-color($red, 40%)`
-$red-800: $ouds-color-functional-scarlet-800 !default; // OUDS mod: instead of `shade-color($red, 60%)`
-$red-900: $ouds-color-functional-scarlet-900 !default; // OUDS mod: instead of `shade-color($red, 80%)`
+$red-100: $core-ouds-color-functional-scarlet-100 !default; // OUDS mod: instead of `tint-color($red, 80%)`
+$red-200: $core-ouds-color-functional-scarlet-200 !default; // OUDS mod: instead of `tint-color($red, 60%)`
+$red-300: $core-ouds-color-functional-scarlet-300 !default; // OUDS mod: instead of `tint-color($red, 40%)`
+$red-400: $core-ouds-color-functional-scarlet-400 !default; // OUDS mod: instead of `tint-color($red, 20%)`
+$red-500: $core-ouds-color-functional-scarlet-500 !default; // OUDS mod: instead of `$red`
+$red-600: $core-ouds-color-functional-scarlet-600 !default; // OUDS mod: instead of `shade-color($red, 20%)`
+$red-700: $core-ouds-color-functional-scarlet-700 !default; // OUDS mod: instead of `shade-color($red, 40%)`
+$red-800: $core-ouds-color-functional-scarlet-800 !default; // OUDS mod: instead of `shade-color($red, 60%)`
+$red-900: $core-ouds-color-functional-scarlet-900 !default; // OUDS mod: instead of `shade-color($red, 80%)`
 
-$orange-100: $ouds-color-orange-100 !default; // OUDS mod: instead of `tint-color($orange, 80%)`
-$orange-200: $ouds-color-orange-200 !default; // OUDS mod: instead of `tint-color($orange, 60%)`
-$orange-300: $ouds-color-orange-300 !default; // OUDS mod: instead of `tint-color($orange, 40%)`
-$orange-400: $ouds-color-orange-400 !default; // OUDS mod: instead of `tint-color($orange, 20%)`
-$orange-500: $ouds-color-orange-500 !default; // OUDS mod: instead of `$orange`
-$orange-600: $ouds-color-orange-600 !default; // OUDS mod: instead of `shade-color($orange, 20%)`
-$orange-700: $ouds-color-orange-700 !default; // OUDS mod: instead of `shade-color($orange, 40%)`
-$orange-800: $ouds-color-orange-800 !default; // OUDS mod: instead of `shade-color($orange, 60%)`
-$orange-900: $ouds-color-orange-900 !default; // OUDS mod: instead of `shade-color($orange, 80%)`
+$orange-100: $core-orange-color-orange-100 !default; // OUDS mod: instead of `tint-color($orange, 80%)`
+$orange-200: $core-orange-color-orange-200 !default; // OUDS mod: instead of `tint-color($orange, 60%)`
+$orange-300: $core-orange-color-orange-300 !default; // OUDS mod: instead of `tint-color($orange, 40%)`
+$orange-400: $core-orange-color-orange-400 !default; // OUDS mod: instead of `tint-color($orange, 20%)`
+$orange-500: $core-orange-color-orange-500 !default; // OUDS mod: instead of `$orange`
+$orange-600: $core-orange-color-orange-600 !default; // OUDS mod: instead of `shade-color($orange, 20%)`
+$orange-700: $core-orange-color-orange-700 !default; // OUDS mod: instead of `shade-color($orange, 40%)`
+$orange-800: $core-orange-color-orange-800 !default; // OUDS mod: instead of `shade-color($orange, 60%)`
+$orange-900: $core-orange-color-orange-900 !default; // OUDS mod: instead of `shade-color($orange, 80%)`
 
-$yellow-100: $ouds-color-functional-sun-100 !default; // OUDS mod: instead of `tint-color($yellow, 80%)`
-$yellow-200: $ouds-color-functional-sun-200 !default; // OUDS mod: instead of `tint-color($yellow, 60%)`
-$yellow-300: $ouds-color-functional-sun-300 !default; // OUDS mod: instead of `tint-color($yellow, 40%)`
-$yellow-400: $ouds-color-functional-sun-400 !default; // OUDS mod: instead of `tint-color($yellow, 20%)`
-$yellow-500: $ouds-color-functional-sun-500 !default; // OUDS mod: instead of `$yellow`
-$yellow-600: $ouds-color-functional-sun-600 !default; // OUDS mod: instead of `shade-color($yellow, 20%)`
-$yellow-700: $ouds-color-functional-sun-700 !default; // OUDS mod: instead of `shade-color($yellow, 40%)`
-$yellow-800: $ouds-color-functional-sun-800 !default; // OUDS mod: instead of `shade-color($yellow, 60%)`
-$yellow-900: $ouds-color-functional-sun-900 !default; // OUDS mod: instead of `shade-color($yellow, 80%)`
+$yellow-100: $core-ouds-color-functional-sun-100 !default; // OUDS mod: instead of `tint-color($yellow, 80%)`
+$yellow-200: $core-ouds-color-functional-sun-200 !default; // OUDS mod: instead of `tint-color($yellow, 60%)`
+$yellow-300: $core-ouds-color-functional-sun-300 !default; // OUDS mod: instead of `tint-color($yellow, 40%)`
+$yellow-400: $core-ouds-color-functional-sun-400 !default; // OUDS mod: instead of `tint-color($yellow, 20%)`
+$yellow-500: $core-ouds-color-functional-sun-500 !default; // OUDS mod: instead of `$yellow`
+$yellow-600: $core-ouds-color-functional-sun-600 !default; // OUDS mod: instead of `shade-color($yellow, 20%)`
+$yellow-700: $core-ouds-color-functional-sun-700 !default; // OUDS mod: instead of `shade-color($yellow, 40%)`
+$yellow-800: $core-ouds-color-functional-sun-800 !default; // OUDS mod: instead of `shade-color($yellow, 60%)`
+$yellow-900: $core-ouds-color-functional-sun-900 !default; // OUDS mod: instead of `shade-color($yellow, 80%)`
 
-$green-100: $ouds-color-functional-malachite-100 !default; // OUDS mod: instead of `tint-color($green, 80%)`
-$green-200: $ouds-color-functional-malachite-200 !default; // OUDS mod: instead of `tint-color($green, 60%)`
-$green-300: $ouds-color-functional-malachite-300 !default; // OUDS mod: instead of `tint-color($green, 40%)`
-$green-400: $ouds-color-functional-malachite-400 !default; // OUDS mod: instead of `tint-color($green, 20%)`
-$green-500: $ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `$green`
-$green-600: $ouds-color-functional-malachite-600 !default; // OUDS mod: instead of `shade-color($green, 20%)`
-$green-700: $ouds-color-functional-malachite-700 !default; // OUDS mod: instead of `shade-color($green, 40%)`
-$green-800: $ouds-color-functional-malachite-800 !default; // OUDS mod: instead of `shade-color($green, 60%)`
-$green-900: $ouds-color-functional-malachite-900 !default; // OUDS mod: instead of `shade-color($green, 80%)`
+$green-100: $core-ouds-color-functional-malachite-100 !default; // OUDS mod: instead of `tint-color($green, 80%)`
+$green-200: $core-ouds-color-functional-malachite-200 !default; // OUDS mod: instead of `tint-color($green, 60%)`
+$green-300: $core-ouds-color-functional-malachite-300 !default; // OUDS mod: instead of `tint-color($green, 40%)`
+$green-400: $core-ouds-color-functional-malachite-400 !default; // OUDS mod: instead of `tint-color($green, 20%)`
+$green-500: $core-ouds-color-functional-malachite-500 !default; // OUDS mod: instead of `$green`
+$green-600: $core-ouds-color-functional-malachite-600 !default; // OUDS mod: instead of `shade-color($green, 20%)`
+$green-700: $core-ouds-color-functional-malachite-700 !default; // OUDS mod: instead of `shade-color($green, 40%)`
+$green-800: $core-ouds-color-functional-malachite-800 !default; // OUDS mod: instead of `shade-color($green, 60%)`
+$green-900: $core-ouds-color-functional-malachite-900 !default; // OUDS mod: instead of `shade-color($green, 80%)`
 
-$teal-100: $ouds-color-decorative-emerald-100 !default; // OUDS mod: instead of `tint-color($teal, 80%)`
-$teal-200: $ouds-color-decorative-emerald-200 !default; // OUDS mod: instead of `tint-color($teal, 60%)`
-$teal-300: $ouds-color-decorative-emerald-300 !default; // OUDS mod: instead of `tint-color($teal, 40%)`
-$teal-400: $ouds-color-decorative-emerald-400 !default; // OUDS mod: instead of `tint-color($teal, 20%)`
-$teal-500: $ouds-color-decorative-emerald-500 !default; // OUDS mod: instead of `$teal`
-$teal-600: $ouds-color-decorative-emerald-600 !default; // OUDS mod: instead of `shade-color($teal, 20%)`
-$teal-700: $ouds-color-decorative-emerald-700 !default; // OUDS mod: instead of `shade-color($teal, 40%)`
-$teal-800: $ouds-color-decorative-emerald-800 !default; // OUDS mod: instead of `shade-color($teal, 60%)`
-$teal-900: $ouds-color-decorative-emerald-900 !default; // OUDS mod: instead of `shade-color($teal, 80%)`
+$teal-100: $core-orange-color-decorative-emerald-100 !default; // OUDS mod: instead of `tint-color($teal, 80%)`
+$teal-200: $core-orange-color-decorative-emerald-200 !default; // OUDS mod: instead of `tint-color($teal, 60%)`
+$teal-300: $core-orange-color-decorative-emerald-300 !default; // OUDS mod: instead of `tint-color($teal, 40%)`
+$teal-400: $core-orange-color-decorative-emerald-400 !default; // OUDS mod: instead of `tint-color($teal, 20%)`
+$teal-500: $core-orange-color-decorative-emerald-500 !default; // OUDS mod: instead of `$teal`
+$teal-600: $core-orange-color-decorative-emerald-600 !default; // OUDS mod: instead of `shade-color($teal, 20%)`
+$teal-700: $core-orange-color-decorative-emerald-700 !default; // OUDS mod: instead of `shade-color($teal, 40%)`
+$teal-800: $core-orange-color-decorative-emerald-800 !default; // OUDS mod: instead of `shade-color($teal, 60%)`
+$teal-900: $core-orange-color-decorative-emerald-900 !default; // OUDS mod: instead of `shade-color($teal, 80%)`
 
-$cyan-100: $ouds-color-decorative-sky-100 !default; // OUDS mod: instead of `tint-color($cyan, 80%)`
-$cyan-200: $ouds-color-decorative-sky-200 !default; // OUDS mod: instead of `tint-color($cyan, 60%)`
-$cyan-300: $ouds-color-decorative-sky-300 !default; // OUDS mod: instead of `tint-color($cyan, 40%)`
-$cyan-400: $ouds-color-decorative-sky-400 !default; // OUDS mod: instead of `tint-color($cyan, 20%)`
-$cyan-500: $ouds-color-decorative-sky-500 !default; // OUDS mod: instead of `$cyan`
-$cyan-600: $ouds-color-decorative-sky-600 !default; // OUDS mod: instead of `shade-color($cyan, 20%)`
-$cyan-700: $ouds-color-decorative-sky-700 !default; // OUDS mod: instead of `shade-color($cyan, 40%)`
-$cyan-800: $ouds-color-decorative-sky-800 !default; // OUDS mod: instead of `shade-color($cyan, 60%)`
-$cyan-900: $ouds-color-decorative-sky-900 !default; // OUDS mod: instead of `shade-color($cyan, 80%)`
+$cyan-100: $core-orange-color-decorative-sky-100 !default; // OUDS mod: instead of `tint-color($cyan, 80%)`
+$cyan-200: $core-orange-color-decorative-sky-200 !default; // OUDS mod: instead of `tint-color($cyan, 60%)`
+$cyan-300: $core-orange-color-decorative-sky-300 !default; // OUDS mod: instead of `tint-color($cyan, 40%)`
+$cyan-400: $core-orange-color-decorative-sky-400 !default; // OUDS mod: instead of `tint-color($cyan, 20%)`
+$cyan-500: $core-orange-color-decorative-sky-500 !default; // OUDS mod: instead of `$cyan`
+$cyan-600: $core-orange-color-decorative-sky-600 !default; // OUDS mod: instead of `shade-color($cyan, 20%)`
+$cyan-700: $core-orange-color-decorative-sky-700 !default; // OUDS mod: instead of `shade-color($cyan, 40%)`
+$cyan-800: $core-orange-color-decorative-sky-800 !default; // OUDS mod: instead of `shade-color($cyan, 60%)`
+$cyan-900: $core-orange-color-decorative-sky-900 !default; // OUDS mod: instead of `shade-color($cyan, 80%)`
 
 $blues: (
   "blue-100": $blue-100,
@@ -414,6 +414,7 @@ $enable-deprecation-messages:     false !default;
 $enable-important-utilities:      true !default;
 $enable-fixed-header:             true !default; // OUDS mod: used to apply scroll-padding-top
 $enable-bootstrap-compatibility:  false !default; // OUDS mod: used to enforce Bootstrap compatibility
+$enable-bullet-list-tick:         false !default; // OUDS mod: used to optin in the tick marker
 
 $enable-dark-mode:            true !default;
 // OUDS mod: $color-mode-type is declared in our `_config.scss` file
@@ -484,7 +485,7 @@ $body-emphasis-color:       $ouds-color-content-default-light !default; // OUDS 
 // scss-docs-start link-variables
 $link-color:                              $black !default; // OUDS mod
 $link-decoration:                         underline !default;
-$link-font-weight:                        $ouds-font-weight-system-strong !default; // OUDS mod
+$link-font-weight:                        $ouds-font-weight-system-web-strong !default; // OUDS mod
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $primary !default; // OUDS mod
 $link-hover-decoration:                   null !default;
@@ -508,7 +509,7 @@ $stretched-link-z-index:                  1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom: $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
+$paragraph-margin-bottom: $ouds-space-fixed-md !default; // OUDS mod: instead of `1rem`
 
 
 // Grid breakpoints
@@ -607,10 +608,10 @@ $border-color-translucent:    $ouds-color-border-default-light !default; // OUDS
 
 // scss-docs-start border-radius-variables
 $border-radius:               $ouds-border-radius-default !default; // OUDS mod: instead of `.375rem`
-$border-radius-sm:            $ouds-border-radius-short !default; // OUDS mod: instead of `.25rem`
+$border-radius-sm:            $ouds-border-radius-small !default; // OUDS mod: instead of `.25rem`
 $border-radius-lg:            $ouds-border-radius-medium !default; // OUDS mod: instead of `.5rem`
-$border-radius-xl:            $ouds-border-radius-tall !default; //OUDS mod: instead of `1rem`
-$border-radius-xxl:           $ouds-border-radius-tall * 1.5 !default; // OUDS mod: instead of `2rem`
+$border-radius-xl:            $ouds-border-radius-large !default; //OUDS mod: instead of `1rem`
+$border-radius-xxl:           $ouds-border-radius-large * 1.5 !default; // OUDS mod: instead of `2rem`
 $border-radius-pill:          px-to-rem($ouds-border-radius-pill) !default; // OUDS mod: instead of `50rem`
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -695,10 +696,10 @@ $font-size-lg:                var(--#{$prefix}font-size-body-large) !default; //
 
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
-$font-weight-normal:          $ouds-font-weight-system-default !default;
+$font-weight-normal:          $ouds-font-weight-system-web-default !default;
 $font-weight-medium:          null !default;
 $font-weight-semibold:        null !default;
-$font-weight-bold:            $ouds-font-weight-system-strong !default;
+$font-weight-bold:            $ouds-font-weight-system-web-strong !default;
 $font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;
@@ -729,10 +730,10 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer * .5`
+$headings-margin-bottom:      $ouds-space-fixed-md !default; // OUDS mod: instead of `$spacer * .5`
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        $ouds-font-weight-heading !default;
+$headings-font-weight:        $ouds-font-weight-web-heading !default;
 $headings-line-height:        null !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
@@ -760,13 +761,13 @@ $display-font-sizes: (
 
 $display-font-family: null !default;
 $display-font-style:  null !default;
-$display-font-weight: $ouds-font-weight-display !default;
+$display-font-weight: $ouds-font-weight-web-display !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
 $lead-font-size:              $h5-font-size !default;
-$lead-font-weight:            $ouds-font-weight-body-default !default;
+$lead-font-weight:            $ouds-font-weight-web-body-default !default;
 
 // OUDS mod: no $small-font-size
 
@@ -778,12 +779,12 @@ $text-muted:                  var(--#{$prefix}secondary-color) !default; // Depr
 
 // OUDS mod: no $initialism-font-size
 
-$blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
+$blockquote-margin-y:         $ouds-space-fixed-md !default; // OUDS mod: instead of `1rem`
 // OUDS mod: no `$blockquote-font-size`
 $blockquote-footer-color:     var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `$gray-600`
 // OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer !default;`
+$hr-margin-y:                 $ouds-space-fixed-md !default; // OUDS mod: instead of `$spacer !default;`
 $hr-color:                    $ouds-color-border-default !default; // OUDS mod: instead of `inherit !default;`
 
 // fusv-disable
@@ -1105,7 +1106,7 @@ $form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg 
 // OUDS mod: no $form-switch-width
 // OUDS mod: no $form-switch-padding-start
 // OUDS mod: no $form-switch-bg-image
-$form-switch-border-radius:       $ouds-switch-border-radius !default; // OUDS mod: instead of `$form-switch-width`
+$form-switch-border-radius:       $ouds-switch-border-radius-cursor !default; // OUDS mod: instead of `$form-switch-width`
 $form-switch-transition:          width .15s cubic-bezier(.2, 0, 0, 1), height .15s cubic-bezier(.2, 0, 0, 1), left .15s cubic-bezier(.2, 0, 0, 1) !default; // OUDS mod: instead of `background-position .15s ease-in-out`
 
 // OUDS mod: no $form-switch-focus-color
@@ -1415,8 +1416,8 @@ $navbar-badge-margin-top:                   .375rem !default;
 // OUDS mod: deprecated all `$navbar-dark-*` in OUDS Web, kept for Bootstrap compatibility
 $navbar-dark-border-color:          $gray-700 !default; // OUDS mod
 $navbar-dark-color:                 $white !default; // OUDS mod: instead of `rgba($white, .55)`
-$navbar-dark-hover-color:           $ouds-color-orange-500 !default; // OUDS mod: instead of `rgba($white, .75)`
-$navbar-dark-active-color:          $ouds-color-orange-500 !default; // OUDS mod: instead of `$white`
+$navbar-dark-hover-color:           $core-orange-color-orange-500 !default; // OUDS mod: instead of `rgba($white, .75)`
+$navbar-dark-active-color:          $core-orange-color-orange-500 !default; // OUDS mod: instead of `$white`
 $navbar-dark-disabled-color:        $gray-700 !default; // OUDS mod: instead of `rgba($white, .25)`
 // OUDS mod: no $navbar-dark-icon-color
 // OUDS mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
@@ -1728,16 +1729,7 @@ $toast-header-background-color:     rgba(var(--#{$prefix}body-bg-rgb), .85) !def
 $toast-header-border-color:         rgba($black, .05) !default; // OUDS mod: instead of `$toast-border-color`
 // scss-docs-end toast-variables
 
-// Badges
-
-// scss-docs-start badge-variables
-$badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               var(--#{$prefix}border-radius) !default;
-// scss-docs-end badge-variables
+// OUDS mod: no Badges
 
 // Modals
 
@@ -1956,6 +1948,13 @@ $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 // OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
 
+// OUDS mod
+// Bullet list
+$bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 6.25h7.5v7.5h-7.5z'/></svg>") !default;
+$bullet-list-marker-level-1: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 8.75h7.5v2.5h-7.5z'/></svg>") !default;
+$bullet-list-marker-level-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7.813 7.813h4.375v4.375H7.813z'/></svg>") !default;
+$bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'></svg>") !default;
+// End mod
 
 // Carousel
 
@@ -2088,10 +2087,10 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 $code-font-size:                    .875em !default; // OUDS mod: instead of `$small-font-size`
 $code-color:                        $ouds-color-content-muted-light !default; // instead of `$pink`
 
-$kbd-padding-y:                     px-to-rem($ouds-space-fixed-smash) !default; // instead of `.1875rem`
-$kbd-padding-x:                     px-to-rem($ouds-space-fixed-shortest) !default; // instead of `.375rem`
+$kbd-padding-y:                     px-to-rem($ouds-space-fixed-3xs) !default; // instead of `.1875rem`
+$kbd-padding-x:                     px-to-rem($ouds-space-fixed-2xs) !default; // instead of `.375rem`
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--#{$prefix}color-content-on-status-emphasized-alt) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
+$kbd-color:                         var(--#{$prefix}color-content-on-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
 $kbd-bg:                            var(--#{$prefix}color-surface-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 $nested-kbd-font-weight:            null !default; // Deprecated in Bootstrap v5.2.0, removing in v6
 
@@ -2159,7 +2158,7 @@ $step-link-text-decoration:   $link-decoration !default;
 //// Sticker
 // scss-docs-start sticker
 $sticker-color:                         $black !default;
-$sticker-background-color:              $ouds-color-orange-500 !default;
+$sticker-background-color:              $core-orange-color-orange-500 !default;
 $sticker-font-weight:                   $font-weight-bold !default;
 
 $sticker-size-sm:                       $spacer * 7 !default;

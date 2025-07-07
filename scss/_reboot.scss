@@ -30,12 +30,6 @@
     @include font-size(var(--#{$prefix}root-font-size));
   }
 
-  @if $enable-smooth-scroll {
-    @media (prefers-reduced-motion: no-preference) {
-      scroll-behavior: smooth;
-    }
-  }
-
   // OUDS mod: Improve focus visibility when fixed/sticky header is used
   // See https://caniuse.com/?search=scroll-padding
   // scss-docs-start scroll-offset
@@ -44,6 +38,12 @@
 
     @include media-breakpoint-up(lg) {
       scroll-padding-top: $scroll-offset-top;
+    }
+  }
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
     }
   }
   // scss-docs-end scroll-offset
@@ -207,7 +207,7 @@ abbr[title] {
 // Address
 
 address {
-  margin-bottom: $ouds-space-fixed-medium; // OUDS mod: instead of `1rem`
+  margin-bottom: $ouds-space-fixed-md; // OUDS mod: instead of `1rem`
   font-style: normal;
   line-height: inherit;
 }
@@ -215,10 +215,7 @@ address {
 
 // Lists
 
-ol,
-ul {
-  padding-left: 2rem;
-}
+// OUDS mod: no padding-left on ol and ul
 
 ol,
 ul,
@@ -236,42 +233,36 @@ ul ol {
 
 // OUDS mod
 // Orange square list-style
+// stylelint-disable selector-max-type
 ul {
   list-style-type: square;
-}
 
-// Future-proof markers' color
-// See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
-li::marker {
-  color: var(--#{$prefix}color-content-brand-primary);
-  vertical-align: middle;
+  ul {
+    list-style-type: "-  ";
 
-  ol & {
-    color: inherit;
+    ul {
+      list-style-type: circle;
+    }
   }
 }
+ol ol {
+  list-style-type: upper-alpha;
 
-li li::marker { color: var(--#{$prefix}color-content-muted); }
-
-li li li::marker { color: var(--#{$prefix}color-content-disabled); } // TODO: Check the colors once the design is done
-
-// Bullet-proof markers' color
-// @todo To remove when ::marker support is OK
-// See https://caniuse.com/#search=%3A%3Amarker
-li::before {
-  color: var(--#{$prefix}color-content-brand-primary);
-  vertical-align: text-top;
-
-  ol & {
-    color: inherit;
+  ol {
+    list-style-type: lower-alpha;
   }
 }
-
-li li::before { color: var(--#{$prefix}color-content-muted); }
-
-li li li::before { color: var(--#{$prefix}color-content-disabled); }
 // stylelint-enable selector-max-type
+
+li {
+  &::marker {
+    color: var(--#{$prefix}primary);
+
+    ol & {
+      color: inherit;
+    }
+  }
+}
 // End mod
 
 dt {
@@ -289,7 +280,7 @@ dd {
 // Blockquote
 
 blockquote {
-  margin: 0 0 $ouds-space-fixed-medium; // OUDS mod: instead of `0 0 1rem`
+  margin: 0 0 $ouds-space-fixed-md; // OUDS mod: instead of `0 0 1rem`
 }
 
 // OUDS mod: No italic
@@ -384,12 +375,12 @@ sup { top: -.5em; }
 
   .colored-bg &,
   &.colored-bg {
-    --#{$prefix}link-color: #{$ouds-link-color-content-enabled-mono};
-    --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover-mono};
-    --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus-mono};
-    --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed-mono};
-    --#{$prefix}link-disabled-color: #{$ouds-link-color-content-disabled-mono};
-    --#{$prefix}link-visited-color: #{$ouds-link-color-content-enabled-mono};
+    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
   }
 }
 // End mod
@@ -431,7 +422,7 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: $ouds-space-fixed-medium; // 2 // OUDS mod: instead of `1rem`
+  margin-bottom: $ouds-space-fixed-md; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
   @include get-font-size("code-medium"); // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;

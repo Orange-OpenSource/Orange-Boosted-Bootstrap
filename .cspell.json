@@ -83,18 +83,8 @@
     "navigations",
     "navs",
     "Neue",
-    "nhuge",
-    "njumbo",
-    "nmedium",
     "noindex",
-    "nshort",
-    "nshorter",
-    "nshortest",
     "nsmash",
-    "nspacious",
-    "ntall",
-    "ntaller",
-    "ntallest",
     "Noto",
     "offcanvas",
     "offcanvases",
@@ -118,6 +108,7 @@
     "roboto",
     "RTLCSS",
     "ruleset",
+    "sassrc",
     "screenreaders",
     "scrollbars",
     "scrollspy",
@@ -165,9 +156,6 @@
     "مرحبًا"
   ],
   "language": "en-US",
-  "files": [
-    "**/*.md"
-  ],
   "ignorePaths": [
     ".cspell.json",
     "dist/",

@@ -1,0 +1,59 @@
+---
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import Code from '@components/shortcodes/Code.astro'
+---
+
+<section class="row pb-scaled-xl">
+  <div class="col-12 d-none d-xl-block pb-scaled-sm">
+    <hr class="border-medium border-default m-none" />
+  </div>
+  <div class="col-xl-4 pe-xl-5xl">
+    <hr class="d-xl-none border-medium m-none pb-scaled-sm" />
+    <h2 class="text-brand-primary mb-scaled-xs">Get started any way you&nbsp;want</h2>
+    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xs">
+      Jump right into building with OUDS Web—use the CDN, install it via package manager, or download the source code.
+    </p>
+    <p class="mb-scaled-lg">
+      <a href={getVersionedDocsPath('getting-started/download')} class="link link-chevron"> Read installation docs</a>
+    </p>
+  </div>
+  <div class="col-xl-8">
+    <h3 class="h2 mb-scaled-xs">Install via package manager</h3>
+    <p class="mb-scaled-md">
+      Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package-managed installs
+      don't include documentation or our full build scripts.
+    </p>
+    <Code code={`npm install @ouds/web@${getConfig().current_version}`} lang="sh" />
+    <Code code={`yarn add @ouds/web@${getConfig().current_version}`} lang="sh" />
+    <p class="mb-scaled-lg">
+      <a href={getVersionedDocsPath('getting-started/download')}>Read our installation docs</a> for more info and additional
+      package managers.
+    </p>
+    <div class="border-top border-thin border-default pt-scaled-sm">
+      <h3 class="h2">Include via CDN</h3>
+      <p class="mb-scaled-md">
+        When you only need to include OUDS Web's compiled CSS or JS, you can use <a
+          href="https://www.jsdelivr.com/package/npm/@ouds/web">jsDelivr</a
+        >. See it in action with our simple <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}
+          >quick start</a
+        >, or <a href={getVersionedDocsPath('examples')}>browse the examples</a> to jumpstart your next project. You can
+        also choose to include Popper and our JS <a
+          href={getVersionedDocsPath('getting-started/introduction/#separate')}>separately</a
+        >.
+      </p>
+      <Code
+        code={`<link href="${getConfig().cdn.css}" rel="stylesheet" integrity="${
+          getConfig().cdn.css_hash
+        }" crossorigin="anonymous">`}
+        lang="html"
+      />
+      <Code
+        code={`<script src="${getConfig().cdn.js_bundle}" integrity="${
+          getConfig().cdn.js_bundle_hash
+        }" crossorigin="anonymous"></script>`}
+        lang="html"
+      />
+    </div>
+  </div>
+</section>

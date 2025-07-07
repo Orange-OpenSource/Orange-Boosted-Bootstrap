@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import MastHead from '@components/home/MastHead.astro'
+import GetStarted from '@components/home/GetStarted.astro'
+import Customize from '@components/home/Customize.astro'
+import CSSVariables from '@components/home/CSSVariables.astro'
+import { getConfig } from '@libs/config'
+---
+
+<BaseLayout>
+  <MastHead />
+  <div class="container-fluid container-max-width pt-scaled-md pb-scaled-3xl bd-masthead-followup">
+    <p class="mb-scaled-md d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
+      <a href={`/docs/${getConfig().docs_version}/migration`} class="tag me-md bd-tag">New in v0.5</a>
+      <span class="lead mt-scaled-sm m-md-none">Breadcrumb, Bullet list, Badge, and many more</span>
+    </p>
+    <GetStarted />
+    <Customize />
+    <CSSVariables />
+  </div>
+</BaseLayout>

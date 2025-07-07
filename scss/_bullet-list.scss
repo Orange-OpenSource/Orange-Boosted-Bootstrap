@@ -1,0 +1,147 @@
+// stylelint-disable selector-no-qualifying-type, selector-max-type, selector-max-compound-selectors, selector-max-combinators
+.bullet-list {
+  --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
+  --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-large);
+  --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-large);
+  --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-large}); // stylelint-disable-line function-disallowed-list
+  --#{$prefix}bullet-list-marker-left: #{$ouds-bullet-list-space-padding-inline-level-0};
+
+  padding-left: 0;
+  font-weight: $ouds-font-weight-web-body-strong;
+  list-style-type: "";
+  @include get-font-size("body-large");
+
+  &.fs-bm,
+  &.fs-bm ul,
+  &.fs-bm ol {
+    --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
+    --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
+    --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-medium);
+    --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-medium}); // stylelint-disable-line function-disallowed-list
+    @include get-font-size("body-medium");
+  }
+
+  &.fw-normal,
+  &.fw-normal ul,
+  &.fw-normal ol {
+    font-weight: $ouds-font-weight-web-body-default;
+  }
+
+  li {
+    position: relative;
+    padding: var(--#{$prefix}bullet-list-padding-block) 0;
+    padding-left: calc(var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0}); // stylelint-disable-line function-disallowed-list
+
+    &:has(ul, ol) {
+      padding-bottom: 0; // remove duplicate padding when we have nested lists
+    }
+
+    &::before {
+      position: absolute;
+      top: var(--#{$prefix}bullet-list-padding-block);
+      left: var(--#{$prefix}bullet-list-marker-left);
+      width: var(--#{$prefix}bullet-list-icon-container-width);
+      height: var(--#{$prefix}bullet-list-icon-container-width);
+      height: 1lh;
+      content: "";
+    }
+
+    ol,
+    ul {
+      padding-left: 0;
+      margin-top: var(--#{$prefix}bullet-list-padding-block);
+      list-style-type: "";
+    }
+
+    li {
+      --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-1} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-0})); // stylelint-disable-line function-disallowed-list
+      padding-left: calc($ouds-bullet-list-space-padding-inline-level-1 - $ouds-bullet-list-space-padding-inline-level-0); // stylelint-disable-line function-disallowed-list
+
+      li {
+        --#{$prefix}bullet-list-marker-left: calc(#{$ouds-bullet-list-space-padding-inline-level-2} - (var(--#{$prefix}bullet-list-fixed-left-padding) + #{$ouds-bullet-list-space-padding-inline-level-1})); // stylelint-disable-line function-disallowed-list
+        padding-left: calc($ouds-bullet-list-space-padding-inline-level-2 - $ouds-bullet-list-space-padding-inline-level-1); // stylelint-disable-line function-disallowed-list
+      }
+    }
+  }
+}
+
+// we need to use child combinator instead of descendant to handle mixed lists
+ul.bullet-list {
+  @if $enable-bullet-list-tick {
+    &.bullet-list-tick {
+      --#{$prefix}bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267c.212-.183.498-.296.811-.296.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>");
+    }
+  }
+
+  &.bullet-list-bare {
+    --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
+  }
+
+  &.bullet-list-default-color {
+    --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
+  }
+
+  // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists
+  &:not(:has(ol)) li,
+  > li {
+    &::before {
+      background-color: var(--#{$prefix}bullet-color, var(--#{$prefix}color-content-brand-primary));
+      mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-0);
+      mask-repeat: no-repeat;
+      mask-position: center right;
+      mask-size: var(--#{$prefix}bullet-list-icon-size);
+    }
+
+    > ul > li {
+      &::before {
+        mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-1);
+      }
+
+      > ul > li {
+        &::before {
+          mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-2);
+        }
+      }
+    }
+  }
+
+}
+
+ol.bullet-list {
+  counter-reset: list;
+
+  // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists
+  &:not(:has(ul)) li,
+  > li {
+    counter-increment: list;
+
+    &::before {
+      text-align: right;
+      content: counter(list) ".";
+    }
+
+    > ol {
+      counter-reset: upper-alpha-list;
+    }
+
+    > ol > li {
+      counter-increment: upper-alpha-list;
+
+      &::before {
+        content: counter(upper-alpha-list, upper-alpha) ".";
+      }
+
+      > ol {
+        counter-reset: lower-alpha-list;
+      }
+
+      > ol > li {
+        counter-increment: lower-alpha-list;
+
+        &::before {
+          content: counter(lower-alpha-list, lower-alpha) ".";
+        }
+      }
+    }
+  }
+}
