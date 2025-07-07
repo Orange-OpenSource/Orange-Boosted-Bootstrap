@@ -73,12 +73,13 @@ ul.bullet-list {
     }
   }
 
-  .bullet-list-marker-reset {
-    --#{$prefix}bullet-list-custom-marker: initial;
-  }
-
   &.bullet-list-bare {
     --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
+
+    ul,
+    li {
+      --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
+    }
   }
 
   &.bullet-list-default-color {
@@ -96,14 +97,18 @@ ul.bullet-list {
       mask-size: var(--#{$prefix}bullet-list-icon-size);
     }
 
-    > ul > li {
-      &::before {
-        mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-1);
-      }
+    > ul {
+      --#{$prefix}bullet-list-custom-marker: initial;
 
-      > ul > li {
+      > li {
         &::before {
-          mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-2);
+          mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-1);
+        }
+
+        > ul > li {
+          &::before {
+            mask-image: var(--#{$prefix}bullet-list-custom-marker, $bullet-list-marker-level-2);
+          }
         }
       }
     }
