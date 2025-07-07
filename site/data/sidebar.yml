@@ -6,43 +6,67 @@
   icon_color: body-color
   pages:
     - title: Introduction
+    - title: Migration from Boosted
     - title: Download
     - title: Contents
     - title: Browsers & devices
+    - title: Accessibility
+    - title: RFS
+      draft: true
+    - title: RTL
+      draft: true
     - title: JavaScript
       draft: true
+    - title: Sass
+      draft: true
+    - title: Optimize
+      draft: true
+    - title: Contribute
     - title: Webpack
       draft: true
     - title: Parcel
       draft: true
     - title: Vite
       draft: true
-    - title: Accessibility
-    - title: RFS
-      draft: true
-    - title: RTL
-      draft: true
-    - title: Contribute
+    - title: Migration
 
-- title: Customize
-  icon: palette2
+- title: Concepts
+  icon: orange-expert-bulb
   icon_color: body-color
   pages:
-    - title: Overview
+    - title: Actions
+    - title: Navigation
+    - title: Input
+    - title: Dialog
       draft: true
-    - title: Custom libraries
-    - title: Sass
+    - title: Indicator
       draft: true
-    - title: Options
+    - title: Layout
+    - title: Content display
+    - title: Data
+      draft: true
+
+- title: Foundation
+  icon: design-token-figma
+  icon_color: body-color
+  pages:
+    - title: Approach
+    - title: Tokens
+      draft: true
     - title: Color palette
     - title: Color theme
       draft: true
     - title: Color modes
-    - title: Components
-      draft: true
     - title: CSS variables
       draft: true
-    - title: Optimize
+    - title: Options
+    - title: Reboot
+    - title: Typography
+    - title: Components
+      draft: true
+    - title: Images # Do we keep the following ?
+      draft: true
+    - title: Figures
       draft: true
 
 - title: Layout
@@ -57,43 +81,8 @@
     - title: Utilities
     - title: Z-index
     - title: CSS Grid
-
-- title: Content
-  icon: file-earmark-richtext
-  icon_color: body-color
-  pages:
-    - title: Reboot
-    - title: Typography
-    - title: Images
+    - title: Form layout
       draft: true
-    - title: Tables
-      draft: true
-    - title: Figures
-      draft: true
-
-- title: Forms
-  icon: ui-radios
-  icon_color: body-color
-  pages:
-    - title: Overview
-    - title: Form control
-      draft: true
-    - title: Select
-      draft: true
-    - title: Checkbox
-    - title: Radio button
-    - title: Switch
-    - title: Range
-      draft: true
-    - title: Input group
-      draft: true
-    - title: Floating labels
-      draft: true
-    - title: Quantity selector
-      draft: true
-    - title: Layout
-      draft: true
-    - title: Validation
 
 - title: Components
   icon: menu-button-wide-fill
@@ -101,29 +90,38 @@
   pages:
     - title: Accordion
       draft: true
-    - title: Alerts
+    - title: Alert
       draft: true
     - title: Back to top
       draft: true
     - title: Badge
     - title: Breadcrumb
     - title: Bullet list
-    - title: Buttons
+    - title: Button
     - title: Button group
       draft: true
     - title: Card
       draft: true
     - title: Carousel
       draft: true
+    - title: Checkbox
     - title: Close button
       draft: true
     - title: Collapse
       draft: true
-    - title: Dropdowns
+    - title: Divider
+    - title: Dropdown
       draft: true
-    - title: Links
+    - title: Icon
+    - title: Floating label
+      draft: true
     - title: Footer
       draft: true
+    - title: Form control
+      draft: true
+    - title: Input group
+      draft: true
+    - title: Link
     - title: List group
       draft: true
     - title: Local navigation
@@ -132,7 +130,7 @@
       draft: true
     - title: Navbar
       draft: true
-    - title: Navs & tabs
+    - title: Nav & tab
       draft: true
     - title: Offcanvas
       draft: true
@@ -140,45 +138,39 @@
       draft: true
     - title: Pagination
       draft: true
-    - title: Placeholders
+    - title: Placeholder
       draft: true
-    - title: Popovers
+    - title: Popover
       draft: true
     - title: Progress
       draft: true
+    - title: Quantity selector
+      draft: true
+    - title: Radio button
+    - title: Range
+      draft: true
     - title: Scrollspy
       draft: true
-    - title: Spinners
+    - title: Select
+      draft: true
+    - title: Spinner
       draft: true
     - title: Stepped process
       draft: true
     - title: Sticker
       draft: true
-    - title: Tags
+    - title: Switch
+    - title: Table
       draft: true
-    - title: Title bars
+    - title: Tag
       draft: true
-    - title: Toasts
+    - title: Title bar
       draft: true
-    - title: Tooltips
+    - title: Toast
       draft: true
-
-- title: Helpers
-  icon: magic
-  icon_color: body-color
-  pages:
-    - title: Clearfix
-    - title: Color & background
-    - title: Colored links
-    - title: Divider
-    - title: Focus ring
+    - title: Tooltip
       draft: true
-    - title: Position
-    - title: Ratio
-    - title: Stacks
-    - title: Stretched link
-    - title: Text truncation
-    - title: Visually hidden
+    - title: Validation
 
 - title: Utilities
   icon: braces-asterisk
@@ -186,30 +178,33 @@
   pages:
     - title: API
     - title: Background
-    - title: Borders
-    - title: Colors
+    - title: Border
+    - title: Clearfix
+    - title: Color & background
+    - title: Colored link
+    - title: Color
     - title: Display
     - title: Flex
     - title: Float
-    - title: Interactions
+    - title: Focus ring
+      draft: true
+    - title: Interaction
     - title: Object fit
     - title: Opacity
     - title: Overflow
     - title: Position
-    - title: Shadows
+    - title: Ratio
+    - title: Shadow
     - title: Sizing
     - title: Spacing
+    - title: Stack
+    - title: Stretched link
     - title: Text
+    - title: Text truncation
     - title: Vertical align
     - title: Visibility
+    - title: Visually hidden
     - title: Z-index
-
-- title: Extend
-  icon: tools
-  icon_color: body-color
-  pages:
-    - title: Approach
-    - title: Icons
 
 - title: About
   icon: globe2
@@ -223,10 +218,3 @@
     - title: License
     - title: Translations
     - title: Cookies
-
-- title: Migrations
-  icon: transfers
-  icon_color: body-color
-  pages:
-    - title: Migration
-    - title: Migration from Boosted
