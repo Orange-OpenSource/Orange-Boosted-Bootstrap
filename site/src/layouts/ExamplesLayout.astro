@@ -19,7 +19,8 @@ const {
   html_class,
   include_js,
   title = 'Example',
-  theme_selector = true
+  theme_selector = true,
+  bootstrap_compat_css = true
 } = Astro.props
 
 const pageTitle = `${title} · ${getConfig().title} v${getConfig().docs_version}`
@@ -42,7 +43,7 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
 
     <script is:inline src={getVersionedDocsPath('assets/js/color-modes.js')}></script>
 
-    <Stylesheet direction={direction} layout="examples" />
+    <Stylesheet direction={direction} layout="examples" bootstrap_compat_css={bootstrap_compat_css} />
     <Favicons />
 
     <style is:global>

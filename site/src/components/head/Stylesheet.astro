@@ -5,9 +5,11 @@ import type { Layout } from '@libs/layout'
 interface Props {
   direction?: 'rtl'
   layout: Layout
+  bootstrap_compat_css?: boolean
 }
 
-const { direction } = Astro.props
+const { direction,
+  bootstrap_compat_css = true } = Astro.props
 ---
 
-<link {...getVersionedBsCssProps(direction)} />
+<link {...getVersionedBsCssProps(direction, bootstrap_compat_css)} />
