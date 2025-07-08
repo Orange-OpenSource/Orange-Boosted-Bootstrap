@@ -81,7 +81,6 @@
 }
 
 @include tac("H1", true) {
-  // display: block;
   margin-bottom: $spacer;
   font-size: $h2-font-size;
   letter-spacing: $h2-spacing;
