@@ -12,7 +12,6 @@
   transform: translateX(-50%);
 
   [role="heading"] {
-    display: block;
     font-weight: $font-weight-bold;
     color: $modal-content-color;
   }
@@ -81,6 +80,7 @@
 }
 
 @include tac("H1", true) {
+  display: block;
   margin-bottom: $spacer;
   font-size: $h2-font-size;
   letter-spacing: $h2-spacing;
@@ -164,7 +164,7 @@
   }
 }
 
-.catToggleBtn,
+.#{$tac-prefix}Title[role="heading"]:has(.catToggleBtn),
 .#{$tac-prefix}Hidden,
 .#{$tac-prefix}InfoBox,
 .#{$tac-prefix}ListCookies + br {
