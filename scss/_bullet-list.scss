@@ -11,6 +11,7 @@
   list-style-type: "";
   @include get-font-size("body-large");
 
+  &.fs-bm,
   &.fs-bm ul,
   &.fs-bm ol {
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
