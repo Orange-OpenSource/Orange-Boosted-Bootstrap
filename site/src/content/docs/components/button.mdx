@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Button
 description: Use OUDS Web’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 aliases:
   - "/docs/components/buttons/"
@@ -73,14 +73,14 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 ## With icon
 
 <Callout type="info">
-The recommended way of using an icon in a button is through an [SVG sprite file]([[docsref:/extend/icons#svg-sprite]]). You need to fill it using `currentColor` to respect the button color scheme (can be set directly inside the SVG sprite).
+The recommended way of using an icon in a button is through an [SVG sprite file]([[docsref:/components/icon#svg-sprite]]). You need to fill it using `currentColor` to respect the button color scheme (can be set directly inside the SVG sprite).
 
-When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
+When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/components/icon#icons-accessibility]]) for more info.
 </Callout>
 
 ### Text and icon
 
-The recommended way of using an icon in a button is an [embedded SVG]([[docsref:/extend/icons]]). You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
+The recommended way of using an icon in a button is an [embedded SVG]([[docsref:/components/icon]]). You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
@@ -266,7 +266,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 Disabled buttons using the `<a>` element behave a bit different:
 
 - Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
-- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
+- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/link#disabled-link-accessibility-warning]]).
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 <Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">

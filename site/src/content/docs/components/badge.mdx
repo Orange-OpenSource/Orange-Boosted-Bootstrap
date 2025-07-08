@@ -25,10 +25,10 @@ For accessibility and semantics reasons, badges, like any other informative elem
 <Example code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 
-## Standard variants 
+## Standard variants
 
 {/*  TODO: set the right url for design documentation */}
-OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
+OUDS Web [color and background helpers]([[docsref:/utilities/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
 
 <Example class="d-flex gap-3" code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>
   <p class="badge text-bg-status-accent-emphasized"><span class="visually-hidden">Badge alt text</span></p>
@@ -101,7 +101,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
       <span class="visually-hidden">Trash contains items</span>
     </span>
   </button>
-  
+
   <button type="button" class="btn btn-default position-relative ms-md">
     Inbox
     <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">

@@ -13,7 +13,7 @@ import { getData } from '@libs/data'
 
 This section exposes all the existing colors inside the OUDS Web palette. These variables aren’t meant to be used, it’s only an exposure of the available raw colors. Be aware that none of the variables presented here depend on the theme.
 
-{/* Please make sure that none of the [color theme variables]([[docsref:/customize/color-theme]]) fit your needs before picking one here. */}
+{/* Please make sure that none of the [color theme variables]([[docsref:/foundation/color-theme]]) fit your needs before picking one here. */}
 
 {getData('palette').filter(palette => palette.category === "OUDS colors").map((category) => {
   return(
@@ -64,7 +64,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
 Bootstrap defines a color palette on its own. We worked on a mapping between Orange Unified Design System’s colors and Bootstrap’s ones in cases where users will use Bootstrap-based plugins or libraries so that, when used with OUDS Web CSS, provides an acceptable automatic rendering.
 
 You’re encouraged to use Orange semantic color tokens (using CSS variables is even better) when it comes to custom code.
-{/* , you can find most of them in our [color theme section]([[docsref:/customize/color-theme]]) */}
+{/* , you can find most of them in our [color theme section]([[docsref:/foundation/color-theme]]) */}
 
 <BootstrapCompatibility>
 <br />
@@ -140,7 +140,7 @@ Here’s how you should use these in your Sass:
 }
 ```
 
-[Color]([[docsref:/utilities/colors]]) and [Background]([[docsref:/utilities/background]]) utility classes are also available for setting `color` and `background-color`.
+[Color]([[docsref:/utilities/color]]) and [Background]([[docsref:/utilities/background]]) utility classes are also available for setting `color` and `background-color`.
 </BootstrapCompatibility>
 
 ## CSS
@@ -173,8 +173,8 @@ Because OUDS Web relies on Bootstrap’s specific tokens system, we need to map 
 OUDS Web’s source Sass files include maps to help you quickly and easily loop over a list of colors and their hex values.
 
 - `$colors` lists all our available base colors
-{/* - `$theme-colors` lists all [semantically named light theme colors]([[docsref:/customize/color-theme]]) */}
-{/* - `$theme-colors-dark` lists all [semantically named dark theme colors]([[docsref:/customize/color-theme]]) */}
+{/* - `$theme-colors` lists all [semantically named light theme colors]([[docsref:/foundation/color-theme]]) */}
+{/* - `$theme-colors-dark` lists all [semantically named dark theme colors]([[docsref:/foundation/color-theme]]) */}
 - `$utilities-text` overrides `$theme-colors` specifically used to define `.text-*` utilities
 - `$utilities-bg` overrides `$theme-colors` specifically used to define `.bg-*` utilities
 - `$utilities-border` overrides `$theme-colors` specifically used to define `.border-*` utilities

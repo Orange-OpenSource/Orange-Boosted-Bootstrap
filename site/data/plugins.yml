@@ -1,10 +1,10 @@
 - name: Alert
   description: Show and hide alert messages to your users.
-  link: components/alerts/#javascript-behavior
+  link: components/alert/#javascript-behavior
 
 - name: Button
   description: Programmatically control the active state for buttons.
-  link: components/buttons/#button-plugin
+  link: components/button/#button-plugin
 
 - name: Carousel
   description: Add slideshows to any page, including support for crossfade.
@@ -16,7 +16,7 @@
 
 - name: Dropdown
   description: Create menus of links, actions, forms, and more.
-  link: components/dropdowns/
+  link: components/dropdown/
 
 - name: Modal
   description: Add flexible and responsive dialogs to your project.
@@ -28,7 +28,7 @@
 
 - name: Popover
   description: Create custom overlays. Built on Popper.
-  link: components/popovers/
+  link: components/popover/
 
 - name: Scrollspy
   description: Automatically update active nav links based on page scroll.
@@ -36,12 +36,12 @@
 
 - name: Tab
   description: Allow Bootstrap nav components to toggle contents.
-  link: components/navs-tabs/
+  link: components/nav-tab/
 
 - name: Toast
   description: Show and hide notifications to your visitors.
-  link: components/toasts/
+  link: components/toast/
 
 - name: Tooltip
   description: Replace browser tooltips with custom ones. Built on Popper.
-  link: components/tooltips/
+  link: components/tooltip/

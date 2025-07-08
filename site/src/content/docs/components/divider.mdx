@@ -14,7 +14,7 @@ You can find here the [OUDS Divider design guidelines](https://unified-design-sy
 
 ## Horizontal rules
 
-Horizontal rules should use the `<hr />` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]([[docsref:/utilities/borders]]), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
+Horizontal rules should use the `<hr />` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]([[docsref:/utilities/border]]), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
 
 <Example code={`<hr />
 <div class="border-top border-default my-md"></div>`} />
@@ -39,7 +39,7 @@ Vertical rules scale their height in flex layouts:
 
 ## Color
 
-Change the divider color using the [border color utilities]([[docsref:/utilities/borders#color]]).
+Change the divider color using the [border color utilities]([[docsref:/utilities/border#color]]).
 
 <Example class="d-flex flex-column gap-1" code={`<hr class="border-muted">
   <hr class="border-emphasized">
@@ -60,14 +60,14 @@ Change the divider color using the [border color utilities]([[docsref:/utilities
   <div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-on-white"></div></div>`} />
 
 <BootstrapCompatibility>
-The `<hr />` and `vr` color can be set using [colors utilities]([[docsref:/utilities/colors]])
+The `<hr />` and `vr` color can be set using [colors utilities]([[docsref:/utilities/color]])
 <Example code={`<hr class="text-muted">
 <div class="vr text-brand-primary"></div>`} />
 </BootstrapCompatibility>
 
 ## Size
 
-Change the divider thickness using the [border width utilities]([[docsref:/utilities/borders#width]]).
+Change the divider thickness using the [border width utilities]([[docsref:/utilities/border#width]]).
 
 <Example code={`<div>
     <hr class="border-thin">

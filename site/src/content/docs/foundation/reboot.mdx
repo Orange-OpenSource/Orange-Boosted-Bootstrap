@@ -23,7 +23,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## CSS variables
 
-OUDS Web standards require `@import`s across all our CSS bundles (including `ouds-web.css`, `ouds-web-reboot.css`, and `ouds-web-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately OUDS Web will continue to see more [CSS variables]([[docsref:/customize/css-variables]]) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don’t use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+OUDS Web standards require `@import`s across all our CSS bundles (including `ouds-web.css`, `ouds-web-reboot.css`, and `ouds-web-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately OUDS Web will continue to see more [CSS variables]([[docsref:/foundation/css-variables]]) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don’t use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
 For example, consider these `:root` CSS variables for common `:root` styles:
 
@@ -165,7 +165,7 @@ The `<hr />` element has been simplified. Similar to browser defaults, `<hr />`s
 
 <Example code={`<hr />`} />
 
-The `<hr />` style can be modified with border utilities. See some customization examples in the [Divider helpers]([[docsref:/helpers/divider]]) documentation.
+The `<hr />` style can be modified with border utilities. See some customization examples in the [Divider helpers]([[docsref:/components/divider]]) documentation.
 
 ## Lists
 
@@ -220,7 +220,7 @@ For indicating sample output from a program use the `<samp>` tag.
 
 ## Tables
 
-Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]([[docsref:/content/tables]]).
+Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]([[docsref:/components/table]]).
 
 <Example code={`<table>
     <caption>

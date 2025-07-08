@@ -18,7 +18,7 @@ While OUDS Web doesn’t include an icon set by default, Orange does have its ow
 
 [Solaris icons library]([[config:icons]]) is a growing library of icons that are designed by OUDS design team. It features an icon search tool based on categories and keywords, and allows icons to be downloaded in various formats for use in design and development. They are not open-source though and should only be used for Orange projects. Please refer to the [icons license file]([[config:icons_license]]) for legal information.
 
-If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons]([[docsref:extend/icons#use-solaris-icons]]).
+If you need guidance to use Solaris icons, please refer to the paragraph [use Solaris icons](#use-solaris-icons).
 
 ## Icons rendering
 
@@ -37,7 +37,7 @@ Icons are designed within a square layout to preserve consistency. Within this s
 ## Icons color
 
 To color icons, you can:
-- use [color utilities classes]([[docsref:utilities/colors#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
+- use [color utilities classes]([[docsref:utilities/color#colors]]) like `.text-brand-primary`, `.text-disabled` or `.text-status-positive` that change current color value.
 - specify a color using CSS variables like `--bs-color-content-brand-primary`, `--bs-color-content-disabled` or `--bs-color-content-status-positive`.
 
 For SVGs (SVG sprites, inline SVGs or CSS mask image SVGs), the `fill="currentColor"` attribute is required on the `<svg>` or `<symbol>` tag, if you want to change the icons color on the fly: it will make the icon inherit color from itself or its parent containers. It is set on the icons downloaded from Solaris icons finder. For CSS mask image SVGs, the `background-color: currentColor` CSS property should be set.
@@ -118,7 +118,7 @@ Here are [the normal contexts of use of these functional colors](https://unified
 
 ### Other icons
 
-Here are some examples of other [color utilities]([[docsref:utilities/colors#colors]]) and CSS variables used with icons.
+Here are some examples of other [color utilities]([[docsref:utilities/color#colors]]) and CSS variables used with icons.
 
 <Example class="d-inline-flex flex-column" code={`<p class="p-sm bg-primary d-inline-flex align-items-center gap-xs" data-bs-theme="light">
     <svg class="decorative-sm-icon" aria-hidden="true">
@@ -432,7 +432,7 @@ Here are the rules to follow for regular texts. These icons’ sizes are respons
 
 ### Decorative
 
-Here are the rules to follow for decorative icons. Be careful using these icons’ sizes because they are not responsive. Check out for [more information about accessibility in our documentation]([[docsref:/extend/icons#icons-accessibility]]).
+Here are the rules to follow for decorative icons. Be careful using these icons’ sizes because they are not responsive. Check out for [more information about accessibility in our documentation](#icons-accessibility).
 
 <details class="mb-md">
   <summary>See the <strong>sizes</strong> associated to classes</summary>
@@ -614,7 +614,6 @@ You can also have the icon above the text block.
 ### `<img>` and font icon
 
 SVG Sprite is the preferred choice for flexibility, performance and accessibility, and this is why all our examples use this method but there are other ways to display icons. They should all behave the same thanks to our CSS. If you are experimenting any trouble, feel free to search or fill in a new [Github discussion](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions) or contact [our team]([[docsref:/about/team]]).
-{/* Check out for more information in [our documentation]([[docsref:/extend/icons]]). */}
 
 <Example code={`<div class="d-flex align-items-center mb-md">
     <img class="hxl-lg-icon me-sm" alt="" src="/docs/${getConfig().docs_version}/assets/img/vite.svg" />
@@ -643,7 +642,7 @@ If the icon is **meaningful** with no visible adjacent text, e.g. indication in 
 
 The best way to do this is to keep the icon hidden to assistive technologies (see above) and add a visually hidden label which will be perceived by assistive technologies, by using the `.visually-hidden` class. You can also use an `aria-label` on the containing interactive element to provide an accessible name. For external images within the `<img />` tag, you can also fill the `alt` attribute directly.
 
-Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image]([[docsref:extend/icons#svg-external-image]]).
+Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
 
 {/* todo add tooltip on buttons and explanation when available */}
 <Example class="mt-0 bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
@@ -672,12 +671,12 @@ Remember that you cannot use external images inside interactive elements because
 
 There are many ways to use Solaris icons in a web page:
 - Bundled, if you have several icons in your project:
-  - [SVG sprite]([[docsref:extend/icons#svg-sprite]]) (preferred choice for flexibility, performance and accessibility)
-  - [Web font]([[docsref:extend/icons#web-font]])
+  - [SVG sprite](#svg-sprite) (preferred choice for flexibility, performance and accessibility)
+  - [Web font](#web-font)
 - Individually, if you have only few icons to render:
-  - [Inline SVG]([[docsref:extend/icons#inline-svg]])
-  - [SVG external image]([[docsref:extend/icons#svg-external-image]])
-  - [CSS mask image SVG]([[docsref:extend/icons#css-mask-image-svg]])
+  - [Inline SVG](#inline-svg)
+  - [SVG external image](#svg-external-image)
+  - [CSS mask image SVG](#css-mask-image-svg)
 
 All icons can be retrieved easily in any of these formats in the Solaris icons finder. See Solaris icons library [develop documentation]([[config:icons_develop]]) for complete development guidelines for the different formats, and their pros and cons.
 
@@ -720,7 +719,7 @@ Using the [Solaris icons finder]([[config:icons]]), you can generate a Web font 
 <Example code={`<span class="si si-settings" aria-hidden="true" style="font-size: 3rem"></span>`} />
 
 {/* <Callout type="warning">
-Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon]([[docsref:extend/icons#warning-icon]]).
+Note that with this technique, you cannot have multicolor icons, so you cannot render the [warning icon](#warning-icon).
 </Callout> */}
 
 ### Inline SVG
@@ -743,7 +742,7 @@ You can use SVG through an `<img />` tag when:
 
 CSS mask image icons should be used when you can’t or don’t want to refer to an external image, or if you want to include the icon in a CSS `::before` or `::after` pseudo-element.
 
-You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/customize/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
+You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
 <Example class="mt-0" code={`<span class="icon-home"></span>`} />
 

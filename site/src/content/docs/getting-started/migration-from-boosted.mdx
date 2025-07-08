@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/extend/approach#bootstrap-compatibility]]).
+This guide provides information on how to migrate from Boosted (latest release) to OUDS Web, with Bootstrap compatibility turned off. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
 Let’s start with the most obvious change you’ll notice: the name. **Boosted is now OUDS Web.**
 
@@ -35,7 +35,7 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/customize/color-modes]])
+- <span class="badge text-bg-status-positive-emphasized">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/foundation/color-modes]])
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
@@ -52,7 +52,7 @@ Technically, it means that you can get rid of the following things:
 
 ### Typography
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/content/typography]]) for more details.
+- <span class="badge text-bg-status-positive-emphasized">New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/foundation/typography]]) for more details.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
@@ -188,7 +188,7 @@ Now you should write:
   </div>
 </div>
 ```
-See [our new Checkbox page]([[docsref:/forms/checkbox]]) for more information.
+See [our new Checkbox page]([[docsref:/components/checkbox]]) for more information.
 </div>
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
@@ -221,7 +221,7 @@ Now you should write:
   </div>
 </div>
 ```
-See [our new Radio button page]([[docsref:/forms/radio-button]]) for more information.
+See [our new Radio button page]([[docsref:/components/radio-button]]) for more information.
 </div>
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
@@ -254,7 +254,7 @@ Now you should write:
   </div>
 </div>
 ```
-See [our new Switch page]([[docsref:/forms/switch]]) for more information.
+See [our new Switch page]([[docsref:/components/switch]]) for more information.
 </div>
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
@@ -265,13 +265,13 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Most color-background color helpers have been removed or changed.
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/utilities/color-background]]) to see more.
 
 - <details>
     <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-  See more details about [`[data-bs-theme]`]([[docsref:/customize/color-modes]]).
+  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.text-bg-primary` → `.text-bg-brand-primary`
@@ -295,7 +295,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Icon link
 
-- <span class="badge text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]([[docsref:/components/links#icon-link]]) and [link chevron]([[docsref:/components/links#link-chevron]]).
+- <span class="badge text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]([[docsref:/components/link#icon-link]]) and [link chevron]([[docsref:/components/link#link-chevron]]).
 
 ### Icon
 
@@ -314,7 +314,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Vertical rule
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]([[docsref:/helpers/divider]]) documentation.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]([[docsref:/components/divider]]) documentation.
 
 ## Utilities
 
@@ -330,7 +330,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
     <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
-  See more details about [`[data-bs-theme]`]([[docsref:/customize/color-modes]]).
+  See more details about [`[data-bs-theme]`]([[docsref:/foundation/color-modes]]).
   </Callout>
 
   1. `.bg-transparent` stays the same
@@ -361,15 +361,15 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Border
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]([[docsref:/utilities/borders#border]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]([[docsref:/utilities/border#border]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]([[docsref:/utilities/borders#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]([[docsref:/utilities/border#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]([[docsref:/utilities/borders#radius]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]([[docsref:/utilities/border#radius]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.rounded-0`, `.rounded-top-0`, `.rounded-bottom-0`, `.rounded-start-0` and `.rounded-end-0`.
   - **1**: `.rounded-1`, `.rounded-top-1`, `.rounded-bottom-1`, `.rounded-start-1` and `.rounded-end-1`.
   - **2**: `.rounded-2`, `.rounded-top-2`, `.rounded-bottom-2`, `.rounded-start-2` and `.rounded-end-2`.
@@ -389,7 +389,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Border opacity utilities have been removed.
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/border#color]]) to see more.
 
 - <details>
     <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
@@ -408,7 +408,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Text opacity utilities have been removed.
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/color]]) to see more.
 
 - <details>
     <summary><span class="badge text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
@@ -464,7 +464,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Shadow
 
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]([[docsref:/utilities/shadows]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> `.shadow`, `.shadow-sm` and `.shadow-lg` have been removed from the default build. Please check the new [shadows values]([[docsref:/utilities/shadow]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 - <span class="badge text-bg-status-positive-emphasized">New</span> Shadows utilities:
 `.shadow-none`, `.shadow-raised`, `.shadow-drag`, `.shadow-default`, `.shadow-emphasized`, `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled`.
 
@@ -2424,8 +2424,8 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ## Sass mixins
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/content/typography#sass-mixins]]) for more details.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/button#sass-mixins]]).

@@ -57,7 +57,7 @@ toc: true
   - **Neutral**: `.text-on-status-neutral-emphasized`, `.text-on-status-neutral-muted`
   - **Positive**: `.text-on-status-positive-emphasized`, `.text-on-status-positive-muted`
   - **Warning**: `.text-on-status-warning-emphasized`, `.text-on-status-warning-muted`
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `.text-on-status-emphasized`, `.text-on-status-emphasized-alt`, `.text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]([[docsref:/helpers/color-background]])
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Generic Color utilities for status background have been removed: `.text-on-status-emphasized`, `.text-on-status-emphasized-alt`, `.text-on-status-muted`. You should use the new color utilities related to the background or directly use our [color & background helpers]([[docsref:/utilities/color-background]])
 
 #### Spacings
 
@@ -166,7 +166,7 @@ toc: true
 
 - <span class="badge text-bg-status-negative-emphasized">Breaking</span> Colors links are unstyled in OUDS Web, the documentation is only kept for Bootstrap compatibility.
 
-- <span class="badge text-bg-status-warning-emphasized">Warning</span> The icon link documentation has been merged into is the new [Link component]([[docsref:/components/links]]) documentation and removed from helpers section.
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> The icon link documentation has been merged into is the new [Link component]([[docsref:/components/link]]) documentation and removed from helpers section.
 
 ### Utilities
 
@@ -395,7 +395,7 @@ toc: true
 
 ### Color modes
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> We provide four brand new themes that are <code>light</code>, <code>dark</code>,  <code>root</code> and <code>root-inverted</code>. See more on our [color modes page]([[docsref:/customize/color-modes]])
+- <span class="badge text-bg-status-positive-emphasized">New</span> We provide four brand new themes that are <code>light</code>, <code>dark</code>,  <code>root</code> and <code>root-inverted</code>. See more on our [color modes page]([[docsref:/foundation/color-modes]])
 
 ### Content styles
 
@@ -435,7 +435,7 @@ toc: true
 
 #### Color background
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/utilities/color-background]]) to see more.
 
 #### Icon
 
@@ -477,11 +477,11 @@ toc: true
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/border#color]]) to see more.
 
 #### Colors
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to see more.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/color]]) to see more.
 
 #### Display
 
@@ -2002,7 +2002,7 @@ toc: true
 
 ### Sass mixins
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/content/typography#sass-mixins]]) for more details.
+- <span class="badge text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/foundation/typography#sass-mixins]]) for more details.
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `color-mode({mode}, {root}, {inverted-mode})` mixin.
 
@@ -2012,7 +2012,7 @@ toc: true
 
 ### Pre-compiled versions
 
-From now on, by default, OUDS Web won’t embed Bootstrap elements (like helpers, utilities, variables, components variants, etc.) that do not comply with Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`. [Learn more about Bootstrap compatibility]([[docsref:/extend/approach#bootstrap-compatibility]]).
+From now on, by default, OUDS Web won’t embed Bootstrap elements (like helpers, utilities, variables, components variants, etc.) that do not comply with Orange Unified Design System. However, you can still use our Bootstrap compatibility mode by using `ouds-web-bootstrap.css` and `ouds-web-bootstrap.min.css`. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
 ### Utilities
 
@@ -2023,7 +2023,7 @@ From now on, by default, OUDS Web won’t embed Bootstrap elements (like helpers
 ### CSS and Sass variables
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
-  - For instance, without the Bootstrap compatibility mode, you won’t have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc. [Learn more about Bootstrap compatibility]([[docsref:/extend/approach#bootstrap-compatibility]]).
+  - For instance, without the Bootstrap compatibility mode, you won’t have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc. [Learn more about Bootstrap compatibility]([[docsref:/foundation/approach#bootstrap-compatibility]]).
 
 - <span class="badge text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
