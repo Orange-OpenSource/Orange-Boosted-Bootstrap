@@ -57,11 +57,11 @@ Add the class `.bullet-list-default-color` to switch to the default body color f
 
 ### Custom marker
 
-The list marker can be customized by setting the `--bs-bullet-list-custom-marker` custom property either in a CSS class or in the style attribute of the targeted `ul` or `li`. Custom marker should only be applied to one level of the list, add `.bullet-list-marker-reset` to prevent the custom property from being applied to nested lists.
+The list marker can be customized by setting the `--bs-bullet-list-custom-marker` custom property either in a CSS class or in the style attribute of the targeted `ul` or `li`. Custom marker should only be applied to one level of the list.
 
 #### CSS class
 
-Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker. Add `.bullet-list-marker-reset` so it will not affect nested lists.
+Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
 
 <Example code={`<style>
     .bullet-list-heart {
@@ -71,7 +71,7 @@ Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-mark
 
   <ul class="bullet-list bullet-list-heart">
       <li>Heart item
-        <ul class="bullet-list-marker-reset">
+        <ul>
           <li>Heart item</li>
           <li>Heart item</li>
         </ul>
@@ -127,7 +127,7 @@ The tick marker is not shipped by default in the OUDS Web CSS, set the [`$enable
   <ul class="bullet-list bullet-list-tick">
       <li>Task</li>
       <li>Task 2
-        <ul class="bullet-list-marker-reset">
+        <ul>
           <li>Sub item</li>
           <li>Sub item</li>
         </ul>
