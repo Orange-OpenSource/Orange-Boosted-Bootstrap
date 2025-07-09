@@ -83,9 +83,9 @@ if (frontmatter.toc) {
         </div>
       </div>
 
-      {
-        frontmatter.toc && headings && (
-          <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
+      <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
+        {
+          frontmatter.toc && headings && (
             <h2 class="mb-none" id="docs-toc">
               <button
                 class="btn btn-default p-md-none mb-sm mb-md-none text-decoration-none bd-toc-toggle d-md-none"
@@ -108,9 +108,9 @@ if (frontmatter.toc) {
                 <TableOfContents headings={headings} />
               </nav>
             </div>
-          </div>
-        )
-      }
+          )
+        }
+      </div>
 
       <div class="bd-content ps-lg-sm">
         {
