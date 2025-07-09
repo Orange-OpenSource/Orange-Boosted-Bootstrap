@@ -416,7 +416,7 @@ $ouds-tabs-space-row-gap-icon-label-unequal: $ouds-space-row-gap-xs !default;
 // Tag
 
 // scss-docs-start ouds-component-tag
-$ouds-tag-border-radius: $ouds-border-radius-pill !default;
+$ouds-tag-border-radius: $ouds-border-radius-pill !default; // OK
 $ouds-tag-input-border-width-default-interaction: $ouds-border-width-medium !default;
 $ouds-tag-input-border-width-default: $ouds-border-width-default !default;
 $ouds-tag-input-color-bg-enabled: $ouds-color-action-support-enabled !default;
@@ -431,23 +431,23 @@ $ouds-tag-input-color-content-enabled: $ouds-color-action-enabled !default;
 $ouds-tag-input-color-content-focus: $ouds-color-action-focus !default;
 $ouds-tag-input-color-content-hover: $ouds-color-action-hover !default;
 $ouds-tag-input-color-content-pressed: $ouds-color-action-pressed !default;
-$ouds-tag-size-icon-default: $ouds-size-icon-with-label-medium-size-sm !default;
-$ouds-tag-size-icon-small: $ouds-size-icon-with-label-small-size-sm !default;
-$ouds-tag-size-min-height-default: $ouds-dimension-xs !default;
+$ouds-tag-size-icon-default: $ouds-size-icon-with-label-medium-size-sm !default; // TODO replaced by ouds/💠_indicator/tag/size/asset-default
+$ouds-tag-size-icon-small: $ouds-size-icon-with-label-small-size-sm !default; // TODO replaced by ouds/💠_indicator/tag/size/asset-small
+$ouds-tag-size-min-height-default: $ouds-dimension-xs !default; // OK
 $ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
-$ouds-tag-size-min-height-small: $ouds-dimension-3xs !default;
-$ouds-tag-size-min-width-default: $ouds-dimension-xl !default;
-$ouds-tag-size-min-width-small: $ouds-dimension-lg !default;
-$ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xs !default;
-$ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xs !default;
-$ouds-tag-space-inset-default-asset: $ouds-space-inset-3xs !default;
-$ouds-tag-space-inset-small-asset: $ouds-space-inset-4xs !default;
-$ouds-tag-space-padding-block-default: $ouds-space-padding-block-xs !default;
-$ouds-tag-space-padding-block-small: $ouds-space-padding-block-2xs !default;
-$ouds-tag-space-padding-inline-default-asset: $ouds-space-padding-inline-xs !default;
-$ouds-tag-space-padding-inline-default: $ouds-space-padding-inline-md !default;
-$ouds-tag-space-padding-inline-small-asset: $ouds-space-padding-inline-2xs !default;
-$ouds-tag-space-padding-inline-small: $ouds-space-padding-inline-sm !default;
+$ouds-tag-size-min-height-small: $ouds-dimension-3xs !default; // OK
+$ouds-tag-size-min-width-default: $ouds-dimension-xl !default; // OK
+$ouds-tag-size-min-width-small: $ouds-dimension-lg !default; // OK
+$ouds-tag-space-column-gap-default: $ouds-space-column-gap-2xs !default; // OK
+$ouds-tag-space-column-gap-small: $ouds-space-column-gap-2xs !default; // OK
+$ouds-tag-space-inset-default-asset: $ouds-space-inset-3xs !default; // TODO split in space-inset-icon-default, space-inset-bullet-default and space-inset-loader-default
+$ouds-tag-space-inset-small-asset: $ouds-space-inset-4xs !default; // TODO split in space-inset-icon-small, space-inset-bullet-small and space-inset-loader-small
+$ouds-tag-space-padding-block-default: $ouds-space-padding-block-xs !default; // OK
+$ouds-tag-space-padding-block-small: $ouds-space-padding-block-2xs !default; // OK
+$ouds-tag-space-padding-inline-default-asset: $ouds-space-padding-inline-xs !default; // OK
+$ouds-tag-space-padding-inline-default: $ouds-space-padding-inline-md !default; // OK
+$ouds-tag-space-padding-inline-small-asset: $ouds-space-padding-inline-2xs !default; // OK
+$ouds-tag-space-padding-inline-small: $ouds-space-padding-inline-sm !default; // OK
 // scss-docs-end ouds-component-tag
 
 // Typography
