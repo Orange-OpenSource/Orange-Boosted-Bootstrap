@@ -164,7 +164,7 @@
   }
 }
 
-.catToggleBtn,
+[role="heading"]:has(.catToggleBtn),
 .#{$tac-prefix}Hidden,
 .#{$tac-prefix}InfoBox,
 .#{$tac-prefix}ListCookies + br {
