@@ -1,6 +1,8 @@
 // Component application
 // Depends on semantic applications
-// Token version 1.1.0
+// OUDS Core tokens version 1.2.0
+// Orange Core tokens version 1.1.0
+// Orange System tokens version 1.2.0
 
 // Badge
 
@@ -374,16 +376,20 @@ $ouds-switch-space-padding-inline-unselected: $ouds-space-padding-inline-xs !def
 // Tabs
 
 // scss-docs-start ouds-component-tabs
-$ouds-tabs-boolean-divider: true !default;
-$ouds-tabs-border-disabled: $ouds-border-width-none !default;
-$ouds-tabs-border-enabled: $ouds-border-width-none !default;
-$ouds-tabs-border-focus: $ouds-border-width-none !default;
-$ouds-tabs-border-hover: $ouds-border-width-none !default;
-$ouds-tabs-border-pressed: $ouds-border-width-none !default;
+$ouds-tabs-boolean-divider-bottom: true !default;
+$ouds-tabs-boolean-divider-side: false !default;
 $ouds-tabs-border-radius-bottom: $ouds-border-radius-none !default;
 $ouds-tabs-border-radius-top: $ouds-border-radius-none !default;
-$ouds-tabs-color-bg-default: var(--#{$prefix}tabs-color-bg-default) !default;
-$ouds-tabs-color-bg-sticky: var(--#{$prefix}tabs-color-bg-sticky) !default;
+$ouds-tabs-border-selected-bottom: $ouds-border-width-thicker !default;
+$ouds-tabs-border-selected-without-bottom: $ouds-border-width-none !default;
+$ouds-tabs-border-unselected-bottom: $ouds-border-width-none !default;
+$ouds-tabs-border-unselected-without-bottom: $ouds-border-width-none !default;
+$ouds-tabs-color-bg-selected-default: var(--#{$prefix}tabs-color-bg-selected-default) !default;
+$ouds-tabs-color-bg-selected-sticky: var(--#{$prefix}tabs-color-bg-selected-sticky) !default;
+$ouds-tabs-color-bg-unselected-default: var(--#{$prefix}tabs-color-bg-unselected-default) !default;
+$ouds-tabs-color-bg-unselected-sticky: var(--#{$prefix}tabs-color-bg-unselected-sticky) !default;
+$ouds-tabs-color-border-bottom: $ouds-color-action-selected !default;
+$ouds-tabs-color-border-without-bottom: $ouds-color-border-default !default;
 $ouds-tabs-color-gradient-drag-overlay-end: var(--#{$prefix}tabs-color-gradient-drag-overlay-end) !default;
 $ouds-tabs-color-gradient-drag-overlay-start: $ouds-color-bg-primary !default;
 $ouds-tabs-size-icon-equal: $ouds-size-icon-decorative-xs !default;
@@ -391,18 +397,18 @@ $ouds-tabs-size-icon-unequal: $ouds-size-icon-with-label-large-size-xs !default;
 $ouds-tabs-size-max-width-equal: $core-ouds-dimension-3000 !default;
 $ouds-tabs-size-max-width-unequal: $core-ouds-dimension-3000 !default;
 $ouds-tabs-size-min-width-equal: $core-ouds-dimension-1400 !default;
-$ouds-tabs-size-min-width-unequal: $core-ouds-dimension-600 !default;
+$ouds-tabs-size-min-width-unequal: $ouds-size-min-interactive-area !default;
 $ouds-tabs-space-column-gap-content-menu-equal: $ouds-space-column-gap-none !default;
-$ouds-tabs-space-column-gap-content-menu-unequal: $ouds-space-column-gap-none !default;
+$ouds-tabs-space-column-gap-content-menu-unequal: $ouds-space-column-gap-lg !default;
 $ouds-tabs-space-column-gap-icon-label: $ouds-space-column-gap-xs !default;
 $ouds-tabs-space-column-gap-label-badge: $ouds-space-row-gap-2xs !default;
+$ouds-tabs-space-padding-block-content-bottom: $ouds-space-padding-block-md !default;
 $ouds-tabs-space-padding-block-content-top: $ouds-space-padding-block-sm !default;
 $ouds-tabs-space-padding-inline-divider-desktop: $ouds-grid-xl-margin !default;
-$ouds-tabs-space-padding-inline-divider-mobile: $ouds-space-padding-inline-none !default;
-$ouds-tabs-space-padding-inline-divider-tablet: $ouds-space-padding-inline-none !default;
+$ouds-tabs-space-padding-inline-divider-mobile: $ouds-grid-2xs-margin !default;
+$ouds-tabs-space-padding-inline-divider-tablet: $ouds-grid-md-margin !default;
 $ouds-tabs-space-padding-inline-icon-label-equal: $ouds-space-padding-inline-xs !default;
 $ouds-tabs-space-padding-inline-icon-label-unequal: $ouds-space-padding-inline-4xs !default;
-$ouds-tabs-space-row-gap-content: $ouds-space-row-gap-md !default;
 $ouds-tabs-space-row-gap-icon-label-equal: $ouds-space-row-gap-3xs !default;
 $ouds-tabs-space-row-gap-icon-label-unequal: $ouds-space-row-gap-xs !default;
 // scss-docs-end ouds-component-tabs
@@ -411,26 +417,22 @@ $ouds-tabs-space-row-gap-icon-label-unequal: $ouds-space-row-gap-xs !default;
 
 // scss-docs-start ouds-component-tag
 $ouds-tag-border-radius: $ouds-border-radius-pill !default;
-$ouds-tag-border-width-default-interaction: $ouds-border-width-medium !default;
-$ouds-tag-border-width-default: $ouds-border-width-default !default;
+$ouds-tag-input-border-width-default-interaction: $ouds-border-width-medium !default;
+$ouds-tag-input-border-width-default: $ouds-border-width-default !default;
 $ouds-tag-input-color-bg-enabled: $ouds-color-action-support-enabled !default;
 $ouds-tag-input-color-bg-focus: $ouds-color-action-support-focus !default;
 $ouds-tag-input-color-bg-hover: $ouds-color-action-support-hover !default;
 $ouds-tag-input-color-bg-pressed: $ouds-color-action-support-pressed !default;
-$ouds-tag-input-color-border-disabled: $ouds-color-action-disabled !default;
 $ouds-tag-input-color-border-enabled: $ouds-color-border-default !default;
 $ouds-tag-input-color-border-focus: $ouds-color-action-focus !default;
 $ouds-tag-input-color-border-hover: $ouds-color-action-hover !default;
 $ouds-tag-input-color-border-pressed: $ouds-color-action-pressed !default;
-$ouds-tag-input-color-content-disabled: $ouds-color-action-disabled !default;
 $ouds-tag-input-color-content-enabled: $ouds-color-action-enabled !default;
 $ouds-tag-input-color-content-focus: $ouds-color-action-focus !default;
 $ouds-tag-input-color-content-hover: $ouds-color-action-hover !default;
 $ouds-tag-input-color-content-pressed: $ouds-color-action-pressed !default;
 $ouds-tag-size-icon-default: $ouds-size-icon-with-label-medium-size-sm !default;
 $ouds-tag-size-icon-small: $ouds-size-icon-with-label-small-size-sm !default;
-$ouds-tag-size-loader-default: $ouds-size-icon-with-label-medium-size-xs !default;
-$ouds-tag-size-loader-small: $ouds-size-icon-with-label-small-size-xs !default;
 $ouds-tag-size-min-height-default: $ouds-dimension-xs !default;
 $ouds-tag-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
 $ouds-tag-size-min-height-small: $ouds-dimension-3xs !default;
@@ -442,10 +444,10 @@ $ouds-tag-space-inset-default-asset: $ouds-space-inset-3xs !default;
 $ouds-tag-space-inset-small-asset: $ouds-space-inset-4xs !default;
 $ouds-tag-space-padding-block-default: $ouds-space-padding-block-xs !default;
 $ouds-tag-space-padding-block-small: $ouds-space-padding-block-2xs !default;
-$ouds-tag-space-padding-inline-default-asset: $core-ouds-dimension-100 !default;
+$ouds-tag-space-padding-inline-default-asset: $ouds-space-padding-inline-xs !default;
 $ouds-tag-space-padding-inline-default: $ouds-space-padding-inline-md !default;
 $ouds-tag-space-padding-inline-small-asset: $ouds-space-padding-inline-2xs !default;
-$ouds-tag-space-padding-inline-small: $core-ouds-dimension-out-of-system-250 !default;
+$ouds-tag-space-padding-inline-small: $ouds-space-padding-inline-sm !default;
 // scss-docs-end ouds-component-tag
 
 // Typography
