@@ -17,8 +17,11 @@ import { getConfig } from '@libs/config'
 
 Tag indicator can be used near some text (to show status or key details), or in a list (to indicate or filter by categories or keywords).
 
-OUDS Web has a basic `.tag` class that sets up default styles.
+<Callout type="info">
+  For accessibility and semantics reasons, tags, like any other informative elements, must be enclosed in an ancestor or parent semantic tag. In the following examples, tag are used either in `<li>`, `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
+</Callout>
 
+OUDS Web has a basic `.tag` class that sets up default styles.
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-lg">
     <li><span class="tag">Roaming</span></li>
@@ -196,7 +199,7 @@ To display a colored bullet add `<span class="tag-bullet"></span>` in the `.tag-
 <Callout type="info">
   The recommended way of using an icon in a tag is through an [SVG sprite file]([[docsref:/extend/icons#svg-sprite]]).
 
-  Since icons in tags are purely decorative and adjacent text always exists,  so they should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our tag examples.
+  Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our tag examples.
 </Callout>
 
 To display a colored icon, just add the icon in the `.tag-asset-container`.
@@ -580,62 +583,3 @@ To display a small tag, add the class `.tag-sm` to the tag.
       </span>
     </li>
   </ul>`} />
-
-## Accessibility
-
-// TODO
-
-Tags indicator is typically used in a list.
-
-otherwise, the tag should be included in a semantic tag (cf badge)
-
-
-<br/><br/><br/><br/>
-
-For tests:
-
-<Example code={`
-  <h2>Title <span class="tag">Coming soon</span></h2>
-  <h2>Title
-    <span class="tag">
-      <span class="tag-asset-container">
-        <span class="tag-bullet"></span>
-      </span>
-      Coming soon
-    </span>
-  </h2>
-  <h2>
-    Title
-    <span class="tag">
-      <span class="tag-asset-container">
-        <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </span>
-      Coming soon
-    </span>
-  <h2>
-  <h2>
-    Title
-    <span class="tag tag-sm">Roaming</span>
-  </h2>
-  <h2>
-    Title
-    <span class="tag tag-sm">
-      <span class="tag-asset-container">
-        <span class="tag-bullet"></span>
-      </span>
-      Coming soon
-    </span>
-  </h2>
-  <h2>
-    Title
-    <span class="tag tag-sm">
-      <span class="tag-asset-container">
-        <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-        </svg>
-      </span>
-      Coming soon
-    </span>
-  </h2>`} />

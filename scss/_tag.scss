@@ -11,8 +11,8 @@
   --#{$prefix}tag-asset-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-default
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
-  --#{$prefix}btn-loading-dasharray: 96;
-  --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+  --#{$prefix}tag-loading-dasharray: 96;
+  --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   // scss-docs-end tag-css-vars
 
   display: inline-flex;
@@ -90,10 +90,10 @@
     > .tag-loader-inner {
       fill: none;
       stroke: var(--#{$prefix}tag-asset-color);
-      stroke-dasharray: var(--#{$prefix}btn-loading-dasharray);
+      stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
       stroke-width: 6;
       transform-origin: center;
-      animation: var(--#{$prefix}btn-loading-animation);
+      animation: var(--#{$prefix}tag-loading-animation);
     }
   }
 }
