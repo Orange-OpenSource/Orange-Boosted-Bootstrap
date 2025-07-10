@@ -19,10 +19,14 @@ import Code from '@components/shortcodes/Code.astro'
         <Code code={`npm i @ouds/web@${getConfig().current_version}`} lang="sh" />
       </div>
 
-      <div class="mb-scaled-md">
+      <div class="d-flex mb-scaled-md gap-md">
         <a href={getVersionedDocsPath('getting-started/introduction')} class="btn btn-strong">
           <svg class="bi me-sm" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
           Read the docs
+        </a>
+        <a href={getVersionedDocsPath('components')} class="btn btn-default">
+          <svg class="bi me-sm" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+          Discover components
         </a>
       </div>
 

@@ -15,9 +15,9 @@ import { getData } from '@libs/data'
 Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sass map and respond to color modes.
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you’ll want to use an additional:
-* `[data-bs-theme]` [color mode attribute]([[docsref:/customize/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
-* `.text-*` [color utilities]([[docsref:/utilities/colors]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
-* `.text-bg-*` [color & background helper]([[docsref:/helpers/color-background]]) from our background colors and if there is no components inside
+* `[data-bs-theme]` [color mode attribute]([[docsref:/foundation/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
+* `.text-*` [color utilities]([[docsref:/utilities/color]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
+* `.text-bg-*` [color & background helper]([[docsref:/utilities/color-background]]) from our background colors and if there is no components inside
 
 <BootstrapCompatibility>
 
@@ -177,7 +177,7 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
 
 ## CSS
 
-{/* In addition to the following Sass functionality, consider reading about our included [CSS custom properties]([[docsref:/customize/css-variables]]) (aka CSS variables) for colors and more. */}
+{/* In addition to the following Sass functionality, consider reading about our included [CSS custom properties]([[docsref:/foundation/css-variables]]) (aka CSS variables) for colors and more. */}
 
 ### Sass tokens
 
@@ -223,7 +223,7 @@ Our background utilities are generated from our `$ouds-backgrounds`:
 
 <ScssDocs name="ouds-maps-backgrounds" file="scss/_maps.scss" />
 
-Know that these backgrounds depend on our [color modes]([[docsref:/customize/color-modes]]).
+Know that these backgrounds depend on our [color modes]([[docsref:/foundation/color-modes]]).
 
 <BootstrapCompatibility>
 Theme colors are then put into a Sass map so we can loop over them to generate our utilities, component modifiers, and more.
