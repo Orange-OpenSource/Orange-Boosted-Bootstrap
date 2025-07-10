@@ -583,3 +583,28 @@ To display a small tag, add the class `.tag-sm` to the tag.
       </span>
     </li>
   </ul>`} />
+
+## Tag input
+
+Standard tags are used in an informative way. Tag inputs are used to edit tags, that is removing them. They are interactive and can take all the usual statuses: enabled, hover, pressed, disabled or focus.
+
+<Example code={`
+  <button type="button" class="tag tag-input">
+    Label
+    <span class="tag-asset-container">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
+      </svg>
+    </span>
+  </button>
+
+  <button type="button" class="tag tag-input" disabled="true">
+    Label
+    <span class="tag-asset-container">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
+      </svg>
+    </span>
+  </button>`} />
+
+
