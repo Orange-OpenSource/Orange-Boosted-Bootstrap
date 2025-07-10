@@ -76,9 +76,8 @@ ul.bullet-list {
   &.bullet-list-bare {
     --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
 
-    ul,
-    li {
-      --#{$prefix}bullet-list-custom-marker: #{$bullet-list-empty-marker};
+    ul {
+      --#{$prefix}bullet-list-custom-marker: initial;
     }
   }
 
