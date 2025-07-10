@@ -18,6 +18,7 @@ import snippetsContent from './partials/snippets.js?raw'
 // These values will be replaced by Astro's Vite plugin
 const CONFIG = {
   cssCdn: '__CSS_CDN__',
+  cssBootstrapCdn: '__CSS_BOOTSTRAP_CDN__',
   jsBundleCdn: '__JS_BUNDLE_CDN__',
   docsVersion: '__DOCS_VERSION__'
 }
@@ -30,20 +31,21 @@ document.querySelectorAll('.btn-edit').forEach(btn => {
 
     const htmlSnippet = exampleEl.innerHTML
     const jsSnippet = codeSnippet.querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
+    const cssBootstrap = codeSnippet.closest('[data-sb-css-bootstrap]')
     // Get extra classes for this example
     const classes = Array.from(exampleEl.classList).join(' ')
 
-    openOUDSWebSnippet(htmlSnippet, jsSnippet, classes)
+    openOUDSWebSnippet(htmlSnippet, jsSnippet, classes, cssBootstrap)
   })
 })
 
-const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes) => {
+const openOUDSWebSnippet = (htmlSnippet, jsSnippet, classes, cssBootstrap) => {
   const indexHtml = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="${CONFIG.cssCdn}" rel="stylesheet" />
+    <link href="${cssBootstrap ? CONFIG.cssBootstrapCdn : CONFIG.cssCdn}" rel="stylesheet" />
     <link href="https://web.unified-design-system.orange.com/docs/${CONFIG.docsVersion}/assets/css/docs.css" rel="stylesheet" />
     <title>OUDS Web Example</title>
     <${'script'} defer src="${CONFIG.jsBundleCdn}"></${'script'}>
