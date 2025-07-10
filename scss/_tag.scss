@@ -1,4 +1,5 @@
-.tag {
+.tag,
+.tag-input {
   // scss-docs-start tag-css-vars
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
@@ -135,6 +136,49 @@
     --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small-asset};
   }
   // scss-docs-end tag-sm-css-vars
+}
+
+.tag-input {
+  --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
+  --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
+  --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
+  --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+
+  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
+
+  &:hover {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:active {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-pressed};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-pressed};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-pressed};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:focus {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    --#{$prefix}tag-color: #{$ouds-color-action-disabled};
+    --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
+    --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  .tag-asset-container {
+    margin-right: 0;
+    margin-left: var(--#{$prefix}tag-asset-gap);
+  }
 }
 
 //  img,
