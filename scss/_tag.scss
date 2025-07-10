@@ -40,11 +40,6 @@
   --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
 }
 
-.tag-muted {
-  --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-muted};
-  --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-muted};
-}
-
 .tag-asset-container {
   display: flex;
   flex-shrink: 0;
