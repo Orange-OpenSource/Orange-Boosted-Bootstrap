@@ -82,8 +82,12 @@ ul.bullet-list {
     }
   }
 
-  &.bullet-list-default-color {
+  .bullet-list-default-color {
     --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
+  }
+
+  .bullet-list-brand-color {
+    --#{$prefix}bullet-color: initial;
   }
 
   // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists

@@ -55,6 +55,23 @@ Add the class `.bullet-list-default-color` to switch to the default body color f
       </li>
   </ul>`} />
 
+You can mix and match colors between list levels by using `.bullet-list-default-color` and `.bullet-list-brand-color`.
+
+<Example code={`<ul class="bullet-list bullet-list-default-color">
+      <li>Item</li>
+      <li>Item
+        <ul class="bullet-list-brand-color">
+          <li>Sub item</li>
+          <li>Sub item
+            <ul class="bullet-list-default-color">
+              <li>Sub item</li>
+              <li>Sub item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+  </ul>`} />
+
 ### Custom marker
 
 The list marker can be customized by setting the `--bs-bullet-list-custom-marker` custom property either in a CSS class or in the style attribute of the targeted `ul` or `li`. Custom marker should only be applied to one level of the list.
