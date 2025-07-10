@@ -1,11 +1,15 @@
+@import "../../config";
 @import "../../functions";
+@import "../../tokens/raw";
+@import "../../tokens/semantic";
+@import "../../tokens/semantic-colors-custom-props";
+@import "../../tokens/composite";
+@import "../../tokens/component";
 @import "../../variables";
 @import "../../mixins";
 
-// Store original value
 $original-enable-shadows: $enable-shadows;
 
-// Enable shadows for all tests
 $enable-shadows: true !global;
 
 @include describe("box-shadow mixin") {
@@ -184,5 +188,4 @@ $enable-shadows: true !global;
   }
 }
 
-// Restore original value
 $enable-shadows: $original-enable-shadows !global;

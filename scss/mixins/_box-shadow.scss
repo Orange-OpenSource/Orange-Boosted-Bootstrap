@@ -1,6 +1,7 @@
 @mixin box-shadow($shadow...) {
   @if $enable-shadows {
-    $result: ();    $has-single-value: false;
+    $result: ();
+    $has-single-value: false;
     $single-value: null;
 
     @each $value in $shadow {
