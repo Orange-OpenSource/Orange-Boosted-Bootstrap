@@ -51,6 +51,8 @@
   examples:
     - name: Loading buttons
       description: 'Use loading buttons in an accessible way.'
+    - name: Download app
+      description: 'A way to illustrate a download app page.'
 
 - category: 'Bootstrap examples'
   bootstrap: true
