@@ -586,43 +586,104 @@ To display a small tag, add the class `.tag-sm` to the tag.
 
 ## Tag input
 
-Standard tags are used in an informative way. Tag inputs are used to edit tags, that is removing them. They are interactive and can take all the usual statuses: enabled, hover, pressed, disabled or focus.
+Standard tags are used in an informative way. Tag inputs are used to edit tags, that is removing them. They are interactive and can take all the usual statuses: enabled, hover, pressed, disabled or focus. The should be used along with a `<button>`, or at least an interactive semantic HTML tag like `<a>`.
+
+
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-lg row-gap-md">
+    <li>
+      <button type="button" class="tag">
+        <span class="tag-input">Label</span>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag">
+        <span class="tag-input">Label</span>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag" disabled>
+        <span class="tag-input">Label</span>
+      </button>
+    </li>
+    <li>
+      <a class="tag" href="#">
+        <span class="tag-input">Label</span>
+      </a>
+    </li>
+    <li>
+      <a class="tag" aria-disabled="true" href="#">
+        <span class="tag-input">Label</span>
+      </a>
+    </li>
+  </ul>`} />
+
+// Test for alignments
 
 <Example code={`
-  <button type="button" class="tag tag-input">
-    Label
-    <span class="tag-asset-container">
-      <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
-      </svg>
-    </span>
-  </button>
+    <button type="button" class="tag">
+      <span class="tag-input">Label</span>
+    </button>
+    <a type="button" class="tag" href="#">
+      <span class="tag-input">Label</span>
+    </a>
+    <button type="button" class="btn btn-default">
+      Label
+    </button>`} />
 
-  <button type="button" class="tag tag-input" disabled>
-    Label
-    <span class="tag-asset-container">
-      <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
-      </svg>
-    </span>
-  </button>
+## Layout
 
-  <a type="button" class="tag tag-input">
-    Label
-    <span class="tag-asset-container">
-      <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
-      </svg>
-    </span>
-  </a>
+// Tests
 
-  <a type="button" class="tag tag-input" disabled>
-    Label
-    <span class="tag-asset-container">
-      <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
-      </svg>
-    </span>
-  </a>`} />
+<Example code={`<ul class="list-unstyled d-flex column-gap-lg">
+    <li><span class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></li>
+    <li><span class="tag">Consectetur adipiscing elit</span></li>
+    <li><span class="tag">4G</span></li>
+  </ul>
+  <br/><br/>
+  <h2>Title <span class="tag">Coming soon lorem ipsum </span></h2>
+  <br/><br/>
+  <p><span class="tag">New</span> Some text</p>`
+  } />
 
 
+  <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-lg row-gap-md">
+    <li>
+      <button type="button" class="tag">
+        <span class="tag-input">
+          A
+        </span>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag">
+        <span class="tag-input">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag" disabled>
+        <span class="tag-input">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
+      </button>
+    </li>
+    <li>
+      <a class="tag" href="#">
+        <span class="tag-input">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="tag" aria-disabled="true" href="#">
+        <span class="tag-input">
+          A
+        </span>
+      </a>
+    </li>
+  </ul>
+  <br/><br/>
+  <h2>Title <button type="button" class="tag"><span class="tag-input">Coming soon lorem ipsum</span></button></h2>
+  <p>Title <button type="button" class="tag"><span class="tag-input">Coming soon lorem ipsum</span></button></p>
+`} />
