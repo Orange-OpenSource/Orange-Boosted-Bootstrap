@@ -28,67 +28,70 @@
   background-color: var(--#{$prefix}tag-background-color);
   @include get-font-size("label-medium");
   @include border-radius(#{$ouds-tag-border-radius});
+
 }
 
-.tag-disabled {
-  --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
-  --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
-}
-
-.tag-asset-container {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  width: var(--#{$prefix}tag-asset-container-size);
-  height: var(--#{$prefix}tag-asset-container-size);
-  padding: var(--#{$prefix}tag-asset-padding);
-  margin-right: var(--#{$prefix}tag-asset-gap);
-
-  // TODO do we keep "img"? => if not, see in button
-  svg:not(.tag-loader),
-  img,
-  .icon {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    line-height: 1;
-    color: var(--#{$prefix}tag-asset-color);
+.tag {
+  &.tag-disabled {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
+    --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
   }
 
-  &:has(.tag-bullet) {
-    --#{$prefix}tag-asset-padding: 3px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-default when available
-  }
+  .tag-asset-container {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: var(--#{$prefix}tag-asset-container-size);
+    height: var(--#{$prefix}tag-asset-container-size);
+    padding: var(--#{$prefix}tag-asset-padding);
+    margin-right: var(--#{$prefix}tag-asset-gap);
 
-  .tag-bullet {
-    width: 100%;
-    height: 100%;
-    background-color: var(--#{$prefix}tag-asset-color);
-    @include border-radius(#{$ouds-tag-border-radius});
-  }
+    // TODO do we keep "img"? => if not, see in button
+    svg:not(.tag-loader),
+    img,
+    .icon {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      line-height: 1;
+      color: var(--#{$prefix}tag-asset-color);
+    }
 
-  &:has(.tag-loader) {
-    --#{$prefix}tag-asset-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-default when available
-    position: relative;
-  }
+    &:has(.tag-bullet) {
+      --#{$prefix}tag-asset-padding: 3px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-default when available
+    }
 
-  .tag-loader { // TODO copied from button loader, should be factorized
-    --#{$prefix}tag-asset-color: currentcolor;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    margin: 0;
-    font-size: var(--#{$prefix}tag-asset-container-size);
-    color: var(--#{$prefix}tag-asset-color);
-    transform: translate(-50%, -50%) rotate(-90deg);
+    .tag-bullet {
+      width: 100%;
+      height: 100%;
+      background-color: var(--#{$prefix}tag-asset-color);
+      @include border-radius(#{$ouds-tag-border-radius});
+    }
 
-    > .tag-loader-inner {
-      fill: none;
-      stroke: var(--#{$prefix}tag-asset-color);
-      stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
-      stroke-width: 6;
-      transform-origin: center;
-      animation: var(--#{$prefix}tag-loading-animation);
+    &:has(.tag-loader) {
+      --#{$prefix}tag-asset-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-default when available
+      position: relative;
+    }
+
+    .tag-loader { // TODO copied from button loader, should be factorized
+      --#{$prefix}tag-asset-color: currentcolor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin: 0;
+      font-size: var(--#{$prefix}tag-asset-container-size);
+      color: var(--#{$prefix}tag-asset-color);
+      transform: translate(-50%, -50%) rotate(-90deg);
+
+      > .tag-loader-inner {
+        fill: none;
+        stroke: var(--#{$prefix}tag-asset-color);
+        stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
+        stroke-width: 6;
+        transform-origin: center;
+        animation: var(--#{$prefix}tag-loading-animation);
+      }
     }
   }
 }
