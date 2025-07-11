@@ -7,8 +7,8 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  --#{$prefix}tag-asset-container-size: 16px; // TODO ouds/💠_indicator/tag/size/asset-default
-  --#{$prefix}tag-asset-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-default
+  --#{$prefix}tag-asset-container-size: 16px; // TODO ouds/💠_indicator/tag/size/asset-default when available
+  --#{$prefix}tag-asset-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-default when available
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 96;
@@ -24,7 +24,7 @@
   font-weight: 700;
   color: var(--#{$prefix}tag-color);
   white-space: nowrap;
-  vertical-align: text-bottom; // TODO alignment to check
+  vertical-align: text-bottom; // TODO alignment to check with text in <p>
   background-color: var(--#{$prefix}tag-background-color);
   @include get-font-size("label-medium");
   @include border-radius(#{$ouds-tag-border-radius});
@@ -44,7 +44,7 @@
   padding: var(--#{$prefix}tag-asset-padding);
   margin-right: var(--#{$prefix}tag-asset-gap);
 
-  // TODO do we keep "img"? => if not, see in badge
+  // TODO do we keep "img"? => if not, see in button
   svg:not(.tag-loader),
   img,
   .icon {
@@ -56,7 +56,7 @@
   }
 
   &:has(.tag-bullet) {
-    --#{$prefix}tag-asset-padding: 3px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-default
+    --#{$prefix}tag-asset-padding: 3px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-default when available
   }
 
   .tag-bullet {
@@ -67,11 +67,11 @@
   }
 
   &:has(.tag-loader) {
-    --#{$prefix}tag-asset-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-default
+    --#{$prefix}tag-asset-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-default when available
     position: relative;
   }
 
-  .tag-loader { // TODO copied from button loader
+  .tag-loader { // TODO copied from button loader, should be factorized
     --#{$prefix}tag-asset-color: currentcolor;
     position: absolute;
     top: 50%;
@@ -118,10 +118,10 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
-  --#{$prefix}tag-asset-container-size: 12px; // TODO ouds/💠_indicator/tag/size/asset-small
-  --#{$prefix}tag-bullet-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-small
-  --#{$prefix}tag-icon-padding: 0; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-small
-  --#{$prefix}tag-loader-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-small
+  --#{$prefix}tag-asset-container-size: 12px; // TODO replace by ouds/💠_indicator/tag/size/asset-small when available
+  --#{$prefix}tag-bullet-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-small when available
+  --#{$prefix}tag-icon-padding: 0; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-small when available
+  --#{$prefix}tag-loader-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-small when available
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
   @include get-font-size("label-small");
 
