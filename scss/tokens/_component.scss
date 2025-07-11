@@ -417,20 +417,20 @@ $ouds-tabs-space-row-gap-icon-label-unequal: $ouds-space-row-gap-xs !default;
 
 // scss-docs-start ouds-component-tag
 $ouds-tag-border-radius: $ouds-border-radius-pill !default; // OK
-$ouds-tag-input-border-width-default-interaction: $ouds-border-width-medium !default;
-$ouds-tag-input-border-width-default: $ouds-border-width-default !default;
-$ouds-tag-input-color-bg-enabled: $ouds-color-action-support-enabled !default;
-$ouds-tag-input-color-bg-focus: $ouds-color-action-support-focus !default;
-$ouds-tag-input-color-bg-hover: $ouds-color-action-support-hover !default;
-$ouds-tag-input-color-bg-pressed: $ouds-color-action-support-pressed !default;
-$ouds-tag-input-color-border-enabled: $ouds-color-border-default !default;
-$ouds-tag-input-color-border-focus: $ouds-color-action-focus !default;
-$ouds-tag-input-color-border-hover: $ouds-color-action-hover !default;
-$ouds-tag-input-color-border-pressed: $ouds-color-action-pressed !default;
-$ouds-tag-input-color-content-enabled: $ouds-color-action-enabled !default;
-$ouds-tag-input-color-content-focus: $ouds-color-action-focus !default;
-$ouds-tag-input-color-content-hover: $ouds-color-action-hover !default;
-$ouds-tag-input-color-content-pressed: $ouds-color-action-pressed !default;
+$ouds-tag-input-border-width-default-interaction: $ouds-border-width-medium !default; // OK
+$ouds-tag-input-border-width-default: $ouds-border-width-default !default; // OK
+$ouds-tag-input-color-bg-enabled: $ouds-color-action-support-enabled !default; // OK
+$ouds-tag-input-color-bg-focus: $ouds-color-action-support-focus !default; // OK
+$ouds-tag-input-color-bg-hover: $ouds-color-action-support-hover !default; // OK
+$ouds-tag-input-color-bg-pressed: $ouds-color-action-support-pressed !default; // OK
+$ouds-tag-input-color-border-enabled: $ouds-color-border-default !default; // OK
+$ouds-tag-input-color-border-focus: $ouds-color-action-focus !default; // OK
+$ouds-tag-input-color-border-hover: $ouds-color-action-hover !default; // OK
+$ouds-tag-input-color-border-pressed: $ouds-color-action-pressed !default; // OK
+$ouds-tag-input-color-content-enabled: $ouds-color-action-enabled !default; // OK
+$ouds-tag-input-color-content-focus: $ouds-color-action-focus !default; // OK
+$ouds-tag-input-color-content-hover: $ouds-color-action-hover !default; // OK
+$ouds-tag-input-color-content-pressed: $ouds-color-action-pressed !default; // OK
 $ouds-tag-size-icon-default: $ouds-size-icon-with-label-medium-size-sm !default; // TODO replaced by ouds/💠_indicator/tag/size/asset-default
 $ouds-tag-size-icon-small: $ouds-size-icon-with-label-small-size-sm !default; // TODO replaced by ouds/💠_indicator/tag/size/asset-small
 $ouds-tag-size-min-height-default: $ouds-dimension-xs !default; // OK
