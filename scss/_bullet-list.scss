@@ -65,6 +65,14 @@
   }
 }
 
+.bullet-list-default-color {
+  --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
+}
+
+.bullet-list-brand-color {
+  --#{$prefix}bullet-color: initial;
+}
+
 // we need to use child combinator instead of descendant to handle mixed lists
 ul.bullet-list {
   @if $enable-bullet-list-tick {
@@ -79,14 +87,6 @@ ul.bullet-list {
     ul {
       --#{$prefix}bullet-list-custom-marker: initial;
     }
-  }
-
-  .bullet-list-default-color {
-    --#{$prefix}bullet-color: var(--#{$prefix}color-content-default);
-  }
-
-  .bullet-list-brand-color {
-    --#{$prefix}bullet-color: initial;
   }
 
   // this is necessary in order to avoid duplicating :before definition in all descendant li and still handle mixed lists
