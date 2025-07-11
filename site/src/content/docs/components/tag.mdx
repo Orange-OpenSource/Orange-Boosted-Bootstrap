@@ -546,8 +546,8 @@ To display a small tag, add the class `.tag-sm` to the tag.
         <span class="tag-asset-container">
           <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
             <circle class="tag-loader-inner" cx="20" cy="20" r="17"></circle>
-            <span role="status" class="visually-hidden">Loading</span>
           </svg>
+          <span role="status" class="visually-hidden">Loading</span>
         </span>
         Neutral
       </span>
@@ -576,8 +576,8 @@ To display a small tag, add the class `.tag-sm` to the tag.
         <span class="tag-asset-container">
           <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
             <circle class="tag-loader-inner" cx="20" cy="20" r="17"></circle>
-            <span role="status" class="visually-hidden">Loading</span>
           </svg>
+          <span role="status" class="visually-hidden">Loading</span>
         </span>
         Small neutral
       </span>
@@ -598,13 +598,31 @@ Standard tags are used in an informative way. Tag inputs are used to edit tags, 
     </span>
   </button>
 
-  <button type="button" class="tag tag-input" disabled="true">
+  <button type="button" class="tag tag-input" disabled>
     Label
     <span class="tag-asset-container">
       <svg aria-hidden="true">
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
       </svg>
     </span>
-  </button>`} />
+  </button>
+
+  <a type="button" class="tag tag-input">
+    Label
+    <span class="tag-asset-container">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
+      </svg>
+    </span>
+  </a>
+
+  <a type="button" class="tag tag-input" disabled>
+    Label
+    <span class="tag-asset-container">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#delete-from-cross-square"/>
+      </svg>
+    </span>
+  </a>`} />
 
 
