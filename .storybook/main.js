@@ -3,18 +3,24 @@ const config = {
   stories: [
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-  addons: ["@storybook/addon-a11y", {
-    name: "@storybook/addon-essentials",
-    options: {
-      measure: false, // Note: addon-measure is forced to false in order to avoid it enabled in ZeroHeight
-    }
-  }, "@storybook/addon-themes",],
+
+  addons: [
+    "@storybook/addon-a11y",
+    "@storybook/addon-themes",
+    "@storybook/addon-docs"
+  ],
+
   framework: {
     name: "@storybook/html-vite",
     options: {},
   },
+
   docs: {
     defaultName: 'Docs'
+  },
+
+  features: {
+    measure: false
   }
 };
 export default config;
