@@ -9,14 +9,13 @@ updates:
       timezone: Europe/Paris
   - package-ecosystem: npm
     directory: "/"
-    reviewers:
-      - louismaximepiton
     labels:
       - dependencies
       - v5
     groups:
       storybook-deps:
         patterns:
+          - "eslint-plugin-storybook"
           - "storybook"
           - "@storybook/*"
     schedule:

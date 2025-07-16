@@ -68,7 +68,7 @@ if (frontmatter.toc) {
             }
             <a
               class="btn btn-sm btn-outline-secondary"
-              href={`${getConfig().repo}/blob/v${getConfig().current_version}/site/src/content/${id}`}
+              href={`${getConfig().repo}/blob/v${getConfig().current_version}/site/src/content/docs/${id}`}
               title="View and edit this file on GitHub"
               target="_blank"
               rel="noopener"
@@ -83,9 +83,9 @@ if (frontmatter.toc) {
         </div>
       </div>
 
-      {
-        frontmatter.toc && headings && (
-          <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
+      <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
+        {
+          frontmatter.toc && headings && (
             <h2 class="mb-0" id="docs-toc">
               <button
                 class="btn btn-outline-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none"
@@ -108,9 +108,9 @@ if (frontmatter.toc) {
                 <TableOfContents headings={headings} />
               </nav>
             </div>
-          </div>
-        )
-      }
+            )
+          }
+      </div>
 
       <div class="bd-content ps-lg-2">
         {
