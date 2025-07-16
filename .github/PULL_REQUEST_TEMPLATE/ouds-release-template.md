@@ -39,7 +39,8 @@
     - (v4 only) `npm publish --tag v4.x.y` (if you forgot and v4 becomes the latest version on NPM, you can run `npm dist-tag add boosted@5.x.y latest` to fix it) -->
 - [ ] check release on [NPM](https://www.npmjs.com/package/@ouds/web), [Nuget](https://www.nuget.org/packages/@ouds/web/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `main` of the [ouds-web-doc](https://github.com/Orange-OpenSource/ouds-web-doc) repo:
-  - [ ] copy `../_site` to the `main` branch (don't forget to update Storybook as well)
+  - [ ] copy `../_site` to the `main` branch
+  - [ ] don't forget to update Storybook as well and double-check that pages are referenced
   - [ ] check every `index.html` used as redirections to redirect to the new release
   - [ ] when bumping minor or major version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurrences
