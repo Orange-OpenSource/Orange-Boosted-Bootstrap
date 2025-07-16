@@ -57,7 +57,7 @@
     mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
 
-  > [data-focus-visible-added]:focus + label {
+  > :focus-visible + label {
     z-index: $focus-visible-zindex; // Make sure the focused star is displayed over its next sibling
     @include focus-visible();
     outline-offset: -1px;
