@@ -50,7 +50,7 @@ Link utilities should be used carefully because the rendering provided in the fo
 </DesignCalloutAlert>
 
 <Example code={[
-  ...getData('theme-colors').map((themeColor) => (<p><a href="#" class={`link-underline-${themeColor.name}`}>{themeColor.title} underline</a></p>))
+  ...getData('theme-colors').map((themeColor) => `<p><a href="#" class="link-underline-${themeColor.name}">${themeColor.title} underline</a></p>`)
 ]} />
 </details>
 

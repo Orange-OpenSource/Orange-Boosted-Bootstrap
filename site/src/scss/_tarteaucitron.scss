@@ -12,10 +12,15 @@
   transform: translateX(-50%);
 
   [role="heading"] {
-    display: block;
     font-weight: $font-weight-bold;
     color: $modal-content-color;
   }
+}
+
+// fixes https://github.com/AmauriC/tarteaucitron.js/issues/1347 (backport tac css)
+@include tac("-modal-open #tac_title", true)  {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
 }
 
 @include tac("Root") {
@@ -164,7 +169,7 @@
   }
 }
 
-.catToggleBtn,
+[role="heading"]:has(.catToggleBtn),
 .#{$tac-prefix}Hidden,
 .#{$tac-prefix}InfoBox,
 .#{$tac-prefix}ListCookies + br {
