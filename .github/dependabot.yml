@@ -15,6 +15,7 @@ updates:
     groups:
       storybook-deps:
         patterns:
+          - "eslint-plugin-storybook"
           - "storybook"
           - "@storybook/*"
     schedule:
