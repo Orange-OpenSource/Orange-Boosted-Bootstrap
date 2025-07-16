@@ -9,8 +9,6 @@ updates:
       timezone: Europe/Paris
   - package-ecosystem: npm
     directory: "/"
-    reviewers:
-      - louismaximepiton
     labels:
       - dependencies
       - v5
