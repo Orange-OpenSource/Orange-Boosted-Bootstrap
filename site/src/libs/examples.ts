@@ -20,7 +20,8 @@ export const exampleFrontmatterSchema = z.object({
   html_class: z.string().optional(),
   include_js: z.boolean().optional(),
   theme_selector: z.boolean().optional(),
-  title: z.string()
+  title: z.string(),
+  bootstrap_compat_css: z.oboolean().optional(),
 })
 
 export type ExampleFrontmatter = z.infer<typeof exampleFrontmatterSchema>
