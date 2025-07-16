@@ -81,7 +81,6 @@
   // OUDS mod: apply common styles to hover, focus visible and loading states
   &:hover,
   &:focus-visible,
-  &:focus[data-focus-visible-added],
   &.loading-indeterminate,
   &.loading-determinate,
   &:active,
@@ -100,8 +99,7 @@
 
   // OUDS mod: no .btn-check + &:hover
 
-  &:focus-visible,
-  &:focus[data-focus-visible-added] { // OUDS mod
+  &:focus-visible {
     z-index: $focus-visible-zindex; // OUDS mod
     color: var(--#{$prefix}btn-focus-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-color)`
     @include gradient-bg(var(--#{$prefix}btn-focus-bg)); // OUDS mod: instead of `var(--#{$prefix}btn-hover-bg)`

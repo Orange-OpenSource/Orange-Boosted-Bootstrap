@@ -71,11 +71,9 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
+    @include focus-visible();
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
   }
 
   .DocSearch-Search-Icon {
@@ -114,10 +112,8 @@
 .DocSearch-Reset {
   @include border-radius(0, 0);
 
-  &:focus {
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
+  &:focus-visible {
+    @include focus-visible();
   }
 }
 
@@ -190,10 +186,8 @@
     color: var(--docsearch-highlight-color);
   }
 
-  &:focus {
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
+  &:focus-visible {
+    @include focus-visible();
   }
 }
 

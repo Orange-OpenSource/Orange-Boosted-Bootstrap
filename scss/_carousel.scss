@@ -128,11 +128,9 @@
   }
 
   // scss-docs-start focus-visible-carousel
-  &:focus {
-    &[data-focus-visible-added] {
-      > span {
-        @include focus-visible();
-      }
+  &:focus-visible {
+    > span {
+      @include focus-visible();
     }
   }
   // scss-docs-end focus-visible-carousel
@@ -225,10 +223,8 @@
       }
     }
 
-    &:focus {
-      &[data-focus-visible-added] {
-        transform: none;
-      }
+    &:focus-visible {
+      transform: none;
     }
 
   }
