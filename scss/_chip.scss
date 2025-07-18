@@ -1,0 +1,59 @@
+.chip-container {
+  @include list-unstyled();
+  display: flex;
+  flex-direction: row;
+  gap: 0 8px;
+}
+
+.chip {
+  position: relative;
+  flex-shrink: 0;
+  padding: 7px 0;
+}
+
+.chip-content {
+  display: inline-flex;
+  padding: 6px 16px;
+  @include get-font-size("label-medium");
+  font-weight: 700;
+  color: var(--bs-color-content-default);
+  background-color: transparent;
+  border: 1px solid var(--bs-color-border-default);
+  border-radius: 9999px; // stylelint-disable-line property-disallowed-list
+
+  &::before {
+    // Check
+    content: "";
+  }
+
+  &::after {
+    // Dropdown
+    content: "";
+  }
+
+  &:hover,
+  &:focus-visible {
+    padding: 5px 15px;
+    color: var(--bs-color-content-muted);
+    border: 2px solid var(--bs-color-border-emphasized);
+  }
+
+  &:active {
+    padding: 5px 15px;
+    color: var(--bs-color-content-brand-primary);
+    border: 2px solid var(--bs-color-border-brand-primary);
+  }
+
+  &:disabled {
+    color: var(--bs-color-content-disabled);
+    border-color: var(--bs-color-content-disabled);
+  }
+
+  &:has(:checked) {
+    border-color: var(--bs-color-border-brand-primary);
+  };
+}
+
+.chip-icon {
+  --bs-padding: 16px;
+}

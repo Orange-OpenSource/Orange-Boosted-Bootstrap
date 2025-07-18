@@ -1,0 +1,89 @@
+---
+title: Chip
+description: OUDS Web’s chip provides a compact UI element used either to represent a filter or to recommend an option.
+aliases:
+  - "/docs/components/chip/"
+toc: true
+---
+
+## Standard variant(s)
+
+{/* <Example code={`<ul class="chip-container">
+    <li>
+      <button class="chip">Label</button>
+    </li>
+    <li>
+      <button class="chip">Label</button>
+    </li>
+  </ul>`} /> */}
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <button>Label</button>
+    </li>
+    <li class="chip">
+      <button class="chip-content">
+        Label
+        <span class="chip-util" aria-hidden="true"></span>
+      </button>
+    </li>
+  </ul>`} />
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <input type="checkbox" />
+      <label class="chip-content">
+        Label
+        <span class="chip-util" aria-hidden="true"></span>
+      </label>
+    </li>
+    <li class="chip-break"></li>
+    <li class="chip">
+      <input type="checkbox" checked />
+      <label class="chip-content">
+        Label
+        <span class="chip-util" aria-hidden="true"></span>
+      </label>
+    </li>
+  </ul>`} />
+{/* <Example code={`<ul class="chip-container">
+    <li class="chip">
+      <label>
+        <input type="checkbox" />
+      </label>
+    </li>
+    <li class="chip-break"></li>
+    <li class="chip">
+      <label>
+        <input type="checkbox" checked />
+      </label>
+    </li>
+  </ul>`} /> */}
+{/* <Example code={`<ul class="chip-container">
+    <li>
+      <label class="chip">
+        <input type="checkbox" />
+      </label>
+    </li>
+    <li class="chip-break"></li>
+    <li>
+      <label class="chip">
+        <input type="checkbox" checked />
+      </label>
+    </li>
+  </ul>`} /> */}
+<Example code={`<ul class="chip-container">
+    <li>
+      <input type="radio" />
+      <label></label>
+    </li>
+    <li>
+      <input type="radio" checked />
+      <label></label>
+    </li>
+  </ul>`} />
+
+chip = position relative
+chip container = overflow, wrap automatic or manual, 2.5 lines height,
+
+## Layout
+## Other variants : With icon, with chevron, etc
+## States : disabled, visited, loading, etc
