@@ -6,84 +6,295 @@ aliases:
 toc: true
 ---
 
-## Standard variant(s)
+import { getConfig } from '@libs/config'
 
-{/* <Example code={`<ul class="chip-container">
-    <li>
-      <button class="chip">Label</button>
-    </li>
-    <li>
-      <button class="chip">Label</button>
-    </li>
-  </ul>`} /> */}
+Chip is a component that is always grouped with some others. This is why we display all our examples using `<ul class="chip-container"><li></li></ul>` structure. Please adapt this structure to what's needed in your project and the context of use.
+
+`.chip-container` helps managing the Chip list.
+
+`.chip` helps managing the placement inside the container and the click area.
+
+<Callout type="warning">
+`.chip-container` is provided without any design specifications, please make sure to align it with your project requirements. More likely, the list should be horizontally scrollable when overflowing or be wrapped on 2 or 3 lines visible lines either manually or automatically vertically scrollable.
+</Callout>
+
+## Filter chip
+
+Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. It's mainly base on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) ones too.
+
+Add `.chip-filter` to the clickable part of the component.
+
 <Example code={`<ul class="chip-container">
     <li class="chip">
-      <button>Label</button>
+      <input type="checkbox" id="appleCheck" checked />
+      <label class="chip-filter" for="appleCheck">
+        Apple
+      </label>
     </li>
     <li class="chip">
-      <button class="chip-content">
+      <input type="checkbox" id="samsungCheck" />
+      <label class="chip-filter" for="samsungCheck">
+        Samsung
+      </label>
+    </li>
+    <li class="chip">
+      <input type="checkbox" id="xiaomiCheck" />
+      <label class="chip-filter" for="xiaomiCheck">
+        Xiaomi
+      </label>
+    </li>
+  </ul>`} />
+
+### Text and icon
+
+To display an icon, please set it up at the end of the component.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <input type="checkbox" id="filterWithIcon" />
+      <label class="chip-filter" for="filterWithIcon">
+        Label with icon
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </label>
+    </li>
+    <li class="chip">
+      <input type="checkbox" id="filterWithIcon2" checked />
+      <label class="chip-filter" for="filterWithIcon2">
+        Antoher label with icon
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </label>
+    </li>
+  </ul>`} />
+
+### Icon only
+
+To display a Chip with only an icon, add `.chip-icon` to the clickable part of the component.
+
+Prefer using an [embedded SVG], but you can also use font icon. Please avoid using `<img />` because the color system won't work on this.
+
+Make sure to provide an accessible text for each Chip.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <input type="checkbox" id="filterIconOnly" />
+      <label class="chip-filter chip-icon" for="filterIconOnly">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        <span class="visually-hidden">Favorites</span>
+      </label>
+    </li>
+    <li class="chip">
+      <input type="checkbox" id="filterIconOnly2" checked />
+      <label class="chip-filter chip-icon" for="filterIconOnly2">
+        <span class="icon si si-settings" aria-hidden="true"></span>
+        <span class="visually-hidden">Technical</span>
+      </label>
+    </li>
+  </ul>`} />
+
+### Using radio buttons
+
+If you want to have only one filter active at a time, you can use the radio button based one. All the rules explained in this page about filter Chips apply on this variant as well.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <input type="radio" id="radioCheck" name="radio" />
+      <label class="chip-filter" for="radioCheck">
+        Filter 1
+      </label>
+    </li>
+    <li class="chip">
+      <input type="radio" id="radioCheck2" name="radio" />
+      <label class="chip-filter" for="radioCheck2">
+        Filter 2
+      </label>
+    </li>
+    <li class="chip">
+      <input type="radio" id="radioCheck3" name="radio" checked />
+      <label class="chip-filter" for="radioCheck3">
+        Filter 3
+      </label>
+    </li>
+  </ul>`} />
+
+### With `<input />` inside label
+
+Inputs can also be held inside labels to allow a different HTML structure but should avoided since it's not the maintained one.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <label class="chip-filter">
+        <input type="checkbox" id="inputInside" checked />
+        Filter 1
+      </label>
+    </li>
+    <li class="chip">
+      <label class="chip-filter">
+        Filter 2
+        <input type="checkbox" id="inputInside2" />
+      </label>
+    </li>
+  </ul>`} />
+
+### Using buttons
+
+To have dynamic updates, please prefer using buttons. All the rules explained in this page about filter Chips apply on this variant as well.
+
+The style is applied on `[aria-pressed="true"]` to make sure that accessibility is good.
+
+Make use of our [Button JS plugin]([[docsref:/components/buttons#plugin]]) or make a custom one on your side, but at least provide the `aria-pressed`.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <button class="chip-filter" data-bs-toggle="button">
         Label
-        <span class="chip-util" aria-hidden="true"></span>
+      </button>
+    </li>
+    <li class="chip">
+      <button class="chip-filter active" aria-pressed="true" data-bs-toggle="button">
+        Label
+      </button>
+    </li>
+  </ul>`} />
+
+### Disabled state
+
+Here are the different rendering under disabled state. Add `disabled` attribute either on the input or on the button element.
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <input type="checkbox" id="disabledFilter" checked disabled />
+      <label class="chip-filter" for="disabledFilter">
+        Disabled checked filter
+      </label>
+    </li>
+    <li class="chip">
+      <label class="chip-filter">
+        <input type="checkbox" id="disabledFilter2" disabled />
+        Disabled filter with icon
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </label>
+    </li>
+    <li class="chip">
+      <button class="chip-filter" data-bs-toggle="button" disabled>
+        Disabled button filter
+      </button>
+    </li>
+  </ul>`} />
+
+## Suggestion chip
+
+No Selected state
+
+### Text and icon
+
+### Icon only
+
+### Disabled state
+
+{/* TODO: Probably a Layout section explaining How it behaves with long labels, maybe examples with utilities on wrapping li[aria-hidden].w-100 */}
+
+## Standard variant(s)
+
+<Example code={`<ul class="chip-container">
+    <li class="chip">
+      <button class="chip-suggestion">
+        Label
+      </button>
+    </li>
+    <li class="chip">
+      <button class="chip-suggestion">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+        Label
+      </button>
+    </li>
+    <li class="chip">
+      <button class="chip-suggestion chip-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
       </button>
     </li>
   </ul>`} />
 <Example code={`<ul class="chip-container">
     <li class="chip">
-      <input type="checkbox" />
-      <label class="chip-content">
+      <input type="checkbox" id="check1" />
+      <label class="chip-filter" for="check1">
         Label
-        <span class="chip-util" aria-hidden="true"></span>
       </label>
     </li>
-    <li class="chip-break"></li>
     <li class="chip">
-      <input type="checkbox" checked />
-      <label class="chip-content">
+      <input type="checkbox" id="check3" checked />
+      <label class="chip-filter" for="check3">
         Label
-        <span class="chip-util" aria-hidden="true"></span>
       </label>
+    </li>
+    <li class="chip">
+      <input type="checkbox" id="check4" checked />
+      <label class="chip-filter" for="check4">
+        Label
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </label>
+    </li>
+    <li class="chip">
+      <input type="checkbox" id="check5" checked />
+      <label class="chip-filter chip-icon" for="check5">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </label>
+    </li>
+    <li class="chip">
+      <button class="chip-filter">
+        Label
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </button>
+    </li>
+    <li class="chip">
+      <button class="chip-filter active" aria-pressed="true">
+        Label
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
+      </button>
     </li>
   </ul>`} />
-{/* <Example code={`<ul class="chip-container">
-    <li class="chip">
-      <label>
-        <input type="checkbox" />
-      </label>
-    </li>
-    <li class="chip-break"></li>
-    <li class="chip">
-      <label>
-        <input type="checkbox" checked />
-      </label>
-    </li>
-  </ul>`} /> */}
-{/* <Example code={`<ul class="chip-container">
-    <li>
-      <label class="chip">
-        <input type="checkbox" />
-      </label>
-    </li>
-    <li class="chip-break"></li>
-    <li>
-      <label class="chip">
-        <input type="checkbox" checked />
-      </label>
-    </li>
-  </ul>`} /> */}
 <Example code={`<ul class="chip-container">
-    <li>
-      <input type="radio" />
-      <label></label>
+    <li class="chip">
+      <label class="chip-filter">
+        <input type="checkbox" />
+        Label
+      </label>
     </li>
-    <li>
-      <input type="radio" checked />
-      <label></label>
+    <li class="chip">
+      <label class="chip-filter">
+        <input type="checkbox" checked />
+        Label
+      </label>
     </li>
   </ul>`} />
-
-chip = position relative
-chip container = overflow, wrap automatic or manual, 2.5 lines height,
-
-## Layout
-## Other variants : With icon, with chevron, etc
-## States : disabled, visited, loading, etc
+{/* <Example code={`<ul class="chip-container">
+    <li>
+      <label class="chip">
+        <input type="checkbox" />
+      </label>
+    </li>
+    <li>
+      <label class="chip">
+        <input type="checkbox" checked />
+      </label>
+    </li>
+  </ul>`} /> */}
