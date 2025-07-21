@@ -1,4 +1,4 @@
-.tag:not(:has(.tag-input)),
+.tag,
 .tag .tag-input {
   --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
   --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
@@ -11,7 +11,7 @@
   --#{$prefix}tag-asset-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-default when available
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
-  --#{$prefix}tag-loading-dasharray: 96;
+  --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 
   display: inline-flex;
@@ -47,6 +47,12 @@
     margin-right: var(--#{$prefix}tag-asset-gap);
 
     // TODO do we keep "img"? => if not, see in button
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+
     svg:not(.tag-loader),
     img,
     .icon {
@@ -88,7 +94,7 @@
         fill: none;
         stroke: var(--#{$prefix}tag-asset-color);
         stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
-        stroke-width: 6;
+        stroke-width: 8;
         transform-origin: center;
         animation: var(--#{$prefix}tag-loading-animation);
       }
@@ -130,6 +136,13 @@
 
   &:has(.tag-asset-container) {
     --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small-asset};
+  }
+
+  .tag-asset-container:has(.tag-loader) {
+    svg {
+      width: 10px;
+      height: 10px;
+    }
   }
 }
 
@@ -181,6 +194,14 @@
     --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
     --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+  }
+
+  &:hover:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
+  &:focus-visible:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
+  &:focus[data-focus-visible-added]:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
+  &:active:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
+  &.active:not(&:disabled):not(&[aria-disabled="true"]) .tag-input {
+    padding: subtract(var(--#{$prefix}tag-padding-y), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-end), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-y), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-start), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default));
   }
 
   .tag-input {
