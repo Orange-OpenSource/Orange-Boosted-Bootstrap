@@ -154,8 +154,7 @@
       draft: true
     - title: Sticker
       draft: true
-    - title: Tags
-      draft: true
+    - title: Tag
     - title: Title bars
       draft: true
     - title: Toasts
