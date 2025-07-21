@@ -46,13 +46,12 @@
     padding: var(--#{$prefix}tag-asset-padding);
     margin-right: var(--#{$prefix}tag-asset-gap);
 
-    // TODO do we keep "img"? => if not, see in button
-
     svg {
       width: 12px;
       height: 12px;
     }
 
+    // TODO do we keep "img"? => if not, see in button
     svg:not(.tag-loader),
     img,
     .icon {
