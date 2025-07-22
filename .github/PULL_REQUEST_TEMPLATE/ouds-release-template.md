@@ -18,6 +18,7 @@
       - [ ] Move `site/static/docs/x.y` to `site/static/docs/x.y+1`
       - [ ] Make sure the migration guide is updated only for the next version
       - [ ] (Major version) Manually update the version in `nuget/ouds-web.nuspec` and `nuget/ouds-web.sass.nuspec`
+      - [ ] Check that the changes in the migration guide only apply to the latest version
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "@ouds/web" should have its version changed!
 - [ ] if the year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities, and main file) as well as in `NOTICE.txt`.
