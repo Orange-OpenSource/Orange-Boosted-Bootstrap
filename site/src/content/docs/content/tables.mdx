@@ -7,6 +7,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
+import { getConfig } from '@libs/config'
 
 ## Overview
 
@@ -171,8 +172,7 @@ If you want dark tables, please consider using [contextual dark mode]([[docsref:
 
 Highlight a table row or cell by adding a `.table-active` class.
 
-<div class="bd-example">
-  <table class="table">
+<Example showMarkup={false} code={`<table class="table">
     <caption class="visually-hidden">Boosted table with an active row and cell</caption>
     <thead>
       <tr>
@@ -202,8 +202,7 @@ Highlight a table row or cell by adding a `.table-active` class.
         <td class="table-active">@social</td>
       </tr>
     </tbody>
-  </table>
-</div>
+  </table>`} />
 
 ```html
 <table class="table">
@@ -237,8 +236,7 @@ These colored tables should not be used because they do not respect the [Orange 
 If you want dark tables, please consider using [contextual dark mode]([[docsref:/customize/color-modes/#contextual-dark-mode-vs-dark-variants]]).
 </DesignCalloutAlert>
 
-<div class="bd-example">
-  <table class="table table-dark">
+<Example showMarkup={false} code={`<table class="table table-dark">
     <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
     <thead>
       <tr>
@@ -268,8 +266,7 @@ If you want dark tables, please consider using [contextual dark mode]([[docsref:
         <td class="table-active">@social</td>
       </tr>
     </tbody>
-  </table>
-</div>
+  </table>`} />
 
 ```html
 <table class="table table-dark">
@@ -373,8 +370,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 
 Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the top by default. Use the [vertical align]([[docsref:/utilities/vertical-align]]) classes to re-align where needed.
 
-<div class="bd-example">
-  <div class="table-responsive">
+<Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table align-middle">
       <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
       <thead>
@@ -406,8 +402,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="table-responsive">
@@ -447,8 +442,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 This variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 </DesignCalloutAlert>
 
-<div class="bd-example">
-  <table class="table table-striped table-bordered">
+<Example showMarkup={false} code={`<table class="table table-striped table-bordered">
     <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
     <thead>
       <tr>
@@ -503,8 +497,7 @@ This variant should not be used because it does not respect the Orange Design Sy
         <td class="table-active">@social</td>
       </tr>
     </tbody>
-  </table>
-</div>
+  </table>`} />
 
 ```html
 <table class="table table-striped table-bordered">
@@ -596,8 +589,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
-<div class="bd-example">
-  <div class="table-responsive">
+<Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table">
       <caption class="visually-hidden">Boosted responsive table</caption>
       <thead>
@@ -653,8 +645,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="table-responsive">
@@ -750,8 +741,7 @@ Add a [`.form-check` div]([[docsref:/forms/checks-radios#checks]]) within `<th>`
 The selection behavior isn’t implemented yet. This feature will be delivered with [#410]([[config:repo]]/issues/410) as an example.
 </Callout>
 
-<div class="bd-example">
-  <div class="table-responsive">
+<Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table table-sm table-hover has-checkbox">
       <caption class="visually-hidden">Boosted table with a selection feature</caption>
       <thead>
@@ -885,8 +875,7 @@ The selection behavior isn’t implemented yet. This feature will be delivered w
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="table-responsive">
@@ -952,8 +941,7 @@ The selection behavior isn’t implemented yet. This feature will be delivered w
 
 Use SVG or PNG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
-<div class="bd-example">
-  <div class="table-responsive">
+<Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table table-sm table-hover align-middle has-checkbox">
       <caption class="visually-hidden">Boosted table with icons in a row</caption>
       <thead>
@@ -983,7 +971,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <img src="/docs/[[config:docs_version]]/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2 inline" />
+            <img src="/docs/${getConfig().docs_version}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2 inline" />
             <span>Cell text</span>
           </td>
           <td>Cell text</td>
@@ -1001,7 +989,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1020,7 +1008,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <img src="/docs/[[config:docs_version]]/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2" />
+            <img src="/docs/${getConfig().docs_version}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2" />
             <span>Cell text</span>
           </td>
           <td>Cell text</td>
@@ -1038,7 +1026,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1058,7 +1046,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1078,7 +1066,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1098,7 +1086,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1118,7 +1106,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" class="me-2" aria-hidden="true">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#file-document"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#file-document"></use>
             </svg>
             <span class="visually-hidden">Document</span>
             <span>Cell text</span>
@@ -1129,8 +1117,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="table-responsive">
@@ -1155,8 +1142,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
 
 Use SVG or PNG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
-<div class="bd-example">
-  <div class="table-responsive">
+<Example showMarkup={false} code={`<div class="table-responsive">
     <table class="table align-middle">
       <caption class="visually-hidden">Boosted table with icons inside a row</caption>
       <thead>
@@ -1172,56 +1158,40 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <th scope="row" class="fw-normal">Cell text</th>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="fw-normal">Cell text</th>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
-            </svg>
-            <span class="visually-hidden">Yes</span>
-          </td>
-          <td>
-            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
         </tr>
         <tr>
           <th scope="row" class="fw-normal">Cell text</th>
-          <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1231,13 +1201,29 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+            <span class="visually-hidden">Yes</span>
+          </td>
+          <td>
+            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1248,7 +1234,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
            <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
@@ -1259,15 +1245,14 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
           <td></td>
           <td>
             <svg width="1.875rem" height="1.875rem" aria-hidden="true" class="text-success">
-              <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#tick"></use>
+              <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#tick"></use>
             </svg>
             <span class="visually-hidden">Yes</span>
           </td>
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="table-responsive">
