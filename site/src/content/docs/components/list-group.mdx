@@ -326,8 +326,7 @@ Loop that generates the modifier classes with an overriding of CSS variables.
 
 Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our list group to create tabbable panes of local content.
 
-<div class="bd-example" role="tabpanel">
-  <div class="row">
+<Example showMarkup={false} code={`<div class="row" role="tabpanel">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
         <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
@@ -352,8 +351,7 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="row">

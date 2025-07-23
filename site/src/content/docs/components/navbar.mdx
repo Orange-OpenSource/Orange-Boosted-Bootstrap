@@ -319,12 +319,11 @@ Mix and match with other components and utilities as needed.
 
 Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass and CSS variables. The default is our “light navbar” for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
-<div class="bd-example">
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+<Example showMarkup={false} code={`<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/${getConfig().docs_version}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -360,7 +359,7 @@ Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass a
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/${getConfig().docs_version}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -396,7 +395,7 @@ Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass a
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/[[config:docs_version]]/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
+          <img src="/docs/${getConfig().docs_version}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy" />
         </a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -426,8 +425,7 @@ Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass a
         </form>
       </div>
     </div>
-  </nav>
-</div>
+  </nav>`} />
 
 ```html
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">

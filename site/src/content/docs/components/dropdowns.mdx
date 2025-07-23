@@ -64,8 +64,7 @@ Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1a
 
 The best part is you can do this with any button variant, too:
 
-<div class="bd-example">
-  <div class="btn-group">
+<Example showMarkup={false} code={`<div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -124,8 +123,7 @@ The best part is you can do this with any button variant, too:
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Example single danger button -->
@@ -173,8 +171,7 @@ Only the `.btn-outline-secondary` variant should be used as a split dropdown bec
 Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 </DesignCalloutAlert>
 
-<div class="bd-example">
-  <div class="btn-group">
+<Example showMarkup={false} code={`<div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
@@ -251,8 +248,7 @@ Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1a
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Example split danger button -->
@@ -276,8 +272,7 @@ Please refer to the [Dropdowns guidelines](https://system.design.orange.com/0c1a
 
 Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
 
-<div class="bd-example">
-  <div class="btn-group">
+<Example showMarkup={false} code={`<div class="btn-group">
     <button class="btn btn-dropdown btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Large button</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -299,8 +294,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Large button groups (default and split) -->
@@ -334,8 +328,7 @@ This small variant should not be used because it does not respect the Orange Des
 Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 </DesignCalloutAlert>
 
-<div class="bd-example">
-  <div class="btn-group">
+<Example showMarkup={false} code={`<div class="btn-group">
     <button class="btn btn-dropdown btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Small button</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -357,8 +350,7 @@ Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="btn-group">
@@ -424,8 +416,7 @@ Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af
 
 Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
-<div class="bd-example">
-  <div class="btn-group dropup">
+<Example showMarkup={false} code={`<div class="btn-group dropup">
     <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropup</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -447,8 +438,7 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Default dropup button -->
@@ -504,8 +494,7 @@ Please refer to the [Dropdown guidelines](https://system.design.orange.com/0c1af
 
 Trigger dropdown menus at the right of the elements by adding `.dropend` to the parent element.
 
-<div class="bd-example">
-  <div class="btn-group dropend">
+<Example showMarkup={false} code={`<div class="btn-group dropend">
     <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropend</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -527,8 +516,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
       <li><hr class="dropdown-divider" /></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Default dropend button -->
@@ -559,8 +547,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
 
 Trigger dropdown menus at the left of the elements by adding `.dropstart` to the parent element.
 
-<div class="bd-example">
-  <div class="btn-group dropstart">
+<Example showMarkup={false} code={`<div class="btn-group dropstart">
     <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropstart</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -582,8 +569,7 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
     <button type="button" class="btn btn-outline-secondary">Split dropstart</button>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <!-- Default dropstart button -->
