@@ -39,7 +39,7 @@
 }
 
 .link-chevron {
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-default};
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-chevron-default};
   --#{$prefix}link-arrow-color: #{$ouds-link-color-arrow-enabled};
   --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-arrow-hover};
   --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-arrow-focus};
@@ -122,7 +122,7 @@
 .link-sm {
   --#{$prefix}link-icon-size: #{$ouds-link-size-icon-small};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-small};
+  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-chevron-small};
 
   @include get-font-size("label-medium");
   min-width: $ouds-link-size-min-width-small;
