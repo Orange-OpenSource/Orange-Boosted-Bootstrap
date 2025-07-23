@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.4.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v0.4.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap dropdown.js v0.5.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -201,6 +201,9 @@
       this._element.setAttribute('aria-expanded', 'false');
       Manipulator.removeDataAttribute(this._menu, 'popper');
       EventHandler.trigger(this._element, EVENT_HIDDEN, relatedTarget);
+
+      // Explicitly return focus to the trigger elementAdd commentMore actions
+      this._element.focus();
     }
     _getConfig(config) {
       config = super._getConfig(config);
@@ -291,7 +294,7 @@
       }
       return {
         ...defaultBsPopperConfig,
-        ...index_js.execute(this._config.popperConfig, [defaultBsPopperConfig])
+        ...index_js.execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
       };
     }
     _selectMenuItem({

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../../dist/css/ouds-web.min.css" rel="stylesheet">
+    <link href="../../../dist/css/ouds-web.min.css" rel="stylesheet" />
     <title>Toast</title>
     <style>
       .notifications {
@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <h1>Toast <small>Bootstrap Visual Test</small></h1>
 
-      <div class="row mt-tall">
+      <div class="row mt-lg">
         <div class="col-md-12">
           <button id="btnShowToast" class="btn btn-strong">Show toast</button>
           <button id="btnHideToast" class="btn btn-strong">Hide toast</button>
@@ -28,7 +28,7 @@
     <div class="notifications">
       <div id="toastAutoHide" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
         <div class="toast-header">
-          <span class="d-block bg-brand-primary rounded me-short" style="width: 20px; height: 20px;"></span>
+          <span class="d-block bg-brand-primary rounded me-sm" style="width: 20px; height: 20px;"></span>
           <strong class="me-auto">Bootstrap</strong>
           <small>11 mins ago</small>
         </div>
@@ -39,10 +39,10 @@
 
       <div class="toast" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-          <span class="d-block bg-brand-primary rounded me-short" style="width: 20px; height: 20px;"></span>
+          <span class="d-block bg-brand-primary rounded me-sm" style="width: 20px; height: 20px;"></span>
           <strong class="me-auto">Bootstrap</strong>
           <small class="text-muted">2 seconds ago</small>
-          <button type="button" class="ms-short mb-shortest btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
+          <button type="button" class="ms-sm mb-2xs btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button><!--OUDS mod: a11y-->
         </div>
         <div class="toast-body">
           Heads up, toasts will stack automatically

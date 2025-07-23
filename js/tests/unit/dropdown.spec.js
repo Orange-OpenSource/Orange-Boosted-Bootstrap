@@ -172,7 +172,10 @@ describe('Dropdown', () => {
 
       const popperConfig = dropdown._getPopperConfig()
 
-      expect(getPopperConfig).toHaveBeenCalled()
+      // Ensure that the function was called with the default config.
+      expect(getPopperConfig).toHaveBeenCalledWith(jasmine.objectContaining({
+        placement: jasmine.any(String)
+      }))
       expect(popperConfig.placement).toEqual('left')
     })
   })
@@ -1615,14 +1618,14 @@ describe('Dropdown', () => {
       })
     })
 
-    it('should ignore keyboard events within <input>s and <textarea>s', () => {
+    it('should ignore keyboard events within <input />s and <textarea>s', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
           '<div class="dropdown">',
           '  <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>',
           '  <div class="dropdown-menu">',
           '    <a class="dropdown-item" href="#sub1">Submenu 1</a>',
-          '    <input type="text">',
+          '    <input type="text" />',
           '    <textarea></textarea>',
           '  </div>',
           '</div>'
@@ -1822,7 +1825,7 @@ describe('Dropdown', () => {
           '<div class="dropdown">',
           '  <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>',
           '  <div class="dropdown-menu">',
-          '    <input type="text">',
+          '    <input type="text" />',
           '  </div>',
           '</div>'
         ].join('')
@@ -1880,7 +1883,7 @@ describe('Dropdown', () => {
           '  <div class="dropdown-menu">',
           '  </div>',
           '</div>',
-          '<input type="text">'
+          '<input type="text" />'
         ].join('')
 
         const triggerDropdown = fixtureEl.querySelector('[data-bs-toggle="dropdown"]')
@@ -1901,14 +1904,14 @@ describe('Dropdown', () => {
       })
     })
 
-    it('should ignore keyboard events for <input>s and <textarea>s within dropdown-menu, except for escape key', () => {
+    it('should ignore keyboard events for <input />s and <textarea>s within dropdown-menu, except for escape key', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
           '<div class="dropdown">',
           '  <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>',
           '  <div class="dropdown-menu">',
           '    <a class="dropdown-item" href="#sub1">Submenu 1</a>',
-          '    <input type="text">',
+          '    <input type="text" />',
           '    <textarea></textarea>',
           '  </div>',
           '</div>'

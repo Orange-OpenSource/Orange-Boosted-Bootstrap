@@ -95,7 +95,7 @@
   // File input buttons theming
   &::file-selector-button {
     padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // OUDS mod
-    margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
+    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px)); // stylelint-disable-line function-disallowed-list
     margin-inline-end: $input-padding-x;
     color: $form-file-button-color;
     @include gradient-bg($form-file-button-bg);
@@ -178,7 +178,7 @@
 
   &::file-selector-button {
     padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // OUDS mod
-    margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
+    margin: calc(-1 * (#{$input-padding-y} - 1px)) (-$input-padding-x) calc(-1 * (#{$input-padding-y} + 1px)); // stylelint-disable-line function-disallowed-list
     margin-inline-end: $input-padding-x-lg;
   }
 }

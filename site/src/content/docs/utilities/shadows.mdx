@@ -1,0 +1,72 @@
+---
+title: Shadows
+description: Add or remove shadows to elements with box-shadow utilities.
+aliases:
+  - "/docs/utilities/shadows/"
+toc: true
+---
+
+<Callout type="info">
+Box-shadow styles are referred to as ’elevation’ within the design system.
+</Callout>
+
+## Examples
+
+{/* While shadows on components are disabled by default in OUDS Web and can be enabled via `$enable-shadows`, */}
+You can quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and new semantic helpers.
+
+<Example class="overflow-hidden" code={`<div class="shadow-none p-lg mb-4xl bg-secondary">No shadow</div>
+  <div class="shadow-default p-lg mb-4xl bg-secondary">Default shadow</div>
+  <div class="shadow-drag p-lg mb-4xl bg-secondary">Drag shadow</div>
+  <div class="shadow-emphasized p-lg mb-4xl bg-secondary">Emphasized shadow</div>
+  <div class="shadow-raised p-lg mb-4xl bg-secondary">Raised shadow</div>
+  <div class="shadow-sticky-default p-lg mb-4xl bg-secondary">Sticky default shadow</div>
+  <div class="shadow-sticky-emphasized p-lg mb-4xl bg-secondary">Sticky emphasized shadow</div>
+  <div class="shadow-sticky-navigation-scrolled p-lg mb-4xl bg-secondary">Sticky navigation shadow</div>`} />
+
+<BootstrapCompatibility>
+
+Includes support for three default sizes (which have associated variables to match).
+
+<Example class="overflow-hidden" code={`<div class="shadow-none p-3 mb-5 bg-body-tertiary">No shadow</div>
+  <div class="shadow-sm p-3 mb-5 bg-body-tertiary">Small shadow</div>
+  <div class="shadow p-3 mb-5 bg-body-tertiary">Regular shadow</div>
+  <div class="shadow-lg p-3 mb-5 bg-body-tertiary">Larger shadow</div>`} />
+
+</BootstrapCompatibility>
+
+## CSS
+
+### Sass tokens
+
+#### Semantic tokens
+
+Shadow semantic tokens as Sass variables.
+
+<ScssDocs name="ouds-semantic-elevation" file="scss/tokens/_semantic.scss" />
+
+#### Composite tokens
+
+Shadow composite tokens are defined as Sass variables.
+
+<ScssDocs name="ouds-composite-elevation" file="scss/tokens/_composite.scss" />
+
+### Sass variables
+
+<ScssDocs name="box-shadow-variables" file="scss/_variables.scss" />
+
+### Sass maps
+
+<ScssDocs name="ouds-maps-elevations" file="scss/_maps.scss" />
+
+### Sass utilities API
+
+Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-shadow-ouds" file="scss/_utilities.scss" />
+
+<BootstrapCompatibility>
+
+<ScssDocs name="utils-shadow" file="scss/_utilities.scss" />
+
+</BootstrapCompatibility>

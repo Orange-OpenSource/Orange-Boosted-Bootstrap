@@ -1,0 +1,113 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import type { Layout } from '@libs/layout'
+import GitHubIcon from '@components/icons/GitHubIcon.astro'
+import LinkItem from '@components/header/LinkItem.astro'
+import Versions from '@components/header/Versions.astro'
+import ThemeToggler from '@layouts/partials/ThemeToggler.astro'
+import SubNav from '@components/header/SubNav.astro'
+
+interface Props {
+  addedIn?: CollectionEntry<'docs'>['data']['added']
+  layout: Layout
+  title: string
+}
+
+const { addedIn, layout, title } = Astro.props
+---
+
+<header class="sticky-top bd-header">
+  <nav
+    class="navbar navbar-expand supra d-none"
+    data-bs-theme="dark"
+    aria-label="Supra-navigation - New release banner"
+  >
+    <div class="container-fluid container-max-width d-flex justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://web.unified-design-system.orange.com">
+            There’s a newer version of OUDS Web!
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
+    <div class="container-fluid container-max-width">
+      <div class="navbar-brand me-auto me-lg-2xl">
+        <a class="stretched-link" href="/">
+          <img
+            src={getVersionedDocsPath('assets/brand/orange-logo.svg')}
+            width="50"
+            height="50"
+            alt="OUDS Web - Back to Home"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <!--OUDS mod: no sidebar toggle which is in the subnav in OUDS Web-->
+
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target=".bd-navbar"
+        aria-controls="bd-navbar1 bd-navbar2"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
+        <ul class="navbar-nav">
+          <LinkItem
+            active={Astro.url.pathname === '/'}
+            href="/"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
+          >
+            Home
+          </LinkItem>
+          <LinkItem
+            active={layout === 'docs'}
+            href={getVersionedDocsPath('getting-started/introduction')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
+          >
+            Docs
+          </LinkItem>
+          <LinkItem
+            active={title === 'Examples'}
+            href={getVersionedDocsPath('examples')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
+          >
+            Examples
+          </LinkItem>
+        </ul>
+      </div>
+      <div id="bd-navbar2" class="navbar-collapse collapse bd-navbar border-none">
+        <ul class="navbar-nav flex-row me-lg-lg">
+          <LinkItem class="nav-icon" href={getConfig().repo} target="_blank" rel="noopener">
+            <GitHubIcon height={16} width={16} />
+            <span class="visually-hidden">GitHub</span>
+          </LinkItem>
+          <li class="nav-item">
+            <div class="bd-search nav-link nav-icon" id="docsearch" data-bd-docs-version={getConfig().docs_version}>
+            </div>
+          </li>
+
+          <Versions layout={layout} addedIn={addedIn} />
+        </ul>
+        <ul class="navbar-nav flex-row ms-lg-lg">
+          <li class="nav-item dropdown">
+            <ThemeToggler layout={layout} />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {layout === 'docs' && <SubNav />}
+</header>

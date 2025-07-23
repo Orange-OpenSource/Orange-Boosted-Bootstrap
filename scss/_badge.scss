@@ -1,42 +1,65 @@
-// Base class
 //
-// Requires one of the contextual, color modifier classes for `color` and
-// `background-color`.
+// Base styles
+//
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-padding: #{subtract(var(--#{$prefix}badge-padding-y), 1px) var(--#{$prefix}badge-padding-x) add(var(--#{$prefix}badge-padding-y), 1px)}; // OUDS mod
-  --#{$prefix}badge-padding-x: #{$badge-padding-x};
-  --#{$prefix}badge-padding-y: #{$badge-padding-y};
-  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
-  --#{$prefix}badge-font-weight: #{$badge-font-weight};
-  --#{$prefix}badge-color: #{$badge-color};
-  --#{$prefix}badge-border-radius: #{$badge-border-radius};
+  --#{$prefix}badge-size: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
+  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
+  --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
-  padding: var(--#{$prefix}badge-padding);
-  @include font-size(var(--#{$prefix}badge-font-size));
-  font-weight: var(--#{$prefix}badge-font-weight);
-  line-height: 1;
-  color: var(--#{$prefix}badge-color);
+  width: var(--#{$prefix}badge-size);
+  min-width: var(--#{$prefix}badge-size);
+  height: var(--#{$prefix}badge-size);
+  min-height: var(--#{$prefix}badge-size);
+  padding: var(--#{$prefix}badge-count-padding-y) var(--#{$prefix}badge-count-padding-x);
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  color: #{$ouds-color-content-on-status-neutral-emphasized};
   text-align: center;
-
-  /* rtl:remove */
-  letter-spacing: initial; // OUDS mod
-  white-space: nowrap;
-  vertical-align: baseline;
+  background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  @include get-font-size("label-small");
   @include border-radius(var(--#{$prefix}badge-border-radius));
-  @include gradient-bg();
 
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
+  svg {
+    display: flex;
+    flex: 1 0 0;
+    aspect-ratio: 1/1;
   }
 }
 
-// Quick fix for badges in buttons
-.btn .badge {
-  padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x); // OUDS mod
-  margin-left: map-get($spacers, 1); // OUDS mod
+.badge-disabled {
+  color: #{$ouds-color-content-on-action-disabled};
+  background-color: #{$ouds-color-action-disabled};
+}
+
+.badge-xs {
+  --#{$prefix}badge-size: #{$ouds-badge-size-xsmall};
+}
+
+.badge-sm {
+  --#{$prefix}badge-size: #{$ouds-badge-size-small};
+}
+
+.badge-lg {
+  --#{$prefix}badge-size: #{$ouds-badge-size-large};
+
+  @include get-font-size("label-medium");
+}
+
+.badge-count {
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
+  --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
+  --#{$prefix}badge-count-padding-y: 0;
+
+  width: auto;
+
+  &.badge-lg {
+    --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
+    --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
+  }
 }

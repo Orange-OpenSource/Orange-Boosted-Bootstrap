@@ -1,0 +1,85 @@
+---
+title: Divider
+description: Use the horizontal or vertical rule helpers to create dividers. A divider can be used to visually structure an interface by clearly separating content sections.
+aliases:
+  - "/docs/helpers/divider/"
+  - "/docs/helpers/dividers/"
+  - "/docs/helpers/vertical-rule/"
+toc: true
+---
+
+<Callout type="info">
+You can find here the [OUDS Divider design guidelines](https://unified-design-system.orange.com/472794e18/p/629e1b-divider).
+</Callout>
+
+## Horizontal rules
+
+Horizontal rules should use the `<hr />` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]([[docsref:/utilities/borders]]), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
+
+<Example code={`<hr />
+<div class="border-top border-default my-md"></div>`} />
+
+## Vertical rules
+
+Vertical rules are inspired by the `<hr />` element. The `vr` class allows you to create vertical dividers in common layouts. They’re styled just like `<hr />` elements. They have `min-height` of `1em`.
+
+<Example code={`<div class="vr"></div>`} />
+
+Vertical rules scale their height in flex layouts:
+
+<Example class="d-flex" code={`<div class="d-flex" style="height: 50px;">
+  <div class="vr"></div>
+</div>
+<div class="d-flex" style="height: 80px;">
+  <div class="vr"></div>
+</div>
+<div class="d-flex" style="height: 100px;">
+  <div class="vr"></div>
+</div>`} />
+
+## Color
+
+Change the divider color using the [border color utilities]([[docsref:/utilities/borders#color]]).
+
+<Example class="d-flex flex-column gap-1" code={`<hr class="border-muted">
+  <hr class="border-emphasized">
+  <hr class="border-brand-primary">
+  <div data-bs-theme="light" class="bg-brand-primary py-2xs"><hr class="border-on-brand-primary"></div>
+  <div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-black"></div>
+  <div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-white"></div>
+  <div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-on-black"></div>
+  <div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-on-white"></div>`} />
+
+<Example class="d-flex gap-1" code={`<div class="vr border-muted"></div>
+  <div class="vr border-emphasized"></div>
+  <div class="vr border-brand-primary"></div>
+  <div data-bs-theme="light" class="d-flex bg-brand-primary"><div class="vr border-on-brand-primary"></div></div>
+  <div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-black"></div></div>
+  <div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-white"></div></div>
+  <div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-on-black"></div></div>
+  <div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-on-white"></div></div>`} />
+
+<BootstrapCompatibility>
+The `<hr />` and `vr` color can be set using [colors utilities]([[docsref:/utilities/colors]])
+<Example code={`<hr class="text-muted">
+<div class="vr text-brand-primary"></div>`} />
+</BootstrapCompatibility>
+
+## Size
+
+Change the divider thickness using the [border width utilities]([[docsref:/utilities/borders#width]]).
+
+<Example code={`<div>
+    <hr class="border-thin">
+    <hr class="border-medium">
+    <hr class="border-thick">
+    <hr class="border-thicker">
+  </div>`} />
+
+<Example code={`<div class="d-flex" style="height: 50px;">
+    <div class="vr border-thin"></div>
+    <div class="vr border-medium"></div>
+    <div class="vr border-thick"></div>
+    <div class="vr border-thicker"></div>
+  </div>`} />
+

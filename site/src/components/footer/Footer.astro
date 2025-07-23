@@ -1,0 +1,263 @@
+---
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import type { Layout } from '@libs/layout'
+
+interface Props {
+  layout: Layout
+  title: string
+}
+
+const { layout } = Astro.props
+const { title } = Astro.props
+---
+
+<footer class="footer navbar bd-footer" data-bs-theme="dark">
+  <h2 class="visually-hidden">Boosted sitemap & information</h2>
+  <div class="container-fluid container-max-width footer-nav">
+    <nav class="accordion" id="sitemapAccordion" aria-label="Boosted sitemap footer">
+      <div class="row">
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingLinks">
+            <button
+              class="accordion-button collapsed container-fluid container-max-width px-2xs d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLinks"
+              aria-expanded="true"
+              aria-controls="collapseLinks"
+            >
+              Links
+            </button>
+            <span class="d-none d-md-flex">Links</span>
+          </h3>
+          <div
+            id="collapseLinks"
+            class="container-fluid container-max-width accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname === '/' }]}
+                  {...Astro.url.pathname === '/' && { 'aria-current': 'page' }}
+                  href="/"
+                  aria-describedby="headingLinks"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={[
+                    'nav-link',
+                    { active: !Astro.url.pathname.includes('getting-started') && layout === 'docs' }
+                  ]}
+                  {...!Astro.url.pathname.includes('getting-started') &&
+                    layout === 'docs' && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('')}
+                  aria-describedby="headingLinks"
+                >
+                  Docs
+                </a>
+              </li>
+              <li>
+                <a
+                  class:list={['nav-link', { active: title === 'Examples' }]}
+                  {...title === 'Examples' && { 'aria-current': 'page' }}
+                  href={getVersionedDocsPath('examples')}
+                  aria-describedby="headingLinks"
+                >
+                  Examples
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingGuides">
+            <button
+              class="accordion-button collapsed container-fluid container-max-width px-2xs d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseGuides"
+              aria-expanded="true"
+              aria-controls="collapseGuides"
+            >
+              Guides
+            </button>
+            <span class="d-none d-md-flex">Guides</span>
+          </h3>
+          <div
+            id="collapseGuides"
+            class="container-fluid container-max-width accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class:list={['nav-link', { active: Astro.url.pathname.includes('getting-started') }]}
+                  {...Astro.url.pathname.includes('getting-started') && { 'aria-current': 'true' }}
+                  href={getVersionedDocsPath('getting-started')}
+                  aria-describedby="headingLinks"
+                >
+                  Getting started
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingProjects">
+            <button
+              class="accordion-button collapsed container-fluid container-max-width px-2xs d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseProjects"
+              aria-expanded="true"
+              aria-controls="collapseProjects"
+            >
+              Projects
+            </button>
+            <span class="d-none d-md-flex">Projects</span>
+          </h3>
+          <div
+            id="collapseProjects"
+            class="container-fluid container-max-width accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class="nav-link"
+                  href={getConfig().repo}
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  OUDS Web
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={getConfig().bootstrap}
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Bootstrap
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href="https://ouds-main--boosted.netlify.app"
+                  aria-describedby="headingProjects"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Pre-release on Netlify
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-6 col-lg-2">
+          <h3 class="accordion-header footer-heading" id="headingCommunity">
+            <button
+              class="accordion-button collapsed container-fluid container-max-width px-2xs d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCommunity"
+              aria-expanded="true"
+              aria-controls="collapseCommunity"
+            >
+              Community
+            </button>
+            <span class="d-none d-md-flex">Community</span>
+          </h3>
+          <div
+            id="collapseCommunity"
+            class="container-fluid container-max-width accordion-collapse collapse"
+            data-bs-parent="#sitemapAccordion"
+          >
+            <ul class="navbar-nav">
+              <li>
+                <a
+                  class="nav-link"
+                  href={`${getConfig().repo}/issues`}
+                  aria-describedby="headingCommunity"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Issues
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href={`${getConfig().repo}/discussions`}
+                  aria-describedby="headingCommunity"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Discussions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- OUDS mod: footer specific adaptations -->
+        <div
+          class="footer-column accordion-header col-md-12 col-lg-4 mb-lg pt-lg pt-lg-2xl px-2xs px-lg-none fw-bold small"
+        >
+          <p class="mb-lg-2xs">
+            This documentation is an adaptation made by Orange. Original version designed and built with all the love in
+            the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener"
+              >Bootstrap core team</a
+            > with the help of <a
+              href="https://github.com/twbs/bootstrap/graphs/contributors"
+              target="_blank"
+              rel="noopener">their contributors</a
+            >.
+          </p>
+          <p class="mb-lg-2xs">
+            Orange modified code licensed <a
+              href={`${getConfig().repo}/blob/main/LICENSE`}
+              target="_blank"
+              rel="license noopener">MIT</a
+            >-&nbsp;just like <a
+              href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+              target="_blank"
+              rel="license noopener"
+              title="Bootstrap’s license"
+              aria-label="Bootstrap’s license">Bootstrap</a
+            >, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"
+              >CC BY 3.0</a
+            >.
+          </p>
+          <p class="mb-lg-2xs">Currently v{getConfig().current_version}.</p>
+          <p class="mb-lg-2xs">
+            <a href="https://www.netlify.com" target="_blank" rel="noopener">
+              <img
+                src="https://www.netlify.com/img/global/badges/netlify-dark.svg"
+                alt="Deployed by Netlify"
+                width="89"
+                height="40"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+      <!-- End mod -->
+    </nav>
+  </div>
+</footer>
+<!-- OUDS mod: back-to-top component -->
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-default" data-bs-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+<!-- End mod -->

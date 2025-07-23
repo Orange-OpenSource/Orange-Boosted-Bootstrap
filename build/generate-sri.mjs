@@ -3,7 +3,7 @@
 /*!
  * Script to generate SRI hashes for use in our docs.
  * Remember to use the same vendor files as the CDN ones,
- * otherwise the hashes won't match!
+ * otherwise the hashes won’t match!
  *
  * Copyright 2017-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -19,11 +19,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 sh.config.fatal = true
 
-const configFile = path.join(__dirname, '../hugo.yml')
+const configFile = path.join(__dirname, '../config.yml')
 
 // Array of objects which holds the files to generate SRI hashes for.
 // `file` is the path from the root folder
-// `configPropertyName` is the hugo.yml variable's name of the file
+// `configPropertyName` is the config.yml variable’s name of the file
 const files = [
   {
     file: 'dist/css/ouds-web.min.css',
@@ -32,6 +32,14 @@ const files = [
   {
     file: 'dist/css/ouds-web.rtl.min.css',
     configPropertyName: 'css_rtl_hash'
+  },
+  {
+    file: 'dist/css/ouds-web-bootstrap.min.css',
+    configPropertyName: 'css_bootstrap_hash'
+  },
+  {
+    file: 'dist/css/ouds-web-bootstrap.rtl.min.css',
+    configPropertyName: 'css_bootstrap_rtl_hash'
   },
   {
     file: 'dist/js/ouds-web.min.js',

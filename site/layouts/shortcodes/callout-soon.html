@@ -1,9 +1,0 @@
-{{- /*
-  Usage: `callout-soon "type"`, where `type` is a string (default: "component") representing the type of element to be available soon.
-*/ -}}
-
-{{- $type := .Get 0 | default "component" -}}
-<div class="bd-callout bd-callout-warning">
-  <p><strong>This {{ $type }} is not yet available.</strong></p>
-  <p>Please check back soon.</p>
-</div>

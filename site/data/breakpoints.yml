@@ -1,8 +1,8 @@
 - breakpoint: 2xs
-  abbr: ""
+  abbr: ''
   name: 2x-small
   min-width: 0px
-  container: ""
+  container: ''
 
 - breakpoint: xs
   abbr: -xs

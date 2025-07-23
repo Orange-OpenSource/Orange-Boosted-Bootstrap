@@ -1,0 +1,323 @@
+---
+title: Bullet list
+description: List allows users to view individual, but related, text items grouped together.
+aliases:
+  - "/docs/components/bullet-list/"
+toc: true
+---
+
+<Callout type="info">
+You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/49e7bf-bullet-list).
+</Callout>
+
+## Unordered lists
+
+Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a custom icon as the list marker.
+
+### Default display
+
+<Example code={`<ul class="bullet-list">
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+  </ul>`} />
+
+### Nested unordered lists
+
+The marker depends on the level of nesting.
+
+<Example code={`<ul class="bullet-list">
+      <li>Bullet lists</li>
+      <li>Can have:
+        <ul>
+          <li>Nested lists</li>
+          <li>With:
+            <ul>
+              <li>Another marker</li>
+              <li>Each</li>
+            </ul>
+        </ul>
+      </li>
+      <li>That's all</li>
+  </ul>`} />
+
+### Marker color
+
+Add the class `.bullet-list-default-color` to switch to the default body color for the marker.
+
+<Example code={`<ul class="bullet-list bullet-list-default-color">
+      <li>Item</li>
+      <li>Item
+        <ul>
+          <li>Sub item</li>
+          <li>Sub item</li>
+        </ul>
+      </li>
+  </ul>`} />
+
+You can mix and match colors between list levels by using `.bullet-list-default-color` and `.bullet-list-brand-color`.
+
+<Example code={`<ul class="bullet-list bullet-list-default-color">
+      <li>Item</li>
+      <li>Item
+        <ul class="bullet-list-brand-color">
+          <li>Sub item</li>
+          <li>Sub item
+            <ul class="bullet-list-default-color">
+              <li>Sub item</li>
+              <li>Sub item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+  </ul>`} />
+
+### Custom marker
+
+The list marker can be customized by setting the `--bs-bullet-list-custom-marker` custom property either in a CSS class or in the style attribute of the targeted `ul` or `li`. Custom marker should only be applied to one level of the list.
+
+#### CSS class
+
+Define a CSS class with the desired SVG inside the `--bs-bullet-list-custom-marker` custom property. This will avoid repeating the SVG code if you plan to have several bullet lists with this same marker.
+
+<Example code={`<style>
+    .bullet-list-heart {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947l-.003.003Zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667Z' clip-rule='evenodd'/></svg>")
+    }
+  </style>
+
+  <ul class="bullet-list bullet-list-heart">
+      <li>Heart item
+        <ul>
+          <li>Heart item</li>
+          <li>Heart item</li>
+        </ul>
+      </li>
+      <li>Heart item</li>
+  </ul>`} />
+
+#### Inline SVG in `ul`
+
+<Callout type="info">
+**Inlined SVG requires properly escaped characters.** Some reserved characters, such as `<`, `>` and `#`, must be URL-encoded or escaped. When customizing the CSS variable, you must handle this yourself.
+</Callout>
+
+<Example code={`<ul class="bullet-list" style="--bs-bullet-list-custom-marker: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.474 9.514 10 15.577 4.526 9.514l-.002-.003A2.868 2.868 0 0 1 8.69 5.572l.838.796.472.455.472-.455.838-.796.008-.008a2.868 2.868 0 0 1 4.159 3.947zm1.251-5.302A4.78 4.78 0 0 0 10 4.18a4.78 4.78 0 0 0-6.815 6.7L10 18.393l6.815-7.514a4.78 4.78 0 0 0-.09-6.667'/%3E%3C/svg%3E&#34;);">
+      <li>Heart item</li>
+      <li>Heart item</li>
+  </ul>`} />
+
+#### Different custom markers
+
+To have a different marker icon for each item on the same level, add the class or style attribute to the `li`s instead of the `ul`.
+
+<Example code={`<style>
+    .marker-calendar {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M800 175H700v-38c0-20.71-16.789-37-37.5-37a37.5 37.5 0 0 0-37.5 37.5V175H350.011L350 137.5a37.5 37.5 0 0 0-75 0V175H100v625a75 75 0 0 0 75 75h700V250a75 75 0 0 0-75-75Zm25 650H187.5a37.5 37.5 0 0 1-37.5-37.5V400h637.5a37.5 37.5 0 0 1 37.5 37.5V825ZM250 262.5a62.4 62.4 0 0 1 25-50v50a37.5 37.5 0 0 0 75 0V250h.011v-37.493A62.5 62.5 0 1 1 250 262.5Zm350 0a62.4 62.4 0 0 1 25-50v50a37.5 37.5 0 0 0 75 0l-.011-12.5H700v-37a61.471 61.471 0 0 1 25 49.5 62.5 62.5 0 0 1-125 0Z'/></svg>")
+    }
+    .marker-address-book {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M800 100.017 200 100v125.007h-25a49.975 49.975 0 1 0 0 99.95h25v125.05h-25A50 50 0 1 0 175 550h25v124.985h-25a50.016 50.016 0 0 0 0 100.032h25v50.161a74.724 74.724 0 0 0 75 74.677L875 900l-.121-725.1A74.793 74.793 0 0 0 800 100.017ZM537.5 249.833a87.5 87.5 0 1 1-87.5 87.5 87.5 87.5 0 0 1 87.5-87.5ZM675 749.992H449.9a49.914 49.914 0 0 1-49.9-50V588c0-75.939 61.561-138.058 137.5-138.058S675 512.061 675 588v161.992Z'/></svg>")
+    }
+  </style>
+
+  <ul class="bullet-list">
+      <li class="marker-calendar">Calendar item
+        <ul>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </li>
+      <li class="marker-address-book">Address book item</li>
+  </ul>`} />
+
+### Tick marker
+
+#### Using SCSS
+
+The tick marker is not shipped by default in the OUDS Web CSS, set the [`$enable-bullet-list-tick` variable]([[docsref:/customize/options]]) to `true` to enable the `.bullet-list-tick` class. Do not forget the `.bullet-list-tick` if you have nested lists.
+
+<Example code={`<!--
+    // in your style.scss file before importing OUDS Web source code
+    $enable-bullet-list-tick: true;
+  -->
+
+  <ul class="bullet-list bullet-list-tick">
+      <li>Task</li>
+      <li>Task 2
+        <ul>
+          <li>Sub item</li>
+          <li>Sub item</li>
+        </ul>
+      </li>
+  </ul>`} />
+
+#### Using a custom marker
+
+To display a tick list without compiling the Sass source, add a CSS class setting the `--bs-bullet-list-custom-marker` custom property to the tick SVG. [See above](#custom-marker) for more information.
+
+<Example code={`<style>
+    .bullet-with-tick {
+      --bs-bullet-list-custom-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill-rule='evenodd' d='m16.615 6.308-7.587 8.75c-.217.25-.55.41-.925.41s-.708-.16-.926-.41l-3.793-4.375a1.038 1.038 0 0 1-.26-.683c0-.302.133-.575.348-.773l.474-.438c.214-.198.51-.32.838-.32.294 0 .564.1.771.263l2.31 2.362 7.013-6.267a1.24 1.24 0 0 1 .811-.296c.655 0 1.185.49 1.185 1.094 0 .259-.097.496-.26.683Z' clip-rule='evenodd'/></svg>")
+    }
+  </style>
+
+  <ul class="bullet-list bullet-with-tick">
+      <li>Task</li>
+      <li>Task</li>
+      <li>Task</li>
+  </ul>`} />
+
+## Ordered lists
+
+Add a `.bullet-list` class to an `ol` element to display an ordered list.
+
+### Default display
+
+<Example code={`<ol class="bullet-list">
+      <li>Step</li>
+      <li>Step</li>
+      <li>Step</li>
+      <li>Step</li>
+      <li>Step</li>
+      <li>Step</li>
+  </ol>`} />
+
+### Nested ordered lists
+
+<Example code={`<ol class="bullet-list">
+      <li>Category</li>
+      <li>Category
+        <ol>
+          <li>Subcategory</li>
+          <li>Subcategory
+            <ol>
+              <li>Sub subcategory</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Other category</li>
+  </ol>`} />
+
+## Mixed lists
+
+It's possible to mix ordered and unordered lists, in this case adding the `.bullet-list` to the nested `<ul>` or `<ol>` is necessary.
+
+<Example code={`<ol class="bullet-list">
+      <li>This is an ordered list</li>
+      <li>With a nested
+        <ul class="bullet-list">
+          <li>Unordered</li>
+          <li>List</li>
+        </ul>
+      </li>
+  </ol>
+
+  <ul class="bullet-list">
+      <li>This is an unordered list</li>
+      <li>With a nested
+        <ol class="bullet-list">
+          <li>Ordered</li>
+          <li>List</li>
+        </ol>
+      </li>
+  </ul>`} />
+
+## Bare lists
+
+<Callout type="warning">
+Do not confuse this style with the `.list-unstyled` utility that removes all styles from the list, see [below](#unstyled)
+</Callout>
+
+Bare lists have no markers, but retains indentation for alignment.
+
+<Example code={`<ul class="bullet-list bullet-list-bare">
+      <li>Bare bullet lists</li>
+      <li>Do not have a marker
+        <ul>
+          <li>They still</li>
+          <li>Have indentation</li>
+        </ul>
+      </li>
+  </ul>`} />
+
+## Text style
+
+By default bullet lists text is displayed as [body large]([[docsref:/content/typography#regular-texts]]) and in bold, you can use the following classes to change these defaults.
+
+### Body medium
+
+Add `.fs-bm` to the top `ul` to use body medium font size.
+
+<Example code={`<ul class="bullet-list fs-bm">
+    <li>This is a list</li>
+    <li>With a smaller font size</li>
+  </ul>`} />
+
+### Font weight normal
+
+Add `.fw-normal` to the top `ul` to use a normal font weight.
+
+<Example code={`<ul class="bullet-list fw-normal">
+    <li>This is a list</li>
+    <li>With a normal font weight, you can put <a href="#">links</a> and long texts in here, adding some words just to show how this will wrap</li>
+  </ul>`} />
+
+## Native list
+
+<Callout type="warning">
+Only use this where you can not add a class to `<ul>` and `<ol>`.
+</Callout>
+
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+
+<div class="bd-example">
+* All lists have their top margin removed
+* And their bottom margin normalized
+* Nested lists have no bottom margin
+  * This way they have a more even appearance
+  * Particularly when followed by more list items
+    * This way they have a more even appearance
+    * Particularly when followed by more list items
+* The left padding has also been reset
+
+1. Here's an ordered list
+2. With a few list items
+3. It can also have
+    1. Several nested list
+    2. As you can see
+        1. Lorem ipsum
+        2. Deep nested
+4. As the previous unordered list
+</div>
+
+## Utilities
+
+### Unstyled
+
+Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+
+<Example code={`<ul class="list-unstyled">
+    <li>This is a list.</li>
+    <li>It appears completely unstyled.</li>
+    <li>Structurally, it's still a list.</li>
+    <li>However, this style only applies to immediate child elements.</li>
+    <li>Nested lists:
+      <ul>
+        <li>are unaffected by this style</li>
+        <li>will still show a bullet</li>
+        <li>and have appropriate left margin</li>
+      </ul>
+    </li>
+    <li>This may still come in handy in some situations.</li>
+  </ul>`} />
+
+### Inline
+
+Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
+
+<Example code={`<ul class="list-inline">
+    <li class="list-inline-item">This is a list item.</li>
+    <li class="list-inline-item">And another one.</li>
+    <li class="list-inline-item">But they're displayed inline.</li>
+  </ul>`} />

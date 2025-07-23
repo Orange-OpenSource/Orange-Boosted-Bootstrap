@@ -1,0 +1,34 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  /**
+   * The type of callout to display. One of `info`, or `danger`.
+   * @default 'danger'
+   */
+  level?: 'danger' | 'info'
+}
+
+const { level = 'danger' } = Astro.props
+---
+
+<div class:list={['alert', `alert-${level}`]}>
+  <span class="alert-icon"><span class="visually-hidden">{level}</span></span>
+  <div>
+    <p class="alert-heading mb-2xs">
+      {
+        level === 'danger' ? (
+          <>
+            <span>Incompatibility with Orange Unified Design System.</span>
+            <a href={getVersionedDocsPath('getting-started/introduction')}>More information</a>
+          </>
+        ) : (
+          <span>Orange Unified Design System recommendation.</span>
+        )
+      }
+    </p>
+    <div>
+      <slot />
+    </div>
+  </div>
+</div>

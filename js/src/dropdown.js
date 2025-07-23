@@ -207,6 +207,9 @@ class Dropdown extends BaseComponent {
     this._element.setAttribute('aria-expanded', 'false')
     Manipulator.removeDataAttribute(this._menu, 'popper')
     EventHandler.trigger(this._element, EVENT_HIDDEN, relatedTarget)
+
+    // Explicitly return focus to the trigger elementAdd commentMore actions
+    this._element.focus()
   }
 
   _getConfig(config) {
@@ -320,7 +323,7 @@ class Dropdown extends BaseComponent {
 
     return {
       ...defaultBsPopperConfig,
-      ...execute(this._config.popperConfig, [defaultBsPopperConfig])
+      ...execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
     }
   }
 
