@@ -62,9 +62,12 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
   <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
   <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
   <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-  <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
-  <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
   <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`} />
+
+We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+<Example code={`<p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+  <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>`} />
 
 #### Inside a static theme
 
@@ -94,9 +97,18 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
         <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
         <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
         <p class="bg-always-white p-lg fw-bold">.bg-always-white</p>
-        <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
         <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+      </div>
+    </div>`} />
+
+  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+  <Example code={`<div class="bg-brand-primary p-lg">
+      <div data-bs-theme="light">
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
       </div>
     </div>`} />
 
@@ -126,9 +138,18 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
         <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
         <p class="bg-always-black p-lg fw-bold">.bg-always-black</p>
         <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-        <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
         <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+      </div>
+    </div>`} />
+
+  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+  <Example code={`<div class="bg-emphasized p-lg">
+      <div data-bs-theme="dark">
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
       </div>
     </div>`} />
 
@@ -162,9 +183,18 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
         <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
         <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
         <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-        <p class="bg-opacity-lower p-tall fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-tall fw-bold">.bg-opacity-lowest</p>
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
         <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+      </div>
+    </div>`} />
+
+  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+  <Example code={`<div class="bg-status-neutral-emphasized p-lg">
+      <div data-bs-theme="root-inverted">
+        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
       </div>
     </div>`} />
 

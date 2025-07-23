@@ -34,9 +34,7 @@ Please consider using our [color modes]([[docsref:/customize/color-modes]]) dire
   <p class="text-bg-status-info-emphasized p-lg fw-bold">.text-bg-status-info-emphasized</p>
   <p class="text-bg-status-info-muted p-lg fw-bold">.text-bg-status-info-muted</p>
   <p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
-  <p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>
-  <p class="text-bg-opacity-lower p-tall fw-bold">.text-bg-opacity-lower</p>
-  <p class="text-bg-opacity-lowest p-tall fw-bold">.text-bg-opacity-lowest</p>`} />
+  <p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>`} />
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -51,3 +49,10 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
   ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
 ]} />
 </BootstrapCompatibility>
+
+### Opacity backgrounds
+
+These opacity backgrounds should be used in very specific context, to opacify the background and make some text readable. Prefer using `.text-bg-secondary` when possible.
+
+<Example code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
+  <p class="text-bg-opacity-lowest p-lg fw-bold">.text-bg-opacity-lowest</p>`} />
