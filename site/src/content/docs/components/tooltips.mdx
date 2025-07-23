@@ -6,6 +6,8 @@ aliases:
 toc: true
 ---
 
+import { getConfig } from '@libs/config'
+
 ## Overview
 
 Things to know when using the tooltip plugin:
@@ -79,16 +81,13 @@ Please refer to the [Tooltip guidelines](https://system.design.orange.com/0c1af1
 ### Directions
 
 Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using Boosted in RTL.
-
-<div class="bd-example tooltip-demo">
-  <div class="bd-example-tooltips">
+<Example showMarkup={false} class="tooltip-demo" code={`<div class="bd-example-tooltips">
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</button>
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">Tooltip on right</button>
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">Tooltip on bottom</button>
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">Tooltip on left</button>
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
@@ -115,8 +114,7 @@ And with custom HTML added:
 
 With an SVG:
 
-<div class="bd-example tooltip-demo">
-  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Hover or focus to see default tooltip">
+<Example showMarkup={false} class="tooltip-demo" code={`<a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Hover or focus to see default tooltip">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
@@ -125,11 +123,10 @@ With an SVG:
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" aria-hidden="true">
-      <use xlink:href="/docs/[[config:docs_version]]/assets/img/boosted-sprite.svg#assistance"></use>
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/boosted-sprite.svg#assistance"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
-  </button>
-</div>
+  </button>`} />
 
 ```html
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">

@@ -36,8 +36,7 @@ Keep reading for demos and usage guidelines.
 
 Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
-<div class="bd-example bg-body-tertiary">
-  <div class="modal position-static d-block" tabindex="-1">
+<Example showMarkup={false} class="bg-body-tertiary" code={`<div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -53,8 +52,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="modal" tabindex="-1">
@@ -80,8 +78,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 
 Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag—being `.modal-content`'s first child— and you’re done!
 
-<div class="bd-example bg-body-tertiary">
-  <div class="modal position-static d-block" tabindex="-1">
+<Example showMarkup={false} class="bg-body-tertiary" code={`<div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <Placeholder width="100%" height="260" class="modal-img" text="icon" />
@@ -98,8 +95,7 @@ Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="modal" tabindex="-1">
@@ -148,9 +144,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">Launch demo modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">Launch demo modal</button>`} />
 
 ```html
 <!-- Button trigger modal -->
@@ -200,9 +194,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">Launch static backdrop modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">Launch static backdrop modal</button>`} />
 
 ```html
 <!-- Button trigger modal -->
@@ -252,9 +244,7 @@ When modals become too long for the user’s viewport or device, they scroll ind
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Launch demo modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Launch demo modal</button>`} />
 
 You can also create a scrollable modal that allows scrolling the modal body by adding `.modal-dialog-scrollable` to `.modal-dialog`.
 
@@ -278,9 +268,7 @@ You can also create a scrollable modal that allows scrolling the modal body by a
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">Launch demo modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">Launch demo modal</button>`} />
 
 ```html
 <!-- Scrollable modal -->
@@ -331,10 +319,8 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Vertically centered modal</button>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Vertically centered scrollable modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Vertically centered modal</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Vertically centered scrollable modal</button>`} />
 
 ```html
 <!-- Vertically centered modal -->
@@ -374,9 +360,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopovers">Launch demo modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopovers">Launch demo modal</button>`} />
 
 ```html
 <div class="modal-body">
@@ -435,9 +419,7 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
   </div>
 </div>
 
-<div class="bd-example">
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gridSystemModal">Launch demo modal</button>
-</div>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gridSystemModal">Launch demo modal</button>`} />
 
 ```html
 <div class="modal-body">
@@ -600,11 +582,9 @@ Modals have three optional sizes, available via modifier classes to be placed on
 
 Our default modal without modifier class constitutes the “medium” size modal.
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLg">Large modal</button>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalSm">Small modal</button>
-</div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalSm">Small modal</button>`} />
 
 ```html
 <div class="modal-dialog modal-xl">...</div>
@@ -678,14 +658,12 @@ Please refer to the [Modals guidelines](https://system.design.orange.com/0c1af11
 | `.modal-fullscreen-xxl-down` | `1440px` |
 </BsTable>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenSm">Full screen below sm</button>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenMd">Full screen below md</button>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenLg">Full screen below lg</button>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXl">Full screen below xl</button>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXxl">Full screen below xxl</button>
-</div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXxl">Full screen below xxl</button>`} />
 
 ```html
 <!-- Full screen modal -->

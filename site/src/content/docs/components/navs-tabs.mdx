@@ -429,8 +429,7 @@ On the `.nav-underline` modifier class:
 
 Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
 
-<div class="bd-example">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
+<Example showMarkup={false} code={`<ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
     </li>
@@ -457,8 +456,7 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
     <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
       <p class="mb-0">This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -485,8 +483,7 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 
 To help fit your needs, this works with `<ul>`-based markup, as shown above, or with any arbitrary “roll your own” markup. Note that if you’re using `<nav>`, you shouldn’t add `role="tablist"` directly to it, as this would override the element’s native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
 
-<div class="bd-example">
-  <nav>
+<Example showMarkup={false} code={`<nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
       <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
@@ -507,8 +504,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
     <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
       <p class="mb-0">This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <nav>
@@ -529,8 +525,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 
 The tabs plugin also works with underline.
 
-<div class="bd-example">
-  <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
+<Example showMarkup={false} code={`<ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
     </li>
@@ -557,8 +552,7 @@ The tabs plugin also works with underline.
     <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
       <p class="mb-0">This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -594,8 +588,7 @@ Instead, please consider using our [Tabs Underline variant]([[docsref:/component
 
 And with vertical pills. Ideally, for vertical tabs, you should also add `aria-orientation="vertical"` to the tab list container.
 
-<div class="bd-example">
-  <div class="d-flex align-items-start">
+<Example showMarkup={false} code={`<div class="d-flex align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
       <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
@@ -620,8 +613,7 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
         <p class="mb-0">This is some placeholder content the <strong>Settings tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
       </div>
     </div>
-  </div>
-</div>
+  </div>`} />
 
 ```html
 <div class="d-flex align-items-start">
