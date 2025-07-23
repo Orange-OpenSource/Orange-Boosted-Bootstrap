@@ -49,3 +49,10 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
   ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
 ]} />
 </BootstrapCompatibility>
+
+### Opacity backgrounds
+
+These opacity backgrounds should be used in very specific context, to opacify the background and make some text readable. Prefer using `.text-bg-secondary` when possible.
+
+<Example code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
+  <p class="text-bg-opacity-lowest p-lg fw-bold">.text-bg-opacity-lowest</p>`} />
