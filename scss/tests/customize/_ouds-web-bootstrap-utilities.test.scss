@@ -1056,6 +1056,10 @@ $utilities: ();
           opacity: .16 !important;
         }
 
+        .opacity-disabled {
+          opacity: 0.2 !important;
+        }
+
         .opacity-medium {
           opacity: .32 !important;
         }
@@ -11027,6 +11031,10 @@ $utilities: ();
 
         .opacity-weak {
           opacity: .16 !important;
+        }
+
+        .opacity-disabled {
+          opacity: .2 !important;
         }
 
         .opacity-medium {
