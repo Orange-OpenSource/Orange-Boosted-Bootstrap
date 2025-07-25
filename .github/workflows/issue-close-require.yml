@@ -17,7 +17,7 @@ jobs:
     if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap'
     steps:
       - name: awaiting reply
-        uses: actions-cool/issues-helper@a610082f8ac0cf03e357eb8dd0d5e2ba075e017e # v3.6.0
+        uses: actions-cool/issues-helper@fc213a762aba1c74f57f07a7f13f85e6e7d9a0e9 # v3.6.1
         with:
           actions: "close-issues"
           labels: "awaiting-reply"
