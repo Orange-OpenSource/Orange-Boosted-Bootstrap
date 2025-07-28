@@ -208,11 +208,9 @@
   }
 
   // OUDS mod: focus
-  &:focus {
-    &[data-focus-visible-added] {
-      outline-offset: -$focus-visible-outer-width;
-      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}color-border-focus-inset);
-    }
+  &:focus-visible {
+    outline-offset: -$focus-visible-outer-width;
+    box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}color-border-focus-inset);
   }
   // End mod
 }

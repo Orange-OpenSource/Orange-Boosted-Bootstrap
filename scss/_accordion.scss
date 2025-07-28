@@ -78,13 +78,11 @@
     background-color: var(--#{$prefix}accordion-btn-hover-bg); // OUDS mod
   }
 
-  &:focus {
+  &:focus-visible {
     // OUDS mod
-    &[data-focus-visible-added] {
-      z-index: $focus-visible-zindex; // Make sure the focused accordion button is displayed over its next sibling
-      outline-offset: add($focus-visible-outer-offset, var(--#{$prefix}accordion-border-width));
-      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
-    }
+    z-index: $focus-visible-zindex; // Make sure the focused accordion button is displayed over its next sibling
+    outline-offset: add($focus-visible-outer-offset, var(--#{$prefix}accordion-border-width));
+    box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}color-border-focus-inset);
     // End mod
   }
 }

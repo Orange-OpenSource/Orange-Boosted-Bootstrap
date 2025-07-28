@@ -148,7 +148,6 @@
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-unicorn": "^55.0.0",
     "find-unused-sass-variables": "^6.1.0",
-    "focus-visible": "^5.2.1",
     "github-slugger": "^2.0.0",
     "globby": "^14.1.0",
     "hammer-simulator": "0.0.1",
