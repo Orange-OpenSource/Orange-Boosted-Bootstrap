@@ -31,6 +31,7 @@ function createTemplate(component) {
         toc: true \n\
       }\n\
     },\n\
+    tags: ['autodocs'],
   }\n\
   \n\
 `

@@ -15,10 +15,6 @@ const config = {
     options: {},
   },
 
-  docs: {
-    defaultName: 'Docs'
-  },
-
   features: {
     measure: false
   }
