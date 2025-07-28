@@ -38,6 +38,8 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 - <span class="badge text-bg-status-warning-emphasized">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
+
 ## Fonts
 
 OUDS Web doesn’t use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.

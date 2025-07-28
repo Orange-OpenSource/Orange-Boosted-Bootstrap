@@ -40,13 +40,9 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  // OUDS mod: make sure the focused nav link is displayed over its next sibling
-  &:focus[data-focus-visible-added] {
-    z-index: $focus-visible-zindex;
+  &:focus-visible {
+    z-index: $focus-visible-zindex; // OUDS mod: make sure the focused nav link is displayed over its next sibling
   }
-  // End mod
-
-  // OUDS mod: no `&:focus-visible`
 
   // Disabled state lightens text
   &.disabled,

@@ -11,25 +11,16 @@
   appearance: none;
   background-color: transparent;
 
-  &:focus {
+  &:focus-visible {
     outline: 0;
-    box-shadow: none; // Bosted mod
+    box-shadow: none; // OUDS mod
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
-    // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
-    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
-
-    // OUDS mod: added `&[data-focus-visible-added]`
-    &[data-focus-visible-added] {
-      // OUDS mod: better focus visibility
-      &::-webkit-slider-thumb {
-        @include focus-visible();
-      }
-      &::-moz-range-thumb {
-        @include focus-visible();
-      }
-      // End mod
+    &::-webkit-slider-thumb {
+      @include focus-visible(); // OUDS mod: instead of `box-shadow`
+    }
+    &::-moz-range-thumb {
+      @include focus-visible(); // OUDS mod: instead of `box-shadow`
     }
   }
 
