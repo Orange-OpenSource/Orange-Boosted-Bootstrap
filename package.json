@@ -171,7 +171,7 @@
     "npm-run-all2": "^8.0.4",
     "ods-storybook-theme": "^2.0.0",
     "pa11y-ci": "^3.1.0",
-    "pa11y-ci-reporter-html": "^7.0.0",
+    "pa11y-ci-reporter-html": "^8.0.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.6.2",
