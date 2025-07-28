@@ -95,6 +95,7 @@ updates:
       - dependency-name: "sass"
       - dependency-name: "sass-true"
       - dependency-name: "shelljs"
+      - dependency-name: "streetsidesoftware/cspell-action"
       - dependency-name: "stylelint"
       - dependency-name: "stylelint-config-twbs-bootstrap"
       - dependency-name: "terser"
