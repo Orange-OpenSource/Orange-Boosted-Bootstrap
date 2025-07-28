@@ -117,7 +117,7 @@
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@docsearch/js": "^3.9.0",
-    "@percy/cli": "^1.31.0",
+    "@percy/cli": "^1.31.1",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
