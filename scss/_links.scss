@@ -21,7 +21,7 @@
   background: transparent;
   border: 0;
 
-  &:has(svg, img, .icon):not(:hover, :active, :focus-visible, :focus[data-focus-visible]) {
+  &:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
     text-decoration: none;
   }
 
@@ -52,8 +52,7 @@
 
   &:hover,
   &:active,
-  &:focus-visible,
-  &:focus[data-focus-visible] {
+  &:focus-visible {
     text-decoration: underline;
   }
 
@@ -82,9 +81,7 @@
   }
 
   &:focus-visible::before,
-  &:focus[data-focus-visible]::before,
-  &:focus-visible::after,
-  &:focus[data-focus-visible]::after {
+  &:focus-visible::after {
     background-color: var(--#{$prefix}link-chevron-focus-color);
   }
 

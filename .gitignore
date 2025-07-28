@@ -19,7 +19,6 @@
 .cache
 .DS_Store
 .idea
-.vscode
 .project
 .settings
 .tmproj
@@ -28,7 +27,6 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
-/.vscode/
 # Local Netlify folder
 .netlify
 
