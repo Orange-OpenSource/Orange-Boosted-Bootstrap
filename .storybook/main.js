@@ -17,8 +17,5 @@ const config = {
     name: "@storybook/html-vite",
     options: {},
   },
-  docs: {
-    defaultName: 'Docs'
-  }
 };
 export default config;
