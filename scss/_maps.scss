@@ -150,6 +150,8 @@ $ouds-backgrounds: (
   "status-info-muted": var(--#{$prefix}color-surface-status-info-muted),
   "always-black": var(--#{$prefix}color-always-black),
   "always-white": var(--#{$prefix}color-always-white),
+  "opacity-lower": var(--#{$prefix}color-opacity-lower),
+  "opacity-lowest": var(--#{$prefix}color-opacity-lowest),
   "transparent": transparent,
 ) !default;
 // scss-docs-end ouds-maps-backgrounds
