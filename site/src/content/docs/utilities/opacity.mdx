@@ -6,7 +6,13 @@ aliases:
 toc: true
 ---
 
+import { getConfig } from '@libs/config'
+
+## Opacity
+
 The `opacity` property sets the opacity level for an element. The opacity level describes the semantic transparency level, where `opaque` is not transparent at all, `emphasis` to `weaker` are various levels of transparency, and `transparent` is completely transparent.
+
+### Common
 
 Set the opacity of an element using `.opacity-{value}` utilities.
 
@@ -49,6 +55,14 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 <div class="opacity-0">...</div>
 ```
 </BootstrapCompatibility>
+
+### Disabled
+
+Set an image or a svg to disabled easily thanks to `.opacity-disabled`.
+
+<Example code={`<svg class="opacity-disabled text-brand-primary" aria-hidden="true">
+    <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+  </svg>`} />
 
 ## CSS
 
