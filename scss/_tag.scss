@@ -7,8 +7,8 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  --#{$prefix}tag-asset-container-size: 16px; // TODO ouds/💠_indicator/tag/size/asset-default when available
-  --#{$prefix}tag-asset-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-default when available
+  --#{$prefix}tag-asset-container-size: #{$ouds-tag-size-asset-default};
+  --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-icon-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
@@ -27,14 +27,17 @@
   vertical-align: text-bottom; // TODO alignment to check with text in <p>
   background-color: var(--#{$prefix}tag-background-color);
   @include get-font-size("label-medium");
-  @include border-radius(#{$ouds-tag-border-radius});
-
+  @include border-radius($ouds-tag-border-radius);
 }
 
 .tag {
-  &.tag-disabled {
+  &.tag-disabled { // TODO: [aria-disabled="true"] ?
     --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
+  }
+
+  &:has(.tag-asset-container) {
+    --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-asset-default};
   }
 
   .tag-asset-container {
@@ -46,13 +49,8 @@
     padding: var(--#{$prefix}tag-asset-padding);
     margin-right: var(--#{$prefix}tag-asset-gap);
 
-    svg {
-      width: 12px;
-      height: 12px;
-    }
-
     // TODO do we keep "img"? => if not, see in button
-    svg:not(.tag-loader),
+    svg,
     img,
     .icon {
       width: 100%;
@@ -63,7 +61,7 @@
     }
 
     &:has(.tag-bullet) {
-      --#{$prefix}tag-asset-padding: 3px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-default when available
+      --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-bullet-default};
     }
 
     .tag-bullet {
@@ -74,20 +72,16 @@
     }
 
     &:has(.tag-loader) {
-      --#{$prefix}tag-asset-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-default when available
+      --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-loader-default};
       position: relative;
     }
 
     .tag-loader { // TODO copied from button loader, should be factorized
-      --#{$prefix}tag-asset-color: currentcolor;
-      position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
       margin: 0;
       font-size: var(--#{$prefix}tag-asset-container-size);
-      color: var(--#{$prefix}tag-asset-color);
-      transform: translate(-50%, -50%) rotate(-90deg);
+      color: currentcolor;
+      transform: rotate(-90deg);
 
       > .tag-loader-inner {
         fill: none;
@@ -101,22 +95,22 @@
   }
 }
 
-.tag.text-bg-status-accent-muted:not(:has(.tag-loader)) {
+.tag.text-bg-status-accent-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-accent-emphasized};
 }
-.tag.text-bg-status-positive-muted:not(:has(.tag-loader)) {
+.tag.text-bg-status-positive-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-positive-emphasized};
 }
 
-.tag.text-bg-status-info-muted:not(:has(.tag-loader)) {
+.tag.text-bg-status-info-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-info-emphasized};
 }
 
-.tag.text-bg-status-warning-muted:not(:has(.tag-loader)) {
+.tag.text-bg-status-warning-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-warning-emphasized};
 }
 
-.tag.text-bg-status-negative-muted:not(:has(.tag-loader)) {
+.tag.text-bg-status-negative-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-negative-emphasized};
 }
 
@@ -126,25 +120,17 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
-  --#{$prefix}tag-asset-container-size: 12px; // TODO replace by ouds/💠_indicator/tag/size/asset-small when available
-  --#{$prefix}tag-bullet-padding: 2px; // TODO replace by ouds/💠_indicator/tag/space/inset/bullet-small when available
-  --#{$prefix}tag-icon-padding: 0; // TODO replace by ouds/💠_indicator/tag/space/inset/icon-small when available
-  --#{$prefix}tag-loader-padding: 1px; // TODO replace by ouds/💠_indicator/tag/space/inset/loader-small when available
+  --#{$prefix}tag-asset-container-size: #{$ouds-tag-size-asset-small};
+  --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
+  --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
   @include get-font-size("label-small");
 
   &:has(.tag-asset-container) {
-    --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small-asset};
-  }
-
-  .tag-asset-container:has(.tag-loader) {
-    svg {
-      width: 10px;
-      height: 10px;
-    }
+    --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-asset-small};
   }
 }
-
 
 .tag:has(.tag-input) {
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
@@ -170,18 +156,13 @@
   }
 
   &:focus-visible {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
-
     outline: 0;
     box-shadow: none;
 
     > .tag-input {
-      --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
-      --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
-      --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
+      --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
+      --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
+      --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
       --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
       @include focus-visible();
     }

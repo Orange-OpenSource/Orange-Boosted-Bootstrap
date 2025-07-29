@@ -13,6 +13,17 @@ import { getConfig } from '@libs/config'
   You can find here the [OUDS Tag design guidelines](https://unified-design-system.orange.com/).
 </Callout>
 
+<Example code={`<ul class="list-unstyled d-flex column-gap-lg">
+    <li><span class="tag">Roaming</span></li>
+    <li><span class="tag">5G Ready</span></li>
+    <li><span class="tag">4G</span></li>
+  </ul>
+  <br/><br/>
+  <h2>Title <span class="tag">Coming soon</span></h2>
+  <br/><br/>
+  <p><span class="tag">New</span> Some text</p>
+  <button class="tag tag-input">Label</button>`} />
+
 ## Standard variant
 
 Tag indicator can be used near some text (to show status or key details), or in a list (to indicate or filter by categories or keywords).
@@ -586,7 +597,7 @@ To display a small tag, add the class `.tag-sm` to the tag.
 
 ## Tag input
 
-Standard tags are used in an informative way. Tag inputs are used to edit tags, that is removing them. They are interactive and can take all the usual statuses: enabled, hover, pressed, disabled or focus. The should be used along with a `<button>`, or at least an interactive semantic HTML tag like `<a>`.
+Standard tags are used in an informative way. Tag inputs are used to edit tags, that is removing them. They are interactive and can take all the usual statuses: enabled, hover, pressed, disabled or focus. The Tag should be used along with a `<button>`.
 
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-lg row-gap-md">
@@ -600,16 +611,6 @@ Standard tags are used in an informative way. Tag inputs are used to edit tags, 
         <span class="tag-input">Label</span>
       </button>
     </li>
-    <li>
-      <a class="tag" href="#">
-        <span class="tag-input">Label</span>
-      </a>
-    </li>
-    <li>
-      <a class="tag" aria-disabled="true" href="#">
-        <span class="tag-input">Label</span>
-      </a>
-    </li>
   </ul>`} />
 
 // Test for alignments
@@ -618,9 +619,6 @@ Standard tags are used in an informative way. Tag inputs are used to edit tags, 
     <button type="button" class="tag">
       <span class="tag-input">Label</span>
     </button>
-    <a class="tag" href="#">
-      <span class="tag-input">Label</span>
-    </a>
     <button type="button" class="btn btn-default">
       Label
     </button>`} />
