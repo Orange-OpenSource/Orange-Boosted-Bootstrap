@@ -1,4 +1,6 @@
 .tag {
+  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
+  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
   --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
   --#{$prefix}tag-border-width: 0px;
   --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
@@ -6,8 +8,6 @@
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
-  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
-  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
   --#{$prefix}tag-asset-container-size: #{$ouds-tag-size-asset-default};
   --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-icon-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
@@ -45,7 +45,6 @@
   height: var(--#{$prefix}tag-asset-container-size);
   padding: var(--#{$prefix}tag-asset-padding);
 
-  // TODO do we keep "img"? => if not, see in button
   svg,
   img,
   .icon {
@@ -62,7 +61,6 @@
 
   &:has(.tag-loader) {
     --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-loader-default};
-    position: relative;
   }
 }
 
@@ -74,10 +72,11 @@
 }
 
 .tag-loader { // TODO copied from button loader, should be factorized
+  --#{$prefix}tag-asset-color: currentcolor;
+
   display: block;
   margin: 0;
   font-size: var(--#{$prefix}tag-asset-container-size);
-  color: currentcolor;
   transform: rotate(-90deg);
 
   > .tag-loader-inner {
@@ -150,13 +149,11 @@
   }
 
   &::after {
-    display: inline-block;
     width: var(--#{$prefix}tag-asset-container-size);
     height: var(--#{$prefix}tag-asset-container-size);
-    vertical-align: bottom;
     content: "";
     background-color: currentcolor;
-    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 83.3333333 416.666667 0 250 166.666667 83.3333333 0 0 83.3333333 166.666667 250 0 416.666667 83.3333333 500 250 333.333333 416.666667 500 500 416.666667 333.333333 250z' transform='translate(250 250)'/></svg>");
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 83.333 416.667 0 250 166.667 83.333 0 0 83.333 166.667 250 0 416.667 83.333 500 250 333.333 416.667 500 500 416.667 333.333 250z' transform='translate(250 250)'/></svg>");
   }
 
   &:hover {
