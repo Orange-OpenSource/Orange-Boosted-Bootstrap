@@ -1,9 +1,10 @@
-.tag,
-.tag .tag-input {
+.tag {
   --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
+  --#{$prefix}tag-border-width: 0px;
   --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
+  --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
@@ -14,12 +15,14 @@
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
 
+  position: relative;
   display: inline-flex;
+  gap: var(--#{$prefix}tag-asset-gap);
   align-items: center;
   justify-content: center;
   min-width: var(--#{$prefix}tag-min-width);
   min-height: var(--#{$prefix}tag-min-height);
-  padding: var(--#{$prefix}tag-padding-y) var(--#{$prefix}tag-padding-end) var(--#{$prefix}tag-padding-y) var(--#{$prefix}tag-padding-start);
+  padding: subtract(var(--#{$prefix}tag-padding-y), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-end), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-y), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-start), var(--#{$prefix}tag-border-width));
   margin: 0;
   font-weight: 700;
   color: var(--#{$prefix}tag-color);
@@ -28,76 +31,74 @@
   background-color: var(--#{$prefix}tag-background-color);
   @include get-font-size("label-medium");
   @include border-radius($ouds-tag-border-radius);
-}
-
-.tag {
-  &.tag-disabled { // TODO: [aria-disabled="true"] ?
-    --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
-    --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
-  }
 
   &:has(.tag-asset-container) {
-    --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-asset-default};
+    --#{$prefix}tag-padding-start: var(--#{$prefix}tag-padding-asset);
+  }
+}
+
+.tag-asset-container {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: var(--#{$prefix}tag-asset-container-size);
+  height: var(--#{$prefix}tag-asset-container-size);
+  padding: var(--#{$prefix}tag-asset-padding);
+
+  // TODO do we keep "img"? => if not, see in button
+  svg,
+  img,
+  .icon {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 1;
+    color: var(--#{$prefix}tag-asset-color);
   }
 
-  .tag-asset-container {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    width: var(--#{$prefix}tag-asset-container-size);
-    height: var(--#{$prefix}tag-asset-container-size);
-    padding: var(--#{$prefix}tag-asset-padding);
-    margin-right: var(--#{$prefix}tag-asset-gap);
-
-    // TODO do we keep "img"? => if not, see in button
-    svg,
-    img,
-    .icon {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      line-height: 1;
-      color: var(--#{$prefix}tag-asset-color);
-    }
-
-    &:has(.tag-bullet) {
-      --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-bullet-default};
-    }
-
-    .tag-bullet {
-      width: 100%;
-      height: 100%;
-      background-color: var(--#{$prefix}tag-asset-color);
-      @include border-radius(#{$ouds-tag-border-radius});
-    }
-
-    &:has(.tag-loader) {
-      --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-loader-default};
-      position: relative;
-    }
-
-    .tag-loader { // TODO copied from button loader, should be factorized
-      display: block;
-      margin: 0;
-      font-size: var(--#{$prefix}tag-asset-container-size);
-      color: currentcolor;
-      transform: rotate(-90deg);
-
-      > .tag-loader-inner {
-        fill: none;
-        stroke: var(--#{$prefix}tag-asset-color);
-        stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
-        stroke-width: 8;
-        transform-origin: center;
-        animation: var(--#{$prefix}tag-loading-animation);
-      }
-    }
+  &:has(.tag-bullet) {
+    --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-bullet-default};
   }
+
+  &:has(.tag-loader) {
+    --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-loader-default};
+    position: relative;
+  }
+}
+
+.tag-bullet {
+  width: 100%;
+  height: 100%;
+  background-color: var(--#{$prefix}tag-asset-color);
+  @include border-radius(#{$ouds-tag-border-radius});
+}
+
+.tag-loader { // TODO copied from button loader, should be factorized
+  display: block;
+  margin: 0;
+  font-size: var(--#{$prefix}tag-asset-container-size);
+  color: currentcolor;
+  transform: rotate(-90deg);
+
+  > .tag-loader-inner {
+    fill: none;
+    stroke: var(--#{$prefix}tag-asset-color);
+    stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
+    stroke-width: 8;
+    transform-origin: center;
+    animation: var(--#{$prefix}tag-loading-animation);
+  }
+}
+
+.tag-disabled { // TODO: [aria-disabled="true"] ?
+  --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
+  --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
 }
 
 .tag.text-bg-status-accent-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-accent-emphasized};
 }
+
 .tag.text-bg-status-positive-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-positive-emphasized};
 }
@@ -117,6 +118,7 @@
 .tag-sm {
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
+  --#{$prefix}tag-padding-start-asset: #{$ouds-tag-space-padding-inline-asset-small};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
@@ -126,29 +128,45 @@
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
   @include get-font-size("label-small");
-
-  &:has(.tag-asset-container) {
-    --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-asset-small};
-  }
 }
 
-.tag:has(.tag-input) {
-  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  display: inline-flex;
-  min-height: $ouds-tag-size-min-height-interactive-area;
-  padding: calc(calc($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
-  text-decoration: none;
-  background: transparent;
-  border: 0;
+.tag-input {
+  --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
+  --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
+  --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
+  --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+  --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
-  &:hover .tag-input {
+  margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
+  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
+
+  &::before {
+    position: absolute;
+    top: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    right: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    bottom: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    left: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    content: "";
+  }
+
+  &::after {
+    display: inline-block;
+    width: var(--#{$prefix}tag-asset-container-size);
+    height: var(--#{$prefix}tag-asset-container-size);
+    vertical-align: bottom;
+    content: "";
+    background-color: currentcolor;
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 83.3333333 416.666667 0 250 166.666667 83.3333333 0 0 83.3333333 166.666667 250 0 416.666667 83.3333333 500 250 333.333333 416.666667 500 500 416.666667 333.333333 250z' transform='translate(250 250)'/></svg>");
+  }
+
+  &:hover {
     --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
     --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
     --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
     --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
   }
 
-  &:active .tag-input {
+  &:active {
     --#{$prefix}tag-color: #{$ouds-tag-input-color-content-pressed};
     --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-pressed};
     --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-pressed};
@@ -156,51 +174,19 @@
   }
 
   &:focus-visible {
-    outline: 0;
-    box-shadow: none;
-
-    > .tag-input {
-      --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
-      --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
-      --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
-      --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
-      @include focus-visible();
-    }
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
   }
 
-  &:disabled .tag-input,
-  &[aria-disabled="true"] .tag-input {
+  &:disabled,
+  &[aria-disabled="true"] {
     --#{$prefix}tag-color: #{$ouds-color-action-disabled};
     --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
     --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
-  }
 
-  &:hover:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
-  &:focus-visible:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
-  &:focus[data-focus-visible-added]:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
-  &:active:not(&:disabled):not(&[aria-disabled="true"]) .tag-input,
-  &.active:not(&:disabled):not(&[aria-disabled="true"]) .tag-input {
-    padding: subtract(var(--#{$prefix}tag-padding-y), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-end), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-y), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default)) subtract(var(--#{$prefix}tag-padding-start), subtract($ouds-tag-input-border-width-default-interaction, $ouds-tag-input-border-width-default));
-  }
-
-  .tag-input {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
-
-    border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
-
-    &::after {
-      display: inline-block;
-      width: var(--#{$prefix}tag-asset-container-size);
-      height: var(--#{$prefix}tag-asset-container-size);
-      margin-left: #{$ouds-tag-space-column-gap-default};
-      vertical-align: bottom;
-      content: "";
-      background-color: var(--#{$prefix}tag-color);
-      mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 83.3333333 416.666667 0 250 166.666667 83.3333333 0 0 83.3333333 166.666667 250 0 416.666667 83.3333333 500 250 333.333333 416.666667 500 500 416.666667 333.333333 250z' transform='translate(250 250)'/></svg>");
-    }
+    pointer-events: none;
   }
 }
