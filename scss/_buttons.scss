@@ -34,7 +34,7 @@
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-default};
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-border-color: initial; // OUDS mod: instead of `transparent`
   // OUDS mod: no --#{$prefix}btn-box-shadow
   // OUDS mod: no --#{$prefix}btn-disabled-opacity
