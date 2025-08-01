@@ -38,14 +38,20 @@ const sitemapExcludes = [
   `/docs/dark-mode`,
   `/docs/${getConfig().docs_version}/dark-mode`,
   `/docs/${getConfig().docs_version}/getting-started`,
+  `/docs/${getConfig().docs_version}/getting-started/build-tools`,
   `/docs/${getConfig().docs_version}/customize`,
+  `/docs/${getConfig().docs_version}/customize/color`,
   `/docs/${getConfig().docs_version}/layout`,
   `/docs/${getConfig().docs_version}/content`,
   `/docs/${getConfig().docs_version}/components`,
+  `/docs/${getConfig().docs_version}/components/navs`,
   `/docs/${getConfig().docs_version}/helpers`,
+  `/docs/${getConfig().docs_version}/helpers/screen-readers`,
   `/docs/${getConfig().docs_version}/utilities`,
   `/docs/${getConfig().docs_version}/extend`,
-  `/docs/${getConfig().docs_version}/about`
+  `/docs/${getConfig().docs_version}/about`,
+  `/docs/${getConfig().docs_version}/forms`,
+  `/docs/${getConfig().docs_version}/forms/checks`
 ]
 
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
