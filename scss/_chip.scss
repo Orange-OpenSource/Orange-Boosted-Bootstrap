@@ -17,7 +17,7 @@
   white-space: nowrap;
 
   [type="radio"],
-  [type="checkbox"] { // Not `input` because of the incoming editable variant
+  [type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none;

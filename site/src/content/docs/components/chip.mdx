@@ -1,6 +1,6 @@
 ---
 title: Chip
-description: OUDS Web’s chip provides a compact UI element used either to represent a filter or to recommend an option.
+description: Provides a compact UI element used either to represent a filter or to recommend an option.
 aliases:
   - "/docs/components/chip/"
 toc: true
@@ -8,21 +8,26 @@ toc: true
 
 import { getConfig } from '@libs/config'
 
-Chip is a component that is always grouped with some others. This is why we display all our examples using `<ul class="chip-container"><li></li></ul>` structure. Please adapt this structure to what’s needed in your project and the context of use.
+<Callout type="info">
+{/* TODO: set the right url for design documentation */}
+You can find here the [OUDS Chip design guidelines](https://unified-design-system.orange.com/).
+</Callout>
 
-`.chip-container` helps managing the Chip list.
+Chip components are always displayed in a containing list with a `.chip-container` class as they are always displayed as a group. This can be adapted to your needs and context of use.
 
-`.chip` helps managing the placement inside the container and the click area.
+`.chip-container` manages the overall Chip list layout.
+
+`.chip` is the main class defining the Chip component. It controls the placement inside the container and the click area.
 
 <Callout type="warning">
-`.chip-container` is provided without any design specifications, please make sure to align it with your project requirements. More likely, the list should be horizontally scrollable when overflowing or be wrapped on 2 or 3 lines visible lines either manually or automatically vertically scrollable.
+`.chip-container` has no design specifications for now, please be aware the Chip list display and behavior could evolve in the future.
 </Callout>
 
 ## Filter chip
 
-Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. It’s mainly base on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) ones too. Thus, there is a selected state on this variant of the component.
+Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. Theyr are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips. Thus, there is a selected state on this variant of the component.
 
-Add `.chip-filter` to the clickable part of the component.
+To create a filter chip, add `.chip-filter` to the clickable part of the component.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -47,7 +52,7 @@ Add `.chip-filter` to the clickable part of the component.
 
 ### Text and icon
 
-To display an icon, please set it up at the end of the component.
+To display an icon add the icon as the last child of the `.chip-filter`.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -62,7 +67,7 @@ To display an icon, please set it up at the end of the component.
     <li class="chip">
       <input type="checkbox" id="filterWithIcon2" checked />
       <label class="chip-filter" for="filterWithIcon2">
-        Antoher filter with icon
+        Another filter with icon
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
@@ -74,7 +79,7 @@ To display an icon, please set it up at the end of the component.
 
 To display a Chip with only an icon, add `.chip-icon` to the clickable part of the component.
 
-Prefer using an [embedded SVG]([[docsref:/extend/icons]]), but you can also use font icon. Please avoid using `<img />` since the color system won’t work on it.
+Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also use font icon. Avoid using `<img />` since the color system won’t work on it.
 
 Make sure to provide an accessible text for each Chip.
 
@@ -99,7 +104,7 @@ Make sure to provide an accessible text for each Chip.
 
 ### Using radio buttons
 
-If you want to have only one filter active at a time, you can use the radio button based one. All the rules explained in this page about filter Chips apply on this variant as well.
+To have only one active filter chip at a time, use the radio button version. All the rules explained in this page about filter Chips apply on this variant as well.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -124,7 +129,7 @@ If you want to have only one filter active at a time, you can use the radio butt
 
 ### With `<input />` inside label
 
-Inputs can also be held inside labels to allow a different HTML structure but should avoided since it’s not the maintained one.
+Inputs can also be inside the labels to allow a different HTML structure but this should be avoided since there will be no maintenance for this.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -143,11 +148,11 @@ Inputs can also be held inside labels to allow a different HTML structure but sh
 
 ### Using buttons
 
-To have dynamic updates, please prefer using buttons. All the rules explained in this page about filter Chips apply on this variant as well.
+To have dynamic updates, prefer using buttons. All the rules explained in this page about filter Chips apply on this variant as well.
 
-The style is applied on `[aria-pressed="true"]` to make sure that accessibility is good.
+The style is applied on `[aria-pressed="true"]` to enforce a good level of accessibility.
 
-Make use of our [Button JS plugin]([[docsref:/components/buttons#plugin]]) or make a custom one on your side, but at least provide the `aria-pressed`.
+Make use of our [Button JS plugin]([[docsref:/components/chip#button-plugin]]) or handle interactivity on your side, make sure to use `aria-pressed`.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -164,7 +169,9 @@ Make use of our [Button JS plugin]([[docsref:/components/buttons#plugin]]) or ma
 
 ### Disabled state
 
-Here are the different rendering under disabled state. Add `disabled` attribute either on the input or on the button element.
+Add `disabled` attribute either on the input or on the button element to disable the chip.
+
+The following example shows every possible renderings depending on the filter chip type but it is not recommended to mix different types in a real use case.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -200,7 +207,7 @@ Here are the different rendering under disabled state. Add `disabled` attribute 
 
 Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
 
-Add `.chip-suggestion` to the clickable part of the component.
+To create a suggestion chip, add `.chip-suggestion` to the clickable part of the component.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -222,7 +229,7 @@ Add `.chip-suggestion` to the clickable part of the component.
 
 ### Text and icon
 
-To display an icon, please set it up at the start of the component.
+To display an icon, add the icon as the first child of the button.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -247,7 +254,7 @@ To display an icon, please set it up at the start of the component.
 
 To display a Chip with only an icon, add `.chip-icon` to the clickable part of the component.
 
-Prefer using an [embedded SVG]([[docsref:/extend/icons]]), but you can also use font icon. Please avoid using `<img />` since the color system won’t work on it.
+Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also use font icon. Avoid using `<img />` since the color system won’t work on it.
 
 Make sure to provide an accessible text for each Chip.
 
@@ -270,7 +277,9 @@ Make sure to provide an accessible text for each Chip.
 
 ### Disabled state
 
-Here are the different rendering under disabled state. Add `disabled` attribute either on the input or on the button element.
+Add `disabled` attribute on the button element to disable the chip.
+
+The following example shows every possible renderings depending on the suggestion chip type but it is not recommended to mix different types in a real use case.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -298,26 +307,9 @@ Here are the different rendering under disabled state. Add `disabled` attribute 
 
 This part explains global truth among all the Chip variants.
 
-### With long label
-
-Prefer short labels over long ones, but here is the expected rendering when the labels are too long. Long labels shouldn’t wrap and stay on one line.
-
-<Example code={`<ul class="chip-container">
-    <li class="chip">
-      <button class="chip-suggestion">
-        Thanks for this message, I’ll answer it later.
-      </button>
-    </li>
-    <li class="chip">
-      <button class="chip-suggestion">
-        Maybe we can we talk about it later ? I have a meeting right now.
-      </button>
-    </li>
-  </ul>`} />
-
 ### Overflowing
 
-Easily handle many chips since it is the default behavior implemented in our Chip component.
+By default when using `.chip-container` the Chip list will scroll horizontally on one line.
 
 <Example code={`<ul class="chip-container">
     <li class="chip">
@@ -359,7 +351,7 @@ Easily handle many chips since it is the default behavior implemented in our Chi
 
 ### Wrapping
 
-Easily handle many chips by adding `.flex-wrap` on the `.chip-container` element. Be careful using this technique because on mobile wiewports, it can take many space. It shouldn’t take more than 2 or 3 lines.
+Add `.flex-wrap` on the `.chip-container` element to display a wrapping list of Chips. Beware with this option as it could take too much vertical space on mobile viewports, as a rule there should not be more than 2 or 3 lines of Chips displayed.
 
 <Example code={`<ul class="chip-container flex-wrap">
     <li class="chip">
@@ -399,16 +391,16 @@ Easily handle many chips by adding `.flex-wrap` on the `.chip-container` element
     </li>
   </ul>`} />
 
-### Mix of two worlds
+### Mix of both
 
-Here is a rendering mixing wrapping and overflowing to a better UX.
+For some use cases, mixing wrapping and overflowing can lead to a better UX.
 
 #### Vertical overflow
 
-Please note that a `style="max-height: 115px;"` is added since we don’t want to display more than 2 or 3 lines at the same time, and in the same time the scrollbar isn’t displayed on all device and people still want to know that there is some more Chips below.
+This layout combines wrapping and vertical scrolling, please note that a `style="max-height: 115px;"` is added since we don’t want to display more than 2 or 3 lines, and still show part of the following line as a visual clue when the scrollbar is not displayed.
 
 <Callout type="warning">
-This part is experimental and should be changed at some point.
+This part is experimental and could change in the future.
 </Callout>
 
 <Example code={`<ul class="chip-container flex-wrap" style="max-height: 115px;">
@@ -511,10 +503,10 @@ This part is experimental and should be changed at some point.
 
 #### Horizontal overflow
 
-Add a parent element to multiple `.chip-container`s with `.d-flex.flex-column.overflow-auto` and add `.overflow-visible` to each `.chip-container` in order to have a good overflow.
+This layout combines horizontal scrolling and multiple lines. Add a parent element with `.d-flex.flex-column.overflow-auto` to multiple `.chip-container`s  with `.overflow-visible` in order to have a good overflow.
 
 <Callout type="warning">
-This part is experimental and should be changed at some point.
+This part is experimental and could change in the future.
 </Callout>
 
 <Example code={`<div class="d-flex flex-column overflow-auto">
@@ -606,7 +598,7 @@ This part is experimental and should be changed at some point.
 
 ### Pseudo elements
 
-Here is a table resuming the pseudo elements that are used by the different variants of the Chip.
+Here is a table summarizing the pseudo elements that are used by the different variants of the Chip.
 
 <BsTable>
 | Chip variant    | `::before` | `::after` |
@@ -616,3 +608,59 @@ Here is a table resuming the pseudo elements that are used by the different vari
 </BsTable>
 
 {/* | Filter expand chip | Used       | Used      | */}
+
+## Button plugin
+
+The button plugin allows you to create simple on/off toggle buttons.
+
+<Callout type="info">
+Visually, these toggle buttons are identical to the [checkbox toggle buttons]([[docsref:/forms/checks-radios#checkbox-toggle-buttons]]). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as “checked”/“not checked” (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as “button”/“button pressed”. The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+</Callout>
+
+### Toggle states
+
+Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+
+<details>
+<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
+<br />
+<DesignCalloutAlert>
+These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
+
+Instead, consider using our [Checks component]([[docsref:/forms/checks-radios#checks]]), [Radios component]([[docsref:/forms/checks-radios#radios]]) or [Radio toggle buttons component]([[docsref:/forms/checks-radios#radio-toggle-buttons]]).
+</DesignCalloutAlert>
+
+<Example code={`<button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+  <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>`} />
+
+<Example code={`<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+  <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+  <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>`} />
+</details>
+
+### Methods
+
+You can create a button instance with the button constructor, for example:
+
+```js
+const bsButton = new boosted.Button('#myButton')
+```
+
+<BsTable>
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element’s button. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `boosted.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn’t initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)`. |
+| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
+</BsTable>
+
+For example, to toggle all buttons
+
+```js
+document.querySelectorAll('.btn').forEach(buttonElement => {
+  const button = boosted.Button.getOrCreateInstance(buttonElement)
+  button.toggle()
+})
+```
