@@ -1,8 +1,8 @@
 // Component application
 // Depends on semantic applications
-// OUDS Core tokens version 1.3.0
+// OUDS Core tokens version 1.5.0
 // Orange Core tokens version 1.1.0
-// Orange System tokens version 1.3.0
+// Orange System tokens version 1.5.0
 
 // Badge
 
@@ -39,23 +39,20 @@ $ouds-bullet-list-space-padding-inline-level-2: $core-ouds-dimension-850 !defaul
 // Button
 
 // scss-docs-start ouds-component-button
-$ouds-button-border-radius: $ouds-border-radius-default !default;
+$ouds-button-border-radius-default: $ouds-border-radius-default !default;
+$ouds-button-border-radius-rounded: $ouds-border-radius-medium !default;
 $ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
 $ouds-button-border-width-default-interaction: $ouds-border-width-medium !default;
 $ouds-button-border-width-default: $ouds-border-width-default !default;
-$ouds-button-border-width-minimal-interaction: $ouds-border-width-none !default;
-$ouds-button-border-width-minimal: $ouds-border-width-none !default;
+$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-primary !default;
 $ouds-button-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-focus: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-hover: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-loading: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-pressed: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-minimal-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-color-bg-minimal-enabled: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-minimal-focus: $ouds-color-action-support-focus !default;
 $ouds-button-color-bg-minimal-hover: $ouds-color-action-support-hover !default;
-$ouds-button-color-bg-minimal-loading: $ouds-color-action-support-loading !default;
 $ouds-button-color-bg-minimal-pressed: $ouds-color-action-support-pressed !default;
 $ouds-button-color-border-default-disabled: $ouds-color-action-disabled !default;
 $ouds-button-color-border-default-enabled: $ouds-color-action-enabled !default;
@@ -63,12 +60,7 @@ $ouds-button-color-border-default-focus: $ouds-color-action-focus !default;
 $ouds-button-color-border-default-hover: $ouds-color-action-hover !default;
 $ouds-button-color-border-default-loading: $ouds-color-action-loading !default;
 $ouds-button-color-border-default-pressed: $ouds-color-action-pressed !default;
-$ouds-button-color-border-minimal-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-color-border-minimal-enabled: $ouds-color-opacity-transparent !default;
-$ouds-button-color-border-minimal-focus: $ouds-color-opacity-transparent !default;
-$ouds-button-color-border-minimal-hover: $ouds-color-opacity-transparent !default;
-$ouds-button-color-border-minimal-loading: $ouds-color-opacity-transparent !default;
-$ouds-button-color-border-minimal-pressed: $ouds-color-opacity-transparent !default;
+$ouds-button-color-content-brand-enabled: $ouds-color-content-on-brand-primary !default;
 $ouds-button-color-content-default-disabled: $ouds-color-action-disabled !default;
 $ouds-button-color-content-default-enabled: $ouds-color-action-enabled !default;
 $ouds-button-color-content-default-focus: $ouds-color-action-focus !default;
@@ -87,11 +79,8 @@ $ouds-button-mono-color-bg-default-focus: var(--#{$prefix}button-mono-color-bg-d
 $ouds-button-mono-color-bg-default-hover: var(--#{$prefix}button-mono-color-bg-default-hover) !default;
 $ouds-button-mono-color-bg-default-loading: var(--#{$prefix}button-mono-color-bg-default-loading) !default;
 $ouds-button-mono-color-bg-default-pressed: var(--#{$prefix}button-mono-color-bg-default-pressed) !default;
-$ouds-button-mono-color-bg-minimal-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-bg-minimal-enabled: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-bg-minimal-focus: var(--#{$prefix}button-mono-color-bg-minimal-focus) !default;
 $ouds-button-mono-color-bg-minimal-hover: var(--#{$prefix}button-mono-color-bg-minimal-hover) !default;
-$ouds-button-mono-color-bg-minimal-loading: var(--#{$prefix}button-mono-color-bg-minimal-loading) !default;
 $ouds-button-mono-color-bg-minimal-pressed: var(--#{$prefix}button-mono-color-bg-minimal-pressed) !default;
 $ouds-button-mono-color-bg-strong-disabled: var(--#{$prefix}button-mono-color-bg-strong-disabled) !default;
 $ouds-button-mono-color-bg-strong-enabled: var(--#{$prefix}button-mono-color-bg-strong-enabled) !default;
@@ -105,12 +94,6 @@ $ouds-button-mono-color-border-default-focus: $ouds-color-opacity-transparent !d
 $ouds-button-mono-color-border-default-hover: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-border-default-loading: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-border-default-pressed: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-disabled: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-enabled: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-focus: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-hover: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-loading: $ouds-color-opacity-transparent !default;
-$ouds-button-mono-color-border-minimal-pressed: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-border-strong-disabled: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-border-strong-enabled: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-border-strong-focus: $ouds-color-opacity-transparent !default;
@@ -265,10 +248,10 @@ $ouds-divider-border-width: $ouds-border-width-thin !default;
 // Link
 
 // scss-docs-start ouds-component-link
-$ouds-link-color-arrow-enabled: $ouds-color-content-brand-primary !default;
-$ouds-link-color-arrow-focus: $ouds-color-content-brand-primary !default;
-$ouds-link-color-arrow-hover: $ouds-color-content-brand-primary !default;
-$ouds-link-color-arrow-pressed: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-enabled: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-focus: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-hover: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-pressed: $ouds-color-content-brand-primary !default;
 $ouds-link-color-content-enabled: $ouds-color-action-enabled !default;
 $ouds-link-color-content-focus: $ouds-color-action-focus !default;
 $ouds-link-color-content-hover: $ouds-color-action-hover !default;
@@ -420,16 +403,15 @@ $ouds-text-area-size-max-height-input: $core-ouds-dimension-2500 !default;
 $ouds-text-area-size-max-width: $core-ouds-dimension-6000 !default;
 $ouds-text-area-size-min-height-input: $core-ouds-dimension-900 !default;
 $ouds-text-area-space-padding-block: $ouds-space-padding-block-sm !default;
-$ouds-text-input-border-radius: $ouds-border-radius-default !default;
+$ouds-text-input-border-radius-default: $ouds-border-radius-default !default;
+$ouds-text-input-border-radius-rounded: $ouds-border-radius-small !default;
 $ouds-text-input-border-width-default: $ouds-border-width-default !default;
 $ouds-text-input-border-width-focus: $ouds-border-width-medium !default;
 $ouds-text-input-color-border-enabled: $ouds-color-border-default !default;
 $ouds-text-input-color-border-focus: $ouds-color-border-emphasized !default;
 $ouds-text-input-color-border-hover: $ouds-color-action-hover !default;
 $ouds-text-input-color-border-loading: $ouds-color-border-emphasized !default;
-$ouds-text-input-size-country-selector-chevron: $ouds-size-icon-with-label-large-size-xs !default;
 $ouds-text-input-size-country-selector-flag-height: $ouds-size-icon-with-label-large-size-xs !default;
-$ouds-text-input-size-credit-card-height: $ouds-size-icon-with-label-large-size-sm !default;
 $ouds-text-input-size-label-max-height: $core-ouds-dimension-600 !default;
 $ouds-text-input-size-leading-icon: $ouds-size-icon-with-label-large-size-sm !default;
 $ouds-text-input-size-max-width: $core-ouds-dimension-4000 !default;
@@ -438,12 +420,12 @@ $ouds-text-input-size-min-width: $core-ouds-dimension-2500 !default;
 $ouds-text-input-size-vertical-divider-height: $ouds-dimension-4xs !default;
 $ouds-text-input-space-column-gap-default: $ouds-space-column-gap-md !default;
 $ouds-text-input-space-column-gap-inline-text: $ouds-space-column-gap-xs !default;
-$ouds-text-input-space-column-gap-trailing-error-icon: $ouds-space-column-gap-xs !default;
+$ouds-text-input-space-column-gap-trailing-error-action: $ouds-space-column-gap-xs !default;
 $ouds-text-input-space-padding-block-default: $ouds-space-padding-block-2xs !default;
 $ouds-text-input-space-padding-block-top-helper-text: $ouds-space-padding-block-xs !default;
-$ouds-text-input-space-padding-inline-button: $ouds-space-padding-inline-2xs !default;
 $ouds-text-input-space-padding-inline-country-selector-end: $ouds-space-padding-inline-xs !default;
 $ouds-text-input-space-padding-inline-country-selector-start: $ouds-space-padding-inline-sm !default;
 $ouds-text-input-space-padding-inline-default: $ouds-space-padding-inline-lg !default;
+$ouds-text-input-space-padding-inline-trailing-action: $ouds-space-padding-inline-2xs !default;
 $ouds-text-input-space-row-gap-label-input: $ouds-space-row-gap-none !default;
 // scss-docs-end ouds-component-text
