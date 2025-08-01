@@ -80,13 +80,11 @@
       border: 0;
     }
 
-    &:focus {
-      &[data-focus-visible-added] {
-        border-right-width: var(--#{$prefix}btn-border-width);
+    &:focus-visible {
+      border-right-width: var(--#{$prefix}btn-border-width);
 
-        &::after {
-          display: none;
-        }
+      &::after {
+        display: none;
       }
     }
   }
