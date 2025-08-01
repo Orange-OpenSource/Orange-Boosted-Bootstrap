@@ -10,7 +10,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-// Boosted mod: Remove back-to-top component from all pages when its not needed
+// Boosted mod: Add tabindex to <pre> elements with a class to ensure a proper focus
 export default () => {
   document.querySelectorAll('pre[class]').forEach(element => {
     element.tabIndex = 0
