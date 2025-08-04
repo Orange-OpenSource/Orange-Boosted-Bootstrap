@@ -25,8 +25,7 @@
 }
 
 // Common styles
-.chip-suggestion,
-.chip-filter {
+.chip-interactive {
   --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-enabled};
   --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-enabled};
   --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected)};
@@ -100,24 +99,24 @@
 }
 
 // Suggestion chip specific style
-.chip-suggestion {
-  &:has(svg),
-  &:has(img),
-  &:has(.icon) {
+.chip-suggestion .chip-interactive {
+  &:where(:has(svg)),
+  &:where(:has(img)),
+  &:where(:has(.icon)) {
     --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
   }
 }
 
 // Filter chip specific style that handles images, focus-visible and disabled states
-.chip-filter {
-  &:has(svg),
-  &:has(img),
-  &:has(.icon) {
+.chip-interactive {
+  .chip-filter &:where(:has(svg)),
+  .chip-filter &:where(:has(img)),
+  .chip-filter &:where(:has(.icon)) {
     --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   }
 
-  input:focus-visible ~ &,
-  &:has(input:focus-visible) {
+  .chip-filter input:focus-visible ~ &,
+  .chip-filter &:has(input:focus-visible) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-focus};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-focus};
     --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
@@ -126,8 +125,8 @@
     @include focus-visible();
   }
 
-  input:disabled ~ &,
-  &:has(input:disabled) {
+  .chip-filter input:disabled ~ &,
+  .chip-filter &:has(input:disabled) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-disabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-disabled};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-disabled};
@@ -136,9 +135,9 @@
   }
 
   // Filter chip specific style for selected state
-  input:checked ~ &,
-  &[aria-pressed="true"],
-  &:has(input:checked) {
+  .chip-filter input:checked ~ &,
+  .chip-filter &[aria-pressed="true"],
+  .chip-filter &:has(input:checked) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
     --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-selected)};
@@ -173,18 +172,18 @@
     }
   }
 
-  input:checked:focus-visible ~ &,
-  &[aria-pressed="true"]:focus-visible,
-  &:has(input:checked:focus-visible) {
+  .chip-filter input:checked:focus-visible ~ &,
+  .chip-filter &[aria-pressed="true"]:focus-visible,
+  .chip-filter &:has(input:checked:focus-visible) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-focus};
     --#{$prefix}chip-tick-color: currentcolor;
   }
 
-  input:checked:disabled ~ &,
-  &[aria-pressed="true"]:disabled,
-  &:has(input:checked:disabled) {
+  .chip-filter input:checked:disabled ~ &,
+  .chip-filter &[aria-pressed="true"]:disabled,
+  .chip-filter &:has(input:checked:disabled) {
     --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-disabled};
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-disabled};
