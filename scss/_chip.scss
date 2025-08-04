@@ -192,7 +192,7 @@
 }
 
 // Icon chip specific style
-.chip-icon.chip-icon { // Best option since we don't want to duplicate this code.
+.chip .chip-icon { // Best option since we don't want to duplicate this code.
   --#{$prefix}chip-padding-block: #{$ouds-chip-space-padding-block-icon-only};
   --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
