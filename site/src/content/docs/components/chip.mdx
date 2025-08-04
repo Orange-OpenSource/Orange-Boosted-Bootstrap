@@ -613,31 +613,9 @@ Here is a table summarizing the pseudo elements that are used by the different v
 
 The button plugin allows you to create simple on/off toggle buttons.
 
-<Callout type="info">
-Visually, these toggle buttons are identical to the [checkbox toggle buttons]([[docsref:/forms/checks-radios#checkbox-toggle-buttons]]). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as “checked”/“not checked” (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as “button”/“button pressed”. The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
-</Callout>
-
 ### Toggle states
 
 Add `data-bs-toggle="button"` to toggle a button’s `active` state. If you’re pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
-
-<details>
-<summary>See Bootstrap examples that are incompatible with Orange Design System.</summary>
-<br />
-<DesignCalloutAlert>
-These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
-
-Instead, consider using our [Checks component]([[docsref:/forms/checks-radios#checks]]), [Radios component]([[docsref:/forms/checks-radios#radios]]) or [Radio toggle buttons component]([[docsref:/forms/checks-radios#radio-toggle-buttons]]).
-</DesignCalloutAlert>
-
-<Example code={`<button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
-  <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
-  <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>`} />
-
-<Example code={`<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
-  <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-  <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>`} />
-</details>
 
 ### Methods
 
