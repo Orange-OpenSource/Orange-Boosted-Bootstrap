@@ -30,22 +30,6 @@
       draft: true
     - title: Migration
 
-- title: Components categories
-  icon: orange-expert-bulb
-  icon_color: body-color
-  pages:
-    - title: Actions
-    - title: Navigation
-    - title: Input
-    - title: Dialog
-      draft: true
-    - title: Indicator
-      draft: true
-    - title: Layout
-    - title: Content display
-    - title: Data
-      draft: true
-
 - title: Foundation
   icon: design-token-figma
   icon_color: body-color
@@ -62,7 +46,7 @@
     - title: Options
     - title: Reboot
     - title: Typography
-    - title: Components
+    - title: Component
       draft: true
     - title: Images # Do we keep the following ?
       draft: true
@@ -95,9 +79,13 @@
     - title: Back to top
       draft: true
     - title: Badge
+      category: Indicator
     - title: Breadcrumb
+      category: Navigation
     - title: Bullet list
+      category: Content display
     - title: Button
+      category: Actions
     - title: Button group
       draft: true
     - title: Card
@@ -105,14 +93,17 @@
     - title: Carousel
       draft: true
     - title: Checkbox
+      category: Control
     - title: Close button
       draft: true
     - title: Collapse
       draft: true
     - title: Divider
+      category: Layout
     - title: Dropdown
       draft: true
     - title: Icon
+      category: Visual assets
     - title: Floating label
       draft: true
     - title: Footer
@@ -122,6 +113,7 @@
     - title: Input group
       draft: true
     - title: Link
+      category: Navigation
     - title: List group
       draft: true
     - title: Local navigation
@@ -147,6 +139,7 @@
     - title: Quantity selector
       draft: true
     - title: Radio button
+      category: Control
     - title: Range
       draft: true
     - title: Scrollspy
@@ -160,6 +153,7 @@
     - title: Sticker
       draft: true
     - title: Switch
+      category: Control
     - title: Table
       draft: true
     - title: Tag

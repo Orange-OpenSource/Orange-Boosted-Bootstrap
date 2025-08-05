@@ -65,18 +65,11 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={layout === 'docs' && title !== 'Migrating to recent versions' && title !== 'Migrating from Boosted'}
+            active={layout === 'docs' && !(title === 'Migrating to recent versions' || title === 'Migrating from Boosted' || title === 'Components')}
             href={getVersionedDocsPath('getting-started/introduction')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
           >
             Docs
-          </LinkItem>
-          <LinkItem
-            active={title === 'Migrating to recent versions' || title === 'Migrating from Boosted'}
-            href={getVersionedDocsPath('/getting-started/migration-from-boosted')}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'migration'});"
-          >
-            Migration
           </LinkItem>
           <LinkItem
             active={title === 'Components'}
@@ -100,11 +93,11 @@ const { addedIn, layout, title } = Astro.props
             Customize
           </LinkItem>
           <LinkItem
-            active={title === 'Useful links'}
-            href="/useful-links"
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'useful-links'});"
+            active={title === 'Resources'}
+            href="/resources"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'resources'});"
           >
-            Links
+            Resources
           </LinkItem>
         </ul>
       </div>
