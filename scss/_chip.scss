@@ -96,7 +96,18 @@
     font-size: px-to-rem($ouds-chip-size-icon);
     line-height: 1;
   }
+}
 
+// Suggestion chip specific style
+.chip-suggestion .chip-interactive {
+  &:where(:has(svg)),
+  &:where(:has(img)),
+  &:where(:has(.icon)) {
+    --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+  }
+}
+
+.chip-interactive { // stylelint-disable-line no-duplicate-selectors
   // Filter chip specific style that handles images, focus-visible and disabled states
   .chip-filter &:where(:has(svg)),
   .chip-filter &:where(:has(img)),
@@ -177,15 +188,6 @@
     --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
     --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-disabled};
     --#{$prefix}chip-tick-color: currentcolor;
-  }
-}
-
-// Suggestion chip specific style
-.chip-suggestion .chip-interactive {
-  &:where(:has(svg)),
-  &:where(:has(img)),
-  &:where(:has(.icon)) {
-    --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
   }
 }
 
