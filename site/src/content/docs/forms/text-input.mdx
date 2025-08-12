@@ -1,0 +1,141 @@
+---
+title: Text input
+description: A text input is a user interface component that allows users to enter, edit, or select single-line textual data. It provides a visual and interactive affordance for text entry while supporting labels, placeholders, icons, helper messages, and validation feedback.
+toc: true
+---
+
+<Callout type="info">
+{/* TODO: set the right url for design documentation */}
+You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/).
+</Callout>
+
+## Basic example
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <label for="exampleFormControlInput1">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="Firstname">
+    <label for="exampleFormControlInput0">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+    <label for="exampleFormControlInput2">Email address</label>
+  </div>`} />
+
+## Variants
+
+### Alternative
+
+A minimalist input with a transparent background and a visible stroke outlining the field. This style may be interesting for contexts other than form pages:
+* When inputs need to feel lightweight and unobtrusive
+* In a header (search field)
+* In a selection/filtering feature in a product catalog
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternative" placeholder="">
+    <label for="exampleFormControlInputAlternative">Firstname</label>
+  </div>`} />
+
+### Rounded
+
+For a finish with rounded corners.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-rounded" id="exampleFormControlInputRounded" placeholder="">
+    <label for="exampleFormControlInputRounded">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative form-control-rounded" id="exampleFormControlInputRoundedAlt" placeholder="">
+    <label for="exampleFormControlInputRoundedAlt">Firstname</label>
+  </div>`} />
+
+### Icon
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+// TODO
+
+### Helper text
+
+To display a helper text below inputs, add a `.form-text` as a sibling of a `.form-control`.
+
+<Callout type="warning">
+Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+</Callout>
+
+<Example code={`<div class="form-control-item">
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="">
+    <label for="inputPassword5">Password</label>
+  </div>
+  <div id="passwordHelpBlock" class="form-text">
+    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  </div>`} />
+
+## States
+
+### Disabled
+
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputDisabledEmpty" placeholder="" disabled>
+    <label for="exampleFormControlInputDisabledEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputDisabled" value="Doe" disabled>
+    <label for="exampleFormControlInputDisabled">Lastname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabledEmpty" placeholder="" disabled>
+    <label for="exampleFormControlInputAlternativeDisabledEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabled" value="Doe" placeholder="" disabled>
+    <label for="exampleFormControlInputAlternativeDisabled">Lastname</label>
+  </div>`} />
+
+### Readonly
+
+Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputReadonlyEmpty" placeholder="" readonly>
+    <label for="exampleFormControlInputReadonlyEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputReadonly" placeholder="" value="Doe" readonly>
+    <label for="exampleFormControlInputReadonly">Lastname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeReadonlyEmpty" placeholder="" readonly>
+    <label for="exampleFormControlInputAlternativeReadonlyEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeReadonly" placeholder="" value="Doe" readonly>
+    <label for="exampleFormControlInputAlternativeReadonly" class="form-label">Lastname</label>
+  </div>`} />
+
+### Invalid
+
+<Callout type="info" name="input-invalid" />
+
+To display an invalid input, add `.is-invalid` to a `.form-control`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+
+{/* <Example code={`<div class="form-control-item mb-3">
+    <label for="exampleFormControlInputInvalidEmpty">Firstname</label>
+    <input type="text" class="form-control is-invalid" id="exampleFormControlInputInvalidEmpty" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputInvalid">Lastname</label>
+    <input type="text" class="form-control is-invalid" id="exampleFormControlInputInvalid" value="Doe" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputAlternativeInvalidEmpty">Firstname</label>
+    <input type="text" class="form-control form-control-alternative is-invalid" id="exampleFormControlInputAlternativeInvalidEmpty" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputAlternativeInvalid" class="form-label">Lastname</label>
+    <input type="text" class="form-control form-control-alternative is-invalid" id="exampleFormControlInputAlternativeInvalid" value="Doe" placeholder="" readonly>
+  </div>`} /> */}
