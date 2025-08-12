@@ -8,7 +8,7 @@
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
-  --#{$prefix}tag-asset-container-size: #{$ouds-tag-size-asset-default};
+  --#{$prefix}tag-asset-container-size: #{px-to-rem($ouds-tag-size-asset-default)};
   --#{$prefix}tag-asset-padding: #{$ouds-tag-space-inset-icon-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
@@ -27,7 +27,6 @@
   font-weight: 700;
   color: var(--#{$prefix}tag-color);
   white-space: nowrap;
-  vertical-align: text-bottom; // TODO alignment to check with text in <p>
   background-color: var(--#{$prefix}tag-background-color);
   @include get-font-size("label-medium");
   @include border-radius($ouds-tag-border-radius);
@@ -68,7 +67,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--#{$prefix}tag-asset-color);
-  @include border-radius(#{$ouds-tag-border-radius});
+  @include border-radius(#{$ouds-border-radius-pill});
 }
 
 .tag-loader { // TODO copied from button loader, should be factorized
@@ -121,7 +120,7 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
-  --#{$prefix}tag-asset-container-size: #{$ouds-tag-size-asset-small};
+  --#{$prefix}tag-asset-container-size: #{px-to-rem($ouds-tag-size-asset-small)};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};

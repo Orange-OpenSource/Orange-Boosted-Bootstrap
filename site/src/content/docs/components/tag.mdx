@@ -347,16 +347,12 @@ To display a colored icon, just add the icon inside the `.tag-asset-container`.
 
 If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `line-height`.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
-      <span class="tag">
-        <span class="tag-asset-container">
-          <span class="icon si si-settings" aria-hidden="true"></span>
-        </span>
-        Settings
-      </span>
-    </li>
-  </ul>`} />
+<Example code={`<span class="tag">
+    <span class="tag-asset-container">
+      <span class="icon si si-settings" aria-hidden="true"></span>
+    </span>
+    Settings
+  </span>`} />
 
 #### Loader
 
@@ -562,7 +558,7 @@ To display a small tag, add the class `.tag-sm` to the tag.
 ## Tag input
 
 <Callout type="warning">
-  Please note that all the variants above shouldn't be applied on this version of the component.
+  Please note that all the variants above must not be applied on this version of the component.
 </Callout>
 
 Standard tags are used in an informative way. Tag inputs are interactive and can take all the usual states: enabled, hover, pressed, disabled or focused. The tag input should be used along with a `<button>`.
