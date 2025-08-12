@@ -36,7 +36,7 @@
     min-height: var(--#{$prefix}form-control-min-height);
 
 
-    /* stylelint-disable-next-line declaration-no-important */
+    // stylelint-disable-next-line declaration-no-important
     padding-top: calc(var(--#{$prefix}form-control-padding-y) * 4) !important; // stylelint-disable-line function-disallowed-list
 
 
