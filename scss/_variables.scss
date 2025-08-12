@@ -1008,15 +1008,9 @@ $input-disabled-color:                  var(--#{$prefix}color-action-disabled) !
 $input-disabled-bg:                     var(--#{$prefix}color-action-support-disabled) !default; // OUDS mod
 $input-disabled-border-color:           var(--#{$prefix}color-action-disabled) !default; // OUDS mod
 
-<<<<<<< HEAD
-$input-color:                           var(--#{$prefix}body-color) !default;
-$input-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of var(--#{$prefix}border-color)
-$input-border-width:                    0px !default; // OUDS mod TODO to be modified for inputs
-=======
 $input-color:                           var(--#{$prefix}color-content-default) !default; // OUDS mod
 $input-border-color:                    $ouds-text-input-color-border-enabled !default; // OUDS mod
 $input-border-width:                    $ouds-text-input-border-width-default !default; // OUDS mod
->>>>>>> 05807db95 (feat: text-input WIP)
 $input-box-shadow:                      none !default; // OUDS mod
 
 $input-border-radius:                   $ouds-text-input-border-radius-default !default; // OUDS mod
