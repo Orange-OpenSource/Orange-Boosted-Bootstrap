@@ -29,22 +29,6 @@
   @extend %form-item;
   position: relative;
 
-
-  > .form-control {
-    min-width: var(--#{$prefix}form-control-min-width);
-    max-width: var(--#{$prefix}form-control-max-width);
-    min-height: var(--#{$prefix}form-control-min-height);
-
-
-    // stylelint-disable-next-line declaration-no-important
-    padding-top: calc(var(--#{$prefix}form-control-padding-y) * 4) !important; // stylelint-disable-line function-disallowed-list
-
-
-    &::placeholder {
-      color: transparent;
-    }
-  }
-
   > label {
     position: absolute;
     top: 0;
@@ -61,31 +45,25 @@
     overflow: hidden;
     color: var(--#{$prefix}form-label-color);
     text-align: start;
-
     pointer-events: none;
     transform-origin: 0 0;
     @include get-font-size("label-large");
     @include transition(all .1s ease-out);
   }
 
-  > .form-control:focus,
-  > .form-control:not(:placeholder-shown) {
-    padding-top: 12px;
-    ~ label {
-      top: calc(var(--#{$prefix}form-control-padding-y) / 2); // stylelint-disable-line function-disallowed-list
-      display: block;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      @include get-font-size("label-small");
-    }
-  }
+  > .form-control {
+    min-width: var(--#{$prefix}form-control-min-width);
+    max-width: var(--#{$prefix}form-control-max-width);
+    min-height: var(--#{$prefix}form-control-min-height);
 
-  // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
-  > .form-control:-webkit-autofill {
-    padding-top: 12px;
-    ~ label {
+    // stylelint-disable-next-line declaration-no-important
+    padding-top: calc(var(--#{$prefix}form-control-padding-y) * 4) !important; // stylelint-disable-line function-disallowed-list
+
+    &:placeholder-shown:not([placeholder=""]) ~ label,
+    &[placeholder]:not(:placeholder-shown) ~ label,
+    &:focus ~ label {
       top: calc(var(--#{$prefix}form-control-padding-y) / 2); // stylelint-disable-line function-disallowed-list
-      display: block;
+      align-items: flex-start;
       text-overflow: ellipsis;
       white-space: nowrap;
       @include get-font-size("label-small");
@@ -96,6 +74,14 @@
   > .form-control:disabled ~ label {
     --#{$prefix}form-label-color: var(--#{$prefix}color-action-disabled);
   }
+}
+
+.form-control-item ~ .form-text {
+  @extend %form-item;
+
+  max-width: var(--#{$prefix}form-control-max-width);
+  padding-right: subtract(var(--#{$prefix}form-control-padding-x), var(--#{$prefix}form-control-border-width-right));
+  padding-left: subtract(var(--#{$prefix}form-control-padding-x), var(--#{$prefix}form-control-border-width-left));
 }
 
 .form-control {
