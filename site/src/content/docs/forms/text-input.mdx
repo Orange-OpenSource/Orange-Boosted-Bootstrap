@@ -11,17 +11,29 @@ You can find here the [OUDS Checkbox design guidelines](https://unified-design-s
 
 ## Basic example
 
+Wrap a pair of `<input class="form-control">` and `<label>` elements in `.form-control-item` to style OUDS textual form fields. Note that the `<input>` must come first so we can utilize a sibling selector (i.e., `~`).
+
+A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is empty.
+
+If the placeholder text is empty, it is not visible; only the `<label>` is shown to users.
+
 <Example code={`<div class="form-control-item mb-3">
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-    <label for="exampleFormControlInput1">Firstname</label>
-  </div>
-  <div class="form-control-item mb-3">
-    <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="Firstname">
-    <label for="exampleFormControlInput0">Firstname</label>
-  </div>
-  <div class="form-control-item mb-3">
-    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
-    <label for="exampleFormControlInput2">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInputWithEmptyPlaceholder" placeholder="">
+    <label for="exampleFormControlInputWithEmptyPlaceholder">Email address</label>
+  </div>`} />
+
+If the placeholder text is filled, `<label>`s will automatically adjust to their floated position.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputWithPlaceholder" placeholder="name@example.com">
+    <label for="exampleFormControlInputWithPlaceholder">Email address</label>
+  </div>`} />
+
+When there’s a value already defined, `<label>`s will automatically adjust to their floated position.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputWithValue" placeholder="name@example.com" value="test@example.com">
+    <label for="exampleFormControlInputWithValue">Input with value</label>
   </div>`} />
 
 ## Variants
@@ -84,7 +96,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
     <label for="exampleFormControlInputDisabledEmpty">Firstname</label>
   </div>
   <div class="form-control-item mb-3">
-    <input type="text" class="form-control" id="exampleFormControlInputDisabled" value="Doe" disabled>
+    <input type="text" class="form-control" id="exampleFormControlInputDisabled" placeholder="" value="Doe" disabled>
     <label for="exampleFormControlInputDisabled">Lastname</label>
   </div>
   <div class="form-control-item mb-3">
@@ -92,7 +104,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
     <label for="exampleFormControlInputAlternativeDisabledEmpty">Firstname</label>
   </div>
   <div class="form-control-item mb-3">
-    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabled" value="Doe" placeholder="" disabled>
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabled" placeholder="" value="Doe" disabled>
     <label for="exampleFormControlInputAlternativeDisabled">Lastname</label>
   </div>`} />
 
