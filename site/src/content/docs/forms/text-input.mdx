@@ -6,6 +6,8 @@ aliases:
 toc: true
 ---
 
+import { getConfig } from '@libs/config'
+
 <Callout type="info">
 {/* TODO: set the right url for design documentation */}
 You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/).
@@ -65,11 +67,55 @@ For a finish with rounded corners.
     <label for="exampleFormControlInputRoundedAlt">Firstname</label>
   </div>`} />
 
-### Icon
+### Leading icon
+
+Add an icon to help indicate the purpose of the input by placing an `<svg>` or `<img>` element inside the `.form-control-item`. The icon is automatically positioned at the left side of the input field.
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-// TODO
+<Example code={`<div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control" id="exampleFormControlInputEmptyWithIcon" placeholder="">
+    <label for="exampleFormControlInputEmptyWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control" id="exampleFormControlInputPlaceholderWithIcon" placeholder="placehoder">
+    <label for="exampleFormControlInputPlaceholderWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control form-control-alternative" id="exampleFormControlInputAltEmptyWithIcon" placeholder="">
+    <label for="exampleFormControlInputAltEmptyWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control form-control-alternative" id="exampleFormControlInputAltValueWithIcon" placeholder="placehoder" value="Input">
+    <label for="exampleFormControlInputAltValueWithIcon">Label</label>
+  </div>`} />
+
+### Trailing action
+
+Trailing actions can be added to the right side of the input field by placing a minimal icon only button (`.btn`, `.btn-minimal` and `.btn-icon`) inside the `.form-control-item`. It can be used to provide actions related to the field: clear input, toggle password visibility, open a date picker, etc.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputEmptyWithAction" placeholder="">
+    <label for="exampleFormControlInputEmptyWithAction">Label</label>
+    <button class="btn btn-minimal btn-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden">Default</span>
+    </button>
+  </div>`} />
 
 ### Helper text
 
