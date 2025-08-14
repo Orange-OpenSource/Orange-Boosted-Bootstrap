@@ -1010,7 +1010,7 @@ $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
 $input-border-color:                    var(--#{$prefix}color-border-default) !default; // OUDS mod: instead of var(--#{$prefix}border-color)
-$input-border-width:                    0 !default; // OUDS mod TODO to be modified for inputs
+$input-border-width:                    0px !default; // OUDS mod TODO to be modified for inputs
 $input-box-shadow:                      none !default; // OUDS mod
 
 $input-border-radius:                   var(--#{$prefix}border-radius) !default;

@@ -73,7 +73,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/docs/${file[1]}/0.5/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
