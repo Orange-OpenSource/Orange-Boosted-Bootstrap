@@ -17,7 +17,13 @@
   --#{$prefix}form-control-padding-y: #{$ouds-text-input-space-padding-block-default};
   --#{$prefix}form-control-max-width: #{$ouds-text-input-size-max-width};
   --#{$prefix}form-control-min-height: #{$ouds-text-input-size-min-height};
-  --#{$prefix}form-control-min-width: #{$ouds-text-input-size-min-width};
+  --#{$prefix}form-control-icon-size: #{$ouds-text-input-size-leading-icon};
+  --#{$prefix}form-control-column-gap: #{$ouds-text-input-space-column-gap-default};
+  --#{$prefix}form-control-padding-x: #{$ouds-text-input-space-padding-inline-default};
+  --#{$prefix}form-control-padding-y: #{$ouds-text-input-space-padding-block-default};
+  --#{$prefix}form-control-trailing-action-width: #{$ouds-button-size-min-width};
+  --#{$prefix}form-control-trailing-action-height: #{$ouds-button-size-max-height-icon-only};
+  --#{$prefix}form-control-trailing-action-padding-right: #{$ouds-text-input-space-padding-inline-trailing-action};
   // scss-docs-end form-control-css-vars
 
   // scss-docs-start form-label-css-vars
@@ -28,6 +34,7 @@
 .form-control-item {
   @extend %form-item;
   position: relative;
+  max-width: var(--#{$prefix}form-control-max-width);
 
   > label {
     position: absolute;
@@ -36,7 +43,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    max-width: var(--#{$prefix}form-control-max-width);
+    max-width: subtract(var(--#{$prefix}form-control-max-width), var(--#{$prefix}form-control-padding-x));
     height: 100%;
     padding-top: subtract(var(--#{$prefix}form-control-padding-y), var(--#{$prefix}form-control-border-width-top));
     padding-right: subtract(var(--#{$prefix}form-control-padding-x), var(--#{$prefix}form-control-border-width-right));
@@ -53,7 +60,6 @@
 
   > .form-control {
     min-width: var(--#{$prefix}form-control-min-width);
-    max-width: var(--#{$prefix}form-control-max-width);
     min-height: var(--#{$prefix}form-control-min-height);
 
     // stylelint-disable-next-line declaration-no-important
@@ -73,6 +79,40 @@
   > :disabled ~ label,
   > .form-control:disabled ~ label {
     --#{$prefix}form-label-color: var(--#{$prefix}color-action-disabled);
+  }
+
+  > img,
+  > svg {
+    position: absolute;
+    top: subtract(var(--#{$prefix}form-control-min-height) / 2, var(--#{$prefix}form-control-icon-size) / 2);
+    left: subtract(var(--#{$prefix}form-control-padding-x), var(--#{$prefix}form-control-border-width-left));
+    z-index: 2;
+    width: var(--#{$prefix}form-control-icon-size);
+    min-width: var(--#{$prefix}form-control-icon-size);
+    height: var(--#{$prefix}form-control-icon-size);
+  }
+
+  &:has(> svg) {
+    > .form-control,
+    > label {
+      padding-left: add(subtract(var(--#{$prefix}form-control-padding-x), var(--#{$prefix}form-control-border-width-left)), add(var(--#{$prefix}form-control-icon-size), var(--#{$prefix}form-control-column-gap)));
+    }
+  }
+
+  > button {
+    position: absolute;
+    top: subtract(var(--#{$prefix}form-control-min-height) / 2, var(--#{$prefix}form-control-trailing-action-height) / 2);
+    right: subtract(var(--#{$prefix}form-control-trailing-action-padding-right), var(--#{$prefix}form-control-border-width-left));
+    z-index: 2;
+  }
+
+  &:has(> button) {
+    > .form-control, {
+      padding-right: add(subtract(var(--#{$prefix}form-control-trailing-action-padding-right), var(--#{$prefix}form-control-border-width-left)), add(var(--#{$prefix}form-control-trailing-action-width), var(--#{$prefix}form-control-column-gap)));
+    }
+    > label {
+      max-width: subtract(subtract(var(--#{$prefix}form-control-max-width), var(--#{$prefix}form-control-trailing-action-padding-right)), add(var(--#{$prefix}form-control-trailing-action-width), var(--#{$prefix}form-control-column-gap)));
+    }
   }
 }
 
