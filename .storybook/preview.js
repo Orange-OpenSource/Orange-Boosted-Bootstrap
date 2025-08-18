@@ -1,5 +1,5 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
-import { INITIAL_VIEWPORTS } from 'storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import './storybook.scss';
 
 /** @type { import('@storybook/html-vite').Preview } */
