@@ -35,8 +35,6 @@ const sitemapExcludes = [
   '/404',
   '/docs',
   `/docs/${getConfig().docs_version}`,
-  `/docs/dark-mode`,
-  `/docs/${getConfig().docs_version}/dark-mode`,
   `/docs/${getConfig().docs_version}/getting-started`,
   `/docs/${getConfig().docs_version}/customize`,
   `/docs/${getConfig().docs_version}/layout`,

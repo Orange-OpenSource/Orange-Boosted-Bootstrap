@@ -56,8 +56,8 @@
   display: none;
   align-items: center;
   padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
-  font-weight: $font-weight-bold;stylelint-disable-linefunction-disallowed-listfont-weightstylelint-disable-linefunction-disallowed-listfont-weight
-  color: $core-ouds-color-functional-white;color
+  font-weight: $font-weight-bold;
+  color: $core-ouds-color-functional-white;
   background: $core-ouds-color-functional-black;
   border-top: var(--bs-border-width) solid var(--bs-color-border-default);
 
@@ -69,8 +69,8 @@
 
   &[style*="display: block"] {
     display: flex !important; // stylelint-disable-line declaration-no-important
-    flex-wrap: wrap;stylelint-disable-linedeclaration-no-importantflex-wrapstylelint-disable-linedeclaration-no-importantflex-wrap
-    justify-content: center;justify-content
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -82,8 +82,8 @@
   position: absolute;
   right: $modal-content-padding;
   margin: calc($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // stylelint-disable-line function-disallowed-list
-  overflow: hidden;stylelint-disable-linefunction-disallowed-listoverflowstylelint-disable-linefunction-disallowed-listoverflow
-  text-indent: 2ch;text-indent
+  overflow: hidden;
+  text-indent: 2ch;
   white-space: nowrap;
 }
 
@@ -96,8 +96,8 @@
   width: 100%;
   height: 100%;
   margin: 0 !important; // stylelint-disable-line declaration-no-important
-  background: $modal-backdrop-bg;stylelint-disable-linedeclaration-no-importantbackgroundstylelint-disable-linedeclaration-no-importantbackground
-  border: 0;border
+  background: $modal-backdrop-bg;
+  border: 0;
   opacity: $modal-backdrop-opacity;
 }
 
