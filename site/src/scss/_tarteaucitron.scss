@@ -11,7 +11,6 @@
   transform: translateX(-50%);
 
   [role="heading"] {
-    display: block;
     font-weight: $font-weight-bold;
     color: $modal-content-color;
   }
@@ -34,6 +33,12 @@
   }
 }
 
+// fixes https://github.com/AmauriC/tarteaucitron.js/issues/1347 (backport tac css)
+@include tac("-modal-open #tac_title", true)  {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
+}
+
 @include tac("Root") {
   position: absolute;
   top: 0;
@@ -51,8 +56,8 @@
   display: none;
   align-items: center;
   padding: $spacer calc((100% - var(--max-width, 312px)) / 2); // stylelint-disable-line function-disallowed-list
-  font-weight: $font-weight-bold;stylelint-disable-linefunction-disallowed-listfont-weight
-  color: $core-ouds-color-functional-white;
+  font-weight: $font-weight-bold;stylelint-disable-linefunction-disallowed-listfont-weightstylelint-disable-linefunction-disallowed-listfont-weight
+  color: $core-ouds-color-functional-white;color
   background: $core-ouds-color-functional-black;
   border-top: var(--bs-border-width) solid var(--bs-color-border-default);
 
@@ -64,8 +69,8 @@
 
   &[style*="display: block"] {
     display: flex !important; // stylelint-disable-line declaration-no-important
-    flex-wrap: wrap;stylelint-disable-linedeclaration-no-importantflex-wrap
-    justify-content: center;
+    flex-wrap: wrap;stylelint-disable-linedeclaration-no-importantflex-wrapstylelint-disable-linedeclaration-no-importantflex-wrap
+    justify-content: center;justify-content
   }
 }
 
@@ -77,8 +82,8 @@
   position: absolute;
   right: $modal-content-padding;
   margin: calc($spacer / -2) calc(-1 * #{$btn-close-padding}) calc(-1 * #{$btn-close-padding}) auto; // stylelint-disable-line function-disallowed-list
-  overflow: hidden;stylelint-disable-linefunction-disallowed-listoverflow
-  text-indent: 2ch;
+  overflow: hidden;stylelint-disable-linefunction-disallowed-listoverflowstylelint-disable-linefunction-disallowed-listoverflow
+  text-indent: 2ch;text-indent
   white-space: nowrap;
 }
 
@@ -91,8 +96,8 @@
   width: 100%;
   height: 100%;
   margin: 0 !important; // stylelint-disable-line declaration-no-important
-  background: $modal-backdrop-bg;stylelint-disable-linedeclaration-no-importantbackground
-  border: 0;
+  background: $modal-backdrop-bg;stylelint-disable-linedeclaration-no-importantbackgroundstylelint-disable-linedeclaration-no-importantbackground
+  border: 0;border
   opacity: $modal-backdrop-opacity;
 }
 
