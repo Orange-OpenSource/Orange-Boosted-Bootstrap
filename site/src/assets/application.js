@@ -11,8 +11,10 @@
 
 import sidebarScroll from './partials/sidebar.js'
 import removeBackToTopWhenNotNeeded from './partials/back-to-top.js' // Boosted mod
+import addTabindex from './partials/tabindex.js' // Boosted mod
 import snippets from './partials/snippets.js'
 
 sidebarScroll()
 removeBackToTopWhenNotNeeded() // Boosted mod
+addTabindex() // Boosted mod
 snippets()
