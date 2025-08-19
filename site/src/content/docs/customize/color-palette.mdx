@@ -73,13 +73,13 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, weâ€
 {getData('colors').map((color) => {
   if (color.name !== "white" && color.name !== "gray" && color.name !== "gray-dark") {
     return (
-      <div class="col-md-4 mb-3" key={color.name}>
+      <div class="col-md-4 mb-3">
         <div class={`p-3 mb-2 position-relative swatch-${color.name}`}>
           <strong class="d-block">${color.name}</strong>
           {color.hex}
         </div>
         {[100,200,300,400,500,600,700,800,900].map((level) => (
-          <div class={`p-3 bd-${color.name}-${level}`} key={level}>
+          <div class={`p-3 bd-${color.name}-${level}`}>
             ${color.name}-{level}
           </div>
         ))}
@@ -88,13 +88,13 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, weâ€
   }
   else if (color.name === "gray") {
     return (
-      <div class="col-md-4 mb-3" key={color.name}>
+      <div class="col-md-4 mb-3">
         <div class="p-3 mb-2 position-relative swatch-gray-500">
           <strong class="d-block">$gray-500</strong>
           #ccc
         </div>
         {[100,200,300,400,500,600,700,800,900,950].map((level) => (
-          <div class={`p-3 bd-${color.name}-${level}`} key={level}>
+          <div class={`p-3 bd-${color.name}-${level}`}>
             ${color.name}-{level}
           </div>
         ))}
