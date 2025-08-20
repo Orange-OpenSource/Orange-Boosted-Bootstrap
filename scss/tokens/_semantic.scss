@@ -1,18 +1,18 @@
 // Semantic applications
 // Depends on raw primitive values
-// OUDS Core tokens version 1.2.0
+// OUDS Core tokens version 1.5.0
 // Orange Core tokens version 1.1.0
-// Orange System tokens version 1.2.0
+// Orange System tokens version 1.5.0
 
 // Border
 
 // scss-docs-start ouds-semantic-border
 $ouds-border-radius-default: $core-ouds-border-radius-0 !default;
 $ouds-border-radius-large: $core-ouds-border-radius-300 !default;
-$ouds-border-radius-medium: $core-ouds-border-radius-150 !default;
+$ouds-border-radius-medium: $core-ouds-border-radius-200 !default;
 $ouds-border-radius-none: $core-ouds-border-radius-0 !default;
 $ouds-border-radius-pill: $core-ouds-border-radius-9999 !default;
-$ouds-border-radius-small: $core-ouds-border-radius-75 !default;
+$ouds-border-radius-small: $core-ouds-border-radius-100 !default;
 $ouds-border-style-default: $core-ouds-border-style-solid !default;
 $ouds-border-style-drag: $core-ouds-border-style-dashed !default;
 $ouds-border-width-default: $core-ouds-border-width-25 !default;
@@ -54,6 +54,8 @@ $ouds-color-action-pressed-dark: $core-orange-color-orange-500 !default;
 $ouds-color-action-pressed-light: $core-orange-color-orange-550 !default;
 $ouds-color-action-selected-dark: $core-orange-color-orange-500 !default;
 $ouds-color-action-selected-light: $core-orange-color-orange-550 !default;
+$ouds-color-action-support-disabled-dark: $core-ouds-color-opacity-white-40 !default;
+$ouds-color-action-support-disabled-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-action-support-enabled-dark: $core-ouds-color-opacity-white-40 !default;
 $ouds-color-action-support-enabled-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-action-support-focus-dark: $core-ouds-color-opacity-white-80 !default;
@@ -64,8 +66,8 @@ $ouds-color-action-support-loading-dark: $core-ouds-color-opacity-white-120 !def
 $ouds-color-action-support-loading-light: $core-ouds-color-opacity-black-120 !default;
 $ouds-color-action-support-pressed-dark: $core-ouds-color-opacity-white-120 !default;
 $ouds-color-action-support-pressed-light: $core-ouds-color-opacity-black-120 !default;
-$ouds-color-action-visited-dark: $core-orange-color-decorative-amethyst-400 !default;
-$ouds-color-action-visited-light: $core-orange-color-decorative-amethyst-600 !default;
+$ouds-color-action-visited-dark: $core-ouds-color-functional-amethyst-400 !default;
+$ouds-color-action-visited-light: $core-ouds-color-functional-amethyst-600 !default;
 $ouds-color-always-black: $core-ouds-color-functional-black !default;
 $ouds-color-always-on-black: $core-ouds-color-functional-gray-light-160 !default;
 $ouds-color-always-on-white: $core-ouds-color-functional-black !default;
@@ -114,6 +116,8 @@ $ouds-color-content-on-action-loading-dark: $core-ouds-color-functional-black !d
 $ouds-color-content-on-action-loading-light: $core-ouds-color-functional-white !default;
 $ouds-color-content-on-action-pressed-dark: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-action-pressed-light: $core-ouds-color-functional-white !default;
+$ouds-color-content-on-action-selected-dark: $core-ouds-color-functional-black !default;
+$ouds-color-content-on-action-selected-light: $core-ouds-color-functional-white !default;
 $ouds-color-content-on-brand-primary-dark: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-brand-primary-light: $core-ouds-color-functional-black !default;
 $ouds-color-content-on-overlay-emphasized-dark: $core-ouds-color-functional-black !default;
@@ -144,13 +148,13 @@ $ouds-color-content-on-status-warning-muted-dark: $core-ouds-color-functional-gr
 $ouds-color-content-on-status-warning-muted-light: $core-ouds-color-functional-black !default;
 $ouds-color-content-status-accent-dark: $core-orange-color-orange-500 !default;
 $ouds-color-content-status-accent-light: $core-orange-color-orange-500 !default;
-$ouds-color-content-status-info-dark: $core-ouds-color-functional-dodger-blue-500 !default;
+$ouds-color-content-status-info-dark: $core-ouds-color-functional-dodger-blue-300 !default;
 $ouds-color-content-status-info-light: $core-ouds-color-functional-dodger-blue-500 !default;
-$ouds-color-content-status-negative-dark: $core-ouds-color-functional-scarlet-600 !default;
+$ouds-color-content-status-negative-dark: $core-ouds-color-functional-scarlet-300 !default;
 $ouds-color-content-status-negative-light: $core-ouds-color-functional-scarlet-600 !default;
-$ouds-color-content-status-positive-dark: $core-ouds-color-functional-malachite-500 !default;
+$ouds-color-content-status-positive-dark: $core-ouds-color-functional-malachite-300 !default;
 $ouds-color-content-status-positive-light: $core-ouds-color-functional-malachite-500 !default;
-$ouds-color-content-status-warning-dark: $core-ouds-color-functional-sun-500 !default;
+$ouds-color-content-status-warning-dark: $core-ouds-color-functional-sun-300 !default;
 $ouds-color-content-status-warning-light: $core-ouds-color-functional-sun-500 !default;
 $ouds-color-decorative-accent-1-default: $core-orange-color-decorative-emerald-500 !default;
 $ouds-color-decorative-accent-1-emphasized: $core-orange-color-decorative-emerald-700 !default;
@@ -490,6 +494,7 @@ $ouds-grid-xs-width: $core-ouds-grid-width-200 !default;
 // Opacity
 
 // scss-docs-start ouds-semantic-opacity
+$ouds-opacity-disabled: $core-ouds-opacity-200 !default;
 $ouds-opacity-invisible: $core-ouds-opacity-0 !default;
 $ouds-opacity-medium: $core-ouds-opacity-320 !default;
 $ouds-opacity-opaque: $core-ouds-opacity-1000 !default;
@@ -658,16 +663,17 @@ $ouds-space-inset-sm: $ouds-dimension-8xs !default;
 $ouds-space-inset-xl: $ouds-dimension-3xs !default;
 $ouds-space-inset-xs: $ouds-dimension-9xs !default;
 $ouds-space-padding-block-2xl: $ouds-dimension-3xs !default;
-$ouds-space-padding-block-2xs: $ouds-dimension-10xs !default;
+$ouds-space-padding-block-2xs: $ouds-dimension-9xs !default;
 $ouds-space-padding-block-3xl: $ouds-dimension-2xs !default;
-$ouds-space-padding-block-3xs: $ouds-dimension-11xs !default;
+$ouds-space-padding-block-3xs: $ouds-dimension-10xs !default;
 $ouds-space-padding-block-4xl: $ouds-dimension-xs !default;
+$ouds-space-padding-block-4xs: $ouds-dimension-11xs !default;
 $ouds-space-padding-block-lg: $ouds-dimension-5xs !default;
 $ouds-space-padding-block-md: $ouds-dimension-6xs !default;
 $ouds-space-padding-block-none: $ouds-dimension-none !default;
-$ouds-space-padding-block-sm: $ouds-dimension-8xs !default;
+$ouds-space-padding-block-sm: $ouds-dimension-7xs !default;
 $ouds-space-padding-block-xl: $ouds-dimension-4xs !default;
-$ouds-space-padding-block-xs: $ouds-dimension-9xs !default;
+$ouds-space-padding-block-xs: $ouds-dimension-8xs !default;
 $ouds-space-padding-inline-2xl: $ouds-dimension-3xs !default;
 $ouds-space-padding-inline-2xs: $ouds-dimension-9xs !default;
 $ouds-space-padding-inline-3xl: $ouds-dimension-2xs !default;

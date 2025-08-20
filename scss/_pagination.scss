@@ -73,7 +73,7 @@
   }
 
   // OUDS mod: make sure the focused page link is displayed over its next sibling
-  &:focus[data-focus-visible-added] {
+  &:focus-visible {
     z-index: $focus-visible-zindex;
   }
   // End mod

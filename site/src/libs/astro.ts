@@ -35,14 +35,18 @@ const sitemapExcludes = [
   '/404',
   '/docs',
   `/docs/${getConfig().docs_version}`,
-  `/docs/dark-mode`,
-  `/docs/${getConfig().docs_version}/dark-mode`,
   `/docs/${getConfig().docs_version}/getting-started`,
+  `/docs/${getConfig().docs_version}/getting-started/build-tools`,
   `/docs/${getConfig().docs_version}/customize`,
+  `/docs/${getConfig().docs_version}/customize/color`,
   `/docs/${getConfig().docs_version}/layout`,
   `/docs/${getConfig().docs_version}/content`,
   `/docs/${getConfig().docs_version}/components`,
+  `/docs/${getConfig().docs_version}/components/navs`,
+  `/docs/${getConfig().docs_version}/forms`,
   `/docs/${getConfig().docs_version}/helpers`,
+  `/docs/${getConfig().docs_version}/helpers/screen-readers`,
+  `/docs/${getConfig().docs_version}/migration`,
   `/docs/${getConfig().docs_version}/utilities`,
   `/docs/${getConfig().docs_version}/extend`,
   `/docs/${getConfig().docs_version}/about`
@@ -73,20 +77,11 @@ export function oudsWeb(): AstroIntegration[] {
                   rehypeAutolinkHeadings,
                   {
                     behavior: 'append',
-                    content: (element: Element) => [
-                      {
-                        type: 'element',
-                        tagName: 'span',
-                        children: [
-                          {
-                            type: 'text',
-                            value: `Link to this section: ${(element.children[0] as Text).value}`
-                          }
-                        ],
-                        properties: { class: 'visually-hidden' }
-                      }
-                    ],
-                    properties: { class: 'anchor-link' },
+                    content: [{ type: 'text', value: ' '}],
+                    properties: (element: Element) => ({
+                      class: 'anchor-link',
+                      ariaLabel: `Link to this section: ${(element.children[0] as Text).value}`
+                    }),
                     test: (element: Element) => element.tagName.match(headingsRangeRegex)
                   }
                 ],

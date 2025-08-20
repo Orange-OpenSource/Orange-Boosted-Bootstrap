@@ -8,6 +8,34 @@ aliases:
 toc: true
 ---
 
+## v0.6.0
+
+### Contents
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
+
+### Components
+
+#### Button
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Button CSS variables have been changed. `--bs-button-mono-color-bg-minimal-loading` is no longer available.
+-<span class="badge text-bg-status-positive-emphasized">New</span> `.btn-rounded` is now available.
+-<span class="badge text-bg-status-positive-emphasized">New</span> `.btn-brand` is now available.
+
+#### Link
+
+- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Link CSS variables have been changed. All the variables containing `arrow` have been renamed the same with `chevron` instead.
+
+### Utilities
+
+#### Borders
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> `.rounded-small` and `.rounded-medium` have been updated to respectively 4px and 8px. All components have been updated accordingly. It shouldn’t bother you too much since it’s handled on OUDS Web side.
+
+#### Colors
+
+- <span class="badge text-bg-status-warning-emphasized">Warning</span> Dark mode values of our `.text-status-info`, `.text-status-positive`, `.text-status-warning` and `.text-status-danger` have been tweaked. It shouldn’t bother you too much since it’s handled on OUDS Web side.
+
 ## v0.5.0
 
 <hr />

@@ -1,6 +1,9 @@
 // stylelint-disable selector-max-type, selector-no-qualifying-type
 
 .bd-toc {
+  // OUDS mod: no font-size
+  // OUDS mod: no container-type
+
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: $offset-top; // OUDS mod

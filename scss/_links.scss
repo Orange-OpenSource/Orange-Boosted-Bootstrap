@@ -21,7 +21,7 @@
   background: transparent;
   border: 0;
 
-  &:has(svg, img, .icon):not(:hover, :active, :focus-visible, :focus[data-focus-visible]) {
+  &:has(svg, img, .icon):not(:hover, :active, :focus-visible) {
     text-decoration: none;
   }
 
@@ -39,12 +39,12 @@
 }
 
 .link-chevron {
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-default};
-  --#{$prefix}link-arrow-color: #{$ouds-link-color-arrow-enabled};
-  --#{$prefix}link-arrow-hover-color: #{$ouds-link-color-arrow-hover};
-  --#{$prefix}link-arrow-focus-color: #{$ouds-link-color-arrow-focus};
-  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-color-arrow-pressed};
-  --#{$prefix}link-arrow-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-default};
+  --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-enabled};
+  --#{$prefix}link-chevron-hover-color: #{$ouds-link-color-chevron-hover};
+  --#{$prefix}link-chevron-focus-color: #{$ouds-link-color-chevron-focus};
+  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-color-chevron-pressed};
+  --#{$prefix}link-chevron-disabled-color: #{$ouds-color-action-disabled};
 
   // Extend for Boosted compatibility in which .link-chevron can be used without .link
   @extend .link;
@@ -52,8 +52,7 @@
 
   &:hover,
   &:active,
-  &:focus-visible,
-  &:focus[data-focus-visible] {
+  &:focus-visible {
     text-decoration: underline;
   }
 
@@ -68,40 +67,38 @@
     width: var(--#{$prefix}link-icon-size);
     min-width: var(--#{$prefix}link-icon-size);
     height: var(--#{$prefix}link-icon-size);
-    margin-right: var(--#{$prefix}link-arrow-gap);
+    margin-right: var(--#{$prefix}link-chevron-gap);
     vertical-align: middle;
     content: "";
-    background-color: var(--#{$prefix}link-arrow-color);
+    background-color: var(--#{$prefix}link-chevron-color);
     mask: var(--#{$prefix}chevron-icon) center no-repeat;
     mask-size: var(--#{$prefix}link-icon-size);
   }
 
   &:hover::before,
   &:hover::after {
-    background-color: var(--#{$prefix}link-arrow-hover-color);
+    background-color: var(--#{$prefix}link-chevron-hover-color);
   }
 
   &:focus-visible::before,
-  &:focus[data-focus-visible]::before,
-  &:focus-visible::after,
-  &:focus[data-focus-visible]::after {
-    background-color: var(--#{$prefix}link-arrow-focus-color);
+  &:focus-visible::after {
+    background-color: var(--#{$prefix}link-chevron-focus-color);
   }
 
   &:active::before,
   &:active::after {
-    background-color: var(--#{$prefix}link-arrow-pressed-color);
+    background-color: var(--#{$prefix}link-chevron-pressed-color);
   }
 
   &:not(.back)::after {
     margin-right: 0;
-    margin-left: var(--#{$prefix}link-arrow-gap);
+    margin-left: var(--#{$prefix}link-chevron-gap);
     transform: rotate(180deg) translateY(1px);
   }
 
   &[aria-disabled="true"]::before,
   &[aria-disabled="true"]::after {
-    background-color: var(--#{$prefix}link-arrow-disabled-color);
+    background-color: var(--#{$prefix}link-chevron-disabled-color);
   }
 }
 
@@ -112,17 +109,17 @@
   --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
   --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
   --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
-  --#{$prefix}link-arrow-color: #{$ouds-link-mono-color-content-enabled};
-  --#{$prefix}link-arrow-hover-color: #{$ouds-link-mono-color-content-hover};
-  --#{$prefix}link-arrow-focus-color: #{$ouds-link-mono-color-content-focus};
-  --#{$prefix}link-arrow-pressed-color: #{$ouds-link-mono-color-content-pressed};
-  --#{$prefix}link-arrow-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  --#{$prefix}link-chevron-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-chevron-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-chevron-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-chevron-disabled-color: #{$ouds-link-mono-color-content-disabled};
 }
 
 .link-sm {
   --#{$prefix}link-icon-size: #{$ouds-link-size-icon-small};
   --#{$prefix}link-icon-gap: #{$ouds-link-space-column-gap-icon-small};
-  --#{$prefix}link-arrow-gap: #{$ouds-link-space-column-gap-arrow-small};
+  --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-small};
 
   @include get-font-size("label-medium");
   min-width: $ouds-link-size-min-width-small;
