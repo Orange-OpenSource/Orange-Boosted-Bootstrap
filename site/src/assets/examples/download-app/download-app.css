@@ -55,6 +55,7 @@
   width: 100%;
   min-width: 100%;
   min-height: 165px;
+  max-height: 400px;
 }
 
 @media (min-width: 1024px) {
@@ -64,14 +65,15 @@
 
   .out-of-grid img {
     width: auto;
+    max-height: none;
   }
 }
 
-[data-bs-theme="light"] .dark-show {
+:root[data-bs-theme="light"] .dark-show {
   display: none;
 }
 
-[data-bs-theme="dark"] .dark-show + * {
+:root[data-bs-theme="dark"] .dark-show + * {
   display: none;
 }
 
