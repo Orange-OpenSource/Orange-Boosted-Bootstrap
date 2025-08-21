@@ -1,7 +1,7 @@
 // Components custom properties applications
 // OUDS Core tokens version 1.5.0
-// Orange Core tokens version 1.1.0
-// Orange System tokens version 1.5.0
+// Sosh Core tokens version 1.1.0
+// Sosh System tokens version 1.5.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
@@ -39,6 +39,10 @@
   --#{$prefix}button-mono-color-content-minimal-focus: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-ouds-color-opacity-black-280};
+  --#{$prefix}button-social-color-bg-enabled: #{$core-ouds-color-functional-black};
+  --#{$prefix}button-social-color-bg-hover: #{$core-ouds-color-opacity-black-680};
+  --#{$prefix}button-social-color-bg-pressed: #{$core-ouds-color-opacity-black-680};
+  --#{$prefix}button-social-color-bg-focus: #{$core-ouds-color-opacity-black-680};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-black};
   --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-black-520};
@@ -49,7 +53,7 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-600};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-black-440};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
-  --#{$prefix}button-social-color-content-focus: #{$ouds-color-content-on-action-focus-light};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-content-brand-primary-light};
 }
 // scss-docs-end ouds-component-css-color
 
@@ -87,6 +91,10 @@
   --#{$prefix}button-mono-color-content-minimal-focus: #{$core-ouds-color-functional-black};
   --#{$prefix}button-mono-color-border-default-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}button-mono-color-border-default-disabled: #{$core-ouds-color-opacity-white-440};
+  --#{$prefix}button-social-color-bg-enabled: #{$core-ouds-color-functional-white};
+  --#{$prefix}button-social-color-bg-hover: #{$core-ouds-color-opacity-white-640};
+  --#{$prefix}button-social-color-bg-pressed: #{$core-ouds-color-opacity-white-640};
+  --#{$prefix}button-social-color-bg-focus: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}link-mono-color-content-enabled: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-hover: #{$core-ouds-color-functional-white};
   --#{$prefix}link-mono-color-content-pressed: #{$core-ouds-color-opacity-white-800};
@@ -97,6 +105,6 @@
   --#{$prefix}switch-color-track-selected-interaction: #{$core-ouds-color-functional-malachite-300};
   --#{$prefix}switch-color-track-unselected: #{$core-ouds-color-opacity-white-640};
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
-  --#{$prefix}button-social-color-content-focus: #{$ouds-color-content-on-action-enabled-dark};
+  --#{$prefix}link-color-chevron-hover: #{$ouds-color-action-enabled-dark};
 }
 // scss-docs-end ouds-all-component-css-color

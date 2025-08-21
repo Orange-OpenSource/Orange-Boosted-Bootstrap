@@ -1,8 +1,8 @@
 // Component application
 // Depends on semantic applications
 // OUDS Core tokens version 1.5.0
-// Orange Core tokens version 1.1.0
-// Orange System tokens version 1.5.0
+// Sosh Core tokens version 1.1.0
+// Sosh System tokens version 1.5.0
 
 // Badge
 
@@ -40,11 +40,11 @@ $ouds-bullet-list-space-padding-inline-level-2: $core-ouds-dimension-850 !defaul
 
 // scss-docs-start ouds-component-button
 $ouds-button-border-radius-default: $ouds-border-radius-default !default;
-$ouds-button-border-radius-rounded: $ouds-border-radius-medium !default;
+$ouds-button-border-radius-rounded: $ouds-border-radius-default !default;
 $ouds-button-border-width-default-interaction-mono: $ouds-border-width-none !default;
-$ouds-button-border-width-default-interaction: $ouds-border-width-medium !default;
+$ouds-button-border-width-default-interaction: $ouds-border-width-default !default;
 $ouds-button-border-width-default: $ouds-border-width-default !default;
-$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-primary !default;
+$ouds-button-color-bg-brand-enabled: $ouds-color-surface-brand-secondary !default;
 $ouds-button-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
 $ouds-button-color-bg-default-focus: $ouds-color-opacity-transparent !default;
@@ -60,7 +60,7 @@ $ouds-button-color-border-default-focus: $ouds-color-action-focus !default;
 $ouds-button-color-border-default-hover: $ouds-color-action-hover !default;
 $ouds-button-color-border-default-loading: $ouds-color-action-loading !default;
 $ouds-button-color-border-default-pressed: $ouds-color-action-pressed !default;
-$ouds-button-color-content-brand-enabled: $ouds-color-content-on-brand-primary !default;
+$ouds-button-color-content-brand-enabled: $ouds-color-content-on-brand-secondary !default;
 $ouds-button-color-content-default-disabled: $ouds-color-action-disabled !default;
 $ouds-button-color-content-default-enabled: $ouds-color-action-enabled !default;
 $ouds-button-color-content-default-focus: $ouds-color-action-focus !default;
@@ -71,7 +71,7 @@ $ouds-button-color-content-minimal-disabled: $ouds-color-action-disabled !defaul
 $ouds-button-color-content-minimal-enabled: $ouds-color-action-enabled !default;
 $ouds-button-color-content-minimal-focus: $ouds-color-action-focus !default;
 $ouds-button-color-content-minimal-hover: $ouds-color-action-hover !default;
-$ouds-button-color-content-minimal-loading: $ouds-color-content-default !default;
+$ouds-button-color-content-minimal-loading: $ouds-color-action-loading !default;
 $ouds-button-color-content-minimal-pressed: $ouds-color-action-pressed !default;
 $ouds-button-mono-color-bg-default-disabled: $ouds-color-opacity-transparent !default;
 $ouds-button-mono-color-bg-default-enabled: $ouds-color-opacity-transparent !default;
@@ -125,10 +125,10 @@ $ouds-button-size-max-height-icon-only: $ouds-size-min-interactive-area !default
 $ouds-button-size-min-height: $ouds-size-min-interactive-area !default;
 $ouds-button-size-min-width: $ouds-size-min-interactive-area !default;
 $ouds-button-social-border-radius: $ouds-border-radius-pill !default;
-$ouds-button-social-color-bg-enabled: $ouds-color-action-enabled !default;
-$ouds-button-social-color-bg-focus: $ouds-color-action-focus !default;
-$ouds-button-social-color-bg-hover: $ouds-color-action-hover !default;
-$ouds-button-social-color-bg-pressed: $ouds-color-action-hover !default;
+$ouds-button-social-color-bg-enabled: $core-ouds-color-functional-black !default;
+$ouds-button-social-color-bg-focus: $core-ouds-color-opacity-black-680 !default;
+$ouds-button-social-color-bg-hover: $core-ouds-color-opacity-black-680 !default;
+$ouds-button-social-color-bg-pressed: $core-ouds-color-opacity-black-680 !default;
 $ouds-button-social-color-content-enabled: $ouds-color-content-on-action-enabled !default;
 $ouds-button-social-color-content-focus: var(--#{$prefix}button-social-color-content-focus) !default;
 $ouds-button-social-color-content-hover: $ouds-color-content-on-action-hover !default;
@@ -149,11 +149,11 @@ $ouds-button-space-padding-inline-start-icon-end: $ouds-space-padding-inline-3xl
 // Checkbox
 
 // scss-docs-start ouds-component-checkbox
-$ouds-checkbox-border-radius: $ouds-border-radius-default !default;
-$ouds-checkbox-border-width-selected-focus: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-selected-hover: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-selected-pressed: $ouds-border-width-medium !default;
-$ouds-checkbox-border-width-selected: $ouds-border-width-medium !default;
+$ouds-checkbox-border-radius: $ouds-border-radius-small !default;
+$ouds-checkbox-border-width-selected-focus: $ouds-border-width-none !default;
+$ouds-checkbox-border-width-selected-hover: $ouds-border-width-none !default;
+$ouds-checkbox-border-width-selected-pressed: $ouds-border-width-none !default;
+$ouds-checkbox-border-width-selected: $ouds-border-width-none !default;
 $ouds-checkbox-border-width-unselected-focus: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected-hover: $ouds-border-width-medium !default;
 $ouds-checkbox-border-width-unselected-pressed: $ouds-border-width-medium !default;
@@ -167,40 +167,40 @@ $ouds-checkbox-size-min-width: $ouds-size-min-interactive-area !default;
 // Chip
 
 // scss-docs-start ouds-component-chip
-$ouds-chip-badge-color-bg: $ouds-color-surface-status-neutral-emphasized !default;
-$ouds-chip-badge-color-content: $ouds-color-content-on-status-neutral-emphasized !default;
+$ouds-chip-badge-color-bg: $ouds-color-content-on-action-enabled !default;
+$ouds-chip-badge-color-content: $ouds-color-content-default !default;
 $ouds-chip-border-radius: $ouds-border-radius-pill !default;
-$ouds-chip-border-width-selected: $ouds-border-width-medium !default;
-$ouds-chip-border-width-unselected-interaction: $ouds-border-width-medium !default;
-$ouds-chip-border-width-unselected: $ouds-border-width-default !default;
-$ouds-chip-color-bg-selected-disabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-selected-enabled: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-selected-focus: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-selected-hover: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-bg-selected-pressed: $ouds-color-opacity-transparent !default;
+$ouds-chip-border-width-selected: $ouds-border-width-none !default;
+$ouds-chip-border-width-unselected-interaction: $ouds-border-width-default !default;
+$ouds-chip-border-width-unselected: $ouds-border-width-thin !default;
+$ouds-chip-color-bg-selected-disabled: $ouds-color-action-disabled !default;
+$ouds-chip-color-bg-selected-enabled: $ouds-color-action-selected !default;
+$ouds-chip-color-bg-selected-focus: $ouds-color-action-focus !default;
+$ouds-chip-color-bg-selected-hover: $ouds-color-action-hover !default;
+$ouds-chip-color-bg-selected-pressed: $ouds-color-action-pressed !default;
 $ouds-chip-color-bg-unselected-disabled: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-unselected-enabled: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-unselected-focus: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-unselected-hover: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-bg-unselected-pressed: $ouds-color-opacity-transparent !default;
-$ouds-chip-color-border-selected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-border-selected-enabled: $ouds-color-action-selected !default;
-$ouds-chip-color-border-selected-focus: $ouds-color-action-focus !default;
-$ouds-chip-color-border-selected-hover: $ouds-color-action-hover !default;
-$ouds-chip-color-border-selected-pressed: $ouds-color-action-pressed !default;
+$ouds-chip-color-border-selected-disabled: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-border-selected-enabled: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-border-selected-focus: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-border-selected-hover: $ouds-color-opacity-transparent !default;
+$ouds-chip-color-border-selected-pressed: $ouds-color-opacity-transparent !default;
 $ouds-chip-color-border-unselected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-border-unselected-enabled: $ouds-color-border-default !default;
+$ouds-chip-color-border-unselected-enabled: $ouds-color-border-emphasized !default;
 $ouds-chip-color-border-unselected-focus: $ouds-color-action-focus !default;
 $ouds-chip-color-border-unselected-hover: $ouds-color-action-hover !default;
 $ouds-chip-color-border-unselected-pressed: $ouds-color-action-pressed !default;
-$ouds-chip-color-content-selected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-content-selected-enabled: $ouds-color-action-enabled !default;
-$ouds-chip-color-content-selected-focus: $ouds-color-action-focus !default;
-$ouds-chip-color-content-selected-hover: $ouds-color-action-hover !default;
-$ouds-chip-color-content-selected-pressed: $ouds-color-action-pressed !default;
-$ouds-chip-color-content-selected-tick-enabled: $ouds-color-action-selected !default;
+$ouds-chip-color-content-selected-disabled: $ouds-color-content-on-action-disabled !default;
+$ouds-chip-color-content-selected-enabled: $ouds-color-content-on-action-selected !default;
+$ouds-chip-color-content-selected-focus: $ouds-color-content-on-action-focus !default;
+$ouds-chip-color-content-selected-hover: $ouds-color-content-on-action-hover !default;
+$ouds-chip-color-content-selected-pressed: $ouds-color-content-on-action-pressed !default;
+$ouds-chip-color-content-selected-tick-enabled: $ouds-color-content-on-action-selected !default;
 $ouds-chip-color-content-unselected-disabled: $ouds-color-action-disabled !default;
-$ouds-chip-color-content-unselected-enabled: $ouds-color-action-enabled !default;
+$ouds-chip-color-content-unselected-enabled: $ouds-color-content-default !default;
 $ouds-chip-color-content-unselected-focus: $ouds-color-action-focus !default;
 $ouds-chip-color-content-unselected-hover: $ouds-color-action-hover !default;
 $ouds-chip-color-content-unselected-pressed: $ouds-color-action-pressed !default;
@@ -248,11 +248,11 @@ $ouds-divider-border-width: $ouds-border-width-thin !default;
 // Link
 
 // scss-docs-start ouds-component-link
-$ouds-link-color-chevron-enabled: $ouds-color-content-brand-primary !default;
-$ouds-link-color-chevron-focus: $ouds-color-content-brand-primary !default;
+$ouds-link-color-chevron-enabled: $ouds-color-action-enabled !default;
+$ouds-link-color-chevron-focus: $ouds-color-action-enabled !default;
 $ouds-link-color-chevron-hover: $ouds-color-content-brand-primary !default;
-$ouds-link-color-chevron-pressed: $ouds-color-content-brand-primary !default;
-$ouds-link-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-link-color-chevron-pressed: $ouds-color-action-pressed !default;
+$ouds-link-color-content-enabled: $ouds-color-content-default !default;
 $ouds-link-color-content-focus: $ouds-color-action-focus !default;
 $ouds-link-color-content-hover: $ouds-color-action-hover !default;
 $ouds-link-color-content-pressed: $ouds-color-action-pressed !default;
@@ -297,10 +297,10 @@ $ouds-quantity-input-space-column-gap-quantity-selector: $core-ouds-dimension-ou
 
 // scss-docs-start ouds-component-radio
 $ouds-radio-button-border-radius: $ouds-border-radius-pill !default;
-$ouds-radio-button-border-width-selected-focus: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-selected-hover: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-selected-pressed: $ouds-border-width-medium !default;
-$ouds-radio-button-border-width-selected: $ouds-border-width-medium !default;
+$ouds-radio-button-border-width-selected-focus: $ouds-border-width-none !default;
+$ouds-radio-button-border-width-selected-hover: $ouds-border-width-none !default;
+$ouds-radio-button-border-width-selected-pressed: $ouds-border-width-none !default;
+$ouds-radio-button-border-width-selected: $ouds-border-width-none !default;
 $ouds-radio-button-border-width-unselected-focus: $ouds-border-width-medium !default;
 $ouds-radio-button-border-width-unselected-hover: $ouds-border-width-medium !default;
 $ouds-radio-button-border-width-unselected-pressed: $ouds-border-width-medium !default;
@@ -358,8 +358,8 @@ $ouds-switch-space-padding-inline-unselected: $ouds-space-padding-inline-xs !def
 
 // scss-docs-start ouds-component-tag
 $ouds-tag-border-radius: $ouds-border-radius-pill !default;
-$ouds-tag-input-border-width-default-interaction: $ouds-border-width-medium !default;
-$ouds-tag-input-border-width-default: $ouds-border-width-default !default;
+$ouds-tag-input-border-width-default-interaction: $ouds-border-width-default !default;
+$ouds-tag-input-border-width-default: $ouds-border-width-thin !default;
 $ouds-tag-input-color-bg-enabled: $ouds-color-action-support-enabled !default;
 $ouds-tag-input-color-bg-focus: $ouds-color-action-support-focus !default;
 $ouds-tag-input-color-bg-hover: $ouds-color-action-support-hover !default;
@@ -368,7 +368,7 @@ $ouds-tag-input-color-border-enabled: $ouds-color-border-default !default;
 $ouds-tag-input-color-border-focus: $ouds-color-action-focus !default;
 $ouds-tag-input-color-border-hover: $ouds-color-action-hover !default;
 $ouds-tag-input-color-border-pressed: $ouds-color-action-pressed !default;
-$ouds-tag-input-color-content-enabled: $ouds-color-action-enabled !default;
+$ouds-tag-input-color-content-enabled: $ouds-color-content-default !default;
 $ouds-tag-input-color-content-focus: $ouds-color-action-focus !default;
 $ouds-tag-input-color-content-hover: $ouds-color-action-hover !default;
 $ouds-tag-input-color-content-pressed: $ouds-color-action-pressed !default;
@@ -404,8 +404,8 @@ $ouds-text-area-size-max-width: $core-ouds-dimension-6000 !default;
 $ouds-text-area-size-min-height-input: $core-ouds-dimension-900 !default;
 $ouds-text-area-space-padding-block: $ouds-space-padding-block-sm !default;
 $ouds-text-input-border-radius-default: $ouds-border-radius-default !default;
-$ouds-text-input-border-radius-rounded: $ouds-border-radius-small !default;
-$ouds-text-input-border-width-default: $ouds-border-width-default !default;
+$ouds-text-input-border-radius-rounded: $ouds-border-radius-default !default;
+$ouds-text-input-border-width-default: $ouds-border-width-thin !default;
 $ouds-text-input-border-width-focus: $ouds-border-width-medium !default;
 $ouds-text-input-color-border-enabled: $ouds-color-border-default !default;
 $ouds-text-input-color-border-focus: $ouds-color-border-emphasized !default;
