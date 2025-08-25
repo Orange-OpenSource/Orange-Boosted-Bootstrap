@@ -104,6 +104,49 @@ const { addedIn, layout, title } = Astro.props
           <li class="nav-item dropdown">
             <ThemeToggler layout={layout} />
           </li>
+          <li class="nav-item dropdown">
+            <button
+              class='nav-link nav-icon dropdown-toggle'
+              id="bd-brand"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-label="Toggle brand (orange)"
+            >
+              <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
+              <span class='d-lg-none ms-2' id="bd-brand-text">Toggle brand</span>
+            </button>
+            <ul
+              class=`dropdown-menu dropdown-menu-end mb-2`
+              aria-labelledby="bd-brand-text"
+            >
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item d-flex align-items-center"
+                  data-bs-brand-value="orange"
+                  aria-pressed="false"
+                >
+                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
+                  Orange
+                  <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item d-flex align-items-center"
+                  data-bs-brand-value="sosh"
+                  aria-pressed="false"
+                >
+                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
+                  Sosh
+                  <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

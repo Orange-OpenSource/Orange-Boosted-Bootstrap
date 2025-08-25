@@ -2,6 +2,21 @@
 ---
 
 <style is:global lang="scss">
-  @import '../../scss/docs';
-  @import '../../scss/docs_search';
+  $ouds-root-selector: '&';
+  [data-bs-brand="orange"] {
+    $brand: "orange";
+    @import '../../../../scss/ouds-web-bootstrap.scss';
+    @import '../../scss/docs';
+    @import '../../scss/docs_search';
+  }
+  [data-bs-brand="sosh"] {
+    $brand: "sosh";
+    @import '../../../../packages/sosh/sosh-scss/ouds-web-sosh-bootstrap.scss';
+    @import '../../scss/docs';
+    @import '../../scss/docs_search';
+  }
+  // [data-bs-brand] {
+  //   @import '../../scss/docs';
+  //   @import '../../scss/docs_search';
+  // }
 </style>

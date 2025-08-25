@@ -221,5 +221,8 @@
   },
   "overrides": {
     "storybook": "$storybook"
-  }
+  },
+  "workspaces": [
+    "packages/sosh"
+  ]
 }

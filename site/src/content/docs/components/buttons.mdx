@@ -9,6 +9,18 @@ toc: true
 import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 
+<BrandSpecific brand="orange">
+Test Orange
+</BrandSpecific>
+
+<BrandSpecific brand="sosh">
+Test Sosh
+</BrandSpecific>
+
+<BrandSpecific brand={['orange', 'sosh']}>
+Test Orange + Sosh
+</BrandSpecific>
+
 <Callout type="info">
 You can find here the [OUDS Button design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
 </Callout>

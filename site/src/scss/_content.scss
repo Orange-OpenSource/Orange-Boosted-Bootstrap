@@ -172,3 +172,17 @@
   }
 }
 // scss-docs-end custom-color-mode
+
+$brands: ("orange", "sosh") !default;
+
+[class^="bd-brand-"] {
+  display: none;
+}
+
+@each $brand-to-display in $brands {
+  @if $brand-to-display == $brand {
+    .bd-brand-#{$brand-to-display} {
+      display: block;
+    }
+  }
+}

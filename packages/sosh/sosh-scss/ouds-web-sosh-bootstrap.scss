@@ -1,0 +1,6 @@
+$enable-bootstrap-compatibility: true !default;
+
+@import "../../../scss/config";
+@import "../../../scss/functions";
+@import "tokens";
+@import "../../../scss/ouds-web";
