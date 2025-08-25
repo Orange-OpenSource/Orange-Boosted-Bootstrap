@@ -27,6 +27,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 
 <Example class="bd-btn-example" code={`<button type="button" class="btn btn-default">Default</button>
 <button type="button" class="btn btn-strong">Strong</button>
+<button type="button" class="btn btn-brand">Brand</button>
 <button type="button" class="btn btn-minimal">Minimal</button>
 <button type="button" class="btn btn-negative">Negative</button>`} />
 
@@ -39,6 +40,20 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 {/* OUDS mod: no accessibility tip callout about colored buttons since OUDS Web does not provide such buttons */}
 
 {/* OUDS mod: Variants on colored background added */}
+
+### Rounded
+
+Add `.btn-rounded` to the button class list to enable rounded corners.
+
+<Callout type="warning">
+  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
+</Callout>
+
+<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
+<button type="button" class="btn btn-strong btn-rounded">Strong</button>
+<button type="button" class="btn btn-brand btn-rounded">Brand</button>
+<button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
+<button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
 
 ## Variants on colored background
 
@@ -55,7 +70,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
       <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
-      <!-- BEWARE: \`.btn-negative\` should never be used on colored backgrounds! -->
+      <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>
   <div class="bg-status-negative-emphasized p-lg">
@@ -63,7 +78,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
       <button type="button" class="btn btn-minimal btn-on-colored-bg">Minimal</button>
-      <!-- BEWARE: \`.btn-negative\` should never be used on colored backgrounds! -->
+      <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>`} />
 
@@ -99,6 +114,12 @@ We strongly advise not using an `<img />`, in particular because the icon will n
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       Strong
+    </button>
+    <button type="button" class="btn btn-brand">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      Brand
     </button>
     <button type="button" class="btn btn-minimal">
       <svg aria-hidden="true">
@@ -166,6 +187,12 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
       </svg>
       <span class="visually-hidden">Strong</span>
     </button>
+    <button type="button" class="btn btn-icon btn-brand">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden">Brand</span>
+    </button>
     <button type="button" class="btn btn-icon btn-minimal">
       <svg aria-hidden="true">
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -225,6 +252,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 <Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
   <button class="btn btn-strong" type="submit">Button</button>
+  <button class="btn btn-brand" type="submit">Button</button>
   <input class="btn btn-minimal" type="button" value="Input" />
   <input class="btn btn-negative" type="submit" value="Submit" />
   <input class="btn btn-default" type="reset" value="Reset" />`} />
@@ -248,6 +276,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 <Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default" disabled>Default</button>
     <button type="button" class="btn btn-strong" disabled>Strong</button>
+    <button type="button" class="btn btn-brand" disabled>Brand</button>
     <button type="button" class="btn btn-minimal" disabled>Minimal</button>
     <button type="button" class="btn btn-negative" disabled>Negative</button>
   </div>
@@ -326,6 +355,13 @@ You can see it live and find a JavaScript example on our [loading buttons live e
       </svg>
       <span role="status" id="loading-btn-msg-2" class="visually-hidden">Downloading file 2</span>
     </button>
+    <button type="button" class="btn btn-brand loading-indeterminate" id="loading-btn-100" disabled>
+      Download file 100
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-100" class="visually-hidden">Downloading file 100</span>
+    </button>
     <button type="button" class="btn btn-minimal loading-indeterminate" id="loading-btn-3" disabled>
       Download file 3
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -356,6 +392,13 @@ You can see it live and find a JavaScript example on our [loading buttons live e
         <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
       </svg>
       <span role="status" id="loading-btn-msg-6" class="visually-hidden">Downloading file 6: xx%</span>
+    </button>
+    <button type="button" class="btn btn-brand loading-determinate" id="loading-btn-101" disabled style="--bs-btn-loading-time: 5s;">
+      Download file 101
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-btn-msg-101" class="visually-hidden">Downloading file 101: xx%</span>
     </button>
     <button type="button" class="btn btn-minimal loading-determinate" id="loading-btn-7" disabled style="--bs-btn-loading-time: 5s;">
       Download file 7

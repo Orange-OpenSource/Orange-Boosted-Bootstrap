@@ -1,18 +1,18 @@
 // Semantic applications
 // Depends on raw primitive values
-// OUDS Core tokens version 1.3.0
+// OUDS Core tokens version 1.5.0
 // Orange Core tokens version 1.1.0
-// Orange System tokens version 1.3.0
+// Orange System tokens version 1.5.0
 
 // Border
 
 // scss-docs-start ouds-semantic-border
 $ouds-border-radius-default: $core-ouds-border-radius-0 !default;
 $ouds-border-radius-large: $core-ouds-border-radius-300 !default;
-$ouds-border-radius-medium: $core-ouds-border-radius-150 !default;
+$ouds-border-radius-medium: $core-ouds-border-radius-200 !default;
 $ouds-border-radius-none: $core-ouds-border-radius-0 !default;
 $ouds-border-radius-pill: $core-ouds-border-radius-9999 !default;
-$ouds-border-radius-small: $core-ouds-border-radius-75 !default;
+$ouds-border-radius-small: $core-ouds-border-radius-100 !default;
 $ouds-border-style-default: $core-ouds-border-style-solid !default;
 $ouds-border-style-drag: $core-ouds-border-style-dashed !default;
 $ouds-border-width-default: $core-ouds-border-width-25 !default;

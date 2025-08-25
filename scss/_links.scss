@@ -40,10 +40,10 @@
 
 .link-chevron {
   --#{$prefix}link-chevron-gap: #{$ouds-link-space-column-gap-chevron-default};
-  --#{$prefix}link-chevron-color: #{$ouds-link-color-arrow-enabled};
-  --#{$prefix}link-chevron-hover-color: #{$ouds-link-color-arrow-hover};
-  --#{$prefix}link-chevron-focus-color: #{$ouds-link-color-arrow-focus};
-  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-color-arrow-pressed};
+  --#{$prefix}link-chevron-color: #{$ouds-link-color-chevron-enabled};
+  --#{$prefix}link-chevron-hover-color: #{$ouds-link-color-chevron-hover};
+  --#{$prefix}link-chevron-focus-color: #{$ouds-link-color-chevron-focus};
+  --#{$prefix}link-chevron-pressed-color: #{$ouds-link-color-chevron-pressed};
   --#{$prefix}link-chevron-disabled-color: #{$ouds-color-action-disabled};
 
   // Extend for Boosted compatibility in which .link-chevron can be used without .link

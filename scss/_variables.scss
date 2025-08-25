@@ -947,7 +947,7 @@ $btn-active-box-shadow:       null !default;
 // OUDS mod: no `$btn-link-focus-shadow-rgb`
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $ouds-button-border-radius !default; // OUDS mod: instead of var(--#{$prefix}border-radius)
+$btn-border-radius:           $ouds-button-border-radius-default !default; // OUDS mod: instead of var(--#{$prefix}border-radius)
 // OUDS mod: no $btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
 // OUDS mod: no $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 

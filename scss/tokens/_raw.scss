@@ -1,8 +1,8 @@
 // Raw primitive values
 // Insertion of brand foundations
-// OUDS Core tokens version 1.3.0
+// OUDS Core tokens version 1.5.0
 // Orange Core tokens version 1.1.0
-// Orange System tokens version 1.3.0
+// Orange System tokens version 1.5.0
 
 // Border
 
@@ -16,10 +16,10 @@ $core-ouds-border-style-solid: solid !default;
 $core-ouds-border-radius-0: $core-ouds-border-base * 0 !default; // 0px
 // $core-ouds-border-radius-25: $core-ouds-border-base * .25 !default; // 1px
 // $core-ouds-border-radius-50: $core-ouds-border-base * .5 !default; // 2px
-$core-ouds-border-radius-75: $core-ouds-border-base * .75 !default; // 3px
-// $core-ouds-border-radius-100: $core-ouds-border-base * 1 !default; // 4px
-$core-ouds-border-radius-150: $core-ouds-border-base * 1.5 !default; // 6px
-// $core-ouds-border-radius-200: $core-ouds-border-base * 2 !default; // 8px
+// $core-ouds-border-radius-75: $core-ouds-border-base * .75 !default; // 3px
+$core-ouds-border-radius-100: $core-ouds-border-base * 1 !default; // 4px
+// $core-ouds-border-radius-150: $core-ouds-border-base * 1.5 !default; // 6px
+$core-ouds-border-radius-200: $core-ouds-border-base * 2 !default; // 8px
 $core-ouds-border-radius-300: $core-ouds-border-base * 3 !default; // 12px
 // $core-ouds-border-radius-400: $core-ouds-border-base * 4 !default; // 16px
 // $core-ouds-border-radius-500: $core-ouds-border-base * 5 !default; // 20px
