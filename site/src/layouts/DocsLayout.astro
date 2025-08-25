@@ -89,7 +89,6 @@ if (frontmatter.toc) {
           if (selectGoodPage) {
             return (
               <ul class="d-flex column-gap-xs list-unstyled mb-none">
-                <li><span class="tag text-bg-status-info-muted">Design: v{component.value}</span></li>
                 <li><span class:list={['tag', { 'text-bg-status-positive-muted': versionCompared }, { 'text-bg-status-warning-emphasized': !versionCompared }]}>
                   {!versionCompared && <>
                     <span class="tag-asset-container">
@@ -99,7 +98,7 @@ if (frontmatter.toc) {
                     </span>
                     <span class="visually-hidden">Warning the design and tech versions don’t match.</span>
                   </>}
-                  Tech: v{frontmatter.version}
+                  Ref design: v{frontmatter.version}
                 </span></li>
               </ul>
             )

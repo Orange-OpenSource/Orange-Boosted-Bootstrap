@@ -4,7 +4,7 @@ description: The Badge is a small UI element used to highlight status, notificat
 aliases:
   - "/docs/components/badge/"
 toc: true
-version: "1.1.0"
+version: "1.0.0"
 ---
 
 import { getData } from '@libs/data'
@@ -144,7 +144,6 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
   if (selectGoodPage) {
     return (
       <ul class="d-flex column-gap-xs list-unstyled mb-none">
-        <li><span class="tag text-bg-status-info-muted">Design: v{component.value}</span></li>
         <li><span class:list={['tag', { 'text-bg-status-positive-muted': versionCompared }, { 'text-bg-status-warning-emphasized': !versionCompared }]}>
           {!versionCompared && <>
             <span class="tag-asset-container">
@@ -154,7 +153,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
             </span>
             <span class="visually-hidden">Warning the design and tech versions don’t match.</span>
           </>}
-          Tech: v{frontmatter.version}
+          Ref design: v{frontmatter.version}
         </span></li>
       </ul>
     )
@@ -166,6 +165,5 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 <BsTable>
 | Techno | Version | Description |
 | ---- | ------- | ----------- |
-| Design | {getData('_components-versions').find((component) => frontmatter.title.toLowerCase().replaceAll(' ', '-').startsWith(component.name)).value} | This represents the version of the component on the design side. |
-| Tech | {frontmatter.version} | This represents the last implemented design version in OUDS Web.  |
+| Implemented design | {frontmatter.version} | This represents the last implemented design version in OUDS Web.  |
 </BsTable>
