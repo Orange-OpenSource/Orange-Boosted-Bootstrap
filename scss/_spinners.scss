@@ -9,10 +9,10 @@
   width: var(--#{$prefix}spinner-width);
   height: var(--#{$prefix}spinner-height);
   color: #{$spinner-color}; // Boosted mod
-  vertical-align: var(--#{$prefix}spinner-vertical-align);Boostedmodvertical-align
+  vertical-align: var(--#{$prefix}spinner-vertical-align);
   background-color: transparent; // Boosted mod
   // stylelint-disable-next-line property-disallowed-list
-  border-radius: 50%;Boostedmodstylelint-disable-next-lineproperty-disallowed-listborder-radius
+  border-radius: 50%;
   animation: var(--#{$prefix}spinner-animation-speed) linear infinite var(--#{$prefix}spinner-animation-name);
 }
 
@@ -32,7 +32,7 @@
   --#{$prefix}spinner-animation-name: spinner-border;
   // scss-docs-end spinner-border-css-vars
 
-  border: var(--#{$prefix}spinner-border-width) solid currentcolor;scss-docs-endspinner-border-css-varsborder
+  border: var(--#{$prefix}spinner-border-width) solid currentcolor;
   border-right-color: transparent;
 }
 
@@ -78,7 +78,7 @@
   --#{$prefix}spinner-animation-name: spinner-grow;
   // scss-docs-end spinner-grow-css-vars
 
-  background-color: currentcolor;scss-docs-endspinner-grow-css-varsbackground-color
+  background-color: currentcolor;
   opacity: 0;
 }
 
