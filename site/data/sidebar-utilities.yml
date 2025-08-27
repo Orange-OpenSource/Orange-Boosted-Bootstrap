@@ -3,6 +3,7 @@
   icon_color: body-color
   pages:
     - title: API
+    - title: Aspect ratio
     - title: Background
     - title: Border
     - title: Clearfix
@@ -17,7 +18,6 @@
     - title: Opacity
     - title: Overflow
     - title: Position
-    - title: Ratio
     - title: Shadow
     - title: Sizing
     - title: Spacing
