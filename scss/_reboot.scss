@@ -62,23 +62,23 @@
 
 // scss-docs-start reboot-body-rules
 body {
-  position: relative; // Boosted mod: required for back-to-top component
+  position: relative; // Boosted mod: required for back-to-top component;
   margin: 0; // 1
-  font-family: var(--#{$prefix}body-font-family);
+  font-family: var(--#{$prefix}body-font-family);1font-family
   font-synthesis: none; // Boosted mod // 5
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  // Boosted mod: no color
+  // Boosted mod: no color;
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
-  background-color: var(--#{$prefix}body-bg); // 2
-  -webkit-text-size-adjust: 100%; // 3
-  -webkit-tap-highlight-color: rgba($black, 0); // 4
-  -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
-  text-rendering: optimizespeed; // Boosted mod
+  background-color: var(--#{$prefix}body-bg);Boostedmodbackground-color // 2
+  -webkit-text-size-adjust: 100%;2-webkit-text-size-adjust // 3
+  -webkit-tap-highlight-color: rgba($black, 0);3-webkit-tap-highlight-color // 4
+  -webkit-font-smoothing: subpixel-antialiased;4-webkit-font-smoothing // Boosted mod
+  text-rendering: optimizespeed;Boostedmodtext-rendering // Boosted mod
 }
 // scss-docs-end reboot-body-rules
 
@@ -100,12 +100,12 @@ body {
 
 .js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
 .js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
-  outline: 0 !important;
+  outline: 0 !important;2outline
   box-shadow: none;
 }
 
 :focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
-  outline: 0 !important;
+  outline: 0 !important;3outline
   box-shadow: none;
 }
 // scss-docs-end focus-visibility
@@ -381,11 +381,11 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: 1rem; // 2
-  overflow: auto; // 3
+  margin-bottom: 1rem;1margin-bottom // 2
+  overflow: auto;2overflow // 3
   @include font-size($code-font-size);
   line-height: $pre-line-height; // Boosted mod
-  color: $pre-color;
+  color: $pre-color;Boostedmodcolor
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -398,9 +398,9 @@ pre {
 var, // Boosted mod
 code {
   @include font-size($code-font-size);
-  font-style: normal; // Boosted mod: <var> is italic in all browsers
+  font-style: normal; // Boosted mod: <var> is italic in all browsers;
   line-height: $line-height-sm; // Boosted mod
-  color: var(--#{$prefix}code-color);
+  color: var(--#{$prefix}code-color);Boostedmodcolor
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
@@ -451,25 +451,25 @@ svg {
 //    See https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
 
 table {
-  font-feature-settings: "tnum";      // Boosted mod: 2
-  font-variant-numeric: tabular-nums; // Boosted mod: 2
+  font-feature-settings: "tnum";      // Boosted mod: 2;
+  font-variant-numeric: tabular-nums; // Boosted mod: 2;
   caption-side: top;                  // Boosted mod
-  border-collapse: collapse;
+  border-collapse: collapse;Boostedmodborder-collapse
 }
 
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
   @include font-size($h1-font-size);    // Boosted mod
-  font-weight: $font-weight-bold;       // Boosted mod
-  color: $table-caption-color;
+  font-weight: $font-weight-bold;Boostedmodfont-weight       // Boosted mod
+  color: $table-caption-color;Boostedmodcolor
   text-align: left;
 
   /* rtl:remove */
   letter-spacing: $h1-spacing;          // Boosted mod
-  -webkit-font-smoothing: antialiased;  // Boosted mod
-  -moz-osx-font-smoothing: grayscale;   // Boosted mod
-  text-rendering: optimizelegibility;   // Boosted mod
+  -webkit-font-smoothing: antialiased;Boostedmod-webkit-font-smoothing  // Boosted mod
+  -moz-osx-font-smoothing: grayscale;Boostedmod-moz-osx-font-smoothing   // Boosted mod
+  text-rendering: optimizelegibility;Boostedmodtext-rendering   // Boosted mod
 }
 
 // 1. Removes font-weight bold by inheriting
@@ -478,8 +478,8 @@ caption {
 
 th {
   font-weight: $table-th-font-weight; // 1
-  text-align: inherit; // 2
-  text-align: -webkit-match-parent; // 3
+  text-align: inherit;1text-align // 2
+  text-align: -webkit-match-parent;2text-align // 3
 }
 
 thead,
@@ -500,7 +500,7 @@ th {
 
 label {
   display: inline-block; // 1
-  font-weight: $form-label-font-weight; // Boosted mod
+  font-weight: $form-label-font-weight;1font-weight // Boosted mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -508,7 +508,7 @@ label {
 
 button {
   // stylelint-disable-next-line property-disallowed-list
-  border-radius: 0;
+  border-radius: 0;stylelint-disable-next-lineproperty-disallowed-listborder-radius
 }
 
 // Explicitly remove focus outline in Chromium when it shouldn't be
@@ -611,9 +611,9 @@ textarea {
 
 fieldset {
   min-width: 0; // 1
-  padding: 0; // 2
-  margin: 0; // 2
-  border: 0; // 2
+  padding: 0;1padding // 2
+  margin: 0;2margin // 2
+  border: 0;2border // 2
 }
 
 // 1. By using `float: left`, the legend will behave like a block element.
@@ -623,7 +623,7 @@ fieldset {
 
 legend {
   float: left; // 1
-  width: 100%;
+  width: 100%;1width
   padding: 0;
   margin-bottom: $legend-margin-bottom;
   @include font-size($legend-font-size);
@@ -661,6 +661,12 @@ legend {
 [type="search"] {
   -webkit-appearance: textfield; // 1
   outline-offset: -#{$focus-visible-outer-offset}; // 2 // Boosted mod
+
+  // 3. Better affordance and consistent appearance for search cancel button
+  &::-webkit-search-cancel-button {
+    cursor: pointer;
+    filter: grayscale(1);
+  }
 }
 
 // 1. A few input types should stay LTR
@@ -695,7 +701,7 @@ legend {
 
 ::file-selector-button {
   font: inherit; // 1
-  -webkit-appearance: button; // 2
+  -webkit-appearance: button;1-webkit-appearance // 2
 }
 
 // Correct element displays
@@ -716,7 +722,7 @@ iframe {
 
 summary {
   display: list-item; // 1
-  cursor: pointer;
+  cursor: pointer;1cursor
 }
 
 
