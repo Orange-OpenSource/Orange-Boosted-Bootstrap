@@ -173,7 +173,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) add(var(--#{$prefix}dropdown-item-padding-y), .125rem); // OUDS mod
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) calc(var(--#{$prefix}dropdown-item-padding-y) + .125rem); // OUDS mod
   clear: both;
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // OUDS mod
   color: var(--#{$prefix}dropdown-link-color);
@@ -210,7 +210,7 @@
   // OUDS mod: focus
   &:focus-visible {
     outline-offset: -$focus-visible-outer-width;
-    box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}color-border-focus-inset);
+    box-shadow: inset 0 0 0 calc($focus-visible-inner-width + $focus-visible-outer-width) var(--#{$prefix}color-border-focus-inset);
   }
   // End mod
 }

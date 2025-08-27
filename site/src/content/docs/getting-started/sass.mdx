@@ -323,6 +323,7 @@ You can also specify a base color with our color map functions:
 
 We use the `escape-svg` function to escape the `<`, `>` and `#` characters for SVG background images. When using the `escape-svg` function, data URIs must be quoted.
 
+{/*
 ### Add and Subtract functions
 
 We use the `add` and `subtract` functions to wrap the CSS `calc` function. The primary purpose of these functions is to avoid errors when a “unitless” `0` value is passed into a `calc` expression. Expressions like `calc(10px - 0)` will return an error in all browsers, despite being mathematically correct.
@@ -360,6 +361,7 @@ $border-width: 0;
   border-radius: subtract($border-radius, $border-width);
 }
 ```
+*/}
 
 ## Mixins
 

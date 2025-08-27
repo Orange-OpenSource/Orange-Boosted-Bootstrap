@@ -67,7 +67,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: subtract(100%, 1px);
+      left: calc(100% - 1px);
       z-index: -1;
       width: var(--#{$prefix}stepped-process-item-arrow-width);
       clip-path: var(--#{$prefix}stepped-process-item-arrow-shape);
@@ -127,7 +127,7 @@
 
 @for $i from 1 through $stepped-process-max-items {
   .stepped-process-item:nth-child(#{$i}) {
-    $index: subtract($stepped-process-max-items, $i);
+    $index: calc($stepped-process-max-items - $i);
     z-index: if($index == 0, null, $index);
   }
 }

@@ -31,7 +31,7 @@
   justify-content: center;
   min-width: var(--#{$prefix}tag-min-width);
   min-height: var(--#{$prefix}tag-min-height);
-  padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+  padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width));
   margin: 0;
   font-weight: 700;
   color: var(--#{$prefix}tag-color);
@@ -105,7 +105,7 @@
   &:has(.tag-status-icon),
   &:has(.tag-bullet),
   &.loading:has(.tag-loader) {
-    padding-left: calc(var(--#{$prefix}tag-padding-asset) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    padding-left: calc(var(--#{$prefix}tag-padding-asset) - var(--#{$prefix}tag-border-width));
   }
 
   .tag-icon,
@@ -132,8 +132,8 @@
   }
 
   .tag-status-icon {
-    width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
-    height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
+    width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding)));
+    height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding)));
     margin: var(--#{$prefix}tag-icon-padding);
     vertical-align: middle;
     background-color: var(--#{$prefix}tag-asset-color);
@@ -141,8 +141,8 @@
   }
 
   .tag-bullet {
-    width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
-    height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
+    width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding)));
+    height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding)));
     margin: var(--#{$prefix}tag-bullet-padding);
     background-color: var(--#{$prefix}tag-asset-color);
     @include border-radius(#{$ouds-border-radius-pill});
@@ -170,8 +170,8 @@
       top: 0;
       left: 0;
       display: inline-block;
-      width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
-      height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
+      width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding)));
+      height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding)));
       content: "";
       background-repeat: no-repeat;
       background-size: contain;
@@ -252,15 +252,15 @@
   --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default};
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
-  margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
+  margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
 
   &::before {
     position: absolute;
-    top: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
-    right: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
-    bottom: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
-    left: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    top: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width));
+    right: calc(-1 * var(--#{$prefix}tag-border-width));
+    bottom: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width));
+    left: calc(-1 * var(--#{$prefix}tag-border-width));
     content: "";
   }
 
