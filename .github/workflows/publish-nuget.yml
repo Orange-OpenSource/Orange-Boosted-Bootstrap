@@ -18,7 +18,7 @@ jobs:
       - name: Set up NuGet
         uses: nuget/setup-nuget@323ab0502cd38fdc493335025a96c8fdb0edc71f # v2.0.1
         with:
-          nuget-api-key: ${{ secrets.NuGetAPIKey }}
+          nuget-api-key: ${{ secrets.NUGET_TOKEN }}
           nuget-version: '5.x'
 
       - name: Pack NuGet packages
