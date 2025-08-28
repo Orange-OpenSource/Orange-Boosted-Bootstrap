@@ -1,30 +1,6 @@
 //
 // Headings
 //
-.h1 {
-  @extend h1;
-}
-
-.h2 {
-  @extend h2;
-}
-
-.h3 {
-  @extend h3;
-}
-
-.h4 {
-  @extend h4;
-}
-
-.h5 {
-  @extend h5;
-}
-
-.h6 {
-  @extend h6;
-}
-
 
 .lead {
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($lead-font-size)`
@@ -41,17 +17,6 @@
     @extend %heading; // OUDS mod
     @include get-font-size($font-size); // OUDS mod: instead of `@include font-size($font-size)`
   }
-}
-
-//
-// Emphasis
-//
-.small {
-  @extend small;
-}
-
-.mark {
-  @extend mark;
 }
 
 //

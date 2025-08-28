@@ -127,32 +127,38 @@ hr {
   text-rendering: optimizelegibility;   // OUDS mod
 }
 
-h1 {
+h1,
+.h1 {
   @extend %heading;
   @include get-font-size("heading-xlarge"); // OUDS mod: instead of `@include font-size($h1-font-size)`
 }
 
-h2 {
+h2,
+.h2 {
   @extend %heading;
   @include get-font-size("heading-large"); // OUDS mod: instead of `@include font-size($h2-font-size)`
 }
 
-h3 {
+h3,
+.h3 {
   @extend %heading;
   @include get-font-size("heading-medium"); // OUDS mod: instead of `@include font-size($h3-font-size)`
 }
 
-h4 {
+h4,
+.h4 {
   @extend %heading;
   @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size($h4-font-size)`
 }
 
-h5 {
+h5,
+.h5 {
   @extend %heading;
   @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($h5-font-size)`
 }
 
-h6 {
+h6,
+.h6 {
   @extend %heading;
   @include get-font-size("body-medium"); // OUDS mod: instead of `@include font-size($h6-font-size)`
 }
@@ -288,14 +294,16 @@ strong {
 //
 // Add the correct font size in all browsers
 
-small {
+small,
+.small {
   @include get-font-size("body-small"); // OUDS mod: instead of `@include font-size($small-font-size)`
 }
 
 
 // Mark
 
-mark {
+mark,
+.mark {
   padding: $mark-padding;
   color: var(--#{$prefix}color-content-on-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-color)`
   background-color: var(--#{$prefix}color-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-bg)`
