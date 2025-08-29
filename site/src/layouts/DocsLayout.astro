@@ -84,22 +84,17 @@ if (frontmatter.toc) {
         </div>
         {getData('_components-versions').map((component) => {
           const selectGoodPage = frontmatter.title.toLowerCase().replaceAll(' ', '-').startsWith(component.name)
-          const versionCompared = component.value === frontmatter.version
 
           if (selectGoodPage) {
             return (
-              <ul class="d-flex column-gap-xs list-unstyled mb-none">
-                <li><span class:list={['tag', { 'text-bg-status-positive-muted': versionCompared }, { 'text-bg-status-warning-emphasized': !versionCompared }]}>
-                  {!versionCompared && <>
-                    <span class="tag-asset-container">
-                      <svg aria-hidden="true">
-                        <use xlink:href={`/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#important`} />
-                      </svg>
-                    </span>
-                    <span class="visually-hidden">Warning the design and tech versions don’t match.</span>
-                  </>}
-                  Ref design: v{frontmatter.version}
+              <ul class="d-flex column-gap-xs list-unstyled mb-none align-items-center">
+                <li><span class="tag text-bg-status-info-muted">
+                  Ref design: v{component.value}
                 </span></li>
+                <li><span class="tag text-bg-status-info-muted">
+                  Ref tokens: v{''}
+                </span></li>
+                <li><a href="#compatibility">Learn more <span class="visually-hidden">about these versions</span></a></li>
               </ul>
             )
           } else {

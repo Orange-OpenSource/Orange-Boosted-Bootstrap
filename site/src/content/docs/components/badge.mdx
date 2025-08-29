@@ -4,7 +4,6 @@ description: The Badge is a small UI element used to highlight status, notificat
 aliases:
   - "/docs/components/badge/"
 toc: true
-version: "1.0.0"
 ---
 
 import { getData } from '@libs/data'
@@ -137,33 +136,9 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 
 ## Compatibility
 
-{getData('_components-versions').map((component) => {
-  const selectGoodPage = frontmatter.title.toLowerCase().replaceAll(' ', '-').startsWith(component.name)
-  const versionCompared = component.value === frontmatter.version
-
-  if (selectGoodPage) {
-    return (
-      <ul class="d-flex column-gap-xs list-unstyled mb-none">
-        <li><span class:list={['tag', { 'text-bg-status-positive-muted': versionCompared }, { 'text-bg-status-warning-emphasized': !versionCompared }]}>
-          {!versionCompared && <>
-            <span class="tag-asset-container">
-              <svg aria-hidden="true">
-                <use xlink:href={`/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#important`} />
-              </svg>
-            </span>
-            <span class="visually-hidden">Warning the design and tech versions don’t match.</span>
-          </>}
-          Ref design: v{frontmatter.version}
-        </span></li>
-      </ul>
-    )
-  } else {
-    return (<></>)
-  }
-})}
-
 <BsTable>
 | Techno | Version | Description |
 | ---- | ------- | ----------- |
-| Implemented design | {frontmatter.version} | This represents the last implemented design version in OUDS Web.  |
+| Ref design | {getData('_components-versions').find(component => component.name === frontmatter.title.toLowerCase()).value} | This represents the last implemented design version in OUDS Web. |
+| Ref tokens | {''} | This represents the last implemented tokens version in OUDS Web. |
 </BsTable>
