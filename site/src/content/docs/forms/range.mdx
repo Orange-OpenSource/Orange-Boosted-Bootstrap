@@ -16,8 +16,8 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it’s perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
 </Callout>
 
-<Example code={`<label for="customRange1" class="form-label">Example range</label>
-<input type="range" class="form-range" id="customRange1">`} />
+<Example code={`<label for="range1" class="form-label">Example range</label>
+<input type="range" class="form-range" id="range1">`} />
 
 ## Disabled
 
@@ -30,15 +30,15 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 
 Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
 
-<Example code={`<label for="customRange2" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" id="customRange2">`} />
+<Example code={`<label for="range2" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" id="range2">`} />
 
 ## Steps
 
 By default, range inputs “snap” to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
 
-<Example code={`<label for="customRange3" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">`} />
+<Example code={`<label for="range3" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="range3">`} />
 
 ## Usability
 
@@ -47,14 +47,14 @@ For better usability, it is recommended most of the time to display the current 
 This requires extra JavaScript code.
 
 <Example code={`<div class="d-flex w-100 justify-content-between">
-    <label for="customRange4" class="form-label">Example range</label>
-    <output for="customRange4" class="fw-bold" aria-hidden="true" id="rangeValue"></output>
+    <label for="range4" class="form-label">Example range</label>
+    <output for="range4" class="fw-bold" aria-hidden="true" id="rangeValue"></output>
   </div>
-  <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="customRange4">
+  <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="range4">
 
   <script>
     // This is an example script, please modify as needed
-    const rangeInput = document.getElementById('customRange4');
+    const rangeInput = document.getElementById('range4');
     const rangeOutput = document.getElementById('rangeValue');
 
     // Set initial value
