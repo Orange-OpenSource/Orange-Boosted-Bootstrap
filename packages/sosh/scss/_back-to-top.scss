@@ -1,0 +1,71 @@
+// OUDS Web only
+// See https://moderncss.dev/pure-css-smooth-scroll-back-to-top/
+@if $enable-fixed-header {
+  [id="#{$back-to-top-target-id}"]:target {
+    scroll-margin-top: $back-to-top-target-offset-top;
+  }
+}
+
+.back-to-top {
+  // scss-docs-start back-to-top-css-vars
+  --#{$prefix}back-to-top-top: #{$back-to-top-display-threshold};
+  --#{$prefix}back-to-top-right: #{$back-to-top-offset-right};
+  --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom};
+  --#{$prefix}back-to-top-zindex: #{$zindex-back-to-top};
+  --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top};
+  --#{$prefix}back-to-top-link-icon: #{$back-to-top-icon};
+  --#{$prefix}back-to-top-link-width: #{$back-to-top-icon-width};
+  --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
+  --#{$prefix}back-to-top-link-bg: #{$back-to-top-bg};
+  --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
+  --#{$prefix}back-to-top-title-padding: #{$back-to-top-title-padding};
+  --#{$prefix}back-to-top-title-color: #{$back-to-top-title-color};
+  --#{$prefix}back-to-top-title-bg-color: #{$back-to-top-title-bg-color};
+  --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
+  // scss-docs-end back-to-top-css-vars
+
+  position: absolute;
+  top: var(--#{$prefix}back-to-top-top);
+  right: var(--#{$prefix}back-to-top-right);
+  bottom: var(--#{$prefix}back-to-top-bottom);
+  z-index: var(--#{$prefix}back-to-top-zindex);
+  pointer-events: none;
+  background-color: transparent;
+
+  // scss-docs-start back-to-top-xl-css-vars
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}back-to-top-right: #{$back-to-top-offset-right * 2};
+    --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom * 2};
+    --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top-xl};
+  }
+  // scss-docs-end back-to-top-xl-css-vars
+}
+
+.back-to-top-link {
+  position: sticky;
+  top: var(--#{$prefix}back-to-top-link-offset-top);
+  pointer-events: all;
+  background-color: var(--#{$prefix}back-to-top-link-bg);
+  @include button-icon(var(--#{$prefix}back-to-top-link-icon), $size: var(--#{$prefix}back-to-top-link-width) var(--#{$prefix}back-to-top-link-height), $pseudo: "after", $position: calc(50% - 1px));
+
+  &::after {
+    transform: rotate(.25turn) #{"/* rtl:ignore */"};
+  }
+
+  @include media-breakpoint-up(xl) {
+    &[data-#{$prefix}label]::before {
+      position: absolute;
+      right: var(--#{$prefix}back-to-top-title-offset-right);
+      z-index: -1; // To ensure focus indicator appears above
+      padding: var(--#{$prefix}back-to-top-title-padding);
+      color: var(--#{$prefix}back-to-top-title-color);
+      white-space: nowrap;
+      content: attr(data-#{$prefix}label);
+      background-color: var(--#{$prefix}back-to-top-title-bg-color);
+    }
+
+    &[data-#{$prefix}label]:hover::before {
+      text-decoration: var(--#{$prefix}back-to-top-title-active-decoration);
+    }
+  }
+}

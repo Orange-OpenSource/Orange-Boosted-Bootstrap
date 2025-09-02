@@ -1,0 +1,44 @@
+// All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
+@if $enable-bootstrap-compatibility {
+  @each $color, $value in map-remove($utilities-bg-colors, "black", "white", "body") {
+    // OUDS mod: Force colors to have a good rendering
+    $text-bg-color: var(--#{$prefix}color-content-default);
+    @if index(("danger"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-negative-emphasized);
+    } @else if index(("dark"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-neutral-emphasized);
+    } @else if index(("success"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-positive-emphasized);
+    } @else if index(("info", "warning"), #{$color}) {
+      $text-bg-color: var(--#{$prefix}color-content-on-status-#{$color}-emphasized);
+    }
+    // End mod
+
+    .text-bg-#{$color} {
+      color: $text-bg-color if($enable-important-utilities, !important, null); // OUDS mod: instead of `color-contrast($value)`
+      background-color: if($value, $value, var(--#{$prefix}color-bg-#{$color})) if($enable-important-utilities, !important, null); // OUDS mod: instead of `RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1))`
+    }
+  }
+}
+
+// OUDS mod
+@each $color, $value in map-remove($ouds-backgrounds, "transparent") {
+  $text-bg-color: var(--#{$prefix}color-content-default);
+  @if index(("brand-primary"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);
+  } @else if index(("emphasized"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-white);
+  } @else if index(("always-black"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-black);
+  } @else if index(("always-white"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-always-on-white);
+  } @else if str-index($color, "status-") == 1 {
+    $text-bg-color: var(--#{$prefix}color-content-on-#{$color});
+  }
+
+  .text-bg-#{$color} {
+    color: $text-bg-color if($enable-important-utilities, !important, null);
+    background-color: $value if($enable-important-utilities, !important, null);
+  }
+}
+// End mod

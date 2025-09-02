@@ -1,0 +1,469 @@
+//
+// Base styles
+//
+
+// OUDS mod: Animation keyframes
+@keyframes rotate-determinate {
+  0% { stroke-dashoffset: 107 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate1-indeterminate {
+  0%,
+  10% { stroke-dashoffset: 192 #{"/* rtl:ignore */"}; }
+  50%,
+  60% { stroke-dashoffset: 96 #{"/* rtl:ignore */"}; }
+  100% { stroke-dashoffset: 0 #{"/* rtl:ignore */"}; }
+}
+
+@keyframes rotate2-indeterminate {
+  0% { transform: rotate(0deg) #{"/* rtl:ignore */"}; }
+  100% { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+}
+// End mod
+
+.btn {
+  // scss-docs-start btn-css-vars
+  // OUDS mod: no --#{$prefix}btn-padding-x
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+  // OUDS mod: no --#{$prefix}btn-font-family
+  // OUDS mod: no `@include rfs($btn-font-size, --#{$prefix}btn-font-size)`
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  // OUDS mod: no `--#{$prefix}btn-line-height`
+  --#{$prefix}btn-color: #{$btn-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-border-color: initial; // OUDS mod: instead of `transparent`
+  // OUDS mod: no --#{$prefix}btn-box-shadow
+  // OUDS mod: no --#{$prefix}btn-disabled-opacity
+  // OUDS mod: no --#{$prefix}btn-focus-box-shadow
+
+  // Additional OUDS variables
+  --#{$prefix}btn-padding-start: #{$btn-padding-x};
+  --#{$prefix}btn-padding-end: #{$btn-padding-x};
+  --#{$prefix}btn-min-width: #{$ouds-button-size-min-width};
+  --#{$prefix}btn-min-height: #{$ouds-button-size-min-height};
+  --#{$prefix}btn-interaction-border-width: #{$btn-border-width};
+  --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
+  --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
+  --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
+  --#{$prefix}btn-loading-size: #{$ouds-button-size-loader};
+  --#{$prefix}btn-loading-dasharray: 96;
+  --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+  // End mod
+  // scss-docs-end btn-css-vars
+
+  display: inline-flex; // OUDS mod: instead of `inline-block`
+  align-items: center; // OUDS mod
+  justify-content: center; // OUDS mod
+  min-width: var(--#{$prefix}btn-min-width); // OUDS mod
+  min-height: var(--#{$prefix}btn-min-height); // OUDS mod
+  padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-end), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-border-width)) subtract(var(--#{$prefix}btn-padding-start), var(--#{$prefix}btn-border-width)); // OUDS mod: instead of `var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x)`
+  // OUDS mod: no font-family
+  @include get-font-size("label-large"); // OUDS mod
+  font-weight: var(--#{$prefix}btn-font-weight);
+  // OUDS mod: no line-height, already defined by get-font-size
+  color: var(--#{$prefix}btn-color);
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  @include border-radius(var(--#{$prefix}btn-border-radius));
+  @include gradient-bg(var(--#{$prefix}btn-bg));
+  // OUDS mod: no box-shadow
+  // OUDS mod: no transition
+
+  // OUDS mod: apply common styles to hover, focus visible and loading states
+  &:hover,
+  &:focus-visible,
+  &.loading-indeterminate,
+  &.loading-determinate,
+  &:active,
+  &.active {
+    padding: subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-end), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-y), var(--#{$prefix}btn-interaction-border-width)) subtract(var(--#{$prefix}btn-padding-start), var(--#{$prefix}btn-interaction-border-width));
+    border-width: var(--#{$prefix}btn-interaction-border-width);
+  }
+  // End mod
+
+  &:hover {
+    color: var(--#{$prefix}btn-hover-color);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--#{$prefix}btn-hover-bg);
+    border-color: var(--#{$prefix}btn-hover-border-color);
+  }
+
+  // OUDS mod: no .btn-check + &:hover
+
+  &:focus-visible {
+    z-index: $focus-visible-zindex; // OUDS mod
+    color: var(--#{$prefix}btn-focus-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-color)`
+    @include gradient-bg(var(--#{$prefix}btn-focus-bg)); // OUDS mod: instead of `var(--#{$prefix}btn-hover-bg)`
+    border-color: var(--#{$prefix}btn-focus-border-color); // OUDS mod: instead of `var(--#{$prefix}btn-hover-border-color)`
+    // OUDS mod: no outline
+    // OUDS mod: no box-shadow
+  }
+
+  // OUDS mod: no .btn-check:focus-visible + &
+
+  // OUDS mod: selectors are slightly different to handle `.btn-check:checked`
+  // OUDS mod: no .btn-check:checked + &:active,
+  // OUDS mod: no .btn-check:checked + &,
+  // OUDS mod: no &.show,
+  &:active,
+  &.active {
+    color: var(--#{$prefix}btn-active-color);
+    background-color: var(--#{$prefix}btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-active-border-color);
+    // OUDS mod: no box shadow modification for the active state
+    // OUDS mod: no &:focus-visible
+  }
+
+  // OUDS mod: no `.btn-check:checked:focus-visible + &` to handle box shadow
+
+  // OUDS mod: selectors are slightly different to handle `.btn-check`
+  // OUDS mod: no .btn-check:disabled + &,
+  // OUDS mod: no fieldset:disabled &,
+  &:disabled,
+  &[aria-disabled="true"] { // OUDS mod: Defensive CSS to force a11y
+    color: var(--#{$prefix}btn-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-disabled-border-color);
+    // OUDS mod: no opacity
+    // OUDS mod: no box-shadow
+  }
+
+  // OUDS mod: loading buttons
+  .loader {
+    display: none;
+  }
+
+  &.loading-indeterminate,
+  &.loading-determinate {
+    position: relative;
+    color: transparent;
+    background-color: var(--#{$prefix}btn-loading-bg);
+    border-color: var(--#{$prefix}btn-loading-border-color);
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin: 0;
+      font-size: var(--#{$prefix}btn-loading-size);
+      transform: translate(-50%, -50%) rotate(-90deg);
+
+      > .loader-inner {
+        fill: none;
+        stroke: var(--#{$prefix}btn-loading-color);
+        stroke-dasharray: var(--#{$prefix}btn-loading-dasharray);
+        stroke-width: 6;
+        transform-origin: center;
+        animation: var(--#{$prefix}btn-loading-animation);
+      }
+    }
+  }
+
+  &.loading-determinate {
+    --#{$prefix}btn-loading-dasharray: 107;
+    --#{$prefix}btn-loading-animation: var(--#{$prefix}btn-loading-time) infinite linear rotate-determinate;
+  }
+
+  // OUDS mod: buttons with icon and text
+  svg,
+  img,
+  .icon { // TODO: Any way to make it from an a11y pov, like `img[alt]` or `svg[aria-hidden]` ?
+    width: 1em;
+    height: 1em;
+    margin-right: var(--#{$prefix}btn-icon-gap);
+    overflow: hidden;
+    font-size: var(--#{$prefix}btn-icon-size);
+    line-height: 1;
+  }
+
+  &:has(svg:not(.loader)),
+  &:has(img:not(.loader)),
+  &:has(.icon:not(.loader)) {
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-padding-inline-icon-start};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-padding-inline-start-icon-end};
+  }
+
+  // icon button (icon only, without text)
+  &.btn-icon.btn-icon { // Double the class selector to artificially increase the selector's specificity
+    --#{$prefix}btn-padding-start: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
+    --#{$prefix}btn-icon-gap: 0;
+    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-only};
+  }
+  // End mod
+}
+
+.btn-rounded {
+  --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-rounded};
+}
+
+//
+// Alternate buttons
+//
+
+// OUDS mod: define OUDS buttons
+// scss-docs-start btn-variant-loops
+.btn-brand {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    $ouds-button-color-bg-brand-enabled,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-brand-enabled,
+    var(--#{$prefix}color-action-hover),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-hover),
+    var(--#{$prefix}color-action-pressed),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-pressed),
+    var(--#{$prefix}color-action-disabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-disabled),
+    var(--#{$prefix}color-action-focus),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-focus),
+    var(--#{$prefix}color-action-loading),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-loading)
+  );
+}
+
+.btn-default {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction};
+
+  @include button-variant(
+    $ouds-button-color-bg-default-enabled,
+    $ouds-button-color-border-default-enabled,
+    $ouds-button-color-content-default-enabled,
+    $ouds-button-color-bg-default-hover,
+    $ouds-button-color-border-default-hover,
+    $ouds-button-color-content-default-hover,
+    $ouds-button-color-bg-default-pressed,
+    $ouds-button-color-border-default-pressed,
+    $ouds-button-color-content-default-pressed,
+    $ouds-button-color-bg-default-disabled,
+    $ouds-button-color-border-default-disabled,
+    $ouds-button-color-content-default-disabled,
+    $ouds-button-color-bg-default-focus,
+    $ouds-button-color-border-default-focus,
+    $ouds-button-color-content-default-focus,
+    $ouds-button-color-bg-default-loading,
+    $ouds-button-color-border-default-loading,
+    $ouds-button-color-content-default-loading
+  );
+}
+
+.btn-minimal {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-enabled,
+    $ouds-button-color-bg-minimal-hover,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-hover,
+    $ouds-button-color-bg-minimal-pressed,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-pressed,
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-disabled,
+    $ouds-button-color-bg-minimal-focus,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-focus,
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-color-content-minimal-loading
+  );
+}
+
+.btn-strong {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-action-enabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-enabled),
+    var(--#{$prefix}color-action-hover),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-hover),
+    var(--#{$prefix}color-action-pressed),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-pressed),
+    var(--#{$prefix}color-action-disabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-disabled),
+    var(--#{$prefix}color-action-focus),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-focus),
+    var(--#{$prefix}color-action-loading),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-loading)
+  );
+}
+
+.btn-negative {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-action-negative-enabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
+    var(--#{$prefix}color-action-negative-hover),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
+    var(--#{$prefix}color-action-negative-pressed),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
+    var(--#{$prefix}color-action-disabled),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-action-disabled),
+    var(--#{$prefix}color-action-negative-focus),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-negative-emphasized),
+    var(--#{$prefix}color-action-negative-loading),
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-content-on-status-negative-emphasized)
+  );
+}
+
+.btn-default.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-button-border-width-default};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-button-border-width-default-interaction-mono};
+
+  @include button-variant(
+    $ouds-button-mono-color-bg-default-enabled,
+    $ouds-button-mono-color-border-default-enabled,
+    $ouds-button-mono-color-content-default-enabled,
+    $ouds-button-mono-color-bg-default-hover,
+    $ouds-button-mono-color-border-default-hover,
+    $ouds-button-mono-color-content-default-hover,
+    $ouds-button-mono-color-bg-default-pressed,
+    $ouds-button-mono-color-border-default-pressed,
+    $ouds-button-mono-color-content-default-pressed,
+    $ouds-button-mono-color-bg-default-disabled,
+    $ouds-button-mono-color-border-default-disabled,
+    $ouds-button-mono-color-content-default-disabled,
+    $ouds-button-mono-color-bg-default-focus,
+    $ouds-button-mono-color-border-default-focus,
+    $ouds-button-mono-color-content-default-focus,
+    $ouds-button-mono-color-bg-default-loading,
+    $ouds-button-mono-color-border-default-loading,
+    $ouds-button-mono-color-content-default-loading
+  );
+}
+
+.btn-strong.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    $ouds-button-mono-color-bg-strong-enabled,
+    $ouds-button-mono-color-border-strong-enabled,
+    $ouds-button-mono-color-content-strong-enabled,
+    $ouds-button-mono-color-bg-strong-hover,
+    $ouds-button-mono-color-border-strong-hover,
+    $ouds-button-mono-color-content-strong-hover,
+    $ouds-button-mono-color-bg-strong-pressed,
+    $ouds-button-mono-color-border-strong-pressed,
+    $ouds-button-mono-color-content-strong-pressed,
+    $ouds-button-mono-color-bg-strong-disabled,
+    $ouds-button-mono-color-border-strong-disabled,
+    $ouds-button-mono-color-content-strong-disabled,
+    $ouds-button-mono-color-bg-strong-focus,
+    $ouds-button-mono-color-border-strong-focus,
+    $ouds-button-mono-color-content-strong-focus,
+    $ouds-button-mono-color-bg-strong-loading,
+    $ouds-button-mono-color-border-strong-loading,
+    $ouds-button-mono-color-content-strong-loading
+  );
+}
+
+.btn-minimal.btn-on-colored-bg {
+  --#{$prefix}btn-border-width: #{$ouds-border-width-none};
+  --#{$prefix}btn-interaction-border-width: #{$ouds-border-width-none};
+
+  @include button-variant(
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-enabled,
+    $ouds-button-mono-color-bg-minimal-hover,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-hover,
+    $ouds-button-mono-color-bg-minimal-pressed,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-pressed,
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-disabled,
+    $ouds-button-mono-color-bg-minimal-focus,
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-focus,
+    var(--#{$prefix}color-opacity-transparent),
+    var(--#{$prefix}color-opacity-transparent),
+    $ouds-button-mono-color-content-minimal-loading
+  );
+}
+
+@if $enable-bootstrap-compatibility {
+  .btn-primary {
+    @extend .btn-strong;
+  }
+
+  .btn-success {
+    @extend .btn-default;
+  }
+
+  .btn-danger {
+    @extend .btn-negative;
+  }
+
+  .btn-warning {
+    @extend .btn-negative;
+  }
+
+  .btn-info {
+    @extend .btn-minimal;
+  }
+
+  .btn-light {
+    @extend .btn-minimal;
+  }
+
+  .btn-dark {
+    @extend .btn-strong;
+  }
+
+  .btn-secondary {
+    @extend .btn-default;
+  }
+
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @extend .btn-default; // OUDS mod
+    }
+  }
+}
+// scss-docs-end btn-variant-loops
+// End mod

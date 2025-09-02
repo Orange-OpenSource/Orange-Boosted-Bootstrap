@@ -1,0 +1,12 @@
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  // OUDS mod: no width
+  min-height: 1em;
+  margin: 0 $ouds-space-fixed-md; // OUDS mod
+  color: $hr-color; // OUDS mod
+  // OUDS mod: no background color
+  border: 0; // OUDS mod
+  border-left: $vr-border-width solid currentcolor; // OUDS mod
+  // OUDS mod: no opacity
+}

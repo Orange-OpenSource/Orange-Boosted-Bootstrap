@@ -1,0 +1,1164 @@
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(
+  (
+    // scss-docs-start utils-vertical-align
+    "align": (
+      property: vertical-align,
+      class: align,
+      values: baseline top middle bottom text-bottom text-top
+    ),
+    // scss-docs-end utils-vertical-align
+    // scss-docs-start utils-float
+    "float": (
+      responsive: true,
+      property: float,
+      values: (
+        start: left,
+        end: right,
+        none: none,
+      )
+    ),
+    // scss-docs-end utils-float
+    // Object Fit utilities
+    // scss-docs-start utils-object-fit
+    "object-fit": (
+      responsive: true,
+      property: object-fit,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none,
+      )
+    ),
+    // scss-docs-end utils-object-fit
+    // Opacity utilities
+    // scss-docs-start utils-opacity
+    "opacity": (
+      property: opacity,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      ),
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-end utils-opacity
+    // scss-docs-start utils-opacity-ouds
+    "opacity-ouds": (
+      property: opacity,
+      values: $ouds-opacities
+    ),
+    // scss-docs-end utils-opacity-ouds
+    // scss-docs-start utils-overflow
+    "overflow": (
+      property: overflow,
+      values: auto hidden visible scroll,
+    ),
+    "overflow-x": (
+      property: overflow-x,
+      values: auto hidden visible scroll,
+    ),
+    "overflow-y": (
+      property: overflow-y,
+      values: auto hidden visible scroll,
+    ),
+    // scss-docs-end utils-overflow
+    // scss-docs-start utils-display
+    "display": (
+      responsive: true,
+      print: true,
+      property: display,
+      class: d,
+      values: inline inline-block block grid inline-grid table table-row table-cell flex inline-flex none
+    ),
+    // scss-docs-end utils-display
+    // scss-docs-start utils-shadow
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      values: (
+        null: var(--#{$prefix}box-shadow),
+        sm: var(--#{$prefix}box-shadow-sm),
+        lg: var(--#{$prefix}box-shadow-lg),
+        // OUDS mod: `none` value handled by `shadow-ouds`
+      ),
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-end utils-shadow
+    // OUDS mod
+    // scss-docs-start utils-shadow-ouds
+    "shadow-ouds": (
+      property: box-shadow,
+      class: shadow,
+      values: $ouds-elevations
+    ),
+    // scss-docs-end utils-shadow-ouds
+    // End mod
+    // scss-docs-start utils-focus-ring
+    "focus-ring": (
+      css-var: true,
+      css-variable-name: focus-ring-color,
+      class: focus-ring,
+      values: map-loop($theme-colors-rgb, rgba-css-var, "$key", "focus-ring")
+    ),
+    // scss-docs-end utils-focus-ring
+    // scss-docs-start utils-position
+    "position": (
+      property: position,
+      values: static relative absolute fixed sticky
+    ),
+    "top": (
+      property: top,
+      values: $position-values
+    ),
+    "bottom": (
+      property: bottom,
+      values: $position-values
+    ),
+    "start": (
+      property: left,
+      class: start,
+      values: $position-values
+    ),
+    "end": (
+      property: right,
+      class: end,
+      values: $position-values
+    ),
+    "translate-middle": (
+      property: transform,
+      class: translate-middle,
+      values: (
+        null: translate(-50%, -50%),
+        x: translateX(-50%),
+        y: translateY(-50%),
+      )
+    ),
+    // scss-docs-end utils-position
+    // OUDS mod
+    // scss-docs-start utils-border-ouds
+    "border-ouds": (
+      property: border,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    // scss-docs-end utils-border-ouds
+    // End mod
+    // scss-docs-start utils-borders
+    "border": (
+      property: border,
+      values: (
+        // OUDS mod: null value moved to border-ouds
+        0: 0,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "border-top": (
+      property: border-top,
+      values: (
+        // OUDS mod: null value moved to border-top-ouds
+        0: 0,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "border-end": (
+      property: border-right,
+      class: border-end,
+      values: (
+        // OUDS mod: null value moved to border-end-ouds
+        0: 0,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        // OUDS mod: null value moved to border-bottom-ouds
+        0: 0,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "border-start": (
+      property: border-left,
+      class: border-start,
+      values: (
+        // OUDS mod: null value moved to border-start-ouds
+        0: 0,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      // OUDS mod: no local-vars,
+      values: $utilities-border-colors,
+      bootstrap-compatibility: true
+    ),
+    "subtle-border-color": (
+      property: border-color,
+      class: border,
+      values: $utilities-border-subtle,
+      bootstrap-compatibility: true
+    ),
+    "border-width": (
+      property: border-width,
+      class: border,
+      values: $border-widths,
+      bootstrap-compatibility: true
+    ),
+    // OUDS mod: no "border-opacity"
+    // scss-docs-end utils-borders
+    // OUDS mod
+    // scss-docs-start utils-borders-ouds
+    "border-top-ouds": (
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-end-ouds": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-bottom-ouds": (
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-start-ouds": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        "none": 0,
+      ),
+    ),
+    "border-width-ouds": (
+      property: border-width,
+      class: border,
+      values: $ouds-border-widths
+    ),
+    "border-style-ouds": (
+      property: border-style,
+      class: border,
+      values: $ouds-border-styles
+    ),
+    "border-color-ouds": (
+      property: border-color,
+      class: border,
+      values: $ouds-border-colors
+    ),
+    // scss-docs-end utils-borders-ouds
+    // End mod
+    // Sizing utilities
+    // scss-docs-start utils-sizing
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "max-width": (
+      property: max-width,
+      class: mw,
+      values: (
+        none: none,
+        100: 100%
+      )
+    ),
+    "viewport-width": (
+      property: width,
+      class: vw,
+      values: (100: 100vw)
+    ),
+    "min-viewport-width": (
+      property: min-width,
+      class: min-vw,
+      values: (100: 100vw)
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "max-height": (
+      property: max-height,
+      class: mh,
+      values: (100: 100%)
+    ),
+    "viewport-height": (
+      property: height,
+      class: vh,
+      values: (100: 100vh)
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (100: 100vh)
+    ),
+    // scss-docs-end utils-sizing
+    // Flex utilities
+    // scss-docs-start utils-flex
+    "flex": (
+      responsive: true,
+      property: flex,
+      values: (fill: 1 1 auto)
+    ),
+    "flex-direction": (
+      responsive: true,
+      property: flex-direction,
+      class: flex,
+      values: row column row-reverse column-reverse
+    ),
+    "flex-grow": (
+      responsive: true,
+      property: flex-grow,
+      class: flex,
+      values: (
+        grow-0: 0,
+        grow-1: 1,
+      )
+    ),
+    "flex-shrink": (
+      responsive: true,
+      property: flex-shrink,
+      class: flex,
+      values: (
+        shrink-0: 0,
+        shrink-1: 1,
+      )
+    ),
+    "flex-wrap": (
+      responsive: true,
+      property: flex-wrap,
+      class: flex,
+      values: wrap nowrap wrap-reverse
+    ),
+    "justify-content": (
+      responsive: true,
+      property: justify-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+      )
+    ),
+    "align-items": (
+      responsive: true,
+      property: align-items,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+      )
+    ),
+    "align-content": (
+      responsive: true,
+      property: align-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        stretch: stretch,
+      )
+    ),
+    "align-self": (
+      responsive: true,
+      property: align-self,
+      values: (
+        auto: auto,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+      )
+    ),
+    "order": (
+      responsive: true,
+      property: order,
+      values: (
+        first: -1,
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        last: 6,
+      ),
+    ),
+    // scss-docs-end utils-flex
+    // scss-docs-start utils-spacing
+    // Margin utilities
+    "margin": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-x-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-y": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-y-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-top-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-end-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-bottom-ouds`
+      bootstrap-compatibility: true
+    ),
+    "margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: $spacers, // OUDS mod: `auto` value handled by `margin-start-ouds`
+      bootstrap-compatibility: true
+    ),
+    // Negative margin utilities
+    "negative-margin": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-y": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    "negative-margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: $negative-spacers,
+      bootstrap-compatibility: true
+    ),
+    // Padding utilities
+    "padding": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-x": (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-y": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-top": (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-end": (
+      responsive: true,
+      property: padding-right,
+      class: pe,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-bottom": (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "padding-start": (
+      responsive: true,
+      property: padding-left,
+      class: ps,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    // Gap utility
+    "gap": (
+      responsive: true,
+      property: gap,
+      class: gap,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "row-gap": (
+      responsive: true,
+      property: row-gap,
+      class: row-gap,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    "column-gap": (
+      responsive: true,
+      property: column-gap,
+      class: column-gap,
+      values: $spacers,
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-end utils-spacing
+    // OUDS mod
+    // scss-docs-start utils-spacing-ouds
+    // Scaled margin utilities
+    "margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    // Negative scaled margin utilities
+    "negative-margin-scaled-ouds": (
+      property: margin,
+      class: m-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-x-scaled-ouds": (
+      property: margin-right margin-left,
+      class: mx-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-y-scaled-ouds": (
+      property: margin-top margin-bottom,
+      class: my-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-top-scaled-ouds": (
+      property: margin-top,
+      class: mt-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-end-scaled-ouds": (
+      property: margin-right,
+      class: me-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-bottom-scaled-ouds": (
+      property: margin-bottom,
+      class: mb-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    "negative-margin-start-scaled-ouds": (
+      property: margin-left,
+      class: ms-scaled,
+      values: $ouds-dimension-negative-space-scaled
+    ),
+    // Fixed margin utilities
+    "margin-ouds": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-x-ouds": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-y-ouds": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-top-ouds": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-end-ouds": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-bottom-ouds": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    "margin-start-ouds": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: map-merge($ouds-dimension-space-fixed, (auto: auto))
+    ),
+    // Negative fixed margin utilities
+    "negative-margin-ouds": (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-x-ouds": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-y-ouds": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-top-ouds": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-end-ouds": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-bottom-ouds": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    "negative-margin-start-ouds": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: $ouds-dimension-negative-space-fixed
+    ),
+    // Padding utilities
+    "padding-scaled-ouds": (
+      property: padding,
+      class: p-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-x-scaled-ouds": (
+      property: padding-right padding-left,
+      class: px-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-y-scaled-ouds": (
+      property: padding-top padding-bottom,
+      class: py-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-top-scaled-ouds": (
+      property: padding-top,
+      class: pt-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-end-scaled-ouds": (
+      property: padding-right,
+      class: pe-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-bottom-scaled-ouds": (
+      property: padding-bottom,
+      class: pb-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-start-scaled-ouds": (
+      property: padding-left,
+      class: ps-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "padding-ouds": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-x-ouds": (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-y-ouds": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-top-ouds": (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-end-ouds": (
+      responsive: true,
+      property: padding-right,
+      class: pe,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-bottom-ouds": (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: $ouds-dimension-space-fixed
+    ),
+    "padding-start-ouds": (
+      responsive: true,
+      property: padding-left,
+      class: ps,
+      values: $ouds-dimension-space-fixed
+    ),
+    // Gap utility
+    "gap-scaled-ouds": (
+      property: gap,
+      class: gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "row-gap-scaled-ouds": (
+      property: row-gap,
+      class: row-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "column-gap-scaled-ouds": (
+      property: column-gap,
+      class: column-gap-scaled,
+      values: $ouds-dimension-space-scaled
+    ),
+    "gap-ouds": (
+      responsive: true,
+      property: gap,
+      class: gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    "row-gap-ouds": (
+      responsive: true,
+      property: row-gap,
+      class: row-gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    "column-gap-ouds": (
+      responsive: true,
+      property: column-gap,
+      class: column-gap,
+      values: $ouds-dimension-space-fixed
+    ),
+    // scss-docs-end utils-spacing-ouds
+    // End mod
+    // Text
+    // scss-docs-start utils-text
+    "font-family": (
+      property: font-family,
+      class: font,
+      values: (monospace: var(--#{$prefix}font-monospace))
+    ),
+    "font-size": (
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+      bootstrap-compatibility: true
+    ),
+    // OUDS mod: no font-style
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        lighter: $font-weight-lighter,
+        light: $font-weight-light,
+        // OUDS mod: no normal because handled by ouds map
+        medium: $font-weight-medium,
+        semibold: $font-weight-semibold,
+        // OUDS mod: no bold because handled by ouds map
+        bolder: $font-weight-bolder
+      ),
+      bootstrap-compatibility: true
+    ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+        sm: $line-height-sm,
+        base: $line-height-base,
+        lg: $line-height-lg,
+      ),
+      bootstrap-compatibility: true
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+      )
+    ),
+    "text-decoration": (
+      property: text-decoration,
+      values: none underline line-through
+    ),
+    "text-transform": (
+      property: text-transform,
+      class: text,
+      values: lowercase uppercase capitalize
+    ),
+    "white-space": (
+      property: white-space,
+      class: text,
+      values: (
+        wrap: normal,
+        nowrap: nowrap,
+      )
+    ),
+    "word-wrap": (
+      property: word-wrap word-break,
+      class: text,
+      values: (break: break-word),
+      rtl: false
+    ),
+    // scss-docs-end utils-text
+    // scss-docs-start utils-text-ouds
+    "font-size-ouds": (
+      property: font-size,
+      class: fs,
+      values: $ouds-font-sizes
+    ),
+    "font-weight-ouds": (
+      property: font-weight,
+      class: fw,
+      values: $ouds-font-weights
+    ),
+    // scss-docs-end utils-text-ouds
+    // scss-docs-start utils-color
+    "color": (
+      property: color,
+      class: text,
+      // OUDS mod: no local-vars
+      values: map-merge(
+        $utilities-text-colors,
+        (
+          "muted": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+          "black-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($black, .5)`
+          "white-50": var(--#{$prefix}color-content-muted), // Deprecated in Bootstrap // OUDS mod: instead of `rgba($white, .5)`
+          "body-secondary": var(--#{$prefix}color-content-muted), // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
+          "body-tertiary": var(--#{$prefix}color-content-disabled), // OUDS mod: instead of `var(--#{$prefix}tertiary-color)`
+          "body-emphasis": var(--#{$prefix}color-content-default), // OUDS mod: instead of `var(--#{$prefix}emphasis-color)`
+          // OUDS mod: no "reset"
+        )
+      ),
+      bootstrap-compatibility: true
+    ),
+    // OUDS mod: no "text-opacity"
+    "text-color": (
+      property: color,
+      class: text,
+      values: $utilities-text-emphasis-colors,
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-end utils-color
+    // scss-docs-start utils-color-ouds
+    "color-ouds": (
+      property: color,
+      class: text,
+      values: $ouds-text-colors
+    ),
+    // scss-docs-end utils-color-ouds
+    // OUDS mod: no "link-opacity"
+    // OUDS mod: no "link-offset"
+    // OUDS mod: no "link-underline
+    // OUDS mod: no "link-underline-opacity"
+    // scss-docs-start utils-bg-color
+    "background-color": (
+      property: background-color,
+      class: bg,
+      // OUDS mod: no local-vars
+      values: map-merge(
+        $utilities-bg-colors,
+        (
+          // OUDS mod: no "transparent"
+          "body-secondary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity))`
+          "body-tertiary": var(--#{$prefix}color-bg-secondary), // OUDS mod: instead of `rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity))`
+        )
+      ),
+      bootstrap-compatibility: true,
+    ),
+    // OUDS mod: no "bg-opacity"
+    "subtle-background-color": (
+      property: background-color,
+      class: bg,
+      values: $utilities-bg-subtle,
+      bootstrap-compatibility: true,
+    ),
+    // scss-docs-end utils-bg-color
+    // scss-docs-start utils-bg-color-ouds
+    "background-color-ouds": (
+      property: background-color,
+      class: bg,
+      values: $ouds-backgrounds,
+    ),
+    // scss-docs-end utils-bg-color-ouds
+    "gradient": (
+      property: background-image,
+      class: bg,
+      values: (gradient: var(--#{$prefix}gradient)),
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-start utils-interaction
+    "user-select": (
+      property: user-select,
+      values: all auto none
+    ),
+    "pointer-events": (
+      property: pointer-events,
+      class: pe,
+      values: none auto,
+    ),
+    // scss-docs-end utils-interaction
+    // scss-docs-start utils-border-radius
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        // OUDS mod: null value moved to rounded-ouds
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
+    ),
+    "rounded-top": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (
+        // OUDS mod: null value moved to rounded-top-ouds
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
+    ),
+    "rounded-end": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: (
+        // OUDS mod: null value moved to rounded-end-ouds
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
+    ),
+    "rounded-bottom": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (
+        // OUDS mod: null value moved to rounded-bottom-ouds
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
+    ),
+    "rounded-start": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+        // OUDS mod: null value moved to rounded-start-ouds
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-lg), // OUDS mod: instead of `var(--#{$prefix}border-radius)`
+        3: var(--#{$prefix}border-radius-xl), // OUDS mod: instead of `var(--#{$prefix}border-radius-lg)`
+        4: var(--#{$prefix}border-radius-xxl), // OUDS mod: instead of `var(--#{$prefix}border-radius-xl)`
+        5: $border-radius-xxl * 1.5, // OUDS mod: instead of `var(--#{$prefix}border-radius-xxl)`
+      ),
+      bootstrap-compatibility: true
+    ),
+    // scss-docs-end utils-border-radius
+    // OUDS mod
+    // scss-docs-start utils-border-radius-ouds
+    "rounded-ouds": (
+      property: border-radius,
+      class: rounded,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-top-ouds": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-end-ouds": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-bottom-ouds": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: $ouds-border-radiuses
+    ),
+    "rounded-start-ouds": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: $ouds-border-radiuses
+    ),
+    // scss-docs-end utils-border-radius-ouds
+    // End mod
+    // scss-docs-start utils-visibility
+    "visibility": (
+      property: visibility,
+      class: null,
+      values: (
+        visible: visible,
+        invisible: hidden,
+      )
+    ),
+    // scss-docs-end utils-visibility
+    // scss-docs-start utils-zindex
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: $zindex-levels,
+    )
+    // scss-docs-end utils-zindex
+  ),
+  $utilities
+);

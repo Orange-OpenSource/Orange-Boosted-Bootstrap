@@ -1,0 +1,563 @@
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  // scss-docs-start navbar-css-vars
+  --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+  --#{$prefix}navbar-padding-y: 0; // OUDS mod: no padding in small breakpoints
+  --#{$prefix}navbar-font-weight: #{$navbar-font-weight}; // OUDS mod
+  --#{$prefix}navbar-border-width: #{$navbar-border-width}; // OUDS mod
+  --#{$prefix}navbar-border-color: #{$navbar-border-color}; // OUDS mod
+  --#{$prefix}navbar-bg: #{$navbar-light-bg}; // OUDS mod
+  --#{$prefix}navbar-color: #{$navbar-light-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
+  --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
+  --#{$prefix}navbar-brand-margin-y: #{$navbar-brand-margin-y-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
+  --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs}; // OUDS mod
+  --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
+  --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --#{$prefix}navbar-nav-padding-top: 0; // OUDS mod
+  --#{$prefix}navbar-nav-padding-x: 0; // OUDS mod
+  --#{$prefix}navbar-nav-padding-bottom: 0; // OUDS mod
+  --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // OUDS mod
+  --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // OUDS mod
+  --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // OUDS mod
+  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // OUDS mod
+  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x-xs}; // OUDS mod
+  --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size-xs}; // OUDS mod
+  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size-xs}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-color: #{$navbar-light-icon-color}; // OUDS mod
+  --#{$prefix}navbar-toggler-icon-hover-color: #{$navbar-light-icon-hover-color}; // OUDS mod
+  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
+  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
+  // scss-docs-end navbar-css-vars
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  // OUDS mod
+  font-weight: var(--#{$prefix}navbar-font-weight);
+  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
+  @include gradient-bg(var(--#{$prefix}navbar-bg)); // OUDS mod: instead of `@include gradient-bg()`
+  @include transition($navbar-transition);
+  // End mod
+
+  // OUDS mod: Difference between xs and md breakpoints
+  // scss-docs-start orange-navbar-css-vars
+  @include media-breakpoint-up(md) {
+    --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+    --#{$prefix}navbar-brand-margin-y: #{$navbar-brand-margin-y};
+    --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size};
+    --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+    --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing};
+    --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+    --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y};
+    --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x};
+    --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size};
+    --#{$prefix}navbar-toggler-padding-y: #{$navbar-nav-icon-padding-y};
+    --#{$prefix}navbar-toggler-padding-x: #{$navbar-nav-icon-padding-x};
+    --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
+    --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+  }
+  // scss-docs-end orange-navbar-css-vars
+  // End mod
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properties so that content nested within behave properly.
+  // The `flex-wrap` property is inherited to simplify the expanded navbars
+  %container-flex-properties {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: flex-end; // OUDS mod
+    // OUDS mod: no justify-content
+  }
+
+  > .container,
+  > .container-fluid {
+    @extend %container-flex-properties;
+  }
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+      @extend %container-flex-properties;
+    }
+  }
+
+  // OUDS mod
+  .dropdown {
+    svg {
+      width: $spacer;
+      height: $spacer;
+      margin: calc(-.5 * (#{$spacer} - (var(--#{$prefix}dropdown-font-size, var(--#{$prefix}btn-font-size)) * var(--#{$prefix}dropdown-line-height, var(--#{$prefix}btn-line-height))))) 0; // stylelint-disable-line function-disallowed-list
+      fill: currentcolor;
+    }
+
+    .active svg {
+      display: block if($enable-important-utilities, !important, null);
+    }
+
+    .dropdown-toggle::after {
+      margin-left: $spacer * .25;
+      border-width: .3125rem;
+    }
+
+    .dropdown-menu {
+      --bs-dropdown-min-width: 8.75rem;
+
+      @include media-breakpoint-down(lg) {
+        @include rfs($font-size-sm, --bs-dropdown-font-size);
+        --bs-dropdown-line-height: #{$line-height-sm};
+        --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+      }
+    }
+  }
+  // End mod
+}
+
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+// OUDS mod
+.navbar-brand {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  order: -1;
+  padding-top: var(--#{$prefix}navbar-brand-padding-y);
+  padding-bottom: var(--#{$prefix}navbar-brand-padding-y);
+  margin-top: var(--#{$prefix}navbar-brand-margin-y);
+  margin-right: var(--#{$prefix}navbar-brand-margin-end);
+  margin-bottom: var(--#{$prefix}navbar-brand-margin-y);
+  @include font-size(var(--#{$prefix}navbar-brand-font-size));
+  color: var(--#{$prefix}navbar-brand-color);
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap;
+  @include transition($navbar-brand-transition);
+
+  // No focus
+  &:hover {
+    text-decoration: if($link-hover-decoration == underline, none, null);
+
+    .title,
+    .two-lined {
+      color: var(--#{$prefix}navbar-brand-hover-color);
+    }
+  }
+
+  //// Orange's master logo
+  img {
+    width: auto;
+    height: var(--#{$prefix}navbar-brand-logo-size);
+    @include transition($navbar-brand-logo-transition);
+  }
+
+  //// Ensure headings variant align consistently
+  .title,
+  .two-lined {
+    margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); // stylelint-disable-line function-disallowed-list
+    @include font-size(var(--#{$prefix}navbar-brand-font-size));
+    line-height: 1;
+    letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
+  }
+
+  .two-lined {
+    --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
+    --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
+
+    @include media-breakpoint-up(md) {
+      --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined};
+      --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined};
+    }
+  }
+}
+// End mod
+
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  // scss-docs-start navbar-nav-css-vars
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // OUDS mod
+  --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // OUDS mod
+  @include rfs(var(--#{$prefix}navbar-nav-font-size, $font-size-base), --#{$prefix}nav-link-font-size); // OUDS mod
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
+  // scss-docs-end navbar-nav-css-vars
+
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // OUDS mod
+  margin-bottom: 0;
+  @include font-size(var(--#{$prefix}navbar-nav-font-size)); // OUDS mod
+  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
+  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod
+  @include list-unstyled(); // OUDS mod
+
+  // OUDS mod: Handle .nav-link and .nav-icon slightly differently than Bs
+  .nav-link {
+    position: relative;
+    padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
+    margin: 0 calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+    word-break: break-all;
+
+    &:hover {
+      z-index: 1;
+    }
+
+    @include media-breakpoint-down(lg) {
+      outline-offset: -$focus-visible-outer-width;
+    }
+
+    &.active,
+    &.show {
+      color: var(--#{$prefix}navbar-active-color);
+    }
+  }
+
+  .nav-item {
+    border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
+
+    .badge {
+      --#{$prefix}badge-padding: #{$navbar-badge-padding-y $navbar-badge-padding-x};
+      margin-top: $navbar-badge-margin-top; // stay in Scss because no need of CSS var
+    }
+
+    .nav-link.nav-icon {
+      padding: var(--#{$prefix}navbar-nav-icon-padding-y) var(--#{$prefix}navbar-nav-icon-padding-x);
+      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+      white-space: nowrap;
+
+      svg,
+      img {
+        width: var(--#{$prefix}navbar-nav-icon-size);
+        height: var(--#{$prefix}navbar-nav-icon-size);
+      }
+    }
+
+    &:not(:first-of-type) > .nav-icon {
+      margin-left: 0;
+    }
+  }
+
+  &.flex-row .nav-item {
+    border: 0;
+  }
+  // End mod
+
+  .dropdown-menu {
+    position: static;
+  }
+}
+
+
+// Navbar text
+//
+//
+
+.navbar-text {
+  // OUDS mod: no padding-top
+  padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // OUDS mod
+  color: var(--#{$prefix}navbar-color);
+
+  // OUDS mod: no a:focus
+  a,
+  a:hover {
+    color: var(--#{$prefix}navbar-active-color);
+  }
+}
+
+// OUDS mod: Navbar item
+.navbar-item {
+  margin-bottom: var(--#{$prefix}navbar-nav-icon-padding-y);
+}
+// End mod
+
+// Responsive navbar
+//
+// Custom styles for responsive collapsing and toggling of navbar contents.
+// Powered by the collapse Bootstrap JavaScript plugin.
+
+// When collapsed, prevent the toggleable navbar contents from appearing in
+// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
+// on the `.navbar` parent.
+.navbar-collapse.show, // OUDS mod: always keep nav-items at full width when transitioning
+.navbar-collapse.collapsing {
+  flex-basis: 100%;
+  // OUDS mod: no flex-grow to avoid weird behavior in expanded breakpoints and .show
+  // For always expanded or extra full navbars, ensure content aligns itself
+  // properly vertically. Can be easily overridden with flex utilities.
+  align-items: center;
+
+  // OUDS mod: Handle icons support and padding of expanded navbars
+  &[class*="d-"] {
+    border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &:first-of-type {
+      margin-top: var(--#{$prefix}navbar-padding-y);
+    }
+  }
+  // End mod
+}
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  // stylelint-disable-next-line function-disallowed-list
+  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // OUDS mod
+  // stylelint-disable-next-line function-disallowed-list
+  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // OUDS mod
+  @include font-size(var(--#{$prefix}navbar-toggler-font-size));
+  line-height: 1;
+  color: var(--#{$prefix}navbar-color);
+  background-color: transparent; // remove default button style
+  border: 0; // OUDS mod: remove border to simplify calculations
+  @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
+  @include transition(var(--#{$prefix}navbar-toggler-transition));
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    // OUDS mod: no outline;
+    // OUDS mod: no box-shadow
+  }
+
+  // OUDS mod: close icon when opened & color state
+  &:hover,
+  &:active {
+    .navbar-toggler-icon {
+      background-color: var(--#{$prefix}navbar-toggler-icon-hover-color);
+    }
+  }
+
+  &[aria-expanded="true"] {
+    --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-toggler-icon-close-bg)};
+  }
+
+  &.collapsed {
+    order: 7;
+  }
+  // End mod
+}
+
+// Keep as a separate element so folks can easily override it with another icon
+// or image file as needed.
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  // OUDS mod: no `background-image`
+  // OUDS mod: no `background-repeat`
+  // OUDS mod: no `background-position`
+  // OUDS mod: no `background-size`
+  background-color: var(--#{$prefix}navbar-toggler-icon-color); // OUDS mod
+  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // OUDS mod
+}
+
+.navbar-nav-scroll {
+  max-height: var(--#{$prefix}scroll-height, 75vh);
+  overflow-y: auto;
+}
+
+// OUDS mod: Handle the nav-under responsiveness
+.navbar:not(.supra) + .navbar {
+  padding: 0;
+  margin-top: calc(-1 * var(--#{$prefix}navbar-border-width)); // stylelint-disable-line function-disallowed-list
+}
+// End mod
+
+// scss-docs-start navbar-expand-loop
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          // OUDS mod
+          .nav-link {
+            margin: 0;
+
+            &.active::before {
+              position: absolute;
+              right: var(--#{$prefix}navbar-nav-link-padding-x);
+              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
+              left: var(--#{$prefix}navbar-nav-link-padding-x);
+              height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
+              content: "";
+              background-color: currentcolor;
+              @include transition($navbar-active-transition);
+            }
+          }
+
+          .nav-item {
+            border: 0;
+
+            &:first-child > .nav-link {
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+            }
+
+            &:last-child > .nav-link {
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+            }
+
+            &:first-child > .nav-icon {
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+            }
+
+            &:last-child > .nav-icon {
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
+            }
+          }
+          // End mod
+        }
+
+        // OUDS mod: Handle the responsiveness of the collapsing content in a global header
+        .navbar-collapse.show,
+        .navbar-collapse.collapsing {
+          &[class*="d-"] {
+            margin-bottom: 0;
+            border-top: 0;
+          }
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        // Handle the responsiveness of the different bars of a global header
+        &.supra {
+          display: flex;
+        }
+
+        .header-minimized &:first-child:not(.supra),
+        .header-minimized .supra + &.navbar {
+          --#{$prefix}navbar-nav-link-padding-y: .75rem;
+        }
+
+        &:not(.supra) + .navbar {
+          margin-top: 0;
+
+          .nav-link{
+            padding-bottom: add(var(--#{$prefix}navbar-nav-link-padding-y), .0625rem);
+
+            &.active::before{
+              bottom: 0;
+            }
+          }
+        }
+        // End mod
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .offcanvas {
+          // stylelint-disable declaration-no-important
+          position: static;
+          z-index: auto;
+          flex-grow: 1;
+          width: auto !important;
+          height: auto !important;
+          visibility: visible !important;
+          background-color: transparent !important;
+          border: 0 !important;
+          transform: none !important;
+          @include box-shadow(none);
+          @include transition(none);
+          // stylelint-enable declaration-no-important
+
+          .offcanvas-header {
+            display: none;
+          }
+
+          .offcanvas-body {
+            display: flex;
+            flex-grow: 0;
+            padding: 0;
+            overflow-y: visible;
+          }
+        }
+      }
+    }
+  }
+}
+// scss-docs-end navbar-expand-loop
+
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
+
+.navbar-light {
+  @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
+}
+
+// OUDS mod: deprecated in OUDS Web, kept for Bootstrap compatibility
+// OUDS mod: no `navbar[data-bs-theme="dark"]` selector
+.navbar-dark {
+  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // OUDS mod
+  --#{$prefix}navbar-color: #{$navbar-dark-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
+  --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
+  --#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
+  --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
+  --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
+  --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
+  // OUDS mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
+}
+// End mod
+
+// OUDS mod: no `@if enable-dark-mode`

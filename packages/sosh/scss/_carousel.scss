@@ -1,0 +1,358 @@
+// Notes on the classes:
+//
+// 1. .carousel.pointer-event should ideally be pan-y (to allow for users to scroll vertically)
+//    even when their scroll action started on a carousel, but for compatibility (with Firefox)
+//    we're preventing all actions instead
+// 2. The .carousel-item-start and .carousel-item-end is used to indicate where
+//    the active slide is heading.
+// 3. .active.carousel-item is the current slide.
+// 4. .active.carousel-item-start and .active.carousel-item-end is the current
+//    slide in its in-transition state. Only one of these occurs at a time.
+// 5. .carousel-item-next.carousel-item-start and .carousel-item-prev.carousel-item-end
+//    is the upcoming slide in transition.
+
+.carousel {
+  position: relative;
+}
+
+.carousel.pointer-event {
+  touch-action: pan-y;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  @include clearfix();
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  @include transition($carousel-transition);
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(-100%);
+}
+
+
+//
+// Alternate transitions
+//
+
+.carousel-fade {
+  .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+  }
+
+  .carousel-item.active,
+  .carousel-item-next.carousel-item-start,
+  .carousel-item-prev.carousel-item-end {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .active.carousel-item-start,
+  .active.carousel-item-end {
+    z-index: 0;
+    opacity: 0;
+    @include transition(opacity 0s $carousel-transition-duration);
+  }
+}
+
+
+//
+// Left/right controls for nav
+//
+
+.carousel-control-prev,
+.carousel-control-next {
+  --#{$prefix}control-bg: #{rgba($carousel-indicator-active-bg, .5)}; // OUDS mod
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  // Use flex for alignment (1-3)
+  display: flex; // 1. allow flex styles
+  align-items: center; // 2. vertically center contents
+  justify-content: center; // 3. horizontally center contents
+  width: $carousel-control-width;
+  padding: 0;
+  color: $carousel-control-color;
+  text-align: center;
+  background: none;
+  // OUDS mod: no filter
+  border: 0;
+  outline: 0; // OUDS mod
+  box-shadow: none; // OUDS mod
+  opacity: $carousel-control-opacity;
+  @include transition($carousel-control-transition);
+
+  // Hover state - OUDS mod: no focus state
+  &:hover {
+    --#{$prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // OUDS mod
+    color: color-contrast($carousel-control-color);
+    text-decoration: none;
+    opacity: $carousel-control-hover-opacity;
+  }
+
+  // OUDS mod
+  &:disabled,
+  &[aria-disabled] {
+    color: $gray-700;
+    pointer-events: none;
+  }
+
+  &:active {
+    --#{$prefix}control-bg: #{$carousel-control-icon-active-bg};
+    color: $carousel-control-color;
+  }
+
+  // scss-docs-start focus-visible-carousel
+  &:focus-visible {
+    > span {
+      @include focus-visible();
+    }
+  }
+  // scss-docs-end focus-visible-carousel
+  // End mod
+}
+
+.carousel-control-prev {
+  left: 0;
+  background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
+}
+.carousel-control-next {
+  right: 0;
+  background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
+}
+
+// Icons for within
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  background-color: var(--#{$prefix}control-bg); // OUDS mod
+  @include border-radius(50%, 50%);
+  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // OUDS mod
+}
+
+// OUDS mod
+
+/* rtl:begin:remove */
+.carousel-control-next-icon {
+  transform: scaleX(-1);
+}
+
+/* rtl:end:remove */
+
+/* rtl:raw:
+.carousel-control-prev-icon {
+  transform: scaleX(-1);
+}
+*/
+
+// End mod
+
+// Optional indicator pips/controls
+//
+// Add a container (such as a list) with the following class and add an item (ideally a focusable control,
+// like a button) with data-bs-target for each slide your carousel holds.
+
+/* rtl:begin:ignore */
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%; // OUDS mod
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: $carousel-indicators-padding-y 0; // OUDS mod
+  margin-bottom: $carousel-indicators-margin-bottom; // OUDS mod
+  background: rgba($carousel-indicator-active-bg, .5); // OUDS mod
+  transform: translateX(-50%); // OUDS mod
+  @include border-radius($spacer, $spacer); // OUDS mod
+
+  [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
+    padding: 0;
+    margin-right: $carousel-indicator-spacer;
+    margin-left: $carousel-indicator-spacer;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: $carousel-control-color; // OUDS mod: instead of var(--#{$prefix}carousel-indicator-active-bg)
+    border: 0;
+    // OUDS mod: use our own target-size() mixin instead of transparent borders
+    opacity: $carousel-indicator-opacity;
+    @include transition($carousel-indicator-transition);
+
+    // OUDS mod
+    @include border-radius(50%, 50%);
+    @include target-size($carousel-indicator-hit-area-height);
+
+    &:hover,
+    &:focus {
+      background-color: color-contrast($carousel-indicator-active-bg);
+    }
+
+    &:hover {
+      transform: scale($carousel-indicator-hover-scale);
+      &::before {
+        transform: translate3d(-50%, -50%, 0) scale($carousel-indicator-active-scale);
+      }
+    }
+
+    &:focus-visible {
+      transform: none;
+    }
+
+  }
+
+  .active {
+    background-color: $carousel-indicator-active-bg;
+    border-color: color-contrast($carousel-indicator-active-bg);
+    opacity: $carousel-indicator-active-opacity;
+
+    @if $enable-transitions {
+      // Animation based on Lea Verou's simple pie chart
+      // See https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
+      background-image: linear-gradient(to right, transparent 50%, color-contrast($carousel-indicator-active-bg) 0);
+      // No need to feature test mask-*
+      // See https://caniuse.com/mdn-css_properties_mask-image
+      mask-image: radial-gradient(circle at 50%, transparent 33%, $white add(33%, 1px));
+      transform: scale($carousel-indicator-hover-scale);
+
+      &:hover,
+      &:focus {
+        mask-image: none;
+      }
+
+      &::before {
+        transform: translate3d(-50%, -50%, 0) scale($carousel-indicator-active-scale);
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        content: "";
+        background-color: inherit;
+        transform-origin: left;
+        // stylelint-disable-next-line function-disallowed-list
+        animation: carousel-progress calc(#{$carousel-indicator-animation-interval} / 2) linear infinite, carousel-progress-half $carousel-indicator-animation-interval step-end infinite;
+        @include border-radius(inspect($carousel-indicator-active-radius), $carousel-indicator-active-radius);
+      }
+
+      @keyframes carousel-progress {
+        to { transform: rotate(.5turn); }
+      }
+
+      @keyframes carousel-progress-half {
+        50% { background: color-contrast($carousel-indicator-active-bg); }
+      }
+
+      .carousel.is-done &,
+      .carousel.is-paused &,
+      .carousel.is-static & {
+        background: color-contrast($carousel-indicator-active-bg);
+
+        &::after {
+          animation: none;
+        }
+      }
+
+      @if $enable-reduced-motion {
+        @media (prefers-reduced-motion: reduce) {
+          background: color-contrast($carousel-indicator-active-bg);
+
+          &::after {
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* rtl:end:ignore */
+
+.carousel-action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+
+  .carousel-control-play-pause {
+    margin-bottom: $carousel-indicators-margin-bottom;
+    color: $carousel-control-icon-color;
+    background: rgba($carousel-indicator-active-bg, .5);
+    border: 0;
+    @include border-radius($spacer, $spacer);
+
+    &.pause {
+      @include button-icon($carousel-control-pause-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+    }
+
+    &.play {
+      @include button-icon($carousel-control-play-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+
+      &::after {
+        transform: translateX(1px);
+      }
+    }
+
+    &:hover {
+      color: color-contrast($carousel-control-color);
+      background-color: #{color-contrast($carousel-indicator-active-bg)};
+      opacity: $carousel-control-hover-opacity;
+    }
+  }
+
+  .carousel-indicators {
+    position: initial;
+    margin-left: $carousel-control-pause-indicators-spacing;
+    transform: none;
+  }
+}
+// End mod
+
+// Optional captions
+//
+//
+
+.carousel-caption {
+  position: absolute;
+  right: (100% - $carousel-caption-width) * .5;
+  bottom: $carousel-caption-spacer;
+  left: (100% - $carousel-caption-width) * .5;
+  padding: $carousel-caption-padding-y $carousel-caption-padding-x; // OUDS mod
+  color: $carousel-caption-color; // OUDS mod: instead of var(--#{$prefix}carousel-caption-color)
+  background-color: $carousel-caption-bg; // OUDS mod
+}
+
+// OUDS mod: no specific rules for dark carousel or dark mode carousel

@@ -1,0 +1,419 @@
+// OUDS mod
+// scss-docs-start ouds-maps-borders
+$ouds-border-radiuses: (
+  null:       $ouds-border-radius-default,
+  "none":     $ouds-border-radius-none,
+  "small":    $ouds-border-radius-small,
+  "medium":   $ouds-border-radius-medium,
+  "large":     $ouds-border-radius-large,
+  "pill":     px-to-rem($ouds-border-radius-pill),
+  "circle":   50%
+) !default;
+
+$ouds-border-styles: (
+  "drag":     $ouds-border-style-drag
+) !default;
+
+$ouds-border-widths: (
+  "thin":     $ouds-border-width-thin,
+  "medium":   $ouds-border-width-medium,
+  "thick":    $ouds-border-width-thick,
+  "thicker":  $ouds-border-width-thicker,
+) !default;
+
+$ouds-border-colors: (
+  "brand-primary": var(--#{$prefix}color-border-brand-primary),
+  "default": var(--#{$prefix}color-border-default),
+  "emphasized": var(--#{$prefix}color-border-emphasized),
+  "muted": var(--#{$prefix}color-border-muted),
+  "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+) !default;
+// scss-docs-end ouds-maps-borders
+
+// scss-docs-start ouds-maps-dimension
+$ouds-dimension-space-scaled: (
+  "none": var(--#{$prefix}space-scaled-none),
+  "3xs": var(--#{$prefix}space-scaled-3xs),
+  "2xs": var(--#{$prefix}space-scaled-2xs),
+  "xs": var(--#{$prefix}space-scaled-xs),
+  "sm": var(--#{$prefix}space-scaled-sm),
+  "md": var(--#{$prefix}space-scaled-md),
+  "lg": var(--#{$prefix}space-scaled-lg),
+  "xl": var(--#{$prefix}space-scaled-xl),
+  "2xl": var(--#{$prefix}space-scaled-2xl),
+  "3xl": var(--#{$prefix}space-scaled-3xl)
+) !default;
+
+// stylelint-disable function-disallowed-list
+$ouds-dimension-negative-space-scaled: (
+  "n3xs": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
+  "n2xs": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
+  "nxs": calc(-1 * var(--#{$prefix}space-scaled-xs)),
+  "nsm": calc(-1 * var(--#{$prefix}space-scaled-sm)),
+  "nmd": calc(-1 * var(--#{$prefix}space-scaled-md)),
+  "nlg": calc(-1 * var(--#{$prefix}space-scaled-lg)),
+  "nxl": calc(-1 * var(--#{$prefix}space-scaled-xl)),
+  "n2xl": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
+  "n3xl": calc(-1 * var(--#{$prefix}space-scaled-3xl))
+) !default;
+// stylelint-enable function-disallowed-list
+
+// scss-docs-start ouds-maps-dimension-fixed
+$ouds-dimension-space-fixed: (
+  "none": $ouds-space-fixed-none,
+  "3xs": $ouds-space-fixed-3xs,
+  "2xs": $ouds-space-fixed-2xs,
+  "xs": $ouds-space-fixed-xs,
+  "sm": $ouds-space-fixed-sm,
+  "md": $ouds-space-fixed-md,
+  "lg": $ouds-space-fixed-lg,
+  "xl": $ouds-space-fixed-xl,
+  "2xl": $ouds-space-fixed-2xl,
+  "3xl": $ouds-space-fixed-3xl,
+  "4xl": $ouds-space-fixed-4xl,
+  "5xl": $ouds-space-fixed-5xl
+) !default;
+// scss-docs-end ouds-maps-dimension-fixed
+
+$ouds-dimension-negative-space-fixed: if($enable-negative-margins, negativify-map($ouds-dimension-space-fixed), null) !default;
+// scss-docs-end ouds-maps-dimension
+
+// scss-docs-start ouds-maps-elevations
+$ouds-elevations: (
+  "default":                    $ouds-elevation-default,
+  "drag":                       $ouds-elevation-drag,
+  "emphasized":                 $ouds-elevation-emphasized,
+  "none":                       $ouds-elevation-none,
+  "raised":                     $ouds-elevation-raised,
+  "sticky-default":             $ouds-elevation-sticky-default,
+  "sticky-emphasized":          $ouds-elevation-sticky-emphasized,
+  "sticky-navigation-scrolled": $ouds-elevation-sticky-navigation-scrolled
+) !default;
+// scss-docs-end ouds-maps-elevations
+
+// scss-docs-start ouds-maps-font
+$ouds-font-sizes: (
+  cm: "/code-medium",
+  bs: "/body-small",
+  bm: "/body-medium",
+  bl: "/body-large",
+  hs: "/heading-small",
+  hm: "/heading-medium",
+  hl: "/heading-large",
+  hxl: "/heading-xlarge",
+  ds: "/display-small",
+  dm: "/display-medium",
+  dl: "/display-large",
+) !default;
+
+$ouds-font-weights: (
+  normal: $ouds-font-weight-system-web-default,
+  bold: $ouds-font-weight-system-web-strong
+) !default;
+
+$ouds-icon-sizes: ("sm", "md", "lg") !default;
+// scss-docs-end ouds-maps-font
+
+// scss-docs-start ouds-maps-opacities
+$ouds-opacities: (
+  "invisible":  $ouds-opacity-invisible,
+  "weaker":     $ouds-opacity-weaker,
+  "weak":       $ouds-opacity-weak,
+  "disabled":   $ouds-opacity-disabled,
+  "medium":     $ouds-opacity-medium,
+  "strong":     $ouds-opacity-strong,
+  "opaque":     $ouds-opacity-opaque
+) !default;
+// scss-docs-end ouds-maps-opacities
+
+// scss-docs-start ouds-maps-backgrounds
+$ouds-backgrounds: (
+  "primary": var(--#{$prefix}color-bg-primary),
+  "secondary": var(--#{$prefix}color-bg-secondary),
+  "tertiary": var(--#{$prefix}color-bg-tertiary),
+  "emphasized": var(--#{$prefix}color-bg-emphasized),
+  "brand-primary": var(--#{$prefix}color-surface-brand-primary),
+  "status-neutral-emphasized": var(--#{$prefix}color-surface-status-neutral-emphasized),
+  "status-neutral-muted": var(--#{$prefix}color-surface-status-neutral-muted),
+  "status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
+  "status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
+  "status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
+  "status-positive-muted": var(--#{$prefix}color-surface-status-positive-muted),
+  "status-negative-emphasized": var(--#{$prefix}color-surface-status-negative-emphasized),
+  "status-negative-muted": var(--#{$prefix}color-surface-status-negative-muted),
+  "status-warning-emphasized": var(--#{$prefix}color-surface-status-warning-emphasized),
+  "status-warning-muted": var(--#{$prefix}color-surface-status-warning-muted),
+  "status-info-emphasized": var(--#{$prefix}color-surface-status-info-emphasized),
+  "status-info-muted": var(--#{$prefix}color-surface-status-info-muted),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "transparent": transparent,
+) !default;
+// scss-docs-end ouds-maps-backgrounds
+
+// scss-docs-start ouds-maps-text-colors
+$ouds-text-colors: (
+  "brand-primary": var(--#{$prefix}color-content-brand-primary),
+  "default": var(--#{$prefix}color-content-default),
+  "disabled": var(--#{$prefix}color-content-disabled),
+  "muted": var(--#{$prefix}color-content-muted),
+  "on-brand-primary": var(--#{$prefix}color-content-on-brand-primary),
+  "on-status-accent-emphasized": var(--#{$prefix}color-content-on-status-accent-emphasized),
+  "on-status-accent-muted": var(--#{$prefix}color-content-on-status-accent-muted),
+  "on-status-info-emphasized": var(--#{$prefix}color-content-on-status-info-emphasized),
+  "on-status-info-muted": var(--#{$prefix}color-content-on-status-info-muted),
+  "on-status-negative-emphasized": var(--#{$prefix}color-content-on-status-negative-emphasized),
+  "on-status-negative-muted": var(--#{$prefix}color-content-on-status-negative-muted),
+  "on-status-neutral-emphasized": var(--#{$prefix}color-content-on-status-neutral-emphasized),
+  "on-status-neutral-muted": var(--#{$prefix}color-content-on-status-neutral-muted),
+  "on-status-positive-emphasized": var(--#{$prefix}color-content-on-status-positive-emphasized),
+  "on-status-positive-muted": var(--#{$prefix}color-content-on-status-positive-muted),
+  "on-status-warning-emphasized": var(--#{$prefix}color-content-on-status-warning-emphasized),
+  "on-status-warning-muted": var(--#{$prefix}color-content-on-status-warning-muted),
+  "status-accent": var(--#{$prefix}color-content-status-accent),
+  "status-info": var(--#{$prefix}color-content-status-info),
+  "status-negative": var(--#{$prefix}color-content-status-negative),
+  "status-positive": var(--#{$prefix}color-content-status-positive),
+  "status-warning": var(--#{$prefix}color-content-status-warning),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+  "always-on-black": var(--#{$prefix}color-always-on-black),
+  "always-on-white": var(--#{$prefix}color-always-on-white),
+  "reset": inherit,
+) !default;
+// scss-docs-end ouds-maps-text-colors
+// End mod
+
+// Re-assigned maps
+//
+// Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
+
+// scss-docs-start theme-colors-rgb
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+// scss-docs-end theme-colors-rgb
+
+// scss-docs-start theme-text-map
+$theme-colors-text: (
+  "primary": $primary-text-emphasis,
+  "secondary": $secondary-text-emphasis,
+  "success": $success-text-emphasis,
+  "info": $info-text-emphasis,
+  "warning": $warning-text-emphasis,
+  "danger": $danger-text-emphasis,
+  "light": $light-text-emphasis,
+  "dark": $dark-text-emphasis,
+) !default;
+// scss-docs-end theme-text-map
+
+// scss-docs-start theme-bg-subtle-map
+$theme-colors-bg-subtle: (
+  "primary": $primary-bg-subtle,
+  "secondary": $secondary-bg-subtle,
+  "success": $success-bg-subtle,
+  "info": $info-bg-subtle,
+  "warning": $warning-bg-subtle,
+  "danger": $danger-bg-subtle,
+  "light": $light-bg-subtle,
+  "dark": $dark-bg-subtle,
+) !default;
+// scss-docs-end theme-bg-subtle-map
+
+// scss-docs-start theme-border-subtle-map
+$theme-colors-border-subtle: (
+  "primary": $primary-border-subtle,
+  "secondary": $secondary-border-subtle,
+  "success": $success-border-subtle,
+  "info": $info-border-subtle,
+  "warning": $warning-border-subtle,
+  "danger": $danger-border-subtle,
+  "light": $light-border-subtle,
+  "dark": $dark-border-subtle,
+) !default;
+// scss-docs-end theme-border-subtle-map
+
+$theme-colors-rgb-dark: null !default;
+$theme-colors-text-dark: null !default;
+$theme-colors-bg-subtle-dark: null !default;
+$theme-colors-border-subtle-dark: null !default;
+
+@if $enable-dark-mode {
+  // OUDS mod
+  // scss-docs-start theme-colors-rgb-dark
+  $theme-colors-rgb-dark: map-loop($theme-colors-dark, to-rgb, "$value") !default;
+  // scss-docs-end theme-colors-rgb-dark
+  // End mod
+
+  // scss-docs-start theme-text-dark-map
+  $theme-colors-text-dark: (
+    "primary": $primary-text-emphasis-dark,
+    "secondary": $secondary-text-emphasis-dark,
+    "success": $success-text-emphasis-dark,
+    "info": $info-text-emphasis-dark,
+    "warning": $warning-text-emphasis-dark,
+    "danger": $danger-text-emphasis-dark,
+    "light": $light-text-emphasis-dark,
+    "dark": $dark-text-emphasis-dark,
+  ) !default;
+  // scss-docs-end theme-text-dark-map
+
+  // scss-docs-start theme-bg-subtle-dark-map
+  $theme-colors-bg-subtle-dark: (
+    "primary": $primary-bg-subtle-dark,
+    "secondary": $secondary-bg-subtle-dark,
+    "success": $success-bg-subtle-dark,
+    "info": $info-bg-subtle-dark,
+    "warning": $warning-bg-subtle-dark,
+    "danger": $danger-bg-subtle-dark,
+    "light": $light-bg-subtle-dark,
+    "dark": $dark-bg-subtle-dark,
+  ) !default;
+  // scss-docs-end theme-bg-subtle-dark-map
+
+  // scss-docs-start theme-border-subtle-dark-map
+  $theme-colors-border-subtle-dark: (
+    "primary": $primary-border-subtle-dark,
+    "secondary": $secondary-border-subtle-dark,
+    "success": $success-border-subtle-dark,
+    "info": $info-border-subtle-dark,
+    "warning": $warning-border-subtle-dark,
+    "danger": $danger-border-subtle-dark,
+    "light": $light-border-subtle-dark,
+    "dark": $dark-border-subtle-dark,
+  ) !default;
+  // scss-docs-end theme-border-subtle-dark-map
+}
+
+// Utilities maps
+//
+// Extends the default `$theme-colors` maps to help create our utilities.
+
+// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
+// scss-docs-start utilities-colors
+$utilities-colors: $theme-colors-rgb !default;
+// scss-docs-end utilities-colors
+
+// scss-docs-start utilities-text-colors
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    "primary":    var(--#{$prefix}color-content-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-content-muted), // OUDS mod
+    "success":    var(--#{$prefix}color-content-status-positive), // OUDS mod
+    "info":       var(--#{$prefix}color-content-status-info), // OUDS mod
+    "warning":    var(--#{$prefix}color-content-status-warning), // OUDS mod
+    "danger":     var(--#{$prefix}color-content-status-negative), // OUDS mod
+    "light":      var(--#{$prefix}color-content-disabled), // OUDS mod
+    "dark":       var(--#{$prefix}color-content-default), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
+    "body":       var(--#{$prefix}color-content-default) // OUDS mod: instead of `to-rgb($body-color)`
+  )
+) !default;
+$utilities-text-colors: $utilities-text !default; // OUDS mod: instead of `map-loop($utilities-text, rgba-css-var, "$key", "text")`
+
+$utilities-text-emphasis-colors: (
+  "primary-emphasis": var(--#{$prefix}primary-text-emphasis),
+  "secondary-emphasis": var(--#{$prefix}secondary-text-emphasis),
+  "success-emphasis": var(--#{$prefix}success-text-emphasis),
+  "info-emphasis": var(--#{$prefix}info-text-emphasis),
+  "warning-emphasis": var(--#{$prefix}warning-text-emphasis),
+  "danger-emphasis": var(--#{$prefix}danger-text-emphasis),
+  "light-emphasis": var(--#{$prefix}light-text-emphasis),
+  "dark-emphasis": var(--#{$prefix}dark-text-emphasis)
+) !default;
+// scss-docs-end utilities-text-colors
+
+// scss-docs-start utilities-bg-colors
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    "primary":    var(--#{$prefix}color-surface-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-bg-secondary), // OUDS mod
+    "success":    var(--#{$prefix}color-surface-status-positive-emphasized), // OUDS mod
+    "info":       var(--#{$prefix}color-surface-status-info-emphasized), // OUDS mod
+    "warning":    var(--#{$prefix}color-surface-status-warning-emphasized), // OUDS mod
+    "danger":     var(--#{$prefix}color-surface-status-negative-emphasized), // OUDS mod
+    "light":      var(--#{$prefix}color-bg-secondary), // OUDS mod
+    "dark":       var(--#{$prefix}color-surface-status-neutral-emphasized), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
+    "body":       var(--#{$prefix}color-bg-primary) // OUDS mod: instead of `to-rgb($body-bg)`
+  )
+) !default;
+$utilities-bg-colors: $utilities-bg !default; // OUDS mod: instead of `map-loop($utilities-bg, rgba-css-var, "$key", "bg")`
+
+$utilities-bg-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-bg-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
+  "success-subtle": var(--#{$prefix}success-bg-subtle),
+  "info-subtle": var(--#{$prefix}info-bg-subtle),
+  "warning-subtle": var(--#{$prefix}warning-bg-subtle),
+  "danger-subtle": var(--#{$prefix}danger-bg-subtle),
+  "light-subtle": var(--#{$prefix}light-bg-subtle),
+  "dark-subtle": var(--#{$prefix}dark-bg-subtle)
+) !default;
+// scss-docs-end utilities-bg-colors
+
+// scss-docs-start utilities-border-colors
+$utilities-border: map-merge(
+  $utilities-colors,
+  (
+    "primary":    var(--#{$prefix}color-border-brand-primary), // OUDS mod
+    "secondary":  var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "success":    var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "info":       var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "warning":    var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "danger":     var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "light":      var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "dark":       var(--#{$prefix}color-border-emphasized), // OUDS mod
+    "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
+    "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
+  )
+) !default;
+$utilities-border-colors: $utilities-border !default; // OUDS mod: instead of `map-loop($utilities-border, rgba-css-var, "$key", "border", "$value")`
+
+$utilities-border-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-border-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-border-subtle),
+  "success-subtle": var(--#{$prefix}success-border-subtle),
+  "info-subtle": var(--#{$prefix}info-border-subtle),
+  "warning-subtle": var(--#{$prefix}warning-border-subtle),
+  "danger-subtle": var(--#{$prefix}danger-border-subtle),
+  "light-subtle": var(--#{$prefix}light-border-subtle),
+  "dark-subtle": var(--#{$prefix}dark-border-subtle)
+) !default;
+// scss-docs-end utilities-border-colors
+
+// OUDS mod : no $utilities-links-underline
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+// OUDS mod
+// scss-docs-start grid-gutters
+$grid-gutter-widths: (
+  2xs: $ouds-grid-2xs-column-gap, // 8px
+  xs: $ouds-grid-xs-column-gap, // 16px
+  sm: $ouds-grid-sm-column-gap, // 16px
+  md: $ouds-grid-md-column-gap, // 24px
+  lg: $ouds-grid-lg-column-gap, // 24px
+  xl: $ouds-grid-xl-column-gap, // 32px
+  2xl: $ouds-grid-2xl-column-gap, // 32px
+  3xl: $ouds-grid-3xl-column-gap // 40px
+) !default;
+// scss-docs-end grid-gutters
+
+// scss-docs-start gutters
+$gutters: $ouds-dimension-space-fixed !default; // instead of `$spacers`
+// scss-docs-end gutters
+
+@if $enable-bootstrap-compatibility {
+  // Add Bootstrap gutters
+  $gutters: map-merge($gutters, $spacers);
+}
+// End mod
+
+$alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // OUDS mod

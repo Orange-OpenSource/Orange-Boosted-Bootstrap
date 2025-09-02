@@ -1,0 +1,66 @@
+// scss-docs-start ouds-font-icon-common
+%icon-size {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  fill: currentcolor;
+}
+// scss-docs-end ouds-font-icon-common
+
+@each $font-ref, $font-name in $ouds-font-sizes {
+  @each $icon-size in $ouds-icon-sizes {
+    @if str-slice($font-name, 1, 5) != "/code" {
+      .#{$font-ref}-#{$icon-size}-icon {
+        @extend %icon-size;
+        font-size: var(--#{$prefix}icon-#{$icon-size}-with-#{str-slice($font-name, 2)}) if($enable-important-utilities, !important, null);
+      }
+    }
+  }
+}
+
+.decorative-4xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-4xs if($enable-important-utilities, !important, null);
+}
+
+.decorative-3xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-3xs if($enable-important-utilities, !important, null);
+}
+
+.decorative-2xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-2xs if($enable-important-utilities, !important, null);
+}
+
+.decorative-xs-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-xs if($enable-important-utilities, !important, null);
+}
+
+.decorative-sm-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-sm if($enable-important-utilities, !important, null);
+}
+
+.decorative-md-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-md if($enable-important-utilities, !important, null);
+}
+
+.decorative-lg-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-lg if($enable-important-utilities, !important, null);
+}
+
+.decorative-xl-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-xl if($enable-important-utilities, !important, null);
+}
+
+.decorative-2xl-icon {
+  @extend %icon-size;
+  font-size: $ouds-size-icon-decorative-2xl if($enable-important-utilities, !important, null);
+}

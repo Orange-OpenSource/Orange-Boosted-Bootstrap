@@ -1,0 +1,760 @@
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
+
+
+// Reboot
+//
+// Normalization of HTML elements, manually forked from Normalize.css to remove
+// styles targeting irrelevant browsers while applying new styles.
+//
+// Normalize is licensed MIT. https://github.com/necolas/normalize.css
+
+
+// Document
+//
+// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+// Root
+//
+// Ability to the value of the root font sizes, affecting the value of `rem`.
+// null by default, thus nothing is generated.
+
+#{$ouds-root-selector} { // OUDS mod: instead of `:root`
+  @if $font-size-root != null {
+    @include font-size(var(--#{$prefix}root-font-size));
+  }
+
+  // OUDS mod: Improve focus visibility when fixed/sticky header is used
+  // See https://caniuse.com/?search=scroll-padding
+  // scss-docs-start scroll-offset
+  @if $enable-fixed-header {
+    scroll-padding-top: $scroll-offset-top * .5;
+
+    @include media-breakpoint-up(lg) {
+      scroll-padding-top: $scroll-offset-top;
+    }
+  }
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+  // scss-docs-end scroll-offset
+  // End mod
+}
+
+
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Prevent adjustments of font size after orientation changes in iOS.
+// 4. Change the default tap highlight to be completely transparent in iOS.
+// 5. Prevent faux-bold/italic especially for some RTL fonts
+//    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
+
+// scss-docs-start reboot-body-rules
+#{$ouds-root-selector} > * { // OUDS mod: instead of `body`
+  position: relative; // OUDS mod: required for back-to-top component
+  margin: 0; // 1
+  font-family: var(--#{$prefix}body-font-family);
+  font-synthesis: none; // OUDS mod // 5
+  @include font-size(var(--#{$prefix}body-font-size));
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
+  color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--#{$prefix}body-color)`
+  text-align: var(--#{$prefix}body-text-align);
+
+  /* rtl:remove */
+  letter-spacing: var(--#{$prefix}body-letter-spacing); // OUDS mod
+  background-color: var(--#{$prefix}color-bg-primary); // 2 // OUDS mod: instead of `var(--#{$prefix}body-bg)`
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+  -webkit-font-smoothing: subpixel-antialiased; // OUDS mod
+  text-rendering: optimizespeed; // OUDS mod
+}
+// scss-docs-end reboot-body-rules
+
+
+// OUDS mod: focus state
+// scss-docs-start focus-visibility
+:focus-visible {
+  @include focus-visible();
+}
+// scss-docs-end focus-visibility
+// End mod
+
+
+// Content grouping
+//
+// 1. Reset Firefox's gray color
+
+hr {
+  margin: $hr-margin-y 0;
+  color: $hr-color; // 1
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+  opacity: $hr-opacity;
+}
+
+
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+// scss-docs-start ouds-font-implementation
+%heading {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: var(--#{$prefix}heading-color);
+
+  /* rtl:remove */
+  -webkit-font-smoothing: antialiased;  // OUDS mod
+  -moz-osx-font-smoothing: grayscale;   // OUDS mod
+  text-rendering: optimizelegibility;   // OUDS mod
+}
+
+h1 {
+  @extend %heading;
+  @include get-font-size("heading-xlarge"); // OUDS mod: instead of `@include font-size($h1-font-size)`
+}
+
+h2 {
+  @extend %heading;
+  @include get-font-size("heading-large"); // OUDS mod: instead of `@include font-size($h2-font-size)`
+}
+
+h3 {
+  @extend %heading;
+  @include get-font-size("heading-medium"); // OUDS mod: instead of `@include font-size($h3-font-size)`
+}
+
+h4 {
+  @extend %heading;
+  @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size($h4-font-size)`
+}
+
+h5 {
+  @extend %heading;
+  @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($h5-font-size)`
+}
+
+h6 {
+  @extend %heading;
+  @include get-font-size("body-medium"); // OUDS mod: instead of `@include font-size($h6-font-size)`
+}
+// scss-docs-end ouds-font-implementation
+
+
+// Reset margins on paragraphs
+//
+// Similarly, the top margin on `<p>`s get reset. However, we also reset the
+// bottom margin to use `rem` units instead of `em`.
+
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  @include get-font-size("body-medium"); // OUDS mod
+}
+
+
+// Abbreviations
+//
+// 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
+// 2. Add explicit cursor to indicate changed behavior.
+// 3. Prevent the text-decoration to be skipped.
+
+abbr[title] {
+  text-decoration: underline dotted; // 1
+  cursor: help; // 2
+  text-decoration-skip-ink: none; // 3
+}
+
+
+// Address
+
+address {
+  margin-bottom: $ouds-space-fixed-md; // OUDS mod: instead of `1rem`
+  font-style: normal;
+  line-height: inherit;
+}
+
+
+// Lists
+
+// OUDS mod: no padding-left on ol and ul
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+// OUDS mod
+// Orange square list-style
+// stylelint-disable selector-max-type
+ul {
+  list-style-type: square;
+
+  ul {
+    list-style-type: "-  ";
+
+    ul {
+      list-style-type: circle;
+    }
+  }
+}
+ol ol {
+  list-style-type: upper-alpha;
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+// stylelint-enable selector-max-type
+
+li {
+  &::marker {
+    color: var(--#{$prefix}primary);
+
+    ol & {
+      color: inherit;
+    }
+  }
+}
+// End mod
+
+dt {
+  font-weight: $dt-font-weight;
+}
+
+// 1. Undo browser default
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; // 1
+}
+
+
+// Blockquote
+
+blockquote {
+  margin: 0 0 $ouds-space-fixed-md; // OUDS mod: instead of `0 0 1rem`
+}
+
+// OUDS mod: No italic
+i,
+em,
+cite {
+  font-style: normal; // OUDS mod: remove italic.
+}
+// End mod
+
+
+// Strong
+//
+// Add the correct font weight in Chrome, Edge, and Safari
+
+b,
+em, // OUDS mod
+strong {
+  font-weight: $font-weight-bold; // OUDS mod: ensure 700
+}
+
+
+// Small
+//
+// Add the correct font size in all browsers
+
+small {
+  @include get-font-size("body-small"); // OUDS mod: instead of `@include font-size($small-font-size)`
+}
+
+
+// Mark
+
+mark {
+  padding: $mark-padding;
+  color: var(--#{$prefix}color-content-on-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-color)`
+  background-color: var(--#{$prefix}color-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-bg)`
+}
+
+
+// Sub and Sup
+//
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+
+sub,
+sup {
+  position: relative;
+  @include font-size($sub-sup-font-size);
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+
+// Links
+
+// OUDS mod: define link properties in a placeholder to be reused in link component
+%link-properties {
+  font-weight: $link-font-weight; // OUDS mod
+  color: var(--#{$prefix}link-color); // OUDS mod: instead of rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: var(--#{$prefix}link-hover-color); // OUDS mod
+    text-decoration: $link-hover-decoration;
+  }
+
+
+  .visited-links &:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
+  &:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
+    color: var(--#{$prefix}link-visited-color);
+  }
+
+  &:focus-visible:not([aria-disabled="true"]) {
+    color: var(--#{$prefix}link-focus-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    color: var(--#{$prefix}link-active-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &[aria-disabled="true"] {
+    color: var(--#{$prefix}link-disabled-color);
+    pointer-events: none;
+  }
+
+  .colored-bg &,
+  &.colored-bg {
+    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
+  }
+}
+// End mod
+
+a {
+  // OUDS mod: use link properties placeholder
+  @extend %link-properties;
+}
+
+// And undo these styles for placeholder links/named anchors (without href).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+// See https://github.com/twbs/bootstrap/issues/19402
+
+a:not([href]):not([class]):not([aria-disabled="true"]) { // OUDS mod: Added `:not([aria-disabled="true])`
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+// Code
+
+var, // OUDS mod
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-code;
+  @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
+}
+
+// 1. Remove browser default top margin
+// 2. Reset browser default of `1em` to use `rem`s
+// 3. Don't allow content to break outside
+
+pre {
+  display: block;
+  margin-top: 0; // 1
+  margin-bottom: $ouds-space-fixed-md; // 2 // OUDS mod: instead of `1rem`
+  overflow: auto; // 3
+  @include get-font-size("code-medium"); // OUDS mod: instead of `@include font-size($code-font-size)`
+  color: $pre-color;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    @include font-size(inherit);
+    color: inherit;
+    word-break: normal;
+  }
+}
+
+var, // OUDS mod
+code {
+  @include font-size($code-font-size);
+  font-style: normal; // OUDS mod: <var> is italic in all browsers
+  color: var(--#{$prefix}color-content-muted);
+  word-wrap: break-word;
+
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
+}
+
+kbd {
+  padding: $kbd-padding-y $kbd-padding-x;
+  @include font-size($kbd-font-size);
+  color: $kbd-color;
+  background-color: $kbd-bg;
+  @include border-radius($border-radius-sm, $border-radius-sm); // OUDS mod: instead of `@include border-radius($border-radius-sm)`
+
+  kbd {
+    padding: 0;
+    @include font-size(1em);
+    font-weight: $nested-kbd-font-weight;
+  }
+}
+
+
+// Figures
+//
+// Apply a consistent margin strategy (matches our type styles).
+
+figure {
+  margin: 0 0 1rem;
+}
+
+
+// Images and content
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+
+// Tables
+//
+// 1. Prevent double borders
+// 2. Ensure horizontal alignment in table when using numbers
+//    See https://x.com/wesbos/status/932644812582522880
+//    See https://caniuse.com/#feat=font-variant-numeric
+//    See https://caniuse.com/#feat=font-feature
+//    See https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
+
+table {
+  font-feature-settings: "tnum";      // OUDS mod: 2
+  font-variant-numeric: tabular-nums; // OUDS mod: 2
+  caption-side: top;                  // OUDS mod
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: $table-caption-padding-y;
+  padding-bottom: $table-caption-padding-y;
+  @include get-font-size("heading-xlarge"); // OUDS mod
+  font-weight: $font-weight-bold; // OUDS mod
+  color: $table-caption-color;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;  // OUDS mod
+  -moz-osx-font-smoothing: grayscale;   // OUDS mod
+  text-rendering: optimizelegibility;   // OUDS mod
+}
+
+// 1. Removes font-weight bold by inheriting
+// 2. Matches default `<td>` alignment by inheriting `text-align`.
+// 3. Fix alignment for Safari
+
+th {
+  font-weight: $table-th-font-weight; // 1
+  text-align: inherit; // 2
+  text-align: -webkit-match-parent; // 3
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+
+// Forms
+//
+// 1. Allow labels to use `margin` for spacing.
+
+label {
+  display: inline-block; // 1
+}
+
+// Remove the default `border-radius` that macOS Chrome adds.
+// See https://github.com/twbs/bootstrap/issues/24093
+
+button {
+  // stylelint-disable-next-line property-disallowed-list
+  border-radius: 0;
+}
+
+// Explicitly remove focus outline in Chromium when it shouldn't be
+// visible (e.g. as result of mouse click or touch tap). It already
+// should be doing this automatically, but seems to currently be
+// confused and applies its very visible two-tone outline anyway.
+//
+// This rule is not applied with the focus ring utility which handles
+// itself outline and box shadow
+
+button:focus:not(:focus-visible):not(.focus-ring) {
+  outline: 0;
+  box-shadow: none; // Bosted mod
+}
+
+// 1. Remove the margin in Firefox and Safari
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // 1
+  font-family: inherit;
+  @include font-size(inherit);
+  line-height: inherit;
+
+  /* rtl:remove */
+  letter-spacing: inherit; // OUDS mod
+  box-shadow: none; // OUDS mod: prevent native validation styles to apply
+}
+
+// Remove the inheritance of text transform in Firefox
+button,
+select {
+  text-transform: none;
+}
+// Set the cursor for non-`<button>` buttons
+//
+// Details at https://github.com/twbs/bootstrap/pull/30562
+[role="button"] {
+  cursor: pointer;
+}
+
+select {
+  // Remove the inheritance of word-wrap in Safari.
+  // See https://github.com/twbs/bootstrap/issues/24990
+  word-wrap: normal;
+
+  // Undo the opacity change from Chrome
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+// Remove the dropdown arrow only from text type inputs built with datalists in Chrome.
+// See https://stackoverflow.com/a/54997118
+
+[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+// 3. Opinionated: add "hand" cursor to non-disabled button elements.
+
+button,
+[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
+
+  @if $enable-button-pointers {
+    &:not(:disabled) {
+      cursor: pointer; // 3
+    }
+  }
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+// 1. Textareas should really only resize vertically so they don't break their (horizontal) containers.
+
+textarea {
+  resize: vertical; // 1
+}
+
+// 1. Browsers set a default `min-width: min-content;` on fieldsets,
+//    unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+//    So we reset that to ensure fieldsets behave more like a standard block element.
+//    See https://github.com/twbs/bootstrap/issues/12359
+//    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+// 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
+
+fieldset {
+  min-width: 0; // 1
+  padding: 0; // 2
+  margin: 0; // 2
+  border: 0; // 2
+}
+
+// 1. By using `float: left`, the legend will behave like a block element.
+//    This way the border of a fieldset wraps around the legend if present.
+// 2. Fix wrapping bug.
+//    See https://github.com/twbs/bootstrap/issues/29712
+
+legend {
+  float: left; // 1
+  width: 100%;
+  padding: 0;
+  margin-bottom: $legend-margin-bottom;
+  font-weight: $legend-font-weight;
+  // OUDS mod: no line-height
+  @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
+
+  + * {
+    clear: left; // 2
+  }
+}
+
+// Fix height of inputs with a type of datetime-local, date, month, week, or time
+// See https://github.com/twbs/bootstrap/issues/18842
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+// 1. This overrides the extra rounded corners on search inputs in iOS so that our
+//    `.form-control` class can properly style them. Note that this cannot simply
+//    be added to `.form-control` as it's not specific enough. For details, see
+//    https://github.com/twbs/bootstrap/issues/11586.
+// 2. Correct the outline style in Safari.
+
+[type="search"] {
+  -webkit-appearance: textfield; // 1
+  outline-offset: -#{$focus-visible-outer-offset}; // 2 // OUDS mod
+}
+
+// 1. A few input types should stay LTR
+// See https://rtlstyling.com/posts/rtl-styling#form-inputs
+// 2. RTL only output
+// See https://rtlcss.com/learn/usage-guide/control-directives/#raw
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+// Remove the inner padding in Chrome and Safari on macOS.
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Remove padding around color pickers in webkit browsers
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+
+// 1. Inherit font family and line height for file input buttons
+// 2. Correct the inability to style clickable types in iOS and Safari.
+
+::file-selector-button {
+  font: inherit; // 1
+  -webkit-appearance: button; // 2
+}
+
+// Correct element displays
+
+output {
+  display: inline-block;
+}
+
+// Remove border from iframe
+
+iframe {
+  border: 0;
+}
+
+// Summary
+//
+// 1. Add the correct display in all browsers
+
+summary {
+  display: list-item; // 1
+  cursor: pointer;
+}
+
+
+// Progress
+//
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+
+progress {
+  vertical-align: baseline;
+}
+
+
+// Hidden attribute
+//
+// Always hide an element with the `hidden` HTML attribute.
+
+[hidden] {
+  display: none !important;
+}
+
+// OUDS mod
+// Selection
+::selection {
+  color: var(--#{$prefix}color-content-on-action-highlighted);
+  background-color: var(--#{$prefix}color-action-highlighted);
+}
+// End mod

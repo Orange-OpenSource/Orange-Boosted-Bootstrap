@@ -1,0 +1,532 @@
+// OUDS mod
+#{$ouds-root-selector},
+[data-bs-theme] {
+  color: var(--#{$prefix}color-content-default);
+
+  // Link colors need to be defined here to ensure theme switching capabilities.
+  --#{$prefix}link-color: #{$ouds-link-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-color-action-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-color-action-visited};
+}
+
+// Note that some of the following variables in `#{$ouds-root-selector}, [data-bs-theme="light"]` could be extracted into `#{$ouds-root-selector}` only selector since they are not modified by other color modes!
+// End mod
+
+@include color-mode(light, true) { // OUDS mod: instead of `:root, [data-bs-theme="light"]`
+  color-scheme: light; // OUDS mod
+
+  // Note: Custom variable values only support SassScript inside `#{}`.
+
+  // Colors
+  //
+  // Generate palettes for full colors, grays, and theme colors.
+
+  @if $enable-bootstrap-compatibility {
+    @each $color, $value in $colors {
+      --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $grays {
+      --#{$prefix}gray-#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors {
+      --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-rgb {
+      --#{$prefix}#{$color}-rgb: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-text {
+      --#{$prefix}#{$color}-text-emphasis: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-bg-subtle {
+      --#{$prefix}#{$color}-bg-subtle: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-border-subtle {
+      --#{$prefix}#{$color}-border-subtle: #{$value};
+    }
+
+    --#{$prefix}white-rgb: #{to-rgb($white)};
+    --#{$prefix}black-rgb: #{to-rgb($black)};
+  }
+
+  // OUDS mod
+  @each $icon, $svg in $svg-as-custom-props {
+    --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+  }
+  // End mod
+
+  // Fonts
+
+  // Note: Use `inspect` for lists so that quoted items keep the quotes.
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+  --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
+  --#{$prefix}gradient: #{$gradient};
+
+  // OUDS mod
+  // scss-docs-start root-font-variables-ouds
+  --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-mobile)};
+  --#{$prefix}font-size-display-medium: #{px-to-rem($ouds-font-size-display-medium-mobile)};
+  --#{$prefix}font-size-display-small: #{px-to-rem($ouds-font-size-display-small-mobile)};
+  --#{$prefix}font-size-heading-xlarge: #{px-to-rem($ouds-font-size-heading-xlarge-mobile)};
+  --#{$prefix}font-size-heading-large: #{px-to-rem($ouds-font-size-heading-large-mobile)};
+  --#{$prefix}font-size-heading-medium: #{px-to-rem($ouds-font-size-heading-medium-mobile)};
+  --#{$prefix}font-size-heading-small: #{px-to-rem($ouds-font-size-heading-small-mobile)};
+  --#{$prefix}font-size-body-large: #{px-to-rem($ouds-font-size-body-large-mobile)};
+  --#{$prefix}font-size-body-medium: #{px-to-rem($ouds-font-size-body-medium-mobile)};
+  --#{$prefix}font-size-body-small: #{px-to-rem($ouds-font-size-body-small-mobile)};
+  --#{$prefix}font-size-label-xlarge: #{px-to-rem($ouds-font-size-label-xlarge)};
+  --#{$prefix}font-size-label-large: #{px-to-rem($ouds-font-size-label-large)};
+  --#{$prefix}font-size-label-medium: #{px-to-rem($ouds-font-size-label-medium)};
+  --#{$prefix}font-size-label-small: #{px-to-rem($ouds-font-size-label-small)};
+  --#{$prefix}font-size-code-medium: #{px-to-rem($ouds-font-size-code-medium)};
+  --#{$prefix}font-line-height-display-large: #{divide($ouds-font-line-height-display-large-mobile, $ouds-font-size-display-large-mobile)};
+  --#{$prefix}font-line-height-display-medium: #{divide($ouds-font-line-height-display-medium-mobile, $ouds-font-size-display-medium-mobile)};
+  --#{$prefix}font-line-height-display-small: #{divide($ouds-font-line-height-display-small-mobile, $ouds-font-size-display-small-mobile)};
+  --#{$prefix}font-line-height-heading-xlarge: #{divide($ouds-font-line-height-heading-xlarge-mobile, $ouds-font-size-heading-xlarge-mobile)};
+  --#{$prefix}font-line-height-heading-large: #{divide($ouds-font-line-height-heading-large-mobile, $ouds-font-size-heading-large-mobile)};
+  --#{$prefix}font-line-height-heading-medium: #{divide($ouds-font-line-height-heading-medium-mobile, $ouds-font-size-heading-medium-mobile)};
+  --#{$prefix}font-line-height-heading-small: #{divide($ouds-font-line-height-heading-small-mobile, $ouds-font-size-heading-small-mobile)};
+  --#{$prefix}font-line-height-body-large: #{divide($ouds-font-line-height-body-large-mobile, $ouds-font-size-body-large-mobile)};
+  --#{$prefix}font-line-height-body-medium: #{divide($ouds-font-line-height-body-medium-mobile, $ouds-font-size-body-medium-mobile)};
+  --#{$prefix}font-line-height-body-small: #{divide($ouds-font-line-height-body-small-mobile, $ouds-font-size-body-small-mobile)};
+  --#{$prefix}font-line-height-label-xlarge: #{divide($ouds-font-line-height-label-xlarge, $ouds-font-size-label-xlarge)};
+  --#{$prefix}font-line-height-label-large: #{divide($ouds-font-line-height-label-large, $ouds-font-size-label-large)};
+  --#{$prefix}font-line-height-label-medium: #{divide($ouds-font-line-height-label-medium, $ouds-font-size-label-medium)};
+  --#{$prefix}font-line-height-label-small: #{divide($ouds-font-line-height-label-small, $ouds-font-size-label-small)};
+  --#{$prefix}font-line-height-code-medium: #{divide($ouds-font-line-height-label-small, $ouds-font-size-code-medium)};
+  --#{$prefix}font-letter-spacing-display-large: #{px-to-rem($ouds-font-letter-spacing-display-large-mobile)};
+  --#{$prefix}font-letter-spacing-display-medium: #{px-to-rem($ouds-font-letter-spacing-display-medium-mobile)};
+  --#{$prefix}font-letter-spacing-display-small: #{px-to-rem($ouds-font-letter-spacing-display-small-mobile)};
+  --#{$prefix}font-letter-spacing-heading-xlarge: #{px-to-rem($ouds-font-letter-spacing-heading-xlarge-mobile)};
+  --#{$prefix}font-letter-spacing-heading-large: #{px-to-rem($ouds-font-letter-spacing-heading-large-mobile)};
+  --#{$prefix}font-letter-spacing-heading-medium: #{px-to-rem($ouds-font-letter-spacing-heading-medium-mobile)};
+  --#{$prefix}font-letter-spacing-heading-small: #{px-to-rem($ouds-font-letter-spacing-heading-small-mobile)};
+  --#{$prefix}font-letter-spacing-body-large: #{px-to-rem($ouds-font-letter-spacing-body-large-mobile)};
+  --#{$prefix}font-letter-spacing-body-medium: #{px-to-rem($ouds-font-letter-spacing-body-medium-mobile)};
+  --#{$prefix}font-letter-spacing-body-small: #{px-to-rem($ouds-font-letter-spacing-body-small-mobile)};
+  --#{$prefix}font-letter-spacing-label-xlarge: #{px-to-rem($ouds-font-letter-spacing-label-xlarge)};
+  --#{$prefix}font-letter-spacing-label-large: #{px-to-rem($ouds-font-letter-spacing-label-large)};
+  --#{$prefix}font-letter-spacing-label-medium: #{px-to-rem($ouds-font-letter-spacing-label-medium)};
+  --#{$prefix}font-letter-spacing-label-small: #{px-to-rem($ouds-font-letter-spacing-label-small)};
+  --#{$prefix}font-letter-spacing-code-medium: #{px-to-rem($ouds-font-letter-spacing-code-medium)};
+  --#{$prefix}font-max-width-display-large: #{px-to-rem($ouds-size-max-width-type-display-large-mobile)};
+  --#{$prefix}font-max-width-display-medium: #{px-to-rem($ouds-size-max-width-type-display-medium-mobile)};
+  --#{$prefix}font-max-width-display-small: #{px-to-rem($ouds-size-max-width-type-display-small-mobile)};
+  --#{$prefix}font-max-width-heading-xlarge: #{px-to-rem($ouds-size-max-width-type-heading-xlarge-mobile)};
+  --#{$prefix}font-max-width-heading-large: #{px-to-rem($ouds-size-max-width-type-heading-large-mobile)};
+  --#{$prefix}font-max-width-heading-medium: #{px-to-rem($ouds-size-max-width-type-heading-medium-mobile)};
+  --#{$prefix}font-max-width-heading-small: #{px-to-rem($ouds-size-max-width-type-heading-small-mobile)};
+  --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-mobile)};
+  --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-mobile)};
+  --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-mobile)};
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-tablet)};
+    --#{$prefix}font-size-display-medium: #{px-to-rem($ouds-font-size-display-medium-tablet)};
+    --#{$prefix}font-size-display-small: #{px-to-rem($ouds-font-size-display-small-tablet)};
+    --#{$prefix}font-size-heading-xlarge: #{px-to-rem($ouds-font-size-heading-xlarge-tablet)};
+    --#{$prefix}font-size-heading-large: #{px-to-rem($ouds-font-size-heading-large-tablet)};
+    --#{$prefix}font-size-heading-medium: #{px-to-rem($ouds-font-size-heading-medium-tablet)};
+    --#{$prefix}font-size-heading-small: #{px-to-rem($ouds-font-size-heading-small-tablet)};
+    --#{$prefix}font-size-body-large: #{px-to-rem($ouds-font-size-body-large-tablet)};
+    --#{$prefix}font-size-body-medium: #{px-to-rem($ouds-font-size-body-medium-tablet)};
+    --#{$prefix}font-size-body-small: #{px-to-rem($ouds-font-size-body-small-tablet)};
+    --#{$prefix}font-line-height-display-large: #{divide($ouds-font-line-height-display-large-tablet, $ouds-font-size-display-large-tablet)};
+    --#{$prefix}font-line-height-display-medium: #{divide($ouds-font-line-height-display-medium-tablet, $ouds-font-size-display-medium-tablet)};
+    --#{$prefix}font-line-height-display-small: #{divide($ouds-font-line-height-display-small-tablet, $ouds-font-size-display-small-tablet)};
+    --#{$prefix}font-line-height-heading-xlarge: #{divide($ouds-font-line-height-heading-xlarge-tablet, $ouds-font-size-heading-xlarge-tablet)};
+    --#{$prefix}font-line-height-heading-large: #{divide($ouds-font-line-height-heading-large-tablet, $ouds-font-size-heading-large-tablet)};
+    --#{$prefix}font-line-height-heading-medium: #{divide($ouds-font-line-height-heading-medium-tablet, $ouds-font-size-heading-medium-tablet)};
+    --#{$prefix}font-line-height-heading-small: #{divide($ouds-font-line-height-heading-small-tablet, $ouds-font-size-heading-small-tablet)};
+    --#{$prefix}font-line-height-body-large: #{divide($ouds-font-line-height-body-large-tablet, $ouds-font-size-body-large-tablet)};
+    --#{$prefix}font-line-height-body-medium: #{divide($ouds-font-line-height-body-medium-tablet, $ouds-font-size-body-medium-tablet)};
+    --#{$prefix}font-line-height-body-small: #{divide($ouds-font-line-height-body-small-tablet, $ouds-font-size-body-small-tablet)};
+    --#{$prefix}font-letter-spacing-display-large: #{px-to-rem($ouds-font-letter-spacing-display-large-tablet)};
+    --#{$prefix}font-letter-spacing-display-medium: #{px-to-rem($ouds-font-letter-spacing-display-medium-tablet)};
+    --#{$prefix}font-letter-spacing-display-small: #{px-to-rem($ouds-font-letter-spacing-display-small-tablet)};
+    --#{$prefix}font-letter-spacing-heading-xlarge: #{px-to-rem($ouds-font-letter-spacing-heading-xlarge-tablet)};
+    --#{$prefix}font-letter-spacing-heading-large: #{px-to-rem($ouds-font-letter-spacing-heading-large-tablet)};
+    --#{$prefix}font-letter-spacing-heading-medium: #{px-to-rem($ouds-font-letter-spacing-heading-medium-tablet)};
+    --#{$prefix}font-letter-spacing-heading-small: #{px-to-rem($ouds-font-letter-spacing-heading-small-tablet)};
+    --#{$prefix}font-letter-spacing-body-large: #{px-to-rem($ouds-font-letter-spacing-body-large-tablet)};
+    --#{$prefix}font-letter-spacing-body-medium: #{px-to-rem($ouds-font-letter-spacing-body-medium-tablet)};
+    --#{$prefix}font-letter-spacing-body-small: #{px-to-rem($ouds-font-letter-spacing-body-small-tablet)};
+    --#{$prefix}font-max-width-display-large: #{px-to-rem($ouds-size-max-width-type-display-large-tablet)};
+    --#{$prefix}font-max-width-display-medium: #{px-to-rem($ouds-size-max-width-type-display-medium-tablet)};
+    --#{$prefix}font-max-width-display-small: #{px-to-rem($ouds-size-max-width-type-display-small-tablet)};
+    --#{$prefix}font-max-width-heading-xlarge: #{px-to-rem($ouds-size-max-width-type-heading-xlarge-tablet)};
+    --#{$prefix}font-max-width-heading-large: #{px-to-rem($ouds-size-max-width-type-heading-large-tablet)};
+    --#{$prefix}font-max-width-heading-medium: #{px-to-rem($ouds-size-max-width-type-heading-medium-tablet)};
+    --#{$prefix}font-max-width-heading-small: #{px-to-rem($ouds-size-max-width-type-heading-small-tablet)};
+    --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-tablet)};
+    --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-tablet)};
+    --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-tablet)};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}font-size-display-large: #{px-to-rem($ouds-font-size-display-large-desktop)};
+    --#{$prefix}font-size-display-medium: #{px-to-rem($ouds-font-size-display-medium-desktop)};
+    --#{$prefix}font-size-display-small: #{px-to-rem($ouds-font-size-display-small-desktop)};
+    --#{$prefix}font-size-heading-xlarge: #{px-to-rem($ouds-font-size-heading-xlarge-desktop)};
+    --#{$prefix}font-size-heading-large: #{px-to-rem($ouds-font-size-heading-large-desktop)};
+    --#{$prefix}font-size-heading-medium: #{px-to-rem($ouds-font-size-heading-medium-desktop)};
+    --#{$prefix}font-size-heading-small: #{px-to-rem($ouds-font-size-heading-small-desktop)};
+    --#{$prefix}font-size-body-large: #{px-to-rem($ouds-font-size-body-large-desktop)};
+    --#{$prefix}font-size-body-medium: #{px-to-rem($ouds-font-size-body-medium-desktop)};
+    --#{$prefix}font-size-body-small: #{px-to-rem($ouds-font-size-body-small-desktop)};
+    --#{$prefix}font-line-height-display-large: #{divide($ouds-font-line-height-display-large-desktop, $ouds-font-size-display-large-desktop)};
+    --#{$prefix}font-line-height-display-medium: #{divide($ouds-font-line-height-display-medium-desktop, $ouds-font-size-display-medium-desktop)};
+    --#{$prefix}font-line-height-display-small: #{divide($ouds-font-line-height-display-small-desktop, $ouds-font-size-display-small-desktop)};
+    --#{$prefix}font-line-height-heading-xlarge: #{divide($ouds-font-line-height-heading-xlarge-desktop, $ouds-font-size-heading-xlarge-desktop)};
+    --#{$prefix}font-line-height-heading-large: #{divide($ouds-font-line-height-heading-large-desktop, $ouds-font-size-heading-large-desktop)};
+    --#{$prefix}font-line-height-heading-medium: #{divide($ouds-font-line-height-heading-medium-desktop, $ouds-font-size-heading-medium-desktop)};
+    --#{$prefix}font-line-height-heading-small: #{divide($ouds-font-line-height-heading-small-desktop, $ouds-font-size-heading-small-desktop)};
+    --#{$prefix}font-line-height-body-large: #{divide($ouds-font-line-height-body-large-desktop, $ouds-font-size-body-large-desktop)};
+    --#{$prefix}font-line-height-body-medium: #{divide($ouds-font-line-height-body-medium-desktop, $ouds-font-size-body-medium-desktop)};
+    --#{$prefix}font-line-height-body-small: #{divide($ouds-font-line-height-body-small-desktop, $ouds-font-size-body-small-desktop)};
+    --#{$prefix}font-letter-spacing-display-large: #{px-to-rem($ouds-font-letter-spacing-display-large-desktop)};
+    --#{$prefix}font-letter-spacing-display-medium: #{px-to-rem($ouds-font-letter-spacing-display-medium-desktop)};
+    --#{$prefix}font-letter-spacing-display-small: #{px-to-rem($ouds-font-letter-spacing-display-small-desktop)};
+    --#{$prefix}font-letter-spacing-heading-xlarge: #{px-to-rem($ouds-font-letter-spacing-heading-xlarge-desktop)};
+    --#{$prefix}font-letter-spacing-heading-large: #{px-to-rem($ouds-font-letter-spacing-heading-large-desktop)};
+    --#{$prefix}font-letter-spacing-heading-medium: #{px-to-rem($ouds-font-letter-spacing-heading-medium-desktop)};
+    --#{$prefix}font-letter-spacing-heading-small: #{px-to-rem($ouds-font-letter-spacing-heading-small-desktop)};
+    --#{$prefix}font-letter-spacing-body-large: #{px-to-rem($ouds-font-letter-spacing-body-large-desktop)};
+    --#{$prefix}font-letter-spacing-body-medium: #{px-to-rem($ouds-font-letter-spacing-body-medium-desktop)};
+    --#{$prefix}font-letter-spacing-body-small: #{px-to-rem($ouds-font-letter-spacing-body-small-desktop)};
+    --#{$prefix}font-max-width-display-large: #{px-to-rem($ouds-size-max-width-type-display-large-desktop)};
+    --#{$prefix}font-max-width-display-medium: #{px-to-rem($ouds-size-max-width-type-display-medium-desktop)};
+    --#{$prefix}font-max-width-display-small: #{px-to-rem($ouds-size-max-width-type-display-small-desktop)};
+    --#{$prefix}font-max-width-heading-xlarge: #{px-to-rem($ouds-size-max-width-type-heading-xlarge-desktop)};
+    --#{$prefix}font-max-width-heading-large: #{px-to-rem($ouds-size-max-width-type-heading-large-desktop)};
+    --#{$prefix}font-max-width-heading-medium: #{px-to-rem($ouds-size-max-width-type-heading-medium-desktop)};
+    --#{$prefix}font-max-width-heading-small: #{px-to-rem($ouds-size-max-width-type-heading-small-desktop)};
+    --#{$prefix}font-max-width-body-large: #{px-to-rem($ouds-size-max-width-type-body-large-desktop)};
+    --#{$prefix}font-max-width-body-medium: #{px-to-rem($ouds-size-max-width-type-body-medium-desktop)};
+    --#{$prefix}font-max-width-body-small: #{px-to-rem($ouds-size-max-width-type-body-small-desktop)};
+  }
+  // scss-docs-end root-font-variables-ouds
+  // End mod
+
+  // Root and body
+  // scss-docs-start root-body-variables
+  @if $font-size-root != null {
+    --#{$prefix}root-font-size: #{$font-size-root};
+  }
+  --#{$prefix}body-font-family: #{inspect($font-family-base)};
+  @include rfs($font-size-base, --#{$prefix}body-font-size);
+  --#{$prefix}body-font-weight: #{$font-weight-base};
+  --#{$prefix}body-line-height: #{$line-height-base};
+  --#{$prefix}body-letter-spacing: #{$letter-spacing-base}; // OUDS mod
+  @if $body-text-align != null {
+    --#{$prefix}body-text-align: #{$body-text-align};
+  }
+
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}body-color: #{$body-color};
+    --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+    --#{$prefix}body-bg: #{$body-bg};
+    --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+
+    --#{$prefix}emphasis-color: #{$body-emphasis-color};
+    --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+
+    --#{$prefix}secondary-color: #{$body-secondary-color};
+    --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
+    --#{$prefix}secondary-bg: #{$body-secondary-bg};
+    --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
+
+    --#{$prefix}tertiary-color: #{$body-tertiary-color};
+    --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+    --#{$prefix}tertiary-bg: #{$body-tertiary-bg};
+    --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+  }
+  // scss-docs-end root-body-variables
+
+  --#{$prefix}heading-color: #{$headings-color};
+
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
+    --#{$prefix}link-decoration: #{$link-decoration};
+
+    --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
+
+    @if $link-hover-decoration != null {
+      --#{$prefix}link-hover-decoration: #{$link-hover-decoration};
+    }
+  }
+
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}code-color: #{$code-color};
+    --#{$prefix}highlight-color: #{$mark-color};
+    --#{$prefix}highlight-bg: #{$mark-bg};
+  }
+
+  // scss-docs-start root-border-var-ouds
+  --#{$prefix}border-width: #{$border-width};
+  --#{$prefix}border-style: #{$border-style};
+  --#{$prefix}border-color: #{$border-color};
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}border-color-translucent: #{$border-color-translucent};
+  }
+  // scss-docs-end root-border-var-ouds
+
+  // OUDS mod
+  // scss-docs-start root-space-scaled-var-ouds
+  --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-mobile};
+  --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-mobile};
+  --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-mobile};
+  --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-mobile};
+  --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-mobile};
+  --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-mobile};
+  --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-mobile};
+  --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-mobile};
+  --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-mobile};
+  --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-mobile};
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-tablet};
+    --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-tablet};
+    --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-tablet};
+    --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-tablet};
+    --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-tablet};
+    --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-tablet};
+    --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-tablet};
+    --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-tablet};
+    --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-tablet};
+    --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-tablet};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-desktop};
+    --#{$prefix}space-scaled-3xs: #{$ouds-space-scaled-3xs-desktop};
+    --#{$prefix}space-scaled-2xs: #{$ouds-space-scaled-2xs-desktop};
+    --#{$prefix}space-scaled-xs: #{$ouds-space-scaled-xs-desktop};
+    --#{$prefix}space-scaled-sm: #{$ouds-space-scaled-sm-desktop};
+    --#{$prefix}space-scaled-md: #{$ouds-space-scaled-md-desktop};
+    --#{$prefix}space-scaled-lg: #{$ouds-space-scaled-lg-desktop};
+    --#{$prefix}space-scaled-xl: #{$ouds-space-scaled-xl-desktop};
+    --#{$prefix}space-scaled-2xl: #{$ouds-space-scaled-2xl-desktop};
+    --#{$prefix}space-scaled-3xl: #{$ouds-space-scaled-3xl-desktop};
+  }
+  // scss-docs-end root-space-scaled-var-ouds
+
+  // scss-docs-start root-size-scaled-var-ouds
+  --#{$prefix}icon-sm-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-sm-mobile)};
+  --#{$prefix}icon-md-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-md-mobile)};
+  --#{$prefix}icon-lg-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-sm-mobile)};
+  --#{$prefix}icon-md-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-md-mobile)};
+  --#{$prefix}icon-lg-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-sm-mobile)};
+  --#{$prefix}icon-md-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-md-mobile)};
+  --#{$prefix}icon-lg-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-sm-mobile)};
+  --#{$prefix}icon-md-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-md-mobile)};
+  --#{$prefix}icon-lg-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-sm-mobile)};
+  --#{$prefix}icon-md-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-md-mobile)};
+  --#{$prefix}icon-lg-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-sm-mobile)};
+  --#{$prefix}icon-md-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-md-mobile)};
+  --#{$prefix}icon-lg-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-lg-mobile)};
+  --#{$prefix}icon-sm-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-sm-mobile)};
+  --#{$prefix}icon-md-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-md-mobile)};
+  --#{$prefix}icon-lg-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-lg-mobile)};
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}icon-sm-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-sm-tablet)};
+    --#{$prefix}icon-md-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-md-tablet)};
+    --#{$prefix}icon-lg-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-sm-tablet)};
+    --#{$prefix}icon-md-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-md-tablet)};
+    --#{$prefix}icon-lg-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-sm-tablet)};
+    --#{$prefix}icon-md-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-md-tablet)};
+    --#{$prefix}icon-lg-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-sm-tablet)};
+    --#{$prefix}icon-md-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-md-tablet)};
+    --#{$prefix}icon-lg-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-sm-tablet)};
+    --#{$prefix}icon-md-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-md-tablet)};
+    --#{$prefix}icon-lg-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-sm-tablet)};
+    --#{$prefix}icon-md-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-md-tablet)};
+    --#{$prefix}icon-lg-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-lg-tablet)};
+    --#{$prefix}icon-sm-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-sm-tablet)};
+    --#{$prefix}icon-md-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-md-tablet)};
+    --#{$prefix}icon-lg-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-lg-tablet)};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}icon-sm-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-sm-desktop)};
+    --#{$prefix}icon-md-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-md-desktop)};
+    --#{$prefix}icon-lg-with-heading-xlarge: #{px-to-rem($ouds-size-icon-with-heading-xlarge-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-sm-desktop)};
+    --#{$prefix}icon-md-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-md-desktop)};
+    --#{$prefix}icon-lg-with-heading-large: #{px-to-rem($ouds-size-icon-with-heading-large-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-sm-desktop)};
+    --#{$prefix}icon-md-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-md-desktop)};
+    --#{$prefix}icon-lg-with-heading-medium: #{px-to-rem($ouds-size-icon-with-heading-medium-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-sm-desktop)};
+    --#{$prefix}icon-md-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-md-desktop)};
+    --#{$prefix}icon-lg-with-heading-small: #{px-to-rem($ouds-size-icon-with-heading-small-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-sm-desktop)};
+    --#{$prefix}icon-md-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-md-desktop)};
+    --#{$prefix}icon-lg-with-body-large: #{px-to-rem($ouds-size-icon-with-body-large-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-sm-desktop)};
+    --#{$prefix}icon-md-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-md-desktop)};
+    --#{$prefix}icon-lg-with-body-medium: #{px-to-rem($ouds-size-icon-with-body-medium-size-lg-desktop)};
+    --#{$prefix}icon-sm-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-sm-desktop)};
+    --#{$prefix}icon-md-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-md-desktop)};
+    --#{$prefix}icon-lg-with-body-small: #{px-to-rem($ouds-size-icon-with-body-small-size-lg-desktop)};
+  }
+  // scss-docs-end root-size-scaled-var-ouds
+  // End mod
+
+  // scss-docs-start root-border-var
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}border-radius: #{$border-radius};
+    --#{$prefix}border-radius-sm: #{$border-radius-sm};
+    --#{$prefix}border-radius-lg: #{$border-radius-lg};
+    --#{$prefix}border-radius-xl: #{$border-radius-xl};
+    --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
+    --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl); // Deprecated in Bootstrap v5.3.0 for consistency
+    --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  }
+  // scss-docs-end root-border-var
+
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}box-shadow: #{$box-shadow};
+    --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
+    --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
+    --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
+  }
+
+  // Focus styles
+  // scss-docs-start root-focus-variables
+  --#{$prefix}focus-ring-width: #{$focus-ring-width};
+  --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity};
+  --#{$prefix}focus-ring-color: #{$focus-ring-color};
+  // scss-docs-end root-focus-variables
+
+  // scss-docs-start root-form-validation-variables
+  @if $enable-bootstrap-compatibility {
+    --#{$prefix}form-valid-color: #{$form-valid-color};
+    --#{$prefix}form-valid-border-color: #{$form-valid-border-color};
+    --#{$prefix}form-invalid-color: #{$form-invalid-color};
+    --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
+  }
+  // scss-docs-end root-form-validation-variables
+
+  --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter}; // OUDS mod
+  --#{$prefix}form-select-indicator: #{$form-select-indicator}; // OUDS mod
+  --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator}; // OUDS mod
+
+  // OUDS mod
+  // Table-specific styles
+  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
+  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+  --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+  // End mod
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+    color-scheme: dark;
+
+    // scss-docs-start root-dark-mode-vars
+    @if $enable-bootstrap-compatibility {
+      --#{$prefix}body-color: #{$body-color-dark};
+      --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
+      --#{$prefix}body-bg: #{$body-bg-dark};
+      --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
+
+      --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
+      --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
+
+      --#{$prefix}secondary-color: #{$body-secondary-color-dark};
+      --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
+      --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
+      --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
+
+      --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
+      --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
+      --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
+      --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+
+      // OUDS mod
+      @each $color, $value in $theme-colors-dark {
+        --#{$prefix}#{$color}: #{$value};
+      }
+
+      @each $color, $value in $theme-colors-rgb-dark {
+        --#{$prefix}#{$color}-rgb: #{$value};
+      }
+      // End mod
+
+      @each $color, $value in $theme-colors-text-dark {
+        --#{$prefix}#{$color}-text-emphasis: #{$value};
+      }
+
+      @each $color, $value in $theme-colors-bg-subtle-dark {
+        --#{$prefix}#{$color}-bg-subtle: #{$value};
+      }
+
+      @each $color, $value in $theme-colors-border-subtle-dark {
+        --#{$prefix}#{$color}-border-subtle: #{$value};
+      }
+    }
+
+    // OUDS mod
+    @each $icon, $svg in $svg-as-custom-props-dark {
+      --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+    }
+    // End mod
+
+    --#{$prefix}heading-color: #{$headings-color-dark};
+
+    @if $enable-bootstrap-compatibility {
+      --#{$prefix}link-color-rgb: #{to-rgb($link-color-dark)};
+      --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
+
+      --#{$prefix}code-color: #{$code-color-dark};
+      --#{$prefix}highlight-color: #{$mark-color-dark};
+      --#{$prefix}highlight-bg: #{$mark-bg-dark};
+    }
+
+    --#{$prefix}border-color: #{$border-color-dark};
+    @if $enable-bootstrap-compatibility {
+      --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+    }
+
+    --#{$prefix}focus-ring-color: #{$focus-ring-color-dark}; // OUDS mod
+
+    @if $enable-bootstrap-compatibility {
+      --#{$prefix}form-valid-color: #{$form-valid-color-dark};
+      --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
+      --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
+      --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+    }
+    --#{$prefix}form-select-indicator: #{$form-select-indicator-dark}; // OUDS mod
+    --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark}; // OUDS mod
+    --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
+
+    // OUDS mod
+    // Table-specific styles
+    --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
+    --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
+    --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
+    // End mod
+    // scss-docs-end root-dark-mode-vars
+  }
+}

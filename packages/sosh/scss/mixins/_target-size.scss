@@ -1,0 +1,23 @@
+// Minimum target size should be 44×44 CSS pixels
+//
+// See https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+// See https://w3c.github.io/wcag/understanding/pointer-target-spacing.html
+// See https://checklists.opquast.com/en/qualiteweb/the-size-of-the-clickable-elements-is-sufficient
+
+// scss-docs-start target-size
+@mixin target-size($size: $target-size, $pseudo-element: before, $position: relative, $width: $size, $height: $size) {
+  position: $position;
+
+  &::#{$pseudo-element} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $width;
+    min-width: 100%;
+    height: $height;
+    min-height: 100%;
+    content: "";
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+// scss-docs-end target-size

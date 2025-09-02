@@ -1,0 +1,212 @@
+.footer {
+  // scss-docs-start footer-css-vars
+  --#{$prefix}footer-gap: 0;
+  --#{$prefix}footer-padding-top: 0;
+  --#{$prefix}footer-padding-bottom: 0;
+  --#{$prefix}footer-color: #{$footer-color};
+  --#{$prefix}footer-title-margin-bottom: 0;
+  --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
+  --#{$prefix}footer-title-font-weight: #{$footer-title-font-weight};
+  --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
+  --#{$prefix}footer-title-letter-spacing: #{$footer-letter-spacing};
+  // scss-docs-end footer-css-vars
+  --#{$prefix}navbar-padding-y: 0;
+  --#{$prefix}navbar-nav-link-padding-y: 0;
+  --#{$prefix}navbar-nav-link-padding-x: 0;
+  --#{$prefix}navbar-nav-font-size: #{$footer-font-size-sm};
+  --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
+  --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
+
+  display: block;
+  color: var(--#{$prefix}footer-color);
+  box-shadow: none;
+
+  > [class*="container"] {
+    display: block;
+  }
+
+  > * {
+    padding-top: var(--#{$prefix}footer-padding-top);
+    padding-bottom: var(--#{$prefix}footer-padding-bottom);
+
+    .navbar-nav {
+      flex-wrap: wrap;
+      gap: var(--#{$prefix}footer-gap);
+
+      .nav-link {
+        outline-offset: $focus-visible-outer-offset; // Override outline offset coming from .navbar-nav
+
+        &.active {
+          text-decoration: underline;
+
+          &::before {
+            content: unset;
+          }
+        }
+      }
+    }
+
+    .footer-heading {
+      margin-bottom: var(--#{$prefix}footer-title-margin-bottom);
+      font-size: var(--#{$prefix}footer-title-font-size);
+      font-weight: var(--#{$prefix}footer-title-font-weight);
+      line-height: var(--#{$prefix}footer-title-line-height);
+      letter-spacing: var(--#{$prefix}footer-title-letter-spacing);
+      white-space: nowrap;
+    }
+  }
+
+  .footer-title-content {
+    // scss-docs-start footer-title-css-vars
+    --#{$prefix}footer-padding-top: #{$footer-title-content-padding-top};
+    --#{$prefix}footer-padding-bottom: #{$footer-title-content-padding-bottom};
+    --#{$prefix}footer-title-margin-bottom: #{$footer-title-margin-bottom};
+    // scss-docs-end footer-title-css-vars
+  }
+
+  .footer-social {
+    // scss-docs-start footer-social-css-vars
+    --#{$prefix}footer-padding-top: #{$footer-social-padding-top};
+    --#{$prefix}footer-padding-bottom: #{$footer-social-padding-bottom};
+    --#{$prefix}footer-title-margin-bottom: #{$footer-title-margin-bottom};
+    --#{$prefix}footer-title-font-size: #{$footer-font-size-sm};
+    --#{$prefix}footer-title-line-height: #{$footer-line-height-sm};
+    // scss-docs-end footer-social-css-vars
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    // scss-docs-start footer-nav-css-vars
+    --#{$prefix}footer-gap: #{$footer-gap-xl};
+    // scss-docs-end footer-nav-css-vars
+    --#{$prefix}navbar-nav-padding-top: #{$footer-nav-list-padding-top};
+    --#{$prefix}navbar-nav-padding-x: 0;
+    --#{$prefix}navbar-nav-padding-bottom: #{$footer-nav-list-padding-bottom};
+
+    .accordion {
+      --#{$prefix}accordion-btn-font-size: #{$footer-font-size-sm};
+      --#{$prefix}accordion-btn-line-height: #{$footer-accordion-line-height};
+      --#{$prefix}accordion-btn-letter-spacing: #{$footer-letter-spacing};
+      --#{$prefix}accordion-active-color: #{$footer-accordion-active-color};
+      --#{$prefix}accordion-btn-hover-bg: #{$footer-accordion-btn-hover-bg};
+    }
+
+    .footer-column:first-of-type .accordion-header:first-of-type,
+    .accordion .accordion-item {
+      border: 0;
+    }
+
+    .accordion-button::after {
+      margin-right: 0;
+    }
+  }
+
+  .footer-service {
+    // scss-docs-start footer-service-css-vars
+    --#{$prefix}footer-padding-top: #{subtract($footer-service-padding-y, .0625rem)};
+    --#{$prefix}footer-padding-bottom: #{$footer-service-padding-y};
+    // scss-docs-end footer-service-css-vars
+
+    .nav-link > span {
+      padding-top: $footer-service-link-padding-top; // Shift due to font, stay in Scss because no need of CSS var
+    }
+  }
+
+  .footer-terms {
+    // scss-docs-start footer-terms-css-vars
+    --#{$prefix}footer-padding-top: #{$footer-terms-padding-top};
+    --#{$prefix}footer-padding-bottom: #{$footer-terms-padding-bottom};
+    --#{$prefix}footer-gap: #{$footer-gap-xl};
+    // scss-docs-end footer-terms-css-vars
+  }
+
+  @include media-breakpoint-up(md) {
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    .footer-title-content {
+      // scss-docs-start footer-title-md-css-vars
+      --#{$prefix}footer-padding-bottom: #{$footer-title-content-padding-bottom-md};
+      // scss-docs-end footer-title-md-css-vars
+    }
+
+    .footer-social {
+      // scss-docs-start footer-social-md-css-vars
+      --#{$prefix}footer-padding-top: #{$footer-social-padding-top-md};
+      --#{$prefix}footer-title-margin-bottom: #{$footer-social-title-margin-bottom-md};
+      --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
+      --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
+      // scss-docs-end footer-social-md-css-vars
+
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .footer-nav {
+      // scss-docs-start footer-nav-md-css-vars
+      --#{$prefix}footer-gap: #{$footer-gap};
+      --#{$prefix}footer-padding-top: #{$footer-nav-padding-top};
+      --#{$prefix}footer-padding-bottom: #{$footer-nav-list-padding-bottom-md};
+      --#{$prefix}footer-title-margin-bottom: #{$footer-title-margin-bottom-md};
+      // scss-docs-end footer-nav-md-css-vars
+      --#{$prefix}navbar-nav-padding-top: #{$footer-nav-list-padding-top-md};
+      --#{$prefix}navbar-nav-padding-bottom: null;
+      --#{$prefix}navbar-nav-font-size: #{$footer-font-size-md};
+      --#{$prefix}navbar-nav-line-height: #{$footer-line-height-md};
+
+      .accordion {
+        --#{$prefix}accordion-border-width: 0;
+      }
+
+      .collapse {
+        display: flex;
+        padding-left: 0;
+      }
+
+      .accordion-button::after {
+        content: unset;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+    }
+
+    .footer-service {
+      // scss-docs-start footer-service-md-css-vars
+      --#{$prefix}footer-padding-top: #{add($footer-service-padding-y-md, .0625rem)};
+      --#{$prefix}footer-padding-bottom: #{$footer-service-padding-y-md};
+      // scss-docs-end footer-service-md-css-vars
+    }
+
+    .footer-terms {
+      // scss-docs-start footer-terms-md-css-vars
+      --#{$prefix}footer-padding-top: #{$footer-terms-padding-y-md};
+      --#{$prefix}footer-padding-bottom: #{$footer-terms-padding-y-md};
+      // scss-docs-end footer-terms-md-css-vars
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .footer-nav {
+      // scss-docs-start footer-nav-lg-css-vars
+      --#{$prefix}footer-padding-bottom: #{$footer-nav-list-padding-bottom-lg};
+      // scss-docs-end footer-nav-lg-css-vars
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .footer-nav {
+      max-width: unset;
+      padding: 0;
+
+      .row {
+        --#{$prefix}gutter-x: 0;
+      }
+    }
+  }
+}
