@@ -185,7 +185,7 @@
     "sirv-cli": "^3.0.1",
     "storybook": "^9.1.2",
     "stylelint": "^16.20.0",
-    "stylelint-config-twbs-bootstrap": "^16.0.0",
+    "stylelint-config-twbs-bootstrap": "^16.1.0",
     "tarteaucitronjs": "^1.22.0",
     "terser": "^5.42.0",
     "unist-util-visit": "^5.0.0",
