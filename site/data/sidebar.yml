@@ -77,7 +77,7 @@
   pages:
     - title: Overview
     - title: Form control
-      draft: true
+    - title: Text input
     - title: Select
       draft: true
     - title: Checkbox

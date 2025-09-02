@@ -1,0 +1,201 @@
+---
+title: Text input
+description: A text input is a user interface component that allows users to enter, edit, or select single-line textual data. It provides a visual and interactive affordance for text entry while supporting labels, placeholders, icons, helper messages, and validation feedback.
+aliases:
+  - "/docs/forms/text-input/"
+toc: true
+---
+
+import { getConfig } from '@libs/config'
+
+<Callout type="info">
+{/* TODO: set the right url for design documentation */}
+You can find here the [OUDS Checkbox design guidelines](https://unified-design-system.orange.com/).
+</Callout>
+
+## Basic example
+
+Wrap a pair of `<input class="form-control">` and `<label>` elements in `.form-control-item` to style OUDS textual form fields. Note that the `<input>` must come first so we can utilize a sibling selector (i.e., `~`).
+
+A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is empty.
+
+If the placeholder text is empty, it is not visible; only the `<label>` is shown to users.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputWithEmptyPlaceholder" placeholder="">
+    <label for="exampleFormControlInputWithEmptyPlaceholder">Email address</label>
+  </div>`} />
+
+If the placeholder text is filled, `<label>`s will automatically adjust to their floated position.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputWithPlaceholder" placeholder="name@example.com">
+    <label for="exampleFormControlInputWithPlaceholder">Email address</label>
+  </div>`} />
+
+When there’s a value already defined, `<label>`s will automatically adjust to their floated position.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputWithValue" placeholder="name@example.com" value="test@example.com">
+    <label for="exampleFormControlInputWithValue">Input with value</label>
+  </div>`} />
+
+## Variants
+
+### Alternative
+
+A minimalist input with a transparent background and a visible stroke outlining the field. This style may be interesting for contexts other than form pages:
+* When inputs need to feel lightweight and unobtrusive
+* In a header (search field)
+* In a selection/filtering feature in a product catalog
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternative" placeholder="">
+    <label for="exampleFormControlInputAlternative">Firstname</label>
+  </div>`} />
+
+### Rounded
+
+For a finish with rounded corners.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-rounded" id="exampleFormControlInputRounded" placeholder="">
+    <label for="exampleFormControlInputRounded">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative form-control-rounded" id="exampleFormControlInputRoundedAlt" placeholder="">
+    <label for="exampleFormControlInputRoundedAlt">Firstname</label>
+  </div>`} />
+
+### Leading icon
+
+Add an icon to help indicate the purpose of the input by placing an `<svg>` or `<img>` element inside the `.form-control-item`. The icon is automatically positioned at the left side of the input field.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Example code={`<div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control" id="exampleFormControlInputEmptyWithIcon" placeholder="">
+    <label for="exampleFormControlInputEmptyWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control" id="exampleFormControlInputPlaceholderWithIcon" placeholder="placehoder">
+    <label for="exampleFormControlInputPlaceholderWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control form-control-alternative" id="exampleFormControlInputAltEmptyWithIcon" placeholder="">
+    <label for="exampleFormControlInputAltEmptyWithIcon">Label</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <svg aria-hidden="true">
+      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+    </svg>
+    <input type="email" class="form-control form-control-alternative" id="exampleFormControlInputAltValueWithIcon" placeholder="placehoder" value="Input">
+    <label for="exampleFormControlInputAltValueWithIcon">Label</label>
+  </div>`} />
+
+### Trailing action
+
+Trailing actions can be added to the right side of the input field by placing a minimal icon only button (`.btn`, `.btn-minimal` and `.btn-icon`) inside the `.form-control-item`. It can be used to provide actions related to the field: clear input, toggle password visibility, open a date picker, etc.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="email" class="form-control" id="exampleFormControlInputEmptyWithAction" placeholder="">
+    <label for="exampleFormControlInputEmptyWithAction">Label</label>
+    <button class="btn btn-minimal btn-icon">
+      <svg aria-hidden="true">
+        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      </svg>
+      <span class="visually-hidden">Default</span>
+    </button>
+  </div>`} />
+
+### Helper text
+
+To display a helper text below inputs, add a `.form-text` as a sibling of a `.form-control`.
+
+<Callout type="warning">
+Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+</Callout>
+
+<Example code={`<div class="form-control-item">
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="">
+    <label for="inputPassword5">Password</label>
+  </div>
+  <div id="passwordHelpBlock" class="form-text">
+    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  </div>`} />
+
+## States
+
+### Disabled
+
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputDisabledEmpty" placeholder="" disabled>
+    <label for="exampleFormControlInputDisabledEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputDisabled" placeholder="" value="Doe" disabled>
+    <label for="exampleFormControlInputDisabled">Lastname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabledEmpty" placeholder="" disabled>
+    <label for="exampleFormControlInputAlternativeDisabledEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeDisabled" placeholder="" value="Doe" disabled>
+    <label for="exampleFormControlInputAlternativeDisabled">Lastname</label>
+  </div>`} />
+
+### Readonly
+
+Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
+
+<Example code={`<div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputReadonlyEmpty" placeholder="" readonly>
+    <label for="exampleFormControlInputReadonlyEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control" id="exampleFormControlInputReadonly" placeholder="" value="Doe" readonly>
+    <label for="exampleFormControlInputReadonly">Lastname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeReadonlyEmpty" placeholder="" readonly>
+    <label for="exampleFormControlInputAlternativeReadonlyEmpty">Firstname</label>
+  </div>
+  <div class="form-control-item mb-3">
+    <input type="text" class="form-control form-control-alternative" id="exampleFormControlInputAlternativeReadonly" placeholder="" value="Doe" readonly>
+    <label for="exampleFormControlInputAlternativeReadonly" class="form-label">Lastname</label>
+  </div>`} />
+
+### Invalid
+
+<Callout type="info" name="input-invalid" />
+
+To display an invalid input, add `.is-invalid` to a `.form-control`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+
+{/* <Example code={`<div class="form-control-item mb-3">
+    <label for="exampleFormControlInputInvalidEmpty">Firstname</label>
+    <input type="text" class="form-control is-invalid" id="exampleFormControlInputInvalidEmpty" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputInvalid">Lastname</label>
+    <input type="text" class="form-control is-invalid" id="exampleFormControlInputInvalid" value="Doe" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputAlternativeInvalidEmpty">Firstname</label>
+    <input type="text" class="form-control form-control-alternative is-invalid" id="exampleFormControlInputAlternativeInvalidEmpty" placeholder="" readonly>
+  </div>
+  <div class="form-control-item mb-3">
+    <label for="exampleFormControlInputAlternativeInvalid" class="form-label">Lastname</label>
+    <input type="text" class="form-control form-control-alternative is-invalid" id="exampleFormControlInputAlternativeInvalid" value="Doe" placeholder="" readonly>
+  </div>`} /> */}
