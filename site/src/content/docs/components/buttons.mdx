@@ -92,15 +92,13 @@ The recommended way of using an icon in a button is through an [SVG sprite file]
 When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
 </Callout>
 
-### Text and icon
+If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
-The recommended way of using an icon in a button is an [embedded SVG]([[docsref:/extend/icons]]). You need to fill it using `currentColor` to respect button color scheme (which can be done inside the SVG sprite file).
+### Text and icon
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
 Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
-
-If really needed, you can use a font icon associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`.
 
 We strongly advise not using an `<img />`, in particular because the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system won’t work.
 
