@@ -1,6 +1,6 @@
 {
-  "name": "@ouds/web-sosh",
-  "description": "OUDS Web Sosh is a Bootstrap based, Sosh branded accessible and ergonomic components library.",
+  "name": "@ouds/web-orange",
+  "description": "OUDS Web Orange is a Bootstrap based, Orange branded accessible and ergonomic components library.",
   "version": "0.5.0",
   "config": {
     "version_short": "0.5"
@@ -14,7 +14,7 @@
     "framework",
     "web",
     "bootstrap",
-    "Sosh"
+    "Orange"
   ],
   "homepage": "https://web.unified-design-system.orange.com/",
   "author": "The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
