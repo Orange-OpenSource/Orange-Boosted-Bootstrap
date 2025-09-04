@@ -29,12 +29,7 @@ $enable-rounded: true;
 // Load Bootstrap variables and mixins
 @import "../../../scss/config";
 @import "../../../scss/functions";
-@import "../../../scss/tokens/raw";
-@import "../../../scss/tokens/semantic";
-@import "../../../scss/tokens/semantic-colors-custom-props";
-@import "../../../scss/tokens/composite";
-@import "../../../scss/tokens/component-colors-custom-props";
-@import "../../../scss/tokens/component";
+@import "../../../packages/orange/scss/tokens";
 @import "../../../scss/variables";
 @import "../../../scss/maps";
 @import "../../../scss/mixins";
