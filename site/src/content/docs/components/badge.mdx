@@ -25,7 +25,7 @@ For accessibility and semantics reasons, badges, like any other informative elem
 <Example code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 
-## Standard variants 
+## Standard variants
 
 {/*  TODO: set the right url for design documentation */}
 OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
@@ -101,7 +101,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
       <span class="visually-hidden">Trash contains items</span>
     </span>
   </button>
-  
+
   <button type="button" class="btn btn-default position-relative ms-md">
     Inbox
     <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">
@@ -133,3 +133,12 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 <Example code={getData('theme-colors').map((themeColor) => `<span class="badge rounded-pill text-bg-${themeColor.name}">+99</span>`)} />
 
 </BootstrapCompatibility>
+
+## Compatibility
+
+<BsTable>
+| Techno | Version | Description |
+| ---- | ------- | ----------- |
+| Ref design | {getData('_components-versions').find(component => component.name === frontmatter.title.toLowerCase()).value} | This represents the last implemented design version in OUDS Web. |
+| Ref tokens | {''} | This represents the last implemented tokens version in OUDS Web. |
+</BsTable>

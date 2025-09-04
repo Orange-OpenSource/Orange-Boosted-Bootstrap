@@ -2,6 +2,7 @@
 import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
 import type { LayoutOverridesHTMLAttributes } from '@libs/layout'
 import { getSlug, processMarkdownToHtml } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
@@ -81,6 +82,25 @@ if (frontmatter.toc) {
         <div class="bd-subtitle mt-sm">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
+        {getData('_components-versions').map((component) => {
+          const selectGoodPage = frontmatter.title.toLowerCase().replaceAll(' ', '-').startsWith(component.name)
+
+          if (selectGoodPage) {
+            return (
+              <ul class="d-flex column-gap-xs list-unstyled mb-none align-items-center">
+                <li><span class="tag text-bg-status-info-muted">
+                  Ref design: v{component.value}
+                </span></li>
+                <li><span class="tag text-bg-status-info-muted">
+                  Ref tokens: v{''}
+                </span></li>
+                <li><a href="#compatibility">Learn more <span class="visually-hidden">about these versions</span></a></li>
+              </ul>
+            )
+          } else {
+            return (<></>)
+          }
+        })}
       </div>
 
       <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
