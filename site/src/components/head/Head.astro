@@ -5,7 +5,6 @@ import type { Layout } from '@libs/layout'
 import Stylesheet from '@components/head/Stylesheet.astro'
 import Favicons from '@components/head/Favicons.astro'
 import Social from '@components/head/Social.astro'
-import Scss from '@components/head/Scss.astro'
 
 interface Props {
   description: string
@@ -14,9 +13,10 @@ interface Props {
   robots: string | undefined
   thumbnail: string
   title: string
+  brand: string
 }
 
-const { description, direction, layout, robots, thumbnail, title } = Astro.props
+const { description, direction, layout, robots, thumbnail, title, brand } = Astro.props
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
@@ -24,6 +24,10 @@ const isHome = Astro.url.pathname === '/'
 const pageTitle = isHome
   ? `${getConfig().title} · ${getConfig().subtitle}`
   : `${title} · ${getConfig().title} v${getConfig().docs_version}`
+
+// Dynamic imports to avoid build-time processing
+const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.astro') : null
+const Scss = import.meta.env.PROD ? null : await import('@components/head/Scss.astro')
 ---
 
 <meta charset="UTF-8" />
@@ -49,8 +53,16 @@ const pageTitle = isHome
 <!-- end mod -->
 
 <script is:inline src={getVersionedDocsPath('assets/js/color-modes.js')}></script>
+<script is:inline src={getVersionedDocsPath('assets/js/brand-picker.js')}></script>
 
-<Stylesheet direction={direction} layout={layout} />
-<Scss />
+{import.meta.env.PROD && ScssProd && (
+  <Stylesheet direction={direction} layout={layout} />
+  <ScssProd.default />
+)}
+
+{!import.meta.env.PROD && Scss && (
+  <Scss.default brand={brand} />
+)}
+
 <Favicons />
 <Social description={description} layout={layout} thumbnail={thumbnail} title={title} />
