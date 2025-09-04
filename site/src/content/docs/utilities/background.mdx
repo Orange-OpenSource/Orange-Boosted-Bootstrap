@@ -76,82 +76,78 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 <details class="mb-lg px-sm">
   <summary class="py-sm">You’re in a static <code>light</code> context</summary>
 
-  <Example class="p-none" code={`<div class="bg-brand-primary p-lg">
-      <div data-bs-theme="light">
-        <p class="bg-primary p-lg fw-bold">.bg-primary</p>
-        <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
-        <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
-        <p class="bg-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-emphasized</span></p>
-        <p class="bg-brand-primary p-lg fw-bold">.bg-brand-primary</p>
-        <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-status-neutral-emphasized</span></p>
-        <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
-        <p class="bg-status-accent-emphasized p-lg fw-bold">.bg-status-accent-emphasized</p>
-        <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
-        <p class="bg-status-positive-emphasized p-lg fw-bold">.bg-status-positive-emphasized</p>
-        <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
-        <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-status-negative-emphasized</span></p>
-        <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
-        <p class="bg-status-warning-emphasized p-lg fw-bold">.bg-status-warning-emphasized</p>
-        <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
-        <p class="bg-status-info-emphasized p-lg fw-bold">.bg-status-info-emphasized</p>
-        <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
-        <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-        <p class="bg-always-white p-lg fw-bold">.bg-always-white</p>
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-        <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
-      </div>
-    </div>`} />
+<Example class="p-none" code={`<div class="bg-brand-primary p-lg">
+    <div data-bs-theme="light">
+      <p class="bg-primary p-lg fw-bold">.bg-primary</p>
+      <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
+      <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
+      <p class="bg-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-emphasized</span></p>
+      <p class="bg-brand-primary p-lg fw-bold">.bg-brand-primary</p>
+      <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-status-neutral-emphasized</span></p>
+      <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
+      <p class="bg-status-accent-emphasized p-lg fw-bold">.bg-status-accent-emphasized</p>
+      <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
+      <p class="bg-status-positive-emphasized p-lg fw-bold">.bg-status-positive-emphasized</p>
+      <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
+      <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-status-negative-emphasized</span></p>
+      <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
+      <p class="bg-status-warning-emphasized p-lg fw-bold">.bg-status-warning-emphasized</p>
+      <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
+      <p class="bg-status-info-emphasized p-lg fw-bold">.bg-status-info-emphasized</p>
+      <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
+      <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-lg fw-bold">.bg-always-white</p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+    </div>
+  </div>`} />
 
-  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-  <Example code={`<div class="bg-brand-primary p-lg">
-      <div data-bs-theme="light">
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-      </div>
-    </div>`} />
+<Example code={`<div class="bg-brand-primary p-lg">
+    <div data-bs-theme="light">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
 
 </details>
 
 <details class="mb-lg px-sm">
   <summary class="py-sm">You’re in a static <code>dark</code> context</summary>
 
-  <Example class="p-none" code={`<div class="bg-emphasized p-lg">
-      <div data-bs-theme="dark">
-        <p class="bg-primary p-lg fw-bold">.bg-primary</p>
-        <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
-        <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
-        <p class="bg-emphasized p-lg fw-bold">.bg-emphasized</p>
-        <p class="bg-brand-primary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-primary</span></p>
-        <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-neutral-emphasized</span></p>
-        <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
-        <p class="bg-status-accent-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-accent-emphasized</span></p>
-        <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
-        <p class="bg-status-positive-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
-        <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
-        <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-negative-emphasized</span></p>
-        <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
-        <p class="bg-status-warning-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
-        <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
-        <p class="bg-status-info-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-info-emphasized</span></p>
-        <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
-        <p class="bg-always-black p-lg fw-bold">.bg-always-black</p>
-        <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-        <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
-      </div>
-    </div>`} />
+<Example class="p-none" code={`<div class="bg-emphasized p-lg">
+    <div data-bs-theme="dark">
+      <p class="bg-primary p-lg fw-bold">.bg-primary</p>
+      <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
+      <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
+      <p class="bg-emphasized p-lg fw-bold">.bg-emphasized</p>
+      <p class="bg-brand-primary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-primary</span></p>
+      <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-neutral-emphasized</span></p>
+      <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
+      <p class="bg-status-accent-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-accent-emphasized</span></p>
+      <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
+      <p class="bg-status-positive-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
+      <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
+      <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-negative-emphasized</span></p>
+      <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
+      <p class="bg-status-warning-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
+      <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
+      <p class="bg-status-info-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-info-emphasized</span></p>
+      <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
+      <p class="bg-always-black p-lg fw-bold">.bg-always-black</p>
+      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+    </div>
+  </div>`} />
 
-  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-  <Example code={`<div class="bg-emphasized p-lg">
-      <div data-bs-theme="dark">
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-      </div>
-    </div>`} />
+<Example code={`<div class="bg-emphasized p-lg">
+    <div data-bs-theme="dark">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
 
 </details>
 
@@ -162,41 +158,39 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 <details class="mb-lg px-sm">
   <summary class="py-sm">You’re in a dynamic <code>root-inverted</code> context</summary>
 
-  <Example class="p-none" code={`<div class="bg-status-neutral-emphasized p-lg">
-      <div data-bs-theme="root-inverted">
-        <p class="bg-primary p-lg fw-bold">.bg-primary</p>
-        <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
-        <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
-        <p class="bg-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-emphasized</span></p>
-        <p class="bg-brand-primary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-primary</span></p>
-        <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="root">.bg-status-neutral-emphasized</span></p>
-        <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
-        <p class="bg-status-accent-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-accent-emphasized</span></p>
-        <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
-        <p class="bg-status-positive-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
-        <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
-        <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="root">.bg-status-negative-emphasized</span></p>
-        <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
-        <p class="bg-status-warning-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
-        <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
-        <p class="bg-status-info-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-info-emphasized</span></p>
-        <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
-        <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-        <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-        <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
-      </div>
-    </div>`} />
+<Example class="p-none" code={`<div class="bg-status-neutral-emphasized p-lg">
+    <div data-bs-theme="root-inverted">
+      <p class="bg-primary p-lg fw-bold">.bg-primary</p>
+      <p class="bg-secondary p-lg fw-bold">.bg-secondary</p>
+      <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
+      <p class="bg-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-emphasized</span></p>
+      <p class="bg-brand-primary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-primary</span></p>
+      <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="root">.bg-status-neutral-emphasized</span></p>
+      <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
+      <p class="bg-status-accent-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-accent-emphasized</span></p>
+      <p class="bg-status-accent-muted p-lg fw-bold">.bg-status-accent-muted</p>
+      <p class="bg-status-positive-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-positive-emphasized</span></p>
+      <p class="bg-status-positive-muted p-lg fw-bold">.bg-status-positive-muted</p>
+      <p class="bg-status-negative-emphasized p-lg fw-bold"><span data-bs-theme="root">.bg-status-negative-emphasized</span></p>
+      <p class="bg-status-negative-muted p-lg fw-bold">.bg-status-negative-muted</p>
+      <p class="bg-status-warning-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-warning-emphasized</span></p>
+      <p class="bg-status-warning-muted p-lg fw-bold">.bg-status-warning-muted</p>
+      <p class="bg-status-info-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-info-emphasized</span></p>
+      <p class="bg-status-info-muted p-lg fw-bold">.bg-status-info-muted</p>
+      <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>
+    </div>
+  </div>`} />
 
-  We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+We also provide some opacity backgounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-  <Example code={`<div class="bg-status-neutral-emphasized p-lg">
-      <div data-bs-theme="root-inverted">
-        <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-        <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
-      </div>
-    </div>`} />
+<Example code={`<div class="bg-status-neutral-emphasized p-lg">
+    <div data-bs-theme="root-inverted">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
 
 </details>
 
