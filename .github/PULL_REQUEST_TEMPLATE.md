@@ -4,4 +4,5 @@ Click the `Preview` tab and select a PR template:
   - [Release Boosted](?expand=1&template=boosted-release-template.md) (Core team only)
 - **OUDS Web**:
   - [Contribute to OUDS Web](?expand=1&template=ouds-contribution-template.md)
+  - [Docs only to OUDS Web](?expand=1&template=ouds-doc-template.md)
   - [Release OUDS Web](?expand=1&template=ouds-release-template.md) (Core team only)
