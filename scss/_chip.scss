@@ -50,10 +50,7 @@
 
   &::after {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     cursor: pointer;
     content: "";
   }
@@ -99,7 +96,7 @@
 }
 
 // Suggestion chip specific style
-.chip-suggestion .chip-interactive {
+.chip-suggestion .chip-interactive:where(:has(svg, img, .icon)) {
   &:where(:has(svg)),
   &:where(:has(img)),
   &:where(:has(.icon)) {
@@ -109,9 +106,7 @@
 
 .chip-interactive { // stylelint-disable-line no-duplicate-selectors
   // Filter chip specific style that handles images, focus-visible and disabled states
-  .chip-filter &:where(:has(svg)),
-  .chip-filter &:where(:has(img)),
-  .chip-filter &:where(:has(.icon)) {
+  .chip-filter &:where(:has(svg, img, .icon)) {
     --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   }
 

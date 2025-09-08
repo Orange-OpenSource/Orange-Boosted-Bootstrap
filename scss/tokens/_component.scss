@@ -167,8 +167,8 @@ $ouds-checkbox-size-min-width: $ouds-size-min-interactive-area !default;
 // Chip
 
 // scss-docs-start ouds-component-chip
-$ouds-chip-badge-color-bg: $ouds-color-surface-status-neutral-emphasized !default; // Not used for now
-$ouds-chip-badge-color-content: $ouds-color-content-on-status-neutral-emphasized !default; // Not used for now
+$ouds-chip-badge-color-bg: $ouds-color-surface-status-neutral-emphasized !default;
+$ouds-chip-badge-color-content: $ouds-color-content-on-status-neutral-emphasized !default;
 $ouds-chip-border-radius: $ouds-border-radius-pill !default;
 $ouds-chip-border-width-selected: $ouds-border-width-medium !default;
 $ouds-chip-border-width-unselected-interaction: $ouds-border-width-medium !default;
@@ -208,12 +208,12 @@ $ouds-chip-size-icon: $ouds-size-icon-with-label-medium-size-sm !default;
 $ouds-chip-size-min-height-interactive-area: $ouds-size-min-interactive-area !default;
 $ouds-chip-size-min-height: $ouds-dimension-xs !default;
 $ouds-chip-size-min-width: $ouds-dimension-2xl !default;
-$ouds-chip-space-column-gap-badge-chevron: $ouds-space-column-gap-2xs !default; // Not used for now
+$ouds-chip-space-column-gap-badge-chevron: $ouds-space-column-gap-2xs !default;
 $ouds-chip-space-column-gap-icon: $ouds-space-column-gap-xs !default;
 $ouds-chip-space-padding-block-icon-only: $ouds-space-padding-block-xs !default;
 $ouds-chip-space-padding-block: $ouds-space-padding-block-2xs !default;
-$ouds-chip-space-padding-inline-badge-start: $ouds-space-padding-inline-4xs !default; // Not used for now
-$ouds-chip-space-padding-inline-chevron-end: $ouds-space-padding-inline-xs !default; // Not used for now
+$ouds-chip-space-padding-inline-badge-start: $ouds-space-padding-inline-4xs !default;
+$ouds-chip-space-padding-inline-chevron-end: $ouds-space-padding-inline-xs !default;
 $ouds-chip-space-padding-inline-icon-none: $ouds-space-padding-inline-lg !default;
 $ouds-chip-space-padding-inline-icon: $ouds-space-padding-inline-sm !default;
 // scss-docs-end ouds-component-chip
