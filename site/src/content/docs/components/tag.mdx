@@ -15,49 +15,56 @@ import { getConfig } from '@libs/config'
 
 ## Overview
 
-There are two versions of tags: standard tags and tag inputs. For both, OUDS Web has a basic `.tag` class that sets up default styles.
-
-<Example code={`<p class="tag">Tag</p>
-<button type="button" class="tag tag-input">Tag input</button>`
-} />
-
-<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3">
+<ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top ratio ratio-16x9">
-        <img class="w-100 object-fit-cover" src="/docs/[[config:docs_version]]/assets/img/components/Tag.png" alt="" loading="lazy"/>
+      <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+          <p class="tag">Tag</p>
+        </div>
       </div>
-      <div class="card-body">
+      <div class="card-body border-default border-thin border-top">
         <a class="stretched-link" href="#tag">Tag</a> indicator is used in an informative way, to show short info like a label, keyword, or category.
       </div>
     </div>
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top ratio ratio-16x9">
-        <img class="w-100 object-fit-cover" src="/docs/[[config:docs_version]]/assets/img/components/Tag-input.png" alt="" loading="lazy"/>
+      <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+          <button type="button" class="tag tag-input" tabindex="-1">Tag input</button>
+        </div>
       </div>
-      <div class="card-body">
+
+      <div class="card-body border-default border-thin border-top">
         <a class="stretched-link" href="#tag-input">Tag input</a> is interactive and can take all the usual states: enabled, hover, pressed, disabled or focused.
       </div>
     </div>
   </li>
 </ul>
 
+For both versions of tag, OUDS Web has a basic `.tag` class that sets up default styles.
+
+<Example showToolbar={false} code={`<p class="tag">Tag</p>`
+} />
+
+<Example showToolbar={false} code={`<button type="button" class="tag tag-input">Tag input</button>`
+} />
+
 ## Tag
 
 <Callout type="info">
-  For accessibility and semantics reasons, tags, like any other informative elements, must be enclosed in an ancestor or parent semantic tag. In the following examples, tag are used either in `<li>`, `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
+  For accessibility and semantics reasons, tags, like any other informative elements, must be enclosed in an ancestor or parent semantic HTML tag. In the following examples, tag are used either in `<li>`, `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-xs">
-  <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
-  <li><span class="tag">5G Ready</span></li>
-  <li><span class="tag">4G</span></li>
+    <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
+    <li><span class="tag">5G Ready</span></li>
+    <li><span class="tag">4G</span></li>
   </ul>`
 } />
 
-OUDS Web [color and background utilities]([[docsref:/helpers/color-background]]) can be applied to display colored tag variants, either emphasized or muted. Each color has its own semantic purpose. Please follow the [tag design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right category. {/* TODO: really? Or it's just colors? if semantic, set the right url for design documentation (see Tag status), otherwise remove this part */}
+OUDS Web [color and background utilities]([[docsref:/helpers/color-background]]) can be applied to display colored tag variants, either emphasized or muted. Each color has its own semantic purpose. Please follow the [tag design specifications](https://unified-design-system.orange.com/) to choose the right color for the right semantic. {/* TODO: set the right url for design documentation */}
 
 For disabled color, use `.tag-disabled` class.
 
@@ -645,18 +652,18 @@ To display a small tag, add the class `.tag-sm` to the tag.
 
 Tag inputs are interactive and may be associated to an input field to be added dynamically. The tag input should be used along with a `<button>`, and can take all the usual states: enabled, hover, pressed, disabled or focused. It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
+  <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
     <li><button type="button" class="tag tag-input">Roaming</button></li>
     <li><button type="button" class="tag tag-input">5G Ready</button></li>
     <li><button type="button" class="tag tag-input">4G</button></li>
   </ul>`} />
 
-### Layout
+  ### Layout
 
 
-Tag inputs are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
+  Tag inputs are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs">
+  <Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs">
     <li><button type="button" class="tag tag-input">Label</button></li>
     <li><button type="button" class="tag tag-input">Label</button></li>
     <li><button type="button" class="tag tag-input">Label</button></li>
@@ -665,13 +672,13 @@ Tag inputs are typically intended to be added side by side. They require horizon
     <li><button type="button" class="tag tag-input">Label</button></li>
   </ul>`} />
 
-### States
+  ### States
 
-#### Disabled
+  #### Disabled
 
-To disable a tag input, just add the `disabled` attribute to the `.tag`.
+  To disable a tag input, just add the `disabled` attribute to the `.tag`.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
+  <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
     <li><button type="button" class="tag tag-input" disabled>Roaming</button></li>
     <li><button type="button" class="tag tag-input">5G Ready</button></li>
     <li><button type="button" class="tag tag-input" disabled>4G</button></li>
