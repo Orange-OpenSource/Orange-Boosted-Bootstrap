@@ -5,7 +5,8 @@
     "plugin:import/warnings",
     "plugin:unicorn/recommended",
     "xo",
-    "xo/browser"
+    "xo/browser",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "arrow-body-style": "off",
