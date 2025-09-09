@@ -1,0 +1,17 @@
+---
+/*
+ * Outputs badge to identify the first version something was added
+ */
+interface Props {
+  /**
+   * The brand(s) that should display the following part.
+   */
+  brand?: string | string[]
+}
+
+const { brand = 'orange' } = Astro.props
+
+const brandToDisplay: string[] = typeof brand === 'string' ? [brand] : brand
+---
+
+<div class={brandToDisplay.map(brand => `bd-brand-${brand}`).join(' ')}><slot /></div>

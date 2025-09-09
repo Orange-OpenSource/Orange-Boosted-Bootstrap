@@ -48,6 +48,8 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
   <p class="bg-tertiary p-lg fw-bold">.bg-tertiary</p>
   <p class="bg-emphasized p-lg fw-bold"><span data-bs-theme="dark">.bg-emphasized</span></p>
   <p class="bg-brand-primary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-primary</span></p>
+  <p class="bg-brand-secondary p-lg fw-bold"><span data-bs-theme="root-inverted">.bg-brand-secondary</span></p>
+  <p class="bg-brand-tertiary p-lg fw-bold"><span data-bs-theme="light">.bg-brand-tertiary</span></p>
   <p class="bg-status-neutral-emphasized p-lg fw-bold"><span data-bs-theme="root-inverted">.bg-status-neutral-emphasized</span></p>
   <p class="bg-status-neutral-muted p-lg fw-bold">.bg-status-neutral-muted</p>
   <p class="bg-status-accent-emphasized p-lg fw-bold"><span data-bs-theme="light">.bg-status-accent-emphasized</span></p>
@@ -210,22 +212,6 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
 ## CSS
 
 {/* In addition to the following Sass functionality, consider reading about our included [CSS custom properties]([[docsref:/customize/css-variables]]) (aka CSS variables) for colors and more. */}
-
-### Sass tokens
-
-#### Semantic tokens
-
-Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
-
-<ScssDocs name="ouds-semantic-color" file="scss/tokens/_semantic.scss" />
-
-### CSS semantic tokens
-
-Color semantic tokens as CSS variables.
-
-<ScssDocs name="ouds-semantic-css-color" file="scss/tokens/_semantic-colors-custom-props.scss" />
-
-The same happens for the dark mode by replacing `-light` by `-dark`.
 
 ### Sass variables
 
