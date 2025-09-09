@@ -70,25 +70,7 @@
   @include border-radius(#{$ouds-border-radius-pill});
 }
 
-.tag-loader { // TODO copied from button loader, should be factorized
-  --#{$prefix}tag-asset-color: currentcolor;
-
-  display: block;
-  margin: 0;
-  font-size: var(--#{$prefix}tag-asset-container-size);
-  transform: rotate(-90deg);
-
-  > .tag-loader-inner {
-    fill: none;
-    stroke: var(--#{$prefix}tag-asset-color);
-    stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
-    stroke-width: 8;
-    transform-origin: center;
-    animation: var(--#{$prefix}tag-loading-animation);
-  }
-}
-
-.tag-disabled { // TODO: [aria-disabled="true"] ?
+.tag-disabled {
   --#{$prefix}tag-color: #{$ouds-color-content-on-action-disabled};
   --#{$prefix}tag-background-color: #{$ouds-color-action-disabled};
 }
@@ -111,6 +93,34 @@
 
 .tag.text-bg-status-negative-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-negative-emphasized};
+}
+
+
+.tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
+  --#{$prefix}tag-asset-color: currentcolor;
+
+  display: block;
+  margin: 0;
+  font-size: var(--#{$prefix}tag-asset-container-size);
+  transform: rotate(-90deg);
+
+  > .tag-loader-inner {
+    fill: none;
+    stroke: var(--#{$prefix}tag-asset-color);
+    stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
+    stroke-width: 8;
+    transform-origin: center;
+    animation: var(--#{$prefix}tag-loading-animation);
+  }
+
+  .tag:not(.loading) .tag-asset-container:has(&) {
+    display: none;
+  }
+
+  .tag.loading:has(&) {
+    color: #{$ouds-color-content-default} if($enable-important-utilities, !important, null);
+    background-color: #{$ouds-color-surface-status-neutral-muted} if($enable-important-utilities, !important, null);
+  }
 }
 
 .tag-sm {
