@@ -27,6 +27,7 @@ if (frontmatter.toc) {
   bodyProps['data-bs-spy'] = 'scroll'
   bodyProps['data-bs-target'] = '#TableOfContents'
 }
+const currentComponentSlug = frontmatter.title.toLowerCase().replaceAll(' ', '-');
 ---
 
 <BaseLayout {...Astro.props} layout="docs" overrides={{ body: bodyProps }}>
@@ -83,23 +84,13 @@ if (frontmatter.toc) {
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
         {getData('_components-versions').map((component) => {
-          const selectGoodPage = frontmatter.title.toLowerCase().replaceAll(' ', '-').startsWith(component.name)
-
-          if (selectGoodPage) {
-            return (
-              <ul class="d-flex column-gap-xs list-unstyled mb-none align-items-center">
-                <li><span class="tag text-bg-status-info-muted">
-                  Ref design: v{component.value}
-                </span></li>
-                <li><span class="tag text-bg-status-info-muted">
-                  Ref tokens: v{''}
-                </span></li>
-                <li><a href="#compatibility">Learn more <span class="visually-hidden">about these versions</span></a></li>
-              </ul>
-            )
-          } else {
-            return (<></>)
-          }
+          return currentComponentSlug.startsWith(component.name) ? (
+            <p class="tag text-bg-status-info-muted mb-0">
+              Component design version: v{component.value}
+            </p>
+          ) : (
+            <></>
+          );
         })}
       </div>
 
