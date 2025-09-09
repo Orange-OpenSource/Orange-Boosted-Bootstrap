@@ -49,7 +49,10 @@
     "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config ../../build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "css-test": "jasmine --config=scss/tests/jasmine.js"
+    "css-test": "jasmine --config=scss/tests/jasmine.js",
+    "astro-dev": "astro dev --root ../../site",
+    "astro-build": "astro build --root ../../site && rm -rf _site && cp -r site/dist _site",
+    "astro-preview": "astro preview --root ../../site"
   },
   "license": "MIT"
 }
