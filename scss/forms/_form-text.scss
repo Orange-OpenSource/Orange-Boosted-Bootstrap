@@ -4,9 +4,9 @@
 
 .form-text {
   margin-top: $form-text-margin-top;
-  @include font-size($form-text-font-size);
-  font-style: $form-text-font-style;
-  font-weight: $form-text-font-weight;
-  line-height: $form-text-line-height; // OUDS mod
+  @include get-font-size("label-medium"); // OUDS mod: instead of @include font-size($form-text-font-size);
+  // OUDS mod: no font-style
+  // OUDS mod: no font-weight
+  // OUDS mod: no line-height
   color: $form-text-color;
 }

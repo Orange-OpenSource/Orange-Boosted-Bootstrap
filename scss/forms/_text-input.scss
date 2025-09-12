@@ -1,0 +1,233 @@
+//
+// Text input
+//
+
+%text-input-item {
+  // scss-docs-start text-input-css-vars
+  --#{$prefix}text-input-color: var(--#{$prefix}color-content-default);
+  --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-enabled);
+  --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-enabled};
+  --#{$prefix}text-input-border-width-top: 0px;
+  --#{$prefix}text-input-border-width-right: 0px;
+  --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-default};
+  --#{$prefix}text-input-border-width-left: 0px;
+  --#{$prefix}text-input-border-width-focus: 0px;
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-default};
+  --#{$prefix}text-input-padding-x: #{$ouds-text-input-space-padding-inline-default};
+  --#{$prefix}text-input-padding-y: #{$ouds-text-input-space-padding-block-default};
+  --#{$prefix}text-input-max-width: #{$ouds-text-input-size-max-width};
+  --#{$prefix}text-input-min-height: #{$ouds-text-input-size-min-height};
+  --#{$prefix}text-input-icon-size: #{$ouds-text-input-size-leading-icon};
+  --#{$prefix}text-input-column-gap: #{$ouds-text-input-space-column-gap-default};
+  --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
+  --#{$prefix}text-input-padding-x: #{$ouds-text-input-space-padding-inline-default};
+  --#{$prefix}text-input-padding-y: #{$ouds-text-input-space-padding-block-default};
+  --#{$prefix}text-input-trailing-action-width: #{$ouds-button-size-min-width};
+  --#{$prefix}text-input-trailing-action-height: #{$ouds-button-size-max-height-icon-only};
+  --#{$prefix}text-input-trailing-action-padding-right: #{$ouds-text-input-space-padding-inline-trailing-action};
+
+  --#{$prefix}text-input-label-color: var(--#{$prefix}color-content-muted);
+  --#{$prefix}text-input-helper-margin-top: #{$ouds-text-input-space-padding-block-top-helper-text};
+  --#{$prefix}text-input-helper-color: var(--#{$prefix}color-content-muted);
+  // scss-docs-end text-input-css-vars
+}
+
+.text-input-container {
+  @extend %text-input-item;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix}text-input-column-row-gap);
+  justify-content: center;
+  min-width: var(--#{$prefix}text-input-min-width);
+  max-width: var(--#{$prefix}text-input-max-width);
+  min-height: var(--#{$prefix}text-input-min-height);
+  padding-top: subtract(var(--#{$prefix}text-input-padding-y), var(--#{$prefix}text-input-border-width-top));
+  padding-right: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-right));
+  padding-bottom: subtract(var(--#{$prefix}text-input-padding-y), var(--#{$prefix}text-input-border-width-bottom));
+  padding-left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
+  background-color: var(--#{$prefix}text-input-background-color);
+  background-clip: padding-box;
+  border-color: var(--#{$prefix}text-input-border-color);
+  border-style: solid;
+  border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
+  @include get-font-size("label-large");
+  @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
+  @include transition(all .1s ease-out);
+
+  &.text-input-container-alternative {
+    --#{$prefix}text-input-background-color: transparent;
+    --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-default};
+    --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-default};
+    --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
+  }
+
+  &.text-input-container-rounded {
+    --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
+  }
+
+  > label {
+    z-index: 1;
+    overflow: hidden;
+    color: var(--#{$prefix}text-input-label-color);
+    pointer-events: none;
+    @include transition(all .1s ease-out);
+  }
+
+  .text-input {
+    position: absolute;
+    top: 50%;
+    left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
+    z-index: 2;
+    width: subtract(100%, subtract(calc(var(--#{$prefix}text-input-padding-x) * 2), add(var(--#{$prefix}text-input-border-width-left), var(--#{$prefix}text-input-border-width-right)))); // stylelint-disable-line function-disallowed-list
+    padding: 0;
+    color: var(--#{$prefix}text-input-color);
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 0;
+    transform: translate(0, -50%);
+
+    &:placeholder-shown:not([placeholder=""]),
+    &[placeholder]:not(:placeholder-shown),
+    &:focus,
+    &:focus-visible {
+      position: static;
+      outline: 0;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  // Hover state styles
+  &:hover:has(.text-input:not(:focus):not(:disabled):not(:read-only):not(.is-invalid)) {
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
+    &:not(.text-input-container-alternative) {
+      --#{$prefix}text-input-background-color: #{$ouds-color-action-support-hover};
+    }
+  }
+
+  // Focused state styles
+  &:has(.text-input:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
+    --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+    --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
+    &.text-input-container-alternative {
+      --#{$prefix}text-input-background-color: transparent;
+      --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
+      --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
+      --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
+    }
+  }
+
+  &:has(.text-input:placeholder-shown:not([placeholder=""])),
+  &:has(.text-input[placeholder]:not(:placeholder-shown)),
+  &:has(.text-input:focus) {
+    > label {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @include get-font-size("label-small");
+    }
+  }
+
+  // Read only inputs
+  &:has(.text-input:read-only:not(:disabled)) {
+    --#{$prefix}text-input-background-color: transparent;
+    --#{$prefix}text-input-border-color: #{$ouds-color-border-muted};
+    --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-default};
+    --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-default};
+    --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
+
+    &.text-input-container-alternative {
+      --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-disabled);
+      --#{$prefix}text-input-border-width-top: 0px;
+      --#{$prefix}text-input-border-width-right: 0px;
+      --#{$prefix}text-input-border-width-bottom: 0px;
+      --#{$prefix}text-input-border-width-left: 0px;
+    }
+
+    outline: 0;
+  }
+
+  // Disabled inputs
+  &:has(.text-input:disabled) {
+    --#{$prefix}text-input-color: var(--#{$prefix}color-action-disabled);
+    --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-disabled);
+    &:not(.text-input-container-alternative) {
+      --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-disabled);
+    }
+
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  // Leading icon
+  > img,
+  > svg {
+    position: absolute;
+    top: subtract(var(--#{$prefix}text-input-min-height) / 2, var(--#{$prefix}text-input-icon-size) / 2);
+    left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
+    z-index: 2;
+    width: var(--#{$prefix}text-input-icon-size);
+    min-width: var(--#{$prefix}text-input-icon-size);
+    height: var(--#{$prefix}text-input-icon-size);
+  }
+
+  &:has(> svg) {
+    > .text-input,
+    > label {
+      padding-left: add(var(--#{$prefix}text-input-icon-size), var(--#{$prefix}text-input-column-gap));
+    }
+  }
+
+  // Trailing action
+  > button {
+    position: absolute;
+    top: subtract(var(--#{$prefix}text-input-min-height) / 2, var(--#{$prefix}text-input-trailing-action-height) / 2);
+    right: subtract(var(--#{$prefix}text-input-trailing-action-padding-right), var(--#{$prefix}text-input-border-width-left));
+    z-index: 2;
+  }
+
+  &:has(> button) {
+    padding-right: subtract(var(--#{$prefix}text-input-trailing-action-padding-right), var(--#{$prefix}text-input-border-width-left));
+
+    > .text-input,
+    > label {
+      padding-right: add(var(--#{$prefix}text-input-trailing-action-width), var(--#{$prefix}text-input-column-gap));
+    }
+  }
+
+  // Invalid text inputs
+  &:has(> .text-input.is-invalid) {
+    --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
+    --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
+    --#{$prefix}text-input-helper-color: var(--#{$prefix}color-content-status-negative);
+
+    &:not(.text-input-container-alternative) {
+      --#{$prefix}text-input-background-color: var(--#{$prefix}color-surface-status-negative-muted);
+    }
+
+    &:hover {
+      --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-hover);
+      --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-hover);
+    }
+  }
+
+  &:has(> .text-input:focus.is-invalid) {
+    --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
+    --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
+  }
+}
+
+.text-input-container ~ .text-input-helper {
+  @extend %text-input-item;
+
+  max-width: var(--#{$prefix}text-input-max-width);
+  padding-right: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-right));
+  padding-left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
+  margin-top: var(--#{$prefix}text-input-helper-margin-top);
+  color: var(--#{$prefix}text-input-helper-color);
+
+  @include get-font-size("label-medium");
+}
