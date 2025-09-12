@@ -76,7 +76,6 @@
   icon_color: body-color
   pages:
     - title: Overview
-    - title: Form control
     - title: Text input
     - title: Select
       draft: true
