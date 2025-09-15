@@ -337,7 +337,7 @@ sup { top: -.5em; }
     color: var(--#{$prefix}link-visited-color);
   }
 
-  &:focus-visible:not([aria-disabled="true"]) {
+  &:focus-visible:where(:not([aria-disabled="true"])) {
     color: var(--#{$prefix}link-focus-color);
     text-decoration: $link-hover-decoration;
   }
@@ -675,6 +675,12 @@ legend {
 [type="search"] {
   -webkit-appearance: textfield; // 1
   outline-offset: -#{$focus-visible-outer-offset}; // 2 // OUDS mod
+
+  // 3. Better affordance and consistent appearance for search cancel button
+  &::-webkit-search-cancel-button {
+    cursor: pointer;
+    filter: grayscale(1);
+  }
 }
 
 // 1. A few input types should stay LTR

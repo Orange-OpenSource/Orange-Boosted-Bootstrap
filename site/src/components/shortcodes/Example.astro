@@ -1,6 +1,6 @@
 ---
 import { replacePlaceholdersInHtml } from '@libs/placeholder'
-import { Prism } from '@astrojs/prism'
+import Code from '@components/shortcodes/Code.astro'
 
 interface Props {
   /**
@@ -80,10 +80,11 @@ const simplifiedMarkup = markup
   {
     showMarkup && (
       <>
-        <div class:list={['highlight', showToolbar ? '' : 'border-default border-thin border-top']}>
+        <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} />
+        <!-- <div class:list={['highlight', showToolbar ? '' : 'border-default border-thin border-top']}>
           <Prism code={simplifiedMarkup} lang={lang} />
-        </div>
-        {showPreview && showToolbar && (
+        </div> -->
+        {showPreview && (
           <div class="d-flex order-first align-items-center highlight-toolbar ps-lg border-top border-bottom border-thin border-default">
             <small class="font-monospace text-muted text-uppercase my-sm">{lang}</small>
             <div class="d-flex ms-auto">

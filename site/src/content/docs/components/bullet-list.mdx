@@ -271,25 +271,27 @@ Only use this where you can not add a class to `<ul>` and `<ol>`.
 
 All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
 
-<div class="bd-example">
-* All lists have their top margin removed
-* And their bottom margin normalized
-* Nested lists have no bottom margin
-  * This way they have a more even appearance
-  * Particularly when followed by more list items
-    * This way they have a more even appearance
-    * Particularly when followed by more list items
-* The left padding has also been reset
+<Example showMarkup={false} code={`<ul>
+    <li>All lists have their top margin removed</li>
+    <li>And their bottom margin normalized</li>
+    <li>Nested lists have no bottom margin</li>
+      <li>This way they have a more even appearance</li>
+      <li>Particularly when followed by more list items</li>
+        <li>This way they have a more even appearance</li>
+        <li>Particularly when followed by more list items</li>
+    <li>The left padding has also been reset</li>
+  </ul>
 
-1. Here's an ordered list
-2. With a few list items
-3. It can also have
-    1. Several nested list
-    2. As you can see
-        1. Lorem ipsum
-        2. Deep nested
-4. As the previous unordered list
-</div>
+  <ol>
+    <li>Here's an ordered list</li>
+    <li>With a few list items</li>
+    <li>It can also have</li>
+        <li>Several nested list</li>
+        <li>As you can see</li>
+            <li>Lorem ipsum</li>
+            <li>Deep nested</li>
+    <li>As the previous unordered list</li>
+  </ol>`} />
 
 ## Utilities
 
