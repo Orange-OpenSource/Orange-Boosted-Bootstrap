@@ -421,34 +421,33 @@ Tag inputs are interactive and may be associated to an input field to be added d
 
 It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
-  <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
-    <li><button type="button" class="tag tag-input">Roaming</button></li>
-    <li><button type="button" class="tag tag-input">5G Ready</button></li>
-    <li><button type="button" class="tag tag-input">4G</button></li>
-  </ul>`} />
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
+  <li><button type="button" class="tag tag-input">Roaming</button></li>
+  <li><button type="button" class="tag tag-input">5G Ready</button></li>
+  <li><button type="button" class="tag tag-input">4G</button></li>
+</ul>`} />
 
-  ### Layout
+### Layout
 
+Tag inputs are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
 
-  Tag inputs are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
+<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs">
+  <li><button type="button" class="tag tag-input">Label</button></li>
+  <li><button type="button" class="tag tag-input">Label</button></li>
+  <li><button type="button" class="tag tag-input">Label</button></li>
+  <li><button type="button" class="tag tag-input">Label</button></li>
+  <li><button type="button" class="tag tag-input">Label</button></li>
+  <li><button type="button" class="tag tag-input">Label</button></li>
+</ul>`} />
 
-  <Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs">
-    <li><button type="button" class="tag tag-input">Label</button></li>
-    <li><button type="button" class="tag tag-input">Label</button></li>
-    <li><button type="button" class="tag tag-input">Label</button></li>
-    <li><button type="button" class="tag tag-input">Label</button></li>
-    <li><button type="button" class="tag tag-input">Label</button></li>
-    <li><button type="button" class="tag tag-input">Label</button></li>
-  </ul>`} />
+### States
 
-  ### States
+#### Disabled
 
-  #### Disabled
+To disable a tag input, just add the `disabled` attribute to the `.tag`.
 
-  To disable a tag input, just add the `disabled` attribute to the `.tag`.
-
-  <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
-    <li><button type="button" class="tag tag-input" disabled>Roaming</button></li>
-    <li><button type="button" class="tag tag-input">5G Ready</button></li>
-    <li><button type="button" class="tag tag-input" disabled>4G</button></li>
-  </ul>`} />
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
+  <li><button type="button" class="tag tag-input" disabled>Roaming</button></li>
+  <li><button type="button" class="tag tag-input">5G Ready</button></li>
+  <li><button type="button" class="tag tag-input" disabled>4G</button></li>
+</ul>`} />
