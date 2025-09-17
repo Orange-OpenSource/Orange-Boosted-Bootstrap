@@ -24,7 +24,7 @@ import { getConfig } from '@libs/config'
         </div>
       </div>
       <div class="card-body border-default border-thin border-top">
-        <a class="stretched-link" href="#tag">Tag</a> indicator is used in an informative way, to show short info like a label, keyword, or category.
+        <a class="stretched-link" href="#tag-indicator">Tag</a> indicator is used in an informative way, to show short info like a label, keyword, or category.
       </div>
     </div>
   </li>
@@ -51,7 +51,7 @@ For both versions of tag, OUDS Web has a basic `.tag` class that sets up default
 <Example showToolbar={false} code={`<button type="button" class="tag tag-input">Tag input</button>`
 } />
 
-## Tag
+## Tag (indicator)
 
 <Callout type="info">
   For accessibility and semantics reasons, tags, like any other informative elements, must be enclosed in an ancestor or parent semantic HTML tag. In the following examples, tag are used either in `<li>`, `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
@@ -69,7 +69,7 @@ OUDS Web [color and background utilities]([[docsref:/helpers/color-background]])
 For disabled color, use the `.tag-disabled` class.
 
 <Callout type="warning">
-  Disabled tag should be used only in a disabled context,inside a disabled clickable element (a card for example).
+  The disabled tag should only be used in a disabled context, inside an interactive element that has been disabled, such as a card.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
@@ -88,30 +88,6 @@ For disabled color, use the `.tag-disabled` class.
     <li><span class="tag text-bg-status-info-muted">Info</span></li>
     <li><span class="tag text-bg-status-warning-muted">Warning</span></li>
     <li><span class="tag text-bg-status-negative-muted">Negative</span></li>
-  </ul>`} />
-
-### Layout
-
-Tag indicator can be used near some text or some title (to show status or key details), or in a list (to indicate categories or keywords). If needed, you can use the [vertical alignment utilities]([[docsref:/utilities/vertical-align]]) to vertically center inline content.
-
-<Example code={`<ul class="list-unstyled d-flex column-gap-xs">
-    <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
-    <li><span class="tag">5G Ready</span></li>
-    <li><span class="tag">4G</span></li>
-  </ul>
-  <h2>Title <span class="tag align-middle">Coming soon</span></h2>
-  <p><span class="tag">New</span> Some text</p>`
-} />
-
-Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) the and vertical space (default value is obtained thanks to `.row-gap-md`).
-
-<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md">
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
   </ul>`} />
 
 ### Variants
@@ -273,11 +249,84 @@ To display a colored bullet add `<span class="tag-bullet"></span>` inside the `.
     </li>
   </ul>`} />
 
-##### Icon
+##### Status icon
+
+Icons are predefined in SCSS for statuses positive, info, warning and negative.
+
+<Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+    <li>
+      <span class="tag text-bg-status-positive-emphasized">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Positive
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-info-emphasized">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Info
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-warning-emphasized">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Warning
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-negative-emphasized">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Negative
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-positive-muted">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Positive
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-info-muted">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Info
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-warning-muted">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Warning
+      </span>
+    </li>
+    <li>
+      <span class="tag text-bg-status-negative-muted">
+        <span class="tag-asset-container">
+          <span class="tag-status-icon" aria-hidden="true"></span>
+        </span>
+        Negative
+      </span>
+    </li>
+  </ul>`} />
+
+##### Other icon
 
 <Callout type="info">
   The recommended way of using an icon in a tag is through an [SVG sprite file]([[docsref:/extend/icons#svg-sprite]]).
+</Callout>
 
+<Callout type="warning">
   Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
 </Callout>
 
@@ -305,58 +354,6 @@ To display a colored icon, just add the icon inside the `.tag-asset-container`.
       </span>
     </li>
     <li>
-      <span class="tag text-bg-status-positive-emphasized">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#tick-confirmation" />
-          </svg>
-        </span>
-        Positive
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-info-emphasized">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#info" />
-          </svg>
-        </span>
-        Info
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-warning-emphasized">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#important" />
-          </svg>
-        </span>
-        Warning
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-negative-emphasized">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#error-severe" />
-          </svg>
-        </span>
-        Negative
-      </span>
-    </li>
-    <li>
-      <span class="tag tag-disabled">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
-          </svg>
-        </span>
-        Disabled
-      </span>
-    </li>
-  </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
       <span class="tag text-bg-status-neutral-muted">
         <span class="tag-asset-container">
           <svg aria-hidden="true">
@@ -377,43 +374,13 @@ To display a colored icon, just add the icon inside the `.tag-asset-container`.
       </span>
     </li>
     <li>
-      <span class="tag text-bg-status-positive-muted">
+      <span class="tag tag-disabled">
         <span class="tag-asset-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#tick-confirmation"/>
+            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
           </svg>
         </span>
-        Positive
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-info-muted">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#info"/>
-          </svg>
-        </span>
-        Info
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-warning-muted">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#important"/>
-          </svg>
-        </span>
-        Warning
-      </span>
-    </li>
-    <li>
-      <span class="tag text-bg-status-negative-muted">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#error-severe"/>
-          </svg>
-        </span>
-        Negative
+        Disabled
       </span>
     </li>
   </ul>`} />
@@ -478,13 +445,43 @@ To display a small tag, add the class `.tag-sm` to the tag.
     </li>
   </ul>`} />
 
+
+### Layout
+
+Tag indicator can be used near some text or some title (to show status or key details), or in a list (to indicate categories or keywords). If needed, you can use the [vertical alignment utilities]([[docsref:/utilities/vertical-align]]) to vertically center inline content.
+
+<Example code={`<ul class="list-unstyled d-flex column-gap-xs">
+    <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
+    <li><span class="tag">5G Ready</span></li>
+    <li><span class="tag">4G</span></li>
+    <li><span class="tag tag-sm">Roaming</span></li> <!-- Issue with line-height of li -->
+    <li><span class="tag tag-sm">5G Ready</span></li>
+  </ul>
+  <h2>Title <span class="tag align-middle">Coming soon</span></h2>
+  <h2>Title <span class="tag tag-sm align-middle">Coming soon</span></h2>
+  <p><span class="tag">New</span> Some text</p>
+  <p><span class="tag tag-sm">New</span> Some text</p>`} />
+
+Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) the and vertical space (default value is obtained thanks to `.row-gap-md`).
+
+<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md">
+    <li><span class="tag">Label</span></li>
+    <li><span class="tag">Label</span></li>
+    <li><span class="tag">Label</span></li>
+    <li><span class="tag">Label</span></li>
+    <li><span class="tag">Label</span></li>
+    <li><span class="tag">Label</span></li>
+  </ul>`} />
+
 ## Tag input
 
 <Callout type="warning">
-  Please note that all the variants of tag above must not be applied on this version of the component.
+  Please note that all the variants of tag (indicator) above must not be applied on tag input.
 </Callout>
 
-Tag inputs are interactive and may be associated to an input field to be added dynamically. The tag input should be used along with a `<button>`, and can take all the usual states: enabled, hover, pressed, disabled or focused. It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
+Tag inputs are interactive and may be associated to an input field to be added dynamically. The tag input should be used along with a `<button>`, and can take all the usual states: enabled, hover, pressed, disabled or focused.
+
+It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
   <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs">
     <li><button type="button" class="tag tag-input">Roaming</button></li>

@@ -83,6 +83,20 @@
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-positive-emphasized};
 }
 
+.tag.text-bg-status-positive-emphasized,
+.tag.text-bg-status-positive-muted {
+
+  > .tag-asset-container > .tag-status-icon {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    vertical-align: middle;
+    background-color: #000;
+    background-size: contain;
+    mask-image: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 960 960' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M500,75C265.279,75,75,265.279,75,500S265.279,925,500,925,925,734.721,925,500,734.721,75,500,75ZM722.051,339.988l-254.642,320-0.007-.006a39.635,39.635,0,0,1-62.125,0l-0.006.005-127.321-160,0.006-.006a40.142,40.142,0,0,1,2.928-53.267l15.915-16a39.612,39.612,0,0,1,54.022-2.077l0.006-.008L428.382,515,663.77,285.818l0.006,0.008A39.734,39.734,0,0,1,730.77,315a39.952,39.952,0,0,1-8.726,24.981Z' transform='scale(.96)' fill='#000'/></svg>"));
+  }
+}
+
 .tag.text-bg-status-info-muted {
   --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-info-emphasized};
 }
