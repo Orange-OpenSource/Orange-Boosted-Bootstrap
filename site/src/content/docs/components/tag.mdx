@@ -54,13 +54,13 @@ For both versions of tag, OUDS Web has a basic `.tag` class that sets up default
 ## Tag (indicator)
 
 <Callout type="info">
-  For accessibility and semantics reasons, tags, like any other informative elements, must be enclosed in an ancestor or parent semantic HTML tag. In the following examples, tag are used either in `<li>`, `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
+  For accessibility and semantics reasons, tags, like any other informative elements, must be on or be enclosed in a semantic HTML tag. In the following examples, tag are used either as `<li>` or in `<h2>` or `<p>`: you can use any other semantic tag depending on the usage context.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-xs">
-    <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
-    <li><span class="tag">5G Ready</span></li>
-    <li><span class="tag">4G</span></li>
+    <li class="tag">Roaming</li>
+    <li class="tag">5G Ready</li>
+    <li class="tag">4G</li>
   </ul>`
 } />
 
@@ -73,21 +73,21 @@ For disabled color, use the `.tag-disabled` class.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li><span class="tag text-bg-status-neutral-emphasized">Neutral</span></li>
-    <li><span class="tag text-bg-status-accent-emphasized">Accent</span></li>
-    <li><span class="tag text-bg-status-positive-emphasized">Positive</span></li>
-    <li><span class="tag text-bg-status-info-emphasized">Info</span></li>
-    <li><span class="tag text-bg-status-warning-emphasized">Warning</span></li>
-    <li><span class="tag text-bg-status-negative-emphasized">Negative</span></li>
-    <li><span class="tag tag-disabled">Disabled</span></li>
+    <li class="tag text-bg-status-neutral-emphasized">Neutral</li>
+    <li class="tag text-bg-status-accent-emphasized">Accent</li>
+    <li class="tag text-bg-status-positive-emphasized">Positive</li>
+    <li class="tag text-bg-status-info-emphasized">Info</li>
+    <li class="tag text-bg-status-warning-emphasized">Warning</li>
+    <li class="tag text-bg-status-negative-emphasized">Negative</li>
+    <li class="tag tag-disabled">Disabled</li>
   </ul>
   <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li><span class="tag text-bg-status-neutral-muted">Neutral</span></li>
-    <li><span class="tag text-bg-status-accent-muted">Accent</span></li>
-    <li><span class="tag text-bg-status-positive-muted">Positive</span></li>
-    <li><span class="tag text-bg-status-info-muted">Info</span></li>
-    <li><span class="tag text-bg-status-warning-muted">Warning</span></li>
-    <li><span class="tag text-bg-status-negative-muted">Negative</span></li>
+    <li class="tag text-bg-status-neutral-muted">Neutral</li>
+    <li class="tag text-bg-status-accent-muted">Accent</li>
+    <li class="tag text-bg-status-positive-muted">Positive</li>
+    <li class="tag text-bg-status-info-muted">Info</li>
+    <li class="tag text-bg-status-warning-muted">Warning</li>
+    <li class="tag text-bg-status-negative-muted">Negative</li>
   </ul>`} />
 
 ### Variants
@@ -97,9 +97,9 @@ For disabled color, use the `.tag-disabled` class.
 To display tags with squared corners, add the `.rounded-none` utility class to the tag.
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li><span class="tag rounded-none text-bg-status-accent-emphasized">Accent emphasized</span></li>
-    <li><span class="tag rounded-none text-bg-status-accent-muted">Accent muted</span></li>
-    <li><span class="tag rounded-none tag-disabled">Disabled</span></li>
+    <li class="tag rounded-none text-bg-status-accent-emphasized">Accent emphasized</li>
+    <li class="tag rounded-none text-bg-status-accent-muted">Accent muted</li>
+    <li class="tag rounded-none tag-disabled">Disabled</li>
   </ul>`} />
 
 #### With asset
@@ -111,141 +111,109 @@ To add an asset (either bullet, icon or loader) inside a tag, add a `.tag-asset-
 To display a colored bullet add `<span class="tag-bullet"></span>` inside the `.tag-asset-container`.
 
 <Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
-      <span class="tag">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Neutral
+    <li class="tag">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Neutral
     </li>
-    <li>
-      <span class="tag text-bg-status-accent-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Accent
+    <li class="tag text-bg-status-accent-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Accent
     </li>
-    <li>
-      <span class="tag text-bg-status-positive-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Positive
+    <li class="tag text-bg-status-positive-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Positive
     </li>
-    <li>
-      <span class="tag text-bg-status-info-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Info
+    <li class="tag text-bg-status-info-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Info
     </li>
-    <li>
-      <span class="tag text-bg-status-warning-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Warning
+    <li class="tag text-bg-status-warning-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Warning
     </li>
-    <li>
-      <span class="tag text-bg-status-negative-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Negative
+    <li class="tag text-bg-status-negative-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Negative
     </li>
-    <li>
-      <span class="tag tag-disabled">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Disabled
+    <li class="tag tag-disabled">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Disabled
     </li>
   </ul>
   <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
-      <span class="tag text-bg-status-neutral-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Neutral
+    <li class="tag text-bg-status-neutral-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Neutral
     </li>
-    <li>
-      <span class="tag text-bg-status-accent-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Accent
+    <li class="tag text-bg-status-accent-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Accent
     </li>
-    <li>
-      <span class="tag text-bg-status-positive-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Positive
+    <li class="tag text-bg-status-positive-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Positive
     </li>
-    <li>
-      <span class="tag text-bg-status-info-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Info
+    <li class="tag text-bg-status-info-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Info
     </li>
-    <li>
-      <span class="tag text-bg-status-warning-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Warning
+    <li class="tag text-bg-status-warning-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Warning
     </li>
-    <li>
-      <span class="tag text-bg-status-negative-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Negative
+    <li class="tag text-bg-status-negative-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Negative
     </li>
   </ul>`} />
 
 <Example showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
     ...
-    <li>
-      <span class="tag text-bg-status-accent-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Neutral
+    <li class="tag text-bg-status-accent-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Neutral
     </li>
     ...
-    <li>
-      <span class="tag tag-disabled">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Disabled
+    <li class="tag tag-disabled">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Disabled
     </li>
     ...
-    <li>
-      <span class="tag text-bg-status-neutral-muted">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Neutral
+    <li class="tag text-bg-status-neutral-muted">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Neutral
     </li>
   </ul>`} />
 
@@ -254,69 +222,53 @@ To display a colored bullet add `<span class="tag-bullet"></span>` inside the `.
 Icons are predefined in SCSS for statuses positive, info, warning and negative.
 
 <Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
-      <span class="tag text-bg-status-positive-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Positive
+    <li class="tag text-bg-status-positive-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Positive
     </li>
-    <li>
-      <span class="tag text-bg-status-info-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Info
+    <li class="tag text-bg-status-info-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Info
     </li>
-    <li>
-      <span class="tag text-bg-status-warning-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Warning
+    <li class="tag text-bg-status-warning-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Warning
     </li>
-    <li>
-      <span class="tag text-bg-status-negative-emphasized">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Negative
+    <li class="tag text-bg-status-negative-emphasized">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Negative
     </li>
-    <li>
-      <span class="tag text-bg-status-positive-muted">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Positive
+    <li class="tag text-bg-status-positive-muted">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Positive
     </li>
-    <li>
-      <span class="tag text-bg-status-info-muted">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Info
+    <li class="tag text-bg-status-info-muted">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Info
     </li>
-    <li>
-      <span class="tag text-bg-status-warning-muted">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Warning
+    <li class="tag text-bg-status-warning-muted">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Warning
     </li>
-    <li>
-      <span class="tag text-bg-status-negative-muted">
-        <span class="tag-asset-container">
-          <span class="tag-status-icon" aria-hidden="true"></span>
-        </span>
-        Negative
+    <li class="tag text-bg-status-negative-muted">
+      <span class="tag-asset-container">
+        <span class="tag-status-icon" aria-hidden="true"></span>
       </span>
+      Negative
     </li>
   </ul>`} />
 
@@ -333,55 +285,45 @@ Icons are predefined in SCSS for statuses positive, info, warning and negative.
 To display a colored icon, just add the icon inside the `.tag-asset-container`.
 
 <Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li>
-      <span class="tag">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
-          </svg>
-        </span>
-        Neutral
+    <li class="tag">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        </svg>
       </span>
+      Neutral
     </li>
-    <li>
-      <span class="tag text-bg-status-accent-emphasized">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
-          </svg>
-        </span>
-        Accent
+    <li class="tag text-bg-status-accent-emphasized">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        </svg>
       </span>
+      Accent
     </li>
-    <li>
-      <span class="tag text-bg-status-neutral-muted">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-          </svg>
-        </span>
-        Neutral
+    <li class="tag text-bg-status-neutral-muted">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
       </span>
+      Neutral
     </li>
-    <li>
-      <span class="tag text-bg-status-accent-muted">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-          </svg>
-        </span>
-        Accent
+    <li class="tag text-bg-status-accent-muted">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
       </span>
+      Accent
     </li>
-    <li>
-      <span class="tag tag-disabled">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
-          </svg>
-        </span>
-        Disabled
+    <li class="tag tag-disabled">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        </svg>
       </span>
+      Disabled
     </li>
   </ul>`} />
 
@@ -413,35 +355,29 @@ To display a loader, add the following SVG and a `.visually-hidden` text inside 
 To display a small tag, add the class `.tag-sm` to the tag.
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
-    <li><span class="tag tag-sm">Small neutral</span></li>
-    <li>
-      <span class="tag tag-sm">
-        <span class="tag-asset-container">
-          <span class="tag-bullet"></span>
-        </span>
-        Small neutral
+    <li class="tag tag-sm">Small neutral</li>
+    <li class="tag tag-sm">
+      <span class="tag-asset-container">
+        <span class="tag-bullet"></span>
       </span>
+      Small neutral
     </li>
-    <li>
-      <span class="tag tag-sm">
-        <span class="tag-asset-container">
-          <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
-          </svg>
-        </span>
-        Small neutral
+    <li class="tag tag-sm">
+      <span class="tag-asset-container">
+        <svg aria-hidden="true">
+          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        </svg>
       </span>
+      Small neutral
     </li>
-    <li>
-      <span class="tag tag-sm">
-        <span class="tag-asset-container">
-          <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
-            <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
-          </svg>
-          <span role="status" class="visually-hidden">Loading</span>
-        </span>
-        Small neutral
+    <li class="tag tag-sm">
+      <span class="tag-asset-container">
+        <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
+          <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
+        </svg>
+        <span role="status" class="visually-hidden">Loading</span>
       </span>
+      Small neutral
     </li>
   </ul>`} />
 
@@ -451,11 +387,13 @@ To display a small tag, add the class `.tag-sm` to the tag.
 Tag indicator can be used near some text or some title (to show status or key details), or in a list (to indicate categories or keywords). If needed, you can use the [vertical alignment utilities]([[docsref:/utilities/vertical-align]]) to vertically center inline content.
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-xs">
-    <li><span class="tag">Roaming</span></li> <!-- Issue with line-height of li -->
-    <li><span class="tag">5G Ready</span></li>
-    <li><span class="tag">4G</span></li>
-    <li><span class="tag tag-sm">Roaming</span></li> <!-- Issue with line-height of li -->
-    <li><span class="tag tag-sm">5G Ready</span></li>
+    <li class="tag">Roaming</li>
+    <li class="tag">5G Ready</li>
+    <li class="tag">4G</li>
+  </ul>
+  <ul class="list-unstyled d-flex column-gap-xs">
+    <li class="tag tag-sm">Roaming</li>
+    <li class="tag tag-sm">5G Ready</li>
   </ul>
   <h2>Title <span class="tag align-middle">Coming soon</span></h2>
   <h2>Title <span class="tag tag-sm align-middle">Coming soon</span></h2>
@@ -465,12 +403,12 @@ Tag indicator can be used near some text or some title (to show status or key de
 Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) the and vertical space (default value is obtained thanks to `.row-gap-md`).
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md">
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
-    <li><span class="tag">Label</span></li>
+    <li class="tag">Label</li>
+    <li class="tag">Label</li>
+    <li class="tag">Label</li>
+    <li class="tag">Label</li>
+    <li class="tag">Label</li>
+    <li class="tag">Label</li>
   </ul>`} />
 
 ## Tag input
