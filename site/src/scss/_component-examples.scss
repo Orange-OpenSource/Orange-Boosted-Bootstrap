@@ -13,16 +13,6 @@
     // OUDS mod: no margin-right, margin-left, border-width
     @include border-radius(var(--bs-border-radius));
   }
-
-  // OUDS mod
-  .btn-minimal.btn-icon {
-    display: none;
-
-    @include media-breakpoint-up(md) {
-      display: inline-flex;
-    }
-  }
-  // End mod
 }
 
 .bd-example {
