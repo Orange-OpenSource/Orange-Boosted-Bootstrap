@@ -138,7 +138,7 @@ Documentation search is powered by [Algolia’s DocSearch](https://docsearch.alg
 
 1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
 2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/ouds-web` directory, run `npm run docs-serve` in the command line.
+3. From the root `/ouds-web` directory, run `npm run start` in the command line.
 4. Open `http://localhost:9001/` in your browser, and voilà.
 
 Learn more about using Hugo by reading its [documentation](https://docs.astro.build/en/getting-started/).

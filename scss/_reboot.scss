@@ -236,7 +236,7 @@ ol ol {
 
 li {
   &::marker {
-    color: var(--#{$prefix}primary);
+    color: var(--#{$prefix}color-content-brand-primary);
 
     ol & {
       color: inherit;

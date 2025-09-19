@@ -9,23 +9,28 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 nuget/ouds-web.png
-site/layouts/partials/icons.html
-site/static/docs/**/assets/brand/orange-logo.svg
-site/static/docs/**/assets/brand/orange-social.png
-site/static/docs/**/assets/fonts/solaris-icons.woff2
-site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
-site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
-site/static/docs/**/assets/img/favicons/apple-touch-icon.png
-site/static/docs/**/assets/img/favicons/favicon-16x16.png
-site/static/docs/**/assets/img/favicons/favicon-32x32.png
-site/static/docs/**/assets/img/favicons/favicon.ico
-site/static/docs/**/assets/img/favicons/mstile-144x144.png
-site/static/docs/**/assets/img/favicons/mstile-150x150.png
-site/static/docs/**/assets/img/favicons/mstile-150x150.png
-site/static/docs/**/assets/img/favicons/mstile-310x150.png
-site/static/docs/**/assets/img/favicons/mstile-310x310.png
-site/static/docs/**/assets/img/favicons/mstile-70x70.png
-site/static/docs/**/assets/img/favicons/safari-pinned-tab.svg
-site/static/docs/**/assets/img/ouds-web-sprite.svg
+site/src/components/icons/Symbols.astro
+site/static/[brand]/docs/[version]/assets/brand/orange-logo.svg
+site/static/[brand]/docs/[version]/assets/brand/sosh-logo.svg
+site/static/[brand]/docs/[version]/assets/img/navbar-contact.png
+site/static/[brand]/docs/[version]/assets/img/thumbnail.png
+site/static/**/docs/[version]/assets/brand/social.png
+site/static/**/docs/[version]/assets/fonts/solaris-icons.woff2
+site/static/**/docs/[version]/assets/img/favicons/android-chrome-192x192.png
+site/static/**/docs/[version]/assets/img/favicons/android-chrome-512x512.png
+site/static/**/docs/[version]/assets/img/favicons/apple-touch-icon.png
+site/static/**/docs/[version]/assets/img/favicons/favicon-16x16.png
+site/static/**/docs/[version]/assets/img/favicons/favicon-32x32.png
+site/static/**/docs/[version]/assets/img/favicons/favicon.ico
+site/static/**/docs/[version]/assets/img/favicons/mstile-70x70.png
+site/static/**/docs/[version]/assets/img/favicons/mstile-144x144.png
+site/static/**/docs/[version]/assets/img/favicons/mstile-150x150.png
+site/static/**/docs/[version]/assets/img/favicons/mstile-310x150.png
+site/static/**/docs/[version]/assets/img/favicons/mstile-310x310.png
+site/static/**/docs/[version]/assets/img/favicons/safari-pinned-tab.svg
+site/static/**/docs/[version]/assets/img/ouds-web-home-desktop.png
+site/static/**/docs/[version]/assets/img/ouds-web-home-mobile.png
+site/static/**/docs/[version]/assets/img/ouds-web-home-tablet.png
+site/static/**/docs/[version]/assets/img/ouds-web-sprite.svg
 
 End of the parts list under Orange SA Copyright

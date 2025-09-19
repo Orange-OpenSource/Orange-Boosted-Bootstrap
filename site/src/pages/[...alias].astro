@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   }
 
   function getAliasStaticPath(alias: string, path: string) {
-    return { params: { alias: trimLeadingAndTrailingSlashes(replaceConfigInText(alias)) }, props: { path } }
+    return { params: { alias: trimLeadingAndTrailingSlashes(replaceConfigInText(alias)), brand: process.env.BRAND }, props: { path } }
   }
 
   const staticPaths = []

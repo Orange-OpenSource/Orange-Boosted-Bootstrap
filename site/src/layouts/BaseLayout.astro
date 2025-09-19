@@ -38,14 +38,14 @@ const { frontmatter, layout, overrides, robots } = Astro.props
 
 const title = Astro.props.title ?? frontmatter?.title ?? getConfig().title
 const description = frontmatter?.description ? stripMarkdown(frontmatter.description) : getConfig().description
-const thumbnail = frontmatter?.thumbnail ? `img/${frontmatter.thumbnail}` : 'brand/orange-social.png'
+const thumbnail = frontmatter?.thumbnail ? `img/${frontmatter.thumbnail}` : `brand/social.png`
 
 const bodyProps = overrides?.body ?? {}
 const mainProps = overrides?.main ?? {}
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto" data-bs-brand="sosh">
+<html lang="en" data-bs-theme="auto" data-bs-brand={process.env.BRAND}>
   <head>
     <Head
       description={description}

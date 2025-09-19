@@ -7,6 +7,7 @@ toc: true
 ---
 
 import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 You can find here the [OUDS Switch design guidelines](https://unified-design-system.orange.com/472794e18/p/18acc0-switch).
@@ -88,7 +89,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
     </div>
     <div class="control-item-assets-container">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
       </svg>
     </div>
   </div>
@@ -145,7 +146,7 @@ It's recommended to keep switch label to no more than three words. When space is
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -159,7 +160,7 @@ It's recommended to keep switch label to no more than three words. When space is
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -182,7 +183,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.switch-item`
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -196,7 +197,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.switch-item`
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -321,7 +322,7 @@ If switches belong to a group (e.g., in a form), provide clear context by adding
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -335,7 +336,7 @@ If switches belong to a group (e.g., in a form), provide clear context by adding
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>

@@ -8,18 +8,7 @@ toc: true
 
 import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
-
-<BrandSpecific brand="orange">
-Test Orange
-</BrandSpecific>
-
-<BrandSpecific brand="sosh">
-Test Sosh
-</BrandSpecific>
-
-<BrandSpecific brand={['orange', 'sosh']}>
-Test Orange + Sosh
-</BrandSpecific>
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 You can find here the [OUDS Button design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
@@ -53,6 +42,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 
 {/* OUDS mod: Variants on colored background added */}
 
+<BrandSpecific brand="orange">
 ### Rounded
 
 Add `.btn-rounded` to the button class list to enable rounded corners.
@@ -62,10 +52,11 @@ Add `.btn-rounded` to the button class list to enable rounded corners.
 </Callout>
 
 <Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
-<button type="button" class="btn btn-strong btn-rounded">Strong</button>
-<button type="button" class="btn btn-brand btn-rounded">Brand</button>
-<button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
-<button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
+  <button type="button" class="btn btn-strong btn-rounded">Strong</button>
+  <button type="button" class="btn btn-brand btn-rounded">Brand</button>
+  <button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
+  <button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
+</BrandSpecific>
 
 ## Variants on colored background
 
@@ -119,31 +110,31 @@ We strongly advise not using an `<img />`, in particular because the icon will n
 <Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Default
     </button>
     <button type="button" class="btn btn-strong">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Strong
     </button>
     <button type="button" class="btn btn-brand">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Brand
     </button>
     <button type="button" class="btn btn-minimal">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Minimal
     </button>
     <button type="button" class="btn btn-negative">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       Negative
     </button>
@@ -158,19 +149,19 @@ We strongly advise not using an `<img />`, in particular because the icon will n
     <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Default
       </button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Strong
       </button>
       <button type="button" class="btn btn-minimal btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         Minimal
       </button>
@@ -191,31 +182,31 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 <Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-icon btn-default">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
     <button type="button" class="btn btn-icon btn-strong">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Strong</span>
     </button>
     <button type="button" class="btn btn-icon btn-brand">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Brand</span>
     </button>
     <button type="button" class="btn btn-icon btn-minimal">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Minimal</span>
     </button>
     <button type="button" class="btn btn-icon btn-negative">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Negative</span>
     </button>
@@ -230,19 +221,19 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
     <div data-bs-theme="light" class="d-flex gap-xs flex-wrap">
       <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Default</span>
       </button>
       <button type="button" class="btn btn-icon btn-strong btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Strong</span>
       </button>
       <button type="button" class="btn btn-icon btn-minimal btn-on-colored-bg">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Minimal</span>
       </button>
@@ -487,7 +478,7 @@ Loading state can also be combined with all kind of buttons, including icons.
 <Example class="bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#download"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       <span class="visually-hidden">Downloading file 15</span>
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -497,7 +488,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
     <button type="button" class="btn btn-icon btn-default loading-determinate" id="loading-btn-16" disabled style="--bs-btn-loading-time: 5s;">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#download"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       <span class="visually-hidden">Downloading file 16</span>
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -507,7 +498,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
     <button type="button" class="btn btn-strong loading-indeterminate" id="loading-btn-17" disabled>
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#download"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       Download file 17
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -517,7 +508,7 @@ Loading state can also be combined with all kind of buttons, including icons.
     </button>
     <button type="button" class="btn btn-strong loading-determinate" id="loading-btn-18" disabled style="--bs-btn-loading-time: 5s;">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#download"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
       </svg>
       Download file 18
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">

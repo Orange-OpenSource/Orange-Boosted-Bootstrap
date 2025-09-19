@@ -8,6 +8,7 @@ toc: true
 ---
 
 import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 You can find here the [OUDS Radio button design guidelines](https://unified-design-system.orange.com/472794e18/p/90c467-radio-button).
@@ -93,7 +94,7 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
     </div>
     <div class="control-item-assets-container">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
       </svg>
     </div>
   </div>
@@ -198,7 +199,7 @@ It's recommended to keep radio button label to no more than three words. When sp
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -213,7 +214,7 @@ It's recommended to keep radio button label to no more than three words. When sp
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -237,7 +238,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -252,7 +253,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -417,7 +418,7 @@ If radio buttons belong to a group (e.g., in a form), provide clear context by a
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>
@@ -432,7 +433,7 @@ If radio buttons belong to a group (e.g., in a form), provide clear context by a
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-            <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+            <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
           </svg>
         </div>
       </div>

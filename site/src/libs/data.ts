@@ -14,12 +14,6 @@ import { capitalizeFirstLetter } from './utils'
 // An object containing all the data types and their associated schema. The key should match the name of the data file
 // in the `./site/data/` directory.
 const dataDefinitions = {
-  'background-colors': z
-    .object({
-      name: z.string(),
-      hex: z.string()
-    })
-    .array(),
   breakpoints: z
     .object({
       breakpoint: z.string(),
@@ -61,41 +55,6 @@ const dataDefinitions = {
     })
     .array(),
   grays: zNamedHexColors(9),
-  palette: z
-    .object({
-      category: z.string(),
-      name: z.string(),
-      colors: z
-        .object({
-          name: z.string(),
-          hex: zHexColor,
-          darkHex: zHexColor.optional()
-        })
-        .array()
-        .optional(),
-      subcategories: z
-        .object({
-          subcategory: z.string(),
-          name: z.string(),
-          colors: z
-            .object({
-              name: z.string(),
-              variable: z.string(),
-              hex: z.string() // TODO: make the zHexColor back in here ?
-            })
-            .array()
-        })
-        .array()
-        .optional()
-    })
-    .array(),
-  plugins: z
-    .object({
-      description: z.string(),
-      link: z.string().startsWith('components/'),
-      name: z.string()
-    })
-    .array(),
   sidebar: z
     .object({
       title: z.string(),
@@ -104,7 +63,8 @@ const dataDefinitions = {
       pages: z
         .object({
           title: z.string(),
-          draft: z.boolean().optional()
+          draft: z.boolean().optional(),
+          brand: z.string().optional()
         })
         .array()
         .optional()
@@ -122,15 +82,7 @@ const dataDefinitions = {
     .transform((val) => {
       // Add a `title` property to each theme color object being the capitalized version of the `name` property.
       return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }))
-    }),
-  translations: z
-    .object({
-      name: z.string(),
-      code: zLanguageCode,
-      description: z.string(),
-      url: z.string().url()
     })
-    .array()
 } satisfies Record<string, DataSchema>
 
 let data = new Map<DataType, z.infer<DataSchema>>()

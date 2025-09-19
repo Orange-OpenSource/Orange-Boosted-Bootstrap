@@ -1,6 +1,7 @@
 ---
 import fs from 'node:fs'
 import Code from '@shortcodes/Code.astro'
+import { getConfig } from '@libs/config'
 
 /**
  * Prints SVG content.
@@ -8,7 +9,7 @@ import Code from '@shortcodes/Code.astro'
 interface Props {
   /**
    * File path to the SVG file without file extension.
-   * @default "orange-logo"
+   * @default "brand-logo"
    */
   file?: string
 
@@ -19,9 +20,9 @@ interface Props {
   downloadable?: boolean
 }
 
-const { file = 'orange-logo', downloadable = true } = Astro.props
+const { file = `${getConfig().brand}-logo`, downloadable = true } = Astro.props
 
-const filePath = `site/static/docs/[version]/assets/brand/${file}`
+const filePath = `site/${getConfig().brand}/static/docs/[version]/assets/brand/${file}`
 const svgFormattedPath = `${filePath}-formatted.svg`
 const svgPath = `${filePath}.svg`
 

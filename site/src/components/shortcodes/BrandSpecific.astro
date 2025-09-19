@@ -1,4 +1,5 @@
 ---
+import { getConfig } from '@libs/config';
 /*
  * Outputs badge to identify the first version something was added
  */
@@ -14,4 +15,8 @@ const { brand = 'orange' } = Astro.props
 const brandToDisplay: string[] = typeof brand === 'string' ? [brand] : brand
 ---
 
-<div class={brandToDisplay.map(brand => `bd-brand-${brand}`).join(' ')}><slot /></div>
+{brandToDisplay.map((brand) => {
+  if (brand === getConfig().brand) {
+    return <slot />
+  }
+})}

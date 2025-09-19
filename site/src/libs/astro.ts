@@ -26,36 +26,36 @@ const autoImportedComponentDirectories = ['shortcodes']
 
 // A list of static file paths that will be aliased to a different path.
 const staticFileAliases = {
-  '/docs/[version]/assets/img/favicons/apple-touch-icon.png': '/apple-touch-icon.png',
-  '/docs/[version]/assets/img/favicons/favicon.ico': '/favicon.ico'
+  '/orange/docs/[version]/assets/img/favicons/apple-touch-icon.png': '/apple-touch-icon.png',
+  '/orange/docs/[version]/assets/img/favicons/favicon.ico': '/favicon.ico'
 }
 
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
   '/404',
   '/docs',
-  `/docs/${getConfig().docs_version}`,
-  `/docs/${getConfig().docs_version}/getting-started`,
-  `/docs/${getConfig().docs_version}/getting-started/build-tools`,
-  `/docs/${getConfig().docs_version}/customize`,
-  `/docs/${getConfig().docs_version}/customize/color`,
-  `/docs/${getConfig().docs_version}/layout`,
-  `/docs/${getConfig().docs_version}/content`,
-  `/docs/${getConfig().docs_version}/components`,
-  `/docs/${getConfig().docs_version}/components/navs`,
-  `/docs/${getConfig().docs_version}/forms`,
-  `/docs/${getConfig().docs_version}/helpers`,
-  `/docs/${getConfig().docs_version}/helpers/screen-readers`,
-  `/docs/${getConfig().docs_version}/migration`,
-  `/docs/${getConfig().docs_version}/utilities`,
-  `/docs/${getConfig().docs_version}/extend`,
-  `/docs/${getConfig().docs_version}/about`
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started/build-tools`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/customize`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/customize/color`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/layout`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/content`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components/navs`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/forms`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers/screen-readers`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/migration`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/utilities`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/extend`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/about`
 ]
 
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
 
 export function oudsWeb(): AstroIntegration[] {
-  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`)
+  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${getConfig().brand}${url}/`)
 
   configurePrism()
 
@@ -161,10 +161,10 @@ function cleanPublicDirectory() {
 }
 
 // Copy the `tarteaucitron` folder from the node_modules the latest version of TarteauCitron to make it available from
-// the `/docs/${docs_version}/dist` URL.
+// the `/${process.env.BRAND}/docs/${docs_version}/dist` URL.
 function copyTarteauCitron() {
   const source = path.join(process.cwd(), 'node_modules/tarteaucitronjs')
-  const destination = path.join(getDocsPublicFsPath(), 'docs', getConfig().docs_version, 'assets/js')
+  const destination = path.join(getDocsPublicFsPath(), getConfig().brand, 'docs', getConfig().docs_version, 'assets/js')
 
   fs.mkdirSync(destination, { recursive: true })
   fs.copyFileSync(path.join(source, 'tarteaucitron.min.js'), path.join(destination, 'tarteaucitron.min.js'))
@@ -176,10 +176,10 @@ function copyTarteauCitron() {
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of OUDS Web to make it available from
-// the `/docs/${docs_version}/dist` URL.
+// the `/${process.env.BRAND}/docs/${docs_version}/dist` URL.
 function copyOudsWeb() {
   const source = path.join(process.cwd(), 'dist')
-  const destination = path.join(getDocsPublicFsPath(), 'docs', getConfig().docs_version, 'dist')
+  const destination = path.join(getDocsPublicFsPath(), getConfig().brand, 'docs', getConfig().docs_version, 'dist')
 
   fs.mkdirSync(destination, { recursive: true })
   fs.cpSync(source, destination, { recursive: true })
@@ -192,7 +192,8 @@ function copyStatic() {
   const source = getDocsStaticFsPath()
   const destination = path.join(getDocsPublicFsPath())
 
-  copyStaticRecursively(source, destination)
+  copyStaticRecursively(path.join(source, getConfig().brand), path.join(destination, getConfig().brand))
+  copyStaticRecursively(path.join(source, '[brand]'), path.join(destination, getConfig().brand))
 }
 
 // Alias (copy) some static files to different paths.

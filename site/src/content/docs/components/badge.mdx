@@ -7,7 +7,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 {/* TODO: set the right url for design documentation */}
@@ -25,7 +25,7 @@ For accessibility and semantics reasons, badges, like any other informative elem
 <Example code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 
-## Standard variants 
+## Standard variants
 
 {/*  TODO: set the right url for design documentation */}
 OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) can be applied to display badge variants, each serving its own semantic purpose. Please follow the [Badge design specifications](https://unified-design-system.orange.com/) to choose the right badge for the right action.
@@ -65,25 +65,25 @@ Badges can be used with icons to visually reinforce meaning.
 
 <Example class="d-flex align-items-center gap-3" code={`<p class="badge">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge badge-lg">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge text-bg-status-negative-emphasized">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge badge-lg text-bg-status-negative-emphasized">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>`} />
@@ -94,14 +94,14 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 
 <Example class="d-flex align-items-center gap-3" code={`<button type="button" class="btn btn-icon btn-default position-relative">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#trash"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
     </svg>
     <span class="visually-hidden">Trash</span>
     <span class="position-absolute top-0 start-100 translate-middle badge text-bg-status-negative-emphasized">
       <span class="visually-hidden">Trash contains items</span>
     </span>
   </button>
-  
+
   <button type="button" class="btn btn-default position-relative ms-md">
     Inbox
     <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">

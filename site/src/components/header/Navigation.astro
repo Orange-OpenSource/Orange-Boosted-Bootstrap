@@ -37,9 +37,9 @@ const { addedIn, layout, title } = Astro.props
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
     <div class="container-fluid container-max-width">
       <div class="navbar-brand me-auto me-lg-2xl">
-        <a class="stretched-link" href="/">
+        <a class="stretched-link" href={`/${getConfig().brand}/`}>
           <img
-            src={getVersionedDocsPath('assets/brand/orange-logo.svg')}
+            src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)}
             width="50"
             height="50"
             alt="OUDS Web - Back to Home"
@@ -66,7 +66,7 @@ const { addedIn, layout, title } = Astro.props
         <ul class="navbar-nav">
           <LinkItem
             active={Astro.url.pathname === '/'}
-            href="/"
+            href={`/${getConfig().brand}/`}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
           >
             Home
@@ -112,9 +112,9 @@ const { addedIn, layout, title } = Astro.props
               aria-expanded="false"
               data-bs-toggle="dropdown"
               data-bs-display="static"
-              aria-label="Toggle brand (orange)"
+              aria-label={`Toggle brand (${getConfig().brand})`}
             >
-              <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
+              <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="Toggle brand" loading="lazy" />
               <span class='d-lg-none ms-2' id="bd-brand-text">Toggle brand</span>
             </button>
             <ul
@@ -122,28 +122,28 @@ const { addedIn, layout, title } = Astro.props
               aria-labelledby="bd-brand-text"
             >
               <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
+                <a
+                  href="#"
+                  class:list={["dropdown-item d-flex align-items-center", {active: getConfig().brand === 'orange'}]}
                   data-bs-brand-value="orange"
-                  aria-pressed="false"
+                  aria-current={getConfig().brand === 'orange'}
                 >
                   <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
                   Orange
-                  <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-                </button>
+                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'orange'}]} aria-hidden="true"><use href="#check2"></use></svg>
+                </a>
               </li>
               <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
+                <a
+                  href="#"
+                  class:list={["dropdown-item d-flex align-items-center", {active: getConfig().brand === 'sosh'}]}
                   data-bs-brand-value="sosh"
-                  aria-pressed="false"
+                  aria-current={getConfig().brand === 'sosh'}
                 >
                   <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} alt="Toggle brand" loading="lazy" />
                   Sosh
-                  <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-                </button>
+                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'sosh'}]} aria-hidden="true"><use href="#check2"></use></svg>
+                </a>
               </li>
             </ul>
           </li>

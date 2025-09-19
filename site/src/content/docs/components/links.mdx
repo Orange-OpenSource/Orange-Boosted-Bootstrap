@@ -6,7 +6,7 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 You can find here the [OUDS Link design guidelines](https://unified-design-system.orange.com/472794e18/p/31c33b-link).
@@ -71,7 +71,7 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 <Example code={`<div>
     <a class="link icon-link" href="#">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
       </svg>
       This is an example of a link with an SVG icon
     </a>
@@ -86,7 +86,7 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 <BootstrapCompatibility>
 <Example code={`<a class="icon-link" href="#">
     <svg class="bi" aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
     </svg>
     This is an example of link with icon
   </a>`} />
@@ -108,7 +108,7 @@ The `.link` classes are designed to be used with the `<a>` element. However, you
   <div>
     <button class="link link-sm icon-link" type="button">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
     </svg> Small button link icon
     </button>
   </div>`} />
@@ -123,7 +123,7 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
   <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
   <div><a class="link icon-link" aria-disabled="true">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
     </svg>
     This is an example of a link with an icon
   </a>

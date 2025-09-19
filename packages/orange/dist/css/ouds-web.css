@@ -42,13 +42,24 @@
   --bs-color-bg-secondary: #f4f4f4;
   --bs-color-bg-tertiary: #f9f5f0;
   --bs-color-border-brand-primary: #f15e00;
+  --bs-color-border-brand-secondary: ;
+  --bs-color-border-brand-tertiary: ;
   --bs-color-border-default: rgba(0, 0, 0, 0.2);
   --bs-color-border-emphasized: #000;
   --bs-color-border-focus-inset: #fff;
   --bs-color-border-focus: #000;
   --bs-color-border-muted: rgba(0, 0, 0, 0.08);
   --bs-color-border-on-brand-primary: #000;
+  --bs-color-border-on-brand-secondary: ;
+  --bs-color-border-on-brand-tertiary: ;
+  --bs-color-border-status-accent: ;
+  --bs-color-border-status-info: ;
+  --bs-color-border-status-negative: ;
+  --bs-color-border-status-positive: ;
+  --bs-color-border-status-warning: ;
   --bs-color-content-brand-primary: #f15e00;
+  --bs-color-content-brand-secondary: ;
+  --bs-color-content-brand-tertiary: ;
   --bs-color-content-default: #000;
   --bs-color-content-disabled: rgba(0, 0, 0, 0.2);
   --bs-color-content-muted: rgba(0, 0, 0, 0.68);
@@ -61,6 +72,8 @@
   --bs-color-content-on-action-pressed: #fff;
   --bs-color-content-on-action-selected: #fff;
   --bs-color-content-on-brand-primary: #000;
+  --bs-color-content-on-brand-secondary: ;
+  --bs-color-content-on-brand-tertiary: ;
   --bs-color-content-on-overlay-emphasized: #fff;
   --bs-color-content-on-status-accent-emphasized: #000;
   --bs-color-content-on-status-accent-muted: #000;
@@ -95,12 +108,21 @@
   --bs-color-decorative-accent-5-emphasized: #ff80d4;
   --bs-color-decorative-accent-5-muted: #ffe5f6;
   --bs-color-decorative-brand-primary: #ff7900;
+  --bs-color-decorative-brand-primary-emphasized: ;
+  --bs-color-decorative-brand-primary-muted: ;
   --bs-color-decorative-brand-secondary: #000;
+  --bs-color-decorative-brand-secondary-emphasized: ;
+  --bs-color-decorative-brand-secondary-muted: ;
   --bs-color-decorative-brand-tertiary: #fff;
+  --bs-color-decorative-brand-tertiary-emphasized: ;
+  --bs-color-decorative-brand-tertiary-muted: ;
+  --bs-color-decorative-neutral-emphasized-high: ;
   --bs-color-decorative-neutral-emphasized-higher: #333;
+  --bs-color-decorative-neutral-emphasized-highest: ;
   --bs-color-decorative-neutral-emphasized-low: #555;
   --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
   --bs-color-decorative-neutral-emphasized-lowest: #666;
+  --bs-color-decorative-neutral-emphasized-medium: ;
   --bs-color-decorative-neutral-muted-high: #ccc;
   --bs-color-decorative-neutral-muted-higher: #999;
   --bs-color-decorative-neutral-muted-highest: #858585;
@@ -125,6 +147,8 @@
   --bs-color-overlay-emphasized: #272727;
   --bs-color-overlay-modal: #fff;
   --bs-color-surface-brand-primary: #ff7900;
+  --bs-color-surface-brand-secondary: ;
+  --bs-color-surface-brand-tertiary: ;
   --bs-color-surface-status-accent-emphasized: #ff7900;
   --bs-color-surface-status-accent-muted: rgba(189, 121, 60, 0.08);
   --bs-color-surface-status-info-emphasized: #26b2ff;
@@ -148,6 +172,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   --bs-color-action-disabled: rgba(255, 255, 255, 0.2);
@@ -175,13 +200,24 @@
   --bs-color-bg-secondary: #1f1f1f;
   --bs-color-bg-tertiary: #23211a;
   --bs-color-border-brand-primary: #ff7900;
+  --bs-color-border-brand-secondary: ;
+  --bs-color-border-brand-tertiary: ;
   --bs-color-border-default: rgba(255, 255, 255, 0.2);
   --bs-color-border-emphasized: rgba(255, 255, 255, 0.92);
   --bs-color-border-focus: #eee;
   --bs-color-border-focus-inset: #141414;
   --bs-color-border-muted: rgba(255, 255, 255, 0.08);
   --bs-color-border-on-brand-primary: #000;
+  --bs-color-border-on-brand-secondary: ;
+  --bs-color-border-on-brand-tertiary: ;
+  --bs-color-border-status-accent: ;
+  --bs-color-border-status-info: ;
+  --bs-color-border-status-negative: ;
+  --bs-color-border-status-positive: ;
+  --bs-color-border-status-warning: ;
   --bs-color-content-brand-primary: #ff7900;
+  --bs-color-content-brand-secondary: ;
+  --bs-color-content-brand-tertiary: ;
   --bs-color-content-default: #eee;
   --bs-color-content-disabled: rgba(255, 255, 255, 0.2);
   --bs-color-content-muted: rgba(255, 255, 255, 0.64);
@@ -194,6 +230,8 @@
   --bs-color-content-on-action-pressed: #000;
   --bs-color-content-on-action-selected: #000;
   --bs-color-content-on-brand-primary: #000;
+  --bs-color-content-on-brand-secondary: ;
+  --bs-color-content-on-brand-tertiary: ;
   --bs-color-content-on-overlay-emphasized: #000;
   --bs-color-content-on-status-accent-emphasized: #000;
   --bs-color-content-on-status-accent-muted: #eee;
@@ -220,6 +258,8 @@
   --bs-color-overlay-emphasized: #eee;
   --bs-color-overlay-modal: #333;
   --bs-color-surface-brand-primary: #ff7900;
+  --bs-color-surface-brand-secondary: ;
+  --bs-color-surface-brand-tertiary: ;
   --bs-color-surface-status-accent-emphasized: #ff7900;
   --bs-color-surface-status-accent-muted: #353228;
   --bs-color-surface-status-info-emphasized: #8ad5ff;
@@ -285,6 +325,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8);
@@ -647,6 +688,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   color-scheme: dark;
@@ -14141,6 +14183,14 @@ label.tag:active.disabled {
 
 .text-on-brand-primary {
   color: var(--bs-color-content-on-brand-primary) !important;
+}
+
+.text-on-brand-secondary {
+  color: var(--bs-color-content-on-brand-secondary) !important;
+}
+
+.text-on-brand-tertiary {
+  color: var(--bs-color-content-on-brand-tertiary) !important;
 }
 
 .text-on-status-accent-emphasized {

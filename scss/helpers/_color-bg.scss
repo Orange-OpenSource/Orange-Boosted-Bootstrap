@@ -36,9 +36,11 @@
     $text-bg-color: var(--#{$prefix}color-content-on-#{$color});
   }
 
-  .text-bg-#{$color} {
-    color: $text-bg-color if($enable-important-utilities, !important, null);
-    background-color: $value if($enable-important-utilities, !important, null);
+  @if $value {
+    .text-bg-#{$color} {
+      color: $text-bg-color if($enable-important-utilities, !important, null);
+      background-color: $value if($enable-important-utilities, !important, null);
+    }
   }
 }
 // End mod

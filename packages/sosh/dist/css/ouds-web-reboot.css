@@ -125,6 +125,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   --bs-color-action-disabled: rgba(255, 255, 255, 0.2);
@@ -276,6 +277,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8);
@@ -642,6 +644,7 @@
 }
 
 [data-bs-theme=dark],
+:root[data-bs-theme=dark],
 :root[data-bs-theme=dark] [data-bs-theme=root],
 :root[data-bs-theme=light] [data-bs-theme=root-inverted] {
   color-scheme: dark;
@@ -781,8 +784,10 @@ p {
 }
 
 abbr[title] {
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 

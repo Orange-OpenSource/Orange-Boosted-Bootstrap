@@ -29,11 +29,11 @@ const sidebar = getData('sidebar')
                 {group.title}
               </h2>
               <ul class="list-unstyled fw-normal mt-2xs pb-sm small">
-                {group.pages?.map((page) => {
+                {group.pages?.filter((page) => !page.brand || page.brand === getConfig().brand).map((page) => {
                   const docSlug = getSlug(page.title)
                   const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
-                  const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                  const url = `/${process.env.BRAND}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
                   const active = Astro.params.slug === unversionedPageSlug
 
                   const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
@@ -73,7 +73,7 @@ const sidebar = getData('sidebar')
               <li class="bd-links-span-all mt-2xs mb-lg mx-sm border-top" />
               <li class="bd-links-span-all">
                 <a
-                  href={`/docs/${getConfig().docs_version}/${groupSlug}/`}
+                  href={`/${process.env.BRAND}/docs/${getConfig().docs_version}/${groupSlug}/`}
                   class:list={['bd-links-link', 'd-block', { active }]}
                   aria-current={active ? 'page' : undefined}
                 >

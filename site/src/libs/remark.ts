@@ -57,7 +57,7 @@ export const remarkBsConfig: Plugin<[], Root> = function () {
 }
 
 // A remark plugin to add versionned docs links in markdown (or MDX) files.
-// For example, [[docsref:/foo]] will be replaced with the `/docs/${docs_version}/foo` value with the `docs_version`
+// For example, [[docsref:/foo]] will be replaced with the `/${process.env.BRAND}/docs/${docs_version}/foo` value with the `docs_version`
 // value being read from the `config.yml` file.
 // Note: this also works in frontmatter.
 // Note: this plugin is meant to facilitate the migration from Hugo to Astro while keeping the differences to a minimum.

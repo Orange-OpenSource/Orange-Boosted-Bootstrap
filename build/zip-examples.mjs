@@ -11,6 +11,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sh from 'shelljs'
+import { getConfig } from '../site/src/libs/config'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -34,7 +35,7 @@ const jsFiles = [
   'ouds-web.bundle.min.js.map'
 ]
 const imgFiles = [
-  'orange-logo.svg'
+  `${getConfig().brand}-logo.svg`
 ]
 const staticJsFiles = [
   'color-modes.js'
