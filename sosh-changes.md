@@ -62,17 +62,17 @@ Breakpoints:
 - ~~Customizable grid to remove or replace in custom libraries~~
 - ~~Remove Sass reference~~
 
-Gutters:
-- Values of gutters to remove or change
-- Customizable gutters to remove or replace in custom libraries
+~~Gutters:~~
+- ~~Values of gutters to remove or change~~
+- ~~Customizable gutters to remove or replace in custom libraries~~
 
 Layout/utilities:
-- Remove or handle margin and padding
+- ~~Remove or handle margin and padding~~
 - Or remove page ?
 
-CSS grid:
-- Customizable part to remove or replace in custom libraries
-- Remove Sass reference
+~~CSS grid:~~
+- ~~Customizable part to remove or replace in custom libraries~~
+- ~~Remove Sass reference~~
 
 Reboot:
 - Rewrite the whole page, nothing to be left aside, the values, the sense of what's written.
@@ -160,6 +160,7 @@ Handle this somehow:
 - Clean tokenator
 - define vars for css bg in docs
 - See where to add the new file structure and explain how to use
+- check component rendering in the doc
 
 After PR is merged:
 - Make redirects on the ouds-web-doc already existing
