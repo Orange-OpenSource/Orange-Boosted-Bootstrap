@@ -86,19 +86,13 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 ## With icon
 
-<Callout type="info">
-The recommended way of using an icon in a button is through an [SVG sprite file]([[docsref:/extend/icons#svg-sprite]]). You need to fill it using `currentColor` to respect the button color scheme (which can be set directly inside the SVG sprite).
-</Callout>
-
-Please note that if you experience a problem with a cropped SVG, we recommend using the `.overflow-visible` utility on the SVG to fix its rendering.
-
-If really needed, you can use a [Web font]([[docsref:/extend/icons#web-font]]) associated to the `.icon` class to set correct parameters for the `font-size` and `line-height`. However, we strongly advise against using an `<img />` tag, as the icon will not benefit from dynamic color changes on states (hover, focus, active) and the color mode system will not work.
-
-<Callout type="warning">
-When icons are purely decorative, they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our text and icon examples. For icon only, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
-</Callout>
+<Callout type="info" name="info-icons-svg-sprite" />
 
 ### Text and icon
+
+<Callout type="warning">
+Icons in text and icon buttons are considered purely decorative, so they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our examples. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
+</Callout>
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
@@ -171,6 +165,10 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
 ### Icon only
 
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
+
+<Callout type="warning">
+For icon only buttons, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
+</Callout>
 
 {/* TODO: Add a paragraph about tooltip and/or title */}
 
