@@ -145,7 +145,7 @@
   .disabled &,
   &.disabled {
     color: #{$ouds-color-content-on-action-disabled} if($enable-important-utilities, !important, null);
-    background-color:#{$ouds-color-action-disabled} if($enable-important-utilities, !important, null);
+    background-color: #{$ouds-color-action-disabled} if($enable-important-utilities, !important, null);
   }
 }
 
