@@ -390,25 +390,25 @@ It can be removed on click, but you have to implement this behavior by yourself,
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected tags">
-  <li>
-    <button type="button" class="tag tag-input">
-      <span class="visually-hidden">Remove the tag:</span>
-      Roaming
-    </button>
-  </li>
-  <li>
-    <button type="button" class="tag tag-input">
-      <span class="visually-hidden">Remove the tag:</span>
-      5G Ready
-    </button>
-  </li>
-  <li>
-    <button type="button" class="tag tag-input">
+    <li>
+      <button type="button" class="tag tag-input">
         <span class="visually-hidden">Remove the tag:</span>
-        4G
-    </button>
-  </li>
-</ul>`} />
+        Roaming
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag tag-input">
+        <span class="visually-hidden">Remove the tag:</span>
+        5G Ready
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag tag-input">
+          <span class="visually-hidden">Remove the tag:</span>
+          4G
+      </button>
+    </li>
+  </ul>`} />
 
 ### States
 
@@ -417,31 +417,31 @@ It can be removed on click, but you have to implement this behavior by yourself,
 To disable an input tag, just add the `disabled` attribute to the `.tag`.
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected tags">
-  <li>
-    <button type="button" class="tag tag-input" disabled>
-      <span class="visually-hidden">Remove the tag:</span>
-      Roaming
-    </button>
-  </li>
-  <li>
-    <button type="button" class="tag tag-input" disabled>
-      <span class="visually-hidden">Remove the tag:</span>
-      5G
-    </button>
-  </li>
-  <li>
-    <button type="button" class="tag tag-input" disabled>
-      <span class="visually-hidden">Remove the tag:</span>
-      4G
-    </button>
-  </li>
-</ul>`} />
+    <li>
+      <button type="button" class="tag tag-input" disabled>
+        <span class="visually-hidden">Remove the tag:</span>
+        Roaming
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag tag-input" disabled>
+        <span class="visually-hidden">Remove the tag:</span>
+        5G
+      </button>
+    </li>
+    <li>
+      <button type="button" class="tag tag-input" disabled>
+        <span class="visually-hidden">Remove the tag:</span>
+        4G
+      </button>
+    </li>
+  </ul>`} />
 
 ### Layout
 
 Input tags are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
 
-  <Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs" aria-label="Selected tags">
+<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs" aria-label="Selected tags">
     <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 1</button></li>
     <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 2</button></li>
     <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 3</button></li>
