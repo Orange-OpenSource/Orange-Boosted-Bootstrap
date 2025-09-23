@@ -1017,9 +1017,9 @@ $input-border-radius:                   $ouds-text-input-border-radius-default !
 $input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
 $input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
-$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              currentcolor !default;
-$input-focus-color:                     $input-color !default;
+// OUDS mod: no $input-focus-bg
+// OUDS mod: no $input-focus-border-color
+// OUDS mod: no $input-focus-color
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // OUDS mod
 
