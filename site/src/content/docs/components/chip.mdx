@@ -56,7 +56,7 @@ Chip components are always displayed in a containing list with a `ul.chip-contai
 
 ### Accessibility
 
-For visually impaired and blind users, the visual context is inaccessible. Thus, they cannot understand the purpose of the chips on the page. So it's mandatory to add a hidden text to explain the use of chips without context. Don’t forget to adapt and translate this text to your use case.
+For visually impaired and blind users, the visual context is inaccessible. Thus, they cannot understand the purpose of the chips on the page. So it's mandatory to add a hidden text (or an `aria-label` on the containing `ul` for radio buttons) to explain the use of chips without context. Don’t forget to adapt and translate this text to your use case.
 
 ### Pseudo elements
 
@@ -105,11 +105,10 @@ To create a filter chip, add `.chip-filter` to the `.chip`.
 
 To have only one active filter chip at a time, use the radio button version. All the rules explained in this page about filter chips apply on this variant as well.
 
-<Example code={`<ul class="chip-container">
+<Example code={`<ul class="chip-container" aria-label="Filter by">
     <li class="chip chip-filter">
       <input type="radio" id="radioCheck" name="radio" />
       <label class="chip-interactive" for="radioCheck">
-        <span class="visually-hidden">Filter by</span>
         Filter with radio 1
       </label>
     </li>
