@@ -101,13 +101,13 @@ Utilities: Remove Sass reference
 - ~~Missing bg-brand-secondary and bg-brand-tertiary~~
 - ~~How to handle data-bs-theme correctly and easily with tokens maybe ?~~
 
-Border:
-- Missing border-brand-secondary/tertiary and border-on-bg-brand-secondary/tertiary
+~~Border:~~
+- ~~Missing border-brand-secondary/tertiary and border-on-bg-brand-secondary/tertiary~~
 
-Color:
-- Missing text-brand-secondary/tertiary and text-on-bg-brand-secondary/tertiary
-- Values in some paragraph
-- Table to see back if this is needed
+~~Color:~~
+- ~~Missing text-brand-secondary/tertiary and text-on-bg-brand-secondary/tertiary~~
+- ~~Values in some paragraph~~
+- ~~Table to see back if this is needed~~
 
 Flex:
 - Remove Media object

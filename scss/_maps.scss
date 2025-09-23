@@ -164,6 +164,8 @@ $ouds-backgrounds: (
 // scss-docs-start ouds-maps-text-colors
 $ouds-text-colors: (
   "brand-primary": var(--#{$prefix}color-content-brand-primary),
+  "brand-secondary": if($ouds-color-content-brand-secondary != null, var(--#{$prefix}color-content-brand-secondary), null),
+  "brand-tertiary": if($ouds-color-content-brand-tertiary != null, var(--#{$prefix}color-content-brand-tertiary), null),
   "default": var(--#{$prefix}color-content-default),
   "disabled": var(--#{$prefix}color-content-disabled),
   "muted": var(--#{$prefix}color-content-muted),
