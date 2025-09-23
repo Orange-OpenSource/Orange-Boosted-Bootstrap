@@ -25,7 +25,7 @@
   justify-content: center;
   min-width: var(--#{$prefix}tag-min-width);
   min-height: var(--#{$prefix}tag-min-height);
-  padding: subtract(var(--#{$prefix}tag-padding-y), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-end), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-y), var(--#{$prefix}tag-border-width)) subtract(var(--#{$prefix}tag-padding-start), var(--#{$prefix}tag-border-width));
+  padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
   margin: 0;
   font-weight: 700;
   color: var(--#{$prefix}tag-color);
