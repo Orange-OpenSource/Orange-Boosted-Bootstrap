@@ -57,7 +57,6 @@
   border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
   @include get-font-size("label-large");
   @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
-  @include transition(all .1s ease-out);
 
   &.text-input-container-outlined {
     --#{$prefix}text-input-background-color: transparent;
@@ -71,10 +70,10 @@
   }
 
   > label {
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
     color: var(--#{$prefix}text-input-label-color);
-    @include transition(all .1s ease-out);
+    @include transition(font-size .1s ease-out);
 
     // Allow the whole text-input-container to be clickable to focus the input
     &::before {
@@ -93,7 +92,7 @@
     position: absolute;
     top: 50%;
     left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     padding: 0;
     color: var(--#{$prefix}text-input-color);
@@ -121,7 +120,7 @@
     position: absolute;
     top: 50%;
     left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
-    z-index: 2;
+    z-index: 1;
     display: flex;
     gap: $ouds-text-input-space-column-gap-inline-text;
     align-items: center;
@@ -142,19 +141,19 @@
     }
   }
 
-  [data-prefix] {
+  [data-bs-prefix] {
     &::before{
       display: block;
       color: var(--#{$prefix}color-content-muted);
-      content: attr(data-prefix);
+      content: attr(data-bs-prefix);
     }
   }
 
-  [data-suffix] {
+  [data-bs-suffix] {
     &::after{
       display: block;
       color: var(--#{$prefix}color-content-muted);
-      content: attr(data-suffix);
+      content: attr(data-bs-suffix);
     }
   }
 
@@ -187,6 +186,13 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       @include get-font-size("label-small");
+    }
+  }
+
+  // Prevent label flickering when input already focused
+  &:has(.text-input:focus) {
+    > label {
+      pointer-events: none;
     }
   }
 
@@ -233,7 +239,8 @@
     height: var(--#{$prefix}text-input-icon-size);
   }
 
-  &:has(> svg) {
+  &:has(> svg),
+  &:has(> img) {
     > .text-input,
     > .input-container,
     > label {
@@ -323,20 +330,21 @@
   max-width: var(--#{$prefix}text-input-max-width);
   padding-right: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-right));
   padding-left: subtract(var(--#{$prefix}text-input-padding-x), var(--#{$prefix}text-input-border-width-left));
-  margin-top: var(--#{$prefix}text-input-helper-margin-top);
   @include get-font-size("label-medium");
 }
 
 // Helper text and helper link
-.text-input-container ~ .text-input-helper,
-.text-input-container ~ .text-input-helper-link {
+.text-input-container ~ .text-input-helper {
   @extend %text-input-message;
-  display: flex;
+  margin-top: var(--#{$prefix}text-input-helper-margin-top);
   color: var(--#{$prefix}text-input-helper-color);
 }
 
-.text-input-container:has(> .text-input.is-invalid) ~ .text-input-helper,
-.text-input-container:has(> .text-input.is-invalid) ~ .text-input-helper-link{
+.text-input-container ~ .link {
+  @extend %text-input-message;
+}
+
+.text-input-container:has(.text-input.is-invalid):has(~ .text-input-error) ~ .text-input-helper {
   display: none;
 }
 
@@ -344,9 +352,10 @@
 .text-input-container ~ .text-input-error {
   @extend %text-input-message;
   display: none;
+  margin-top: var(--#{$prefix}text-input-helper-margin-top);
   color: var(--#{$prefix}text-input-error-color);
 }
 
-.text-input-container:has(> .text-input.is-invalid) ~ .text-input-error {
+.text-input-container:has(.text-input.is-invalid) ~ .text-input-error {
   display: flex;
 }
