@@ -54,9 +54,6 @@
     --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-negative-emphasized};
   }
 
-  &:has(.tag-asset-container) {
-    --#{$prefix}tag-padding-start: var(--#{$prefix}tag-padding-asset);
-  }
 
   .tag-icon,
   .tag-status-icon,
