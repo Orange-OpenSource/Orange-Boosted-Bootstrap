@@ -77,7 +77,7 @@ Filter chips allow users to filter content by selecting or deselecting specific 
 
 To create a filter chip, add `.chip-filter` to the `.chip`.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <input type="checkbox" id="appleCheck" checked />
       <label class="chip-interactive" for="appleCheck">
@@ -88,14 +88,12 @@ To create a filter chip, add `.chip-filter` to the `.chip`.
     <li class="chip chip-filter">
       <input type="checkbox" id="samsungCheck" />
       <label class="chip-interactive" for="samsungCheck">
-        <span class="visually-hidden">Filter by</span>
         Samsung
       </label>
     </li>
     <li class="chip chip-filter">
       <input type="checkbox" id="xiaomiCheck" />
       <label class="chip-interactive" for="xiaomiCheck">
-        <span class="visually-hidden">Filter by</span>
         Xiaomi
       </label>
     </li>
@@ -107,10 +105,11 @@ To create a filter chip, add `.chip-filter` to the `.chip`.
 
 To have only one active filter chip at a time, use the radio button version. All the rules explained in this page about filter chips apply on this variant as well.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <input type="radio" id="radioCheck" name="radio" />
       <label class="chip-interactive" for="radioCheck">
+        <span class="visually-hidden">Filter by</span>
         Filter with radio 1
       </label>
     </li>
@@ -136,9 +135,10 @@ The style is applied on `[aria-pressed="true"]` to enforce a good level of acces
 
 Make use of our [button JS plugin]([[docsref:/components/chip#button-plugin]]) or handle interactivity on your side, but make sure to use `aria-pressed`.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
+        <span class="visually-hidden">Filter by</span>
         Filter label using button 1
       </button>
     </li>
@@ -193,10 +193,11 @@ To display an icon add the icon as the last child of the `.chip-interactive`.
 
 Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also use font icon. Avoid using `<img />` since the color system won’t work on it.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <input type="checkbox" id="filterWithIcon" />
       <label class="chip-interactive" for="filterWithIcon">
+        <span class="visually-hidden">Filter by</span>
         Filter with icon
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -222,21 +223,22 @@ Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also 
 
 Make sure to provide an accessible text for each chip.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <input type="checkbox" id="filterIconOnly1" />
       <label class="chip-interactive chip-icon" for="filterIconOnly1">
+        <span class="visually-hidden">Filter by</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
-        <span class="visually-hidden">Favorites filter</span>
+        <span class="visually-hidden">Favorites</span>
       </label>
     </li>
     <li class="chip chip-filter">
       <input type="checkbox" id="filterIconOnly2" checked />
       <label class="chip-interactive chip-icon" for="filterIconOnly2">
         <span class="icon si si-settings" aria-hidden="true"></span>
-        <span class="visually-hidden">Technical filter</span>
+        <span class="visually-hidden">Technical</span>
       </label>
     </li>
   </ul>`} />
@@ -249,10 +251,11 @@ Add `disabled` attribute either on the input or on the button element to disable
 
 The following example shows every possible renderings depending on the filter chip type but it is not recommended to mix different types in a real use case.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <input type="checkbox" id="disabledFilter" checked disabled />
       <label class="chip-interactive" for="disabledFilter">
+        <span class="visually-hidden">Filter by</span>
         Disabled checked filter
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -275,7 +278,7 @@ Suggestion chips show relevant options based on user input or context. They help
 
 To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 
-<Example code={`<ul class="chip-container" aria-label="Suggestion bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
         <span class="visually-hidden">Answer with:</span>
@@ -302,9 +305,10 @@ To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 
 To display an icon, add the icon as the first child of the `.chip-interactive`.
 
-<Example code={`<ul class="chip-container" aria-label="Suggestion bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
+        <span class="visually-hidden">Answer with:</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
@@ -313,6 +317,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
     </li>
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
+        <span class="visually-hidden">Answer with:</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
@@ -329,19 +334,20 @@ Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also 
 
 Make sure to provide an accessible text for each chip.
 
-<Example code={`<ul class="chip-container" aria-label="Suggestion bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon">
+        <span class="visually-hidden">Answer with:</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
-        <span class="visually-hidden">Send: "I love it."</span>
+        <span class="visually-hidden">I love it.</span>
       </button>
     </li>
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon">
         <span class="icon si si-settings" aria-hidden="true"></span>
-        <span class="visually-hidden">Send: "Go to parameters."</span>
+        <span class="visually-hidden">Go to parameters.</span>
       </button>
     </li>
   </ul>`} />
@@ -354,7 +360,7 @@ Add `disabled` attribute on the button element to disable the chip.
 
 The following example shows every possible renderings depending on the suggestion chip type but it is not recommended to mix different types in a real use case.
 
-<Example code={`<ul class="chip-container" aria-label="Suggestion bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive" disabled>
         <span class="visually-hidden">Answer with:</span>
@@ -386,7 +392,7 @@ This part explains global truth among all the chip variants.
 
 By default when using `.chip-container` the chip list will scroll horizontally on one line.
 
-<Example code={`<ul class="chip-container" aria-label="Filter bar">
+<Example code={`<ul class="chip-container">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         <span class="visually-hidden">Filter by</span>
@@ -395,37 +401,31 @@ By default when using `.chip-container` the chip list will scroll horizontally o
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
@@ -435,7 +435,7 @@ By default when using `.chip-container` the chip list will scroll horizontally o
 
 Add `.flex-wrap` on the `.chip-container` element to display a wrapping list of chips. Beware with this option as it could take too much vertical space on mobile viewports, as a rule there should not be more than 2 or 3 lines of chips displayed.
 
-<Example code={`<ul class="chip-container flex-wrap" aria-label="Filter bar">
+<Example code={`<ul class="chip-container flex-wrap">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         <span class="visually-hidden">Filter by</span>
@@ -444,37 +444,31 @@ Add `.flex-wrap` on the `.chip-container` element to display a wrapping list of 
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
@@ -490,7 +484,7 @@ This layout combines wrapping and vertical scrolling, please note that a `style=
 This part is experimental and could change in the future.
 </Callout>
 
-<Example code={`<ul class="chip-container flex-wrap" aria-label="Filter bar" style="max-height: 115px;">
+<Example code={`<ul class="chip-container flex-wrap" style="max-height: 115px;">
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
         <span class="visually-hidden">Filter by</span>
@@ -499,109 +493,91 @@ This part is experimental and could change in the future.
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive active" aria-pressed="true" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button">
-        <span class="visually-hidden">Filter by</span>
         Quite long label
       </button>
     </li>
