@@ -51,7 +51,7 @@ For both types of tag, OUDS Web has a basic `.tag` class that sets up default st
 <Example showToolbar={false} code={`<p class="tag">Tag</p>`
 } />
 
-<Example showToolbar={false} code={`<button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Click to remove tag</span></button>`
+<Example showToolbar={false} code={`<button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Input tag</button>`
 } />
 
 ## Tag
@@ -59,19 +59,25 @@ For both types of tag, OUDS Web has a basic `.tag` class that sets up default st
 ### Overview
 
 <Callout type="warning">
-For accessibility and semantics reasons, a tag—like any other informative element—must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
+For accessibility reasons, a tag, like any other informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
+
+When inserting tags into a list, wrap the list in a container (probably a `<ul>` or `<ol>`), with an appropriate `aria-label` to describe the group of tags.
 </Callout>
 
-<Example code={`<ul class="list-unstyled d-flex column-gap-xs">
+<Example code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
     <li class="tag">Roaming</li>
     <li class="tag">5G Ready</li>
     <li class="tag">4G</li>
   </ul>`
 } />
 
-OUDS Web [color and background utilities]([[docsref:/helpers/color-background]]) can be applied to display colored tag variants, either emphasized or muted. Each color has its own semantic purpose. Please follow the [tag design specifications](https://unified-design-system.orange.com/472794e18/p/7565ce-tag/t/a9c2192f98) to choose the right color for the right semantic.
+OUDS Web [color and background utilities]([[docsref:/helpers/color-background]]) can be applied to display colored tag variants. Colors are classified in two hierarchies, emphasized (for key tags) or muted (for secondary tags), and each color has its own semantic purpose. Please follow the tag design guidelines to choose the right color for the right usage.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Callout type="warning">
+Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text or add additional text with the class `.visually-hidden`.
+</Callout>
+
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted colors">
     <li class="tag text-bg-status-neutral-muted">Neutral</li>
     <li class="tag text-bg-status-accent-muted">Accent</li>
     <li class="tag text-bg-status-positive-muted">Positive</li>
@@ -79,7 +85,7 @@ OUDS Web [color and background utilities]([[docsref:/helpers/color-background]])
     <li class="tag text-bg-status-warning-muted">Warning</li>
     <li class="tag text-bg-status-negative-muted">Negative</li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Emphasized colors">
     <li class="tag text-bg-status-neutral-emphasized">Neutral</li>
     <li class="tag text-bg-status-accent-emphasized">Accent</li>
     <li class="tag text-bg-status-positive-emphasized">Positive</li>
@@ -88,18 +94,13 @@ OUDS Web [color and background utilities]([[docsref:/helpers/color-background]])
     <li class="tag text-bg-status-negative-emphasized">Negative</li>
   </ul>`} />
 
-
-<Callout type="warning">
-  Keep in mind that color should not be the only way to convey information, so if the color has a strong meaning, it should be reflected in the tag's text, or you should add a `.visually-hidden` additional text.
-</Callout>
-
 ### Variants
 
 #### Squared
 
 To display tags with squared corners, add the `.rounded-none` utility class to the tag.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Keywords">
     <li class="tag rounded-none text-bg-status-accent-muted">Accent muted</li>
     <li class="tag rounded-none text-bg-status-accent-emphasized">Accent emphasized</li>
   </ul>`} />
@@ -108,7 +109,7 @@ To display tags with squared corners, add the `.rounded-none` utility class to t
 
 To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
 
-<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted bullet tag examples">
     <li class="tag text-bg-status-neutral-muted">
       <span class="tag-bullet"></span>
       Neutral
@@ -134,7 +135,7 @@ To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
       Negative
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Emphasized bullet tag examples">
     <li class="tag text-bg-status-neutral-emphasized">
       <span class="tag-bullet"></span>
       Neutral
@@ -161,16 +162,16 @@ To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
     </li>
   </ul>`} />
 
-<Example showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="...">
     ...
     <li class="tag text-bg-status-neutral-muted">
       <span class="tag-bullet"></span>
-      Neutral
+      Neutral muted
     </li>
     ...
     <li class="tag text-bg-status-accent-emphasized">
       <span class="tag-bullet"></span>
-      Neutral
+      Neutral emphasized
     </li>
   </ul>`} />
 
@@ -184,7 +185,7 @@ Status icons are predefined in SCSS for positive, info, warning and negative fun
 If the functional meaning of the text is not sufficiently clear, add additional text with the `.visually-hidden` class to ensure accessibility for all users.
 </Callout>
 
-<Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Functional muted statuses">
     <li class="tag text-bg-status-positive-muted">
       <span class="tag-status-icon"></span>
       Activated
@@ -202,7 +203,7 @@ If the functional meaning of the text is not sufficiently clear, add additional 
       Error
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Functional emphasized statuses">
     <li class="tag text-bg-status-positive-emphasized">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Success:</span>
@@ -237,7 +238,7 @@ To display a colored icon, add the icon inside the tag, with a `.tag-icon` class
 Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
 </Callout>
 
-<Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional muted statuses">
     <li class="tag text-bg-status-neutral-muted">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
@@ -251,7 +252,7 @@ Since icons in tags are always next to some text, they are purely decorative and
       Accent
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional emphasized statuses">
     <li class="tag text-bg-status-neutral-emphasized">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
@@ -323,24 +324,24 @@ You can see a similar live example with buttons with the full JavaScript code on
 
 To display a small tag, add the class `.tag-sm` to the tag.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md">
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Mobile coverage">
     <li class="tag tag-sm">Small neutral</li>
     <li class="tag tag-sm">
       <span class="tag-bullet"></span>
-      Small neutral
+      Roaming
     </li>
     <li class="tag tag-sm">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
       </svg>
-      Small neutral
+      5G Ready
     </li>
     <li class="tag text-bg-status-accent-emphasized tag-sm loading">
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
         <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
       </svg>
       <span role="status" class="visually-hidden">Loading</span>
-      Small loader
+      ...
     </li>
   </ul>`} />
 
@@ -348,12 +349,12 @@ To display a small tag, add the class `.tag-sm` to the tag.
 
 A tag can be used near some text or some title (to show status or key details), or in a list (to indicate categories or keywords). If needed, you can use the [vertical alignment utilities]([[docsref:/utilities/vertical-align]]) to vertically center inline content.
 
-<Example code={`<ul class="list-unstyled d-flex column-gap-xs">
+<Example code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
     <li class="tag">Roaming</li>
     <li class="tag">5G Ready</li>
     <li class="tag">4G</li>
   </ul>
-  <ul class="list-unstyled d-flex column-gap-xs">
+  <ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
     <li class="tag tag-sm">Roaming</li>
     <li class="tag tag-sm">5G Ready</li>
   </ul>
@@ -364,13 +365,13 @@ A tag can be used near some text or some title (to show status or key details), 
 
 Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) and the vertical space (default value is obtained thanks to `.row-gap-md`).
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md">
-    <li class="tag">Label</li>
-    <li class="tag">Label</li>
-    <li class="tag">Label</li>
-    <li class="tag">Label</li>
-    <li class="tag">Label</li>
-    <li class="tag">Label</li>
+<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md" aria-label="Keywords">
+    <li class="tag">Label 1</li>
+    <li class="tag">Label 2</li>
+    <li class="tag">Label 3</li>
+    <li class="tag">Label 4</li>
+    <li class="tag">Label 5</li>
+    <li class="tag">Label 6</li>
   </ul>`} />
 
 ## Input tag
@@ -386,25 +387,25 @@ Input tags are interactive and may be associated to an input field to be added d
 It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
 <Callout type="warning">
-  For accessibility reasons, input tags should be wrapped in a container with an appropriate `aria-label` to describe the group of tags. Each input tag should contain a `.visually-hidden` text to indicate the action that will be performed when the tag is clicked.
+  For accessibility reasons, a list of input tags should be wrapped in a container with an appropriate `aria-label` to describe the group of input tags. Each input tag should contain a `.visually-hidden` text to indicate the action that will be performed when the tag is clicked.
 </Callout>
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected tags">
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected mobile coverage">
     <li>
       <button type="button" class="tag tag-input">
-        <span class="visually-hidden">Remove the tag:</span>
+        <span class="visually-hidden">Remove the tag</span>
         Roaming
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input">
-        <span class="visually-hidden">Remove the tag:</span>
+        <span class="visually-hidden">Remove the tag</span>
         5G Ready
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input">
-          <span class="visually-hidden">Remove the tag:</span>
+          <span class="visually-hidden">Remove the tag</span>
           4G
       </button>
     </li>
@@ -416,22 +417,22 @@ It can be removed on click, but you have to implement this behavior by yourself,
 
 To disable an input tag, just add the `disabled` attribute to the `.tag`.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected tags">
+<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected mobile coverage">
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag:</span>
+        <span class="visually-hidden">Remove the tag</span>
         Roaming
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag:</span>
+        <span class="visually-hidden">Remove the tag</span>
         5G
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag:</span>
+        <span class="visually-hidden">Remove the tag</span>
         4G
       </button>
     </li>
@@ -441,11 +442,11 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
 
 Input tags are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs" aria-label="Selected tags">
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 1</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 2</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 3</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 4</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 5</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag:</span>Label 6</button></li>
+<Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs" aria-label="Selected keywords">
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 1</button></li>
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 2</button></li>
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 3</button></li>
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 4</button></li>
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 5</button></li>
+    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 6</button></li>
   </ul>`} />

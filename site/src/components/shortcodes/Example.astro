@@ -71,7 +71,7 @@ const simplifiedMarkup = markup
 <div class="bd-example-snippet bd-code-snippet">
   {
     showPreview && (
-      <div id={id} class:list={['bd-example order-first m-none border-none', className]}>
+      <div id={id} class:list={['bd-example order-first m-none border-none', className, showToolbar ? '' : 'border-default border-thin border-bottom']}>
         <Fragment set:html={markup} />
       </div>
     )
@@ -81,10 +81,7 @@ const simplifiedMarkup = markup
     showMarkup && (
       <>
         <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} />
-        <!-- <div class:list={['highlight', showToolbar ? '' : 'border-default border-thin border-top']}>
-          <Prism code={simplifiedMarkup} lang={lang} />
-        </div> -->
-        {showPreview && (
+        {showPreview && showToolbar && (
           <div class="d-flex order-first align-items-center highlight-toolbar ps-lg border-top border-bottom border-thin border-default">
             <small class="font-monospace text-muted text-uppercase my-sm">{lang}</small>
             <!-- OUDS mod: buttons are not displayed on small screens -->
