@@ -92,8 +92,8 @@ Button:
 - Rounded section to remove for brand including ~~title and~~ toc
 - Handle colored bg sections
 
-Color&Background:
-- Missing text-bg-brand-secondary and text-bg-brand-tertiary
+~~Color&Background:~~
+- ~~Missing text-bg-brand-secondary and text-bg-brand-tertiary~~
 
 Utilities: Remove Sass reference
 
@@ -109,12 +109,12 @@ Utilities: Remove Sass reference
 - ~~Values in some paragraph~~
 - ~~Table to see back if this is needed~~
 
-Flex:
-- Remove Media object
+~~Flex:~~
+- ~~Remove Media object~~
 
-Spacing:
-- Reference to tokens to update maybe, and their final value or remove.
-- Reference to tokens scaled to update maybe, and their final value or remove.
+~~Spacing:~~
+- ~~Reference to tokens to update maybe, and their final value or remove.~~
+- ~~Reference to tokens scaled to update maybe, and their final value or remove.~~
 
 Text:
 - Update the badge example

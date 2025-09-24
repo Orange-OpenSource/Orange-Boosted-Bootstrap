@@ -26,6 +26,10 @@
   $text-bg-color: var(--#{$prefix}color-content-default);
   @if index(("brand-primary"), #{$color}) {
     $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);
+  } @else if index(("brand-secondary"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-brand-secondary);
+  } @else if index(("brand-tertiary"), #{$color}) {
+    $text-bg-color: var(--#{$prefix}color-content-on-brand-tertiary);
   } @else if index(("emphasized"), #{$color}) {
     $text-bg-color: var(--#{$prefix}color-always-white);
   } @else if index(("always-black"), #{$color}) {
