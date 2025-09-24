@@ -14,6 +14,11 @@ import { capitalizeFirstLetter } from './utils'
 // An object containing all the data types and their associated schema. The key should match the name of the data file
 // in the `./site/data/` directory.
 const dataDefinitions = {
+  '_components-versions': z
+    .object({
+      name: z.string(),
+      value: z.string()
+    }).array(),
   'background-colors': z
     .object({
       name: z.string(),

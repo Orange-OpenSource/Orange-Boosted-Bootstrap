@@ -2,6 +2,7 @@
 import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
 import type { LayoutOverridesHTMLAttributes } from '@libs/layout'
 import { getSlug, processMarkdownToHtml } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
@@ -26,6 +27,7 @@ if (frontmatter.toc) {
   bodyProps['data-bs-spy'] = 'scroll'
   bodyProps['data-bs-target'] = '#TableOfContents'
 }
+const currentComponentSlug = frontmatter.title.toLowerCase().replaceAll(' ', '-');
 ---
 
 <BaseLayout {...Astro.props} layout="docs" overrides={{ body: bodyProps }}>
@@ -81,6 +83,15 @@ if (frontmatter.toc) {
         <div class="bd-subtitle mt-sm">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
+        {getData('_components-versions').map((component) => {
+          return currentComponentSlug.startsWith(component.name) ? (
+            <p class="tag text-bg-status-info-muted mb-0">
+              Component design version: v{component.value}
+            </p>
+          ) : (
+            <></>
+          );
+        })}
       </div>
 
       <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
