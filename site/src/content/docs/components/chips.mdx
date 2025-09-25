@@ -230,11 +230,10 @@ Make sure to provide an accessible text for each chip.
     <li class="chip chip-filter">
       <input type="checkbox" id="filterIconOnly1" />
       <label class="chip-interactive chip-icon" for="filterIconOnly1">
-        <span class="visually-hidden">Filter by</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
-        <span class="visually-hidden">Favorites</span>
+        <span class="visually-hidden">Filter by favorites</span>
       </label>
     </li>
     <li class="chip chip-filter">
@@ -284,7 +283,7 @@ To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
 <Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
-        <span class="visually-hidden">Answer with:</span>
+        <span class="visually-hidden">Answer with</span>
         Thanks.
       </button>
     </li>
@@ -309,7 +308,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
 <Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
-        <span class="visually-hidden">Answer with:</span>
+        <span class="visually-hidden">Answer with</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
@@ -337,7 +336,7 @@ Make sure to provide an accessible text for each chip.
 <Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon">
-        <span class="visually-hidden">Answer with:</span>
+        <span class="visually-hidden">Answer with</span>
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
@@ -363,7 +362,7 @@ The following example shows every possible renderings depending on the suggestio
 <Example code={`<ul class="chip-container">
     <li class="chip chip-suggestion">
       <button class="chip-interactive" disabled>
-        <span class="visually-hidden">Answer with:</span>
+        <span class="visually-hidden">Answer with</span>
         Thanks.
       </button>
     </li>
@@ -378,7 +377,7 @@ The following example shows every possible renderings depending on the suggestio
     <li class="chip chip-suggestion">
       <button class="chip-interactive chip-icon" disabled>
         <span class="icon si si-settings" aria-hidden="true"></span>
-        <span class="visually-hidden">Send: "Go to parameters."</span>
+        <span class="visually-hidden">Send "Go to parameters."</span>
       </button>
     </li>
   </ul>`} />
