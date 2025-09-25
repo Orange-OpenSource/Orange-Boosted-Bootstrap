@@ -46,6 +46,8 @@ You can find here the [OUDS chip design guidelines](https://unified-design-syste
   </li>
 </ul>
 
+### Approach
+
 Chip components are always displayed in a containing list with a `ul.chip-container` class as they are always displayed as a group. This can be adapted to your needs and context of use.
 
 `.chip-container` manages the overall chip list layout.
@@ -60,7 +62,11 @@ Chip components are always displayed in a containing list with a `ul.chip-contai
 
 ### Accessibility
 
-For visually impaired and blind users, the visual context is inaccessible. Thus, they cannot understand the purpose of the chips on the page. So it's mandatory to add a hidden text (or an `aria-label` on the containing `ul` for radio buttons) to explain the use of chips without context. Don’t forget to adapt and translate this text to your use case.
+Visually impaired and blind users will lack the visual context that permits to understand the chips list purpose on the page especially if chips' labels are not self-explanatory. Thus it's mandatory to add textual information to explain what it represents.
+
+If no visible list title is present, a hidden text on the first element is the best way to achieve this as it is the most widely compatible solution. For chips lists [based on radio buttons](#using-radio-buttons), an `aria-label` on the containing `ul` is better suited as the selected element will be vocalized first instead of the first element in the list.
+
+Several examples are provided below but they will need to be adapted for actual use cases.
 
 ### Pseudo elements
 
@@ -266,7 +272,7 @@ The following example shows every possible renderings depending on the filter ch
     </li>
     <li class="chip chip-filter">
       <button class="chip-interactive" data-bs-toggle="button" disabled>
-        Disabled button filter
+        Disabled unchecked filter
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
         </svg>
