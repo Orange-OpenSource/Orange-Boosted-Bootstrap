@@ -112,7 +112,7 @@ Utilities: Remove Sass reference
 ~~Flex:~~
 - ~~Remove Media object~~
 
-~~Spacing:~~
+Spacing:
 - ~~Reference to tokens to update maybe, and their final value or remove.~~
 - ~~Reference to tokens scaled to update maybe, and their final value or remove.~~
 
