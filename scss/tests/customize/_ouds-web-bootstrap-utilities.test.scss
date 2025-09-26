@@ -3598,6 +3598,14 @@ $utilities: ();
           background-color: var(--bs-color-always-white) !important;
         }
 
+        .bg-opacity-lower {
+          background-color: var(--bs-color-opacity-lower) !important;
+        }
+
+        .bg-opacity-lowest {
+          background-color: var(--bs-color-opacity-lowest) !important;
+        }
+
         .bg-transparent {
           background-color: transparent !important;
         }
@@ -14497,6 +14505,14 @@ $utilities: ();
 
         .bg-always-white {
           background-color: var(--bs-color-always-white) !important;
+        }
+
+        .bg-opacity-lower {
+          background-color: var(--bs-color-opacity-lower) !important;
+        }
+
+        .bg-opacity-lowest {
+          background-color: var(--bs-color-opacity-lowest) !important;
         }
 
         .bg-transparent {

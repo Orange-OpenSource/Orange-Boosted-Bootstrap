@@ -51,9 +51,9 @@
     "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config ../../build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "astro-dev": "set BRAND=orange&& astro dev --root ../../site --port 4321",
+    "astro-dev": "set BRAND=orange&& astro dev --root ../../site --port 9001",
     "astro-build": "set BRAND=orange&& astro build --root ../../site",
-    "astro-preview": "set BRAND=orange&& astro preview --root ../../site --port 4321"
+    "astro-preview": "set BRAND=orange&& astro preview --root ../../site --port 9001"
   },
   "license": "MIT"
 }
