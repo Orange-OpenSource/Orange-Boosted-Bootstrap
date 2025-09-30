@@ -7,6 +7,7 @@ toc: true
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
+import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
 You can find here the [OUDS Link design guidelines](https://unified-design-system.orange.com/472794e18/p/31c33b-link).
@@ -31,12 +32,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 </Callout>
 
 <Example class="p-none" code={`<div class="bg-brand-primary p-lg">
-    <div data-bs-theme="light">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
     </div>
   </div>
   <div class="bg-status-negative-emphasized p-lg">
-    <div data-bs-theme="root-inverted">
+    <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
     </div>
   </div>`} />

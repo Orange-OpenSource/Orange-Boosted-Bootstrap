@@ -95,7 +95,7 @@ Button:
 ~~Color&Background:~~
 - ~~Missing text-bg-brand-secondary and text-bg-brand-tertiary~~
 
-Utilities: Remove Sass reference
+~~Utilities: Remove Sass reference~~
 
 ~~Background:~~
 - ~~Missing bg-brand-secondary and bg-brand-tertiary~~
