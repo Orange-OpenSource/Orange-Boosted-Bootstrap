@@ -1,1 +1,1 @@
-The recommended way of using icons is through an SVG sprite file. [Read more about Solaris icons usage]([[docsref:/extend/icons/#use-solaris-icons]])
+The recommended way to use icons is to fill an *SVG sprite file*, and use `currentColor` for styling. If really necessary, for example when you have a lot of icons, you can use an icon font. Find out [more about using icons]([[docsref:/extend/icons#use-solaris-icons]]).
