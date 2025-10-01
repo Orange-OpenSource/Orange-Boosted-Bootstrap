@@ -61,7 +61,7 @@ For both types of tag, OUDS Web has a basic `.tag` class that sets up default st
 <Callout type="warning">
 For accessibility reasons, a tag, like any other informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
 
-When inserting tags into a list, wrap the list in a container (probably a `<ul>` or `<ol>`), with an appropriate `aria-label` to describe the group of tags.
+When inserting tags into a list, wrap the list in a semantic container (usually a `<ul>` or `<ol>`). If the purpose of the tags is not clear enough (especially without visually context), an `aria-label` must be added to the container to explain the function of the tags.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
@@ -393,20 +393,20 @@ It can be removed on click, but you have to implement this behavior by yourself,
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected mobile coverage">
     <li>
       <button type="button" class="tag tag-input">
-        <span class="visually-hidden">Remove the tag</span>
         Roaming
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input">
-        <span class="visually-hidden">Remove the tag</span>
         5G Ready
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input">
-          <span class="visually-hidden">Remove the tag</span>
           4G
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
   </ul>`} />
@@ -420,20 +420,20 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected mobile coverage">
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag</span>
         Roaming
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag</span>
         5G
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
     <li>
       <button type="button" class="tag tag-input" disabled>
-        <span class="visually-hidden">Remove the tag</span>
         4G
+        <span class="visually-hidden">Remove this tag</span>
       </button>
     </li>
   </ul>`} />
@@ -443,10 +443,10 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
 Input tags are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs" aria-label="Selected keywords">
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 1</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 2</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 3</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 4</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 5</button></li>
-    <li><button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Label 6</button></li>
+    <li><button type="button" class="tag tag-input">Label 1<span class="visually-hidden">Remove this tag</span></li></button></li>
+    <li><button type="button" class="tag tag-input">Label 2<span class="visually-hidden">Remove this tag</span></li></button></li>
+    <li><button type="button" class="tag tag-input">Label 3<span class="visually-hidden">Remove this tag</span></li></button></li>
+    <li><button type="button" class="tag tag-input">Label 4<span class="visually-hidden">Remove this tag</span></li></button></li>
+    <li><button type="button" class="tag tag-input">Label 5<span class="visually-hidden">Remove this tag</span></li></button></li>
+    <li><button type="button" class="tag tag-input">Label 6<span class="visually-hidden">Remove this tag</span></li></button></li>
   </ul>`} />
