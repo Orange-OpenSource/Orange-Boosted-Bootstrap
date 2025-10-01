@@ -3,6 +3,7 @@ import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
+import { getVersionedDocsPath } from '@libs/path'
 
 const sidebar = getData('sidebar')
 ---
@@ -23,7 +24,7 @@ const sidebar = getData('sidebar')
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
-                    <use xlink:href={`#${group.icon}`} />
+                    <use xlink:href={getVersionedDocsPath(`/assets/img/ouds-web-sprite.svg#${group.icon}`)} />
                   </svg>
                 )}
                 {group.title}

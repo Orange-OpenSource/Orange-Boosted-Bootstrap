@@ -40,13 +40,13 @@ download:
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:                            "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/dist/css/ouds-web.min.css"
+  css:                            "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/packages/orange/dist/css/ouds-web.min.css"
   css_hash:                       "sha384-PzLB7BzgVrsdYb5Uj4WNKPPfdXQdYv4bdjBEsMZ5oe+dEz22H7ILLktJEDcaKObr"
-  css_bootstrap:                  "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/dist/css/ouds-web-bootstrap.min.css"
+  css_bootstrap:                  "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/packages/orange/dist/css/ouds-web-bootstrap.min.css"
   css_bootstrap_hash:             "sha384-RhKbYWD8fKWN5uAFzA6RnG0dyttdNmvRz1N8kaY9gYeetcUDSc4qynJcLUuRxrHd"
-  css_bootstrap_rtl:              "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/dist/css/ouds-web-bootstrap.rtl.min.css"
+  css_bootstrap_rtl:              "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/packages/orange/dist/css/ouds-web-bootstrap.rtl.min.css"
   css_bootstrap_rtl_hash:         "sha384-RLMjSI5Jvz0bhc6E/7/49QxlQtiVXzlRE0VklL2vRq7C7iMy5SwMeTWXvuCAVHXl"
-  css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/dist/css/ouds-web.rtl.min.css"
+  css_rtl:                        "https://cdn.jsdelivr.net/npm/@ouds/web-orange@0.5.0/packages/orange/dist/css/ouds-web.rtl.min.css"
   css_rtl_hash:                   "sha384-3HhdC+Q2+wK3F5ren8Ru8r9kB4Z2rX0TVz1t6SEJ1MlSlve/toMAl6/AxAAfdCa2"
   js:                             "https://cdn.jsdelivr.net/npm/@ouds/web-common@0.5.0/dist/js/ouds-web.min.js"
   js_hash:                        "sha384-25YZxD729MuJBuRhsSa8sCpN/CdcBVIhQZqWNr2kxM8mgAy8jV/a39ngb+eZoHhT"

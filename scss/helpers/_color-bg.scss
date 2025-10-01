@@ -22,7 +22,7 @@
 }
 
 // OUDS mod
-@each $color, $value in map-remove($ouds-backgrounds, "transparent") {
+@each $color, $value in map-remove($ouds-backgrounds, "transparent", "opacity-lower", "opacity-lowest") {
   $text-bg-color: var(--#{$prefix}color-content-default);
   @if index(("brand-primary"), #{$color}) {
     $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);

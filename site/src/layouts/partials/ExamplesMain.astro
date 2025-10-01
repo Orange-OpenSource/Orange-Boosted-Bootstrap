@@ -63,7 +63,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                           aria-labelledby={`edit-${index} starter-${index}`}
                         >
                           <svg aria-hidden="true">
-                            <use xlink:href="#lightning-charge-fill" />
+                            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
                           </svg>
                           <span id={`edit-${index}`}>Edit in StackBlitz</span>
                         </a>

@@ -130,7 +130,7 @@ const { addedIn, layout, title } = Astro.props
                 >
                   <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
                   Orange
-                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'orange'}]} aria-hidden="true"><use href="#check2"></use></svg>
+                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'orange'}]} aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
                 </a>
               </li>
               <li>
@@ -142,7 +142,7 @@ const { addedIn, layout, title } = Astro.props
                 >
                   <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} alt="Toggle brand" loading="lazy" />
                   Sosh
-                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'sosh'}]} aria-hidden="true"><use href="#check2"></use></svg>
+                  <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'sosh'}]} aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
                 </a>
               </li>
             </ul>

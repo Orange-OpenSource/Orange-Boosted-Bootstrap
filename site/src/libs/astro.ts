@@ -178,11 +178,13 @@ function copyTarteauCitron() {
 // Copy the `dist` folder from the root of the repo containing the latest version of OUDS Web to make it available from
 // the `/${process.env.BRAND}/docs/${docs_version}/dist` URL.
 function copyOudsWeb() {
-  const source = path.join(process.cwd(), 'dist')
+  const sourceJs = path.join(process.cwd(), 'dist')
+  const sourceCss = path.join(process.cwd(), `packages/${getConfig().brand}/dist`)
   const destination = path.join(getDocsPublicFsPath(), getConfig().brand, 'docs', getConfig().docs_version, 'dist')
 
   fs.mkdirSync(destination, { recursive: true })
-  fs.cpSync(source, destination, { recursive: true })
+  fs.cpSync(sourceJs, destination, { recursive: true })
+  fs.cpSync(sourceCss, destination, { recursive: true })
 }
 
 // Copy the content as-is of the `static` folder to make it available from the `/` URL.

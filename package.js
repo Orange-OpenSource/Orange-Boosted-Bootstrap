@@ -12,7 +12,7 @@ Package.describe({
 Package.onUse(api => {
   api.versionsFrom('METEOR@1.0')
   api.addFiles([
-    'dist/css/ouds-web.css',
+    'packages/orange/dist/css/ouds-web.css',
     'dist/js/ouds-web.js'
   ], 'client')
 })

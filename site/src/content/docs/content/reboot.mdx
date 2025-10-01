@@ -9,6 +9,8 @@ aliases:
 toc: true
 ---
 
+import { getMode } from '@libs/sass-variables'
+
 ## Approach
 
 Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
@@ -120,7 +122,10 @@ Links have a disabled style when using an `aria-disabled="true"` attribute.
 
 <Example code={`<a aria-disabled="true">This is an example of a disabled link</a>`} />
 
-Visited links don’t have a specific style by default. The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
+Visited links don’t have a specific style by default.
+
+<BrandSpecific brand="orange">
+The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
 
 <Example code={`<div class="visited-links">
     <div>
@@ -133,6 +138,7 @@ Visited links don’t have a specific style by default. The `:visited` state can
   <div>
     <a href="." class="visited-links">This is an example of a visited link</a>
   </div>`} />
+</BrandSpecific>
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
@@ -142,18 +148,18 @@ On colored backgrounds, links should have a different style. Visited links don�
 
 <Example class="p-none" code={`<div class="colored-bg">
     <div class="bg-brand-primary p-lg">
-      <div data-bs-theme="light">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
     <div class="bg-status-negative-emphasized p-lg">
-      <div data-bs-theme="root-inverted">
-        This is an example of <a href="#">link on colored background</a> in a paragraph.
+      <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
+        This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
   </div>
   <div class="bg-brand-primary p-lg">
-    <div data-bs-theme="light">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
     </div>
   </div>`} />

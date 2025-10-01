@@ -45,7 +45,7 @@ if (layout === 'docs' && version === getConfig().docs_version) {
         href={isHome ? '/' : `/${process.env.BRAND}/docs/${getConfig().docs_version}/${versionsLink}`}
       >
         Latest ({getConfig().docs_version}.x)
-        <svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
       </a>
     </li>
     <li><hr class="dropdown-divider" /></li>

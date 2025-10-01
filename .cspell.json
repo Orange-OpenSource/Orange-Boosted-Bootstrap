@@ -158,7 +158,7 @@
   "language": "en-US",
   "ignorePaths": [
     ".cspell.json",
-    "dist/",
+    "packages/**/dist/",
     "*.min.*",
     "**/*rtl*",
     "**/tests/**",

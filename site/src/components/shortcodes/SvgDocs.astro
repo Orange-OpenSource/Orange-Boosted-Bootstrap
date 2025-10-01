@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import Code from '@shortcodes/Code.astro'
 import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 /**
  * Prints SVG content.
@@ -34,7 +35,7 @@ const size = fs.statSync(svgPath).size
   <div slot="pre" class="bd-clipboard">
     <div class="d-flex ms-auto">
       <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy to clipboard">
-        <svg class="bi" aria-hidden="true"><use xlink:href="#copy"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use></svg>
       </button>
     </div>
   </div>

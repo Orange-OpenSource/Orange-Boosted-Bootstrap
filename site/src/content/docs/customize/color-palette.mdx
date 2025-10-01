@@ -9,6 +9,7 @@ toc: true
 import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { asArray } from '@libs/sass-variables'
+import { getVersionedDocsPath } from '@libs/path'
 
 export const toto = asArray.filter((token) => token.name.match(new RegExp(`^\\$core-(ouds|${getConfig().brand})-color`))).reduce((accColors, color) => {
   const category = color.name.split('-').slice(3, -1).join('-')
@@ -44,10 +45,10 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
               {color.compiledValue.includes('rgba') && (
                 <>
                   <svg class="decorative-xs-icon text-always-black" x="15" y="15" width="20" height="20" aria-hidden="true">
-                    <use xlink:href="#ui-light-mode"/>
+                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-light-mode')}/>
                   </svg>
                   <svg class="decorative-xs-icon text-always-white" x="65" y="15" width="20" height="20" aria-hidden="true">
-                    <use xlink:href="#ui-dark-mode"/>
+                    <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-dark-mode')}/>
                   </svg>
                 </>
               )}

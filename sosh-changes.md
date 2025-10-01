@@ -1,27 +1,26 @@
 Homepage:
-Different design for the homepage ?
 - Banner image
 - ~~Package name~~
 - ~~CDN links~~, associated hashes
 - ~~path must be updated~~
 
-Orange reference to update to Sosh or ${brand}
+~~Orange reference to update to Sosh or ${brand}~~
 Favicon
-Update doc CSS to use tokens instead of hard coded values
-Use special set of icons ? Need to update docs examples respectively
+~~Update doc CSS to use tokens instead of hard coded values~~
+~~Use special set of icons ? Need to update docs examples respectively~~
 Use Sosh font
 All colored bg examples must be remastered
 Restore a good rendering for the tarteaucitron
 Restore a good rendering for the search
 
-Introduction:
+~~Introduction:~~
 - ~~Different Codepen for different brands~~
 - ~~Package name~~
-- ~~CDN links~~, associated hashes
+- ~~CDN links, associated hashes~~
 
 Download:
 - ~~Package name~~
-- ~~CDN links~~, associated hashes
+- ~~CDN links, associated hashes~~
 - Careful about release urls and archives -> Need to determine what will be the release process
 
 ~~Contents:~~
@@ -46,9 +45,9 @@ Download:
 - ~~Include paths need to be updated~~
 - ~~If we keep the token reference, probably need to update the filepath~~
 
-Breakpoints:
+~~Breakpoints:~~
 - ~~Breakpoints could be different and also dimensions~~
-- Customizable breakpoints to remove or replace in custom libraries
+- ~~Customizable breakpoints to remove or replace in custom libraries~~
 - ~~Update comments with values inside~~
 
 ~~Containers:~~
@@ -81,16 +80,16 @@ Typography:
 - Values in tables
 - Remove Sass reference
 
-Checkbox, radio, switch:
-- Link to DSM to update ?
-- Fix the rendering
+~~Checkbox, radio, switch:~~
+- ~~Link to DSM to update ?~~
+- ~~Fix the rendering~~
 
-Breadcrumb, links:
-- Fix the rendering for the chevron in the middle of the component.
+~~Breadcrumb, links:~~
+- ~~Fix the rendering for the chevron in the middle of the component.~~
 
-Button:
-- Rounded section to remove for brand including ~~title and~~ toc
-- Handle colored bg sections
+~~Button:~~
+- ~~Rounded section to remove for brand including title and toc~~
+- ~~Handle colored bg sections~~
 
 ~~Color&Background:~~
 - ~~Missing text-bg-brand-secondary and text-bg-brand-tertiary~~
@@ -112,7 +111,7 @@ Button:
 ~~Flex:~~
 - ~~Remove Media object~~
 
-Spacing:
+~~Spacing:~~
 - ~~Reference to tokens to update maybe, and their final value or remove.~~
 - ~~Reference to tokens scaled to update maybe, and their final value or remove.~~
 
@@ -120,9 +119,9 @@ Text:
 - Update the badge example
 - Update font-size values or remove
 
-Icons:
-- Solaris icons ?
-- Value to update or remove
+~~Icons:~~
+- ~~Solaris icons ?~~
+- ~~Value to update or remove~~
 
 ~~Translations:~~
 - ~~Remove page~~
@@ -161,12 +160,18 @@ Handle this somehow:
 - define vars for css bg in docs
 - See where to add the new file structure and explain how to use
 - check component rendering in the doc
+- check bundlewatch
+- Check all commit in merge
+- Check all `.bg-` and add getMode when needed
+- Check all the CI files
 
 After PR is merged:
 - Make redirects on the ouds-web-doc already existing
 - Probably warn about storybook changing its urls for DSM
 - Probably cut Custom libraries page for other brands and update the side menu
 - Manage Storybook for multi branding
+- Reintroduce values of tokens in the doc ? Spacing, Text, Icons
+- Reintroduce Solaris icons
 
 A11y review:
 - Header brand selector

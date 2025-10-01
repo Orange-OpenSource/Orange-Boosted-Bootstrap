@@ -26,19 +26,19 @@ const configFile = path.join(__dirname, '../config.yml')
 // `configPropertyName` is the config.yml variable’s name of the file
 const files = [
   {
-    file: 'dist/css/ouds-web.min.css',
+    file: 'packages/orange/dist/css/ouds-web.min.css',
     configPropertyName: 'css_hash'
   },
   {
-    file: 'dist/css/ouds-web.rtl.min.css',
+    file: 'packages/orange/dist/css/ouds-web.rtl.min.css',
     configPropertyName: 'css_rtl_hash'
   },
   {
-    file: 'dist/css/ouds-web-bootstrap.min.css',
+    file: 'packages/orange/dist/css/ouds-web-bootstrap.min.css',
     configPropertyName: 'css_bootstrap_hash'
   },
   {
-    file: 'dist/css/ouds-web-bootstrap.rtl.min.css',
+    file: 'packages/orange/dist/css/ouds-web-bootstrap.rtl.min.css',
     configPropertyName: 'css_bootstrap_rtl_hash'
   },
   {

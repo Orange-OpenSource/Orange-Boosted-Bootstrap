@@ -84,21 +84,21 @@
       pointer-events: none;
     }
   }
+}
 
-  .btn-check:disabled + &,
-  .btn-check[disabled] + &,
-  &[disabled],
-  &.disabled {
-    color: var(--#{$prefix}tag-disabled-color);
-    pointer-events: none;
-    border-color: var(--#{$prefix}tag-disabled-color);
-  }
+.btn-check:disabled + .tag,
+.btn-check[disabled] + .tag,
+.tag[disabled],
+.tag.disabled {
+  color: var(--#{$prefix}tag-disabled-color);
+  pointer-events: none;
+  border-color: var(--#{$prefix}tag-disabled-color);
+}
 
-  .btn-check:checked + & {
-    color: var(--#{$prefix}tag-active-color);
-    background-color: var(--#{$prefix}tag-active-decoration-color);
-    border-color: var(--#{$prefix}tag-active-decoration-color);
-  }
+.btn-check:checked + .tag {
+  color: var(--#{$prefix}tag-active-color);
+  background-color: var(--#{$prefix}tag-active-decoration-color);
+  border-color: var(--#{$prefix}tag-active-decoration-color);
 }
 
 // stylelint-disable selector-no-qualifying-type

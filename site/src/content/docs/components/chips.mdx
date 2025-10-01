@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 You can find here the [OUDS chip design guidelines](https://unified-design-system.orange.com/472794e18/p/77fdea-chip).
@@ -209,7 +209,7 @@ Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also 
         <span class="visually-hidden">Filter by</span>
         Filter with icon
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </label>
     </li>
@@ -218,7 +218,7 @@ Prefer using an [embedded SVG]([[docsref:/extend/icons]]), even if you can also 
       <label class="chip-interactive" for="filterWithIcon2">
         Another filter with icon
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </label>
     </li>
@@ -237,7 +237,7 @@ Make sure to provide an accessible text for each chip.
       <input type="checkbox" id="filterIconOnly1" />
       <label class="chip-interactive chip-icon" for="filterIconOnly1">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         <span class="visually-hidden">Filter by favorites</span>
       </label>
@@ -266,7 +266,7 @@ The following example shows every possible renderings depending on the filter ch
         <span class="visually-hidden">Filter by</span>
         Disabled checked filter
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </label>
     </li>
@@ -274,7 +274,7 @@ The following example shows every possible renderings depending on the filter ch
       <button class="chip-interactive" data-bs-toggle="button" disabled>
         Disabled unchecked filter
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
       </button>
     </li>
@@ -316,7 +316,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
       <button class="chip-interactive">
         <span class="visually-hidden">Answer with</span>
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         Suggestion with icon 1
       </button>
@@ -324,7 +324,7 @@ To display an icon, add the icon as the first child of the `.chip-interactive`.
     <li class="chip chip-suggestion">
       <button class="chip-interactive">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         Suggestion with icon 2
       </button>
@@ -344,7 +344,7 @@ Make sure to provide an accessible text for each chip.
       <button class="chip-interactive chip-icon">
         <span class="visually-hidden">Answer with</span>
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         <span class="visually-hidden">I love it.</span>
       </button>
@@ -375,7 +375,7 @@ The following example shows every possible renderings depending on the suggestio
     <li class="chip chip-suggestion">
       <button class="chip-interactive" disabled>
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
         </svg>
         Suggestion with icon 1
       </button>

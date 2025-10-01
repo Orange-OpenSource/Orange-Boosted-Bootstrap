@@ -1041,13 +1041,10 @@ $form-check-radio-border-radius:          $ouds-radio-button-border-radius !defa
 // OUDS mod: no `$form-check-input-checked-color`
 // OUDS mod: no `$form-check-input-checked-bg-color`
 // OUDS mod: no `$form-check-input-checked-border-color`
-$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='m15.262 7.047-6.034 7a.97.97 0 0 1-.737.328.97.97 0 0 1-.736-.329l-3.017-3.5A.833.833 0 0 1 4.53 10c0-.242.106-.46.276-.619l.378-.35a.978.978 0 0 1 .666-.256c.235 0 .449.08.614.21l1.838 1.89 5.578-5.013a.98.98 0 0 1 .645-.237c.52 0 .943.392.943.875a.833.833 0 0 1-.207.547Z'/></svg>") !default; // OUDS mod: custom SVG
-$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M14.0635 10C14.0635 12.2437 12.2446 14.0625 10.001 14.0625C7.75732 14.0625 5.93848 12.2437 5.93848 10C5.93848 7.75634 7.75732 5.9375 10.001 5.9375C12.2446 5.9375 14.0635 7.75634 14.0635 10Z'/></svg>") !default; // OUDS mod: custom SVG
 
 // OUDS mod: no `$form-check-input-indeterminate-color`
 // OUDS mod: no `$form-check-input-indeterminate-bg-color`
 // OUDS mod: no `$form-check-input-indeterminate-border-color`
-$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' d='M4.5 9.375c0-.345.28-.625.625-.625h9.75c.345 0 .625.28.625.625v1.25c0 .345-.28.625-.625.625h-9.75a.625.625 0 0 1-.625-.625v-1.25Z'/></svg>") !default; // OUDS mod: custom SVG
 
 // OUDS mod: no `$form-check-input-disabled-opacity`
 // OUDS mod: no `$form-check-label-disabled-opacity`
@@ -1084,7 +1081,6 @@ $form-switch-transition:          width .15s cubic-bezier(.2, 0, 0, 1), height .
 // OUDS mod: no $form-switch-focus-bg-image
 
 // OUDS mod: no $form-switch-checked-color
-$form-switch-checked-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#000' d='m17.413 8.962-6.207 7.2a.998.998 0 0 1-.758.338.997.997 0 0 1-.757-.338l-3.103-3.6A.857.857 0 0 1 6.375 12c0-.248.109-.473.284-.636l.388-.36c.175-.163.418-.264.686-.264.24 0 .461.082.63.217l1.891 1.943 5.738-5.157c.173-.15.407-.243.663-.243.536 0 .97.403.97.9 0 .213-.08.408-.212.562Z'/></svg>") !default; // OUDS mod: instead of Bootstrap icon
 // OUDS mod: no $form-switch-checked-bg-position
 // scss-docs-end form-switch-variables
 
@@ -1913,19 +1909,10 @@ $title-bar-border-color:            var(--#{$prefix}color-border-default) !defau
 // OUDS mod: no `$breadcrumb-bg`
 $breadcrumb-divider-color:          $ouds-color-content-default !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color)`
 // OUDS mod: no `$breadcrumb-active-color`
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><path d='M6.651 12.75 11.5 8 6.651 3.25 5.266 4.606 8.73 8l-3.464 3.392z'/></svg>") !default; // OUDS mod
 // OUDS mod: no `$breadcrumb-divider-filter`
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 // OUDS mod: no `$breadcrumb-border-radius`
 // scss-docs-end breadcrumb-variables
-
-// OUDS mod
-// Bullet list
-$bullet-list-marker-level-0: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 6.25h7.5v7.5h-7.5z'/></svg>") !default;
-$bullet-list-marker-level-1: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M6.25 8.75h7.5v2.5h-7.5z'/></svg>") !default;
-$bullet-list-marker-level-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7.813 7.813h4.375v4.375H7.813z'/></svg>") !default;
-$bullet-list-empty-marker: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'></svg>") !default;
-// End mod
 
 // Carousel
 

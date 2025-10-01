@@ -9,7 +9,7 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 nuget/ouds-web.png
-site/src/components/icons/Symbols.astro
+packages/**/scss/tokens/composite.scss
 site/static/[brand]/docs/[version]/assets/brand/orange-logo.svg
 site/static/[brand]/docs/[version]/assets/brand/sosh-logo.svg
 site/static/[brand]/docs/[version]/assets/img/navbar-contact.png

@@ -1,67 +1,67 @@
 {
   "files": [
     {
-      "path": "./dist/css/ouds-web-bootstrap.css",
+      "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
       "maxSize": "67.25 kB"
     },
     {
-      "path": "./dist/css/ouds-web-bootstrap.min.css",
+      "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
       "maxSize": "63.75 kB"
     },
     {
-      "path": "./dist/css/ouds-web-grid.css",
+      "path": "./packages/orange/dist/css/ouds-web-grid.css",
       "maxSize": "9.5 kB"
     },
     {
-      "path": "./dist/css/ouds-web-grid.min.css",
+      "path": "./packages/orange/dist/css/ouds-web-grid.min.css",
       "maxSize": "8.5 kB"
     },
     {
-      "path": "./dist/css/ouds-web-reboot.css",
+      "path": "./packages/orange/dist/css/ouds-web-reboot.css",
       "maxSize": "7.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-reboot.min.css",
+      "path": "./packages/orange/dist/css/ouds-web-reboot.min.css",
       "maxSize": "6.5 kB"
     },
     {
-      "path": "./dist/css/ouds-web-utilities.css",
+      "path": "./packages/orange/dist/css/ouds-web-utilities.css",
       "maxSize": "23.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-utilities.min.css",
+      "path": "./packages/orange/dist/css/ouds-web-utilities.min.css",
       "maxSize": "22.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web.css",
+      "path": "./packages/orange/dist/css/ouds-web.css",
       "maxSize": "58.5 kB"
     },
     {
-      "path": "./dist/css/ouds-web.min.css",
+      "path": "./packages/orange/dist/css/ouds-web.min.css",
       "maxSize": "55.0 kB"
     },
     {
-      "path": "./dist/js/ouds-web.bundle.js",
+      "path": "./packages/orange/dist/js/ouds-web.bundle.js",
       "maxSize": "48.5 kB"
     },
     {
-      "path": "./dist/js/ouds-web.bundle.min.js",
+      "path": "./packages/orange/dist/js/ouds-web.bundle.min.js",
       "maxSize": "25.5 kB"
     },
     {
-      "path": "./dist/js/ouds-web.esm.js",
+      "path": "./packages/orange/dist/js/ouds-web.esm.js",
       "maxSize": "33.25 kB"
     },
     {
-      "path": "./dist/js/ouds-web.esm.min.js",
+      "path": "./packages/orange/dist/js/ouds-web.esm.min.js",
       "maxSize": "20.5 kB"
     },
     {
-      "path": "./dist/js/ouds-web.js",
+      "path": "./packages/orange/dist/js/ouds-web.js",
       "maxSize": "34.0 kB"
     },
     {
-      "path": "./dist/js/ouds-web.min.js",
+      "path": "./packages/orange/dist/js/ouds-web.min.js",
       "maxSize": "18.25 kB"
     }
   ],
