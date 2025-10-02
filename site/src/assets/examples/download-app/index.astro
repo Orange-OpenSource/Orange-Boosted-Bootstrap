@@ -1,5 +1,6 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
 
 export const title = 'Download app'
 export const theme_selector = false
@@ -38,7 +39,7 @@ export const aliases = [
     <div class="container-fluid container-max-width">
       <div class="navbar-brand me-auto">
         <a class="stretched-link" href="/">
-          <img src={getVersionedDocsPath('assets/brand/orange-logo.svg')} width="50" height="50" alt="OUDS Web - Go to homepage" loading="lazy" />
+          <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} width="50" height="50" alt="OUDS Web - Go to homepage" loading="lazy" />
         </a>
         <h1 class="two-lined">
           Orange Unified Design System
@@ -212,7 +213,7 @@ export const aliases = [
               <p class="fw-bold mb-none">Time saving by finding the code to use, by selecting the right component variant and it's possible customisation</p>
             </li>
             <li class="d-flex align-items-start">
-              <p class="fw-bold mb-none">Confidence in the fact that the available components are following the Orange brand standard</p>
+              <p class="fw-bold mb-none">Confidence in the fact that the available components are following the {getConfig().display_brand} brand standard</p>
             </li>
             <li class="d-flex align-items-start">
               <p class="fw-bold mb-none">Assurance that the components have been tested amongst the accessibility standard from the industry</p>

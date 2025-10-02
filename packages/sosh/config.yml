@@ -35,8 +35,8 @@ algolia:
 
 download:
   source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.5.0-ouds-web.zip"
-  dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.5.0-ouds-web/ouds-web-0.5.0-dist.zip"
-  dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.5.0-ouds-web/ouds-web-0.5.0-examples.zip"
+  dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.5.0-ouds-web/ouds-web-sosh-0.5.0-dist.zip"
+  dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.5.0-ouds-web/ouds-web-sosh-0.5.0-examples.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

@@ -1,7 +1,7 @@
 Homepage:
 - Banner image
 - ~~Package name~~
-- ~~CDN links~~, associated hashes
+- ~~CDN links, associated hashes~~
 - ~~path must be updated~~
 
 ~~Orange reference to update to Sosh or ${brand}~~
@@ -21,7 +21,7 @@ Restore a good rendering for the search
 Download:
 - ~~Package name~~
 - ~~CDN links, associated hashes~~
-- Careful about release urls and archives -> Need to determine what will be the release process
+- ~~Careful about release urls and archives~~ -> Need to determine what will be the release process
 
 ~~Contents:~~
 - ~~ouds-web to be changed in a Highlighted~~
@@ -134,7 +134,7 @@ Layout/utilities:
 
 Examples:
 - Change thumbnails
-- Check CSS
+- ~~Check CSS~~
 
 Handle this somehow:
 - Composer.json
@@ -150,8 +150,8 @@ Handle this somehow:
 - ~~Support~~
 - ~~Manage Storybook brands somehow~~
 - Nuget
-- Update all build files
-- Update all hashes with https://www.srihash.org/
+- ~~Update all build files~~
+- ~~Update all hashes with https://www.srihash.org/ ~~
 - Check sitemap
 - ~~Update migration guides~~
 - ~~Update data-bs-theme in the doc to be brand compatible~~
@@ -160,7 +160,7 @@ Handle this somehow:
 - ~~define vars for css bg in docs~~
 - ~~See where to add the new file structure and explain how to use~~
 - ~~check component rendering in the doc~~
-- check bundlewatch
+- ~~check bundlewatch~~
 - Check all commit in merge
 - &~~Check all `.bg-` and add getMode when needed~~
 - Check all the CI files
