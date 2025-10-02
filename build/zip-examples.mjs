@@ -15,7 +15,7 @@ import { format } from 'prettier'
 
 const BRANDS = ['orange', 'sosh']
 
-BRANDS.map(async (brand) => {
+BRANDS.map(async brand => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
   const pkgJson = path.join(__dirname, '../package.json')

@@ -51,9 +51,9 @@
     "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config ../../build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "astro-dev": "set BRAND=orange&& astro dev --root ../../site --port 9001",
-    "astro-build": "set BRAND=orange&& astro build --root ../../site && cd ../../site/dist && cp -r . ../../_site",
-    "astro-preview": "set BRAND=orange&& astro preview --root ../../site --port 9001",
+    "astro-dev": "cross-env BRAND=orange astro dev --root ../../site --port 9001",
+    "astro-build": "cross-env BRAND=orange astro build --root ../../site && cd ../../site/dist && cp -r . ../../_site",
+    "astro-preview": "cross-env BRAND=orange astro preview --root ../../site --port 9001",
     "release-zip": "cd ../.. && cross-env-shell \"rm -rf /ouds-web-orange-$npm_package_version-dist ouds-web-orange-$npm_package_version-dist.zip && cp -r dist/ ouds-web-orange-$npm_package_version-dist && cp -r packages/orange/dist/ ouds-web-orange-$npm_package_version-dist && zip -qr9 ouds-web-orange-$npm_package_version-dist.zip ouds-web-orange-$npm_package_version-dist && rm -rf ouds-web-orange-$npm_package_version-dist\""
   },
   "license": "MIT"

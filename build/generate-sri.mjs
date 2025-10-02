@@ -21,7 +21,7 @@ sh.config.fatal = true
 
 const BRANDS = ['orange', 'sosh']
 
-BRANDS.map((brand) => {
+BRANDS.forEach(brand => {
   const configFile = path.join(__dirname, `../packages/${brand}/config.yml`)
 
   // Array of objects which holds the files to generate SRI hashes for.
