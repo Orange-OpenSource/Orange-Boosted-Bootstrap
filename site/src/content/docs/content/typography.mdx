@@ -27,7 +27,7 @@ If you need need to include a font reference inside a custom component, please r
 
 All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
-<BsTable>
+{/* <BsTable>
 | Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
 | Heading xlarge (`<h1></h1>`) | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
@@ -52,7 +52,7 @@ All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-s
 | Body medium (`<h6></h6>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
 </BsTable>
 
-</details>
+</details> */}
 
 <Example code={`<h1>h1. OUDS Web heading</h1>
   <h2>h2. OUDS Web heading</h2>
@@ -76,9 +76,9 @@ You can easily add an icon with your font reference using [our icon size utiliti
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
-We provide `.display-*` from `1` through `3`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Here are the associated `font-size`s depending on the breakpoints.
+We provide `.display-*` from `large` through `small`. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]). Here are the associated `font-size`s depending on the breakpoints.
 
-<BsTable>
+{/* <BsTable>
 | Display reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
 | Display large (`.display-large`) | `2.5rem` (40px) | `4rem` (64px) | `4.5rem` (72px) |
@@ -97,7 +97,7 @@ We provide `.display-*` from `1` through `3`. Each class sets `font-size` but al
 | Display small (`.display-small`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> |
 </BsTable>
 
-</details>
+</details> */}
 
 <Example code={`<h1 class="display-large">Display large</h1>
   <h1 class="display-medium">Display medium</h1>
@@ -135,7 +135,7 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
 Body medium is set by default on `:root` children but we don’t set the `max-width` property for usability reasons.
 </Callout>
 
-<BsTable>
+{/* <BsTable>
 | Regular text reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
 | --- | --- | --- | --- |
 | Body large (`.lead`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
@@ -154,7 +154,7 @@ Body medium is set by default on `:root` children but we don’t set the `max-wi
 | Body small (`.small`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> |
 </BsTable>
 
-</details>
+</details> */}
 
 You can easily add an icon with your font reference using [our icon size utilities]([[docsref:/extend/icons#icons-size]]).
 

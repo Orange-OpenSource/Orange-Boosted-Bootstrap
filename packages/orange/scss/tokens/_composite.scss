@@ -17,10 +17,40 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 // Font stacks
 
 // stylelint-disable value-keyword-case
-// scss-docs-start ouds-composite-font
-$ouds-font-family-sans-serif-stack: "Helvetica Neue", Helvetica, "SF Pro", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$ouds-font-family-monospace-stack: Consolas, "SFMono-Regular", "Roboto Mono", "Liberation Mono", Menlo, monospace !default;
-// scss-docs-end ouds-composite-font
+// scss-docs-start ouds-composite-font-sans-serif
+$ouds-font-family-sans-serif-stack:
+  // Older macOS and iOS
+  "Helvetica Neue",
+  // Some Windows
+  Helvetica,
+  // Safari for macOS and iOS
+  "SF Pro",
+  // Android
+  Roboto,
+  // Basic web fallback
+  Arial,
+  "Noto Sans",
+  "Liberation Sans",
+  sans-serif,
+  // Emojis fonts
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+// scss-docs-end ouds-composite-font-sans-serif
+// scss-docs-start ouds-composite-font-monospace
+$ouds-font-family-monospace-stack:
+  // Windows
+  Consolas,
+  // Safari for macOS and iOS
+  "SFMono-Regular",
+  // Android
+  "Roboto Mono",
+  // Basic web fallback
+  "Liberation Mono",
+  Menlo,
+  monospace !default;
+// scss-docs-end ouds-composite-font-monospace
 // stylelint-enable value-keyword-case
 
 // Icons as data URIs

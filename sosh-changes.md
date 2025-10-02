@@ -5,7 +5,7 @@ Homepage:
 - ~~path must be updated~~
 
 ~~Orange reference to update to Sosh or ${brand}~~
-Favicon
+~~Favicon~~
 ~~Update doc CSS to use tokens instead of hard coded values~~
 ~~Use special set of icons ? Need to update docs examples respectively~~
 Use Sosh font
@@ -73,12 +73,12 @@ Layout/utilities:
 - ~~Customizable part to remove or replace in custom libraries~~
 - ~~Remove Sass reference~~
 
-Reboot:
-- Rewrite the whole page, nothing to be left aside, the values, the sense of what's written.
+~~Reboot:~~
+- ~~Rewrite the whole page, nothing to be left aside, the values, the sense of what's written.~~
 
-Typography:
-- Values in tables
-- Remove Sass reference
+~~Typography:~~
+- ~~Values in tables~~
+- ~~Remove Sass reference~~
 
 ~~Checkbox, radio, switch:~~
 - ~~Link to DSM to update ?~~
@@ -115,9 +115,9 @@ Typography:
 - ~~Reference to tokens to update maybe, and their final value or remove.~~
 - ~~Reference to tokens scaled to update maybe, and their final value or remove.~~
 
-Text:
-- Update the badge example
-- Update font-size values or remove
+~~Text:~~
+- ~~Update the badge example~~
+- ~~Update font-size values or remove~~
 
 ~~Icons:~~
 - ~~Solaris icons ?~~
@@ -153,16 +153,16 @@ Handle this somehow:
 - Update all build files
 - Update all hashes with https://www.srihash.org/
 - Check sitemap
-- Update migration guides
-- Update data-bs-theme in the doc to be brand compatible
-- Remove comments from tokenator in raw
-- Clean tokenator
-- define vars for css bg in docs
-- See where to add the new file structure and explain how to use
-- check component rendering in the doc
+- ~~Update migration guides~~
+- ~~Update data-bs-theme in the doc to be brand compatible~~
+- ~~Remove comments from tokenator in raw~~
+- ~~Clean tokenator~~
+- ~~define vars for css bg in docs~~
+- ~~See where to add the new file structure and explain how to use~~
+- ~~check component rendering in the doc~~
 - check bundlewatch
 - Check all commit in merge
-- Check all `.bg-` and add getMode when needed
+- &~~Check all `.bg-` and add getMode when needed~~
 - Check all the CI files
 
 After PR is merged:
@@ -170,7 +170,7 @@ After PR is merged:
 - Probably warn about storybook changing its urls for DSM
 - Probably cut Custom libraries page for other brands and update the side menu
 - Manage Storybook for multi branding
-- Reintroduce values of tokens in the doc ? Spacing, Text, Icons
+- Reintroduce values of tokens in the doc ? Spacing, Text, Icons, Reboot, Typography
 - Reintroduce Solaris icons
 
 A11y review:
