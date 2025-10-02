@@ -73,4 +73,4 @@ for(const brand of BRANDS) {
       sh.sed('-i', new RegExp(`^(\\s+${configPropertyName}:\\s+["'])\\S*(["'])`), `$1${integrity}$2`, configFile)
     })
   }
-})
+}
