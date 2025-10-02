@@ -32,25 +32,6 @@ const staticFileAliases = {
 
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
-  '',
-  '/404',
-  '/docs',
-  `/docs/${getConfig().docs_version}`,
-  `/docs/${getConfig().docs_version}/getting-started`,
-  `/docs/${getConfig().docs_version}/getting-started/build-tools`,
-  `/docs/${getConfig().docs_version}/customize`,
-  `/docs/${getConfig().docs_version}/customize/color`,
-  `/docs/${getConfig().docs_version}/layout`,
-  `/docs/${getConfig().docs_version}/content`,
-  `/docs/${getConfig().docs_version}/components`,
-  `/docs/${getConfig().docs_version}/components/navs`,
-  `/docs/${getConfig().docs_version}/forms`,
-  `/docs/${getConfig().docs_version}/helpers`,
-  `/docs/${getConfig().docs_version}/helpers/screen-readers`,
-  `/docs/${getConfig().docs_version}/migration`,
-  `/docs/${getConfig().docs_version}/utilities`,
-  `/docs/${getConfig().docs_version}/extend`,
-  `/docs/${getConfig().docs_version}/about`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started/build-tools`,
@@ -60,6 +41,7 @@ const sitemapExcludes = [
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/content`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/components`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/components/navs`,
+  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components/chip`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/forms`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers/screen-readers`,
@@ -245,7 +227,7 @@ function replacePathVersionPlaceholder(name: string) {
 }
 
 function sitemapFilter(page: string, excludedUrls: string[]) {
-  if (page === `${getConfig().baseURL}/`) {
+  if (page === `${getConfig().baseURL}/${getConfig().brand}/`) {
     return true
   }
 
@@ -254,6 +236,10 @@ function sitemapFilter(page: string, excludedUrls: string[]) {
   }
 
   if (!page.includes(getConfig().docs_version)) {
+    return false
+  }
+
+  if (!page.includes(getConfig().brand)) {
     return false
   }
 
