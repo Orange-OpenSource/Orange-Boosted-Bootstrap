@@ -10,7 +10,7 @@
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-bs-brand-value]')
       .forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
+        toggle.addEventListener('click', e => {
           e.preventDefault()
           const url = new URL(window.location)
           const brand = toggle.getAttribute('data-bs-brand-value')
