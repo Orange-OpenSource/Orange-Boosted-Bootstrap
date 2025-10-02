@@ -10,6 +10,10 @@ toc: true
 You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/49e7bf-bullet-list).
 </Callout>
 
+## Overview
+
+Bullet lists can be [unordered](#unordered-lists), [ordered](#ordered-lists), [bare](#bare-lists) or a [mix](#mixed-lists). All types are based on the class `.bullet-list` applied to an `ul` or `ol` element.
+
 ## Unordered lists
 
 Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a custom icon as the list marker.
@@ -263,36 +267,6 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
     <li>With a normal font weight, you can put <a href="#">links</a> and long texts in here, adding some words just to show how this will wrap</li>
   </ul>`} />
 
-## Native list
-
-<Callout type="warning">
-Only use this where you can not add a class to `<ul>` and `<ol>`.
-</Callout>
-
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
-
-<Example showMarkup={false} code={`<ul>
-    <li>All lists have their top margin removed</li>
-    <li>And their bottom margin normalized</li>
-    <li>Nested lists have no bottom margin</li>
-      <li>This way they have a more even appearance</li>
-      <li>Particularly when followed by more list items</li>
-        <li>This way they have a more even appearance</li>
-        <li>Particularly when followed by more list items</li>
-    <li>The left padding has also been reset</li>
-  </ul>
-
-  <ol>
-    <li>Here's an ordered list</li>
-    <li>With a few list items</li>
-    <li>It can also have</li>
-        <li>Several nested list</li>
-        <li>As you can see</li>
-            <li>Lorem ipsum</li>
-            <li>Deep nested</li>
-    <li>As the previous unordered list</li>
-  </ol>`} />
-
 ## Utilities
 
 ### Unstyled
@@ -323,3 +297,33 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
     <li class="list-inline-item">And another one.</li>
     <li class="list-inline-item">But they're displayed inline.</li>
   </ul>`} />
+
+## Native list
+
+<Callout type="warning">
+Only use this where you can not add a class to `<ul>` and `<ol>`.
+</Callout>
+
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+
+<Example showMarkup={false} code={`<ul>
+    <li>All lists have their top margin removed</li>
+    <li>And their bottom margin normalized</li>
+    <li>Nested lists have no bottom margin</li>
+      <li>This way they have a more even appearance</li>
+      <li>Particularly when followed by more list items</li>
+        <li>This way they have a more even appearance</li>
+        <li>Particularly when followed by more list items</li>
+    <li>The left padding has also been reset</li>
+  </ul>
+
+  <ol>
+    <li>Here's an ordered list</li>
+    <li>With a few list items</li>
+    <li>It can also have</li>
+        <li>Several nested list</li>
+        <li>As you can see</li>
+            <li>Lorem ipsum</li>
+            <li>Deep nested</li>
+    <li>As the previous unordered list</li>
+  </ol>`} />
