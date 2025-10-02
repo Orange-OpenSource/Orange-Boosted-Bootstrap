@@ -16,7 +16,7 @@ $ouds-elevation-sticky-navigation-scrolled: $ouds-elevation-x-sticky-navigation-
 
 // Font stacks
 
-// stylelint-disable value-keyword-case
+// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
 // scss-docs-start ouds-composite-font-sans-serif
 $ouds-font-family-sans-serif-stack:
   // Older macOS and iOS
@@ -51,7 +51,7 @@ $ouds-font-family-monospace-stack:
   Menlo,
   monospace !default;
 // scss-docs-end ouds-composite-font-monospace
-// stylelint-enable value-keyword-case
+// stylelint-enable value-keyword-case, scss/dollar-variable-colon-space-after
 
 // Icons as data URIs
 
