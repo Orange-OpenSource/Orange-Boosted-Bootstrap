@@ -13,7 +13,11 @@ import { getVersionedDocsPath } from '@libs/path'
 You can find here the [OUDS Switch design guidelines](https://unified-design-system.orange.com/472794e18/p/18acc0-switch).
 </Callout>
 
-## Basic example
+## Overview
+
+Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
+
+They are implemented using `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of `.control-item-indicator[role="switch"]`.
 
 <Example code={`<div class="switch-item">
     <div class="control-item-assets-container">
@@ -42,12 +46,6 @@ You can find here the [OUDS Switch design guidelines](https://unified-design-sys
     <label class="form-check-label" for="switchCheckChecked">Checked switch (Bootstrap compatible)</label>
   </div>`} />
 </BootstrapCompatibility>
-
-## Approach
-
-Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
-
-They are implemented using `.control-item-*` classes on radio buttons. Browser default radio buttons are replaced with the help of `.control-item-indicator[role="switch"]`.
 
 <ControlItem />
 
