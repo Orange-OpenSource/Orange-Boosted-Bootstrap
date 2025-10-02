@@ -13,7 +13,11 @@ import { getConfig } from '@libs/config'
 You can find here the [OUDS Radio button design guidelines](https://unified-design-system.orange.com/472794e18/p/90c467-radio-button).
 </Callout>
 
-## Basic example
+## Overview
+
+Radio buttons allow user to select a single option from a set of mutually exclusive choices.
+
+They are implemented using `.control-item-*` classes, [see below](#control-item). Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
@@ -46,12 +50,6 @@ You can find here the [OUDS Radio button design guidelines](https://unified-desi
     </label>
   </div>`} />
 </BootstrapCompatibility>
-
-## Approach
-
-Radio buttons allow user to select a single option from a set of mutually exclusive choices.
-
-They are implemented using `.control-item-*` classes. Browser default radio buttons are replaced with the help of the selector `.control-item-indicator[type="radio"]`.
 
 <ControlItem />
 
