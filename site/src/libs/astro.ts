@@ -32,8 +32,25 @@ const staticFileAliases = {
 
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
+  '',
   '/404',
   '/docs',
+  `/docs/${getConfig().docs_version}`,
+  `/docs/${getConfig().docs_version}/getting-started`,
+  `/docs/${getConfig().docs_version}/getting-started/build-tools`,
+  `/docs/${getConfig().docs_version}/customize`,
+  `/docs/${getConfig().docs_version}/customize/color`,
+  `/docs/${getConfig().docs_version}/layout`,
+  `/docs/${getConfig().docs_version}/content`,
+  `/docs/${getConfig().docs_version}/components`,
+  `/docs/${getConfig().docs_version}/components/navs`,
+  `/docs/${getConfig().docs_version}/forms`,
+  `/docs/${getConfig().docs_version}/helpers`,
+  `/docs/${getConfig().docs_version}/helpers/screen-readers`,
+  `/docs/${getConfig().docs_version}/migration`,
+  `/docs/${getConfig().docs_version}/utilities`,
+  `/docs/${getConfig().docs_version}/extend`,
+  `/docs/${getConfig().docs_version}/about`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started`,
   `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started/build-tools`,
@@ -55,7 +72,7 @@ const sitemapExcludes = [
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
 
 export function oudsWeb(): AstroIntegration[] {
-  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${getConfig().brand}${url}/`)
+  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`)
 
   configurePrism()
 

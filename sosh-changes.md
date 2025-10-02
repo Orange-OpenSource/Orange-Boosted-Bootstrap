@@ -152,7 +152,7 @@ Handle this somehow:
 - Nuget
 - ~~Update all build files~~
 - ~~Update all hashes with https://www.srihash.org/ ~~
-- Check sitemap
+- ~~Check sitemap~~
 - ~~Update migration guides~~
 - ~~Update data-bs-theme in the doc to be brand compatible~~
 - ~~Remove comments from tokenator in raw~~
@@ -161,9 +161,9 @@ Handle this somehow:
 - ~~See where to add the new file structure and explain how to use~~
 - ~~check component rendering in the doc~~
 - ~~check bundlewatch~~
-- Check all commit in merge
+- Check all commits in merge
 - &~~Check all `.bg-` and add getMode when needed~~
-- Check all the CI files
+- ~~Check all the CI files~~
 
 After PR is merged:
 - Make redirects on the ouds-web-doc already existing
