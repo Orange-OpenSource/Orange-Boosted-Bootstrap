@@ -11,11 +11,16 @@
   }
 
   &:focus,
-  &:hover,
-  :hover > &,
-  :target > & {
+  &:hover {
     color: var(--bs-link-color); // OUDS mod
     text-decoration: none;
     opacity: 1;
   }
+}
+
+:hover > .anchor-link,
+:target > .anchor-link {
+  color: var(--bs-link-color); // OUDS mod
+  text-decoration: none;
+  opacity: 1;
 }

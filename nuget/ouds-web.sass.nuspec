@@ -25,11 +25,11 @@
   <files>
     <file src="nuget\ouds-web.png" target="" />
 
-    <file src="scss\**\*.scss" target="content\Content\ouds-web" />
+    <file src="packages\orange\scss\**\*.scss" target="content\Content\ouds-web" />
     <file src="dist\js\ouds-web*.js" target="content\Scripts" />
     <file src="dist\js\ouds-web*.js.map" target="content\Scripts" />
 
-    <file src="scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
+    <file src="packages\orange\scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
     <file src="dist\js\ouds-web*.js" target="contentFiles\any\any\wwwroot\js" />
     <file src="dist\js\ouds-web*.js.map" target="contentFiles\any\any\wwwroot\js" />
   </files>

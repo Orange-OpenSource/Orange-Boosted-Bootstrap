@@ -24,11 +24,11 @@ Be careful when using the `data-bs-theme` attribute on an element carrying one o
 
 By default, we provide two static themes/modes that are `"light"` and `"dark"`. These themes are named static because once you’ve set the theme on an element it won’t ever change whatever the main theme is. The `"light"` theme will set the text color to black and set the light variant for every components inside, while the `"dark"` theme will set the text color to white and set the dark variant for every components inside.
 
-<Example code={`<div class="bg-emphasized p-sm">
+<Example code={`<div class="bg-always-black p-sm">
     <div data-bs-theme="dark">
       <p>Text and components in here will always be in dark mode</p>
       <button class="btn btn-strong mb-sm">Dark mode button</button>
-      <div class="bg-status-accent-emphasized p-sm">
+      <div class="bg-always-white p-sm">
         <div data-bs-theme="light">
           <p>Text and components in here will always be in light mode</p>
           <button class="btn btn-strong">Light mode button</button>
@@ -74,7 +74,22 @@ Here is an example of a block that inverts the main theme when it’s placed ins
 
 Here is an example of a block that follows the main theme when it’s placed inside a dark block. To get the main theme independently from the cascade, set via <span class="user-select-all">`data-bs-theme="root"`</span> on any element but the main one. Feel free to change the color mode of the page to see the effect.
 
-{/* TODO: Do we keep the example above or the example should be something that can happen ? Like a dropdown menu inside a header. */}
+## How it works
+
+- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element (using `light` or `dark`), or to any other element or OUDS Web component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
+
+- `root` and `root-inverted` are some automated modes compared to the root mode.
+
+- For each color mode you wish to support, you’ll need to add new overrides for the shared global CSS variables. We do this already in our `_root.scss` stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:
+
+  ```scss
+  // Color mode variables in _root.scss
+  @include color-mode(dark) {
+    // CSS variable overrides here...
+  }
+  ```
+
+- We use a custom `_variables-dark.scss` to power those shared global CSS variable overrides for dark mode. This file isn’t required for your own custom color modes, but it’s required for our dark mode for two reasons. First, it’s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.
 
 ## How to use
 
@@ -91,10 +106,10 @@ We use **2 different layers to set the `background-color` and the theme**. Somet
 <BsTable>
 | Wanted local text color <br />inside main light mode | Wanted local text color <br />inside main dark mode | Theme that should be used |
 | --- | --- | --- |
-| Black | Black | <span class="user-select-all">`"light"`</span> |
-| White | White | <span class="user-select-all">`"dark"`</span> |
-| White | Black | <span class="user-select-all">`"root-inverted"`</span> |
-| Black | White | <span class="user-select-all">`"root"`</span> |
+| Dark | Dark | <span class="user-select-all">`"light"`</span> |
+| Light | Light | <span class="user-select-all">`"dark"`</span> |
+| Light | Dark | <span class="user-select-all">`"root-inverted"`</span> |
+| Dark | Light | <span class="user-select-all">`"root"`</span> |
 </BsTable>
 
 <Callout type="warning">
@@ -160,23 +175,6 @@ Here are some examples of how to use the different `data-bs-theme` attribute on 
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div>`} />
-
-## How it works
-
-- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element (using `light` or `dark`), or to any other element or OUDS Web component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
-
-- `root` and `root-inverted` are some automated modes compared to the root mode.
-
-- For each color mode you wish to support, you’ll need to add new overrides for the shared global CSS variables. We do this already in our `_root.scss` stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:
-
-  ```scss
-  // Color mode variables in _root.scss
-  @include color-mode(dark) {
-    // CSS variable overrides here...
-  }
-  ```
-
-- We use a custom `_variables-dark.scss` to power those shared global CSS variable overrides for dark mode. This file isn’t required for your own custom color modes, but it’s required for our dark mode for two reasons. First, it’s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.
 
 ## Usage
 
@@ -270,7 +268,7 @@ You can also change the root selector from where the theme variables are set. By
 ```scss
 $ouds-root-selector: "#app";
 
-@include "@ouds/web";
+@import "@ouds/web-[[config:brand]]/scss/ouds-web";
 ```
 
 Outputs to:
@@ -302,50 +300,4 @@ Check out our [Orange navbar mode selector variant]([[docsref:/components/orange
 
 Here’s a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it’s implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
 
-<Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/docs/[version]/assets/js/color-modes.js')} />
-
-## CSS
-
-### Sass tokens
-
-#### Raw tokens
-
-Colors raw tokens as Sass variables. **Not to be used as-is**.
-
-<ScssDocs name="ouds-raw-color" file="scss/tokens/_raw.scss" />
-
-#### Semantic tokens
-
-Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
-
-<ScssDocs name="ouds-semantic-color" file="scss/tokens/_semantic.scss" />
-
-### Variables
-
-We have our OUDS semantic CSS variables, which transform over light and dark modes. These are the variables you’ll use in your own custom CSS to style components and elements.
-
-<ScssDocs name="ouds-all-semantic-css-color" file="scss/tokens/_semantic-colors-custom-props.scss" />
-
-<BootstrapCompatibility>
-
-Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to `data-bs-theme` but [can be configured](#building-with-sass) to use a `prefers-color-scheme` media query. Use these variables as a guideline for generating your own new color modes.
-
-<ScssDocs name="root-dark-mode-vars" file="scss/_root.scss" />
-
-</BootstrapCompatibility>
-
-### Sass variables
-
-<BootstrapCompatibility>
-
-CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in `_variables-dark.scss`. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.
-
-<ScssDocs name="sass-dark-mode-vars" file="scss/_variables-dark.scss" />
-
-</BootstrapCompatibility>
-
-### Sass mixins
-
-Styles for dark mode, and any custom color modes you create, can be scoped appropriately to the `data-bs-theme` attribute selector or media query with the customizable `color-mode()` mixin. See the [Sass usage section](#building-with-sass) for more details.
-
-<ScssDocs name="color-mode-mixin" file="scss/mixins/_color-mode.scss" />
+<Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/[brand]/docs/[version]/assets/js/color-modes.js')} />

@@ -1,6 +1,7 @@
 ---
 import { replacePlaceholdersInHtml } from '@libs/placeholder'
 import Code from '@components/shortcodes/Code.astro'
+import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   /**
@@ -87,12 +88,12 @@ const simplifiedMarkup = markup
                 data-sb-js-snippet={addStackblitzJs ? true : undefined}
               >
                 <svg aria-hidden="true">
-                  <use xlink:href="#lightning-charge-fill" />
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
                 </svg>
               </button>
               <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy code to clipboard">
                 <svg aria-hidden="true">
-                  <use xlink:href="#copy" />
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
                 </svg>
               </button>
             </div>

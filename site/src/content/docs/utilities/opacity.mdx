@@ -6,7 +6,7 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 ## Opacity
 
@@ -56,34 +56,6 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 
 Set an image or a svg to disabled easily thanks to `.opacity-disabled`.
 
-<Example code={`<svg class="opacity-disabled text-brand-primary" aria-hidden="true">
-    <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+<Example code={`<svg class="bi opacity-disabled text-brand-primary" aria-hidden="true">
+    <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
   </svg>`} />
-
-## CSS
-
-### Sass tokens
-
-#### Semantic tokens
-
-Opacity semantic tokens are defined as Sass variables.
-
-<ScssDocs name="ouds-semantic-opacity" file="scss/tokens/_semantic.scss" />
-
-### Sass maps
-
-The opacity utilities are declared through this map and generated using our utilities API.
-
-<ScssDocs name="ouds-maps-opacities" file="scss/_maps.scss" />
-
-### Sass utilities API
-
-Opacity utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
-
-<ScssDocs name="utils-opacity-ouds" file="scss/_utilities.scss" />
-
-<BootstrapCompatibility>
-
-<ScssDocs name="utils-opacity" file="scss/_utilities.scss" />
-
-</BootstrapCompatibility>

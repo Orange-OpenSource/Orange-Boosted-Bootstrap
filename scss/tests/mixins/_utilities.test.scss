@@ -5,11 +5,7 @@ $enable-important-utilities: false;
 // OUDS mod
 @import "../../config";
 @import "../../functions"; // Added because needed by "variables"
-@import "../../tokens/raw";
-@import "../../tokens/semantic";
-@import "../../tokens/semantic-colors-custom-props";
-@import "../../tokens/composite";
-@import "../../tokens/component";
+@import "../../../packages/orange/scss/tokens";
 @import "../../variables"; // Added to avoid undefined variable error like `$white`
 // End mod
 @import "../../mixins/utilities";

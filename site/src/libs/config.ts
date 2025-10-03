@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import path from 'node:path'
 import yaml from 'js-yaml'
 import { z } from 'zod'
 import { zPrefixedVersionSemver, zVersionMajorMinor, zVersionSemver } from './validation'
@@ -21,6 +22,7 @@ const configSchema = z.object({
   bootstrap_current_version: z.string(),
   bootstrap_docs_version: z.string(),
   bootstrap_github_org: z.string().url(),
+  brand: z.string(),
   cdn: z.object({
     css: z.string().url(),
     css_hash: z.string(),
@@ -40,6 +42,8 @@ const configSchema = z.object({
   }),
   current_version: zVersionSemver,
   current_ruby_version: zVersionSemver,
+  debug_template: z.string().url(),
+  display_brand: z.string(),
   description: z.string(),
   docs_version: zVersionMajorMinor,
   docsDir: z.string(),
@@ -76,9 +80,13 @@ export function getConfig(): Config {
     return config
   }
 
+  const brand = process.env.BRAND || "orange"
+
   try {
     // Load the config from the `config.yml` file.
-    const rawConfig = yaml.load(fs.readFileSync('./config.yml', 'utf8'))
+    const rawConfig = fs.existsSync(path.join(process.cwd(), 'config.yml'))
+      ? yaml.load(fs.readFileSync(path.join(process.cwd(), 'config.yml'), 'utf8'))
+      : yaml.load(fs.readFileSync(path.join(process.cwd(), `packages/${brand}/config.yml`), 'utf8'))
 
     // Parse the config using the config schema to validate its content and get back a fully typed config object.
     config = configSchema.parse(rawConfig)

@@ -18,7 +18,7 @@ export function getVersionedDocsPath(docsPath: string): string {
     generatedVersionedDocsPaths.push(sanitizedDocsPath)
   }
 
-  return `/docs/${docs_version}/${sanitizedDocsPath}`
+  return `/${process.env.BRAND}/docs/${docs_version}/${sanitizedDocsPath}`
 }
 
 // Validate that all the generated versioned docs paths point to an existing page or asset.
@@ -33,7 +33,7 @@ export function validateVersionedDocsPaths(distUrl: URL) {
 
   for (const docsPath of generatedVersionedDocsPaths) {
     const sanitizedDocsPath = sanitizeVersionedDocsPathForValidation(docsPath)
-    const absoluteDocsPath = fileURLToPath(new URL(path.join('./docs', docs_version, sanitizedDocsPath), distUrl))
+    const absoluteDocsPath = fileURLToPath(new URL(path.join(`./${process.env.BRAND}/docs`, docs_version, sanitizedDocsPath), distUrl))
 
     const docsPathExists = fs.existsSync(absoluteDocsPath)
 

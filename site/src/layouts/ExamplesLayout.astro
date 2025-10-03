@@ -7,7 +7,6 @@ import { getVersionedDocsPath } from '@libs/path'
 import Stylesheet from '@components/head/Stylesheet.astro'
 import Favicons from '@components/head/Favicons.astro'
 import ThemeToggler from '@layouts/partials/ThemeToggler.astro'
-import Icons from '@layouts/partials/Icons.astro'
 
 type Props = ExampleFrontmatter
 
@@ -119,8 +118,6 @@ const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', di
     {extra_css?.map((extraCss) => <link href={extraCss} rel="stylesheet" />)}
   </head>
   <body class:list={body_class}>
-    <Icons />
-
     {
       theme_selector && (
         <div class="dropdown dropup position-fixed bottom-0 end-0 mb-lg me-lg bd-mode-toggle">

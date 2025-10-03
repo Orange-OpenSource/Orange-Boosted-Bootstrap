@@ -1,5 +1,6 @@
 ---
 import type { Layout } from '@libs/layout'
+import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   layout: Layout
@@ -17,7 +18,7 @@ const { layout } = Astro.props
   {...layout !== 'examples' ? { 'data-bs-display': 'static' } : {}}
   aria-label="Toggle theme (auto)"
 >
-  <svg class="bi theme-icon-active" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+  <svg class="bi theme-icon-active" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-auto-mode')}></use></svg>
   <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-2'}` id="bd-theme-text">Toggle mode</span>
 </button>
 <ul
@@ -31,9 +32,9 @@ const { layout } = Astro.props
       data-bs-theme-value="light"
       aria-pressed="false"
     >
-      <svg class="bi me-sm" aria-hidden="true"><use href="#ui-light-mode"></use></svg>
+      <svg class="bi me-sm" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-light-mode')}></use></svg>
       Light
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
     </button>
   </li>
   <li>
@@ -43,9 +44,9 @@ const { layout } = Astro.props
       data-bs-theme-value="dark"
       aria-pressed="false"
     >
-      <svg class="bi me-sm" aria-hidden="true"><use href="#ui-dark-mode"></use></svg>
+      <svg class="bi me-sm" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-dark-mode')}></use></svg>
       Dark
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
     </button>
   </li>
   <li>
@@ -55,9 +56,9 @@ const { layout } = Astro.props
       data-bs-theme-value="auto"
       aria-pressed="true"
     >
-      <svg class="bi me-sm" aria-hidden="true"><use href="#ui-auto-mode"></use></svg>
+      <svg class="bi me-sm" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#ui-auto-mode')}></use></svg>
       Auto
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+      <svg class="bi ms-auto d-none" aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
     </button>
   </li>
 </ul>

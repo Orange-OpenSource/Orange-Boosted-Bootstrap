@@ -9,6 +9,8 @@ aliases:
 toc: true
 ---
 
+import { asArray } from '@libs/sass-variables'
+
 ## Core concepts
 
 - **Breakpoints are the building blocks of responsive design.** Use them to control when your layout can be adapted at a particular viewport or device size.
@@ -24,14 +26,14 @@ OUDS Web includes eight default breakpoints, sometimes referred to as _grid tier
 <BsTable class="table">
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| 2x-small | <em>None</em> |&lt;390px |
-| X-small | `xs` | &ge;390px |
-| Small | `sm` | &ge;480px |
-| Medium | `md` | &ge;736px |
-| Large | `lg` | &ge;1024px |
-| X-large | `xl` | &ge;1320px |
-| 2x-large | `2xl` | &ge;1640px |
-| 3x-large | `3xl` | &ge;1880px |
+| 2x-small | <em>None</em> |&lt;{asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue} |
+| X-small | `xs` | &ge;{asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue} |
+| Small | `sm` | &ge;{asArray.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} |
+| Medium | `md` | &ge;{asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue} |
+| Large | `lg` | &ge;{asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue} |
+| X-large | `xl` | &ge;{asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue} |
+| 2x-large | `2xl` | &ge;{asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue} |
+| 3x-large | `3xl` | &ge;{asArray.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue} |
 </BsTable>
 
 <BootstrapCompatibility>
@@ -41,7 +43,7 @@ Includes support for xxl breakpoint, defined like 2xl.
 <BsTable class="table">
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra extra large | `xxl` | &ge;1640px |
+| Extra extra large | `xxl` | &ge;{asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue} |
 </BsTable>
 
 </BootstrapCompatibility>
@@ -89,31 +91,29 @@ OUDS Web primarily uses the following media query ranges—or breakpoints—in o
 
 These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
-```scss
-// 2x-small devices (portrait phones, less than 390px)
-// No media query for `2xs` since this is the default in OUDS Web
+<Code lang="scss" code={`// 2x-small devices (portrait phones, less than ${asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue})
+  // No media query for \`2xs\` since this is the default in OUDS Web
 
-// X-small devices (portrait phones, 390px and up)
-@media (min-width: 390px) { ... }
+  // X-small devices (portrait phones, ${asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}) { ... }
 
-// Small devices (landscape phones, 480px and up)
-@media (min-width: 480px) { ... }
+  // Small devices (landscape phones, ${asArray.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}) { ... }
 
-// Medium devices (portrait tablets, 736px and up)
-@media (min-width: 736px) { ... }
+  // Medium devices (portrait tablets, ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}) { ... }
 
-// Large devices (landscape tablets, 1024px and up)
-@media (min-width: 1024px) { ... }
+  // Large devices (landscape tablets, ${asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue}) { ... }
 
-// X-large devices (desktops, 1320px and up)
-@media (min-width: 1320px) { ... }
+  // X-large devices (desktops, ${asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}) { ... }
 
-// 2x-large devices (large desktops, 1640px and up)
-@media (min-width: 1640px) { ... }
+  // 2x-large devices (large desktops, ${asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}) { ... }
 
-// 3x-large devices (larger desktops, TV, 1880px and up)
-@media (min-width: 1880px) { ... }
-```
+  // 3x-large devices (larger desktops, TV, ${asArray.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue} and up)
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}) { ... }`} />
 
 ### Max-width
 
@@ -139,30 +139,28 @@ We occasionally use media queries that go in the other direction (the given scre
 
 These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
 
-```scss
-// `2xs` returns only a ruleset and no media query
-// ... { ... }
-// `xs` applies to 2x-small devices (portrait phones, less than 390px)
-@media (max-width: 389.98px) { ... }
+<Code lang="scss" code={`// \`2xs\` returns only a ruleset and no media query
+  // ... { ... }
+  // \`xs\` applies to 2x-small devices (portrait phones, less than ${asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `sm` applies to x-small devices (portrait phones, less than 480px)
-@media (max-width: 479.98px) { ... }
+  // \`sm\` applies to x-small devices (portrait phones, less than ${asArray.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `md` applies to small devices (landscape phones, less than 736px)
-@media (max-width: 735.98px) { ... }
+  // \`md\` applies to small devices (landscape phones, less than ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `lg` applies to medium devices (portrait tablets, less than 1024px)
-@media (max-width: 1023.98px) { ... }
+  // \`lg\` applies to medium devices (portrait tablets, less than ${asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `xl` applies to large devices (landscape tablets, less than 1320px)
-@media (max-width: 1319.98px) { ... }
+  // \`xl\` applies to large devices (landscape tablets, less than ${asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `2xl` applies to x-large devices (desktops, less than 1640px)
-@media (max-width: 1639.98px) { ... }
+  // \`2xl\` applies to x-large devices (desktops, less than ${asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue.slice(0, -2) - 0.02}px) { ... }
 
-// `3xl` applies to 2x-large devices (large desktops, less than 1880px)
-@media (max-width: 1879.98px) { ... }
-```
+  // \`3xl\` applies to 2x-large devices (large desktops, less than ${asArray.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue})
+  @media (max-width: ${asArray.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue.slice(0, -2) - .02}px) { ... }`} />
 
 <Callout type="warning" name="info-mediaqueries-breakpoints" />
 
@@ -183,11 +181,9 @@ There are also media queries and mixins for targeting a single segment of screen
 
 For example the `@include media-breakpoint-only(md) { ... }` will result in:
 
-```scss
-// Example
-// Apply styles starting from medium devices and up to large devices
-@media (min-width: 736px) and (max-width: 1023.98px) { ... }
-```
+<Code lang="scss" code={`// Example
+  // Apply styles starting from medium devices and up to large devices
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}) and (max-width: ${asArray.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - .02}px) { ... }`} />
 
 ### Between breakpoints
 
@@ -199,8 +195,6 @@ Similarly, media queries may span multiple breakpoint widths:
 
 Which results in:
 
-```scss
-// Example
-// Apply styles starting from medium devices and up to x-large devices
-@media (min-width: 736px) and (max-width: 1319.98px) { ... }
-```
+<Code lang="scss" code={`// Example
+  // Apply styles starting from medium devices and up to x-large devices
+  @media (min-width: ${asArray.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}) and (max-width: ${asArray.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - .02}px) { ... }`} />

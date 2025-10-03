@@ -1,3 +1,5 @@
+process.chdir('../../')
+
 import { defineConfig } from 'astro/config'
 
 import { oudsWeb } from './src/libs/astro'
