@@ -2,7 +2,7 @@
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 import type { Layout } from '@libs/layout'
-import Stylesheet from '@components/head/Stylesheet.astro'
+import Scss from '@components/head/Scss.astro'
 import Favicons from '@components/head/Favicons.astro'
 import Social from '@components/head/Social.astro'
 
@@ -24,10 +24,6 @@ const isHome = Astro.url.pathname === '/'
 const pageTitle = isHome
   ? `${getConfig().title} · ${getConfig().subtitle}`
   : `${title} · ${getConfig().title} v${getConfig().docs_version}`
-
-// Dynamic imports to avoid build-time processing
-const Scss = import.meta.env.PROD ? null : await import('@components/head/Scss.astro')
-// const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.astro') : null
 ---
 
 <meta charset="UTF-8" />
@@ -60,9 +56,7 @@ const Scss = import.meta.env.PROD ? null : await import('@components/head/Scss.a
   <ScssProd.default />
 )} -->
 
-{!import.meta.env.PROD && Scss && (
-  <Scss.default />
-)}
+<Scss />
 
 <Favicons />
 <Social description={description} layout={layout} thumbnail={thumbnail} title={title} />

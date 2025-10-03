@@ -65,7 +65,7 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={Astro.url.pathname === '/'}
+            active={Astro.url.pathname === `/${getConfig().brand}/`}
             href={`/${getConfig().brand}/`}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
           >
