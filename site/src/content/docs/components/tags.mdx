@@ -51,17 +51,26 @@ For both types of tag, OUDS Web has a basic `.tag` class that sets up default st
 <Example showToolbar={false} code={`<p class="tag">Tag</p>`
 } />
 
-<Example showToolbar={false} code={`<button type="button" class="tag tag-input"><span class="visually-hidden">Remove the tag</span>Input tag</button>`
+<Example showToolbar={false} code={`<button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Remove this tag</span></button>`
 } />
+
+
+### Accessibility
+
+For accessibility reasons, a tag, like any other informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
+
+Visually impaired and blind users will lack the visual context that permits to understand the tags purpose on the page if tags' labels are not self-explanatory. Thus it's mandatory to add textual information to explain what it represents, especially if the tags are in a list.
+
+*For tags lists: add a semantically informative text to describe the tags' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added.
+
+Several examples are provided below but they will need to be adapted for actual use cases.
 
 ## Tag
 
 ### Overview
 
 <Callout type="warning">
-For accessibility reasons, a tag, like any other informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
-
-When inserting tags into a list, wrap the list in a semantic container (usually a `<ul>` or `<ol>`). If the purpose of the tags is not clear enough (especially without visual context), an `aria-label` must be added to the container to explain the function of the tags.
+Tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a semantically informative text to describe the tags' list purpose*, otherwise an `aria-label` must be added to the container to explain the function of the tags, [more information here](#accessibility).
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
@@ -387,7 +396,11 @@ Input tags are interactive and may be associated to an input field to be added d
 It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
 <Callout type="warning">
-  For accessibility reasons, a list of input tags should be wrapped in a container with an appropriate `aria-label` to describe the group of input tags. Each input tag should contain a `.visually-hidden` text to indicate the action that will be performed when the tag is clicked.
+Input tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a semantically informative text to describe the tags' list purpose*, otherwise an `aria-label` must be added to the container to explain the function of the tags, [more information here](#accessibility).
+</Callout>
+
+<Callout type="warning">
+Each input tag should contain a `.visually-hidden` text *after the button text* to indicate the action that will be performed when the tag is clicked.
 </Callout>
 
 <Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs" aria-label="Selected mobile coverage">
