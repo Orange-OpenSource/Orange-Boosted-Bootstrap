@@ -1,11 +1,12 @@
 ---
 import RedirectLayout from '@layouts/RedirectLayout.astro'
 import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
 
 export function getStaticPaths() {
   return [
     {
-      params: { brand: process.env.BRAND }
+      params: { brand: getConfig().brand }
     }
   ]
 }

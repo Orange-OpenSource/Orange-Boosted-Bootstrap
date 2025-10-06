@@ -9,7 +9,7 @@ import { getConfig } from '@libs/config'
 export function getStaticPaths() {
   return [
     {
-      params: { brand: process.env.BRAND }
+      params: { brand: getConfig().brand }
     }
   ]
 }
@@ -19,7 +19,7 @@ export function getStaticPaths() {
   <MastHead />
   <div class="container-fluid container-max-width pt-scaled-md pb-scaled-3xl bd-masthead-followup">
     <p class="mb-scaled-md d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
-      <a href={`/${process.env.BRAND}/docs/${getConfig().docs_version}/migration`} class="tag me-md bd-tag">New in v0.5</a>
+      <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/migration`} class="tag me-md bd-tag">New in v0.5</a>
       <span class="lead mt-scaled-sm m-md-none">Breadcrumb, Bullet list, Badge, and many more</span>
     </p>
     <GetStarted />

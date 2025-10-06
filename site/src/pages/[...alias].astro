@@ -6,6 +6,7 @@ import { trimLeadingAndTrailingSlashes } from '@libs/utils'
 import { replaceConfigInText } from '@libs/remark'
 import { aliasedDocsPages } from '@libs/content'
 import { getAliasedExamplesPages, getExampleNameFromPagePath } from '@libs/examples'
+import { getConfig } from '@libs/config'
 
 export async function getStaticPaths() {
   function normalizeAliases(aliases: string | string[] | undefined): string[] {
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
   }
 
   function getAliasStaticPath(alias: string, path: string) {
-    return { params: { alias: trimLeadingAndTrailingSlashes(replaceConfigInText(alias)), brand: process.env.BRAND }, props: { path } }
+    return { params: { alias: trimLeadingAndTrailingSlashes(replaceConfigInText(alias)), brand: getConfig().brand }, props: { path } }
   }
 
   const staticPaths = []

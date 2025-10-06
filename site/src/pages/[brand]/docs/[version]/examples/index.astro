@@ -6,7 +6,7 @@ import ExamplesMain from '@layouts/partials/ExamplesMain.astro'
 export function getStaticPaths() {
   return [
     {
-      params: { version: getConfig().docs_version, brand: process.env.BRAND }
+      params: { version: getConfig().docs_version, brand: getConfig().brand }
     }
   ]
 }

@@ -34,7 +34,7 @@ const sidebar = getData('sidebar')
                   const docSlug = getSlug(page.title)
                   const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
-                  const url = `/${process.env.BRAND}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                  const url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
                   const active = Astro.params.slug === unversionedPageSlug
 
                   const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
@@ -74,7 +74,7 @@ const sidebar = getData('sidebar')
               <li class="bd-links-span-all mt-2xs mb-lg mx-sm border-top" />
               <li class="bd-links-span-all">
                 <a
-                  href={`/${process.env.BRAND}/docs/${getConfig().docs_version}/${groupSlug}/`}
+                  href={`/${getConfig().brand}/docs/${getConfig().docs_version}/${groupSlug}/`}
                   class:list={['bd-links-link', 'd-block', { active }]}
                   aria-current={active ? 'page' : undefined}
                 >

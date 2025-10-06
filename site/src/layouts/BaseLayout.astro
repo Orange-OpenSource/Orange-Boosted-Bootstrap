@@ -45,7 +45,7 @@ const mainProps = overrides?.main ?? {}
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto" data-bs-brand={process.env.BRAND}>
+<html lang="en" data-bs-theme="auto" data-bs-brand={getConfig().brand}>
   <head>
     <Head
       description={description}

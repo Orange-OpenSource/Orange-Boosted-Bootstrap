@@ -15,7 +15,7 @@ function getVersionsSortedDesc<TKey extends string, TVersions extends Record<TKe
 export function getStaticPaths() {
   return [
     {
-      params: { brand: process.env.BRAND }
+      params: { brand: getConfig().brand }
     }
   ]
 }

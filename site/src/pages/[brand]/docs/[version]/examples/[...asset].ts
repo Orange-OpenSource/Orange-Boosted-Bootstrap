@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
   return examplesAssets.map((examplesAsset) => {
     return {
-      params: { asset: examplesAsset, version: getConfig().docs_version, brand: process.env.BRAND }
+      params: { asset: examplesAsset, version: getConfig().docs_version, brand: getConfig().brand }
     }
   })
 }

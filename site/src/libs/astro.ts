@@ -32,23 +32,23 @@ const staticFileAliases = {
 
 // A list of pages that will be excluded from the sitemap.
 const sitemapExcludes = [
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/getting-started/build-tools`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/customize`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/customize/color`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/layout`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/content`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components/navs`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/components/chip`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/forms`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/helpers/screen-readers`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/migration`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/utilities`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/extend`,
-  `/${process.env.BRAND}/docs/${getConfig().docs_version}/about`
+  `/${getConfig().brand}/docs/${getConfig().docs_version}`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/getting-started`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/getting-started/build-tools`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/customize`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/customize/color`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/layout`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/content`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/components`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/components/navs`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/components/chip`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/forms`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/helpers`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/helpers/screen-readers`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/migration`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/utilities`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/extend`,
+  `/${getConfig().brand}/docs/${getConfig().docs_version}/about`
 ]
 
 const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
@@ -160,7 +160,7 @@ function cleanPublicDirectory() {
 }
 
 // Copy the `tarteaucitron` folder from the node_modules the latest version of TarteauCitron to make it available from
-// the `/${process.env.BRAND}/docs/${docs_version}/dist` URL.
+// the `/${getConfig().brand}/docs/${docs_version}/dist` URL.
 function copyTarteauCitron() {
   const source = path.join(process.cwd(), 'node_modules/tarteaucitronjs')
   const destination = path.join(getDocsPublicFsPath(), getConfig().brand, 'docs', getConfig().docs_version, 'assets/js')
@@ -175,7 +175,7 @@ function copyTarteauCitron() {
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of OUDS Web to make it available from
-// the `/${process.env.BRAND}/docs/${docs_version}/dist` URL.
+// the `/${getConfig().brand}/docs/${docs_version}/dist` URL.
 function copyOudsWeb() {
   const sourceJs = path.join(process.cwd(), 'dist')
   const sourceCss = path.join(process.cwd(), `packages/${getConfig().brand}/dist`)

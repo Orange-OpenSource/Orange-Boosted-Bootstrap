@@ -24,7 +24,7 @@ export async function getStaticPaths() {
     }
 
     return {
-      params: { example, version: getConfig().docs_version, brand: process.env.BRAND },
+      params: { example, version: getConfig().docs_version, brand: getConfig().brand },
       props: { ...frontmatter, Content }
     }
   })
