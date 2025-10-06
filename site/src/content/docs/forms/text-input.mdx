@@ -158,17 +158,25 @@ To display a helper link below inputs, use a [standard `.link` class]([[docsref:
 
 ### Input prefix and suffix
 
+A textual prefix or suffix can be added to an input by wrapping the `<input>` in a `.input-container` and adding `data-bs-prefix` and/or `data-bs-suffix` attributes to it.
+
 <Example code={`<div class="text-input-container">
     <label for="inputTextWithPrefix">Enter you website URL</label>
     <div class="input-container" data-bs-prefix="https://">
-      <input type="text" id="inputTextWithPrefix" class="text-input" placeholder="">
+      <input type="text" id="inputTextWithPrefix" aria-describedby="prefixTextHelpBlock"class="text-input" placeholder="">
     </div>
+  </div>
+  <div id="prefixTextHelpBlock" class="text-input-helper">
+    Please fill in the complete URL without the protocol (e.g. www.example.com).
   </div>
   <div class="text-input-container mt-md">
     <label for="inputTextWithSuffix">Price</label>
     <div class="input-container" data-bs-suffix="€">
-      <input type="text" id="inputTextWithSuffix" class="text-input" placeholder="">
+      <input type="text" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input" placeholder="">
     </div>
+  </div>
+  <div id="suffixTextHelpBlock" class="text-input-helper">
+    Enter your price in Euro (€).
   </div>
   <div class="text-input-container mt-md">
     <label for="inputTextWithPrefixSuffix">Price</label>
