@@ -1,5 +1,6 @@
 ---
 import RedirectLayout from '@layouts/RedirectLayout.astro'
+import { getConfig } from '@libs/config'
 ---
 
-<RedirectLayout path="/orange/" />
+<RedirectLayout path={`/${getConfig().brand}/`} />

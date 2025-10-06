@@ -1,141 +1,221 @@
-// stylelint-disable function-disallowed-list
-
 .tag {
-  // scss-docs-start tag-css-vars
-  --#{$prefix}tag-color: #{$tag-color};
-  --#{$prefix}tag-bg: #{$tag-bg};
-  --#{$prefix}tag-gap: #{$tag-gap};
-  --#{$prefix}tag-padding-x: #{$tag-padding-x};
-  --#{$prefix}tag-padding-y: #{$tag-padding-y};
-  @include rfs($tag-font-size, --#{$prefix}tag-font-size);
-  --#{$prefix}tag-font-shift: #{$tag-font-shift};
-  --#{$prefix}tag-font-weight: #{$tag-font-weight};
-  --#{$prefix}tag-icon-size: #{$tag-icon-size};
-  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
-  --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
-  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end};
-  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start};
-  --#{$prefix}tag-border-width: #{$tag-border-width};
-  --#{$prefix}tag-border-radius: #{$tag-border-radius};
-  --#{$prefix}tag-border-color: #{$tag-border-color};
-  --#{$prefix}tag-active-color: #{$tag-active-color};
-  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color};
-  --#{$prefix}tag-disabled-color: #{$tag-disabled-color};
-  // scss-docs-end tag-css-vars
+  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
+  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
+  --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
+  --#{$prefix}tag-border-width: 0px;
+  --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
+  --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
+  --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
+  --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
+  --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-default)};
+  --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
+  --#{$prefix}tag-asset-color: currentcolor;
+  --#{$prefix}tag-loading-dasharray: 92;
+  --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
+  --#{$prefix}tag-positive-icon: #{$tag-positive-icon};
+  --#{$prefix}tag-info-icon: #{$tag-info-icon};
+  --#{$prefix}tag-warning-icon: #{$tag-warning-icon};
+  --#{$prefix}tag-negative-icon: #{$tag-negative-icon};
 
+  position: relative;
   display: inline-flex;
-  gap: var(--#{$prefix}tag-gap);
+  gap: var(--#{$prefix}tag-asset-gap);
   align-items: center;
-  padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5));
-  @include font-size(var(--#{$prefix}tag-font-size));
-  font-weight: var(--#{$prefix}tag-font-weight);
-  line-height: add(var(--#{$prefix}tag-font-size), .125rem);
+  justify-content: center;
+  min-width: var(--#{$prefix}tag-min-width);
+  min-height: var(--#{$prefix}tag-min-height);
+  padding: calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-end) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-y) - var(--#{$prefix}tag-border-width)) calc(var(--#{$prefix}tag-padding-start) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+  margin: 0;
+  font-weight: 700;
   color: var(--#{$prefix}tag-color);
-  background-color: var(--#{$prefix}tag-bg);
-  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
-  @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+  white-space: nowrap;
+  background-color: var(--#{$prefix}tag-background-color);
+  @include get-font-size("label-medium");
+  @include border-radius($ouds-tag-border-radius);
 
-  img,
-  svg {
-    width: var(--#{$prefix}tag-icon-size);
-    min-width: var(--#{$prefix}tag-icon-size); // Here to avoid weird behavior on wrap
-    height: var(--#{$prefix}tag-icon-size);
-    margin: add(calc(-.5 * var(--#{$prefix}tag-icon-size)), var(--#{$prefix}tag-font-shift)) 0 calc(-.5 * var(--#{$prefix}tag-icon-size)) var(--#{$prefix}tag-icon-margin-start);
+  &.text-bg-status-accent-muted {
+    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-accent-emphasized};
   }
 
-  .close {
-    position: relative;
-    width: var(--#{$prefix}tag-close-size);
-    min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
-    height: var(--#{$prefix}tag-close-size);
-    padding: 0; // Force padding on button to have a circle on iOS - Safari and Chrome
-    margin: add(calc(-.5 * var(--#{$prefix}tag-close-size)), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(-.5 * var(--#{$prefix}tag-close-size)) var(--#{$prefix}tag-close-margin-start);
-    color: inherit;
-    background-color: transparent;
-    border: 0;
-    @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+  &.text-bg-status-positive-muted {
+    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-positive-emphasized};
+  }
 
-    &::before {
-      position: absolute;
-      top: calc(-1 * var(--#{$prefix}tag-padding-y));
-      right: calc(-1 * var(--#{$prefix}tag-padding-y));
-      bottom: calc(-1 * var(--#{$prefix}tag-padding-y));
-      left: calc(-1 * var(--#{$prefix}tag-padding-y));
-      content: "";
-      @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+  &.text-bg-status-info-muted {
+    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-info-emphasized};
+  }
+
+  &.text-bg-status-warning-muted {
+    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-warning-emphasized};
+  }
+
+  &.text-bg-status-negative-muted {
+    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-negative-emphasized};
+  }
+
+
+  .tag-icon,
+  .tag-status-icon,
+  .tag-bullet,
+  .tag-loader {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: var(--#{$prefix}tag-size-asset);
+    height: var(--#{$prefix}tag-size-asset);
+    padding: #{$ouds-tag-space-inset-icon-default};
+    overflow: hidden;
+    line-height: 1;
+    color: var(--#{$prefix}tag-asset-color);
+  }
+
+  .tag-status-icon {
+    vertical-align: middle;
+    background-color: var(--#{$prefix}tag-asset-color);
+    background-size: contain;
+  }
+
+  .tag-bullet {
+    width: calc(var(--#{$prefix}tag-size-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
+    height: calc(var(--#{$prefix}tag-size-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
+    padding: 0;
+    margin: #{$ouds-tag-space-inset-bullet-default};
+    background-color: var(--#{$prefix}tag-asset-color);
+    @include border-radius(#{$ouds-border-radius-pill});
+  }
+
+  &.text-bg-status-positive-emphasized,
+  &.text-bg-status-positive-muted {
+    .tag-status-icon {
+      mask-image: escape-svg(var(--#{$prefix}tag-positive-icon));
     }
+  }
 
-    &::after {
-      display: block;
-      min-width: subtract(var(--#{$prefix}tag-close-size), .625rem);
-      min-height: subtract(var(--#{$prefix}tag-close-size), .625rem);
-      content: "";
-      background-color: currentcolor;
-      mask: escape-svg(var(--#{$prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
+  &.text-bg-status-info-emphasized,
+  &.text-bg-status-info-muted {
+    .tag-status-icon {
+      mask-image: escape-svg(var(--#{$prefix}tag-info-icon));
     }
+  }
 
-    &:hover,
-    &:active {
-      color: var(--#{$prefix}tag-active-color);
-      background-color: var(--#{$prefix}tag-active-decoration-color);
+  &.text-bg-status-warning-emphasized,
+  &.text-bg-status-warning-muted {
+    .tag-status-icon {
+      mask-image: escape-svg(var(--#{$prefix}tag-warning-icon));
     }
+  }
 
-    &[disabled] {
-      pointer-events: none;
+  &.text-bg-status-negative-emphasized,
+  &.text-bg-status-negative-muted {
+    .tag-status-icon {
+      mask-image: escape-svg(var(--#{$prefix}tag-negative-icon));
+    }
+  }
+
+  &:not(.loading) .tag-loader {
+    display: none;
+  }
+
+  &.loading:has(.tag-loader) {
+    color: #{$ouds-color-content-default} if($enable-important-utilities, !important, null);
+    background-color: #{$ouds-color-surface-status-neutral-muted} if($enable-important-utilities, !important, null);
+  }
+
+  .tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
+    --#{$prefix}tag-asset-color: currentcolor;
+    display: block;
+    margin: 0;
+    font-size: var(--#{$prefix}tag-size-asset);
+    transform: rotate(-90deg);
+
+    > .tag-loader-inner {
+      fill: none;
+      stroke: var(--#{$prefix}tag-asset-color);
+      stroke-dasharray: var(--#{$prefix}tag-loading-dasharray);
+      stroke-width: 8;
+      transform-origin: center;
+      animation: var(--#{$prefix}tag-loading-animation);
     }
   }
 }
 
-.btn-check:disabled + .tag,
-.btn-check[disabled] + .tag,
-.tag[disabled],
+.disabled .tag,
 .tag.disabled {
-  color: var(--#{$prefix}tag-disabled-color);
-  pointer-events: none;
-  border-color: var(--#{$prefix}tag-disabled-color);
+  color: #{$ouds-color-content-on-action-disabled} if($enable-important-utilities, !important, null);
+  background-color: #{$ouds-color-action-disabled} if($enable-important-utilities, !important, null);
 }
-
-.btn-check:checked + .tag {
-  color: var(--#{$prefix}tag-active-color);
-  background-color: var(--#{$prefix}tag-active-decoration-color);
-  border-color: var(--#{$prefix}tag-active-decoration-color);
-}
-
-// stylelint-disable selector-no-qualifying-type
-a.tag,
-button.tag,
-label.tag {
-  color: var(--#{$prefix}tag-color);
-  text-decoration: none;
-  cursor: pointer;
-
-  &:hover {
-    border-color: var(--#{$prefix}tag-active-decoration-color);
-  }
-
-  &.active,
-  &:active {
-    color: var(--#{$prefix}tag-active-color);
-    background-color: var(--#{$prefix}tag-active-decoration-color);
-    border-color: var(--#{$prefix}tag-active-decoration-color);
-
-    &[disabled],
-    &.disabled {
-      background-color: var(--#{$prefix}tag-disabled-color);
-      border-color: var(--#{$prefix}tag-disabled-color);
-    }
-  }
-}
-// stylelint-enable selector-no-qualifying-type
 
 .tag-sm {
-  // scss-docs-start tag-sm-css-vars
-  --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
-  --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
-  --#{$prefix}tag-font-size: #{$tag-font-size-sm};
-  --#{$prefix}tag-icon-size: #{$tag-icon-size-sm};
-  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start-sm};
-  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
-  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
-  // scss-docs-end tag-sm-css-vars
+  --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
+  --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
+  --#{$prefix}tag-padding-start-asset: #{$ouds-tag-space-padding-inline-asset-small};
+  --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
+  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
+  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
+  --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-small)};
+  --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
+  --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
+  --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
+  @include get-font-size("label-small");
+}
+
+.tag-input {
+  --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
+  --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
+  --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
+  --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+  --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
+
+  margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
+  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
+
+  &::before {
+    position: absolute;
+    top: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    right: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    bottom: calc(-.5 * ($ouds-tag-size-min-height-interactive-area - var(--bs-tag-min-height)) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    left: calc(-1 * var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+    content: "";
+  }
+
+  &::after {
+    width: var(--#{$prefix}tag-size-asset);
+    height: var(--#{$prefix}tag-size-asset);
+    content: "";
+    background-color: currentcolor;
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 83.333 416.667 0 250 166.667 83.333 0 0 83.333 166.667 250 0 416.667 83.333 500 250 333.333 416.667 500 500 416.667 333.333 250z' transform='translate(250 250)'/></svg>");
+  }
+
+  &:hover {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:active {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-pressed};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-pressed};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-pressed};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:focus-visible {
+    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
+    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
+    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    --#{$prefix}tag-color: #{$ouds-color-action-disabled};
+    --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
+    --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
+    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+
+    pointer-events: none;
+  }
 }

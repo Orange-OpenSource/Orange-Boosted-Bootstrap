@@ -19,8 +19,8 @@ export function getStaticPaths() {
   <MastHead />
   <div class="container-fluid container-max-width pt-scaled-md pb-scaled-3xl bd-masthead-followup">
     <p class="mb-scaled-md d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
-      <a href={`/${getConfig().brand}/docs/${getConfig().docs_version}/migration`} class="tag me-md bd-tag">New in v0.5</a>
-      <span class="lead mt-scaled-sm m-md-none">Breadcrumb, Bullet list, Badge, and many more</span>
+      <span class="tag me-md">New in v{getConfig().docs_version}</span>
+      <span class="lead mt-scaled-sm m-md-none"><a href={`/docs/${getConfig().docs_version}/components/breadcrumb`}>Breadcrumb</a>, <a href={`/docs/${getConfig().docs_version}/components/bullet-list`}>Bullet list</a>, <a href={`/docs/${getConfig().docs_version}/components/badge`}>Badge</a>, and <a href={`/docs/${getConfig().docs_version}/migration`}>many more</a></span>
     </p>
     <GetStarted />
     <Customize />
