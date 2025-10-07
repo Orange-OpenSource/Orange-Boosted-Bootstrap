@@ -5,12 +5,16 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-@import "../../../scss/config";
-@import "../../../scss/functions";
-@import "../../../packages/orange/scss/tokens";
-@import "../../../scss/variables";
+$prefix: bs-;
+$focus-visible-outer-width:           3px;
+$focus-visible-inner-width:           2px;
+$focus-visible-outer-offset:          $focus-visible-inner-width;
+$transition-focus:    null;
+$enable-transitions:              true;
+$enable-reduced-motion:           true;
+$enable-rounded:                  true;
+
 @import "../../../scss/mixins";
-@import "variables";
 
 @import "@docsearch/css/dist/style";
 @import "search";
