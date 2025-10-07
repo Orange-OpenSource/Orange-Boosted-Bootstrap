@@ -19,7 +19,6 @@ const FILES = [
   'packages/orange/config.yml',
   'packages/sosh/config.yml',
   'js/src/base-component.js',
-  'package.js',
   'scss/mixins/_banner.scss',
   'site/data/docs-versions.yml'
 ]

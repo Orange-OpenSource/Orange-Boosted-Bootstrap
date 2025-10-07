@@ -5,6 +5,7 @@ on:
       - ouds/main
     paths:
       - "scss/**"
+      - "packages/**/scss/**"
   pull_request:
     types: [opened, reopened, synchronize]
   workflow_dispatch:

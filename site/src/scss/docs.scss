@@ -26,14 +26,6 @@
 $enable-rounded: true;
 // fusv-enable
 
-// Load Bootstrap variables and mixins
-@import "../../../scss/config";
-@import "../../../scss/functions";
-@import "../../../packages/orange/scss/tokens";
-@import "../../../scss/variables";
-@import "../../../scss/maps";
-@import "../../../scss/mixins";
-
 // fusv-disable
 $enable-grid-classes: false;
 $enable-cssgrid: true;

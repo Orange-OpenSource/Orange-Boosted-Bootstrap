@@ -1,6 +1,7 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
 import { getConfig } from '@libs/config'
+import { getMode } from '@libs/sass-variables'
 
 export const title = 'Download app'
 export const theme_selector = false
@@ -173,8 +174,8 @@ export const aliases = [
     </div>
   </div>
 
-  <div data-bs-theme="light">
-    <div class="py-2xl py-md-4xl bg-status-info-emphasized">
+  <div class="py-2xl py-md-4xl bg-status-info-emphasized">
+    <div data-bs-theme={getMode('modes-on-status-info-emphasized')}>
       <div class="container-fluid container-max-width d-flex justify-content-center pt-md-sm pb-sm">
         <div class="col-12 col-md-6 col-lg-8 col-xl-6">
           <h2 class="fs-hxl mb-2xl mb-md-4xl text-center">Do you want to start building your app? Get access to the SDK now</h2>
@@ -814,8 +815,8 @@ export const aliases = [
     </div>
   </div>
 
-  <div data-bs-theme="light">
-    <div class="py-2xl py-md-4xl bg-status-warning-emphasized">
+  <div class="py-2xl py-md-4xl bg-status-warning-emphasized">
+    <div data-bs-theme={getMode('modes-on-status-warning-emphasized')}>
       <div class="container-fluid container-max-width d-flex justify-content-center pt-md-sm pb-sm">
         <div class="col-12 col-md-6">
           <h2 class="fs-hxl mb-sm mb-md-lg text-center">Your feedback is valued</h2>

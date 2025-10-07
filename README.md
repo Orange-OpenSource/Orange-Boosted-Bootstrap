@@ -28,15 +28,21 @@
 
 ## Quick start
 
+OUDS Web need at least two different libraries. A common one, containing the common files used to build the different themes, and a theming one to apply some tokens.
+
+The common library have the common Scss files and all the common JavaScript that is included in every library. It also contains the builded JavaScript.
+
+The theming library have the specific Scss files containing all the tokens to apply the theme. It also contains the builded CSS for this specific theme.
+
 Several quick start options are available:
 
 - [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.5.0-ouds-web.zip)
-- Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web@v0.5.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web@v0.5.0`
-- Install with [Bun](https://bun.sh/): `bun add @ouds/web@v0.5.0`
+- Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git && git switch ouds/main`
+- Install with [npm](https://www.npmjs.com/): `npm install @ouds/web-common@v0.5.0 @ouds/web-orange@v0.5.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @ouds/web-common@v0.5.0 @ouds/web-orange@v0.5.0`
+- Install with [Bun](https://bun.sh/): `bun add @ouds/web-common@v0.5.0 @ouds/web-orange@v0.5.0`
 - Install with [Composer](https://getcomposer.org/): `composer require orange-opensource/orange-boosted-bootstrap:dev-ouds/main`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web` Sass: `Install-Package ouds-web.sass`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package ouds-web-common ouds-web-orange` Sass: `Install-Package ouds-web-common.sass ouds-web-orange.sass`
 
 Read the [Getting started page](https://web.unified-design-system.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
@@ -44,14 +50,14 @@ Read the [Getting started page](https://web.unified-design-system.orange.com/doc
 ## Status
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/js.yml?branch=ouds/main&label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Aouds%2Fmain)
-[![npm version](https://img.shields.io/npm/v/@ouds/web?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@ouds/web)
-[![NuGet](https://img.shields.io/nuget/vpre/ouds-web?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/ouds-web/absoluteLatest)
+[![npm version](https://img.shields.io/npm/v/@ouds/web-common?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@ouds/web-common)
+[![NuGet](https://img.shields.io/nuget/vpre/ouds-web-common?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/ouds-web-common/absoluteLatest)
 [![Coverage Status](https://img.shields.io/coveralls/github/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/Orange-OpenSource/Orange-Boosted-Bootstrap?branch=ouds/main)
 [![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/packages/orange/dist/css/ouds-web.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/packages/orange/dist/css/ouds-web.min.css)
 [![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/packages/orange/dist/css/ouds-web.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/packages/orange/dist/css/ouds-web.min.css)
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/ouds/main/dist/js/ouds-web.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/dist/js/ouds-web.min.js)
-[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web/badge)](https://www.jsdelivr.com/package/npm/@ouds/web)
+[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/@ouds/web-common/badge)](https://www.jsdelivr.com/package/npm/@ouds/web-common)
 
 ## What’s included
 
@@ -61,48 +67,50 @@ Within the download you’ll find the following directories and files, logically
   <summary>Download contents</summary>
 
   ```text
-  ouds-web/
-  ├── css/
-  │   ├── ouds-web-bootstrap.css
-  │   ├── ouds-web-bootstrap.css.map
-  │   ├── ouds-web-bootstrap.min.css
-  │   ├── ouds-web-bootstrap.min.css.map
-  │   ├── ouds-web-bootstrap.rtl.css
-  │   ├── ouds-web-bootstrap.rtl.css.map
-  │   ├── ouds-web-bootstrap.rtl.min.css
-  │   ├── ouds-web-bootstrap.rtl.min.css.map
-  │   ├── ouds-web-grid.css
-  │   ├── ouds-web-grid.css.map
-  │   ├── ouds-web-grid.min.css
-  │   ├── ouds-web-grid.min.css.map
-  │   ├── ouds-web-grid.rtl.css
-  │   ├── ouds-web-grid.rtl.css.map
-  │   ├── ouds-web-grid.rtl.min.css
-  │   ├── ouds-web-grid.rtl.min.css.map
-  │   ├── ouds-web-reboot.css
-  │   ├── ouds-web-reboot.css.map
-  │   ├── ouds-web-reboot.min.css
-  │   ├── ouds-web-reboot.min.css.map
-  │   ├── ouds-web-reboot.rtl.css
-  │   ├── ouds-web-reboot.rtl.css.map
-  │   ├── ouds-web-reboot.rtl.min.css
-  │   ├── ouds-web-reboot.rtl.min.css.map
-  │   ├── ouds-web-utilities.css
-  │   ├── ouds-web-utilities.css.map
-  │   ├── ouds-web-utilities.min.css
-  │   ├── ouds-web-utilities.min.css.map
-  │   ├── ouds-web-utilities.rtl.css
-  │   ├── ouds-web-utilities.rtl.css.map
-  │   ├── ouds-web-utilities.rtl.min.css
-  │   ├── ouds-web-utilities.rtl.min.css.map
-  │   ├── ouds-web.css
-  │   ├── ouds-web.css.map
-  │   ├── ouds-web.min.css
-  │   ├── ouds-web.min.css.map
-  │   ├── ouds-web.rtl.css
-  │   ├── ouds-web.rtl.css.map
-  │   ├── ouds-web.rtl.min.css
-  │   └── ouds-web.rtl.min.css.map
+  ouds-web-orange/
+  └── css/
+      ├── ouds-web-bootstrap.css
+      ├── ouds-web-bootstrap.css.map
+      ├── ouds-web-bootstrap.min.css
+      ├── ouds-web-bootstrap.min.css.map
+      ├── ouds-web-bootstrap.rtl.css
+      ├── ouds-web-bootstrap.rtl.css.map
+      ├── ouds-web-bootstrap.rtl.min.css
+      ├── ouds-web-bootstrap.rtl.min.css.map
+      ├── ouds-web-grid.css
+      ├── ouds-web-grid.css.map
+      ├── ouds-web-grid.min.css
+      ├── ouds-web-grid.min.css.map
+      ├── ouds-web-grid.rtl.css
+      ├── ouds-web-grid.rtl.css.map
+      ├── ouds-web-grid.rtl.min.css
+      ├── ouds-web-grid.rtl.min.css.map
+      ├── ouds-web-reboot.css
+      ├── ouds-web-reboot.css.map
+      ├── ouds-web-reboot.min.css
+      ├── ouds-web-reboot.min.css.map
+      ├── ouds-web-reboot.rtl.css
+      ├── ouds-web-reboot.rtl.css.map
+      ├── ouds-web-reboot.rtl.min.css
+      ├── ouds-web-reboot.rtl.min.css.map
+      ├── ouds-web-utilities.css
+      ├── ouds-web-utilities.css.map
+      ├── ouds-web-utilities.min.css
+      ├── ouds-web-utilities.min.css.map
+      ├── ouds-web-utilities.rtl.css
+      ├── ouds-web-utilities.rtl.css.map
+      ├── ouds-web-utilities.rtl.min.css
+      ├── ouds-web-utilities.rtl.min.css.map
+      ├── ouds-web.css
+      ├── ouds-web.css.map
+      ├── ouds-web.min.css
+      ├── ouds-web.min.css.map
+      ├── ouds-web.rtl.css
+      ├── ouds-web.rtl.css.map
+      ├── ouds-web.rtl.min.css
+      └── ouds-web.rtl.min.css.map
+
+  ouds-web-common/
   └── js/
       ├── ouds-web.bundle.js
       ├── ouds-web.bundle.js.map
@@ -137,15 +145,15 @@ Documentation search is powered by [Algolia’s DocSearch](https://docsearch.alg
 ### Running documentation locally
 
 1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
-2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
+2. Run `npm run dist` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 3. From the root `/ouds-web` directory, run `npm run start` in the command line.
-4. Open <http://localhost:9001/> in your browser, and voilà.
+4. Open <http://localhost:9001/orange/> or <http://localhost:9002/sosh/> in your browser, and voilà.
 
-Learn more about using Hugo by reading its [documentation](https://docs.astro.build/en/getting-started/).
+Learn more about using Astro by reading its [documentation](https://docs.astro.build/en/getting-started/).
 
 ### Documentation for previous releases
 
-You can find all our previous releases docs on <https://web.unified-design-system.orange.com/docs/versions/>.
+You can find all our previous releases docs on <https://web.unified-design-system.orange.com/orange/docs/versions/>.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
@@ -200,5 +208,5 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 Code and documentation copyright 2011-2025 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-OUDS Web code and documentation copyright 2015-2025 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+OUDS Web code and documentation copyright 2015-2025 the [OUDS Web Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA](https://orange.com). Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

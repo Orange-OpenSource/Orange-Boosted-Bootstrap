@@ -8,4 +8,6 @@ in whole or part of, in any medium, except as required for reasonable and custom
 and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
+nuget/ouds-web.png
+
 End of the parts list under Orange SA Copyright

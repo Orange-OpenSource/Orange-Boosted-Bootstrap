@@ -1,6 +1,6 @@
 {
-  "name": "orange-opensource/ouds-web-common",
-  "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
+  "name": "orange-opensource/ouds-web-sosh",
+  "description": "OUDS Web is a Bootstrap based, Sosh branded accessible and ergonomic components library.",
   "keywords": [
     "css",
     "js",
@@ -11,7 +11,7 @@
     "framework",
     "web",
     "bootstrap",
-    "Orange"
+    "Sosh"
   ],
   "homepage": "https://web.unified-design-system.orange.com/",
   "authors": [
