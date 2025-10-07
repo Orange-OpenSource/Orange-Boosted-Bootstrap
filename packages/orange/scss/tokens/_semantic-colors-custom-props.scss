@@ -1,7 +1,7 @@
 // Semantic custom properties applications
-// OUDS Core tokens version 1.5.0
+// OUDS Core tokens version 1.6.0
 // Orange Core tokens version 1.1.0
-// Orange System tokens version 1.5.0
+// Orange System tokens version 1.6.0
 
 // scss-docs-start ouds-all-semantic-css-color
 // scss-docs-start ouds-semantic-css-color
@@ -41,6 +41,11 @@
   --#{$prefix}color-border-focus: #{$ouds-color-border-focus-light};
   --#{$prefix}color-border-muted: #{$ouds-color-border-muted-light};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-light};
+  --#{$prefix}color-border-status-accent: #{$ouds-color-border-status-accent-light};
+  --#{$prefix}color-border-status-info: #{$ouds-color-border-status-info-light};
+  --#{$prefix}color-border-status-negative: #{$ouds-color-border-status-negative-light};
+  --#{$prefix}color-border-status-positive: #{$ouds-color-border-status-positive-light};
+  --#{$prefix}color-border-status-warning: #{$ouds-color-border-status-warning-light};
   --#{$prefix}color-content-brand-primary: #{$ouds-color-content-brand-primary-light};
   --#{$prefix}color-content-default: #{$ouds-color-content-default-light};
   --#{$prefix}color-content-disabled: #{$ouds-color-content-disabled-light};
@@ -173,6 +178,11 @@
   --#{$prefix}color-border-focus-inset: #{$ouds-color-border-focus-inset-dark};
   --#{$prefix}color-border-muted: #{$ouds-color-border-muted-dark};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-dark};
+  --#{$prefix}color-border-status-accent: #{$ouds-color-border-status-accent-dark};
+  --#{$prefix}color-border-status-info: #{$ouds-color-border-status-info-dark};
+  --#{$prefix}color-border-status-negative: #{$ouds-color-border-status-negative-dark};
+  --#{$prefix}color-border-status-positive: #{$ouds-color-border-status-positive-dark};
+  --#{$prefix}color-border-status-warning: #{$ouds-color-border-status-warning-dark};
   --#{$prefix}color-content-brand-primary: #{$ouds-color-content-brand-primary-dark};
   --#{$prefix}color-content-default: #{$ouds-color-content-default-dark};
   --#{$prefix}color-content-disabled: #{$ouds-color-content-disabled-dark};
@@ -262,6 +272,11 @@ $ouds-color-border-focus-inset: var(--#{$prefix}color-border-focus-inset) !defau
 $ouds-color-border-focus: var(--#{$prefix}color-border-focus) !default;
 $ouds-color-border-muted: var(--#{$prefix}color-border-muted) !default;
 $ouds-color-border-on-brand-primary: var(--#{$prefix}color-border-on-brand-primary) !default;
+$ouds-color-border-status-accent: var(--#{$prefix}color-border-status-accent) !default;
+$ouds-color-border-status-info: var(--#{$prefix}color-border-status-info) !default;
+$ouds-color-border-status-negative: var(--#{$prefix}color-border-status-negative) !default;
+$ouds-color-border-status-positive: var(--#{$prefix}color-border-status-positive) !default;
+$ouds-color-border-status-warning: var(--#{$prefix}color-border-status-warning) !default;
 $ouds-color-content-brand-primary: var(--#{$prefix}color-content-brand-primary) !default;
 $ouds-color-content-default: var(--#{$prefix}color-content-default) !default;
 $ouds-color-content-disabled: var(--#{$prefix}color-content-disabled) !default;
