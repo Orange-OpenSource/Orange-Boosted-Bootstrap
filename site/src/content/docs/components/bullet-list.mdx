@@ -12,6 +12,10 @@ import { getConfig } from '@libs/config'
 You can find here the [OUDS Bullet list design guidelines](https://unified-design-system.orange.com/472794e18/p/49e7bf-bullet-list).
 </Callout>
 
+## Overview
+
+Bullet lists can be [unordered](#unordered-lists), [ordered](#ordered-lists), [bare](#bare-lists) or a [mix](#mixed-lists). All types are based on the class `.bullet-list` applied to an `ul` or `ol` element.
+
 ## Unordered lists
 
 Add a `.bullet-list` class to an `ul` element to display an unordered list, this will display a custom icon as the list marker.
@@ -280,6 +284,37 @@ Add `.fw-normal` to the top `ul` to use a normal font weight.
     <li>With a normal font weight, you can put <a href="#">links</a> and long texts in here, adding some words just to show how this will wrap</li>
   </ul>`} />
 
+## Utilities
+
+### Unstyled
+
+Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+
+<Example code={`<ul class="list-unstyled">
+    <li>This is a list.</li>
+    <li>It appears completely unstyled.</li>
+    <li>Structurally, it's still a list.</li>
+    <li>However, this style only applies to immediate child elements.</li>
+    <li>Nested lists:
+      <ul>
+        <li>are unaffected by this style</li>
+        <li>will still show a bullet</li>
+        <li>and have appropriate left margin</li>
+      </ul>
+    </li>
+    <li>This may still come in handy in some situations.</li>
+  </ul>`} />
+
+### Inline
+
+Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
+
+<Example code={`<ul class="list-inline">
+    <li class="list-inline-item">This is a list item.</li>
+    <li class="list-inline-item">And another one.</li>
+    <li class="list-inline-item">But they're displayed inline.</li>
+  </ul>`} />
+
 ## Native list
 
 <Callout type="warning">
@@ -320,34 +355,3 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
     </li>
     <li>As the previous unordered list</li>
   </ol>`} />
-
-## Utilities
-
-### Unstyled
-
-Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
-
-<Example code={`<ul class="list-unstyled">
-    <li>This is a list.</li>
-    <li>It appears completely unstyled.</li>
-    <li>Structurally, it's still a list.</li>
-    <li>However, this style only applies to immediate child elements.</li>
-    <li>Nested lists:
-      <ul>
-        <li>are unaffected by this style</li>
-        <li>will still show a bullet</li>
-        <li>and have appropriate left margin</li>
-      </ul>
-    </li>
-    <li>This may still come in handy in some situations.</li>
-  </ul>`} />
-
-### Inline
-
-Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
-
-<Example code={`<ul class="list-inline">
-    <li class="list-inline-item">This is a list item.</li>
-    <li class="list-inline-item">And another one.</li>
-    <li class="list-inline-item">But they're displayed inline.</li>
-  </ul>`} />
