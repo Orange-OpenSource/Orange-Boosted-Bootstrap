@@ -106,22 +106,22 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 The OUDS Web source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
-ouds-web-[[config:brand]]/
-├── dist/
-│   └── css/
-└── scss/
-
-ouds-web-common/
-├── dist/
-│   └── js/
-├── site/
-│   └── src/
-│       ├── assets/
-│       │  └── examples/
-│       └── content/
-│          └── docs/
-├── js/
-└── scss/
+@ouds/
+├── web-[[config:brand]]/
+│   ├── dist/
+│   │   └── css/
+│   └── scss/
+└── web-common/
+    ├── dist/
+    │   └── js/
+    ├── site/
+    │   └── src/
+    │       ├── assets/
+    │       │  └── examples/
+    │       └── content/
+    │          └── docs/
+    ├── js/
+    └── scss/
 ```
 
 The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the compiled download section above. The `site/src/content/docs/` folder includes the source code for our hosted documentation, including our live examples of OUDS Web usage.
