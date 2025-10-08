@@ -40,15 +40,14 @@ interface Props {
    */
   nestedInExample?: boolean
   /**
-   * Defines label to complete 'Edit on Stackblitz' and 'Copy to clipboard' buttons' labels.
-   * @default null
+   * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons labels.
    */
   buttonLabel?: string
 }
 
-const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false, buttonLabel = null } = Astro.props
+const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false, buttonLabel } = Astro.props
 
-const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard4` : 'Copy code to clipboard5'
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard` : 'Copy code to clipboard'
 
 let codeToDisplay = filePath
   ? fs.readFileSync(path.join(process.cwd(), filePath), 'utf8')
@@ -70,23 +69,15 @@ if (filePath && fileMatch && codeToDisplay) {
 <script>
   import ClipboardJS from 'clipboard'
 
-  let  stackblitzLabel = 'Edit code on StackBlitz'
-  if (document.querySelector('.btn-edit') !== null && document.querySelector('.btn-edit').getAttribute('title') !== null) {
-    stackblitzLabel = document.querySelector('.btn-edit').getAttribute('title')
-  }
-  let  clipboardLabel = 'Copy code to clipboard'
-  if (document.querySelector('.btn-clipboard') !== null && document.querySelector('.btn-clipboard').getAttribute('title') !== null) {
-    clipboardLabel = document.querySelector('.btn-clipboard').getAttribute('title')
-  }
-
-  function snippetButtonTooltip(selector: string, title: string) {
+  function snippetButtonTooltip(selector: string, fallbackLabel: string) {
     document.querySelectorAll(selector).forEach((btn) => {
-      oudsWeb.Tooltip.getOrCreateInstance(btn, { title })
+      const label = btn.getAttribute('title') ? btn.getAttribute('title') : fallbackLabel
+      oudsWeb.Tooltip.getOrCreateInstance(btn, { label })
     })
   }
 
-  snippetButtonTooltip('.btn-clipboard', clipboardLabel)
-  snippetButtonTooltip('.btn-edit', stackblitzLabel)
+  snippetButtonTooltip('.btn-clipboard', 'Copy code to clipboard')
+  snippetButtonTooltip('.btn-edit', 'Edit code on StackBlitz')
 
   const clipboard = new ClipboardJS('.btn-clipboard', {
     target: (trigger) => trigger.closest('.bd-code-snippet')?.querySelector('.highlight')!,
@@ -103,7 +94,8 @@ if (filePath && fileMatch && codeToDisplay) {
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild?.getAttributeNS(namespace, 'href')
-    const isCheckIconVisible = originalXhref.includes('#check2')
+    const initialTooltipInner = tooltipBtn?.tip?.querySelector('.tooltip-inner')?.innerHTML
+    const isCheckIconVisible = originalXhref?.includes('#check2') || false
 
     if (isCheckIconVisible) {
       return
@@ -114,7 +106,7 @@ if (filePath && fileMatch && codeToDisplay) {
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': clipboardLabel })
+        tooltipBtn?.setContent({ '.tooltip-inner': initialTooltipInner })
       },
       { once: true }
     )
@@ -136,13 +128,14 @@ if (filePath && fileMatch && codeToDisplay) {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     const fallbackMsg = `Press ${modifierKey}C to copy`
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
+    const initialTooltipInner = tooltipBtn?.tip?.querySelector('.tooltip-inner')?.innerHTML
 
     tooltipBtn?.setContent({ '.tooltip-inner': fallbackMsg })
 
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': clipboardLabel })
+        tooltipBtn?.setContent({ '.tooltip-inner': initialTooltipInner })
       },
       { once: true }
     )
@@ -170,7 +163,7 @@ if (filePath && fileMatch && codeToDisplay) {
         : (
           <div class="bd-clipboard">
             <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
-              <svg class="bi" aria-hidden="true">
+              <svg aria-hidden="true">
                 <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
               </svg>
             </button>

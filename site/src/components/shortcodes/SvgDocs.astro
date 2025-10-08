@@ -19,9 +19,13 @@ interface Props {
    * @default true
    */
   downloadable?: boolean
+  /**
+   * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons labels.
+   */
+  buttonLabel?: string
 }
 
-const { file = `${getConfig().brand}-logo`, downloadable = true } = Astro.props
+const { file = `${getConfig().brand}-logo`, downloadable = true, buttonLabel } = Astro.props
 
 const filePath = `site/${getConfig().brand}/static/docs/[version]/assets/brand/${file}`
 const svgFormattedPath = `${filePath}-formatted.svg`
@@ -29,13 +33,17 @@ const svgPath = `${filePath}.svg`
 
 const svg = fs.readFileSync(svgPath, 'utf8')
 const size = fs.statSync(svgPath).size
+
+const clipboardLabel = buttonLabel !== undefined ? `Copy ${buttonLabel} code to clipboard` : 'Copy code to clipboard'
 ---
 
-<Code filePath={svgFormattedPath} lang="html">
+<Code filePath={svgFormattedPath} lang="html" buttonLabel={buttonLabel}>
   <div slot="pre" class="bd-clipboard">
     <div class="d-flex ms-auto">
-      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy to clipboard">
-        <svg class="bi" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use></svg>
+      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+        <svg aria-hidden="true">
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+        </svg>
       </button>
     </div>
   </div>

@@ -43,8 +43,7 @@ interface Props {
    */
   showToolbar?: boolean
   /**
-   * Defines label to complete 'Edit on Stackblitz' and 'Copy to clipboard' buttons' labels.
-   * @default true
+   * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons labels.
    */
   buttonLabel?: string
 }
@@ -58,7 +57,7 @@ const {
   showMarkup = true,
   showPreview = true,
   showToolbar = true,
-  buttonLabel = null
+  buttonLabel
 } = Astro.props
 
 let markup = Array.isArray(code) ? code.join('\n') : code

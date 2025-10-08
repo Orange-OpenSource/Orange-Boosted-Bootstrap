@@ -16,9 +16,16 @@ interface Props {
    * File path that contains the content to display relative to the root of the repository.
    */
   file: string
+  /**
+   * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons labels.
+   */
+  buttonLabel?: string
 }
 
-const { name, file } = Astro.props
+const { name, file, buttonLabel } = Astro.props
+
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} JS to clipboard` : name ?
+  `Copy ${name} JS to clipboard` : file ? `Copy ${file} file to clipboard` : 'Copy JS to clipboard'
 
 if (!name || !file) {
   throw new Error(
@@ -53,7 +60,7 @@ try {
 }
 ---
 
-<Code containerClass="bd-example-snippet bd-code-snippet bd-file-ref" code={content} lang="js">
+<Code containerClass="bd-example-snippet bd-code-snippet bd-file-ref" code={content} lang="js" buttonLabel={buttonLabel}>
   <div slot="bar" class="d-flex align-items-center highlight-toolbar ps-lg border-bottom border-thin border-default">
     <a
       class="me-4xl font-monospace small"
@@ -63,8 +70,10 @@ try {
     </a>
   </div>
   <div slot="pre" class="position-absolute top-0 end-0">
-    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy code to clipboard">
-      <svg aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use></svg>
+    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+      <svg aria-hidden="true">
+        <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+      </svg>
     </button>
   </div>
 </Code>
