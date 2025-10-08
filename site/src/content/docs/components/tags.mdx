@@ -74,7 +74,7 @@ Several examples are provided below but they will need to be adapted for actual 
 Tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a semantically informative text to describe the tags' list purpose*, otherwise an `aria-label` must be added to the container to explain the function of the tags, [more information here](#accessibility).
 </Callout>
 
-<Example code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
+<Example buttonLabel="default tags" code={`<ul class="list-unstyled d-flex column-gap-xs" aria-label="Mobile coverage">
     <li class="tag">Roaming</li>
     <li class="tag">5G Ready</li>
     <li class="tag">4G</li>
@@ -87,7 +87,7 @@ OUDS Web [color and background utilities]([[docsref:/helpers/color-background]])
 Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`.
 </Callout>
 
-<Example code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted colors">
+<Example buttonLabel="colored tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted colors">
     <li class="tag text-bg-status-neutral-muted">Neutral</li>
     <li class="tag text-bg-status-accent-muted">Accent</li>
     <li class="tag text-bg-status-positive-muted">Positive</li>
