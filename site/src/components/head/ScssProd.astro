@@ -1,16 +1,23 @@
 ---
+
 ---
 
 <style is:global lang="scss">
   $ouds-root-selector: '&';
-  [data-bs-brand="orange"] {
-    $brand: "orange";
-    @import '../../scss/docs';
+  [data-bs-brand='orange'] {
+    $brand: 'orange';
+    @import '../../../../scss/config';
+    @import '../../../../scss/functions';
+    @import '../../../../packages/orange/scss/tokens';
+    @import '../../scss/docs_prod';
     @import '../../scss/docs_search';
   }
-  [data-bs-brand="sosh"] {
-    $brand: "sosh";
-    @import '../../scss/docs';
+  [data-bs-brand='sosh'] {
+    $brand: 'sosh';
+    @import '../../../../scss/config';
+    @import '../../../../scss/functions';
+    @import '../../../../packages/sosh/scss/tokens';
+    @import '../../scss/docs_prod';
     @import '../../scss/docs_search';
   }
 </style>
