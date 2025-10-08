@@ -278,7 +278,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
 <Example code={`<div class="text-input">
     <div class="text-input-container">
       <label for="exampleTextInputInvalidEmpty">Username</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" placeholder="">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="usernameFeedback" placeholder="">
     </div>
     <div id="usernameTextHelpBlock" class="text-input-helper">
       Please choose a username.
@@ -290,7 +290,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
   <div class="text-input">
     <div class="text-input-container mt-md">
       <label for="exampleTextInputInvalid">Email</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" placeholder="">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="emailFeedback" placeholder="">
        <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
           <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
@@ -308,7 +308,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
       </svg>
       <label for="exampleTextInputOutlinedInvalidEmpty">Address</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" placeholder="">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="addressFeedback" placeholder="">
     </div>
     <div id="addressFeedback" class="text-input-error">
       Address is required.
@@ -317,7 +317,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
   <div class="text-input">
     <div class="text-input-container text-input-container-outlined mt-md">
       <label for="exampleTextInputOutlinedInvalid" class="form-label">City</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" placeholder="">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="cityFeedback" placeholder="">
     </div>
     <div id="cityFeedback" class="text-input-error">
         City is invalid.
@@ -330,7 +330,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       </svg>
       <label for="exampleTextInputInvalidWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" placeholder="">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="priceFeedback" placeholder="">
       </div>
     </div>
     <div id="priceFeedback" class="text-input-error">
@@ -344,7 +344,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       </svg>
       <label for="exampleTextInputInvalidTrailingWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="priceTextHelpBlock" placeholder="">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="priceTextHelpBlock" aria-labelledby="invalidPrice" placeholder="">
       </div>
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
