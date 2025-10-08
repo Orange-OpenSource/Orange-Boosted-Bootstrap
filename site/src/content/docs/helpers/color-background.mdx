@@ -7,7 +7,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
-import { asArray } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 
 ## Overview
 
@@ -17,7 +17,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 Please consider using our [color modes]([[docsref:/customize/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
 </Callout>
 
-<Example code={[...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
     return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
   `<p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>

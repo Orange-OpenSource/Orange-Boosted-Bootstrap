@@ -7,7 +7,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
-import { asArray } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 
 ## Border
 
@@ -47,7 +47,7 @@ Or remove borders:
 
 Change the border color using utilities. The color utilities are generated from our `$ouds-border-colors` Sass map.
 
-<Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...asArray.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
+<Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
       return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xs p-xs"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
     }

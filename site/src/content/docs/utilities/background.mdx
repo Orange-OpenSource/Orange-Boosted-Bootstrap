@@ -8,7 +8,7 @@ toc: true
 
 import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
-import { asArray } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -45,8 +45,8 @@ Here are the nominal cases you should be using, when there is no other theme int
 Please note that we use `[data-bs-theme]` attribute on a child element to avoid interfering with the parent theme. This is a workaround to avoid switching the colors between light and dark modes and keep having the good ones displayed.
 </Callout>
 
-<Example code={[...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = asArray.filter(allToken => {
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
       return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[0].includes('dark')
@@ -76,8 +76,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-always-white p-lg">
     <div data-bs-theme="light">`,
-  ...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = asArray.filter(allToken => {
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
       return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[1].includes('light')
@@ -107,8 +107,8 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example class="p-none" code={[`<div class="bg-always-black p-lg">
     <div data-bs-theme="dark">`,
-  ...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = asArray.filter(allToken => {
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
       return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[0].includes('dark')
@@ -142,8 +142,8 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-lg">
     <div data-bs-theme="root-inverted">`,
-  ...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = asArray.filter(allToken => {
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
       return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[0].includes('dark')
@@ -178,8 +178,8 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
 
 `.bg-brand-primary`,{getConfig().brand !== 'orange' ? <><code>.bg-brand-secondary</code>, <code>.bg-brand-tertiary</code></> : ''} `.bg-status-accent-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-negative-emphasized`, `.bg-status-positive-emphasized` and `.bg-status-info-emphasized` are considered as colored backgrounds.
 
-<Example code={[...asArray.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && (token.name.match(/-brand/) || token.name.match(/status-.*-emphasized/)) && !token.name.match(/-neutral/) && token.compiledValue).map(token => {
-    const themesArray = asArray.filter(allToken => {
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && (token.name.match(/-brand/) || token.name.match(/status-.*-emphasized/)) && !token.name.match(/-neutral/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
       return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[0].includes('dark')

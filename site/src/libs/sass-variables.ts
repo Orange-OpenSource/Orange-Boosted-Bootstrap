@@ -6,10 +6,10 @@ const options = {
   includePaths: []
 }
 
-export const asArray = exporter(options).getArray()
+export const allTokens = exporter(options).getArray()
 
 export const getMode = (regex: string) => {
-  const modes = asArray.filter((token: any) => token.name.match(regex)).map((token: any) => token.compiledValue)
+  const modes = allTokens.filter((token: any) => token.name.match(regex)).map((token: any) => token.compiledValue)
   const theme = modes[0].includes('dark')
     ? modes[1].includes('light')
       ? 'root'

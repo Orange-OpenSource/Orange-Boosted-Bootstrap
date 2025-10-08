@@ -8,10 +8,10 @@ toc: true
 
 import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
-import { asArray } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 import { getVersionedDocsPath } from '@libs/path'
 
-export const toto = asArray.filter((token) => token.name.match(new RegExp(`^\\$core-(ouds|${getConfig().brand})-color`))).reduce((accColors, color) => {
+export const toto = allTokens.filter((token) => token.name.match(new RegExp(`^\\$core-(ouds|${getConfig().brand})-color`))).reduce((accColors, color) => {
   const category = color.name.split('-').slice(3, -1).join('-')
 
   if (!accColors[category]) {

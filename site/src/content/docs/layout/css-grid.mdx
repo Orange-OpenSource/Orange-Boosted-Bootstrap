@@ -6,7 +6,7 @@ aliases:
 toc: true
 ---
 
-import { asArray } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 
 OUDS Web’s default grid system represents the culmination of over a decade of CSS layout techniques, tried and tested by millions of people via Bootstrap. But, it was also created without many of the modern CSS features and techniques we’re seeing in browsers like the new CSS Grid.
 
@@ -129,7 +129,7 @@ Similar to our default grid system, our CSS Grid allows for easy nesting of `.gr
 
 - We override the default number of columns with a local CSS variable: `--bs-columns: 3`.
 - In the first auto-column, the column count is inherited and each column is one-third of the available width.
-- In the second auto-column, we’ve reset the column count on the nested `.grid` to {asArray.find((token) => token.name === '$ouds-grid-3xl-column-count').compiledValue} (our default).
+- In the second auto-column, we’ve reset the column count on the nested `.grid` to {allTokens.find((token) => token.name === '$ouds-grid-3xl-column-count').compiledValue} (our default).
 - The third auto-column has no nested content.
 
 In practice this allows for more complex and custom layouts when compared to our default grid system.
