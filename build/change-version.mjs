@@ -13,7 +13,8 @@ import process from 'node:process'
 const VERBOSE = process.argv.includes('--verbose')
 const DRY_RUN = process.argv.includes('--dry') || process.argv.includes('--dry-run')
 
-const BRANDS = (await fs.readdir('packages', {withFileTypes: true})).filter((file) => file.isDirectory()).map((dir) => dir.name)
+// eslint-disable-next-line unicorn/no-await-expression-member
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
 
 // These are the files we only care about replacing the version
 const FILES = [
@@ -23,7 +24,7 @@ const FILES = [
   'site/data/docs-versions.yml'
 ]
 
-await FILES.push(...BRANDS.map((dirname) => `packages/${dirname}/config.yml`))
+await FILES.push(...BRANDS.map(dirname => `packages/${dirname}/config.yml`))
 
 // Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
 function regExpQuote(string) {

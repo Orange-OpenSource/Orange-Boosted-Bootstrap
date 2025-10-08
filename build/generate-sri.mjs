@@ -19,7 +19,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 sh.config.fatal = true
 
-const BRANDS = (await fs.readdir('packages', {withFileTypes: true})).filter((file) => file.isDirectory()).map((dir) => dir.name)
+// eslint-disable-next-line unicorn/no-await-expression-member
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
 
 for (const brand of BRANDS) {
   const configFile = path.join(__dirname, `../packages/${brand}/config.yml`)
