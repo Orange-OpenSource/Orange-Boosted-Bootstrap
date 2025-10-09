@@ -112,7 +112,7 @@
     "@astrojs/markdown-remark": "^6.3.6",
     "@astrojs/mdx": "^4.3.4",
     "@astrojs/prism": "^3.3.0",
-    "@astrojs/sitemap": "^3.5.0",
+    "@astrojs/sitemap": "^3.6.0",
     "@babel/cli": "^7.28.3",
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
