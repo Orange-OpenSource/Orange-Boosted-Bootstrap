@@ -19,7 +19,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 sh.config.fatal = true
 
-// eslint-disable-next-line unicorn/no-await-expression-member
 const BRANDS = fs.readdirSync('packages', { withFileTypes: true }).filter(file => file.isDirectory()).map(dir => dir.name)
 
 for (const brand of BRANDS) {
