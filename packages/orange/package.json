@@ -33,6 +33,7 @@
   "files": [
     "dist/css/*.{css,map}",
     "scss/**/*.scss",
+    "orange-logo.svg",
     "NOTICE.txt",
     "LICENSE"
   ],
