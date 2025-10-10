@@ -69,15 +69,14 @@ if (filePath && fileMatch && codeToDisplay) {
 <script>
   import ClipboardJS from 'clipboard'
 
-  function snippetButtonTooltip(selector: string, fallbackLabel: string) {
+  function snippetButtonTooltip(selector: string, tooltipLabel: string) {
     document.querySelectorAll(selector).forEach((btn) => {
-      const label = btn.getAttribute('title') ? btn.getAttribute('title') : fallbackLabel
-      oudsWeb.Tooltip.getOrCreateInstance(btn, { label })
+      oudsWeb.Tooltip.getOrCreateInstance(btn, { title: tooltipLabel })
     })
   }
 
-  snippetButtonTooltip('.btn-clipboard', 'Copy code to clipboard')
-  snippetButtonTooltip('.btn-edit', 'Edit code on StackBlitz')
+  snippetButtonTooltip('.btn-clipboard', 'Copy to clipboard')
+  snippetButtonTooltip('.btn-edit', 'Edit on StackBlitz')
 
   const clipboard = new ClipboardJS('.btn-clipboard', {
     target: (trigger) => trigger.closest('.bd-code-snippet')?.querySelector('.highlight')!,
