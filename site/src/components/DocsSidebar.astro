@@ -3,6 +3,7 @@ import { getData } from '@libs/data'
 import { getConfig } from '@libs/config'
 import { docsPages } from '@libs/content'
 import { getSlug } from '@libs/utils'
+import { getVersionedDocsPath } from '@libs/path'
 
 const sidebar = getData('sidebar')
 ---
@@ -23,17 +24,17 @@ const sidebar = getData('sidebar')
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
-                    <use xlink:href={`#${group.icon}`} />
+                    <use xlink:href={getVersionedDocsPath(`/assets/img/ouds-web-sprite.svg#${group.icon}`)} />
                   </svg>
                 )}
                 {group.title}
               </h2>
               <ul class="list-unstyled fw-normal mt-2xs pb-sm small">
-                {group.pages?.map((page) => {
+                {group.pages?.filter((page) => !page.brand || page.brand === getConfig().brand).map((page) => {
                   const docSlug = getSlug(page.title)
                   const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
-                  const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                  const url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
                   const active = Astro.params.slug === unversionedPageSlug
 
                   const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
@@ -73,7 +74,7 @@ const sidebar = getData('sidebar')
               <li class="bd-links-span-all mt-2xs mb-lg mx-sm border-top" />
               <li class="bd-links-span-all">
                 <a
-                  href={`/docs/${getConfig().docs_version}/${groupSlug}/`}
+                  href={`/${getConfig().brand}/docs/${getConfig().docs_version}/${groupSlug}/`}
                   class:list={['bd-links-link', 'd-block', { active }]}
                   aria-current={active ? 'page' : undefined}
                 >

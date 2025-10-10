@@ -236,12 +236,12 @@ ol ol {
 
 li {
   &::marker {
-    color: var(--#{$prefix}primary);
-
-    ol & {
-      color: inherit;
-    }
+    color: var(--#{$prefix}color-content-brand-primary);
   }
+}
+
+ol li::marker {
+  color: inherit;
 }
 // End mod
 
@@ -331,12 +331,6 @@ sup { top: -.5em; }
     text-decoration: $link-hover-decoration;
   }
 
-
-  .visited-links &:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
-  &:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
-    color: var(--#{$prefix}link-visited-color);
-  }
-
   &:focus-visible:where(:not([aria-disabled="true"])) {
     color: var(--#{$prefix}link-focus-color);
     text-decoration: $link-hover-decoration;
@@ -351,22 +345,27 @@ sup { top: -.5em; }
     color: var(--#{$prefix}link-disabled-color);
     pointer-events: none;
   }
-
-  .colored-bg &,
-  &.colored-bg {
-    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
-    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
-    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
-    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
-    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
-    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
-  }
 }
 // End mod
 
 a {
   // OUDS mod: use link properties placeholder
   @extend %link-properties;
+}
+
+.visited-links a:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
+a:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
+  color: var(--#{$prefix}link-visited-color);
+}
+
+.colored-bg a,
+a.colored-bg {
+  --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
@@ -420,11 +419,11 @@ code {
   font-style: normal; // OUDS mod: <var> is italic in all browsers
   color: var(--#{$prefix}color-content-muted);
   word-wrap: break-word;
+}
 
-  // Streamline the style when inside anchors to avoid broken underline and more
-  a > & {
-    color: inherit;
-  }
+// Streamline the style when inside anchors to avoid broken underline and more
+a > :is(var, code) {
+  color: inherit;
 }
 
 kbd {

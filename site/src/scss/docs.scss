@@ -26,19 +26,6 @@
 $enable-rounded: true;
 // fusv-enable
 
-// Load Bootstrap variables and mixins
-@import "../../../scss/config";
-@import "../../../scss/functions";
-@import "../../../scss/tokens/raw";
-@import "../../../scss/tokens/semantic";
-@import "../../../scss/tokens/semantic-colors-custom-props";
-@import "../../../scss/tokens/composite";
-@import "../../../scss/tokens/component-colors-custom-props";
-@import "../../../scss/tokens/component";
-@import "../../../scss/variables";
-@import "../../../scss/maps";
-@import "../../../scss/mixins";
-
 // fusv-disable
 $enable-grid-classes: false;
 $enable-cssgrid: true;
@@ -74,4 +61,4 @@ $enable-bullet-list-tick: true;
 @import "ouds-web";
 @import "tarteaucitron";
 
-@import "../../static/docs/[version]/assets/fonts/solaris-icons";
+@import "../../static/orange/docs/[version]/assets/fonts/solaris-icons";

@@ -1,10 +1,6 @@
 @import "../../config";
 @import "../../functions";
-@import "../../tokens/raw";
-@import "../../tokens/semantic";
-@import "../../tokens/semantic-colors-custom-props";
-@import "../../tokens/composite";
-@import "../../tokens/component";
+@import "../../../packages/orange/scss/tokens";
 @import "../../variables";
 @import "../../mixins";
 

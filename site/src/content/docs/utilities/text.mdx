@@ -70,7 +70,7 @@ Quickly change the `font-size` of text. Sizing for these utilities matches our p
 
 These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
-<details class="mb-md">
+{/* <details class="mb-md">
   <summary>See the <code>font-size</code> associated to classes</summary>
 
 <BsTable>
@@ -112,7 +112,7 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
 | Code small (`.fs-cs`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
 </BsTable>
 
-</details>
+</details> */}
 
 <Example code={`<p class="fs-dl">.fs-dl text</p>
   <p class="fs-dm">.fs-dm text</p>
@@ -199,62 +199,3 @@ Decorate text in components with text decoration classes.
 <Example code={`<p class="text-decoration-underline">This text has a line underneath it.</p>
   <p class="text-decoration-line-through">This text has a line going through it.</p>
   <a href="#" class="text-decoration-none">This link has its text decoration removed</a>`} />
-
-## CSS
-
-### Variables
-
-<ScssDocs name="root-font-variables-ouds" file="scss/_root.scss" />
-
-### Sass tokens
-
-#### Semantic tokens
-
-Font semantic tokens are defined as Sass variables.
-
-<ScssDocs name="ouds-semantic-font" file="scss/tokens/_semantic.scss" />
-
-#### Composite tokens
-
-Font composite tokens are defined as Sass variables.
-
-<ScssDocs name="ouds-composite-font" file="scss/tokens/_composite.scss" />
-
-### Sass variables
-
-Default type and font related Sass variables:
-
-<ScssDocs name="font-variables" file="scss/_variables.scss" />
-
-### Sass maps
-
-Font-size utilities are generated from these maps, in combination with our utilities API.
-
-<ScssDocs name="ouds-maps-font" file="scss/_maps.scss" />
-
-<BootstrapCompatibility>
-
-<ScssDocs name="font-sizes" file="scss/_variables.scss" />
-
-<ScssDocs name="theme-text-map" file="scss/_maps.scss" />
-
-</BootstrapCompatibility>
-
-### Sass mixins
-
-We provide a dedicated mixin for font reference called `get-font-size($font-size-reference)`.
-
-<ScssDocs name="ouds-mixin-font" file="scss/mixins/_fonts.scss" />
-
-Whenever you need a font reference inside a custom component or for whatever reason, please follow the same process as us, so you don’t miss any information about a font reference.
-
-<ScssDocs name="ouds-font-implementation" file="scss/_reboot.scss" />
-
-
-### Sass utilities API
-
-Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
-
-<ScssDocs name="utils-text-ouds" file="scss/_utilities.scss" />
-
-<ScssDocs name="utils-text" file="scss/_utilities.scss" />

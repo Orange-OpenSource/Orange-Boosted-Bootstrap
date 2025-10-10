@@ -6,6 +6,8 @@ aliases:
 toc: true
 ---
 
+import { getConfig } from '@libs/config'
+
 ## Package managers
 
 Pull in OUDS Web’s **source files** into nearly any project with some of the most popular package managers. No matter the package manager, OUDS Web will **require a [Sass compiler]([[docsref:/getting-started/contribute#sass]]) and [Autoprefixer]([[docsref:/getting-started/contribute#autoprefixer]])**  for a setup that matches our official compiled versions.
@@ -15,15 +17,15 @@ Pull in OUDS Web’s **source files** into nearly any project with some of the m
 Install OUDS Web in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/@ouds/web):
 
 ```sh
-npm install @ouds/web@[[config:current_version]]
+npm install @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
 `const oudsWeb = require('oudsWeb')` or `import oudsWeb from 'oudsWeb'` will load all of OUDS Web’s plugins onto a `oudsWeb` object.
 The `oudsWeb` module itself exports all of our plugins. You can manually load OUDS Web’s plugins individually by loading the `/js/dist/*.js` files under the package’s top-level directory.
 
-OUDS Web’s `package.json` contains some additional metadata under the following keys:
+OUDS Web {getConfig().display_brand}’s `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to OUDS Web’s main [Sass](https://sass-lang.com/) source file
+- `sass` - path to OUDS Web’s main [Sass](https://sass-lang.com/) source file that you can reuse in your project
 - `style` - path to OUDS Web’s non-minified CSS that’s been compiled using the default settings (no customization)
 
 <Callout type="info" name="info-npm-starter" />
@@ -33,7 +35,7 @@ OUDS Web’s `package.json` contains some additional metadata under the followin
 Install OUDS Web in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/@ouds/web):
 
 ```sh
-yarn add @ouds/web@[[config:current_version]]
+yarn add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
 <Callout type="warning">
@@ -51,12 +53,14 @@ yarn start # Start the project
 Install OUDS Web in your Bun or Node.js powered apps with [the Bun CLI](https://bun.sh/):
 
 ```sh
-bun add @ouds/web@[[config:current_version]]
+bun add @ouds/web-common@[[config:current_version]] @ouds/web-[[config:brand]]@[[config:current_version]]
 ```
 
 ### NuGet
 
 If you develop in .NET Framework, you can also install and manage OUDS Web’s [CSS](https://www.nuget.org/packages/ouds-web) or [Sass](https://www.nuget.org/packages/ouds-web.sass) and JavaScript using [NuGet](https://www.nuget.org/). Newer projects should use [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
+
+{/* TODO: Determine the names of the nuget packages */}
 
 ```powershell
 Install-Package ouds-web
@@ -65,6 +69,8 @@ Install-Package ouds-web
 ```powershell
 Install-Package ouds-web.sass
 ```
+
+{/* TODO: Add a message telling to ask if people need more of them and remove the ones that aren't automatic ? */}
 
 ## CDNs
 

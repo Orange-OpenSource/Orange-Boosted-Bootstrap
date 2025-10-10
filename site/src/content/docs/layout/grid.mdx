@@ -6,6 +6,8 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
 ## Example
 
 OUDS Web’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
@@ -68,27 +70,27 @@ As noted above, each of these breakpoints have their own unique class prefix and
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">2xs<br /><span class="fw-normal">&lt;390px</span></th>
-        <th scope="col">xs<br /><span class="fw-normal">&ge;390px</span></th>
-        <th scope="col">sm<br /><span class="fw-normal">&ge;480px</span></th>
-        <th scope="col">md<br /><span class="fw-normal">&ge;736px</span></th>
-        <th scope="col">lg<br /><span class="fw-normal">&ge;1024px</span></th>
-        <th scope="col">xl<br /><span class="fw-normal">&ge;1320px</span></th>
-        <th scope="col">2xl<br /><span class="fw-normal">&ge;1640px</span></th>
-        <th scope="col">3xl<br /><span class="fw-normal">&ge;1880px</span></th>
+        <th scope="col">2xs<br /><span class="fw-normal">&lt;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</span></th>
+        <th scope="col">xs<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</span></th>
+        <th scope="col">sm<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}</span></th>
+        <th scope="col">md<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}</span></th>
+        <th scope="col">lg<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue}</span></th>
+        <th scope="col">xl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}</span></th>
+        <th scope="col">2xl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}</span></th>
+        <th scope="col">3xl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}</span></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container fluid <code class="fw-normal">max-width</code></th>
-        <td>100vw -<br />(2 * 16px)</td>
-        <td>100vw -<br />(2 * 24px)</td>
-        <td>100vw -<br />(2 * 28px)</td>
-        <td>100vw -<br />(2 * 32px)</td>
-        <td>100vw -<br />(2 * 40px)</td>
-        <td>100vw -<br />(2 * 56px)</td>
-        <td>100vw -<br />(2 * 80px)</td>
-        <td>100vw -<br />(2 * 112px)</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue})</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
@@ -103,26 +105,26 @@ As noted above, each of these breakpoints have their own unique class prefix and
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="8">12</td>
+        <td colspan="8">{allTokens.find((token) => token.name === '$core-ouds-grid-column-count-1200').compiledValue}</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container padding width</th>
-        <td>16px (each side)</td>
-        <td>24px (each side)</td>
-        <td>28px (each side)</td>
-        <td>32px (each side)</td>
-        <td>40px (each side)</td>
-        <td>56px (each side)</td>
-        <td>80px (each side)</td>
-        <td>112px (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue} (each side)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td>8px (4px on left and right)</td>
-        <td colspan="2">16px (8px on left and right)</td>
-        <td colspan="2">24px (12px on left and right)</td>
-        <td colspan="2">32px (16px on left and right)</td>
-        <td colspan="1">40px (20px on left and right)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-2xs-column-gap').compiledValue}</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-xs-column-gap').compiledValue}</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-md-column-gap').compiledValue}</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-xl-column-gap').compiledValue}</td>
+        <td colspan="1">{allTokens.find((token) => token.name === '$ouds-grid-3xl-column-gap').compiledValue}</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
@@ -149,26 +151,26 @@ Includes support for xxl breakpoint, defined like 2xl.
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">2xs<br /><span class="fw-normal">&lt;390px</span></th>
-        <th scope="col">xs<br /><span class="fw-normal">&ge;390px</span></th>
-        <th scope="col">sm<br /><span class="fw-normal">&ge;480px</span></th>
-        <th scope="col">md<br /><span class="fw-normal">&ge;736px</span></th>
-        <th scope="col">lg<br /><span class="fw-normal">&ge;1024px</span></th>
-        <th scope="col">xl<br /><span class="fw-normal">&ge;1320px</span></th>
-        <th scope="col">2xl or xxl<br /><span class="fw-normal">&ge;1640px</span></th>
-        <th scope="col">3xl<br /><span class="fw-normal">&ge;1880px</span></th>
+        <th scope="col">2xs<br /><span class="fw-normal">&lt;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</span></th>
+        <th scope="col">xs<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</span></th>
+        <th scope="col">sm<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}</span></th>
+        <th scope="col">md<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}</span></th>
+        <th scope="col">lg<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue}</span></th>
+        <th scope="col">xl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}</span></th>
+        <th scope="col">2xl or xxl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}</span></th>
+        <th scope="col">3xl<br /><span class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}</span></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>100vw -<br />(2 * 16px)</td>
+        <td>100vw -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</td>
         <td>342px</td>
-        <td>424px</td>
+        <td>4{allTokens.find((token) => token.name === '$ouds-grid-md-column-gap').compiledValue}</td>
         <td>672px</td>
         <td>944px</td>
         <td>1208px</td>
-        <td>1480px</td>
+        <td>1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}</td>
         <td>1656px</td>
       </tr>
       <tr>
@@ -184,26 +186,26 @@ Includes support for xxl breakpoint, defined like 2xl.
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="8">12</td>
+        <td colspan="8">{allTokens.find((token) => token.name === '$core-ouds-grid-column-count-1200').compiledValue}</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container padding width</th>
-        <td>16px (each side)</td>
-        <td>24px (each side)</td>
-        <td>28px (each side)</td>
-        <td>32px (each side)</td>
-        <td>40px (each side)</td>
-        <td>56px (each side)</td>
-        <td>80px (each side)</td>
-        <td>112px (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue} (each side)</td>
+        <td>{allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue} (each side)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td>8px (4px on left and right)</td>
-        <td colspan="2">16px (8px on left and right)</td>
-        <td colspan="2">24px (12px on left and right)</td>
-        <td colspan="2">32px (16px on left and right)</td>
-        <td colspan="1">40px (20px on left and right)</td>
+        <td>8px</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-xs-column-gap').compiledValue}</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-md-column-gap').compiledValue}</td>
+        <td colspan="2">{allTokens.find((token) => token.name === '$ouds-grid-xl-column-gap').compiledValue}</td>
+        <td colspan="1">{allTokens.find((token) => token.name === '$ouds-grid-3xl-column-gap').compiledValue}</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
@@ -468,48 +470,7 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
     </div>
   </div>`} />
 
-## CSS
-
-When using OUDS Web’s source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
-
-### Sass variables
-
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
-
-```scss
-$grid-columns:      12;
-$grid-gutter-width: 1.25rem;
-$grid-row-columns:  6;
-```
-
-Note that OUDS Web doesn’t rely on a single value for grid gutters via `$grid-gutter-width`; instead, it uses a map of values called `$grid-gutter-widths`, which defines different gutter widths for each breakpoint.
-
-<ScssDocs name="grid-gutters" file="scss/_maps.scss" />
-
-<ScssDocs name="grid-breakpoints" file="scss/_variables.scss" />
-
-<ScssDocs name="container-max-widths" file="scss/_variables.scss" />
-
-### Sass mixins
-
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
-
-```scss
-// Creates a wrapper for a series of columns
-@include make-row();
-
-// Make the element grid-ready (applying everything but the width)
-@include make-col-ready();
-
-// Without optional size values, the mixin will create equal columns (similar to using .col)
-@include make-col();
-@include make-col($size, $columns: $grid-columns);
-
-// Offset with margins
-@include make-col-offset($size, $columns: $grid-columns);
-```
-
-### Example usage
+## Example usage
 
 You can modify the variables to your own custom values, or just use the mixins with their default values. Here’s an example of using the default settings to create a two-column layout with a gap between.
 
@@ -554,52 +515,3 @@ You can modify the variables to your own custom values, or just use the mixins w
       <div class="example-content-secondary">Secondary content</div>
     </div>
   </div>`} />
-
-## Customizing the grid
-
-Using our built-in grid Sass variables and maps, it’s possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
-
-### Columns and gutters
-
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column. `$grid-row-columns` is used to set the maximum number of columns of `.row-cols-*`, any number over this limit is ignored.
-
-```scss
-$grid-columns: 12 !default;
-$grid-gutter-width: 1.25rem !default;
-$grid-row-columns: 6 !default;
-```
-
-### Grid tiers
-
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you’d update the `$grid-breakpoints`, `$container-max-widths`, `$grid-gutter-widths`, and `$container-fluid-margin` to something like this:
-
-```scss
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px
-);
-
-$container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 960px
-);
-
-$grid-gutter-widths: (
-  xs: 4px,
-  sm: 8px,
-  md: 16px,
-  lg: 32px
-);
-
-$container-fluid-margin: (
-  xs: 16px,
-  sm: 16px,
-  md: 24px,
-  lg: 24px
-);
-```
-
-When making any changes to the Sass variables or maps, you’ll need to save your changes and recompile. Doing so will output a brand-new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).

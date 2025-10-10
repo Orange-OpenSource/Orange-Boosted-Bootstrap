@@ -1,21 +1,6 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import MastHead from '@components/home/MastHead.astro'
-import GetStarted from '@components/home/GetStarted.astro'
-import Customize from '@components/home/Customize.astro'
-import CSSVariables from '@components/home/CSSVariables.astro'
+import RedirectLayout from '@layouts/RedirectLayout.astro'
 import { getConfig } from '@libs/config'
 ---
 
-<BaseLayout>
-  <MastHead />
-  <div class="container-fluid container-max-width pt-scaled-md pb-scaled-3xl bd-masthead-followup">
-    <p class="mb-scaled-md d-inline-flex flex-column flex-md-row align-items-start align-items-md-center">
-      <span class="tag me-md">New in v0.5</span>
-      <span class="lead mt-scaled-sm m-md-none"><a href={`/docs/${getConfig().docs_version}/components/breadcrumb`}>Breadcrumb</a>, <a href={`/docs/${getConfig().docs_version}/components/bullet-list`}>Bullet list</a>, <a href={`/docs/${getConfig().docs_version}/components/badge`}>Badge</a>, and <a href={`/docs/${getConfig().docs_version}/migration`}>many more</a></span>
-    </p>
-    <GetStarted />
-    <Customize />
-    <CSSVariables />
-  </div>
-</BaseLayout>
+<RedirectLayout path={`/${getConfig().brand}/`} />

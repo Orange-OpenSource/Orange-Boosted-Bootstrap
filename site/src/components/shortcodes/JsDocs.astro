@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import { getConfig } from '@libs/config'
 import Code from '@shortcodes/Code.astro'
+import { getVersionedDocsPath } from '@libs/path'
 
 // Prints everything between `// js-docs-start "name"` and `// js-docs-end "name"`
 // comments in the docs.
@@ -63,7 +64,7 @@ try {
   </div>
   <div slot="pre" class="position-absolute top-0 end-0">
     <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy code to clipboard">
-      <svg aria-hidden="true"><use xlink:href="#copy"></use></svg>
+      <svg aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use></svg>
     </button>
   </div>
 </Code>

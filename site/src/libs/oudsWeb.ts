@@ -3,7 +3,7 @@ import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
 export function getVersionedBsCssProps(direction: 'rtl' | undefined) {
-  let bsCssLinkHref = '/dist/css/ouds-web-bootstrap'
+  let bsCssLinkHref = `/dist/css/ouds-web-bootstrap`
 
   if (direction === 'rtl') {
     bsCssLinkHref = `${bsCssLinkHref}.rtl`

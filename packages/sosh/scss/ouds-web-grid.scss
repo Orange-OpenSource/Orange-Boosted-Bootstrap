@@ -1,0 +1,64 @@
+@import "@ouds/web-common/scss/mixins/banner";
+@include bsBanner(Grid);
+
+$include-column-box-sizing: true !default;
+
+@import "@ouds/web-common/scss/config";
+@import "@ouds/web-common/scss/functions";
+@import "@ouds/web-sosh/scss/tokens";
+@import "@ouds/web-common/scss/variables";
+@import "@ouds/web-common/scss/variables-dark";
+@import "@ouds/web-common/scss/maps";
+
+@import "@ouds/web-common/scss/mixins/breakpoints";
+@import "@ouds/web-common/scss/mixins/container";
+@import "@ouds/web-common/scss/mixins/grid";
+@import "@ouds/web-common/scss/mixins/utilities";
+
+@import "@ouds/web-common/scss/vendor/rfs";
+
+@import "@ouds/web-common/scss/containers";
+@import "@ouds/web-common/scss/grid";
+
+@import "@ouds/web-common/scss/utilities";
+// Only use the utilities we need
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    "display",
+    "order",
+    "flex",
+    "flex-direction",
+    "flex-grow",
+    "flex-shrink",
+    "flex-wrap",
+    "justify-content",
+    "align-items",
+    "align-content",
+    "align-self",
+    "margin",
+    "margin-x",
+    "margin-y",
+    "margin-top",
+    "margin-end",
+    "margin-bottom",
+    "margin-start",
+    "negative-margin",
+    "negative-margin-x",
+    "negative-margin-y",
+    "negative-margin-top",
+    "negative-margin-end",
+    "negative-margin-bottom",
+    "negative-margin-start",
+    "padding",
+    "padding-x",
+    "padding-y",
+    "padding-top",
+    "padding-end",
+    "padding-bottom",
+    "padding-start",
+  )
+);
+
+@import "@ouds/web-common/scss/utilities/api";

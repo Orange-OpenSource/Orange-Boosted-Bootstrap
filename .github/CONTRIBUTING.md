@@ -19,7 +19,7 @@ and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
 
 - Please **do not** use the issue tracker for personal support requests. Stack Overflow ([`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5) tag), [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions) or [IRC](/README.md#community) are better places to get help for things related to Bootstrap.
-  For OUDS Web specific personal support requests, please contact directly OUDS Web Core Team via Orange internal tools.
+  For OUDS Web specific personal support requests, please contact directly OUDS Web Core Team via Orange internal tools or via [our GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions).
 
 - Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.

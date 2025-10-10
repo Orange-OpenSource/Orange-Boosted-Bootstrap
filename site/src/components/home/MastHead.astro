@@ -12,16 +12,16 @@ import Code from '@components/shortcodes/Code.astro'
       <p class="fs-bl fw-bold mb-scaled-2xl bd-text-wrap-balance">
         Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid
         system and components, and bring projects to life with powerful JavaScript plugins. OUDS Web is a Bootstrap
-        based, Orange branded accessible and ergonomic components library.
+        based, {getConfig().display_brand} branded accessible and ergonomic components library.
       </p>
 
       <div class="mb-scaled-xs d-inline-block">
-        <Code code={`npm i @ouds/web@${getConfig().current_version}`} lang="sh" />
+        <Code code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`} lang="sh" />
       </div>
 
       <div class="mb-scaled-md">
         <a href={getVersionedDocsPath('getting-started/introduction')} class="btn btn-strong">
-          <svg class="bi me-sm" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+          <svg class="bi me-sm" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#book-half')}></use></svg>
           Read the docs
         </a>
       </div>
@@ -31,7 +31,7 @@ import Code from '@components/shortcodes/Code.astro'
         <div class="vr m-none border-always-on-black"></div>
         <a href={getVersionedDocsPath('getting-started/download')} class="fw-bold">Download</a>
         <div class="vr m-none border-always-on-black"></div>
-        <a href="/docs/versions/" class="text-nowrap fw-bold">All releases</a>
+        <a href={`/${getConfig().brand}/docs/versions/`} class="text-nowrap fw-bold">All releases</a>
       </div>
     </div>
   </div>

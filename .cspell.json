@@ -159,6 +159,7 @@
   "ignorePaths": [
     ".cspell.json",
     "dist/",
+    "packages/**/dist/",
     "*.min.*",
     "**/*rtl*",
     "**/tests/**",

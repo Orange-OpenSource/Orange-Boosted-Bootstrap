@@ -1,5 +1,6 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
 import Code from '@components/shortcodes/Code.astro'
 ---
 
@@ -29,7 +30,7 @@ $enable-shadows: true;
 $prefix: "mo-";
 
 // Then import OUDS Web
-@import "../node_modules/@ouds/web/scss/ouds-web";`}
+@import "../node_modules/@ouds/web-${getConfig().brand}/scss/ouds-web";`}
       lang="scss"
     />
     <p class="mb-scaled-lg">
@@ -41,8 +42,8 @@ $prefix: "mo-";
       <p class="mb-scaled-md">The easiest way to customize OUDS Web—include only the CSS you need.</p>
       <Code
         code={`// Functions and config first
-@import "../node_modules/@ouds/web/scss/config";
-@import "../node_modules/@ouds/web/scss/functions";
+@import "../node_modules/@ouds/web-common/scss/config";
+@import "../node_modules/@ouds/web-common/scss/functions";
 
 // Variable overrides second
 $primary: #900;
@@ -50,25 +51,20 @@ $enable-shadows: true;
 $prefix: "mo-";
 
 // Required OUDS Web imports
-@import "../node_modules/@ouds/web/scss/tokens/raw";
-@import "../node_modules/@ouds/web/scss/tokens/semantic";
-@import "../node_modules/@ouds/web/scss/tokens/semantic-colors-custom-props";
-@import "../node_modules/@ouds/web/scss/tokens/composite";
-@import "../node_modules/@ouds/web/scss/tokens/component-colors-custom-props";
-@import "../node_modules/@ouds/web/scss/tokens/component";
-@import "../node_modules/@ouds/web/scss/variables";
-@import "../node_modules/@ouds/web/scss/variables-dark";
-@import "../node_modules/@ouds/web/scss/maps";
-@import "../node_modules/@ouds/web/scss/mixins";
-@import "../node_modules/@ouds/web/scss/root";
+@import "../node_modules/@ouds/web-${getConfig().brand}/scss/tokens";
+@import "../node_modules/@ouds/web-common/scss/variables";
+@import "../node_modules/@ouds/web-common/scss/variables-dark";
+@import "../node_modules/@ouds/web-common/scss/maps";
+@import "../node_modules/@ouds/web-common/scss/mixins";
+@import "../node_modules/@ouds/web-common/scss/root";
 
 // Optional components
-@import "../node_modules/@ouds/web/scss/utilities";
-@import "../node_modules/@ouds/web/scss/reboot";
-@import "../node_modules/@ouds/web/scss/containers";
-@import "../node_modules/@ouds/web/scss/grid";
-@import "../node_modules/@ouds/web/scss/helpers";
-@import "../node_modules/@ouds/web/scss/utilities/api";`}
+@import "../node_modules/@ouds/web-common/scss/utilities";
+@import "../node_modules/@ouds/web-common/scss/reboot";
+@import "../node_modules/@ouds/web-common/scss/containers";
+@import "../node_modules/@ouds/web-common/scss/grid";
+@import "../node_modules/@ouds/web-common/scss/helpers";
+@import "../node_modules/@ouds/web-common/scss/utilities/api";`}
         lang="scss"
       />
       <p class="mb-none">

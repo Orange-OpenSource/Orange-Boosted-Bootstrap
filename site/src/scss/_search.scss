@@ -2,7 +2,7 @@
 
 // OUDS mod: the entire file is modified and is specific to OUDS Web
 
-#{$ouds-root-selector} {
+:root {
   // All available CSS vars and specific modifications for OUDS Web
   --docsearch-primary-color: var(--bs-color-content-brand-primary);
   --docsearch-text-color: var(--bs-color-content-default);
@@ -10,11 +10,12 @@
   // --docsearch-icon-stroke-width
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-muted-color: var(--bs-color-content-muted);
-  --docsearch-container-background: #{rgba($modal-backdrop-bg, $modal-backdrop-opacity)};
+  // TODO: use modal tokens when available here
+  --docsearch-container-background: #{rgba(#000, .5)};
   --docsearch-logo-color: var(--bs-color-content-default);
   // --docsearch-modal-width
   // --docsearch-modal-height
-  --docsearch-modal-background: #{$modal-content-bg};
+  --docsearch-modal-background: var(--bs-body-bg);
   --docsearch-modal-shadow: none;
   // --docsearch-searchbox-height;
   // --docsearch-searchbox-background;
@@ -51,7 +52,7 @@
 
 .DocSearch-Modal {
   border: var(--bs-border-width) solid var(--bs-color-border-default);
-  @include border-radius(0, 0);
+  @include border-radius(var(--bs-border-radius));
 }
 
 .DocSearch-Button {
@@ -77,7 +78,7 @@
   }
 
   .DocSearch-Search-Icon {
-    color: var(--#{$prefix}color-content-default);
+    color: var(--bs-color-content-default);
   }
 }
 
@@ -97,7 +98,7 @@
 
 .DocSearch-Form {
   box-shadow: var(--bs-color-border-default) 0 0 0 .125rem inset;
-  @include border-radius(0, 0);
+  @include border-radius(var(--bs-border-radius));
 
   &:focus-within {
     box-shadow: var(--bs-color-content-default) 0 0 0 .125rem inset;
@@ -110,7 +111,7 @@
 }
 
 .DocSearch-Reset {
-  @include border-radius(0, 0);
+  @include border-radius(var(--bs-border-radius));
 
   &:focus-visible {
     @include focus-visible();
@@ -126,7 +127,13 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: var(--#{$prefix}color-action-highlighted);
+  width: auto;
+  height: auto;
+}
+
+// more specificity to override OUDS ul default margin
+.DocSearch-Commands.DocSearch-Commands {
+  margin-bottom: 0;
 }
 
 .DocSearch-Hits {
@@ -143,29 +150,29 @@
   padding-top: .625rem;
 
   a {
-    @include border-radius(0, 0);
+    @include border-radius(var(--bs-border-radius));
   }
 
   mark {
-    color: var(--#{$prefix}color-content-on-action-highlighted);
-    background: var(--#{$prefix}color-action-highlighted);
+    color: var(--bs-color-content-on-action-highlighted);
+    background: var(--bs-color-action-highlighted);
   }
 
   &[aria-selected="true"] {
     a {
-      background-color: var(--#{$prefix}color-action-highlighted);
+      background-color: var(--bs-color-action-highlighted);
     }
 
     mark {
       --docsearch-hit-active-color: var(--bs-color-content-default);
       text-decoration: none;
-      background: var(--#{$prefix}color-action-highlighted);
+      background: var(--bs-color-action-highlighted);
     }
   }
 }
 
 .DocSearch-Hit-action-button {
-  @include border-radius(0, 0);
+  @include border-radius(var(--bs-border-radius));
 
   &:hover,
   &:focus {
@@ -178,9 +185,9 @@
 }
 
 .DocSearch-Prefill {
-  color: var(--#{$prefix}color-content-default);
+  color: var(--bs-color-content-default);
   text-decoration: underline;
-  @include border-radius(0, 0);
+  @include border-radius(var(--bs-border-radius));
 
   &:hover {
     color: var(--docsearch-highlight-color);
