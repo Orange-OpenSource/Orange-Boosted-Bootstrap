@@ -47,7 +47,8 @@ interface Props {
 
 const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false, buttonLabel } = Astro.props
 
-const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard` : 'Copy code to clipboard'
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard` : filePath ?
+  `Copy ${filePath} code to clipboard` : 'Copy code to clipboard'
 
 let codeToDisplay = filePath
   ? fs.readFileSync(path.join(process.cwd(), filePath), 'utf8')

@@ -24,14 +24,13 @@ interface Props {
 
 const { name, file, buttonLabel } = Astro.props
 
-const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SCSS to clipboard` : name ?
-  `Copy ${name} SCSS to clipboard` : file ? `Copy ${file} file to clipboard` : 'Copy SCSS to clipboard'
-
 if (!name || !file) {
   throw new Error(
     `Missing required parameter(s) for the '<ScssDocs />' component, expected both 'name' and 'file' but got 'name: ${name}' and 'file: ${file}'.`
   )
 }
+
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SCSS to clipboard` : `Copy ${name} SCSS to clipboard`
 
 let content: string
 
