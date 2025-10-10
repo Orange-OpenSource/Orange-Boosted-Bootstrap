@@ -13,15 +13,18 @@ import process from 'node:process'
 const VERBOSE = process.argv.includes('--verbose')
 const DRY_RUN = process.argv.includes('--dry') || process.argv.includes('--dry-run')
 
+// eslint-disable-next-line unicorn/no-await-expression-member
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
+
 // These are the files we only care about replacing the version
 const FILES = [
   'README.md',
-  'packages/orange/config.yml',
-  'packages/sosh/config.yml',
   'js/src/base-component.js',
   'scss/mixins/_banner.scss',
   'site/data/docs-versions.yml'
 ]
+
+await FILES.push(...BRANDS.map(dirname => `packages/${dirname}/config.yml`))
 
 // Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
 function regExpQuote(string) {
@@ -73,6 +76,15 @@ function bumpNpmVersion(newVersion) {
       process.exit(1)
     }
   })
+
+  for (const brand of BRANDS) {
+    execFile('npm', ['version', newVersion, '--no-git-tag'], { cwd: `packages/${brand}`, shell: true }, error => {
+      if (error) {
+        console.error(error)
+        process.exit(1)
+      }
+    })
+  }
 }
 
 function showUsage(args) {

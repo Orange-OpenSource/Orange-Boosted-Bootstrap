@@ -25,7 +25,7 @@
   <files>
     <file src="nuget\ouds-web.png" target="" />
 
-    <file src="scss\**\*.scss" target="content\Content" />
-    <file src="scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
+    <file src="packages\sosh\scss\**\*.scss" target="content\Content" />
+    <file src="packages\sosh\scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
   </files>
 </package>

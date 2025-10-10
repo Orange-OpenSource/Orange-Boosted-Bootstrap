@@ -13,7 +13,8 @@ import { fileURLToPath } from 'node:url'
 import sh from 'shelljs'
 import { format } from 'prettier'
 
-const BRANDS = ['orange', 'sosh']
+// eslint-disable-next-line unicorn/no-await-expression-member
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
 
 BRANDS.map(async brand => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url))

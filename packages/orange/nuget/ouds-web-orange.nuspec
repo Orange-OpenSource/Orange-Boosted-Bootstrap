@@ -25,7 +25,7 @@
   <files>
     <file src="nuget\ouds-web.png" target="" />
 
-    <file src="dist\css\ouds-web*.*" target="content\Content" />
-    <file src="dist\css\ouds-web*.*" target="contentFiles\any\any\wwwroot\css" />
+    <file src="packages\orange\dist\css\ouds-web*.*" target="content\Content" />
+    <file src="packages\orange\dist\css\ouds-web*.*" target="contentFiles\any\any\wwwroot\css" />
   </files>
 </package>
