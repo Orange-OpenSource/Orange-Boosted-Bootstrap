@@ -9,5 +9,6 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 nuget/ouds-web.png
+orange-logo.svg
 
 End of the parts list under Orange SA Copyright

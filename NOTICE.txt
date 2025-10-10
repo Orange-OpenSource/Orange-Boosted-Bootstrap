@@ -10,6 +10,8 @@ Any use or displaying shall constitute an infringement under intellectual proper
 
 nuget/ouds-web.png
 packages/**/nuget/ouds-web.png
+packages/orange/orange-logo.png
+packages/sosh/sosh-logo.png
 packages/**/scss/tokens/composite.scss
 site/static/[brand]/docs/[version]/assets/brand/orange-logo.svg
 site/static/[brand]/docs/[version]/assets/brand/sosh-logo.svg
