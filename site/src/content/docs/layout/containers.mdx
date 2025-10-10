@@ -67,23 +67,26 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 
 **This container should not be used for {getConfig().display_brand} websites.**
 
-<Code lang="html" buttonLabel="default container (Bootstrap compatibility)" code={`<div class="container-fluid">
-    <!-- Content here -->
-  </div>`} />
+```html
+<div class="container-fluid">
+  <!-- Content here -->
+</div>
+```
 
 ## Responsive containers
 
 Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, `2xl`, `xxl` and `3xl`.
 
-<Code lang="html" buttonLabel="responsive containers (Bootstrap compatibility)" code={`
-  <div class="container-xs">100% wide until x-small breakpoint</div>
-  <div class="container-sm">100% wide until small breakpoint</div>
-  <div class="container-md">100% wide until medium breakpoint</div>
-  <div class="container-lg">100% wide until large breakpoint</div>
-  <div class="container-xl">100% wide until x-large breakpoint</div>
-  <div class="container-2xl">100% wide until 2x-large breakpoint</div>
-  <div class="container-xxl">100% wide until 2x-large breakpoint</div>
-  <div class="container-3xl">100% wide until 3x-large breakpoint</div>`} />
+```html
+<div class="container-xs">100% wide until x-small breakpoint</div>
+<div class="container-sm">100% wide until small breakpoint</div>
+<div class="container-md">100% wide until medium breakpoint</div>
+<div class="container-lg">100% wide until large breakpoint</div>
+<div class="container-xl">100% wide until x-large breakpoint</div>
+<div class="container-2xl">100% wide until 2x-large breakpoint</div>
+<div class="container-xxl">100% wide until 2x-large breakpoint</div>
+<div class="container-3xl">100% wide until 3x-large breakpoint</div>
+```
 
 </BootstrapCompatibility>
 
@@ -91,9 +94,11 @@ Responsive containers allow you to specify a class that follows the `.container-
 
 Use `.container-fluid` for a full width container with minimum margins, spanning almost the entire width of the viewport.
 
-<Code lang="html" buttonLabel="fluid container" code={`<div class="container-fluid">
-    ...
-  </div>`} />
+```html
+<div class="container-fluid">
+  ...
+</div>
+```
 
 ### Default max width
 
@@ -104,7 +109,7 @@ This container should be associated by default with the class `.container-max-wi
 
 It is defined as follows:
 
-<ScssDocs name="containers-max" file="scss/_containers.scss" buttonLabel="container max width"/>
+<ScssDocs name="containers-max" file="scss/_containers.scss" />
 
 Comparison between `.container-fluid` with `.container-max-width` and `.container-fluid` alone can be seen in the following table:
 
