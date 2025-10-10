@@ -75,7 +75,7 @@
     "release": "npm-run-all storybook-build release-zip*",
     "release-sri": "node build/generate-sri.mjs",
     "release-version": "node build/change-version.mjs",
-    "release-zip": "npm run release-zip -w packages/sosh && npm run release-zip -w packages/orange",
+    "release-zip": "npm-run-all release-zip -w packages/sosh release-zip -w packages/orange",
     "release-zip-examples": "node build/zip-examples.mjs",
     "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",

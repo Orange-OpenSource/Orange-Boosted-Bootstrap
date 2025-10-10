@@ -331,11 +331,6 @@ sup { top: -.5em; }
     text-decoration: $link-hover-decoration;
   }
 
-  .visited-links &:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
-  &:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
-    color: var(--#{$prefix}link-visited-color);
-  }
-
   &:focus-visible:where(:not([aria-disabled="true"])) {
     color: var(--#{$prefix}link-focus-color);
     text-decoration: $link-hover-decoration;
@@ -350,16 +345,6 @@ sup { top: -.5em; }
     color: var(--#{$prefix}link-disabled-color);
     pointer-events: none;
   }
-
-  .colored-bg &,
-  &.colored-bg {
-    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
-    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
-    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
-    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
-    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
-    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
-  }
 }
 // End mod
 
@@ -368,19 +353,19 @@ a {
   @extend %link-properties;
 }
 
-@if $ouds-root-selector != ":root" {
-  .visited-links a:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
-    color: var(--#{$prefix}link-visited-color);
-  }
+.visited-links a:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
+a:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
+  color: var(--#{$prefix}link-visited-color);
+}
 
-  .colored-bg a {
-    --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
-    --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
-    --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
-    --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
-    --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
-    --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
-  }
+.colored-bg a,
+a.colored-bg {
+  --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
