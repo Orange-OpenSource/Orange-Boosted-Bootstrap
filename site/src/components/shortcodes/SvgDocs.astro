@@ -34,7 +34,7 @@ const svgPath = `${filePath}.svg`
 const svg = fs.readFileSync(svgPath, 'utf8')
 const size = fs.statSync(svgPath).size
 
-const clipboardLabel = buttonLabel !== undefined ? `Copy ${buttonLabel} code to clipboard` : 'Copy code to clipboard'
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SVG to clipboard` : file ? `Copy ${file}.svg file to clipboard` : 'Copy SVG to clipboard'
 ---
 
 <Code filePath={svgFormattedPath} lang="html" buttonLabel={buttonLabel}>
