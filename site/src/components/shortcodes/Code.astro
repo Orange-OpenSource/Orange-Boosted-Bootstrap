@@ -76,7 +76,8 @@ if (filePath && fileMatch && codeToDisplay) {
     })
   }
 
-  snippetButtonTooltip('.btn-clipboard', 'Copy to clipboard')
+  const clipboardTooltip = 'Copy to clipboard'
+  snippetButtonTooltip('.btn-clipboard', clipboardTooltip)
   snippetButtonTooltip('.btn-edit', 'Edit on StackBlitz')
 
   const clipboard = new ClipboardJS('.btn-clipboard', {
@@ -94,7 +95,6 @@ if (filePath && fileMatch && codeToDisplay) {
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild?.getAttributeNS(namespace, 'href')
-    const initialTooltipInner = tooltipBtn?.tip?.querySelector('.tooltip-inner')?.innerHTML
     const isCheckIconVisible = originalXhref?.includes('#check2') || false
 
     if (isCheckIconVisible) {
@@ -106,7 +106,7 @@ if (filePath && fileMatch && codeToDisplay) {
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': initialTooltipInner })
+        tooltipBtn?.setContent({ '.tooltip-inner': clipboardTooltip })
       },
       { once: true }
     )
@@ -128,14 +128,13 @@ if (filePath && fileMatch && codeToDisplay) {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     const fallbackMsg = `Press ${modifierKey}C to copy`
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
-    const initialTooltipInner = tooltipBtn?.tip?.querySelector('.tooltip-inner')?.innerHTML
 
     tooltipBtn?.setContent({ '.tooltip-inner': fallbackMsg })
 
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': initialTooltipInner })
+        tooltipBtn?.setContent({ '.tooltip-inner': clipboardTooltip })
       },
       { once: true }
     )
