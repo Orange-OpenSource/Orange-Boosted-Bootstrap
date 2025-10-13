@@ -7,6 +7,7 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
+import { allTokens } from '@libs/sass-variables'
 
 ## Border
 
@@ -46,15 +47,16 @@ Or remove borders:
 
 Change the border color using utilities. The color utilities are generated from our `$ouds-border-colors` Sass map.
 
-<Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={`<span class="border border-brand-primary"></span>
-  <span class="border border-default"></span>
-  <span class="border border-emphasized"></span>
-  <span class="border border-muted"></span>
-  <div data-bs-theme="light" class="bg-brand-primary d-inline-flex m-2xs p-xs"><span class="border border-on-brand-primary m-none bg-brand-primary" data-bs-theme="light"></span></div>
-  <div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-black m-none bg-always-white" data-bs-theme="light"></span></div>
-  <div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-white m-none bg-always-black" data-bs-theme="dark"></span></div>
-  <div data-bs-theme="dark" class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-on-black m-none bg-always-black" data-bs-theme="dark"></span></div>
-  <div data-bs-theme="light" class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-on-white m-none bg-always-white" data-bs-theme="light"></span></div>`} />
+<Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
+    if (token.name.match(/-on-/)) {
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xs p-xs"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
+    }
+    return `<span class="border border-${token.name.split('-').slice(3, -1).join('-')}"></span>`
+  }),
+  `<span class="border border-always-black"></span>
+  <span class="border border-always-white"></span>
+  <div class="bg-always-black d-inline-flex m-2xs p-xs"><span class="border border-always-on-black m-none bg-transparent"></span></div>
+  <div class="bg-always-white d-inline-flex m-2xs p-xs"><span class="border border-always-on-white m-none bg-transparent"></span></div>`]} />
 
 <BootstrapCompatibility>
 
@@ -164,89 +166,3 @@ This utility must not be used in any other context than drag and drop.
 </Callout>
 
 <Example class="bd-example-border-utils" code={`<span class="border border-drag"></span>`} />
-
-## CSS
-
-### Variables
-
-<ScssDocs name="root-border-var-ouds" file="scss/_root.scss" />
-
-<BootstrapCompatibility>
-
-<ScssDocs name="root-border-var" file="scss/_root.scss" />
-
-</BootstrapCompatibility>
-
-### Sass tokens
-
-#### Semantic tokens
-
-Border semantic tokens are defined as Sass variables.
-
-<ScssDocs name="ouds-semantic-border" file="scss/tokens/_semantic.scss" />
-
-Color semantic tokens as Sass variables. **Should not be used as-is**. Prefer use our [CSS semantic tokens](#css-semantic-tokens).
-
-<ScssDocs name="ouds-semantic-color" file="scss/tokens/_semantic.scss" />
-
-### CSS semantic tokens
-
-Color semantic tokens as CSS variables.
-
-<ScssDocs name="ouds-semantic-css-color" file="scss/tokens/_semantic-colors-custom-props.scss" />
-
-The same happens for the dark mode by replacing `-light` by `-dark`.
-
-### Sass variables
-
-<ScssDocs name="border-variables" file="scss/_variables.scss" />
-
-<ScssDocs name="border-radius-variables" file="scss/_variables.scss" />
-
-<BootstrapCompatibility>
-
-Variables for setting `border-color` in `.border-{direction}-subtle` utilities in light and dark mode:
-
-<ScssDocs name="theme-border-subtle-variables" file="scss/_variables.scss" />
-
-<ScssDocs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" />
-
-</BootstrapCompatibility>
-
-### Sass maps
-
-The border utilities are declared through this map and generated using our utilities API.
-
-<ScssDocs name="ouds-maps-borders" file="scss/_maps.scss" />
-
-<BootstrapCompatibility>
-
-Color mode adaptive border colors are also available as a Sass map:
-
-<ScssDocs name="theme-border-subtle-map" file="scss/_maps.scss" />
-
-<ScssDocs name="theme-border-subtle-dark-map" file="scss/_maps.scss" />
-
-</BootstrapCompatibility>
-
-### Sass mixins
-
-<ScssDocs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" />
-
-### Sass utilities API
-
-Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
-
-<ScssDocs name="utils-border-ouds" file="scss/_utilities.scss" />
-
-<ScssDocs name="utils-borders-ouds" file="scss/_utilities.scss" />
-
-<ScssDocs name="utils-border-radius-ouds" file="scss/_utilities.scss" />
-
-<BootstrapCompatibility>
-
-<ScssDocs name="utils-borders" file="scss/_utilities.scss" />
-
-<ScssDocs name="utils-border-radius" file="scss/_utilities.scss" />
-
-</BootstrapCompatibility>

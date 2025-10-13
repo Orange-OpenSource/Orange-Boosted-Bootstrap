@@ -8,7 +8,8 @@ aliases:
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
   You can find here the [OUDS tag design guidelines](https://unified-design-system.orange.com/472794e18/p/7565ce-tag).
@@ -22,7 +23,7 @@ import { getConfig } from '@libs/config'
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-emphasized')}>
           <p class="tag">Tag</p>
         </div>
       </div>
@@ -34,7 +35,7 @@ import { getConfig } from '@libs/config'
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-emphasized')}>
           <button type="button" class="tag tag-input" tabindex="-1">Input tag</button>
         </div>
       </div>
@@ -250,13 +251,13 @@ Since icons in tags are always next to some text, they are purely decorative and
 <Example showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional muted statuses">
     <li class="tag text-bg-status-neutral-muted">
       <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       Neutral
     </li>
     <li class="tag text-bg-status-accent-muted">
       <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       Accent
     </li>
@@ -264,13 +265,13 @@ Since icons in tags are always next to some text, they are purely decorative and
   <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional emphasized statuses">
     <li class="tag text-bg-status-neutral-emphasized">
       <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       Neutral
     </li>
     <li class="tag text-bg-status-accent-emphasized">
       <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       Accent
     </li>
@@ -341,7 +342,7 @@ To display a small tag, add the class `.tag-sm` to the tag.
     </li>
     <li class="tag tag-sm">
       <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend" />
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
       </svg>
       5G Ready
     </li>

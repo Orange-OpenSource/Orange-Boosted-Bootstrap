@@ -2,9 +2,9 @@
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 import type { Layout } from '@libs/layout'
-import Stylesheet from '@components/head/Stylesheet.astro'
 import Favicons from '@components/head/Favicons.astro'
 import Social from '@components/head/Social.astro'
+import Stylesheet from './Stylesheet.astro'
 
 interface Props {
   description: string
@@ -13,9 +13,10 @@ interface Props {
   robots: string | undefined
   thumbnail: string
   title: string
+  brand: string
 }
 
-const { description, direction, layout, robots, thumbnail, title } = Astro.props
+const { description, direction, layout, robots, thumbnail, title, brand } = Astro.props
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
@@ -52,6 +53,7 @@ const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.
 <!-- end mod -->
 
 <script is:inline src={getVersionedDocsPath('assets/js/color-modes.js')}></script>
+<script is:inline src={getVersionedDocsPath('assets/js/brand-picker.js')}></script>
 
 {import.meta.env.PROD && ScssProd && (
   <Stylesheet direction={direction} layout={layout} />

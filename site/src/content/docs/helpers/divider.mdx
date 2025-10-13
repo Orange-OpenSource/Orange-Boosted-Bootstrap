@@ -8,6 +8,8 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
 <Callout type="info">
 You can find here the [OUDS Divider design guidelines](https://unified-design-system.orange.com/472794e18/p/629e1b-divider).
 </Callout>
@@ -41,23 +43,27 @@ Vertical rules scale their height in flex layouts:
 
 Change the divider color using the [border color utilities]([[docsref:/utilities/borders#color]]).
 
-<Example class="d-flex flex-column gap-1" code={`<hr class="border-muted">
-  <hr class="border-emphasized">
-  <hr class="border-brand-primary">
-  <div data-bs-theme="light" class="bg-brand-primary py-2xs"><hr class="border-on-brand-primary"></div>
-  <div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-black"></div>
-  <div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-white"></div>
-  <div data-bs-theme="dark" class="bg-always-black py-2xs"><hr class="border-always-on-black"></div>
-  <div data-bs-theme="light" class="bg-always-white py-2xs"><hr class="border-always-on-white"></div>`} />
+<Example class="d-flex flex-column gap-1" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
+    if (token.name.match(/-on-/)) {
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xs"><hr class="border-${token.name.split('-').slice(3, -1).join('-')}"></div>`
+    }
+    return `<hr class="border-${token.name.split('-').slice(3, -1).join('-')}" />`
+  }),
+  `<div class="bg-always-white py-2xs"><hr class="border-always-black"></div>
+  <div class="bg-always-black py-2xs"><hr class="border-always-white"></div>
+  <div class="bg-always-black py-2xs"><hr class="border-always-on-black"></div>
+  <div class="bg-always-white py-2xs"><hr class="border-always-on-white"></div>`]} />
 
-<Example class="d-flex gap-1" code={`<div class="vr border-muted"></div>
-  <div class="vr border-emphasized"></div>
-  <div class="vr border-brand-primary"></div>
-  <div data-bs-theme="light" class="d-flex bg-brand-primary"><div class="vr border-on-brand-primary"></div></div>
-  <div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-black"></div></div>
-  <div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-white"></div></div>
-  <div data-bs-theme="dark" class="d-flex bg-always-black px-2xs"><div class="vr border-always-on-black"></div></div>
-  <div data-bs-theme="light" class="d-flex bg-always-white px-2xs"><div class="vr border-always-on-white"></div></div>`} />
+<Example class="d-flex flex-column gap-1" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
+    if (token.name.match(/-on-/)) {
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xs"><div class="vr border-${token.name.split('-').slice(3, -1).join('-')}"></div></div>`
+    }
+    return `<div class="vr border-${token.name.split('-').slice(3, -1).join('-')}"></div>`
+  }),
+  `<div class="bg-always-white py-2xs"><div class="vr border-always-black"></div></div>
+  <div class="bg-always-black py-2xs"><div class="vr border-always-white"></div></div>
+  <div class="bg-always-black py-2xs"><div class="vr border-always-on-black"></div></div>
+  <div class="bg-always-white py-2xs"><div class="vr border-always-on-white"></div></div>`]} />
 
 <BootstrapCompatibility>
 The `<hr />` and `vr` color can be set using [colors utilities]([[docsref:/utilities/colors]])

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ouds-web-sosh.sass</id>
+    <!-- pulled from release tag -->
+    <version>0</version>
+    <title>OUDS Web Sosh Sass</title>
+    <authors>The OUDS Web Authors, Orange SA</authors>
+    <owners>Orange SA</owners>
+    <description>OUDS Web is a Bootstrap based, Sosh branded accessible and ergonomic components library.</description>
+    <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
+    <summary>OUDS Web theme in Sass.</summary>
+    <language>en-us</language>
+    <projectUrl>https://web.unified-design-system.orange.com/</projectUrl>
+    <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="ouds/main" />
+    <icon>ouds-web.png</icon>
+    <license type="expression">MIT</license>
+    <copyright>Copyright 2015-2025</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>sass mobile-first responsive front-end framework web bootstrap Sosh</tags>
+    <contentFiles>
+      <files include="**/*" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="nuget\ouds-web.png" target="" />
+
+    <file src="packages\sosh\scss\**\*.scss" target="content\Content" />
+    <file src="packages\sosh\scss\**\*.scss" target="contentFiles\Content\any\any\wwwroot\scss" />
+  </files>
+</package>
