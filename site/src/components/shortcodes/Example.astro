@@ -1,6 +1,7 @@
 ---
 import { replacePlaceholdersInHtml } from '@libs/placeholder'
 import Code from '@components/shortcodes/Code.astro'
+import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   /**
@@ -36,6 +37,11 @@ interface Props {
    * @default true
    */
   showPreview?: boolean
+  /**
+   * Defines if the toolbar with Stackblitz and copy buttons should be visible or not.
+   * @default true
+   */
+  showToolbar?: boolean
 }
 
 const {
@@ -45,7 +51,8 @@ const {
   id,
   lang = 'html',
   showMarkup = true,
-  showPreview = true
+  showPreview = true,
+  showToolbar = true
 } = Astro.props
 
 let markup = Array.isArray(code) ? code.join('\n') : code
@@ -65,7 +72,7 @@ const simplifiedMarkup = markup
 <div class="bd-example-snippet bd-code-snippet">
   {
     showPreview && (
-      <div id={id} class:list={['bd-example order-first m-none border-none', className]}>
+      <div id={id} class:list={['bd-example order-first m-none border-none', className, showToolbar ? '' : 'border-default border-thin border-bottom']}>
         <Fragment set:html={markup} />
       </div>
     )
@@ -75,7 +82,7 @@ const simplifiedMarkup = markup
     showMarkup && (
       <>
         <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} />
-        {showPreview && (
+        {showPreview && showToolbar && (
           <div class="d-flex order-first align-items-center highlight-toolbar ps-lg border-top border-bottom border-thin border-default">
             <small class="font-monospace text-muted text-uppercase my-sm">{lang}</small>
             <!-- OUDS mod: buttons are not displayed on small screens -->
@@ -87,12 +94,12 @@ const simplifiedMarkup = markup
                 data-sb-js-snippet={addStackblitzJs ? true : undefined}
               >
                 <svg aria-hidden="true">
-                  <use xlink:href="#lightning-charge-fill" />
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
                 </svg>
               </button>
               <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy code to clipboard">
                 <svg aria-hidden="true">
-                  <use xlink:href="#copy" />
+                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
                 </svg>
               </button>
             </div>

@@ -23,8 +23,7 @@
     box-shadow: none;
   }
 
-  &:has([aria-readonly="true"]),
-  [role="radiogroup"][aria-readonly="true"] & {
+  &:has([aria-readonly="true"]) {
     pointer-events: none;
   }
 
@@ -45,27 +44,21 @@
   }
 
   // Handle invalid state
-  // stylelint-disable selector-no-qualifying-type
-  .was-validated &:has(input:invalid),
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
   }
 
-  .was-validated &:has(input:invalid:hover),
   &:has(input.is-invalid:hover) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
   }
 
-  .was-validated &:has(input:invalid:focus-visible),
   &:has(input.is-invalid:focus-visible) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
   }
 
-  .was-validated &:has(input:invalid:active),
   &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
-  // stylelint-enable selector-no-qualifying-type
 }
 
 
@@ -138,6 +131,7 @@
   flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
+  overflow: hidden;
   color: var(--#{$prefix}control-item-indicator-color);
   vertical-align: middle;
   appearance: none;
@@ -168,9 +162,7 @@
     @include border-radius($form-check-input-border-radius);
   }
 
-  // stylelint-disable selector-max-attribute
-  &[type="radio"],
-  [role="radiogroup"] &[role="radio"]  {
+  &[type="radio"] {
     @include border-radius($form-check-radio-border-radius);
   }
 
@@ -190,15 +182,6 @@
     &::before {
       background-color: currentcolor;
       mask-image: var(--#{$prefix}checkbox-check-icon);
-    }
-  }
-
-  [role="radiogroup"] &[role="radio"][aria-checked="true"] {
-    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
-
-    &::before {
-      background-color: currentcolor;
-      mask-image: escape-svg($form-check-radio-checked-bg-image);
     }
   }
 
@@ -239,8 +222,7 @@
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-checkbox-border-width-selected-focus)};
       }
 
-      &[type="radio"],
-      [role="radiogroup"] &[role="radio"]{
+      &[type="radio"] {
         --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
       }
     }
@@ -292,13 +274,35 @@
   }
 
   &:disabled,
-  &[role="checkbox"][aria-readonly="true"],
-  [role="radiogroup"][aria-readonly="true"] &[role="radio"] {
+  &[role="checkbox"][aria-readonly="true"] {
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
   }
-  // stylelint-enable selector-max-attribute
 }
+
+// stylelint-disable selector-max-attribute
+[role="radiogroup"] .control-item-indicator[role="radio"]  {
+  @include border-radius($form-check-radio-border-radius);
+
+  &[aria-checked="true"] {
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected)};
+
+    &::before {
+      background-color: currentcolor;
+      mask-image: escape-svg($form-check-radio-checked-bg-image);
+    }
+  }
+
+  &:checked:focus-visible{
+    --#{$prefix}control-item-indicator-border-width: #{px-to-rem($ouds-radio-button-border-width-selected-focus)};
+  }
+}
+
+[role="radiogroup"][aria-readonly="true"] .control-item-indicator[role="radio"] {
+  --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
+  pointer-events: none;
+}
+// stylelint-enable selector-max-attribute
 
 
 //
@@ -451,6 +455,24 @@
   @extend %control-item;
 }
 
+.was-validated .checkbox-item {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+  }
+
+  &:has(input:invalid:hover) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:has(input:invalid:focus-visible) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+  }
+
+  &:has(input:invalid:active) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
+}
+
 .checkbox-standalone {
   @extend %control-item-standalone;
 }
@@ -462,6 +484,24 @@
 
 .radio-button-item {
   @extend %control-item;
+}
+
+.was-validated .radio-button-item {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+  }
+
+  &:has(input:invalid:hover) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:has(input:invalid:focus-visible) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+  }
+
+  &:has(input:invalid:active) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
 }
 
 .radio-button-standalone {
@@ -495,22 +535,18 @@
     }
 
     // stylelint-disable selector-no-qualifying-type
-    .was-validated &:has(input:invalid),
     &:has(input.is-invalid) {
       border-color: $ouds-color-action-negative-enabled;
     }
 
-    .was-validated &:has(input:invalid:hover),
     &:has(input.is-invalid:hover) {
       border-color: $ouds-color-action-negative-hover;
     }
 
-    .was-validated &:has(input:invalid:focus-visible),
     &:has(input.is-invalid:focus-visible) {
       border-color: $ouds-color-action-negative-focus;
     }
 
-    .was-validated &:has(input:invalid:active),
     &:has(input.is-invalid:active) {
       border-color: $ouds-color-action-negative-pressed;
     }
@@ -526,17 +562,14 @@
   }
 
   // stylelint-disable selector-no-qualifying-type
-  .was-validated &:has(input:invalid:hover),
   &:has(input.is-invalid:hover) {
     border-color: $ouds-color-action-negative-hover;
   }
 
-  .was-validated &:has(input:invalid:focus-visible),
   &:has(input.is-invalid:focus-visible) {
     border-color: $ouds-color-action-negative-focus;
   }
 
-  .was-validated &:has(input:invalid:active),
   &:has(input.is-invalid:active) {
     border-color: $ouds-color-action-negative-pressed;
   }
@@ -548,6 +581,38 @@
   }
 }
 
+.was-validated .radio-button-item-outlined {
+  &:has(input:checked) {
+    &:has(input:invalid) {
+      border-color: $ouds-color-action-negative-enabled;
+    }
+
+    &:has(input:invalid:hover) {
+      border-color: $ouds-color-action-negative-hover;
+    }
+
+    &:has(input:invalid:focus-visible) {
+      border-color: $ouds-color-action-negative-focus;
+    }
+
+    &:has(input:invalid:active) {
+      border-color: $ouds-color-action-negative-pressed;
+    }
+  }
+
+  &:has(input:invalid:hover) {
+    border-color: $ouds-color-action-negative-hover;
+  }
+
+  &:has(input:invalid:focus-visible) {
+    border-color: $ouds-color-action-negative-focus;
+  }
+
+  &:has(input:invalid:active) {
+    border-color: $ouds-color-action-negative-pressed;
+  }
+}
+
 
 //
 // Switch
@@ -555,6 +620,24 @@
 
 .switch-item {
   @extend %control-item;
+}
+
+.was-validated .switch-item {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+  }
+
+  &:has(input:invalid:hover) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:has(input:invalid:focus-visible) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+  }
+
+  &:has(input:invalid:active) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
 }
 
 .switch-standalone {
@@ -583,6 +666,24 @@
   .form-check {
     @extend %control-item;
     align-items: center;
+  }
+
+  .was-validated .form-check {
+    &:has(input:invalid) {
+      --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+    }
+
+    &:has(input:invalid:hover) {
+      --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+    }
+
+    &:has(input:invalid:focus-visible) {
+      --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+    }
+
+    &:has(input:invalid:active) {
+      --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+    }
   }
 
   .form-check-input {

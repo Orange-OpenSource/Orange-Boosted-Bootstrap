@@ -1,0 +1,15 @@
+---
+import RedirectLayout from '@layouts/RedirectLayout.astro'
+import { getVersionedDocsPath } from '@libs/path'
+import { getConfig } from '@libs/config'
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { brand: getConfig().brand }
+    }
+  ]
+}
+---
+
+<RedirectLayout path={getVersionedDocsPath('examples')} />

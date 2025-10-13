@@ -63,7 +63,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                           aria-labelledby={`edit-${index} starter-${index}`}
                         >
                           <svg aria-hidden="true">
-                            <use xlink:href="#lightning-charge-fill" />
+                            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
                           </svg>
                           <span id={`edit-${index}`}>Edit in StackBlitz</span>
                         </a>
@@ -77,7 +77,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                 <article class="col-sm-6 col-md-3 mb-lg">
                   <a
                     class="d-block link-offset-1"
-                    href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                    href={`/${getConfig().brand}/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
                     hreflang={example.name.includes('RTL') ? 'ar' : undefined}
                   >
                     <img
@@ -104,7 +104,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
             <details class="mb-2xl px-sm border border-drag">
               <summary class="py-sm">
                 Bootstrap{' '}
-                <span class="tag tag-sm float-end">
+                <span class="tag tag-sm text-bg-status-neutral-muted float-end">
                   <code class="text-default">$enable-bootstrap-compatibility: true</code>
                 </span>
               </summary>
@@ -114,7 +114,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                     <article class="col-sm-6 col-md-3 mb-lg">
                       <a
                         class="d-block link-offset-1"
-                        href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                        href={`/${getConfig().brand}/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
                         hreflang={example.name.includes('RTL') ? 'ar' : undefined}
                       >
                         <img
