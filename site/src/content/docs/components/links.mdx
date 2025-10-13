@@ -19,7 +19,7 @@ Use OUDS Web `.link` class to set up styles such as padding and content alignmen
 
 By default, `.link` defines focus, hover and active styles similar to the `<a>` tag.
 
-<Example buttonLabel="standard variant" code={`<a class="link" href="#">This is an example of link</a>`} />
+<Example code={`<a class="link" href="#">This is an example of link</a>`} />
 
 `:visited` standalone links don’t have any specific styling.
 
@@ -31,7 +31,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 **Heads up!** Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]([[docsref:/utilities/background#colored-backgrounds]]).
 </Callout>
 
-<Example buttonLabel="variants on colored background" class="p-none" code={`<div class="bg-brand-primary p-lg">
+<Example class="p-none" code={`<div class="bg-brand-primary p-lg">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
     </div>
@@ -46,7 +46,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
 
-<Example buttonLabel="link chevron" code={`<div><a class="link link-chevron" href="#">Link with chevron</a></div>
+<Example code={`<div><a class="link link-chevron" href="#">Link with chevron</a></div>
   <div><a class="link link-chevron back" href="#">Link with a back chevron</a></div>
   <div style="width:20rem;">
     <div><a class="link link-chevron" href="#">This is an example of a link on multiple lines with chevron</a></div>
@@ -67,7 +67,7 @@ When icons are purely decorative, they should be hidden from assistive technolog
 
 Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left of your link text. The icon is automatically sized, placed, and colored.
 
-<Example buttonLabel="icon link" code={`<div>
+<Example code={`<div>
     <a class="link icon-link" href="#">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
@@ -95,14 +95,14 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 
 Links are available in two sizes. Add `.link-sm` for small size.
 
-<Example buttonLabel="link sizes" code={`<div><a class="link" href="#">This is an example of a link</a></div>
+<Example code={`<div><a class="link" href="#">This is an example of a link</a></div>
   <div><a class="link link-sm" href="#">This is an example of a small link</a></div>`} />
 
 ## Link tags
 
 The `.link` classes are designed to be used with the `<a>` element. However, you can also use these classes on `<button>` elements.
 
-<Example buttonLabel="link with other tags" code={`<div><button class="link link" type="submit">Button link</button></div>
+<Example code={`<div><button class="link link" type="submit">Button link</button></div>
   <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
   <div>
     <button class="link link-sm icon-link" type="button">
@@ -118,7 +118,7 @@ Make links look inactive by adding the `aria-disabled="true"` attribute to any `
 
 Disabled links using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning](#disabled-link-accessibility-warning).
 
-<Example buttonLabel="disabled state" code={`<div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
+<Example code={`<div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
   <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
   <div><a class="link icon-link" aria-disabled="true">
     <svg aria-hidden="true">
@@ -135,5 +135,5 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 If the disabled link does not convey any useful information, you can include a `tabindex="-1"` attribute in addition to `aria-disabled="true"` on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 However, if the disabled link conveys useful information for users, it must remain focusable and you should not add the `tabindex="-1"` attribute to keep it accessible to keyboard navigation.
 
-<Example buttonLabel="disabled state while keeping `href`" code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
+<Example code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />

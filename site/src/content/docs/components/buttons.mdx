@@ -19,7 +19,7 @@ You can find here the [OUDS Button design guidelines](https://unified-design-sys
 
 OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
 
-<Example buttonLabel="button base class" code={`<button type="button" class="btn">Base class</button>`} />
+<Example code={`<button type="button" class="btn">Base class</button>`} />
 
 The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
@@ -27,7 +27,7 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 
 OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [Button design specifications](https://unified-design-system.orange.com/472794e18/p/48a788-button/t/5c95fb0c27) to choose the right button for the right action.
 
-<Example buttonLabel="standard button variants" class="bd-btn-example" code={`<button type="button" class="btn btn-default">Default</button>
+<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default">Default</button>
 <button type="button" class="btn btn-strong">Strong</button>
 <button type="button" class="btn btn-brand">Brand</button>
 <button type="button" class="btn btn-minimal">Minimal</button>
@@ -69,7 +69,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 - Negative buttons should never be used on colored background.
 </Callout>
 
-<Example buttonLabel="variants on colored backgrounds" class="p-none bd-btn-example" code={`<div class="bg-brand-primary p-lg">
+<Example class="p-none bd-btn-example" code={`<div class="bg-brand-primary p-lg">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xs flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -100,7 +100,7 @@ Icons in text and icon buttons are considered purely decorative, so they should 
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
 
-<Example buttonLabel="text and icon buttons" class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -176,7 +176,7 @@ For icon only buttons, we chose to keep the icon hidden from assistive technolog
 
 {/* TODO: Add a paragraph about tooltip and/or title */}
 
-<Example buttonLabel="icon only buttons" class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-icon btn-default">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -252,7 +252,7 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
-<Example buttonLabel="buttons with other tags" class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
+<Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
   <button class="btn btn-strong" type="submit">Button</button>
   <button class="btn btn-brand" type="submit">Button</button>
   <input class="btn btn-minimal" type="button" value="Input" />
@@ -265,7 +265,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-<Example buttonLabel="outline buttons" class="bd-btn-example" code={[
+<Example class="bd-btn-example" code={[
   ...getData('theme-colors').map((themeColor) => `<button type="button" class="btn btn-outline-${themeColor.name}">${themeColor.title}</button>`)
 ]} />
 
@@ -275,7 +275,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
-<Example buttonLabel="disabled state" class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default" disabled>Default</button>
     <button type="button" class="btn btn-strong" disabled>Strong</button>
     <button type="button" class="btn btn-brand" disabled>Brand</button>
@@ -297,7 +297,7 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
-<Example buttonLabel="disabled state with `<a>` tag" class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
   </div>
@@ -318,7 +318,7 @@ To make an animated loading state button, you will add in your standard button:
 
 For example, before loading, your button could be like this:
 
-<Example buttonLabel="before loading state" code={`<button type="button" class="btn btn-default" id="loading-btn-0">
+<Example code={`<button type="button" class="btn btn-default" id="loading-btn-0">
     Download file
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
       <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
@@ -342,7 +342,7 @@ At the end of the loading, you should:
 
 You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 
-<Example buttonLabel="currently loading state" class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="p-none bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-default loading-indeterminate" id="loading-btn-1" disabled>
       Download file 1
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -472,7 +472,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
 
 Loading state can also be combined with all kind of buttons, including icons.
 
-<Example buttonLabel="loading state with variants" class="bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
+<Example class="bd-btn-example" code={`<div class="p-lg d-flex gap-xs flex-wrap">
     <button type="button" class="btn btn-icon btn-default loading-indeterminate" id="loading-btn-15" disabled>
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download"/>')}
@@ -522,28 +522,28 @@ Create responsive stacks of full-width, "block buttons" with a mix of our displa
 
 Please note that these **full-width** buttons should not be used on desktop screens.
 
-<Example buttonLabel="block buttons" class="bd-btn-example" code={`<div class="d-grid gap-sm">
+<Example class="bd-btn-example" code={`<div class="d-grid gap-sm">
     <button class="btn btn-default" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-sm` utility. Resize your browser to see them change.
 
-<Example buttonLabel="block buttons variation" class="bd-btn-example" code={`<div class="d-grid gap-sm d-md-block">
+<Example class="bd-btn-example" code={`<div class="d-grid gap-sm d-md-block">
     <button class="btn btn-default" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
 You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
-<Example buttonLabel="block buttons with grid system" class="bd-btn-example" code={`<div class="d-grid gap-sm col-6 mx-auto">
+<Example class="bd-btn-example" code={`<div class="d-grid gap-sm col-6 mx-auto">
     <button class="btn btn-default" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
 
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they’re no longer stacked.
 
-<Example buttonLabel="block buttons with flex utilities" class="bd-btn-example" code={`<div class="d-grid gap-sm d-md-flex justify-content-md-end">
+<Example class="bd-btn-example" code={`<div class="d-grid gap-sm d-md-flex justify-content-md-end">
     <button class="btn btn-default me-md-xs" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
