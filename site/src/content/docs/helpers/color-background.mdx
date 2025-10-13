@@ -17,7 +17,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 Please consider using our [color modes]([[docsref:/customize/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
 </Callout>
 
-<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+<Example buttonLabel="text and background colors" code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
     return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
   `<p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
@@ -32,7 +32,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 **Heads up!** There’s currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
 </Callout>
 
-<Example code={[
+<Example buttonLabel="text and background colors (Bootstrap compatibility)" code={[
   ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
 ]} />
 </BootstrapCompatibility>
@@ -41,5 +41,5 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 
 These opacity backgrounds should be used in very specific context, to opacify the background and make some text readable. Prefer using `.text-bg-secondary` when possible.
 
-<Example code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
+<Example buttonLabel="opacity backgrounds" code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
   <p class="text-bg-opacity-lowest p-lg fw-bold">.text-bg-opacity-lowest</p>`} />
