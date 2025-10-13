@@ -25,15 +25,9 @@
 // Ability to the value of the root font sizes, affecting the value of `rem`.
 // null by default, thus nothing is generated.
 
-:root {
+#{$ouds-root-selector} { // OUDS mod: instead of `:root`
   @if $font-size-root != null {
     @include font-size(var(--#{$prefix}root-font-size));
-  }
-
-  @if $enable-smooth-scroll {
-    @media (prefers-reduced-motion: no-preference) {
-      scroll-behavior: smooth;
-    }
   }
 
   // OUDS mod: Improve focus visibility when fixed/sticky header is used
@@ -44,6 +38,12 @@
 
     @include media-breakpoint-up(lg) {
       scroll-padding-top: $scroll-offset-top;
+    }
+  }
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
     }
   }
   // scss-docs-end scroll-offset
@@ -57,11 +57,11 @@
 // 2. As a best practice, apply a default `background-color`.
 // 3. Prevent adjustments of font size after orientation changes in iOS.
 // 4. Change the default tap highlight to be completely transparent in iOS.
-// 5. Prevent faux-bold/italic
+// 5. Prevent faux-bold/italic especially for some RTL fonts
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 // scss-docs-start reboot-body-rules
-body {
+#{$ouds-root-selector} > * { // OUDS mod: instead of `body`
   position: relative; // OUDS mod: required for back-to-top component
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
@@ -69,12 +69,12 @@ body {
   @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
-  // OUDS mod: no color
+  color: var(--#{$prefix}color-content-default); // OUDS mod: instead of `var(--#{$prefix}body-color)`
   text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // OUDS mod
-  background-color: var(--#{$prefix}body-bg); // 2
+  letter-spacing: var(--#{$prefix}body-letter-spacing); // OUDS mod
+  background-color: var(--#{$prefix}color-bg-primary); // 2 // OUDS mod: instead of `var(--#{$prefix}body-bg)`
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // OUDS mod
@@ -84,29 +84,9 @@ body {
 
 
 // OUDS mod: focus state
-//
-// 1. Default focus state
-// 2. Using the :focus-visible polyfill to hide outline defensively
-//    See https://github.com/WICG/focus-visible
-//    Note 1: this rule is not applied for our focus ring helper which
-//    handles itself outline and box shadow
-//    Note 2: this rule is also not applied for invalid select and invalid input files to ensure
-//    sufficient contrast between select elements on error focused vs. non focused
-// 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
-:focus {
-  @include focus-visible(); // 1
-}
-
-.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
-.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
-  outline: 0 !important;
-  box-shadow: none;
-}
-
-:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
-  outline: 0 !important;
-  box-shadow: none;
+:focus-visible {
+  @include focus-visible();
 }
 // scss-docs-end focus-visibility
 // End mod
@@ -131,10 +111,10 @@ hr {
 //    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 //    margin for easier control within type scales as it avoids margin collapsing.
 
+// scss-docs-start ouds-font-implementation
 %heading {
   margin-top: 0; // 1
   margin-bottom: $headings-margin-bottom;
-  @include font-size($font-size-base);  // OUDS mod
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -142,7 +122,6 @@ hr {
   color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
-  letter-spacing: $letter-spacing-base; // OUDS mod
   -webkit-font-smoothing: antialiased;  // OUDS mod
   -moz-osx-font-smoothing: grayscale;   // OUDS mod
   text-rendering: optimizelegibility;   // OUDS mod
@@ -150,28 +129,34 @@ hr {
 
 h1 {
   @extend %heading;
-  @include font-size($h4-font-size);
-  line-height: $h4-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h4-spacing;
+  @include get-font-size("heading-xlarge"); // OUDS mod: instead of `@include font-size($h1-font-size)`
 }
 
-h2,
+h2 {
+  @extend %heading;
+  @include get-font-size("heading-large"); // OUDS mod: instead of `@include font-size($h2-font-size)`
+}
+
 h3 {
   @extend %heading;
-  @include font-size($h5-font-size);
-  line-height: $h5-line-height;
-
-  /* rtl:remove */
-  letter-spacing: $h5-spacing;
+  @include get-font-size("heading-medium"); // OUDS mod: instead of `@include font-size($h3-font-size)`
 }
 
-h4,
-h5,
+h4 {
+  @extend %heading;
+  @include get-font-size("heading-small"); // OUDS mod: instead of `@include font-size($h4-font-size)`
+}
+
+h5 {
+  @extend %heading;
+  @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($h5-font-size)`
+}
+
 h6 {
   @extend %heading;
+  @include get-font-size("body-medium"); // OUDS mod: instead of `@include font-size($h6-font-size)`
 }
+// scss-docs-end ouds-font-implementation
 
 
 // Reset margins on paragraphs
@@ -182,6 +167,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+  @include get-font-size("body-medium"); // OUDS mod
 }
 
 
@@ -201,7 +187,7 @@ abbr[title] {
 // Address
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: $ouds-space-fixed-md; // OUDS mod: instead of `1rem`
   font-style: normal;
   line-height: inherit;
 }
@@ -209,10 +195,7 @@ address {
 
 // Lists
 
-ol,
-ul {
-  padding-left: 2rem;
-}
+// OUDS mod: no padding-left on ol and ul
 
 ol,
 ul,
@@ -230,42 +213,36 @@ ul ol {
 
 // OUDS mod
 // Orange square list-style
+// stylelint-disable selector-max-type
 ul {
   list-style-type: square;
-}
 
-// Future-proof markers' color
-// See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
-li::marker {
-  color: var(--#{$prefix}primary);
-  vertical-align: middle;
+  ul {
+    list-style-type: "-  ";
 
-  ol & {
-    color: inherit;
+    ul {
+      list-style-type: circle;
+    }
   }
 }
+ol ol {
+  list-style-type: upper-alpha;
 
-li li::marker { color: var(--#{$prefix}secondary-color); }
-
-li li li::marker { color: var(--#{$prefix}tertiary-color); }
-
-// Bullet-proof markers' color
-// @todo To remove when ::marker support is OK
-// See https://caniuse.com/#search=%3A%3Amarker
-li::before {
-  color: var(--#{$prefix}primary);
-  vertical-align: text-top;
-
-  ol & {
-    color: inherit;
+  ol {
+    list-style-type: lower-alpha;
   }
 }
-
-li li::before { color: var(--#{$prefix}secondary-color); }
-
-li li li::before { color: var(--#{$prefix}tertiary-color); }
 // stylelint-enable selector-max-type
+
+li {
+  &::marker {
+    color: var(--#{$prefix}color-content-brand-primary);
+  }
+}
+
+ol li::marker {
+  color: inherit;
+}
 // End mod
 
 dt {
@@ -283,8 +260,16 @@ dd {
 // Blockquote
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $ouds-space-fixed-md; // OUDS mod: instead of `0 0 1rem`
 }
+
+// OUDS mod: No italic
+i,
+em,
+cite {
+  font-style: normal; // OUDS mod: remove italic.
+}
+// End mod
 
 
 // Strong
@@ -303,11 +288,7 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  @include font-size($small-font-size);
-  // OUDS mod
-  font-weight: $font-weight-normal;
-  line-height: $line-height-sm;
-  // End mod
+  @include get-font-size("body-small"); // OUDS mod: instead of `@include font-size($small-font-size)`
 }
 
 
@@ -315,8 +296,8 @@ small {
 
 mark {
   padding: $mark-padding;
-  color: var(--#{$prefix}highlight-color);
-  background-color: var(--#{$prefix}highlight-bg);
+  color: var(--#{$prefix}color-content-on-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-color)`
+  background-color: var(--#{$prefix}color-action-highlighted); // OUDS mod: instead of `var(--#{$prefix}highlight-bg)`
 }
 
 
@@ -339,14 +320,52 @@ sup { top: -.5em; }
 
 // Links
 
-a {
-  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
+// OUDS mod: define link properties in a placeholder to be reused in link component
+%link-properties {
+  font-weight: $link-font-weight; // OUDS mod
+  color: var(--#{$prefix}link-color); // OUDS mod: instead of rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;
 
   &:hover {
-    --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
+    color: var(--#{$prefix}link-hover-color); // OUDS mod
     text-decoration: $link-hover-decoration;
   }
+
+  &:focus-visible:where(:not([aria-disabled="true"])) {
+    color: var(--#{$prefix}link-focus-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    color: var(--#{$prefix}link-active-color);
+    text-decoration: $link-hover-decoration;
+  }
+
+  &[aria-disabled="true"] {
+    color: var(--#{$prefix}link-disabled-color);
+    pointer-events: none;
+  }
+}
+// End mod
+
+a {
+  // OUDS mod: use link properties placeholder
+  @extend %link-properties;
+}
+
+.visited-links a:visited:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible),
+a:visited.visited-links:not(.link, .link-chevron, .icon-link, :hover, :active, :focus-visible) {
+  color: var(--#{$prefix}link-visited-color);
+}
+
+.colored-bg a,
+a.colored-bg {
+  --#{$prefix}link-color: #{$ouds-link-mono-color-content-enabled};
+  --#{$prefix}link-hover-color: #{$ouds-link-mono-color-content-hover};
+  --#{$prefix}link-focus-color: #{$ouds-link-mono-color-content-focus};
+  --#{$prefix}link-active-color: #{$ouds-link-mono-color-content-pressed};
+  --#{$prefix}link-disabled-color: #{$ouds-link-mono-color-content-disabled};
+  --#{$prefix}link-visited-color: #{$ouds-link-mono-color-content-enabled};
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
@@ -354,7 +373,7 @@ a {
 // causes specificity issues in many other styles that are too complex to fix.
 // See https://github.com/twbs/bootstrap/issues/19402
 
-a:not([href]):not([class]) {
+a:not([href]):not([class]):not([aria-disabled="true"]) { // OUDS mod: Added `:not([aria-disabled="true])`
   &,
   &:hover {
     color: inherit;
@@ -381,10 +400,9 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: 1rem; // 2
+  margin-bottom: $ouds-space-fixed-md; // 2 // OUDS mod: instead of `1rem`
   overflow: auto; // 3
-  @include font-size($code-font-size);
-  line-height: $pre-line-height; // OUDS mod
+  @include get-font-size("code-medium"); // OUDS mod: instead of `@include font-size($code-font-size)`
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
@@ -399,14 +417,13 @@ var, // OUDS mod
 code {
   @include font-size($code-font-size);
   font-style: normal; // OUDS mod: <var> is italic in all browsers
-  line-height: $line-height-sm; // OUDS mod
-  color: var(--#{$prefix}code-color);
+  color: var(--#{$prefix}color-content-muted);
   word-wrap: break-word;
+}
 
-  // Streamline the style when inside anchors to avoid broken underline and more
-  a > & {
-    color: inherit;
-  }
+// Streamline the style when inside anchors to avoid broken underline and more
+a > :is(var, code) {
+  color: inherit;
 }
 
 kbd {
@@ -414,7 +431,7 @@ kbd {
   @include font-size($kbd-font-size);
   color: $kbd-color;
   background-color: $kbd-bg;
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius-sm, $border-radius-sm); // OUDS mod: instead of `@include border-radius($border-radius-sm)`
 
   kbd {
     padding: 0;
@@ -445,7 +462,7 @@ svg {
 //
 // 1. Prevent double borders
 // 2. Ensure horizontal alignment in table when using numbers
-//    See https://twitter.com/wesbos/status/932644812582522880
+//    See https://x.com/wesbos/status/932644812582522880
 //    See https://caniuse.com/#feat=font-variant-numeric
 //    See https://caniuse.com/#feat=font-feature
 //    See https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
@@ -460,13 +477,10 @@ table {
 caption {
   padding-top: $table-caption-padding-y;
   padding-bottom: $table-caption-padding-y;
-  @include font-size($h1-font-size);    // OUDS mod
-  font-weight: $font-weight-bold;       // OUDS mod
+  @include get-font-size("heading-xlarge"); // OUDS mod
+  font-weight: $font-weight-bold; // OUDS mod
   color: $table-caption-color;
   text-align: left;
-
-  /* rtl:remove */
-  letter-spacing: $h1-spacing;          // OUDS mod
   -webkit-font-smoothing: antialiased;  // OUDS mod
   -moz-osx-font-smoothing: grayscale;   // OUDS mod
   text-rendering: optimizelegibility;   // OUDS mod
@@ -500,7 +514,6 @@ th {
 
 label {
   display: inline-block; // 1
-  font-weight: $form-label-font-weight; // OUDS mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -626,9 +639,9 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: $legend-margin-bottom;
-  @include font-size($legend-font-size);
   font-weight: $legend-font-weight;
-  line-height: inherit;
+  // OUDS mod: no line-height
+  @include get-font-size("body-large"); // OUDS mod: instead of `@include font-size($legend-font-size)`
 
   + * {
     clear: left; // 2
@@ -661,6 +674,12 @@ legend {
 [type="search"] {
   -webkit-appearance: textfield; // 1
   outline-offset: -#{$focus-visible-outer-offset}; // 2 // OUDS mod
+
+  // 3. Better affordance and consistent appearance for search cancel button
+  &::-webkit-search-cancel-button {
+    cursor: pointer;
+    filter: grayscale(1);
+  }
 }
 
 // 1. A few input types should stay LTR
@@ -736,3 +755,11 @@ progress {
 [hidden] {
   display: none !important;
 }
+
+// OUDS mod
+// Selection
+::selection {
+  color: var(--#{$prefix}color-content-on-action-highlighted);
+  background-color: var(--#{$prefix}color-action-highlighted);
+}
+// End mod

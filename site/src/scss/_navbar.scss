@@ -1,0 +1,53 @@
+.bd-navbar {
+  // OUDS mod: no padding
+  // OUDS mod: no background-color
+  // OUDS mod: no box-shadow
+
+  // OUDS mod: no `@media (forced-color)`
+
+  // OUDS mod: no `&::after`
+
+  // OUDS mod: no .bd-navbar-toggle
+
+  // OUDS mod: no .navbar-toggler
+
+  // OUDS mod: no .navbar-brand
+
+  // OUDS mod: no .navbar-nav-svg
+
+  // OUDS mod: no .offcanvas-lg
+
+  // OUDS mod: no .dropdown-toggle
+
+  // OUDS mod: no .dropdown-menu
+
+  // OUDS mod: no .dropdown-menu-end
+
+  // OUDS mod: Specificity
+  .navbar-nav.flex-row {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid $gray-700;
+    }
+
+    .dropdown-toggle {
+      line-height: 1.5625rem;
+
+      @include media-breakpoint-up(md) {
+        line-height: 1.875rem;
+      }
+    }
+  }
+  // End mod
+}
+
+// OUDS mod
+.bd-header {
+  max-height: 100vh;
+
+  @include media-breakpoint-up(lg) {
+    overflow: visible;
+  }
+}
+// End mod
+
+// OUDS mod: no `@include color-mode(dark)`

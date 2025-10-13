@@ -1,0 +1,193 @@
+---
+title: Background
+description: Convey meaning through `background-color`.
+aliases:
+  - "/docs/utilities/background/"
+toc: true
+---
+
+import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
+import { allTokens } from '@libs/sass-variables'
+
+<Callout type="info" name="warning-color-assistive-technologies" />
+
+## Background color
+
+Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sass map and respond to color modes.
+
+Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you’ll want to use an additional:
+* `[data-bs-theme]` [color mode attribute]([[docsref:/customize/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
+* `.text-*` [color utilities]([[docsref:/utilities/colors]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
+* `.text-bg-*` [color & background helper]([[docsref:/helpers/color-background]]) from our background colors and if there is no components inside
+
+<BootstrapCompatibility>
+
+Here are the equivalent Bootstrap background that you shouldn’t be using. Prefer using the classes above according to [our design system]([[config:ouds.web]]).
+
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="p-3 mb-2 bg-${themeColor.name} text-bg-${themeColor.name}">.bg-${themeColor.name}</div>
+<div class="p-3 mb-2 bg-${themeColor.name}-subtle text-${themeColor.name}-emphasis">.bg-${themeColor.name}-subtle</div>`),
+  `<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
+<div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+<div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 bg-white text-black">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-body">.bg-transparent</div>`]} />
+
+</BootstrapCompatibility>
+
+### `data-bs-theme` attribute
+
+Here are the nominal cases you should be using, when there is no other theme interferences than the root one, using `data-bs-theme` attribute:
+
+<Callout type="info">
+Please note that we use `[data-bs-theme]` attribute on a child element to avoid interfering with the parent theme. This is a workaround to avoid switching the colors between light and dark modes and keep having the good ones displayed.
+</Callout>
+
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[0].includes('dark')
+      ? themesArray[1].includes('light')
+        ? 'root'
+        : 'dark'
+      : themesArray[1].includes('light')
+        ? 'light'
+        : 'root-inverted'
+    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
+  }),
+  `<p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+  <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+  <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`]} />
+
+We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+<Example code={`<p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+  <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>`} />
+
+#### Inside a static theme
+
+Here is a more complex example to understand how to use `[data-bs-theme]` in specific static contexts. In here you should only use the inverse static theme by replacing all `data-bs-theme="root-inverted"` by `data-bs-theme="light"`. So if you’re in a dark theme context, use only `data-bs-theme="light"` when and if needed and respectively.
+
+<details class="mb-lg px-sm">
+  <summary class="py-sm">You’re in a static <code>light</code> context</summary>
+
+<Example class="p-none" code={[`<div class="bg-always-white p-lg">
+    <div data-bs-theme="light">`,
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[1].includes('light')
+      ? 'light'
+      : 'dark'
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'light' ? '</span>' : ''}</p>`
+  }),
+  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `  </div>
+  </div>`]} />
+
+We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+<Example code={`<div class="bg-always-white p-lg">
+    <div data-bs-theme="light">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
+
+</details>
+
+<details class="mb-lg px-sm">
+  <summary class="py-sm">You’re in a static <code>dark</code> context</summary>
+
+<Example class="p-none" code={[`<div class="bg-always-black p-lg">
+    <div data-bs-theme="dark">`,
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[0].includes('dark')
+      ? 'dark'
+      : 'light'
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'dark' ? '</span>' : ''}</p>`
+  }),
+  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `  </div>
+  </div>`]} />
+
+We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+<Example code={`<div class="bg-always-black p-lg">
+    <div data-bs-theme="dark">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
+
+</details>
+
+#### Inside a dynamic theme
+
+Here is a more complex example to understand how to use `[data-bs-theme]` in specific dynamic contexts. In here you should only replace `data-bs-theme="root-inverted"` by `data-bs-theme="root"` and respectively.
+
+<details class="mb-lg px-sm">
+  <summary class="py-sm">You’re in a dynamic <code>root-inverted</code> context</summary>
+
+<Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-lg">
+    <div data-bs-theme="root-inverted">`,
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[0].includes('dark')
+      ? themesArray[1].includes('light')
+        ? 'root-inverted'
+        : 'dark'
+      : themesArray[1].includes('light')
+        ? 'light'
+        : 'root'
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
+  }),
+  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `  </div>
+  </div>`]} />
+
+We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
+
+<Example code={`<div class="bg-status-neutral-emphasized p-lg">
+    <div data-bs-theme="root-inverted">
+      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+    </div>
+  </div>`} />
+
+</details>
+
+## Colored backgrounds
+
+In OUDS Web, we have some backgrounds that are a bit specific because they can take only few components like buttons, links and texts. For accessibility reasons we remove the color of these components.
+
+`.bg-brand-primary`,{getConfig().brand !== 'orange' ? <><code>.bg-brand-secondary</code>, <code>.bg-brand-tertiary</code></> : ''} `.bg-status-accent-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-negative-emphasized`, `.bg-status-positive-emphasized` and `.bg-status-info-emphasized` are considered as colored backgrounds.
+
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && (token.name.match(/-brand/) || token.name.match(/status-.*-emphasized/)) && !token.name.match(/-neutral/) && token.compiledValue).map(token => {
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[0].includes('dark')
+      ? themesArray[1].includes('light')
+        ? 'root'
+        : 'dark'
+      : themesArray[1].includes('light')
+        ? 'light'
+        : 'root-inverted'
+    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
+  })]} />

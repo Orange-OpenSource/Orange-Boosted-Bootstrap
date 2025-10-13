@@ -1,0 +1,45 @@
+---
+title: Color and background
+description: Set a background color with contrasting foreground color.
+aliases:
+  - "/docs/helpers/color-background/"
+toc: true
+---
+
+import { getData } from '@libs/data'
+import { allTokens } from '@libs/sass-variables'
+
+## Overview
+
+Color and background helpers combine the power of our [`.text-*` utilities]([[docsref:/utilities/colors]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]) in one class. We determine a contrasting `color` for a particular `background-color`. However, it doesn’t change mode at all.
+
+<Callout type="info">
+Please consider using our [color modes]([[docsref:/customize/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
+</Callout>
+
+<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
+  }),
+  `<p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
+  <p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>`]} />
+
+<Callout type="info" name="warning-color-assistive-technologies" />
+
+<BootstrapCompatibility>
+Color and background helpers combine the power of our [`.text-*` utilities]([[docsref:/utilities/colors]]) and [`.bg-*` utilities]([[docsref:/utilities/background]]) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
+
+<Callout type="warning">
+**Heads up!** There’s currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
+</Callout>
+
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="text-bg-${themeColor.name} p-3">${themeColor.title} with contrasting color</div>`)
+]} />
+</BootstrapCompatibility>
+
+### Opacity backgrounds
+
+These opacity backgrounds should be used in very specific context, to opacify the background and make some text readable. Prefer using `.text-bg-secondary` when possible.
+
+<Example code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
+  <p class="text-bg-opacity-lowest p-lg fw-bold">.text-bg-opacity-lowest</p>`} />

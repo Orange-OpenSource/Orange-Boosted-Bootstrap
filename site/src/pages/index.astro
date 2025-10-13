@@ -1,0 +1,6 @@
+---
+import RedirectLayout from '@layouts/RedirectLayout.astro'
+import { getConfig } from '@libs/config'
+---
+
+<RedirectLayout path={`/${getConfig().brand}/`} />

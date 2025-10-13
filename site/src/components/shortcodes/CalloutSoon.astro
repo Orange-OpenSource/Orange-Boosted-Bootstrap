@@ -1,0 +1,18 @@
+---
+/*
+ * Outputs a callout for elements that are not yet available.
+ */
+interface Props {
+  /**
+   * @default 'component'
+   */
+  type?: string
+}
+
+const { type = 'component' } = Astro.props
+---
+
+<div class="bd-callout bd-callout-warning">
+  <p><strong>This {type} is not yet available.</strong></p>
+  <p>Please check back soon.</p>
+</div>

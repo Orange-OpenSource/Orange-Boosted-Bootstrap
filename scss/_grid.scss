@@ -2,7 +2,7 @@
 //
 // Rows contain your columns.
 
-:root {
+#{$ouds-root-selector} { // OUDS mod: instead of `:root`
   @each $name, $value in $grid-breakpoints {
     --#{$prefix}breakpoint-#{$name}: #{$value};
   }

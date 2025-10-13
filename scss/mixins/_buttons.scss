@@ -8,16 +8,22 @@
 @mixin button-variant(
   $background,
   $border,
-  $color, // OUDS mod
-  $hover-background: $btn-default-hover-bg, // OUDS mod
-  $hover-border: $btn-default-hover-border, // OUDS mod
-  $hover-color: $btn-default-hover-color, // OUDS mod
-  $active-background: $btn-default-active-bg, // OUDS mod
-  $active-border: $btn-default-active-border, // OUDS mod
-  $active-color: $btn-default-active-color, // OUDS mod
-  $disabled-background: $btn-default-disabled-bg, // OUDS mod
-  $disabled-border: $btn-default-disabled-border, // OUDS mod
-  $disabled-color: $btn-default-disabled-color, // OUDS mod
+  $color, // OUDS mod: no default value
+  $hover-background: $ouds-button-color-bg-default-hover, // OUDS mod: instead of calculated default value
+  $hover-border: $ouds-button-color-border-default-hover, // OUDS mod: instead of calculated default value
+  $hover-color: $ouds-button-color-content-default-hover, // OUDS mod: instead of calculated default value
+  $active-background: $ouds-button-color-bg-default-pressed, // OUDS mod: instead of calculated default value
+  $active-border: $ouds-button-color-border-default-pressed, // OUDS mod: instead of calculated default value
+  $active-color: $ouds-button-color-content-default-pressed, // OUDS mod: instead of calculated default value
+  $disabled-background: $ouds-button-color-bg-default-disabled, // OUDS mod: instead of `$background`
+  $disabled-border: $ouds-button-color-border-default-disabled, // OUDS mod: instead of `$border`
+  $disabled-color: $ouds-button-color-content-default-disabled, // OUDS mod: instead of `color-contrat($disabled-background)`
+  $focus-background: $ouds-button-color-bg-default-focus, // OUDS mod
+  $focus-border: $ouds-button-color-border-default-focus, // OUDS mod
+  $focus-color: $ouds-button-color-content-default-focus, // OUDS mod
+  $loading-background: $ouds-button-color-bg-default-loading, // OUDS mod
+  $loading-border: $ouds-button-color-border-default-loading, // OUDS mod
+  $loading-color: $ouds-button-color-content-default-loading, // OUDS mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
@@ -25,56 +31,58 @@
   --#{$prefix}btn-hover-color: #{$hover-color};
   --#{$prefix}btn-hover-bg: #{$hover-background};
   --#{$prefix}btn-hover-border-color: #{$hover-border};
-  --#{$prefix}btn-focus-shadow-rgb: #{$white}; // OUDS mod
+  // OUDS mod: no --#{$prefix}btn-focus-shadow-rgb
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
   --#{$prefix}btn-active-border-color: #{$active-border};
-  // OUDS mod: no definition of --#{$prefix}btn-active-shadow
+  // OUDS mod: no --#{$prefix}btn-active-shadow
   --#{$prefix}btn-disabled-color: #{$disabled-color};
   --#{$prefix}btn-disabled-bg: #{$disabled-background};
   --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  --#{$prefix}btn-focus-color: #{$focus-color}; // OUDS mod
+  --#{$prefix}btn-focus-bg: #{$focus-background}; // OUDS mod
+  --#{$prefix}btn-focus-border-color: #{$focus-border}; // OUDS mod
+  --#{$prefix}btn-loading-color: #{$loading-color}; // OUDS mod
+  --#{$prefix}btn-loading-bg: #{$loading-background}; // OUDS mod
+  --#{$prefix}btn-loading-border-color: #{$loading-border}; // OUDS mod
 }
 // scss-docs-end btn-variant-mixin
 
 // scss-docs-start btn-outline-variant-mixin
 @mixin button-outline-variant(
   $color,
-  $color-hover: $btn-outline-default-hover-color, // OUDS mod: instead of `color-contrast($color)`
-  $active-background: $btn-outline-default-active-bg, // OUDS mod: instead of `$color`
-  $active-border: $btn-outline-default-active-border, // OUDS mod: instead of `$color`
-  $active-color: $btn-outline-default-active-color, // Booted mod: `color-contrast($active-background)`
-  $hover-background: $btn-outline-default-hover-bg, // OUDS mod
-  $hover-border: $btn-outline-default-hover-border // OUDS mod
+  $color-hover: color-contrast($color),
+  $active-background: $color,
+  $active-border: $color,
+  $active-color: color-contrast($active-background)
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-border-color: #{$color};
   --#{$prefix}btn-hover-color: #{$color-hover};
-  --#{$prefix}btn-hover-bg: #{$hover-background}; // OUDS mod: instead of using `#{$active-background}`
-  --#{$prefix}btn-hover-border-color: #{$hover-border}; // OUDS mod: instead of using `#{$active-border}`
-  --#{$prefix}btn-focus-shadow-rgb: #{$color};
+  --#{$prefix}btn-hover-bg: #{$active-background};
+  --#{$prefix}btn-hover-border-color: #{$active-border};
+  // OUDS mod: no --#{$prefix}btn-focus-shadow-rgb
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
   --#{$prefix}btn-active-border-color: #{$active-border};
-  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-  --#{$prefix}btn-disabled-color: #{$btn-outline-default-disabled-color};
-  --#{$prefix}btn-disabled-bg: #{$btn-outline-default-disabled-bg};
-  --#{$prefix}btn-disabled-border-color: #{$btn-outline-default-disabled-border};
+  // OUDS mod: no --#{$prefix}btn-active-shadow
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: #{$color};
   --#{$prefix}gradient: none;
 }
 // scss-docs-end btn-outline-variant-mixin
 
 // scss-docs-start btn-size-mixin
-@mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x, $letter-spacing: $letter-spacing-base) {
-  --#{$prefix}icon-spacing: #{$icon-spacing}; // OUDS mod: used for icons
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
   --#{$prefix}btn-padding-y: #{$padding-y};
   --#{$prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}btn-font-size);
-  --#{$prefix}btn-line-height: #{$line-height}; // OUDS mod
-  --#{$prefix}btn-letter-spacing: #{$letter-spacing}; // OUDS mod
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
 
+// TODO: We should probably make it more inclusive than just button.
 // OUDS mod: embed an icon as mask-image in a button
 // scss-docs-start btn-icon
 @mixin button-icon(

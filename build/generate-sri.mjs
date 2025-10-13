@@ -3,9 +3,9 @@
 /*!
  * Script to generate SRI hashes for use in our docs.
  * Remember to use the same vendor files as the CDN ones,
- * otherwise the hashes won't match!
+ * otherwise the hashes won’t match!
  *
- * Copyright 2017-2024 The Bootstrap Authors
+ * Copyright 2017-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -19,50 +19,58 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 sh.config.fatal = true
 
-const configFile = path.join(__dirname, '../hugo.yml')
+const BRANDS = fs.readdirSync('packages', { withFileTypes: true }).filter(file => file.isDirectory()).map(dir => dir.name)
 
-// Array of objects which holds the files to generate SRI hashes for.
-// `file` is the path from the root folder
-// `configPropertyName` is the hugo.yml variable's name of the file
-const files = [
-  {
-    file: 'dist/css/ouds-web.min.css',
-    configPropertyName: 'css_hash'
-  },
-  {
-    file: 'dist/css/ouds-web.rtl.min.css',
-    configPropertyName: 'css_rtl_hash'
-  },
-  {
-    file: 'dist/js/ouds-web.min.js',
-    configPropertyName: 'js_hash'
-  },
-  {
-    file: 'dist/js/ouds-web.bundle.min.js',
-    configPropertyName: 'js_bundle_hash'
-  },
-  {
-    file: 'node_modules/@popperjs/core/dist/umd/popper.min.js',
-    configPropertyName: 'popper_hash'
-  },
-  {
-    file: 'node_modules/focus-visible/dist/focus-visible.min.js',
-    configPropertyName: 'focus_visible_hash'
-  }
-]
+for (const brand of BRANDS) {
+  const configFile = path.join(__dirname, `../packages/${brand}/config.yml`)
 
-for (const { file, configPropertyName } of files) {
-  fs.readFile(file, 'utf8', (error, data) => {
-    if (error) {
-      throw error
+  // Array of objects which holds the files to generate SRI hashes for.
+  // `file` is the path from the root folder
+  // `configPropertyName` is the config.yml variable’s name of the file
+  const files = [
+    {
+      file: `packages/${brand}/dist/css/ouds-web.min.css`,
+      configPropertyName: 'css_hash'
+    },
+    {
+      file: `packages/${brand}/dist/css/ouds-web.rtl.min.css`,
+      configPropertyName: 'css_rtl_hash'
+    },
+    {
+      file: `packages/${brand}/dist/css/ouds-web-bootstrap.min.css`,
+      configPropertyName: 'css_bootstrap_hash'
+    },
+    {
+      file: `packages/${brand}/dist/css/ouds-web-bootstrap.rtl.min.css`,
+      configPropertyName: 'css_bootstrap_rtl_hash'
+    },
+    {
+      file: 'dist/js/ouds-web.min.js',
+      configPropertyName: 'js_hash'
+    },
+    {
+      file: 'dist/js/ouds-web.bundle.min.js',
+      configPropertyName: 'js_bundle_hash'
+    },
+    {
+      file: 'node_modules/@popperjs/core/dist/umd/popper.min.js',
+      configPropertyName: 'popper_hash'
     }
+  ]
 
-    const algorithm = 'sha384'
-    const hash = crypto.createHash(algorithm).update(data, 'utf8').digest('base64')
-    const integrity = `${algorithm}-${hash}`
+  for (const { file, configPropertyName } of files) {
+    fs.readFile(file, 'utf8', (error, data) => {
+      if (error) {
+        throw error
+      }
 
-    console.log(`${configPropertyName}: ${integrity}`)
+      const algorithm = 'sha384'
+      const hash = crypto.createHash(algorithm).update(data, 'utf8').digest('base64')
+      const integrity = `${algorithm}-${hash}`
 
-    sh.sed('-i', new RegExp(`^(\\s+${configPropertyName}:\\s+["'])\\S*(["'])`), `$1${integrity}$2`, configFile)
-  })
+      console.log(`${brand}.${configPropertyName}: ${integrity}`)
+
+      sh.sed('-i', new RegExp(`^(\\s+${configPropertyName}:\\s+["'])\\S*(["'])`), `$1${integrity}$2`, configFile)
+    })
+  }
 }

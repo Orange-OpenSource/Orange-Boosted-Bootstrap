@@ -1,0 +1,194 @@
+.chip-container {
+  @include list-unstyled();
+  display: flex;
+  flex-direction: row;
+  gap: 0 8px; // TODO: update values once the component is developed
+  padding: 0 5px; // Handle focus for the first and last Chips
+  margin: 0 -5px;
+  overflow: auto;
+}
+
+.chip {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  min-height: $ouds-chip-size-min-height-interactive-area;
+  white-space: nowrap;
+
+  [type="radio"],
+  [type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+  }
+}
+
+// Common styles
+.chip-interactive {
+  --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-enabled};
+  --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-enabled};
+  --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected)};
+  --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-enabled};
+  --#{$prefix}chip-padding-block: #{$ouds-chip-space-padding-block};
+  --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon-none};
+  --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon-none};
+
+  display: flex;
+  gap: $ouds-chip-space-column-gap-icon;
+  align-items: center;
+  justify-content: center;
+  min-width: $ouds-chip-size-min-width;
+  min-height: $ouds-chip-size-min-height;
+  padding: subtract(var(--#{$prefix}chip-padding-block), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-end), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-block), var(--#{$prefix}chip-border-width)) subtract(var(--#{$prefix}chip-padding-start), var(--#{$prefix}chip-border-width));
+  @include get-font-size("label-medium");
+  font-weight: 700;
+  color: var(--#{$prefix}chip-color);
+  background-color: var(--#{$prefix}chip-bg);
+  border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
+  border-radius: $ouds-chip-border-radius; // stylelint-disable-line property-disallowed-list
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    content: "";
+  }
+
+  &:hover {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-hover};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-hover};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-hover};
+  }
+
+  &:focus-visible {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-focus};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-focus};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-focus};
+  }
+
+  &:active {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-pressed};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-pressed};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-pressed};
+  }
+
+  &:disabled {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-disabled};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-disabled};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-disabled};
+
+    pointer-events: none;
+  }
+
+  svg,
+  img,
+  .icon {
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: px-to-rem($ouds-chip-size-icon);
+    line-height: 1;
+  }
+}
+
+// Suggestion chip specific style
+.chip-suggestion .chip-interactive:where(:has(svg, img, .icon)) {
+  &:where(:has(svg)),
+  &:where(:has(img)),
+  &:where(:has(.icon)) {
+    --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+  }
+}
+
+// Filter chip specific style that handles images, focus-visible and disabled states
+.chip-filter {
+  .chip-interactive:where(:has(svg, img, .icon)) {
+    --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
+  }
+
+  input:focus-visible ~ .chip-interactive,
+  .chip-interactive:has(input:focus-visible) {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-focus};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-focus};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-unselected-interaction)};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-focus};
+
+    @include focus-visible();
+  }
+
+  input:disabled ~ .chip-interactive,
+  .chip-interactive:has(input:disabled) {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-unselected-disabled};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-unselected-disabled};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-unselected-disabled};
+
+    pointer-events: none;
+  }
+
+  // Filter chip specific style for selected state
+  input:checked ~ .chip-interactive,
+  .chip-interactive[aria-pressed="true"],
+  .chip-interactive:has(input:checked) {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-enabled};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-enabled};
+    --#{$prefix}chip-border-width: #{px-to-rem($ouds-chip-border-width-selected)};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-enabled};
+    --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+    --#{$prefix}chip-tick-color: #{$ouds-chip-color-content-selected-tick-enabled};
+
+    &:hover {
+      --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-hover};
+      --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-hover};
+      --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-hover};
+      --#{$prefix}chip-tick-color: currentcolor;
+    }
+
+    &:active {
+      --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-pressed};
+      --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-pressed};
+      --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-pressed};
+      --#{$prefix}chip-tick-color: currentcolor;
+    }
+
+    &::before {
+      width: 1em;
+      height: 1em;
+      overflow: hidden;
+      font-size: px-to-rem($ouds-chip-size-icon);
+      line-height: 1;
+      color: var(--#{$prefix}chip-tick-color);
+      content: "";
+      background-color: currentcolor;
+      mask: $chip-tick-icon no-repeat 50% / px-to-rem($ouds-chip-size-icon);
+    }
+  }
+
+  input:checked:focus-visible ~ .chip-interactive,
+  .chip-interactive[aria-pressed="true"]:focus-visible,
+  .chip-interactive:has(input:checked:focus-visible) {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-focus};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-focus};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-focus};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+
+  input:checked:disabled ~ .chip-interactive,
+  .chip-interactive[aria-pressed="true"]:disabled,
+  .chip-interactive:has(input:checked:disabled) {
+    --#{$prefix}chip-bg: #{$ouds-chip-color-bg-selected-disabled};
+    --#{$prefix}chip-border-color: #{$ouds-chip-color-border-selected-disabled};
+    --#{$prefix}chip-color: #{$ouds-chip-color-content-selected-disabled};
+    --#{$prefix}chip-tick-color: currentcolor;
+  }
+}
+
+// Icon chip specific style
+.chip .chip-icon { // Best option since we don't want to duplicate this code.
+  --#{$prefix}chip-padding-block: #{$ouds-chip-space-padding-block-icon-only};
+  --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
+  --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+}

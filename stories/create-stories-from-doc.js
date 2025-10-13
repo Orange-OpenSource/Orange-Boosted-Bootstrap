@@ -1,8 +1,8 @@
 /*!
  * Script to automatically generate Storybook stories from the documentation.
  *
- * Copyright (c) 2015-2024 Orange SA
- * Copyright (c) 2015-2024 The OUDS Web Authors
+ * Copyright (c) 2015-2025 Orange SA
+ * Copyright (c) 2015-2025 The OUDS Web Authors
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
  */
 
@@ -12,16 +12,15 @@ const fs = require('node:fs')
 const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
 
-const version = '0.0'
-
 function createDirectoryIfNeeded(path) {
-  if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, 0o766, error => {
-      if (error) {
-        throw new Error(error)
-      }
-    })
+  if (fs.existsSync(path)) {
+    fs.rmSync(path, { recursive: true, force: true })
   }
+  fs.mkdirSync(path, 0o766, error => {
+    if (error) {
+      throw new Error(error)
+    }
+  })
 }
 
 function createTemplate(component) {
@@ -52,17 +51,17 @@ const toPascalCase = str => {
 }
 
 // Get all stories that might be displayed
-const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
-  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/components/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'components'])
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/src/content/docs/forms/`)).map(fileName => [toPascalCase(fileName.replace('.mdx', '')), 'forms']))
   .concat([['Tables', 'content']]) // Manual adding
-const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/partials/snippets.js'), { encoding: 'utf8' })
+const snippets = fs.readFileSync(path.resolve(__dirname, '../site/src/assets/partials/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
 
 (async () => {
-  // Note: `{ headless: true, args: ['--no-sandbox'] }` is needed only for some Windows configurations with strong security policies
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] })
+  // Note: `{ args: ['--no-sandbox'] }` is needed only for some Windows configurations with strong security policies
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
   // console.log(await browser.version())
 
   for (const file of files) {
@@ -74,7 +73,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/ouds-web/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.goto(`file://${__dirname}/../_site/docs/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
@@ -97,7 +96,7 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story of={${file[0]}_Stories.${file[0]}_${index}}/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-0 border-0">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
+        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-none border-none">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global oudsWeb: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior

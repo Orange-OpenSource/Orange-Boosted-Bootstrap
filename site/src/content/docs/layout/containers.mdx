@@ -1,0 +1,121 @@
+---
+title: Containers
+description: Containers are a fundamental building block of OUDS Web that contain, pad, and align your content within a given device or viewport.
+aliases:
+  - "/docs/layout/containers/"
+toc: true
+---
+
+import { getConfig } from '@libs/config'
+import { allTokens } from '@libs/sass-variables'
+
+## How they work
+
+Containers are the most basic layout element in OUDS Web and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+
+OUDS Web provides a single responsive container, `.container-fluid`, which ensures a `width: 100%` at all breakpoints. To optimize its use, pair it with the `.container-max-width` class. For further details, refer to the [Fluid containers](#fluid-containers) section.
+
+The table below compares `.container-fluid` `max-width` with and without `.container-max-width` across each breakpoint.
+
+See them in action and compare them in our [Grid example]([[docsref:/examples/grid/#containers]]) and [Grid system example]([[docsref:/examples/grid-system/]]).
+
+Please note that we apply an extra-padding on our containers (see [our mixin](#sass-mixins)).
+
+<BsTable class="table">
+|  | 2x-small<div class="fw-normal">&lt;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</div> | X-small<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</div> | Small<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}</div> | Medium<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}</div> | Large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue}</div> | X-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}</div> | 2x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}</div> | 3x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}</div> |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `.container-fluid` with `.container-max-width`  | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-2xl-max-width-alt').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-2xl-max-width-alt').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue.slice(0, -2)}px |
+| `.container-fluid` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue})</span> |
+</BsTable>
+
+<BootstrapCompatibility>
+
+<Callout type="danger">
+**These containers should not be used for {getConfig().display_brand} websites.** Instead, use the containers provided by OUDS Web: `.container-fluid` associated or not with `.container-max-width`.
+</Callout>
+
+Bootstrap compatibility enables the use of three different containers:
+
+- `.container`, which sets a static `max-width` between each responsive breakpoint.
+- `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one.
+- `.container-fluid`, which sets the `width: 100%` at all breakpoints.
+
+Moreover, Bootstrap compatibility includes the support for xxl breakpoint, defined like 2xl, making `.container-xxl` class available.
+
+The table below illustrates how each container’s `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
+
+Please note that we apply an extra-padding on our containers (see [our mixin](#sass-mixins)).
+
+<BsTable class="table">
+|  | 2x-small<div class="fw-normal">&lt;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</div> | X-small<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue}</div> | Small<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue}</div> | Medium<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue}</div> | Large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue}</div> | X-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}</div> | 2x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}</div> | 3x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}</div> |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `.container` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-xs` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-xs-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-sm` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-md` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-md-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-lg` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-lg-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue.slice(0, -2)}px | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-xl` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | {allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue.slice(0, -2)}px | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-2xl` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-xxl` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | 1{allTokens.find((token) => token.name === '$ouds-grid-sm-min-width').compiledValue} | 1656px |
+| `.container-3xl` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</span> | 1656px |
+| `.container-fluid` | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xs-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-sm-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-md-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-lg-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</span> | <span class="text-muted">100% -<br />(2 * {allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue})</span> |
+</BsTable>
+
+## Default container
+
+Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
+
+**This container should not be used for {getConfig().display_brand} websites.**
+
+```html
+<div class="container-fluid">
+  <!-- Content here -->
+</div>
+```
+
+## Responsive containers
+
+Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, `2xl`, `xxl` and `3xl`.
+
+```html
+<div class="container-xs">100% wide until x-small breakpoint</div>
+<div class="container-sm">100% wide until small breakpoint</div>
+<div class="container-md">100% wide until medium breakpoint</div>
+<div class="container-lg">100% wide until large breakpoint</div>
+<div class="container-xl">100% wide until x-large breakpoint</div>
+<div class="container-2xl">100% wide until 2x-large breakpoint</div>
+<div class="container-xxl">100% wide until 2x-large breakpoint</div>
+<div class="container-3xl">100% wide until 3x-large breakpoint</div>
+```
+
+</BootstrapCompatibility>
+
+## Fluid containers
+
+Use `.container-fluid` for a full width container with minimum margins, spanning almost the entire width of the viewport.
+
+```html
+<div class="container-fluid">
+  ...
+</div>
+```
+
+### Default max width
+
+This container should be associated by default with the class `.container-max-width`. After breakpoint `2xl`, this class:
+- limits the container width to 1680px (including margins),
+- limits container margin to 80px each side,
+- limits gutters width to 32px.
+
+It is defined as follows:
+
+<ScssDocs name="containers-max" file="scss/_containers.scss" />
+
+Comparison between `.container-fluid` with `.container-max-width` and `.container-fluid` alone can be seen in the following table:
+
+<BsTable class="table">
+|  | X-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-xl-min-width').compiledValue}</div> | 2x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-2xl-min-width').compiledValue}</div> | 3x-large<div class="fw-normal">&ge;{allTokens.find((token) => token.name === '$ouds-grid-3xl-min-width').compiledValue}</div> |
+| --- | --- | --- | --- |
+| `.container-fluid` with <br />`.container-max-width` | <ul class="mb-none"><li>Width <code>100% - (2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</code></li><li>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue}</code></li><li>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-xl-column-gap').compiledValue}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</code></li><li><b>Max-width <code>{allTokens.find((token) => token.name === '$ouds-grid-2xl-max-width-alt').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue.slice(0, -2)}px</code></b></li><li>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue}</code></li><li>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-2xl-column-gap').compiledValue}</code></li></ul> | <ul class="mb-none"><li><b>Width <code>{allTokens.find((token) => token.name === '$ouds-grid-2xl-max-width-alt').compiledValue.slice(0, -2) - 2 * allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue.slice(0, -2)}px</code></b></li><li><b>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue}</code></b></li><li><b>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-2xl-column-gap').compiledValue}</code></b></li></ul> |
+| `.container-fluid` | <ul class="mb-none"><li>Width <code>100% - (2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue})</code></li><li>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-xl-margin').compiledValue}</code></li><li>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-xl-column-gap').compiledValue}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue})</code></li><li>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-2xl-margin').compiledValue}</code></li><li>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-2xl-column-gap').compiledValue}</code></li></ul> | <ul class="mb-none"><li>Width <code>100% - (2 * {allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue})</code></li><li>Margin <code>2 * {allTokens.find((token) => token.name === '$ouds-grid-3xl-margin').compiledValue}</code></li><li>Gutter <code>{allTokens.find((token) => token.name === '$ouds-grid-3xl-column-gap').compiledValue}</code></li></ul> |
+</BsTable>

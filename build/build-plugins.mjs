@@ -2,7 +2,7 @@
 
 /*!
  * Script to build our plugins to use them separately.
- * Copyright 2020-2024 The Bootstrap Authors
+ * Copyright 2020-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -56,7 +56,7 @@ const build = async plugin => {
       // Pattern to identify local files
       const pattern = /^(\.{1,2})\//
 
-      // It's not a local file, e.g a Node.js package
+      // It’s not a local file, e.g a Node.js package
       if (!pattern.test(source)) {
         globals[source] = source
         return true

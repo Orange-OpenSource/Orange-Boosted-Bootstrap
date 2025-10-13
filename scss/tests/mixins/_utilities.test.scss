@@ -3,7 +3,9 @@ $enable-important-utilities: false;
 
 // Important: Do not import rfs to check that the mixin just calls the appropriate functions from it
 // OUDS mod
+@import "../../config";
 @import "../../functions"; // Added because needed by "variables"
+@import "../../../packages/orange/scss/tokens";
 @import "../../variables"; // Added to avoid undefined variable error like `$white`
 // End mod
 @import "../../mixins/utilities";

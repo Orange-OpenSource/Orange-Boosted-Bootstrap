@@ -5,8 +5,6 @@
  * --------------------------------------------------------------------------
  */
 
-import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // OUDS mod
-
 export { default as Alert } from './src/alert.js'
 export { default as Button } from './src/button.js'
 export { default as Carousel } from './src/carousel.js'

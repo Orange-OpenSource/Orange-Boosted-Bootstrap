@@ -3,7 +3,7 @@
 /*!
  * Script to create the built examples zip archive;
  * requires the `zip` command to be present!
- * Copyright 2020-2024 The Bootstrap Authors
+ * Copyright 2020-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -11,89 +11,113 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sh from 'shelljs'
+import { format } from 'prettier'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+// eslint-disable-next-line unicorn/no-await-expression-member
+const BRANDS = (await fs.readdir('packages', { withFileTypes: true })).filter(file => file.isDirectory()).map(dir => dir.name)
 
-const pkgJson = path.join(__dirname, '../package.json')
-const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
+BRANDS.map(async brand => {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const versionShort = pkg.config.version_short
-const distFolder = `ouds-web-${pkg.version}-examples`
-const rootDocsDir = '_site'
-const docsDir = `${rootDocsDir}/ouds-web/docs/${versionShort}/`
+  const pkgJson = path.join(__dirname, '../package.json')
+  const pkg = JSON.parse(await fs.readFile(pkgJson, 'utf8'))
 
-// these are the files we need in the examples
-const cssFiles = [
-  'ouds-web.min.css',
-  'ouds-web.min.css.map',
-  'ouds-web.rtl.min.css',
-  'ouds-web.rtl.min.css.map'
-]
-const jsFiles = [
-  'ouds-web.bundle.min.js',
-  'ouds-web.bundle.min.js.map'
-]
-const imgFiles = [
-  'orange-logo.svg'
-]
-const staticJsFiles = [
-  'color-modes.js'
-]
+  const versionShort = pkg.config.version_short
+  const distFolder = `ouds-web-${brand}-${pkg.version}-examples`
+  const rootDocsDir = '_site'
+  const docsDir = `${rootDocsDir}/${brand}/docs/${versionShort}/`
 
-sh.config.fatal = true
+  // these are the files we need in the examples
+  const cssFiles = [
+    'ouds-web.min.css',
+    'ouds-web.min.css.map',
+    'ouds-web.rtl.min.css',
+    'ouds-web.rtl.min.css.map'
+  ]
+  const jsFiles = [
+    'ouds-web.bundle.min.js',
+    'ouds-web.bundle.min.js.map'
+  ]
+  const imgFiles = [
+    `${brand}-logo.svg`
+  ]
+  const staticJsFiles = [
+    'color-modes.js'
+  ]
 
-if (!sh.test('-d', rootDocsDir)) {
-  throw new Error(`The "${rootDocsDir}" folder does not exist, did you forget building the docs?`)
-}
+  sh.config.fatal = true
 
-// switch to the root dir
-sh.cd(path.join(__dirname, '..'))
+  if (!sh.test('-d', rootDocsDir)) {
+    throw new Error(`The "${rootDocsDir}" folder does not exist, did you forget building the docs?`)
+  }
 
-// remove any previously created folder/zip with the same name
-sh.rm('-rf', [distFolder, `${distFolder}.zip`])
+  // switch to the root dir
+  sh.cd(path.join(__dirname, '..'))
 
-sh.mkdir('-p', [
-  distFolder,
-  `${distFolder}/assets/brand/`,
-  `${distFolder}/assets/dist/css/`,
-  `${distFolder}/assets/dist/js/`,
-  `${distFolder}/assets/js/`
-])
+  // remove any previously created folder/zip with the same name
+  sh.rm('-rf', [distFolder, `${distFolder}.zip`])
 
-sh.cp('-Rf', `${docsDir}/examples/*`, distFolder)
+  sh.mkdir('-p', [
+    distFolder,
+    `${distFolder}/assets/brand/`,
+    `${distFolder}/assets/dist/css/`,
+    `${distFolder}/assets/dist/js/`,
+    `${distFolder}/assets/js/`
+  ])
 
-for (const file of cssFiles) {
-  sh.cp('-f', `${docsDir}/dist/css/${file}`, `${distFolder}/assets/dist/css/`)
-}
+  sh.cp('-Rf', `${docsDir}/examples/*`, distFolder)
 
-for (const file of jsFiles) {
-  sh.cp('-f', `${docsDir}/dist/js/${file}`, `${distFolder}/assets/dist/js/`)
-}
+  for (const file of cssFiles) {
+    sh.cp('-f', `${docsDir}/dist/css/${file}`, `${distFolder}/assets/dist/css/`)
+  }
 
-for (const file of imgFiles) {
-  sh.cp('-f', `${docsDir}/assets/brand/${file}`, `${distFolder}/assets/brand/`)
-}
+  for (const file of jsFiles) {
+    sh.cp('-f', `${docsDir}/dist/js/${file}`, `${distFolder}/assets/dist/js/`)
+  }
 
-for (const file of staticJsFiles) {
-  sh.cp('-f', `${docsDir}/assets/js/${file}`, `${distFolder}/assets/js/`)
-}
+  for (const file of imgFiles) {
+    sh.cp('-f', `${docsDir}/assets/brand/${file}`, `${distFolder}/assets/brand/`)
+  }
 
-sh.rm(`${distFolder}/index.html`)
+  for (const file of staticJsFiles) {
+    sh.cp('-f', `${docsDir}/assets/js/${file}`, `${distFolder}/assets/js/`)
+  }
 
-// get all examples' HTML files
-for (const file of sh.find(`${distFolder}/**/*.html`)) {
-  const fileContents = sh.cat(file)
-    .toString()
-    .replace(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
-    .replace(/"..\/dist\//g, '"../assets/dist/')
-    .replace(/(<link href="\.\.\/.*) integrity=".*>/g, '$1>')
-    .replace(/(<script src="\.\.\/.*) integrity=".*>/g, '$1></script>')
-    .replace(/( +)<!-- favicons(.|\n)+<style>/i, '    <style>')
-  new sh.ShellString(fileContents).to(file)
-}
+  sh.rm(`${distFolder}/index.html`)
 
-// create the zip file
-sh.exec(`zip -qr9 "${distFolder}.zip" "${distFolder}"`)
+  // get all examples' HTML files
+  const htmlFiles = sh.find(`${distFolder}/**/*.html`)
 
-// remove the folder we created
-sh.rm('-rf', distFolder)
+  const formatPromises = htmlFiles.map(async file => {
+    const fileContents = sh.cat(file)
+      .toString()
+      .replace(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
+      .replace(/"..\/dist\//g, '"../assets/dist/')
+      .replace(/(<link href="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+      .replace(/<link[^>]*href="\.\.\/assets\/img\/favicons\/[^"]*"[^>]*>/g, '')
+      .replace(/(<script src="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+
+    let formattedHTML
+    try {
+      formattedHTML = await format(fileContents, {
+        parser: 'html',
+        filepath: file
+      })
+    } catch (error) {
+      console.error(`\nError formatting ${file}:`)
+      console.error(`Message: ${error.message}`)
+      console.error('\nSkipping formatting for this file...\n')
+      formattedHTML = fileContents
+    }
+
+    new sh.ShellString(formattedHTML).to(file)
+  })
+
+  await Promise.all(formatPromises)
+
+  // create the zip file
+  sh.exec(`zip -qr9 "${distFolder}.zip" "${distFolder}"`)
+
+  // remove the folder we created
+  sh.rm('-rf', distFolder)
+})

@@ -1,0 +1,22 @@
+---
+import { getConfig } from '@libs/config';
+/*
+ * Outputs badge to identify the first version something was added
+ */
+interface Props {
+  /**
+   * The brand(s) that should display the following part.
+   */
+  brand?: string | string[]
+}
+
+const { brand = 'orange' } = Astro.props
+
+const brandToDisplay: string[] = typeof brand === 'string' ? [brand] : brand
+---
+
+{brandToDisplay.map((brand) => {
+  if (brand === getConfig().brand) {
+    return <slot />
+  }
+})}

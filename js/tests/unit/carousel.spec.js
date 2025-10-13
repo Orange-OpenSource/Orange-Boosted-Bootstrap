@@ -218,12 +218,12 @@ describe('Carousel', () => {
       })
     })
 
-    it('should ignore keyboard events within <input>s and <textarea>s', () => {
+    it('should ignore keyboard events within <input />s and <textarea>s', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <div class="carousel-inner">',
         '    <div class="carousel-item active">',
-        '      <input type="text">',
+        '      <input type="text" />',
         '      <textarea></textarea>',
         '    </div>',
         '    <div class="carousel-item"></div>',
@@ -620,10 +620,10 @@ describe('Carousel', () => {
           '<div class="carousel">',
           '  <div class="carousel-inner">',
           '    <div id="item" class="carousel-item">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '    <div class="carousel-item active">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '  </div>',
           '</div>'
@@ -667,10 +667,10 @@ describe('Carousel', () => {
           '<div class="carousel">',
           '  <div class="carousel-inner">',
           '    <div id="item" class="carousel-item active">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '    <div class="carousel-item">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '  </div>',
           '</div>'
@@ -709,10 +709,10 @@ describe('Carousel', () => {
           '<div class="carousel">',
           '  <div class="carousel-inner">',
           '    <div id="item" class="carousel-item">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '    <div class="carousel-item active">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '  </div>',
           '</div>'
@@ -750,10 +750,10 @@ describe('Carousel', () => {
           '<div class="carousel">',
           '  <div class="carousel-inner">',
           '    <div id="item" class="carousel-item active">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '    <div class="carousel-item">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '  </div>',
           '</div>'
@@ -792,10 +792,10 @@ describe('Carousel', () => {
           '<div class="carousel">',
           '  <div class="carousel-inner">',
           '    <div id="item" class="carousel-item active">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '    <div class="carousel-item">',
-          '      <img alt="">',
+          '      <img alt="" />',
           '    </div>',
           '  </div>',
           '</div>'

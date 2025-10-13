@@ -1,5 +1,5 @@
 {
-  "name": "orange-opensource/ouds-web",
+  "name": "orange-opensource/ouds-web-common",
   "description": "OUDS Web is a Bootstrap based, Orange branded accessible and ergonomic components library.",
   "keywords": [
     "css",
@@ -20,8 +20,8 @@
       "email": "loic.laussel@orange.com"
     },
     {
-      "name": "Julien Déramond",
-      "email": "julien.deramond@orange.com"
+      "name": "Vincent Prothais",
+      "email": "vincent.prothais@orange.com"
     }
   ],
   "support": {

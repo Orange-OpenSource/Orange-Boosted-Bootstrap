@@ -1,0 +1,20 @@
+/*!
+ * Bootstrap Docs (https://getbootstrap.com/)
+ * Copyright 2025 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ * For details, see https://creativecommons.org/licenses/by/3.0/.
+ */
+
+$prefix: bs-;
+$focus-visible-outer-width:           3px;
+$focus-visible-inner-width:           2px;
+$focus-visible-outer-offset:          $focus-visible-inner-width;
+$transition-focus:    null;
+$enable-transitions:              true;
+$enable-reduced-motion:           true;
+$enable-rounded:                  true;
+
+@import "../../../scss/mixins";
+
+@import "@docsearch/css/dist/style";
+@import "search";

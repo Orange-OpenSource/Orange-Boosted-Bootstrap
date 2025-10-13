@@ -1,18 +1,14 @@
 # This file holds all sidebar menu's entries.
-# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+# The logic for the sidebar generation is in 'site/layouts/partials/docs-sidebar.html'.
 
 - title: Getting started
   icon: book-half
   icon_color: body-color
   pages:
     - title: Introduction
-      draft: true
     - title: Download
-      draft: true
     - title: Contents
-      draft: true
     - title: Browsers & devices
-      draft: true
     - title: JavaScript
     - title: Webpack
       draft: true
@@ -21,7 +17,6 @@
     - title: Vite
       draft: true
     - title: Accessibility
-      draft: true
     - title: RFS
       draft: true
     - title: RTL
@@ -34,16 +29,14 @@
   pages:
     - title: Overview
       draft: true
+    - title: Custom libraries
+      brand: orange
     - title: Sass
-      draft: true
     - title: Options
-      draft: true
     - title: Color palette
-      draft: true
     - title: Color theme
       draft: true
     - title: Color modes
-      draft: true
     - title: Components
       draft: true
     - title: CSS variables
@@ -56,30 +49,20 @@
   icon_color: body-color
   pages:
     - title: Breakpoints
-      draft: true
     - title: Containers
-      draft: true
     - title: Grid
-      draft: true
     - title: Columns
-      draft: true
     - title: Gutters
-      draft: true
     - title: Utilities
-      draft: true
     - title: Z-index
-      draft: true
     - title: CSS Grid
-      draft: true
 
 - title: Content
   icon: file-earmark-richtext
   icon_color: body-color
   pages:
     - title: Reboot
-      draft: true
     - title: Typography
-      draft: true
     - title: Images
       draft: true
     - title: Tables
@@ -92,23 +75,24 @@
   icon_color: body-color
   pages:
     - title: Overview
-      draft: true
     - title: Form control
       draft: true
     - title: Select
       draft: true
-    - title: Checks & radios
-      draft: true
+    - title: Checkbox
+    - title: Radio button
+    - title: Switch
     - title: Range
       draft: true
     - title: Input group
+      draft: true
+    - title: Floating labels
       draft: true
     - title: Quantity selector
       draft: true
     - title: Layout
       draft: true
     - title: Validation
-      draft: true
 
 - title: Components
   icon: menu-button-wide-fill
@@ -120,24 +104,24 @@
       draft: true
     - title: Back to top
       draft: true
-    - title: Badge
-      draft: true
+    - title: Badges
     - title: Breadcrumb
-      draft: true
+    - title: Bullet list
     - title: Buttons
-      draft: true
     - title: Button group
       draft: true
     - title: Card
       draft: true
     - title: Carousel
       draft: true
+    - title: Chips
     - title: Close button
       draft: true
     - title: Collapse
       draft: true
     - title: Dropdowns
       draft: true
+    - title: Links
     - title: Footer
       draft: true
     - title: List group
@@ -171,7 +155,6 @@
     - title: Sticker
       draft: true
     - title: Tags
-      draft: true
     - title: Title bars
       draft: true
     - title: Toasts
@@ -184,83 +167,48 @@
   icon_color: body-color
   pages:
     - title: Clearfix
-      draft: true
     - title: Color & background
-      draft: true
     - title: Colored links
-      draft: true
+    - title: Divider
     - title: Focus ring
       draft: true
-    - title: Icon link
-      draft: true
     - title: Position
-      draft: true
     - title: Ratio
-      draft: true
     - title: Stacks
-      draft: true
     - title: Stretched link
-      draft: true
     - title: Text truncation
-      draft: true
-    - title: Vertical rule
-      draft: true
     - title: Visually hidden
-      draft: true
 
 - title: Utilities
   icon: braces-asterisk
   icon_color: body-color
   pages:
     - title: API
-      draft: true
     - title: Background
-      draft: true
     - title: Borders
-      draft: true
     - title: Colors
-      draft: true
     - title: Display
-      draft: true
     - title: Flex
-      draft: true
     - title: Float
-      draft: true
     - title: Interactions
-      draft: true
-    - title: Link
-      draft: true
     - title: Object fit
-      draft: true
     - title: Opacity
-      draft: true
     - title: Overflow
-      draft: true
     - title: Position
-      draft: true
     - title: Shadows
-      draft: true
     - title: Sizing
-      draft: true
     - title: Spacing
-      draft: true
     - title: Text
-      draft: true
     - title: Vertical align
-      draft: true
     - title: Visibility
-      draft: true
     - title: Z-index
-      draft: true
 
 - title: Extend
-  icon: tools
+  icon: repair-tools
   icon_color: body-color
   pages:
     - title: Approach
-      draft: true
     - title: Icons
-      draft: true
 
 - title: About
   icon: globe2
@@ -272,7 +220,6 @@
     - title: Brand
       draft: true
     - title: License
-    - title: Translations
     - title: Cookies
 
 - title: Migrations
@@ -281,3 +228,4 @@
   pages:
     - title: Migration
     - title: Migration from Boosted
+      brand: orange

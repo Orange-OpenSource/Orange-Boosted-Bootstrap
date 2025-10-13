@@ -10,8 +10,9 @@
 
 // Helpers
 @import "mixins/breakpoints";
-@import "mixins/color-mode";
+// OUDS mod: @import "mixins/color-mode"; is done inside the functions
 @import "mixins/color-scheme";
+@import "mixins/fonts"; // OUDS mod
 @import "mixins/image";
 @import "mixins/resize";
 @import "mixins/visually-hidden";

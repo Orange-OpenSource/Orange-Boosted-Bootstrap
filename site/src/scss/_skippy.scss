@@ -1,0 +1,7 @@
+.skippy {
+  z-index: $zindex-skippy; // OUDS mod
+
+  a {
+    color: var(--#{$prefix}color-always-on-black);
+  }
+}

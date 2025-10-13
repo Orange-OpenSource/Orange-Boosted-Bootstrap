@@ -1,0 +1,15 @@
+//
+// Placeholder svg used in the docs.
+//
+
+// Remember to update `site/_layouts/examples.html` too if this changes!
+
+.bd-placeholder-img {
+  @include get-font-size("body-large"); // OUDS mod: instead of `1.125rem`
+  user-select: none;
+  text-anchor: middle;
+}
+
+.bd-placeholder-img-lg {
+  @include get-font-size("display-medium"); // OUDS mod: instead of `3.5rem`
+}

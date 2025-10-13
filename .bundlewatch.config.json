@@ -1,36 +1,44 @@
 {
   "files": [
     {
-      "path": "./dist/css/ouds-web-grid.css",
+      "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
+      "maxSize": "69.0 kB"
+    },
+    {
+      "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
+      "maxSize": "65.5 kB"
+    },
+    {
+      "path": "./packages/orange/dist/css/ouds-web-grid.css",
+      "maxSize": "9.5 kB"
+    },
+    {
+      "path": "./packages/orange/dist/css/ouds-web-grid.min.css",
+      "maxSize": "8.5 kB"
+    },
+    {
+      "path": "./packages/orange/dist/css/ouds-web-reboot.css",
       "maxSize": "7.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-grid.min.css",
-      "maxSize": "6.25 kB"
+      "path": "./packages/orange/dist/css/ouds-web-reboot.min.css",
+      "maxSize": "6.5 kB"
     },
     {
-      "path": "./dist/css/ouds-web-reboot.css",
-      "maxSize": "4.75 kB"
+      "path": "./packages/orange/dist/css/ouds-web-utilities.css",
+      "maxSize": "23.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-reboot.min.css",
-      "maxSize": "4.5 kB"
+      "path": "./packages/orange/dist/css/ouds-web-utilities.min.css",
+      "maxSize": "22.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-utilities.css",
-      "maxSize": "13.0 kB"
+      "path": "./packages/orange/dist/css/ouds-web.css",
+      "maxSize": "60.0 kB"
     },
     {
-      "path": "./dist/css/ouds-web-utilities.min.css",
-      "maxSize": "12.0 kB"
-    },
-    {
-      "path": "./dist/css/ouds-web.css",
-      "maxSize": "44.75 kB"
-    },
-    {
-      "path": "./dist/css/ouds-web.min.css",
-      "maxSize": "41.75 kB"
+      "path": "./packages/orange/dist/css/ouds-web.min.css",
+      "maxSize": "56.25 kB"
     },
     {
       "path": "./dist/js/ouds-web.bundle.js",
@@ -58,8 +66,6 @@
     }
   ],
   "ci": {
-    "trackBranches": [
-      "ouds/main"
-    ]
+    "trackBranches": ["ouds/main"]
   }
 }
