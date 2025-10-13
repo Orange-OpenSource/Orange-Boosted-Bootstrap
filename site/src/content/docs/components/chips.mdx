@@ -59,7 +59,7 @@ Chip components are always displayed in a containing list with a `ul.chip-contai
 
 ### Accessibility
 
-Visually impaired and blind users will lack the visual context that permits to understand the chips list purpose on the page especially if chips' labels are not self-explanatory. Thus it's mandatory to *add a semantically informative title to describe the chips' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added.
+Visually impaired and blind users will lack the visual context that permits to understand the chips list purpose on the page especially if chips' labels are not self-explanatory. Thus it's mandatory to *add a semantically informative title to describe the chips' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added. To improve accessibility and denote the chips' list uniqueness of purpose, it's possible to add `role=group` on a parent container (but not the `ul` as it would not work).
 
 Several examples are provided below but they will need to be adapted for actual use cases.
 
@@ -81,6 +81,10 @@ Here is a table summarizing the pseudo elements that are used by the different v
 Filter chips allow users to filter content by selecting or deselecting specific categories or attributes while keeping the element on the page. They are based on checkbox inputs, but we also have [button based](#using-buttons) or [radio button based](#using-radio-buttons) filter chips. Thus, there is a selected state on this variant of the component.
 
 To create a filter chip, add `.chip-filter` to the `.chip`.
+
+<Callout type="warning">
+*If possible, display a semantically informative title to describe the chips' list purpose* like in the following example, otherwise an `aria-label` must be added to the `.chip-container` to explain the function of the chips, [more information here](#accessibility).
+</Callout>
 
 <Example code={`
   <h4 id="filtersHeader">Filter by brands</h4>
@@ -280,6 +284,10 @@ The following example shows every possible renderings depending on the filter ch
 Suggestion chips show relevant options based on user input or context. They help users quickly choose from dynamic or recommended items. Since this implies a dynamic behavior, these should be implemented using buttons.
 
 To create a suggestion chip, add `.chip-suggestion` to the `.chip`.
+
+<Callout type="warning">
+*If possible, display a semantically informative title to describe the chips' list purpose*, otherwise an `aria-label` must be added to the `.chip-container` to explain the function of the chips, like in the following example. [More information here](#accessibility).
+</Callout>
 
 <Example code={`<ul class="chip-container" aria-label="Answer with">
     <li class="chip chip-suggestion">
