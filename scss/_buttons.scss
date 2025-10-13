@@ -49,7 +49,7 @@
   --#{$prefix}btn-icon-size: #{$ouds-button-size-icon};
   --#{$prefix}btn-icon-gap: #{$ouds-button-space-column-gap-icon};
   --#{$prefix}btn-focus-border-color: var(--#{$prefix}btn-hover-border-color);
-  --#{$prefix}btn-loading-size: #{$ouds-button-size-loader};
+  --#{$prefix}btn-loading-size: #{px-to-rem($ouds-button-size-loader)};
   --#{$prefix}btn-loading-dasharray: 96;
   --#{$prefix}btn-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
   // End mod
@@ -203,7 +203,7 @@
     --#{$prefix}btn-padding-end: #{$ouds-button-space-inset-icon-only};
     --#{$prefix}btn-padding-y: #{$ouds-button-space-inset-icon-only};
     --#{$prefix}btn-icon-gap: 0;
-    --#{$prefix}btn-icon-size: #{$ouds-button-size-icon-only};
+    --#{$prefix}btn-icon-size: #{px-to-rem($ouds-button-size-icon-only)};
   }
   // End mod
 }
