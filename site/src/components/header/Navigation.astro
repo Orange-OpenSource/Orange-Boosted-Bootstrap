@@ -114,7 +114,7 @@ const { addedIn, layout, title } = Astro.props
               data-bs-display="static"
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
-              <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="Toggle brand" loading="lazy" />
+              <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="" loading="lazy" />
               <span class='d-lg-none ms-2' id="bd-brand-text">Toggle brand</span>
             </button>
             <ul
@@ -123,24 +123,24 @@ const { addedIn, layout, title } = Astro.props
             >
               <li>
                 <a
-                  href="#"
+                  href={Astro.url}
                   class:list={["dropdown-item d-flex align-items-center", {active: getConfig().brand === 'orange'}]}
                   data-bs-brand-value="orange"
                   aria-current={getConfig().brand === 'orange'}
                 >
-                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="Toggle brand" loading="lazy" />
+                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/orange-logo.svg')} alt="" loading="lazy" />
                   Orange
                   <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'orange'}]} aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href={Astro.url}
                   class:list={["dropdown-item d-flex align-items-center", {active: getConfig().brand === 'sosh'}]}
                   data-bs-brand-value="sosh"
                   aria-current={getConfig().brand === 'sosh'}
                 >
-                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} alt="Toggle brand" loading="lazy" />
+                  <img class="bi me-sm" src={getVersionedDocsPath('assets/brand/sosh-logo.svg')} alt="" loading="lazy" />
                   Sosh
                   <svg class:list={["bi ms-auto", {'d-none': getConfig().brand !== 'sosh'}]} aria-hidden="true"><use href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#check2')}></use></svg>
                 </a>

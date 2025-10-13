@@ -95,7 +95,7 @@ if (filePath && fileMatch && codeToDisplay) {
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild?.getAttributeNS(namespace, 'href')
-    const isCheckIconVisible = originalXhref?.includes('#check2') || false
+    const isCheckIconVisible = originalXhref.includes('#check2')
 
     if (isCheckIconVisible) {
       return

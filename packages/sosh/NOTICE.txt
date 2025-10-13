@@ -10,5 +10,6 @@ Any use or displaying shall constitute an infringement under intellectual proper
 
 nuget/ouds-web.png
 sosh-logo.svg
+scss/_composite.scss
 
 End of the parts list under Orange SA Copyright
