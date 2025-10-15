@@ -37,6 +37,8 @@
   value: '1.2.0'
 - name: 'tag'
   value: '1.1.0'
+- name: 'input-tag'
+  value: '1.1.0'
 - name: 'text-area'
   value: '1.0.0'
 - name: 'text-input'

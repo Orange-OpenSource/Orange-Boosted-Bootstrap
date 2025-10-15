@@ -2,6 +2,7 @@
 import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
 import type { LayoutOverridesHTMLAttributes } from '@libs/layout'
 import { getSlug, processMarkdownToHtml } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
@@ -26,6 +27,13 @@ if (frontmatter.toc) {
   bodyProps['data-bs-spy'] = 'scroll'
   bodyProps['data-bs-target'] = '#TableOfContents'
 }
+
+let currentComponentsTypesNames = [frontmatter.title]
+if(frontmatter.types) {
+  currentComponentsTypesNames = frontmatter.types
+}
+const  currentComponentsTypesSlugs = currentComponentsTypesNames.map((name) => name.toLowerCase().replaceAll(' ', '-'))
+const multipleComponents = currentComponentsTypesSlugs.length > 1 ? 's' : ''
 ---
 
 <BaseLayout {...Astro.props} layout="docs" overrides={{ body: bodyProps }}>
@@ -81,6 +89,20 @@ if (frontmatter.toc) {
         <div class="bd-subtitle mt-sm">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
+        <h6 class="d-inline mb-2" id="componentVersions"><a class="link" href="#">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></h6>
+        <div class="d-inline align-middle" role="group"  aria-labelledby="componentVersions">
+          <ul class="list-unstyled d-inline-flex flex-wrap column-gap-xs row-gap-md mb-0 align-middle">
+            {getData('_components-versions').map((component) => {
+              return currentComponentsTypesSlugs.map((slug, index) => {
+                return slug.startsWith(component.name) ? (
+                  <li class="tag text-bg-status-info-muted">{currentComponentsTypesNames[index]} v{component.value}</li>
+                ) : (
+                  <></>
+                );
+              })
+            })}
+          </ul>
+        </div>
       </div>
 
       <div class="bd-toc mt-lg mb-4xl my-lg-none mb-lg-4xl px-sm-2xs text-muted">
@@ -97,7 +119,7 @@ if (frontmatter.toc) {
               >
                 On this page
                 <svg class="bi d-md-none ms-sm" aria-hidden="true">
-                  <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#chevron-expand')} />
+                  <use xlink:href="#chevron-expand" />
                 </svg>
               </button>
               <span class="d-none d-md-block h6 my-sm ms-lg">On this page</span>
