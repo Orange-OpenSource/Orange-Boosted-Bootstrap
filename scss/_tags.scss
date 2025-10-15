@@ -9,6 +9,7 @@
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
   --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-default)};
+  --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
@@ -70,6 +71,11 @@
     color: var(--#{$prefix}tag-asset-color);
   }
 
+  .tag-icon {
+    width: var(--#{$prefix}tag-size-decorative-asset);
+    height: var(--#{$prefix}tag-size-decorative-asset);
+  }
+
   .tag-status-icon {
     vertical-align: middle;
     background-color: var(--#{$prefix}tag-asset-color);
@@ -77,8 +83,8 @@
   }
 
   .tag-bullet {
-    width: calc(var(--#{$prefix}tag-size-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
-    height: calc(var(--#{$prefix}tag-size-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
+    width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
+    height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
     padding: 0;
     margin: #{$ouds-tag-space-inset-bullet-default};
     background-color: var(--#{$prefix}tag-asset-color);
@@ -154,6 +160,7 @@
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
   --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-small)};
+  --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-small};
   --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
