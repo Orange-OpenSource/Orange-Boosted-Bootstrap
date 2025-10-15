@@ -31,8 +31,8 @@
     - title: Overview
       draft: true
     - title: Custom libraries
+      brand: orange
     - title: Sass
-      draft: true
     - title: Options
     - title: Color palette
     - title: Color theme
@@ -204,7 +204,7 @@
     - title: Z-index
 
 - title: Extend
-  icon: tools
+  icon: repair-tools
   icon_color: body-color
   pages:
     - title: Approach
@@ -220,7 +220,6 @@
     - title: Brand
       draft: true
     - title: License
-    - title: Translations
     - title: Cookies
 
 - title: Migrations
@@ -229,3 +228,4 @@
   pages:
     - title: Migration
     - title: Migration from Boosted
+      brand: orange

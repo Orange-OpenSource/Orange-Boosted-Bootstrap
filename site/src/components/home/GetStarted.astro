@@ -24,8 +24,8 @@ import Code from '@components/shortcodes/Code.astro'
       Install OUDS Web's source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package-managed installs
       don't include documentation or our full build scripts.
     </p>
-    <Code code={`npm install @ouds/web@${getConfig().current_version}`} lang="sh" />
-    <Code code={`yarn add @ouds/web@${getConfig().current_version}`} lang="sh" />
+    <Code code={`npm install @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`} lang="sh" />
+    <Code code={`yarn add @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`} lang="sh" />
     <p class="mb-scaled-lg">
       <a href={getVersionedDocsPath('getting-started/download')}>Read our installation docs</a> for more info and additional
       package managers.

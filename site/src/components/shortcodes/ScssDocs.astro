@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import { getConfig } from '@libs/config'
 import Code from '@shortcodes/Code.astro'
+import { getVersionedDocsPath } from '@libs/path'
 
 // Prints everything between `// scss-docs-start "name"` and `// scss-docs-end "name"`
 // comments in the docs.
@@ -15,15 +16,21 @@ interface Props {
    * File path that contains the content to display relative to the root of the repository.
    */
   file: string
+  /**
+   * Defines label to complete 'Copy SCSS to clipboard' button aria-label.
+   */
+  buttonLabel?: string
 }
 
-const { name, file } = Astro.props
+const { name, file, buttonLabel } = Astro.props
 
 if (!name || !file) {
   throw new Error(
     `Missing required parameter(s) for the '<ScssDocs />' component, expected both 'name' and 'file' but got 'name: ${name}' and 'file: ${file}'.`
   )
 }
+
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SCSS to clipboard` : `Copy ${name} SCSS to clipboard`
 
 let content: string
 
@@ -54,7 +61,7 @@ try {
 }
 ---
 
-<Code containerClass="bd-example-snippet bd-file-ref" code={content} lang="scss">
+<Code containerClass="bd-example-snippet bd-file-ref" code={content} lang="scss" buttonLabel={buttonLabel}>
   <div slot="bar" class="d-flex align-items-center highlight-toolbar ps-lg border-bottom border-thin border-default">
     <a
       class="me-4xl font-monospace small"
@@ -64,8 +71,10 @@ try {
     </a>
   </div>
   <div slot="pre" class="position-absolute top-0 end-0">
-    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy code to clipboard">
-      <svg aria-hidden="true"><use xlink:href="#copy"></use></svg>
+    <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+      <svg aria-hidden="true">
+        <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
+      </svg>
     </button>
   </div>
 </Code>

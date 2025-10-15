@@ -1,8 +1,18 @@
 ---
+
 ---
 
 <style is:global lang="scss">
-  @import '../../../../scss/ouds-web-bootstrap.scss';
-  @import '../../scss/docs';
+  $ouds-root-selector: '&';
+  [data-bs-brand='orange'] {
+    @import '../../../../packages/orange/scss/ouds-web-bootstrap.scss';
+    $brand: 'orange';
+    @import '../../scss/docs';
+  }
+  [data-bs-brand='sosh'] {
+    @import '../../../../packages/sosh/scss/ouds-web-bootstrap.scss';
+    $brand: 'sosh';
+    @import '../../scss/docs';
+  }
   @import '../../scss/docs_search';
 </style>

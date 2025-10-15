@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { Prism } from '@astrojs/prism'
+import { getVersionedDocsPath } from '@libs/path'
 
 interface Props {
   /**
@@ -38,9 +39,16 @@ interface Props {
    * @default false
    */
   nestedInExample?: boolean
+  /**
+   * Defines label to complete 'Edit code on Stackblitz' and/or 'Copy code to clipboard' buttons aria-labels.
+   */
+  buttonLabel?: string
 }
 
-const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false } = Astro.props
+const { class: className, code, containerClass, fileMatch, filePath, lang, nestedInExample = false, buttonLabel } = Astro.props
+
+const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} code to clipboard` : filePath ?
+  `Copy ${filePath} code to clipboard` : 'Copy code to clipboard'
 
 let codeToDisplay = filePath
   ? fs.readFileSync(path.join(process.cwd(), filePath), 'utf8')
@@ -62,17 +70,15 @@ if (filePath && fileMatch && codeToDisplay) {
 <script>
   import ClipboardJS from 'clipboard'
 
-  const btnTitle = 'Copy to clipboard'
-  const btnEdit = 'Edit on StackBlitz'
-
-  function snippetButtonTooltip(selector: string, title: string) {
+  function snippetButtonTooltip(selector: string, tooltipLabel: string) {
     document.querySelectorAll(selector).forEach((btn) => {
-      oudsWeb.Tooltip.getOrCreateInstance(btn, { title })
+      oudsWeb.Tooltip.getOrCreateInstance(btn, { title: tooltipLabel })
     })
   }
 
-  snippetButtonTooltip('.btn-clipboard', btnTitle)
-  snippetButtonTooltip('.btn-edit', btnEdit)
+  const clipboardTooltip = 'Copy to clipboard'
+  snippetButtonTooltip('.btn-clipboard', clipboardTooltip)
+  snippetButtonTooltip('.btn-edit', 'Edit on StackBlitz')
 
   const clipboard = new ClipboardJS('.btn-clipboard', {
     target: (trigger) => trigger.closest('.bd-code-snippet')?.querySelector('.highlight')!,
@@ -89,7 +95,7 @@ if (filePath && fileMatch && codeToDisplay) {
     const tooltipBtn = oudsWeb.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild?.getAttributeNS(namespace, 'href')
-    const isCheckIconVisible = originalXhref === '#check2'
+    const isCheckIconVisible = originalXhref.includes('#check2')
 
     if (isCheckIconVisible) {
       return
@@ -100,7 +106,7 @@ if (filePath && fileMatch && codeToDisplay) {
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': btnTitle })
+        tooltipBtn?.setContent({ '.tooltip-inner': clipboardTooltip })
       },
       { once: true }
     )
@@ -128,7 +134,7 @@ if (filePath && fileMatch && codeToDisplay) {
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
       () => {
-        tooltipBtn?.setContent({ '.tooltip-inner': btnTitle })
+        tooltipBtn?.setContent({ '.tooltip-inner': clipboardTooltip })
       },
       { once: true }
     )
@@ -155,9 +161,9 @@ if (filePath && fileMatch && codeToDisplay) {
         )
         : (
           <div class="bd-clipboard">
-            <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title="Copy to clipboard">
-              <svg class="bi" role="img" aria-label="Copy">
-                <use xlink:href="#copy" />
+            <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+              <svg aria-hidden="true">
+                <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
               </svg>
             </button>
           </div>

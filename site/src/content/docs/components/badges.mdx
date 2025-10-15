@@ -9,7 +9,8 @@ toc: true
 ---
 
 import { getData } from '@libs/data'
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
 You can find here the [OUDS Badge design guidelines](https://unified-design-system.orange.com/472794e18/p/698ea8-badge).
@@ -23,7 +24,7 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-emphasized')}>
           <p class="badge text-bg-status-accent-emphasized">
             <span class="visually-hidden">Basic badge</span>
           </p>
@@ -35,7 +36,7 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-emphasized')}>
           <p class="badge badge-count text-bg-status-accent-emphasized">1</p>
         </div>
       </div>
@@ -45,10 +46,10 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
   <li class="col">
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
-        <div class="d-flex align-items-center justify-content-center" data-bs-theme="dark">
+        <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-emphasized')}>
           <p class="badge text-bg-status-accent-emphasized">
             <svg aria-hidden="true">
-              <use xlink:href={`/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend`}/>
+              <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}/>
             </svg>
             <span class="visually-hidden">Badge with icon</span>
           </p>
@@ -119,13 +120,13 @@ Badges can be used with icons to visually reinforce meaning.
 
 <Example class="d-flex align-items-center gap-3" code={`<p class="badge">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
   <p class="badge text-bg-status-negative-emphasized">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>`} />
@@ -137,13 +138,13 @@ Badge - Icon are available in two sizes.
 <Example class="d-flex align-items-center gap-3" code={`
   <p class="badge badge-lg">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>
-  <p class="badge ">
+  <p class="badge">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <span class="visually-hidden">Badge alt text</span>
   </p>`} />
@@ -154,7 +155,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
 
 <Example class="d-flex align-items-center gap-3" code={`<button type="button" class="btn btn-icon btn-default position-relative">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#trash"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
     </svg>
     <span class="visually-hidden">Trash</span>
     <span class="position-absolute top-0 start-100 translate-middle badge text-bg-status-negative-emphasized">

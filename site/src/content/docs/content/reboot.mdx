@@ -9,6 +9,9 @@ aliases:
 toc: true
 ---
 
+import { getMode } from '@libs/sass-variables'
+import { getConfig } from '@libs/config'
+
 ## Approach
 
 Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
@@ -34,11 +37,9 @@ In practice, those variables are then applied in Reboot like so:
 
 Which allows you to make real-time customizations however you like:
 
-```html
-<body style="--bs-body-color: #333;">
-  <!-- ... -->
-</body>
-```
+<Code lang="html" buttonLabel="real-time customization" code={`<body style="--bs-body-color: #333;">
+    <!-- ... -->
+  </body> `} />
 
 ## Page defaults
 
@@ -53,43 +54,17 @@ The `:root` and child elements are updated to provide better page-wide defaults.
 
 OUDS Web utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today’s devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
-```scss
-$font-family-sans-serif:
-  // Safari for macOS and iOS (San Francisco)
-  "SF Pro",
-  // Android
-  Roboto,
-  // older macOS and iOS
-  "Helvetica Neue",
-  // Windows
-  Helvetica
-  // Basic web fallback
-  Arial,
-  // Sans serif fallback
-  sans-serif !default;
-```
+<ScssDocs name="ouds-composite-font-sans-serif" file={`packages/${getConfig().brand}/scss/tokens/_composite.scss`} />
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout OUDS Web. To switch the global `font-family`, update `$font-family-base` and recompile OUDS Web.
 
 The following `font-family` is applied on every code basis element. To switch the global `font-family`, update `$font-family-code` and recompile OUDS Web.
 
-```scss
-$font-family-sans-serif:
-  // Safari for macOS and iOS (San Francisco)
-  "SF Mono",
-  // Android
-  "Roboto Mono",
-  // Windows
-  Consolas,
-  // Basic web fallback
-  Menlo,
-  // Monospace fallback
-  monospace !default;
-```
+<ScssDocs name="ouds-composite-font-monospace" file={`packages/${getConfig().brand}/scss/tokens/_composite.scss`} />
 
 ## Headings
 
-All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-bottom: 16px` set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
+All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-bottom` set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
 
 <BsTable class="table">
 | Heading | Example |
@@ -104,9 +79,9 @@ All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-
 
 ## Paragraphs
 
-All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]([[docsref:/utilities/spacing]]).
+All `<p>` elements have their `margin-top` removed and `margin-bottom` set for easy spacing. If you want to get rid of the `margin-bottom`, please make sure to use our `.mb-none` [spacing utilities]([[docsref:/utilities/spacing]]).
 
-<Example code={`<p class="mw-none mb-none">This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
+<Example buttonLabel="paragraph" code={`<p class="mw-none mb-none">This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one below.</p>
   <p>This is an example paragraph which is long enough so it’s easy to see and compare the <code>max-width</code> in action and compare it to the one above.</p>
   <p>This is an example paragraph.</p>`} />
 
@@ -114,15 +89,18 @@ All `<p>` elements have their `margin-top` removed and `margin-bottom: 16px` set
 
 Links have bold and underline applied. While links change on `:hover`, by default they don’t change based on whether someone `:visited` the link.
 
-<Example code={`<a href="#">This is an example link</a>`} />
+<Example buttonLabel="link" code={`<a href="#">This is an example link</a>`} />
 
 Links have a disabled style when using an `aria-disabled="true"` attribute.
 
-<Example code={`<a aria-disabled="true">This is an example of a disabled link</a>`} />
+<Example buttonLabel="disabled link" code={`<a aria-disabled="true">This is an example of a disabled link</a>`} />
 
-Visited links don’t have a specific style by default. The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
+Visited links don’t have a specific style by default.
 
-<Example code={`<div class="visited-links">
+<BrandSpecific brand="orange">
+The `:visited` state can be styled with the additional `.visited-links` utility class that can be applied directly to a link or to a parent element to style all the child links.
+
+<Example buttonLabel="visited link" code={`<div class="visited-links">
     <div>
       <a href=".">This is an example of a visited link</a>
     </div>
@@ -133,27 +111,28 @@ Visited links don’t have a specific style by default. The `:visited` state can
   <div>
     <a href="." class="visited-links">This is an example of a visited link</a>
   </div>`} />
+</BrandSpecific>
 
 Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
-<Example code={`<a>This is a placeholder link</a>`} />
+<Example buttonLabel="placeholder link" code={`<a>This is a placeholder link</a>`} />
 
 On colored backgrounds, links should have a different style. Visited links don’t have a specific style on colored backgrounds.
 
-<Example class="p-none" code={`<div class="colored-bg">
+<Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="colored-bg">
     <div class="bg-brand-primary p-lg">
-      <div data-bs-theme="light">
+      <div data-bs-theme="${getMode('modes-on-brand-primary')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
     <div class="bg-status-negative-emphasized p-lg">
-      <div data-bs-theme="root-inverted">
-        This is an example of <a href="#">link on colored background</a> in a paragraph.
+      <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
+        This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
   </div>
   <div class="bg-brand-primary p-lg">
-    <div data-bs-theme="light">
+    <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
     </div>
   </div>`} />
@@ -162,7 +141,7 @@ On colored backgrounds, links should have a different style. Visited links don�
 
 The `<hr />` element has been simplified. Similar to browser defaults, `<hr />`s are styled via `border-top` and automatically inherit their `border-color` via `color`.
 
-<Example code={`<hr />`} />
+<Example buttonLabel="horizontal rule" code={`<hr />`} />
 
 The `<hr />` style can be modified with border utilities. See some customization examples in the [Divider helpers]([[docsref:/helpers/divider]]) documentation.
 
@@ -174,7 +153,7 @@ Please refer to the [Bullet list component]([[docsref:/components/bullet-list]])
 
 For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
 
-<Example showMarkup={false} code={`<dl>
+<Example buttonLabel="description list" showMarkup={false} code={`<dl>
     <dt>Description lists</dt>
     <dd>A description list is perfect for defining terms.</dd>
     <dt>Term</dt>
@@ -188,13 +167,13 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
 
 Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
 
-<Example code={`For example, <code>&lt;section&gt;</code> should be wrapped as inline.`} />
+<Example buttonLabel="inline code" code={`For example, <code>&lt;section&gt;</code> should be wrapped as inline.`} />
 
 ## Code blocks
 
 Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `px` units for its `margin-bottom`.
 
-<Example code={`<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
+<Example buttonLabel="code block" code={`<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
   &lt;p&gt;And another line of sample text here...&lt;/p&gt;
   </code></pre>`} />
 
@@ -202,26 +181,26 @@ Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle
 
 For indicating variables use the `<var>` tag.
 
-<Example code={`<var>y</var> = <var>m</var><var>x</var> + <var>b</var>`} />
+<Example buttonLabel="variable" code={`<var>y</var> = <var>m</var><var>x</var> + <var>b</var>`} />
 
 ## User input
 
 Use the `<kbd>` to indicate input that is typically entered via keyboard.
 
-<Example code={`To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br />
+<Example buttonLabel="user input" code={`To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br />
   To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>`} />
 
 ## Sample output
 
 For indicating sample output from a program use the `<samp>` tag.
 
-<Example code={`<samp>This text is meant to be treated as sample output from a computer program.</samp>`} />
+<Example buttonLabel="sample output" code={`<samp>This text is meant to be treated as sample output from a computer program.</samp>`} />
 
 ## Tables
 
 Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]([[docsref:/content/tables]]).
 
-<Example code={`<table>
+<Example buttonLabel="table" code={`<table>
     <caption>
       This is an example table, and this is its caption to describe the contents.
     </caption>
@@ -270,7 +249,7 @@ These changes, and more, are demonstrated below.
 
 <Callout type="warning" name="warning-input-support" />
 
-<Example showMarkup={false} code={`<form>
+<Example buttonLabel="form" showMarkup={false} code={`<form>
     <fieldset>
       <legend>Example legend</legend>
       <p>
@@ -396,7 +375,7 @@ These changes, and more, are demonstrated below.
 
 Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn’t necessary for `<button>` elements, which get their own `cursor` change.
 
-<Example code={`<span role="button" tabindex="0">Non-button element button</span>`} />
+<Example buttonLabel="pointer on button" code={`<span role="button" tabindex="0">Non-button element button</span>`} />
 
 ## Misc elements
 
@@ -404,7 +383,7 @@ Reboot includes an enhancement for `role="button"` to change the default cursor 
 
 The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 16px` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br />`.
 
-<Example showMarkup={false} code={`<address>
+<Example buttonLabel="address" showMarkup={false} code={`<address>
     <strong>ACME Corporation</strong><br />
     1123 Fictional St,<br />
     San Francisco, CA 94103<br />
@@ -418,9 +397,9 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 ### Blockquote
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 16px` for something more consistent with other elements.
+The default `margin` on blockquotes is `1em 40px`, so we reset that for something more consistent with other elements.
 
-<Example showMarkup={false} code={`<figure>
+<Example buttonLabel="blockquote" showMarkup={false} code={`<figure>
     <blockquote class="blockquote">
       <p>A well-known quote, contained in a blockquote element.</p>
     </blockquote>
@@ -433,13 +412,13 @@ The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 16px
 
 The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
 
-<Example showMarkup={false} code={`The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.`} />
+<Example buttonLabel="abbreviation" showMarkup={false} code={`The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.`} />
 
 ### Summary
 
 The default `cursor` on summary is `text`, so we reset that to `pointer` to convey that the element can be interacted with by clicking on it.
 
-<Example showMarkup={false} code={`<details>
+<Example buttonLabel="summary" showMarkup={false} code={`<details>
     <summary>Some details</summary>
     <p>More info about the details.</p>
   </details>
@@ -453,9 +432,7 @@ The default `cursor` on summary is `text`, so we reset that to `pointer` to conv
 
 HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io/), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden.
 
-```html
-<input type="text" hidden />
-```
+<Code lang="html" buttonLabel="hidden attribute" code={`<input type="text" hidden />`} />
 
 <Callout type="info">
 Since `[hidden]` is not compatible with jQuery’s `$(...).hide()` and `$(...).show()` methods, we don’t specifically endorse `[hidden]` over other techniques for managing the `display` of elements.

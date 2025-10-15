@@ -41,7 +41,7 @@ const { title } = Astro.props
                 <a
                   class:list={['nav-link', { active: Astro.url.pathname === '/' }]}
                   {...Astro.url.pathname === '/' && { 'aria-current': 'page' }}
-                  href="/"
+                  href={`/${getConfig().brand}/`}
                   aria-describedby="headingLinks"
                 >
                   Home
@@ -152,7 +152,7 @@ const { title } = Astro.props
               <li>
                 <a
                   class="nav-link"
-                  href="https://ouds-main--boosted.netlify.app"
+                  href={`https://ouds-main--boosted.netlify.app/${getConfig().brand}`}
                   aria-describedby="headingProjects"
                   target="_blank"
                   rel="noopener"

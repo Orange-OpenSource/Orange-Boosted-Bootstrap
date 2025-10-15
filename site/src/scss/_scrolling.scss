@@ -12,17 +12,17 @@ main {
   [tabindex="0"] {
     scroll-margin-top: 80px;
     scroll-margin-bottom: 100px;
+  }
+}
 
-    @include media-breakpoint-up(md) {
-      .header-minimized ~ .bd-gutter & {
-        scroll-margin-top: 8.5rem;
-      }
-    }
+@include media-breakpoint-up(md) {
+  .header-minimized ~ .bd-gutter :is(main a, main button, main input, main select, main textarea, main h2, main h3, main h4) {
+    scroll-margin-top: 8.5rem;
+  }
+}
 
-    @include media-breakpoint-up(lg) {
-      .header-minimized ~ .bd-gutter & {
-        scroll-margin-top: 5.5rem;
-      }
-    }
+@include media-breakpoint-up(lg) {
+  .header-minimized ~ .bd-gutter :is(main a, main button, main input, main select, main textarea, main h2, main h3, main h4) {
+    scroll-margin-top: 5.5rem;
   }
 }

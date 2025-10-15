@@ -6,6 +6,8 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
 ## Changing `display`
 
 Use our [display utilities]([[docsref:/utilities/display]]) for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
@@ -19,7 +21,7 @@ Should you need to add `display: flex` to an element, do so with `.d-flex` or on
 
 ## Margin and padding
 
-Use the `margin` and `padding` [spacing utilities]([[docsref:/utilities/spacing]]) to control how elements and components are spaced and sized. OUDS Web includes an eleven-level scale for spacing utilities, based on a `4px` value default `$ouds-dimension-base` variable. Choose values for all viewports (e.g., `.me-lg` for `margin-right: 16px` in LTR), or pick responsive variants to target specific viewports (e.g., `.me-md-lg` for `margin-right: 16px` —in LTR— starting at the `md` breakpoint).
+Use the `margin` and `padding` [spacing utilities]([[docsref:/utilities/spacing]]) to control how elements and components are spaced and sized. OUDS Web includes an eleven-level scale for spacing utilities, based on a <code>{allTokens.find((token) => token.name === '$core-ouds-dimension-base').compiledValue}</code> value default <code>{allTokens.find((token) => token.name === '$core-ouds-dimension-base').name}</code> variable. Choose values for all viewports (e.g., `.me-lg` for <code>margin-right: {allTokens.find((token) => token.name === '$ouds-space-fixed-lg').compiledValue}</code> in LTR), or pick responsive variants to target specific viewports (e.g., `.me-md-lg` for <code>margin-right: {allTokens.find((token) => token.name === '$ouds-space-fixed-lg').compiledValue}</code> —in LTR— starting at the `md` breakpoint).
 
 ## Toggle `visibility`
 
