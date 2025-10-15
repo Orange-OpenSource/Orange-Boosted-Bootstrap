@@ -21,9 +21,13 @@ A `placeholder` attribute is required on each `<input>` as our CSS-only floating
 
 If the placeholder text is empty, it is not visible; only the `<label>` is shown to users.
 
+<Callout type="warning">
+To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate token to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
+</Callout>
+
 <Example code={`<div class="text-input-container mb-md">
     <label for="exampleTextInputWithEmptyPlaceholder">Email address</label>
-    <input type="email" class="text-input-field" id="exampleTextInputWithEmptyPlaceholder" placeholder="">
+    <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithEmptyPlaceholder" placeholder="">
   </div>`} />
 
 If the placeholder text is filled, `<label>`s will automatically adjust to their floated position.
@@ -140,15 +144,19 @@ Helper text should be explicitly associated with the text input it relates to us
 If the helper text is not sufficient, it's possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
 To display a helper link below inputs, use a [standard `.link` class]([[docsref:/components/links#standard-variant]]) as a sibling of a `.text-input-container`.
 
+<Callout type="warning">
+If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
+</Callout>
+
 <Example code={`<div class="text-input">
     <div class="text-input-container">
       <label for="inputTextWithHelperTextLink">Send your feedback</label>
-      <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-input-field" placeholder="">
+      <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-input-field" placeholder="">
     </div>
     <div id="feedbackTextHelpBlock" class="text-input-helper">
       Please describe your feedback in a few words.
     </div>
-    <a href="#" class="link">
+    <a href="#" id="feedbackTextHelpMore" class="link">
       More information
     </a>
   </div>
