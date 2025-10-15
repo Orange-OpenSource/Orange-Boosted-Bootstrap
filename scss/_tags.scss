@@ -10,6 +10,7 @@
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-default};
   --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-default)};
   --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-default};
+  --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
