@@ -36,8 +36,8 @@ A better alternative for those using this type of frameworks is to use a framewo
 
 <Callout type="warning">
   **To set up a functional OUDS Web demo based on the Bootstrap templates**, follow these steps to replace all `bootstrap` references:
-  * Change `bootstrap` to `ouds-${getConfig().brand}` in `scss/style.scss`.
-  * Replace `bootstrap` with `@ouds/web-common` and `@ouds/web-${getConfig().brand}` with the correct versions in `package.json`.
+  * Change `bootstrap` to <code>ouds-web-{getConfig().brand}</code> in `scss/style.scss`.
+  * Replace `bootstrap` with `@ouds/web-common` and <code>@ouds/web-{getConfig().brand}</code> with the correct versions in `package.json`.
   * Replace CDN URLs with the correct ones within `import` statements in `index.html` (see [CND links]([[docsref:/getting-started/introduction#cdn-links]])).
   * Update JavaScript objects from `bootstrap` to `oudsWeb`.
 </Callout>
