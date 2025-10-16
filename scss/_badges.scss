@@ -4,7 +4,7 @@
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$prefix}badge-size: #{$ouds-badge-size-medium};
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
   --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
   --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
@@ -37,21 +37,20 @@
 }
 
 .badge-xs {
-  --#{$prefix}badge-size: #{$ouds-badge-size-xsmall};
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
 }
 
 .badge-sm {
-  --#{$prefix}badge-size: #{$ouds-badge-size-small};
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
 }
 
 .badge-lg {
-  --#{$prefix}badge-size: #{$ouds-badge-size-large};
+  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
 
   @include get-font-size("label-medium");
 }
 
 .badge-count {
-  --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-medium)};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-count-padding-y: 0;
 
