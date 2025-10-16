@@ -18,7 +18,7 @@
   --#{$prefix}text-input-padding-y: #{$ouds-text-input-space-padding-block-default};
   --#{$prefix}text-input-max-width: #{$ouds-text-input-size-max-width};
   --#{$prefix}text-input-min-height: #{$ouds-text-input-size-min-height};
-  --#{$prefix}text-input-icon-size: #{$ouds-text-input-size-leading-icon};
+  --#{$prefix}text-input-icon-size: #{px-to-rem($ouds-text-input-size-leading-icon)};
   --#{$prefix}text-input-column-gap: #{$ouds-text-input-space-column-gap-default};
   --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
   --#{$prefix}text-input-padding-x: #{$ouds-text-input-space-padding-inline-default};
@@ -305,7 +305,7 @@
 
     &:has(> button)::after {
       right: subtract(add(add(var(--#{$prefix}text-input-trailing-action-padding-right), var(--#{$prefix}text-input-trailing-action-width)), var(--#{$prefix}text-input-column-gap)), var(--#{$prefix}text-input-border-width-left));
-      width: $ouds-button-size-icon-only;
+      width: px-to-rem($ouds-button-size-icon-only);
     }
 
     &:not(.text-input-container-outlined) {
