@@ -1,12 +1,12 @@
 ---
 title: Text input
-description: A text input is a user interface component that allows users to enter, edit, or select single-line textual data. It provides a visual and interactive affordance for text entry while supporting labels, placeholders, icons, helper messages, and validation feedback.
+description: A text input is a user interface component that allows users to enter or edit textual data. It provides a visual and interactive affordance for text entry while supporting labels, placeholders, icons, helper messages, and validation feedback.
 aliases:
   - "/docs/forms/text-input/"
 toc: true
 ---
 
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 {/* TODO: set the right url for design documentation */}
@@ -19,7 +19,7 @@ Wrap a pair of `<input class="text-input-field">` and `<label>` elements in `.te
 
 A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is empty.
 
-If the placeholder text is empty, it is not visible; only the `<label>` is shown to users.
+If the placeholder text is empty, it is not visible: only the `<label>` is shown to users.
 
 <Callout type="warning">
 To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate token to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
@@ -30,7 +30,7 @@ To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org
     <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithEmptyPlaceholder" placeholder="">
   </div>`} />
 
-If the placeholder text is filled, `<label>`s will automatically adjust to their floated position.
+If the placeholder text is supplied, `<label>`s will automatically adjust to their floated position.
 
 <Example code={`<div class="text-input-container mb-md">
     <label for="exampleTextInputWithPlaceholder">Email address</label>
@@ -48,7 +48,7 @@ When there’s a value already defined, `<label>`s will automatically adjust to 
 
 ### Outlined
 
-A minimalist input with a transparent background and a visible stroke outlining the field. This style may be interesting for contexts other than form pages:
+Add `.text-input-container-outlined` for a minimalist input with a transparent background and a visible stroke outlining the field. This style may be interesting for contexts other than form pages:
 * When inputs need to feel lightweight and unobtrusive
 * In a header (search field)
 * In a selection/filtering feature in a product catalog
@@ -60,7 +60,7 @@ A minimalist input with a transparent background and a visible stroke outlining 
 
 ### Rounded
 
-For a finish with rounded corners.
+Add `.text-input-container-rounded` for a finish with rounded corners.
 
 <Example code={`<div class="text-input-container text-input-container-rounded mb-md">
     <label for="exampleTextInputRounded">Firstname</label>
@@ -79,28 +79,28 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 <Example code={`<div class="text-input-container mb-md">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <label for="exampleTextInputEmptyWithIcon">Label</label>
     <input type="email" class="text-input-field" id="exampleTextInputEmptyWithIcon" placeholder="">
   </div>
   <div class="text-input-container mb-md">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <label for="exampleTextInputPlaceholderWithIcon">Label</label>
     <input type="email" class="text-input-field" id="exampleTextInputPlaceholderWithIcon" placeholder="placeholder">
   </div>
   <div class="text-input-container text-input-container-outlined mb-md">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <label for="exampleTextInputAltEmptyWithIcon">Label</label>
     <input type="email" class="text-input-field" id="exampleTextInputAltEmptyWithIcon" placeholder="">
   </div>
   <div class="text-input-container text-input-container-outlined mb-md">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <label for="exampleTextInputAltValueWithIcon">Label</label>
     <input type="email" class="text-input-field" id="exampleTextInputAltValueWithIcon" placeholder="placeholder" value="Input">
@@ -115,7 +115,7 @@ Trailing actions can be added to the right side of the input field by placing a 
     <input type="email" class="text-input-field" id="exampleTextInputEmptyWithAction" placeholder="">
     <button class="btn btn-minimal btn-icon">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
@@ -212,15 +212,15 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
   <div class="text-input">
     <div class="text-input-container mt-md">
     <svg aria-hidden="true">
-      <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
     <label for="inputTextWithPrefixSuffixLeadingTrailing">Email</label>
     <div class="input-container" data-bs-prefix="🖳" data-bs-suffix="@orange.com">
-      <input type="text" id="inputTextWithPrefixSuffixLeadingTrailing" aria-describedby="globalTextHelpBlock" class="text-input-field" placeholder="">
+      <input type="email" id="inputTextWithPrefixSuffixLeadingTrailing" aria-describedby="globalTextHelpBlock" class="text-input-field" placeholder="">
     </div>
     <button class="btn btn-minimal btn-icon">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <span class="visually-hidden">Default</span>
     </button>
@@ -301,7 +301,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="emailFeedback" placeholder="">
        <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
         </svg>
         <span class="visually-hidden">Default</span>
       </button>
@@ -313,7 +313,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
   <div class="text-input">
     <div class="text-input-container text-input-container-outlined mt-md">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleTextInputOutlinedInvalidEmpty">Address</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="addressFeedback" placeholder="">
@@ -334,7 +334,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
   <div class="text-input">
     <div class="text-input-container text-input-container mt-md">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleTextInputInvalidWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
@@ -348,7 +348,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
   <div class="text-input">
     <div class="text-input-container text-input-container mt-md">
       <svg aria-hidden="true">
-        <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#heart-recommend"/>
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="exampleTextInputInvalidTrailingWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
@@ -356,7 +356,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       </div>
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
-          <use xlink:href="/docs/${getConfig().docs_version}/assets/img/ouds-web-sprite.svg#trash"/>
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
         </svg>
         <span class="visually-hidden">Default</span>
       </button>

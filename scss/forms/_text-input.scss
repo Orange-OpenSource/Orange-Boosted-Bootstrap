@@ -159,7 +159,7 @@
 
 
   // Hover state styles
-  &:hover:has(.text-input-field:not(:focus):not(:disabled):not(:read-only):not(.is-invalid):not(:invalid)) {
+  &:hover:has(.text-input-field:not(:focus):not(:disabled):not(:read-only):not(.is-invalid)) {
     --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
     &:not(.text-input-container-outlined) {
       --#{$prefix}text-input-background-color: #{$ouds-color-action-support-hover};
@@ -167,7 +167,7 @@
   }
 
   // Focused state styles
-  &:has(.text-input-field:focus:not(:disabled):not(:read-only):not(.is-invalid):not(:invalid)) {
+  &:has(.text-input-field:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
     --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
     --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
     --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
