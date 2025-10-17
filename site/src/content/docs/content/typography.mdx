@@ -6,6 +6,23 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
+export const headingLevel = [
+  "heading-xlarge",
+  "heading-large",
+  "heading-medium",
+  "heading-small",
+  "body-large",
+  "body-medium"
+]
+
+export const screenSize = [
+  "mobile",
+  "tablet",
+  "desktop"
+]
+
 ## Global settings
 
 OUDS Web sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]([[docsref:/utilities/text]]).
@@ -27,32 +44,87 @@ If you need need to include a font reference inside a custom component, please r
 
 All HTML headings, `<h1>` through `<h6>`, are available. Each class sets `font-size` but also `line-height`, `letter-spacing`, `font-weight: bold`, and `max-width`. Here are the associated `font-size`s depending on the breakpoints. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
-{/* <BsTable>
-| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Heading xlarge (`<h1></h1>`) | `1.75rem` (28px) | `2.25rem` (36px) | `2.5rem` (40px) |
-| Heading large (`<h2></h2>`) | `1.5rem` (24px) | `1.75rem` (28px) | `2rem` (32px) |
-| Heading medium (`<h3></h3>`) | `1.25rem` (20px) | `1.5rem` (24px) | `1.75rem` (28px) |
-| Heading small (`<h4></h4>`) | `1.125rem` (18px) | `1.25rem` (20px) | `1.5rem` (24px) |
-| Body large (`<h5></h5>`) | `1rem` (16px) | `1.125rem` (18px) | `1.25rem` (20px) |
-| Body medium (`<h6></h6>`) | `1rem` (16px) | `1rem` (16px) | `1.125rem` (18px) |
-</BsTable>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Heading reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+    </thead>
+    <tbody>
+{
+  headingLevel.map((level) => (
+    <tr>
+      <td>
+        {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1></h1>'}</code>)</>)}
+        {level === 'heading-large' && (<>Heading xlarge (<code>{'<h2></h2>'}</code>)</>)}
+        {level === 'heading-medium' && (<>Heading xlarge (<code>{'<h3></h3>'}</code>)</>)}
+        {level === 'heading-small' && (<>Heading xlarge (<code>{'<h4></h4>'}</code>)</>)}
+        {level === 'body-large' && (<>Heading xlarge (<code>{'<h5></h5>'}</code>)</>)}
+        {level === 'body-medium' && (<>Heading xlarge (<code>{'<h6></h6>'}</code>)</>)}
+      </td>
+      {
+          screenSize.map((size) => (
+          <td>
+            <code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})
+          </td>
+        ))
+      }
+    </tr>
+  ))
+}
+    </tbody>
+  </table>
+</div>
+
 
 <details class="mb-md">
   <summary>See more details about the heading classes</summary>
 
-<BsTable>
-| Heading reference | Values from `2xs` to `sm` | Values from `md` to `lg` | Values for `xl` and upper |
-| --- | --- | --- | --- |
-| Heading xlarge (`<h1></h1>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading large (`<h2></h2>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading medium (`<h3></h3>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> |
-| Heading small (`<h4></h4>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body large (`<h5></h5>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 45rem</li></ul> |
-| Body medium (`<h6></h6>`) | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-md"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> |
-</BsTable>
-
-</details> */}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Heading reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+      </thead>
+      <tbody>
+      {
+        headingLevel.map((level) => (
+          <tr>
+            <td>
+              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'<h1></h1>'}</code>)</>)}
+              {level === 'heading-large' && (<>Heading xlarge (<code>{'<h2></h2>'}</code>)</>)}
+              {level === 'heading-medium' && (<>Heading xlarge (<code>{'<h3></h3>'}</code>)</>)}
+              {level === 'heading-small' && (<>Heading xlarge (<code>{'<h4></h4>'}</code>)</>)}
+              {level === 'body-large' && (<>Heading xlarge (<code>{'<h5></h5>'}</code>)</>)}
+              {level === 'body-medium' && (<>Heading xlarge (<code>{'<h6></h6>'}</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  <ul class="mb-none ps-md">
+                    <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                    <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                    <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                    <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                  </ul>
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<h1>h1. OUDS Web heading</h1>
   <h2>h2. OUDS Web heading</h2>
