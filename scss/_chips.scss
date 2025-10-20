@@ -13,7 +13,7 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  min-height: $ouds-chip-size-min-height-interactive-area;
+  min-height: px-to-rem($ouds-chip-size-min-height-interactive-area);
   white-space: nowrap;
 
   [type="radio"],
@@ -90,7 +90,7 @@
     width: 1em;
     height: 1em;
     overflow: hidden;
-    font-size: px-to-rem($ouds-chip-size-icon);
+    font-size: $ouds-chip-size-icon;
     line-height: 1;
   }
 }
@@ -191,4 +191,10 @@
   --#{$prefix}chip-padding-block: #{$ouds-chip-space-padding-block-icon-only};
   --#{$prefix}chip-padding-end: #{$ouds-chip-space-padding-inline-icon};
   --#{$prefix}chip-padding-start: #{$ouds-chip-space-padding-inline-icon};
+
+  svg,
+  img,
+  .icon {
+    font-size: px-to-rem($ouds-chip-size-icon);
+  }
 }
