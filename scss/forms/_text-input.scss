@@ -46,10 +46,10 @@
   min-width: var(--#{$prefix}text-input-min-width);
   max-width: var(--#{$prefix}text-input-max-width);
   min-height: var(--#{$prefix}text-input-min-height);
-  padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top));
-  padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right));
-  padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom));
-  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+  padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+  padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
+  padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
   background-color: var(--#{$prefix}text-input-background-color);
   background-clip: padding-box;
   border-color: var(--#{$prefix}text-input-border-color);
@@ -91,7 +91,7 @@
   .text-input-field {
     position: absolute;
     top: 50%;
-    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     z-index: 3;
     width: 100%;
     padding: 0;
@@ -119,7 +119,7 @@
   .input-container {
     position: absolute;
     top: 50%;
-    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     z-index: 1;
     display: flex;
     gap: $ouds-text-input-space-column-gap-inline-text;
@@ -232,8 +232,8 @@
   > img,
   > svg {
     position: absolute;
-    top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2);
-    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+    top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2); // stylelint-disable-line function-disallowed-list
+    left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     z-index: 2;
     width: var(--#{$prefix}text-input-icon-size);
     min-width: var(--#{$prefix}text-input-icon-size);
@@ -245,25 +245,25 @@
     > .text-input-field,
     > .input-container,
     > label {
-      padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap));
+      padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
     }
   }
 
   // Trailing action
   > button {
     position: absolute;
-    top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2);
-    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+    top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2); // stylelint-disable-line function-disallowed-list
+    right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     z-index: 2;
   }
 
   &:has(> button) {
-    padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+    padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
 
     > .text-input-field,
     > .input-container,
     > label {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -283,6 +283,7 @@
       .text-input-field,
       .input-container,
       label {
+        // stylelint-disable-next-line function-disallowed-list
         padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
       }
     }
@@ -291,7 +292,7 @@
     &::after {
       position: absolute;
       top: 50%;
-      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left));
+      right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
       width: var(--#{$prefix}text-input-trailing-action-width);
       height: var(--#{$prefix}text-input-trailing-action-height);
       overflow: hidden;
@@ -305,6 +306,7 @@
     }
 
     &:has(> button)::after {
+      // stylelint-disable-next-line function-disallowed-list
       right: calc(calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)) - var(--#{$prefix}text-input-border-width-left));
       width: px-to-rem($ouds-button-size-icon-only);
     }
@@ -331,8 +333,8 @@
 %text-input-message {
   @extend %text-input-item;
   max-width: var(--#{$prefix}text-input-max-width);
-  padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right));
-  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left));
+  padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
   @include get-font-size("label-medium");
 }
 
