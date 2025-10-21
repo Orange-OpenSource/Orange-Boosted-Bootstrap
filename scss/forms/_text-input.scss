@@ -276,7 +276,7 @@
     .text-input-field,
     .input-container,
     label {
-      padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
     }
 
     &:has(> button) {
