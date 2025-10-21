@@ -2,6 +2,7 @@
 import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
 import type { LayoutOverridesHTMLAttributes } from '@libs/layout'
 import { getSlug, processMarkdownToHtml } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
@@ -26,6 +27,23 @@ if (frontmatter.toc) {
   bodyProps['data-bs-spy'] = 'scroll'
   bodyProps['data-bs-target'] = '#TableOfContents'
 }
+
+let currentComponentsTypesNames = [frontmatter.title]
+if(frontmatter.types) {
+  currentComponentsTypesNames = frontmatter.types
+}
+let componentsVersions: {name: string, version: string}[] = [];
+currentComponentsTypesNames.forEach((name) => {
+  getData('_components-versions').every((component) => {
+    if(component.name.startsWith(name.toLowerCase().replaceAll(' ', '-'))) {
+      componentsVersions.push({name, version: component.value})
+      return false
+    }
+    return true
+  })
+})
+const isComponent = componentsVersions.length > 0;
+const multipleComponents = componentsVersions.length > 1 ? 's' : ''
 ---
 
 <BaseLayout {...Astro.props} layout="docs" overrides={{ body: bodyProps }}>
@@ -113,6 +131,16 @@ if (frontmatter.toc) {
       </div>
 
       <div class="bd-content ps-lg-sm">
+        {isComponent && (
+          <p class="d-inline"><a class="link" href={getVersionedDocsPath('/getting-started/versioning')} id="componentVersions">Component{`${multipleComponents}`} design version{`${multipleComponents}`}:</a></p>
+          <div class="d-inline align-middle" role="group"  aria-labelledby="componentVersions">
+            <ul class="list-unstyled d-inline-flex flex-wrap column-gap-xs row-gap-md mb-0 align-middle">
+              {componentsVersions.map((component) => (
+                <li class="tag text-bg-status-info-muted">{component.name} v{component.version}</li>
+              ))}
+            </ul>
+          </div>
+        )}
         {
           frontmatter.sections && (
             <div class="row g-medium">
