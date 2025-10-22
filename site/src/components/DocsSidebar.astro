@@ -20,7 +20,7 @@ const sidebar = getData('sidebar')
               <h2 class="fs-bm mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
                 {group.icon && (
                   <svg
-                    class="bm-md-icon me-2xs"
+                    class="bm-medium-icon me-2xs"
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >
@@ -30,39 +30,41 @@ const sidebar = getData('sidebar')
                 {group.title}
               </h2>
               <ul class="list-unstyled fw-normal mt-2xs pb-sm small">
-                {group.pages?.filter((page) => !page.brand || page.brand === getConfig().brand).map((page) => {
-                  const docSlug = getSlug(page.title)
-                  const unversionedPageSlug = `${groupSlug}/${docSlug}`
+                {group.pages
+                  ?.filter((page) => !page.brand || page.brand === getConfig().brand)
+                  .map((page) => {
+                    const docSlug = getSlug(page.title)
+                    const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
-                  const url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
-                  const active = Astro.params.slug === unversionedPageSlug
+                    const url = `/${getConfig().brand}/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                    const active = Astro.params.slug === unversionedPageSlug
 
-                  const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
+                    const generatedPage = docsPages.find((page: any) => page.slug === unversionedPageSlug)
 
-                  // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
-                  if (!generatedPage) {
-                    throw new Error(
-                      `The page '${page.title}' referenced in 'site/data/sidebar.yml' does not exist at '${url}'.`
+                    // This test should not be necessary, see comments for `getSlug()` in `src/libs/utils.ts`.
+                    if (!generatedPage) {
+                      throw new Error(
+                        `The page '${page.title}' referenced in 'site/data/sidebar.yml' does not exist at '${url}'.`
+                      )
+                    }
+
+                    return (
+                      <li>
+                        <a
+                          href={url}
+                          class:list={[
+                            'bd-links-link',
+                            'd-block',
+                            { active },
+                            { 'text-decoration-line-through': page.draft }
+                          ]}
+                          aria-current={active ? 'page' : undefined}
+                        >
+                          {page.title} {page.draft && <span class="visually-hidden">page is not yet available</span>}
+                        </a>
+                      </li>
                     )
-                  }
-
-                  return (
-                    <li>
-                      <a
-                        href={url}
-                        class:list={[
-                          'bd-links-link',
-                          'd-block',
-                          { active },
-                          { 'text-decoration-line-through': page.draft }
-                        ]}
-                        aria-current={active ? 'page' : undefined}
-                      >
-                        {page.title} {page.draft && <span class="visually-hidden">page is not yet available</span>}
-                      </a>
-                    </li>
-                  )
-                })}
+                  })}
               </ul>
             </li>
           )

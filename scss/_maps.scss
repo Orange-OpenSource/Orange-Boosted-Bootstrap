@@ -405,14 +405,14 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // OUDS mod
 // scss-docs-start grid-gutters
 $grid-gutter-widths: (
-  2xs: $ouds-grid-2xs-column-gap, // 8px
-  xs: $ouds-grid-xs-column-gap, // 16px
-  sm: $ouds-grid-sm-column-gap, // 16px
-  md: $ouds-grid-md-column-gap, // 24px
-  lg: $ouds-grid-lg-column-gap, // 24px
-  xl: $ouds-grid-xl-column-gap, // 32px
-  2xl: $ouds-grid-2xl-column-gap, // 32px
-  3xl: $ouds-grid-3xl-column-gap // 40px
+  2xs: $ouds-grid-2xsmall-column-gap, // 8px
+  xs: $ouds-grid-xsmall-column-gap, // 16px
+  sm: $ouds-grid-small-column-gap, // 16px
+  md: $ouds-grid-medium-column-gap, // 24px
+  lg: $ouds-grid-large-column-gap, // 24px
+  xl: $ouds-grid-xlarge-column-gap, // 32px
+  2xl: $ouds-grid-2xlarge-column-gap, // 32px
+  3xl: $ouds-grid-3xlarge-column-gap // 40px
 ) !default;
 // scss-docs-end grid-gutters
 
