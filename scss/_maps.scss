@@ -69,17 +69,17 @@ $ouds-dimension-negative-space-scaled: (
 // scss-docs-start ouds-maps-dimension-fixed
 $ouds-dimension-space-fixed: (
   "none": $ouds-space-fixed-none,
-  "3xs": $ouds-space-fixed-3xs,
-  "2xs": $ouds-space-fixed-2xs,
-  "xs": $ouds-space-fixed-xs,
-  "sm": $ouds-space-fixed-sm,
+  "3xs": $ouds-space-fixed-3xsmall,
+  "2xs": $ouds-space-fixed-2xsmall,
+  "xs": $ouds-space-fixed-xsmall,
+  "sm": $ouds-space-fixed-small,
   "md": $ouds-space-fixed-md,
-  "lg": $ouds-space-fixed-lg,
-  "xl": $ouds-space-fixed-xl,
-  "2xl": $ouds-space-fixed-2xl,
-  "3xl": $ouds-space-fixed-3xl,
-  "4xl": $ouds-space-fixed-4xl,
-  "5xl": $ouds-space-fixed-5xl
+  "lg": $ouds-space-fixed-large,
+  "xl": $ouds-space-fixed-xlarge,
+  "2xl": $ouds-space-fixed-2xlarge,
+  "3xl": $ouds-space-fixed-3xlarge,
+  "4xl": $ouds-space-fixed-4xlarge,
+  "5xl": $ouds-space-fixed-5xlarge
 ) !default;
 // scss-docs-end ouds-maps-dimension-fixed
 
