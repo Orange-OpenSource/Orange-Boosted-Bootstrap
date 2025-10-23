@@ -2045,8 +2045,8 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 $code-font-size:                    .875em !default; // OUDS mod: instead of `$small-font-size`
 $code-color:                        $ouds-color-content-muted-light !default; // instead of `$pink`
 
-$kbd-padding-y:                     px-to-rem($ouds-space-fixed-3xs) !default; // instead of `.1875rem`
-$kbd-padding-x:                     px-to-rem($ouds-space-fixed-2xs) !default; // instead of `.375rem`
+$kbd-padding-y:                     px-to-rem($ouds-space-fixed-3xsmall) !default; // instead of `.1875rem`
+$kbd-padding-x:                     px-to-rem($ouds-space-fixed-2xsmall) !default; // instead of `.375rem`
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}color-content-on-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-bg)`
 $kbd-bg:                            var(--#{$prefix}color-surface-status-neutral-emphasized) !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`

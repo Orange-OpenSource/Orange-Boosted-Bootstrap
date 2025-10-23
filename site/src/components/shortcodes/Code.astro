@@ -143,7 +143,7 @@ if (filePath && fileMatch && codeToDisplay) {
 
 <div class:list={[{ 'bd-code-snippet': !nestedInExample }, containerClass, 'highlight-container']}>
   {Astro.slots.has('bar') ? <slot name="bar" /> : null}
-  <div class:list={['highlight', { 'pe-md-4xl': !nestedInExample }]}>
+  <div class:list={['highlight', { 'pe-md-4xlarge': !nestedInExample }]}>
     {
       codeToDisplay && lang ? (
         <Prism code={codeToDisplay} lang={lang} />
