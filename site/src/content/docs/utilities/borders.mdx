@@ -49,14 +49,14 @@ Change the border color using utilities. The color utilities are generated from 
 
 <Example class="bd-example-border-utils d-flex align-items-center flex-wrap" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xsmall p-xs"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} d-inline-flex m-2xsmall p-xsmall"><span class="border border-${token.name.split('-').slice(3, -1).join('-')} m-none bg-transparent"></span></div>`
     }
     return `<span class="border border-${token.name.split('-').slice(3, -1).join('-')}"></span>`
   }),
   `<span class="border border-always-black"></span>
   <span class="border border-always-white"></span>
-  <div class="bg-always-black d-inline-flex m-2xsmall p-xs"><span class="border border-always-on-black m-none bg-transparent"></span></div>
-  <div class="bg-always-white d-inline-flex m-2xsmall p-xs"><span class="border border-always-on-white m-none bg-transparent"></span></div>`]} />
+  <div class="bg-always-black d-inline-flex m-2xsmall p-xsmall"><span class="border border-always-on-black m-none bg-transparent"></span></div>
+  <div class="bg-always-white d-inline-flex m-2xsmall p-xsmall"><span class="border border-always-on-white m-none bg-transparent"></span></div>`]} />
 
 <BootstrapCompatibility>
 

@@ -9,18 +9,18 @@ const sidebar = getData('sidebar')
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
-  <ul class="bd-links-nav list-unstyled mb-none pb-large pb-md-small pe-lg-sm">
+  <ul class="bd-links-nav list-unstyled mb-none pb-large pb-md-small pe-lg-small">
     {
       sidebar.map((group) => {
         const groupSlug = getSlug(group.title)
 
         if (group.pages) {
           return (
-            <li class="bd-links-group py-sm">
+            <li class="bd-links-group py-small">
               <h2 class="fs-bm mb-none bd-links-heading d-flex w-100 align-items-center fw-semibold">
                 {group.icon && (
                   <svg
-                    class="bm-medium-icon me-2xs"
+                    class="bm-medium-icon me-2xsmall"
                     style={group.icon_color && `color: var(--bs-${group.icon_color});"`}
                     aria-hidden="true"
                   >

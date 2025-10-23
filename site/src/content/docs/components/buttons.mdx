@@ -69,7 +69,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 - Negative buttons should never be used on colored background.
 </Callout>
 
-<Example class="p-none bd-btn-example" code={`<div class="bg-brand-primary p-lg">
+<Example class="p-none bd-btn-example" code={`<div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -77,7 +77,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
       <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>
-  <div class="bg-status-negative-emphasized p-lg">
+  <div class="bg-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -138,7 +138,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     </button>
   </div>
 
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
@@ -214,7 +214,7 @@ For icon only buttons, we chose to keep the icon hidden from assistive technolog
     </button>
   </div>
 
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
@@ -283,7 +283,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
     <button type="button" class="btn btn-negative" disabled>Negative</button>
   </div>
 
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
@@ -301,7 +301,7 @@ Disabled buttons using the `<a>` element behave a bit different:
     <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
   </div>
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <a class="btn btn-default btn-on-colored-bg" role="button" aria-disabled="true">Default link</a>
       <a class="btn btn-strong btn-on-colored-bg" role="button" aria-disabled="true">Strong link</a>
@@ -418,7 +418,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     </button>
   </div>
 
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
         Download file 9
@@ -444,7 +444,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     </div>
   </div>
 
-  <div class="bg-brand-primary p-lg">
+  <div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled style="--bs-btn-loading-time: 5s;">
         Download file 12
@@ -522,7 +522,7 @@ Create responsive stacks of full-width, "block buttons" with a mix of our displa
 
 Please note that these **full-width** buttons should not be used on desktop screens.
 
-<Example class="bd-btn-example" code={`<div class="d-grid gap-sm">
+<Example class="bd-btn-example" code={`<div class="d-grid gap-small">
     <button class="btn btn-default" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
@@ -544,6 +544,6 @@ You can adjust the width of your block buttons with grid column width classes. F
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they’re no longer stacked.
 
 <Example class="bd-btn-example" code={`<div class="d-grid gap-small d-md-flex justify-content-md-end">
-    <button class="btn btn-default me-md-xs" type="button">Button</button>
+    <button class="btn btn-default me-md-xsmall" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />

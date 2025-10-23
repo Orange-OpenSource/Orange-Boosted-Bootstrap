@@ -30,7 +30,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
 
 {
   Object.keys(toto).map((colorCategory) => (
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-lg">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-large">
       {toto[colorCategory].map((color) => (
         <figure class="mb-none" aria-label={color.name}>
           <button class="border-none p-none color-copy ratio ratio-1x1" data-clipboard-text={color.name} data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
@@ -55,7 +55,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
             </svg>
             <span class="visually-hidden">Copy variable name {color.name}</span>
           </button>
-          <figcaption class="py-2xs">
+          <figcaption class="py-2xsmall">
             <code class="user-select-all">{color.compiledValue}</code>
             <hr class="my-2xsmall bg-transparent border-top" style={`border-color: ${color.compiledValue} !important`} />
             <var class="user-select-all">{color.name}</var>
@@ -94,7 +94,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, weâ€
 
 <div class="row font-monospace">
   {getData('colors').map((color) => color.name !== 'white' && color.name !== 'gray' && color.name !== 'gray-dark' && (
-    <div class="col-md-4 mb-lg">
+    <div class="col-md-4 mb-large">
       <div class={`p-large mb-small position-relative swatch-${color.name}`}>
         <strong class="d-block">{color.name}</strong>
         {color.hex}
@@ -107,7 +107,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, weâ€
     </div>
   ))}
 
-  <div class="col-md-4 mb-lg">
+  <div class="col-md-4 mb-large">
     <div class="p-large mb-small position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
       #555
@@ -119,7 +119,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, weâ€
     })}
   </div>
 
-  <div class="col-md-4 mb-lg">
+  <div class="col-md-4 mb-large">
     <div class="p-large mb-small bd-black text-always-on-black">
       <strong class="d-block">$black</strong>
       #000

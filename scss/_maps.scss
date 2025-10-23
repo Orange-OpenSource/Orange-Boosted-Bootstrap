@@ -41,45 +41,45 @@ $ouds-border-colors: (
 // scss-docs-start ouds-maps-dimension
 $ouds-dimension-space-scaled: (
   "none": var(--#{$prefix}space-scaled-none),
-  "3xs": var(--#{$prefix}space-scaled-3xs),
-  "2xs": var(--#{$prefix}space-scaled-2xs),
-  "xs": var(--#{$prefix}space-scaled-xs),
-  "sm": var(--#{$prefix}space-scaled-sm),
-  "md": var(--#{$prefix}space-scaled-md),
-  "lg": var(--#{$prefix}space-scaled-lg),
-  "xl": var(--#{$prefix}space-scaled-xl),
-  "2xl": var(--#{$prefix}space-scaled-2xl),
-  "3xl": var(--#{$prefix}space-scaled-3xl)
+  "3xsmall": var(--#{$prefix}space-scaled-3xs),
+  "2xsmall": var(--#{$prefix}space-scaled-2xs),
+  "xsmall": var(--#{$prefix}space-scaled-xs),
+  "small": var(--#{$prefix}space-scaled-sm),
+  "medium": var(--#{$prefix}space-scaled-md),
+  "large": var(--#{$prefix}space-scaled-lg),
+  "xlarge": var(--#{$prefix}space-scaled-xl),
+  "2xlarge": var(--#{$prefix}space-scaled-2xl),
+  "3xlarge": var(--#{$prefix}space-scaled-3xl)
 ) !default;
 
 // stylelint-disable function-disallowed-list
 $ouds-dimension-negative-space-scaled: (
-  "n3xs": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
-  "n2xs": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
-  "nxs": calc(-1 * var(--#{$prefix}space-scaled-xs)),
-  "nsm": calc(-1 * var(--#{$prefix}space-scaled-sm)),
-  "nmd": calc(-1 * var(--#{$prefix}space-scaled-md)),
-  "nlg": calc(-1 * var(--#{$prefix}space-scaled-lg)),
-  "nxl": calc(-1 * var(--#{$prefix}space-scaled-xl)),
-  "n2xl": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
-  "n3xl": calc(-1 * var(--#{$prefix}space-scaled-3xl))
+  "n3xsmall": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
+  "n2xsmall": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
+  "nxsmall": calc(-1 * var(--#{$prefix}space-scaled-xs)),
+  "nsmall": calc(-1 * var(--#{$prefix}space-scaled-sm)),
+  "nmedium": calc(-1 * var(--#{$prefix}space-scaled-md)),
+  "nlarge": calc(-1 * var(--#{$prefix}space-scaled-lg)),
+  "nxlarge": calc(-1 * var(--#{$prefix}space-scaled-xl)),
+  "n2xlarge": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
+  "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xl))
 ) !default;
 // stylelint-enable function-disallowed-list
 
 // scss-docs-start ouds-maps-dimension-fixed
 $ouds-dimension-space-fixed: (
   "none": $ouds-space-fixed-none,
-  "3xs": $ouds-space-fixed-3xsmall,
-  "2xs": $ouds-space-fixed-2xsmall,
-  "xs": $ouds-space-fixed-xsmall,
-  "sm": $ouds-space-fixed-small,
-  "md": $ouds-space-fixed-md,
-  "lg": $ouds-space-fixed-large,
-  "xl": $ouds-space-fixed-xlarge,
-  "2xl": $ouds-space-fixed-2xlarge,
-  "3xl": $ouds-space-fixed-3xlarge,
-  "4xl": $ouds-space-fixed-4xlarge,
-  "5xl": $ouds-space-fixed-5xlarge
+  "3xsmall": $ouds-space-fixed-3xsmall,
+  "2xsmall": $ouds-space-fixed-2xsmall,
+  "xsmall": $ouds-space-fixed-xsmall,
+  "small": $ouds-space-fixed-small,
+  "medium": $ouds-space-fixed-md,
+  "large": $ouds-space-fixed-large,
+  "xlarge": $ouds-space-fixed-xlarge,
+  "2xlarge": $ouds-space-fixed-2xlarge,
+  "3xlarge": $ouds-space-fixed-3xlarge,
+  "4xlarge": $ouds-space-fixed-4xlarge,
+  "5xlarge": $ouds-space-fixed-5xlarge
 ) !default;
 // scss-docs-end ouds-maps-dimension-fixed
 
@@ -117,7 +117,7 @@ $ouds-font-weights: (
   bold: $ouds-font-weight-system-web-strong
 ) !default;
 
-$ouds-icon-sizes: ("sm", "md", "lg") !default;
+$ouds-icon-sizes: ("small", "medium", "large") !default;
 // scss-docs-end ouds-maps-font
 
 // scss-docs-start ouds-maps-opacities

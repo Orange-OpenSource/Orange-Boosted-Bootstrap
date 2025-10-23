@@ -71,10 +71,10 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific static contexts. In here you should only use the inverse static theme by replacing all `data-bs-theme="root-inverted"` by `data-bs-theme="light"`. So if you’re in a dark theme context, use only `data-bs-theme="light"` when and if needed and respectively.
 
-<details class="mb-large px-sm">
-  <summary class="py-sm">You’re in a static <code>light</code> context</summary>
+<details class="mb-large px-small">
+  <summary class="py-small">You’re in a static <code>light</code> context</summary>
 
-<Example class="p-none" code={[`<div class="bg-always-white p-lg">
+<Example class="p-none" code={[`<div class="bg-always-white p-large">
     <div data-bs-theme="light">`,
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
     const themesArray = allTokens.filter(allToken => {
@@ -93,7 +93,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-<Example code={`<div class="bg-always-white p-lg">
+<Example code={`<div class="bg-always-white p-large">
     <div data-bs-theme="light">
       <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
       <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>
@@ -102,10 +102,10 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 </details>
 
-<details class="mb-large px-sm">
-  <summary class="py-sm">You’re in a static <code>dark</code> context</summary>
+<details class="mb-large px-small">
+  <summary class="py-small">You’re in a static <code>dark</code> context</summary>
 
-<Example class="p-none" code={[`<div class="bg-always-black p-lg">
+<Example class="p-none" code={[`<div class="bg-always-black p-large">
     <div data-bs-theme="dark">`,
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
     const themesArray = allTokens.filter(allToken => {
@@ -124,7 +124,7 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-<Example code={`<div class="bg-always-black p-lg">
+<Example code={`<div class="bg-always-black p-large">
     <div data-bs-theme="dark">
       <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
       <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>
@@ -137,10 +137,10 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific dynamic contexts. In here you should only replace `data-bs-theme="root-inverted"` by `data-bs-theme="root"` and respectively.
 
-<details class="mb-large px-sm">
-  <summary class="py-sm">You’re in a dynamic <code>root-inverted</code> context</summary>
+<details class="mb-large px-small">
+  <summary class="py-small">You’re in a dynamic <code>root-inverted</code> context</summary>
 
-<Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-lg">
+<Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-large">
     <div data-bs-theme="root-inverted">`,
   ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
     const themesArray = allTokens.filter(allToken => {
@@ -163,7 +163,7 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-<Example code={`<div class="bg-status-neutral-emphasized p-lg">
+<Example code={`<div class="bg-status-neutral-emphasized p-large">
     <div data-bs-theme="root-inverted">
       <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
       <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>

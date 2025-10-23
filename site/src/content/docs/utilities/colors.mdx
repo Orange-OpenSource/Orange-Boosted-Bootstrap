@@ -31,14 +31,14 @@ Here are some compliant combinations examples for texts:
 
 <Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<p class="bg-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-sm">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+      return `<p class="bg-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
     }
-    return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-sm">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+    return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
-  `<p class="text-always-black p-sm">Text always-black</p>
-  <p class="text-always-white p-sm">Text always-white</p>
-  <p class="text-always-on-black bg-always-black p-sm">Text always-on-black</p>
-  <p class="text-always-on-white bg-always-white p-sm">Text always-on-white</p>`]} />
+  `<p class="text-always-black p-small">Text always-black</p>
+  <p class="text-always-white p-small">Text always-white</p>
+  <p class="text-always-on-black bg-always-black p-small">Text always-on-black</p>
+  <p class="text-always-on-white bg-always-white p-small">Text always-on-white</p>`]} />
 
 <Callout type="info">
 If you don’t see the couple you need in the following table, please mind using one of the table or check that the contrast between the text and the background is at least 4.5 for normal text and 3 for large text.

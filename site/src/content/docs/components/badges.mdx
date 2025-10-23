@@ -95,10 +95,10 @@ OUDS Web [color and background helpers]([[docsref:/helpers/color-background]]) c
 Badges are available in four sizes.
 
 <Example class="d-flex align-items-center gap-3" code={`
-  <p class="badge badge-lg"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge badge-large"><span class="visually-hidden">Badge alt text</span></p>
   <p class="badge"><span class="visually-hidden">Badge alt text</span></p>
-  <p class="badge badge-sm"><span class="visually-hidden">Badge alt text</span></p>
-  <p class="badge badge-xs"><span class="visually-hidden">Badge alt text</span></p>`} />
+  <p class="badge badge-small"><span class="visually-hidden">Badge alt text</span></p>
+  <p class="badge badge-xsmall"><span class="visually-hidden">Badge alt text</span></p>`} />
 
 ## Badge - Count
 
@@ -113,7 +113,7 @@ Badges can be used to display numerical value using the `.badge-count` class.
 Badge - Count are available in two sizes.
 
 <Example class="d-flex align-items-center gap-3" code={`
-  <p class="badge badge-count badge-lg">12</p>
+  <p class="badge badge-count badge-large">12</p>
   <p class="badge badge-count">12</p>`} />
 
 ## Badge - Icon
@@ -140,7 +140,7 @@ Badges can be used with icons to visually reinforce meaning.
 Badge - Icon are available in two sizes.
 
 <Example class="d-flex align-items-center gap-3" code={`
-  <p class="badge badge-lg">
+  <p class="badge badge-large">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
     </svg>
@@ -167,7 +167,7 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
     </span>
   </button>
 
-  <button type="button" class="btn btn-default position-relative ms-md">
+  <button type="button" class="btn btn-default position-relative ms-medium">
     Inbox
     <span class="position-absolute top-0 start-100 translate-middle badge badge-count text-bg-status-info-emphasized">
       +99

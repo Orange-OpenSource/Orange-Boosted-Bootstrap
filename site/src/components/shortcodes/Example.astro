@@ -92,17 +92,17 @@ const simplifiedMarkup = markup
         <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} buttonLabel={buttonLabel} />
         {showPreview && showToolbar && (
           <div class="d-flex order-first align-items-center highlight-toolbar ps-large border-top border-bottom border-thin border-default">
-            <small class="font-monospace text-muted text-uppercase my-sm">{lang}</small>
+            <small class="font-monospace text-muted text-uppercase my-small">{lang}</small>
             <!-- OUDS mod: buttons are not displayed on small screens -->
             <div class="d-none d-md-flex ms-auto">
-              <button type="button" class="btn btn-minimal btn-icon btn-edit m-2xsmall me-xs"
+              <button type="button" class="btn btn-minimal btn-icon btn-edit m-2xsmall me-xsmall"
                 title={stackblitzLabel}
                 data-sb-js-snippet={addStackblitzJs ? true : undefined}>
                 <svg aria-hidden="true">
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
                 </svg>
               </button>
-              <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+              <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xsmall" title={clipboardLabel}>
                 <svg aria-hidden="true">
                   <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
                 </svg>
