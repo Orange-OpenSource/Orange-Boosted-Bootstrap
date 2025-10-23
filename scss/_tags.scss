@@ -152,7 +152,7 @@
   background-color: #{$ouds-color-action-disabled} if($enable-important-utilities, !important, null);
 }
 
-.tag-sm {
+.tag-small {
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-start-asset: #{$ouds-tag-space-padding-inline-asset-small};

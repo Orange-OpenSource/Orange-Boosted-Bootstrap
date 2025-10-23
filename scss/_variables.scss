@@ -480,7 +480,7 @@ $stretched-link-z-index:                  1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom: $ouds-space-fixed-md !default; // OUDS mod: instead of `1rem`
+$paragraph-margin-bottom: $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
 
 
 // Grid breakpoints
@@ -701,7 +701,7 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $ouds-space-fixed-md !default; // OUDS mod: instead of `$spacer * .5`
+$headings-margin-bottom:      $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer * .5`
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        $ouds-font-weight-web-heading !default;
@@ -750,12 +750,12 @@ $text-muted:                  var(--#{$prefix}secondary-color) !default; // Depr
 
 // OUDS mod: no $initialism-font-size
 
-$blockquote-margin-y:         $ouds-space-fixed-md !default; // OUDS mod: instead of `1rem`
+$blockquote-margin-y:         $ouds-space-fixed-medium !default; // OUDS mod: instead of `1rem`
 // OUDS mod: no `$blockquote-font-size`
 $blockquote-footer-color:     var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `$gray-600`
 // OUDS mod: no `$blockquote-footer-font-size`
 
-$hr-margin-y:                 $ouds-space-fixed-md !default; // OUDS mod: instead of `$spacer !default;`
+$hr-margin-y:                 $ouds-space-fixed-medium !default; // OUDS mod: instead of `$spacer !default;`
 $hr-color:                    $ouds-color-border-default !default; // OUDS mod: instead of `inherit !default;`
 
 // fusv-disable
@@ -2125,7 +2125,7 @@ $sticker-size-lg:                       $spacer * 14 !default;
 
 // Considering @use "sass:math", math.sqrt(2) / 2 is approximated to 0.7071067812
 $sticker-content-max-width-sm:          $sticker-size-sm * .7071067812 !default;
-$sticker-content-max-width-md:          $sticker-size-md * .7071067812 !default;
+$sticker-content-max-width-md:          $sticker-size-medium * .7071067812 !default;
 $sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
 // scss-docs-end sticker
 

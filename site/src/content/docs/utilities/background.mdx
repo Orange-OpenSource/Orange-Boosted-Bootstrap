@@ -56,22 +56,22 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
       : themesArray[1].includes('light')
         ? 'light'
         : 'root-inverted'
-    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
+    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
   }),
-  `<p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-  <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-  <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`]} />
+  `<p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+  <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+  <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`]} />
 
 We also provide some opacity backgrounds that should only be used in very specific context, to opacify the background and make some text readable. Prefer using `.bg-secondary` when possible.
 
-<Example code={`<p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-  <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>`} />
+<Example code={`<p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
+  <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>`} />
 
 #### Inside a static theme
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific static contexts. In here you should only use the inverse static theme by replacing all `data-bs-theme="root-inverted"` by `data-bs-theme="light"`. So if you’re in a dark theme context, use only `data-bs-theme="light"` when and if needed and respectively.
 
-<details class="mb-lg px-sm">
+<details class="mb-large px-sm">
   <summary class="py-sm">You’re in a static <code>light</code> context</summary>
 
 <Example class="p-none" code={[`<div class="bg-always-white p-lg">
@@ -83,11 +83,11 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
     const theme = themesArray[1].includes('light')
       ? 'light'
       : 'dark'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'light' ? '</span>' : ''}</p>`
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'light' ? '</span>' : ''}</p>`
   }),
-  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
   `  </div>
   </div>`]} />
 
@@ -95,14 +95,14 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example code={`<div class="bg-always-white p-lg">
     <div data-bs-theme="light">
-      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+      <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>
     </div>
   </div>`} />
 
 </details>
 
-<details class="mb-lg px-sm">
+<details class="mb-large px-sm">
   <summary class="py-sm">You’re in a static <code>dark</code> context</summary>
 
 <Example class="p-none" code={[`<div class="bg-always-black p-lg">
@@ -114,11 +114,11 @@ We also provide some opacity backgrounds that should only be used in very specif
     const theme = themesArray[0].includes('dark')
       ? 'dark'
       : 'light'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'dark' ? '</span>' : ''}</p>`
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'dark' ? '</span>' : ''}</p>`
   }),
-  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
   `  </div>
   </div>`]} />
 
@@ -126,8 +126,8 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example code={`<div class="bg-always-black p-lg">
     <div data-bs-theme="dark">
-      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+      <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>
     </div>
   </div>`} />
 
@@ -137,7 +137,7 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 Here is a more complex example to understand how to use `[data-bs-theme]` in specific dynamic contexts. In here you should only replace `data-bs-theme="root-inverted"` by `data-bs-theme="root"` and respectively.
 
-<details class="mb-lg px-sm">
+<details class="mb-large px-sm">
   <summary class="py-sm">You’re in a dynamic <code>root-inverted</code> context</summary>
 
 <Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-lg">
@@ -153,11 +153,11 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
       : themesArray[1].includes('light')
         ? 'light'
         : 'root'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
+    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
   }),
-  `    <p class="bg-always-black p-lg fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
-      <p class="bg-always-white p-lg fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
-      <p class="bg-transparent p-lg fw-bold">.bg-transparent</p>`,
+  `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
+      <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
+      <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
   `  </div>
   </div>`]} />
 
@@ -165,8 +165,8 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example code={`<div class="bg-status-neutral-emphasized p-lg">
     <div data-bs-theme="root-inverted">
-      <p class="bg-opacity-lower p-lg fw-bold">.bg-opacity-lower</p>
-      <p class="bg-opacity-lowest p-lg fw-bold">.bg-opacity-lowest</p>
+      <p class="bg-opacity-lower p-large fw-bold">.bg-opacity-lower</p>
+      <p class="bg-opacity-lowest p-large fw-bold">.bg-opacity-lowest</p>
     </div>
   </div>`} />
 
@@ -189,5 +189,5 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
       : themesArray[1].includes('light')
         ? 'light'
         : 'root-inverted'
-    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
+    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
   })]} />

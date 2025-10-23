@@ -80,34 +80,34 @@ Responsive variations also exist for `flex-direction`.
 Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `evenly`.
 
 <Example showMarkup={false} class="bd-example-flex" code={`<div class="d-flex justify-content-start mb-lg">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">Start</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">Start</div>
   </div>
   <div class="d-flex justify-content-end mb-lg">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">End</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">End</div>
   </div>
   <div class="d-flex justify-content-center mb-lg">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">Center</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">Center</div>
   </div>
   <div class="d-flex justify-content-between mb-lg">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">Between</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">Between</div>
   </div>
   <div class="d-flex justify-content-around mb-lg">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">Around</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">Around</div>
   </div>
   <div class="d-flex justify-content-evenly">
-    <div class="p-sm bd-highlight">Justify</div>
-    <div class="p-sm bd-highlight">Content</div>
-    <div class="p-sm bd-highlight">Evenly</div>
+    <div class="p-small bd-highlight">Justify</div>
+    <div class="p-small bd-highlight">Content</div>
+    <div class="p-small bd-highlight">Evenly</div>
   </div>`} />
 
 ```html
@@ -249,9 +249,9 @@ Responsive variations also exist for `align-self`.
 Use the `.flex-fill` class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.
 
 <Example class="bd-example-flex" code={`<div class="d-flex">
-    <div class="p-sm flex-fill">Flex item with a lot of content</div>
-    <div class="p-sm flex-fill">Flex item</div>
-    <div class="p-sm flex-fill">Flex item</div>
+    <div class="p-small flex-fill">Flex item with a lot of content</div>
+    <div class="p-small flex-fill">Flex item</div>
+    <div class="p-small flex-fill">Flex item</div>
   </div>`} />
 
 Responsive variations also exist for `flex-fill`.
@@ -271,7 +271,7 @@ Responsive variations also exist for `flex-fill`.
 Use `.flex-grow-*` utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the `.flex-grow-1` elements uses all available space it can, while allowing the remaining two flex items their necessary space.
 
 <Example class="bd-example-flex" code={`<div class="d-flex">
-  <div class="p-sm flex-grow-1">Flex item</div>
+  <div class="p-small flex-grow-1">Flex item</div>
   <div class="p-sm">Flex item</div>
   <div class="p-sm">Third flex item</div>
 </div>`} />
@@ -279,8 +279,8 @@ Use `.flex-grow-*` utilities to toggle a flex item’s ability to grow to fill a
 Use `.flex-shrink-*` utilities to toggle a flex item’s ability to shrink if necessary. In the example below, the second flex item with `.flex-shrink-1` is forced to wrap its contents to a new line, "shrinking" to allow more space for the previous flex item with `.w-100`.
 
 <Example class="bd-example-flex" code={`<div class="d-flex">
-  <div class="p-sm w-100">Flex item</div>
-  <div class="p-sm flex-shrink-1">Flex item</div>
+  <div class="p-small w-100">Flex item</div>
+  <div class="p-small flex-shrink-1">Flex item</div>
 </div>`} />
 
 Responsive variations also exist for `flex-grow` and `flex-shrink`.

@@ -90,7 +90,7 @@ OUDS Web [color and background utilities]([[docsref:/helpers/color-background]])
 Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`.
 </Callout>
 
-<Example buttonLabel="colored tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted colors">
+<Example buttonLabel="colored tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Muted colors">
     <li class="tag text-bg-status-neutral-muted">Neutral</li>
     <li class="tag text-bg-status-accent-muted">Accent</li>
     <li class="tag text-bg-status-positive-muted">Positive</li>
@@ -98,7 +98,7 @@ Keep in mind that color should not be the only way to convey information. If the
     <li class="tag text-bg-status-warning-muted">Warning</li>
     <li class="tag text-bg-status-negative-muted">Negative</li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Emphasized colors">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Emphasized colors">
     <li class="tag text-bg-status-neutral-emphasized">Neutral</li>
     <li class="tag text-bg-status-accent-emphasized">Accent</li>
     <li class="tag text-bg-status-positive-emphasized">Positive</li>
@@ -113,7 +113,7 @@ Keep in mind that color should not be the only way to convey information. If the
 
 To display tags with squared corners, add the `.rounded-none` utility class to the tag.
 
-<Example buttonLabel="squared tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Keywords">
+<Example buttonLabel="squared tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Keywords">
     <li class="tag rounded-none text-bg-status-accent-muted">Accent muted</li>
     <li class="tag rounded-none text-bg-status-accent-emphasized">Accent emphasized</li>
   </ul>`} />
@@ -122,7 +122,7 @@ To display tags with squared corners, add the `.rounded-none` utility class to t
 
 To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
 
-<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Muted bullet tag examples">
+<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Muted bullet tag examples">
     <li class="tag text-bg-status-neutral-muted">
       <span class="tag-bullet"></span>
       Neutral
@@ -148,7 +148,7 @@ To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
       Negative
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Emphasized bullet tag examples">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Emphasized bullet tag examples">
     <li class="tag text-bg-status-neutral-emphasized">
       <span class="tag-bullet"></span>
       Neutral
@@ -175,7 +175,7 @@ To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
     </li>
   </ul>`} />
 
-<Example buttonLabel="bullet tags" showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="...">
+<Example buttonLabel="bullet tags" showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="...">
     ...
     <li class="tag text-bg-status-neutral-muted">
       <span class="tag-bullet"></span>
@@ -198,7 +198,7 @@ Status icons are predefined in SCSS for positive, info, warning and negative fun
 If the functional meaning of the text is not sufficiently clear, add additional text with the `.visually-hidden` class to ensure accessibility for all users.
 </Callout>
 
-<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Functional muted statuses">
+<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Functional muted statuses">
     <li class="tag text-bg-status-positive-muted">
       <span class="tag-status-icon"></span>
       Activated
@@ -216,7 +216,7 @@ If the functional meaning of the text is not sufficiently clear, add additional 
       Error
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Functional emphasized statuses">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Functional emphasized statuses">
     <li class="tag text-bg-status-positive-emphasized">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Success</span>
@@ -251,7 +251,7 @@ To display a colored icon, add the icon inside the tag, with a `.tag-icon` class
 Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
 </Callout>
 
-<Example  buttonLabel="non-functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional muted statuses">
+<Example  buttonLabel="non-functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Non-functional muted statuses">
     <li class="tag text-bg-status-neutral-muted">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
@@ -265,7 +265,7 @@ Since icons in tags are always next to some text, they are purely decorative and
       Accent
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Non-functional emphasized statuses">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Non-functional emphasized statuses">
     <li class="tag text-bg-status-neutral-emphasized">
       <svg aria-hidden="true" class="tag-icon">
         <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
@@ -337,7 +337,7 @@ You can see a similar live example with buttons with the full JavaScript code on
 
 To display a small tag, add the class `.tag-sm` to the tag.
 
-<Example buttonLabel="small tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xs row-gap-md" aria-label="Mobile coverage">
+<Example buttonLabel="small tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-md" aria-label="Mobile coverage">
     <li class="tag tag-sm">Small neutral</li>
     <li class="tag tag-sm">
       <span class="tag-bullet"></span>
@@ -349,7 +349,7 @@ To display a small tag, add the class `.tag-sm` to the tag.
       </svg>
       5G Ready
     </li>
-    <li class="tag text-bg-status-accent-emphasized tag-sm loading">
+    <li class="tag text-bg-status-accent-emphasized tag-small loading">
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
         <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
       </svg>
@@ -372,13 +372,13 @@ A tag can be used near some text or some title (to show status or key details), 
     <li class="tag tag-sm">5G Ready</li>
   </ul>
   <h2>Title <span class="tag align-middle">Coming soon</span></h2>
-  <h2>Title <span class="tag tag-sm align-middle">Coming soon</span></h2>
+  <h2>Title <span class="tag tag-small align-middle">Coming soon</span></h2>
   <p><span class="tag">New</span> Some text</p>
   <p><span class="tag tag-sm">New</span> Some text</p>`} />
 
 Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) and the vertical space (default value is obtained thanks to `.row-gap-md`).
 
-<Example buttonLabel="tags list layout" code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xs row-gap-md" aria-label="Keywords">
+<Example buttonLabel="tags list layout" code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xsmall row-gap-md" aria-label="Keywords">
     <li class="tag">Label 1</li>
     <li class="tag">Label 2</li>
     <li class="tag">Label 3</li>

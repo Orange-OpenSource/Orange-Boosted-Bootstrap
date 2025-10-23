@@ -36,15 +36,15 @@
   background-color: #{$ouds-color-action-disabled};
 }
 
-.badge-xs {
+.badge-xsmall {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
 }
 
-.badge-sm {
+.badge-small {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
 }
 
-.badge-lg {
+.badge-large {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
 
   @include get-font-size("label-medium");
@@ -54,7 +54,7 @@
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-count-padding-y: 0;
 
-  &.badge-lg {
+  &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
     --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
   }

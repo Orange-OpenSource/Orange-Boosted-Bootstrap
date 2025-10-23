@@ -37,7 +37,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
             {examples.map((example, index) => {
               if (external) {
                 return (
-                  <article class="col-md-6 col-lg-4 mb-lg d-flex gap-lg">
+                  <article class="col-md-6 col-lg-4 mb-large d-flex gap-lg">
                     <GitHubIcon class="bi fs-hm flex-shrink-0" />
                     <div>
                       <h3 class="h5 mb-2xs">
@@ -54,7 +54,7 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                       <p class="text-muted mb-none">{example.description}</p>
                       <p class="mb-none">
                         <a
-                          class="link icon-link link-sm link-offset-1"
+                          class="link icon-link link-small link-offset-1"
                           href={`https://stackblitz.com/github/twbs${example.url}?file=${
                             example.indexPath ? example.indexPath : 'index.html'
                           }`}
@@ -63,7 +63,9 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
                           aria-labelledby={`edit-${index} starter-${index}`}
                         >
                           <svg aria-hidden="true">
-                            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')} />
+                            <use
+                              xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#lightning-charge-fill')}
+                            />
                           </svg>
                           <span id={`edit-${index}`}>Edit in StackBlitz</span>
                         </a>
@@ -101,10 +103,10 @@ import GitHubIcon from '@components/icons/GitHubIcon.astro'
         )}
         {bootstrap && (
           <div class="col-12">
-            <details class="mb-2xl px-sm border border-drag">
+            <details class="mb-2xlarge px-small border border-drag">
               <summary class="py-sm">
                 Bootstrap{' '}
-                <span class="tag tag-sm text-bg-status-neutral-muted float-end">
+                <span class="tag tag-small text-bg-status-neutral-muted float-end">
                   <code class="text-default">$enable-bootstrap-compatibility: true</code>
                 </span>
               </summary>

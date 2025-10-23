@@ -9,7 +9,7 @@ const sidebar = getData('sidebar')
 ---
 
 <nav class="bd-links w-100" id="bd-docs-nav" aria-labelledby="docs-nav">
-  <ul class="bd-links-nav list-unstyled mb-none pb-lg pb-md-sm pe-lg-sm">
+  <ul class="bd-links-nav list-unstyled mb-none pb-large pb-md-small pe-lg-sm">
     {
       sidebar.map((group) => {
         const groupSlug = getSlug(group.title)
@@ -29,7 +29,7 @@ const sidebar = getData('sidebar')
                 )}
                 {group.title}
               </h2>
-              <ul class="list-unstyled fw-normal mt-2xs pb-sm small">
+              <ul class="list-unstyled fw-normal mt-2xsmall pb-small small">
                 {group.pages
                   ?.filter((page) => !page.brand || page.brand === getConfig().brand)
                   .map((page) => {
@@ -73,7 +73,7 @@ const sidebar = getData('sidebar')
 
           return (
             <>
-              <li class="bd-links-span-all mt-2xs mb-lg mx-sm border-top" />
+              <li class="bd-links-span-all mt-2xsmall mb-large mx-small border-top" />
               <li class="bd-links-span-all">
                 <a
                   href={`/${getConfig().brand}/docs/${getConfig().docs_version}/${groupSlug}/`}
