@@ -5,8 +5,7 @@
 
   // Additional OUDS variables
   --#{$prefix}breadcrumb-divider: #{escape-svg($breadcrumb-divider) "/* rtl:"escape-svg($breadcrumb-divider-flipped) "*/"};
-  --#{$prefix}breadcrumb-item-padding-links: #{$ouds-breadcrumb-space-column-gap-links};
-  --#{$prefix}breadcrumb-item-padding-icon: #{$ouds-breadcrumb-space-column-gap-icon};
+  --#{$prefix}breadcrumb-item-gap: #{$ouds-breadcrumb-space-column-gap-links};
   // End mod
   // scss-docs-end breadcrumb-css-vars
 
@@ -19,7 +18,7 @@
     display: none;
     align-items: center;
     min-width: 0; // overrides children links implied width see https://css-tricks.com/flexbox-truncated-text/
-    padding-right: var(--#{$prefix}breadcrumb-item-padding-links);
+    padding-right: var(--#{$prefix}breadcrumb-item-gap);
     white-space: nowrap;
 
     // The separator between breadcrumbs
@@ -28,7 +27,7 @@
       flex-shrink: 0;
       width: $ouds-breadcrumb-size-icon;
       height: $ouds-breadcrumb-size-icon;
-      margin-left: var(--#{$prefix}breadcrumb-item-padding-icon);
+      margin-left: var(--#{$prefix}breadcrumb-item-gap);
       color: var(--#{$prefix}breadcrumb-divider-color);
       content: "";
       background-color: currentcolor;

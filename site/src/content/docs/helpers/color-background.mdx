@@ -18,10 +18,10 @@ Please consider using our [color modes]([[docsref:/customize/color-modes]]) dire
 </Callout>
 
 <Example buttonLabel="text and background colors" code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-lg fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
+    return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
   }),
-  `<p class="text-bg-always-black p-lg fw-bold">.text-bg-always-black</p>
-  <p class="text-bg-always-white p-lg fw-bold">.text-bg-always-white</p>`]} />
+  `<p class="text-bg-always-black p-large fw-bold">.text-bg-always-black</p>
+  <p class="text-bg-always-white p-large fw-bold">.text-bg-always-white</p>`]} />
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -41,5 +41,5 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 
 These opacity backgrounds should be used in very specific context, to opacify the background and make some text readable. Prefer using `.text-bg-secondary` when possible.
 
-<Example buttonLabel="opacity backgrounds" code={`<p class="text-bg-opacity-lower p-lg fw-bold">.text-bg-opacity-lower</p>
-  <p class="text-bg-opacity-lowest p-lg fw-bold">.text-bg-opacity-lowest</p>`} />
+<Example buttonLabel="opacity backgrounds" code={`<p class="text-bg-opacity-lower p-large fw-bold">.text-bg-opacity-lower</p>
+  <p class="text-bg-opacity-lowest p-large fw-bold">.text-bg-opacity-lowest</p>`} />

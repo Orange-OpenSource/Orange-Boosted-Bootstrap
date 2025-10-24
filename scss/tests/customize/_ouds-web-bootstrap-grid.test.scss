@@ -152,9 +152,7 @@ $enable-bootstrap-compatibility: null !default;
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
           --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -575,113 +573,113 @@ $enable-bootstrap-compatibility: null !default;
           --bs-gutter-y: 0px !important;
         }
 
-        .g-3xs,
-        .gx-3xs {
+        .g-3xsmall,
+        .gx-3xsmall {
           --bs-gutter-x: 2px !important;
         }
 
-        .g-3xs,
-        .gy-3xs {
+        .g-3xsmall,
+        .gy-3xsmall {
           --bs-gutter-y: 2px !important;
         }
 
-        .g-2xs,
-        .gx-2xs {
+        .g-2xsmall,
+        .gx-2xsmall {
           --bs-gutter-x: 4px !important;
         }
 
-        .g-2xs,
-        .gy-2xs {
+        .g-2xsmall,
+        .gy-2xsmall {
           --bs-gutter-y: 4px !important;
         }
 
-        .g-xs,
-        .gx-xs {
+        .g-xsmall,
+        .gx-xsmall {
           --bs-gutter-x: 8px !important;
         }
 
-        .g-xs,
-        .gy-xs {
+        .g-xsmall,
+        .gy-xsmall {
           --bs-gutter-y: 8px !important;
         }
 
-        .g-sm,
-        .gx-sm {
+        .g-small,
+        .gx-small {
           --bs-gutter-x: 12px !important;
         }
 
-        .g-sm,
-        .gy-sm {
+        .g-small,
+        .gy-small {
           --bs-gutter-y: 12px !important;
         }
 
-        .g-md,
-        .gx-md {
+        .g-medium,
+        .gx-medium {
           --bs-gutter-x: 16px !important;
         }
 
-        .g-md,
-        .gy-md {
+        .g-medium,
+        .gy-medium {
           --bs-gutter-y: 16px !important;
         }
 
-        .g-lg,
-        .gx-lg {
+        .g-large,
+        .gx-large {
           --bs-gutter-x: 24px !important;
         }
 
-        .g-lg,
-        .gy-lg {
+        .g-large,
+        .gy-large {
           --bs-gutter-y: 24px !important;
         }
 
-        .g-xl,
-        .gx-xl {
+        .g-xlarge,
+        .gx-xlarge {
           --bs-gutter-x: 32px !important;
         }
 
-        .g-xl,
-        .gy-xl {
+        .g-xlarge,
+        .gy-xlarge {
           --bs-gutter-y: 32px !important;
         }
 
-        .g-2xl,
-        .gx-2xl {
+        .g-2xlarge,
+        .gx-2xlarge {
           --bs-gutter-x: 40px !important;
         }
 
-        .g-2xl,
-        .gy-2xl {
+        .g-2xlarge,
+        .gy-2xlarge {
           --bs-gutter-y: 40px !important;
         }
 
-        .g-3xl,
-        .gx-3xl {
+        .g-3xlarge,
+        .gx-3xlarge {
           --bs-gutter-x: 48px !important;
         }
 
-        .g-3xl,
-        .gy-3xl {
+        .g-3xlarge,
+        .gy-3xlarge {
           --bs-gutter-y: 48px !important;
         }
 
-        .g-4xl,
-        .gx-4xl {
+        .g-4xlarge,
+        .gx-4xlarge{
           --bs-gutter-x: 56px !important;
         }
 
-        .g-4xl,
-        .gy-4xl {
+        .g-4xlarge,
+        .gy-4xlarge{
           --bs-gutter-y: 56px !important;
         }
 
-        .g-5xl,
-        .gx-5xl {
+        .g-5xlarge,
+        .gx-5xlarge {
           --bs-gutter-x: 64px !important;
         }
 
-        .g-5xl,
-        .gy-5xl {
+        .g-5xlarge,
+        .gy-5xlarge {
           --bs-gutter-y: 64px !important;
         }
 
@@ -848,113 +846,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xs-3xs,
-          .gx-xs-3xs {
+          .g-xs-3xsmall,
+          .gx-xs-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xs-3xs,
-          .gy-xs-3xs {
+          .g-xs-3xsmall,
+          .gy-xs-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xs-2xs,
-          .gx-xs-2xs {
+          .g-xs-2xsmall,
+          .gx-xs-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xs-2xs,
-          .gy-xs-2xs {
+          .g-xs-2xsmall,
+          .gy-xs-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xs-xs,
-          .gx-xs-xs {
+          .g-xs-xsmall,
+          .gx-xs-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xs-xs,
-          .gy-xs-xs {
+          .g-xs-xsmall,
+          .gy-xs-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xs-sm,
-          .gx-xs-sm {
+          .g-xs-small,
+          .gx-xs-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xs-sm,
-          .gy-xs-sm {
+          .g-xs-small,
+          .gy-xs-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xs-md,
-          .gx-xs-md {
+          .g-xs-medium,
+          .gx-xs-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xs-md,
-          .gy-xs-md {
+          .g-xs-medium,
+          .gy-xs-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xs-lg,
-          .gx-xs-lg {
+          .g-xs-large,
+          .gx-xs-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xs-lg,
-          .gy-xs-lg {
+          .g-xs-large,
+          .gy-xs-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xs-xl,
-          .gx-xs-xl {
+          .g-xs-xlarge,
+          .gx-xs-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xs-xl,
-          .gy-xs-xl {
+          .g-xs-xlarge,
+          .gy-xs-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xs-2xl,
-          .gx-xs-2xl {
+          .g-xs-2xlarge,
+          .gx-xs-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xs-2xl,
-          .gy-xs-2xl {
+          .g-xs-2xlarge,
+          .gy-xs-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xs-3xl,
-          .gx-xs-3xl {
+          .g-xs-3xlarge,
+          .gx-xs-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xs-3xl,
-          .gy-xs-3xl {
+          .g-xs-3xlarge,
+          .gy-xs-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xs-4xl,
-          .gx-xs-4xl {
+          .g-xs-4xlarge,
+          .gx-xs-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xs-4xl,
-          .gy-xs-4xl {
+          .g-xs-4xlarge,
+          .gy-xs-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xs-5xl,
-          .gx-xs-5xl {
+          .g-xs-5xlarge,
+          .gx-xs-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xs-5xl,
-          .gy-xs-5xl {
+          .g-xs-5xlarge,
+          .gy-xs-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -1122,113 +1120,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-sm-3xs,
-          .gx-sm-3xs {
+          .g-sm-3xsmall,
+          .gx-sm-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-sm-3xs,
-          .gy-sm-3xs {
+          .g-sm-3xsmall,
+          .gy-sm-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-sm-2xs,
-          .gx-sm-2xs {
+          .g-sm-2xsmall,
+          .gx-sm-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-sm-2xs,
-          .gy-sm-2xs {
+          .g-sm-2xsmall,
+          .gy-sm-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-sm-xs,
-          .gx-sm-xs {
+          .g-sm-xsmall,
+          .gx-sm-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-sm-xs,
-          .gy-sm-xs {
+          .g-sm-xsmall,
+          .gy-sm-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-sm-sm,
-          .gx-sm-sm {
+          .g-sm-small,
+          .gx-sm-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-sm-sm,
-          .gy-sm-sm {
+          .g-sm-small,
+          .gy-sm-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-sm-md,
-          .gx-sm-md {
+          .g-sm-medium,
+          .gx-sm-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-sm-md,
-          .gy-sm-md {
+          .g-sm-medium,
+          .gy-sm-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-sm-lg,
-          .gx-sm-lg {
+          .g-sm-large,
+          .gx-sm-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-sm-lg,
-          .gy-sm-lg {
+          .g-sm-large,
+          .gy-sm-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-sm-xl,
-          .gx-sm-xl {
+          .g-sm-xlarge,
+          .gx-sm-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-sm-xl,
-          .gy-sm-xl {
+          .g-sm-xlarge,
+          .gy-sm-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-sm-2xl,
-          .gx-sm-2xl {
+          .g-sm-2xlarge,
+          .gx-sm-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-sm-2xl,
-          .gy-sm-2xl {
+          .g-sm-2xlarge,
+          .gy-sm-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-sm-3xl,
-          .gx-sm-3xl {
+          .g-sm-3xlarge,
+          .gx-sm-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-sm-3xl,
-          .gy-sm-3xl {
+          .g-sm-3xlarge,
+          .gy-sm-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-sm-4xl,
-          .gx-sm-4xl {
+          .g-sm-4xlarge,
+          .gx-sm-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-sm-4xl,
-          .gy-sm-4xl {
+          .g-sm-4xlarge,
+          .gy-sm-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-sm-5xl,
-          .gx-sm-5xl {
+          .g-sm-5xlarge,
+          .gx-sm-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-sm-5xl,
-          .gy-sm-5xl {
+          .g-sm-5xlarge,
+          .gy-sm-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -1396,113 +1394,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-md-3xs,
-          .gx-md-3xs {
+          .g-md-3xsmall,
+          .gx-md-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-md-3xs,
-          .gy-md-3xs {
+          .g-md-3xsmall,
+          .gy-md-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-md-2xs,
-          .gx-md-2xs {
+          .g-md-2xsmall,
+          .gx-md-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-md-2xs,
-          .gy-md-2xs {
+          .g-md-2xsmall,
+          .gy-md-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-md-xs,
-          .gx-md-xs {
+          .g-md-xsmall,
+          .gx-md-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-md-xs,
-          .gy-md-xs {
+          .g-md-xsmall,
+          .gy-md-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-md-sm,
-          .gx-md-sm {
+          .g-md-small,
+          .gx-md-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-md-sm,
-          .gy-md-sm {
+          .g-md-small,
+          .gy-md-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-md-md,
-          .gx-md-md {
+          .g-md-medium,
+          .gx-md-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-md-md,
-          .gy-md-md {
+          .g-md-medium,
+          .gy-md-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-md-lg,
-          .gx-md-lg {
+          .g-md-large,
+          .gx-md-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-md-lg,
-          .gy-md-lg {
+          .g-md-large,
+          .gy-md-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-md-xl,
-          .gx-md-xl {
+          .g-md-xlarge,
+          .gx-md-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-md-xl,
-          .gy-md-xl {
+          .g-md-xlarge,
+          .gy-md-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-md-2xl,
-          .gx-md-2xl {
+          .g-md-2xlarge,
+          .gx-md-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-md-2xl,
-          .gy-md-2xl {
+          .g-md-2xlarge,
+          .gy-md-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-md-3xl,
-          .gx-md-3xl {
+          .g-md-3xlarge,
+          .gx-md-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-md-3xl,
-          .gy-md-3xl {
+          .g-md-3xlarge,
+          .gy-md-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-md-4xl,
-          .gx-md-4xl {
+          .g-md-4xlarge,
+          .gx-md-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-md-4xl,
-          .gy-md-4xl {
+          .g-md-4xlarge,
+          .gy-md-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-md-5xl,
-          .gx-md-5xl {
+          .g-md-5xlarge,
+          .gx-md-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-md-5xl,
-          .gy-md-5xl {
+          .g-md-5xlarge,
+          .gy-md-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -1670,113 +1668,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-lg-3xs,
-          .gx-lg-3xs {
+          .g-lg-3xsmall,
+          .gx-lg-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-lg-3xs,
-          .gy-lg-3xs {
+          .g-lg-3xsmall,
+          .gy-lg-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-lg-2xs,
-          .gx-lg-2xs {
+          .g-lg-2xsmall,
+          .gx-lg-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-lg-2xs,
-          .gy-lg-2xs {
+          .g-lg-2xsmall,
+          .gy-lg-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-lg-xs,
-          .gx-lg-xs {
+          .g-lg-xsmall,
+          .gx-lg-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-lg-xs,
-          .gy-lg-xs {
+          .g-lg-xsmall,
+          .gy-lg-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-lg-sm,
-          .gx-lg-sm {
+          .g-lg-small,
+          .gx-lg-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-lg-sm,
-          .gy-lg-sm {
+          .g-lg-small,
+          .gy-lg-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-lg-md,
-          .gx-lg-md {
+          .g-lg-medium,
+          .gx-lg-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-lg-md,
-          .gy-lg-md {
+          .g-lg-medium,
+          .gy-lg-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-lg-lg,
-          .gx-lg-lg {
+          .g-lg-large,
+          .gx-lg-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-lg-lg,
-          .gy-lg-lg {
+          .g-lg-large,
+          .gy-lg-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-lg-xl,
-          .gx-lg-xl {
+          .g-lg-xlarge,
+          .gx-lg-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-lg-xl,
-          .gy-lg-xl {
+          .g-lg-xlarge,
+          .gy-lg-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-lg-2xl,
-          .gx-lg-2xl {
+          .g-lg-2xlarge,
+          .gx-lg-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-lg-2xl,
-          .gy-lg-2xl {
+          .g-lg-2xlarge,
+          .gy-lg-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-lg-3xl,
-          .gx-lg-3xl {
+          .g-lg-3xlarge,
+          .gx-lg-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-lg-3xl,
-          .gy-lg-3xl {
+          .g-lg-3xlarge,
+          .gy-lg-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-lg-4xl,
-          .gx-lg-4xl {
+          .g-lg-4xlarge,
+          .gx-lg-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-lg-4xl,
-          .gy-lg-4xl {
+          .g-lg-4xlarge,
+          .gy-lg-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-lg-5xl,
-          .gx-lg-5xl {
+          .g-lg-5xlarge,
+          .gx-lg-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-lg-5xl,
-          .gy-lg-5xl {
+          .g-lg-5xlarge,
+          .gy-lg-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -1944,113 +1942,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xl-3xs,
-          .gx-xl-3xs {
+          .g-xl-3xsmall,
+          .gx-xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xl-3xs,
-          .gy-xl-3xs {
+          .g-xl-3xsmall,
+          .gy-xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xl-2xs,
-          .gx-xl-2xs {
+          .g-xl-2xsmall,
+          .gx-xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xl-2xs,
-          .gy-xl-2xs {
+          .g-xl-2xsmall,
+          .gy-xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xl-xs,
-          .gx-xl-xs {
+          .g-xl-xsmall,
+          .gx-xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xl-xs,
-          .gy-xl-xs {
+          .g-xl-xsmall,
+          .gy-xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xl-sm,
-          .gx-xl-sm {
+          .g-xl-small,
+          .gx-xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xl-sm,
-          .gy-xl-sm {
+          .g-xl-small,
+          .gy-xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xl-md,
-          .gx-xl-md {
+          .g-xl-medium,
+          .gx-xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xl-md,
-          .gy-xl-md {
+          .g-xl-medium,
+          .gy-xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xl-lg,
-          .gx-xl-lg {
+          .g-xl-large,
+          .gx-xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xl-lg,
-          .gy-xl-lg {
+          .g-xl-large,
+          .gy-xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xl-xl,
-          .gx-xl-xl {
+          .g-xl-xlarge,
+          .gx-xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xl-xl,
-          .gy-xl-xl {
+          .g-xl-xlarge,
+          .gy-xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xl-2xl,
-          .gx-xl-2xl {
+          .g-xl-2xlarge,
+          .gx-xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xl-2xl,
-          .gy-xl-2xl {
+          .g-xl-2xlarge,
+          .gy-xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xl-3xl,
-          .gx-xl-3xl {
+          .g-xl-3xlarge,
+          .gx-xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xl-3xl,
-          .gy-xl-3xl {
+          .g-xl-3xlarge,
+          .gy-xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xl-4xl,
-          .gx-xl-4xl {
+          .g-xl-4xlarge,
+          .gx-xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xl-4xl,
-          .gy-xl-4xl {
+          .g-xl-4xlarge,
+          .gy-xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xl-5xl,
-          .gx-xl-5xl {
+          .g-xl-5xlarge,
+          .gx-xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xl-5xl,
-          .gy-xl-5xl {
+          .g-xl-5xlarge,
+          .gy-xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -2218,113 +2216,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-2xl-3xs,
-          .gx-2xl-3xs {
+          .g-2xl-3xsmall,
+          .gx-2xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-2xl-3xs,
-          .gy-2xl-3xs {
+          .g-2xl-3xsmall,
+          .gy-2xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-2xl-2xs,
-          .gx-2xl-2xs {
+          .g-2xl-2xsmall,
+          .gx-2xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-2xl-2xs,
-          .gy-2xl-2xs {
+          .g-2xl-2xsmall,
+          .gy-2xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-2xl-xs,
-          .gx-2xl-xs {
+          .g-2xl-xsmall,
+          .gx-2xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-2xl-xs,
-          .gy-2xl-xs {
+          .g-2xl-xsmall,
+          .gy-2xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-2xl-sm,
-          .gx-2xl-sm {
+          .g-2xl-small,
+          .gx-2xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-2xl-sm,
-          .gy-2xl-sm {
+          .g-2xl-small,
+          .gy-2xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-2xl-md,
-          .gx-2xl-md {
+          .g-2xl-medium,
+          .gx-2xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-2xl-md,
-          .gy-2xl-md {
+          .g-2xl-medium,
+          .gy-2xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-2xl-lg,
-          .gx-2xl-lg {
+          .g-2xl-large,
+          .gx-2xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-2xl-lg,
-          .gy-2xl-lg {
+          .g-2xl-large,
+          .gy-2xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-2xl-xl,
-          .gx-2xl-xl {
+          .g-2xl-xlarge,
+          .gx-2xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-2xl-xl,
-          .gy-2xl-xl {
+          .g-2xl-xlarge,
+          .gy-2xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-2xl-2xl,
-          .gx-2xl-2xl {
+          .g-2xl-2xlarge,
+          .gx-2xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-2xl-2xl,
-          .gy-2xl-2xl {
+          .g-2xl-2xlarge,
+          .gy-2xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-2xl-3xl,
-          .gx-2xl-3xl {
+          .g-2xl-3xlarge,
+          .gx-2xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-2xl-3xl,
-          .gy-2xl-3xl {
+          .g-2xl-3xlarge,
+          .gy-2xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-2xl-4xl,
-          .gx-2xl-4xl {
+          .g-2xl-4xlarge,
+          .gx-2xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-2xl-4xl,
-          .gy-2xl-4xl {
+          .g-2xl-4xlarge,
+          .gy-2xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-2xl-5xl,
-          .gx-2xl-5xl {
+          .g-2xl-5xlarge,
+          .gx-2xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-2xl-5xl,
-          .gy-2xl-5xl {
+          .g-2xl-5xlarge,
+          .gy-2xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -2492,113 +2490,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-3xl-3xs,
-          .gx-3xl-3xs {
+          .g-3xl-3xsmall,
+          .gx-3xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-3xl-3xs,
-          .gy-3xl-3xs {
+          .g-3xl-3xsmall,
+          .gy-3xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-3xl-2xs,
-          .gx-3xl-2xs {
+          .g-3xl-2xsmall,
+          .gx-3xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-3xl-2xs,
-          .gy-3xl-2xs {
+          .g-3xl-2xsmall,
+          .gy-3xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-3xl-xs,
-          .gx-3xl-xs {
+          .g-3xl-xsmall,
+          .gx-3xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-3xl-xs,
-          .gy-3xl-xs {
+          .g-3xl-xsmall,
+          .gy-3xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-3xl-sm,
-          .gx-3xl-sm {
+          .g-3xl-small,
+          .gx-3xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-3xl-sm,
-          .gy-3xl-sm {
+          .g-3xl-small,
+          .gy-3xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-3xl-md,
-          .gx-3xl-md {
+          .g-3xl-medium,
+          .gx-3xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-3xl-md,
-          .gy-3xl-md {
+          .g-3xl-medium,
+          .gy-3xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-3xl-lg,
-          .gx-3xl-lg {
+          .g-3xl-large,
+          .gx-3xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-3xl-lg,
-          .gy-3xl-lg {
+          .g-3xl-large,
+          .gy-3xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-3xl-xl,
-          .gx-3xl-xl {
+          .g-3xl-xlarge,
+          .gx-3xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-3xl-xl,
-          .gy-3xl-xl {
+          .g-3xl-xlarge,
+          .gy-3xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-3xl-2xl,
-          .gx-3xl-2xl {
+          .g-3xl-2xlarge,
+          .gx-3xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-3xl-2xl,
-          .gy-3xl-2xl {
+          .g-3xl-2xlarge,
+          .gy-3xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-3xl-3xl,
-          .gx-3xl-3xl {
+          .g-3xl-3xlarge,
+          .gx-3xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-3xl-3xl,
-          .gy-3xl-3xl {
+          .g-3xl-3xlarge,
+          .gy-3xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-3xl-4xl,
-          .gx-3xl-4xl {
+          .g-3xl-4xlarge,
+          .gx-3xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-3xl-4xl,
-          .gy-3xl-4xl {
+          .g-3xl-4xlarge,
+          .gy-3xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-3xl-5xl,
-          .gx-3xl-5xl {
+          .g-3xl-5xlarge,
+          .gx-3xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-3xl-5xl,
-          .gy-3xl-5xl {
+          .g-3xl-5xlarge,
+          .gy-3xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
         }
@@ -2753,9 +2751,7 @@ $enable-bootstrap-compatibility: null !default;
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
           --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -3345,9 +3341,7 @@ $enable-bootstrap-compatibility: null !default;
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
           --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -3750,9 +3744,7 @@ $enable-bootstrap-compatibility: null !default;
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
           --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-default: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-sticky-navigation-scrolled: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         [data-bs-theme="dark"],
@@ -4174,113 +4166,113 @@ $enable-bootstrap-compatibility: null !default;
           --bs-gutter-y: 0px !important;
         }
 
-        .g-3xs,
-        .gx-3xs {
+        .g-3xsmall,
+        .gx-3xsmall {
           --bs-gutter-x: 2px !important;
         }
 
-        .g-3xs,
-        .gy-3xs {
+        .g-3xsmall,
+        .gy-3xsmall {
           --bs-gutter-y: 2px !important;
         }
 
-        .g-2xs,
-        .gx-2xs {
+        .g-2xsmall,
+        .gx-2xsmall {
           --bs-gutter-x: 4px !important;
         }
 
-        .g-2xs,
-        .gy-2xs {
+        .g-2xsmall,
+        .gy-2xsmall {
           --bs-gutter-y: 4px !important;
         }
 
-        .g-xs,
-        .gx-xs {
+        .g-xsmall,
+        .gx-xsmall {
           --bs-gutter-x: 8px !important;
         }
 
-        .g-xs,
-        .gy-xs {
+        .g-xsmall,
+        .gy-xsmall {
           --bs-gutter-y: 8px !important;
         }
 
-        .g-sm,
-        .gx-sm {
+        .g-small,
+        .gx-small {
           --bs-gutter-x: 12px !important;
         }
 
-        .g-sm,
-        .gy-sm {
+        .g-small,
+        .gy-small {
           --bs-gutter-y: 12px !important;
         }
 
-        .g-md,
-        .gx-md {
+        .g-medium,
+        .gx-medium {
           --bs-gutter-x: 16px !important;
         }
 
-        .g-md,
-        .gy-md {
+        .g-medium,
+        .gy-medium {
           --bs-gutter-y: 16px !important;
         }
 
-        .g-lg,
-        .gx-lg {
+        .g-large,
+        .gx-large {
           --bs-gutter-x: 24px !important;
         }
 
-        .g-lg,
-        .gy-lg {
+        .g-large,
+        .gy-large {
           --bs-gutter-y: 24px !important;
         }
 
-        .g-xl,
-        .gx-xl {
+        .g-xlarge,
+        .gx-xlarge {
           --bs-gutter-x: 32px !important;
         }
 
-        .g-xl,
-        .gy-xl {
+        .g-xlarge,
+        .gy-xlarge {
           --bs-gutter-y: 32px !important;
         }
 
-        .g-2xl,
-        .gx-2xl {
+        .g-2xlarge,
+        .gx-2xlarge {
           --bs-gutter-x: 40px !important;
         }
 
-        .g-2xl,
-        .gy-2xl {
+        .g-2xlarge,
+        .gy-2xlarge {
           --bs-gutter-y: 40px !important;
         }
 
-        .g-3xl,
-        .gx-3xl {
+        .g-3xlarge,
+        .gx-3xlarge {
           --bs-gutter-x: 48px !important;
         }
 
-        .g-3xl,
-        .gy-3xl {
+        .g-3xlarge,
+        .gy-3xlarge {
           --bs-gutter-y: 48px !important;
         }
 
-        .g-4xl,
-        .gx-4xl {
+        .g-4xlarge,
+        .gx-4xlarge{
           --bs-gutter-x: 56px !important;
         }
 
-        .g-4xl,
-        .gy-4xl {
+        .g-4xlarge,
+        .gy-4xlarge{
           --bs-gutter-y: 56px !important;
         }
 
-        .g-5xl,
-        .gx-5xl {
+        .g-5xlarge,
+        .gx-5xlarge {
           --bs-gutter-x: 64px !important;
         }
 
-        .g-5xl,
-        .gy-5xl {
+        .g-5xlarge,
+        .gy-5xlarge {
           --bs-gutter-y: 64px !important;
         }
 
@@ -4507,113 +4499,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xs-3xs,
-          .gx-xs-3xs {
+          .g-xs-3xsmall,
+          .gx-xs-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xs-3xs,
-          .gy-xs-3xs {
+          .g-xs-3xsmall,
+          .gy-xs-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xs-2xs,
-          .gx-xs-2xs {
+          .g-xs-2xsmall,
+          .gx-xs-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xs-2xs,
-          .gy-xs-2xs {
+          .g-xs-2xsmall,
+          .gy-xs-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xs-xs,
-          .gx-xs-xs {
+          .g-xs-xsmall,
+          .gx-xs-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xs-xs,
-          .gy-xs-xs {
+          .g-xs-xsmall,
+          .gy-xs-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xs-sm,
-          .gx-xs-sm {
+          .g-xs-small,
+          .gx-xs-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xs-sm,
-          .gy-xs-sm {
+          .g-xs-small,
+          .gy-xs-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xs-md,
-          .gx-xs-md {
+          .g-xs-medium,
+          .gx-xs-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xs-md,
-          .gy-xs-md {
+          .g-xs-medium,
+          .gy-xs-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xs-lg,
-          .gx-xs-lg {
+          .g-xs-large,
+          .gx-xs-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xs-lg,
-          .gy-xs-lg {
+          .g-xs-large,
+          .gy-xs-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xs-xl,
-          .gx-xs-xl {
+          .g-xs-xlarge,
+          .gx-xs-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xs-xl,
-          .gy-xs-xl {
+          .g-xs-xlarge,
+          .gy-xs-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xs-2xl,
-          .gx-xs-2xl {
+          .g-xs-2xlarge,
+          .gx-xs-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xs-2xl,
-          .gy-xs-2xl {
+          .g-xs-2xlarge,
+          .gy-xs-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xs-3xl,
-          .gx-xs-3xl {
+          .g-xs-3xlarge,
+          .gx-xs-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xs-3xl,
-          .gy-xs-3xl {
+          .g-xs-3xlarge,
+          .gy-xs-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xs-4xl,
-          .gx-xs-4xl {
+          .g-xs-4xlarge,
+          .gx-xs-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xs-4xl,
-          .gy-xs-4xl {
+          .g-xs-4xlarge,
+          .gy-xs-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xs-5xl,
-          .gx-xs-5xl {
+          .g-xs-5xlarge,
+          .gx-xs-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xs-5xl,
-          .gy-xs-5xl {
+          .g-xs-5xlarge,
+          .gy-xs-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -4841,113 +4833,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-sm-3xs,
-          .gx-sm-3xs {
+          .g-sm-3xsmall,
+          .gx-sm-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-sm-3xs,
-          .gy-sm-3xs {
+          .g-sm-3xsmall,
+          .gy-sm-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-sm-2xs,
-          .gx-sm-2xs {
+          .g-sm-2xsmall,
+          .gx-sm-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-sm-2xs,
-          .gy-sm-2xs {
+          .g-sm-2xsmall,
+          .gy-sm-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-sm-xs,
-          .gx-sm-xs {
+          .g-sm-xsmall,
+          .gx-sm-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-sm-xs,
-          .gy-sm-xs {
+          .g-sm-xsmall,
+          .gy-sm-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-sm-sm,
-          .gx-sm-sm {
+          .g-sm-small,
+          .gx-sm-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-sm-sm,
-          .gy-sm-sm {
+          .g-sm-small,
+          .gy-sm-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-sm-md,
-          .gx-sm-md {
+          .g-sm-medium,
+          .gx-sm-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-sm-md,
-          .gy-sm-md {
+          .g-sm-medium,
+          .gy-sm-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-sm-lg,
-          .gx-sm-lg {
+          .g-sm-large,
+          .gx-sm-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-sm-lg,
-          .gy-sm-lg {
+          .g-sm-large,
+          .gy-sm-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-sm-xl,
-          .gx-sm-xl {
+          .g-sm-xlarge,
+          .gx-sm-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-sm-xl,
-          .gy-sm-xl {
+          .g-sm-xlarge,
+          .gy-sm-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-sm-2xl,
-          .gx-sm-2xl {
+          .g-sm-2xlarge,
+          .gx-sm-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-sm-2xl,
-          .gy-sm-2xl {
+          .g-sm-2xlarge,
+          .gy-sm-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-sm-3xl,
-          .gx-sm-3xl {
+          .g-sm-3xlarge,
+          .gx-sm-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-sm-3xl,
-          .gy-sm-3xl {
+          .g-sm-3xlarge,
+          .gy-sm-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-sm-4xl,
-          .gx-sm-4xl {
+          .g-sm-4xlarge,
+          .gx-sm-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-sm-4xl,
-          .gy-sm-4xl {
+          .g-sm-4xlarge,
+          .gy-sm-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-sm-5xl,
-          .gx-sm-5xl {
+          .g-sm-5xlarge,
+          .gx-sm-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-sm-5xl,
-          .gy-sm-5xl {
+          .g-sm-5xlarge,
+          .gy-sm-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5175,113 +5167,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-md-3xs,
-          .gx-md-3xs {
+          .g-md-3xsmall,
+          .gx-md-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-md-3xs,
-          .gy-md-3xs {
+          .g-md-3xsmall,
+          .gy-md-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-md-2xs,
-          .gx-md-2xs {
+          .g-md-2xsmall,
+          .gx-md-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-md-2xs,
-          .gy-md-2xs {
+          .g-md-2xsmall,
+          .gy-md-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-md-xs,
-          .gx-md-xs {
+          .g-md-xsmall,
+          .gx-md-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-md-xs,
-          .gy-md-xs {
+          .g-md-xsmall,
+          .gy-md-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-md-sm,
-          .gx-md-sm {
+          .g-md-small,
+          .gx-md-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-md-sm,
-          .gy-md-sm {
+          .g-md-small,
+          .gy-md-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-md-md,
-          .gx-md-md {
+          .g-md-medium,
+          .gx-md-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-md-md,
-          .gy-md-md {
+          .g-md-medium,
+          .gy-md-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-md-lg,
-          .gx-md-lg {
+          .g-md-large,
+          .gx-md-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-md-lg,
-          .gy-md-lg {
+          .g-md-large,
+          .gy-md-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-md-xl,
-          .gx-md-xl {
+          .g-md-xlarge,
+          .gx-md-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-md-xl,
-          .gy-md-xl {
+          .g-md-xlarge,
+          .gy-md-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-md-2xl,
-          .gx-md-2xl {
+          .g-md-2xlarge,
+          .gx-md-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-md-2xl,
-          .gy-md-2xl {
+          .g-md-2xlarge,
+          .gy-md-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-md-3xl,
-          .gx-md-3xl {
+          .g-md-3xlarge,
+          .gx-md-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-md-3xl,
-          .gy-md-3xl {
+          .g-md-3xlarge,
+          .gy-md-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-md-4xl,
-          .gx-md-4xl {
+          .g-md-4xlarge,
+          .gx-md-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-md-4xl,
-          .gy-md-4xl {
+          .g-md-4xlarge,
+          .gy-md-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-md-5xl,
-          .gx-md-5xl {
+          .g-md-5xlarge,
+          .gx-md-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-md-5xl,
-          .gy-md-5xl {
+          .g-md-5xlarge,
+          .gy-md-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5509,113 +5501,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-lg-3xs,
-          .gx-lg-3xs {
+          .g-lg-3xsmall,
+          .gx-lg-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-lg-3xs,
-          .gy-lg-3xs {
+          .g-lg-3xsmall,
+          .gy-lg-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-lg-2xs,
-          .gx-lg-2xs {
+          .g-lg-2xsmall,
+          .gx-lg-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-lg-2xs,
-          .gy-lg-2xs {
+          .g-lg-2xsmall,
+          .gy-lg-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-lg-xs,
-          .gx-lg-xs {
+          .g-lg-xsmall,
+          .gx-lg-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-lg-xs,
-          .gy-lg-xs {
+          .g-lg-xsmall,
+          .gy-lg-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-lg-sm,
-          .gx-lg-sm {
+          .g-lg-small,
+          .gx-lg-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-lg-sm,
-          .gy-lg-sm {
+          .g-lg-small,
+          .gy-lg-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-lg-md,
-          .gx-lg-md {
+          .g-lg-medium,
+          .gx-lg-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-lg-md,
-          .gy-lg-md {
+          .g-lg-medium,
+          .gy-lg-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-lg-lg,
-          .gx-lg-lg {
+          .g-lg-large,
+          .gx-lg-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-lg-lg,
-          .gy-lg-lg {
+          .g-lg-large,
+          .gy-lg-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-lg-xl,
-          .gx-lg-xl {
+          .g-lg-xlarge,
+          .gx-lg-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-lg-xl,
-          .gy-lg-xl {
+          .g-lg-xlarge,
+          .gy-lg-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-lg-2xl,
-          .gx-lg-2xl {
+          .g-lg-2xlarge,
+          .gx-lg-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-lg-2xl,
-          .gy-lg-2xl {
+          .g-lg-2xlarge,
+          .gy-lg-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-lg-3xl,
-          .gx-lg-3xl {
+          .g-lg-3xlarge,
+          .gx-lg-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-lg-3xl,
-          .gy-lg-3xl {
+          .g-lg-3xlarge,
+          .gy-lg-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-lg-4xl,
-          .gx-lg-4xl {
+          .g-lg-4xlarge,
+          .gx-lg-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-lg-4xl,
-          .gy-lg-4xl {
+          .g-lg-4xlarge,
+          .gy-lg-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-lg-5xl,
-          .gx-lg-5xl {
+          .g-lg-5xlarge,
+          .gx-lg-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-lg-5xl,
-          .gy-lg-5xl {
+          .g-lg-5xlarge,
+          .gy-lg-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -5843,113 +5835,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xl-3xs,
-          .gx-xl-3xs {
+          .g-xl-3xsmall,
+          .gx-xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xl-3xs,
-          .gy-xl-3xs {
+          .g-xl-3xsmall,
+          .gy-xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xl-2xs,
-          .gx-xl-2xs {
+          .g-xl-2xsmall,
+          .gx-xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xl-2xs,
-          .gy-xl-2xs {
+          .g-xl-2xsmall,
+          .gy-xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xl-xs,
-          .gx-xl-xs {
+          .g-xl-xsmall,
+          .gx-xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xl-xs,
-          .gy-xl-xs {
+          .g-xl-xsmall,
+          .gy-xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xl-sm,
-          .gx-xl-sm {
+          .g-xl-small,
+          .gx-xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xl-sm,
-          .gy-xl-sm {
+          .g-xl-small,
+          .gy-xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xl-md,
-          .gx-xl-md {
+          .g-xl-medium,
+          .gx-xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xl-md,
-          .gy-xl-md {
+          .g-xl-medium,
+          .gy-xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xl-lg,
-          .gx-xl-lg {
+          .g-xl-large,
+          .gx-xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xl-lg,
-          .gy-xl-lg {
+          .g-xl-large,
+          .gy-xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xl-xl,
-          .gx-xl-xl {
+          .g-xl-xlarge,
+          .gx-xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xl-xl,
-          .gy-xl-xl {
+          .g-xl-xlarge,
+          .gy-xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xl-2xl,
-          .gx-xl-2xl {
+          .g-xl-2xlarge,
+          .gx-xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xl-2xl,
-          .gy-xl-2xl {
+          .g-xl-2xlarge,
+          .gy-xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xl-3xl,
-          .gx-xl-3xl {
+          .g-xl-3xlarge,
+          .gx-xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xl-3xl,
-          .gy-xl-3xl {
+          .g-xl-3xlarge,
+          .gy-xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xl-4xl,
-          .gx-xl-4xl {
+          .g-xl-4xlarge,
+          .gx-xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xl-4xl,
-          .gy-xl-4xl {
+          .g-xl-4xlarge,
+          .gy-xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xl-5xl,
-          .gx-xl-5xl {
+          .g-xl-5xlarge,
+          .gx-xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xl-5xl,
-          .gy-xl-5xl {
+          .g-xl-5xlarge,
+          .gy-xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -6177,113 +6169,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-xxl-3xs,
-          .gx-xxl-3xs {
+          .g-xxl-3xsmall,
+          .gx-xxl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-xxl-3xs,
-          .gy-xxl-3xs {
+          .g-xxl-3xsmall,
+          .gy-xxl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-xxl-2xs,
-          .gx-xxl-2xs {
+          .g-xxl-2xsmall,
+          .gx-xxl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-xxl-2xs,
-          .gy-xxl-2xs {
+          .g-xxl-2xsmall,
+          .gy-xxl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-xxl-xs,
-          .gx-xxl-xs {
+          .g-xxl-xsmall,
+          .gx-xxl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-xxl-xs,
-          .gy-xxl-xs {
+          .g-xxl-xsmall,
+          .gy-xxl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-xxl-sm,
-          .gx-xxl-sm {
+          .g-xxl-small,
+          .gx-xxl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-xxl-sm,
-          .gy-xxl-sm {
+          .g-xxl-small,
+          .gy-xxl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-xxl-md,
-          .gx-xxl-md {
+          .g-xxl-medium,
+          .gx-xxl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-xxl-md,
-          .gy-xxl-md {
+          .g-xxl-medium,
+          .gy-xxl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-xxl-lg,
-          .gx-xxl-lg {
+          .g-xxl-large,
+          .gx-xxl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-xxl-lg,
-          .gy-xxl-lg {
+          .g-xxl-large,
+          .gy-xxl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-xxl-xl,
-          .gx-xxl-xl {
+          .g-xxl-xlarge,
+          .gx-xxl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-xxl-xl,
-          .gy-xxl-xl {
+          .g-xxl-xlarge,
+          .gy-xxl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-xxl-2xl,
-          .gx-xxl-2xl {
+          .g-xxl-2xlarge,
+          .gx-xxl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-xxl-2xl,
-          .gy-xxl-2xl {
+          .g-xxl-2xlarge,
+          .gy-xxl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-xxl-3xl,
-          .gx-xxl-3xl {
+          .g-xxl-3xlarge,
+          .gx-xxl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-xxl-3xl,
-          .gy-xxl-3xl {
+          .g-xxl-3xlarge,
+          .gy-xxl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-xxl-4xl,
-          .gx-xxl-4xl {
+          .g-xxl-4xlarge,
+          .gx-xxl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-xxl-4xl,
-          .gy-xxl-4xl {
+          .g-xxl-4xlarge,
+          .gy-xxl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-xxl-5xl,
-          .gx-xxl-5xl {
+          .g-xxl-5xlarge,
+          .gx-xxl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-xxl-5xl,
-          .gy-xxl-5xl {
+          .g-xxl-5xlarge,
+          .gy-xxl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -6511,113 +6503,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-2xl-3xs,
-          .gx-2xl-3xs {
+          .g-2xl-3xsmall,
+          .gx-2xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-2xl-3xs,
-          .gy-2xl-3xs {
+          .g-2xl-3xsmall,
+          .gy-2xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-2xl-2xs,
-          .gx-2xl-2xs {
+          .g-2xl-2xsmall,
+          .gx-2xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-2xl-2xs,
-          .gy-2xl-2xs {
+          .g-2xl-2xsmall,
+          .gy-2xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-2xl-xs,
-          .gx-2xl-xs {
+          .g-2xl-xsmall,
+          .gx-2xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-2xl-xs,
-          .gy-2xl-xs {
+          .g-2xl-xsmall,
+          .gy-2xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-2xl-sm,
-          .gx-2xl-sm {
+          .g-2xl-small,
+          .gx-2xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-2xl-sm,
-          .gy-2xl-sm {
+          .g-2xl-small,
+          .gy-2xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-2xl-md,
-          .gx-2xl-md {
+          .g-2xl-medium,
+          .gx-2xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-2xl-md,
-          .gy-2xl-md {
+          .g-2xl-medium,
+          .gy-2xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-2xl-lg,
-          .gx-2xl-lg {
+          .g-2xl-large,
+          .gx-2xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-2xl-lg,
-          .gy-2xl-lg {
+          .g-2xl-large,
+          .gy-2xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-2xl-xl,
-          .gx-2xl-xl {
+          .g-2xl-xlarge,
+          .gx-2xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-2xl-xl,
-          .gy-2xl-xl {
+          .g-2xl-xlarge,
+          .gy-2xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-2xl-2xl,
-          .gx-2xl-2xl {
+          .g-2xl-2xlarge,
+          .gx-2xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-2xl-2xl,
-          .gy-2xl-2xl {
+          .g-2xl-2xlarge,
+          .gy-2xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-2xl-3xl,
-          .gx-2xl-3xl {
+          .g-2xl-3xlarge,
+          .gx-2xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-2xl-3xl,
-          .gy-2xl-3xl {
+          .g-2xl-3xlarge,
+          .gy-2xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-2xl-4xl,
-          .gx-2xl-4xl {
+          .g-2xl-4xlarge,
+          .gx-2xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-2xl-4xl,
-          .gy-2xl-4xl {
+          .g-2xl-4xlarge,
+          .gy-2xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-2xl-5xl,
-          .gx-2xl-5xl {
+          .g-2xl-5xlarge,
+          .gx-2xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-2xl-5xl,
-          .gy-2xl-5xl {
+          .g-2xl-5xlarge,
+          .gy-2xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 
@@ -6845,113 +6837,113 @@ $enable-bootstrap-compatibility: null !default;
             --bs-gutter-y: 0px !important;
           }
 
-          .g-3xl-3xs,
-          .gx-3xl-3xs {
+          .g-3xl-3xsmall,
+          .gx-3xl-3xsmall {
             --bs-gutter-x: 2px !important;
           }
 
-          .g-3xl-3xs,
-          .gy-3xl-3xs {
+          .g-3xl-3xsmall,
+          .gy-3xl-3xsmall {
             --bs-gutter-y: 2px !important;
           }
 
-          .g-3xl-2xs,
-          .gx-3xl-2xs {
+          .g-3xl-2xsmall,
+          .gx-3xl-2xsmall {
             --bs-gutter-x: 4px !important;
           }
 
-          .g-3xl-2xs,
-          .gy-3xl-2xs {
+          .g-3xl-2xsmall,
+          .gy-3xl-2xsmall {
             --bs-gutter-y: 4px !important;
           }
 
-          .g-3xl-xs,
-          .gx-3xl-xs {
+          .g-3xl-xsmall,
+          .gx-3xl-xsmall {
             --bs-gutter-x: 8px !important;
           }
 
-          .g-3xl-xs,
-          .gy-3xl-xs {
+          .g-3xl-xsmall,
+          .gy-3xl-xsmall {
             --bs-gutter-y: 8px !important;
           }
 
-          .g-3xl-sm,
-          .gx-3xl-sm {
+          .g-3xl-small,
+          .gx-3xl-small {
             --bs-gutter-x: 12px !important;
           }
 
-          .g-3xl-sm,
-          .gy-3xl-sm {
+          .g-3xl-small,
+          .gy-3xl-small {
             --bs-gutter-y: 12px !important;
           }
 
-          .g-3xl-md,
-          .gx-3xl-md {
+          .g-3xl-medium,
+          .gx-3xl-medium {
             --bs-gutter-x: 16px !important;
           }
 
-          .g-3xl-md,
-          .gy-3xl-md {
+          .g-3xl-medium,
+          .gy-3xl-medium {
             --bs-gutter-y: 16px !important;
           }
 
-          .g-3xl-lg,
-          .gx-3xl-lg {
+          .g-3xl-large,
+          .gx-3xl-large {
             --bs-gutter-x: 24px !important;
           }
 
-          .g-3xl-lg,
-          .gy-3xl-lg {
+          .g-3xl-large,
+          .gy-3xl-large {
             --bs-gutter-y: 24px !important;
           }
 
-          .g-3xl-xl,
-          .gx-3xl-xl {
+          .g-3xl-xlarge,
+          .gx-3xl-xlarge {
             --bs-gutter-x: 32px !important;
           }
 
-          .g-3xl-xl,
-          .gy-3xl-xl {
+          .g-3xl-xlarge,
+          .gy-3xl-xlarge {
             --bs-gutter-y: 32px !important;
           }
 
-          .g-3xl-2xl,
-          .gx-3xl-2xl {
+          .g-3xl-2xlarge,
+          .gx-3xl-2xlarge {
             --bs-gutter-x: 40px !important;
           }
 
-          .g-3xl-2xl,
-          .gy-3xl-2xl {
+          .g-3xl-2xlarge,
+          .gy-3xl-2xlarge {
             --bs-gutter-y: 40px !important;
           }
 
-          .g-3xl-3xl,
-          .gx-3xl-3xl {
+          .g-3xl-3xlarge,
+          .gx-3xl-3xlarge {
             --bs-gutter-x: 48px !important;
           }
 
-          .g-3xl-3xl,
-          .gy-3xl-3xl {
+          .g-3xl-3xlarge,
+          .gy-3xl-3xlarge {
             --bs-gutter-y: 48px !important;
           }
 
-          .g-3xl-4xl,
-          .gx-3xl-4xl {
+          .g-3xl-4xlarge,
+          .gx-3xl-4xlarge{
             --bs-gutter-x: 56px !important;
           }
 
-          .g-3xl-4xl,
-          .gy-3xl-4xl {
+          .g-3xl-4xlarge,
+          .gy-3xl-4xlarge{
             --bs-gutter-y: 56px !important;
           }
 
-          .g-3xl-5xl,
-          .gx-3xl-5xl {
+          .g-3xl-5xlarge,
+          .gx-3xl-5xlarge {
             --bs-gutter-x: 64px !important;
           }
 
-          .g-3xl-5xl,
-          .gy-3xl-5xl {
+          .g-3xl-5xlarge,
+          .gy-3xl-5xlarge {
             --bs-gutter-y: 64px !important;
           }
 

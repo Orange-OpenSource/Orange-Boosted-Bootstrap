@@ -3,21 +3,21 @@ import { getVersionedDocsPath } from '@libs/path'
 import Code from '@components/shortcodes/Code.astro'
 ---
 
-<section class="row pb-scaled-xl">
-  <div class="col-12 d-none d-xl-block pb-scaled-sm">
+<section class="row pb-scaled-xlarge">
+  <div class="col-12 d-none d-xl-block pb-scaled-small">
     <hr class="border-medium border-default m-none" />
   </div>
-  <div class="col-xl-4 pe-xl-5xl">
-    <hr class="d-xl-none border-medium m-none pb-scaled-sm" />
-    <h2 class="text-brand-primary mb-scaled-xs">Build and extend in real-time with CSS&nbsp;variables</h2>
-    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xs">
+  <div class="col-xl-4 pe-xl-5xlarge">
+    <hr class="d-xl-none border-medium m-none pb-scaled-small" />
+    <h2 class="text-brand-primary mb-scaled-xsmall">Build and extend in real-time with CSS&nbsp;variables</h2>
+    <p class="lead fw-bold bd-text-wrap-balance mb-scaled-xsmall">
       OUDS Web is evolving with each release to better utilize CSS variables for global theme styles, individual
       components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code
         >:root</code
       > level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily
       be modified.
     </p>
-    <p class="mb-scaled-lg">
+    <p class="mb-scaled-large">
       <a href={getVersionedDocsPath('customize/css-variables')} class="link link-chevron">
         Learn more about CSS variables
       </a>
@@ -25,14 +25,14 @@ import Code from '@components/shortcodes/Code.astro'
   </div>
 
   <div class="col-xl-8">
-    <h3 class="h2 mb-scaled-xs">Using CSS variables</h3>
-    <p class="mb-scaled-md">
+    <h3 class="h2 mb-scaled-xsmall">Using CSS variables</h3>
+    <p class="mb-scaled-medium">
       Use any of our <a href={getVersionedDocsPath('customize/css-variables/#root-variables')}
         >global <code>:root</code> variables</a
       > to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children
       elements.
     </p>
-    <div class="mb-scaled-md">
+    <div class="mb-scaled-medium">
       <Code
         code={`.component {
   color: var(--bs-color-content-default);
@@ -47,9 +47,9 @@ import Code from '@components/shortcodes/Code.astro'
         lang="scss"
       />
     </div>
-    <div class="border-top border-thin border-default pt-scaled-sm">
+    <div class="border-top border-thin border-default pt-scaled-small">
       <h3 class="h2">Customizing via CSS variables</h3>
-      <p class="mb-scaled-md">
+      <p class="mb-scaled-medium">
         Override global, component, or utility class variables to customize OUDS Web just how you like. No need to
         redeclare each rule, just a new variable value.
       </p>

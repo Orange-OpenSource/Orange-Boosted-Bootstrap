@@ -1,8 +1,8 @@
 // Raw primitive values
 // Insertion of brand foundations
-// OUDS Core tokens version 1.5.0
-// Orange Core tokens version 1.1.0
-// Orange System tokens version 1.5.0
+// OUDS Core tokens version 1.7.0
+// Orange Core tokens version 1.2.0
+// Orange System tokens version 2.0.1
 
 // Border
 
@@ -92,7 +92,8 @@ $core-orange-color-decorative-sky-600: #1982b3 !default;
 $core-orange-color-decorative-sky-700: #136186 !default;
 $core-orange-color-decorative-sky-800: #0c415a !default;
 $core-orange-color-decorative-sky-900: #06202d !default;
-$core-orange-color-opacity-warm-gray: rgba(189, 121, 60, .08) !default;
+$core-orange-color-opacity-warm-gray-80: rgba(189, 121, 60, .08) !default;
+$core-orange-color-opacity-warm-gray-400: rgba(104, 93, 80, .4) !default;
 $core-orange-color-orange-50: #fff2e6 !default;
 $core-orange-color-orange-100: #ffd5b0 !default;
 $core-orange-color-orange-200: #ffc18a !default;
@@ -123,7 +124,7 @@ $core-ouds-color-functional-dodger-blue-300: #8ad5ff !default;
 $core-ouds-color-functional-dodger-blue-400: #57c3ff !default;
 $core-ouds-color-functional-dodger-blue-500: #26b2ff !default;
 $core-ouds-color-functional-dodger-blue-600: #009bf0 !default;
-$core-ouds-color-functional-dodger-blue-700: #007abd !default;
+$core-ouds-color-functional-dodger-blue-700: #0073b2 !default;
 $core-ouds-color-functional-dodger-blue-800: #00598a !default;
 $core-ouds-color-functional-dodger-blue-900: #003857 !default;
 $core-ouds-color-functional-gray-dark-80: #7a7a7a !default;
@@ -132,7 +133,7 @@ $core-ouds-color-functional-gray-dark-240: #666 !default;
 $core-ouds-color-functional-gray-dark-320: #5c5c5c !default;
 $core-ouds-color-functional-gray-dark-400: #555 !default;
 $core-ouds-color-functional-gray-dark-480: #444 !default;
-$core-ouds-color-functional-gray-dark-560: #3d3d3d !default;
+$core-ouds-color-functional-gray-dark-560: #3b3b3b !default;
 $core-ouds-color-functional-gray-dark-640: #333 !default;
 $core-ouds-color-functional-gray-dark-720: #272727 !default;
 $core-ouds-color-functional-gray-dark-800: #1f1f1f !default;
@@ -157,6 +158,7 @@ $core-ouds-color-functional-malachite-400: #67e97e !default;
 $core-ouds-color-functional-malachite-500: #3de35a !default;
 $core-ouds-color-functional-malachite-600: #1ecd3c !default;
 $core-ouds-color-functional-malachite-700: #17a02f !default;
+$core-ouds-color-functional-malachite-750: #138126 !default;
 $core-ouds-color-functional-malachite-800: #0e621d !default;
 $core-ouds-color-functional-malachite-900: #0a4715 !default;
 $core-ouds-color-functional-scarlet-100: #ffe5e6 !default;
@@ -175,6 +177,7 @@ $core-ouds-color-functional-sun-400: #ffd73d !default;
 $core-ouds-color-functional-sun-500: #ffd000 !default;
 $core-ouds-color-functional-sun-600: #d6aa00 !default;
 $core-ouds-color-functional-sun-700: #a38200 !default;
+$core-ouds-color-functional-sun-750: #856a00 !default;
 $core-ouds-color-functional-sun-800: #665100 !default;
 $core-ouds-color-functional-sun-900: #3d3100 !default;
 $core-ouds-color-functional-white: #fff !default;
@@ -203,10 +206,14 @@ $core-ouds-color-opacity-black-840: rgba(0, 0, 0, .84) !default;
 $core-ouds-color-opacity-black-880: rgba(0, 0, 0, .88) !default;
 $core-ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
 $core-ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
-$core-ouds-color-opacity-dodger-blue: rgba(38, 178, 255, .08) !default;
-$core-ouds-color-opacity-malachite: rgba(61, 227, 90, .12) !default;
-$core-ouds-color-opacity-scarlet: rgba(234, 3, 5, .08) !default;
-$core-ouds-color-opacity-sun: rgba(255, 208, 0, .16) !default;
+$core-ouds-color-opacity-dodger-blue-80: rgba(38, 178, 255, .08) !default;
+$core-ouds-color-opacity-dodger-blue-520: rgba(0, 89, 138, .52) !default;
+$core-ouds-color-opacity-malachite-120: rgba(61, 227, 90, .12) !default;
+$core-ouds-color-opacity-malachite-640: rgba(14, 98, 29, .64) !default;
+$core-ouds-color-opacity-scarlet-80: rgba(219, 0, 2, .08) !default;
+$core-ouds-color-opacity-scarlet-320: rgba(219, 0, 2, .32) !default;
+$core-ouds-color-opacity-sun-160: rgba(255, 208, 0, .16) !default;
+$core-ouds-color-opacity-sun-480: rgba(102, 81, 0, .48) !default;
 $core-ouds-color-opacity-white-0: rgba(255, 255, 255, 0) !default;
 $core-ouds-color-opacity-white-40: rgba(255, 255, 255, .04) !default;
 $core-ouds-color-opacity-white-80: rgba(255, 255, 255, .08) !default;
@@ -281,6 +288,12 @@ $core-ouds-dimension-out-of-system-75: $core-ouds-dimension-base * .75 !default;
 $core-ouds-dimension-out-of-system-150: $core-ouds-dimension-base * 1.5 !default; // 6px
 $core-ouds-dimension-out-of-system-250: $core-ouds-dimension-base * 2.5 !default; // 10px
 // scss-docs-end ouds-raw-dimension
+
+// Effect
+
+// scss-docs-start ouds-raw-effect
+$core-ouds-effect-blur-320: 32px !default;
+// scss-docs-end ouds-raw-effect
 
 // Elevation
 
