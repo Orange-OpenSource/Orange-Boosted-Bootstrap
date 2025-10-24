@@ -21,8 +21,6 @@
   --#{$prefix}text-input-icon-size: #{px-to-rem($ouds-text-input-size-leading-icon)};
   --#{$prefix}text-input-column-gap: #{$ouds-text-input-space-column-gap-default};
   --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
-  --#{$prefix}text-input-padding-x: #{$ouds-text-input-space-padding-inline-default};
-  --#{$prefix}text-input-padding-y: #{$ouds-text-input-space-padding-block-default};
   --#{$prefix}text-input-trailing-action-width: #{$ouds-button-size-min-width};
   --#{$prefix}text-input-trailing-action-height: #{$ouds-button-size-max-height-icon-only};
   --#{$prefix}text-input-trailing-action-padding-right: #{$ouds-text-input-space-padding-inline-trailing-action};
@@ -167,17 +165,23 @@
   }
 
   // Focused state styles
-  &:has(.text-input-field:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
-    --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
-    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+  &:has(.text-input-field:focus:not(:disabled):not(:read-only)) {
     --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
     &.text-input-container-outlined {
-      --#{$prefix}text-input-background-color: transparent;
       --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
       --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
       --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
     }
   }
+
+  &:has(.text-input-field:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
+    --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
+    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+    &.text-input-container-outlined {
+      --#{$prefix}text-input-background-color: transparent;
+    }
+  }
+
 
   &:has(.text-input-field:placeholder-shown:not([placeholder=""])),
   &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
