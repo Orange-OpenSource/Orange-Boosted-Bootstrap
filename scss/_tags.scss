@@ -1,9 +1,9 @@
 .tag {
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
+  --#{$prefix}tag-color: #{$ouds-color-content-default};
   --#{$prefix}tag-border-width: 0px;
-  --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  --#{$prefix}tag-background-color: #{$ouds-color-surface-inverse-high};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
@@ -125,7 +125,7 @@
 
   &.loading:has(.tag-loader) {
     color: #{$ouds-color-content-default} if($enable-important-utilities, !important, null);
-    background-color: #{$ouds-color-surface-status-neutral-muted} if($enable-important-utilities, !important, null);
+    background-color: #{$ouds-color-surface-secondary} if($enable-important-utilities, !important, null);
   }
 
   .tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
@@ -169,10 +169,10 @@
 }
 
 .tag-input {
-  --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
-  --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
-  --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
-  --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+  --#{$prefix}tag-color: #{$ouds-input-tag-color-content-enabled};
+  --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-enabled};
+  --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-enabled};
+  --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default};
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
   margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
@@ -196,24 +196,24 @@
   }
 
   &:hover {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-hover};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-hover};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-hover};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:active {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-pressed};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-pressed};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-pressed};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-pressed};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-pressed};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-pressed};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:focus-visible {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-focus};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-focus};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-focus};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:disabled,
@@ -221,7 +221,7 @@
     --#{$prefix}tag-color: #{$ouds-color-action-disabled};
     --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default};
 
     pointer-events: none;
   }
