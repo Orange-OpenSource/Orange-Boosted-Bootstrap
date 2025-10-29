@@ -22,7 +22,7 @@ A `placeholder` attribute is required on each `<input>` as our CSS-only floating
 If the placeholder text is empty, it is not visible: only the `<label>` is shown to users.
 
 <Callout type="warning">
-To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate token to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
+To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate value to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
 </Callout>
 
 <Example code={`<div class="text-input-container mb-md">
@@ -30,7 +30,7 @@ To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org
     <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithEmptyPlaceholder" placeholder="">
   </div>`} />
 
-If the placeholder text is supplied, `<label>`s will automatically adjust to their floated position.
+If the placeholder text is supplied, `<label>` will automatically adjust to their floated position.
 
 <Example code={`<div class="text-input-container mb-md">
     <label for="exampleTextInputWithPlaceholder">Email address</label>
@@ -177,7 +177,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
 A textual prefix or suffix can be added to an input by wrapping the `<input>` in a `.input-container` and adding `data-bs-prefix` and/or `data-bs-suffix` attributes to it.
 
 <Callout type="warning">
-For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
+For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
 </Callout>
 
 <Example code={`<div class="text-input">
