@@ -148,10 +148,6 @@
     mask-image: escape-svg(var(--#{$prefix}tag-warning-external-icon));
   }
 
-  .icon > svg > path{ /* target the image with css */
-    fill: var(--primary-color);
-  }
-
   &.tag-warning.tag-muted .tag-status-icon {
     position: relative;
     background-color: transparent;
