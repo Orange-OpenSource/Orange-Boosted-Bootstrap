@@ -1,6 +1,6 @@
 ---
 title: Tags
-description: A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content.
+description: A tag is a static or interactive component used to show status, key details, or categories. It can also help users filter content by selecting or entering relevant information.
 aliases:
   - "/docs/components/tags/"
   - "/docs/components/tag/"
@@ -25,7 +25,7 @@ import { getMode } from '@libs/sass-variables'
 <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
+      <div class="card-top ratio ratio-16x9 bg-inverse-low" aria-hidden="true">
         <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <p class="tag">Tag</p>
         </div>
@@ -37,7 +37,7 @@ import { getMode } from '@libs/sass-variables'
   </li>
   <li class="col">
     <div class="card position-relative h-100">
-      <div class="card-top ratio ratio-16x9 bg-emphasized" aria-hidden="true">
+      <div class="card-top ratio ratio-16x9 bg-inverse-low" aria-hidden="true">
         <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <button type="button" class="tag tag-input" tabindex="-1">Input tag</button>
         </div>
@@ -50,7 +50,7 @@ import { getMode } from '@libs/sass-variables'
   </li>
 </ul>
 
-For both types of tag, OUDS Web has a basic `.tag` class that sets up default styles.
+For both types of tag, OUDS Web has a common basic `.tag` class that sets up default styles.
 
 <Example showToolbar={false} code={`<p class="tag">Tag</p>`
 } />
@@ -58,24 +58,23 @@ For both types of tag, OUDS Web has a basic `.tag` class that sets up default st
 <Example showToolbar={false} code={`<button type="button" class="tag tag-input">Input tag<span class="visually-hidden">Remove this tag</span></button>`
 } />
 
-
 ### Accessibility
 
-For accessibility reasons, a tag, like any other informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` and `<p>` elements. You may use any other semantic element that best fits the context.
+For accessibility reasons, any informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside of `<h2>` or `<p>` elements. The input tags are implemented as `<button>` elements. You may use any semantic element that best fits the context.
 
-Visually impaired and blind users will lack the visual context that permits to understand the tags purpose on the page if tags' labels are not self-explanatory. Thus it's mandatory to add textual information to explain what it represents, especially if the tags are in a list.
+Keep in mind that visually impaired and blind users will lack the visual context (color for instance) that permits to understand the tags purpose on the page, if tags' labels are not self-explanatory. In thas case, it's mandatory to add textual information to explain what it represents, especially if the tags are in a list.
 
-*For tags lists: add a semantically informative text to describe the tags' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added.
+*For tag and input tag lists: add a semantically informative text to describe the list purpose* if possible, otherwise an `aria-label` on the containing `<ul>` or `<ol>` must be added.
 
 Several examples are provided below but they will need to be adapted for actual use cases.
 
 ## Tag
 
+A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content. Tags can include icons or bullets.
+
 ### Overview
 
-<Callout type="warning">
-Tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a semantically informative text to describe the tags' list purpose*, otherwise an `aria-label` must be added to the container to explain the function of the tags, [more information here](#accessibility).
-</Callout>
+<Callout type="warning" name="warning-tag-lists-accessibility" />
 
 <Example buttonLabel="default tags" code={`<ul class="list-unstyled d-flex column-gap-xsmall" aria-label="Mobile coverage">
     <li class="tag">Roaming</li>
@@ -84,217 +83,231 @@ Tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`).
   </ul>`
 } />
 
-OUDS Web [color and background utilities]([[docsref:/helpers/color-background]]) can be applied to display colored tag variants. Colors are classified in two hierarchies, emphasized (for key tags) or muted (for secondary tags), and each color has its own semantic purpose. Please follow the tag design guidelines to choose the right color for the right usage.
-
-<Callout type="warning">
-Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`.
-</Callout>
-
-<Example buttonLabel="colored tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Muted colors">
-    <li class="tag text-bg-status-neutral-muted">Neutral</li>
-    <li class="tag text-bg-status-accent-muted">Accent</li>
-    <li class="tag text-bg-status-positive-muted">Positive</li>
-    <li class="tag text-bg-status-info-muted">Info</li>
-    <li class="tag text-bg-status-warning-muted">Warning</li>
-    <li class="tag text-bg-status-negative-muted">Negative</li>
-  </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Emphasized colors">
-    <li class="tag text-bg-status-neutral-emphasized">Neutral</li>
-    <li class="tag text-bg-status-accent-emphasized">Accent</li>
-    <li class="tag text-bg-status-positive-emphasized">Positive</li>
-    <li class="tag text-bg-status-info-emphasized">Info</li>
-    <li class="tag text-bg-status-warning-emphasized">Warning</li>
-    <li class="tag text-bg-status-negative-emphasized">Negative</li>
-  </ul>`} />
-
 ### Variants
 
-#### Squared
+#### Status and appearance
 
-To display tags with squared corners, add the `.rounded-none` utility class to the tag.
+Tags have status depending on the context of the information they represent. Each state is designed to convey a specific meaning and ensure clarity in communication. Their appearance can be emphasized (by default, for key tags) or muted (by adding `.tag-muted`, for secondary tags).
 
-<Example buttonLabel="squared tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Keywords">
-    <li class="tag rounded-none text-bg-status-accent-muted">Accent muted</li>
-    <li class="tag rounded-none text-bg-status-accent-emphasized">Accent emphasized</li>
-  </ul>`} />
+##### Non-functional
 
-#### Bullet
+Non-functional tags are used to display categories, default states, or to draw attention without carrying a specific functional meaning (unlike functional tags, see juste below).
 
-To add a colored bullet in the tag, add `<span class="tag-bullet"></span>`.
-
-<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Muted bullet tag examples">
-    <li class="tag text-bg-status-neutral-muted">
-      <span class="tag-bullet"></span>
-      Neutral
-    </li>
-    <li class="tag text-bg-status-accent-muted">
-      <span class="tag-bullet"></span>
-      Accent
-    </li>
-    <li class="tag text-bg-status-positive-muted">
-      <span class="tag-bullet"></span>
-      Positive
-    </li>
-    <li class="tag text-bg-status-info-muted">
-      <span class="tag-bullet"></span>
-      Info
-    </li>
-    <li class="tag text-bg-status-warning-muted">
-      <span class="tag-bullet"></span>
-      Warning
-    </li>
-    <li class="tag text-bg-status-negative-muted">
-      <span class="tag-bullet"></span>
-      Negative
-    </li>
+<Example buttonLabel="non-functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized tags (default)">
+    <li class="tag">Neutral emphasized (default)</li>
+    <li class="tag tag-accent">Accent emphasized</li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Emphasized bullet tag examples">
-    <li class="tag text-bg-status-neutral-emphasized">
-      <span class="tag-bullet"></span>
-      Neutral
-    </li>
-    <li class="tag text-bg-status-accent-emphasized">
-      <span class="tag-bullet"></span>
-      Accent
-    </li>
-    <li class="tag text-bg-status-positive-emphasized">
-      <span class="tag-bullet"></span>
-      Positive
-    </li>
-    <li class="tag text-bg-status-info-emphasized">
-      <span class="tag-bullet"></span>
-      Info
-    </li>
-    <li class="tag text-bg-status-warning-emphasized">
-      <span class="tag-bullet"></span>
-      Warning
-    </li>
-    <li class="tag text-bg-status-negative-emphasized">
-      <span class="tag-bullet"></span>
-      Negative
-    </li>
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional muted tags">
+    <li class="tag tag-muted">Neutral muted</li>
+    <li class="tag tag-accent tag-muted">Accent muted</li>
   </ul>`} />
-
-<Example buttonLabel="bullet tags" showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="...">
-    ...
-    <li class="tag text-bg-status-neutral-muted">
-      <span class="tag-bullet"></span>
-      Neutral muted
-    </li>
-    ...
-    <li class="tag text-bg-status-accent-emphasized">
-      <span class="tag-bullet"></span>
-      Neutral emphasized
-    </li>
-  </ul>`} />
-
-#### Tag status
 
 ##### Functional
 
-Status icons are predefined in SCSS for positive, info, warning and negative functional statuses. To display a status icon, just add `.tag-status-icon` inside the tag, the icon will change depending on the text utility used.
+Functional tags communicate specific statuses or system feedback (e.g., success, warning, error, information). Please follow the tag design guidelines to choose the right color for the right usage.
 
 <Callout type="warning">
-If the functional meaning of the text is not sufficiently clear, add additional text with the `.visually-hidden` class to ensure accessibility for all users.
+  Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
-<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional muted statuses">
-    <li class="tag text-bg-status-positive-muted">
+<Example buttonLabel="functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized tags (default)">
+    <li class="tag tag-positive">Positive emphasized</li>
+    <li class="tag tag-info">Info emphasized</li>
+    <li class="tag tag-warning">Warning emphasized</li>
+    <li class="tag tag-negative">Negative emphasized</li>
+  </ul>
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional muted tags">
+    <li class="tag tag-positive tag-muted">Positive muted</li>
+    <li class="tag tag-info tag-muted">Info muted</li>
+    <li class="tag tag-warning tag-muted">Warning muted</li>
+    <li class="tag tag-negative tag-muted">Negative muted</li>
+  </ul>`} />
+
+
+#### Icon
+
+##### Non-functional
+
+To display a colored icon in non-functional tags, add the icon inside the tag, with a `.tag-icon` class.
+
+<Callout type="info" name="info-icons-svg-sprite" />
+
+<Callout type="warning">
+  Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
+</Callout>
+
+<Example  buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized icons">
+    <li class="tag">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Neutral emphasized (default)
+    </li>
+    <li class="tag tag-accent">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Accent emphasized
+    </li>
+  </ul>
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional muted icons">
+    <li class="tag tag-muted">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Neutral muted
+    </li>
+    <li class="tag tag-accent tag-muted">
+      <svg aria-hidden="true" class="tag-icon">
+        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
+      </svg>
+      Accent muted
+    </li>
+  </ul>
+  <p class="tag">
+    <span class="si-settings tag-icon" aria-hidden="true"></span>
+    Settings
+  </p>`} />
+
+##### Functional
+
+As functional tags communicate specific statuses, each status must always be paired with its dedicated functional icon that matches the meaning of the tag, and other icons must not be used. To display a status icon, just add `.tag-status-icon` inside the tag.
+
+<Callout type="warning">
+  If the functional meaning of the text is not sufficiently clear, add an additional text with the `.visually-hidden` class to ensure accessibility for all users.
+</Callout>
+
+<Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized icons">
+    <li class="tag tag-positive">
       <span class="tag-status-icon"></span>
       Activated
     </li>
-    <li class="tag text-bg-status-info-muted">
+    <li class="tag tag-info">
       <span class="tag-status-icon"></span>
       Coming soon
     </li>
-    <li class="tag text-bg-status-warning-muted">
+    <li class="tag tag-warning">
       <span class="tag-status-icon"></span>
       Under maintenance
     </li>
-    <li class="tag text-bg-status-negative-muted">
+    <li class="tag tag-negative">
       <span class="tag-status-icon"></span>
       Error
     </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized statuses">
-    <li class="tag text-bg-status-positive-emphasized">
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional muted icons">
+    <li class="tag tag-positive tag-muted">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Success</span>
       Tested
     </li>
-    <li class="tag text-bg-status-info-emphasized">
+    <li class="tag tag-info tag-muted">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Info</span>
       Manually tested
     </li>
-    <li class="tag text-bg-status-warning-emphasized">
+    <li class="tag tag-warning tag-muted">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Caution</span>
       Not tested
     </li>
-    <li class="tag text-bg-status-negative-emphasized">
+    <li class="tag tag-negative tag-muted">
       <span class="tag-status-icon"></span>
       <span class="visually-hidden">Error</span>
       Tested
     </li>
   </ul>`} />
 
-In case you need to use a different icon than the predefined ones, you can configure your own icons by overriding the custom properties (CSS variables) `--bs-tag-positive-icon`, `--bs-tag-info-icon` `--bs-tag-warning-icon` and `--bs-tag-error-icon`.
+#### Bullet
 
-##### Non-functional
+To add a colored bullet in the tag, add a `<span>` with a class `.tag-bullet` inside the tag.
 
-<Callout type="info" name="info-icons-svg-sprite" />
-
-To display a colored icon, add the icon inside the tag, with a `.tag-icon` class.
-
-<Callout type="warning">
-Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
-</Callout>
-
-<Example  buttonLabel="non-functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional muted statuses">
-    <li class="tag text-bg-status-neutral-muted">
-      <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
-      </svg>
+<Example showMarkup={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Emphasized bullet tag examples">
+    <li class="tag">
+      <span class="tag-bullet"></span>
       Neutral
     </li>
-    <li class="tag text-bg-status-accent-muted">
-      <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
-      </svg>
+    <li class="tag tag-accent">
+      <span class="tag-bullet"></span>
       Accent
     </li>
+    <li class="tag tag-positive">
+      <span class="tag-bullet"></span>
+      Positive
+    </li>
+    <li class="tag tag-info">
+      <span class="tag-bullet"></span>
+      Info
+    </li>
+    <li class="tag tag-warning">
+      <span class="tag-bullet"></span>
+      Warning
+    </li>
+    <li class="tag tag-negative">
+      <span class="tag-bullet"></span>
+      Negative
+    </li>
   </ul>
-  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized statuses">
-    <li class="tag text-bg-status-neutral-emphasized">
-      <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
-      </svg>
+  <ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Emphasized bullet tag examples">
+    <li class="tag tag-muted">
+      <span class="tag-bullet"></span>
       Neutral
     </li>
-    <li class="tag text-bg-status-accent-emphasized">
-      <svg aria-hidden="true" class="tag-icon">
-        <use xlink:href=${getVersionedDocsPath('assets/img/ouds-web-sprite.svg#heart-empty')} />
-      </svg>
+    <li class="tag tag-accent tag-muted">
+      <span class="tag-bullet"></span>
       Accent
     </li>
-  </ul>
-  <p class="tag text-bg-status-accent-muted">
-    <span class="si-settings tag-icon" aria-hidden="true"></span>
-    Settings
-  </p>`} />
+    <li class="tag tag-positive tag-muted">
+      <span class="tag-bullet"></span>
+      Positive
+    </li>
+    <li class="tag tag-info tag-muted">
+      <span class="tag-bullet"></span>
+      Info
+    </li>
+    <li class="tag tag-warning tag-muted">
+      <span class="tag-bullet"></span>
+      Warning
+    </li>
+    <li class="tag tag-negative tag-muted">
+      <span class="tag-bullet"></span>
+      Negative
+    </li>
+  </ul>`} />
+
+  <Example buttonLabel="bullet tags" showPreview={false} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Bullet tag examples">
+    ...
+    <li class="tag">
+      <span class="tag-bullet"></span>
+      Neutral
+    </li>
+    ...
+    <li class="tag tag-accent tag-muted">
+      <span class="tag-bullet"></span>
+      Accent
+    </li>
+  </ul>`} />
+
+#### Rounded corner
+
+By default, tags have rounded corners. To display tags with squared corners, add the `.rounded-none` utility class to the tag.
+
+<Example buttonLabel="squared tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Keywords">
+    <li class="tag tag-accent rounded-none">Squared accent emphasized</li>
+    <li class="tag tag-info tag-muted rounded-none">Squared info muted</li>
+  </ul>`} />
 
 ### States
 
 #### Disabled
 
-The disabled tag should only be used in a disabled context, inside an interactive element that has been disabled, such as a card. If the tag has been added a `.disabled` class, or is inside an element with a `.disabled` class it will look dimmed, whatever the text utility you used.
+The disabled tag should only be used in a disabled context, inside an interactive element that has been disabled, such as a clickable card. If the tag has been added a `.disabled` class, or is inside an element with a `.disabled` class it will look dimmed, whatever its status or appearance.
 
 <Example buttonLabel="disabled tags" showMarkup={true} code={`<div class="disabled mb-medium">
-    <p><span class="tag text-bg-status-accent-emphasized">Disabled</span> Some text</p>
+    <p><span class="tag tag-accent">Disabled</span> Some text</p>
   </div>
-  <p class="disabled"><span class="tag text-bg-status-accent-emphasized">Disabled</span> Some text</p>
-  <p><span class="tag text-bg-status-accent-emphasized disabled">Disabled</span> Some text</p>`} />
+  <p class="disabled"><span class="tag tag-accent">Disabled</span> Some text</p>
+  <p><span class="tag tag-accent disabled">Disabled</span> Some text</p>`} />
 
 #### Loading
 
@@ -306,7 +319,7 @@ To make an animated loading state tag, you will add in your standard tag:
 
 For example, before loading, your tag could be like this:
 
-  <Example buttonLabel="loading tag" code={`<p class="tag text-bg-status-accent-emphasized">
+  <Example buttonLabel="loading tag" code={`<p class="tag tag-accent">
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
       <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
     </svg>
@@ -325,7 +338,7 @@ At the end of the loading, you should:
 
 You can see a similar live example with buttons with the full JavaScript code on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 
-<Example buttonLabel="currently loading tag" code={`<p class="tag text-bg-status-accent-emphasized loading">
+<Example buttonLabel="currently loading tag" code={`<p class="tag tag-accent loading">
     <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
       <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
     </svg>
@@ -335,7 +348,7 @@ You can see a similar live example with buttons with the full JavaScript code on
 
 ### Sizes
 
-To display a small tag, add the class `.tag-sm` to the tag.
+To display a small tag, add the class `.tag-small` to the tag.
 
 <Example buttonLabel="small tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Mobile coverage">
     <li class="tag tag-small">Small neutral</li>
@@ -349,7 +362,11 @@ To display a small tag, add the class `.tag-sm` to the tag.
       </svg>
       5G Ready
     </li>
-    <li class="tag text-bg-status-accent-emphasized tag-small loading">
+    <li class="tag tag-small">
+        <span class="si-settings tag-icon" aria-hidden="true"></span>
+        Settings
+    </li>
+    <li class="tag tag-accent tag-small loading">
       <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="tag-loader" aria-hidden="true">
         <circle class="tag-loader-inner" cx="20" cy="20" r="15"></circle>
       </svg>
@@ -389,6 +406,8 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
 
 ## Input tag
 
+A input tag is a component that allows users to enter multiple values, each represented as a tag. As users type and submit values (usually by pressing enter, comma, or tab), each value is transformed into a tag. Input tags are often used for adding labels, categories, or participants. They typically support removing individual tags.
+
 ### Overview
 
 <Callout type="warning">
@@ -399,9 +418,7 @@ Input tags are interactive and may be associated to an input field to be added d
 
 It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
-<Callout type="warning">
-Input tags lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a semantically informative text to describe the tags' list purpose*, otherwise an `aria-label` must be added to the container to explain the function of the tags, [more information here](#accessibility).
-</Callout>
+<Callout type="warning" name="warning-tag-lists-accessibility" />
 
 <Callout type="warning">
 Each input tag should contain a `.visually-hidden` text *after the button text* to indicate the action that will be performed when the tag is clicked.
