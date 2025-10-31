@@ -50,7 +50,7 @@ jobs:
         run: npm run docs-prettier-check
 
       - name: Run linkinator
-        uses: JustinBeckwith/linkinator-action@3d5ba091319fa7b0ac14703761eebb7d100e6f6d # v1.11.0
+        uses: JustinBeckwith/linkinator-action@af984b9f30f63e796ae2ea5be5e07cb587f1bbd9 # v2.3
         with:
           paths: _site
           recurse: true
