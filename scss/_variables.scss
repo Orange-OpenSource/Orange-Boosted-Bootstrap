@@ -931,16 +931,15 @@ $btn-icon-padding-x:          subtract($ouds-button-space-padding-inline-icon-st
 // Forms
 
 // scss-docs-start form-text-variables
-$form-text-margin-top:                  $ouds-text-input-space-padding-block-top-helper-text !default; // OUDS mod
+$form-text-margin-top:                  $ouds-text-input-space-padding-block-top-helper-text !default; // OUDS mod: instead of `.25rem !default`
 $form-text-font-size:                   null !default; // OUDS mod: instead of `$small-font-size`
 // OUDS mod: no $form-text-font-style:                  null !default;
 // OUDS mod: no $form-text-font-weight:                 null !default;
-// OUDS mod: no $form-text-line-height:                 $line-height-sm !default; // OUDS mod
-$form-text-color:                       var(--#{$prefix}color-content-muted) !default; // OUDS mod
+$form-text-color:                       var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color) !default`
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
-$form-label-margin-bottom:              .5rem !default; // OUDS mod
+$form-label-margin-bottom:              .5rem !default;
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
@@ -959,8 +958,8 @@ $form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($for
 // scss-docs-end form-helper-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y:                       $ouds-text-input-space-padding-block-default !default; // OUDS mod
-$input-padding-x:                       $ouds-text-input-space-padding-inline-default !default; // OUDS mod
+$input-padding-y:                       $ouds-text-input-space-padding-block-default !default; // OUDS mod: instead of `$input-btn-padding-y !default`;
+$input-padding-x:                       $ouds-text-input-space-padding-inline-default !default; // OUDS mod: instead of `$input-btn-padding-x !default`;
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
 $input-font-weight:                     $font-weight-bold !default;
@@ -974,19 +973,19 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}color-action-support-enabled) !default; // OUDS mod
-$input-disabled-color:                  var(--#{$prefix}color-action-disabled) !default; // OUDS mod
-$input-disabled-bg:                     var(--#{$prefix}color-action-support-disabled) !default; // OUDS mod
-$input-disabled-border-color:           var(--#{$prefix}color-action-disabled) !default; // OUDS mod
+$input-bg:                              var(--#{$prefix}color-action-support-enabled) !default; // OUDS mod: instead of `var(--#{$prefix}input-bg) !default`
+$input-disabled-color:                  var(--#{$prefix}color-action-disabled) !default; // OUDS mod: instead of `null !default`
+$input-disabled-bg:                     var(--#{$prefix}color-action-support-disabled) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-bg) !default`
+$input-disabled-border-color:           var(--#{$prefix}color-action-disabled) !default; // OUDS mod: instead of `null !default`
 
-$input-color:                           var(--#{$prefix}color-content-default) !default; // OUDS mod
-$input-border-color:                    $ouds-text-input-color-border-enabled !default; // OUDS mod
-$input-border-width:                    $ouds-text-input-border-width-default !default; // OUDS mod
-$input-box-shadow:                      none !default; // OUDS mod
+$input-color:                           var(--#{$prefix}color-content-default) !default; // OUDS mod: instead of `var(--#{$prefix}body-color) !default`
+$input-border-color:                    $ouds-text-input-color-border-enabled !default; // OUDS mod: instead of `var(--#{$prefix}border-color) !default`
+$input-border-width:                    $ouds-text-input-border-width-default !default; // OUDS mod: instead of `$input-btn-border-width !default`
+$input-box-shadow:                      none !default; // OUDS mod: instead of `var(--#{$prefix}box-shadow-inset) !default`
 
-$input-border-radius:                   $ouds-text-input-border-radius-default !default; // OUDS mod
-$input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
-$input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
+$input-border-radius:                   $ouds-text-input-border-radius-default !default; // OUDS mod: instead of `var(--#{$prefix}border-radius) !default`
+$input-border-radius-sm:                $ouds-text-input-border-radius-default !default; // OUDS mod: instead of `var(--#{$prefix}border-radius-sm) !default`
+$input-border-radius-lg:                $ouds-text-input-border-radius-default !default; // OUDS mod: instead of `var(--#{$prefix}border-radius-lg) !default`
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              currentcolor !default;
@@ -994,7 +993,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // OUDS mod
 
-$input-placeholder-color:               var(--#{$prefix}color-content-muted) !default; // OUDS mod
+$input-placeholder-color:               var(--#{$prefix}color-content-muted) !default; // OUDS mod: instead of `var(--#{$prefix}secondary-color) !default`
 $input-plaintext-color:                 null !default; // OUDS mod: instead of `var(--#{$prefix}body-color)`
 
 // OUDS mod: no $input-height-border
@@ -1008,7 +1007,7 @@ $input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  var(--#{$prefix}font-line-height-body-large) !default; // OUDS mod
 
-$input-transition:                      none !default; // OUDS mod
+$input-transition:                      none !default; // OUDS mod: instead of `border-color .15s ease-in-out, box-shadow .15s ease-in-out !default`
 
 $form-color-width:                      2.5rem !default; // OUDS mod: instead of `3rem`
 $form-color-border-color:               var(--#{$prefix}emphasis-color) !default; // OUDS mod
