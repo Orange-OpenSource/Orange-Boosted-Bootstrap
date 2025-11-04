@@ -3,7 +3,7 @@
   @if $color-mode-type == "media-query" {
     @if $root == true {
       @media (prefers-color-scheme: $mode) {
-        :root {
+        #{$root-selector} {
           @content;
         }
       }
@@ -11,6 +11,11 @@
       @media (prefers-color-scheme: $mode) {
         @content;
       }
+    }
+  } @else if $root == true and $mode == light {
+    #{$root-selector},
+    [data-bs-theme="#{$mode}"] {
+      @content;
     }
   } @else {
     [data-bs-theme="#{$mode}"] {

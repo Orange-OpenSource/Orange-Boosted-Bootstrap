@@ -1,5 +1,5 @@
 // stylelint-disable selector-max-id
-:root {
+#{$root-selector} { // Boosted mod: instead of `:root`
   scroll-padding-top: $offset-top * .5;
 
   @include media-breakpoint-up(lg) {

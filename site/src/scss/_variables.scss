@@ -11,7 +11,7 @@ $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-
 $bd-gutter-x: .625rem; // Boosted mod
 $bd-callout-variants: info, warning, danger !default;
 
-:root,
+#{$root-selector}, // Boosted mod: instead of `:root`
 [data-bs-theme="light"] {
   --bd-primary-light: #{$bd-primary-light}; // Boosted mod
   // Boosted mod: no --bd-purple
