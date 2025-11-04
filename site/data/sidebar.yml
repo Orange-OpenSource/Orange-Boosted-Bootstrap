@@ -22,6 +22,8 @@
     - title: RTL
       draft: true
     - title: Contribute
+    - title: Versioning
+      draft: true
 
 - title: Customize
   icon: palette2

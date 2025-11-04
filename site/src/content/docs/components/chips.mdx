@@ -6,6 +6,9 @@ aliases:
   - "/docs/components/chip/"
   - "/docs/[[config:docs_version]]/components/chip/"
 toc: true
+types:
+  - Filter chip
+  - Suggestion chip
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -59,7 +62,7 @@ Chip components are always displayed in a containing list with a `ul.chip-contai
 
 ### Accessibility
 
-Visually impaired and blind users will lack the visual context that permits to understand the chips list purpose on the page especially if chips' labels are not self-explanatory. Thus it's mandatory to *add a semantically informative title to describe the chips' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added. To improve accessibility and denote the chips' list uniqueness of purpose, it's possible to add `role=group` on a parent container (but not the `ul` as it would not work).
+Visually impaired and blind users will lack the visual context that permits to understand the chips list purpose on the page especially if chips' labels are not self-explanatory. Thus it's mandatory to *add a semantically informative title to describe the chips' list purpose* if possible, otherwise an `aria-label` on the containing `ul` must be added. To improve accessibility and denote the chips' list uniqueness of purpose, it's possible to add `role=group` on a parent container (but not the `ul` as it would lose its semantics).
 
 Several examples are provided below but they will need to be adapted for actual use cases.
 
