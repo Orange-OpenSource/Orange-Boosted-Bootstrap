@@ -85,8 +85,8 @@ $utilities: map-merge(
       class: shadow,
       values: (
         null: var(--#{$prefix}box-shadow),
-        small: var(--#{$prefix}box-shadow-sm),
-        large: var(--#{$prefix}box-shadow-lg),
+        sm: var(--#{$prefix}box-shadow-sm),
+        lg: var(--#{$prefix}box-shadow-lg),
         // OUDS mod: `none` value handled by `shadow-ouds`
       ),
       bootstrap-compatibility: true
