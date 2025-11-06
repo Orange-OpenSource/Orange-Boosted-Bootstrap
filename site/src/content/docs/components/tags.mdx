@@ -391,7 +391,7 @@ A tag can be used near some text or some title (to show status or key details), 
   <p><span class="tag">New</span> Some text</p>
   <p><span class="tag tag-small">New</span> Some text</p>`} />
 
-Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`) and the vertical space (default value is obtained thanks to `.row-gap-md`).
+Tags can be added side by side. They require horizontal and vertical spacing between each other. You can use [flexbox utilities]([[docsref:/utilities/spacing#gap]]) to manage the horizontal space (default value is obtained thanks to `.column-gap-xsmall`) and the vertical space (default value is obtained thanks to `.row-gap-medium`).
 
 <Example buttonLabel="tags list layout" code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xsmall row-gap-medium" aria-label="Keywords">
     <li class="tag">Label 1</li>
@@ -472,7 +472,7 @@ To disable an input tag, just add the `disabled` attribute to the `.tag`.
 
 ### Layout
 
-Input tags are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xs`). Vertical space is automatically created by the extended touch target heights.
+Input tags are typically intended to be added side by side. They require horizontal and vertical spacing between each other. You can use flexbox utilities to manage the horizontal space (default value is obtained thanks to `.column-gap-xsmall`). Vertical space is automatically created by the extended touch target heights.
 
 <Example buttonLabel="input tags layout" code={`<ul class="list-unstyled d-flex flex-wrap col-4 column-gap-xsmall" aria-label="Selected keywords">
     <li><button type="button" class="tag tag-input">Label 1<span class="visually-hidden">Remove this tag</span></button></li>
