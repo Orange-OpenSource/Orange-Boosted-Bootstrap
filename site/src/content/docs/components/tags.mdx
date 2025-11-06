@@ -58,28 +58,41 @@ For both types of tag, OUDS Web has a common basic `.tag` class that sets up def
 
 ### Accessibility
 
+#### Semantics
 For accessibility reasons, any informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside `<h2>` or `<p>` elements. The input tags are implemented as `<button>` elements. You may use any semantic element that best fits the context.
 
-Keep in mind that visually impaired and blind users will lack the visual context (color for instance) that permits to understand the tags purpose on the page, if tags' labels are not self-explanatory. In that case, it's mandatory to add textual information to explain what it represents, especially if the tags are in a list.
+Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a text that semantically describes the purpose of the tags*, otherwise add an `aria-label` to the container that explains the tags' function. [Read more about tags accessibility here](#accessibility).
 
-*For tag and input tag lists: add a semantically informative text to describe the list purpose* if possible, otherwise an `aria-label` on the containing `<ul>` or `<ol>` must be added.
+<Example buttonLabel="tags list with a displayed title"  code={`<div class="d-inline-flex align-items-center">
+    <h4 id="tagsTitle" class="h6 me-small">Mobile coverage: </h4>
+    <div role="group" aria-labelledby="tagsTitle">
+      <ul class="list-unstyled d-flex column-gap-xsmall">
+        <li class="tag">Roaming</li>
+        <li class="tag">5G Ready</li>
+        <li class="tag">4G</li>
+      </ul>
+    </div>
+  </div>
+`} />
 
-Several examples are provided below but they will need to be adapted for actual use cases.
+<Example buttonLabel="tags list with an aria-label" code={`<ul class="list-unstyled d-flex column-gap-xsmall" aria-label="Mobile coverage">
+  <li class="tag">Roaming</li>
+  <li class="tag">5G Ready</li>
+  <li class="tag">4G</li>
+</ul>`
+} />
 
-## Tag
+#### Information for visually impaired users
+
+Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the tags purpose on the page, if tags' labels are not self-explanatory. In that case, it's mandatory to add textual information to explain what it represents, especially if the tags are in a list.
+
+Several examples are provided below, but they will need to be adapted for actual use cases.
+
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Tag
 
 A tag is a small element that shows short info like a label, keyword, or category. It helps users quickly find, group, or understand content. Tags can include icons or bullets.
 
-### Overview
-
 <Callout type="warning" name="warning-tag-lists-accessibility" />
-
-<Example buttonLabel="default tags" code={`<ul class="list-unstyled d-flex column-gap-xsmall" aria-label="Mobile coverage">
-    <li class="tag">Roaming</li>
-    <li class="tag">5G Ready</li>
-    <li class="tag">4G</li>
-  </ul>`
-} />
 
 ### Variants
 
@@ -105,7 +118,7 @@ Non-functional tags are used to display categories, default states, or to draw a
 Functional tags communicate specific statuses or system feedback (e.g., success, warning, error, information). Please follow the tag design guidelines to choose the right color for the right usage.
 
 <Callout type="warning">
-  Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`. [Read more about tags accessibility here](#accessibility).
+  Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, reflect it in the tag's text and if necessary add additional text with the class `.visually-hidden`. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
 <Example buttonLabel="functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized tags (default)">
@@ -120,7 +133,6 @@ Functional tags communicate specific statuses or system feedback (e.g., success,
     <li class="tag tag-warning tag-muted">Warning muted</li>
     <li class="tag tag-negative tag-muted">Negative muted</li>
   </ul>`} />
-
 
 #### Icon
 
@@ -402,19 +414,15 @@ Tags can be added side by side. They require horizontal and vertical spacing bet
     <li class="tag">Label 6</li>
   </ul>`} />
 
-## Input tag
+## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Input tag
 
 A input tag is a component that allows users to enter multiple values, each represented as a tag. As users type and submit values (usually by pressing enter, comma, or tab), each value is transformed into a tag. Input tags are often used for adding labels, categories, or participants. They typically support removing individual tags.
-
-### Overview
 
 <Callout type="warning">
   Please note that all the variants of tag above *must not* be applied on input tag.
 </Callout>
 
-Input tags are interactive and may be associated to an input field to be added dynamically. The input tag should be used on a `<button>`, and can take all the usual states: enabled, hover, pressed, disabled or focused.
-
-It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
+The input tags are implemented as `<button>` elements, and can take all the usual states: enabled, hover, pressed, disabled or focused. It can be removed on click, but you have to implement this behavior by yourself, with some JavaScript specific to your project.
 
 <Callout type="warning" name="warning-tag-lists-accessibility" />
 
