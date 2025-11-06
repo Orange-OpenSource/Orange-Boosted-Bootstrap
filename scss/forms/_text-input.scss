@@ -340,6 +340,7 @@
   .text-input-container ~ .text-input-helper {
     @extend %text-input-message;
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
+    margin-bottom: 0;
     color: var(--#{$prefix}text-input-helper-color);
   }
 
@@ -357,6 +358,7 @@
     @extend %text-input-message;
     display: none;
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
+    margin-bottom: 0;
     color: var(--#{$prefix}text-input-error-color);
   }
 
