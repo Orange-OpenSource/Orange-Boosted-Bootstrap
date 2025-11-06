@@ -132,10 +132,22 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 Trailing actions can be added to the right side of the input field by placing a minimal icon only button (`.btn`, `.btn-minimal` and `.btn-icon`) inside the `.text-input-container`. It can be used to provide actions related to the field: clear input, toggle password visibility, open a date picker, etc.
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-md">
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithAction">Label</label>
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithAction" placeholder="">
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container text-input-container-outlined">
+      <label for="exampleTextInputEmptyWithActionOutlined">Label</label>
+      <input type="email" class="text-input-field" id="exampleTextInputEmptyWithActionOutlined" placeholder="">
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
