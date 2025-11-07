@@ -843,7 +843,8 @@ $utilities: ();
           --bs-color-always-on-black: #eee;
           --bs-color-always-on-white: #000;
           --bs-color-always-white: #fff;
-          --bs-color-bg-emphasized: #141414;
+          --bs-color-bg-inverse-high: #141414;
+          --bs-color-bg-inverse-low: #141414;
           --bs-color-bg-primary: #fff;
           --bs-color-bg-secondary: #f4f4f4;
           --bs-color-bg-tertiary: #f9f5f0;
@@ -854,9 +855,15 @@ $utilities: ();
           --bs-color-border-focus: #000;
           --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
+          --bs-color-border-status-accent: #ff7900;
+          --bs-color-border-status-info: #0073b2;
+          --bs-color-border-status-negative: #db0002;
+          --bs-color-border-status-positive: #138126;
+          --bs-color-border-status-warning: #ffd000;
           --bs-color-content-brand-primary: #f15e00;
           --bs-color-content-default: #000;
           --bs-color-content-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-content-inverse: #fff;
           --bs-color-content-muted: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #fff;
           --bs-color-content-on-action-enabled: #fff;
@@ -867,87 +874,49 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-action-selected: #fff;
           --bs-color-content-on-brand-primary: #000;
-          --bs-color-content-on-overlay-emphasized: #fff;
           --bs-color-content-on-status-accent-emphasized: #000;
           --bs-color-content-on-status-accent-muted: #000;
-          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-emphasized: #fff;
           --bs-color-content-on-status-info-muted: #000;
           --bs-color-content-on-status-negative-emphasized: #fff;
           --bs-color-content-on-status-negative-muted: #000;
-          --bs-color-content-on-status-neutral-emphasized: #fff;
-          --bs-color-content-on-status-neutral-muted: #000;
-          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-emphasized: #fff;
           --bs-color-content-on-status-positive-muted: #000;
           --bs-color-content-on-status-warning-emphasized: #000;
           --bs-color-content-on-status-warning-muted: #000;
           --bs-color-content-status-accent: #ff7900;
-          --bs-color-content-status-info: #26b2ff;
+          --bs-color-content-status-info: #0073b2;
           --bs-color-content-status-negative: #db0002;
-          --bs-color-content-status-positive: #3de35a;
-          --bs-color-content-status-warning: #ffd000;
-          --bs-color-decorative-accent-1-default: #50be87;
-          --bs-color-decorative-accent-1-emphasized: #2e7b54;
-          --bs-color-decorative-accent-1-muted: #c0e8d4;
-          --bs-color-decorative-accent-2-default: #4ab4e6;
-          --bs-color-decorative-accent-2-emphasized: #136186;
-          --bs-color-decorative-accent-2-muted: #a5daf3;
-          --bs-color-decorative-accent-3-default: #ffd000;
-          --bs-color-decorative-accent-3-emphasized: #ffb400;
-          --bs-color-decorative-accent-3-muted: #ffed99;
-          --bs-color-decorative-accent-4-default: #a885d8;
-          --bs-color-decorative-accent-4-emphasized: #2c174a;
-          --bs-color-decorative-accent-4-muted: #e0d4f2;
-          --bs-color-decorative-accent-5-default: #ffb4e6;
-          --bs-color-decorative-accent-5-emphasized: #ff80d4;
-          --bs-color-decorative-accent-5-muted: #ffe5f6;
-          --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #000;
-          --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-emphasized-higher: #333;
-          --bs-color-decorative-neutral-emphasized-low: #555;
-          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
-          --bs-color-decorative-neutral-emphasized-lowest: #666;
-          --bs-color-decorative-neutral-muted-high: #ccc;
-          --bs-color-decorative-neutral-muted-higher: #999;
-          --bs-color-decorative-neutral-muted-highest: #858585;
-          --bs-color-decorative-neutral-muted-low: #e0e0e0;
-          --bs-color-decorative-neutral-muted-lower: #eee;
-          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
-          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
-          --bs-color-decorative-skin-tint-100: #fbebdf;
-          --bs-color-decorative-skin-tint-200: #f4cfb2;
-          --bs-color-decorative-skin-tint-300: #e3b591;
-          --bs-color-decorative-skin-tint-400: #c19372;
-          --bs-color-decorative-skin-tint-500: #cf7e3f;
-          --bs-color-decorative-skin-tint-600: #aa6631;
-          --bs-color-decorative-skin-tint-700: #7e4f2a;
-          --bs-color-decorative-skin-tint-800: #553720;
-          --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-content-status-positive: #138126;
+          --bs-color-content-status-warning: #856a00;
           --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
-          --bs-color-overlay-default: #fff;
           --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #272727;
+          --bs-color-overlay-dropdown: #fff;
           --bs-color-overlay-modal: #fff;
+          --bs-color-overlay-tooltip: #272727;
           --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-inverse-high: #272727;
+          --bs-color-surface-inverse-low: #272727;
+          --bs-color-surface-primary: #fff;
+          --bs-color-surface-secondary: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-accent-emphasized: #ff7900;
           --bs-color-surface-status-accent-muted: rgba(189, 121, 60, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-info-emphasized: #26b2ff;
+          --bs-color-surface-status-info-emphasized: #0073b2;
           --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #db0002;
-          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #3de35a;
+          --bs-color-surface-status-negative-muted: rgba(219, 0, 2, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #138126;
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-tertiary: rgba(189, 121, 60, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
@@ -975,10 +944,11 @@ $utilities: ();
           --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
-          --bs-color-bg-emphasized: #333;
+          --bs-color-bg-inverse-high: #eee;
+          --bs-color-bg-inverse-low: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #23211a;
+          --bs-color-bg-tertiary: #353228;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
@@ -986,9 +956,15 @@ $utilities: ();
           --bs-color-border-focus-inset: #141414;
           --bs-color-border-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
+          --bs-color-border-status-accent: #ff7900;
+          --bs-color-border-status-info: #8ad5ff;
+          --bs-color-border-status-negative: #ff8081;
+          --bs-color-border-status-positive: #94f0a4;
+          --bs-color-border-status-warning: #ffe270;
           --bs-color-content-brand-primary: #ff7900;
           --bs-color-content-default: #eee;
           --bs-color-content-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-content-inverse: #000;
           --bs-color-content-muted: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #000;
           --bs-color-content-on-action-enabled: #000;
@@ -999,15 +975,12 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-action-selected: #000;
           --bs-color-content-on-brand-primary: #000;
-          --bs-color-content-on-overlay-emphasized: #000;
           --bs-color-content-on-status-accent-emphasized: #000;
           --bs-color-content-on-status-accent-muted: #eee;
           --bs-color-content-on-status-info-emphasized: #000;
           --bs-color-content-on-status-info-muted: #eee;
           --bs-color-content-on-status-negative-emphasized: #000;
           --bs-color-content-on-status-negative-muted: #eee;
-          --bs-color-content-on-status-neutral-emphasized: #000;
-          --bs-color-content-on-status-neutral-muted: #eee;
           --bs-color-content-on-status-positive-emphasized: #000;
           --bs-color-content-on-status-positive-muted: #eee;
           --bs-color-content-on-status-warning-emphasized: #000;
@@ -1020,29 +993,41 @@ $utilities: ();
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
-          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #eee;
+          --bs-color-overlay-drag: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-dropdown: #3b3b3b;
           --bs-color-overlay-modal: #333;
+          --bs-color-overlay-tooltip: #3b3b3b;
           --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-inverse-high: #eee;
+          --bs-color-surface-inverse-low: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-primary: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-secondary: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-accent-emphasized: #ff7900;
-          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-accent-muted: rgba(104, 93, 80, 0.4); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-info-emphasized: #8ad5ff;
-          --bs-color-surface-status-info-muted: #003857;
+          --bs-color-surface-status-info-muted: rgba(0, 89, 138, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #ff8081;
-          --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-negative-muted: rgba(219, 0, 2, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-positive-emphasized: #94f0a4;
-          --bs-color-surface-status-positive-muted: #0a4715;
+          --bs-color-surface-status-positive-muted: rgba(14, 98, 29, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffe270;
-          --bs-color-surface-status-warning-muted: #3d3100;
+          --bs-color-surface-status-warning-muted: rgba(102, 81, 0, 0.48); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-tertiary: rgba(104, 93, 80, 0.4); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-default: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         :root,
         [data-bs-theme="light"],
         :root[data-bs-theme="light"] [data-bs-theme="root"],
         :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
+          --bs-button-color-bg-brand-pressed: #000;
+          --bs-button-color-bg-brand-loading: #000;
+          --bs-button-color-content-brand-pressed: #fff;
+          --bs-button-color-content-brand-loading: #fff;
           --bs-button-mono-color-bg-default-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-pressed: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-loading: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
@@ -1062,18 +1047,18 @@ $utilities: ();
           --bs-button-mono-color-content-default-loading: #000;
           --bs-button-mono-color-content-default-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-default-focus: #fff;
-          --bs-button-mono-color-content-strong-enabled: #fff;
-          --bs-button-mono-color-content-strong-hover: #fff;
-          --bs-button-mono-color-content-strong-pressed: #000;
-          --bs-button-mono-color-content-strong-loading: #000;
-          --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-mono-color-content-strong-focus: #fff;
           --bs-button-mono-color-content-minimal-enabled: #000;
           --bs-button-mono-color-content-minimal-hover: #fff;
           --bs-button-mono-color-content-minimal-pressed: #000;
           --bs-button-mono-color-content-minimal-loading: #000;
           --bs-button-mono-color-content-minimal-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-minimal-focus: #fff;
+          --bs-button-mono-color-content-strong-enabled: #fff;
+          --bs-button-mono-color-content-strong-hover: #fff;
+          --bs-button-mono-color-content-strong-pressed: #000;
+          --bs-button-mono-color-content-strong-loading: #000;
+          --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-button-mono-color-content-strong-focus: #fff;
           --bs-button-mono-color-border-default-enabled: #000;
           --bs-button-mono-color-border-default-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-enabled: #000;
@@ -1082,17 +1067,22 @@ $utilities: ();
           --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-focus: #000;
           --bs-switch-color-cursor: #fff;
-          --bs-switch-color-track-selected: #3de35a;
-          --bs-switch-color-track-selected-interaction: #1ecd3c;
+          --bs-switch-color-track-selected: #17a02f;
+          --bs-switch-color-track-selected-interaction: #138126;
           --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-social-color-content-focus: #fff;
+          --bs-icon-color-content-status-warning-external-shape: #ffd000;
+          --bs-icon-color-content-status-warning-internal-shape: #856a00;
         }
 
         [data-bs-theme="dark"],
         :root[data-bs-theme="dark"],
         :root[data-bs-theme="dark"] [data-bs-theme="root"],
         :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
+          --bs-button-color-bg-brand-pressed: #eee;
+          --bs-button-color-bg-brand-loading: #eee;
+          --bs-button-color-content-brand-pressed: #000;
+          --bs-button-color-content-brand-loading: #000;
           --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-pressed: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-loading: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
@@ -1112,18 +1102,18 @@ $utilities: ();
           --bs-button-mono-color-content-default-loading: #fff;
           --bs-button-mono-color-content-default-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-default-focus: #000;
-          --bs-button-mono-color-content-strong-enabled: #000;
-          --bs-button-mono-color-content-strong-hover: #000;
-          --bs-button-mono-color-content-strong-pressed: #fff;
-          --bs-button-mono-color-content-strong-loading: #fff;
-          --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-mono-color-content-strong-focus: #000;
           --bs-button-mono-color-content-minimal-enabled: #fff;
           --bs-button-mono-color-content-minimal-hover: #000;
           --bs-button-mono-color-content-minimal-pressed: #fff;
           --bs-button-mono-color-content-minimal-loading: #fff;
           --bs-button-mono-color-content-minimal-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-minimal-focus: #000;
+          --bs-button-mono-color-content-strong-enabled: #000;
+          --bs-button-mono-color-content-strong-hover: #000;
+          --bs-button-mono-color-content-strong-pressed: #fff;
+          --bs-button-mono-color-content-strong-loading: #fff;
+          --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-button-mono-color-content-strong-focus: #000;
           --bs-button-mono-color-border-default-enabled: #fff;
           --bs-button-mono-color-border-default-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-enabled: #fff;
@@ -1136,7 +1126,8 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #94f0a4;
           --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-social-color-content-focus: #000;
+          --bs-icon-color-content-status-warning-external-shape: #ffe270;
+          --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
         }
 
         .opacity-invisible {
@@ -2121,273 +2112,273 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-3xlarge) !important;
         }
 
-        .m-scaled-n3xs {
+        .m-scaled-n3xsmall{
           margin: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n2xs {
+        .m-scaled-n2xsmall{
           margin: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nxs {
+        .m-scaled-nxsmall{
           margin: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nsm {
+        .m-scaled-nsmall {
           margin: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nmd {
+        .m-scaled-nmedium {
           margin: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nlg {
+        .m-scaled-nlarge {
           margin: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nxl {
+        .m-scaled-nxlarge {
           margin: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n2xl {
+        .m-scaled-n2xlarge {
           margin: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n3xl {
+        .m-scaled-n3xlarge {
           margin: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n3xs {
+        .mx-scaled-n3xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n2xs {
+        .mx-scaled-n2xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nxs {
+        .mx-scaled-nxsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nsm {
+        .mx-scaled-nsmall {
           margin-right: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nmd {
+        .mx-scaled-nmedium {
           margin-right: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nlg {
+        .mx-scaled-nlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nxl {
+        .mx-scaled-nxlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n2xl {
+        .mx-scaled-n2xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n3xl {
+        .mx-scaled-n3xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n3xs {
+        .my-scaled-n3xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n2xs {
+        .my-scaled-n2xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nxs {
+        .my-scaled-nxsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nsm {
+        .my-scaled-nsmall {
           margin-top: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nmd {
+        .my-scaled-nmedium {
           margin-top: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nlg {
+        .my-scaled-nlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nxl {
+        .my-scaled-nxlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n2xl {
+        .my-scaled-n2xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n3xl {
+        .my-scaled-n3xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n3xs {
+        .mt-scaled-n3xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n2xs {
+        .mt-scaled-n2xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nxs {
+        .mt-scaled-nxsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nsm {
+        .mt-scaled-nsmall {
           margin-top: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nmd {
+        .mt-scaled-nmedium {
           margin-top: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nlg {
+        .mt-scaled-nlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nxl {
+        .mt-scaled-nxlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n2xl {
+        .mt-scaled-n2xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n3xl {
+        .mt-scaled-n3xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n3xs {
+        .me-scaled-n3xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n2xs {
+        .me-scaled-n2xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nxs {
+        .me-scaled-nxsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nsm {
+        .me-scaled-nsmall {
           margin-right: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nmd {
+        .me-scaled-nmedium {
           margin-right: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nlg {
+        .me-scaled-nlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nxl {
+        .me-scaled-nxlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n2xl {
+        .me-scaled-n2xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n3xl {
+        .me-scaled-n3xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n3xs {
+        .mb-scaled-n3xsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n2xs {
+        .mb-scaled-n2xsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nxs {
+        .mb-scaled-nxsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nsm {
+        .mb-scaled-nsmall {
           margin-bottom: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nmd {
+        .mb-scaled-nmedium {
           margin-bottom: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nlg {
+        .mb-scaled-nlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nxl {
+        .mb-scaled-nxlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n2xl {
+        .mb-scaled-n2xlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n3xl {
+        .mb-scaled-n3xlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n3xs {
+        .ms-scaled-n3xsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n2xs {
+        .ms-scaled-n2xsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nxs {
+        .ms-scaled-nxsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nsm {
+        .ms-scaled-nsmall {
           margin-left: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nmd {
+        .ms-scaled-nmedium {
           margin-left: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nlg {
+        .ms-scaled-nlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nxl {
+        .ms-scaled-nxlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n2xl {
+        .ms-scaled-n2xlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n3xl {
+        .ms-scaled-n3xlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
@@ -3594,7 +3585,7 @@ $utilities: ();
         }
 
         .shadow-emphasized {
-          box-shadow: 0 12px 12px -4px var(--bs-elevation-color-emphasized) !important;
+          box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized) !important;
         }
 
         .shadow-none {
@@ -10822,8 +10813,8 @@ $utilities: ();
             class: shadow,
             values: (
               null: var(--#{$prefix}box-shadow),
-              sm: var(--#{$prefix}box-shadow-small),
-              lg: var(--#{$prefix}box-shadow-large),
+              sm: var(--#{$prefix}box-shadow-sm),
+              lg: var(--#{$prefix}box-shadow-lg),
             ),
             bootstrap-compatibility: true
           ),
@@ -10895,7 +10886,8 @@ $utilities: ();
           --bs-color-always-on-black: #eee;
           --bs-color-always-on-white: #000;
           --bs-color-always-white: #fff;
-          --bs-color-bg-emphasized: #141414;
+          --bs-color-bg-inverse-high: #141414;
+          --bs-color-bg-inverse-low: #141414;
           --bs-color-bg-primary: #fff;
           --bs-color-bg-secondary: #f4f4f4;
           --bs-color-bg-tertiary: #f9f5f0;
@@ -10906,9 +10898,15 @@ $utilities: ();
           --bs-color-border-focus: #000;
           --bs-color-border-muted: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
+          --bs-color-border-status-accent: #ff7900;
+          --bs-color-border-status-info: #0073b2;
+          --bs-color-border-status-negative: #db0002;
+          --bs-color-border-status-positive: #138126;
+          --bs-color-border-status-warning: #ffd000;
           --bs-color-content-brand-primary: #f15e00;
           --bs-color-content-default: #000;
           --bs-color-content-disabled: rgba(0, 0, 0, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-content-inverse: #fff;
           --bs-color-content-muted: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #fff;
           --bs-color-content-on-action-enabled: #fff;
@@ -10919,87 +10917,49 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #fff;
           --bs-color-content-on-action-selected: #fff;
           --bs-color-content-on-brand-primary: #000;
-          --bs-color-content-on-overlay-emphasized: #fff;
           --bs-color-content-on-status-accent-emphasized: #000;
           --bs-color-content-on-status-accent-muted: #000;
-          --bs-color-content-on-status-info-emphasized: #000;
+          --bs-color-content-on-status-info-emphasized: #fff;
           --bs-color-content-on-status-info-muted: #000;
           --bs-color-content-on-status-negative-emphasized: #fff;
           --bs-color-content-on-status-negative-muted: #000;
-          --bs-color-content-on-status-neutral-emphasized: #fff;
-          --bs-color-content-on-status-neutral-muted: #000;
-          --bs-color-content-on-status-positive-emphasized: #000;
+          --bs-color-content-on-status-positive-emphasized: #fff;
           --bs-color-content-on-status-positive-muted: #000;
           --bs-color-content-on-status-warning-emphasized: #000;
           --bs-color-content-on-status-warning-muted: #000;
           --bs-color-content-status-accent: #ff7900;
-          --bs-color-content-status-info: #26b2ff;
+          --bs-color-content-status-info: #0073b2;
           --bs-color-content-status-negative: #db0002;
-          --bs-color-content-status-positive: #3de35a;
-          --bs-color-content-status-warning: #ffd000;
-          --bs-color-decorative-accent-1-default: #50be87;
-          --bs-color-decorative-accent-1-emphasized: #2e7b54;
-          --bs-color-decorative-accent-1-muted: #c0e8d4;
-          --bs-color-decorative-accent-2-default: #4ab4e6;
-          --bs-color-decorative-accent-2-emphasized: #136186;
-          --bs-color-decorative-accent-2-muted: #a5daf3;
-          --bs-color-decorative-accent-3-default: #ffd000;
-          --bs-color-decorative-accent-3-emphasized: #ffb400;
-          --bs-color-decorative-accent-3-muted: #ffed99;
-          --bs-color-decorative-accent-4-default: #a885d8;
-          --bs-color-decorative-accent-4-emphasized: #2c174a;
-          --bs-color-decorative-accent-4-muted: #e0d4f2;
-          --bs-color-decorative-accent-5-default: #ffb4e6;
-          --bs-color-decorative-accent-5-emphasized: #ff80d4;
-          --bs-color-decorative-accent-5-muted: #ffe5f6;
-          --bs-color-decorative-brand-primary: #ff7900;
-          --bs-color-decorative-brand-secondary: #000;
-          --bs-color-decorative-brand-tertiary: #fff;
-          --bs-color-decorative-neutral-emphasized-higher: #333;
-          --bs-color-decorative-neutral-emphasized-low: #555;
-          --bs-color-decorative-neutral-emphasized-lower: #5c5c5c;
-          --bs-color-decorative-neutral-emphasized-lowest: #666;
-          --bs-color-decorative-neutral-muted-high: #ccc;
-          --bs-color-decorative-neutral-muted-higher: #999;
-          --bs-color-decorative-neutral-muted-highest: #858585;
-          --bs-color-decorative-neutral-muted-low: #e0e0e0;
-          --bs-color-decorative-neutral-muted-lower: #eee;
-          --bs-color-decorative-neutral-muted-lowest: #f4f4f4;
-          --bs-color-decorative-neutral-muted-medium: #d6d6d6;
-          --bs-color-decorative-skin-tint-100: #fbebdf;
-          --bs-color-decorative-skin-tint-200: #f4cfb2;
-          --bs-color-decorative-skin-tint-300: #e3b591;
-          --bs-color-decorative-skin-tint-400: #c19372;
-          --bs-color-decorative-skin-tint-500: #cf7e3f;
-          --bs-color-decorative-skin-tint-600: #aa6631;
-          --bs-color-decorative-skin-tint-700: #7e4f2a;
-          --bs-color-decorative-skin-tint-800: #553720;
-          --bs-color-decorative-skin-tint-900: #2e2014;
+          --bs-color-content-status-positive: #138126;
+          --bs-color-content-status-warning: #856a00;
           --bs-color-opacity-lower: rgba(0, 0, 0, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(0, 0, 0, 0);
-          --bs-color-overlay-default: #fff;
           --bs-color-overlay-drag: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #272727;
+          --bs-color-overlay-dropdown: #fff;
           --bs-color-overlay-modal: #fff;
+          --bs-color-overlay-tooltip: #272727;
           --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-inverse-high: #272727;
+          --bs-color-surface-inverse-low: #272727;
+          --bs-color-surface-primary: #fff;
+          --bs-color-surface-secondary: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-accent-emphasized: #ff7900;
           --bs-color-surface-status-accent-muted: rgba(189, 121, 60, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-info-emphasized: #26b2ff;
+          --bs-color-surface-status-info-emphasized: #0073b2;
           --bs-color-surface-status-info-muted: rgba(38, 178, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #db0002;
-          --bs-color-surface-status-negative-muted: rgba(234, 3, 5, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-emphasized: rgba(0, 0, 0, 0.84); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(0, 0, 0, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-positive-emphasized: #3de35a;
+          --bs-color-surface-status-negative-muted: rgba(219, 0, 2, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-positive-emphasized: #138126;
           --bs-color-surface-status-positive-muted: rgba(61, 227, 90, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffd000;
           --bs-color-surface-status-warning-muted: rgba(255, 208, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-tertiary: rgba(189, 121, 60, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-default: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-none: rgba(0, 0, 0, 0);
-          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-elevation-color-sticky: rgba(0, 0, 0, 0.16); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
@@ -11027,10 +10987,11 @@ $utilities: ();
           --bs-color-action-support-loading: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-support-pressed: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-action-visited: #a885d8;
-          --bs-color-bg-emphasized: #333;
+          --bs-color-bg-inverse-high: #eee;
+          --bs-color-bg-inverse-low: #333;
           --bs-color-bg-primary: #141414;
           --bs-color-bg-secondary: #1f1f1f;
-          --bs-color-bg-tertiary: #23211a;
+          --bs-color-bg-tertiary: #353228;
           --bs-color-border-brand-primary: #ff7900;
           --bs-color-border-default: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
@@ -11038,9 +10999,15 @@ $utilities: ();
           --bs-color-border-focus-inset: #141414;
           --bs-color-border-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-border-on-brand-primary: #000;
+          --bs-color-border-status-accent: #ff7900;
+          --bs-color-border-status-info: #8ad5ff;
+          --bs-color-border-status-negative: #ff8081;
+          --bs-color-border-status-positive: #94f0a4;
+          --bs-color-border-status-warning: #ffe270;
           --bs-color-content-brand-primary: #ff7900;
           --bs-color-content-default: #eee;
           --bs-color-content-disabled: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-content-inverse: #000;
           --bs-color-content-muted: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-content-on-action-disabled: #000;
           --bs-color-content-on-action-enabled: #000;
@@ -11051,15 +11018,12 @@ $utilities: ();
           --bs-color-content-on-action-pressed: #000;
           --bs-color-content-on-action-selected: #000;
           --bs-color-content-on-brand-primary: #000;
-          --bs-color-content-on-overlay-emphasized: #000;
           --bs-color-content-on-status-accent-emphasized: #000;
           --bs-color-content-on-status-accent-muted: #eee;
           --bs-color-content-on-status-info-emphasized: #000;
           --bs-color-content-on-status-info-muted: #eee;
           --bs-color-content-on-status-negative-emphasized: #000;
           --bs-color-content-on-status-negative-muted: #eee;
-          --bs-color-content-on-status-neutral-emphasized: #000;
-          --bs-color-content-on-status-neutral-muted: #eee;
           --bs-color-content-on-status-positive-emphasized: #000;
           --bs-color-content-on-status-positive-muted: #eee;
           --bs-color-content-on-status-warning-emphasized: #000;
@@ -11072,29 +11036,41 @@ $utilities: ();
           --bs-color-opacity-lower: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-lowest: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-opacity-transparent: rgba(255, 255, 255, 0);
-          --bs-color-overlay-default: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-drag: rgba(255, 255, 255, 0.2); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-overlay-emphasized: #eee;
+          --bs-color-overlay-drag: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-overlay-dropdown: #3b3b3b;
           --bs-color-overlay-modal: #333;
+          --bs-color-overlay-tooltip: #3b3b3b;
           --bs-color-surface-brand-primary: #ff7900;
+          --bs-color-surface-inverse-high: #eee;
+          --bs-color-surface-inverse-low: rgba(255, 255, 255, 0.12); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-primary: rgba(255, 255, 255, 0.04); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-secondary: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-accent-emphasized: #ff7900;
-          --bs-color-surface-status-accent-muted: #353228;
+          --bs-color-surface-status-accent-muted: rgba(104, 93, 80, 0.4); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-info-emphasized: #8ad5ff;
-          --bs-color-surface-status-info-muted: #003857;
+          --bs-color-surface-status-info-muted: rgba(0, 89, 138, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-negative-emphasized: #ff8081;
-          --bs-color-surface-status-negative-muted: #4d0001;
-          --bs-color-surface-status-neutral-emphasized: rgba(255, 255, 255, 0.92); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-color-surface-status-neutral-muted: rgba(255, 255, 255, 0.08); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-status-negative-muted: rgba(219, 0, 2, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-positive-emphasized: #94f0a4;
-          --bs-color-surface-status-positive-muted: #0a4715;
+          --bs-color-surface-status-positive-muted: rgba(14, 98, 29, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-color-surface-status-warning-emphasized: #ffe270;
-          --bs-color-surface-status-warning-muted: #3d3100;
+          --bs-color-surface-status-warning-muted: rgba(102, 81, 0, 0.48); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-color-surface-tertiary: rgba(104, 93, 80, 0.4); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-default: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-drag: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-emphasized: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-raised: rgba(0, 0, 0, 0.32); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-elevation-color-sticky: rgba(0, 0, 0, 0.24); // stylelint-disable-line @stylistic/number-leading-zero
         }
 
         :root,
         [data-bs-theme="light"],
         :root[data-bs-theme="light"] [data-bs-theme="root"],
         :root[data-bs-theme="dark"] [data-bs-theme="root-inverted"] {
+          --bs-button-color-bg-brand-pressed: #000;
+          --bs-button-color-bg-brand-loading: #000;
+          --bs-button-color-content-brand-pressed: #fff;
+          --bs-button-color-content-brand-loading: #fff;
           --bs-button-mono-color-bg-default-hover: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-pressed: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-loading: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
@@ -11114,18 +11090,18 @@ $utilities: ();
           --bs-button-mono-color-content-default-loading: #000;
           --bs-button-mono-color-content-default-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-default-focus: #fff;
-          --bs-button-mono-color-content-strong-enabled: #fff;
-          --bs-button-mono-color-content-strong-hover: #fff;
-          --bs-button-mono-color-content-strong-pressed: #000;
-          --bs-button-mono-color-content-strong-loading: #000;
-          --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-mono-color-content-strong-focus: #fff;
           --bs-button-mono-color-content-minimal-enabled: #000;
           --bs-button-mono-color-content-minimal-hover: #fff;
           --bs-button-mono-color-content-minimal-pressed: #000;
           --bs-button-mono-color-content-minimal-loading: #000;
           --bs-button-mono-color-content-minimal-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-minimal-focus: #fff;
+          --bs-button-mono-color-content-strong-enabled: #fff;
+          --bs-button-mono-color-content-strong-hover: #fff;
+          --bs-button-mono-color-content-strong-pressed: #000;
+          --bs-button-mono-color-content-strong-loading: #000;
+          --bs-button-mono-color-content-strong-disabled: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-button-mono-color-content-strong-focus: #fff;
           --bs-button-mono-color-border-default-enabled: #000;
           --bs-button-mono-color-border-default-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-enabled: #000;
@@ -11134,17 +11110,22 @@ $utilities: ();
           --bs-link-mono-color-content-disabled: rgba(0, 0, 0, 0.28); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-focus: #000;
           --bs-switch-color-cursor: #fff;
-          --bs-switch-color-track-selected: #3de35a;
-          --bs-switch-color-track-selected-interaction: #1ecd3c;
+          --bs-switch-color-track-selected: #17a02f;
+          --bs-switch-color-track-selected-interaction: #138126;
           --bs-switch-color-track-unselected: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(0, 0, 0, 0.52); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-social-color-content-focus: #fff;
+          --bs-icon-color-content-status-warning-external-shape: #ffd000;
+          --bs-icon-color-content-status-warning-internal-shape: #856a00;
         }
 
         [data-bs-theme="dark"],
         :root[data-bs-theme="dark"],
         :root[data-bs-theme="dark"] [data-bs-theme="root"],
         :root[data-bs-theme="light"] [data-bs-theme="root-inverted"] {
+          --bs-button-color-bg-brand-pressed: #eee;
+          --bs-button-color-bg-brand-loading: #eee;
+          --bs-button-color-content-brand-pressed: #000;
+          --bs-button-color-content-brand-loading: #000;
           --bs-button-mono-color-bg-default-hover: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-pressed: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-bg-default-loading: rgba(0, 0, 0, 0.68); // stylelint-disable-line @stylistic/number-leading-zero
@@ -11164,18 +11145,18 @@ $utilities: ();
           --bs-button-mono-color-content-default-loading: #fff;
           --bs-button-mono-color-content-default-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-default-focus: #000;
-          --bs-button-mono-color-content-strong-enabled: #000;
-          --bs-button-mono-color-content-strong-hover: #000;
-          --bs-button-mono-color-content-strong-pressed: #fff;
-          --bs-button-mono-color-content-strong-loading: #fff;
-          --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-mono-color-content-strong-focus: #000;
           --bs-button-mono-color-content-minimal-enabled: #fff;
           --bs-button-mono-color-content-minimal-hover: #000;
           --bs-button-mono-color-content-minimal-pressed: #fff;
           --bs-button-mono-color-content-minimal-loading: #fff;
           --bs-button-mono-color-content-minimal-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-button-mono-color-content-minimal-focus: #000;
+          --bs-button-mono-color-content-strong-enabled: #000;
+          --bs-button-mono-color-content-strong-hover: #000;
+          --bs-button-mono-color-content-strong-pressed: #fff;
+          --bs-button-mono-color-content-strong-loading: #fff;
+          --bs-button-mono-color-content-strong-disabled: rgba(0, 0, 0, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
+          --bs-button-mono-color-content-strong-focus: #000;
           --bs-button-mono-color-border-default-enabled: #fff;
           --bs-button-mono-color-border-default-disabled: rgba(255, 255, 255, 0.44); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-link-mono-color-content-enabled: #fff;
@@ -11188,7 +11169,8 @@ $utilities: ();
           --bs-switch-color-track-selected-interaction: #94f0a4;
           --bs-switch-color-track-unselected: rgba(255, 255, 255, 0.64); // stylelint-disable-line @stylistic/number-leading-zero
           --bs-switch-color-track-unselected-interaction: rgba(255, 255, 255, 0.8); // stylelint-disable-line @stylistic/number-leading-zero
-          --bs-button-social-color-content-focus: #000;
+          --bs-icon-color-content-status-warning-external-shape: #ffe270;
+          --bs-icon-color-content-status-warning-internal-shape: rgba(255, 255, 255, 0);
         }
 
         .opacity-0 {
@@ -12881,273 +12863,273 @@ $utilities: ();
           margin-left: var(--bs-space-scaled-3xlarge) !important;
         }
 
-        .m-scaled-n3xs {
+        .m-scaled-n3xsmall{
           margin: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n2xs {
+        .m-scaled-n2xsmall{
           margin: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nxs {
+        .m-scaled-nxsmall{
           margin: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nsm {
+        .m-scaled-nsmall {
           margin: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nmd {
+        .m-scaled-nmedium {
           margin: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nlg {
+        .m-scaled-nlarge {
           margin: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-nxl {
+        .m-scaled-nxlarge {
           margin: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n2xl {
+        .m-scaled-n2xlarge {
           margin: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .m-scaled-n3xl {
+        .m-scaled-n3xlarge {
           margin: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n3xs {
+        .mx-scaled-n3xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n2xs {
+        .mx-scaled-n2xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nxs {
+        .mx-scaled-nxsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nsm {
+        .mx-scaled-nsmall {
           margin-right: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nmd {
+        .mx-scaled-nmedium {
           margin-right: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nlg {
+        .mx-scaled-nlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-nxl {
+        .mx-scaled-nxlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n2xl {
+        .mx-scaled-n2xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mx-scaled-n3xl {
+        .mx-scaled-n3xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-left: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n3xs {
+        .my-scaled-n3xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n2xs {
+        .my-scaled-n2xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nxs {
+        .my-scaled-nxsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nsm {
+        .my-scaled-nsmall {
           margin-top: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nmd {
+        .my-scaled-nmedium {
           margin-top: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nlg {
+        .my-scaled-nlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-nxl {
+        .my-scaled-nxlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n2xl {
+        .my-scaled-n2xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .my-scaled-n3xl {
+        .my-scaled-n3xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n3xs {
+        .mt-scaled-n3xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n2xs {
+        .mt-scaled-n2xsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nxs {
+        .mt-scaled-nxsmall{
           margin-top: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nsm {
+        .mt-scaled-nsmall {
           margin-top: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nmd {
+        .mt-scaled-nmedium {
           margin-top: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nlg {
+        .mt-scaled-nlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-nxl {
+        .mt-scaled-nxlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n2xl {
+        .mt-scaled-n2xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mt-scaled-n3xl {
+        .mt-scaled-n3xlarge {
           margin-top: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n3xs {
+        .me-scaled-n3xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n2xs {
+        .me-scaled-n2xsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nxs {
+        .me-scaled-nxsmall{
           margin-right: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nsm {
+        .me-scaled-nsmall {
           margin-right: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nmd {
+        .me-scaled-nmedium {
           margin-right: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nlg {
+        .me-scaled-nlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-nxl {
+        .me-scaled-nxlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n2xl {
+        .me-scaled-n2xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .me-scaled-n3xl {
+        .me-scaled-n3xlarge {
           margin-right: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n3xs {
+        .mb-scaled-n3xsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n2xs {
+        .mb-scaled-n2xsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nxs {
+        .mb-scaled-nxsmall{
           margin-bottom: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nsm {
+        .mb-scaled-nsmall {
           margin-bottom: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nmd {
+        .mb-scaled-nmedium {
           margin-bottom: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nlg {
+        .mb-scaled-nlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-nxl {
+        .mb-scaled-nxlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n2xl {
+        .mb-scaled-n2xlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .mb-scaled-n3xl {
+        .mb-scaled-n3xlarge {
           margin-bottom: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n3xs {
+        .ms-scaled-n3xsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-3xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n2xs {
+        .ms-scaled-n2xsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-2xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nxs {
+        .ms-scaled-nxsmall{
           margin-left: calc(-1 * var(--bs-space-scaled-xsmall)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nsm {
+        .ms-scaled-nsmall {
           margin-left: calc(-1 * var(--bs-space-scaled-small)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nmd {
+        .ms-scaled-nmedium {
           margin-left: calc(-1 * var(--bs-space-scaled-medium)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nlg {
+        .ms-scaled-nlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-large)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-nxl {
+        .ms-scaled-nxlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n2xl {
+        .ms-scaled-n2xlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-2xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
-        .ms-scaled-n3xl {
+        .ms-scaled-n3xlarge {
           margin-left: calc(-1 * var(--bs-space-scaled-3xlarge)) !important; // stylelint-disable-line function-disallowed-list
         }
 
@@ -14107,7 +14089,7 @@ $utilities: ();
           line-height: 1 !important;
         }
 
-        .lh-small {
+        .lh-sm {
           line-height: 1.25 !important;
         }
 
@@ -14115,7 +14097,7 @@ $utilities: ();
           line-height: 1.5 !important;
         }
 
-        .lh-large {
+        .lh-lg {
           line-height: 2 !important;
         }
 
@@ -14489,11 +14471,11 @@ $utilities: ();
           box-shadow: var(--bs-box-shadow) !important;
         }
 
-        .shadow-small {
+        .shadow-sm {
           box-shadow: var(--bs-box-shadow-sm) !important;
         }
 
-        .shadow-large {
+        .shadow-lg {
           box-shadow: var(--bs-box-shadow-lg) !important;
         }
 
@@ -14506,7 +14488,7 @@ $utilities: ();
         }
 
         .shadow-emphasized {
-          box-shadow: 0 12px 12px -4px var(--bs-elevation-color-emphasized) !important;
+          box-shadow: 0 8px 8px -2px var(--bs-elevation-color-emphasized) !important;
         }
 
         .shadow-none {

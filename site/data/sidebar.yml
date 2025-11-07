@@ -10,7 +10,6 @@
     - title: Contents
     - title: Browsers & devices
     - title: JavaScript
-      draft: true
     - title: Webpack
       draft: true
     - title: Parcel
@@ -78,8 +77,7 @@
   icon_color: body-color
   pages:
     - title: Overview
-    - title: Form control
-      draft: true
+    - title: Text input
     - title: Select
       draft: true
     - title: Checkbox

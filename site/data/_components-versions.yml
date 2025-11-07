@@ -5,9 +5,9 @@
 
 - name: 'badge'
   value: '1.2.0'
-- name: 'badge---count'
+- name: 'badge-count'
   value: '1.2.0'
-- name: 'badge---icon'
+- name: 'badge-icon'
   value: '1.2.0'
 - name: 'breadcrumb'
   value: '1.1.0'
