@@ -77,7 +77,7 @@ const multipleComponents = componentsVersions.length > 1 ? 's' : ''
             {
               // This is needed because we want to show the badge if show_badge isn't present or is set to false
               frontmatter.added &&
-                ((frontmatter.added.show_badge !== undefined && frontmatter.added.show_badge) ||
+                ((frontmatter.added.show_badge !== undefined && frontmatter.added.show_badge === true) ||
                   frontmatter.added.show_badge === undefined) && (
                   <p class="mb-none me-small">
                     <span class="tag tag-small">Added in v{frontmatter.added.version}</span>
