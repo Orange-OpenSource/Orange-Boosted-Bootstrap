@@ -184,7 +184,7 @@ To display a helper link below inputs, use a standard small link [with `.link` a
 If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-md">
     <div class="text-input-container">
       <label for="inputTextWithHelperTextLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-input-field" placeholder="">
@@ -197,7 +197,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     </a>
   </div>
   <div class="text-input">
-    <div class="text-input-container mt-lg">
+    <div class="text-input-container">
       <label for="inputTextWithHelperLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperLink" aria-describedby="feedbackTextHelpLink" class="text-input-field" placeholder="">
     </div>
@@ -214,7 +214,7 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
 For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-md">
     <div class="text-input-container">
       <label for="inputTextWithPrefix">Enter you website URL</label>
       <div class="input-container" data-bs-prefix="https://">
@@ -224,35 +224,37 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
     <p id="prefixTextHelpBlock" class="text-input-helper">
       Please fill in the complete URL without the protocol (e.g. www.example.com).
     </p>
-    <div class="text-input-container mt-md">
-      <label for="inputTextWithSuffix">Price</label>
-      <div class="input-container" data-bs-suffix="€">
-        <input type="text" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input-field" placeholder="">
+  </div>
+  <div class="text-input mb-md">
+    <div class="text-input-container">
+      <label for="inputTextWithSuffix">Email</label>
+      <div class="input-container" data-bs-suffix="@orange.com">
+        <input type="email" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input-field" placeholder="">
       </div>
     </div>
     <p id="suffixTextHelpBlock" class="text-input-helper">
-      Enter your price in Euro (€).
+      Enter your email address without the domain name (e.g. only your username before the @).
     </p>
   </div>
-  <div class="text-input">
-    <div class="text-input-container mt-md">
+  <div class="text-input mb-md">
+    <div class="text-input-container">
       <label for="inputTextWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
         <input type="text" id="inputTextWithPrefixSuffix" aria-describedby="prefixSuffixTextHelpBlock" class="text-input-field" placeholder="Enter amount">
       </div>
     </div>
-    <p id="prefixSuffixTextHelpBlock" class="text-input-helper">
+    <div id="prefixSuffixTextHelpBlock" class="text-input-helper">
       Enter your price in Pounds (£) without decimals.
-    </p>
+    </div>
   </div>
   <div class="text-input">
-    <div class="text-input-container mt-md">
-      <svg aria-hidden="true">
+    <div class="text-input-container">
+     <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
-      <label for="inputTextWithPrefixSuffixLeadingTrailing">Email</label>
-      <div class="input-container" data-bs-suffix="@orange.com">
-        <input type="email" id="inputTextWithPrefixSuffixLeadingTrailing" aria-describedby="globalTextHelpBlock" class="text-input-field" placeholder="">
+      <label for="inputTextWithPrefixSuffixIcon">Price</label>
+      <div class="input-container" data-bs-prefix="€"data-bs-suffix=".00">
+        <input type="text" id="inputTextWithPrefixSuffixIcon" aria-describedby="prefixSuffixIconTextHelpBlock" class="text-input-field" placeholder="">
       </div>
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
@@ -261,8 +263,8 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <span class="visually-hidden">Add to favorites</span>
       </button>
     </div>
-    <p id="globalTextHelpBlock" class="text-input-helper">
-      Enter your email address without the domain name (e.g. only your username before the @).
+    <p id="prefixSuffixIconTextHelpBlock" class="text-input-helper">
+      Enter your price in Euro (€) without decimals.
     </p>
   </div>`} />
 
