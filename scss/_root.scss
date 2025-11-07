@@ -290,8 +290,8 @@
   --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-mobile};
   --#{$prefix}space-scaled-large: #{$ouds-space-scaled-large-mobile};
   --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-xlarge-mobile};
-  --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-2xlarge-mobile};
-  --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-3xlarge-mobile};
+  --#{$prefix}space-scaled-2xlarge: #{$ouds-space-scaled-2xlarge-mobile};
+  --#{$prefix}space-scaled-3xlarge: #{$ouds-space-scaled-3xlarge-mobile};
 
   @include media-breakpoint-up(md) {
     --#{$prefix}space-scaled-none: #{$ouds-space-scaled-none-tablet};
@@ -302,8 +302,8 @@
     --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-tablet};
     --#{$prefix}space-scaled-large: #{$ouds-space-scaled-large-tablet};
     --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-xlarge-tablet};
-    --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-2xlarge-tablet};
-    --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-3xlarge-tablet};
+    --#{$prefix}space-scaled-2xlarge: #{$ouds-space-scaled-2xlarge-tablet};
+    --#{$prefix}space-scaled-3xlarge: #{$ouds-space-scaled-3xlarge-tablet};
   }
 
   @include media-breakpoint-up(xl) {
@@ -315,8 +315,8 @@
     --#{$prefix}space-scaled-medium: #{$ouds-space-scaled-medium-desktop};
     --#{$prefix}space-scaled-large: #{$ouds-space-scaled-large-desktop};
     --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-xlarge-desktop};
-    --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-2xlarge-desktop};
-    --#{$prefix}space-scaled-xlarge: #{$ouds-space-scaled-3xlarge-desktop};
+    --#{$prefix}space-scaled-2xlarge: #{$ouds-space-scaled-2xlarge-desktop};
+    --#{$prefix}space-scaled-3xlarge: #{$ouds-space-scaled-3xlarge-desktop};
   }
   // scss-docs-end root-space-scaled-var-ouds
 

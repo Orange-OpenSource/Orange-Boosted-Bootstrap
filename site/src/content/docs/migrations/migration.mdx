@@ -16,6 +16,10 @@ toc: true
 
 ### Components
 
+#### Badges
+
+- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> All badges sizing classes have been renamed `.badge-xs` is `.badge-xsmall`, `.badge-sm` is `.badge-small` and `.badge-lg` is `.badge-large`.
+
 #### Button
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Button CSS variables have been changed. `--bs-button-mono-color-bg-minimal-loading` is no longer available.
@@ -28,21 +32,13 @@ toc: true
 
 #### Link
 
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Link sizing class has been renamed from `.link-sm` to `.link-small`.
+
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Link CSS variables have been changed. All the variables containing `arrow` have been renamed the same with `chevron` instead.
 
 #### Tag
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> Tag component has been implemented.
-
-### Utilities
-
-#### Borders
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.rounded-small` and `.rounded-medium` have been updated to respectively 4px and 8px. All components have been updated accordingly. It shouldn’t bother you too much since it’s handled on OUDS Web side.
-
-#### Colors
-
-- <span class="tag tag-small rounded-none tag-warning">Warning</span> Dark mode values of our `.text-status-info`, `.text-status-positive`, `.text-status-warning` and `.text-status-danger` have been tweaked. It shouldn’t bother you too much since it’s handled on OUDS Web side.
 
 ### Helpers
 
@@ -55,6 +51,36 @@ toc: true
 #### Background
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.bg-opacity-lower` and `.bg-opacity-lowest` background color utilities have been added. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+
+#### Borders
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.rounded-small` and `.rounded-medium` have been updated to respectively 4px and 8px. All components have been updated accordingly. It shouldn’t bother you too much since it’s handled on OUDS Web side.
+
+#### Colors
+
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Dark mode values of our `.text-status-info`, `.text-status-positive`, `.text-status-warning` and `.text-status-danger` have been tweaked. It shouldn’t bother you too much since it’s handled on OUDS Web side.
+
+#### Shadow
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.shadow-sticky` shadow utility have been added. Visit our [shadows page]([[docsref:/utilities/shadows]]) to see more.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.shadow-sticky-default`, `.shadow-sticky-emphasized` and `.shadow-sticky-navigation-scrolled` shadow utilities have been removed. Visit our [shadows page]([[docsref:/utilities/shadows]]) to see more.
+
+#### Spacings
+
+- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Spacing utilities (padding, margin, gap, ...) sizes have been renamed as follows:
+  - **3xs** is renamed to `3xsmall` : for example `.m-3xs` → `.m-3xsmall`
+  - **2xs** is renamed to `2xsmall` : for example `.m-2xs` → `.m-2xsmall`
+  - **Xs** is renamed to `xsmall` : for example `.m-xs` → `.m-xsmall`
+  - **Sm** is renamed to `small` : for example `.m-sm` → `.m-small`
+  - **Md** is renamed to `medium` : for example `.m-md` → `.m-medium`
+  - **Lg** is renamed to `large` : for example `.m-lg` → `.m-large`
+  - **Xl** is renamed to `xlarge` : for example `.m-xl` → `.m-xlarge`
+  - **2xl** is renamed to `2xlarge` : for example `.m-2xl` → `.m-2xlarge`
+  - **3xl** is renamed to `3xlarge` : for example `.m-3xl` → `.m-3xlarge`
+  - **4xl** is renamed to `4xlarge` : for example `.m-4xl` → `.m-4xlarge`
+  - **5xl** is renamed to `5xlarge` : for example `.m-5xl` → `.m-5xlarge`
+  - **Negative** these changes apply to negative spacings as well, for example `.m-n3xs` → `.m-n3xsmall`
 
 ### CSS and Sass variables
 
