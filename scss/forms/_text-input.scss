@@ -327,12 +327,11 @@
     }
   }
 
-  // Shared styles for helper and error messages
+  // Shared styles for helpers and error messages
   %text-input-message {
     max-width: var(--#{$prefix}text-input-max-width);
     padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
     padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
-    @include get-font-size("label-medium");
   }
 
   // Helper text and helper link
@@ -341,6 +340,7 @@
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
     margin-bottom: 0;
     color: var(--#{$prefix}text-input-helper-color);
+    @include get-font-size("label-medium");
   }
 
   .text-input-container ~ .link {
@@ -359,6 +359,7 @@
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
     margin-bottom: 0;
     color: var(--#{$prefix}text-input-error-color);
+    @include get-font-size("label-medium");
   }
 
   .text-input-container:has(.text-input-field.is-invalid) ~ .text-input-error,
