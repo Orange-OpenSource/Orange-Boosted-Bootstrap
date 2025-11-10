@@ -243,9 +243,9 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <input type="text" id="inputTextWithPrefixSuffix" aria-describedby="prefixSuffixTextHelpBlock" class="text-input-field" placeholder="Enter amount">
       </div>
     </div>
-    <div id="prefixSuffixTextHelpBlock" class="text-input-helper">
+    <p id="prefixSuffixTextHelpBlock" class="text-input-helper">
       Enter your price in Pounds (£) without decimals.
-    </div>
+    </p>
   </div>
   <div class="text-input">
     <div class="text-input-container">
@@ -253,7 +253,7 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label for="inputTextWithPrefixSuffixIcon">Price</label>
-      <div class="input-container" data-bs-prefix="€"data-bs-suffix=".00">
+      <div class="input-container" data-bs-prefix="€" data-bs-suffix=".00">
         <input type="text" id="inputTextWithPrefixSuffixIcon" aria-describedby="prefixSuffixIconTextHelpBlock" class="text-input-field" placeholder="">
       </div>
       <button class="btn btn-minimal btn-icon">
