@@ -78,6 +78,7 @@
   pages:
     - title: Overview
     - title: Text input
+    - title: Text area
     - title: Select
       draft: true
     - title: Checkbox
