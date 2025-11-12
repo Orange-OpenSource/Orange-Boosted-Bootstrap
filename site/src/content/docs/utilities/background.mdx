@@ -8,7 +8,7 @@ toc: true
 
 import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
-import { allTokens } from '@libs/sass-variables'
+import { allTokens, scssMaps } from '@libs/sass-variables'
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -45,19 +45,25 @@ Here are the nominal cases you should be using, when there is no other theme int
 Please note that we use `[data-bs-theme]` attribute on a child element to avoid interfering with the parent theme. This is a workaround to avoid switching the colors between light and dark modes and keep having the good ones displayed.
 </Callout>
 
-<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = allTokens.filter(allToken => {
-      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
-    }).map(token => token.compiledValue)
-    const theme = themesArray[0].includes('dark')
-      ? themesArray[1].includes('light')
-        ? 'root'
-        : 'dark'
-      : themesArray[1].includes('light')
-        ? 'light'
-        : 'root-inverted'
-    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
-  }),
+<Example code={[
+  ...scssMaps.find(token => token.name === '$ouds-backgrounds').mapValue
+    .filter(bgToken => !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name))
+    .map(token => {
+      const conditionalBg = token.value.match(/variable-exists\(([^\)]*)/g)
+      // remove backgrounds that are conditional
+      if(conditionalBg && !allTokens.includes(conditionalBg[0]))  return '';
+      const themesArray = allTokens.filter(allToken => {
+        return allToken.name.match(`modes-on-(bg-)?${token.name}-(dark|light)`)
+      }).map(token => token.compiledValue)
+      const theme = themesArray[0].includes('dark')
+        ? themesArray[1].includes('light')
+          ? 'root'
+          : 'dark'
+        : themesArray[1].includes('light')
+          ? 'light'
+          : 'root-inverted'
+      return `<p class="bg-${token.name} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name}${theme !== 'root' ? '</span>' : ''}</p>`
+    }),
   `<p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
   <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
   <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`]} />
