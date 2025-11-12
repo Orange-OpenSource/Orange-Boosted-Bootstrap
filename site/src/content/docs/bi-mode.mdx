@@ -1,0 +1,455 @@
+---
+title: Bi mode explanation
+description: This is a tutorial for the bi-mode using Boosted and OUDS Web.
+aliases: "/bi-mode/"
+toc: true
+---
+
+## Preamble
+
+This page is for people that want to try the bi-mode combining Boosted and OUDS Web. It’s also a tutorial to implement OUDS Web gradually inside your website. Be careful, we don’t support it too much and this feature is supposed to be used only by the selected projects. If you’re not, please contact us so we can maybe help you.
+This page is not to be used alone, but is complementary to [OUDS Web documenation](https://web.unified-design-system.orange.com/) and [Boosted documentation](https://boosted.orange.com/).
+
+## Example of integration
+
+If you want to see the kind of changes and the amount of changes it might require on your side by watching it in action in the [ODS Charts project](https://github.com/Orange-OpenSource/ods-charts/pull/673/files). Be aware that this project remains very simple due to the used technology, and that only few pages were done in this example just to test different configurations.
+
+## Cons
+
+Here is a non exhaustive list of disadvantages of using this bi-mode:
+- There might be some unwanted side and edge effects that we didn’t anticipate.
+- It implies a change of design, so be in touch with your designer(s).
+- It implies a mix of two brands that doesn’t coexist well.
+- It implies a big load of work to start the journey and a moderate one to keep up to date.
+- You will need to adapt to the new naming.
+- Since the library isn’t released, it won’t be as stable a Boosted for example.
+
+## Pros
+
+Here is a non exhaustive list of advantages of using this bi-mode:
+- You have more power to feedback and influence the library.
+- You have more support and a better connection with the core team of the library.
+- You gain time for the future since you are migrating to OUDS Web little by little.
+- You will be in advance compared to others projects in terms of design system.
+- You will more likely have only few changes to do to integrate components one by one.
+- No more issues about dark mode.
+- Easier releases, so you won’t have to wait long until something’s corrected.
+
+## Tutorials to progressively switch to OUDS Web
+
+### OUDS Web as the main framework
+
+This is the prefered scenario, it will help you to implement the basic concepts of OUDS Web.
+
+#### Maximum of OUDS Web
+
+<Callout type="info">
+**This is the recommended scenario.**
+</Callout>
+
+In this scenario, you will have access, use all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the blanks using Boosted and custom CSS.
+
+1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme. <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
+
+2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
+    <details class="mb-medium">
+      <summary>See the configuration file</summary>
+      <Code lang="scss" code={`// 1. Import all OUDS Web
+        @import "@ouds/web-orange/dist/css/ouds-web";
+
+        // 2. Import a custom stack of Boosted and remove already existing elements.
+        .boosted {
+          // Configuration
+          @import "boosted/scss/functions";
+          @import "boosted/scss/variables";
+          @import "boosted/scss/variables-dark";
+          @import "boosted/scss/maps";
+          @import "boosted/scss/mixins";
+          // Don’t import Boosted utilities since they are all defined by OUDS Web already
+
+          // Declare a custom _root.scss, inspired from Boosted, but linked to OUDS Web evolutions
+          [data-bs-theme] {
+            color: var(--#{$prefix}body-color);
+            background-color: var(--#{$prefix}body-bg);
+          }
+
+          &,
+          [data-bs-theme="light"],
+          :root[data-bs-theme="light"] & [data-bs-theme="root"],
+          :root[data-bs-theme="dark"] & [data-bs-theme="root-inverted"],
+          :root[data-bs-theme="light"] &[data-bs-theme="root"],
+          :root[data-bs-theme="dark"] &[data-bs-theme="root-inverted"] {
+            color-scheme: light;
+
+            // Colors
+            @each $color, $value in $colors {
+              --#{$prefix}#{$color}: #{$value};
+            }
+
+            @each $color, $value in $grays {
+              --#{$prefix}gray-#{$color}: #{$value};
+            }
+
+            @each $color, $value in $theme-colors {
+              --#{$prefix}#{$color}: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-rgb {
+              --#{$prefix}#{$color}-rgb: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-text {
+              --#{$prefix}#{$color}-text-emphasis: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-bg-subtle {
+              --#{$prefix}#{$color}-bg-subtle: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-border-subtle {
+              --#{$prefix}#{$color}-border-subtle: #{$value};
+            }
+
+            --#{$prefix}white-rgb: #{to-rgb($white)};
+            --#{$prefix}black-rgb: #{to-rgb($black)};
+
+
+            @each $icon, $svg in $svg-as-custom-props {
+              --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+            }
+
+            // Fonts
+            // No definition of the font-stacks and let the OUDS Web ones hydrate Boosted
+            @if $font-size-root != null {
+              --#{$prefix}root-font-size: #{$font-size-root};
+            }
+            --#{$prefix}body-font-family: #{inspect($font-family-base)};
+            @include rfs($font-size-base, --#{$prefix}body-font-size);
+            --#{$prefix}body-font-weight: #{$font-weight-base};
+            --#{$prefix}body-line-height: #{$line-height-base};
+            @if $body-text-align != null {
+              --#{$prefix}body-text-align: #{$body-text-align};
+            }
+
+            --#{$prefix}body-color: #{$body-color};
+            --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+            --#{$prefix}body-bg: #{$body-bg};
+            --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+
+            --#{$prefix}emphasis-color: #{$body-emphasis-color};
+            --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+
+            --#{$prefix}secondary-color: #{$body-secondary-color};
+            --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
+            --#{$prefix}secondary-bg: #{$body-secondary-bg};
+            --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
+
+            --#{$prefix}tertiary-color: #{$body-tertiary-color};
+            --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+            --#{$prefix}tertiary-bg: #{$body-tertiary-bg};
+            --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+
+            --#{$prefix}heading-color: #{$headings-color};
+
+            // No Link colors and let the OUDS Web links hydrate the Boosted ones
+            // No basic element colors definition and let the OUDS Web links hydrate the Boosted ones
+
+            --#{$prefix}disabled-color: #{$disabled-color};
+            --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg};
+
+            --#{$prefix}border-width: #{$border-width};
+            --#{$prefix}border-style: #{$border-style};
+            --#{$prefix}border-color: #{$border-color};
+            --#{$prefix}border-color-subtle: #{$border-color-subtle};
+            --#{$prefix}border-color-translucent: #{$border-color-translucent};
+
+            --#{$prefix}border-radius: #{0px};
+            --#{$prefix}border-radius-sm: #{$border-radius-sm};
+            --#{$prefix}border-radius-lg: #{$border-radius-lg};
+            --#{$prefix}border-radius-xl: #{$border-radius-xl};
+            --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
+            --#{$prefix}border-radius-2xl: var(--#{$prefix}border-radius-xxl);
+            --#{$prefix}border-radius-pill: #{$border-radius-pill};
+
+            --#{$prefix}box-shadow: #{$box-shadow};
+            --#{$prefix}box-shadow-sm: #{$box-shadow-sm};
+            --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
+            --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
+
+            // Focus styles
+            --#{$prefix}focus-ring-width: #{$focus-ring-width};
+            --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity};
+            --#{$prefix}focus-ring-color: #{$focus-ring-color};
+
+            --#{$prefix}form-valid-color: #{$form-valid-color};
+            --#{$prefix}form-valid-border-color: #{$form-valid-border-color};
+            --#{$prefix}form-invalid-color: #{$form-invalid-color};
+            --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
+
+            --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter};
+            --#{$prefix}form-select-indicator: #{$form-select-indicator};
+            --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator};
+
+            // Table-specific styles
+            --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
+            --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+            --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+
+            // No Boosted specific Breadcrumb styles
+
+            // Remove some unwanted edge changes of OUDS Web inside Boosted
+            --#{$prefix}font-max-width-display-large: none;
+            --#{$prefix}font-max-width-display-medium: none;
+            --#{$prefix}font-max-width-display-small: none;
+            --#{$prefix}font-max-width-heading-xlarge: none;
+            --#{$prefix}font-max-width-heading-large: none;
+            --#{$prefix}font-max-width-heading-medium: none;
+            --#{$prefix}font-max-width-heading-small: none;
+            --#{$prefix}font-max-width-body-large: none;
+            --#{$prefix}font-max-width-body-medium: none;
+            --#{$prefix}font-max-width-body-small: none;
+          }
+
+          [data-bs-theme="dark"] &,
+          &[data-bs-theme="dark"],
+          :root[data-bs-theme="dark"] & [data-bs-theme="root"],
+          :root[data-bs-theme="light"] & [data-bs-theme="root-inverted"],
+          :root[data-bs-theme="dark"] &[data-bs-theme="root"],
+          :root[data-bs-theme="light"] &[data-bs-theme="root-inverted"] {
+            color-scheme: dark;
+
+            --#{$prefix}body-color: #{$body-color-dark};
+            --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
+            --#{$prefix}body-bg: #{$body-bg-dark};
+            --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
+
+            --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
+            --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
+
+            --#{$prefix}secondary-color: #{$body-secondary-color-dark};
+            --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
+            --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
+            --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
+
+            --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
+            --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
+            --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
+            --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+
+            @each $color, $value in $theme-colors-dark {
+              --#{$prefix}#{$color}: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-rgb-dark {
+              --#{$prefix}#{$color}-rgb: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-text-dark {
+              --#{$prefix}#{$color}-text-emphasis: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-bg-subtle-dark {
+              --#{$prefix}#{$color}-bg-subtle: #{$value};
+            }
+
+            @each $color, $value in $theme-colors-border-subtle-dark {
+              --#{$prefix}#{$color}-border-subtle: #{$value};
+            }
+
+            @each $icon, $svg in $svg-as-custom-props-dark {
+              --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+            }
+
+            --#{$prefix}heading-color: #{$headings-color-dark};
+
+            --#{$prefix}disabled-color: #{$disabled-color-dark};
+            --#{$prefix}tertiary-active-bg: #{$tertiary-active-bg-dark};
+
+            --#{$prefix}border-color: #{$border-color-dark};
+            --#{$prefix}border-color-subtle: #{$border-color-subtle-dark};
+            --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+
+            --#{$prefix}focus-ring-color: #{$focus-ring-color-dark};
+
+            --#{$prefix}form-valid-color: #{$form-valid-color-dark};
+            --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
+            --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
+            --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+            --#{$prefix}form-select-indicator: #{$form-select-indicator-dark};
+            --#{$prefix}form-select-disabled-indicator: #{$form-select-disabled-indicator-dark};
+            --#{$prefix}form-color-disabled-filter: #{$form-color-disabled-filter-dark};
+
+            // Table-specific styles
+            --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor-dark};
+            --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor-dark};
+            --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
+          }
+
+          // Import only what’s needed from Boosted to fill in the blanks
+          @import "boosted/scss/images";
+          @import "boosted/scss/tables";
+          @import "boosted/scss/forms/labels";
+          @import "boosted/scss/forms/form-text";
+          @import "boosted/scss/forms/form-control";
+          @import "boosted/scss/forms/form-select";
+          @import "boosted/scss/forms/form-range";
+          @import "boosted/scss/forms/input-group";
+          @import "boosted/scss/forms/star-rating";
+          @import "boosted/scss/forms/validation";
+          @import "boosted/scss/forms/quantity-selector";
+          @import "boosted/scss/transitions";
+          @import "boosted/scss/dropdown";
+          @import "boosted/scss/button-group";
+          @import "boosted/scss/nav";
+          @import "boosted/scss/navbar";
+          @import "boosted/scss/card";
+          @import "boosted/scss/accordion";
+          @import "boosted/scss/pagination";
+          @import "boosted/scss/alert";
+          @import "boosted/scss/progress";
+          @import "boosted/scss/list-group";
+          @import "boosted/scss/close";
+          @import "boosted/scss/toasts";
+          @import "boosted/scss/modal";
+          @import "boosted/scss/tooltip";
+          @import "boosted/scss/popover";
+          @import "boosted/scss/carousel";
+          @import "boosted/scss/spinners";
+          @import "boosted/scss/offcanvas";
+          @import "boosted/scss/placeholders";
+
+          // Boosted
+          @import "boosted/scss/back-to-top";
+          @import "boosted/scss/footer";
+          @import "boosted/scss/local-navigation";
+          @import "boosted/scss/orange-navbar";
+          @import "boosted/scss/stepped-process";
+          @import "boosted/scss/sticker";
+          @import "boosted/scss/title-bars";
+
+          // No need to import Helpers or Utilities, and use the OUDS Web ones
+        }
+
+        // 3. Import your custom Boosted components
+        @import "backport/custom/boosted/components.scss";
+
+        // 4. Import custom components from your project
+        @import "your/custom/(s)css/files.scss";`} />
+    </details>
+
+3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]).
+
+4. Sometimes, we provide only a partial support of what was done before. Since the goal of OUDS is to support all the previous components or at least give an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you need to copy paste the code if you use it in your code.
+
+5. Add a `.boosted` near to the root (`<body>` for example), set the `[data-bs-theme]` (probably to `root`), and voilà, you should be having the best of two worlds.
+
+#### Minimum of OUDS Web
+
+<Callout type="warning">
+This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to implement it.
+</Callout>
+
+In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
+
+1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme. <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
+
+2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
+    <details class="mb-medium">
+      <summary>See the configuration file</summary>
+      <Code lang="scss" code={`// 1. Import all OUDS Web
+        @import "@ouds/web-orange/dist/css/ouds-web";
+
+        // 2. Import all OUDS Web and remove already existing elements.
+        .boosted {
+          @import "boosted/dist/css/boosted";
+        }
+
+        // 3. Import custom components from your project
+        @import "your/custom/(s)css/files.scss";`} />
+    </details>
+
+3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.boosted` each time you need to use Boosted on the element or its children and also to set the `[data-bs-theme]` every time you use this selector. Don’t change any element further since you’ll be using Boosted directly.
+
+4. You might need to override things that doesn’t match the specifications on your own.
+
+### Keep Boosted as the main framework
+
+<Callout type="warning">
+This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to implement it.
+</Callout>
+
+In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
+
+1. Make sure to install `sass`, `@ouds/web-common`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme. <Code lang="sh" code="npm i sass @ouds/web-common @ouds/web-orange boosted" />
+
+2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
+    <details class="mb-medium">
+      <summary>See the configuration file</summary>
+      <Code lang="scss" code={`// 1. Import all Boosted
+        @import "boosted/dist/css/boosted";
+
+        // 2. Import a custom stack of OUDS Web and remove already existing elements.
+        .ouds-web {
+          // Configuration
+          $ouds-root-selector: "&";
+
+          @import "@ouds/web-common/scss/config";
+          @import "@ouds/web-common/scss/functions";
+          @import "@ouds/web-orange/scss/tokens"; // Orange theme
+          @import "@ouds/web-common/scss/variables";
+          @import "@ouds/web-common/scss/variables-dark";
+          @import "@ouds/web-common/scss/maps";
+          @import "@ouds/web-common/scss/mixins";
+          @import "@ouds/web-common/scss/utilities";
+
+          // Layout & components
+          @import "@ouds/web-common/scss/root";
+          @import "@ouds/web-common/scss/containers";
+          @import "@ouds/web-common/scss/grid";
+          @import "@ouds/web-common/scss/reboot";
+          @import "@ouds/web-common/scss/type";
+          @import "@ouds/web-common/scss/forms/control-item";
+          @import "@ouds/web-common/scss/forms/input-group";
+          @import "@ouds/web-common/scss/links";
+          @import "@ouds/web-common/scss/buttons";
+          @import "@ouds/web-common/scss/breadcrumb";
+          @import "@ouds/web-common/scss/badge";
+          @import "@ouds/web-common/scss/tags";
+
+          @import "@ouds/web-common/scss/helpers";
+          @import "@ouds/web-common/scss/utilities/api";
+        }
+
+        [data-bs-theme],
+        &[data-bs-theme] {
+          background: unset;
+        }
+
+        // 3. Import your custom Boosted components
+        @import "backport/custom/boosted/components.scss";
+
+        // 4. Import custom components from your project
+        @import "your/custom/(s)css/files.scss";`} />
+    </details>
+
+3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.ouds-web` each time you need to use OUDS Web on the element or its children and also to set the `[data-bs-theme]` every time you use this selector.
+
+4. Sometimes, we provide only a partial support of what was done before. Since the goal of OUDS is to support all the previous components or at least give an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you need to copy paste the code if you use it in your code.
+
+5. You might need to override things that doesn’t match the specifications on your own.
+
+## Process once set
+
+Here is a small list of what to do once, you’re all set, you should check once a week if there isn’t a new OUDS Web release.
+- If not, you can stop here and enjoy a week without release.
+- If yes, follow [our migration guide]([[docsref:/migration]]). The main changes can be:
+  - Already existing components to update in your code.
+  - New components, so update your code with the new ones, remove the newly useless import(s) from Boosted custom import stack or from the custom Boosted backports.
+
+## Good practices
+
+Here is a non-exhaustive list for the good practices once you’re all set:
+- Have two separate custom stylesheets, one with the style that will be included in OUDS Web, and one that is very specific to your project.
+- Keep up to date with the latest OUDS Web version, add the newly added components, remove dead code from your stylesheets.
+- `data-bs-theme` must be set alongside with `.boosted` class.
+- Don’t hesitate if there is any question. If you have any question, any review, it will probably to others after you, and we can complete a faq with yours to helps others.
