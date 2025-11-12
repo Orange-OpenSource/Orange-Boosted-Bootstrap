@@ -8,7 +8,7 @@ toc: true
 
 import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
-import { allTokens, scssMaps } from '@libs/sass-variables'
+import { allTokens, scssMaps, hasToken } from '@libs/sass-variables'
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -53,8 +53,8 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
     )
     .filter(bgToken => {
       // remove backgrounds that are conditional
-      const conditionalBg = bgToken.value.match(/variable-exists\(([^\)]*)/g)
-      return !conditionalBg || allTokens.includes(conditionalBg[0]);
+      const conditionalBgMatches = bgToken.value.match(/variable-exists\(([^\)]*)/)
+      return !conditionalBgMatches || hasToken(`$${conditionalBgMatches[1]}`);
     })
     .map(token => {
       const themesArray = allTokens.filter(allToken => {
