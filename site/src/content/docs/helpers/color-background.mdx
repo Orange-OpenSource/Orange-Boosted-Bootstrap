@@ -17,11 +17,14 @@ Color and background helpers combine the power of our [`.text-*` utilities]([[do
 Please consider using our [color modes]([[docsref:/customize/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
 </Callout>
 
-<Example buttonLabel="text and background colors" code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
-  }),
-  `<p class="text-bg-always-black p-large fw-bold">.text-bg-always-black</p>
-  <p class="text-bg-always-white p-large fw-bold">.text-bg-always-white</p>`]} />
+  <Example buttonLabel="text and background colors" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-surface/) && token.name.match(/-light/) && token.compiledValue)
+      .sort((a,b) => {
+        return (!a.name.startsWith('$ouds-color-surface-status') && b.name.startsWith('$ouds-color-surface-status')) ? -1 : 0
+      }).map(token => {
+          return `<p class="text-bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">.text-bg-${token.name.split('-').slice(3, -1).join('-')}</p>`
+      }),
+        `<p class="text-bg-always-black p-large fw-bold">.text-bg-always-black</p>
+      <p class="text-bg-always-white p-large fw-bold">.text-bg-always-white</p>`]} />
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 

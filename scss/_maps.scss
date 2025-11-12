@@ -141,8 +141,8 @@ $ouds-backgrounds: (
   "brand-primary": var(--#{$prefix}color-surface-brand-primary),
   "brand-secondary": if(variable-exists(ouds-color-surface-brand-secondary-light), var(--#{$prefix}color-surface-brand-secondary), null),
   "brand-tertiary": if(variable-exists(ouds-color-surface-brand-tertiary-light), var(--#{$prefix}color-surface-brand-tertiary), null),
-  "status-neutral-emphasized": var(--#{$prefix}color-surface-status-neutral-emphasized),
-  "status-neutral-muted": var(--#{$prefix}color-surface-status-neutral-muted),
+  "inverse-high": var(--#{$prefix}color-surface-inverse-high),
+  "inverse-low": var(--#{$prefix}color-surface-inverse-low),
   "status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
   "status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
   "status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
@@ -178,8 +178,6 @@ $ouds-text-colors: (
   "on-status-info-muted": var(--#{$prefix}color-content-on-status-info-muted),
   "on-status-negative-emphasized": var(--#{$prefix}color-content-on-status-negative-emphasized),
   "on-status-negative-muted": var(--#{$prefix}color-content-on-status-negative-muted),
-  "on-status-neutral-emphasized": var(--#{$prefix}color-content-on-status-neutral-emphasized),
-  "on-status-neutral-muted": var(--#{$prefix}color-content-on-status-neutral-muted),
   "on-status-positive-emphasized": var(--#{$prefix}color-content-on-status-positive-emphasized),
   "on-status-positive-muted": var(--#{$prefix}color-content-on-status-positive-muted),
   "on-status-warning-emphasized": var(--#{$prefix}color-content-on-status-warning-emphasized),
@@ -348,7 +346,7 @@ $utilities-bg: map-merge(
     "warning":    var(--#{$prefix}color-surface-status-warning-emphasized), // OUDS mod
     "danger":     var(--#{$prefix}color-surface-status-negative-emphasized), // OUDS mod
     "light":      var(--#{$prefix}color-bg-secondary), // OUDS mod
-    "dark":       var(--#{$prefix}color-surface-status-neutral-emphasized), // OUDS mod
+    "dark":       var(--#{$prefix}color-surface-inverse-high), // OUDS mod
     "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
     "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
     "body":       var(--#{$prefix}color-bg-primary) // OUDS mod: instead of `to-rgb($body-bg)`

@@ -31,7 +31,7 @@
   --#{$prefix}text-input-helper-color: var(--#{$prefix}color-content-muted);
 
   --#{$prefix}text-input-error-color: var(--#{$prefix}color-content-status-negative);
-  --#{$prefix}text-input-invalid-icon: #{$danger-icon};
+  --#{$prefix}text-input-invalid-icon: #{$alert-icon-important};
   // scss-docs-end text-input-css-vars
 
   .text-input-container {

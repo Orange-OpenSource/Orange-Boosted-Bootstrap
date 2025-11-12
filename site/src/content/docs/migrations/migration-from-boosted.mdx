@@ -32,13 +32,13 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 ## Foundations
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Orange color has been modified from `#f16e00` to `#f15e00`. It means that under certain circumstances, you might be able to use Orange and light gray items together.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/customize/color-modes]])
+- <span class="tag tag-small rounded-none tag-positive">New</span> We provide two brand new themes that are <code>root</code> and <code>root-inverted</code>. They are complementary to `light` and `dark`. See more on our [color modes page]([[docsref:/customize/color-modes]])
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> The root selector have been tweaked for more flexibility on JS frameworks. Please don’t hesitate to contact us if you find any issue with it.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
 
 ## Fonts
 
@@ -53,21 +53,21 @@ Technically, it means that you can get rid of the following things:
 
 ### Typography
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/content/typography]]) for more details.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Body fonts’ sizes are now responsive and can change depending on the screen size. See [Typography]([[docsref:/content/typography]]) for more details.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
+- <span class="tag tag-small rounded-none tag-positive">New</span> A `max-width` has been added on all font references for readability reasons. If you want to get rid of the `max-width`, please use our `.mw-none` width utility.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Selected text is now styled with a specific text `color` and `background-color`, making it easier to spot and to read.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Display headings classes `.display-{1|2|3|4|5|6}` have been removed and replaced by `.display-{small|medium|large}`. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Abbreviation class `.initialism` has been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Abbreviation class `.initialism` has been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Default spacing values now use `px`s instead of `em`s for fixed component spacing, to keep as much space as possible for meaningful content on zoom.
 
 ## Layout
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Responsive breakpoints have changed:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Responsive breakpoints have changed:
   - `2xs` and `3xl` have been added.
   - `xxl` has been renamed to `2xl`.
   - The breakpoints values have changed. Please refer to the [breakpoints’ documentation]([[docsref:/layout/breakpoints]]).
@@ -77,45 +77,45 @@ Technically, it means that you can get rid of the following things:
 
 All responsive classes, helpers, and utilities have been updated accordingly to match the new breakpoints.
 
-- <span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
+- <span class="tag tag-small rounded-none tag-info">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
 
 ## Components
 
 ### Badges
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.badge` is now rounded by default.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.badge-disabled` has been added.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.badge-xsmall`, `.badge-small`, `.badge-large` have been added to size the badge.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.badge-count` has been added to implement Badge - Count.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.badge` is now rounded by default.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-disabled` has been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-xsmall`, `.badge-small`, `.badge-large` have been added to size the badge.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-count` has been added to implement Badge - Count.
 
 ### Breadcrumb
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> the last element of a Breadcrumb must now contain a `span` element to handle behavior on smaller viewport.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> the last element of a Breadcrumb must now contain a `span` element to handle behavior on smaller viewport.
 
 ### Bullet list
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
 
 ### Close button
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.btn-close-white` class has been removed as it was deprecated in Boosted v5.3.3.
 
 ### Buttons
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
   - `.btn-danger` and `.btn-warning` will look as `.btn-negative`
   - `.btn-info` and `.btn-light` will look as `.btn-minimal`
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.btn-social` and all its variants have been removed.
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-no-outline` has been removed. You can use `.btn-minimal` instead.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-social` and all its variants have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-outline-*` have been removed. You can still have them using `$enable-bootstrap-compatibility`. They all look like `.btn-default`.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `.btn-sm` and `.btn-lg` have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Loading buttons implementation has changed. You should now use the classes `.loading-indeterminate` and `.loading-determinate` and no more spinner borders.
 <div class="ps-xlarge">
 
 For example, if you used to write:
@@ -142,42 +142,38 @@ You will have to make some extra Javascript to change the styles and update the 
 
 </div>
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Button plugin (button with a toggle behavior) has been removed.
 
 ### Chips
 
-- <span class="badge text-bg-status-positive-emphasized">New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> Chips components have been implemented. See more in our [Chips page]([[docsref:/components/chips]]).
 
 ### Links
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> New standalone link component has been added. Use `.link` class to get it.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Use `.link-sm` class to get small standalone link.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
+- <span class="tag tag-small rounded-none tag-positive">New</span> New standalone link component has been added. Use `.link` class to get it.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Use `.link-sm` class to get small standalone link.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.link-on-colored-bg` has been added; it can be used to get variants on colored backgrounds.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> A `.link` class should be added to existing links with `.link-chevron` class to comply with the OUDS Web documentation and ensure future compatibility.
 
 ### Tags
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic Tag. The Filter tag has changed to the Filter chip. The Navigation tag has been removed. The Input tag has changed to the Tag input. Be careful, either the meaning or the markup changed, or both.
-
-### Tag
-
-- <span class="badge text-bg-status-negative-emphasized">Breaking</span> Tag filter have been replaced by our new [filter chip]([[docsref:/components/chips#filter-chip]]).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic Tag, and the Input tag markup has been updated. The Filter tag has changed to be the [Filter chip]([[docsref:/components/chips#filter-chip]]). The Navigation tag has been removed. Be careful, either the meaning or the markup changed, or both.
 
 ## Forms
 
 ### Checks & radios
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.control-item-assets-container`, `.control-item-text-container`, `.control-item-label`, `.control-item-indicator`, `.control-item-helper`, `.control-item-divider` and `.control-item-inverse` have been added.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` and `.form-switch` have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.form-check`, `.form-check-input`, `.form-check-label`, `.form-check-inline`, `.form-check-reverse` and `.form-switch` have been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `form-star-rating()` mixin has been removed as it was deprecated in Boosted v5.3.2.
 
 #### Checkbox
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.checkbox-item` and `.checkbox-standalone` have been added.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Checkbox is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Checkbox is a new component compared to Boosted’s Check, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
@@ -204,13 +200,13 @@ Now you should write:
 See [our new Checkbox page]([[docsref:/forms/checkbox]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in checkboxes’ labels are now forbidden (they won’t be interactive anyway).
 
 #### Radio button
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.radio-button-item`, `.radio-button-standalone`, `.radio-button-additional-label` and `.radio-button-item-outlined` have been added.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Radio button is a new component compared to Boosted’s radio, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Radio button is a new component compared to Boosted’s radio, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
@@ -237,13 +233,13 @@ Now you should write:
 See [our new Radio button page]([[docsref:/forms/radio-button]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
 
 #### Switch
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.switch-item` and `.switch-standalone` have been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.switch-item` and `.switch-standalone` have been added.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Switch is a new component compared to Boosted’s Check, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Switch is a new component compared to Boosted’s Check, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
 
@@ -270,18 +266,18 @@ Now you should write:
 See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 </div>
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
 
 ## Helpers
 
 ### Color background
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Most color-background color helpers have been removed or changed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Most color-background color helpers have been removed or changed.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new color-background color helpers are now available. Visit our [color-bg page]([[docsref:/helpers/color-background]]) to see more.
 
 - <details>
-    <summary><span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+    <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
   See more details about [`[data-bs-theme]`]([[docsref:/customize/color-modes]]).
@@ -300,19 +296,19 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Colored links
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> All colored links helpers are unstyled in OUDS Web. Classes still exist for Bootstrap compatibility.
 
 ### Divider
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Horizontal or vertical rule helpers to create dividers.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Horizontal or vertical rule helpers to create dividers.
 
 ### Icon link
 
-- <span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]([[docsref:/components/links#icon-link]]) and [link chevron]([[docsref:/components/links#link-chevron]]).
+- <span class="tag tag-small rounded-none tag-info">Info</span> `.icon-link` and `.link-chevron` are now documented in link component. See [icon link]([[docsref:/components/links#icon-link]]) and [link chevron]([[docsref:/components/links#link-chevron]]).
 
 ### Icon
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Icons’ sizes helpers have been added to help choose the right icon size with a specific typography reference. If you need these helpers, and you are using a custom import stack for helpers, don’t forget to add the needed file `helpers/_icon.scss`:
+- <span class="tag tag-small rounded-none tag-positive">New</span> Icons’ sizes helpers have been added to help choose the right icon size with a specific typography reference. If you need these helpers, and you are using a custom import stack for helpers, don’t forget to add the needed file `helpers/_icon.scss`:
   - Responsive icons’ sizes in headings:
     - `.h{size}-short-icon`, `.h{size}-medium-icon`, `.h{size}-tall-icon`, where `h` stands for heading and size is one of `s` for small, `m` for medium, `l` for large, or `xl` for x-large
     - `.b{size}-short-icon`, `.b{size}-medium-icon`, , `.h{size}-tall-icon`, where `b` stands for body and size is one of `m` for medium, or `l` for large
@@ -321,26 +317,26 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Position
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Responsive sticky helpers `.sticky-xxl-{top|bottom}` have been removed and replaced by their equivalent `.sticky-2xl-{top|bottom}`. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Responsive sticky helpers: `.sticky-xs-{top|bottom}`, `.sticky-2xl-{top|bottom}` and `.sticky-3xl-{top|bottom}`.
 
 ### Vertical rule
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]([[docsref:/helpers/divider]]) documentation.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> The vertical rule documentation has been merged into the new [Divider helper]([[docsref:/helpers/divider]]) documentation.
 
 ## Utilities
 
 ### Background
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Most background color utilities have been removed or changed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Most background color utilities have been removed or changed.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Background opacity utilities have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Background opacity utilities have been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to see more.
 
 - <details>
-    <summary><span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
+    <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>
 
   <Callout type="info">
   See more details about [`[data-bs-theme]`]([[docsref:/customize/color-modes]]).
@@ -374,15 +370,15 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Border
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]([[docsref:/utilities/borders#border]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Border operative utilities have been removed: `.border-0`, `.border-top-0`, `.border-bottom-0`, `.border-start-0`, and `.border-end-0`. Please check the new [border values]([[docsref:/utilities/borders#border]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Border operative utilities: `.border-none`, `.border-top-none`, `.border-bottom-none`, `.border-start-none`, and `.border-end-none`.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]([[docsref:/utilities/borders#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Border width utilities have been removed: `.border-0`, `.border-1`, `.border-2`, `.border-3`, `.border-4` and `.border-5`. Please check the new [border values]([[docsref:/utilities/borders#width]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Border width utilities: `.border-none`, `.border-thin`, `.border-medium`, `.border-thick`, and `.border-thicker`.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]([[docsref:/utilities/borders#radius]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Border radius utilities with many sizes have been removed. Please check the new [border values]([[docsref:/utilities/borders#radius]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.rounded-0`, `.rounded-top-0`, `.rounded-bottom-0`, `.rounded-start-0` and `.rounded-end-0`.
   - **1**: `.rounded-1`, `.rounded-top-1`, `.rounded-bottom-1`, `.rounded-start-1` and `.rounded-end-1`.
   - **2**: `.rounded-2`, `.rounded-top-2`, `.rounded-bottom-2`, `.rounded-start-2` and `.rounded-end-2`.
@@ -390,22 +386,22 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **4**: `.rounded-4`, `.rounded-top-4`, `.rounded-bottom-4`, `.rounded-start-4` and `.rounded-end-4`.
   - **5**: `.rounded-5`, `.rounded-top-5`, `.rounded-bottom-5`, `.rounded-start-5` and `.rounded-end-5`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Border radius utilities with all sizes:
+- <span class="tag tag-small rounded-none tag-positive">New</span> Border radius utilities with all sizes:
   - **None**: `.rounded-none`, `.rounded-top-none`, `.rounded-bottom-none`, `.rounded-start-none` and `.rounded-end-none`.
   - **Small**: `.rounded-small`, `.rounded-top-small`, `.rounded-bottom-small`, `.rounded-start-small` and `.rounded-end-small`.
   - **Medium**: `.rounded-medium`, `.rounded-top-medium`, `.rounded-bottom-medium`, `.rounded-start-medium` and `.rounded-end-medium`.
   - **Large**: `.rounded-large`, `.rounded-top-large`, `.rounded-bottom-large`, `.rounded-start-large` and `.rounded-end-large`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Border style utilities: `.border-drag`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Border style utilities: `.border-drag`.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> All border color utilities have been removed or changed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> All border color utilities have been removed or changed.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Border opacity utilities have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Border opacity utilities have been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new border color utilities are now available. Visit our [border page]([[docsref:/utilities/borders#color]]) to see more.
 
 - <details>
-    <summary><span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
+    <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in your websites:</summary>
 
   1. `.border-primary` → `.border-brand-primary`
   2. `.border-black` → `.border-always-black` or `.border-always-on-white` or `.border-on-brand-primary`
@@ -417,14 +413,14 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Colors
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Most text color utilities have been removed or changed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Most text color utilities have been removed or changed.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Text opacity utilities have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text opacity utilities have been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to see more.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The new text color utilities are now available. Visit our [color page]([[docsref:/utilities/colors]]) to see more.
 
 - <details>
-    <summary><span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> Here are the modifications to apply in your websites:</summary>
+    <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in your websites:</summary>
 
   1. `.text-primary(-emphasis)` → `.text-brand-primary`
   2. `.text-secondary(-emphasis)` → `.text-muted`
@@ -447,33 +443,33 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Display
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.d-xxl-{value}` responsive display utility has been replaced by `.d-2xl-{value}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.d-xs-{value}` and `.d-3xl-{value}` responsive display utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Flex
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `.flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `.flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `.flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `xxl` responsive flex utilities have been replaced by `2xl` utilities: `.d-xxl-flex`, `.d-xxl-inline-flex`, `.flex-xxl-{row|column}`, `.flex-xxl-{row|column}-reverse`, `.justify-content-xxl-{start|end|center|between|around|evenly}`, `.align-items-xxl-{start|end|center|baseline|stretch}`, `.align-self-xxl-{start|end|center|baseline|stretch}`, `.flex-xxl-fill`, `.flex-xxl-{grow|shrink}-{0|1}`, `.flex-xxl-{nowrap|wrap|wrap-reverse}`, `.order-xxl-{number}`, `.order-xxl-{first|last}` and `.align-content-xxl-{start|end|center|between|around|stretch}` utilities have been replaced by `.d-2xl-flex`, `.d-2xl-inline-flex`, `.flex-2xl-{row|column}`, `.flex-2xl-{row|column}-reverse`, `.justify-content-2xl-{start|end|center|between|around|evenly}`, `.align-items-2xl-{start|end|center|baseline|stretch}`, `.align-self-2xl-{start|end|center|baseline|stretch}`, `.flex-2xl-fill`, `.flex-2xl-{grow|shrink}-{0|1}`, `.flex-2xl-{nowrap|wrap|wrap-reverse}`, `.order-2xl-{number}`, `.order-2xl-{first|last}` and `.align-content-2xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `xs` and `3xl` responsive flex utilities have been added: `.d-xs-flex`, `.d-xs-inline-flex`, `.flex-xs-{row|column}`, `.flex-xs-{row|column}-reverse`, `.justify-content-xs-{start|end|center|between|around|evenly}`, `.align-items-xs-{start|end|center|baseline|stretch}`, `.align-self-xs-{start|end|center|baseline|stretch}`, `.flex-xs-fill`, `.flex-xs-{grow|shrink}-{0|1}`, `.flex-xs-{nowrap|wrap|wrap-reverse}`, `.order-xs-{number}`, `.order-xs-{first|last}`, `.align-content-xs-{start|end|center|between|around|stretch}`, `.d-3xl-flex`, `.d-3xl-inline-flex`, `.flex-3xl-{row|column}`, `.flex-3xl-{row|column}-reverse`, `.justify-content-3xl-{start|end|center|between|around|evenly}`, `.align-items-3xl-{start|end|center|baseline|stretch}`, `.align-self-3xl-{start|end|center|baseline|stretch}`, `.flex-3xl-fill`, `.flex-3xl-{grow|shrink}-{0|1}`, `.flex-3xl-{nowrap|wrap|wrap-reverse}`, `.order-3xl-{number}`, `.order-3xl-{first|last}` and `.align-content-3xl-{start|end|center|between|around|stretch}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Float
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `xxl` responsive float utilities have been replaced by `2xl` utilities: `.float-xxl-{start|end|none}` utilities have been replaced by `.float-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `xs` and `3xl` responsive float utilities have been added:  `.float-xs-{start|end|none}` and  `.float-3xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
 ### Link
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the build and from the documentation. They are useless in OUDS web.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.link-opacity`, `.link-offset`, `.link-underline`, `.link-underline-opacity` and `.opacity-100` have been removed from the build and from the documentation. They are useless in OUDS web.
 
 ### Object fit
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
-- <span class="tag tag-small rounded-none text-bg-status-info-emphasized">Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `xxl` responsive object fit utilities have been replaced by `2xl` utilities: `.object-fit-xxl-{contain|cover|fill|scale|none}` utilities have been replaced by ``.object-fit-2xl-{contain|cover|fill|scale|none}``. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `xs` and `3xl` responsive object fit utilities have been added:  `.object-fit-xs-{contain|cover|fill|scale|none}` and  `.object-fit-3xl-{contain|cover|fill|scale|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small rounded-none tag-info">Info</span> `xxl` responsive object fit utilities can still be available when <code>$enable-bootstrap-compatibility</code> is on.
 
 ### Opacity
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]([[docsref:/utilities/opacity]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.opacity-0`, `.opacity-25`, `.opacity-50`, `.opacity-75` and `.opacity-100` have been removed from the default build. Please check the new [opacity values]([[docsref:/utilities/opacity]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Opacity utilities: `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, `.opacity-medium`, `.opacity-strong` and `.opacity-opaque`.
 
 ### Shadow
 
@@ -484,11 +480,11 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Sizing
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful now that a `max-width` has been added on all font references (for readability reasons), if you want to omit it in some special cases.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Sizing utility `.mw-none` to set `max-width: none`. This utility is particularly useful now that a `max-width` has been added on all font references (for readability reasons), if you want to omit it in some special cases.
 
 ### Spacings
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The following margin spacing utilities have been removed from the default build (`.m{position}-{breakpoint}-{negative}{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.m-0`, `.mx-0`, `.my-0`, `.mt-0`, `.mb-0`, `.ms-0`, `.me-0`, `.m-sm-0`, etc...
   - **1**: `.m-1`, `.mx-1`, `.my-1`, `.mt-1`, `.mb-1`, `.ms-1`, `.me-1`, `.m-sm-1`, etc...
   - **2**: `.m-2`, `.mx-2`, `.my-2`, `.mt-2`, `.mb-2`, `.ms-2`, `.me-2`, `.m-sm-2`, etc...
@@ -497,7 +493,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **5**: `.m-5`, `.mx-5`, `.my-5`, `.mt-5`, `.mb-5`, `.ms-5`, `.me-5`, `.m-sm-5`, etc...
   - **Negative**: `.m-n1`, `.m-n2`, `.m-n3`, `.m-n4`, `.m-n5`, `.mx-n1`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> The following padding spacing utilities have been removed from the default build (`.p{position}-{breakpoint}-{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The following padding spacing utilities have been removed from the default build (`.p{position}-{breakpoint}-{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.p-0`, `.px-0`, `.py-0`, `.pt-0`, `.pb-0`, `.ps-0`, `.pe-0`, `.p-sm-0`, etc...
   - **1**: `.p-1`, `.px-1`, `.py-1`, `.pt-1`, `.pb-1`, `.ps-1`, `.pe-1`, `.p-sm-1`, etc...
   - **2**: `.p-2`, `.px-2`, `.py-2`, `.pt-2`, `.pb-2`, `.ps-2`, `.pe-2`, `.p-sm-2`, etc...
@@ -505,7 +501,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **4**: `.p-4`, `.px-4`, `.py-4`, `.pt-4`, `.pb-4`, `.ps-4`, `.pe-4`, `.p-sm-4`, etc...
   - **5**: `.p-5`, `.px-5`, `.py-5`, `.pt-5`, `.pb-5`, `.ps-5`, `.pe-5`, `.p-sm-5`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> The following gap spacing utilities have been removed from the default build (`.{row-|column-|}gap-{breakpoint}-{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> The following gap spacing utilities have been removed from the default build (`.{row-|column-|}gap-{breakpoint}-{value}`). Please check the new [spacing values]([[docsref:/utilities/spacing]]) directly in the documentation and adapt your websites to them. You can still have them using `$enable-bootstrap-compatibility`:
   - **0**: `.gap-0`, `.row-gap-0`, `.column-gap-0`, `.gap-sm-0`, etc...
   - **1**: `.gap-1`, `.row-gap-1`, `.column-gap-1`, `.gap-sm-1`, etc...
   - **2**: `.gap-2`, `.row-gap-2`, `.column-gap-2`, `.gap-sm-2`, etc...
@@ -513,7 +509,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **4**: `.gap-4`, `.row-gap-4`, `.column-gap-4`, `.gap-sm-4`, etc...
   - **5**: `.gap-5`, `.row-gap-5`, `.column-gap-5`, `.gap-sm-5`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> fixed margin spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> fixed margin spacing utilities:
   - **None**: `.m-none`, `.mx-none`, `.my-none`, `.mt-none`, `.mb-none`, `.ms-none`, `.me-none`, `.m-xs-none`, etc...
   - **3xsmall**: `.m-3xsmall`, `.mx-3xsmall`, `.my-3xsmall`, `.mt-3xsmall`, `.mb-3xsmall`, `.ms-3xsmall`, `.me-3xsmall`, `.m-xs-3xsmall`, etc...
   - **2xsmall**: `.m-2xsmall`, `.mx-2xsmall`, `.my-2xsmall`, `.mt-2xsmall`, `.mb-2xsmall`, `.ms-2xsmall`, `.me-2xsmall`, `.m-xs-2xsmall`, etc...
@@ -529,7 +525,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **Auto**: `.m-xs-auto`, `.mx-xs-auto`, `.my-xs-auto`, `.mt-xs-auto`, `.mb-xs-auto`, `.ms-xs-auto`, `.me-xs-auto`, `.m-2xl-auto`, etc...
   - **Negative**: `.m-n3xsmall`, `.m-n2xsmall`, `.m-nxsmall`, `.m-nsmall`, `.m-nmedium`, `.m-nlarge`, `.m-nxlarge`, `.m-n2xlarge`, `.m-n3xlarge`, `.m-n4xlarge`, `.m-n5xlarge`, `.mx-n3xsmall`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> scaled margin spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> scaled margin spacing utilities:
   - **None**: `.m-scaled-none`, `.mx-scaled-none`, `.my-scaled-none`, `.mt-scaled-none`, `.mb-scaled-none`, `.ms-scaled-none`, `.me-scaled-none`,
   - **3xsmall**: `.m-scaled-3xsmall`, `.mx-scaled-3xsmall`, `.my-scaled-3xsmall`, `.mt-scaled-3xsmall`, `.mb-scaled-3xsmall`, `.ms-scaled-3xsmall`, `.me-scaled-3xsmall`,
   - **2xsmall**: `.m-scaled-2xsmall`, `.mx-scaled-2xsmall`, `.my-scaled-2xsmall`, `.mt-scaled-2xsmall`, `.mb-scaled-2xsmall`, `.ms-scaled-2xsmall`, `.me-scaled-2xsmall`,
@@ -541,7 +537,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **2xlarge**: `.m-scaled-2xlarge`, `.mx-scaled-2xlarge`, `.my-scaled-2xlarge`, `.mt-scaled-2xlarge`, `.mb-scaled-2xlarge`, `.ms-scaled-2xlarge`, `.me-scaled-2xlarge`,
   - **3xlarge**: `.m-scaled-3xlarge`, `.mx-scaled-3xlarge`, `.my-scaled-3xlarge`, `.mt-scaled-3xlarge`, `.mb-scaled-3xlarge`, `.ms-scaled-3xlarge`, `.me-scaled-3xlarge`
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> fixed padding spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> fixed padding spacing utilities:
   - **None**: `.p-none`, `.px-none`, `.py-none`, `.pt-none`, `.pb-none`, `.ps-none`, `.pe-none`, `.p-xs-none`, etc...
   - **3xsmall**: `.p-3xsmall`, `.px-3xsmall`, `.py-3xsmall`, `.pt-3xsmall`, `.pb-3xsmall`, `.ps-3xsmall`, `.pe-3xsmall`, `.p-xs-3xsmall`, etc...
   - **2xsmall**: `.p-2xsmall`, `.px-2xsmall`, `.py-2xsmall`, `.pt-2xsmall`, `.pb-2xsmall`, `.ps-2xsmall`, `.pe-2xsmall`, `.p-xs-2xsmall`, etc...
@@ -555,7 +551,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **4xlarge**: `.p-4xlarge`, `.px-4xlarge`, `.py-4xlarge`, `.pt-4xlarge`, `.pb-4xlarge`, `.ps-4xlarge`, `.pe-4xlarge`, `.p-xs-4xlarge`, etc...
   - **5xlarge**: `.p-5xlarge`, `.px-5xlarge`, `.py-5xlarge`, `.pt-5xlarge`, `.pb-5xlarge`, `.ps-5xlarge`, `.pe-5xlarge`, `.p-xs-5xlarge`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> scaled padding spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> scaled padding spacing utilities:
   - **None**: `.p-scaled-none`, `.px-scaled-none`, `.py-scaled-none`, `.pt-scaled-none`, `.pb-scaled-none`, `.ps-scaled-none`, `.pe-scaled-none`,
   - **3xs**: `.p-scaled-3xsmall`, `.px-scaled-3xsmall`, `.py-scaled-3xsmall`, `.pt-scaled-3xsmall`, `.pb-scaled-3xsmall`, `.ps-scaled-3xsmall`, `.pe-scaled-3xsmall`,
   - **2xsmall**: `.p-scaled-2xsmall`, `.px-scaled-2xsmall`, `.py-scaled-2xsmall`, `.pt-scaled-2xsmall`, `.pb-scaled-2xsmall`, `.ps-scaled-2xsmall`, `.pe-scaled-2xsmall`,
@@ -567,7 +563,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **2xl**: `.p-scaled-2xlarge`, `.px-scaled-2xlarge`, `.py-scaled-2xlarge`, `.pt-scaled-2xlarge`, `.pb-scaled-2xlarge`, `.ps-scaled-2xlarge`, `.pe-scaled-2xlarge`,
   - **3xl**: `.p-scaled-3xlarge`, `.px-scaled-3xlarge`, `.py-scaled-3xlarge`, `.pt-scaled-3xlarge`, `.pb-scaled-3xlarge`, `.ps-scaled-3xlarge`, `.pe-scaled-3xlarge`
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> fixed gap spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> fixed gap spacing utilities:
   - **None**: `.gap-none`, `.row-gap-none`, `.column-gap-none`, `.gap-xs-none`, etc...
   - **3xsmall**: `.gap-3xsmall`, `.row-gap-3xsmall`, `.column-gap-3xsmall`, `.gap-xs-3xsmall`, etc...
   - **2xsmall**: `.gap-2xsmall`, `.row-gap-2xsmall`, `.column-gap-2xsmall`, `.gap-xs-2xsmall`, etc...
@@ -581,7 +577,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **4xlarge**: `.gap-4xlarge`, `.row-gap-4xlarge`, `.column-gap-4xlarge`, `.gap-xs-4xlarge`, etc...
   - **5xlarge**: `.gap-5xlarge`, `.row-gap-5xlarge`, `.column-gap-5xlarge`, `.gap-xs-5xlarge`, etc...
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> scaled gap spacing utilities:
+- <span class="tag tag-small rounded-none tag-positive">New</span> scaled gap spacing utilities:
   - **None**: `.gap-scaled-none`, `.row-gap-scaled-none`, `.column-gap-scaled-none`
   - **3xsmall**: `.gap-scaled-3xsmall`, `.row-gap-scaled-3xsmall`, `.column-gap-scaled-3xsmall`
   - **2xsmall**: `.gap-scaled-2xsmall`, `.row-gap-scaled-2xsmall`, `.column-gap-scaled-2xsmall`
@@ -593,7 +589,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   - **2xlarge**: `.gap-scaled-2xlarge`, `.row-gap-scaled-2xlarge`, `.column-gap-scaled-2xlarge`
   - **3xlarge**: `.gap-scaled-3xlarge`, `.row-gap-scaled-3xlarge`, `.column-gap-scaled-3xlarge`
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> You might be able to transfer your spacing utilities following one of the two proposed methods (while keeping almost the rendering and at least the same proportion between spacings):
   - Keep the previous behavior and getting one utility for another.
     1. **0**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)0` → `$1none`
     2. **1**: `(([" \.][mp]|-?gap)[tblrsexy]?-[a-z]{0,3}-?n?)1` → `$12xsmall`
@@ -609,40 +605,40 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 ### Text
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.text-xxl-{start|end|none}` responsive alignment text utility has been replaced by `.text-2xl-{start|end|none}`. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]). You can still have it using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.text-xs-{start|end|none}` and `.text-3xl-{start|end|none}` responsive alignment text utilities have been added. Please refer to the [new breakpoints’ names]([[docsref:/layout/breakpoints#available-breakpoints]]).
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Font size text utilities `.fs-{1|2|3|4|5|6}` have been removed and replaced by new ones. You can still have them using `$enable-bootstrap-compatibility`:
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
   - **Code**: `.fs-cm`, `.fs-cs`
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Line height text utilities `.lh-1`, `.lh-sm`, `.lh-base`, and `.lh-lg` have been removed, since our font references already have defined `line-height`s. You can still have them using `$enable-bootstrap-compatibility`.
 
-- <span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Line length text utilities `.ll-sm` and `.ll-md` have been removed, since there is already a default `max-width`.
 
 ## Examples
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> New [Font example]([[docsref:/examples/font]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> New [Font example]([[docsref:/examples/font]]).
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> New [Grid system example]([[docsref:/examples/grid-system/]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> New [Grid system example]([[docsref:/examples/grid-system/]]).
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> New [Loading buttons live example]([[docsref:/examples/loading-buttons/]]).
+- <span class="tag tag-small rounded-none tag-positive">New</span> New [Loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 
 ## CSS and Sass variables
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `$enable-bootstrap-compatibility` option set to `false` by default. This option allows you to compile the Sass files with a Bootstrap compatibility mode.
   - For instance, without the Bootstrap compatibility mode, you won’t have the opacity Bootstrap utilities such as `.opacity-0`, `.opacity-1`, `.opacity-50`, etc. You will only have the semantic OUDS Web utilities such as `.opacity-invisible`, `.opacity-weaker`, `.opacity-weak`, etc.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn’t impact your website.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `$enable-rounded` option have been set to `true` by default. This option allows you to set rounded corner on components. Please check that it doesn’t impact your website.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `scss/_color-palette.scss` doesn’t exist anymore. If you were importing it in your project, please make sure to remove it.
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
+- <span class="tag tag-small rounded-none tag-positive">New</span> OUDS Web fully implements the design tokens. If you were using the Sass compilation, you must import the new Sass files before the variables.
 
   <details class="mb-large">
   <summary>See the new import stack</summary>
@@ -663,7 +659,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Sass variables:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Sass variables:</summary>
     <ul>
       <li><code>$core-orange-color-decorative-amber-500</code></li>
       <li><code>$core-orange-color-decorative-amethyst-100</code></li>
@@ -1633,7 +1629,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Sass variables containing CSS variable with value depending on theme:</summary>
     <ul>
       <li><code>$ouds-color-action-disabled</code></li>
       <li><code>$ouds-color-action-enabled</code></li>
@@ -1769,7 +1765,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Sass maps:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Sass maps:</summary>
     <ul>
       <li><code>$grid-gutter-widths</code></li>
       <li><code>$ouds-backgrounds</code></li>
@@ -1791,14 +1787,14 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Sass mixins:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Sass mixins:</summary>
     <ul>
       <li><code>get-font-size()</code></li>
     </ul>
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> Keys in <code>$utilities</code> map:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>border-bottom-ouds</code></li>
       <li><code>border-color-ouds</code></li>
@@ -1870,7 +1866,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> CSS variables:</summary>
+    <summary><span class="tag tag-small rounded-none tag-positive">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-letter-spacing</code></li>
       <li><code>--bs-color-action-disabled</code></li>
@@ -2076,7 +2072,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Dropped Sass variables:</summary>
+    <summary><span class="tag tag-small rounded-none tag-warning">Warning</span> Dropped Sass variables:</summary>
     <ul>
       <li><code>$blockquote-font-size</code></li>
       <li><code>$blockquote-footer-font-size</code></li>
@@ -2241,7 +2237,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Dropped CSS variables:</summary>
+    <summary><span class="tag tag-small rounded-none tag-warning">Warning</span> Dropped CSS variables:</summary>
     <ul>
       <li><code>--bs-border-color-subtle</code></li>
       <li><code>--bs-btn-close-active-border-color</code></li>
@@ -2266,7 +2262,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="tag tag-small rounded-none tag-negative">Breaking</span> CSS variables only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>--bs-black</code></li>
       <li><code>--bs-black-rgb</code></li>
@@ -2366,14 +2362,14 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Dropped Sass mixins:</summary>
+    <summary><span class="tag tag-small rounded-none tag-warning">Warning</span> Dropped Sass mixins:</summary>
     <ul>
       <li><code>make-container-fluid-margin()</code></li>
     </ul>
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-negative-emphasized">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
+    <summary><span class="tag tag-small rounded-none tag-negative">Breaking</span> Keys in <code>$utilities</code> map only available when <code>$enable-bootstrap-compatibility</code> is on:</summary>
     <ul>
       <li><code>background-color</code></li>
       <li><code>border</code></li>
@@ -2427,7 +2423,7 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
   </details>
 
 - <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
+    <summary><span class="tag tag-small rounded-none tag-warning">Warning</span> Dropped keys in <code>$utilities</code> map:</summary>
     <ul>
       <li><code>bg-opacity</code></li>
       <li><code>border-opacity</code></li>
@@ -2436,12 +2432,12 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
     </ul>
   </details>
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Signature of `make-row($gutter, $gutter-sm)` is now `make-row($gutter)`.
 
 ## Sass mixins
 
-- <span class="tag tag-small rounded-none text-bg-status-positive-emphasized">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/content/typography#sass-mixins]]) for more details.
+- <span class="tag tag-small rounded-none tag-positive">New</span> The mixin `get-font-size({font-size-ref})` has been added, where `font-size-ref` is one of: `"code-medium"`, `"label-small"`, `"label-medium"`, `"label-large"`, `"label-xlarge"`, `"body-small"`, `"body-medium"`, `"body-large"`, `"heading-small"`, `"heading-medium"`, `"heading-large"`, `"heading-xlarge"`, `"display-small"`, `"display-medium"`, `"display-large"`. If you have/need any `font-size` in one of your SCSS classes, please consider using this mixin instead. See [Typography Sass mixins]([[docsref:/content/typography#sass-mixins]]) for more details.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `color-mode({mode}, {root}, {inverted-mode})` mixin signature has changed. We now provide an `$inverted-mode` parameter that is set by default to `light` or `dark` depending on the `$mode`. It allows you to precise another mode to be the inverse of a certain mode.
 
-- <span class="tag tag-small rounded-none text-bg-status-warning-emphasized">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> `button-variant` mixin signature has changed. We now provide extra parameters for focus and loading states colors. We keep it as a warning because we provide default values for these parameters. See more in [our Button documentation]([[docsref:/components/buttons#sass-mixins]]).
