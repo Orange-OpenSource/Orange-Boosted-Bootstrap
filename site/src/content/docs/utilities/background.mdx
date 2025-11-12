@@ -47,11 +47,16 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
 
 <Example code={[
   ...scssMaps.find(token => token.name === '$ouds-backgrounds').mapValue
-    .filter(bgToken => !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name))
-    .map(token => {
-      const conditionalBg = token.value.match(/variable-exists\(([^\)]*)/g)
+    .filter(bgToken =>
+      // remove backgrounds that have specific documentation
+      !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name)
+    )
+    .filter(bgToken => {
       // remove backgrounds that are conditional
-      if(conditionalBg && !allTokens.includes(conditionalBg[0]))  return '';
+      const conditionalBg = bgToken.value.match(/variable-exists\(([^\)]*)/g)
+      return !conditionalBg || allTokens.includes(conditionalBg[0]);
+    })
+    .map(token => {
       const themesArray = allTokens.filter(allToken => {
         return allToken.name.match(`modes-on-(bg-)?${token.name}-(dark|light)`)
       }).map(token => token.compiledValue)
