@@ -3512,14 +3512,6 @@ $utilities: ();
           color: var(--bs-color-content-on-status-negative-muted) !important;
         }
 
-        .text-on-status-neutral-emphasized {
-          color: var(--bs-color-content-on-status-neutral-emphasized) !important;
-        }
-
-        .text-on-status-neutral-muted {
-          color: var(--bs-color-content-on-status-neutral-muted) !important;
-        }
-
         .text-on-status-positive-emphasized {
           color: var(--bs-color-content-on-status-positive-emphasized) !important;
         }
@@ -3612,20 +3604,16 @@ $utilities: ();
           background-color: var(--bs-color-bg-tertiary) !important;
         }
 
-        .bg-emphasized {
-          background-color: var(--bs-color-bg-emphasized) !important;
-        }
-
         .bg-brand-primary {
           background-color: var(--bs-color-surface-brand-primary) !important;
         }
 
-        .bg-status-neutral-emphasized {
-          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
+        .bg-inverse-high {
+          background-color: var(--bs-color-surface-inverse-high) !important;
         }
 
-        .bg-status-neutral-muted {
-          background-color: var(--bs-color-surface-status-neutral-muted) !important;
+        .bg-inverse-low {
+          background-color: var(--bs-color-surface-inverse-low) !important;
         }
 
         .bg-status-accent-emphasized {
@@ -14403,14 +14391,6 @@ $utilities: ();
           color: var(--bs-color-content-on-status-negative-muted) !important;
         }
 
-        .text-on-status-neutral-emphasized {
-          color: var(--bs-color-content-on-status-neutral-emphasized) !important;
-        }
-
-        .text-on-status-neutral-muted {
-          color: var(--bs-color-content-on-status-neutral-muted) !important;
-        }
-
         .text-on-status-positive-emphasized {
           color: var(--bs-color-content-on-status-positive-emphasized) !important;
         }
@@ -14532,7 +14512,7 @@ $utilities: ();
         }
 
         .bg-dark {
-          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
+          background-color: var(--bs-color-surface-inverse-high) !important;
         }
 
         .bg-black {
@@ -14599,20 +14579,16 @@ $utilities: ();
           background-color: var(--bs-color-bg-tertiary) !important;
         }
 
-        .bg-emphasized {
-          background-color: var(--bs-color-bg-emphasized) !important;
-        }
-
         .bg-brand-primary {
           background-color: var(--bs-color-surface-brand-primary) !important;
         }
 
-        .bg-status-neutral-emphasized {
-          background-color: var(--bs-color-surface-status-neutral-emphasized) !important;
+        .bg-inverse-high {
+          background-color: var(--bs-color-surface-inverse-high) !important;
         }
 
-        .bg-status-neutral-muted {
-          background-color: var(--bs-color-surface-status-neutral-muted) !important;
+        .bg-inverse-low {
+          background-color: var(--bs-color-surface-inverse-low) !important;
         }
 
         .bg-status-accent-emphasized {
