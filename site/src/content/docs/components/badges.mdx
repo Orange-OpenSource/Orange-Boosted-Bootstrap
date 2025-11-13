@@ -30,7 +30,7 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
       <div class="card-top ratio ratio-16x9 bg-inverse-low" aria-hidden="true">
         <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <p class="badge">
-            <span class="visually-hidden">Basic badge</span>
+            <span class="visually-hidden">Beware</span>
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
     <div class="card position-relative h-100">
       <div class="card-top ratio ratio-16x9 bg-inverse-low" aria-hidden="true">
         <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
-          <p class="badge badge-count">1</p>
+          <p class="badge badge-count">1<span class="visually-hidden">Error</span></p>
         </div>
       </div>
       <div class="card-body border-default border-thin border-top"><a class="stretched-link" href="#badge---count">Badge - Count</a> adds a number to notifications for example.</div>
@@ -53,7 +53,7 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
         <div class="d-flex align-items-center justify-content-center" data-bs-theme={getMode('modes-on-bg-inverse-low')}>
           <p class="badge">
             <span class="badge-status-icon"></span>
-            <span class="visually-hidden">Badge with icon</span>
+            <span class="visually-hidden">Beware</span>
           </p>
         </div>
       </div>
@@ -62,22 +62,38 @@ You can find here the [OUDS Badge design guidelines](https://unified-design-syst
   </li>
 </ul>
 
+For the three types of badge, OUDS Web has a common basic `.badge` class that sets up default styles.
+
+<Example showToolbar={false} code={`<p class="badge"><span class="visually-hidden">Beware</span></p>`} />
+
+<Example showToolbar={false} code={`<p class="badge badge-count">1<span class="visually-hidden">error</span></p>`} />
+
+<Example showToolbar={false} code={`<p class="badge">
+    <span class="badge-status-icon"></span>
+    <span class="visually-hidden">Beware</span>
+  </p>`} />
+
 ### Accessibility
 
-<Callout type="info">
-  TODO mutualiser ?
-  For accessibility and semantics reasons, badges, like any other informative elements, must be enclosed in an ancestor or parent semantic tag. In the following examples, `<p>` is used as the base semantic element, but you can use any other semantic tag depending on the context.
-  TODO comparer avec tag
-  todo parler du visually hidden
-</Callout>
+#### Semantics
+For accessibility reasons, any informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the badges, badges - count and badges - icon appear as `<p>` or inside `<p>` elements. You may use any semantic element that best fits the context.
+
+#### Information for visually impaired users
+
+Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the badges purpose on the page. In most cases, it is mandatory to add a `.visually-hidden` information to explain what it represents.
+
+Several examples are provided below, but they need to be adapted for actual use cases.
 
 ## <svg class="hl-small-icon me-scaled-2xsmall mb-xsmall" width="1rem" height="1rem" aria-hidden="true"><use xlink:href="/orange/docs/0.5/assets/img/ouds-web-sprite.svg#component-atom" /></svg>Badge
 
-The badge is a small UI element used to highlight status, notifications, or categorization within an interface.
+The badge is a small UI element used to highlight categories, presence, or draw attention to certain elements within an interface. Default badge carries a negative functional status.
 
-OUDS Web has a base `.badge` class that sets up basic styles. Default badge carries a negative functional status.
+<Callout type="warning">
+  If the context does not allow visually impaired or blind users to understand the meaning, add a `.visually-hidden` text associated with the badge. [Read more about badges accessibility here](#accessibility).
+</Callout>
 
-<Example code={`<p class="badge"><span class="visually-hidden">Badge alt text</span></p>`} />
+<Example class="" code={`<p class="badge badge-count"><span class="visually-hidden">Beware</span></p>
+  <p class="d-flex align-items-center">Beware<span class="badge ms-2xsmall"></span></p>`} />
 
 ### Variants
 
@@ -85,17 +101,17 @@ OUDS Web has a base `.badge` class that sets up basic styles. Default badge carr
 
 ##### Non-functional
 
-Non-functional badges help highlight categories, presence, or draw attention to certain elements without carrying a specific functional meaning (unlike functional badges, see juste below).
+Non-functional badges are used to display neutral or accent information without carrying a specific functional meaning (unlike functional badges, see below).
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-neutral"><span class="visually-hidden">To be noted</span></p>
   <p class="badge badge-accent"><span class="visually-hidden">Important</span></p>`} />
 
 ##### Functional
 
-Functional badges help the user quickly understand the state of an element and take action if needed. They carry a clear meaning related to the status of an object or system. Default status is negative.
+Functional badges carry a clear meaning related to the status of an object or system. They help the user quickly understand the status of an element and take action if needed.
 
 <Callout type="warning">
-  Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the badge's  `.visually-hidden` associated text. [Read more about tags accessibility here](#accessibility).
+  Keep in mind that color should not be the only way to convey information. In functional badges, the color has a strong meaning, it must be reflected in the badge's `.visually-hidden` associated text. [Read more about badges accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
@@ -107,7 +123,7 @@ Functional badges help the user quickly understand the state of an element and t
 
 #### Disabled
 
-The disabled state of a badge appears visually muted to signal that it is not currently active or relevant. To make a disabled badge, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may not be necessary.
+The disabled state of a badge appears visually muted to signal that it is not currently active or relevant. To make a disabled badge, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-neutral badge-disabled"></p>
   <p class="badge badge-accent badge-disabled"></p>
@@ -131,10 +147,13 @@ Badges are available in four sizes. Default size is medium.
 Badges - count provide a numerical indication.
 
 <Callout type="warning">
-  If the number itself is not meaningful in the context, add `.visually-hidden`  text associated with the badge - count.
+  If the number itself is not meaningful in the context, add a `.visually-hidden` text associated with the badge - count. [Read more about badges accessibility here](#accessibility).
 </Callout>
 
-<Example class="d-flex gap-3" code={`<p class="badge badge-count">1<span class="visually-hidden">error</span>`} />
+<Example class="d-flex gap-3" code={`<p class="badge badge-count">1<span class="visually-hidden">error</span></p>
+  <p class="position-relative pt-3xsmall">
+    Error<span class="position-absolute top-0 start-100 translate-middle badge badge-count">1</span>
+  </p>`} />
 
 ### Variants
 
@@ -143,7 +162,7 @@ Badges - count provide a numerical indication.
 Badges - count can be used with non-functional or functional colors.
 
 <Callout type="warning">
-  Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, reflect that meaning in `.visually hidden` text associated with the badge - count.
+  Keep in mind that color should not be the only way to convey information. If the color has a strong meaning, especially in functional statuses, reflect that meaning in the `.visually hidden` text associated with the badge - count. [Read more about badges accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-neutral badge-count">0<span class="visually-hidden">notification</span></p>
@@ -157,18 +176,18 @@ Badges - count can be used with non-functional or functional colors.
 
 #### Disabled
 
-The disabled state of a badge - count appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - count, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may not be necessary.
+The disabled state of a badge - count appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - count, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may require adaptation.
 
-<Example class="d-flex gap-3" code={`<p class="badge badge-neutral badge-count badge-disabled">0</p>
-  <p class="badge badge-accent badge-count badge-disabled">1</p>
-  <p class="badge badge-positive badge-count badge-disabled">2</p>
-  <p class="badge badge-info badge-count badge-disabled">10</p>
-  <p class="badge badge-warning badge-count badge-disabled">+99</p>
-  <p class="badge badge-count badge-disabled">250</p>`} />
+<Example class="d-flex gap-3" code={`<p class="badge badge-neutral badge-count badge-disabled">0<span class="visually-hidden">notification</span></p>
+  <p class="badge badge-accent badge-count badge-disabled">1<span class="visually-hidden">notification</span></p>
+  <p class="badge badge-positive badge-count badge-disabled">2<span class="visually-hidden">confirmations</span></p>
+  <p class="badge badge-info badge-count badge-disabled">10<span class="visually-hidden">new emails</span></p>
+  <p class="badge badge-warning badge-count badge-disabled">+99<span class="visually-hidden">alerts</span></p>
+  <p class="badge badge-count badge-disabled">250<span class="visually-hidden">errors</span></p>`} />
 
 ### Sizes
 
-Badges - count are available in two sizes. Add `.badge-large` to have a larger badge.
+Badges - count are available in two sizes. Add `.badge-large` to have a larger badge. Default size is medium.
 
 <Example class="d-flex align-items-center gap-3" code={`<p class="badge badge-count">12<span class="visually-hidden">errors</span></p>
   <p class="badge badge-count badge-large">12<span class="visually-hidden">errors</span></p>`} />
@@ -180,12 +199,12 @@ Badges - icon can be used to visually reinforce meaning.
 <Callout type="info" name="info-icons-svg-sprite" />
 
 <Callout type="warning">
-  Badges - icon should always be associated to a `.visually-hidden`  text describing the icon's meaning.
+  Badges - icon should always be associated to a `.visually-hidden` text describing the icon's meaning. [Read more about badges accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex align-items-center gap-3" code={`<p class="badge">
     <span class="badge-status-icon"></span>
-    <span class="visually-hidden">Error</span>
+    <span class="visually-hidden">Beware</span>
   </p>
   <p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
@@ -204,7 +223,7 @@ Badges - icon can be used to visually reinforce meaning.
 
 ##### Non-functional
 
-Non-functional badges - icon TODO help highlight categories, presence, or draw attention to certain elements without carrying a specific functional meaning (unlike functional badges, see juste below).
+Non-functional badges - icon are used to display neutral or accent information without carrying a specific functional meaning (unlike functional badges, see below), reinforced by an icon.
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-neutral">
     <svg class="badge-icon" aria-hidden="true">
@@ -229,10 +248,10 @@ Non-functional badges - icon TODO help highlight categories, presence, or draw a
 
 ##### Functional
 
-TODO Functional badges - icon help the user quickly understand the state of an element and take action if needed. They carry a clear meaning related to the status of an object or system. Default status is negative.
+Functional badges - icon carry a clear meaning related to the status of an object or system, reinforced by an icon. They help the user quickly understand the status of an element and take action if needed.
 
 <Callout type="warning">
-  TODO Keep in mind that color should not be the only way to convey information. If the color has strong meaning, reflect it in the badge's  `.visually-hidden` associated text. [Read more about tags accessibility here](#accessibility).
+  Keep in mind that color and icon should not be the only ways to convey information. In functional badges, the color and icon have a strong meaning, it must be reflected in the badge's `.visually-hidden` associated text. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-positive">
@@ -249,12 +268,30 @@ TODO Functional badges - icon help the user quickly understand the state of an e
   </p>
   <p class="badge">
     <span class="badge-status-icon"></span>
-    <span class="visually-hidden">Error</span>
+    <span class="visually-hidden">Beware</span>
+  </p>`} />
+
+### States
+
+#### Disabled
+
+The disabled state of a badge - icon appears visually muted to signal that it is not currently active or relevant. To make a disabled badge - icon, simply add the `.badge-disabled` class. Depending on the use case, the `.visually-hidden` text may be unnecessary or require adaptation.
+
+<Example class="d-flex gap-3" code={`<p class="badge badge-disabled">
+    <span class="badge-status-icon"></span>
+  </p>
+  <p class="badge badge-neutral badge-disabled">
+    <svg class="badge-icon" aria-hidden="true">
+      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+    </svg>
+  </p>
+  <p class="badge badge-neutral badge-disabled">
+    <span class="badge-icon si si-settings" aria-hidden="true"></span>
   </p>`} />
 
 ### Sizes
 
-Badges - icon are available in two sizes. Add `.badge-large` to have a larger badge.
+Badges - icon are available in two sizes. Add `.badge-large` to have a larger badge. Default size is medium.
 
 <Example class="d-flex align-items-center gap-3" code={`<p class="badge">
     <span class="badge-status-icon"></span>
@@ -281,12 +318,12 @@ Badges - icon are available in two sizes. Add `.badge-large` to have a larger ba
     <span class="visually-hidden">Parameter</span>
   </p>`} />
 
-## Positioned
+## Positioning
 
-Use utilities to modify a `.badge` and position it in the corner of a button with an icon.
+Use utilities to modify a `.badge` and position it in the corner of a button.
 
 <Example class="d-flex align-items-center gap-3" code={`<button type="button" class="btn btn-icon btn-default position-relative">
-    <svg class="badge-icon" aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}"/>
     </svg>
     <span class="visually-hidden">Trash</span>
@@ -303,16 +340,15 @@ Use utilities to modify a `.badge` and position it in the corner of a button wit
     </span>
   </button>`} />
 
-
 <BootstrapCompatibility>
 
 <Example code={`<button type="button" class="btn btn-primary position-relative">
-  Inbox
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    +99
-    <span class="visually-hidden">unread messages</span>
-  </span>
-</button>`} />
+    Inbox
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      +99
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>`} />
 
 <Example code={`<button type="button" class="btn btn-primary position-relative">
     Profile

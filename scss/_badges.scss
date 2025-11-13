@@ -53,34 +53,36 @@
     --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
   }
 
-  &:not(.badge-neutral):not(.badge-accent) .badge-status-icon {
-    mask-image: escape-svg(var(--#{$prefix}badge-negative-icon));
-  }
-
-  &.badge-positive {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
-
+  &:not(.badge-neutral):not(.badge-accent) {
     .badge-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}badge-positive-icon));
+      mask-image: escape-svg(var(--#{$prefix}badge-negative-icon));
     }
-  }
 
-  &.badge-info {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+    &.badge-positive {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
 
-    .badge-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}badge-info-icon));
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-positive-icon));
+      }
     }
-  }
 
-  &.badge-warning {
-    --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
-    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+    &.badge-info {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
 
-    .badge-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}badge-warning-icon));
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-info-icon));
+      }
+    }
+
+    &.badge-warning {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-warning-icon));
+      }
     }
   }
 }
