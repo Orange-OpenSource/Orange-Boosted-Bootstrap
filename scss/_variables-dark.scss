@@ -16,7 +16,7 @@ $info-dark:       $core-ouds-color-functional-dodger-blue-300 !default;
 $warning-dark:    $core-ouds-color-functional-sun-300 !default;
 $danger-dark:     $core-ouds-color-functional-scarlet-300 !default;
 $light-dark:      $ouds-color-bg-secondary-dark !default;
-$dark-dark:       $ouds-color-bg-emphasized-dark !default;
+$dark-dark:       $ouds-color-bg-inverse-low-dark !default;
 // scss-docs-end theme-color-dark-variables
 
 // scss-docs-start theme-colors-dark-map
@@ -52,7 +52,7 @@ $info-bg-subtle-dark:               $ouds-color-surface-status-info-muted-dark !
 $warning-bg-subtle-dark:            $ouds-color-surface-status-warning-muted-dark !default; // OUDS mod: instead of `shade-color($warning, 80%)`
 $danger-bg-subtle-dark:             $ouds-color-surface-status-negative-muted-dark !default; // OUDS mod: instead of `shade-color($danger, 80%)`
 $light-bg-subtle-dark:              $ouds-color-bg-secondary-dark !default; // OUDS mod: instead of `$gray-800`
-$dark-bg-subtle-dark:               $ouds-color-surface-status-neutral-muted-dark !default; // OUDS mod: instead of `mix($gray-800, $black)`
+$dark-bg-subtle-dark:               $ouds-color-surface-secondary-dark !default; // OUDS mod: instead of `mix($gray-800, $black)`
 // scss-docs-end theme-bg-subtle-dark-variables
 
 // scss-docs-start theme-border-subtle-dark-variables

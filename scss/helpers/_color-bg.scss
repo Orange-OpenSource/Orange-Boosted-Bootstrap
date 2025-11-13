@@ -36,6 +36,8 @@
     $text-bg-color: var(--#{$prefix}color-always-on-black);
   } @else if index(("always-white"), #{$color}) {
     $text-bg-color: var(--#{$prefix}color-always-on-white);
+  } @else if str-index($color, "inverse-") == 1 {
+    $text-bg-color: var(--#{$prefix}color-content-inverse);
   } @else if str-index($color, "status-") == 1 {
     $text-bg-color: var(--#{$prefix}color-content-on-#{$color});
   }

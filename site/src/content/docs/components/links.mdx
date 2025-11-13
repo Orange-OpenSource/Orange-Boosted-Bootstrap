@@ -4,6 +4,8 @@ description: Use OUDS Web’s custom link styles for navigational elements, enab
 aliases:
   - "/docs/components/links/"
 toc: true
+types:
+  - Link
 ---
 
 import { getVersionedDocsPath } from '@libs/path'
@@ -31,12 +33,12 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 **Heads up!** Background utilities used to make colored backgrounds, should always be used with the appropriate color theme (see an example below). Please refer to [colored backgrounds documentation]([[docsref:/utilities/background#colored-backgrounds]]).
 </Callout>
 
-<Example class="p-none" code={`<div class="bg-brand-primary p-lg">
+<Example class="p-none" code={`<div class="bg-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
     </div>
   </div>
-  <div class="bg-status-negative-emphasized p-lg">
+  <div class="bg-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
       <a class="link link-on-colored-bg" href="#">This is an example of link</a>
     </div>
@@ -93,10 +95,10 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
 
 ## Sizes
 
-Links are available in two sizes. Add `.link-sm` for small size.
+Links are available in two sizes. Add `.link-small` for small size.
 
 <Example code={`<div><a class="link" href="#">This is an example of a link</a></div>
-  <div><a class="link link-sm" href="#">This is an example of a small link</a></div>`} />
+  <div><a class="link link-small" href="#">This is an example of a small link</a></div>`} />
 
 ## Link tags
 
@@ -105,7 +107,7 @@ The `.link` classes are designed to be used with the `<a>` element. However, you
 <Example code={`<div><button class="link link" type="submit">Button link</button></div>
   <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
   <div>
-    <button class="link link-sm icon-link" type="button">
+    <button class="link link-small icon-link" type="button">
     <svg aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
     </svg> Small button link icon

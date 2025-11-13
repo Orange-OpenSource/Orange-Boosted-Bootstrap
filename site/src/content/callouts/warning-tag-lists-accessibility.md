@@ -1,0 +1,1 @@
+To ensure accessibility, pay attention to the semantics of the tags you use and adapt the examples to your specific use cases. Also, make sure you convey information correctly to users with visual impairments. [Read more about tags accessibility here](#accessibility).

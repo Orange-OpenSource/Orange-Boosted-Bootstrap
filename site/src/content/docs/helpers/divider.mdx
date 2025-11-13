@@ -19,7 +19,7 @@ You can find here the [OUDS Divider design guidelines](https://unified-design-sy
 Horizontal rules should use the `<hr />` tag, when the separator has semantic meaning (i.e., when it represents a topic change or a significant transition in the content). If the divider is purely decorative, prefer using a border CSS property on an HTML element or our [border utilities]([[docsref:/utilities/borders]]), or even ensure to hide it from assistive technologies (e.g., `aria-hidden="true"`).
 
 <Example buttonLabel="horizontal rule" code={`<hr />
-<div class="border-top border-default my-md"></div>`} />
+<div class="border-top border-default my-medium"></div>`} />
 
 ## Vertical rules
 
@@ -45,25 +45,25 @@ Change the divider color using the [border color utilities]([[docsref:/utilities
 
 <Example buttonLabel="colored horizontal rules" class="d-flex flex-column gap-1" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xs"><hr class="border-${token.name.split('-').slice(3, -1).join('-')}"></div>`
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xsmall"><hr class="border-${token.name.split('-').slice(3, -1).join('-')}"></div>`
     }
     return `<hr class="border-${token.name.split('-').slice(3, -1).join('-')}" />`
   }),
-  `<div class="bg-always-white py-2xs"><hr class="border-always-black"></div>
-  <div class="bg-always-black py-2xs"><hr class="border-always-white"></div>
-  <div class="bg-always-black py-2xs"><hr class="border-always-on-black"></div>
-  <div class="bg-always-white py-2xs"><hr class="border-always-on-white"></div>`]} />
+  `<div class="bg-always-white py-2xsmall"><hr class="border-always-black"></div>
+  <div class="bg-always-black py-2xsmall"><hr class="border-always-white"></div>
+  <div class="bg-always-black py-2xsmall"><hr class="border-always-on-black"></div>
+  <div class="bg-always-white py-2xsmall"><hr class="border-always-on-white"></div>`]} />
 
 <Example buttonLabel="colored vertical rules" class="d-flex flex-column gap-1" code={[...allTokens.filter(token => token.name.match(/\$ouds-color-border-/) && token.name.match(/-light/) && token.compiledValue && !token.name.match(/-focus/)).map(token => {
     if (token.name.match(/-on-/)) {
-      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xs"><div class="vr border-${token.name.split('-').slice(3, -1).join('-')}"></div></div>`
+      return `<div class="bg-${token.name.split('-').slice(4, -1).join('-')} py-2xsmall"><div class="vr border-${token.name.split('-').slice(3, -1).join('-')}"></div></div>`
     }
     return `<div class="vr border-${token.name.split('-').slice(3, -1).join('-')}"></div>`
   }),
-  `<div class="bg-always-white py-2xs"><div class="vr border-always-black"></div></div>
-  <div class="bg-always-black py-2xs"><div class="vr border-always-white"></div></div>
-  <div class="bg-always-black py-2xs"><div class="vr border-always-on-black"></div></div>
-  <div class="bg-always-white py-2xs"><div class="vr border-always-on-white"></div></div>`]} />
+  `<div class="bg-always-white py-2xsmall"><div class="vr border-always-black"></div></div>
+  <div class="bg-always-black py-2xsmall"><div class="vr border-always-white"></div></div>
+  <div class="bg-always-black py-2xsmall"><div class="vr border-always-on-black"></div></div>
+  <div class="bg-always-white py-2xsmall"><div class="vr border-always-on-white"></div></div>`]} />
 
 <BootstrapCompatibility>
 The `<hr />` and `.vr` color can be set using [colors utilities]([[docsref:/utilities/colors]])
