@@ -87,15 +87,25 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-always-white p-large">
     <div data-bs-theme="light">`,
-  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = allTokens.filter(allToken => {
-      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
-    }).map(token => token.compiledValue)
-    const theme = themesArray[1].includes('light')
-      ? 'light'
-      : 'dark'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'light' ? '</span>' : ''}</p>`
-  }),
+    ...scssMaps.find(token => token.name === '$ouds-backgrounds').mapValue
+      .filter(bgToken =>
+        // remove backgrounds that have specific documentation
+        !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name)
+      )
+      .filter(bgToken => {
+        // remove backgrounds that are conditional
+        const conditionalBgMatches = bgToken.value.match(/variable-exists\(([^\)]*)/)
+        return !conditionalBgMatches || hasToken(`$${conditionalBgMatches[1]}`);
+      })
+      .map(token => {
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(bg-)?${token.name}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[1].includes('light')
+          ? 'light'
+          : 'dark'
+        return `    <p class="bg-${token.name} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name}${theme !== 'light' ? '</span>' : ''}</p>`
+      }),
   `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
       <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
       <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
@@ -118,15 +128,25 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example class="p-none" code={[`<div class="bg-always-black p-large">
     <div data-bs-theme="dark">`,
-  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = allTokens.filter(allToken => {
-      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
-    }).map(token => token.compiledValue)
-    const theme = themesArray[0].includes('dark')
-      ? 'dark'
-      : 'light'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'dark' ? '</span>' : ''}</p>`
-  }),
+    ...scssMaps.find(token => token.name === '$ouds-backgrounds').mapValue
+      .filter(bgToken =>
+        // remove backgrounds that have specific documentation
+        !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name)
+      )
+      .filter(bgToken => {
+        // remove backgrounds that are conditional
+        const conditionalBgMatches = bgToken.value.match(/variable-exists\(([^\)]*)/)
+        return !conditionalBgMatches || hasToken(`$${conditionalBgMatches[1]}`);
+      })
+      .map(token => {
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(bg-)?${token.name}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[0].includes('dark')
+          ? 'dark'
+          : 'light'
+        return `    <p class="bg-${token.name} p-large fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name}${theme !== 'dark' ? '</span>' : ''}</p>`
+      }),
   `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
       <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
       <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
@@ -153,19 +173,29 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-status-neutral-emphasized p-large">
     <div data-bs-theme="root-inverted">`,
-  ...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && token.compiledValue).map(token => {
-    const themesArray = allTokens.filter(allToken => {
-      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
-    }).map(token => token.compiledValue)
-    const theme = themesArray[0].includes('dark')
-      ? themesArray[1].includes('light')
-        ? 'root-inverted'
-        : 'dark'
-      : themesArray[1].includes('light')
-        ? 'light'
-        : 'root'
-    return `    <p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
-  }),
+    ...scssMaps.find(token => token.name === '$ouds-backgrounds').mapValue
+      .filter(bgToken =>
+        // remove backgrounds that have specific documentation
+        !['transparent', 'opacity-lowest', 'opacity-lower', 'always-black', 'always-white'].includes(bgToken.name)
+      )
+      .filter(bgToken => {
+        // remove backgrounds that are conditional
+        const conditionalBgMatches = bgToken.value.match(/variable-exists\(([^\)]*)/)
+        return !conditionalBgMatches || hasToken(`$${conditionalBgMatches[1]}`);
+      })
+      .map(token => {
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(bg-)?${token.name}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[0].includes('dark')
+          ? themesArray[1].includes('light')
+            ? 'root-inverted'
+            : 'dark'
+          : themesArray[1].includes('light')
+            ? 'light'
+            : 'root'
+        return `    <p class="bg-${token.name} p-large fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
+      }),
   `    <p class="bg-always-black p-large fw-bold"><span data-bs-theme="dark">.bg-always-black</span></p>
       <p class="bg-always-white p-large fw-bold"><span data-bs-theme="light">.bg-always-white</span></p>
       <p class="bg-transparent p-large fw-bold">.bg-transparent</p>`,
