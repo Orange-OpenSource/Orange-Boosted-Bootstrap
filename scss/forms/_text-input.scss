@@ -32,6 +32,7 @@
 
   --#{$prefix}text-input-error-color: var(--#{$prefix}color-content-status-negative);
   --#{$prefix}text-input-invalid-icon: #{$danger-icon};
+  --#{$prefix}text-input-column-gap-trailing-error: #{$ouds-text-input-space-column-gap-trailing-error-action};
   // scss-docs-end text-input-css-vars
 
   .text-input-container {
@@ -231,7 +232,7 @@
     > img,
     > svg {
       position: absolute;
-      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2); // stylelint-disable-line function-disallowed-list
+      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-icon-size) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
       left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
       z-index: 2;
       width: var(--#{$prefix}text-input-icon-size);
@@ -251,7 +252,7 @@
     // Trailing action
     > button {
       position: absolute;
-      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2); // stylelint-disable-line function-disallowed-list
+      top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
       right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
       z-index: 3;
     }
@@ -283,14 +284,13 @@
         .input-container,
         label {
           // stylelint-disable-next-line function-disallowed-list
-          padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
+          padding-right: calc($ouds-button-size-icon-only + var(--#{$prefix}text-input-column-gap-trailing-error) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap));
         }
       }
 
-
       &::after {
         position: absolute;
-        top: 50%;
+        top: calc(var(--#{$prefix}text-input-min-height) / 2 - var(--#{$prefix}text-input-trailing-action-height) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
@@ -301,12 +301,11 @@
         content: "";
         background-color: currentcolor;
         mask: escape-svg(var(--#{$prefix}text-input-invalid-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
-        transform: translateY(-50%);
       }
 
       &:has(> button)::after {
         // stylelint-disable-next-line function-disallowed-list
-        right: calc(calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)) - var(--#{$prefix}text-input-border-width-left));
+        right: calc(calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error)) - var(--#{$prefix}text-input-border-width-left));
         width: px-to-rem($ouds-button-size-icon-only);
       }
 
@@ -328,19 +327,20 @@
     }
   }
 
-  // Shared styles for helper and error messages
+  // Shared styles for helpers and error messages
   %text-input-message {
     max-width: var(--#{$prefix}text-input-max-width);
     padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
     padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
-    @include get-font-size("label-medium");
   }
 
   // Helper text and helper link
   .text-input-container ~ .text-input-helper {
     @extend %text-input-message;
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
+    margin-bottom: 0;
     color: var(--#{$prefix}text-input-helper-color);
+    @include get-font-size("label-medium");
   }
 
   .text-input-container ~ .link {
@@ -357,7 +357,9 @@
     @extend %text-input-message;
     display: none;
     margin-top: var(--#{$prefix}text-input-helper-margin-top);
+    margin-bottom: 0;
     color: var(--#{$prefix}text-input-error-color);
+    @include get-font-size("label-medium");
   }
 
   .text-input-container:has(.text-input-field.is-invalid) ~ .text-input-error,
