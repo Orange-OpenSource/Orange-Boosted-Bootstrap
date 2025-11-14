@@ -36,9 +36,9 @@ toc: true
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Link CSS variables have been changed. All the variables containing `arrow` have been renamed the same with `chevron` instead.
 
-#### Tag
+#### Tags
 
-- <span class="tag tag-small rounded-none tag-positive">New</span> Tag component has been implemented.
+- <span class="tag tag-small rounded-none tag-positive">New</span> Tags components has been implemented.
 
 ### Helpers
 
@@ -81,86 +81,6 @@ toc: true
   - **4xl** is renamed to `4xlarge` : for example `.m-4xl` → `.m-4xlarge`
   - **5xl** is renamed to `5xlarge` : for example `.m-5xl` → `.m-5xlarge`
   - **Negative** these changes apply to negative spacings as well, for example `.m-n3xs` → `.m-n3xsmall`
-
-### CSS and Sass variables
-
-- <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none tag-positive">New</span> Sass variables:</summary>
-    <ul>
-      <li><code>$ouds-font-weight-system-web-moderate</code></li>
-      <li><code>$ouds-font-weight-web-body-moderate</code></li>
-      <li><code>$ouds-font-weight-web-label-moderate</code></li>
-      <li><code>$ouds-effect-blur-drag</code></li>
-      <li><code>$ouds-color-bg-inverse-low-light</code></li>
-      <li><code>$ouds-color-bg-inverse-low-dark</code></li>
-      <li><code>$ouds-color-bg-inverse-high-light</code></li>
-      <li><code>$ouds-color-bg-inverse-high-dark</code></li>
-      <li><code>$ouds-color-surface-secondary-light</code></li>
-      <li><code>$ouds-color-surface-secondary-dark</code></li>
-      <li><code>$ouds-color-surface-inverse-high-light</code></li>
-      <li><code>$ouds-color-surface-inverse-high-dark</code></li>
-      <li><code>$ouds-color-surface-primary-light</code></li>
-      <li><code>$ouds-color-surface-primary-dark</code></li>
-      <li><code>$ouds-color-surface-tertiary-light</code></li>
-      <li><code>$ouds-color-surface-tertiary-dark</code></li>
-      <li><code>$ouds-color-surface-inverse-low-light</code></li>
-      <li><code>$ouds-color-surface-inverse-low-dark</code></li>
-      <li><code>$ouds-color-content-inverse-light</code></li>
-      <li><code>$ouds-color-content-inverse-dark</code></li>
-      <li><code>$ouds-elevation-sticky</code></li>
-      <li><code>$ouds-elevation-x-sticky</code></li>
-      <li><code>$ouds-elevation-y-sticky</code></li>
-      <li><code>$ouds-elevation-blur-sticky</code></li>
-      <li><code>$ouds-elevation-spread-sticky</code></li>
-    </ul>
-  </details>
-
-- <details class="mb-small">
-    <summary><span class="tag tag-small rounded-none tag-negative">Breaking</span> Removed Sass variables:</summary>
-    <ul>
-      <li><code>$ouds-color-bg-emphasized-light</code></li>
-      <li><code>$ouds-color-bg-emphasized-dark</code></li>
-      <li><code>$ouds-color-bg-emphasized</code></li>
-      <li><code>$ouds-color-surface-status-neutral-muted-light</code></li>
-      <li><code>$ouds-color-surface-status-neutral-muted-dark</code></li>
-      <li><code>$ouds-color-surface-status-neutral-muted</code></li>
-      <li><code>$ouds-color-surface-status-neutral-emphasized-light</code></li>
-      <li><code>$ouds-color-surface-status-neutral-emphasized-dark</code></li>
-      <li><code>$ouds-color-surface-status-neutral-emphasized</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-emphasized-light</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-emphasized-dark</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-emphasized</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-muted-light</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-muted-dark</code></li>
-      <li><code>$ouds-color-content-on-status-neutral-muted</code></li>
-      <li><code>$ouds-elevation-sticky-default</code></li>
-      <li><code>$ouds-elevation-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-x-sticky-default</code></li>
-      <li><code>$ouds-elevation-y-sticky-default</code></li>
-      <li><code>$ouds-elevation-x-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-y-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-x-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-y-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-blur-sticky-default</code></li>
-      <li><code>$ouds-elevation-blur-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-blur-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-spread-sticky-default</code></li>
-      <li><code>$ouds-elevation-spread-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-spread-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized-dark</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-emphasized</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-dark</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled-light</code></li>
-      <li><code>$ouds-elevation-color-sticky-navigation-scrolled</code></li>
-      <li><code>$ouds-elevation-color-sticky-default</code></li>
-      <li><code>$ouds-color-overlay-emphasized-dark</code></li>
-      <li><code>$ouds-color-overlay-emphasized-light</code></li>
-      <li><code>$ouds-color-overlay-default-dark</code></li>
-      <li><code>$ouds-color-overlay-default-light</code></li>
-    </ul>
-  </details>
 
 ## v0.5.0
 
