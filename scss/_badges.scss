@@ -92,11 +92,11 @@
   background-color: #{$ouds-color-action-disabled};
 }
 
-.badge-xsmall:not(.badge-count) {
+.badge-xsmall:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
 }
 
-.badge-small:not(.badge-count) {
+.badge-small:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
 }
 
