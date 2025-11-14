@@ -18,7 +18,8 @@
       @content;
     }
   } @else {
-    [data-bs-theme="#{$mode}"] {
+    [data-bs-theme="#{$mode}"],
+    #{$root-selector}[data-bs-theme="#{$mode}"] {
       @content;
     }
   }
