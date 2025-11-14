@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v5.3.7 (https://boosted.orange.com/)
+ * Boosted Reboot v5.3.8 (https://boosted.orange.com/)
  * Copyright 2014-2025 The Boosted Authors
  * Copyright 2014-2025 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.3.7 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -158,7 +158,8 @@
   --bs-breadcrumb-divider-filter: none;
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme=dark],
+:root[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #fff;
   --bs-body-color-rgb: 255, 255, 255;
@@ -269,7 +270,7 @@
   }
 }
 
-body {
+:root > * {
   position: relative;
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -679,6 +680,10 @@ legend + * {
 [type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
 }
 
 /* rtl:raw:
