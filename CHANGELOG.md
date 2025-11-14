@@ -1,3 +1,23 @@
+## [5.3.8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.7...v5.3.8) (2025-11-14)
+
+
+### Bug Fixes
+
+* **docs:** Generate correctly Links underline color ([#3042](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3042)) ([834192b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/834192b974f14299ba275d89374afed5f92d3f33))
+* **docs:** Update Back to top documentation to use jsx syntax ([#3061](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3061)) ([62f9304](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/62f9304401b8e6f44bdcc38bd4ae9efe3f76458f))
+* **examples:** Label for non required field in form example ([#3097](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3097)) ([b7d3bcf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b7d3bcf0e440caed8d691be966380ac38bdc6198))
+* **tac:** do not display category container at all ([#3058](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3058)) ([3266cb2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3266cb2e9237ae1c558143c79f989aca9dd6372f))
+* **tac:** port tac fix for duplicated h2 into our scss ([#2862](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2862)) ([841d94e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/841d94e351b3948bb308da786716f66be7e6a48a))
+
+
+### Features
+
+* Adding new PR templates ([#2937](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/2937)) ([02f6477](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/02f6477db4b4778bb147be6736111c1742b2520a))
+* Customizable root for Boosted ([#3203](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3203)) ([81f948a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/81f948a01c031c29a07f060eb88135fa9f894afb))
+* **github:** add a doc-only PR template ([#3105](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/3105)) ([e2df8e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e2df8e3fa71a47742e07725504940ebac249f498))
+
+
+
 ## [5.3.7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.3.6...v5.3.7) (2025-06-23)
 
 
