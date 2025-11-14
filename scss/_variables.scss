@@ -450,6 +450,7 @@ $color-mode-type:             data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
 
+$root-selector:               ":root" !default; // Boosted mod
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix !default;
 // fusv-disable

@@ -1,6 +1,6 @@
 // Note: Bootstrap stops at --base0F
 
-:root,
+#{$root-selector}, // Boosted mod: instead of `:root`
 [data-bs-theme="light"] {
   --base00: #{$white};
   --base01: #{$gray-700};
