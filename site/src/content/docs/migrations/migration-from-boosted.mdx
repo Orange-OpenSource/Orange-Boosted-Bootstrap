@@ -84,10 +84,9 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 ### Badges
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.badge` is now rounded by default.
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-disabled` has been added.
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-xsmall`, `.badge-small`, `.badge-large` have been added to size the badge.
-- <span class="tag tag-small rounded-none tag-positive">New</span> `.badge-count` has been added to implement Badge - Count.
+- <span class="tag tag-small rounded-none tag-warning">Breaking</span> Badge has changed a lot in its meaning and usages. It can no longer contain text (use our new [tags]([[docsref:/components/tags]]) for this). It is now either a basic badge (a coloured bullet), a badge - count (with a number) or a badge - icon (with an icon).
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle badges colors, states and sizes.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New classes have been added to handle badges icons.
 
 ### Breadcrumb
 
@@ -157,7 +156,10 @@ You will have to make some extra Javascript to change the styles and update the 
 
 ### Tags
 
-- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic Tag, and the Input tag markup has been updated. The Filter tag has changed to be the [Filter chip]([[docsref:/components/chips#filter-chip]]). The Navigation tag has been removed. Be careful, either the meaning or the markup changed, or both.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Tag has changed a lot in its meaning and usages. The Informative tag has changed to be the basic tag, and the input tag markup has been updated. The filter tag has changed to be the [filter chip]([[docsref:/components/chips#filter-chip]]). The navigation tag has been removed. Be careful, either the meaning or the markup changed, or both.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> New dedicated classes have been added to handle tags colors, appearance, states and sizes.
+- <span class="tag tag-small rounded-none tag-positive">New</span> A tag can now contain a decorative bullet or an icon. New dedicated classes have been added to handle this.
+- <span class="tag tag-small rounded-none tag-positive">New</span> A tag can now have squared corners by using `rounded-none` utility.
 
 ## Forms
 

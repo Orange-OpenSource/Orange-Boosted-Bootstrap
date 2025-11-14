@@ -59,6 +59,7 @@ For both types of tag, OUDS Web has a common basic `.tag` class that sets up def
 ### Accessibility
 
 #### Semantics
+
 For accessibility reasons, any informative element, must either be a semantic element itself or be wrapped in an appropriate semantic HTML element. In the examples below, the tags appear as `<li>` elements or inside `<h2>` or `<p>` elements. The input tags are implemented as `<button>` elements. You may use any semantic element that best fits the context.
 
 Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a text that semantically describes the purpose of the tags*, otherwise add an `aria-label` to the container that explains the tags' function.
@@ -76,15 +77,14 @@ Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>
 `} />
 
 <Example buttonLabel="tags list with an aria-label" code={`<ul class="list-unstyled d-flex column-gap-xsmall" aria-label="Mobile coverage">
-  <li class="tag">Roaming</li>
-  <li class="tag">5G Ready</li>
-  <li class="tag">4G</li>
-</ul>`
-} />
+    <li class="tag">Roaming</li>
+    <li class="tag">5G Ready</li>
+    <li class="tag">4G</li>
+  </ul>`} />
 
 #### Information for visually impaired users
 
-Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the tags purpose on the page, if tags' labels are not self-explanatory. In that case, it's mandatory to add `.visually-hidden` information to explain what it represents.
+Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the tags purpose on the page, if tags' labels are not self-explanatory. In that case, it's mandatory to add a `.visually-hidden` information to explain what it represents.
 
 Several examples are provided below, but they need to be adapted for actual use cases.
 
@@ -102,7 +102,7 @@ Tags hold status depending on the context of the information they represent. Eac
 
 ##### Non-functional
 
-Non-functional tags are used to display categories, default states, or to draw attention without carrying a specific functional meaning (unlike functional tags, see below).
+Non-functional tags are used to display categories, default status, or to draw attention without carrying a specific functional meaning (unlike functional tags, see below).
 
 <Example buttonLabel="non-functional tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized tags (default)">
     <li class="tag">Neutral emphasized (default)</li>
@@ -143,7 +143,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
 <Callout type="info" name="info-icons-svg-sprite" />
 
 <Callout type="warning">
-  Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples.
+  Since icons in tags are always next to some text, they are purely decorative and should be hidden from assistive technologies using `aria-hidden="true"`, as demonstrated in our examples. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
 <Example  buttonLabel="non-functional icon tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Non-functional emphasized icons">
@@ -184,7 +184,7 @@ To display a colored icon in non-functional tags, add the icon inside the tag, w
 As functional tags communicate specific statuses, each status must always be paired with its dedicated functional icon that matches the meaning of the tag, and other icons must not be used. To display a status icon, just add a `<span>` with the `.tag-status-icon` class inside the tag.
 
 <Callout type="warning">
-  If the functional meaning of the text is not sufficiently clear, add an additional text with the `.visually-hidden` class to ensure accessibility for all users.
+  If the functional meaning of the text is not sufficiently clear, add an additional text with the `.visually-hidden` class to ensure accessibility for all users. [Read more about tags accessibility here](#accessibility).
 </Callout>
 
 <Example buttonLabel="functional status tags" showMarkup={true} code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall row-gap-medium" aria-label="Functional emphasized icons">
@@ -427,7 +427,7 @@ The input tags are implemented as `<button>` elements, and can take all the usua
 <Callout type="warning" name="warning-tag-lists-accessibility" />
 
 <Callout type="warning">
-Each input tag should contain a `.visually-hidden` text *after the button text* to indicate the action that will be performed when the tag is clicked.
+  Each input tag should contain a `.visually-hidden` text *after the button text* to indicate the action that will be performed when the tag is clicked.
 </Callout>
 
 <Example buttonLabel="input tags" code={`<ul class="list-unstyled d-flex flex-wrap column-gap-xsmall" aria-label="Selected mobile coverage">
