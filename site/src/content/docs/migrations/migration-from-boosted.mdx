@@ -268,6 +268,33 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in switches’ labels are now forbidden (they won’t be interactive anyway).
 
+#### Text Input
+
+- <span class="tag tag-sm rounded-none text-bg-status-positive-emphasized">New</span> `.text-input` has been added.
+
+- <span class="tag tag-sm rounded-none text-bg-status-negative-emphasized">Breaking</span> Text Input is a new component compared to Boosted’s Input, the DOM is therefore very different.
+<div class="ps-xl">
+For example, if you used to write:
+
+```html
+<div class="mb-3">
+  <label for="exampleFormControlInput" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput" placeholder="name@example.com">
+</div>
+```
+Now you should write:
+
+```html
+<div class="text-input">
+  <div class="text-input-container">
+    <label for="exampleTextInput" class="form-label">Email address</label>
+    <input type="email" class="text-input-field" id="exampleTextInput" placeholder="name@example.com">
+  </div>
+</div>
+```
+See [our new Text Input page]([[docsref:/forms/text-input]]) for more information.
+</div>
+
 ## Helpers
 
 ### Color background
