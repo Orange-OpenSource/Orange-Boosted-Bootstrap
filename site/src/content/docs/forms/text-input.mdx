@@ -71,7 +71,7 @@ Add `.text-input-container-outlined` for a minimalist input with a transparent b
 
 Add `.text-input-container-rounded` for a finish with rounded corners.
 
-<Example code={`<div class="text-input mb-md">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container text-input-container-rounded">
       <label for="exampleTextInputRounded">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputRounded" placeholder="">
@@ -91,7 +91,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-<Example code={`<div class="text-input mb-md">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -100,7 +100,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithIcon" placeholder="">
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -109,7 +109,7 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
       <input type="email" class="text-input-field" id="exampleTextInputPlaceholderWithIcon" placeholder="placeholder">
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -132,10 +132,22 @@ Add an icon to help indicate the purpose of the input by placing an `<svg>` or `
 
 Trailing actions can be added to the right side of the input field by placing a minimal icon only button (`.btn`, `.btn-minimal` and `.btn-icon`) inside the `.text-input-container`. It can be used to provide actions related to the field: clear input, toggle password visibility, open a date picker, etc.
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputEmptyWithAction">Label</label>
       <input type="email" class="text-input-field" id="exampleTextInputEmptyWithAction" placeholder="">
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container text-input-container-outlined">
+      <label for="exampleTextInputEmptyWithActionOutlined">Label</label>
+      <input type="email" class="text-input-field" id="exampleTextInputEmptyWithActionOutlined" placeholder="">
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -158,38 +170,38 @@ Helper text should be explicitly associated with the text input it relates to us
       <label for="inputTextPassword">Password</label>
       <input type="password" id="inputTextPassword" class="text-input-field" aria-describedby="passwordTextHelpBlock" placeholder="">
     </div>
-    <div id="passwordTextHelpBlock" class="text-input-helper">
+    <p id="passwordTextHelpBlock" class="text-input-helper">
       Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-    </div>
+    </p>
   </div>`} />
 
 ### Helper link
 
 If the helper text is not sufficient, it's possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
-To display a helper link below inputs, use a [standard `.link` class]([[docsref:/components/links#standard-variant]]) as a sibling of a `.text-input-container`.
+To display a helper link below inputs, use a standard small link [with `.link` and `.link-sm` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-input-container`.
 
 <Callout type="warning">
 If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="inputTextWithHelperTextLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-input-field" placeholder="">
     </div>
-    <div id="feedbackTextHelpBlock" class="text-input-helper">
+    <p id="feedbackTextHelpBlock" class="text-input-helper">
       Please describe your feedback in a few words.
-    </div>
-    <a href="#" id="feedbackTextHelpMore" class="link">
+    </p>
+    <a href="#" id="feedbackTextHelpMore" class="link link-sm">
       More information
     </a>
   </div>
   <div class="text-input">
-    <div class="text-input-container mt-lg">
+    <div class="text-input-container">
       <label for="inputTextWithHelperLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperLink" aria-describedby="feedbackTextHelpLink" class="text-input-field" placeholder="">
     </div>
-    <a href="#" id="feedbackTextHelpLink" class="link">
+    <a href="#" id="feedbackTextHelpLink" class="link link-sm">
       More information
     </a>
   </div>`} />
@@ -202,55 +214,58 @@ A textual prefix or suffix can be added to an input by wrapping the `<input>` in
 For accessibility purpose the prefix and suffix should be explicitly mentioned in the helper text related to the input by the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce these additional or already existing elements when the user focuses or enters the input.
 </Callout>
 
-<Example code={`<div class="text-input">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="inputTextWithPrefix">Enter you website URL</label>
       <div class="input-container" data-bs-prefix="https://">
         <input type="text" id="inputTextWithPrefix" aria-describedby="prefixTextHelpBlock" class="text-input-field" placeholder="">
       </div>
     </div>
-    <div id="prefixTextHelpBlock" class="text-input-helper">
+    <p id="prefixTextHelpBlock" class="text-input-helper">
       Please fill in the complete URL without the protocol (e.g. www.example.com).
-    </div>
-    <div class="text-input-container mt-md">
-      <label for="inputTextWithSuffix">Price</label>
-      <div class="input-container" data-bs-suffix="€">
-        <input type="text" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input-field" placeholder="">
+    </p>
+  </div>
+  <div class="text-input mb-medium">
+    <div class="text-input-container">
+      <label for="inputTextWithSuffix">Email</label>
+      <div class="input-container" data-bs-suffix="@orange.com">
+        <input type="email" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input-field" placeholder="">
       </div>
     </div>
-    <div id="suffixTextHelpBlock" class="text-input-helper">
-      Enter your price in Euro (€).
-    </div>
+    <p id="suffixTextHelpBlock" class="text-input-helper">
+      Enter your email address without the domain name (e.g. only your username before the @).
+    </p>
   </div>
-  <div class="text-input">
-    <div class="text-input-container mt-md">
+  <div class="text-input mb-medium">
+    <div class="text-input-container">
       <label for="inputTextWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
         <input type="text" id="inputTextWithPrefixSuffix" aria-describedby="prefixSuffixTextHelpBlock" class="text-input-field" placeholder="Enter amount">
       </div>
     </div>
-    <div id="prefixSuffixTextHelpBlock" class="text-input-helper">
+    <p id="prefixSuffixTextHelpBlock" class="text-input-helper">
       Enter your price in Pounds (£) without decimals.
-    </div>
+    </p>
   </div>
   <div class="text-input">
-    <div class="text-input-container mt-md">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-    </svg>
-    <label for="inputTextWithPrefixSuffixLeadingTrailing">Email</label>
-    <div class="input-container" data-bs-prefix="🖳" data-bs-suffix="@orange.com">
-      <input type="email" id="inputTextWithPrefixSuffixLeadingTrailing" aria-describedby="globalTextHelpBlock" class="text-input-field" placeholder="">
-    </div>
-    <button class="btn btn-minimal btn-icon">
-      <svg aria-hidden="true">
+    <div class="text-input-container">
+     <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
-      <span class="visually-hidden">Add to favorites</span>
-    </button>
-    </div> <div id="globalTextHelpBlock" class="text-input-helper">
-      Enter your email address without the domain name (e.g. only your username before the @).
+      <label for="inputTextWithPrefixSuffixIcon">Price</label>
+      <div class="input-container" data-bs-prefix="€" data-bs-suffix=".00">
+        <input type="text" id="inputTextWithPrefixSuffixIcon" aria-describedby="prefixSuffixIconTextHelpBlock" class="text-input-field" placeholder="">
+      </div>
+      <button class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
     </div>
+    <p id="prefixSuffixIconTextHelpBlock" class="text-input-helper">
+      Enter your price in Euro (€) without decimals.
+    </p>
   </div>`} />
 
 ## States
@@ -259,19 +274,19 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
 
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
-<Example code={`<div class="text-input mb-md">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputDisabledEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputDisabledEmpty" placeholder="" disabled>
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputDisabled">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputDisabled" placeholder="" value="Doe" disabled>
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedDisabledEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedDisabledEmpty" placeholder="" disabled>
@@ -288,19 +303,19 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 
 Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
 
-<Example code={`<div class="text-input mb-md">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputReadonlyEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputReadonlyEmpty" placeholder="" readonly>
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputReadonly">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputReadonly" placeholder="" value="Doe" readonly>
     </div>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedReadonlyEmpty">Firstname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonlyEmpty" placeholder="" readonly>
@@ -323,19 +338,19 @@ To display an invalid input, add `.is-invalid` to a `.text-input-field` within t
 For accessibility purpose, the invalid should be associated with a `.text-input-error` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.text-input-error` will replace the helper text, so it should be descriptive enough to convey the error.
 </Callout>
 
-<Example code={`<div class="text-input mb-md">
+<Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputInvalidEmpty">Username</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="usernameFeedback" placeholder="">
     </div>
-    <div id="usernameTextHelpBlock" class="text-input-helper">
+    <p id="usernameTextHelpBlock" class="text-input-helper">
       Please choose a username.
-    </div>
-    <div id="usernameFeedback" class="text-input-error">
+    </p>
+    <p id="usernameFeedback" class="text-input-error">
       Username is required.
-    </div>
+    </p>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputInvalid">Email</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="emailFeedback" placeholder="">
@@ -346,11 +361,11 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <span class="visually-hidden">Add to favorites</span>
       </button>
     </div>
-    <div id="emailFeedback" class="text-input-error">
+    <p id="emailFeedback" class="text-input-error">
       Email is invalid.
-    </div>
+    </p>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -358,21 +373,21 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       <label for="exampleTextInputOutlinedInvalidEmpty">Address</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="addressFeedback" placeholder="">
     </div>
-    <div id="addressFeedback" class="text-input-error">
+    <p id="addressFeedback" class="text-input-error">
       Address is required.
-    </div>
+    </p>
   </div>
-  <div class="text-input mb-md">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
-      <label for="exampleTextInputOutlinedInvalid" class="form-label">City</label>
+      <label for="exampleTextInputOutlinedInvalid">City</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="cityFeedback" placeholder="">
     </div>
-    <div id="cityFeedback" class="text-input-error">
+    <p id="cityFeedback" class="text-input-error">
         City is invalid.
-    </div>
+    </p>
   </div>
-  <div class="text-input mb-md">
-    <div class="text-input-container text-input-container">
+  <div class="text-input mb-medium">
+    <div class="text-input-container">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
@@ -381,12 +396,12 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="priceFeedback" placeholder="">
       </div>
     </div>
-    <div id="priceFeedback" class="text-input-error">
+    <p id="priceFeedback" class="text-input-error">
       Price is not valid.
-    </div>
+    </p>
   </div>
   <div class="text-input">
-    <div class="text-input-container text-input-container">
+    <div class="text-input-container">
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
@@ -401,13 +416,13 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <span class="visually-hidden">Delete</span>
       </button>
     </div>
-    <div id="priceTextHelpBlock" class="text-input-helper">
+    <p id="priceTextHelpBlock" class="text-input-helper">
       Please enter your price.
-    </div>
-    <div id="invalidPrice" class="text-input-error">
+    </p>
+    <p id="invalidPrice" class="text-input-error">
       Price is not valid.
-    </div>
-    <a href="#" id="priceTextHelpLink" class="link">
+    </p>
+    <a href="#" id="priceTextHelpLink" class="link link-sm">
       More information
     </a>
   </div>`} />
@@ -418,11 +433,11 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
 
 Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
 
-<Example code={`<div class="mb-md">
+<Example code={`<div class="mb-medium">
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
-  <div class="mb-md">
+  <div class="mb-medium">
     <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>`} />
@@ -484,13 +499,13 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct `margin` and `padding`.
 
-<Example code={`<div class="mb-md row">
+<Example code={`<div class="mb-medium row">
     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
     </div>
   </div>
-  <div class="mb-md row">
+  <div class="mb-medium row">
     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword">
@@ -507,25 +522,25 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
       <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-md">Confirm identity</button>
+      <button type="submit" class="btn btn-primary mb-medium">Confirm identity</button>
     </div>
   </form>`} />
 
 ## File input
 
-<Example code={`<div class="mb-md">
+<Example code={`<div class="mb-medium">
     <label for="formFile" class="form-label">Default file input example</label>
     <input class="form-control" type="file" id="formFile">
   </div>
-  <div class="mb-md">
+  <div class="mb-medium">
     <label for="formFileMultiple" class="form-label">Multiple files input example</label>
     <input class="form-control" type="file" id="formFileMultiple" multiple>
   </div>
-  <div class="mb-md">
+  <div class="mb-medium">
     <label for="formFileDisabled" class="form-label">Disabled file input example</label>
     <input class="form-control" type="file" id="formFileDisabled" disabled>
   </div>
-  <div class="mb-md">
+  <div class="mb-medium">
     <label for="formFileSm" class="form-label">Small file input example</label>
     <input class="form-control form-control-sm" id="formFileSm" type="file">
   </div>
