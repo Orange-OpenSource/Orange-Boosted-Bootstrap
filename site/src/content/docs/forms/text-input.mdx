@@ -159,7 +159,7 @@ Trailing actions can be added to the right side of the input field by placing a 
 
 ### Helper text
 
-To display a helper text below inputs, add a `.text-input-helper` as a sibling of a `.text-input-container`.
+To display a helper text below inputs, add a `.helper-text` as a sibling of a `.text-input-container`.
 
 <Callout type="warning">
 Helper text should be explicitly associated with the text input it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
@@ -170,7 +170,7 @@ Helper text should be explicitly associated with the text input it relates to us
       <label for="inputTextPassword">Password</label>
       <input type="password" id="inputTextPassword" class="text-input-field" aria-describedby="passwordTextHelpBlock" placeholder="">
     </div>
-    <p id="passwordTextHelpBlock" class="text-input-helper">
+    <p id="passwordTextHelpBlock" class="helper-text">
       Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
     </p>
   </div>`} />
@@ -189,7 +189,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
       <label for="inputTextWithHelperTextLink">Send your feedback</label>
       <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-input-field" placeholder="">
     </div>
-    <p id="feedbackTextHelpBlock" class="text-input-helper">
+    <p id="feedbackTextHelpBlock" class="helper-text">
       Please describe your feedback in a few words.
     </p>
     <a href="#" id="feedbackTextHelpMore" class="link link-sm">
@@ -221,7 +221,7 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <input type="text" id="inputTextWithPrefix" aria-describedby="prefixTextHelpBlock" class="text-input-field" placeholder="">
       </div>
     </div>
-    <p id="prefixTextHelpBlock" class="text-input-helper">
+    <p id="prefixTextHelpBlock" class="helper-text">
       Please fill in the complete URL without the protocol (e.g. www.example.com).
     </p>
   </div>
@@ -232,7 +232,7 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <input type="email" id="inputTextWithSuffix" aria-describedby="suffixTextHelpBlock" class="text-input-field" placeholder="">
       </div>
     </div>
-    <p id="suffixTextHelpBlock" class="text-input-helper">
+    <p id="suffixTextHelpBlock" class="helper-text">
       Enter your email address without the domain name (e.g. only your username before the @).
     </p>
   </div>
@@ -243,7 +243,7 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <input type="text" id="inputTextWithPrefixSuffix" aria-describedby="prefixSuffixTextHelpBlock" class="text-input-field" placeholder="Enter amount">
       </div>
     </div>
-    <p id="prefixSuffixTextHelpBlock" class="text-input-helper">
+    <p id="prefixSuffixTextHelpBlock" class="helper-text">
       Enter your price in Pounds (£) without decimals.
     </p>
   </div>
@@ -263,7 +263,7 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
         <span class="visually-hidden">Add to favorites</span>
       </button>
     </div>
-    <p id="prefixSuffixIconTextHelpBlock" class="text-input-helper">
+    <p id="prefixSuffixIconTextHelpBlock" class="helper-text">
       Enter your price in Euro (€) without decimals.
     </p>
   </div>`} />
@@ -335,7 +335,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid input, add `.is-invalid` to a `.text-input-field` within the `.text-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purpose, the invalid should be associated with a `.text-input-error` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.text-input-error` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purpose, the invalid should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
 </Callout>
 
 <Example code={`<div class="text-input mb-md">
@@ -343,10 +343,10 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       <label for="exampleTextInputInvalidEmpty">Username</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="usernameFeedback" placeholder="">
     </div>
-    <p id="usernameTextHelpBlock" class="text-input-helper">
+    <p id="usernameTextHelpBlock" class="helper-text">
       Please choose a username.
     </p>
-    <p id="usernameFeedback" class="text-input-error">
+    <p id="usernameFeedback" class="error-text">
       Username is required.
     </p>
   </div>
@@ -361,7 +361,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <span class="visually-hidden">Add to favorites</span>
       </button>
     </div>
-    <p id="emailFeedback" class="text-input-error">
+    <p id="emailFeedback" class="error-text">
       Email is invalid.
     </p>
   </div>
@@ -373,7 +373,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       <label for="exampleTextInputOutlinedInvalidEmpty">Address</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="addressFeedback" placeholder="">
     </div>
-    <p id="addressFeedback" class="text-input-error">
+    <p id="addressFeedback" class="error-text">
       Address is required.
     </p>
   </div>
@@ -382,7 +382,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
       <label for="exampleTextInputOutlinedInvalid">City</label>
       <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="cityFeedback" placeholder="">
     </div>
-    <p id="cityFeedback" class="text-input-error">
+    <p id="cityFeedback" class="error-text">
         City is invalid.
     </p>
   </div>
@@ -396,7 +396,7 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="priceFeedback" placeholder="">
       </div>
     </div>
-    <p id="priceFeedback" class="text-input-error">
+    <p id="priceFeedback" class="error-text">
       Price is not valid.
     </p>
   </div>
@@ -416,10 +416,10 @@ For accessibility purpose, the invalid should be associated with a `.text-input-
         <span class="visually-hidden">Delete</span>
       </button>
     </div>
-    <p id="priceTextHelpBlock" class="text-input-helper">
+    <p id="priceTextHelpBlock" class="helper-text">
       Please enter your price.
     </p>
-    <p id="invalidPrice" class="text-input-error">
+    <p id="invalidPrice" class="error-text">
       Price is not valid.
     </p>
     <a href="#" id="priceTextHelpLink" class="link link-sm">
