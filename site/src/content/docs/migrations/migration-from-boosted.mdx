@@ -289,14 +289,41 @@ For example, if you used to write:
 Now you should write:
 
 ```html
-<div class="text-input">
+<div class="text-input mb-md">
   <div class="text-input-container">
-    <label for="exampleTextInput" class="form-label">Email address</label>
+    <label for="exampleTextInput">Email address</label>
     <input type="email" class="text-input-field" id="exampleTextInput" placeholder="name@example.com">
   </div>
 </div>
 ```
 See [our new Text Input page]([[docsref:/forms/text-input]]) for more information.
+</div>
+
+#### Text Area
+
+- <span class="tag tag-sm rounded-none text-bg-status-positive-emphasized">New</span> `.text-area` has been added.
+
+- <span class="tag tag-sm rounded-none text-bg-status-negative-emphasized">Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
+<div class="ps-xl">
+For example, if you used to write:
+
+```html
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+```
+Now you should write:
+
+```html
+<div class="text-area mb-md">
+  <div class="text-area-container">
+    <label for="exampleTextArea">Example textarea</label>
+    <textarea class="text-area-field" id="exampleTextArea"></textarea>
+  </div>
+</div>
+```
+See [our new Text Area page]([[docsref:/forms/text-area]]) for more information.
 </div>
 
 ## Helpers
