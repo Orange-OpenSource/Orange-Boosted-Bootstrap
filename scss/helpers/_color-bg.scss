@@ -6,7 +6,7 @@
     @if index(("danger"), #{$color}) {
       $text-bg-color: var(--#{$prefix}color-content-on-status-negative-emphasized);
     } @else if index(("dark"), #{$color}) {
-      $text-bg-color: var(--#{$prefix}color-content-on-status-neutral-emphasized);
+      $text-bg-color: var(--#{$prefix}color-content-inverse);
     } @else if index(("success"), #{$color}) {
       $text-bg-color: var(--#{$prefix}color-content-on-status-positive-emphasized);
     } @else if index(("info", "warning"), #{$color}) {
@@ -20,33 +20,3 @@
     }
   }
 }
-
-// OUDS mod
-@each $color, $value in map-remove($ouds-backgrounds, "transparent", "opacity-lower", "opacity-lowest") {
-  $text-bg-color: var(--#{$prefix}color-content-default);
-  @if index(("brand-primary"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-brand-primary);
-  } @else if index(("brand-secondary"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-brand-secondary);
-  } @else if index(("brand-tertiary"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-content-on-brand-tertiary);
-  } @else if index(("emphasized"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-always-white);
-  } @else if index(("always-black"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-always-on-black);
-  } @else if index(("always-white"), #{$color}) {
-    $text-bg-color: var(--#{$prefix}color-always-on-white);
-  } @else if str-index($color, "inverse-") == 1 {
-    $text-bg-color: var(--#{$prefix}color-content-inverse);
-  } @else if str-index($color, "status-") == 1 {
-    $text-bg-color: var(--#{$prefix}color-content-on-#{$color});
-  }
-
-  @if $value {
-    .text-bg-#{$color} {
-      color: $text-bg-color if($enable-important-utilities, !important, null);
-      background-color: $value if($enable-important-utilities, !important, null);
-    }
-  }
-}
-// End mod

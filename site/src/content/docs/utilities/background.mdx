@@ -19,14 +19,13 @@ Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sas
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you’ll want to use an additional:
 * `[data-bs-theme]` [color mode attribute]([[docsref:/customize/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes
 * `.text-*` [color utilities]([[docsref:/utilities/colors]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
-* `.text-bg-*` [color & background helper]([[docsref:/helpers/color-background]]) from our background colors and if there is no components inside
 
 <BootstrapCompatibility>
 
 Here are the equivalent Bootstrap background that you shouldn’t be using. Prefer using the classes above according to [our design system]([[config:ouds.web]]).
 
 <Example code={[
-  ...getData('theme-colors').map((themeColor) => `<div class="p-3 mb-2 bg-${themeColor.name} text-bg-${themeColor.name}">.bg-${themeColor.name}</div>
+  ...getData('theme-colors').map((themeColor) => `<div class="p-3 mb-2 bg-${themeColor.name}">.bg-${themeColor.name}</div>
 <div class="p-3 mb-2 bg-${themeColor.name}-subtle text-${themeColor.name}-emphasis">.bg-${themeColor.name}-subtle</div>`),
   `<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
 <div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
