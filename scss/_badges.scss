@@ -10,10 +10,10 @@
   --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
   --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
   --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
-  --#{$prefix}badge-positive-icon: #{$alert-icon-success};
-  --#{$prefix}badge-info-icon: #{$alert-icon-info};
-  --#{$prefix}badge-warning-icon: #{$alert-icon-warning-external};
-  --#{$prefix}badge-negative-icon: #{$alert-icon-important};
+  --#{$prefix}badge-positive-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}badge-info-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}badge-warning-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}badge-negative-icon: var(--#{$prefix}error-icon);
   // scss-docs-end badge-css-vars
 
   display: inline-block;
