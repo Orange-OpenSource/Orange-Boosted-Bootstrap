@@ -2,7 +2,7 @@
 
 // Boosted mod: the entire file is modified and is specific to Boosted
 
-:root {
+#{$root-selector} { // Boosted mod: instead of `:root`
   // All available CSS vars and specific modifications for Boosted
   --docsearch-primary-color: var(--bs-primary);
   --docsearch-text-color: var(--bs-body-color);

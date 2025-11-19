@@ -213,6 +213,31 @@ For example, you can create a “blue theme” with the selector `data-bs-theme=
 </div>
 ```
 
+### Change the root selector
+
+You can also change the root selector from where the theme variables are set. By default, it's set to `:root`, but you can change it to any other selector. This is useful if you want to apply the theme to another element, for instance in Angular where you can't access easily the `<html>` element.
+
+```scss
+$root-selector: "#app";
+
+@include "boosted";
+```
+
+Outputs to:
+
+```css
+#app,
+[data-bs-theme="light"] {
+  /* Your light mode variables definition */
+}
+
+[data-bs-theme="dark"] {
+  /* Your dark mode variables definition */
+}
+
+/* Further Boosted CSS */
+```
+
 ## JavaScript
 
 To allow visitors or users to toggle color modes, you’ll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We’ve built a toggler in our documentation that initially defers to a user’s current system color mode, but provides an option to override that and pick a specific color mode.
