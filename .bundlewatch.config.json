@@ -18,11 +18,11 @@
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-reboot.css",
-      "maxSize": "7.0 kB"
+      "maxSize": "7.25 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-reboot.min.css",
-      "maxSize": "6.5 kB"
+      "maxSize": "7 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-utilities.css",

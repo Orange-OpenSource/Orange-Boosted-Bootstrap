@@ -94,8 +94,11 @@ $alert-icon-important: url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='h
 
 //// SVG used several times
 $svg-as-custom-props: (
-  "chevron": $chevron-icon,
-  "close":   $cross-icon-stroke,
-  "success": $alert-icon-success,
-  "error":   $alert-icon-important
+  "chevron":          $chevron-icon,
+  "close":            $cross-icon-stroke,
+  "success":          $alert-icon-success,
+  "info":             $alert-icon-info,
+  "warning":          $alert-icon-warning-external,
+  "warning-internal": $alert-icon-warning-internal,
+  "error":            $alert-icon-important
 ) !default;

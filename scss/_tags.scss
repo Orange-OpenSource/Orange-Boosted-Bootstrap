@@ -14,11 +14,11 @@
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --#{$prefix}tag-positive-icon: #{$alert-icon-success};
-  --#{$prefix}tag-info-icon: #{$alert-icon-info};
-  --#{$prefix}tag-warning-external-icon: #{$alert-icon-warning-external};
-  --#{$prefix}tag-warning-internal-icon: #{$alert-icon-warning-internal};
-  --#{$prefix}tag-negative-icon: #{$alert-icon-important};
+  --#{$prefix}tag-positive-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}tag-info-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}tag-negative-icon: var(--#{$prefix}error-icon);
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
 
   position: relative;
