@@ -7,54 +7,61 @@ toc: true
 
 ## Preamble
 
-This page is for people that want to try the bi-mode combining Boosted and OUDS Web. It’s also a tutorial to implement OUDS Web gradually inside your website. Be careful, we don’t support it too much and this feature is supposed to be used only by the selected projects. If you’re not, please contact us so we can maybe help you.
-This page is not to be used alone, but is complementary to [OUDS Web documenation](https://web.unified-design-system.orange.com/) and [Boosted documentation](https://boosted.orange.com/).
+Bi-mode is a way to early and gradually migrate a Boosted project to OUDS.
+
+This page is for people that want to try the bi-mode combining sBoosted and OUDS Web. It also works as a tutorial to implement OUDS Web gradually inside your website. Be careful, we will support this in a “best-effort” way ; this feature is supposed to be mainly used by pre-selected projects. If you need any assistance, please [contact us]([[docsref:/about/team]]).
+This page is not to be used alone, but is complementary to [OUDS Web documentation](https://web.unified-design-system.orange.com/) and [Boosted documentation](https://boosted.orange.com/).
 
 ## Example of integration
 
-If you want to see the kind of changes and the amount of changes it might require on your side by watching it in action in the [ODS Charts project](https://github.com/Orange-OpenSource/ods-charts/pull/673/files). Be aware that this project remains very simple due to the used technology, and that only few pages were done in this example just to test different configurations.
+You can check this [example of bi-mode on ODS Charts project](https://github.com/Orange-OpenSource/ods-charts/pull/673/files) update to see what it would entail, and the amount of work required on your side in terms of changes. Be aware that the ODS Charts project remains very simple due to the used technology, and that only few pages were done in this example just to test different configurations.
 
 ## Cons
 
 Here is a non exhaustive list of disadvantages of using this bi-mode:
+- It implies a change of design, and a mix of two brands that might sometimes visually clash, so be in touch with your designer(s).
+- It implies a big load of work to start the journey.
+- You will need to adapt to the new naming of utilities, helpers, components, etc.
+- Since the library isn’t released, it won’t be as stable as Boosted.
 - There might be some unwanted side and edge effects that we didn’t anticipate.
-- It implies a change of design, so be in touch with your designer(s).
-- It implies a mix of two brands that doesn’t coexist well.
-- It implies a big load of work to start the journey and a moderate one to keep up to date.
-- You will need to adapt to the new naming.
-- Since the library isn’t released, it won’t be as stable a Boosted for example.
 
 ## Pros
 
 Here is a non exhaustive list of advantages of using this bi-mode:
-- You have more power to feedback and influence the library.
-- You have more support and a better connection with the core team of the library.
+- You will be in advance compared to other projects in terms of design system.
 - You gain time for the future since you are migrating to OUDS Web little by little.
-- You will be in advance compared to others projects in terms of design system.
 - You will more likely have only few changes to do to integrate components one by one.
-- No more issues about dark mode.
-- Easier releases, so you won’t have to wait long until something’s corrected.
+- No more issues with dark mode.
+- Easier releases, so you won’t have to wait as long until something’s corrected.
+- You have more support and a better connection with the core team of the library.
+- You have more power to feedback and influence the library.
 
 ## Tutorials to progressively switch to OUDS Web
 
-### OUDS Web as the main framework
+### JavaScript
 
-This is the prefered scenario, it will help you to implement the basic concepts of OUDS Web.
+As there is no diff on any javascript component at the moment, we encourage you to take the JavaScript from `@ouds/web-common`. So replace `boosted/dist/js/boosted.ems.min.js` by `@ouds/web-common/dist/js/ouds-web.esm.min.js`, and you should be good to go.
 
-#### Maximum of OUDS Web
+### CSS
+
+#### OUDS Web as the main framework
+
+This is the preferred scenario and will help you implement the basic concepts of OUDS Web.
+
+##### Maximum of OUDS Web
 
 <Callout type="info">
 **This is the recommended scenario.**
 </Callout>
 
-In this scenario, you will have access, use all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the blanks using Boosted and custom CSS.
+In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
 
-1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme.
+1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
     <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
-      <summary>See the configuration file</summary>
+      <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all OUDS Web
         @import "@ouds/web-orange/dist/css/ouds-web";
 
@@ -286,7 +293,7 @@ In this scenario, you will have access, use all the components available in OUDS
             --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor-dark};
           }
 
-          // Import only what’s needed from Boosted to fill in the blanks
+          // Import only what’s needed from Boosted to fill in the missing parts
           @import "boosted/scss/images";
           @import "boosted/scss/tables";
           @import "boosted/scss/forms/labels";
@@ -319,7 +326,7 @@ In this scenario, you will have access, use all the components available in OUDS
           @import "boosted/scss/offcanvas";
           @import "boosted/scss/placeholders";
 
-          // Boosted
+          // Boosted specific imports
           @import "boosted/scss/back-to-top";
           @import "boosted/scss/footer";
           @import "boosted/scss/local-navigation";
@@ -328,7 +335,7 @@ In this scenario, you will have access, use all the components available in OUDS
           @import "boosted/scss/sticker";
           @import "boosted/scss/title-bars";
 
-          // No need to import Helpers or Utilities, and use the OUDS Web ones
+          // No need to import helpers or utilities, and use the OUDS Web ones
         }
 
         // 3. Import your custom Boosted components
@@ -338,26 +345,26 @@ In this scenario, you will have access, use all the components available in OUDS
         @import "your/custom/(s)css/files.scss";`} />
     </details>
 
-3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]).
+3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]).
 
-4. Sometimes, we provide only a partial support of what was done before. Since the goal of OUDS is to support all the previous components or at least give an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you need to copy paste the code if you use it in your code.
+4. Sometimes, OUDS Web provides components that only partially cover the features available in Boosted. But rest assured that the goal is to cover all of the previously available components or at least provide an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you’ll need to copy paste these buttons’ styles from Boosted if you need them.
 
-5. Add a `.boosted` near to the root (`<body>` for example), set the `[data-bs-theme]` (probably to `root`), and voilà, you should be having the best of two worlds.
+5. Add a `.boosted` class near to the root (on `<body>` for example), set the `[data-bs-theme]` (probably to on `root`), and voilà, you should be having the best of two worlds.
 
-#### Minimum of OUDS Web
+##### Minimum of OUDS Web
 
 <Callout type="warning">
-This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to implement it.
+This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
 
-1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme.
+1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
     <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
-      <summary>See the configuration file</summary>
+      <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all OUDS Web
         @import "@ouds/web-orange/dist/css/ouds-web";
 
@@ -370,24 +377,24 @@ In this scenario, you will have access to OUDS Web on the root, but once a Boost
         @import "your/custom/(s)css/files.scss";`} />
     </details>
 
-3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.boosted` each time you need to use Boosted on the element or its children and also to set the `[data-bs-theme]` every time you use this selector. Don’t change any element further since you’ll be using Boosted directly.
+3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.boosted` each time you need to use Boosted on the element or its children and also to set the `[data-bs-theme]` every time you use this selector. Don’t change any element further since you’ll be using Boosted directly.
 
 4. You might need to override things that doesn’t match the specifications on your own.
 
-### Keep Boosted as the main framework
+#### Boosted as the main framework
 
 <Callout type="warning">
-This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to implement it.
+This is not the recommended scenario, but if you want a simpler migration (at first only), here is a way to do it.
 </Callout>
 
 In this scenario, you will have access to OUDS Web on defined elements and children. It means that once you’ve set `.ouds-web` on an element, you’ll have access to OUDS Web.
 
-1. Make sure to install `sass`, `@ouds/web-common`, and `boosted`. You’ll also need a theme, and this tutorial assumes it will be the Orange theme.
+1. Make sure to install `sass`, `@ouds/web-common`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
     <Code lang="sh" code="npm i sass @ouds/web-common @ouds/web-orange boosted" />
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
-      <summary>See the configuration file</summary>
+      <summary>See the main style file example</summary>
       <Code lang="scss" code={`// 1. Import all Boosted
         @import "boosted/dist/css/boosted";
 
@@ -435,24 +442,24 @@ In this scenario, you will have access to OUDS Web on defined elements and child
         @import "your/custom/(s)css/files.scss";`} />
     </details>
 
-3. Once your all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.ouds-web` each time you need to use OUDS Web on the element or its children and also to set the `[data-bs-theme]` every time you use this selector.
+3. Once you’re all set, you can begin to follow [our migration guide from Boosted]([[docsref:/migrations/migration-from-boosted]]), and add a `.ouds-web` each time you need to use OUDS Web on the element or its children and also to set the `[data-bs-theme]` every time you use this selector.
 
-4. Sometimes, we provide only a partial support of what was done before. Since the goal of OUDS is to support all the previous components or at least give an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you need to copy paste the code if you use it in your code.
+4. Sometimes, OUDS Web provides components that only partially cover the features available in Boosted. But rest assured that the goal is to cover all of the previously available components or at least provide an alternative. For example, the [Boosted social buttons](https://boosted.orange.com/docs/5.3/components/buttons/#social-buttons) aren’t yet developed, so you’ll need to copy paste these buttons’ styles from Boosted if you need them.
 
 5. You might need to override things that doesn’t match the specifications on your own.
 
 ## Process once set
 
-Here is a small list of what to do once, you’re all set, you should check once a week if there isn’t a new OUDS Web release.
-- If not, you can stop here and enjoy a week without release.
+Once you’re all set, you should check once a month if there isn’t a new OUDS Web release.
+- If not, you can stop here and enjoy a month without release.
 - If yes, follow [our migration guide]([[docsref:/migration]]). The main changes can be:
   - Already existing components to update in your code.
   - New components, so update your code with the new ones, remove the newly useless import(s) from Boosted custom import stack or from the custom Boosted backports.
 
 ## Good practices
 
-Here is a non-exhaustive list for the good practices once you’re all set:
+Here is a non-exhaustive list of best practices to adopt once you’re all set:
 - Have two separate custom stylesheets, one with the style that will be included in OUDS Web, and one that is very specific to your project.
 - Keep up to date with the latest OUDS Web version, add the newly added components, remove dead code from your stylesheets.
 - `data-bs-theme` must be set alongside with `.boosted` class.
-- Don’t hesitate if there is any question. If you have any question, any review, it will probably to others after you, and we can complete a faq with yours to helps others.
+- If you have any questions, don’t hesitate to ask. Any question or feedback will probably be useful to others after you, and we will add your contributions to our FAQs to help them.
