@@ -38,5 +38,5 @@ export const getMode = (regex: string) => {
  * @returns boolean
  */
 export const hasToken = (searchToken: string) => {
-  return allTokens.find((token: any) => token.name === searchToken) ? true : false;
+  return allTokens.some((token: any) => token.name === searchToken);
 }

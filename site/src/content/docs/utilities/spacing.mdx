@@ -142,7 +142,7 @@ Here are some representative examples of these classes:
 }
 
 .p-2xlarge {
-  padding: $ouds-space-fixed-tall !important;
+  padding: $ouds-space-fixed-2large !important;
 }
 ```
 
@@ -173,9 +173,9 @@ The first two examples show the scaled and fixed margin classes in action. The l
 
 Please note that if you mix the scaled and fixed classes, the fixed classes will override the scaled ones.
 
-<Example class="bd-example-spacings" code={`<div class="mx-scaled-large">Tall scaled x margin</div>
-  <div class="mx-large">Tall x margin (fixed)</div>
-  <div class="mx-large mx-md-xlarge mx-xl-2xlarge">Tall scaled x margin (manually)</div>`} />
+<Example class="bd-example-spacings" code={`<div class="mx-scaled-large">Large scaled x margin</div>
+  <div class="mx-large">Large x margin (fixed)</div>
+  <div class="mx-large mx-md-xlarge mx-xl-2xlarge">Large scaled x margin (manually)</div>`} />
 
 ### Horizontal centering
 
@@ -195,14 +195,14 @@ Additionally, OUDS Web also includes an `.mx-auto` class for horizontally center
 
 In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-sm` and `.ms-scaled-lg`:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here are some example classes that are the opposite of `.mt-small` and `.ms-scaled-large`:
 
 ```scss
-.mt-nsm {
+.mt-nsmall {
   margin-top: -$ouds-space-fixed-small !important;
 }
 
-.ms-scaled-nlg {
+.ms-scaled-nlarge {
   margin-top: calc(-1 * var(--bs-space-scaled-large)) !important;
 }
 ```
@@ -230,7 +230,7 @@ When using `display: grid` or `display: flex`, you can make use of `gap` utiliti
     <div class="p-small">Grid item 4</div>
   </div>`} />
 
-Support includes responsive options for all of OUDS Web’s grid breakpoints, as well as sizes from the `$ouds-dimension-space-fixed` map (`none`–`jumbo`). There is no `.gap-auto` utility class as it’s effectively the same as `.gap-none`.
+Support includes responsive options for all of OUDS Web’s grid breakpoints, as well as sizes from the `$ouds-dimension-space-fixed` map (`none`–`5xlarge`). There is no `.gap-auto` utility class as it’s effectively the same as `.gap-none`.
 
 <BootstrapCompatibility>
 

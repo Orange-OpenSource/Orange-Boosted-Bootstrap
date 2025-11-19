@@ -30,7 +30,7 @@ This section exposes all the existing colors inside the OUDS Web palette. These 
 
 {
   Object.keys(toto).map((colorCategory) => (
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-tall pb-large">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5 gy-2xlarge pb-large">
       {toto[colorCategory].map((color) => (
         <figure class="mb-none" aria-label={color.name}>
           <button class="border-none p-none color-copy ratio ratio-1x1" data-clipboard-text={color.name} data-bs-toggle="tooltip" data-bs-title="Copy to clipboard">
