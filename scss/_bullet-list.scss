@@ -1,8 +1,8 @@
 // stylelint-disable selector-no-qualifying-type, selector-max-type, selector-max-compound-selectors, selector-max-combinators
 .bullet-list {
   --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-large};
-  --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-large);
-  --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-large);
+  --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-medium-with-body-large);
+  --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-small-with-body-large);
   --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-large}); // stylelint-disable-line function-disallowed-list
   --#{$prefix}bullet-list-marker-left: #{$ouds-bullet-list-space-padding-inline-level-0};
 
@@ -15,8 +15,8 @@
   &.fs-bm ul,
   &.fs-bm ol {
     --#{$prefix}bullet-list-padding-block: #{$ouds-bullet-list-space-padding-block-body-medium};
-    --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-md-with-body-medium);
-    --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-sm-with-body-medium);
+    --#{$prefix}bullet-list-icon-container-width: var(--#{$prefix}icon-medium-with-body-medium);
+    --#{$prefix}bullet-list-icon-size: var(--#{$prefix}icon-small-with-body-medium);
     --#{$prefix}bullet-list-fixed-left-padding: calc(var(--#{$prefix}bullet-list-icon-container-width) + #{$ouds-bullet-list-space-column-gap-body-medium}); // stylelint-disable-line function-disallowed-list
     @include get-font-size("body-medium");
   }

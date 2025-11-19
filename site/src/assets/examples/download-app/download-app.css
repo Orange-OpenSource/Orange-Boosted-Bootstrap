@@ -15,33 +15,33 @@
   }
 }
 
-.icons-sm {
+.icons-small {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.icons-md {
+.icons-medium {
   width: 3.125rem;
   height: 3.125rem;
 }
 
-.icons-lg {
+.icons-large {
   width: 4.375rem;
   height: 4.375rem;
 }
 
 @media (min-width: 768px) {
-  .icons-sm {
+  .icons-small {
     width: 3.125rem;
     height: 3.125rem;
   }
 
-  .icons-md {
+  .icons-medium {
     width: 3.75rem;
     height: 3.75rem;
   }
 
-  .icons-lg {
+  .icons-large {
     width: 6.25rem;
     height: 6.25rem;
   }
