@@ -26,7 +26,6 @@
 
   --#{$prefix}text-input-label-color: var(--#{$prefix}color-content-muted);
 
-  --#{$prefix}text-input-invalid-icon: #{$danger-icon};
   --#{$prefix}text-input-column-gap: #{$ouds-text-input-space-column-gap-default};
   --#{$prefix}text-input-column-gap-trailing-error: #{$ouds-text-input-space-column-gap-trailing-error-action};
   // scss-docs-end text-input-common-css-vars
@@ -310,7 +309,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: escape-svg(var(--#{$prefix}text-input-invalid-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: var(--#{$prefix}error-icon) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
       }
 
       &:has(> button)::after {
@@ -515,7 +514,7 @@
         color: var(--#{$prefix}text-input-label-color);
         content: "";
         background-color: currentcolor;
-        mask: escape-svg(var(--#{$prefix}text-input-invalid-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
+        mask: escape-svg(var(--#{$prefix}error-icon)) no-repeat 50% / px-to-rem($ouds-button-size-icon-only);
         transform: translateY(-50%);
       }
 

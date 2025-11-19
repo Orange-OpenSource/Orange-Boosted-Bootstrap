@@ -41,45 +41,45 @@ $ouds-border-colors: (
 // scss-docs-start ouds-maps-dimension
 $ouds-dimension-space-scaled: (
   "none": var(--#{$prefix}space-scaled-none),
-  "3xs": var(--#{$prefix}space-scaled-3xs),
-  "2xs": var(--#{$prefix}space-scaled-2xs),
-  "xs": var(--#{$prefix}space-scaled-xs),
-  "sm": var(--#{$prefix}space-scaled-sm),
-  "md": var(--#{$prefix}space-scaled-md),
-  "lg": var(--#{$prefix}space-scaled-lg),
-  "xl": var(--#{$prefix}space-scaled-xl),
-  "2xl": var(--#{$prefix}space-scaled-2xl),
-  "3xl": var(--#{$prefix}space-scaled-3xl)
+  "3xsmall": var(--#{$prefix}space-scaled-3xsmall),
+  "2xsmall": var(--#{$prefix}space-scaled-2xsmall),
+  "xsmall": var(--#{$prefix}space-scaled-xsmall),
+  "small": var(--#{$prefix}space-scaled-small),
+  "medium": var(--#{$prefix}space-scaled-medium),
+  "large": var(--#{$prefix}space-scaled-large),
+  "xlarge": var(--#{$prefix}space-scaled-xlarge),
+  "2xlarge": var(--#{$prefix}space-scaled-2xlarge),
+  "3xlarge": var(--#{$prefix}space-scaled-3xlarge)
 ) !default;
 
 // stylelint-disable function-disallowed-list
 $ouds-dimension-negative-space-scaled: (
-  "n3xs": calc(-1 * var(--#{$prefix}space-scaled-3xs)),
-  "n2xs": calc(-1 * var(--#{$prefix}space-scaled-2xs)),
-  "nxs": calc(-1 * var(--#{$prefix}space-scaled-xs)),
-  "nsm": calc(-1 * var(--#{$prefix}space-scaled-sm)),
-  "nmd": calc(-1 * var(--#{$prefix}space-scaled-md)),
-  "nlg": calc(-1 * var(--#{$prefix}space-scaled-lg)),
-  "nxl": calc(-1 * var(--#{$prefix}space-scaled-xl)),
-  "n2xl": calc(-1 * var(--#{$prefix}space-scaled-2xl)),
-  "n3xl": calc(-1 * var(--#{$prefix}space-scaled-3xl))
+  "n3xsmall": calc(-1 * var(--#{$prefix}space-scaled-3xsmall)),
+  "n2xsmall": calc(-1 * var(--#{$prefix}space-scaled-2xsmall)),
+  "nxsmall": calc(-1 * var(--#{$prefix}space-scaled-xsmall)),
+  "nsmall": calc(-1 * var(--#{$prefix}space-scaled-small)),
+  "nmedium": calc(-1 * var(--#{$prefix}space-scaled-medium)),
+  "nlarge": calc(-1 * var(--#{$prefix}space-scaled-large)),
+  "nxlarge": calc(-1 * var(--#{$prefix}space-scaled-xlarge)),
+  "n2xlarge": calc(-1 * var(--#{$prefix}space-scaled-2xlarge)),
+  "n3xlarge": calc(-1 * var(--#{$prefix}space-scaled-3xlarge))
 ) !default;
 // stylelint-enable function-disallowed-list
 
 // scss-docs-start ouds-maps-dimension-fixed
 $ouds-dimension-space-fixed: (
   "none": $ouds-space-fixed-none,
-  "3xs": $ouds-space-fixed-3xs,
-  "2xs": $ouds-space-fixed-2xs,
-  "xs": $ouds-space-fixed-xs,
-  "sm": $ouds-space-fixed-sm,
-  "md": $ouds-space-fixed-md,
-  "lg": $ouds-space-fixed-lg,
-  "xl": $ouds-space-fixed-xl,
-  "2xl": $ouds-space-fixed-2xl,
-  "3xl": $ouds-space-fixed-3xl,
-  "4xl": $ouds-space-fixed-4xl,
-  "5xl": $ouds-space-fixed-5xl
+  "3xsmall": $ouds-space-fixed-3xsmall,
+  "2xsmall": $ouds-space-fixed-2xsmall,
+  "xsmall": $ouds-space-fixed-xsmall,
+  "small": $ouds-space-fixed-small,
+  "medium": $ouds-space-fixed-medium,
+  "large": $ouds-space-fixed-large,
+  "xlarge": $ouds-space-fixed-xlarge,
+  "2xlarge": $ouds-space-fixed-2xlarge,
+  "3xlarge": $ouds-space-fixed-3xlarge,
+  "4xlarge": $ouds-space-fixed-4xlarge,
+  "5xlarge": $ouds-space-fixed-5xlarge
 ) !default;
 // scss-docs-end ouds-maps-dimension-fixed
 
@@ -93,9 +93,7 @@ $ouds-elevations: (
   "emphasized":                 $ouds-elevation-emphasized,
   "none":                       $ouds-elevation-none,
   "raised":                     $ouds-elevation-raised,
-  "sticky-default":             $ouds-elevation-sticky-default,
-  "sticky-emphasized":          $ouds-elevation-sticky-emphasized,
-  "sticky-navigation-scrolled": $ouds-elevation-sticky-navigation-scrolled
+  "sticky":                     $ouds-elevation-sticky
 ) !default;
 // scss-docs-end ouds-maps-elevations
 
@@ -119,7 +117,7 @@ $ouds-font-weights: (
   bold: $ouds-font-weight-system-web-strong
 ) !default;
 
-$ouds-icon-sizes: ("sm", "md", "lg") !default;
+$ouds-icon-sizes: ("small", "medium", "large") !default;
 // scss-docs-end ouds-maps-font
 
 // scss-docs-start ouds-maps-opacities
@@ -139,12 +137,11 @@ $ouds-backgrounds: (
   "primary": var(--#{$prefix}color-bg-primary),
   "secondary": var(--#{$prefix}color-bg-secondary),
   "tertiary": var(--#{$prefix}color-bg-tertiary),
-  "emphasized": var(--#{$prefix}color-bg-emphasized),
   "brand-primary": var(--#{$prefix}color-surface-brand-primary),
   "brand-secondary": if(variable-exists(ouds-color-surface-brand-secondary-light), var(--#{$prefix}color-surface-brand-secondary), null),
   "brand-tertiary": if(variable-exists(ouds-color-surface-brand-tertiary-light), var(--#{$prefix}color-surface-brand-tertiary), null),
-  "status-neutral-emphasized": var(--#{$prefix}color-surface-status-neutral-emphasized),
-  "status-neutral-muted": var(--#{$prefix}color-surface-status-neutral-muted),
+  "inverse-high": var(--#{$prefix}color-surface-inverse-high),
+  "inverse-low": var(--#{$prefix}color-surface-inverse-low),
   "status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
   "status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
   "status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
@@ -180,8 +177,6 @@ $ouds-text-colors: (
   "on-status-info-muted": var(--#{$prefix}color-content-on-status-info-muted),
   "on-status-negative-emphasized": var(--#{$prefix}color-content-on-status-negative-emphasized),
   "on-status-negative-muted": var(--#{$prefix}color-content-on-status-negative-muted),
-  "on-status-neutral-emphasized": var(--#{$prefix}color-content-on-status-neutral-emphasized),
-  "on-status-neutral-muted": var(--#{$prefix}color-content-on-status-neutral-muted),
   "on-status-positive-emphasized": var(--#{$prefix}color-content-on-status-positive-emphasized),
   "on-status-positive-muted": var(--#{$prefix}color-content-on-status-positive-muted),
   "on-status-warning-emphasized": var(--#{$prefix}color-content-on-status-warning-emphasized),
@@ -350,7 +345,7 @@ $utilities-bg: map-merge(
     "warning":    var(--#{$prefix}color-surface-status-warning-emphasized), // OUDS mod
     "danger":     var(--#{$prefix}color-surface-status-negative-emphasized), // OUDS mod
     "light":      var(--#{$prefix}color-bg-secondary), // OUDS mod
-    "dark":       var(--#{$prefix}color-surface-status-neutral-emphasized), // OUDS mod
+    "dark":       var(--#{$prefix}color-surface-inverse-high), // OUDS mod
     "black":      var(--#{$prefix}color-always-black), // OUDS mod: instead of `to-rgb($black)`
     "white":      var(--#{$prefix}color-always-white), // OUDS mod: instead of `to-rgb($white)`
     "body":       var(--#{$prefix}color-bg-primary) // OUDS mod: instead of `to-rgb($body-bg)`

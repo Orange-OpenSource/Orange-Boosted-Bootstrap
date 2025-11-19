@@ -20,47 +20,47 @@
   }
 }
 
-.decorative-4xs-icon {
+.decorative-4xsmall-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-4xs if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-4xsmall if($enable-important-utilities, !important, null);
 }
 
-.decorative-3xs-icon {
+.decorative-3xsmall-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-3xs if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-3xsmall if($enable-important-utilities, !important, null);
 }
 
-.decorative-2xs-icon {
+.decorative-2xsmall-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-2xs if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-2xsmall if($enable-important-utilities, !important, null);
 }
 
-.decorative-xs-icon {
+.decorative-xsmall-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-xs if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-xsmall if($enable-important-utilities, !important, null);
 }
 
-.decorative-sm-icon {
+.decorative-small-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-sm if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-small if($enable-important-utilities, !important, null);
 }
 
-.decorative-md-icon {
+.decorative-medium-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-md if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-medium if($enable-important-utilities, !important, null);
 }
 
-.decorative-lg-icon {
+.decorative-large-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-lg if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-large if($enable-important-utilities, !important, null);
 }
 
-.decorative-xl-icon {
+.decorative-xlarge-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-xl if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-xlarge if($enable-important-utilities, !important, null);
 }
 
-.decorative-2xl-icon {
+.decorative-2xlarge-icon {
   @extend %icon-size;
-  font-size: $ouds-size-icon-decorative-2xl if($enable-important-utilities, !important, null);
+  font-size: $ouds-size-icon-decorative-2xlarge if($enable-important-utilities, !important, null);
 }

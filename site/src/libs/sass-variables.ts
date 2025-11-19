@@ -8,6 +8,13 @@ const options = {
 
 export const allTokens = exporter(options).getArray()
 
+const optionsMaps = {
+  inputFiles: [`scss/_maps.scss`],
+  includePaths: []
+}
+
+export const scssMaps = exporter(optionsMaps).getArray()
+
 /**
  * This function returns the current theme depending on the parameter passed (light, dark, root, root-inverted). You need to use a name containing 'modes-on' and it should exist in the _semantic.scss file.
  * @param regex
@@ -23,4 +30,13 @@ export const getMode = (regex: string) => {
       ? 'root-inverted'
       : 'light'
   return theme
+}
+
+/**
+ * This function returns true if we have the specified token in allTokens list.
+ * @param searchToken
+ * @returns boolean
+ */
+export const hasToken = (searchToken: string) => {
+  return allTokens.some((token: any) => token.name === searchToken);
 }
