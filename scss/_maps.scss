@@ -123,6 +123,7 @@ $ouds-icon-sizes: ("small", "medium", "large") !default;
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (
   "invisible":  $ouds-opacity-invisible,
+  "weakest":     $ouds-opacity-weakest,
   "weaker":     $ouds-opacity-weaker,
   "weak":       $ouds-opacity-weak,
   "disabled":   $ouds-opacity-disabled,
