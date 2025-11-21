@@ -1,8 +1,8 @@
 // Raw primitive values
 // Insertion of brand foundations
-// OUDS Core tokens version 1.7.0
+// OUDS Core tokens version 1.9.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.0.1
+// Orange System tokens version 2.3.0
 
 // Border
 
@@ -208,6 +208,8 @@ $core-ouds-color-opacity-black-920: rgba(0, 0, 0, .92) !default;
 $core-ouds-color-opacity-black-960: rgba(0, 0, 0, .96) !default;
 $core-ouds-color-opacity-dodger-blue-80: rgba(38, 178, 255, .08) !default;
 $core-ouds-color-opacity-dodger-blue-520: rgba(0, 89, 138, .52) !default;
+$core-ouds-color-opacity-gray-dark-800-800: rgba(31, 31, 31, .8) !default;
+$core-ouds-color-opacity-gray-light-80-800: rgba(244, 244, 244, .8) !default;
 $core-ouds-color-opacity-malachite-120: rgba(61, 227, 90, .12) !default;
 $core-ouds-color-opacity-malachite-640: rgba(14, 98, 29, .64) !default;
 $core-ouds-color-opacity-scarlet-80: rgba(219, 0, 2, .08) !default;
@@ -266,6 +268,7 @@ $core-ouds-dimension-850: $core-ouds-dimension-base * 17 !default; // 68px
 $core-ouds-dimension-900: $core-ouds-dimension-base * 18 !default; // 72px
 $core-ouds-dimension-950: $core-ouds-dimension-base * 19 !default; // 76px
 $core-ouds-dimension-1000: $core-ouds-dimension-base * 20 !default; // 80px
+$core-ouds-dimension-1050: $core-ouds-dimension-base * 21 !default; // 84px
 $core-ouds-dimension-1100: $core-ouds-dimension-base * 22 !default; // 88px
 $core-ouds-dimension-1200: $core-ouds-dimension-base * 24 !default; // 96px
 $core-ouds-dimension-1250: $core-ouds-dimension-base * 25 !default; // 100px
@@ -292,6 +295,7 @@ $core-ouds-dimension-out-of-system-250: $core-ouds-dimension-base * 2.5 !default
 // Effect
 
 // scss-docs-start ouds-raw-effect
+$core-ouds-effect-blur-160: 16px !default;
 $core-ouds-effect-blur-320: 32px !default;
 // scss-docs-end ouds-raw-effect
 

@@ -1,7 +1,7 @@
 // Components custom properties applications
-// OUDS Core tokens version 1.7.0
+// OUDS Core tokens version 1.9.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.0.1
+// Orange System tokens version 2.3.0
 
 // scss-docs-start ouds-all-component-css-color
 // scss-docs-start ouds-component-css-color
@@ -55,6 +55,7 @@
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-black-520};
   --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-ouds-color-functional-sun-500};
   --#{$prefix}icon-color-content-status-warning-internal-shape: #{$core-ouds-color-functional-sun-750};
+  --#{$prefix}icon-color-content-default: #{$core-ouds-color-functional-black};
 }
 // scss-docs-end ouds-component-css-color
 
@@ -108,5 +109,6 @@
   --#{$prefix}switch-color-track-unselected-interaction: #{$core-ouds-color-opacity-white-800};
   --#{$prefix}icon-color-content-status-warning-external-shape: #{$core-ouds-color-functional-sun-300};
   --#{$prefix}icon-color-content-status-warning-internal-shape: #{$ouds-color-opacity-transparent-dark};
+  --#{$prefix}icon-color-content-default: #{$core-ouds-color-functional-gray-light-160};
 }
 // scss-docs-end ouds-all-component-css-color
