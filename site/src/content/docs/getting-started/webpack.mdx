@@ -232,19 +232,16 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    **Note:** Sass deprecation warnings are shown when compiling source Sass files with the latest versions of Dart Sass. This does not prevent compilation or usage of Boosted. We’re [working on a long-term fix](https://github.com/twbs/bootstrap/issues/40962), but in the meantime these deprecation notices can be ignored.
 
-2. **Let’s import Boosted’s fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]([[config:repo]]/blob/v[[config:current_version]]/NOTICE.txt).
+2. **Let’s import Boosted’s fonts, limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]([[config:repo]]/blob/v[[config:current_version]]/NOTICE.txt).
 
-   ```sh
-   mkdir src/fonts
-   cp /path/HelvNeue55_W1G.woff2 src/fonts/
-   cp /path/HelvNeue75_W1G.woff2 src/fonts/
+   ```scss
+   @import "boosted/scss/orange-helvetica";
    ```
 
 3. **Now, let’s import Boosted’s CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted’s source Sass.
 
    ```scss
    // Import all of Boosted’s CSS
-   @import "boosted/scss/orange-helvetica";
    @import "boosted/scss/boosted";
    ```
 
