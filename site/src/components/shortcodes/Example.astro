@@ -90,7 +90,7 @@ const simplifiedMarkup = markup
     showMarkup && (
       <>
         <Code code={simplifiedMarkup} lang={lang} nestedInExample={true} buttonLabel={buttonLabel} />
-        {(showToolbar) && (
+        {showToolbar && (
           <div class:list={['d-flex order-first align-items-center highlight-toolbar ps-large border-top border-bottom border-thin border-default',
             (showPreview && showToolbar) ? '' : 'border-top-none']}>
             <small class="font-monospace text-muted text-uppercase my-small">{lang}</small>
