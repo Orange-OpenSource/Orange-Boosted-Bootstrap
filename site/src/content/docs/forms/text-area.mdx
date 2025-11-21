@@ -83,7 +83,7 @@ Helper text should be explicitly associated with the text area it relates to usi
 ### Helper link
 
 If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
-To display a helper link below text areas, use a standard small link [with `.link` and `.link-sm` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
+To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
 If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
@@ -97,7 +97,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     <p id="feedbackTextHelpBlock" class="helper-text">
       You have <strong>180</strong> characters left.
     </p>
-    <a href="#" id="feedbackTextHelpMore" class="link link-sm">
+    <a href="#" id="feedbackTextHelpMore" class="link link-small">
       More information
     </a>
   </div>
@@ -106,7 +106,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
       <label for="textAreaHelperLink">Additional comments</label>
       <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" class="text-area-field"></textarea>
     </div>
-    <a href="#" id="feedbackTextHelpLink" class="link link-sm">
+    <a href="#" id="feedbackTextHelpLink" class="link link-small">
       More information
     </a>
   </div>`} />
@@ -180,7 +180,7 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
     <p id="commentFeedbackOutlined" class="error-text">
       You have <strong>20</strong> characters too many.
     </p>
-    <a href="#" id="commentTextHelpLinkOutlined" class="link link-sm">
+    <a href="#" id="commentTextHelpLinkOutlined" class="link link-small">
       More information
     </a>
   </div>`} />
