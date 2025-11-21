@@ -179,7 +179,7 @@
       }
     }
 
-    &:has(.text-input-field:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
+    &:has(.text-input-field:not(.is-invalid)) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
       &.text-input-container-outlined {
@@ -335,6 +335,22 @@
       --#{$prefix}text-input-caret-color: var(--#{$prefix}color-action-negative-pressed);
     }
   }
+
+  // Helper link
+  .text-input-container ~ .link {
+    @extend %text-input-message;
+  }
+
+  // Helper text and error text visibility handling
+  .text-input-container:has(.text-input-field.is-invalid):has(~ .error-text) ~ .helper-text,
+  .text-input-container:has(.text-input-field:invalid):has(~ .error-text) ~ .helper-text {
+    display: none;
+  }
+
+  .text-input-container:has(.text-input-field.is-invalid) ~ .error-text,
+  .text-input-container:has(.text-input-field:invalid) ~ .error-text {
+    display: block;
+  }
 }
 
 //
@@ -442,7 +458,7 @@
     }
 
     // Focused state styles
-    &:has(.text-area-field:focus:not(:disabled):not(:read-only)) {
+    &:has(.text-area-field:focus) {
       --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
       &.text-area-container-outlined {
         --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
@@ -535,6 +551,22 @@
       --#{$prefix}text-input-caret-color: var(--#{$prefix}color-action-negative-pressed);
     }
   }
+
+  // Helper link
+  .text-area-container ~ .link {
+    @extend %text-input-message;
+  }
+
+  // Helper text and error text visibility handling
+  .text-area-container:has(.text-area-field.is-invalid):has(~ .error-text) ~ .helper-text,
+  .text-area-container:has(.text-area-field:invalid):has(~ .error-text) ~ .helper-text {
+    display: none;
+  }
+
+  .text-area-container:has(.text-area-field.is-invalid) ~ .error-text,
+  .text-area-container:has(.text-area-field:invalid) ~ .error-text {
+    display: block;
+  }
 }
 
 
@@ -568,27 +600,4 @@
   margin-bottom: 0;
   color: var(--#{$prefix}color-content-status-negative);
   @include get-font-size("label-medium");
-}
-
-.text-input,
-.text-area {
-  // Helper link
-  .text-input-container ~ .link,
-  .text-area-container ~ .link {
-    @extend %text-input-message;
-  }
-
-  .text-input-container:has(.text-input-field.is-invalid):has(~ .error-text) ~ .helper-text,
-  .text-input-container:has(.text-input-field:invalid):has(~ .error-text) ~ .helper-text,
-  .text-area-container:has(.text-area-field.is-invalid):has(~ .error-text) ~ .helper-text,
-  .text-area-container:has(.text-area-field:invalid):has(~ .error-text) ~ .helper-text {
-    display: none;
-  }
-
-  .text-input-container:has(.text-input-field.is-invalid) ~ .error-text,
-  .text-input-container:has(.text-input-field:invalid) ~ .error-text,
-  .text-area-container:has(.text-area-field.is-invalid) ~ .error-text,
-  .text-area-container:has(.text-area-field:invalid) ~ .error-text {
-    display: block;
-  }
 }

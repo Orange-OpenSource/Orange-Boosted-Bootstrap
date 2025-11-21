@@ -10,7 +10,7 @@ import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
 {/* TODO: set the right url for design documentation */}
-You can find here the [OUDS Text Input design guidelines](https://unified-design-system.orange.com/).
+You can find here the [OUDS Text Area design guidelines](https://unified-design-system.orange.com/).
 </Callout>
 
 ## Overview
@@ -19,13 +19,13 @@ Use a `.text-area` wrapper to create a text area with OUDS styles, then wrap a p
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="exampleTextArea">Additional comment</label>
+      <label for="exampleTextArea">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextArea"></textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container">
-      <label for="exampleTextAreaPlaceholder">Additional comment</label>
+      <label for="exampleTextAreaPlaceholder">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextAreaPlaceholder" placeholder="Enter your comment here"></textarea>
     </div>
   </div>`} />
@@ -38,7 +38,7 @@ Add `.text-area-container-outlined` for a minimalist text area with a transparen
 
 <Example code={`<div class="text-area">
     <div class="text-area-container text-area-container-outlined">
-      <label for="exampleTextAreaOutlined">Additional comment</label>
+      <label for="exampleTextAreaOutlined">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextAreaOutlined"></textarea>
     </div>
   </div>`} />
@@ -50,13 +50,13 @@ Add `.text-area-container-rounded` for a finish with rounded corners.
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container text-area-container-rounded">
-      <label for="exampleTextAreaRounded">Additional comment</label>
+      <label for="exampleTextAreaRounded">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-rounded text-area-container-outlined">
-      <label for="exampleTextAreaRoundedAlt">Additional comment</label>
+      <label for="exampleTextAreaRoundedAlt">Additional comments</label>
       <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
     </div>
   </div>`} />
@@ -67,12 +67,12 @@ Add `.text-area-container-rounded` for a finish with rounded corners.
 To display a helper text below text areas, add a `.helper-text` as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the input.
+Helper text should be explicitly associated with the text area it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this helper text when the user focuses or enters the text area.
 </Callout>
 
 <Example code={`<div class="text-area">
     <div class="text-area-container">
-      <label for="textAreaWithHelperText">Additional comment</label>
+      <label for="textAreaWithHelperText">Additional comments</label>
       <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock"></textarea>
     </div>
     <p id="textAreaWithHelperTextHelpBlock" class="helper-text">
@@ -82,8 +82,8 @@ Helper text should be explicitly associated with the text area it relates to usi
 
 ### Helper link
 
-If the helper text is not sufficient, it's possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
-To display a helper link below inputs, use a standard small link [with `.link` and `.link-sm` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
+If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
+To display a helper link below text areas, use a standard small link [with `.link` and `.link-sm` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
 If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
@@ -91,7 +91,7 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="textAreaWithHelperTextLink">Additional comment</label>
+      <label for="textAreaWithHelperTextLink">Additional comments</label>
       <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-area-field"></textarea>
     </div>
     <p id="feedbackTextHelpBlock" class="helper-text">
@@ -102,8 +102,8 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     </a>
   </div>
   <div class="text-area">
-    <div class="text-area-container mt-lg">
-      <label for="textAreaHelperLink">Additional comment</label>
+    <div class="text-area-container mt-large">
+      <label for="textAreaHelperLink">Additional comments</label>
       <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" class="text-area-field"></textarea>
     </div>
     <a href="#" id="feedbackTextHelpLink" class="link link-sm">
@@ -115,35 +115,35 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
 
 ### Disabled
 
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+Add the `disabled` boolean attribute on a text area to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="exampleTextAreaDisabled">Additional comment</label>
-      <textarea class="text-area-field" id="exampleTextAreaDisabled" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <label for="exampleTextAreaDisabled">Additional comments</label>
+      <textarea disabled class="text-area-field" id="exampleTextAreaDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
-      <label for="exampleTextAreaOutlinedDisabled">Additional comment</label>
-      <textarea class="text-area-field" id="exampleTextAreaOutlinedDisabled" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <label for="exampleTextAreaOutlinedDisabled">Additional comments</label>
+      <textarea disabled class="text-area-field" id="exampleTextAreaOutlinedDisabled">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>`} />
 
 ### Readonly
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
+Add the `readonly` boolean attribute on a text area to prevent modification of the text area’s value. `readonly` text areas can still be focused and selected, while `disabled` text areas cannot.
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="exampleTextAreaReadonly">Additional comment</label>
-      <textarea class="text-area-field" id="exampleTextAreaReadonly" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <label for="exampleTextAreaReadonly">Additional comments</label>
+      <textarea readonly class="text-area-field" id="exampleTextAreaReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
-      <label for="exampleTextAreaOutlinedReadonly">Additional comment</label>
-      <textarea class="text-area-field" id="exampleTextAreaOutlinedReadonly" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <label for="exampleTextAreaOutlinedReadonly">Additional comments</label>
+      <textarea readonly class="text-area-field" id="exampleTextAreaOutlinedReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
   </div>`} />
 
@@ -151,7 +151,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid input, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+To display an invalid text area, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
 For accessibility purpose, the invalid should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
@@ -159,7 +159,7 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="exampleTextAreaInvalid">Additional comment</label>
+      <label for="exampleTextAreaInvalid">Additional comments</label>
       <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentTextHelpBlock" aria-labelledby="commentFeedback"></textarea>
     </div>
     <p id="commentTextHelpBlock" class="helper-text">
@@ -171,7 +171,7 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
   </div>
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
-      <label for="exampleTextAreaOutlinedInvalid">Additional comment</label>
+      <label for="exampleTextAreaOutlinedInvalid">Additional comments</label>
       <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
