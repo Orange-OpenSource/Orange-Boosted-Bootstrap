@@ -223,6 +223,7 @@
     }
   },
   "overrides": {
-    "storybook": "$storybook"
+    "storybook": "$storybook",
+    "volar-service-emmet": "0.0.63"
   }
 }
