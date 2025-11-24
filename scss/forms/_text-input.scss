@@ -107,7 +107,7 @@
       opacity: 0;
       transform: translate(0, -50%);
 
-      &:placeholder-shown:not([placeholder=""]),
+      &:placeholder-shown:not([placeholder=" "]),
       &[placeholder]:not(:placeholder-shown),
       &:focus,
       &:focus-visible {
@@ -132,7 +132,7 @@
       opacity: 0;
       transform: translate(0, -50%);
 
-      &:has(.text-input-field:placeholder-shown:not([placeholder=""])),
+      &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
       &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
       &:has(.text-input-field:focus),
       &:has(.text-input-field:focus-visible) {
@@ -188,7 +188,7 @@
     }
 
 
-    &:has(.text-input-field:placeholder-shown:not([placeholder=""])),
+    &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
     &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
     &:has(.text-input-field:focus) {
       > label {
