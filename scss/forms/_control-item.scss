@@ -10,7 +10,7 @@
   gap: px-to-rem($ouds-control-item-space-column-gap);
   min-width: px-to-rem($ouds-control-item-size-min-width);
   min-height: $form-check-min-height;
-  padding: $ouds-control-item-space-padding-block-default;
+  padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
   @include border-radius($ouds-control-item-border-radius);
 
   // Handle focus
@@ -312,6 +312,11 @@
 .control-item-divider {
   padding-bottom: subtract($ouds-control-item-space-padding-block-default, $ouds-divider-border-width);
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
+
+  &:has(.is-invalid),
+  .was-validated &:has(input:invalid){
+    border-color: var(--#{$prefix}control-item-label-color);
+  }
 }
 
 .control-item-reverse {
@@ -519,7 +524,7 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding: subtract($ouds-control-item-space-padding-block-default, $ouds-divider-border-width);
+    padding: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width) calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width); // stylelint-disable function-disallowed-list
     border: $ouds-divider-border-width solid $ouds-color-border-default;
   }
 
@@ -573,12 +578,12 @@
   &:has(input.is-invalid:active) {
     border-color: $ouds-color-action-negative-pressed;
   }
-  // stylelint-enable selector-no-qualifying-type
 
   &:has(input:focus-visible) {
-    padding: $ouds-control-item-space-padding-block-default;
+    padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
     border-width: 0;
   }
+  // stylelint-enable selector-no-qualifying-type
 }
 
 .was-validated .radio-button-item-outlined {
