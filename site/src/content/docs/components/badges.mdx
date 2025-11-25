@@ -111,13 +111,28 @@ Non-functional badges are used to display neutral or accent information without 
 Functional badges carry a clear meaning related to the status of an object or system. They help the user quickly understand the status of an element and take action if needed.
 
 <Callout type="warning">
-  Keep in mind that color should not be the only way to convey information. In functional badges, the color has a strong meaning, it must be reflected in the badge's `.visually-hidden` associated text. [Read more about badges accessibility here](#accessibility).
+  Keep in mind that color should not be the only way to convey information. Functional badges, which have a strong meaning, should not be combined, because some user cannot differentiate between them. In this case, it is preferable to use an icon as a second way to convey information, associated with a `.visually-hidden` text. [Read more about badges accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
   <p class="badge badge-info"><span class="visually-hidden">Info</span></p>
   <p class="badge badge-warning"><span class="visually-hidden">Warning</span></p>
   <p class="badge"><span class="visually-hidden">Beware</span></p>`} />
+
+Here is a valid example of use of functional badges:
+
+<Example class="d-flex gap-3" code={`<p class="position-relative pt-3xsmall">
+    Activities<span class="position-absolute top-0 start-100 translate-middle badge badge-info"></span>
+  </p>
+  <p class="position-relative pt-3xsmall">
+    Channels
+  </p>
+  <p class="position-relative pt-3xsmall">
+    Conversations<span class="position-absolute top-0 start-100 translate-middle badge badge-info"></span>
+  </p>
+  <p class="position-relative pt-3xsmall">
+    Emails<span class="position-absolute top-0 start-100 translate-middle badge badge-info"></span>
+  </p>`} />
 
 ### States
 
