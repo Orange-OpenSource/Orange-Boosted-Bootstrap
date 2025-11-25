@@ -108,52 +108,52 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
     </div>
   </div>`} />
 
-### Additional label
+### Extra label
 
-To add critical information to some of the options, add a `.radio-button-additional-label` as a sibling of a `.control-item-label`. Make sure the additional label is accessible by adding an `aria-describedby` attribute to the input.
+To add critical information to some of the options, add a `.radio-button-extra-label` as a sibling of a `.control-item-label`. Make sure the extra label is accessible by adding an `aria-describedby` attribute to the input.
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel" aria-describedby="radioAdditionalTextDescription" name="radioAdditionalLabel" />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithExtraLabelItem" aria-describedby="radioExtraLabel" name="radioExtraLabel" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioAdditionalLabel">Default radio button</label>
-      <p class="radio-button-additional-label" id="radioAdditionalTextDescription">Additional label</p>
+      <label class="control-item-label" for="radioWithExtraLabelItem">Default radio button</label>
+      <p class="radio-button-extra-label" id="radioExtraLabel">Extra label</p>
     </div>
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioAdditionalLabel2" aria-describedby="radioAdditionalTextDescription2" name="radioAdditionalLabel" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithExtraLabelItem2" aria-describedby="radioExtraLabel2" name="radioExtraLabel" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioAdditionalLabel2">Checked radio button</label>
-      <p class="radio-button-additional-label" id="radioAdditionalTextDescription2">Additional label</p>
+      <label class="control-item-label" for="radioWithExtraLabelItem2">Checked radio button</label>
+      <p class="radio-button-extra-label" id="radioExtraLabel2">Extra label</p>
     </div>
   </div>`} />
 
-### Helper text
+### Description text
 
-To display a helper text, add a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
+To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
-Additional label and helper text can be combined, but the additional label must come first (visually and in the `aria-describedby` attribute).
+Extra label and description text can be combined, but the extra label must come first (visually and in the `aria-describedby` attribute).
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioHelperText" aria-describedby="radioAdditionalTextHelper" name="radioTextHelper" />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithDescription" aria-describedby="radioDescription" name="radioTextDescription" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioHelperText">Default radio button</label>
-      <p class="control-item-helper" id="radioAdditionalTextHelper">Helper text</p>
+      <label class="control-item-label" for="radioWithDescription">Default radio button</label>
+      <p class="control-item-description" id="radioDescription">Description text</p>
     </div>
   </div>
   <div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="radio" value="" id="radioHelperText2" aria-describedby="radioAdditionalTextHelper2 radioAdditionalTextDescription3" name="radioTextHelper" checked />
+      <input class="control-item-indicator" type="radio" value="" id="radioWithDescription2" aria-describedby="radioExtraLabel2 radioDescription2" name="radioTextDescription" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="radioHelperText2">Checked radio button</label>
-      <p class="radio-button-additional-label" id="radioAdditionalTextDescription3">Additional label</p>
-      <p class="control-item-helper" id="radioAdditionalTextHelper2">Helper text</p>
+      <label class="control-item-label" for="radioWithDescription2">Checked radio button</label>
+      <p class="radio-button-extra-label" id="radioExtraLabel2">Extra label</p>
+      <p class="control-item-description" id="radioDescription2">Description text</p>
     </div>
   </div>`} />
 
@@ -182,18 +182,18 @@ To display outlined radio buttons, add `.radio-button-item-outlined` to a `.radi
 
 ### Default
 
-It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, additional label or helper text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
+It's recommended to keep radio button label to no more than three words. When space is limited or when a long label, extra label or description text is required, the text can wrap, as this is preferable to truncation. The radio button indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayout1" name="radioLayout" aria-describedby="radioLayout1AdditionalLabel radioLayout1Description" />
+          <input class="control-item-indicator" type="radio" value="" id="radioLayout1" name="radioLayout" aria-describedby="radioLayout1ExtraLabel radioLayout1Description" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayout1">Label</label>
-          <p class="radio-button-additional-label" id="radioLayout1AdditionalLabel">Additional label</p>
-          <p class="control-item-helper" id="radioLayout1Description">Helper text</p>
+          <p class="radio-button-extra-label" id="radioLayout1ExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioLayout1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -203,12 +203,12 @@ It's recommended to keep radio button label to no more than three words. When sp
       </div>
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayout2" name="radioLayout"  aria-describedby="radioLayout2AdditionalLabel radioLayout2Description" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radioLayout2" name="radioLayout"  aria-describedby="radioLayout2ExtraLabel radioLayout2Description" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayout2">A longer label for showing behavior in this case</label>
-          <p class="radio-button-additional-label" id="radioLayout2AdditionalLabel">Radio button indicator and icon will stick to the top area of the component</p>
-          <p class="control-item-helper" id="radioLayout2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <p class="radio-button-extra-label" id="radioLayout2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
+          <p class="control-item-description" id="radioLayout2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -227,12 +227,12 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
     <div class="col-8 col-md-6 col-xl-5">
       <div class="radio-button-item control-item-divider control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev1" name="radioLayoutRev" aria-describedby="radioLayoutRev1AdditionalLabel radioLayoutRev1Description" />
+          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev1" name="radioLayoutRev" aria-describedby="radioLayoutRev1ExtraLabel radioLayoutRev1Description" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayoutRev1">Label with reverse layout</label>
-          <p class="radio-button-additional-label" id="radioLayoutRev1AdditionalLabel">Additional label</p>
-          <p class="control-item-helper" id="radioLayoutRev1Description">Helper text</p>
+          <p class="radio-button-extra-label" id="radioLayoutRev1ExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioLayoutRev1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -242,12 +242,12 @@ To reverse the component, simply add `.control-item-reverse` to a `.radio-button
       </div>
       <div class="radio-button-item control-item-divider control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev2" name="radioLayoutRev"  aria-describedby="radioLayoutRev2AdditionalLabel radioLayoutRev2Description" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radioLayoutRev2" name="radioLayoutRev"  aria-describedby="radioLayoutRev2ExtraLabel radioLayoutRev2Description" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioLayoutRev2">A longer label with reverse layout for showing behavior in this case</label>
-          <p class="radio-button-additional-label" id="radioLayoutRev2AdditionalLabel">Radio button indicator and icon will stick to the top area of the component</p>
-          <p class="control-item-helper" id="radioLayoutRev2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <p class="radio-button-extra-label" id="radioLayoutRev2ExtraLabel">Radio button indicator and icon will stick to the top area of the component</p>
+          <p class="control-item-description" id="radioLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -284,12 +284,12 @@ Add the `disabled` attribute to the input, then the radio button and the associa
 
 <Example code={`<div class="radio-button-item">
     <div class="control-item-assets-container">
-      <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledAdditionalLabel radioDisabledDescription"/>
+      <input disabled class="control-item-indicator" type="radio" value="" id="radioDisabled" name="radioDisabled" aria-describedby="radioDisabledExtraLabel radioDisabledDescription"/>
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="radioDisabled">Default disabled radio button</label>
-      <p class="radio-button-additional-label" id="radioDisabledAdditionalLabel">Additional label</p>
-      <p class="control-item-helper" id="radioDisabledDescription">Helper text</p>
+      <p class="radio-button-extra-label" id="radioDisabledExtraLabel">Extra label</p>
+      <p class="control-item-description" id="radioDisabledDescription">Description text</p>
     </div>
   </div>
   <div class="radio-button-item">
@@ -323,12 +323,12 @@ To create a read only radio button, the input should be replaced by a `span` ele
 <Example code={`<div role="radiogroup" aria-readonly="true">
     <div class="radio-button-item">
       <div class="control-item-assets-container">
-        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyAdditionalLabel radioReadonlyDescription"></span>
+        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
       </div>
       <div class="control-item-text-container">
         <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
-        <p class="radio-button-additional-label" id="radioReadonlyAdditionalLabel">Additional label</p>
-        <p class="control-item-helper" id="radioReadonlyDescription">Helper text</p>
+        <p class="radio-button-extra-label" id="radioReadonlyExtraLabel">Extra label</p>
+        <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
       </div>
     </div>
     <div class="radio-button-item">
@@ -349,12 +349,12 @@ To display an invalid radio button, add `.is-invalid` to a `.control-item-indica
 
 <Example code={`<div class="radio-button-item radio-button-item-outlined">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidAdditionalLabel radioInvalidDescription" />
+      <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalid" id="radioInvalid" aria-describedby="radioInvalidExtraLabel radioInvalidDescription" />
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="radioInvalid">Default invalid radio button</label>
-      <p class="radio-button-additional-label" id="radioInvalidAdditionalLabel">Additional label</p>
-      <p class="control-item-helper" id="radioInvalidDescription">Helper text</p>
+      <p class="radio-button-extra-label" id="radioInvalidExtraLabel">Extra label</p>
+      <p class="control-item-description" id="radioInvalidDescription">Description text</p>
     </div>
   </div>
   <div class="radio-button-item radio-button-item-outlined">
@@ -363,7 +363,7 @@ To display an invalid radio button, add `.is-invalid` to a `.control-item-indica
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="radioInvalid2">Checked invalid radio button</label>
-      <p class="control-item-helper" id="radioInvalid2Description">Helper text</p>
+      <p class="control-item-description" id="radioInvalid2Description">Description text</p>
     </div>
   </div>`} />
 
@@ -407,12 +407,12 @@ If radio buttons belong to a group (e.g., in a form), provide clear context by a
       <legend>Radio buttons group example</legend>
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioGroup1" name="radioGroup" aria-describedby="radioGroup1AdditionalLabel radioGroup1Description" />
+          <input class="control-item-indicator" type="radio" value="" id="radioGroup1" name="radioGroup" aria-describedby="radioGroup1ExtraLabel radioGroup1Description" />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioGroup1">Group radio button 1</label>
-          <p class="radio-button-additional-label" id="radioGroup1AdditionalLabel">Additional label</p>
-          <p class="control-item-helper" id="radioGroup1Description">Helper text</p>
+          <p class="radio-button-extra-label" id="radioGroup1ExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioGroup1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
@@ -422,12 +422,12 @@ If radio buttons belong to a group (e.g., in a form), provide clear context by a
       </div>
       <div class="radio-button-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="radio" value="" id="radioGroup2" name="radioGroup"  aria-describedby="radioGroup2AdditionalLabel radioGroup2Description" checked />
+          <input class="control-item-indicator" type="radio" value="" id="radioGroup2" name="radioGroup"  aria-describedby="radioGroup2ExtraLabel radioGroup2Description" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="radioGroup2">Group radio button 2</label>
-          <p class="radio-button-additional-label" id="radioGroup2AdditionalLabel">Additional label</p>
-          <p class="control-item-helper" id="radioGroup2Description">Helper text</p>
+          <p class="radio-button-extra-label" id="radioGroup2ExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioGroup2Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">

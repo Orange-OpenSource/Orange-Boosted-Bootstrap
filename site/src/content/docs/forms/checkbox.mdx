@@ -109,26 +109,26 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
     </div>
   </div>`} />
 
-### Helper text
+### Description text
 
-To display a helper text, add a `.control-item-helper` as a sibling of a `.control-item-label`. Make sure the helper text is accessible by adding an `aria-describedby` attribute to the input.
+To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
 <Example code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription" id="checkboxHelperText" value="" />
+      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription" id="checkboxWithDescription" value="" />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxHelperText">Default checkbox</label>
-      <p class="control-item-helper" id="checkboxHelperTextDescription">Helper text</p>
+      <label class="control-item-label" for="checkboxWithDescription">Default checkbox</label>
+      <p class="control-item-description" id="checkboxDescription">Description text</p>
     </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxHelperTextDescription2" id="checkboxHelperText2" value="" checked />
+      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription2" id="checkboxWithDescription2" value="" checked />
     </div>
     <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxHelperText2">Checked checkbox</label>
-      <p class="control-item-helper" id="checkboxHelperTextDescription2">Helper text</p>
+      <label class="control-item-label" for="checkboxWithDescription2">Checked checkbox</label>
+      <p class="control-item-description" id="checkboxDescription2">Description text</p>
     </div>
   </div>`} />
 
@@ -136,7 +136,7 @@ To display a helper text, add a `.control-item-helper` as a sibling of a `.contr
 
 ### Default
 
-It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or helper text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
+It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example code={`<div class="row">
     <div class="col-8 col-md-6 col-xl-5">
@@ -146,7 +146,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayout1">Label</label>
-          <p class="control-item-helper" id="checboxLayout1Description">Helper text</p>
+          <p class="control-item-description" id="checboxLayout1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -160,7 +160,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayout2">A short label</label>
-          <p class="control-item-helper" id="checboxLayout2Description">A longer helper text that can wrap to another line to show the behaviour</p>
+          <p class="control-item-description" id="checboxLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -174,7 +174,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayout3">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-helper" id="checboxLayout3Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <p class="control-item-description" id="checboxLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -197,7 +197,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.checkbox-ite
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayoutRev1">Label with reverse layout</label>
-          <p class="control-item-helper" id="checboxLayoutRev1Description">Helper text</p>
+          <p class="control-item-description" id="checboxLayoutRev1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -211,7 +211,7 @@ To reverse the component, simply add `.control-item-reverse` to a `.checkbox-ite
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-helper" id="checboxLayoutRev2Description">Also a longer helper text, it will also wrap at some point depending on the component width</p>
+          <p class="control-item-description" id="checboxLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -362,7 +362,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
-      <p class="control-item-helper" id="checkboxInvalidDescription">Helper text</p>
+      <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
     </div>
   </div>
   <div class="checkbox-item">
@@ -371,7 +371,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
-      <p class="control-item-helper" id="checkboxInvalid2Description">Helper text</p>
+      <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
     </div>
   </div>
   <div class="checkbox-item">
@@ -380,7 +380,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     </div>
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
-      <p class="control-item-helper" id="checkboxInvalidIndeterminateDescription">Helper text</p>
+      <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
     </div>
   </div>`} />
 
@@ -409,7 +409,7 @@ If checkboxes belong to a group (e.g., in a form), provide clear context by addi
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxGroup1">Group checkbox 1</label>
-          <p class="control-item-helper" id="checkboxGroup1Description">Helper text</p>
+          <p class="control-item-description" id="checkboxGroup1Description">Description</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -423,7 +423,7 @@ If checkboxes belong to a group (e.g., in a form), provide clear context by addi
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="checkboxGroup2">Group checkbox 2</label>
-          <p class="control-item-helper" id="checkboxGroup2Description">Helper text</p>
+          <p class="control-item-description" id="checkboxGroup2Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">

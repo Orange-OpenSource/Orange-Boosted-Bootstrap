@@ -9,6 +9,7 @@
   display: flex;
   gap: px-to-rem($ouds-control-item-space-column-gap);
   min-width: px-to-rem($ouds-control-item-size-min-width);
+  max-width: px-to-rem($ouds-control-item-size-max-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
   @include border-radius($ouds-control-item-border-radius);
@@ -114,8 +115,8 @@
   }
 }
 
-// Helper
-.control-item-helper {
+// Description
+.control-item-description {
   margin: 0;
   color: $ouds-color-content-muted;
   @include get-font-size("label-medium");
@@ -513,7 +514,7 @@
   @extend %control-item-standalone;
 }
 
-.radio-button-additional-label {
+.radio-button-extra-label {
   margin: 0;
   font-weight: $ouds-font-weight-system-web-strong;
   color: $ouds-color-content-default;
