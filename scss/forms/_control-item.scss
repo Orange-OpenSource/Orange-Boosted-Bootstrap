@@ -279,6 +279,11 @@
     --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
     pointer-events: none;
   }
+
+  &[role="checkbox"][aria-readonly="true"] {
+    color: $ouds-color-action-read-only-primary;
+    border-color: $ouds-color-action-read-only-secondary;
+  }
 }
 
 // stylelint-disable selector-max-attribute
@@ -300,8 +305,9 @@
 }
 
 [role="radiogroup"][aria-readonly="true"] .control-item-indicator[role="radio"] {
-  --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
+  color: $ouds-color-action-read-only-primary;
   pointer-events: none;
+  border-color: $ouds-color-action-read-only-secondary;
 }
 // stylelint-enable selector-max-attribute
 
@@ -423,12 +429,19 @@
       width: $ouds-switch-size-width-cursor-selected-pressed;
     }
 
-    &:disabled,
-    &[aria-readonly="true"] {
+    &:disabled {
       background-color: $ouds-color-action-disabled;
 
       &::after {
         background-color: $ouds-color-action-disabled;
+      }
+    }
+
+    &[aria-readonly="true"] {
+      background-color: $ouds-color-action-read-only-secondary;
+
+      &::after {
+        background-color: $ouds-color-action-read-only-primary;
       }
     }
     // stylelint-enable selector-max-attribute
