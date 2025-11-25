@@ -1,9 +1,6 @@
 .tag {
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  --#{$prefix}tag-color: #{$ouds-color-content-inverse};
-  --#{$prefix}tag-border-width: 0px;
-  --#{$prefix}tag-background-color: #{$ouds-color-surface-inverse-high};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
@@ -11,6 +8,13 @@
   --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-default)};
   --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-default};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-default};
+  --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-default};
+  --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-default};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-default};
+  --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
+  --#{$prefix}tag-color: #{$ouds-color-content-inverse};
+  --#{$prefix}tag-border-width: 0px;
+  --#{$prefix}tag-background-color: #{$ouds-color-surface-inverse-high};
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
@@ -19,7 +23,6 @@
   --#{$prefix}tag-warning-external-icon: var(--#{$prefix}warning-icon);
   --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}warning-internal-icon);
   --#{$prefix}tag-negative-icon: var(--#{$prefix}error-icon);
-  --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
 
   position: relative;
   display: inline-flex;
@@ -114,7 +117,6 @@
     align-items: center;
     width: var(--#{$prefix}tag-size-asset);
     height: var(--#{$prefix}tag-size-asset);
-    padding: #{$ouds-tag-space-inset-icon-default};
     overflow: hidden;
     line-height: 1;
     color: var(--#{$prefix}tag-asset-color);
@@ -123,6 +125,7 @@
   .tag-icon { // Keep size in px for decorative icons
     width: var(--#{$prefix}tag-size-decorative-asset);
     height: var(--#{$prefix}tag-size-decorative-asset);
+    padding: var(--#{$prefix}tag-icon-padding);
     &::before {
       font-size: var(--#{$prefix}tag-font-size-icon);
     }
@@ -135,10 +138,10 @@
   }
 
   .tag-bullet {
-    width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
-    height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * #{$ouds-tag-space-inset-bullet-default})); // stylelint-disable-line function-disallowed-list
+    width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
+    height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
     padding: 0;
-    margin: #{$ouds-tag-space-inset-bullet-default};
+    margin: var(--#{$prefix}tag-bullet-padding);
     background-color: var(--#{$prefix}tag-asset-color);
     @include border-radius(#{$ouds-border-radius-pill});
   }
@@ -199,6 +202,7 @@
   .tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
     --#{$prefix}tag-asset-color: currentcolor;
     display: block;
+    padding: var(--#{$prefix}tag-loader-padding);
     margin: 0;
     font-size: var(--#{$prefix}tag-size-asset);
     transform: rotate(-90deg);
@@ -221,18 +225,18 @@
 }
 
 .tag-small {
+  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
+  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-small};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
-  --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
-  --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
   --#{$prefix}tag-size-asset: #{px-to-rem($ouds-tag-size-asset-small)};
   --#{$prefix}tag-size-decorative-asset: #{$ouds-tag-size-asset-small};
-  --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
-  --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
-  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
+  --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
+  --#{$prefix}tag-bullet-padding: #{$ouds-tag-space-inset-bullet-small};
+  --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
 }
