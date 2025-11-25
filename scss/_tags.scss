@@ -98,6 +98,13 @@
     }
   }
 
+  &:has(.tag-icon),
+  &:has(.tag-status-icon),
+  &:has(.tag-bullet),
+  &.loading:has(.tag-loader) {
+    padding-left: calc(var(--#{$prefix}tag-padding-asset) - var(--#{$prefix}tag-border-width)); // stylelint-disable-line function-disallowed-list
+  }
+
   .tag-icon,
   .tag-status-icon,
   .tag-bullet,
@@ -216,7 +223,7 @@
 .tag-small {
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
-  --#{$prefix}tag-padding-start-asset: #{$ouds-tag-space-padding-inline-asset-small};
+  --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-small};
   --#{$prefix}tag-padding-y: #{$ouds-tag-space-padding-block-small};
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-small};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-small};
