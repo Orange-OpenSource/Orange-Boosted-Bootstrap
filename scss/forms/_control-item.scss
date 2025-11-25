@@ -626,6 +626,11 @@
 
 .switch-item {
   @extend %control-item;
+  flex-direction: row-reverse;
+
+  &.control-item-reverse {
+    flex-direction: initial;
+  }
 }
 
 .was-validated .switch-item {
