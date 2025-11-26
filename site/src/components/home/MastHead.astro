@@ -2,10 +2,12 @@
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 import Code from '@components/shortcodes/Code.astro'
+
 ---
 
-<div class="bd-masthead bg-always-black" id="content" data-bs-theme="dark">
-  <div class="container-fluid container-max-width pt-scaled-xlarge pb-scaled-3xlarge">
+<div class="bd-masthead" id="content" {...((getConfig().brand === 'orange') && { "data-bs-theme": "dark" })}>
+  <div class="bd-masthead-bg"></div>
+  <div class="container-fluid container-max-width pt-scaled-xlarge pb-scaled-3xlarge z-1 position-relative">
     <div class="col-md-8">
       <h1 class="display-medium text-brand-primary mb-scaled-small">OUDS Web</h1>
 
@@ -16,26 +18,24 @@ import Code from '@components/shortcodes/Code.astro'
       </p>
 
       <div class="mb-scaled-xsmall d-inline-block">
-        <Code
-          code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}
-          lang="sh"
-        />
+        <Code lang="sh"
+          code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}/>
       </div>
 
       <div class="mb-scaled-medium">
         <a href={getVersionedDocsPath('getting-started/introduction')} class="btn btn-strong">
-          <svg class="bi me-small" aria-hidden="true"
-            ><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#book-half')}></use></svg
-          >
+          <svg class="bi me-small" aria-hidden="true">
+            <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#book-half')}></use>
+          </svg>
           Read the docs
         </a>
       </div>
 
       <div class="hstack gap-small">
         <p class="mb-none">Currently v{getConfig().current_version}</p>
-        <div class="vr m-none border-always-on-black"></div>
+        <div class="vr m-none border-emphasized"></div>
         <a href={getVersionedDocsPath('getting-started/download')} class="fw-bold">Download</a>
-        <div class="vr m-none border-always-on-black"></div>
+        <div class="vr m-none border-emphasized"></div>
         <a href={`/${getConfig().brand}/docs/versions/`} class="text-nowrap fw-bold">All releases</a>
       </div>
     </div>
