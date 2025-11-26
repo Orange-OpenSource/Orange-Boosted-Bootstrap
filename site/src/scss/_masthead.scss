@@ -1,6 +1,5 @@
 // OUDS mod
 .bd-masthead {
-  position: relative;
   @if ($brand == "orange") {
     background-color: var(--#{$prefix}color-bg-primary);
   }
@@ -12,10 +11,6 @@
   }
 
   .bd-masthead-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
     @include media-breakpoint-up(md) {
       @if ($brand == "orange") {
         background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-tablet.png");
