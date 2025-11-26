@@ -1,13 +1,11 @@
 // OUDS mod
 .bd-masthead {
   position: relative;
-  padding-bottom: 7.5rem;
   @if ($brand == "orange") {
     background-color: var(--#{$prefix}color-bg-primary);
   }
 
   @include media-breakpoint-up(md) {
-    padding-bottom: 0;
     @if ($brand == "orange") {
       background-color: var(--#{$prefix}color-always-black);
     }
