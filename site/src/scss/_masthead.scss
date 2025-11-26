@@ -34,18 +34,24 @@
     }
   }
 
-  .highlight {
-    padding-top: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .bd-masthead-code {
+    width: 100%;
+    max-width: 28rem;
 
-    @include media-breakpoint-up(md) {
-      padding-right: 6rem;
-    }
-
-    pre {
-      padding-top: .75rem;
+    .highlight {
+      padding-top: 0;
       overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include media-breakpoint-up(md) {
+        padding-right: 6rem;
+      }
+
+      pre {
+        padding-top: .75rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 }
