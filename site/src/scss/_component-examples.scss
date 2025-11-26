@@ -384,11 +384,8 @@
   padding: .75rem .75rem 0; // OUDS mod: instead of ` padding: .75rem ($bd-gutter-x * .5)`
   white-space: nowrap; // OUDS mod
   background-color: var(--bd-pre-bg);
-
-  @include media-breakpoint-up(md) {
-    // OUDS mod: no `padding: .75rem 1.25rem`
-    @include border-radius(calc(var(--bs-border-radius) - 1px));
-  }
+  @include border-radius(calc(var(--bs-border-radius) - 1px)); // OUDS mod: apply border-radius for all breakpoints
+  // OUDS mod: no `padding: .75rem 1.25rem` from breakpoint md
 
   @include media-breakpoint-up(lg) {
     pre {
