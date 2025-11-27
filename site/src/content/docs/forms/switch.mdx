@@ -78,6 +78,10 @@ To display a divider, add `.control-item-divider` to a `.switch-item`.
 
 To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.switch-item`.
 
+<Callout type="warning">
+  The `.control-item-assets-container` containing the icon *must be the last child* of the `.switch-item`, the flow of the item is reversed by CSS to work like other control items.
+</Callout>
+
 <Example code={`<div class="switch-item">
     <div class="control-item-assets-container">
       <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchWithSVG" />

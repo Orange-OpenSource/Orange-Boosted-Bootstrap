@@ -4,12 +4,14 @@
 
 %control-item {
   --#{$prefix}control-item-label-color: #{$ouds-color-content-default};
+  --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon};
+  --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+  --#{$prefix}control-item-error-icon-offset-left: unset;
 
   position: relative;
   display: flex;
-  gap: px-to-rem($ouds-control-item-space-column-gap);
+  gap: $ouds-control-item-space-column-gap;
   min-width: px-to-rem($ouds-control-item-size-min-width);
-  max-width: px-to-rem($ouds-control-item-size-max-width);
   min-height: $form-check-min-height;
   padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
   @include border-radius($ouds-control-item-border-radius);
@@ -47,6 +49,16 @@
   // Handle invalid state
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
   }
 
   &:has(input.is-invalid:hover) {
@@ -59,6 +71,21 @@
 
   &:has(input.is-invalid:active) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
+
+  &::after {
+    position: absolute;
+    top: $ouds-control-item-space-padding-block-default;
+    right: var(--#{$prefix}control-item-error-icon-offset-right);
+    left: var(--#{$prefix}control-item-error-icon-offset-left);
+    width: $ouds-control-item-size-icon - 2 * $ouds-control-item-space-padding-inline-error-icon;
+    height: calc(100% - 2 * $ouds-control-item-space-padding-block-default); // stylelint-disable-line function-disallowed-list
+    max-height: px-to-rem($ouds-control-item-size-max-height-assets-container);
+    font-size: $ouds-control-item-size-icon;
+    line-height: 1;
+    color: var(--#{$prefix}control-item-label-color);
+    background-color: currentcolor;
+    mask: var(--#{$prefix}error-icon) no-repeat center;
   }
 }
 
@@ -317,7 +344,7 @@
 //
 
 .control-item-divider {
-  padding-bottom: subtract($ouds-control-item-space-padding-block-default, $ouds-divider-border-width);
+  padding-bottom: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 
   &:has(.is-invalid),
@@ -328,6 +355,19 @@
 
 .control-item-reverse {
   flex-direction: row-reverse;
+
+  // stylelint-disable selector-no-qualifying-type
+  &:has(input.is-invalid),
+  .was-validated &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+    --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon};
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+  }
+  // stylelint-enable selector-no-qualifying-type
 }
 
 
@@ -538,11 +578,18 @@
   &:hover,
   &:active,
   &:has(input:checked) {
-    padding: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width) calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width); // stylelint-disable function-disallowed-list
+    padding-block: calc($ouds-control-item-space-padding-block-default - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
+    padding-inline: calc($ouds-control-item-space-padding-inline - $ouds-divider-border-width); // stylelint-disable-line function-disallowed-list
     border: $ouds-divider-border-width solid $ouds-color-border-default;
+
+    // stylelint-disable selector-no-qualifying-type
+    &:has(input.is-invalid) {
+      --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon - $ouds-divider-border-width};
+    }
+    // stylelint-enable selector-no-qualifying-type
   }
 
-  &:has(input:checked) {
+  &:has(input:checked:not(.is-invalid)) {
     border-color: $ouds-color-action-selected;
 
     &:hover {
@@ -552,24 +599,6 @@
     &:active {
       border-color: $ouds-color-action-pressed;
     }
-
-    // stylelint-disable selector-no-qualifying-type
-    &:has(input.is-invalid) {
-      border-color: $ouds-color-action-negative-enabled;
-    }
-
-    &:has(input.is-invalid:hover) {
-      border-color: $ouds-color-action-negative-hover;
-    }
-
-    &:has(input.is-invalid:focus-visible) {
-      border-color: $ouds-color-action-negative-focus;
-    }
-
-    &:has(input.is-invalid:active) {
-      border-color: $ouds-color-action-negative-pressed;
-    }
-    // stylelint-enable selector-no-qualifying-type
   }
 
   &:hover {
@@ -581,16 +610,8 @@
   }
 
   // stylelint-disable selector-no-qualifying-type
-  &:has(input.is-invalid:hover) {
-    border-color: $ouds-color-action-negative-hover;
-  }
-
-  &:has(input.is-invalid:focus-visible) {
-    border-color: $ouds-color-action-negative-focus;
-  }
-
-  &:has(input.is-invalid:active) {
-    border-color: $ouds-color-action-negative-pressed;
+  &:has(input.is-invalid) {
+    border-color: var(--#{$prefix}control-item-label-color);
   }
 
   &:has(input:focus-visible) {
@@ -603,19 +624,7 @@
 .was-validated .radio-button-item-outlined {
   &:has(input:checked) {
     &:has(input:invalid) {
-      border-color: $ouds-color-action-negative-enabled;
-    }
-
-    &:has(input:invalid:hover) {
-      border-color: $ouds-color-action-negative-hover;
-    }
-
-    &:has(input:invalid:focus-visible) {
-      border-color: $ouds-color-action-negative-focus;
-    }
-
-    &:has(input:invalid:active) {
-      border-color: $ouds-color-action-negative-pressed;
+      border-color: var(--#{$prefix}control-item-label-color);
     }
   }
 
@@ -641,8 +650,28 @@
   @extend %control-item;
   flex-direction: row-reverse;
 
+  // stylelint-disable selector-no-qualifying-type
+  &:has(input.is-invalid) {
+    --#{$prefix}control-item-error-icon-offset-right: unset;
+    --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
+
+    padding-right: $ouds-control-item-space-padding-inline;
+    padding-left: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+  }
+  // stylelint-enable selector-no-qualifying-type
+
   &.control-item-reverse {
     flex-direction: initial;
+
+    // stylelint-disable selector-no-qualifying-type
+    &:has(input.is-invalid) {
+      --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
+      --#{$prefix}control-item-error-icon-offset-left: unset;
+
+      padding-right: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+      padding-left: $ouds-control-item-space-padding-inline;
+    }
+    // stylelint-enable selector-no-qualifying-type
   }
 }
 

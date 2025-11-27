@@ -142,11 +142,11 @@ It's recommended to keep checkbox label to no more than three words. When space 
     <div class="col-8 col-md-6 col-xl-5">
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout1" aria-describedby="checboxLayout1Description" />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout1" aria-describedby="checkboxLayout1Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checboxLayout1">Label</label>
-          <p class="control-item-description" id="checboxLayout1Description">Description text</p>
+          <label class="control-item-label" for="checkboxLayout1">Label</label>
+          <p class="control-item-description" id="checkboxLayout1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -156,11 +156,11 @@ It's recommended to keep checkbox label to no more than three words. When space 
       </div>
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout2" aria-describedby="checboxLayout2Description" />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout2" aria-describedby="checkboxLayout2Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checboxLayout2">A short label</label>
-          <p class="control-item-description" id="checboxLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
+          <label class="control-item-label" for="checkboxLayout2">A short label</label>
+          <p class="control-item-description" id="checkboxLayout2Description">A longer description text that can wrap to another line to show the behaviour</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -170,11 +170,11 @@ It's recommended to keep checkbox label to no more than three words. When space 
       </div>
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayout3" aria-describedby="checboxLayout3Description" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout3" aria-describedby="checkboxLayout3Description" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checboxLayout3">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-description" id="checboxLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          <label class="control-item-label" for="checkboxLayout3">A longer label for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-description" id="checkboxLayout3Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -193,11 +193,11 @@ To reverse the component, simply add `.control-item-reverse` to a `.checkbox-ite
     <div class="col-8 col-md-6 col-xl-5">
       <div class="checkbox-item control-item-divider control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayoutRev1" aria-describedby="checboxLayoutRev1Description" />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev1" aria-describedby="checkboxLayoutRev1Description" />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checboxLayoutRev1">Label with reverse layout</label>
-          <p class="control-item-description" id="checboxLayoutRev1Description">Description text</p>
+          <label class="control-item-label" for="checkboxLayoutRev1">Label with reverse layout</label>
+          <p class="control-item-description" id="checkboxLayoutRev1Description">Description text</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -207,11 +207,11 @@ To reverse the component, simply add `.control-item-reverse` to a `.checkbox-ite
       </div>
       <div class="checkbox-item control-item-divider control-item-reverse">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" value="" id="checboxLayoutRev2" aria-describedby="checboxLayoutRev2Description" checked />
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev2" aria-describedby="checkboxLayoutRev2Description" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
-          <p class="control-item-description" id="checboxLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
+          <label class="control-item-label" for="checkboxLayoutRev2">A longer label with reverse layout for showing behavior in this case, checkbox indicator and icon will stick to the top area of the component</label>
+          <p class="control-item-description" id="checkboxLayoutRev2Description">Also a longer description text, it will also wrap at some point depending on the component width</p>
         </div>
         <div class="control-item-assets-container">
           <svg aria-hidden="true">
@@ -354,7 +354,7 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
 <Callout type="info" name="input-invalid" />
 
-To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
+To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
     <div class="control-item-assets-container">
@@ -363,6 +363,11 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
       <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
+    </div>
+    <div class="control-item-assets-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg>
     </div>
   </div>
   <div class="checkbox-item">
@@ -373,6 +378,11 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
       <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
       <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
     </div>
+    <div class="control-item-assets-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg>
+    </div>
   </div>
   <div class="checkbox-item">
     <div class="control-item-assets-container">
@@ -381,6 +391,11 @@ To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`
     <div class="control-item-text-container">
       <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
       <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
+    </div>
+    <div class="control-item-assets-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+      </svg>
     </div>
   </div>`} />
 
