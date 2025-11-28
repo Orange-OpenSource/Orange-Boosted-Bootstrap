@@ -132,7 +132,9 @@
   }
 
   .tag-status-icon {
-    padding: var(--#{$prefix}tag-icon-padding);
+    width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
+    height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
+    margin: var(--#{$prefix}tag-icon-padding);
     vertical-align: middle;
     background-color: var(--#{$prefix}tag-asset-color);
     background-size: contain;
@@ -168,8 +170,8 @@
       top: 0;
       left: 0;
       display: inline-block;
-      width: var(--#{$prefix}tag-size-asset);
-      height: var(--#{$prefix}tag-size-asset);
+      width: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
+      height: calc(var(--#{$prefix}tag-size-asset) - (2 * var(--#{$prefix}tag-icon-padding))); // stylelint-disable-line function-disallowed-list
       content: "";
       background-repeat: no-repeat;
       background-size: contain;
@@ -202,6 +204,8 @@
   .tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
     --#{$prefix}tag-asset-color: currentcolor;
     display: block;
+    width: var(--#{$prefix}tag-size-asset);
+    height: var(--#{$prefix}tag-size-asset);
     padding: var(--#{$prefix}tag-loader-padding);
     margin: 0;
     font-size: var(--#{$prefix}tag-size-asset);
