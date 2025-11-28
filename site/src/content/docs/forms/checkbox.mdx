@@ -234,6 +234,38 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
   </div>`} />
 </BootstrapCompatibility>
 
+### Horizontal
+
+You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
+
+<Example code={`<div class="d-lg-flex flex-row gap-small">
+    <div class="checkbox-item flex-fill">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" name="checkboxLayoutRow" aria-describedby="checkboxLayoutRow1ExtraLabel checkboxLayoutRow1Description" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxLayoutRow1">Option 1</label>
+      </div>
+    </div>
+    <div class="checkbox-item flex-fill">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow2" name="checkboxLayoutRow"  aria-describedby="checkboxLayoutRow2ExtraLabel checkboxLayoutRow2Description" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxLayoutRow2">Option 2</label>
+      </div>
+    </div>
+    <div class="checkbox-item flex-fill">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" name="checkboxLayoutRow"  aria-describedby="checkboxLayoutRow3ExtraLabel checkboxLayoutRow3Description" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxLayoutRow3">Option 2</label>
+      </div>
+    </div>
+  </div>`} />
+
+
 ## Indeterminate
 
 This is often used to indicate a partial selection within a group of choices. For instance, in a nested (hierarchical) list, a parent checkbox can be indeterminate if some, but not all, sub-options are selected. [Learn more about nesting in the design guidelines](https://unified-design-system.orange.com/472794e18/p/23f1c1-checkbox/t/15b9a5fddb).
