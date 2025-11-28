@@ -89,6 +89,36 @@
   }
 }
 
+// common invalid state management
+.was-validated .checkbox-item,
+.was-validated .radio-button-item,
+.was-validated .switch-item {
+  &:has(input:invalid) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &:has(input:invalid:hover) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
+  }
+
+  &:has(input:invalid:focus-visible) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
+  }
+
+  &:has(input:invalid:active) {
+    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
+  }
+}
 
 //
 // Control item containers
@@ -512,34 +542,6 @@
   @extend %control-item;
 }
 
-.was-validated .checkbox-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-
-    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
-
-    .control-item-assets-container:last-child {
-      display: none;
-    }
-
-    &::after {
-      content: "";
-    }
-  }
-
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
-
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
-
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
-  }
-}
-
 .checkbox-standalone {
   @extend %control-item-standalone;
 }
@@ -551,34 +553,6 @@
 
 .radio-button-item {
   @extend %control-item;
-}
-
-.was-validated .radio-button-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-
-    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
-
-    .control-item-assets-container:last-child {
-      display: none;
-    }
-
-    &::after {
-      content: "";
-    }
-  }
-
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
-
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
-
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
-  }
 }
 
 .radio-button-standalone {
@@ -607,7 +581,7 @@
     // stylelint-enable selector-no-qualifying-type
   }
 
-  &:has(input:checked:not(.is-invalid)) {
+  &:has(input:checked:not(.is-invalid, :invalid)) {
     border-color: $ouds-color-action-selected;
 
     &:hover {
@@ -639,24 +613,8 @@
   // stylelint-enable selector-no-qualifying-type
 }
 
-.was-validated .radio-button-item-outlined {
-  &:has(input:checked) {
-    &:has(input:invalid) {
-      border-color: var(--#{$prefix}control-item-label-color);
-    }
-  }
-
-  &:has(input:invalid:hover) {
-    border-color: $ouds-color-action-negative-hover;
-  }
-
-  &:has(input:invalid:focus-visible) {
-    border-color: $ouds-color-action-negative-focus;
-  }
-
-  &:has(input:invalid:active) {
-    border-color: $ouds-color-action-negative-pressed;
-  }
+.was-validated .radio-button-item-outlined:has(input:invalid) {
+  border-color: var(--#{$prefix}control-item-label-color);
 }
 
 
@@ -690,34 +648,6 @@
       padding-left: $ouds-control-item-space-padding-inline;
     }
     // stylelint-enable selector-no-qualifying-type
-  }
-}
-
-.was-validated .switch-item {
-  &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-
-    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
-
-    .control-item-assets-container:last-child {
-      display: none;
-    }
-
-    &::after {
-      content: "";
-    }
-  }
-
-  &:has(input:invalid:hover) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-hover};
-  }
-
-  &:has(input:invalid:focus-visible) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-focus};
-  }
-
-  &:has(input:invalid:active) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-pressed};
   }
 }
 
