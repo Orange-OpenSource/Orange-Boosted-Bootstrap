@@ -359,8 +359,6 @@
   // stylelint-disable selector-no-qualifying-type
   &:has(input.is-invalid),
   .was-validated &:has(input:invalid) {
-    --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
-    --#{$prefix}control-item-error-icon-offset: #{$ouds-control-item-space-padding-inline + $ouds-control-item-space-padding-inline-error-icon};
     --#{$prefix}control-item-error-icon-offset-right: unset;
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
@@ -517,6 +515,16 @@
 .was-validated .checkbox-item {
   &:has(input:invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
   }
 
   &:has(input:invalid:hover) {
@@ -548,6 +556,16 @@
 .was-validated .radio-button-item {
   &:has(input:invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
   }
 
   &:has(input:invalid:hover) {
@@ -678,6 +696,16 @@
 .was-validated .switch-item {
   &:has(input:invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+    .control-item-assets-container:last-child {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+    }
   }
 
   &:has(input:invalid:hover) {
@@ -724,6 +752,16 @@
   .was-validated .form-check {
     &:has(input:invalid) {
       --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
+
+      padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+
+      .control-item-assets-container:last-child {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+      }
     }
 
     &:has(input:invalid:hover) {
