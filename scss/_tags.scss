@@ -1,9 +1,9 @@
 .tag {
   --#{$prefix}tag-min-width: #{$ouds-tag-size-min-width-default};
   --#{$prefix}tag-min-height: #{$ouds-tag-size-min-height-default};
-  --#{$prefix}tag-color: #{$ouds-color-content-on-status-neutral-emphasized};
+  --#{$prefix}tag-color: #{$ouds-color-content-inverse};
   --#{$prefix}tag-border-width: 0px;
-  --#{$prefix}tag-background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  --#{$prefix}tag-background-color: #{$ouds-color-surface-inverse-high};
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-default};
   --#{$prefix}tag-padding-asset: #{$ouds-tag-space-padding-inline-asset-default};
@@ -14,10 +14,12 @@
   --#{$prefix}tag-asset-color: currentcolor;
   --#{$prefix}tag-loading-dasharray: 92;
   --#{$prefix}tag-loading-animation: 2.1875s infinite linear rotate1-indeterminate, 1.25s linear infinite rotate2-indeterminate;
-  --#{$prefix}tag-positive-icon: #{$tag-positive-icon};
-  --#{$prefix}tag-info-icon: #{$tag-info-icon};
-  --#{$prefix}tag-warning-icon: #{$tag-warning-icon};
-  --#{$prefix}tag-negative-icon: #{$tag-negative-icon};
+  --#{$prefix}tag-positive-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}tag-info-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}tag-warning-external-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}tag-warning-internal-icon: var(--#{$prefix}warning-internal-icon);
+  --#{$prefix}tag-negative-icon: var(--#{$prefix}error-icon);
+  --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-medium};
 
   position: relative;
   display: inline-flex;
@@ -35,26 +37,66 @@
   @include get-font-size("label-medium");
   @include border-radius($ouds-tag-border-radius);
 
-  &.text-bg-status-accent-muted {
-    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-accent-emphasized};
+  &.tag-muted {
+    --#{$prefix}tag-color: #{$ouds-color-content-default};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-secondary};
+    --#{$prefix}tag-asset-color: #{$ouds-color-content-default};
   }
 
-  &.text-bg-status-positive-muted {
-    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-positive-emphasized};
+  &.tag-accent {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-status-accent-emphasized};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-status-accent-emphasized};
+
+    &.tag-muted {
+      --#{$prefix}tag-color: #{$ouds-color-content-on-status-accent-muted};
+      --#{$prefix}tag-background-color: #{$ouds-color-surface-status-accent-muted};
+      --#{$prefix}tag-asset-color: #{$ouds-color-content-status-accent};
+    }
   }
 
-  &.text-bg-status-info-muted {
-    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-info-emphasized};
+  &.tag-positive {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-status-positive-emphasized};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-status-positive-emphasized};
+
+    &.tag-muted {
+      --#{$prefix}tag-color: #{$ouds-color-content-on-status-positive-muted};
+      --#{$prefix}tag-background-color: #{$ouds-color-surface-status-positive-muted};
+      --#{$prefix}tag-asset-color: #{$ouds-color-content-status-positive};
+    }
   }
 
-  &.text-bg-status-warning-muted {
-    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-warning-emphasized};
+  &.tag-info {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-status-info-emphasized};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-status-info-emphasized};
+
+    &.tag-muted {
+      --#{$prefix}tag-color: #{$ouds-color-content-on-status-info-muted};
+      --#{$prefix}tag-background-color: #{$ouds-color-surface-status-info-muted};
+      --#{$prefix}tag-asset-color: #{$ouds-color-content-status-info};
+    }
   }
 
-  &.text-bg-status-negative-muted {
-    --#{$prefix}tag-asset-color: #{$ouds-color-surface-status-negative-emphasized};
+  &.tag-warning {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-status-warning-emphasized};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-status-warning-emphasized};
+
+    &.tag-muted {
+      --#{$prefix}tag-color: #{$ouds-color-content-on-status-warning-muted};
+      --#{$prefix}tag-background-color: #{$ouds-color-surface-status-warning-muted};
+      --#{$prefix}tag-asset-color: #{$ouds-color-content-status-warning};
+    }
   }
 
+  &.tag-negative {
+    --#{$prefix}tag-color: #{$ouds-color-content-on-status-negative-emphasized};
+    --#{$prefix}tag-background-color: #{$ouds-color-surface-status-negative-emphasized};
+
+    &.tag-muted {
+      --#{$prefix}tag-color: #{$ouds-color-content-on-status-negative-muted};
+      --#{$prefix}tag-background-color: #{$ouds-color-surface-status-negative-muted};
+      --#{$prefix}tag-asset-color: #{$ouds-color-content-status-negative};
+    }
+  }
 
   .tag-icon,
   .tag-status-icon,
@@ -71,9 +113,12 @@
     color: var(--#{$prefix}tag-asset-color);
   }
 
-  .tag-icon {
+  .tag-icon { // Keep size in px for decorative icons
     width: var(--#{$prefix}tag-size-decorative-asset);
     height: var(--#{$prefix}tag-size-decorative-asset);
+    &::before {
+      font-size: var(--#{$prefix}tag-font-size-icon);
+    }
   }
 
   .tag-status-icon {
@@ -91,32 +136,48 @@
     @include border-radius(#{$ouds-border-radius-pill});
   }
 
-  &.text-bg-status-positive-emphasized,
-  &.text-bg-status-positive-muted {
-    .tag-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}tag-positive-icon));
+  &.tag-positive .tag-status-icon {
+    mask-image: escape-svg(var(--#{$prefix}tag-positive-icon));
+  }
+
+  &.tag-info .tag-status-icon {
+    mask-image: escape-svg(var(--#{$prefix}tag-info-icon));
+  }
+
+  &.tag-warning:not(.tag-muted) .tag-status-icon {
+    mask-image: escape-svg(var(--#{$prefix}tag-warning-external-icon));
+  }
+
+  &.tag-warning.tag-muted .tag-status-icon {
+    position: relative;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: var(--#{$prefix}tag-size-asset);
+      height: var(--#{$prefix}tag-size-asset);
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-color: var(--#{$prefix}icon-color-content-status-warning-external-shape);
+      mask-image: escape-svg(var(--#{$prefix}tag-warning-external-icon));
+    }
+
+    &::after {
+      background-color: var(--#{$prefix}icon-color-content-status-warning-internal-shape);
+      mask-image: escape-svg(var(--#{$prefix}tag-warning-internal-icon));
     }
   }
 
-  &.text-bg-status-info-emphasized,
-  &.text-bg-status-info-muted {
-    .tag-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}tag-info-icon));
-    }
-  }
-
-  &.text-bg-status-warning-emphasized,
-  &.text-bg-status-warning-muted {
-    .tag-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}tag-warning-icon));
-    }
-  }
-
-  &.text-bg-status-negative-emphasized,
-  &.text-bg-status-negative-muted {
-    .tag-status-icon {
-      mask-image: escape-svg(var(--#{$prefix}tag-negative-icon));
-    }
+  &.tag-negative .tag-status-icon {
+    mask-image: escape-svg(var(--#{$prefix}tag-negative-icon));
   }
 
   &:not(.loading) .tag-loader {
@@ -125,7 +186,7 @@
 
   &.loading:has(.tag-loader) {
     color: #{$ouds-color-content-default} if($enable-important-utilities, !important, null);
-    background-color: #{$ouds-color-surface-status-neutral-muted} if($enable-important-utilities, !important, null);
+    background-color: #{$ouds-color-surface-secondary} if($enable-important-utilities, !important, null);
   }
 
   .tag-loader { // TODO partially copied from button loader, should be factorized as much as possible
@@ -152,7 +213,7 @@
   background-color: #{$ouds-color-action-disabled} if($enable-important-utilities, !important, null);
 }
 
-.tag-sm {
+.tag-small {
   --#{$prefix}tag-padding-start: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-end: #{$ouds-tag-space-padding-inline-small};
   --#{$prefix}tag-padding-start-asset: #{$ouds-tag-space-padding-inline-asset-small};
@@ -165,14 +226,15 @@
   --#{$prefix}tag-icon-padding: #{$ouds-tag-space-inset-icon-small};
   --#{$prefix}tag-loader-padding: #{$ouds-tag-space-inset-loader-small};
   --#{$prefix}tag-asset-gap: #{$ouds-tag-space-column-gap-small};
+  --#{$prefix}tag-font-size-icon: #{$ouds-font-size-label-small};
   @include get-font-size("label-small");
 }
 
 .tag-input {
-  --#{$prefix}tag-color: #{$ouds-tag-input-color-content-enabled};
-  --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-enabled};
-  --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-enabled};
-  --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+  --#{$prefix}tag-color: #{$ouds-input-tag-color-content-enabled};
+  --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-enabled};
+  --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-enabled};
+  --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default};
   --#{$prefix}tag-padding-end: var(--#{$prefix}tag-padding-asset);
 
   margin: calc(($ouds-tag-size-min-height-interactive-area - var(--#{$prefix}tag-min-height)) / 2) 0; // stylelint-disable-line function-disallowed-list
@@ -196,24 +258,24 @@
   }
 
   &:hover {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-hover};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-hover};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-hover};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-hover};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-hover};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-hover};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:active {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-pressed};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-pressed};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-pressed};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-pressed};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-pressed};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-pressed};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:focus-visible {
-    --#{$prefix}tag-color: #{$ouds-tag-input-color-content-focus};
-    --#{$prefix}tag-background-color: #{$ouds-tag-input-color-bg-focus};
-    --#{$prefix}tag-border-color: #{$ouds-tag-input-color-border-focus};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default-interaction};
+    --#{$prefix}tag-color: #{$ouds-input-tag-color-content-focus};
+    --#{$prefix}tag-background-color: #{$ouds-input-tag-color-bg-focus};
+    --#{$prefix}tag-border-color: #{$ouds-input-tag-color-border-focus};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default-interaction};
   }
 
   &:disabled,
@@ -221,7 +283,7 @@
     --#{$prefix}tag-color: #{$ouds-color-action-disabled};
     --#{$prefix}tag-background-color: #{$ouds-color-content-on-action-disabled};
     --#{$prefix}tag-border-color: #{$ouds-color-action-disabled};
-    --#{$prefix}tag-border-width: #{$ouds-tag-input-border-width-default};
+    --#{$prefix}tag-border-width: #{$ouds-input-tag-border-width-default};
 
     pointer-events: none;
   }

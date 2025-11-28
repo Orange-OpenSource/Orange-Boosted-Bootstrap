@@ -34,13 +34,17 @@ const svgPath = `${filePath}.svg`
 const svg = fs.readFileSync(svgPath, 'utf8')
 const size = fs.statSync(svgPath).size
 
-const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SVG to clipboard` : file ? `Copy ${file}.svg file to clipboard` : 'Copy SVG to clipboard'
+const clipboardLabel = buttonLabel
+  ? `Copy ${buttonLabel} SVG to clipboard`
+  : file
+    ? `Copy ${file}.svg file to clipboard`
+    : 'Copy SVG to clipboard'
 ---
 
 <Code filePath={svgFormattedPath} lang="html" buttonLabel={buttonLabel}>
   <div slot="pre" class="bd-clipboard">
     <div class="d-flex ms-auto">
-      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+      <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xsmall" title={clipboardLabel}>
         <svg aria-hidden="true">
           <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')}></use>
         </svg>
@@ -65,7 +69,7 @@ const clipboardLabel = buttonLabel ? `Copy ${buttonLabel} SVG to clipboard` : fi
           .replaceAll('}', '%7D')}`}
         download={`${file}.svg`}
       >
-        Download<span class="small ms-2xs">(SVG, {size / 1000}ko)</span>
+        Download<span class="small ms-2xsmall">(SVG, {size / 1000}ko)</span>
       </a>
     </p>
   )

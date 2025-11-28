@@ -8,6 +8,12 @@
   --#{$prefix}badge-border-radius: #{$ouds-border-radius-pill};
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-inset};
   --#{$prefix}badge-count-padding-y: #{$ouds-badge-space-inset};
+  --#{$prefix}badge-color: #{$ouds-color-content-on-status-negative-emphasized};
+  --#{$prefix}badge-background-color: #{$ouds-color-surface-status-negative-emphasized};
+  --#{$prefix}badge-positive-icon: var(--#{$prefix}success-icon);
+  --#{$prefix}badge-info-icon: var(--#{$prefix}info-icon);
+  --#{$prefix}badge-warning-icon: var(--#{$prefix}warning-icon);
+  --#{$prefix}badge-negative-icon: var(--#{$prefix}error-icon);
   // scss-docs-end badge-css-vars
 
   display: inline-block;
@@ -18,16 +24,66 @@
   margin: 0;
   font-style: normal;
   font-weight: 400;
-  color: #{$ouds-color-content-on-status-neutral-emphasized};
+  color: var(--#{$prefix}badge-color);
   text-align: center;
-  background-color: #{$ouds-color-surface-status-neutral-emphasized};
+  background-color: var(--#{$prefix}badge-background-color);
   @include get-font-size("label-small");
   @include border-radius(var(--#{$prefix}badge-border-radius));
 
-  svg {
+  .badge-icon,
+  .badge-status-icon {
     display: flex;
     flex: 1 0 0;
     aspect-ratio: 1/1;
+    font-size: calc(var(--#{$prefix}badge-size) - (2 * var(--#{$prefix}badge-count-padding-x))); // stylelint-disable-line function-disallowed-list
+  }
+
+  .badge-status-icon {
+    background-color: var(--#{$prefix}badge-color);
+    background-size: contain;
+  }
+
+  &.badge-neutral {
+    --#{$prefix}badge-color: #{$ouds-color-content-inverse};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-inverse-high};
+  }
+
+  &.badge-accent {
+    --#{$prefix}badge-color: #{$ouds-color-content-on-status-accent-emphasized};
+    --#{$prefix}badge-background-color: #{$ouds-color-surface-status-accent-emphasized};
+  }
+
+  &:not(.badge-neutral):not(.badge-accent) {
+    .badge-status-icon {
+      mask-image: escape-svg(var(--#{$prefix}badge-negative-icon));
+    }
+
+    &.badge-positive {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-positive-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-positive-emphasized};
+
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-positive-icon));
+      }
+    }
+
+    &.badge-info {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-info-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-info-emphasized};
+
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-info-icon));
+      }
+    }
+
+    &.badge-warning {
+      --#{$prefix}badge-color: #{$ouds-color-content-on-status-warning-emphasized};
+      --#{$prefix}badge-background-color: #{$ouds-color-surface-status-warning-emphasized};
+
+      .badge-status-icon {
+        mask-image: escape-svg(var(--#{$prefix}badge-warning-icon));
+      }
+    }
   }
 }
 
@@ -36,15 +92,15 @@
   background-color: #{$ouds-color-action-disabled};
 }
 
-.badge-xs {
+.badge-xsmall:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-xsmall)};
 }
 
-.badge-sm {
+.badge-small:not(.badge-count):not(:has(.badge-icon)):not(:has(.badge-status-icon)) {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-small)};
 }
 
-.badge-lg {
+.badge-large {
   --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
 
   @include get-font-size("label-medium");
@@ -54,7 +110,7 @@
   --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-medium};
   --#{$prefix}badge-count-padding-y: 0;
 
-  &.badge-lg {
+  &.badge-large {
     --#{$prefix}badge-size: #{px-to-rem($ouds-badge-size-large)};
     --#{$prefix}badge-count-padding-x: #{$ouds-badge-space-padding-inline-large};
   }

@@ -24,3 +24,12 @@ export const getMode = (regex: string) => {
       : 'light'
   return theme
 }
+
+/**
+ * This function returns true if we have the specified token in allTokens list.
+ * @param searchToken
+ * @returns boolean
+ */
+export const hasToken = (searchToken: string) => {
+  return allTokens.some((token: any) => token.name === searchToken);
+}

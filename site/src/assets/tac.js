@@ -16,11 +16,11 @@
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(button => {
-      button.classList.add('btn', 'btn-negative', 'mt-2xs', 'mt-md-none', 'ms-md-lg')
+      button.classList.add('btn', 'btn-negative', 'mt-2xsmall', 'mt-md-none', 'ms-md-large')
       button.innerHTML = tarteaucitron.lang.denyAll
     })
 
-    document.getElementById('tarteaucitron').classList.add('p-lg')
+    document.getElementById('tarteaucitron').classList.add('p-large')
 
     document.getElementById('tarteaucitronClosePanel').classList.add('d-flex', 'align-content-end', 'position-relative', 'btn-close')
     document.getElementById('tarteaucitronClosePanel').innerHTML =
@@ -32,19 +32,19 @@
 
     alert.setAttribute('data-bs-theme', 'dark')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'ms-lg-sm')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'mx-sm-sm', 'ms-lg-auto', 'my-sm', 'my-lg-none')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-default', 'ms-lg-small')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-strong', 'mx-sm-small', 'ms-lg-auto', 'my-small', 'my-lg-none')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
-    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'mx-sm-sm', 'my-sm', 'my-lg-none')
+    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-negative', 'mx-sm-small', 'my-small', 'my-lg-none')
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
   window.addEventListener('tac.open_panel',
     () => {
-      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-default', 'd-flex', 'mt-lg', 'mx-auto')
+      document.getElementById('tarteaucitronSaveButton').classList.add('btn', 'btn-default', 'd-flex', 'mt-large', 'mx-auto')
 
       document.querySelectorAll('#tarteaucitronServices_api button').forEach(button => {
-        button.classList.add('btn', 'ms-sm')
+        button.classList.add('btn', 'ms-small')
       })
       const allowConsentButton = document.querySelector('#tarteaucitronAllAllowed')
       const denyConsentButton = document.querySelector('#tarteaucitronAllDenied')

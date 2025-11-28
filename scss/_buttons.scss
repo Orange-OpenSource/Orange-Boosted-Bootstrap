@@ -226,21 +226,21 @@
     $ouds-button-color-bg-brand-enabled,
     var(--#{$prefix}color-opacity-transparent),
     $ouds-button-color-content-brand-enabled,
-    var(--#{$prefix}color-action-hover),
+    $ouds-button-color-bg-brand-hover,
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-action-hover),
-    var(--#{$prefix}color-action-pressed),
+    $ouds-button-color-content-brand-hover,
+    $ouds-button-color-bg-brand-pressed,
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-action-pressed),
+    $ouds-button-color-content-brand-pressed,
     var(--#{$prefix}color-action-disabled),
     var(--#{$prefix}color-opacity-transparent),
     var(--#{$prefix}color-content-on-action-disabled),
-    var(--#{$prefix}color-action-focus),
+    $ouds-button-color-bg-brand-focus,
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-action-focus),
-    var(--#{$prefix}color-action-loading),
+    $ouds-button-color-content-brand-focus,
+    $ouds-button-color-bg-brand-loading,
     var(--#{$prefix}color-opacity-transparent),
-    var(--#{$prefix}color-content-on-action-loading)
+    $ouds-button-color-content-brand-loading
   );
 }
 
@@ -380,22 +380,22 @@
 
   @include button-variant(
     $ouds-button-mono-color-bg-strong-enabled,
-    $ouds-button-mono-color-border-strong-enabled,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-enabled,
     $ouds-button-mono-color-bg-strong-hover,
-    $ouds-button-mono-color-border-strong-hover,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-hover,
     $ouds-button-mono-color-bg-strong-pressed,
-    $ouds-button-mono-color-border-strong-pressed,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-pressed,
     $ouds-button-mono-color-bg-strong-disabled,
-    $ouds-button-mono-color-border-strong-disabled,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-disabled,
     $ouds-button-mono-color-bg-strong-focus,
-    $ouds-button-mono-color-border-strong-focus,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-focus,
     $ouds-button-mono-color-bg-strong-loading,
-    $ouds-button-mono-color-border-strong-loading,
+    var(--#{$prefix}color-opacity-transparent),
     $ouds-button-mono-color-content-strong-loading
   );
 }

@@ -143,7 +143,7 @@ if (filePath && fileMatch && codeToDisplay) {
 
 <div class:list={[{ 'bd-code-snippet': !nestedInExample }, containerClass, 'highlight-container']}>
   {Astro.slots.has('bar') ? <slot name="bar" /> : null}
-  <div class:list={['highlight', { 'pe-md-4xl': !nestedInExample }]}>
+  <div class:list={['highlight', { 'pe-md-4xlarge': !nestedInExample }]}>
     {
       codeToDisplay && lang ? (
         <Prism code={codeToDisplay} lang={lang} />
@@ -161,7 +161,7 @@ if (filePath && fileMatch && codeToDisplay) {
         )
         : (
           <div class="bd-clipboard">
-            <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xs" title={clipboardLabel}>
+            <button type="button" class="btn btn-minimal btn-icon btn-clipboard m-2xsmall" title={clipboardLabel}>
               <svg aria-hidden="true">
                 <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#copy')} />
               </svg>
