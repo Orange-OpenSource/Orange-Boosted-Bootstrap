@@ -132,6 +132,7 @@
   }
 
   .tag-status-icon {
+    padding: var(--#{$prefix}tag-icon-padding);
     vertical-align: middle;
     background-color: var(--#{$prefix}tag-asset-color);
     background-size: contain;
@@ -140,7 +141,6 @@
   .tag-bullet {
     width: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
     height: calc(var(--#{$prefix}tag-size-decorative-asset) - (2 * var(--#{$prefix}tag-bullet-padding))); // stylelint-disable-line function-disallowed-list
-    padding: 0;
     margin: var(--#{$prefix}tag-bullet-padding);
     background-color: var(--#{$prefix}tag-asset-color);
     @include border-radius(#{$ouds-border-radius-pill});
