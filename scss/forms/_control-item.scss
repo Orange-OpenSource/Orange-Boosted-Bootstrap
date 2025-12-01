@@ -4,12 +4,10 @@
 
 .control-items-list {
   @include list-unstyled();
+  margin: 0;
 
   .control-item-error-message {
     display: none;
-    padding: $ouds-control-item-space-padding-block-top-error-text $ouds-control-item-space-padding-inline 0;
-    color: var(--#{$prefix}color-content-status-negative);
-    @include get-font-size("label-medium");
   }
 
   // stylelint-disable selector-no-qualifying-type
@@ -18,6 +16,12 @@
     display: block;
   }
   // stylelint-enable selector-no-qualifying-type
+}
+
+.control-item-error-message {
+  padding: $ouds-control-item-space-padding-block-top-error-text $ouds-control-item-space-padding-inline 0;
+  color: var(--#{$prefix}color-content-status-negative);
+  @include get-font-size("label-medium");
 }
 
 //

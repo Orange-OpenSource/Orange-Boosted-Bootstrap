@@ -1,5 +1,3 @@
-### Control item
-
 Control item is an abstraction for several non-text input components, like checkbox, radio button and switch, that have similar behavior and layout. It contains an `<input />` indicator, a text container for the label and an optional icon.
 
 We use the parent element selector (`:has`) for all our `<input />` states, like `:invalid` or `:disabled`. When combined with the `.control-item-label` class, we can easily style the text for each item based on the `<input />`’s state.
@@ -11,5 +9,3 @@ We use the parent element selector (`:has`) for all our `<input />` states, like
 `.control-item-label` extend their clickable area until a `.checkbox-standalone`, `.radio-button-standalone`, `.switch-standalone` or a `position: relative;` is found in the page hierarchy. This ensures a consistent approach, whatever the DOM is. Consequently, none of the elements next to the label should be interactive.
 
 `.control-item-indicator` uses customized icons to indicate checked states.
-
-As control items are always displayed as a list, they must be enclosed in a `.control-items-list`. This will handle automatic error text display when a control input is invalid.
