@@ -32,8 +32,8 @@ site/static/**/docs/[version]/assets/img/favicons/mstile-310x150.png
 site/static/**/docs/[version]/assets/img/favicons/mstile-310x310.png
 site/static/**/docs/[version]/assets/img/favicons/safari-pinned-tab.svg
 site/static/**/docs/[version]/assets/img/ouds-web-home-desktop.png
-site/static/**/docs/[version]/assets/img/ouds-web-home-mobile.png
 site/static/**/docs/[version]/assets/img/ouds-web-home-tablet.png
+site/static/**/docs/[version]/assets/img/ouds-web-home.svg
 site/static/**/docs/[version]/assets/img/ouds-web-sprite.svg
 
 End of the parts list under Orange SA Copyright
