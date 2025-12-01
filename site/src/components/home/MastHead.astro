@@ -17,7 +17,7 @@ import Code from '@components/shortcodes/Code.astro'
         based, {getConfig().display_brand} branded accessible and ergonomic components library.
       </p>
 
-      <div class="bd-masthead-code mb-scaled-xsmall d-inline-block">
+      <div class="bd-masthead-code mb-scaled-xsmall d-none d-md-inline-block">
         <Code lang="sh"
           code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}/>
       </div>

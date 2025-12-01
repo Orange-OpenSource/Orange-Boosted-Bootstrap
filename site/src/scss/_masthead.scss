@@ -12,31 +12,33 @@
 
   .bd-masthead-bg {
     @include media-breakpoint-up(md) {
-      @if ($brand == "orange") {
-        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-tablet.png");
-        background-repeat: no-repeat;
-        background-position: center right;
-        background-size: auto 100%;
-      } @else if ($brand == "sosh") {
+      @if ($brand == "sosh") {
         background-color: var(--#{$prefix}color-content-brand-primary);
         mask-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home.svg");
         mask-repeat: no-repeat;
         mask-position: -200px center;
+      } @else {
+        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-tablet.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: auto 100%;
       }
     }
 
     @include media-breakpoint-up(xl) {
-      @if ($brand == "orange") {
-        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-desktop.png");
-      } @else if ($brand == "sosh") {
+      @if ($brand == "sosh") {
         mask-position: center right;
+      } @else {
+        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-desktop.png");
       }
     }
   }
 
   .bd-masthead-code {
-    width: 100%;
-    max-width: 31rem;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+      max-width: 31rem;
+    }
 
     .highlight {
       padding-top: 0;
