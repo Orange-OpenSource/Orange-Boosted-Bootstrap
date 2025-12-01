@@ -17,9 +17,11 @@ You can find here the [OUDS Text Input design guidelines](https://unified-design
 
 Use a `.text-input` wrapper to create a textual form field with OUDS styles, then wrap a pair of `<input class="text-input-field">` and `<label>` elements in `.text-input-container`. Note that the `<label>` must come before the `<input>`.
 
-A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is a space.
+A `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is a empty.
 
-If the placeholder text is a single space, it is not visible: only the `<label>` is shown to users.
+<Callout type="info">
+Even if you don't need a placeholder, <em>you must always define the placeholder attribute with a single space character</em>. This ensures the label behaves correctly by preventing it from overlapping the input text when a value is entered.
+</Callout>
 
 <Callout type="warning">
 To be compliant with the WCAG [1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose) criteria, for each input field collecting information about the user, add the appropriate value to the autocomplete attribute (sufficient [technique H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)).
