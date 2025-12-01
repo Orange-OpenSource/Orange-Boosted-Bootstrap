@@ -425,7 +425,7 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: var(--#{$prefix}text-area-min-height);
+      min-height: calc(var(--#{$prefix}text-area-min-height) * 2); // stylelint-disable-line function-disallowed-list
       max-height: var(--#{$prefix}text-area-max-height);
       padding: 0;
       padding-right: var(--#{$prefix}text-area-padding-right);
@@ -439,8 +439,8 @@
       box-shadow: none;
 
       @supports (field-sizing: content) {
-        resize: none;
         field-sizing: content;  // Not yet standard, but supported in some browsers
+        min-height: var(--#{$prefix}text-area-min-height);
       }
 
       &:focus,
