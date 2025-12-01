@@ -48,6 +48,20 @@ const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.
 {robots && <meta name="robots" content={robots} />}
 
 <!-- Boosted mod -->
+ <link
+  rel="preload"
+  href="https://mastermedia.dam-broadcast.com/pm_12751_486_486651-i5j3fmgqqf--HelvNeue55-W1G.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+ <link
+  rel="preload"
+  href="https://mastermedia.dam-broadcast.com/pm_12751_486_486654-4hk2svl4w7-HelvNeue75-W1G.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
 <link rel="preload" href={getVersionedDocsPath('assets/img/boosted-sprite.svg')} as="image" type="image/svg+xml" />
 <!-- end mod -->

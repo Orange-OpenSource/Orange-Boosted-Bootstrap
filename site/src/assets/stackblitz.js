@@ -20,6 +20,10 @@ const CONFIG = {
   cssCdn: '__CSS_CDN__',
   jsBundleCdn: '__JS_BUNDLE_CDN__',
   docsVersion: '__DOCS_VERSION__',
+  helvNeue55W1GCdn: '__HELV_NEUE_55_W1G_CDN__',
+  helvNeue55W1GHash: '__HELV_NEUE_55_W1G_HASH__',
+  helvNeue75W1GCdn: '__HELV_NEUE_75_W1G_CDN__',
+  helvNeue75W1GHash: '__HELV_NEUE_75_W1G_HASH__',
   helveticaCdn: '__HELVETICA_CDN__',
   helveticaHash: '__HELVETICA_HASH__'
 }
@@ -54,6 +58,8 @@ const openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
+    <link href="${CONFIG.helvNeue55W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${CONFIG.helvNeue55W1GHash}" crossorigin="anonymous">
+    <link href="${CONFIG.helvNeue75W1GCdn}" rel="preload" as="font" type="font/woff2" integrity="${CONFIG.helvNeue75W1GHash}" crossorigin="anonymous">
     <link href="${CONFIG.helveticaCdn}" rel="stylesheet" integrity="${CONFIG.helveticaHash}" crossorigin="anonymous">
 
     <link href="${CONFIG.cssCdn}" rel="stylesheet">
