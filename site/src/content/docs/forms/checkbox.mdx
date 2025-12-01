@@ -21,20 +21,22 @@ Checkboxes allow users to select one or more options from a number of choices.
 
 They are implemented using `.control-item-*` classes, [see below](#control-item). Browser default checkboxes are replaced with the help of the selector `.control-item-indicator[type="checkbox"]`.
 
-<Example code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
+<Example code={`<div class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxDefault" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDefault">Default checkbox</label>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input checked class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDefault2">Checked checkbox</label>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input checked class="control-item-indicator" type="checkbox" value="" id="checkboxDefault2" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDefault2">Checked checkbox</label>
+      </div>
     </div>
   </div>`} />
 
@@ -61,20 +63,22 @@ They are implemented using `.control-item-*` classes, [see below](#control-item)
 
 To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
-<Example code={`<div class="checkbox-item control-item-divider">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider" />
+<Example code={`<div class="control-items-list">
+    <div class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDivider">Default checkbox with divider</label>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDivider">Default checkbox with divider</label>
-    </div>
-  </div>
-  <div class="checkbox-item control-item-divider">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDivider2">Checked checkbox with divider</label>
+    <div class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxDivider2" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDivider2">Checked checkbox with divider</label>
+      </div>
     </div>
   </div>`} />
 
@@ -84,28 +88,30 @@ To display a divider, add `.control-item-divider` to a `.checkbox-item`.
 
 To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.checkbox-item`.
 
-<Example code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithSVG" />
+<Example code={`<div class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithSVG" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithSVG">Default checkbox with an SVG icon</label>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+        </svg>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxWithSVG">Default checkbox with an SVG icon</label>
-    </div>
-    <div class="control-item-assets-container">
-      <svg aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxWithIconFont">Checked checkbox with a font-icon</label>
-    </div>
-    <div class="control-item-assets-container">
-      <span class="icon si si-settings" aria-hidden="true"></span>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxWithIconFont" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithIconFont">Checked checkbox with a font-icon</label>
+      </div>
+      <div class="control-item-assets-container">
+        <span class="icon si si-settings" aria-hidden="true"></span>
+      </div>
     </div>
   </div>`} />
 
@@ -113,22 +119,24 @@ To display an icon, add `.control-item-assets-container` with an icon (SVG or fo
 
 To display a description text, add a `.control-item-description` as a sibling of a `.control-item-label`. Make sure the description is accessible by adding an `aria-describedby` attribute to the input.
 
-<Example code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription" id="checkboxWithDescription" value="" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxWithDescription">Default checkbox</label>
-      <p class="control-item-description" id="checkboxDescription">Description text</p>
-    </div>
-  </div>
+<Example code={`<div class="control-items-list">
   <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription2" id="checkboxWithDescription2" value="" checked />
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription" id="checkboxWithDescription" value="" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithDescription">Default checkbox</label>
+        <p class="control-item-description" id="checkboxDescription">Description text</p>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxWithDescription2">Checked checkbox</label>
-      <p class="control-item-description" id="checkboxDescription2">Description text</p>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" aria-describedby="checkboxDescription2" id="checkboxWithDescription2" value="" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxWithDescription2">Checked checkbox</label>
+        <p class="control-item-description" id="checkboxDescription2">Description text</p>
+      </div>
     </div>
   </div>`} />
 
@@ -139,7 +147,7 @@ To display a description text, add a `.control-item-description` as a sibling of
 It's recommended to keep checkbox label to no more than three words. When space is limited or when a long label or description text is required, the text can wrap, as this is preferable to truncation. The checkbox indicator and the icon will remain vertically centered, until the `.control-item-assets-container` reaches a defined maximum height.
 
 <Example code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="control-items-list col-8 col-md-6 col-xl-5">
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayout1" aria-describedby="checkboxLayout1Description" />
@@ -190,7 +198,7 @@ It's recommended to keep checkbox label to no more than three words. When space 
 To reverse the component, simply add `.control-item-reverse` to a `.checkbox-item`.
 
 <Example code={`<div class="row">
-    <div class="col-8 col-md-6 col-xl-5">
+    <div class="control-items-list col-8 col-md-6 col-xl-5">
       <div class="checkbox-item control-item-divider control-item-reverse">
         <div class="control-item-assets-container">
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRev1" aria-describedby="checkboxLayoutRev1Description" />
@@ -238,29 +246,31 @@ Put your checkboxes on the opposite side with the `.form-check-reverse` modifier
 
 You can align horizontally up to three checkboxes if their labels are short, add sufficient space (for example by using `.gap-small`) between the controls to ensure a clear association of each labels with their corresponding indicator.
 
-<Example code={`<div class="d-lg-flex flex-row gap-small">
-    <div class="checkbox-item flex-fill">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" name="checkboxLayoutRow" />
+<Example code={`<div class="control-items-list">
+    <div class="d-lg-flex flex-row gap-small">
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow1" name="checkboxLayoutRow" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow1">Option 1</label>
+        </div>
       </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxLayoutRow1">Option 1</label>
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow2" name="checkboxLayoutRow" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow2">Option 2</label>
+        </div>
       </div>
-    </div>
-    <div class="checkbox-item flex-fill">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow2" name="checkboxLayoutRow" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxLayoutRow2">Option 2</label>
-      </div>
-    </div>
-    <div class="checkbox-item flex-fill">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" name="checkboxLayoutRow" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="checkboxLayoutRow3">Option 2</label>
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" name="checkboxLayoutRow" checked />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRow3">Option 2</label>
+        </div>
       </div>
     </div>
   </div>`} />
@@ -274,12 +284,14 @@ Users cannot set a checkbox as indeterminate directly. This must be calculated b
 
 Indeterminate state can be used in conjunction with all the other states below.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
+<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminate" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxIndeterminate">Indeterminate checkbox</label>
+      </div>
     </div>
   </div>`} />
 
@@ -306,28 +318,30 @@ checkbox.indeterminate = true
 
 Add the `disabled` attribute to the input, then the checkbox and the associated `<label>` are automatically styled to match with a lighter color to help indicate the input’s state.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" />
+<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxDisabled" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxDisabled">Default disabled checkbox</label>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxDisabled">Default disabled checkbox</label>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxCheckedDisabled">Checked disabled checkbox</label>
+      </div>
     </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxCheckedDisabled" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxCheckedDisabled">Checked disabled checkbox</label>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxIndeterminateDisabled">Indeterminate disabled checkbox</label>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <input disabled class="control-item-indicator" type="checkbox" value="" id="checkboxIndeterminateDisabled" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxIndeterminateDisabled">Indeterminate disabled checkbox</label>
+      </div>
     </div>
   </div>`} />
 
@@ -357,28 +371,30 @@ Add the `disabled` attribute to the input, then the checkbox and the associated 
 
 To create a read only checkbox, the input should be replaced by a `span` element with `role="checkbox"`, `aria-readonly="true"` and `aria-disabled="true"` attributes. The checkbox will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
+<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="control-items-list">
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="checkboxReadonlyLabel"></span>
+      </div>
+      <div class="control-item-text-container">
+        <p class="control-item-label" id="checkboxReadonlyLabel">Default readonly checkbox</p>
+      </div>
     </div>
-    <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyLabel">Default readonly checkbox</p>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
+      </div>
+      <div class="control-item-text-container">
+        <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Checked readonly checkbox</p>
+      </div>
     </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="checkboxReadonlyCheckedLabel"></span>
-    </div>
-    <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyCheckedLabel">Checked readonly checkbox</p>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
-    </div>
-    <div class="control-item-text-container">
-      <p class="control-item-label" id="checkboxReadonlyIndeterminate">Indeterminate readonly checkbox</p>
+    <div class="checkbox-item">
+      <div class="control-item-assets-container">
+        <span class="control-item-indicator" role="checkbox" aria-readonly="true" aria-disabled="true" tabindex="0" aria-checked="mixed" aria-labelledby="checkboxReadonlyIndeterminate"></span>
+      </div>
+      <div class="control-item-text-container">
+        <p class="control-item-label" id="checkboxReadonlyIndeterminate">Indeterminate readonly checkbox</p>
+      </div>
     </div>
   </div>`} />
 
@@ -388,48 +404,51 @@ To create a read only checkbox, the input should be replaced by a `span` element
 
 To display an invalid checkbox, add `.is-invalid` to a `.control-item-indicator`. An error icon will be automatically shown, if there is a decorative icon specified it will be hidden. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
-<Example class="bd-example-indeterminate" addStackblitzJs code={`<div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
-      <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
-    </div>
-    <div class="control-item-assets-container">
-      <svg aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description" checked />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
-      <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
-    </div>
-    <div class="control-item-assets-container">
-      <svg aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>
-    </div>
-  </div>
-  <div class="checkbox-item">
-    <div class="control-item-assets-container">
-      <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription" />
-    </div>
-    <div class="control-item-text-container">
-      <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
-      <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
-    </div>
-    <div class="control-item-assets-container">
-      <svg aria-hidden="true">
-        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
-      </svg>
-    </div>
-  </div>`} />
+<Example class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
+    <li class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid" aria-describedby="checkboxInvalidDescription checkboxInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxInvalid">Default invalid checkbox</label>
+        <p class="control-item-description" id="checkboxInvalidDescription">Description text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+        </svg>
+      </div>
+    </li>
+    <li class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalid2" aria-describedby="checkboxInvalid2Description checkboxInvalidErrorText" checked />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxInvalid2">Checked invalid checkbox</label>
+        <p class="control-item-description" id="checkboxInvalid2Description">Description text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+        </svg>
+      </div>
+    </li>
+    <li class="checkbox-item control-item-divider">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxInvalidIndeterminate" aria-describedby="checkboxInvalidIndeterminateDescription checkboxInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxInvalidIndeterminate">Indeterminate invalid checkbox</label>
+        <p class="control-item-description" id="checkboxInvalidIndeterminateDescription">Description text</p>
+      </div>
+      <div class="control-item-assets-container">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}" />
+        </svg>
+      </div>
+    </li>
+    <li class="control-item-error-message" id="checkboxInvalidErrorText">Incompatible choices.</li>
+  </ul>`} />
 
 <BootstrapCompatibility>
 
@@ -448,7 +467,7 @@ To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
 If checkboxes belong to a group (e.g., in a form), provide clear context by adding a `<legend>` element inside a `<fieldset>` for the group title. Then, screen readers will read the legend before navigating through the checkboxes.
 
 <Example code={`<div class="row">
-    <fieldset class="col-md-6">
+    <fieldset class="control-items-list col-md-6">
       <legend>Checkboxes group example</legend>
       <div class="checkbox-item control-item-divider">
         <div class="control-item-assets-container">

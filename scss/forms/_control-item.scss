@@ -1,4 +1,26 @@
 //
+// Control item list
+//
+
+.control-items-list {
+  @include list-unstyled();
+
+  .control-item-error-message {
+    display: none;
+    padding: $ouds-control-item-space-padding-block-top-error-text $ouds-control-item-space-padding-inline 0;
+    color: var(--#{$prefix}color-content-status-negative);
+    @include get-font-size("label-medium");
+  }
+
+  // stylelint-disable selector-no-qualifying-type
+  &.was-validated:has(input:invalid) .control-item-error-message,
+  &:has(input.is-invalid) .control-item-error-message {
+    display: block;
+  }
+  // stylelint-enable selector-no-qualifying-type
+}
+
+//
 // Control item
 //
 
