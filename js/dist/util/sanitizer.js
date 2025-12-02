@@ -1,10 +1,10 @@
 /*!
-  * OUDS Web v0.5.0 (https://web.unified-design-system.orange.com/)
+  * OUDS Web v0.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2015-2025 The OUDS Web Authors
   * Copyright 2015-2025 Orange
   * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/ouds/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap sanitizer.js v0.5.0 (https://web.unified-design-system.orange.com/)
+  * Bootstrap sanitizer.js v0.6.0 (https://web.unified-design-system.orange.com/)
   * Copyright 2011-2025 The OUDS Web Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -69,7 +69,6 @@
    *
    * Shout-out to Angular https://github.com/angular/angular/blob/15.2.8/packages/core/src/sanitization/url_sanitizer.ts#L38
    */
-  // eslint-disable-next-line unicorn/better-regex
   const SAFE_URL_PATTERN = /^(?!javascript:)(?:[a-z0-9+.-]+:|[^&:/?#]*(?:[/?#]|$))/i;
   const allowedAttribute = (attribute, allowedAttributeList) => {
     const attributeName = attribute.nodeName.toLowerCase();
