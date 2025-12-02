@@ -1,4 +1,14 @@
 // OUDS mod
+@each $weight, $url in $custom-font-cdn-urls {
+  @font-face {
+    font-family: $custom-font-name;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("#{$url}") format("woff2");
+    font-display: swap;
+  }
+}
+
 #{$ouds-root-selector},
 [data-bs-theme] {
   color: var(--#{$prefix}color-local, var(--#{$prefix}color-content-default));

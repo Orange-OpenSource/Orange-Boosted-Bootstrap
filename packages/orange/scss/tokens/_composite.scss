@@ -12,11 +12,18 @@ $ouds-elevation-raised: $ouds-elevation-x-raised $ouds-elevation-y-raised $ouds-
 $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-elevation-blur-sticky $ouds-elevation-spread-sticky var(--#{$prefix}elevation-color-sticky) !default;
 // scss-docs-end ouds-composite-elevation
 
-// Font stacks
+// Font
+
+$custom-font-name: "HelvNeueOrange" !default;
+
+// Map of CDN URLs for custom font, with weight as keys
+$custom-font-cdn-urls: () !default;
 
 // stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
 // scss-docs-start ouds-composite-font-sans-serif
 $ouds-font-family-sans-serif-stack:
+  // Custom OUDS font
+  $custom-font-name,
   // Older macOS and iOS
   "Helvetica Neue",
   // Some Windows
