@@ -2,7 +2,8 @@
 // Control item list
 //
 
-.control-items-list {
+.control-items-list,
+.switch-item-container {
   @include list-unstyled();
   margin: 0;
 
@@ -648,7 +649,8 @@
 // Switch
 //
 
-.switch-item {
+.switch-item,
+.form-switch {
   @extend %control-item;
   flex-direction: row-reverse;
 
