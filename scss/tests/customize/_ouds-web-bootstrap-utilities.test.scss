@@ -1242,6 +1242,10 @@ $utilities: ();
           border-color: var(--bs-color-border-emphasized) !important;
         }
 
+        .border-minimal {
+          border-color: var(--bs-color-border-minimal) !important;
+        }
+
         .border-muted {
           border-color: var(--bs-color-border-muted) !important;
         }
@@ -11415,6 +11419,10 @@ $utilities: ();
 
         .border-emphasized {
           border-color: var(--bs-color-border-emphasized) !important;
+        }
+
+        .border-minimal {
+          border-color: var(--bs-color-border-minimal) !important;
         }
 
         .border-muted {
