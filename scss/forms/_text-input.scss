@@ -179,7 +179,7 @@
       }
     }
 
-    &:has(.text-input-field:not(.is-invalid)) {
+    &:has(.text-input-field:focus:not(:disabled, :read-only, .is-invalid)) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
       &.text-input-container-outlined {
@@ -277,7 +277,6 @@
     }
 
     // Invalid text inputs
-    &.was-validated:has(.text-input-field:invalid),
     &:has(.text-input-field.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
@@ -328,7 +327,6 @@
       }
     }
 
-    &.was-validated:has(.text-input-field:invalid:focus),
     &:has(.text-input-field:focus.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
@@ -508,7 +506,6 @@
     }
 
     // Invalid text inputs
-    &.was-validated:has(.text-area-field:invalid),
     &:has(.text-area-field.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
@@ -544,7 +541,6 @@
       }
     }
 
-    &.was-validated:has(.text-area-field:invalid:focus),
     &:has(.text-area-field:focus.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
