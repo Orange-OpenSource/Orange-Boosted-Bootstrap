@@ -309,14 +309,14 @@ To automatically display a error text on a single switch item, enclose it inside
 <Example code={`<div class="switch-item-container">
     <div class="switch-item control-item-divider">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid" aria-describedby="switchInvalidDescription" checked />
+        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalid" aria-describedby="switchInvalidDescription switchInvalidErrorText" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalid">Default invalid switch</label>
         <p class="control-item-description" id="switchInvalidDescription">Description text</p>
       </div>
     </div>
-    <p class="control-item-error-message" id="checkboxInvalidErrorText">Cannot be activated at this time.</p>
+    <p class="control-item-error-message" id="switchInvalidErrorText">Cannot be activated at this time.</p>
   </div>`} />
 
 <BootstrapCompatibility>
@@ -337,26 +337,26 @@ To add an error message on a single switch item inside a list, the `.switch-item
     <li class="switch-item-container">
       <div class="switch-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidUl" aria-describedby="switchInvalidUlDescription" checked />
+          <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidUl" aria-describedby="switchInvalidUlDescription switchInvalidErrorTextUl" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="switchInvalidUl">Default invalid switch</label>
           <p class="control-item-description" id="switchInvalidUlDescription">Description text</p>
         </div>
       </div>
-      <p class="control-item-error-message mb-xsmall" id="checkboxInvalidErrorText">Cannot be activated at this time.</p>
+      <p class="control-item-error-message mb-xsmall" id="switchInvalidErrorTextUl">Cannot be activated at this time.</p>
     </li>
     <li class="switch-item-container">
       <div class="switch-item control-item-divider">
         <div class="control-item-assets-container">
-          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl2" aria-describedby="switchInvalidUl2Description" checked />
+          <input class="control-item-indicator" type="checkbox" role="switch" value="" id="switchInvalidUl2" aria-describedby="switchInvalidUl2Description switchInvalidErrorTextUl2" checked />
         </div>
         <div class="control-item-text-container">
           <label class="control-item-label" for="switchInvalidUl2">Default invalid switch</label>
           <p class="control-item-description" id="switchInvalidUl2Description">Description text</p>
         </div>
       </div>
-      <p class="control-item-error-message" id="checkboxInvalidErrorText">Cannot be activated at this time.</p>
+      <p class="control-item-error-message" id="switchInvalidErrorTextUl2">Cannot be activated at this time.</p>
     </li>
   </ul>`} />
 
@@ -367,7 +367,7 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
 <Example code={`<fieldset class="control-items-list">
     <div class="switch-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription" />
+        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset" aria-describedby="switchInvalidFieldsetDescription switchInvalidErrorTextGroup" />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalidFieldset">Default invalid switch</label>
@@ -376,14 +376,14 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
     </div>
     <div class="switch-item">
       <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description" checked />
+        <input class="control-item-indicator is-invalid" type="checkbox" role="switch" value="" id="switchInvalidFieldset2" aria-describedby="switchInvalidFieldset2Description switchInvalidErrorTextGroup" checked />
       </div>
       <div class="control-item-text-container">
         <label class="control-item-label" for="switchInvalidFieldset2">Checked invalid switch</label>
         <p class="control-item-description" id="switchInvalidFieldset2Description">Description text</p>
       </div>
     </div>
-    <p class="control-item-error-message" id="checkboxInvalidErrorText">Incompatible choices.</p>
+    <p class="control-item-error-message" id="switchInvalidErrorTextGroup">Incompatible choices.</p>
   </fieldset>`} />
 
 ## Fieldset `<legend>`
