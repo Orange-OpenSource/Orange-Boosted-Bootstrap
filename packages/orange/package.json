@@ -1,9 +1,9 @@
 {
   "name": "@ouds/web-orange",
   "description": "OUDS Web Orange is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "config": {
-    "version_short": "0.5"
+    "version_short": "0.6"
   },
   "sass": "scss/ouds-web.scss",
   "style": "dist/css/ouds-web.css",
