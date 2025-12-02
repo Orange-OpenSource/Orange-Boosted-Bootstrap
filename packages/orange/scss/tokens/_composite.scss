@@ -13,10 +13,16 @@ $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-
 // scss-docs-end ouds-composite-elevation
 
 // Font stacks
+$custom-font-name: "HelvNeueOrange" !default;
+$custom-font-cdn-url-default: null !default;
+$custom-font-cdn-url-moderate: null !default;
+$custom-font-cdn-url-strong: null !default;
 
 // stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
 // scss-docs-start ouds-composite-font-sans-serif
 $ouds-font-family-sans-serif-stack:
+  // Custom OUDS font
+  $custom-font-name,
   // Older macOS and iOS
   "Helvetica Neue",
   // Some Windows

@@ -1,4 +1,36 @@
 // OUDS mod
+// Pour chaque élément du map $custom-font-cdn-urls génère un font-face basé sur les lignes ci-dessous
+@if $custom-font-cdn-url-default {
+  @font-face {
+    font-family: $custom-font-name;
+    font-style: normal;
+    font-weight: $ouds-font-weight-system-web-default;
+    src: url("#{$custom-font-cdn-url-default}") format("woff2");
+    font-display: swap;
+  }
+}
+
+@if $custom-font-cdn-url-moderate {
+  @font-face {
+    font-family: $custom-font-name;
+    font-style: normal;
+    font-weight: $ouds-font-weight-system-web-moderate;
+    src: url("#{$custom-font-cdn-url-moderate}") format("woff2");
+    font-display: swap;
+  }
+}
+
+@if $custom-font-cdn-url-strong {
+  @font-face {
+    font-family: $custom-font-name;
+    font-style: normal;
+    font-weight: $ouds-font-weight-system-web-strong;
+    src: url("#{$custom-font-cdn-url-strong}") format("woff2");
+    font-display: swap;
+  }
+}
+
+
 #{$ouds-root-selector},
 [data-bs-theme] {
   color: var(--#{$prefix}color-local, var(--#{$prefix}color-content-default));
