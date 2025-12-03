@@ -14,11 +14,11 @@
     @include media-breakpoint-up(md) {
       @if ($brand == "sosh") {
         background-color: var(--#{$prefix}color-content-brand-primary);
-        mask-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home.svg");
+        mask-image: url("/#{$brand}/docs/0.6/assets/img/ouds-web-home.svg");
         mask-repeat: no-repeat;
         mask-position: -200px center;
       } @else {
-        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-tablet.png");
+        background-image: url("/#{$brand}/docs/0.6/assets/img/ouds-web-home-tablet.png");
         background-repeat: no-repeat;
         background-position: center right;
         background-size: auto 100%;
@@ -29,7 +29,7 @@
       @if ($brand == "sosh") {
         mask-position: center right;
       } @else {
-        background-image: url("/#{$brand}/docs/0.5/assets/img/ouds-web-home-desktop.png");
+        background-image: url("/#{$brand}/docs/0.6/assets/img/ouds-web-home-desktop.png");
       }
     }
   }
