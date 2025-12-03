@@ -371,23 +371,25 @@ Add the `disabled` attribute to the input, then the radio button and the associa
 
 To create a read only radio button, the input should be replaced by a `span` element with `role="radio"` and `aria-disabled="true"` attributes. All the radio buttons in the group must be surrounded by a container with `role="radiogroup"` and `aria-readonly="true"` attributes. This is the only way to be compliant with ARIA specifications. The radio button will be accessible to keyboard navigation and assistive technologies, thanks to `aria-labelledby` and `tabindex`, but other interactions will be prevented.
 
-<Example code={`<fieldset class="control-items-list" role="radiogroup" aria-readonly="true">
-    <div class="radio-button-item">
-      <div class="control-item-assets-container">
-        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
+<Example code={`<fieldset class="control-items-list">
+    <div role="radiogroup" aria-readonly="true">
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="false" aria-labelledby="radioReadonlyLabel" aria-describedby="radioReadonlyExtraLabel radioReadonlyDescription"></span>
+        </div>
+        <div class="control-item-text-container">
+          <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
+          <p class="radio-button-extra-label" id="radioReadonlyExtraLabel">Extra label</p>
+          <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
+        </div>
       </div>
-      <div class="control-item-text-container">
-        <p class="control-item-label" id="radioReadonlyLabel">Default readonly radio button</p>
-        <p class="radio-button-extra-label" id="radioReadonlyExtraLabel">Extra label</p>
-        <p class="control-item-description" id="radioReadonlyDescription">Description text</p>
-      </div>
-    </div>
-    <div class="radio-button-item">
-      <div class="control-item-assets-container">
-        <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
-      </div>
-      <div class="control-item-text-container">
-        <p class="control-item-label" id="radioReadonlyCheckedLabel">Checked readonly radio button</p>
+      <div class="radio-button-item">
+        <div class="control-item-assets-container">
+          <span class="control-item-indicator" role="radio" aria-disabled="true" tabindex="0" aria-checked="true" aria-labelledby="radioReadonlyCheckedLabel"></span>
+        </div>
+        <div class="control-item-text-container">
+          <p class="control-item-label" id="radioReadonlyCheckedLabel">Checked readonly radio button</p>
+        </div>
       </div>
     </div>
   </fieldset>`} />
