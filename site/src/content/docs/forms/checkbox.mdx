@@ -473,6 +473,32 @@ To display an invalid checkbox, add `.is-invalid` to a `.form-check-input`.
   </div>`} />
 </BootstrapCompatibility>
 
+#### Horizontal
+
+If the layout is horizontal, the `<fieldset>` must enclose the flex containers so the error message is displayed under the first item.
+
+<Example code={`<fieldset class="control-items-list">
+    <div class="d-flex flex-row gap-small w-50">
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxLayoutRowInvalid1" name="checkboxLayoutRowInvalid" aria-describedby="checkboxLayoutRowInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRowInvalid1">Option 1</label>
+        </div>
+      </div>
+      <div class="checkbox-item flex-fill">
+        <div class="control-item-assets-container">
+          <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxLayoutRowInvalid2" name="checkboxLayoutRowInvalid" aria-describedby="checkboxLayoutRowInvalidErrorText" />
+        </div>
+        <div class="control-item-text-container">
+          <label class="control-item-label" for="checkboxLayoutRowInvalid2">Option 2</label>
+        </div>
+      </div>
+    </div>
+    <p class="control-item-error-message" id="checkboxLayoutRowInvalidErrorText">Please choose at least one.</p>
+  </fieldset>`} />
+
 #### With `<ul>`
 
 It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it not a list item.
@@ -511,7 +537,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
 
 ## Fieldset `<legend>`
 
-It is best practice to provide clear context by adding a `<legend>` element inside a `<fieldset>` for the checkbox group title. Then, screen readers will read the legend before navigating through the checkboxes.
+It is best practice to provide clear context by adding a `<legend>` element inside the `<fieldset>` for the checkbox group title. Then, screen readers will read the legend before navigating through the checkboxes.
 
 <Example code={`<div class="row">
     <div class="col-md-6">

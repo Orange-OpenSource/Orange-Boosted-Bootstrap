@@ -388,10 +388,13 @@
   }
 }
 
-[role="radiogroup"][aria-readonly="true"] .control-item-indicator[role="radio"] {
-  color: $ouds-color-action-read-only-primary;
+[role="radiogroup"][aria-readonly="true"] {
   pointer-events: none;
-  border-color: $ouds-color-action-read-only-secondary;
+
+  .control-item-indicator[role="radio"] {
+    color: $ouds-color-action-read-only-primary;
+    border-color: $ouds-color-action-read-only-secondary;
+  }
 }
 // stylelint-enable selector-max-attribute
 
