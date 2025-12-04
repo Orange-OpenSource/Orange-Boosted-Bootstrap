@@ -80,7 +80,7 @@ For accessibility reasons, any informative element, must either be a semantic el
 
 #### Information for visually impaired users
 
-Keep in mind that visually impaired and blind users will lack the visual context (color and icons for instance) that permits to understand the badges purpose on the page. In most cases, it is mandatory to add a `.visually-hidden` information to explain what it represents.
+Keep in mind that visually impaired and blind users will lack the visual context (color and/or icons) that permits to understand the badges purpose on the page. For example colorblind people cannot differentiate colors between them, and may need an icon to understand the meaning. In most cases, it is mandatory to add a `.visually-hidden` information to explain what it represents for screen reader users.
 
 Several examples are provided below, but they need to be adapted for actual use cases.
 
@@ -111,13 +111,33 @@ Non-functional badges are used to display neutral or accent information without 
 Functional badges carry a clear meaning related to the status of an object or system. They help the user quickly understand the status of an element and take action if needed.
 
 <Callout type="warning">
-  Keep in mind that color should not be the only way to convey information. In functional badges, the color has a strong meaning, it must be reflected in the badge's `.visually-hidden` associated text. [Read more about badges accessibility here](#accessibility).
+  Keep in mind that color should not be the only way to convey information. Functional badges, which have a strong meaning, should not be combined, because  some users cannot differentiate colors between them, for example colorblind people. In this case, it is preferable to use an icon as a second way to convey information, associated with a `.visually-hidden` text (required for screen reader users). [Read more about badges accessibility here](#accessibility).
 </Callout>
 
 <Example class="d-flex gap-3" code={`<p class="badge badge-positive"><span class="visually-hidden">Success</span></p>
   <p class="badge badge-info"><span class="visually-hidden">Info</span></p>
   <p class="badge badge-warning"><span class="visually-hidden">Warning</span></p>
   <p class="badge"><span class="visually-hidden">Beware</span></p>`} />
+
+Here is a valid example of use of functional badges:
+
+<Example class="d-flex gap-3" code={`<div class="d-flex align-items-center">
+    <p class="position-relative mb-none">
+      Activities<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
+    </p>
+    <div class="vr"></div>
+    <p class="position-relative mb-none">
+      Channels
+    </p>
+    <div class="vr"></div>
+    <p class="position-relative mb-none">
+      Conversations<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
+    </p>
+    <div class="vr"></div>
+    <p class="position-relative mb-none">
+      Emails<span class="badge badge-info badge-small ms-2xsmall"></span><span class="visually-hidden">New!</span>
+    </p>
+  </div>`} />
 
 ### States
 
