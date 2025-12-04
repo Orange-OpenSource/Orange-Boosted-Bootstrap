@@ -17,15 +17,28 @@ import { getMode } from '@libs/sass-variables'
 You can find here the [OUDS Button design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
 </Callout>
 
-## Base class
+## Overview
 
 OUDS Web has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, but still defines basic focus and hover styles.
 
 <Example code={`<button type="button" class="btn">Base class</button>`} />
 
-The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles. The most basic button is the `.btn-default` variant.
 
-## Standard variants
+<Example code={`<button type="button" class="btn btn-default">Default</button>`} />
+
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input />` elements (though some browsers may apply a slightly different rendering).
+
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+
+<Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
+  <button class="btn btn-strong" type="submit">Button</button>
+  <button class="btn btn-brand" type="submit">Button</button>
+  <input class="btn btn-minimal" type="button" value="Input" />
+  <input class="btn btn-negative" type="submit" value="Submit" />
+  <input class="btn btn-default" type="reset" value="Reset" />`} />
+
+## Variants
 
 OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [Button design specifications](https://unified-design-system.orange.com/472794e18/p/48a788-button/t/5c95fb0c27) to choose the right button for the right action.
 
@@ -45,23 +58,7 @@ OUDS Web includes several button variants, each serving its own semantic purpose
 
 {/* OUDS mod: Variants on colored background added */}
 
-<BrandSpecific brand="orange">
-### Rounded
-
-Add `.btn-rounded` to the button class list to enable rounded corners.
-
-<Callout type="warning">
-  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
-</Callout>
-
-<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
-  <button type="button" class="btn btn-strong btn-rounded">Strong</button>
-  <button type="button" class="btn btn-brand btn-rounded">Brand</button>
-  <button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
-  <button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
-</BrandSpecific>
-
-## Variants on colored background
+### Colored background
 
 OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/utilities/background#colored-background]]). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
@@ -89,12 +86,27 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
   </div>`} />
 
 {/* OUDS mod: With icon added */}
+<BrandSpecific brand="orange">
+### Rounded
 
-## With icon
+Add `.btn-rounded` to the button class list to enable rounded corners.
+
+<Callout type="warning">
+  Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
+</Callout>
+
+<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
+  <button type="button" class="btn btn-strong btn-rounded">Strong</button>
+  <button type="button" class="btn btn-brand btn-rounded">Brand</button>
+  <button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
+  <button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
+</BrandSpecific>
+
+### With icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
-### Text and icon
+#### Text and icon
 
 <Callout type="warning">
 Icons in text and icon buttons are considered purely decorative, so they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our examples. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
@@ -168,7 +180,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     </div>
   </div>`} />
 
-### Icon only
+#### Icon only
 
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
@@ -244,24 +256,7 @@ For icon only buttons, we chose to keep the icon hidden from assistive technolog
     </div>
   </div>`} />
 
-## Disable text wrapping
-
-If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
-
-## Button tags
-
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input />` elements (though some browsers may apply a slightly different rendering).
-
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
-
-<Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
-  <button class="btn btn-strong" type="submit">Button</button>
-  <button class="btn btn-brand" type="submit">Button</button>
-  <input class="btn btn-minimal" type="button" value="Input" />
-  <input class="btn btn-negative" type="submit" value="Submit" />
-  <input class="btn btn-default" type="reset" value="Reset" />`} />
-
-## Outline buttons
+### Outline buttons
 
 <BootstrapCompatibility>
 
@@ -273,7 +268,9 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 </BootstrapCompatibility>
 
-## Disabled state
+## States
+
+### Disabled
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
@@ -310,7 +307,7 @@ Disabled buttons using the `<a>` element behave a bit different:
     </div>
   </div>`} />
 
-## Loading state
+### Loading
 
 The loading state of a button indicates that an action is currently processing or taking place. This state provides feedback to users, enhancing user experience.
 
@@ -518,7 +515,9 @@ Loading state can also be combined with all kind of buttons, including icons.
   </div>
   `} />
 
-## Block buttons
+## Layout
+
+### Block buttons
 
 Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
@@ -549,3 +548,7 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
     <button class="btn btn-default me-md-xsmall" type="button">Button</button>
     <button class="btn btn-default" type="button">Button</button>
   </div>`} />
+
+### Disable text wrapping
+
+If you don’t want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
