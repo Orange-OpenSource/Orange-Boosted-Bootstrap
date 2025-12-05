@@ -32,10 +32,12 @@ let currentComponentsTypesNames = [frontmatter.title]
 if(frontmatter.types) {
   currentComponentsTypesNames = frontmatter.types
 }
+console.log(currentComponentsTypesNames)
 let componentsVersions: {name: string, version: string}[] = [];
 currentComponentsTypesNames.forEach((name) => {
   getData('_components-versions').every((component) => {
-    if(component.name.startsWith(name.toLowerCase().replaceAll(' ', '-'))) {
+    const slug =  name.toLowerCase().split(' ').filter((part) => part !== '-').join('-');
+    if(component.name === slug) {
       componentsVersions.push({name, version: component.value})
       return false
     }
