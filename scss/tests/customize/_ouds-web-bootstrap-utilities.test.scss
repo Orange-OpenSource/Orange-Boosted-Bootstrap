@@ -1270,6 +1270,26 @@ $utilities: ();
           border-color: var(--bs-color-always-on-white) !important;
         }
 
+        .border-status-accent {
+          border-color: var(--bs-color-border-status-accent) !important;
+        }
+
+        .border-status-info {
+          border-color: var(--bs-color-border-status-info) !important;
+        }
+
+        .border-status-negative {
+          border-color: var(--bs-color-border-status-negative) !important;
+        }
+
+        .border-status-positive {
+          border-color: var(--bs-color-border-status-positive) !important;
+        }
+
+        .border-status-warning {
+          border-color: var(--bs-color-border-status-warning) !important;
+        }
+
         .rounded {
           border-radius: 0px !important; // stylelint-disable-line property-disallowed-list, length-zero-no-unit
         }
@@ -11447,6 +11467,26 @@ $utilities: ();
 
         .border-always-on-white {
           border-color: var(--bs-color-always-on-white) !important;
+        }
+
+        .border-status-accent {
+          border-color: var(--bs-color-border-status-accent) !important;
+        }
+
+        .border-status-info {
+          border-color: var(--bs-color-border-status-info) !important;
+        }
+
+        .border-status-negative {
+          border-color: var(--bs-color-border-status-negative) !important;
+        }
+
+        .border-status-positive {
+          border-color: var(--bs-color-border-status-positive) !important;
+        }
+
+        .border-status-warning {
+          border-color: var(--bs-color-border-status-warning) !important;
         }
 
         .rounded-0 {
