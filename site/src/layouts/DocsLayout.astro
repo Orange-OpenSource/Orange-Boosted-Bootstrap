@@ -32,7 +32,6 @@ let currentComponentsTypesNames = [frontmatter.title]
 if(frontmatter.types) {
   currentComponentsTypesNames = frontmatter.types
 }
-console.log(currentComponentsTypesNames)
 let componentsVersions: {name: string, version: string}[] = [];
 currentComponentsTypesNames.forEach((name) => {
   getData('_components-versions').every((component) => {
