@@ -6,6 +6,28 @@ aliases:
 toc: true
 ---
 
+import { allTokens } from '@libs/sass-variables'
+
+export const fontSize = [
+  "display-large",
+  "display-medium",
+  "display-small",
+  "heading-xlarge",
+  "heading-large",
+  "heading-medium",
+  "heading-small",
+  "body-large",
+  "body-medium",
+  "body-small",
+  "code-medium"
+]
+
+export const screenSize = [
+  "mobile",
+  "tablet",
+  "desktop"
+]
+
 ## Text alignment
 
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
@@ -70,49 +92,114 @@ Quickly change the `font-size` of text. Sizing for these utilities matches our p
 
 These classes change the `font-size` but also the `line-height`, the `letter-spacing` and the `max-width`. If you want to get rid of the `max-width`, please make sure to use our `.mw-none` [width utility]([[docsref:/utilities/sizing]]).
 
-{/* <details class="mb-medium">
+<details class="mb-medium">
   <summary>See the <code>font-size</code> associated to classes</summary>
 
-<BsTable>
-| Font reference | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
-| --- | --- | --- | --- |
-| Display large (`.fs-dl`) | `4.5rem` (72px) | `4rem` (64px) | `2.5rem` (40px) |
-| Display medium (`.fs-dm`) | `3.5rem` (56px) | `3rem` (48px) | `2.25rem` (36px) |
-| Display small (`.fs-ds`) | `3rem` (48px) | `2.5rem` (40px) | `2rem` (32px) |
-| Heading xlarge (`.fs-hxl`) | `2.5rem` (40px) | `2.25rem` (36px) | `1.75rem` (28px) |
-| Heading large (`.fs-hl`) | `2rem` (32px) | `1.75rem` (28px) | `1.5rem` (24px) |
-| Heading medium (`.fs-hm`) | `1.75rem` (28px) | `1.5rem` (24px) | `1.25rem` (20px) |
-| Heading small (`.fs-hs`) | `1.5rem` (24px) | `1.25rem` (20px) | `1.125rem` (18px) |
-| Body large (`.fs-bl`) | `1.125rem` (18px) | `1rem` (16px) | `1rem` (16px) |
-| Body medium (`.fs-bm`) | `1rem` (16px) | `.875rem` (14px) | `.875rem` (14px) |
-| Body small (`.fs-bs`) | `.875rem` (14px) | `.75rem` (12px) | `.75rem` (12px) |
-| Code medium (`.fs-cm`) | `.875rem` (14px) | `.875rem` (14px) | `.875rem` (14px) |
-| Code small (`.fs-cs`) | `.75rem` (12px) | `.75rem` (12px) | `.75rem` (12px) |
-</BsTable>
-
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Font reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+      </thead>
+      <tbody>
+      {
+        fontSize.map((level) => (
+          <tr>
+            <td>
+              {level === 'display-large' && (<>Display large (<code>{'.fs-dl'}</code>)</>)}
+              {level === 'display-medium' && (<>Display medium (<code>{'.fs-dm'}</code>)</>)}
+              {level === 'display-small' && (<>Display medium (<code>{'.fs-ds'}</code>)</>)}
+              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'.fs-hxl'}</code>)</>)}
+              {level === 'heading-large' && (<>Heading large (<code>{'.fs-hl'}</code>)</>)}
+              {level === 'heading-medium' && (<>Heading medium (<code>{'.hm'}</code>)</>)}
+              {level === 'heading-small' && (<>Heading small (<code>{'.hs'}</code>)</>)}
+              {level === 'body-large' && (<>Body large (<code>{'.bl'}</code>)</>)}
+              {level === 'body-medium' && (<>Body medium (<code>{'.bm'}</code>)</>)}
+              {level === 'body-small' && (<>Body small (<code>{'.bs'}</code>)</>)}
+              {level === 'code-medium' && (<>Code medium (<code>{'.cm'}</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  {level !== 'code-medium'
+                    && (<><code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue})</>)}
+                  {level === 'code-medium'
+                    && (<><code>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2)) / 16}rem</code> ({allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue})</>)}
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
 </details>
 
 <details class="mb-medium">
   <summary>See more details about the <code>font-size</code> classes</summary>
 
-<BsTable>
-| Font reference | Values for `xl` and upper | Values from `md` to `lg` | Values from `2xs` to `sm` |
-| --- | --- | --- | --- |
-| Display large (`.fs-dl`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>4.5rem</b></li><li><code>line-height</code>: 1.1111</li><li><code>letter-spacing</code>: -0.0675rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>4rem</b></li><li><code>line-height</code>: 1.125</li><li><code>letter-spacing</code>: -0.06rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| Display medium (`.fs-dm`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3.5rem</b></li><li><code>line-height</code>: 1.1429</li><li><code>letter-spacing</code>: -0.04375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -0.0225rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| Display small (`.fs-ds`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>3rem</b></li><li><code>line-height</code>: 1.1667</li><li><code>letter-spacing</code>: -0.0375rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| Heading xlarge (`.fs-hxl`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.5rem</b></li><li><code>line-height</code>: 1.2</li><li><code>letter-spacing</code>: -0.025rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2.25rem</b></li><li><code>line-height</code>: 1.2222</li><li><code>letter-spacing</code>: -.0225rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| Heading large (`.fs-hl`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>2rem</b></li><li><code>line-height</code>: 1.25</li><li><code>letter-spacing</code>: -0.02rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> |
-| Heading medium (`.fs-hm`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.75rem</b></li><li><code>line-height</code>: 1.2857</li><li><code>letter-spacing</code>: -0.0175rem</li><li><code>max-width</code>: 65rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 55rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 55rem</li></ul> |
-| Heading small (`.fs-hs`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.5rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: -0.0075rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.25rem</b></li><li><code>line-height</code>: 1.4</li><li><code>letter-spacing</code>: 0</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Body large (`.fs-bl`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1.125rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Body medium (`.fs-bm`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>1rem</b></li><li><code>line-height</code>: 1.5</li><li><code>letter-spacing</code>: 0.0125rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Body small (`.fs-bs`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li><li><code>max-width</code>: 45rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li><li><code>max-width</code>: 40rem</li></ul> |
-| Code medium (`.fs-cm`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.875rem</b></li><li><code>line-height</code>: 1.4286</li><li><code>letter-spacing</code>: 0.010625rem</li></ul> |
-| Code small (`.fs-cs`) | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> | <ul class="mb-none ps-medium"><li><code class="text-default">font-size</code>: <b>0.75rem</b></li><li><code>line-height</code>: 1.3333</li><li><code>letter-spacing</code>: 0.01125rem</li></ul> |
-</BsTable>
-
-</details> */}
+    <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Font reference</th>
+        <th>Values from `2xs` to `sm`</th>
+        <th>Values from `md` to `lg`</th>
+        <th>Values for `xl` and upper</th>
+      </tr>
+      </thead>
+      <tbody>
+      {
+        fontSize.map((level) => (
+          <tr>
+            <td>
+              {level === 'display-large' && (<>Display large (<code>{'.fs-dl'}</code>)</>)}
+              {level === 'display-medium' && (<>Display medium (<code>{'.fs-dm'}</code>)</>)}
+              {level === 'display-small' && (<>Display medium (<code>{'.fs-ds'}</code>)</>)}
+              {level === 'heading-xlarge' && (<>Heading xlarge (<code>{'.fs-hxl'}</code>)</>)}
+              {level === 'heading-large' && (<>Heading large (<code>{'.fs-hl'}</code>)</>)}
+              {level === 'heading-medium' && (<>Heading medium (<code>{'.fs-hm'}</code>)</>)}
+              {level === 'heading-small' && (<>Heading small (<code>{'.fs-hs'}</code>)</>)}
+              {level === 'body-large' && (<>Body large (<code>{'.fs-bl'}</code>)</>)}
+              {level === 'body-medium' && (<>Body medium (<code>{'.fs-bm'}</code>)</>)}
+              {level === 'body-small' && (<>Body small (<code>{'.fs-bs'}</code>)</>)}
+              {level === 'code-medium' && (<>Code medium (<code>{'.fs-cm'}</code>)</>)}
+            </td>
+            {
+              screenSize.map((size) => (
+                <td>
+                  {level !== 'code-medium'
+                    && (
+                      <ul class="mb-none ps-medium">
+                        <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}-${size}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}-${size}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                        <li><code>max-width</code>: {(allTokens.find((token) => token.name === `$ouds-size-max-width-type-${level}-${size}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                      </ul>
+                    )}
+                  {level === 'code-medium'
+                    && (
+                      <ul class="mb-none ps-medium">
+                        <li><code class="text-default">font-size</code>: <b>{(allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2)) / 16}rem</b></li>
+                        <li><code>line-height</code>: {Math.round(((allTokens.find((token) => token.name === `$ouds-font-line-height-${level}`).compiledValue.slice(0, -2)) / (allTokens.find((token) => token.name === `$ouds-font-size-${level}`).compiledValue.slice(0, -2))) * 10000) / 10000}</li>
+                        <li><code>letter-spacing</code>: {(allTokens.find((token) => token.name === `$ouds-font-letter-spacing-${level}`).compiledValue.slice(0, -2)) / 16}rem</li>
+                      </ul>
+                    )}
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
+      </tbody>
+    </table>
+  </div>
+</details>
 
 <Example code={`<p class="fs-dl">.fs-dl text</p>
   <p class="fs-dm">.fs-dm text</p>
@@ -124,8 +211,7 @@ These classes change the `font-size` but also the `line-height`, the `letter-spa
   <p class="fs-bl">.fs-bl text</p>
   <p class="fs-bm">.fs-bm text</p>
   <p class="fs-bs">.fs-bs text</p>
-  <p class="fs-cm font-monospace">.fs-cm.font-monospace text</p>
-  <p class="fs-cs font-monospace">.fs-cs.font-monospace text</p>`} />
+  <p class="fs-cm font-monospace">.fs-cm.font-monospace text</p>`} />
 
 Customize your available `font-size`s by modifying the `$ouds-font-sizes` Sass map.
 
