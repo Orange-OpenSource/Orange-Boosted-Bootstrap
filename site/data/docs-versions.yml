@@ -1,6 +1,6 @@
 - group: v0.x
   baseurl: 'https://web.unified-design-system.orange.com/docs'
-  description: 'Current major release. Last update was v0.5.0'
+  description: 'Current major release. Last update was v0.6.0'
   versions:
     - '0.0'
     - '0.1'
@@ -8,3 +8,4 @@
     - '0.3'
     - '0.4'
     - '0.5'
+    - '0.6'
