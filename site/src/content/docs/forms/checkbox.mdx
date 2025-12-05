@@ -63,7 +63,7 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
 
 #### Control items list
 
-As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul).
+As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul).
 
 ## Variants
 
@@ -281,7 +281,7 @@ You can align horizontally up to three checkboxes if their labels are short, add
           <input class="control-item-indicator" type="checkbox" value="" id="checkboxLayoutRow3" name="checkboxLayoutRow" checked />
         </div>
         <div class="control-item-text-container">
-          <label class="control-item-label" for="checkboxLayoutRow3">Option 2</label>
+          <label class="control-item-label" for="checkboxLayoutRow3">Option 3</label>
         </div>
       </div>
     </div>
@@ -501,7 +501,7 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
 
 #### With `<ul>`
 
-It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it not a list item.
+It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it is not a list item.
 
 <Example class="bd-example-indeterminate" addStackblitzJs code={`<ul class="control-items-list">
     <li class="checkbox-item control-item-divider">
@@ -549,7 +549,7 @@ It is best practice to provide clear context by adding a `<legend>` element insi
           </div>
           <div class="control-item-text-container">
             <label class="control-item-label" for="checkboxGroup1">Group checkbox 1</label>
-            <p class="control-item-description" id="checkboxGroup1Description">Description</p>
+            <p class="control-item-description" id="checkboxGroup1Description">Description text</p>
           </div>
           <div class="control-item-assets-container">
             <svg aria-hidden="true">

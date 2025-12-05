@@ -57,7 +57,7 @@ They are implemented using `.switch-item` and `.control-item-*` classes, [see be
 
 #### Switch grouping and error handling
 
-As switch items can be used inside a list or a form, but also in a standalone way, there is several way to group them. You can use a `<fieldset>` container if they are in a form, with an optional `<legend>` ([read more here](group)), you can also use a `<ul>` (like most of the examples in this page). For both these solutions please add a `.control-items-list` class on the list container.
+As switch items can be used inside a list or a form, but also in a standalone way, there are several ways to group them. You can use a `<fieldset>` container if they are in a form, with an optional `<legend>` ([read more here](group)), you can also use a `<ul>` (like most of the examples in this page). For both these solutions please add a `.control-items-list` class on the list container.
 
 For automatic error handling you need either to group switch items inside `<fieldset>`s with a `.control-items-list` class or enclose a single switch item in a `.switch-item-container`, read more in the [invalid state section](#invalid).
 
@@ -93,7 +93,7 @@ To display a divider, add `.control-item-divider` to a `.switch-item`.
 To display an icon, add `.control-item-assets-container` with an icon (SVG or font-icon most likely) inside, as a child of a `.switch-item`.
 
 <Callout type="warning">
-  The `.control-item-assets-container` containing the icon *must be the last child* of the `.switch-item`, the flow of the item is reversed by CSS to work like other control items.
+  The `.control-item-assets-container` containing the icon *must be the last child* of the `.switch-item`, as the flow of the item is reversed by CSS to work like other control items.
 </Callout>
 
 <Example code={`<ul class="control-items-list">
@@ -304,7 +304,7 @@ To display an invalid switch, add `.is-invalid` to a `.control-item-indicator`. 
 
 #### Error text on one switch item
 
-To automatically display a error text on a single switch item, enclose it inside a `.switch-item-container` and  add a `.control-item-error-message` as a sibling of the `.switch-item`.
+To automatically display an error text on a single switch item, enclose it inside a `.switch-item-container` and  add a `.control-item-error-message` as a sibling of the `.switch-item`.
 
 <Example code={`<div class="switch-item-container">
     <div class="switch-item control-item-divider">
