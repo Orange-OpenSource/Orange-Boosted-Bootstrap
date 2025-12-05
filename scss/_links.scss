@@ -13,7 +13,6 @@
   display: inline-flex;
   align-items: center;
   min-width: $ouds-link-size-min-width-default;
-  max-width: var(--#{$prefix}font-max-width-label-large);
   min-height: $ouds-link-size-min-height-default;
   padding: $ouds-link-space-padding-block $ouds-link-space-padding-inline;
   text-align: start;
