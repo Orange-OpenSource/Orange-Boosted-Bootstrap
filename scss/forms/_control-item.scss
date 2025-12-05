@@ -408,7 +408,7 @@
   border-bottom: $ouds-divider-border-width solid $ouds-color-border-default;
 
   &:has(.is-invalid),
-  .was-validated &:has(input:invalid){
+  .was-validated &:has(input:invalid) {
     border-color: var(--#{$prefix}control-item-label-color);
   }
 }
