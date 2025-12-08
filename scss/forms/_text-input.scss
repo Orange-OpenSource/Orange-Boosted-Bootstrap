@@ -367,7 +367,7 @@
 
     padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
     padding-right: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-    padding-bottom: calc($ouds-text-area-space-padding-block + $ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+    padding-bottom: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
     padding-left: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: padding-box;
@@ -417,6 +417,7 @@
       max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
       padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+      padding-bottom: $ouds-text-area-space-padding-block;
       padding-left: $ouds-text-input-space-padding-inline-default;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
