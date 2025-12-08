@@ -357,28 +357,18 @@
 
 .text-area {
   @extend %text-item-common;
-  --#{$prefix}text-area-padding-top: #{$ouds-text-area-space-padding-block};
-  --#{$prefix}text-area-padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
-  --#{$prefix}text-area-padding-bottom: #{$ouds-text-area-space-padding-block};
-  --#{$prefix}text-area-padding-left: #{$ouds-text-input-space-padding-inline-default};
-  --#{$prefix}text-area-max-border-width: #{$ouds-text-input-border-width-focus};
-
-  --#{$prefix}text-area-max-height: #{px-to-rem($ouds-text-area-size-max-height-input)};
-  --#{$prefix}text-area-max-width: #{px-to-rem($ouds-text-area-size-max-width)};
-  --#{$prefix}text-area-min-height: #{px-to-rem($ouds-text-area-size-min-height-input)};
-  --#{$prefix}text-area-asset-max-height: #{px-to-rem($ouds-text-area-size-max-height-assets-container)};
 
   .text-area-container {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: var(--#{$prefix}text-area-max-width);
+    max-width: px-to-rem($ouds-text-area-size-max-width);
 
-    padding-top: calc(var(--#{$prefix}text-area-padding-top) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-    padding-right: calc(var(--#{$prefix}text-area-max-border-width) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-    padding-bottom: calc(var(--#{$prefix}text-area-max-border-width) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
-    padding-left: calc(2px - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+    padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+    padding-right: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
+    padding-bottom: calc($ouds-text-area-space-padding-block + $ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: padding-box;
     border-color: var(--#{$prefix}text-input-border-color);
@@ -400,8 +390,8 @@
 
     > label {
       z-index: 2;
-      padding-right: var(--#{$prefix}text-area-padding-right);
-      padding-left: var(--#{$prefix}text-area-padding-left);
+      padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+      padding-left: $ouds-text-input-space-padding-inline-default;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -423,11 +413,11 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: calc(var(--#{$prefix}text-area-min-height) * 2); // stylelint-disable-line function-disallowed-list
-      max-height: var(--#{$prefix}text-area-max-height);
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2); // stylelint-disable-line function-disallowed-list
+      max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
-      padding-right: var(--#{$prefix}text-area-padding-right);
-      padding-left: var(--#{$prefix}text-area-padding-left);
+      padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+      padding-left: $ouds-text-input-space-padding-inline-default;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
       caret-color: var(--#{$prefix}text-input-caret-color);
@@ -438,7 +428,7 @@
 
       @supports (field-sizing: content) {
         field-sizing: content;  // Not yet standard, but supported in some browsers
-        min-height: var(--#{$prefix}text-area-min-height);
+        min-height: px-to-rem($ouds-text-area-size-min-height-input);
       }
 
       &:focus,
@@ -517,7 +507,7 @@
 
       &::after {
         position: absolute;
-        top: calc(var(--#{$prefix}text-area-asset-max-height) / 2 + var(--#{$prefix}text-area-padding-top) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
