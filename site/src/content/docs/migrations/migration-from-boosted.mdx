@@ -80,6 +80,10 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 - <span class="tag tag-small rounded-none tag-info">Info</span> `.container` and `.container-{breakpoint}` have been removed from the default build but you can still have them using `$enable-bootstrap-compatibility`.
 - <span class="tag tag-small rounded-none tag-info">Info</span> `xxl` breakpoint and thus all related classes (like `.container-xxl`, `.col-xxl-*`) can still be available when `$enable-bootstrap-compatibility` is enabled.
 
+## Icons
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/extend/icons#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/extend/icons#accessible-warning-icon]]) has been introduced.
+
 ## Components
 
 ### Badges
@@ -299,9 +303,9 @@ See [our new Text Input page]([[docsref:/forms/text-input]]) for more informatio
 
 #### Text Area
 
-- <span class="tag tag-sm rounded-none text-bg-status-positive-emphasized">New</span> `.text-area` has been added.
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.text-area` has been added.
 
-- <span class="tag tag-sm rounded-none text-bg-status-negative-emphasized">Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Area is a new component compared to Boosted’s Input, the DOM is therefore very different.
 <div class="ps-xl">
 For example, if you used to write:
 
@@ -314,7 +318,7 @@ For example, if you used to write:
 Now you should write:
 
 ```html
-<div class="text-area mb-medium">
+<div class="text-area">
   <div class="text-area-container">
     <label for="exampleTextArea">Example textarea</label>
     <textarea class="text-area-field" id="exampleTextArea"></textarea>
@@ -370,6 +374,8 @@ See [our new Text Area page]([[docsref:/forms/text-area]]) for more information.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Background opacity utilities have been removed.
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> The new background color utilities are now available. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
 
 - <details>
     <summary><span class="tag tag-small rounded-none tag-info">Info</span> Here are the modifications to apply in the exact same order to your websites. Please make sure to adapt the <code>[data-bs-theme]</code> to your context:</summary>

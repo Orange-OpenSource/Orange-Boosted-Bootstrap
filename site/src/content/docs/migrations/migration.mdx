@@ -10,9 +10,17 @@ toc: true
 
 ## v0.6.0
 
+### Core
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
+
 ### Contents
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> The focus-visible polyfill has been removed. So you no longer need it on your side, and you should replace all the calls to `:focus[data-focus-visible-added]` by `:focus-visible`.
+
+### Icons
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> OUDS Web now uses [new functional icons]([[docsref:/extend/icons#functional-icons]]). A new [bicolor accessible warning icon]([[docsref:/extend/icons#accessible-warning-icon]]) has been introduced.
 
 ### Forms
 
@@ -66,6 +74,8 @@ toc: true
 #### Background
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.bg-opacity-lower` and `.bg-opacity-lowest` background color utilities have been added. Visit our [background page]([[docsref:/utilities/background]]) to see more.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `[data-bs-theme]` now use a `--bs-color-local` to set the color if it has been defined by a specific `.bg-*` utility.
 
 #### Borders
 

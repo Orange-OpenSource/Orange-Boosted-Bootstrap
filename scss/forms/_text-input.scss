@@ -107,10 +107,10 @@
       opacity: 0;
       transform: translate(0, -50%);
 
-      &:placeholder-shown:not([placeholder=""]),
+      &:placeholder-shown:not([placeholder=" "]),
       &[placeholder]:not(:placeholder-shown),
-      &:focus,
-      &:focus-visible {
+      &:focus:not(:read-only),
+      &:focus-visible:not(:read-only) {
         position: static;
         outline: 0;
         opacity: 1;
@@ -132,7 +132,7 @@
       opacity: 0;
       transform: translate(0, -50%);
 
-      &:has(.text-input-field:placeholder-shown:not([placeholder=""])),
+      &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
       &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
       &:has(.text-input-field:focus),
       &:has(.text-input-field:focus-visible) {
@@ -162,7 +162,7 @@
 
 
     // Hover state styles
-    &:hover:has(.text-input-field:not(:focus):not(:disabled):not(:read-only):not(.is-invalid)) {
+    &:hover:has(.text-input-field:not(:focus, :disabled, :read-only, .is-invalid)) {
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
       &:not(.text-input-container-outlined) {
         --#{$prefix}text-input-background-color: #{$ouds-color-action-support-hover};
@@ -170,7 +170,7 @@
     }
 
     // Focused state styles
-    &:has(.text-input-field:focus:not(:disabled):not(:read-only)) {
+    &:has(.text-input-field:focus:not(:disabled, :read-only)) {
       --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
       &.text-input-container-outlined {
         --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
@@ -179,7 +179,7 @@
       }
     }
 
-    &:has(.text-input-field:not(.is-invalid)) {
+    &:has(.text-input-field:focus:not(:disabled, :read-only, .is-invalid)) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
       &.text-input-container-outlined {
@@ -188,9 +188,9 @@
     }
 
 
-    &:has(.text-input-field:placeholder-shown:not([placeholder=""])),
+    &:has(.text-input-field:placeholder-shown:not([placeholder=" "])),
     &:has(.text-input-field[placeholder]:not(:placeholder-shown)),
-    &:has(.text-input-field:focus) {
+    &:has(.text-input-field:focus:not(:read-only)) {
       > label {
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -277,7 +277,6 @@
     }
 
     // Invalid text inputs
-    &.was-validated:has(.text-input-field:invalid),
     &:has(.text-input-field.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
@@ -328,7 +327,6 @@
       }
     }
 
-    &.was-validated:has(.text-input-field:invalid:focus),
     &:has(.text-input-field:focus.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
@@ -359,28 +357,18 @@
 
 .text-area {
   @extend %text-item-common;
-  --#{$prefix}text-area-padding-top: #{$ouds-text-area-space-padding-block};
-  --#{$prefix}text-area-padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
-  --#{$prefix}text-area-padding-bottom: #{$ouds-text-area-space-padding-block};
-  --#{$prefix}text-area-padding-left: #{$ouds-text-input-space-padding-inline-default};
-  --#{$prefix}text-area-max-border-width: #{$ouds-text-input-border-width-focus};
-
-  --#{$prefix}text-area-max-height: #{px-to-rem($ouds-text-area-size-max-height-input)};
-  --#{$prefix}text-area-max-width: #{px-to-rem($ouds-text-area-size-max-width)};
-  --#{$prefix}text-area-min-height: #{px-to-rem($ouds-text-area-size-min-height-input)};
-  --#{$prefix}text-area-asset-max-height: #{px-to-rem($ouds-text-area-size-max-height-assets-container)};
 
   .text-area-container {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: var(--#{$prefix}text-area-max-width);
+    max-width: px-to-rem($ouds-text-area-size-max-width);
 
-    padding-top: calc(var(--#{$prefix}text-area-padding-top) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
-    padding-right: calc(var(--#{$prefix}text-area-max-border-width) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
-    padding-bottom: calc(var(--#{$prefix}text-area-max-border-width) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
-    padding-left: calc(2px - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+    padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+    padding-right: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
+    padding-bottom: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-text-input-border-width-focus - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}text-input-background-color);
     background-clip: padding-box;
     border-color: var(--#{$prefix}text-input-border-color);
@@ -402,8 +390,8 @@
 
     > label {
       z-index: 2;
-      padding-right: var(--#{$prefix}text-area-padding-right);
-      padding-left: var(--#{$prefix}text-area-padding-left);
+      padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+      padding-left: $ouds-text-input-space-padding-inline-default;
       color: var(--#{$prefix}text-input-label-color);
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -425,11 +413,12 @@
     .text-area-field {
       z-index: 3;
       width: 100%;
-      min-height: var(--#{$prefix}text-area-min-height);
-      max-height: var(--#{$prefix}text-area-max-height);
+      min-height: calc(px-to-rem($ouds-text-area-size-min-height-input) * 2); // stylelint-disable-line function-disallowed-list
+      max-height: px-to-rem($ouds-text-area-size-max-height-input);
       padding: 0;
-      padding-right: var(--#{$prefix}text-area-padding-right);
-      padding-left: var(--#{$prefix}text-area-padding-left);
+      padding-right: calc(#{$ouds-text-input-space-padding-inline-trailing-action} + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
+      padding-bottom: $ouds-text-area-space-padding-block;
+      padding-left: $ouds-text-input-space-padding-inline-default;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
       caret-color: var(--#{$prefix}text-input-caret-color);
@@ -439,8 +428,8 @@
       box-shadow: none;
 
       @supports (field-sizing: content) {
-        resize: none;
         field-sizing: content;  // Not yet standard, but supported in some browsers
+        min-height: px-to-rem($ouds-text-area-size-min-height-input);
       }
 
       &:focus,
@@ -450,7 +439,7 @@
     }
 
     // Hover state styles
-    &:hover:has(.text-area-field:not(:focus):not(:disabled):not(:read-only):not(.is-invalid)) {
+    &:hover:has(.text-area-field:not(:focus, :disabled, :read-only, .is-invalid)) {
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-hover};
       &:not(.text-area-container-outlined) {
         --#{$prefix}text-input-background-color: #{$ouds-color-action-support-hover};
@@ -467,7 +456,7 @@
       }
     }
 
-    &:has(.text-area-field:focus:not(:disabled):not(:read-only):not(.is-invalid)) {
+    &:has(.text-area-field:focus:not(:disabled, :read-only, .is-invalid)) {
       --#{$prefix}text-input-background-color: var(--#{$prefix}color-action-support-pressed);
       --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
       &.text-area-container-outlined {
@@ -508,7 +497,6 @@
     }
 
     // Invalid text inputs
-    &.was-validated:has(.text-area-field:invalid),
     &:has(.text-area-field.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
@@ -520,7 +508,7 @@
 
       &::after {
         position: absolute;
-        top: calc(var(--#{$prefix}text-area-asset-max-height) / 2 + var(--#{$prefix}text-area-padding-top) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
@@ -544,7 +532,6 @@
       }
     }
 
-    &.was-validated:has(.text-area-field:invalid:focus),
     &:has(.text-area-field:focus.is-invalid) {
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-pressed);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-pressed);
