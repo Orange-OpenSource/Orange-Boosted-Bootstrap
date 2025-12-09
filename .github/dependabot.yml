@@ -7,6 +7,19 @@ updates:
       day: friday
       time: "06:00"
       timezone: Europe/Paris
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "actions/cache"
+      - dependency-name: "actions/checkout"
+      - dependency-name: "actions/setup-node"
+      - dependency-name: "actions-cool/issues-helper"
+      - dependency-name: "calibreapp/image-actions"
+      - dependency-name: "coverallsapp/github-action"
+      - dependency-name: "JustinBeckwith/linkinator-action"
+      - dependency-name: "streetsidesoftware/cspell-action"
   - package-ecosystem: npm
     directory: "/"
     labels:
