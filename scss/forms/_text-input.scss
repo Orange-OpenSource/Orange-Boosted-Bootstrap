@@ -226,6 +226,7 @@
 
     // Disabled inputs
     &:has(.text-input-field:disabled) {
+      --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-disabled);
 
@@ -281,6 +282,8 @@
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-negative-enabled);
       --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-negative-enabled);
 
+      padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
+
       .text-input-field,
       .input-container,
       label {
@@ -313,7 +316,7 @@
 
       &:has(> button)::after {
         // stylelint-disable-next-line function-disallowed-list
-        right: calc(calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error)) - var(--#{$prefix}text-input-border-width-left));
+        right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error) - var(--#{$prefix}text-input-border-width-left));
         width: px-to-rem($ouds-button-size-icon-only);
       }
 
@@ -485,6 +488,7 @@
 
     // Disabled inputs
     &:has(.text-area-field:disabled) {
+      --#{$prefix}text-input-label-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-color: var(--#{$prefix}color-action-disabled);
       --#{$prefix}text-input-border-color: var(--#{$prefix}color-action-disabled);
 

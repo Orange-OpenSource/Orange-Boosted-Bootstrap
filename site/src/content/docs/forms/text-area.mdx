@@ -76,7 +76,7 @@ Helper text should be explicitly associated with the text area it relates to usi
       <textarea id="textAreaWithHelperText" class="text-area-field" aria-describedby="textAreaWithHelperTextHelpBlock"></textarea>
     </div>
     <p id="textAreaWithHelperTextHelpBlock" class="helper-text">
-      You have <strong>180</strong> characters left.
+      Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
   </div>`} />
 
@@ -91,11 +91,11 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="textAreaWithHelperTextLink">Additional comments</label>
-      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-area-field"></textarea>
+      <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>
+      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="labelTextAreaWithHelperTextLink feedbackTextHelpMore" class="text-area-field"></textarea>
     </div>
     <p id="feedbackTextHelpBlock" class="helper-text">
-      You have <strong>180</strong> characters left.
+      Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
     <a href="#" id="feedbackTextHelpMore" class="link link-small">
       More information
@@ -159,11 +159,11 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
-      <label for="exampleTextAreaInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentTextHelpBlock" aria-labelledby="commentFeedback"></textarea>
+      <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentTextHelpBlock" aria-labelledby="labelTextAreaInvalid commentFeedback"></textarea>
     </div>
     <p id="commentTextHelpBlock" class="helper-text">
-      You have <strong>180</strong> characters left.
+      Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
     <p id="commentFeedback" class="error-text">
       This field can’t be empty.
@@ -175,7 +175,7 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
       <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
-      You have <strong>180</strong> characters left.
+      Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
     <p id="commentFeedbackOutlined" class="error-text">
       You have <strong>20</strong> characters too many.

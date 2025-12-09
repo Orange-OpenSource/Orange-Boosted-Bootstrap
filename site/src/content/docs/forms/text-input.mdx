@@ -188,8 +188,8 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
 
 <Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
-      <label for="inputTextWithHelperTextLink">Send your feedback</label>
-      <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="feedbackTextHelpMore" class="text-input-field" placeholder=" ">
+      <label id="labelTextWithHelperTextLink" for="inputTextWithHelperTextLink">Send your feedback</label>
+      <input type="text" id="inputTextWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="labelTextWithHelperTextLink feedbackTextHelpMore" class="text-input-field" placeholder=" ">
     </div>
     <p id="feedbackTextHelpBlock" class="helper-text">
       Please describe your feedback in a few words.
@@ -342,8 +342,8 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
 
 <Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
-      <label for="exampleTextInputInvalidEmpty">Username</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="usernameFeedback" placeholder=" ">
+      <label id="labelTextInputInvalidEmpty" for="exampleTextInputInvalidEmpty">Username</label>
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="labelTextInputInvalidEmpty usernameFeedback" placeholder=" ">
     </div>
     <p id="usernameTextHelpBlock" class="helper-text">
       Please choose a username.
@@ -354,8 +354,8 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
   </div>
   <div class="text-input mb-medium">
     <div class="text-input-container">
-      <label for="exampleTextInputInvalid">Email</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="emailFeedback" placeholder=" ">
+      <label id="labelTextInputInvalid" for="exampleTextInputInvalid">Email</label>
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="labelTextInputInvalid emailFeedback" placeholder=" ">
        <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -372,8 +372,8 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
-      <label for="exampleTextInputOutlinedInvalidEmpty">Address</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="addressFeedback" placeholder=" ">
+      <label id="labelTextInputOutlinedInvalidEmpty" for="exampleTextInputOutlinedInvalidEmpty">Address</label>
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="labelTextInputOutlinedInvalidEmpty addressFeedback" placeholder=" ">
     </div>
     <p id="addressFeedback" class="error-text">
       Address is required.
@@ -381,8 +381,8 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
   </div>
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
-      <label for="exampleTextInputOutlinedInvalid">City</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="cityFeedback" placeholder=" ">
+      <label id="labelTextInputOutlinedInvalid" for="exampleTextInputOutlinedInvalid">City</label>
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="labelTextInputOutlinedInvalid cityFeedback" placeholder=" ">
     </div>
     <p id="cityFeedback" class="error-text">
         City is invalid.
@@ -393,9 +393,9 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
-      <label for="exampleTextInputInvalidWithPrefixSuffix">Price</label>
+      <label id="labelTextInputInvalidWithPrefixSuffix" for="exampleTextInputInvalidWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="priceFeedback" placeholder=" ">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="labelTextInputInvalidWithPrefixSuffix priceFeedback" placeholder=" ">
       </div>
     </div>
     <p id="priceFeedback" class="error-text">
@@ -407,9 +407,9 @@ For accessibility purpose, the invalid should be associated with a `.error-text`
       <svg aria-hidden="true">
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
-      <label for="exampleTextInputInvalidTrailingWithPrefixSuffix">Price</label>
+      <label id="labelTextInputInvalidTrailingWithPrefixSuffix" for="exampleTextInputInvalidTrailingWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="priceTextHelpBlock" aria-labelledby="invalidPrice" placeholder=" ">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="priceTextHelpBlock" aria-labelledby="labelTextInputInvalidTrailingWithPrefixSuffix invalidPrice" placeholder=" ">
       </div>
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
