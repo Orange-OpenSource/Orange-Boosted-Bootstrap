@@ -3,7 +3,8 @@
 //
 
 .control-items-list,
-.switch-item-container {
+.switch-item-container,
+.checkbox-item-container {
   @include list-unstyled();
   margin: 0;
 

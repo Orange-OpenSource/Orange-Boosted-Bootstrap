@@ -62,7 +62,7 @@ They are implemented using `.radio-button-item` and `.control-item-*` classes, [
 
 #### Control items list
 
-As radio buttons are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul).
+As radio buttons are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid.
 
 ## Variants
 
@@ -484,33 +484,6 @@ If the layout is horizontal, the `<fieldset>` must enclose the flex containers s
     </div>
     <p class="control-item-error-message" id="radioLayoutRowInvalidErrorText">Please make a choice.</p>
   </fieldset>`} />
-
-#### With `<ul>`
-
-It is possible to use a `<ul>` instead of `<fieldset>` but you will need to handle the error message display as it will not be hidden by default. The error message must be outside of the list as it is not a list item.
-
-<Example code={`<ul class="control-items-list">
-    <li class="radio-button-item">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalidUl" id="radioInvalidUl" aria-describedby="radioInvalidUlExtraLabel radioInvalidUlDescription radioInvalidUlErrorText" />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioInvalidUl">Default invalid radio button</label>
-        <p class="radio-button-extra-label" id="radioInvalidUlExtraLabel">Extra label</p>
-        <p class="control-item-description" id="radioInvalidUlDescription">Description text</p>
-      </div>
-    </li>
-    <li class="radio-button-item">
-      <div class="control-item-assets-container">
-        <input class="control-item-indicator is-invalid" type="radio" value="" name="radioInvalidUl" id="radioInvalidUl2" aria-describedby="radioInvalidUl2Description radioInvalidUlErrorText" checked />
-      </div>
-      <div class="control-item-text-container">
-        <label class="control-item-label" for="radioInvalidUl2">Checked invalid radio button</label>
-        <p class="control-item-description" id="radioInvalidUl2Description">Description text</p>
-      </div>
-    </li>
-  </ul>
-  <p class="control-item-error-message" id="radioInvalidUlErrorText">You must choose one.</p>`} />
 
 ## Fieldset `<legend>`
 

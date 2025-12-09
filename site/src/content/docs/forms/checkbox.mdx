@@ -63,7 +63,7 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
 
 #### Control items list
 
-As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul).
+As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
 
 ## Variants
 
@@ -534,6 +534,22 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
     </li>
   </ul>
   <p class="control-item-error-message" id="checkboxInvalidUlErrorText">You must choose one.</p>`} />
+
+#### Unique
+
+If you have a checkbox that is not part of a group but needs validation control, you can surround it with a `.checkbox-item-container` to hide and display the error text automatically.
+
+<Example code={`<div class="checkbox-item-container">
+    <div class="checkbox-item flex-fill">
+      <div class="control-item-assets-container">
+        <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
+      </div>
+      <div class="control-item-text-container">
+        <label class="control-item-label" for="checkboxUniqueInvalid">Accept terms and conditions</label>
+      </div>
+    </div>
+    <p class="control-item-error-message" id="checkboxUniqueInvalidErrorText">You must accept the terms and condition to proceed.</p>
+  </div>`} />
 
 ## Fieldset `<legend>`
 
