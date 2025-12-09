@@ -27,15 +27,13 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 
 <Example code={`<button type="button" class="btn btn-default">Default</button>`} />
 
+### Alternative tags
+
 The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input />` elements (though some browsers may apply a slightly different rendering).
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
 <Example class="bd-btn-example" code={`<a class="btn btn-default" href="#" role="button">Link</a>
-  <button class="btn btn-strong" type="submit">Button</button>
-  <button class="btn btn-brand" type="submit">Button</button>
-  <input class="btn btn-minimal" type="button" value="Input" />
-  <input class="btn btn-negative" type="submit" value="Submit" />
   <input class="btn btn-default" type="reset" value="Reset" />`} />
 
 ## Variants
