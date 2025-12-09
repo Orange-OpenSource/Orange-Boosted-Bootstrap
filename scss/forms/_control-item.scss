@@ -77,7 +77,7 @@
   &:has(input.is-invalid) {
     --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
 
-    padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+    padding-right: #{$ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
 
     .control-item-assets-container:last-child {
       display: none;
@@ -423,7 +423,7 @@
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
     padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
   }
   // stylelint-enable selector-no-qualifying-type
 }
@@ -663,7 +663,7 @@
     --#{$prefix}control-item-error-icon-offset-left: var(--#{$prefix}control-item-error-icon-offset);
 
     padding-right: $ouds-control-item-space-padding-inline;
-    padding-left: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+    padding-left: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
   }
   // stylelint-enable selector-no-qualifying-type
 
@@ -675,7 +675,7 @@
       --#{$prefix}control-item-error-icon-offset-right: var(--#{$prefix}control-item-error-icon-offset);
       --#{$prefix}control-item-error-icon-offset-left: unset;
 
-      padding-right: calc($ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
+      padding-right: calc($ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap); // stylelint-disable-line function-disallowed-list
       padding-left: $ouds-control-item-space-padding-inline;
     }
     // stylelint-enable selector-no-qualifying-type
@@ -714,7 +714,7 @@
     &:has(input:invalid) {
       --#{$prefix}control-item-label-color: #{$ouds-color-action-negative-enabled};
 
-      padding-right: #{$ouds-control-item-space-padding-inline + 2 * $ouds-control-item-space-padding-inline-error-icon + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
+      padding-right: #{$ouds-control-item-space-padding-inline + $ouds-control-item-size-icon + $ouds-control-item-space-column-gap};
 
       .control-item-assets-container:last-child {
         display: none;
