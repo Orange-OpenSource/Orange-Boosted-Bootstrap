@@ -57,9 +57,9 @@ They are implemented using `.switch-item` and `.control-item-*` classes, [see be
 
 #### Switch grouping and error handling
 
-As switch items can be used inside a list or a form, but also in a standalone way, there are several ways to group them. You can use a `<fieldset>` container if they are in a form, with an optional `<legend>` ([read more here](group)), you can also use a `<ul>` (like most of the examples in this page). For both these solutions please add a `.control-items-list` class on the list container.
+As switch items can be used inside a list or a form, but also in a standalone way, there are several ways to group them. You can use a `<fieldset>` container if they are in a form, with an optional `<legend>` ([read more here](#fieldset-legend)), you can also use a `<ul>` (like most of the examples in this page). For both these solutions please add a `.control-items-list` class on the list container.
 
-For automatic error handling you need either to group switch items inside `<fieldset>`s with a `.control-items-list` class or enclose a single switch item in a `.switch-item-container`, read more in the [invalid state section](#invalid).
+For automatic error handling on a single switch, you need to surround it in a `.switch-item-container`, read more in the [invalid state section](#invalid).
 
 ## Variants
 
@@ -388,7 +388,7 @@ If the switch items list is part of a form, add a `<fieldset>` with the class `.
 
 ## Fieldset `<legend>`
 
-If switches belong to a group (e.g., in a form), provide clear context by adding a `<legend>` element inside a `<fieldset>` for the group title. Then, screen readers will read the legend before navigating through the switches.
+For accessibility reasons, it is required to provide understandable switch labels without relying on visual context. If switches belong to a group, it is good practice to add a group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the switches; this way keyboard navigation users have more information on what is expected.
 
 <Example code={`<div class="row">
     <div class="col-md-6">

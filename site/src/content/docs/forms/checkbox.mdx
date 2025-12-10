@@ -63,7 +63,7 @@ They are implemented using `.checkbox-item` and `.control-item-*` classes, [see 
 
 #### Control items list
 
-As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class; this will handle automatic error text display when one of the control items input is invalid. It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
+As checkboxes are almost always grouped in a list, they should be enclosed in a `<fieldset> ` element with a `.control-items-list` class, this will handle automatic error text display when one of the control items input is invalid; you can add a `<legend>` element as a title for the list [read more](#fieldset-legend). It is also possible to use a `<ul>` list in place of the `<fieldset>` (and `<li>`s for the items) but the error text display will be up to you [see an example](#with-ul). If the checkbox is not part of a group and you need the automatic error text display, you can enclose it inside a `.checkbox-item-container` [read more](#unique).
 
 ## Variants
 
@@ -540,7 +540,7 @@ It is possible to use a `<ul>` instead of `<fieldset>` but you will need to hand
 If you have a checkbox that is not part of a group but needs validation control, you can surround it with a `.checkbox-item-container` to hide and display the error text automatically.
 
 <Example code={`<div class="checkbox-item-container">
-    <div class="checkbox-item flex-fill">
+    <div class="checkbox-item">
       <div class="control-item-assets-container">
         <input class="control-item-indicator is-invalid" type="checkbox" value="" id="checkboxUniqueInvalid" aria-describedby="checkboxUniqueInvalidErrorText" />
       </div>
@@ -553,7 +553,7 @@ If you have a checkbox that is not part of a group but needs validation control,
 
 ## Fieldset `<legend>`
 
-It is best practice to provide clear context by adding a `<legend>` element inside the `<fieldset>` for the checkbox group title. Then, screen readers will read the legend before navigating through the checkboxes.
+For accessibility reasons, it is required to provide understandable checkbox labels without relying on visual context. It is also good practice to add a checkbox group title inside a `<legend>` element as the first child of the `<fieldset>` element. Screen readers will read the legend before navigating through the checkboxes; this way keyboard navigation users have more information on what is expected.
 
 <Example code={`<div class="row">
     <div class="col-md-6">
