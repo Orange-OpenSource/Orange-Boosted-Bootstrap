@@ -1,0 +1,94 @@
+---
+title: Components
+description: OUDS components summarized in one place.
+aliases: "/components/"
+toc: true
+---
+
+import { getConfig } from '@libs/config'
+import { getData } from '@libs/data'
+import { getVersionedDocsPath } from '@libs/path'
+import fs from 'node:fs'
+
+## Alphabetical order
+
+<ul class="list-unstyled row gy-lg row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+  {
+    getData('sidebar')
+      .filter((group) => group.title === 'Components')[0]
+      .pages.map((page) => {
+        if (page.category && !page.draft) {
+          return (
+            <li class="col">
+              <div class="card position-relative h-100">
+                <div class="card-top ratio ratio-16x9">
+                  <img
+                    class="w-100 object-fit-cover"
+                    src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
+                      ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
+                      : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-body">
+                  <a
+                    class="stretched-link"
+                    href={getVersionedDocsPath(
+                      `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
+                    )}
+                  >
+                    {page.title}
+                  </a>
+                </div>
+              </div>
+            </li>
+          )
+        }
+      })
+  }
+</ul>
+
+<hr />
+
+## Categorical order
+
+{
+  ['Actions', 'Content display', 'Control', 'Data', 'Dialog', 'Indicator', 'Layout', 'Navigation', 'Visual assets'].map((element) => {
+    return (
+      <>
+        {getData('sidebar').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
+        <ul class="list-unstyled row gy-lg row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+          {getData('sidebar').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).map((page) => {
+            return (
+              <li class="col">
+                <div class="card position-relative h-100">
+                  <div class="card-top ratio ratio-16x9">
+                    <img
+                      class="w-100 object-fit-cover"
+                      src={fs.existsSync(`${process.cwd()}/site/static/${getConfig().brand}/docs/[version]/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`)
+                        ? `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}.svg`
+                        : `/${getConfig().brand}/docs/${getConfig().docs_version}/assets/img/ouds-web-home-desktop.png`}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <a
+                      class="stretched-link"
+                      href={getVersionedDocsPath(
+                        `/components/${page.title.replaceAll(' ', '-').replaceAll('&-', '').toLowerCase()}`
+                      )}
+                    >
+                      {page.title}
+                    </a>
+                  </div>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </>
+    )
+  })
+}

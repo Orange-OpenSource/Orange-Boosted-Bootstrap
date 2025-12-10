@@ -1,0 +1,37 @@
+---
+title: Clearfix
+description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+aliases:
+  - "/helpers/"
+  - "/docs/helpers/"
+  - "/docs/[[config:docs_version]]/helpers/"
+  - "/docs/helpers/clearfix/"
+  - "/docs/utilities/clearfix/"
+---
+
+import { getMode } from '@libs/sass-variables'
+
+Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+
+Use in HTML:
+
+<Code buttonLabel="clearfix" lang="html" code={`<div class="clearfix">...</div>`} />
+
+The mixin source code:
+
+<ScssDocs name="clearfix mixin" name="clearfix" file="scss/mixins/_clearfix.scss" />
+
+Use the mixin in SCSS:
+
+<Code buttonLabel="clearfix mixin usage" lang="scss" code={`.element {
+    @include clearfix;
+  }`} />
+
+The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+
+<Example buttonLabel="clearfix usage example" code={`<div class="bg-status-info-emphasized clearfix">
+    <div data-bs-theme="${getMode('modes-on-status-info-emphasized')}">
+      <button type="button" class="btn btn-default btn-on-colored-bg float-start">Example Button floated left</button>
+      <button type="button" class="btn btn-default btn-on-colored-bg float-end">Example Button floated right</button>
+    </div>
+  </div>`} />

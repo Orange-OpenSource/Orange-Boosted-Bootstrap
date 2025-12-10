@@ -22,12 +22,16 @@ import Code from '@components/shortcodes/Code.astro'
           code={`npm i @ouds/web-common@${getConfig().current_version} @ouds/web-${getConfig().brand}@${getConfig().current_version}`}/>
       </div>
 
-      <div class="mb-scaled-medium">
+      <div class="d-flex mb-scaled-medium gap-medium">
         <a href={getVersionedDocsPath('getting-started/introduction')} class="btn btn-strong">
           <svg class="bi me-small" aria-hidden="true">
             <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#book-half')}></use>
           </svg>
           Read the docs
+        </a>
+        <a href={getVersionedDocsPath('components')} class="btn btn-default">
+          <svg class="bi me-sm" aria-hidden="true"><use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#menu-button-wide-fill')}></use></svg>
+          Discover components
         </a>
       </div>
 
