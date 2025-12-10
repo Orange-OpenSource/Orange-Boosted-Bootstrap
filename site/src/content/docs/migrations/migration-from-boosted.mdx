@@ -42,12 +42,14 @@ From now on, OUDS Web won’t embed Bootstrap elements that are not part of Oran
 
 ## Fonts
 
-OUDS Web doesn’t use the Helvetica Neue font. Instead, it uses the system font stack. This means that the font will be slightly different depending on the operating system and browser being used.
+OUDS Web doesn’t provide Helvetica Neue font files. Instead, it loads the font from a CDN in order to share the cached files between every project using OUDS Web.
 
 Technically, it means that you can get rid of the following things:
 - Helvetica Neue woff2 files: `fonts/HelvNeue55_W1G.woff2`, `fonts/HelvNeue75_W1G.woff2`, `fonts/HelveticaNeueW20-55Roman.woff2`, and `fonts/HelveticaNeueW20-75Bold.woff2`.
 - `orange-helvetica.*.css` file (default, RTL, or minified version).
 - If you were customizing your Sass compilation, you can remove the `@import "orange-helvetica";` line from your Sass files if it was there.
+
+The font faces are now generated directly in the `_root.scss` file, based on the `$custom-font-cdn-urls` map variable. You can customize these URLs if needed (for example, to avoid loading resources from the Internet).
 
 ## Content styles
 
