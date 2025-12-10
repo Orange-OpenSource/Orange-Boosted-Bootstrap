@@ -510,7 +510,7 @@
 
       &::after {
         position: absolute;
-        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) / 2 - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
+        top: calc(px-to-rem($ouds-text-area-size-max-height-assets-container) / 2 + ($ouds-text-area-space-padding-block) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
         right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
         width: var(--#{$prefix}text-input-trailing-action-width);
         height: var(--#{$prefix}text-input-trailing-action-height);
