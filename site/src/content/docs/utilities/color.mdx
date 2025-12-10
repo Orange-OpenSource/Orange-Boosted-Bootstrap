@@ -1,0 +1,107 @@
+---
+title: Colors
+description: Convey meaning through `color` with a handful of color utility classes.
+aliases:
+  - "/docs/utilities/colors/"
+  - "/docs/utilities/color/"
+toc: true
+---
+
+import { getData } from '@libs/data'
+import { allTokens } from '@libs/sass-variables'
+
+<Callout type="info" name="warning-color-assistive-technologies" />
+
+## Colors
+
+Colorize text with color utilities. To colorize icons, please refer to our [icon color section](#on-icons).
+
+OUDS Web provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.2 accessibility standards for color contrast](https://www.w3.org/TR/WCAG/#distinguishable).
+To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
+
+<BrandSpecific brand="orange">
+Thus, the `.text-brand-primary` color on light background (`#f15e00`) should only be used in a font size greater than 24px (using for example `.fs-ds` utility), or 19px bold (using for example `.fs-hm` and `.fw-bold` utilities).
+The `.text-brand-primary` color on dark background (`#ff7900`) can be used in any size.
+</BrandSpecific>
+
+<Callout type="info">
+Know that apart `.text-brand-primary`, `.text-default` and `.text-muted`, most of these utilities should be avoided since they are very contextual and you should rather use our [color modes]([[docsref:/foundation/color-modes]]) directly as explained in our [background utilities]([[docsref:/utilities/background]]) to set nested components in the right mode directly as well.
+</Callout>
+
+Here are some compliant combinations examples for texts:
+
+<Example code={[...allTokens.filter(token => token.name.match(/\$ouds-color-content-/) && !token.name.match(/-action-/) && token.name.match(/-light/) && token.compiledValue).map(token => {
+    if (token.name.match(/-on-/)) {
+      return `<p class="bg-${token.name.split('-').slice(4, -1).join('-')} text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+    }
+    return `<p class="text-${token.name.split('-').slice(3, -1).join('-')} p-small">Text ${token.name.split('-').slice(3, -1).join('-')}</p>`
+  }),
+  `<p class="text-always-black p-small">Text always-black</p>
+  <p class="text-always-white p-small">Text always-white</p>
+  <p class="text-always-on-black bg-always-black p-small">Text always-on-black</p>
+  <p class="text-always-on-white bg-always-white p-small">Text always-on-white</p>`]} />
+
+<Callout type="info">
+If you don’t see the couple you need in the following table, please mind using one of the table or check that the contrast between the text and the background is at least 4.5 for normal text and 3 for large text.
+
+These text categories are some [accessibility text categories](https://www.w3.org/TR/WCAG22/#dfn-large-scale) commonly used. They divide the texts into two categories:
+- **Large texts** are texts that are at least 24px or 19px bold. This corresponds to at least [`.fs-hl` and above or `.fs-hm` bold and above]([[docsref:/utilities/text#font-size]]) in OUDS Web.
+- **Normal texts** are the remaining texts references.
+</Callout>
+
+{/* In the following table we assume that the context is switching between light and dark mode and the use of `data-bs-theme` is correctly used.
+
+{/* TODO: Keep this table ? /}
+
+<BsTable>
+| Color utility | Allowed `.bg-*` utility for normal and large texts | Allowed `.bg-*` utility for large text only |
+| --- | --- | --- |
+| `.text-brand-primary` | `.bg-emphasized`, `.bg-always-black` | `.bg-primary`, `.bg-secondary`, `.bg-tertiary`, `.bg-status-neutral-emphasized`, `.bg-status-neutral-muted`, `.bg-always-white` |
+| `.text-default` | All `.bg-*` are allowed. | — |
+| `.text-muted` | All `.bg-*` are allowed. | — |
+| `.text-disabled` must be used carefully in a **disabled context only**. | All `.bg-*` are allowed. | — |
+| `.text-always-black` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
+| `.text-always-white` | `.bg-emphasized`, `.bg-always-black` | — |
+| `.text-on-brand-primary` | `.bg-brand-primary` | — |
+| `.text-on-status-accent-emphasized` | `.bg-status-accent-emphasized` | — |
+| `.text-on-status-accent-muted` | `.bg-status-accent-muted` | — |
+| `.text-on-status-info-emphasized` | `.bg-status-info-emphasized` | — |
+| `.text-on-status-info-muted` | `.bg-status-info-muted` | — |
+| `.text-on-status-negative-emphasized` | `.bg-status-negative-emphasized` | — |
+| `.text-on-status-negative-muted` | `.bg-status-negative-muted` | — |
+| `.text-on-status-neutral-emphasized` | `.bg-status-neutral-emphasized` | — |
+| `.text-on-status-neutral-muted` | `.bg-status-neutral-muted` | — |
+| `.text-on-status-positive-emphasized` | `.bg-status-positive-emphasized` | — |
+| `.text-on-status-positive-muted` | `.bg-status-positive-muted` | — |
+| `.text-on-status-warning-emphasized` | `.bg-status-warning-emphasized` | — |
+| `.text-on-status-warning-muted` | `.bg-status-warning-muted` | — |
+| `.text-always-on-black` | `.bg-emphasized`, `.bg-always-black` | — |
+| `.text-always-on-white` | `.bg-brand-primary`, `.bg-status-accent-emphasized`, `.bg-status-positive-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-info-emphasized`, `.bg-always-white` | — |
+</BsTable> */}
+
+<BootstrapCompatibility>
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<p class="text-${themeColor.name}${themeColor.contrast_color ? ` bg-${themeColor.contrast_color}` : ''}">.text-${themeColor.name}</p>
+<p class="text-${themeColor.name}-emphasis${themeColor.contrast_color ? ` bg-${themeColor.contrast_color}` : ''}">.text-${themeColor.name}-emphasis</p>`),
+  `<p class="text-body">.text-body</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-black">.text-white</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50">.text-white-50</p>`]} />
+
+<Callout type="warning">
+`.text-black-50` and `.text-white-50` are deprecated as of Bootstrap v5.1.0. They’ll be removed in Bootstrap v6.0.0.
+</Callout>
+</BootstrapCompatibility>
+
+### On icons
+
+See [icons documentation]([[docsref:/components/icon#icons-color]]) to learn how to use color utilities on icons.
+
+## Specificity
+
+Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element’s content in a `<div>` or more semantic element with the desired class.

@@ -97,7 +97,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 ### Text and icon
 
 <Callout type="warning">
-Icons in text and icon buttons are considered purely decorative, so they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our examples. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
+Icons in text and icon buttons are considered purely decorative, so they should be hidden from assistive technologies using `aria-hidden="true"`, as we’ve done in our examples. See [icons accessibility]([[docsref:/components/icon#icons-accessibility]]) for more info.
 </Callout>
 
 You don’t need to apply any spacing utility on the icon to get consistent spacing, as the margin is already handled by OUDS Web.
@@ -173,7 +173,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or an `aria-label` attribute.
 
 <Callout type="warning">
-For icon only buttons, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/extend/icons#icons-accessibility]]) for more info.
+For icon only buttons, we chose to keep the icon hidden from assistive technologies and add a visually hidden label. See [icons accessibility]([[docsref:/components/icon#icons-accessibility]]) for more info.
 </Callout>
 
 {/* TODO: Add a paragraph about tooltip and/or title */}
@@ -296,7 +296,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 Disabled buttons using the `<a>` element behave a bit different:
 
 - Disabled buttons using `<a>` must include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies and to make it visually appear disabled.
-- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/links#disabled-link-accessibility-warning]]).
+- Disabled buttons using `<a>` *should not* include the `href` attribute. In case you need to keep the `href`, please refer to [disabled link accessibility warning]([[docsref:/components/link#disabled-link-accessibility-warning]]).
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
 
 <Example class="p-none bd-btn-example" code={`<div class="p-large d-flex gap-xsmall flex-wrap">

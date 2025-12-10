@@ -68,7 +68,8 @@ const dataDefinitions = {
         .object({
           title: z.string(),
           draft: z.boolean().optional(),
-          brand: z.string().optional()
+          brand: z.string().optional(),
+          category: z.union([z.literal('Actions'), z.literal('Content display'), z.literal('Control'), z.literal('Data'), z.literal('Dialog'), z.literal('Indicator'), z.literal('Layout'), z.literal('Navigation'), z.literal('Visual assets')]).optional()
         })
         .array()
         .optional()

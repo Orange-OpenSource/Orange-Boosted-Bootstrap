@@ -65,18 +65,18 @@ const { addedIn, layout, title } = Astro.props
       <div id="bd-navbar1" class="navbar-collapse collapse me-lg-auto bd-navbar mb-none border-none">
         <ul class="navbar-nav">
           <LinkItem
-            active={Astro.url.pathname === `/${getConfig().brand}/`}
-            href={`/${getConfig().brand}/`}
-            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});"
-          >
-            Home
-          </LinkItem>
-          <LinkItem
-            active={layout === 'docs'}
+            active={layout === 'docs' && !(title === 'Migrating to recent versions' || title === 'Migrating from Boosted' || title === 'Components')}
             href={getVersionedDocsPath('getting-started/introduction')}
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});"
           >
             Docs
+          </LinkItem>
+          <LinkItem
+            active={title === 'Components'}
+            href={getVersionedDocsPath('components')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'components'});"
+          >
+            Components
           </LinkItem>
           <LinkItem
             active={title === 'Examples'}
@@ -84,6 +84,20 @@ const { addedIn, layout, title } = Astro.props
             onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});"
           >
             Examples
+          </LinkItem>
+          <LinkItem
+            active={title === 'Customize'}
+            href={getVersionedDocsPath('customize')}
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'customize'});"
+          >
+            Customize
+          </LinkItem>
+          <LinkItem
+            active={title === 'Resources'}
+            href="/resources"
+            onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'resources'});"
+          >
+            Resources
           </LinkItem>
         </ul>
       </div>

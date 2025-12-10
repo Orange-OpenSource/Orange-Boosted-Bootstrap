@@ -17,8 +17,8 @@ import { allTokens, hasToken } from '@libs/sass-variables'
 Background utilities like `.bg-*` are generated from our `$ouds-backgrounds` Sass map and respond to color modes.
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so depending on the cases you’ll want to use an additional:
-* `[data-bs-theme]` [color mode attribute]([[docsref:/customize/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes. It also sets the right color for texts inside
-* `.text-*` [color utilities]([[docsref:/utilities/colors]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
+* `[data-bs-theme]` [color mode attribute]([[docsref:/foundation/color-modes#how-to-use]]) is the best option most of the time and moreover when the element using a background utility contains complex sub-elements such as components that need to respond to color modes. It also sets the right color for texts inside
+* `.text-*` [color utilities]([[docsref:/utilities/color]]) when the background color and color couple are accessible together in light and dark mode, and there is no components inside
 
 <BootstrapCompatibility>
 
