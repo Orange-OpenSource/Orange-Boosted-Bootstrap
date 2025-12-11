@@ -1,8 +1,27 @@
 // Component application
 // Depends on semantic applications
-// OUDS Core tokens version 1.7.0
+// OUDS Core tokens version 1.9.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.0.1
+// Orange System tokens version 2.3.0
+
+// Alert
+
+// scss-docs-start ouds-component-alert
+$ouds-alert-border-radius-default: $ouds-border-radius-default !default;
+$ouds-alert-border-radius-rounded: $ouds-border-radius-large !default;
+$ouds-alert-border-width: $ouds-border-width-none !default;
+$ouds-alert-size-icon: $ouds-size-icon-with-label-large-size-small !default;
+$ouds-alert-size-min-height-bottom-action-placement: $core-ouds-dimension-1250 !default;
+$ouds-alert-size-min-height: $ouds-size-min-interactive-area !default;
+$ouds-alert-size-min-width: $core-ouds-dimension-2000 !default;
+$ouds-alert-space-column-gap-action: $ouds-space-column-gap-small !default;
+$ouds-alert-space-column-gap: $ouds-space-column-gap-medium !default;
+$ouds-alert-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-alert-space-padding-inline: $ouds-space-padding-inline-large !default;
+$ouds-alert-space-row-gap-action: $ouds-space-row-gap-2xsmall !default;
+$ouds-alert-space-row-gap-bullet: $ouds-space-row-gap-none !default;
+$ouds-alert-space-row-gap: $ouds-space-row-gap-small !default;
+// scss-docs-end ouds-component-alert
 
 // Badge
 
@@ -221,15 +240,17 @@ $ouds-control-item-color-bg-hover: $ouds-color-action-support-hover !default;
 $ouds-control-item-color-bg-loading: $ouds-color-action-support-loading !default;
 $ouds-control-item-color-bg-pressed: $ouds-color-action-support-pressed !default;
 $ouds-control-item-color-content-loader: $ouds-color-content-default !default;
+$ouds-control-item-size-error-icon: $ouds-size-icon-with-label-large-size-small !default;
 $ouds-control-item-size-icon: $ouds-size-icon-with-label-large-size-medium !default;
-$ouds-control-item-size-list-item-size-min-height-text: $ouds-size-icon-with-label-large-size-medium !default;
 $ouds-control-item-size-loader: $ouds-size-icon-with-label-large-size-small !default;
 $ouds-control-item-size-max-height-assets-container: $core-ouds-dimension-1200 !default;
 $ouds-control-item-size-max-width: $core-ouds-dimension-4000 !default;
 $ouds-control-item-size-min-height: $core-ouds-dimension-650 !default;
 $ouds-control-item-size-min-width: $core-ouds-dimension-2000 !default;
 $ouds-control-item-space-column-gap: $ouds-space-column-gap-medium !default;
-$ouds-control-item-space-padding-block: $ouds-space-padding-block-medium !default;
+$ouds-control-item-space-padding-block-default: $ouds-space-padding-block-medium !default;
+$ouds-control-item-space-padding-block-top-error-text: $ouds-space-padding-block-xsmall !default;
+$ouds-control-item-space-padding-inline-error-icon: $ouds-space-padding-inline-4xsmall !default;
 $ouds-control-item-space-padding-inline: $ouds-space-padding-inline-large !default;
 $ouds-control-item-space-row-gap: $ouds-space-row-gap-none !default;
 // scss-docs-end ouds-component-control
@@ -243,8 +264,8 @@ $ouds-divider-border-width: $ouds-border-width-thin !default;
 // Expand
 
 // scss-docs-start ouds-component-expand
-$ouds-expand-link-icon-end: true !default; // Permet d'afficher le chevron à droite du link
-$ouds-expand-link-icon-start: false !default; // Permet d'afficher le chevron à gauche du link
+$ouds-expand-link-icon-end: true !default;
+$ouds-expand-link-icon-start: false !default;
 // scss-docs-end ouds-component-expand
 
 // Input
