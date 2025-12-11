@@ -1,7 +1,7 @@
 // Semantic custom properties applications
-// OUDS Core tokens version 1.7.0
+// OUDS Core tokens version 1.9.0
 // Sosh Core tokens version 1.2.0
-// Sosh System tokens version 2.0.1
+// Sosh System tokens version 2.3.0
 
 // scss-docs-start ouds-all-semantic-css-color
 // scss-docs-start ouds-semantic-css-color
@@ -18,6 +18,8 @@
   --#{$prefix}color-action-negative-loading: #{$ouds-color-action-negative-loading-light};
   --#{$prefix}color-action-negative-pressed: #{$ouds-color-action-negative-pressed-light};
   --#{$prefix}color-action-pressed: #{$ouds-color-action-pressed-light};
+  --#{$prefix}color-action-read-only-primary: #{$ouds-color-action-read-only-primary-light};
+  --#{$prefix}color-action-read-only-secondary: #{$ouds-color-action-read-only-secondary-light};
   --#{$prefix}color-action-selected: #{$ouds-color-action-selected-light};
   --#{$prefix}color-action-support-disabled: #{$ouds-color-action-support-disabled-light};
   --#{$prefix}color-action-support-enabled: #{$ouds-color-action-support-enabled-light};
@@ -42,6 +44,7 @@
   --#{$prefix}color-border-emphasized: #{$ouds-color-border-emphasized-light};
   --#{$prefix}color-border-focus-inset: #{$ouds-color-border-focus-inset-light};
   --#{$prefix}color-border-focus: #{$ouds-color-border-focus-light};
+  --#{$prefix}color-border-minimal: #{$ouds-color-border-minimal-light};
   --#{$prefix}color-border-muted: #{$ouds-color-border-muted-light};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-light};
   --#{$prefix}color-border-on-brand-secondary: #{$ouds-color-border-on-brand-secondary-light};
@@ -131,6 +134,8 @@
   --#{$prefix}color-action-negative-loading: #{$ouds-color-action-negative-loading-dark};
   --#{$prefix}color-action-negative-pressed: #{$ouds-color-action-negative-pressed-dark};
   --#{$prefix}color-action-pressed: #{$ouds-color-action-pressed-dark};
+  --#{$prefix}color-action-read-only-primary: #{$ouds-color-action-read-only-primary-dark};
+  --#{$prefix}color-action-read-only-secondary: #{$ouds-color-action-read-only-secondary-dark};
   --#{$prefix}color-action-selected: #{$ouds-color-action-selected-dark};
   --#{$prefix}color-action-support-disabled: #{$ouds-color-action-support-disabled-dark};
   --#{$prefix}color-action-support-enabled: #{$ouds-color-action-support-enabled-dark};
@@ -151,6 +156,7 @@
   --#{$prefix}color-border-emphasized: #{$ouds-color-border-emphasized-dark};
   --#{$prefix}color-border-focus: #{$ouds-color-border-focus-dark};
   --#{$prefix}color-border-focus-inset: #{$ouds-color-border-focus-inset-dark};
+  --#{$prefix}color-border-minimal: #{$ouds-color-border-minimal-dark};
   --#{$prefix}color-border-muted: #{$ouds-color-border-muted-dark};
   --#{$prefix}color-border-on-brand-primary: #{$ouds-color-border-on-brand-primary-dark};
   --#{$prefix}color-border-on-brand-secondary: #{$ouds-color-border-on-brand-secondary-dark};
@@ -238,6 +244,8 @@ $ouds-color-action-negative-hover: var(--#{$prefix}color-action-negative-hover) 
 $ouds-color-action-negative-loading: var(--#{$prefix}color-action-negative-loading) !default;
 $ouds-color-action-negative-pressed: var(--#{$prefix}color-action-negative-pressed) !default;
 $ouds-color-action-pressed: var(--#{$prefix}color-action-pressed) !default;
+$ouds-color-action-read-only-primary: var(--#{$prefix}color-action-read-only-primary) !default;
+$ouds-color-action-read-only-secondary: var(--#{$prefix}color-action-read-only-secondary) !default;
 $ouds-color-action-selected: var(--#{$prefix}color-action-selected) !default;
 $ouds-color-action-support-disabled: var(--#{$prefix}color-action-support-disabled) !default;
 $ouds-color-action-support-enabled: var(--#{$prefix}color-action-support-enabled) !default;
@@ -262,6 +270,7 @@ $ouds-color-border-default: var(--#{$prefix}color-border-default) !default;
 $ouds-color-border-emphasized: var(--#{$prefix}color-border-emphasized) !default;
 $ouds-color-border-focus-inset: var(--#{$prefix}color-border-focus-inset) !default;
 $ouds-color-border-focus: var(--#{$prefix}color-border-focus) !default;
+$ouds-color-border-minimal: var(--#{$prefix}color-border-minimal) !default;
 $ouds-color-border-muted: var(--#{$prefix}color-border-muted) !default;
 $ouds-color-border-on-brand-primary: var(--#{$prefix}color-border-on-brand-primary) !default;
 $ouds-color-border-on-brand-secondary: var(--#{$prefix}color-border-on-brand-secondary) !default;

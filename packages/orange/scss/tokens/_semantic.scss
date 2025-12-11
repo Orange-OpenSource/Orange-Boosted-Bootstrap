@@ -1,8 +1,8 @@
 // Semantic applications
 // Depends on raw primitive values
-// OUDS Core tokens version 1.7.0
+// OUDS Core tokens version 1.9.0
 // Orange Core tokens version 1.2.0
-// Orange System tokens version 2.0.1
+// Orange System tokens version 2.3.0
 
 // Border
 
@@ -106,6 +106,10 @@ $ouds-color-action-negative-pressed-dark: $core-ouds-color-functional-scarlet-10
 $ouds-color-action-negative-pressed-light: $core-ouds-color-functional-scarlet-800 !default;
 $ouds-color-action-pressed-dark: $core-orange-color-orange-500 !default;
 $ouds-color-action-pressed-light: $core-orange-color-orange-550 !default;
+$ouds-color-action-read-only-primary-dark: $core-ouds-color-opacity-white-640 !default;
+$ouds-color-action-read-only-primary-light: $core-ouds-color-opacity-black-680 !default;
+$ouds-color-action-read-only-secondary-dark: $core-ouds-color-opacity-white-200 !default;
+$ouds-color-action-read-only-secondary-light: $core-ouds-color-opacity-black-200 !default;
 $ouds-color-action-selected-dark: $core-orange-color-orange-500 !default;
 $ouds-color-action-selected-light: $core-orange-color-orange-550 !default;
 $ouds-color-action-support-disabled-dark: $core-ouds-color-opacity-white-40 !default;
@@ -146,6 +150,8 @@ $ouds-color-border-focus-dark: $core-ouds-color-functional-gray-light-160 !defau
 $ouds-color-border-focus-inset-dark: $core-ouds-color-functional-gray-dark-880 !default;
 $ouds-color-border-focus-inset-light: $core-ouds-color-functional-white !default;
 $ouds-color-border-focus-light: $core-ouds-color-functional-black !default;
+$ouds-color-border-minimal-dark: $core-ouds-color-opacity-white-40 !default;
+$ouds-color-border-minimal-light: $core-ouds-color-opacity-black-40 !default;
 $ouds-color-border-muted-dark: $core-ouds-color-opacity-white-80 !default;
 $ouds-color-border-muted-light: $core-ouds-color-opacity-black-80 !default;
 $ouds-color-border-on-brand-primary-dark: $core-ouds-color-functional-black !default;
@@ -530,11 +536,12 @@ $ouds-grid-xs-width: $core-ouds-grid-width-200 !default;
 // scss-docs-start ouds-semantic-opacity
 $ouds-opacity-disabled: $core-ouds-opacity-200 !default;
 $ouds-opacity-invisible: $core-ouds-opacity-0 !default;
-$ouds-opacity-medium: $core-ouds-opacity-320 !default;
+$ouds-opacity-medium: $core-ouds-opacity-560 !default;
 $ouds-opacity-opaque: $core-ouds-opacity-1000 !default;
 $ouds-opacity-strong: $core-ouds-opacity-640 !default;
-$ouds-opacity-weak: $core-ouds-opacity-160 !default;
-$ouds-opacity-weaker: $core-ouds-opacity-40 !default;
+$ouds-opacity-weak: $core-ouds-opacity-320 !default;
+$ouds-opacity-weaker: $core-ouds-opacity-160 !default;
+$ouds-opacity-weakest: $core-ouds-opacity-40 !default;
 // scss-docs-end ouds-semantic-opacity
 
 // Size
@@ -633,6 +640,18 @@ $ouds-size-max-width-type-heading-small-tablet: $core-ouds-dimension-7000 !defau
 $ouds-size-max-width-type-heading-xlarge-desktop: $core-ouds-dimension-11000 !default;
 $ouds-size-max-width-type-heading-xlarge-mobile: $core-ouds-dimension-7000 !default;
 $ouds-size-max-width-type-heading-xlarge-tablet: $core-ouds-dimension-9000 !default;
+$ouds-size-max-width-type-label-large-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-type-label-large-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-large-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-medium-desktop: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-medium-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-medium-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-small-desktop: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-small-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-small-tablet: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-xlarge-desktop: $core-ouds-dimension-7000 !default;
+$ouds-size-max-width-type-label-xlarge-mobile: $core-ouds-dimension-6000 !default;
+$ouds-size-max-width-type-label-xlarge-tablet: $core-ouds-dimension-6000 !default;
 $ouds-size-min-interactive-area: $core-ouds-dimension-600 !default;
 $ouds-size-icon-decorative-2xlarge: $ouds-dimension-6xlarge !default;
 $ouds-size-icon-decorative-2xsmall: $ouds-dimension-5xsmall !default;
