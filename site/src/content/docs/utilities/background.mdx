@@ -8,7 +8,7 @@ toc: true
 
 import { getConfig } from '@libs/config'
 import { getData } from '@libs/data'
-import { allTokens, hasToken } from '@libs/sass-variables'
+import { allTokens } from '@libs/sass-variables'
 
 <Callout type="info" name="warning-color-assistive-technologies" />
 
@@ -45,11 +45,27 @@ Please note that we use `[data-bs-theme]` attribute on a child element to avoid 
 </Callout>
 
 <Example code={[
-  ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+  ...allTokens.filter(token => token.name.match(/\$ouds-color-bg-.*-light/))
     .map(token => {
-      const bgName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+      const bgName = token.name.match(/\$ouds-color-bg-(.*)-light/)[1]
       const themesArray = allTokens.filter(allToken => {
         return allToken.name.match(`modes-on-(bg-)?${bgName}-(dark|light)`)
+      }).map(token => token.compiledValue)
+      const theme = themesArray[0].includes('dark')
+        ? themesArray[1].includes('light')
+          ? 'root'
+          : 'dark'
+        : themesArray[1].includes('light')
+          ? 'light'
+          : 'root-inverted'
+      return `<p class="bg-${bgName} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'root' ? '</span>' : ''}</p>`
+    }),
+  ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+    .map(token => {
+      const surfaceName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+      const bgName = `surface-${surfaceName}`
+      const themesArray = allTokens.filter(allToken => {
+        return allToken.name.match(`modes-on-(surface-)?${surfaceName}-(dark|light)`)
       }).map(token => token.compiledValue)
       const theme = themesArray[0].includes('dark')
         ? themesArray[1].includes('light')
@@ -78,13 +94,25 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-always-white p-large">
     <div data-bs-theme="light">`,
-    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-bg-.*-light/))
       .map(token => {
-        const bgName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = token.name.match(/\$ouds-color-bg-(.*)-light/)[1]
         const themesArray = allTokens.filter(allToken => {
           return allToken.name.match(`modes-on-(bg-)?${bgName}-(dark|light)`)
         }).map(token => token.compiledValue)
-        const theme = themesArray[1].includes('light')
+        const theme = themesArray[0].includes('light')
+          ? 'light'
+          : 'dark'
+        return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'light' ? '</span>' : ''}</p>`
+      }),
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+      .map(token => {
+        const surfaceName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = `surface-${surfaceName}`
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(surface-)?${surfaceName}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[0].includes('light')
           ? 'light'
           : 'dark'
         return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'light' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'light' ? '</span>' : ''}</p>`
@@ -111,11 +139,23 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 <Example class="p-none" code={[`<div class="bg-always-black p-large">
     <div data-bs-theme="dark">`,
-    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-bg-.*-light/))
       .map(token => {
-        const bgName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = token.name.match(/\$ouds-color-bg-(.*)-light/)[1]
         const themesArray = allTokens.filter(allToken => {
           return allToken.name.match(`modes-on-(bg-)?${bgName}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[0].includes('dark')
+          ? 'dark'
+          : 'light'
+        return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'dark' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'dark' ? '</span>' : ''}</p>`
+      }),
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+      .map(token => {
+        const surfaceName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = `surface-${surfaceName}`
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(surface-)?${surfaceName}-(dark|light)`)
         }).map(token => token.compiledValue)
         const theme = themesArray[0].includes('dark')
           ? 'dark'
@@ -148,11 +188,27 @@ Here is a more complex example to understand how to use `[data-bs-theme]` in spe
 
 <Example class="p-none" code={[`<div class="bg-inverse-high p-large">
     <div data-bs-theme="root-inverted">`,
-    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-bg-.*-light/))
       .map(token => {
-        const bgName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = token.name.match(/\$ouds-color-bg-(.*)-light/)[1]
         const themesArray = allTokens.filter(allToken => {
           return allToken.name.match(`modes-on-(bg-)?${bgName}-(dark|light)`)
+        }).map(token => token.compiledValue)
+        const theme = themesArray[0].includes('dark')
+          ? themesArray[1].includes('light')
+            ? 'root-inverted'
+            : 'dark'
+          : themesArray[1].includes('light')
+            ? 'light'
+            : 'root'
+        return `    <p class="bg-${bgName} p-large fw-bold">${theme !== 'root-inverted' ? `<span data-bs-theme="${theme}">` : ''}.bg-${bgName}${theme !== 'root-inverted' ? '</span>' : ''}</p>`
+      }),
+    ...allTokens.filter(token => token.name.match(/\$ouds-color-surface-.*-light/))
+      .map(token => {
+        const surfaceName = token.name.match(/\$ouds-color-surface-(.*)-light/)[1]
+        const bgName = `surface-${surfaceName}`
+        const themesArray = allTokens.filter(allToken => {
+          return allToken.name.match(`modes-on-(surface-)?${surfaceName}-(dark|light)`)
         }).map(token => token.compiledValue)
         const theme = themesArray[0].includes('dark')
           ? themesArray[1].includes('light')
@@ -184,11 +240,13 @@ We also provide some opacity backgrounds that should only be used in very specif
 
 In OUDS Web, we have some backgrounds that are a bit specific because they can take only few components like buttons, links and texts. For accessibility reasons we remove the color of these components.
 
-`.bg-brand-primary`,{getConfig().brand !== 'orange' ? <><code>.bg-brand-secondary</code>, <code>.bg-brand-tertiary</code></> : ''} `.bg-status-accent-emphasized`, `.bg-status-warning-emphasized`, `.bg-status-negative-emphasized`, `.bg-status-positive-emphasized` and `.bg-status-info-emphasized` are considered as colored backgrounds.
+`.bg-surface-brand-primary`,{getConfig().brand !== 'orange' ? <><code>.bg-surface-brand-secondary</code>, <code>.bg-surface-brand-tertiary</code></> : ''} `.bg-surface-status-accent-emphasized`, `.bg-surface-status-warning-emphasized`, `.bg-surface-status-negative-emphasized`, `.bg-surface-status-positive-emphasized` and `.bg-surface-status-info-emphasized` are considered as colored backgrounds.
 
-<Example code={[...allTokens.filter(token => (token.name.match(/\$ouds-color-bg-/) || token.name.match(/\$ouds-color-surface-/)) && token.name.match(/-light/) && (token.name.match(/-brand/) || token.name.match(/status-.*-emphasized/)) && !token.name.match(/-neutral/) && token.compiledValue).map(token => {
+<Example code={[
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-surface-brand.*-light/) && token.compiledValue)).map(token => {
+    const brandName = token.name.match(/\$ouds-color-surface-brand-(.*)-light/)[1]
     const themesArray = allTokens.filter(allToken => {
-      return allToken.name.match(`modes-on-(bg-)?${token.name.split('-').slice(3, -1).join('-')}-(dark|light)`)
+      return allToken.name.match(`modes-on-brand-${brandName}-(dark|light)`)
     }).map(token => token.compiledValue)
     const theme = themesArray[0].includes('dark')
       ? themesArray[1].includes('light')
@@ -197,5 +255,20 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
       : themesArray[1].includes('light')
         ? 'light'
         : 'root-inverted'
-    return `<p class="bg-${token.name.split('-').slice(3, -1).join('-')} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-${token.name.split('-').slice(3, -1).join('-')}${theme !== 'root' ? '</span>' : ''}</p>`
-  })]} />
+    return `<p class="bg-surface-brand-${brandName} p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-surface-brand-${brandName}${theme !== 'root' ? '</span>' : ''}</p>`
+  }),
+  ...allTokens.filter(token => (token.name.match(/\$ouds-color-surface-status-.*-emphasized-light/) && token.compiledValue)).map(token => {
+    const statusName = token.name.match(/\$ouds-color-surface-status-(.*)-emphasized-light/)[1]
+    const themesArray = allTokens.filter(allToken => {
+      return allToken.name.match(`modes-on-status-${statusName}`)
+    }).map(token => token.compiledValue)
+    const theme = themesArray[0].includes('dark')
+      ? themesArray[1].includes('light')
+        ? 'root'
+        : 'dark'
+      : themesArray[1].includes('light')
+        ? 'light'
+        : 'root-inverted'
+    return `<p class="bg-surface-status-${statusName}-emphasized p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-surface-status-${statusName}-emphasized${theme !== 'root' ? '</span>' : ''}</p>`
+  })
+  ]} />
