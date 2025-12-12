@@ -13,8 +13,8 @@
         toggle.addEventListener('click', e => {
           e.preventDefault()
           const url = new URL(window.location)
-          const brand = toggle.getAttribute('data-bs-brand-value')
-          const brandToChange = url.pathname.split('/')[1]
+          const brand = `/${toggle.getAttribute('data-bs-brand-value')}/`
+          const brandToChange = `/${url.pathname.split('/')[1]}/`
           window.location = url.href.replace(brandToChange, brand)
         })
       })
