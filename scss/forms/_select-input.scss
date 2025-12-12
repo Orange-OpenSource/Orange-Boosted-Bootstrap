@@ -281,7 +281,7 @@
   --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
 }
 
-option:disabled[value=""] {
+option:disabled[value=""] { // stylelint-disable-line selector-no-qualifying-type
   display: none;
 }
 
