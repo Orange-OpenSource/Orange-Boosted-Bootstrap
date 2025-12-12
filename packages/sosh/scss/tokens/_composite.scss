@@ -14,6 +14,8 @@ $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-
 
 // Font
 
+// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
+// scss-docs-start ouds-composite-font-sans-serif
 $custom-font-name: "Sosh" !default;
 
 // Map of CDN URLs for custom font, with weight as keys
@@ -22,10 +24,8 @@ $custom-font-cdn-urls: (
   $ouds-font-weight-system-web-strong: "https://mastermedia.dam-broadcast.com/pm_12751_481_481815-qd9nelrt7o--Sosh-Bold.woff2"
 ) !default;
 
-// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
-// scss-docs-start ouds-composite-font-sans-serif
 $ouds-font-family-sans-serif-stack:
-  // Custom OUDS font
+  // OUDS custom font
   $custom-font-name,
   // Basic web fallback
   Arial,

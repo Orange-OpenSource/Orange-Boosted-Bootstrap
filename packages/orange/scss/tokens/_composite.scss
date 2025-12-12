@@ -14,15 +14,19 @@ $ouds-elevation-sticky: $ouds-elevation-x-sticky $ouds-elevation-y-sticky $ouds-
 
 // Font
 
+// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
+// scss-docs-start ouds-composite-font-sans-serif
 $custom-font-name: "HelvNeueOrange" !default;
 
 // Map of CDN URLs for custom font, with weight as keys
-$custom-font-cdn-urls: () !default;
+$custom-font-cdn-urls: (
+  $ouds-font-weight-system-web-default: "https://mastermedia.dam-broadcast.com/pm_12751_490_490071-myaimdgylf--HelveticaNeue-Default.woff2",
+  $ouds-font-weight-system-web-moderate: "https://mastermedia.dam-broadcast.com/pm_12751_490_490074-tqtijgs7e4--HelveticaNeue-Moderate.woff2",
+  $ouds-font-weight-system-web-strong: "https://mastermedia.dam-broadcast.com/pm_12751_490_490077-wejriti88u--HelveticaNeue-Strong.woff2"
+) !default;
 
-// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after
-// scss-docs-start ouds-composite-font-sans-serif
 $ouds-font-family-sans-serif-stack:
-  // Custom OUDS font
+  // OUDS custom font
   $custom-font-name,
   // Older macOS and iOS
   "Helvetica Neue",
