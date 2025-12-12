@@ -150,8 +150,20 @@ Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
 Quickly change the `font-weight` of text with these utilities. `font-weight` utilities are abbreviated as `.fw-*`.
 
+<BrandSpecific brand="orange">
+<Callout type="warning">
+The medium font-weight can only be used with `label` and `body` font references.
+</Callout>
+
+<Example code={`<p class="fw-bold">Bold text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>`} />
+</BrandSpecific>
+
+<BrandSpecific brand="sosh">
 <Example code={`<p class="fw-bold">Bold text.</p>
 <p class="fw-normal">Normal weight text.</p>`} />
+</BrandSpecific>
 
 <BootstrapCompatibility>
 
