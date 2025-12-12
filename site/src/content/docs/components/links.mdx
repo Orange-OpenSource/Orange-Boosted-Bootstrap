@@ -15,7 +15,7 @@ import { getMode } from '@libs/sass-variables'
 You can find here the [OUDS Link design guidelines](https://unified-design-system.orange.com/472794e18/p/31c33b-link).
 </Callout>
 
-## Standard variant
+## Overview
 
 Use OUDS Web `.link` class to set up styles such as padding and content alignment to display standalone links. Standalone links should not be used inline within a sentence or a paragraph. In that case, use only a `<a>` tag as described in the [reboot page]([[docsref:/content/reboot#links]]).
 
@@ -25,7 +25,15 @@ By default, `.link` defines focus, hover and active styles similar to the `<a>` 
 
 `:visited` standalone links don’t have any specific styling.
 
-## Variants on colored background
+### Alternative tag
+
+The `.link` classes are designed to be used with the `<a>` element. However, you can also use these classes on `<button>` elements.
+
+<Example code={`<button class="link" type="submit">Button link</button>`} />
+
+## Variants
+
+### On colored background
 
 OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/utilities/background#colored-background]]). Their accessibility (readability) is ensured by suitable semi-opaque backgrounds.
 
@@ -44,7 +52,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
     </div>
   </div>`} />
 
-## Link chevron
+### With chevron
 
 Add `.link-chevron` to enhance your link with a chevron on the right side. Use the additional `.back` class to display the chevron on the left side.
 
@@ -55,7 +63,7 @@ Add `.link-chevron` to enhance your link with a chevron on the right side. Use t
     <div><a class="link link-chevron back" href="#">This is an example of a link on multiple lines with a back chevron</a></div>
   </div>`} />
 
-## Icon link
+### With icon
 
 <Callout type="info" name="info-icons-svg-sprite" />
 
@@ -93,28 +101,9 @@ Take a regular `<a>` element, add `.icon-link`, and insert an icon on the left o
   </a>`} />
 </BootstrapCompatibility>
 
-## Sizes
+## States
 
-Links are available in two sizes. Add `.link-small` for small size.
-
-<Example code={`<div><a class="link" href="#">This is an example of a link</a></div>
-  <div><a class="link link-small" href="#">This is an example of a small link</a></div>`} />
-
-## Link tags
-
-The `.link` classes are designed to be used with the `<a>` element. However, you can also use these classes on `<button>` elements.
-
-<Example code={`<div><button class="link link" type="submit">Button link</button></div>
-  <div><button class="link link-chevron" type="reset">Button link chevron</button></div>
-  <div>
-    <button class="link link-small icon-link" type="button">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
-    </svg> Small button link icon
-    </button>
-  </div>`} />
-
-## Disabled state
+### Disabled
 
 Make links look inactive by adding the `aria-disabled="true"` attribute to any `<a>` element. Disabled links have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
@@ -122,15 +111,16 @@ Disabled links using `<a>` *should not* include the `href` attribute. In case yo
 
 <Example code={`<div><a class="link" aria-disabled="true">This is an example of a disabled link</a></div>
   <div><a class="link link-chevron" aria-disabled="true">This is an example of a disabled link with chevron</a></div>
-  <div><a class="link icon-link" aria-disabled="true">
-    <svg aria-hidden="true">
-      <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
-    </svg>
-    This is an example of a link with an icon
-  </a>
+  <div>
+    <a class="link icon-link" aria-disabled="true">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty"/>')}
+      </svg>
+      This is an example of a link with an icon
+    </a>
   </div>`} />
 
-### Disabled link accessibility warning
+#### Disabled link accessibility warning
 
 To cover cases where you have to keep the `href` attribute on a disabled link, the style on `[aria-disabled="true"]` uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links.
 
@@ -139,3 +129,10 @@ However, if the disabled link conveys useful information for users, it must rema
 
 <Example code={`<div><a href="#" class="link" tabindex="-1" aria-disabled="true">Disabled link without any useful information</a></div>
   <div><a href="#" class="link" aria-disabled="true">Keyboard focusable disabled link</a></div>`} />
+
+## Sizes
+
+Links are available in two sizes. Add `.link-small` for small size.
+
+<Example code={`<div><a class="link" href="#">This is an example of a link</a></div>
+  <div><a class="link link-small" href="#">This is an example of a small link</a></div>`} />
