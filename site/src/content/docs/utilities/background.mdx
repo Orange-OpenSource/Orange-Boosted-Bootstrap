@@ -272,3 +272,15 @@ In OUDS Web, we have some backgrounds that are a bit specific because they can t
     return `<p class="bg-surface-status-${statusName}-emphasized p-large fw-bold">${theme !== 'root' ? `<span data-bs-theme="${theme}">` : ''}.bg-surface-status-${statusName}-emphasized${theme !== 'root' ? '</span>' : ''}</p>`
   })
   ]} />
+
+## Multiple backgrounds
+
+Sometimes it will be necessary to layer two background colors on top of each other. This can happen when designers opt to have two fill color on a container for example if the parent container have a specific background and we want to opacify a card on top of it. To achieve this with OUDS Web you will need two containers with the specified background color utility.
+
+<Example code={`<div class="p-large" style="background: repeating-linear-gradient(-45deg, #ccc, #ccc 40px, var(--bs-color-bg-secondary) 40px, var(--bs-color-bg-secondary) 80px)">
+    <div class="bg-secondary">
+      <div class="bg-surface-secondary p-large">
+        .bg-secondary and .bg-surface-brand-secondary
+      </div>
+    </div>
+  </div>`} />
