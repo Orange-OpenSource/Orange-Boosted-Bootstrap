@@ -23,6 +23,7 @@
   border-color: var(--#{$prefix}text-input-border-color);
   border-style: solid;
   border-width: var(--#{$prefix}text-input-border-width-top) var(--#{$prefix}text-input-border-width-right) var(--#{$prefix}text-input-border-width-bottom) var(--#{$prefix}text-input-border-width-left);
+  font-weight: 500;
   @include border-radius(var(--#{$prefix}text-input-border-radius), 0);
 
   &:hover {
