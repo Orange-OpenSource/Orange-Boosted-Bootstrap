@@ -120,7 +120,8 @@ $ouds-font-sizes: (
 
 $ouds-font-weights: (
   normal: $ouds-font-weight-system-web-default,
-  bold: $ouds-font-weight-system-web-strong
+  medium: $ouds-font-weight-system-web-moderate,
+  bold: $ouds-font-weight-system-web-strong,
 ) !default;
 
 $ouds-icon-sizes: ("small", "medium", "large") !default;
