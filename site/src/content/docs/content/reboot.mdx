@@ -50,13 +50,16 @@ The `:root` and child elements are updated to provide better page-wide defaults.
 - The `:root` children also sets a global `font-family`, `font-weight`, `line-height`, and `color`. This is inherited later by some form elements to prevent font inconsistencies.
 - For safety, the `:root` children has a declared `background-color`, defaulting to `#fff`.
 
-## Native font stack
+## Font stack
+OUDS Web uses custom fonts loaded from a CDN, to ensure optimum text rendering on every device and OS, and to benefit from the browser's cache.
 
-OUDS Web utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today’s devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+OUDS Web utilizes a “native font stack” or “system font stack” — as a fallback for custom font — for optimum text rendering on every device and OS. These system fonts have been designed specifically with today’s devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 <ScssDocs name="ouds-composite-font-sans-serif" file={`packages/${getConfig().brand}/scss/tokens/_composite.scss`} />
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout OUDS Web. To switch the global `font-family`, update `$font-family-base` and recompile OUDS Web.
+
+The font faces are generated directly in the `_root.scss` file, based on the `$custom-font-cdn-urls` map variable. You can customize these URLs if needed (for example, to avoid loading resources from the Internet).
 
 The following `font-family` is applied on every code basis element. To switch the global `font-family`, update `$font-family-code` and recompile OUDS Web.
 
@@ -120,18 +123,18 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 On colored backgrounds, links should have a different style. Visited links don’t have a specific style on colored backgrounds.
 
 <Example buttonLabel="links on colored backgrounds" class="p-none" code={`<div class="colored-bg">
-    <div class="bg-brand-primary p-large">
+    <div class="bg-surface-brand-primary p-large">
       <div data-bs-theme="${getMode('modes-on-brand-primary')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
-    <div class="bg-status-negative-emphasized p-large">
+    <div class="bg-surface-status-negative-emphasized p-large">
       <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}">
         This is an example of a <a href="#">link on colored background</a> in a paragraph.
       </div>
     </div>
   </div>
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}">
       This is an example of a <a href="." class="colored-bg visited-links">link on colored background</a> in a paragraph.
     </div>

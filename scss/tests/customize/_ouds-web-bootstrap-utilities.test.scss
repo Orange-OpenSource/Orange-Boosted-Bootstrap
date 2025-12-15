@@ -3500,6 +3500,10 @@ $utilities: ();
           font-weight: 400 !important;
         }
 
+        .fw-medium {
+          font-weight: 500 !important;
+        }
+
         .fw-bold {
           font-weight: 700 !important;
         }
@@ -3628,6 +3632,58 @@ $utilities: ();
           box-shadow: 0 4px 4px -1px var(--bs-elevation-color-sticky) !important;
         }
 
+        .bg-surface-brand-primary {
+          background-color: var(--bs-color-surface-brand-primary) !important;
+        }
+
+        .bg-surface-status-accent-emphasized {
+          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
+        }
+
+        .bg-surface-status-accent-muted {
+          background-color: var(--bs-color-surface-status-accent-muted) !important;
+        }
+
+        .bg-surface-status-positive-emphasized {
+          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
+        }
+
+        .bg-surface-status-positive-muted {
+          background-color: var(--bs-color-surface-status-positive-muted) !important;
+        }
+
+        .bg-surface-status-negative-emphasized {
+          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
+        }
+
+        .bg-surface-status-negative-muted {
+          background-color: var(--bs-color-surface-status-negative-muted) !important;
+        }
+
+        .bg-surface-status-warning-emphasized {
+          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
+        }
+
+        .bg-surface-status-warning-muted {
+          background-color: var(--bs-color-surface-status-warning-muted) !important;
+        }
+
+        .bg-surface-status-info-emphasized {
+          background-color: var(--bs-color-surface-status-info-emphasized) !important;
+        }
+
+        .bg-surface-status-info-muted {
+          background-color: var(--bs-color-surface-status-info-muted) !important;
+        }
+
+        .bg-always-black {
+          background-color: var(--bs-color-always-black) !important;
+        }
+
+        .bg-always-white {
+          background-color: var(--bs-color-always-white) !important;
+        }
+
         .bg-primary {
           background-color: var(--bs-color-bg-primary) !important;
         }
@@ -3640,64 +3696,32 @@ $utilities: ();
           background-color: var(--bs-color-bg-tertiary) !important;
         }
 
-        .bg-brand-primary {
-          background-color: var(--bs-color-surface-brand-primary) !important;
-        }
-
         .bg-inverse-high {
-          background-color: var(--bs-color-surface-inverse-high) !important;
+          background-color: var(--bs-color-bg-inverse-high) !important;
         }
 
         .bg-inverse-low {
+          background-color: var(--bs-color-bg-inverse-low) !important;
+        }
+
+        .bg-surface-primary {
+          background-color: var(--bs-color-surface-primary) !important;
+        }
+
+        .bg-surface-secondary {
+          background-color: var(--bs-color-surface-secondary) !important;
+        }
+
+        .bg-surface-tertiary {
+          background-color: var(--bs-color-surface-tertiary) !important;
+        }
+
+        .bg-surface-inverse-high {
+          background-color: var(--bs-color-surface-inverse-high) !important;
+        }
+
+        .bg-surface-inverse-low {
           background-color: var(--bs-color-surface-inverse-low) !important;
-        }
-
-        .bg-status-accent-emphasized {
-          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
-        }
-
-        .bg-status-accent-muted {
-          background-color: var(--bs-color-surface-status-accent-muted) !important;
-        }
-
-        .bg-status-positive-emphasized {
-          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
-        }
-
-        .bg-status-positive-muted {
-          background-color: var(--bs-color-surface-status-positive-muted) !important;
-        }
-
-        .bg-status-negative-emphasized {
-          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
-        }
-
-        .bg-status-negative-muted {
-          background-color: var(--bs-color-surface-status-negative-muted) !important;
-        }
-
-        .bg-status-warning-emphasized {
-          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
-        }
-
-        .bg-status-warning-muted {
-          background-color: var(--bs-color-surface-status-warning-muted) !important;
-        }
-
-        .bg-status-info-emphasized {
-          background-color: var(--bs-color-surface-status-info-emphasized) !important;
-        }
-
-        .bg-status-info-muted {
-          background-color: var(--bs-color-surface-status-info-muted) !important;
-        }
-
-        .bg-always-black {
-          background-color: var(--bs-color-always-black) !important;
-        }
-
-        .bg-always-white {
-          background-color: var(--bs-color-always-white) !important;
         }
 
         .bg-opacity-lower {
@@ -14315,6 +14339,10 @@ $utilities: ();
           font-weight: 400 !important;
         }
 
+        .fw-medium {
+          font-weight: 500 !important;
+        }
+
         .fw-bold {
           font-weight: 700 !important;
         }
@@ -14639,6 +14667,58 @@ $utilities: ();
           background-color: var(--bs-dark-bg-subtle) !important;
         }
 
+        .bg-surface-brand-primary {
+          background-color: var(--bs-color-surface-brand-primary) !important;
+        }
+
+        .bg-surface-status-accent-emphasized {
+          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
+        }
+
+        .bg-surface-status-accent-muted {
+          background-color: var(--bs-color-surface-status-accent-muted) !important;
+        }
+
+        .bg-surface-status-positive-emphasized {
+          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
+        }
+
+        .bg-surface-status-positive-muted {
+          background-color: var(--bs-color-surface-status-positive-muted) !important;
+        }
+
+        .bg-surface-status-negative-emphasized {
+          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
+        }
+
+        .bg-surface-status-negative-muted {
+          background-color: var(--bs-color-surface-status-negative-muted) !important;
+        }
+
+        .bg-surface-status-warning-emphasized {
+          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
+        }
+
+        .bg-surface-status-warning-muted {
+          background-color: var(--bs-color-surface-status-warning-muted) !important;
+        }
+
+        .bg-surface-status-info-emphasized {
+          background-color: var(--bs-color-surface-status-info-emphasized) !important;
+        }
+
+        .bg-surface-status-info-muted {
+          background-color: var(--bs-color-surface-status-info-muted) !important;
+        }
+
+        .bg-always-black {
+          background-color: var(--bs-color-always-black) !important;
+        }
+
+        .bg-always-white {
+          background-color: var(--bs-color-always-white) !important;
+        }
+
         .bg-primary {
           background-color: var(--bs-color-bg-primary) !important;
         }
@@ -14651,64 +14731,32 @@ $utilities: ();
           background-color: var(--bs-color-bg-tertiary) !important;
         }
 
-        .bg-brand-primary {
-          background-color: var(--bs-color-surface-brand-primary) !important;
-        }
-
         .bg-inverse-high {
-          background-color: var(--bs-color-surface-inverse-high) !important;
+          background-color: var(--bs-color-bg-inverse-high) !important;
         }
 
         .bg-inverse-low {
+          background-color: var(--bs-color-bg-inverse-low) !important;
+        }
+
+        .bg-surface-primary {
+          background-color: var(--bs-color-surface-primary) !important;
+        }
+
+        .bg-surface-secondary {
+          background-color: var(--bs-color-surface-secondary) !important;
+        }
+
+        .bg-surface-tertiary {
+          background-color: var(--bs-color-surface-tertiary) !important;
+        }
+
+        .bg-surface-inverse-high {
+          background-color: var(--bs-color-surface-inverse-high) !important;
+        }
+
+        .bg-surface-inverse-low {
           background-color: var(--bs-color-surface-inverse-low) !important;
-        }
-
-        .bg-status-accent-emphasized {
-          background-color: var(--bs-color-surface-status-accent-emphasized) !important;
-        }
-
-        .bg-status-accent-muted {
-          background-color: var(--bs-color-surface-status-accent-muted) !important;
-        }
-
-        .bg-status-positive-emphasized {
-          background-color: var(--bs-color-surface-status-positive-emphasized) !important;
-        }
-
-        .bg-status-positive-muted {
-          background-color: var(--bs-color-surface-status-positive-muted) !important;
-        }
-
-        .bg-status-negative-emphasized {
-          background-color: var(--bs-color-surface-status-negative-emphasized) !important;
-        }
-
-        .bg-status-negative-muted {
-          background-color: var(--bs-color-surface-status-negative-muted) !important;
-        }
-
-        .bg-status-warning-emphasized {
-          background-color: var(--bs-color-surface-status-warning-emphasized) !important;
-        }
-
-        .bg-status-warning-muted {
-          background-color: var(--bs-color-surface-status-warning-muted) !important;
-        }
-
-        .bg-status-info-emphasized {
-          background-color: var(--bs-color-surface-status-info-emphasized) !important;
-        }
-
-        .bg-status-info-muted {
-          background-color: var(--bs-color-surface-status-info-muted) !important;
-        }
-
-        .bg-always-black {
-          background-color: var(--bs-color-always-black) !important;
-        }
-
-        .bg-always-white {
-          background-color: var(--bs-color-always-white) !important;
         }
 
         .bg-opacity-lower {
