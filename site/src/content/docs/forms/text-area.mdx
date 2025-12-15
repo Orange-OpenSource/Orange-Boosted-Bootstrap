@@ -98,16 +98,16 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
       Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
     <a href="#" id="feedbackTextHelpMore" class="link link-small">
-      More information
+      More information <span class="visually-hidden"> about what is expected in your comment</span>
     </a>
   </div>
   <div class="text-area">
     <div class="text-area-container mt-large">
       <label for="textAreaHelperLink">Additional comments</label>
-      <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" class="text-area-field"></textarea>
+      <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" aria-labelledby="labelTextAreaHelperLink feedbackTextHelpLink" class="text-area-field"></textarea>
     </div>
     <a href="#" id="feedbackTextHelpLink" class="link link-small">
-      More information
+      More information <span class="visually-hidden">about what is expected in your comment</span>
     </a>
   </div>`} />
 
@@ -154,13 +154,13 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
 To display an invalid text area, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the text area becomes invalid.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaInvalid" for="exampleTextAreaInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentTextHelpBlock" aria-labelledby="labelTextAreaInvalid commentFeedback"></textarea>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaInvalid" aria-describedby="commentFeedback"></textarea>
     </div>
     <p id="commentTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -172,7 +172,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined" aria-labelledby="labelTextAreaOutlinedInvalid commentTextHelpLinkOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -181,6 +181,6 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       Your comment exceeded the limit of <strong>180</strong> characters.
     </p>
     <a href="#" id="commentTextHelpLinkOutlined" class="link link-small">
-      More information
+      More information <span class="visually-hidden">about what is expected in your comment</span>
     </a>
   </div>`} />

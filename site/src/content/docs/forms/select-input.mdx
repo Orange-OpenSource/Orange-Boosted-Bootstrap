@@ -260,13 +260,13 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
 </Callout>
 
 <Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelErrorSelect" for="exampleErrorSelect">Select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberHelpText" aria-labelledby="labelErrorSelect numberFeedback numberLink">
+      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberFeedback" aria-labelledby="labelErrorSelect numberLink">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -287,7 +287,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <div class="select-input mb-medium">
       <div class="select-input-container">
         <label id="labelErrorValidatedSelect" for="exampleErrorValidatedSelect">Select example with validated error</label>
-        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberHelpText" aria-labelledby="labelErrorValidatedSelect validatedNumberFeedback validatedNumberLink">
+        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback" aria-labelledby="labelErrorValidatedSelect validatedNumberLink">
           <option value="" disabled selected></option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -308,7 +308,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="select-input mb-medium">
     <div class="select-input-container select-input-container-outlined">
       <label id="labelErrorSelect2" for="exampleErrorSelect2">Outlined select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect2" aria-describedby="numberHelpText2" aria-labelledby="labelErrorSelect2 numberFeedback2">
+      <select class="select-input-field is-invalid" id="exampleErrorSelect2" aria-describedby="numberFeedback2">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -328,7 +328,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label id="labelErrorSelect3" for="exampleErrorSelect3">Select example with error and icon</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect3" aria-describedby="numberHelpText3" aria-labelledby="labelErrorSelect3 numberFeedback3">
+      <select class="select-input-field is-invalid" id="exampleErrorSelect3" aria-describedby="numberFeedback3">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>

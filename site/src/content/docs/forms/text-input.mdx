@@ -195,16 +195,16 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
       Please describe your feedback in a few words.
     </p>
     <a href="#" id="feedbackTextHelpMore" class="link link-small">
-      More information
+      More information <span class="visually-hidden">about the expected feedback</span>
     </a>
   </div>
   <div class="text-input">
     <div class="text-input-container">
       <label for="inputTextWithHelperLink">Send your feedback</label>
-      <input type="text" id="inputTextWithHelperLink" aria-describedby="feedbackTextHelpLink" class="text-input-field" placeholder=" ">
+      <input type="text" id="inputTextWithHelperLink" aria-describedby="feedbackTextHelpLink" aria-labelledby="labelTextWithHelperLink feedbackTextHelpLink" class="text-input-field" placeholder=" ">
     </div>
     <a href="#" id="feedbackTextHelpLink" class="link link-small">
-      More information
+      More information <span class="visually-hidden">about the expected feedback</span>
     </a>
   </div>`} />
 
@@ -337,13 +337,13 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid input, add `.is-invalid` to a `.text-input-field` within the `.text-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when switching the text input to invalid.
 </Callout>
 
 <Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label id="labelTextInputInvalidEmpty" for="exampleTextInputInvalidEmpty">Username</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameTextHelpBlock" aria-labelledby="labelTextInputInvalidEmpty usernameFeedback" placeholder=" ">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidEmpty" aria-describedby="usernameFeedback" placeholder=" ">
     </div>
     <p id="usernameTextHelpBlock" class="helper-text">
       Please choose a username.
@@ -355,7 +355,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="text-input mb-medium">
     <div class="text-input-container">
       <label id="labelTextInputInvalid" for="exampleTextInputInvalid">Email</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-labelledby="labelTextInputInvalid emailFeedback" placeholder=" ">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalid" value="john.doe@example" aria-describedby="emailFeedback" placeholder=" ">
        <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
           <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
@@ -373,7 +373,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
         <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
       </svg>
       <label id="labelTextInputOutlinedInvalidEmpty" for="exampleTextInputOutlinedInvalidEmpty">Address</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-labelledby="labelTextInputOutlinedInvalidEmpty addressFeedback" placeholder=" ">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalidEmpty" aria-describedby="addressFeedback" placeholder=" ">
     </div>
     <p id="addressFeedback" class="error-text">
       Address is required.
@@ -382,7 +382,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label id="labelTextInputOutlinedInvalid" for="exampleTextInputOutlinedInvalid">City</label>
-      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-labelledby="labelTextInputOutlinedInvalid cityFeedback" placeholder=" ">
+      <input type="text" class="text-input-field is-invalid" id="exampleTextInputOutlinedInvalid" value="Doe" aria-describedby="cityFeedback" placeholder=" ">
     </div>
     <p id="cityFeedback" class="error-text">
         City is invalid.
@@ -395,7 +395,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       </svg>
       <label id="labelTextInputInvalidWithPrefixSuffix" for="exampleTextInputInvalidWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-labelledby="labelTextInputInvalidWithPrefixSuffix priceFeedback" placeholder=" ">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidWithPrefixSuffix" value="-2.2XX" aria-describedby="priceFeedback" placeholder=" ">
       </div>
     </div>
     <p id="priceFeedback" class="error-text">
@@ -409,7 +409,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       </svg>
       <label id="labelTextInputInvalidTrailingWithPrefixSuffix" for="exampleTextInputInvalidTrailingWithPrefixSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">
-        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="priceTextHelpBlock" aria-labelledby="labelTextInputInvalidTrailingWithPrefixSuffix invalidPrice" placeholder=" ">
+        <input type="text" class="text-input-field is-invalid" id="exampleTextInputInvalidTrailingWithPrefixSuffix" value="-2.2XX" aria-describedby="invalidPrice" aria-labelledby="labelTextInputInvalidTrailingWithPrefixSuffix priceTextHelpLink" placeholder=" ">
       </div>
       <button class="btn btn-minimal btn-icon">
         <svg aria-hidden="true">
@@ -425,7 +425,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       Price is not valid.
     </p>
     <a href="#" id="priceTextHelpLink" class="link link-small">
-      More information
+      More information <span class="visually-hidden"> about the price to enter</span>
     </a>
   </div>`} />
 
