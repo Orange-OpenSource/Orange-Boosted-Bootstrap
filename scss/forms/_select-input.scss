@@ -35,6 +35,9 @@
     --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-background-color: #{$ouds-color-action-support-focus};
     --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
+
+    outline: 0;
+    box-shadow: none;
   }
 
   &:open,
