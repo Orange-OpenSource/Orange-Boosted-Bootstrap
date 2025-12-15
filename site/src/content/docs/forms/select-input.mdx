@@ -160,13 +160,13 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
-If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
+Helper link should be explicitly described using the `aria-describedby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the select input.
 </Callout>
 
 <Example buttonLabel="selects with helper link" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelSelectWithHelperAndLink" for="exampleSelectWithHelperAndLink">Select example with helper and link texts</label>
-      <select class="select-input-field" id="exampleSelectWithHelperAndLink" aria-describedby="selectTextHelpBlock" aria-labelledby="labelSelectWithHelperAndLink selectTextLinkBlock">
+      <select class="select-input-field" id="exampleSelectWithHelperAndLink" aria-describedby="selectTextHelpBlock">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -176,21 +176,21 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     <p id="selectTextHelpBlock" class="helper-text">
       Choose a number.
     </p>
-    <a href="#" id="selectTextLinkBlock" class="link link-small">
+    <a href="#" id="selectTextLinkBlock" aria-describedby="selectTextLinkBlock labelSelectWithHelperAndLink" class="link link-small">
       More information <span class="visually-hidden">about how to choose a number</span>
     </a>
   </div>
   <div class="select-input">
     <div class="select-input-container">
       <label id="labelSelectWithLink" for="exampleSelectWithLink">Select example with link text</label>
-      <select class="select-input-field" id="exampleSelectWithLink" aria-labelledby="labelSelectWithLink selectTextLink">
+      <select class="select-input-field" id="exampleSelectWithLink">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
     </div>
-    <a href="#" id="selectTextLink" class="link link-small">
+    <a href="#" id="selectTextLink"  aria-describedby="selectTextLink labelSelectWithLink" class="link link-small">
       More information <span class="visually-hidden">about how to choose a number with a link</span>
     </a>
   </div>`} />
@@ -266,7 +266,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
 <Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <label id="labelErrorSelect" for="exampleErrorSelect">Select example with error</label>
-      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberFeedback" aria-labelledby="labelErrorSelect numberLink">
+      <select class="select-input-field is-invalid" id="exampleErrorSelect" aria-describedby="numberFeedback">
         <option value="" disabled selected></option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -279,7 +279,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <p id="numberFeedback" class="error-text">
       A number is required.
     </p>
-    <a href="#" id="numberLink" class="link link-small">
+    <a href="#" id="numberLink" aria-describedby="numberLink labelErrorSelect" class="link link-small">
       More information <span class="visually-hidden">about how to choose a number from these three</span>
     </a>
   </div>
@@ -287,7 +287,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <div class="select-input mb-medium">
       <div class="select-input-container">
         <label id="labelErrorValidatedSelect" for="exampleErrorValidatedSelect">Select example with validated error</label>
-        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback" aria-labelledby="labelErrorValidatedSelect validatedNumberLink">
+        <select class="select-input-field is-invalid" id="exampleErrorValidatedSelect" aria-describedby="validatedNumberFeedback">
           <option value="" disabled selected></option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -300,7 +300,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       <p id="validatedNumberFeedback" class="error-text">
         A number is required.
       </p>
-      <a href="#" id="validatedNumberLink" class="link link-small">
+      <a href="#" id="validatedNumberLink" aria-describedby="validatedNumberLink labelErrorValidatedSelect" class="link link-small">
         More information <span class="visually-hidden">about how to choose a number from the three available options</span>
       </a>
     </div>

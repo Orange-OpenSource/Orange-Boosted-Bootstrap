@@ -86,28 +86,28 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
+Helper link should be explicitly described using the `aria-describedby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the text area.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">
     <div class="text-area-container">
       <label id="labelTextAreaWithHelperTextLink" for="textAreaWithHelperTextLink">Additional comments</label>
-      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" aria-labelledby="labelTextAreaWithHelperTextLink feedbackTextHelpMore" class="text-area-field"></textarea>
+      <textarea id="textAreaWithHelperTextLink" aria-describedby="feedbackTextHelpBlock" class="text-area-field"></textarea>
     </div>
     <p id="feedbackTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
-    <a href="#" id="feedbackTextHelpMore" class="link link-small">
-      More information <span class="visually-hidden"> about what is expected in your comment</span>
+    <a href="#" id="feedbackTextHelpMore" aria-describedby="feedbackTextHelpMore labelTextAreaWithHelperTextLink" class="link link-small">
+      More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>
   <div class="text-area">
     <div class="text-area-container mt-large">
       <label for="textAreaHelperLink">Additional comments</label>
-      <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" aria-labelledby="labelTextAreaHelperLink feedbackTextHelpLink" class="text-area-field"></textarea>
+      <textarea id="textAreaHelperLink" aria-describedby="feedbackTextHelpLink" class="text-area-field"></textarea>
     </div>
-    <a href="#" id="feedbackTextHelpLink" class="link link-small">
-      More information <span class="visually-hidden">about what is expected in your comment</span>
+    <a href="#" id="feedbackTextHelpMoreLink" aria-describedby="feedbackTextHelpMoreLink labelTextAreaHelperLink" class="link link-small">
+      More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>`} />
 
@@ -172,7 +172,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
   <div class="text-area">
     <div class="text-area-container text-area-container-outlined">
       <label for="exampleTextAreaOutlinedInvalid">Additional comments</label>
-      <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined" aria-labelledby="labelTextAreaOutlinedInvalid commentTextHelpLinkOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
+      <textarea class="text-area-field is-invalid" id="exampleTextAreaOutlinedInvalid" aria-describedby="commentFeedbackOutlined">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
     <p id="commentTextHelpBlockOutlined" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
@@ -180,7 +180,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <p id="commentFeedbackOutlined" class="error-text">
       Your comment exceeded the limit of <strong>180</strong> characters.
     </p>
-    <a href="#" id="commentTextHelpLinkOutlined" class="link link-small">
-      More information <span class="visually-hidden">about what is expected in your comment</span>
+    <a href="#" id="commentTextHelpLinkOutlined" aria-describedby="commentTextHelpLinkOutlined labelTextAreaOutlinedInvalid" class="link link-small">
+      More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>`} />
