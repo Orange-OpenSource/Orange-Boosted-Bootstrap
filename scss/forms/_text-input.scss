@@ -287,7 +287,7 @@
       .text-input-field,
       .input-container,
       label {
-        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap-trailing-error)); // stylelint-disable-line function-disallowed-list
+        padding-right: calc(var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap)); // stylelint-disable-line function-disallowed-list
       }
 
       &:has(> button) {
@@ -449,6 +449,7 @@
     // Focused state styles
     &:has(.text-area-field:focus) {
       --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
+
       &.text-area-container-outlined {
         --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
         --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
