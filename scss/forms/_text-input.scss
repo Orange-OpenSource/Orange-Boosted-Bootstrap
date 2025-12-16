@@ -585,8 +585,3 @@
   color: var(--#{$prefix}color-content-status-negative);
   @include get-font-size("label-medium");
 }
-
-// Top level modifier for rounded corners on textual inputs
-.use-rounded-corner-inputs {
-  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
-}
