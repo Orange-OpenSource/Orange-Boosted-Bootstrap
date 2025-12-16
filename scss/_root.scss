@@ -549,5 +549,5 @@
 
 // Top level modifier for rounded corners on textual inputs
 .use-rounded-corner-inputs {
-  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded} !important; // stylelint-disable-line declaration-no-important
 }

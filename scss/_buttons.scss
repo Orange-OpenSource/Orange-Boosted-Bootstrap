@@ -212,7 +212,7 @@
 }
 
 .use-rounded-corner-buttons {
-  --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-rounded};
+  --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-rounded} !important; // stylelint-disable-line declaration-no-important
 }
 
 //
