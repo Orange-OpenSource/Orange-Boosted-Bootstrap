@@ -65,7 +65,7 @@ Use an ordered or unordered list with linked list items to create a minimally st
 Breadcrumb will never wrap, the number of displayed items depends on the available width, the final two items will always be shown.
 
 <Callout type="danger">
-**Breadcrumb items should not be this long**, the following examples are for small viewport demonstration purpose only
+  **Breadcrumb items should not be this long**, the following examples are for small viewport demonstration purpose only.
 </Callout>
 
 <Example code={`<nav aria-label="large breadcrumb">
@@ -88,7 +88,11 @@ Breadcrumb will never wrap, the number of displayed items depends on the availab
 
 ### Avoiding truncation
 
-To prevent a specific item from being truncated, add `.flex-shrink-0` on the `<li>`. The penultimate item has this option set by default so it's not useful to add it. Be aware that adding this utility to all items would result in an overflow. The items will still be hidden on smaller screens.
+To prevent a specific item from being truncated, add `.flex-shrink-0` on the `<li>`, this could be useful for brand names like Orange which should never be truncated. The penultimate item has this option set by default so it's not useful to add it.  The items will still be hidden on smaller screens.
+
+<Callout type="danger">
+  Be aware that adding this utility to all items would result in an overflow.
+</Callout>
 
 <Example code={`<nav aria-label="very large breadcrumb with no truncation on some items">
     <ol class="breadcrumb">
