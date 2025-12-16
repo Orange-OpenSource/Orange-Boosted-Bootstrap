@@ -68,28 +68,34 @@ Add `.select-input-container-outlined` for a minimalist input with a transparent
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.select-input-container-rounded` for a finish with rounded corners.
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
 
-<Example buttonLabel="rounded selects" code={`<div class="select-input mb-medium">
-    <div class="select-input-container select-input-container-rounded">
-      <label for="exampleRoundedSelect">Rounded select example</label>
-      <select class="select-input-field" id="exampleRoundedSelect">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example buttonLabel="rounded selects" code={`<div class="use-rounded-corner-inputs">
+    <div class="select-input mb-medium">
+      <div class="select-input-container">
+        <label for="exampleRoundedSelect">Rounded select example</label>
+        <select class="select-input-field" id="exampleRoundedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
     </div>
-  </div>
-  <div class="select-input">
-    <div class="select-input-container select-input-container-outlined select-input-container-rounded">
-      <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
-      <select class="select-input-field" id="exampleRoundedOutlinedSelect">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+    <div class="select-input">
+      <div class="select-input-container select-input-container-outlined">
+        <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
+        <select class="select-input-field" id="exampleRoundedOutlinedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
     </div>
   </div>`} />
 </BrandSpecific>

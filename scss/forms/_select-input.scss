@@ -281,10 +281,6 @@
   }
 }
 
-.select-input-container-rounded {
-  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
-}
-
 option:disabled[value=""] { // stylelint-disable-line selector-no-qualifying-type
   display: none;
 }
