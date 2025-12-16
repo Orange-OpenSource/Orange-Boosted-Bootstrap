@@ -2,6 +2,10 @@
 // Common text item styles
 //
 
+#{$ouds-root-selector} {
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-default};
+}
+
 %text-item-common {
   // scss-docs-start text-input-common-css-vars
   --#{$prefix}text-input-color: var(--#{$prefix}color-content-default);
@@ -13,7 +17,6 @@
   --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-default};
   --#{$prefix}text-input-border-width-left: 0px;
   --#{$prefix}text-input-border-width-focus: 0px;
-  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-default};
 
   --#{$prefix}text-input-padding-x: #{$ouds-text-input-space-padding-inline-default};
   --#{$prefix}text-input-padding-y: #{$ouds-text-input-space-padding-block-default};
@@ -70,10 +73,6 @@
       --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-default};
       --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-default};
       --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
-    }
-
-    &.text-input-container-rounded {
-      --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
     }
 
     > label {
@@ -384,10 +383,6 @@
       --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
     }
 
-    &.text-area-container-rounded {
-      --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
-    }
-
     > label {
       z-index: 2;
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
@@ -589,4 +584,9 @@
   margin-bottom: 0;
   color: var(--#{$prefix}color-content-status-negative);
   @include get-font-size("label-medium");
+}
+
+// Top level modifier for rounded corners on textual inputs
+.use-rounded-corner-inputs {
+  --#{$prefix}text-input-border-radius: #{$ouds-text-input-border-radius-rounded};
 }

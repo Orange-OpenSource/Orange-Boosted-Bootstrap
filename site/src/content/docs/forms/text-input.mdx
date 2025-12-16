@@ -71,18 +71,24 @@ Add `.text-input-container-outlined` for a minimalist input with a transparent b
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.text-input-container-rounded` for a finish with rounded corners.
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
 
-<Example code={`<div class="text-input mb-medium">
-    <div class="text-input-container text-input-container-rounded">
-      <label for="exampleTextInputRounded">Firstname</label>
-      <input type="text" class="text-input-field" id="exampleTextInputRounded" placeholder=" ">
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example code={`<div class="use-rounded-corner-inputs">
+    <div class="text-input mb-medium">
+      <div class="text-input-container">
+        <label for="exampleTextInputRounded">Firstname</label>
+        <input type="text" class="text-input-field" id="exampleTextInputRounded" placeholder=" ">
+      </div>
     </div>
-  </div>
-  <div class="text-input">
-    <div class="text-input-container text-input-container-rounded text-input-container-outlined">
-      <label for="exampleTextInputRoundedAlt">Firstname</label>
-      <input type="text" class="text-input-field" id="exampleTextInputRoundedAlt" placeholder=" ">
+    <div class="text-input">
+      <div class="text-input-container text-input-container-outlined">
+        <label for="exampleTextInputRoundedAlt">Firstname</label>
+        <input type="text" class="text-input-field" id="exampleTextInputRoundedAlt" placeholder=" ">
+      </div>
     </div>
   </div>`} />
 </BrandSpecific>

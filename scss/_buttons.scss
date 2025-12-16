@@ -22,6 +22,10 @@
 }
 // End mod
 
+#{$ouds-root-selector} {
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+}
+
 .btn {
   // scss-docs-start btn-css-vars
   // OUDS mod: no --#{$prefix}btn-padding-x
@@ -34,7 +38,6 @@
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-border-color: initial; // OUDS mod: instead of `transparent`
   // OUDS mod: no --#{$prefix}btn-box-shadow
   // OUDS mod: no --#{$prefix}btn-disabled-opacity
@@ -208,7 +211,7 @@
   // End mod
 }
 
-.btn-rounded {
+.use-rounded-corner-buttons {
   --#{$prefix}btn-border-radius: #{$ouds-button-border-radius-rounded};
 }
 
