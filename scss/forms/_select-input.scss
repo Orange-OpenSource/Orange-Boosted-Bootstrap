@@ -139,7 +139,7 @@
     @include transition(font-size .15s ease-in-out, top .15s ease-out);
   }
 
-  &:has(> svg),
+  &:has(> svg:not(.loader)),
   &:has(> img) {
     > .select-input-field {
       padding-left: calc(var(--#{$prefix}text-input-icon-size) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
@@ -191,8 +191,8 @@
     right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) + $ouds-button-space-inset-icon-only); // stylelint-disable-line function-disallowed-list
     left: auto;
     display: none;
-    width: px-to-rem($ouds-button-size-icon-only);
-    height: px-to-rem($ouds-button-size-icon-only);
+    width: px-to-rem($ouds-button-size-loader);
+    height: px-to-rem($ouds-button-size-loader);
     pointer-events: none;
     transform: translate(0, -50%) rotate(-90deg);
 
@@ -204,11 +204,6 @@
       transform-origin: center;
       animation: var(--#{$prefix}loading-animation);
     }
-  }
-
-  .loading-message {
-    @include visually-hidden();
-    display: none;
   }
 
   &:has(.loading-indeterminate) {
@@ -228,10 +223,6 @@
 
     &::after {
       display: none;
-    }
-
-    .loading-message {
-      display: block;
     }
   }
 
