@@ -42,10 +42,13 @@
   @extend %text-item-common;
   // scss-docs-start text-input-css-vars
   --#{$prefix}text-input-min-width: #{px-to-rem($ouds-text-input-size-min-width)};
-  --#{$prefix}text-input-max-width: #{px-to-rem($ouds-text-input-size-max-width)};
   --#{$prefix}text-input-min-height: #{px-to-rem($ouds-text-input-size-min-height)};
   --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
   // scss-docs-end text-input-css-vars
+
+  &.max-width {
+    max-width: px-to-rem($ouds-text-input-size-max-width);
+  }
 
   .text-input-container {
     position: relative;
@@ -54,7 +57,6 @@
     gap: var(--#{$prefix}text-input-column-row-gap);
     justify-content: center;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: var(--#{$prefix}text-input-max-width);
     min-height: var(--#{$prefix}text-input-min-height);
     padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
     padding-right: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
@@ -360,12 +362,15 @@
 .text-area {
   @extend %text-item-common;
 
+  &.max-width {
+    max-width: px-to-rem($ouds-text-area-size-max-width);
+  }
+
   .text-area-container {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: var(--#{$prefix}text-input-min-width);
-    max-width: px-to-rem($ouds-text-area-size-max-width);
 
     padding-top: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}text-input-background-color);
@@ -562,7 +567,6 @@
 %text-input-message {
   --#{$prefix}text-input-message-margin-top: #{$ouds-text-input-space-padding-block-top-helper-text};
 
-  max-width: var(--#{$prefix}text-input-max-width);
   padding-right: var(--#{$prefix}text-input-padding-x);
   padding-left: var(--#{$prefix}text-input-padding-x);
 }
