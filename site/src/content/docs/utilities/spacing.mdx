@@ -5,6 +5,42 @@ aliases:
   - "/docs/utilities/spacing/"
 toc: true
 ---
+import { allTokens } from '@libs/sass-variables'
+
+export const fixedSpacingLevel = [
+  "none",
+  "3xsmall",
+  "2xsmall",
+  "xsmall",
+  "small",
+  "medium",
+  "large",
+  "xlarge",
+  "2xlarge",
+  "3xlarge",
+  "4xlarge",
+  "5xlarge"
+]
+
+export const scaledSpacingLevel = [
+  "none",
+  "3xsmall",
+  "2xsmall",
+  "xsmall",
+  "small",
+  "medium",
+  "large",
+  "xlarge",
+  "2xlarge",
+  "3xlarge"
+]
+
+
+export const screenSize = [
+  "mobile",
+  "tablet",
+  "desktop"
+]
 
 ## Margin and padding
 
@@ -37,19 +73,16 @@ Where *sides* is one of:
 
 Where *size* is one of:
 
-- `none` - for classes that eliminate the `margin` or `padding`
-- `3xsmall` - for classes that set the `margin` or `padding`
-- `2xsmall` - for classes that set the `margin` or `padding`
-- `xsmall` - for classes that set the `margin` or `padding`
-- `small` - for classes that set the `margin` or `padding`
-- `medium` - for classes that set the `margin` or `padding`
-- `large` - for classes that set the `margin` or `padding`
-- `xlarge` - for classes that set the `margin` or `padding`
-- `2xlarge` - for classes that set the `margin` or `padding`
-- `3xlarge` - for classes that set the `margin` or `padding`
-- `4xlarge` - for classes that set the `margin` or `padding`
-- `5xlarge` - for classes that set the `margin` or `padding`
-- `auto` - for classes that set the `margin` to auto
+<ul>
+  {
+    fixedSpacingLevel.map((level) => (
+      <li><code>{level}</code> - for classes that set
+        the <code>margin</code> or <code>padding</code> to <code>{allTokens.find((token) => token.name === `$ouds-space-fixed-${level}`).compiledValue}</code>
+      </li>
+    ))
+  }
+  <li>`auto` - for classes that set the `margin` to `auto`</li>
+</ul>
 
 (You can but shouldn’t add more sizes by adding entries to the `$ouds-dimension-space-fixed` Sass map variable.)
 
@@ -77,11 +110,11 @@ Where *sides* is one of:
 Where *size* is one of:
 
 - `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
-- `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .75`
-- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 2.5`
-- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3.5`
+- `1` - (by default) for classes that set the `margin` or `padding` to `.25rem`
+- `2` - (by default) for classes that set the `margin` or `padding` to `.75rem`
+- `3` - (by default) for classes that set the `margin` or `padding` to `1.5rem`
+- `4` - (by default) for classes that set the `margin` or `padding` to `2.5rem`
+- `5` - (by default) for classes that set the `margin` or `padding` to `3.5rem`
 - `auto` - for classes that set the `margin` to auto
 
 (You can add more sizes by adding entries to the `$spacers` Sass map variable.)
@@ -111,15 +144,36 @@ Where *sides* is one of:
 
 Where *size* is one of:
 
-- `3xsmall` - for classes that set the `margin` or `padding`
-- `2xsmall` - for classes that set the `margin` or `padding`
-- `xsmall` - for classes that set the `margin` or `padding`
-- `small` - for classes that set the `margin` or `padding`
-- `medium` - for classes that set the `margin` or `padding`
-- `large` - for classes that set the `margin` or `padding`
-- `xlarge` - for classes that set the `margin` or `padding`
-- `2xlarge` - for classes that set the `margin` or `padding`
-- `3xlarge` - for classes that set the `margin` or `padding`
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Size name</th>
+      <th>Size for mobile (`2xs` to `sm`)</th>
+      <th>Size for tablet (`md` to `lg`)</th>
+      <th>Size for desktop (`xl` and upper)</th>
+    </tr>
+    </thead>
+    <tbody>
+    {
+      scaledSpacingLevel.map((level) => (
+        <tr>
+          <td>
+            <code>{level}</code>
+          </td>
+          {
+            screenSize.map((size) => (
+              <td>
+                <code>{allTokens.find((token) => token.name === `$ouds-space-scaled-${level}-${size}`).compiledValue}</code>
+              </td>
+            ))
+          }
+        </tr>
+      ))
+    }
+    </tbody>
+  </table>
+</div>
 
 (You can but shouldn’t add more sizes by adding entries to the `$ouds-dimension-space-scaled` Sass map variable.)
 
@@ -142,7 +196,7 @@ Here are some representative examples of these classes:
 }
 
 .p-2xlarge {
-  padding: $ouds-space-fixed-2large !important;
+  padding: $ouds-space-fixed-2xlarge !important;
 }
 ```
 
