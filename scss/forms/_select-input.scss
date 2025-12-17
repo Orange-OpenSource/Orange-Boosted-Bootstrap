@@ -10,6 +10,7 @@
 .select-input-field {
   position: absolute;
   inset: 0;
+  width: 100%; // Avoid a bug on FF 125 and less
   padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top) + var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)); // stylelint-disable-line function-disallowed-list
   padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width)); // stylelint-disable-line function-disallowed-list
   padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
