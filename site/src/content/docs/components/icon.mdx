@@ -189,7 +189,7 @@ Here is a SVG symbol to insert into your SVG sprite. It uses the CSS variables `
 
 Then, you can use it like this:
 
-<Example class="mt-0" code={`<svg class="decorative-small-icon" aria-hidden="true">
+<Example class="mt-none" code={`<svg class="decorative-small-icon" aria-hidden="true">
     <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#alert-warning-accessible')}" />
   </svg>`} />
 
@@ -774,7 +774,7 @@ The best way to do this is to keep the icon hidden to assistive technologies (se
 Remember that you cannot use external images inside interactive elements because the color won’t change with the element’s status (hover, active, focus...), see [SVG external image](#svg-external-image).
 
 {/* todo add tooltip on buttons and explanation when available */}
-<Example class="mt-0 bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
+<Example class="mt-none bd-btn-example" code={`<button type="button" class="btn btn-icon btn-default">
     <svg width="1rem" height="1rem" aria-hidden="true">
       <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#trash')}" />
     </svg>
@@ -870,7 +870,7 @@ This technique should only be used if you have few icons to render, and if they 
 
 You can embed your icons directly within the HTML of your page (as opposed to an external image file). This way to use SVGs can benefit of the power of `currentColor` for easy coloring and theming.
 
-<Example class="mt-0" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
+<Example class="mt-none" code={`<svg fill="currentColor" class="decorative-small-icon" viewBox="0 0 1000 1000" aria-hidden="true">
     <path d="M656.7 422.409a229.96 229.96 0 0 1-315.39.008A224.95 224.95 0 0 0 224.064 615H224v210a100 100 0 0 0 100 100h450V620a224.94 224.94 0 0 0-117.3-197.591M679 255A180 180 0 1 1 499 75a180 180 0 0 1 180 180" fill-rule="evenodd"/>
   </svg>`} />
 
@@ -886,7 +886,7 @@ CSS mask image icons should be used when you can’t or don’t want to refer to
 
 You should use the `mask-image` property instead of `background-image` to benefit from the coloring and theming system, by setting `background-color` property to `currentColor`. You can use the SVG code within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]([[docsref:/getting-started/sass]]#escape-svg)). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space. Mask images can also be styled through CSS properties like `width` or `height`. Note that the `xmlns` attribute is required.
 
-<Example class="mt-0" code={`<span class="icon-home"></span>`} />
+<Example class="mt-none" code={`<span class="icon-home"></span>`} />
 
 Using:
 

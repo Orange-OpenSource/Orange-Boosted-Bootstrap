@@ -129,9 +129,9 @@ const { addedIn, layout, title } = Astro.props
               aria-label={`Toggle brand (${getConfig().brand})`}
             >
               <img src={getVersionedDocsPath(`assets/brand/${getConfig().brand}-logo.svg`)} alt="" loading="lazy" />
-              <span class="d-lg-none ms-2" id="bd-brand-text">Toggle brand</span>
+              <span class="d-lg-none ms-small" id="bd-brand-text">Toggle brand</span>
             </button>
-            <ul class=`dropdown-menu dropdown-menu-end mb-2` aria-labelledby="bd-brand-text">
+            <ul class=`dropdown-menu dropdown-menu-end mb-small` aria-labelledby="bd-brand-text">
               <li>
                 <a
                   href={Astro.url}

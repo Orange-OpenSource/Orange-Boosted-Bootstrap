@@ -12,7 +12,7 @@ import fs from 'node:fs'
 
 ## Alphabetical order
 
-<ul class="list-unstyled row gy-lg row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+<ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
   {
     getData('sidebar')
       .filter((group) => group.title === 'Components')[0]
@@ -58,7 +58,7 @@ import fs from 'node:fs'
     return (
       <>
         {getData('sidebar').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).length > 0 && <h3>{element}</h3>}
-        <ul class="list-unstyled row gy-lg row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
+        <ul class="list-unstyled row gy-large row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-2xl-5">
           {getData('sidebar').filter((group) => group.title === 'Components')[0].pages.filter((page) => page?.category === element).map((page) => {
             return (
               <li class="col">
