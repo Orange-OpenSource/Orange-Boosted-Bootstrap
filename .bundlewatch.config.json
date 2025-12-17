@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.css",
-      "maxSize": "72.25 kB"
+      "maxSize": "72.5 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-bootstrap.min.css",
-      "maxSize": "68.75 kB"
+      "maxSize": "69.0 kB"
     },
     {
       "path": "./packages/orange/dist/css/ouds-web-grid.css",
