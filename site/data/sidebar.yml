@@ -162,6 +162,8 @@
       draft: true
     - title: Tags
       category: Indicator
+    - title: Text area
+      category: Control
     - title: Text input
       category: Control
     - title: Title bar
