@@ -45,6 +45,15 @@ When there’s a value already defined, `<label>`s will automatically adjust to 
     </div>
   </div>`} />
 
+<BootstrapCompatibility>
+<Example code={`<select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>`} />
+</BootstrapCompatibility>
+
 ## Variants
 
 ### Outlined
@@ -201,6 +210,8 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
   </div>`} />
 
 ## States
+
+These states should be exclusive among each others.
 
 ### Disabled
 
@@ -372,6 +383,8 @@ At the end of the loading, you should:
 
 You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 
+In case of an invalid select, you may remove the invalid state before the loading state.
+
 <Example buttonLabel="loading selects" code={`<div class="select-input mb-medium">
     <div class="select-input-container">
       <svg aria-hidden="true">
@@ -422,30 +435,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
       </svg>
       <span role="status" id="loading-msg-2" class="visually-hidden d-none">Loading message</span>
     </div>
-  </div>`} />
-
-In case of an invalid select, make sure to set the loading message in the `aria-describedby` attribute before the invalid message since the invalid state is potentially transitory.
-
-<Example buttonLabel="invalid loading select" code={`<div class="select-input">
-    <div class="select-input-container">
-      <label for="exampleInvalidLoadingSelect">Invalid loading select example</label>
-      <select class="select-input-field loading-indeterminate is-invalid" id="exampleInvalidLoadingSelect" aria-describedby="loading-msg-3 invalidLoadingFeedback">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-msg-3" class="visually-hidden d-none">Loading message</span>
-    </div>
-    <p id="invalidLoadingHelpText" class="helper-text">
-      Choose a number.
-    </p>
-    <p id="invalidLoadingFeedback" class="error-text">
-      A number is required.
-    </p>
   </div>`} />
 
 {/* ## Specific attributes

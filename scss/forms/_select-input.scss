@@ -309,3 +309,13 @@ optgroup {
   color: var(--#{$prefix}color-content-default);
   background-color: var(--#{$prefix}color-bg-primary);
 }
+
+@if $enable-bootstrap-compatibility {
+  .form-select {
+    @extend .select-input;
+    @extend .select-input-container;
+    @extend .select-input-field;
+
+    appearance: auto;
+  }
+}

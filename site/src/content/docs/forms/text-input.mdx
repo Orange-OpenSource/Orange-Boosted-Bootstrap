@@ -278,6 +278,8 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
 
 ## States
 
+These states should be exclusive among each others.
+
 ### Disabled
 
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
@@ -495,6 +497,8 @@ At the end of the loading, you should:
 
 You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
 
+In case of an invalid input, you may remove the invalid state before the loading state.
+
 <Example buttonLabel="loading inputs" code={`<div class="text-input mb-medium">
     <div class="text-input-container">
       <label for="exampleDisabledLoadingTextInput">Disabled loading input example</label>
@@ -561,31 +565,6 @@ You can see it live and find a JavaScript example on our [loading buttons live e
       </svg>
       <span role="status" id="loading-msg-3" class="visually-hidden d-none">Loading message</span>
     </div>
-  </div>`} />
-
-In case of an invalid input, make sure to set the loading message in the `aria-describedby` attribute before the invalid message since the invalid state is potentially transitory.
-
-<Example buttonLabel="invalid loading input" code={`<div class="text-input">
-    <div class="text-input-container">
-      <label for="exampleInvalidLoadingTextInput">Invalid loading input example</label>
-      <input type="text" class="text-input-field loading-indeterminate is-invalid" id="exampleInvalidLoadingTextInput" placeholder=" " value="Input" aria-describedby="loading-msg-4 invalidLoadingFeedback">
-      <button disabled class="btn btn-minimal btn-icon">
-        <svg aria-hidden="true">
-          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
-        </svg>
-        <span class="visually-hidden">Add to favorites</span>
-      </button>
-      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
-        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
-      </svg>
-      <span role="status" id="loading-msg-4" class="visually-hidden d-none">Loading message</span>
-    </div>
-    <p id="invalidLoadingHelpText" class="helper-text">
-      Please choose a username.
-    </p>
-    <p id="invalidLoadingFeedback" class="error-text">
-      Username is required.
-    </p>
   </div>`} />
 
 <BootstrapCompatibility>
