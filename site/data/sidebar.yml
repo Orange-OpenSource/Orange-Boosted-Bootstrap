@@ -132,6 +132,8 @@
       draft: true
     - title: Pagination
       draft: true
+    - title: Password input
+      category: Control
     - title: Placeholder
       draft: true
     - title: Popover

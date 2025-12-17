@@ -27,6 +27,7 @@ $ouds-border-colors: (
   "brand-tertiary": if(variable-exists(ouds-color-border-brand-tertiary-light), var(--#{$prefix}color-border-brand-tertiary), null),
   "default": var(--#{$prefix}color-border-default),
   "emphasized": var(--#{$prefix}color-border-emphasized),
+  "minimal": var(--#{$prefix}color-border-minimal),
   "muted": var(--#{$prefix}color-border-muted),
   "on-brand-primary": var(--#{$prefix}color-border-on-brand-primary),
   "on-brand-secondary": if(variable-exists(ouds-color-border-on-brand-secondary-light), var(--#{$prefix}color-border-on-brand-secondary), null),
@@ -35,6 +36,11 @@ $ouds-border-colors: (
   "always-white": var(--#{$prefix}color-always-white),
   "always-on-black": var(--#{$prefix}color-always-on-black),
   "always-on-white": var(--#{$prefix}color-always-on-white),
+  "status-accent": var(--#{$prefix}color-border-status-accent),
+  "status-info": var(--#{$prefix}color-border-status-info),
+  "status-negative": var(--#{$prefix}color-border-status-negative),
+  "status-positive": var(--#{$prefix}color-border-status-positive),
+  "status-warning": var(--#{$prefix}color-border-status-warning),
 ) !default;
 // scss-docs-end ouds-maps-borders
 
@@ -114,7 +120,8 @@ $ouds-font-sizes: (
 
 $ouds-font-weights: (
   normal: $ouds-font-weight-system-web-default,
-  bold: $ouds-font-weight-system-web-strong
+  medium: $ouds-font-weight-system-web-moderate,
+  bold: $ouds-font-weight-system-web-strong,
 ) !default;
 
 $ouds-icon-sizes: ("small", "medium", "large") !default;
@@ -123,6 +130,7 @@ $ouds-icon-sizes: ("small", "medium", "large") !default;
 // scss-docs-start ouds-maps-opacities
 $ouds-opacities: (
   "invisible":  $ouds-opacity-invisible,
+  "weakest":     $ouds-opacity-weakest,
   "weaker":     $ouds-opacity-weaker,
   "weak":       $ouds-opacity-weak,
   "disabled":   $ouds-opacity-disabled,
@@ -133,31 +141,39 @@ $ouds-opacities: (
 // scss-docs-end ouds-maps-opacities
 
 // scss-docs-start ouds-maps-backgrounds
-$ouds-backgrounds: (
+$ouds-backgrounds-with-color: (
+  "surface-brand-primary": var(--#{$prefix}color-surface-brand-primary),
+  "surface-brand-secondary": if(variable-exists(ouds-color-surface-brand-secondary-light), var(--#{$prefix}color-surface-brand-secondary), null),
+  "surface-brand-tertiary": if(variable-exists(ouds-color-surface-brand-tertiary-light), var(--#{$prefix}color-surface-brand-tertiary), null),
+  "surface-status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
+  "surface-status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
+  "surface-status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
+  "surface-status-positive-muted": var(--#{$prefix}color-surface-status-positive-muted),
+  "surface-status-negative-emphasized": var(--#{$prefix}color-surface-status-negative-emphasized),
+  "surface-status-negative-muted": var(--#{$prefix}color-surface-status-negative-muted),
+  "surface-status-warning-emphasized": var(--#{$prefix}color-surface-status-warning-emphasized),
+  "surface-status-warning-muted": var(--#{$prefix}color-surface-status-warning-muted),
+  "surface-status-info-emphasized": var(--#{$prefix}color-surface-status-info-emphasized),
+  "surface-status-info-muted": var(--#{$prefix}color-surface-status-info-muted),
+  "always-black": var(--#{$prefix}color-always-black),
+  "always-white": var(--#{$prefix}color-always-white),
+) !default;
+$ouds-backgrounds-without-color: (
   "primary": var(--#{$prefix}color-bg-primary),
   "secondary": var(--#{$prefix}color-bg-secondary),
   "tertiary": var(--#{$prefix}color-bg-tertiary),
-  "brand-primary": var(--#{$prefix}color-surface-brand-primary),
-  "brand-secondary": if(variable-exists(ouds-color-surface-brand-secondary-light), var(--#{$prefix}color-surface-brand-secondary), null),
-  "brand-tertiary": if(variable-exists(ouds-color-surface-brand-tertiary-light), var(--#{$prefix}color-surface-brand-tertiary), null),
-  "inverse-high": var(--#{$prefix}color-surface-inverse-high),
-  "inverse-low": var(--#{$prefix}color-surface-inverse-low),
-  "status-accent-emphasized": var(--#{$prefix}color-surface-status-accent-emphasized),
-  "status-accent-muted": var(--#{$prefix}color-surface-status-accent-muted),
-  "status-positive-emphasized": var(--#{$prefix}color-surface-status-positive-emphasized),
-  "status-positive-muted": var(--#{$prefix}color-surface-status-positive-muted),
-  "status-negative-emphasized": var(--#{$prefix}color-surface-status-negative-emphasized),
-  "status-negative-muted": var(--#{$prefix}color-surface-status-negative-muted),
-  "status-warning-emphasized": var(--#{$prefix}color-surface-status-warning-emphasized),
-  "status-warning-muted": var(--#{$prefix}color-surface-status-warning-muted),
-  "status-info-emphasized": var(--#{$prefix}color-surface-status-info-emphasized),
-  "status-info-muted": var(--#{$prefix}color-surface-status-info-muted),
-  "always-black": var(--#{$prefix}color-always-black),
-  "always-white": var(--#{$prefix}color-always-white),
+  "inverse-high": var(--#{$prefix}color-bg-inverse-high),
+  "inverse-low": var(--#{$prefix}color-bg-inverse-low),
+  "surface-primary": var(--#{$prefix}color-surface-primary),
+  "surface-secondary": var(--#{$prefix}color-surface-secondary),
+  "surface-tertiary": var(--#{$prefix}color-surface-tertiary),
+  "surface-inverse-high": var(--#{$prefix}color-surface-inverse-high),
+  "surface-inverse-low": var(--#{$prefix}color-surface-inverse-low),
   "opacity-lower": var(--#{$prefix}color-opacity-lower),
   "opacity-lowest": var(--#{$prefix}color-opacity-lowest),
   "transparent": transparent,
 ) !default;
+$ouds-backgrounds: map-merge($ouds-backgrounds-with-color, $ouds-backgrounds-without-color) !default;
 // scss-docs-end ouds-maps-backgrounds
 
 // scss-docs-start ouds-maps-text-colors
