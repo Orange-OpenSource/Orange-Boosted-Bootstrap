@@ -90,7 +90,7 @@ Helper text should be explicitly associated with the text area it relates to usi
 ### Helper link
 
 If the helper text is not sufficient, it’s possible to offer the user an additional help link. The helper link can also be displayed on its own without helper text.
-To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
+To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/link#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
 If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
@@ -152,7 +152,7 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
       <label for="exampleTextAreaOutlinedReadonly">Additional comments</label>
       <textarea readonly class="text-area-field" id="exampleTextAreaOutlinedReadonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra nisi turpis, vel dignissim enim imperdiet eu. Ut quis mollis erat. Pellentesque id leo pellentesque urna volutpat placerat non nec sem. Integer mauris eros, congue nec magna sit amet, pulvinar laoreet diam. Nam tristique nisl ac nisi aliquet, et molestie turpis maximus.</textarea>
     </div>
-  </div>`} />
+  </div>`} />,
 
 ### Invalid
 
