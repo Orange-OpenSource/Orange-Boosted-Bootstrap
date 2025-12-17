@@ -15,9 +15,9 @@ You can find here the [OUDS select input design guidelines](https://r.orange.fr/
 
 ## Overview
 
-Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<input>`.
+Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<select>`.
 
-An empty `placeholder` option is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty.
+An empty placeholder `<option>` is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it. An empty value to avoid displaying an option as placeholder.
 
 <Example buttonLabel="default select" code={`<div class="select-input">
     <div class="select-input-container">
