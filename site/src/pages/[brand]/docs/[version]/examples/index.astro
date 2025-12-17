@@ -1,6 +1,7 @@
 ---
 import SingleLayout from '@layouts/SingleLayout.astro'
 import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 import ExamplesMain from '@layouts/partials/ExamplesMain.astro'
 
 export function getStaticPaths() {
@@ -19,7 +20,7 @@ export function getStaticPaths() {
   <div class="d-flex flex-column flex-sm-row">
     <a href={getConfig().download.dist_examples} class="btn btn-strong">
       <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-        <use xlink:href="./assets/img/ouds-web-sprite.svg#download"></use>
+        <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}></use>
       </svg>
       Download examples
     </a>

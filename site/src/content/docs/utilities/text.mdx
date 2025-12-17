@@ -56,7 +56,7 @@ Note that we don’t provide utility classes for justified text. While, aestheti
 
 Wrap text with a `.text-wrap` class.
 
-<Example code={`<div class="bg-brand-primary text-wrap" style="width: 6rem;">
+<Example code={`<div class="bg-surface-brand-primary text-wrap" style="width: 6rem;">
     This text should wrap.
   </div>`} />
 
@@ -236,8 +236,20 @@ Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
 Quickly change the `font-weight` of text with these utilities. `font-weight` utilities are abbreviated as `.fw-*`.
 
+<BrandSpecific brand="orange">
+<Callout type="warning">
+The medium font-weight can only be used with `label` and `body` [font references]([[docsref:/content/typography/#regular-texts]]).
+</Callout>
+
+<Example code={`<p class="fw-bold">Bold text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>`} />
+</BrandSpecific>
+
+<BrandSpecific brand="sosh">
 <Example code={`<p class="fw-bold">Bold text.</p>
 <p class="fw-normal">Normal weight text.</p>`} />
+</BrandSpecific>
 
 <BootstrapCompatibility>
 

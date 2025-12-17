@@ -66,7 +66,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 - Negative buttons should never be used on colored background.
 </Callout>
 
-<Example class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-brand-primary p-large">
+<Example class="p-none bd-btn-example bd-first-rounded" code={`<div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -74,7 +74,7 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
       <!-- BEWARE: \`.btn-negative\` and \`.btn-brand\` should never be used on colored backgrounds! -->
     </div>
   </div>
-  <div class="bg-status-negative-emphasized p-large">
+  <div class="bg-surface-status-negative-emphasized p-large">
     <div data-bs-theme="${getMode('modes-on-status-negative-emphasized')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg">Strong</button>
@@ -87,17 +87,23 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.btn-rounded` to the button class list to enable rounded corners.
+Rounded corners buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
 
 <Callout type="warning">
   Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
 </Callout>
 
-<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
-  <button type="button" class="btn btn-strong btn-rounded">Strong</button>
-  <button type="button" class="btn btn-brand btn-rounded">Brand</button>
-  <button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
-  <button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-strong">Strong</button>
+    <button type="button" class="btn btn-brand">Brand</button>
+    <button type="button" class="btn btn-minimal">Minimal</button>
+    <button type="button" class="btn btn-negative">Negative</button>
+  </div>`} />
 </BrandSpecific>
 
 ### With icon
@@ -150,7 +156,7 @@ You don’t need to apply any spacing utility on the icon to get consistent spac
     </button>
   </div>
 
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
@@ -226,7 +232,7 @@ For icon only buttons, we chose to keep the icon hidden from assistive technolog
     </button>
   </div>
 
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-icon btn-default btn-on-colored-bg">
         <svg aria-hidden="true">
@@ -280,7 +286,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
     <button type="button" class="btn btn-negative" disabled>Negative</button>
   </div>
 
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg" disabled>Default</button>
       <button type="button" class="btn btn-strong btn-on-colored-bg" disabled>Strong</button>
@@ -298,7 +304,7 @@ Disabled buttons using the `<a>` element behave a bit different:
     <a class="btn btn-default" role="button" aria-disabled="true">Default link</a>
     <a class="btn btn-strong" role="button" aria-disabled="true">Strong link</a>
   </div>
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <a class="btn btn-default btn-on-colored-bg" role="button" aria-disabled="true">Default link</a>
       <a class="btn btn-strong btn-on-colored-bg" role="button" aria-disabled="true">Strong link</a>
@@ -415,7 +421,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     </button>
   </div>
 
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg loading-indeterminate" id="loading-btn-9" disabled>
         Download file 9
@@ -441,7 +447,7 @@ You can see it live and find a JavaScript example on our [loading buttons live e
     </div>
   </div>
 
-  <div class="bg-brand-primary p-large">
+  <div class="bg-surface-brand-primary p-large">
     <div data-bs-theme="${getMode('modes-on-brand-primary')}" class="d-flex gap-xsmall flex-wrap">
       <button type="button" class="btn btn-default btn-on-colored-bg loading-determinate" id="loading-btn-12" disabled style="--bs-btn-loading-time: 5s;">
         Download file 12
