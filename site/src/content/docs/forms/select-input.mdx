@@ -350,9 +350,9 @@ For accessibility purposes, the invalid state should be associated with a `.erro
 
 ### Loading
 
-Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate`(for an known loading time) class on a `.select-input-field` to display a loader instead of the arrow.
+Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for an known loading time) class on a `.select-input-field` to display a loader instead of the arrow.
 
-You must have the svg already in the `.select-input-container` to make it work like charm. You may also have a status span to display the loading message on assistive technologies.
+The SVG must already be in the `.select-input-container` for it to work. You should also have a status `<span>` so assistive technologies can announce the loading message.
 
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the select to provide the appropriate styles and animation.
@@ -367,7 +367,7 @@ At the end of the loading, you should:
 - Put the focus back on the select to ensure similar behavior across browsers and not lose the user after changes.
 
 <Callout type="info">
-  Optionally, the select can be disabled or not during the loading time depending on the context of use.
+  The select can be disabled or not during the loading time depending on the context of use.
 </Callout>
 
 You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).

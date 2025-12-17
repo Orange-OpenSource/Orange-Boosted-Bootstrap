@@ -97,7 +97,7 @@
       z-index: 3;
       width: 100%;
       padding: 0;
-      font-weight: 500;
+      font-weight: $ouds-font-weight-system-web-moderate;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
       caret-color: var(--#{$prefix}text-input-caret-color);
@@ -478,7 +478,7 @@
       padding-right: calc($ouds-text-input-space-padding-inline-trailing-action + var(--#{$prefix}text-input-trailing-action-width) + var(--#{$prefix}text-input-column-gap) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
       padding-bottom: calc($ouds-text-area-space-padding-block - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
       padding-left: calc($ouds-text-input-space-padding-inline-default - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
-      font-weight: 500;
+      font-weight: $ouds-font-weight-system-web-moderate;
       color: var(--#{$prefix}text-input-color);
       appearance: none;
       caret-color: var(--#{$prefix}text-input-caret-color);

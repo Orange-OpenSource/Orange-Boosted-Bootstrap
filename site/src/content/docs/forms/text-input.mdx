@@ -469,9 +469,9 @@ For accessibility purposes, the invalid state should be associated with a `.erro
 
 ### Loading
 
-Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate`(for a known loading time) class on a `.text-input-field` to display a loader.
+Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) class on a `.text-input-field` to display a loader.
 
-You must have the svg already in the `.text-input-container` to make it work like charm. You may also have a status span to display the loading message on assistive technologies.
+The SVG must already be in the `.text-input-container` for it to work. You should also have a status `<span>` so assistive technologies can announce the loading message.
 
 When the loading starts, you will have to:
 - Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the input to provide the appropriate styles and animation.
@@ -486,7 +486,7 @@ At the end of the loading, you should:
 - Put the focus back on the input to ensure similar behavior across browsers and not lose the user after changes.
 
 <Callout type="info">
-  Optionally, the input can be disabled or not during the loading time depending on the context of use.
+  The input can be disabled or not during the loading time depending on the context of use.
 </Callout>
 
 <Callout type="info">

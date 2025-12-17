@@ -17,7 +17,7 @@
   padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width)); // stylelint-disable-line function-disallowed-list
   padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
   padding-left: calc(var(--#{$prefix}text-input-padding-x) - var(--#{$prefix}text-input-border-width-left)); // stylelint-disable-line function-disallowed-list
-  font-weight: 500;
+  font-weight: $ouds-font-weight-system-web-moderate;
   color: $ouds-color-content-default;
   appearance: none;
   background-color: var(--#{$prefix}text-input-background-color);
