@@ -1,6 +1,6 @@
 ---
 import JsDocs from '@components/shortcodes/JsDocs.astro'
-import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
 
 export const title = 'Loading buttons'
 export const extra_css = ['loading-buttons.css']
@@ -30,7 +30,7 @@ export const aliases = [
 
       <button type="button" class="btn btn-icon btn-default" id="loading-btn-2" title="Download file 2">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
         </svg>
         <span class="visually-hidden">Download file 2</span>
         <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -41,7 +41,7 @@ export const aliases = [
 
       <button type="button" class="btn btn-default" id="loading-btn-3">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
         </svg>
         Download file 3
         <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -74,7 +74,7 @@ export const aliases = [
 
       <button type="button" class="btn btn-icon btn-default" id="loading-btn-6" style="--bs-btn-loading-time: 6s;" title="Download file 6">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
         </svg>
         <span class="visually-hidden">Download file 6</span>
         <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
@@ -85,7 +85,7 @@ export const aliases = [
 
       <button type="button" class="btn btn-default" id="loading-btn-7" style="--bs-btn-loading-time: 8s;">
         <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true">
-          <use xlink:href="../../assets/img/ouds-web-sprite.svg#download"/>
+          <use xlink:href={getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#download')}/>
         </svg>
         Download file 7
         <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">

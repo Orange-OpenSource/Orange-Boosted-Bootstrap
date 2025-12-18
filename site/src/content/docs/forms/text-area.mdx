@@ -45,18 +45,24 @@ Add `.text-area-container-outlined` for a minimalist text area with a transparen
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.text-area-container-rounded` for a finish with rounded corners.
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
 
-<Example code={`<div class="text-area mb-medium">
-    <div class="text-area-container text-area-container-rounded">
-      <label for="exampleTextAreaRounded">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example code={`<div class="use-rounded-corner-inputs">
+    <div class="text-area mb-medium">
+      <div class="text-area-container">
+        <label for="exampleTextAreaRounded">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+      </div>
     </div>
-  </div>
-  <div class="text-area">
-    <div class="text-area-container text-area-container-rounded text-area-container-outlined">
-      <label for="exampleTextAreaRoundedAlt">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+    <div class="text-area">
+      <div class="text-area-container text-area-container-outlined">
+        <label for="exampleTextAreaRoundedAlt">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+      </div>
     </div>
   </div>`} />
 </BrandSpecific>
