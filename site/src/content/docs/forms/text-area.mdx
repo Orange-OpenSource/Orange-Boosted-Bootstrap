@@ -9,8 +9,7 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
-{/* TODO: set the right url for design documentation */}
-You can find here the [OUDS Text Area design guidelines](https://unified-design-system.orange.com/).
+  You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
 </Callout>
 
 ## Overview
@@ -46,18 +45,24 @@ Add `.text-area-container-outlined` for a minimalist text area with a transparen
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.text-area-container-rounded` for a finish with rounded corners.
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
 
-<Example code={`<div class="text-area mb-medium">
-    <div class="text-area-container text-area-container-rounded">
-      <label for="exampleTextAreaRounded">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example code={`<div class="use-rounded-corner-inputs">
+    <div class="text-area mb-medium">
+      <div class="text-area-container">
+        <label for="exampleTextAreaRounded">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRounded"></textarea>
+      </div>
     </div>
-  </div>
-  <div class="text-area">
-    <div class="text-area-container text-area-container-rounded text-area-container-outlined">
-      <label for="exampleTextAreaRoundedAlt">Additional comments</label>
-      <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+    <div class="text-area">
+      <div class="text-area-container text-area-container-outlined">
+        <label for="exampleTextAreaRoundedAlt">Additional comments</label>
+        <textarea class="text-area-field" id="exampleTextAreaRoundedAlt"></textarea>
+      </div>
     </div>
   </div>`} />
 </BrandSpecific>
@@ -86,7 +91,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-Helper link should be explicitly described using the `aria-describedby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the text area.
+Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the text area.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">
@@ -97,7 +102,7 @@ Helper link should be explicitly described using the `aria-describedby` attribut
     <p id="feedbackTextHelpBlock" class="helper-text">
       Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
-    <a href="#" id="feedbackTextHelpMore" aria-describedby="feedbackTextHelpMore labelTextAreaWithHelperTextLink" class="link link-small">
+    <a href="#" id="feedbackTextHelpMore" aria-labelledby="feedbackTextHelpMore labelTextAreaWithHelperTextLink" class="link link-small">
       More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>
@@ -106,7 +111,7 @@ Helper link should be explicitly described using the `aria-describedby` attribut
       <label id="labelTextAreaHelperLink" for="textAreaHelperLink">Additional comments</label>
       <textarea id="textAreaHelperLink" class="text-area-field"></textarea>
     </div>
-    <a href="#" id="feedbackTextHelpMoreLink" aria-describedby="feedbackTextHelpMoreLink labelTextAreaHelperLink" class="link link-small">
+    <a href="#" id="feedbackTextHelpMoreLink" aria-labelledby="feedbackTextHelpMoreLink labelTextAreaHelperLink" class="link link-small">
       More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>`} />
@@ -180,7 +185,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <p id="commentFeedbackOutlined" class="error-text">
       Your comment exceeded the limit of <strong>180</strong> characters.
     </p>
-    <a href="#" id="commentTextHelpLinkOutlined" aria-describedby="commentTextHelpLinkOutlined labelTextAreaOutlinedInvalid" class="link link-small">
+    <a href="#" id="commentTextHelpLinkOutlined" aria-labelledby="commentTextHelpLinkOutlined labelTextAreaOutlinedInvalid" class="link link-small">
       More information <span class="visually-hidden">on additional comments</span>
     </a>
   </div>`} />

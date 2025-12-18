@@ -10,15 +10,14 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
-{/* TODO: set the right url for design documentation */}
-You can find here the [OUDS Select Input design guidelines](https://unified-design-system.orange.com/).
+You can find here the [OUDS select input design guidelines](https://r.orange.fr/r/S-ouds-doc-select-input).
 </Callout>
 
 ## Overview
 
-Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<input>`.
+Use a `.select-input` wrapper to create a select form field with OUDS styles, then wrap a pair of `<select class="select-input-field"></select>` and `<label>` elements in `.select-input-container`. Note that the `<label>` must come before the `<select>`.
 
-An empty `placeholder` option is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty.
+An empty placeholder `<option>` with an empty value is required on each `<select>` as our CSS-only floating label implementation relies on it to detect when the select is empty. This one should be disabled so users won't be able to select it.
 
 <Example buttonLabel="default select" code={`<div class="select-input">
     <div class="select-input-container">
@@ -69,28 +68,34 @@ Add `.select-input-container-outlined` for a minimalist input with a transparent
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.select-input-container-rounded` for a finish with rounded corners.
+Rounded corners inputs is a project-wide option therefore all your inputs should either be rounded or not. Add `.use-rounded-corner-inputs` on a top container (for example `<body>`) to use rounded corners.
 
-<Example buttonLabel="rounded selects" code={`<div class="select-input mb-medium">
-    <div class="select-input-container select-input-container-rounded">
-      <label for="exampleRoundedSelect">Rounded select example</label>
-      <select class="select-input-field" id="exampleRoundedSelect">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example buttonLabel="rounded selects" code={`<div class="use-rounded-corner-inputs">
+    <div class="select-input mb-medium">
+      <div class="select-input-container">
+        <label for="exampleRoundedSelect">Rounded select example</label>
+        <select class="select-input-field" id="exampleRoundedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
     </div>
-  </div>
-  <div class="select-input">
-    <div class="select-input-container select-input-container-outlined select-input-container-rounded">
-      <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
-      <select class="select-input-field" id="exampleRoundedOutlinedSelect">
-        <option value="" disabled selected></option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+    <div class="select-input">
+      <div class="select-input-container select-input-container-outlined">
+        <label for="exampleRoundedOutlinedSelect">Rounded outlined select example</label>
+        <select class="select-input-field" id="exampleRoundedOutlinedSelect">
+          <option value="" disabled selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
     </div>
   </div>`} />
 </BrandSpecific>
@@ -160,7 +165,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
-Helper link should be explicitly described using the `aria-describedby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the select input.
+Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the select input.
 </Callout>
 
 <Example buttonLabel="selects with helper link" code={`<div class="select-input mb-medium">
@@ -176,8 +181,8 @@ Helper link should be explicitly described using the `aria-describedby` attribut
     <p id="selectTextHelpBlock" class="helper-text">
       Choose a number.
     </p>
-    <a href="#" id="selectTextLinkBlock" aria-describedby="selectTextLinkBlock labelSelectWithHelperAndLink" class="link link-small">
-      More information <span class="visually-hidden">about how to choose a number</span>
+    <a href="#" id="selectTextLinkBlock" aria-labelledby="selectTextLinkBlock labelSelectWithHelperAndLink" class="link link-small">
+      More information <span class="visually-hidden">about how to choose a number with a link</span>
     </a>
   </div>
   <div class="select-input">
@@ -190,7 +195,7 @@ Helper link should be explicitly described using the `aria-describedby` attribut
         <option value="3">Three</option>
       </select>
     </div>
-    <a href="#" id="selectTextLink"  aria-describedby="selectTextLink labelSelectWithLink" class="link link-small">
+    <a href="#" id="selectTextLink"  aria-labelledby="selectTextLink labelSelectWithLink" class="link link-small">
       More information <span class="visually-hidden">about how to choose a number with a link</span>
     </a>
   </div>`} />
@@ -260,7 +265,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid select, add `.is-invalid` to a `.select-input-field` within the `.select-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.select-input-container` and related to it with an `aria-describedby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error and you must dynamically replace the `aria-describedby` attribute when the select input becomes invalid.
 </Callout>
 
 <Example buttonLabel="invalid selects" code={`<div class="select-input mb-medium">
@@ -279,7 +284,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <p id="numberFeedback" class="error-text">
       A number is required.
     </p>
-    <a href="#" id="numberLink" aria-describedby="numberLink labelErrorSelect" class="link link-small">
+    <a href="#" id="numberLink" aria-labelledby="numberLink labelErrorSelect" class="link link-small">
       More information <span class="visually-hidden">about how to choose a number from these three</span>
     </a>
   </div>
@@ -300,7 +305,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       <p id="validatedNumberFeedback" class="error-text">
         A number is required.
       </p>
-      <a href="#" id="validatedNumberLink" aria-describedby="validatedNumberLink labelErrorValidatedSelect" class="link link-small">
+      <a href="#" id="validatedNumberLink" aria-labelledby="validatedNumberLink labelErrorValidatedSelect" class="link link-small">
         More information <span class="visually-hidden">about how to choose a number from the three available options</span>
       </a>
     </div>

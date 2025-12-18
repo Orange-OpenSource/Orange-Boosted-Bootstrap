@@ -102,6 +102,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.bullet-list`, `.bullet-list-default-color`, `.bullet-list-tick` and `.bullet-list-bare` classes have been added.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.bullet-list` is mandatory for a full Bullet list component as defined in OUDS.
+- <span class="tag tag-small rounded-none tag-warning">Warning</span> Native `<ul>`, `<ol>` and `<dl>` now have a `max-width` set to the variable `--bs-font-max-width-body-medium`.
 
 ### Close button
 
@@ -111,6 +112,7 @@ All responsive classes, helpers, and utilities have been updated accordingly to 
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-default`, `.btn-strong`, `.btn-minimal`, and `.btn-negative` have been added.
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.btn-on-colored-bg` has been added; it can be used with `.btn-default`, `.btn-strong` and `.btn-minimal` to get variants on colored backgrounds (neither primary, nor secondary, nor tertiary, nor emphasized backgrounds).
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-buttons` have been added; it can be added on `<body>` to toggle project-wide rounded corners buttons.
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`, `.btn-info`, `.btn-light`, `.btn-dark` and `btn-dropdown` have been removed. You can still have them using `$enable-bootstrap-compatibility`. Here is the visual correspondence:
   - `.btn-primary` and `.btn-dark` will look as `.btn-strong`
   - `.btn-secondary` and `.btn-success` will look as `.btn-default`
@@ -247,6 +249,8 @@ See [our new Radio button page]([[docsref:/forms/radio-button]]) for more inform
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.select-input` has been added.
 
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
+
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Select Input is a new component compared to Boosted’s Select, the DOM is therefore very different.
 <div class="ps-xlarge">
 For example, if you used to write:
@@ -313,6 +317,8 @@ See [our new Switch page]([[docsref:/forms/switch]]) for more information.
 ### Text Input
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.text-input` has been added.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Text Input is a new component compared to Boosted’s Input, the DOM is therefore very different.
 <div class="ps-xl">
@@ -691,7 +697,7 @@ See [our new Text Area page]([[docsref:/forms/text-area]]) for more information.
   - **Display headings**: `.fs-dl`, `.fs-dm`, `.fs-ds`
   - **Headings**: `.fs-hxl`, `.fs-hl`, `.fs-hm`, `.fs-hs`
   - **Body**: `.fs-bl`, `.fs-bm`, `.fs-bs`
-  - **Code**: `.fs-cm`, `.fs-cs`
+  - **Code**: `.fs-cm`
 
 - <span class="tag tag-small rounded-none tag-negative">Breaking</span> Font weight text utilities `.fw-semibold` and `.fw-medium` have been removed.
 

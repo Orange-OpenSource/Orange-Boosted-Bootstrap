@@ -14,7 +14,7 @@ import { getVersionedDocsPath } from '@libs/path'
 import { getMode } from '@libs/sass-variables'
 
 <Callout type="info">
-You can find here the [OUDS Button design guidelines](https://unified-design-system.orange.com/472794e18/p/48a788-button).
+  You can find here the OUDS [button design guidelines](https://r.orange.fr/r/S-ouds-doc-button).
 </Callout>
 
 ## Overview
@@ -38,7 +38,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Variants
 
-OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [Button design specifications](https://unified-design-system.orange.com/472794e18/p/48a788-button/t/5c95fb0c27) to choose the right button for the right action.
+OUDS Web includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control. Please follow the [button design specifications](https://r.orange.fr/r/S-ouds-doc-button) to choose the right button for the right action.
 
 <Example class="bd-btn-example" code={`<button type="button" class="btn btn-default">Default</button>
 <button type="button" class="btn btn-strong">Strong</button>
@@ -87,17 +87,23 @@ OUDS Web offers a few variations to use on [colored backgrounds]([[docsref:/util
 <BrandSpecific brand="orange">
 ### Rounded
 
-Add `.btn-rounded` to the button class list to enable rounded corners.
+Rounded corners buttons is a project-wide option therefore all your buttons should either be rounded or not. Add `.use-rounded-corner-buttons` on a top container (for example `<body>`) to use rounded corners.
 
 <Callout type="warning">
   Rounded corners could be used in more emotional, immersive contexts or those tied to specific visual identities. **For standard or business-oriented usage, keep the default square corners.**
 </Callout>
 
-<Example class="bd-btn-example" code={`<button type="button" class="btn btn-default btn-rounded">Default</button>
-  <button type="button" class="btn btn-strong btn-rounded">Strong</button>
-  <button type="button" class="btn btn-brand btn-rounded">Brand</button>
-  <button type="button" class="btn btn-minimal btn-rounded">Minimal</button>
-  <button type="button" class="btn btn-negative btn-rounded">Negative</button>`} />
+<Callout type="info">
+  We use a `<div>` as a parent container because we cannot use `<body>` in an example
+</Callout>
+
+<Example class="bd-btn-example" code={`<div class="use-rounded-corner-buttons">
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-strong">Strong</button>
+    <button type="button" class="btn btn-brand">Brand</button>
+    <button type="button" class="btn btn-minimal">Minimal</button>
+    <button type="button" class="btn btn-negative">Negative</button>
+  </div>`} />
 </BrandSpecific>
 
 ### With icon
