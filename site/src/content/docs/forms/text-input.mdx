@@ -279,15 +279,15 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
 
 ### Max width
 
-By default text inputs will span the whole width of their parent container, to limit the width of the text input on wider parent container, add a `.max-width` to the `.text-input` container.
+By default text inputs will span the whole width of their parent container, to limit the width of the text input on wider parent container, add a `.component-max-width` to the `.text-input` container.
 
-<Example code={`<div class="text-input max-width mb-medium">
+<Example code={`<div class="text-input component-max-width mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputWithMaxWidth">Email address</label>
       <input type="email" autocomplete="email" class="text-input-field" id="exampleTextInputWithMaxWidth" placeholder=" ">
     </div>
   </div>
-  <div class="text-input max-width mb-medium">
+  <div class="text-input component-max-width mb-medium">
     <div class="text-input-container">
       <label for="exampleTextInputWithMaxWidthSuffix">Price</label>
       <div class="input-container" data-bs-prefix="£" data-bs-suffix=".00">

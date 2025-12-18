@@ -44,6 +44,10 @@
   padding: $ouds-control-item-space-padding-block-default $ouds-control-item-space-padding-inline;
   @include border-radius($ouds-control-item-border-radius);
 
+  &.component-max-width {
+    max-width: px-to-rem($ouds-control-item-size-max-width);
+  }
+
   // Handle focus
   &:has(:focus-visible) {
     @include focus-visible();

@@ -5,7 +5,7 @@
   --#{$prefix}text-input-min-width: #{px-to-rem($ouds-select-input-size-min-width)};
   --#{$prefix}text-input-min-height: #{px-to-rem($ouds-text-input-size-min-height)};
 
-  &.max-width {
+  &.component-max-width {
     max-width: px-to-rem($ouds-text-input-size-max-width);
   }
 }

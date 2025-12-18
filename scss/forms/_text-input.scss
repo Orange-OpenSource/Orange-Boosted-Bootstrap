@@ -46,7 +46,7 @@
   --#{$prefix}text-input-column-row-gap: #{$ouds-text-input-space-row-gap-label-input};
   // scss-docs-end text-input-css-vars
 
-  &.max-width {
+  &.component-max-width {
     max-width: px-to-rem($ouds-text-input-size-max-width);
   }
 
@@ -362,7 +362,7 @@
 .text-area {
   @extend %text-item-common;
 
-  &.max-width {
+  &.component-max-width {
     max-width: px-to-rem($ouds-text-area-size-max-width);
   }
 
