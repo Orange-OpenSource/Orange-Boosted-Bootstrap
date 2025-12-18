@@ -200,6 +200,7 @@ address {
 ol,
 ul,
 dl {
+  max-width: var(--#{$prefix}font-max-width-body-medium);
   margin-top: 0;
   margin-bottom: 1rem;
 }
