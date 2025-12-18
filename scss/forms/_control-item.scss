@@ -215,6 +215,7 @@
 
   position: relative;
   flex-shrink: 0;
+  forced-color-adjust: none;
   width: $form-check-input-width;
   height: $form-check-input-width;
   overflow: hidden;
@@ -225,6 +226,10 @@
   background-color: transparent;
   border: var(--#{$prefix}control-item-indicator-border-width) solid var(--#{$prefix}control-item-indicator-color);
   print-color-adjust: exact;
+
+  @media (prefers-contrast: more) or (forced-colors: active) {
+    --#{$prefix}control-item-indicator-color: #{$ouds-color-content-default} !important; // stylelint-disable-line declaration-no-important
+  }
 
   &::before {
     position: absolute;
@@ -361,8 +366,9 @@
 
   &:disabled,
   &[role="checkbox"][aria-readonly="true"] {
-    --#{$prefix}control-item-indicator-color: #{$ouds-color-action-disabled};
+    color: $ouds-color-action-disabled;
     pointer-events: none;
+    border-color: $ouds-color-action-disabled;
   }
 
   &[role="checkbox"][aria-readonly="true"] {
@@ -445,11 +451,18 @@
 }
 
 .control-item-indicator[role="switch"] {
+  --#{$prefix}switch-track-color: #{$ouds-switch-color-track-unselected};
+
+  forced-color-adjust: none;
   min-width: $ouds-switch-size-min-width;
   min-height: $ouds-switch-size-min-height;
-  background-color: $ouds-switch-color-track-unselected;
+  background-color: var(--#{$prefix}switch-track-color);
   border: 0;
   @include border-radius($ouds-switch-border-radius-track, $ouds-switch-border-radius-track);
+
+  @media (prefers-contrast: more) or (forced-colors: active) {
+    --#{$prefix}switch-track-color: #{$ouds-color-content-default} !important; // stylelint-disable-line declaration-no-important
+  }
 
   &[type="checkbox"]::before,
   &[aria-readonly="true"]::before {
@@ -471,7 +484,7 @@
   &:hover,
   &:focus-visible,
   &:active {
-    background-color: $ouds-switch-color-track-unselected-interaction;
+    --#{$prefix}switch-track-color: #{$ouds-switch-color-track-unselected-interaction};
   }
 
   &:active::before {
@@ -486,7 +499,7 @@
   // stylelint-disable selector-max-attribute
   &:checked,
   &[aria-readonly="true"][aria-checked="true"] {
-    background-color: $ouds-switch-color-track-selected;
+    --#{$prefix}switch-track-color: #{$ouds-switch-color-track-selected};
 
     &::before {
       left: calc($ouds-switch-size-min-width - $ouds-switch-space-padding-inline-selected - $ouds-switch-size-width-cursor-selected); // stylelint-disable-line function-disallowed-list
@@ -516,7 +529,7 @@
     &:hover,
     &:focus-visible,
     &:active {
-      background-color: $ouds-switch-color-track-selected-interaction;
+      --#{$prefix}switch-track-color: #{$ouds-switch-color-track-selected-interaction};
 
       &::after {
         background-color: $ouds-switch-color-check-interaction;

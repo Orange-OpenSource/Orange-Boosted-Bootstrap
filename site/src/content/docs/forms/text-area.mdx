@@ -9,8 +9,7 @@ toc: true
 import { getVersionedDocsPath } from '@libs/path'
 
 <Callout type="info">
-{/* TODO: set the right url for design documentation */}
-You can find here the [OUDS Text Area design guidelines](https://unified-design-system.orange.com/).
+  You can find here the OUDS [text area design guidelines](https://r.orange.fr/r/S-ouds-doc-text-area).
 </Callout>
 
 ## Overview
@@ -92,7 +91,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
+If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">
@@ -176,7 +175,7 @@ Add the `readonly` boolean attribute on a text area to prevent modification of t
 To display an invalid text area, add `.is-invalid` to a `.text-area-field` within the `.text-area-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purpose, the invalid should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-area-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">

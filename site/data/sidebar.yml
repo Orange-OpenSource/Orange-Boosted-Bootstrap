@@ -80,8 +80,7 @@
     - title: Text input
     - title: Password input
     - title: Text area
-    - title: Select
-      draft: true
+    - title: Select input
     - title: Checkbox
     - title: Radio button
     - title: Switch
