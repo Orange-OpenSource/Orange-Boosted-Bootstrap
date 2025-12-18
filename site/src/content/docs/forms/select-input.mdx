@@ -200,6 +200,27 @@ If a helper link is used in conjunction with a helper text, the `aria-describedb
     </a>
   </div>`} />
 
+## Layout
+
+### Max width
+
+By default select inputs will span the whole width of their parent container, to limit the width of the select input on wider parent container, add a `.max-width` to the `.text-input` container.
+
+<Example code={`<div class="select-input max-width">
+    <div class="select-input-container">
+      <label for="exampleSelectMaxWidth">Select example max width</label>
+      <select class="select-input-field" id="exampleSelectMaxWidth" aria-describedby="selectMaxWidthHelper">
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <p id="selectMaxWidthHelper" class="helper-text">
+      Helper text.
+    </p>
+  </div>`} />
+
 ## States
 
 ### Disabled

@@ -3,8 +3,11 @@
 .select-input {
   @extend %text-item-common;
   --#{$prefix}text-input-min-width: #{px-to-rem($ouds-select-input-size-min-width)};
-  --#{$prefix}text-input-max-width: #{px-to-rem($ouds-text-input-size-max-width)};
   --#{$prefix}text-input-min-height: #{px-to-rem($ouds-text-input-size-min-height)};
+
+  &.max-width {
+    max-width: px-to-rem($ouds-text-input-size-max-width);
+  }
 }
 
 .select-input-field {
@@ -82,7 +85,6 @@
 .select-input-container {
   position: relative;
   min-width: var(--#{$prefix}text-input-min-width);
-  max-width: var(--#{$prefix}text-input-max-width);
   min-height: var(--#{$prefix}text-input-min-height);
   padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top)); // stylelint-disable-line function-disallowed-list
   padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right)); // stylelint-disable-line function-disallowed-list
