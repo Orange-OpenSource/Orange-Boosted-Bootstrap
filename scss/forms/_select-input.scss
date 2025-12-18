@@ -9,10 +9,8 @@
 
 .select-input-field {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
+  width: 100%; // Avoid a bug on FF 125 and less
   padding-top: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-top) + var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small)); // stylelint-disable-line function-disallowed-list
   padding-right: calc(var(--#{$prefix}text-input-trailing-action-padding-right) - var(--#{$prefix}text-input-border-width-right) + var(--#{$prefix}text-input-column-gap) + var(--#{$prefix}text-input-trailing-action-width)); // stylelint-disable-line function-disallowed-list
   padding-bottom: calc(var(--#{$prefix}text-input-padding-y) - var(--#{$prefix}text-input-border-width-bottom)); // stylelint-disable-line function-disallowed-list
@@ -36,18 +34,15 @@
     --#{$prefix}text-input-background-color: #{$ouds-color-action-support-focus};
     --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
 
+    // To avoid different behavior between browsers
+    // Chrome considers select as an input and doesn't make any difference between focus and focus-visible
+    // Firefox considers select as an element and does make a difference between focus and focus-visible
     outline: 0;
     box-shadow: none;
   }
 
-  // Pasted to avoid errors in Safari
-  &:open {
-    --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
-    --#{$prefix}text-input-background-color: #{$ouds-color-action-support-pressed};
-    --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
-  }
-
-  &:active {
+  // Forgive Safari's selectors list
+  &:is(:open, :active) {
     --#{$prefix}text-input-border-width-bottom: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-background-color: #{$ouds-color-action-support-pressed};
     --#{$prefix}text-input-border-color: #{$ouds-text-input-color-border-focus};
@@ -78,12 +73,8 @@
     --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-focus};
   }
 
-  // Pasted to avoid errors in Safari
-  &:open {
-    --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-pressed};
-  }
-
-  &:active {
+  // Forgive Safari's selectors list
+  &:is(:open, :active) {
     --#{$prefix}text-input-border-color: #{$ouds-color-action-negative-pressed};
   }
 }
@@ -168,16 +159,8 @@
     }
   }
 
-  &:not(:has(:disabled:checked)) {
-    > label {
-      top: calc(var(--#{$prefix}text-input-padding-y) + .25rem + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small))); // stylelint-disable-line function-disallowed-list
-      white-space: nowrap;
-      @include get-font-size("label-small");
-    }
-  }
-
-  // Pasted to avoid errors in Safari
-  &:has(:open) {
+  // Forgive Safari's selectors list
+  &:is(:has(:open), :not(:has(:disabled:checked))) {
     > label {
       top: calc(var(--#{$prefix}text-input-padding-y) + .25rem + .5 * (var(--#{$prefix}font-size-label-small) * var(--#{$prefix}font-line-height-label-small))); // stylelint-disable-line function-disallowed-list
       white-space: nowrap;
@@ -257,12 +240,8 @@
     color: $ouds-color-action-negative-focus;
   }
 
-  // Pasted to avoid errors in Safari
-  &:has(:open) {
-    color: $ouds-color-action-negative-pressed;
-  }
-
-  &:has(:active) {
+  // Forgive Safari's selectors list
+  &:is(:has(:open), :has(:active)) {
     color: $ouds-color-action-negative-pressed;
   }
 
@@ -285,15 +264,8 @@
   --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-default};
   --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-default};
 
-  &:focus-visible,
-  &:active {
-    --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
-    --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
-    --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
-  }
-
-  // Pasted to avoid errors in Safari
-  &:open {
+  // Forgive Safari's selectors list
+  &:is(:focus-visible, :active, :open) {
     --#{$prefix}text-input-border-width-top: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-border-width-right: #{$ouds-text-input-border-width-focus};
     --#{$prefix}text-input-border-width-left: #{$ouds-text-input-border-width-focus};
