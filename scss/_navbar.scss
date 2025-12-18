@@ -207,6 +207,7 @@
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
   // scss-docs-end navbar-nav-css-vars
 
+  @include list-unstyled(); // OUDS mod
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // OUDS mod
@@ -214,8 +215,6 @@
   @include font-size(var(--#{$prefix}navbar-nav-font-size)); // OUDS mod
   line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // OUDS mod
   letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // OUDS mod
-  @include list-unstyled(); // OUDS mod
-
   // OUDS mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;

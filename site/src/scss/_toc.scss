@@ -17,10 +17,8 @@
     @include get-font-size("label-medium"); // OUDS mod: instead of `.875rem`
 
     ul {
-      padding-left: 0;
-      margin-bottom: 0;
-      list-style: none;
       @include list-unstyled(); // OUDS mod
+      margin-bottom: 0;
 
       ul {
         padding-left: 1rem;
