@@ -165,7 +165,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below selects, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.select-input-container`.
 
 <Callout type="warning">
-Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the select input.
+Helper link should be explicitly labelled using the `aria-labelledby` attribute in which you must combine the helper link id and the related select input label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the select input. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
 <Example buttonLabel="selects with helper link" code={`<div class="select-input mb-medium">
@@ -182,7 +182,7 @@ Helper link should be explicitly labelled using the `aria-labelledby` attribute 
       Choose a number.
     </p>
     <a href="#" id="selectTextLinkBlock" aria-labelledby="selectTextLinkBlock labelSelectWithHelperAndLink" class="link link-small">
-      More information <span class="visually-hidden">about how to choose a number with a link</span>
+      More information <span class="visually-hidden">about the</span>
     </a>
   </div>
   <div class="select-input">
@@ -195,8 +195,8 @@ Helper link should be explicitly labelled using the `aria-labelledby` attribute 
         <option value="3">Three</option>
       </select>
     </div>
-    <a href="#" id="selectTextLink"  aria-labelledby="selectTextLink labelSelectWithLink" class="link link-small">
-      More information <span class="visually-hidden">about how to choose a number with a link</span>
+    <a href="#" id="selectTextLink" aria-labelledby="selectTextLink labelSelectWithLink" class="link link-small">
+      More information <span class="visually-hidden">about the</span>
     </a>
   </div>`} />
 
@@ -285,7 +285,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       A number is required.
     </p>
     <a href="#" id="numberLink" aria-labelledby="numberLink labelErrorSelect" class="link link-small">
-      More information <span class="visually-hidden">about how to choose a number from these three</span>
+      More information <span class="visually-hidden">about the</span>
     </a>
   </div>
   <div class="was-validated">
@@ -306,7 +306,7 @@ For accessibility purposes, the invalid state should be associated with a `.erro
         A number is required.
       </p>
       <a href="#" id="validatedNumberLink" aria-labelledby="validatedNumberLink labelErrorValidatedSelect" class="link link-small">
-        More information <span class="visually-hidden">about how to choose a number from the three available options</span>
+        More information <span class="visually-hidden">about the</span>
       </a>
     </div>
   </div>

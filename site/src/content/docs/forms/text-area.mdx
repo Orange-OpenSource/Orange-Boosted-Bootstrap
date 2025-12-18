@@ -91,7 +91,7 @@ If the helper text is not sufficient, it’s possible to offer the user an addit
 To display a helper link below text areas, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-area-container`.
 
 <Callout type="warning">
-Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to provide additional context about the link purpose in relation with the text area.
+Helper link should be explicitly described using the `aria-labelledby` attribute in which you must combine the helper link id and the related text area label id. This will ensure that assistive technologies—such as screen readers—will announce this helper link in relation with the text area. We also recommend adding a `.visually-hidden` span inside the link to coordinate the link content and the label.
 </Callout>
 
 <Example code={`<div class="text-area mb-medium">
@@ -103,7 +103,7 @@ Helper link should be explicitly described using the `aria-labelledby` attribute
       Please be concise and limit your comment to <strong>180</strong> characters.
     </p>
     <a href="#" id="feedbackTextHelpMore" aria-labelledby="feedbackTextHelpMore labelTextAreaWithHelperTextLink" class="link link-small">
-      More information <span class="visually-hidden">on additional comments</span>
+      More information <span class="visually-hidden">on</span>
     </a>
   </div>
   <div class="text-area">
@@ -112,7 +112,7 @@ Helper link should be explicitly described using the `aria-labelledby` attribute
       <textarea id="textAreaHelperLink" class="text-area-field"></textarea>
     </div>
     <a href="#" id="feedbackTextHelpMoreLink" aria-labelledby="feedbackTextHelpMoreLink labelTextAreaHelperLink" class="link link-small">
-      More information <span class="visually-hidden">on additional comments</span>
+      More information <span class="visually-hidden">on</span>
     </a>
   </div>`} />
 
@@ -186,6 +186,6 @@ For accessibility purposes, the invalid state should be associated with a `.erro
       Your comment exceeded the limit of <strong>180</strong> characters.
     </p>
     <a href="#" id="commentTextHelpLinkOutlined" aria-labelledby="commentTextHelpLinkOutlined labelTextAreaOutlinedInvalid" class="link link-small">
-      More information <span class="visually-hidden">on additional comments</span>
+      More information <span class="visually-hidden">on</span>
     </a>
   </div>`} />
