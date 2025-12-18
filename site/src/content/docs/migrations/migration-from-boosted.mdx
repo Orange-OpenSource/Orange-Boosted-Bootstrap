@@ -245,6 +245,42 @@ See [our new Radio button page]([[docsref:/forms/radio-button]]) for more inform
 
 - <span class="tag tag-small rounded-none tag-warning">Warning</span> Links in radio buttons’ labels are now forbidden (they won’t be interactive anyway).
 
+#### Select
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.select-input` has been added.
+
+- <span class="tag tag-small rounded-none tag-positive">New</span> `.use-rounded-corner-inputs` have been added; it can be added on `<body>` to toggle project-wide rounded corners inputs.
+
+- <span class="tag tag-small rounded-none tag-negative">Breaking</span> Select Input is a new component compared to Boosted’s Select, the DOM is therefore very different.
+<div class="ps-xlarge">
+For example, if you used to write:
+
+```html
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+```
+Now you should write:
+
+```html
+<div class="select-input">
+  <div class="select-input-container">
+    <label for="exampleSelect">Default select example</label>
+    <select class="select-input-field" id="exampleSelect">
+      <option value="" disabled selected></option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+</div>
+```
+See [our new Select Input page]([[docsref:/forms/select-input]]) for more information.
+</div>
+
 #### Switch
 
 - <span class="tag tag-small rounded-none tag-positive">New</span> `.switch-item` and `.switch-standalone` have been added.

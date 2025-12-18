@@ -64,7 +64,7 @@ For accessibility reasons, any informative element, must either be a semantic el
 
 Tag and input tag lists must be wrapped in a semantic container (usually a `<ul>` or `<ol>`). *If possible, display a text that semantically describes the purpose of the tags*, otherwise add an `aria-label` to the container that explains the tags' function.
 
-<Example buttonLabel="tags list with a displayed title"  code={`<div class="d-inline-flex align-items-center">
+<Example buttonLabel="tags list with a displayed title" code={`<div class="d-inline-flex align-items-center">
     <h4 id="tagsTitle" class="h6 me-small">Mobile coverage: </h4>
     <div role="group" aria-labelledby="tagsTitle">
       <ul class="list-unstyled d-flex column-gap-xsmall">

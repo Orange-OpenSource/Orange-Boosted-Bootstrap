@@ -188,7 +188,7 @@ If the helper text is not sufficient, it's possible to offer the user an additio
 To display a helper link below inputs, use a standard small link [with `.link` and `.link-small` classes]([[docsref:/components/links#sizes]]) as a sibling of a `.text-input-container`.
 
 <Callout type="warning">
-If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should to be referenced by the `aria-labelledby` attribute.
+If a helper link is used in conjunction with a helper text, the `aria-describedby` attribute should refer to the helper text and the helper link should be referenced by the `aria-labelledby` attribute.
 </Callout>
 
 <Example code={`<div class="text-input mb-medium">
@@ -342,7 +342,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 To display an invalid input, add `.is-invalid` to a `.text-input-field` within the `.text-input-container`. Please take a look at our [Validation page to learn more]([[docsref:/forms/validation]]).
 
 <Callout type="warning">
-For accessibility purpose, the invalid should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
+For accessibility purposes, the invalid state should be associated with a `.error-text` as a sibling of a `.text-input-container` and related to it with an `aria-labelledby` attribute when displayed. Note that the `.error-text` will replace the helper text, so it should be descriptive enough to convey the error.
 </Callout>
 
 <Example code={`<div class="text-input mb-medium">
