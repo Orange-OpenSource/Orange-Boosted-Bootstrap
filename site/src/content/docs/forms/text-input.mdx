@@ -277,9 +277,15 @@ For accessibility purpose the prefix and suffix should be explicitly mentioned i
 
 ## States
 
+These states should be exclusive among each others.
+
 ### Disabled
 
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+<Callout type="info">
+  Don't forget to disable or remove the trailing action button as well if you use one.
+</Callout>
 
 <Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
@@ -299,16 +305,32 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedDisabledEmpty" placeholder=" " disabled>
     </div>
   </div>
-  <div class="text-input">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedDisabled">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedDisabled" placeholder=" " value="Doe" disabled>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container">
+      <label for="exampleTextInputEmptyWithActionDisabled">Label</label>
+      <input disabled type="email" class="text-input-field" id="exampleTextInputEmptyWithActionDisabled" placeholder=" ">
+      <button disabled class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
     </div>
   </div>`} />
 
 ### Readonly
 
 Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
+
+<Callout type="info">
+  Don't forget to disable or remove the trailing action button if you use one.
+</Callout>
 
 <Example code={`<div class="text-input mb-medium">
     <div class="text-input-container">
@@ -328,10 +350,22 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonlyEmpty" placeholder=" " readonly>
     </div>
   </div>
-  <div class="text-input">
+  <div class="text-input mb-medium">
     <div class="text-input-container text-input-container-outlined">
       <label for="exampleTextInputOutlinedReadonly">Lastname</label>
       <input type="text" class="text-input-field" id="exampleTextInputOutlinedReadonly" placeholder=" " value="Doe" readonly>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container">
+      <label for="exampleTextInputEmptyWithActionReadonly">Label</label>
+      <input readonly type="email" class="text-input-field" id="exampleTextInputEmptyWithActionReadonly" value="Input" placeholder=" ">
+      <button disabled class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
     </div>
   </div>`} />
 
@@ -432,6 +466,104 @@ For accessibility purposes, the invalid state should be associated with a `.erro
     <a href="#" id="priceTextHelpLink" class="link link-small">
       More information
     </a>
+  </div>`} />
+
+### Loading
+
+Add the `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) class on a `.text-input-field` to display a loader.
+
+The SVG must already be in the `.text-input-container` for it to work. You should also have a status `<span>` so assistive technologies can announce the loading message.
+
+When the loading starts, you will have to:
+- Add the class `.loading-indeterminate` (for an unknown loading time) or `.loading-determinate` (for a known loading time) to the input to provide the appropriate styles and animation.
+- For a known loading time, provide a CSS variable `--bs-loading-time` to set the loading time. For example, add `style="--bs-loading-time: 5s;"` to the input container, for a 5 seconds loading.
+- Remove the `.d-none` from the status message `<span>`.
+- Update regularly the status message `<span>` containing the loading message.
+
+At the end of the loading, you should:
+
+- Remove the class `.loading-indeterminate` or `.loading-determinate` to restore the input’s look.
+- Set a final status message in `<span>`, indicating the loading has ended.
+- Put the focus back on the input to ensure similar behavior across browsers and not lose the user after changes.
+
+<Callout type="info">
+  The input can be disabled or not during the loading time depending on the context of use.
+</Callout>
+
+<Callout type="info">
+  The trailing action should be disabled at any time if you have one.
+</Callout>
+
+You can see it live and find a JavaScript example on our [loading buttons live example]([[docsref:/examples/loading-buttons/]]).
+
+In case of an invalid input, you may remove the invalid state before the loading state.
+
+<Example buttonLabel="loading inputs" code={`<div class="text-input mb-medium">
+    <div class="text-input-container">
+      <label for="exampleDisabledLoadingTextInput">Disabled loading input example</label>
+      <input disabled type="text" class="text-input-field loading-indeterminate" id="exampleDisabledLoadingTextInput" placeholder=" " value="Input" aria-describedby="loading-msg-0">
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-0" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>
+  <div class="text-input mb-medium">
+    <div class="text-input-container text-input-container-outlined">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleDisabledLoadingTextInputWithDisabledAction">Disabled loading input example with disabled action</label>
+      <input disabled type="text" class="text-input-field loading-indeterminate" id="exampleDisabledLoadingTextInputWithDisabledAction" placeholder=" " aria-describedby="loading-msg-1">
+      <button disabled class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-1" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>
+  <div class="text-input mb-medium">
+    <div class="text-input-container" style="--bs-loading-time: 5s;">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleDeterminateLoadingTextInputWithDisabledAction">Determinate loading input example with disabled action</label>
+      <input type="text" class="text-input-field loading-determinate" id="exampleDeterminateLoadingTextInputWithDisabledAction" placeholder=" " aria-describedby="loading-msg-2">
+      <button disabled class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-2" class="visually-hidden d-none">Loading message</span>
+    </div>
+  </div>
+  <div class="text-input">
+    <div class="text-input-container">
+      <svg aria-hidden="true">
+        <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+      </svg>
+      <label for="exampleLoadingTextInputDisabledAction">Loading input example with disabled action</label>
+      <input type="text" class="text-input-field loading-indeterminate" id="exampleLoadingTextInputDisabledAction" placeholder=" " aria-describedby="loading-msg-3">
+      <button disabled class="btn btn-minimal btn-icon">
+        <svg aria-hidden="true">
+          <use xlink:href="${getVersionedDocsPath('/assets/img/ouds-web-sprite.svg#heart-empty')}"/>
+        </svg>
+        <span class="visually-hidden">Add to favorites</span>
+      </button>
+      <svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg' class="loader" aria-hidden="true">
+        <circle class="loader-inner" cx="20" cy="20" r="17"></circle>
+      </svg>
+      <span role="status" id="loading-msg-3" class="visually-hidden d-none">Loading message</span>
+    </div>
   </div>`} />
 
 <BootstrapCompatibility>
