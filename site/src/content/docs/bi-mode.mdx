@@ -9,7 +9,7 @@ toc: true
 
 Bi-mode is a way to early and gradually migrate a Boosted project to OUDS.
 
-This page is for people that want to try the bi-mode combining sBoosted and OUDS Web. It also works as a tutorial to implement OUDS Web gradually inside your website. Be careful, we will support this in a “best-effort” way ; this feature is supposed to be mainly used by pre-selected projects. If you need any assistance, please [contact us]([[docsref:/about/team]]).
+This page is for people that want to try the bi-mode combining Boosted and OUDS Web. It also works as a tutorial to implement OUDS Web gradually inside your website. Be careful, we will support this in a “best-effort” way ; this feature is supposed to be mainly used by pre-selected projects. If you need any assistance, please [contact us]([[docsref:/about/team]]).
 This page is not to be used alone, but is complementary to [OUDS Web documentation](https://web.unified-design-system.orange.com/) and [Boosted documentation](https://boosted.orange.com/).
 
 ## Example of integration
@@ -22,7 +22,6 @@ Here is a non exhaustive list of disadvantages of using this bi-mode:
 - It implies a change of design, and a mix of two brands that might sometimes visually clash, so be in touch with your designer(s).
 - It implies a big load of work to start the journey.
 - You will need to adapt to the new naming of utilities, helpers, components, etc.
-- Since the library isn’t released, it won’t be as stable as Boosted.
 - There might be some unwanted side and edge effects that we didn’t anticipate.
 
 ## Pros
@@ -57,7 +56,7 @@ This is the preferred scenario and will help you implement the basic concepts of
 In this scenario, you will have access to all the components available in OUDS Web, the grid, the utilities, the helpers, and fill the missing parts using Boosted and custom CSS.
 
 1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
-    <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
+    <Code lang="sh" code="npm i sass @ouds/web-common @ouds/web-orange boosted" />
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
@@ -360,7 +359,7 @@ This is not the recommended scenario, but if you want a simpler migration (at fi
 In this scenario, you will have access to OUDS Web on the root, but once a Boosted element is encountered, it will be Boosted. It means that once you’ve set `.boosted` on an element, you’ll have access to Boosted only on its children.
 
 1. Make sure to install `sass`, and `boosted`. You’ll also need a theme, in this tutorial we assume it will be the Orange theme.
-    <Code lang="sh" code="npm i sass @ouds/web-orange boosted" />
+    <Code lang="sh" code="npm i sass @ouds/web-common @ouds/web-orange boosted" />
 
 2. Replace your Boosted import file by copy pasting this code in the main style file of your project:
     <details class="mb-medium">
